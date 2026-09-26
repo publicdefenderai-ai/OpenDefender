@@ -1,0 +1,407 @@
+[
+  {
+    "id": "ca-rape-261-a1",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse with a person unable to give legal consent because of a mental disorder or developmental or physical disability, where that incapacity was known or reasonably should have been known (§261(a)(1)). Disability alone does not establish incapacity; the prosecution must prove it, considering applicable mitigating measures and voluntary supports.",
+      "es": "Relación sexual con una persona incapaz de dar consentimiento legal por trastorno mental o discapacidad del desarrollo o física, cuando se sabía o razonablemente debía saberse esa incapacidad (§261(a)(1)). La discapacidad por sí sola no demuestra incapacidad; la fiscalía debe probarla considerando las medidas y apoyos aplicables.",
+      "zh": "与因精神障碍、发育或身体残疾而无法给予法律认可同意的人发生性交，且行为人知道或理应知道该无能力状态（第261(a)(1)条）。残疾本身不能证明无同意能力；检方须证明该状态，并考虑适用的辅助措施及自愿支持。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a2",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse against a person’s will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another (§261(a)(2)). Victim age changes the ordinary sentencing range under §264(c).",
+      "es": "Relación sexual contra la voluntad de una persona mediante fuerza, violencia, coacción, amenaza o temor de lesión corporal ilícita inmediata a esa persona u otra (§261(a)(2)). La edad de la víctima cambia la pena ordinaria según el §264(c).",
+      "zh": "以强力、暴力、胁迫、威吓，或使人恐惧自己或他人立即遭受非法身体伤害，违背其意愿实施性交（第261(a)(2)条）。第264(c)条依受害人年龄规定不同普通刑期。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Under §264(c), a victim under 14 changes that range to 9, 11, or 13 years; for a victim aged 14–17 it is 7, 9, or 11 years. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. Según el §264(c), si la víctima es menor de 14 años, la pena es de 9, 11 o 13 años; si tiene entre 14 y 17 años, de 7, 9 u 11 años. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。根据第264(c)条，受害人未满14岁时为9年、11年或13年；14至17岁时为7年、9年或11年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a3",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse where an intoxicating, anesthetic, or controlled substance prevents resistance, and the accused knew or reasonably should have known that condition (§261(a)(3)). Substance use alone is not the complete statutory test.",
+      "es": "Relación sexual cuando una sustancia intoxicante, anestésica o controlada impide resistir, y la persona acusada conocía o razonablemente debía conocer esa condición (§261(a)(3)). El consumo por sí solo no basta para satisfacer la norma.",
+      "zh": "在酒精等致醉物、麻醉物或管制物质使人无法反抗时实施性交，且被告知道或理应知道该状态（第261(a)(3)条）。仅使用物质并不足以满足全部法定条件。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a4",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse where the person is unconscious of the nature of the act and the accused knows it (§261(a)(4)). This includes the statute’s specified sleep, unawareness, fraud-in-fact, and false-professional-purpose circumstances; it is not limited to physical unconsciousness.",
+      "es": "Relación sexual cuando la persona no es consciente de la naturaleza del acto y la persona acusada lo sabe (§261(a)(4)). Incluye los supuestos legales de sueño, falta de conciencia, fraude sobre el acto y falsa finalidad profesional; no se limita a pérdida física del conocimiento.",
+      "zh": "在对方不知晓行为性质且被告明知时实施性交（第261(a)(4)条）。包括法条列举的睡眠、不知情、对行为事实的欺骗和虚假专业目的等情形，并不限于身体昏迷。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a5",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse where the person submits believing the accused is a different person known to them, and the accused intentionally induces that belief through artifice, pretense, or concealment (§261(a)(5)). The statute is not limited to impersonating a spouse.",
+      "es": "Relación sexual cuando la persona accede creyendo que la persona acusada es otra persona conocida, y esta induce intencionalmente esa creencia mediante artificio, simulación u ocultamiento (§261(a)(5)). No se limita a suplantar a un cónyuge.",
+      "zh": "通过伎俩、假装或隐瞒，故意使对方误以为行为人是其认识的另一人而顺从性交（第261(a)(5)条）。该条并不限于冒充配偶。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a6",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse against the person’s will through a threat of future retaliation against them or another, with a reasonable possibility the threat will be carried out (§261(a)(6)). Retaliation means the specified threats of kidnapping, false imprisonment, extreme pain, serious bodily injury, or death.",
+      "es": "Relación sexual contra la voluntad mediante amenaza de represalia futura contra la persona u otra, con posibilidad razonable de cumplirla (§261(a)(6)). Se refiere a las amenazas especificadas de secuestro, privación ilegal de libertad, dolor extremo, lesión grave o muerte.",
+      "zh": "以未来对本人或他人报复的威胁，违背其意愿实施性交，且威胁有合理实现可能（第261(a)(6)条）。报复指法条规定的绑架、非法拘禁、极度痛苦、严重身体伤害或死亡威胁。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-rape-261-a7",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "264",
+      "261.6",
+      "290",
+      "667.61",
+      "667.6",
+      "269",
+      "288.7"
+    ],
+    "summary": {
+      "en": "Intercourse against the person’s will through threats to use public-official authority to incarcerate, arrest, or deport them or another, where they reasonably believe the accused is such an official (§261(a)(7)). The accused need not actually hold public office.",
+      "es": "Relación sexual contra la voluntad mediante amenaza de usar autoridad pública para encarcelar, arrestar o deportar a la persona u otra, cuando cree razonablemente que la persona acusada tiene esa autoridad (§261(a)(7)). No es necesario que realmente sea funcionario.",
+      "zh": "威胁使用公职权力监禁、逮捕或驱逐本人或他人，违背其意愿实施性交，且对方合理相信行为人具有该公职身份（第261(a)(7)条）。行为人无需实际担任公职。"
+    },
+    "penalty": {
+      "en": "Ordinary §264(a) punishment: 3, 6, or 8 years in state prison. Section 264(b) also permits an ability-to-pay-based fine up to $70. This is not a total sentencing ceiling: specified allegations can trigger life terms, consecutive terms, or other provisions (§§667.61, 667.6, 269, 288.7). Registration under §290, other fines, enhancements, and the actual allegations require separate review.",
+      "es": "Pena ordinaria del §264(a): 3, 6 u 8 años de prisión estatal. El §264(b) también permite una multa de hasta $70 considerando la capacidad de pago. No es un máximo total: ciertas alegaciones pueden activar penas perpetuas, consecutivas u otras disposiciones (§§667.61, 667.6, 269, 288.7). El registro del §290, otras multas, aumentos de pena y las alegaciones concretas requieren revisión aparte.",
+      "zh": "第264(a)条普通刑罚为州监狱监禁3年、6年或8年。第264(b)条还允许根据支付能力处最高70美元罚金。这不是总刑罚上限：特定指控可能触发无期刑、连续执行刑期或其他条款（第667.61、667.6、269、288.7条）。第290条登记、其他罚金、加重处罚及实际指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-murder-in-the-first-degree",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "188",
+      "190",
+      "190.2",
+      "190.5"
+    ],
+    "summary": {
+      "en": "Unlawful killing with the elements of murder under §§187–188 and a first-degree basis under §189(a), such as a willful, deliberate, premeditated killing. First degree is not limited to premeditation. Felony-murder participation is constrained by §189(e), subject to its §189(f) exception; participation alone does not automatically establish murder.",
+      "es": "Muerte ilícita con los elementos de asesinato de los §§187–188 y un fundamento de primer grado del §189(a), como matar de forma intencional, deliberada y premeditada. El primer grado no se limita a premeditación. La responsabilidad por asesinato durante otro delito está limitada por el §189(e), con la excepción del §189(f); participar por sí solo no basta.",
+      "zh": "符合第187至188条谋杀要件，并具有第189(a)条一级依据的非法杀人，例如故意、经过考虑且预谋的杀人。一级谋杀不限于预谋。参与基础重罪的谋杀责任受第189(e)条限制，并有第189(f)条例外；仅参与犯罪不自动成立谋杀。"
+    },
+    "penalty": {
+      "en": "Ordinary term: 25 years to life in state prison (§190(a)). Statutorily established special circumstances can expose a person to life without parole or the death penalty (§190.2); those are not automatic consequences of every first-degree murder charge. Section 190.5 bars death for an offense committed under age 18. This describes statutory exposure, not current execution policy or a parole-release prediction. Age, allegations, enhancements, and applicable constitutional limits require individual legal review.",
+      "es": "Pena ordinaria: 25 años a cadena perpetua en prisión estatal (§190(a)). Circunstancias especiales legalmente acreditadas pueden permitir cadena perpetua sin libertad condicional o pena de muerte (§190.2); no se aplican automáticamente a toda acusación de primer grado. El §190.5 prohíbe la pena de muerte por hechos cometidos antes de los 18 años. Se describe la exposición legal, no la política de ejecuciones ni una fecha de liberación. Edad, alegaciones, aumentos y límites constitucionales requieren revisión individual.",
+      "zh": "普通刑期为州监狱25年至终身（第190(a)条）。依法成立的特殊情节可能导致终身不得假释或死刑（第190.2条），并非每项一级谋杀指控都会自动适用。第190.5条禁止对未满18岁时所犯罪行判处死刑。此处说明法定风险，不说明当前执行死刑政策或预测假释日期。年龄、指控、加重处罚及宪法限制须个别法律审查。"
+    }
+  },
+  {
+    "id": "ca-murder-in-the-second-degree",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "188",
+      "189",
+      "190"
+    ],
+    "summary": {
+      "en": "Murder under §§187–188 that is not first degree under §189. Express or implied malice can apply; an intent to kill is not required for every implied-malice theory. Malice cannot be imputed solely from participation in another crime, subject to the statutory felony-murder rule.",
+      "es": "Asesinato según los §§187–188 que no es de primer grado conforme al §189. Puede existir malicia expresa o implícita; no toda teoría de malicia implícita exige intención de matar. La mera participación en otro delito no permite imputar malicia, sujeto a la norma legal de asesinato durante otro delito.",
+      "zh": "符合第187至188条且依第189条不属一级的谋杀。可涉及明示或默示恶意；默示恶意理论并非一律要求杀人意图。仅参与另一犯罪不能推定恶意，但须考虑法定重罪谋杀规则。"
+    },
+    "penalty": {
+      "en": "Ordinary term: 15 years to life (§190(a)). Section 190(b)–(c) provides 25 years to life or life without parole for specified peace-officer killings with the required duty, knowledge, and additional findings. Section 190(d) provides 20 years to life for its specified shooting from a vehicle with intent to inflict great bodily injury. These are conditional alternatives, not a predicted sentence; enhancements and parole rules require separate review.",
+      "es": "Pena ordinaria: 15 años a cadena perpetua (§190(a)). El §190(b)–(c) dispone 25 años a perpetua o perpetua sin libertad condicional para ciertas muertes de agentes, con los requisitos de funciones, conocimiento y determinaciones adicionales. El §190(d) establece 20 años a perpetua para ciertos disparos desde un vehículo con intención de causar lesión grave. Son alternativas condicionadas, no una predicción; aumentos y reglas de libertad condicional requieren revisión aparte.",
+      "zh": "普通刑期为15年至终身（第190(a)条）。第190(b)至(c)条对符合履职、明知及其他认定要求的特定警员被杀案件规定25年至终身或终身不得假释。第190(d)条对意图造成严重身体伤害的特定从车内向车外人员开枪杀人规定20年至终身。这些是有条件的替代刑罚，不是量刑预测；加重处罚及假释规则须另行审查。"
+    }
+  },
+  {
+    "id": "ca-attempted-murder",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "21a",
+      "188",
+      "189",
+      "190.2"
+    ],
+    "summary": {
+      "en": "An intent to unlawfully kill and a direct but ineffectual act toward the killing (§§21a, 664). Attempted murder requires intent to kill; the implied-malice basis that can support a completed murder is not enough. The premeditation allegation and any protected-victim allegation must be distinguished.",
+      "es": "Intención de matar ilícitamente y un acto directo pero ineficaz encaminado a hacerlo (§§21a, 664). La tentativa exige intención de matar; la malicia implícita que puede sustentar un asesinato consumado no basta. Deben distinguirse la alegación de premeditación y las relativas a víctimas protegidas.",
+      "zh": "具有非法杀人意图，并实施直接指向杀人但未成功的行为（第21a、664条）。未遂谋杀要求杀人意图；可支持既遂谋杀的默示恶意并不足够。须区分预谋指控及受保护受害人指控。"
+    },
+    "penalty": {
+      "en": "Under §664(a), ordinarily 5, 7, or 9 years in state prison; willful, deliberate, premeditated attempted murder carries life with the possibility of parole when charged and admitted or found true. Section 664(e) instead imposes life with parole for its specified duty-related protected-victim cases with the required knowledge; §664(f) imposes 15 years to life when its additional premeditation requirements are met. Enhancements and actual parole eligibility require separate review.",
+      "es": "Según el §664(a), ordinariamente 5, 7 o 9 años de prisión estatal; la tentativa intencional, deliberada y premeditada conlleva cadena perpetua con posibilidad de libertad condicional si se alega y admite o acredita. El §664(e) impone perpetua con posibilidad de libertad condicional en ciertos casos de víctimas protegidas en funciones, con el conocimiento exigido; el §664(f) impone 15 años a perpetua si también se cumplen sus requisitos de premeditación. Aumentos y elegibilidad real para libertad condicional requieren revisión aparte.",
+      "zh": "依第664(a)条，普通刑期为州监狱5年、7年或9年；故意、经过考虑且预谋的未遂谋杀，经指控并承认或认定成立，可处终身监禁并可假释。第664(e)条对满足明知要求的特定履职受保护受害人案件规定终身监禁并可假释；满足额外预谋要求时，第664(f)条规定15年至终身。加重处罚及实际假释资格须另行审查。"
+    }
+  },
+  {
+    "id": "ca-robbery-in-the-first-degree",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "212",
+      "213"
+    ],
+    "summary": {
+      "en": "Taking personal property from another’s person or immediate presence, against their will, by force or fear (§§211–212). First degree under §212.5 covers specified inhabited locations, transit operators/passengers, and ATM circumstances. A weapon is not itself the degree test.",
+      "es": "Apoderarse de bienes de otra persona, de su persona o presencia inmediata, contra su voluntad, mediante fuerza o temor (§§211–212). El primer grado del §212.5 comprende ciertos lugares habitados, operadores o pasajeros de transporte y situaciones de cajero automático. El uso de arma no determina por sí solo el grado.",
+      "zh": "以强力或恐吓，违背他人意愿从其身上或近旁夺取财物（第211至212条）。第212.5条一级情形包括特定居住地点、交通运营人员或乘客以及自动取款机相关情形。是否持械本身不是分级标准。"
+    },
+    "penalty": {
+      "en": "Under §213(a)(1)(B), ordinarily 3, 4, or 6 years in state prison. The §213(a)(1)(A) branch is 3, 6, or 9 years when voluntarily acting with two or more other persons in a specified inhabited location. A weapon enhancement, other allegations, fines, and restitution require separate review.",
+      "es": "Según el §213(a)(1)(B), ordinariamente 3, 4 o 6 años de prisión estatal. El §213(a)(1)(A) establece 3, 6 o 9 años cuando se actúa voluntariamente con otras dos o más personas en un lugar habitado especificado. Aumentos por armas, otras alegaciones, multas y restitución requieren revisión aparte.",
+      "zh": "根据第213(a)(1)(B)条，普通刑期为州监狱3年、4年或6年。自愿与至少另外两人在法定居住地点共同行动时，第213(a)(1)(A)条规定3年、6年或9年。武器加重处罚、其他指控、罚金和赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-robbery-in-the-second-degree",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "212",
+      "213"
+    ],
+    "summary": {
+      "en": "Taking personal property from another’s person or immediate presence, against their will, by force or fear (§§211–212). Robbery outside the first-degree circumstances of §212.5(a)–(b) is second degree under §212.5(c); a weapon does not automatically make it first degree.",
+      "es": "Apoderarse de bienes de otra persona, de su persona o presencia inmediata, contra su voluntad, mediante fuerza o temor (§§211–212). Fuera de las circunstancias de primer grado del §212.5(a)–(b), es de segundo grado (§212.5(c)); un arma no lo convierte automáticamente en primer grado.",
+      "zh": "以强力或恐吓，违背他人意愿从其身上或近旁夺取财物（第211至212条）。不属于第212.5(a)至(b)条一级情形的抢劫，依第212.5(c)条为二级；持械不会自动使其成为一级。"
+    },
+    "penalty": {
+      "en": "Under §213(a)(2), 2, 3, or 5 years in state prison. This is the completed-offense range; attempted second-degree robbery has a separate rule in §213(b). Enhancements, fines, restitution, and other allegations require separate review.",
+      "es": "Según el §213(a)(2), 2, 3 o 5 años de prisión estatal. Es la pena del delito consumado; la tentativa de segundo grado tiene una regla distinta en el §213(b). Aumentos, multas, restitución y otras alegaciones requieren revisión aparte.",
+      "zh": "根据第213(a)(2)条，可处州监狱2年、3年或5年。这是既遂刑期；二级抢劫未遂适用第213(b)条的单独规则。加重处罚、罚金、赔偿及其他指控须另行审查。"
+    }
+  },
+  {
+    "id": "ca-attempted-robbery",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "21a",
+      "212",
+      "212.5",
+      "213",
+      "18"
+    ],
+    "summary": {
+      "en": "Intent to commit robbery and a direct but ineffectual act toward it (§§21a, 211, 664). Determine the intended robbery degree under §212.5: the punishment is not always half the completed-offense term.",
+      "es": "Intención de cometer robo con fuerza o temor y un acto directo pero ineficaz encaminado a ello (§§21a, 211, 664). Debe determinarse el grado según el §212.5: la pena no siempre es la mitad de la del delito consumado.",
+      "zh": "具有实施抢劫的意图，并作出直接但未成功的实施行为（第21a、211、664条）。须依第212.5条确定预期抢劫的级别；刑期并不总是既遂刑期的一半。"
+    },
+    "penalty": {
+      "en": "Attempted second-degree robbery: §213(b) overrides §664, with the default state-prison term of 16 months, 2 years, or 3 years under §18(a). Attempted first-degree robbery follows §664(a): half the applicable §213(a)(1) term, ordinarily 18 months, 2 years, or 3 years, or 18 months, 3 years, or 4 years 6 months for the specified group/home branch. The charged degree, branch, and enhancements require separate review.",
+      "es": "Tentativa de segundo grado: el §213(b) desplaza al §664 y aplica la pena estatal supletoria del §18(a): 16 meses, 2 o 3 años. La tentativa de primer grado sigue el §664(a): mitad de la pena aplicable del §213(a)(1), normalmente 18 meses, 2 o 3 años, o 18 meses, 3 años o 4 años y 6 meses para la modalidad grupal en vivienda especificada. Grado, modalidad y aumentos requieren revisión aparte.",
+      "zh": "二级抢劫未遂：第213(b)条优先于第664条，适用第18(a)条默认州监狱刑期16个月、2年或3年。一级抢劫未遂依第664(a)条，适用第213(a)(1)条相应刑期的一半，通常为18个月、2年或3年；特定多人住宅分支为18个月、3年或4年6个月。所指控级别、分支及加重处罚须另行审查。"
+    }
+  },
+  {
+    "id": "ca-voluntary-manslaughter",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "193"
+    ],
+    "summary": {
+      "en": "Unlawful killing without malice upon sudden quarrel or heat of passion (§192(a)). Section 192(f) excludes discovery or disclosure of the victim’s gender, gender identity/expression, or sexual orientation as objectively reasonable provocation. Case law and the actual provocation remain important.",
+      "es": "Muerte ilícita sin malicia en una riña repentina o arrebato de pasión (§192(a)). El §192(f) excluye el descubrimiento o divulgación del género, identidad o expresión de género u orientación sexual de la víctima como provocación objetivamente razonable. La jurisprudencia y los hechos siguen siendo importantes.",
+      "zh": "因突发争吵或激情而实施不具有谋杀恶意的非法杀人（第192(a)条）。第192(f)条排除将发现或披露受害人的性别、性别认同或表达、性取向作为客观合理挑衅。仍须结合判例与实际挑衅事实。"
+    },
+    "penalty": {
+      "en": "Under §193(a), 3, 6, or 11 years in state prison. This is a base term, not the total sentence after enhancements, fines, restitution, or other applicable rules.",
+      "es": "Según el §193(a), 3, 6 u 11 años de prisión estatal. Es una pena base, no la sentencia total tras aumentos, multas, restitución u otras reglas aplicables.",
+      "zh": "根据第193(a)条，可处州监狱3年、6年或11年。这是基本刑期，不是包括加重处罚、罚金、赔偿及其他适用规则后的总刑罚。"
+    }
+  },
+  {
+    "id": "ca-involuntary-manslaughter",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "193",
+      "1170"
+    ],
+    "summary": {
+      "en": "Unlawful killing without malice during a nonfelony unlawful act, or a potentially deadly lawful act done unlawfully or without due caution (§192(b)). This subdivision expressly excludes acts committed in driving a vehicle; those require the applicable vehicular provision.",
+      "es": "Muerte ilícita sin malicia al cometer un acto ilícito no grave, o un acto lícito potencialmente mortal realizado ilícitamente o sin la debida cautela (§192(b)). La disposición excluye expresamente actos al conducir; debe usarse la norma vehicular aplicable.",
+      "zh": "在实施非重罪违法行为，或违法地、欠缺应有谨慎地实施可能致死的合法行为时，造成无谋杀恶意的非法杀人（第192(b)条）。该分支明确排除驾车行为，须适用相应车辆条款。"
+    },
+    "penalty": {
+      "en": "Under §193(b), 2, 3, or 4 years of felony imprisonment pursuant to §1170(h). Custody is ordinarily in county jail under that scheme, but statutory exclusions can require state prison; do not promise a custody location or split sentence without reviewing eligibility. Enhancements, fines, and restitution are separate.",
+      "es": "Según el §193(b), 2, 3 o 4 años de reclusión por delito grave conforme al §1170(h). Normalmente se cumple en cárcel del condado bajo ese régimen, pero exclusiones legales pueden exigir prisión estatal; no debe prometerse lugar de reclusión ni pena dividida sin revisar la elegibilidad. Aumentos, multas y restitución son aparte.",
+      "zh": "根据第193(b)条，依第1170(h)条可处重罪监禁2年、3年或4年。该制度通常在县监狱执行，但法定排除情形可能要求州监狱；未审查资格前不能承诺服刑地点或分段执行。加重处罚、罚金及赔偿另行处理。"
+    }
+  },
+  {
+    "id": "ca-vehicular-manslaughter-192-c1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "193",
+      "191.5",
+      "18.5",
+      "17"
+    ],
+    "summary": {
+      "en": "Driving that unlawfully causes death with gross negligence under §192(c)(1), subject to its express exception for §191.5(a). The distinction from nongross-negligence driving and intoxication-related homicide must be checked; a traffic violation alone is not the full offense.",
+      "es": "Conducción que causa ilícitamente una muerte con negligencia grave según el §192(c)(1), sujeto a la excepción expresa del §191.5(a). Debe distinguirse de conducción sin negligencia grave y homicidio relacionado con intoxicación; una infracción de tránsito por sí sola no basta.",
+      "zh": "依第192(c)(1)条，因重大过失驾车非法致人死亡，但受第191.5(a)条明确例外限制。须区别无重大过失驾车及酒药影响相关杀人；单独交通违规并不满足全部犯罪要件。"
+    },
+    "penalty": {
+      "en": "Under §193(c)(1), misdemeanor county jail up to 364 days (§18.5) or felony state prison for 2, 4, or 6 years. This is a misdemeanor/felony alternative, not an automatic felony. Enhancements, license consequences, fines, and restitution require separate review.",
+      "es": "Según el §193(c)(1), hasta 364 días de cárcel del condado por delito menor (§18.5), o 2, 4 o 6 años de prisión estatal por delito grave. Puede ser menor o grave; no es automáticamente grave. Aumentos, consecuencias para la licencia, multas y restitución requieren revisión aparte.",
+      "zh": "根据第193(c)(1)条，可按轻罪处县监狱最高364天（第18.5条），或按重罪处州监狱2年、4年或6年。这是轻罪或重罪可选条款，并非自动为重罪。加重处罚、驾照后果、罚金和赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-vehicular-manslaughter-192-c2",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "193",
+      "18.5"
+    ],
+    "summary": {
+      "en": "Driving that unlawfully causes death without gross negligence under §192(c)(2), with the required unlawful act or unlawful manner and causation. This is distinct from the gross-negligence branch and from separate intoxication-related homicide statutes.",
+      "es": "Conducción que causa ilícitamente una muerte sin negligencia grave según el §192(c)(2), con el acto ilícito o modo ilícito y la causalidad exigidos. Se distingue de negligencia grave y de normas separadas sobre homicidio relacionado con intoxicación.",
+      "zh": "依第192(c)(2)条，在无重大过失情况下驾车非法致人死亡，须具备要求的违法行为或违法方式及因果关系。这不同于重大过失分支或独立的酒药影响相关杀人条款。"
+    },
+    "penalty": {
+      "en": "Under §193(c)(2), misdemeanor county jail up to 364 days after §18.5’s one-year rule. This provision supplies no felony prison alternative. Fines, restitution, license consequences, and other charged offenses require separate review.",
+      "es": "Según el §193(c)(2), hasta 364 días de cárcel del condado por delito menor, conforme a la regla de un año del §18.5. Esta disposición no ofrece alternativa de prisión por delito grave. Multas, restitución, consecuencias para la licencia y otros cargos requieren revisión aparte.",
+      "zh": "根据第193(c)(2)条，适用第18.5条一年刑期规则后，可按轻罪处县监狱最高364天。此条没有重罪监禁替代刑。罚金、赔偿、驾照后果及其他被控罪名须另行审查。"
+    }
+  },
+  {
+    "id": "ca-vehicular-manslaughter-192-c3",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "193",
+      "550"
+    ],
+    "summary": {
+      "en": "Vehicular manslaughter connected to §550(a)(3), where a collision or accident was knowingly caused for financial gain and proximately caused a death (§192(c)(3)). This is the specified financial-gain collision branch, not a generic careless-driving charge; the statute preserves possible murder prosecution.",
+      "es": "Homicidio vehicular relacionado con el §550(a)(3), cuando se causa a sabiendas una colisión o accidente para obtener beneficio económico y ello causa directamente una muerte (§192(c)(3)). Es la modalidad específica de beneficio económico, no conducción descuidada genérica; la norma permite acusación de asesinato.",
+      "zh": "与第550(a)(3)条相关，为经济利益明知地造成碰撞或事故，并因此直接导致死亡的车辆过失杀人（第192(c)(3)条）。这是特定经济利益碰撞分支，不是一般疏忽驾驶；法条保留谋杀起诉可能。"
+    },
+    "penalty": {
+      "en": "Under §193(c)(3), 4, 6, or 10 years in state prison. Other charges, enhancements, fines, and restitution require separate review; this range is not a total sentence prediction.",
+      "es": "Según el §193(c)(3), 4, 6 o 10 años de prisión estatal. Otros cargos, aumentos, multas y restitución requieren revisión aparte; no es una predicción de la sentencia total.",
+      "zh": "根据第193(c)(3)条，可处州监狱4年、6年或10年。其他指控、加重处罚、罚金及赔偿须另行审查；该范围不是总刑罚预测。"
+    }
+  }
+]

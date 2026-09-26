@@ -5,8 +5,8 @@
     "canonicalRecords": 120,
     "configuredSelectable": 99,
     "withheldCanonicalLabels": 21,
-    "boundedCorrectionPass": 31,
-    "awaitingCorrectionPass": 68,
+    "boundedCorrectionPass": 49,
+    "awaitingCorrectionPass": 50,
     "legacyRows": 115,
     "legacyDispositions": {
       "retain": 49,
@@ -17,13 +17,13 @@
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
     "distinctSelectablePrimarySections": 69,
-    "remainingSharedSourceGroups": 40,
-    "remainingPrimarySections": 45,
+    "remainingSharedSourceGroups": 37,
+    "remainingPrimarySections": 38,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 69,
     "selectableRecordsWithAllPrimaryTextAcquired": 99,
-    "totalAcquiredSectionsIncludingDependencies": 111,
-    "totalAcquiredVersionsIncludingDependencies": 113,
+    "totalAcquiredSectionsIncludingDependencies": 125,
+    "totalAcquiredVersionsIncludingDependencies": 127,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
@@ -51,8 +51,8 @@
     {
       "lawCode": "PEN",
       "selectable": 79,
-      "corrected": 21,
-      "awaitingCorrection": 58
+      "corrected": 39,
+      "awaitingCorrection": 40
     },
     {
       "lawCode": "VEH",
@@ -880,68 +880,6 @@
   ],
   "groups": [
     {
-      "id": "PEN:261",
-      "recordIds": [
-        "ca-rape-261-a1",
-        "ca-rape-261-a2",
-        "ca-rape-261-a3",
-        "ca-rape-261-a4",
-        "ca-rape-261-a5",
-        "ca-rape-261-a6",
-        "ca-rape-261-a7"
-      ],
-      "primaryKeys": [
-        "PEN:261"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:261"
-      ]
-    },
-    {
-      "id": "PEN:187+PEN:189+PEN:211+PEN:212.5+PEN:664",
-      "recordIds": [
-        "ca-attempted-murder",
-        "ca-attempted-robbery",
-        "ca-murder-in-the-first-degree",
-        "ca-murder-in-the-second-degree",
-        "ca-robbery-in-the-first-degree",
-        "ca-robbery-in-the-second-degree"
-      ],
-      "primaryKeys": [
-        "PEN:187",
-        "PEN:189",
-        "PEN:211",
-        "PEN:212.5",
-        "PEN:664"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:187",
-        "PEN:189",
-        "PEN:211",
-        "PEN:212.5",
-        "PEN:664"
-      ]
-    },
-    {
-      "id": "PEN:192",
-      "recordIds": [
-        "ca-involuntary-manslaughter",
-        "ca-vehicular-manslaughter-192-c1",
-        "ca-vehicular-manslaughter-192-c2",
-        "ca-vehicular-manslaughter-192-c3",
-        "ca-voluntary-manslaughter"
-      ],
-      "primaryKeys": [
-        "PEN:192"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:192"
-      ]
-    },
-    {
       "id": "PEN:261.5",
       "recordIds": [
         "ca-unlawful-sexual-intercourse-261-5-b",
@@ -1445,7 +1383,7 @@
       "citation": "Cal. Penal Code §§ 187(a), 189",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:187",
         "PEN:189"
@@ -1455,7 +1393,7 @@
         "PEN:187",
         "PEN:189"
       ],
-      "catalogSha256": "c5333028d7c507f7798aadb8c76b7b338fa3743dad673adc15d8a29c0b990fdc",
+      "catalogSha256": "087b3f9f18794b3cf4097e5508b0be38c9dbe909984bbc217406813669aff812",
       "attorneyReview": "pending"
     },
     {
@@ -1464,7 +1402,7 @@
       "citation": "Cal. Penal Code § 187(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:187"
       ],
@@ -1472,7 +1410,7 @@
       "acquiredPrimaryKeys": [
         "PEN:187"
       ],
-      "catalogSha256": "bca66ae9714ca45f1a85b9de075f3a14591d7fd396303eca9703ee487eb43061",
+      "catalogSha256": "c9bed2b7f3465f199bc428423444f55e034cb1e8534250b34a31c7849319f738",
       "attorneyReview": "pending"
     },
     {
@@ -1481,7 +1419,7 @@
       "citation": "Cal. Penal Code § 192(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:192"
       ],
@@ -1489,7 +1427,7 @@
       "acquiredPrimaryKeys": [
         "PEN:192"
       ],
-      "catalogSha256": "9dd54a954b9c2e199ea099a0509618940542f91806bb59435a609ebba0180af3",
+      "catalogSha256": "01d853a67586ffe388f9af7b8f82825e21d26b739f308c5c2a225acbea42c52c",
       "attorneyReview": "pending"
     },
     {
@@ -1498,7 +1436,7 @@
       "citation": "Cal. Penal Code § 192(b)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:192"
       ],
@@ -1506,7 +1444,7 @@
       "acquiredPrimaryKeys": [
         "PEN:192"
       ],
-      "catalogSha256": "c217eaff5428626372e92290f99dda1e7dcfd15b270a79570a9dae570bb7b75f",
+      "catalogSha256": "298b81153d75ccfd5c85721cf6978337aa671fd3dd5348b4d9af82cfb72f816a",
       "attorneyReview": "pending"
     },
     {
@@ -1872,7 +1810,7 @@
       "citation": "Cal. Penal Code § 212.5(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:211",
         "PEN:212.5"
@@ -1882,7 +1820,7 @@
         "PEN:211",
         "PEN:212.5"
       ],
-      "catalogSha256": "3117d786ba63d545b5ab3f7d7398454dba04fd5027f3526c670a62e056a47d1b",
+      "catalogSha256": "78ce0d1fc5d035b9c2a005c9d248a082a27744357c7256975919029adca14953",
       "attorneyReview": "pending"
     },
     {
@@ -1891,7 +1829,7 @@
       "citation": "Cal. Penal Code § 212.5(c)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:211",
         "PEN:212.5"
@@ -1901,7 +1839,7 @@
         "PEN:211",
         "PEN:212.5"
       ],
-      "catalogSha256": "c0a0faab26de2503d2ad1d9c83e8b4e244ea812c07715a01db3c890180e8e14f",
+      "catalogSha256": "b94dfb14ed14896a36f5f5e0b132598ba86d84f7c8d76b4e744f9781522fa72b",
       "attorneyReview": "pending"
     },
     {
@@ -2639,7 +2577,7 @@
       "citation": "Cal. Penal Code §§ 664, 187",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:187",
         "PEN:664"
@@ -2649,7 +2587,7 @@
         "PEN:187",
         "PEN:664"
       ],
-      "catalogSha256": "dce3ea593ba60fd2d13327297e9831ff47f6bcd789c85829ad12a1e47eb84483",
+      "catalogSha256": "a79518be6d410c70106058240c13a4ab7e05c4ea0e3165efc411fb741a36a81f",
       "attorneyReview": "pending"
     },
     {
@@ -2658,7 +2596,7 @@
       "citation": "Cal. Penal Code §§ 664, 211",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:211",
         "PEN:664"
@@ -2668,7 +2606,7 @@
         "PEN:211",
         "PEN:664"
       ],
-      "catalogSha256": "387f8ce136589898c7e8c9b1c1677d8c3068969cd03ac77f3a3e39c9219da5aa",
+      "catalogSha256": "aef6cfa43b2a5beadc96d53c92bdbb504cd43e27a45f12b677f09df8ecdb5ca3",
       "attorneyReview": "pending"
     },
     {
@@ -2711,7 +2649,7 @@
       "citation": "Cal. Penal Code § 192(c)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:192"
       ],
@@ -2719,7 +2657,7 @@
       "acquiredPrimaryKeys": [
         "PEN:192"
       ],
-      "catalogSha256": "9dcf221b45f62dc7926d78d44ed3b74518e8a1873a87198bf518879e8aff0b69",
+      "catalogSha256": "24041f675a6e57540174f1eaabc89191409edc63f33799c8aacbd2b51cd58fc1",
       "attorneyReview": "pending"
     },
     {
@@ -2728,7 +2666,7 @@
       "citation": "Cal. Penal Code § 192(c)(2)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:192"
       ],
@@ -2736,7 +2674,7 @@
       "acquiredPrimaryKeys": [
         "PEN:192"
       ],
-      "catalogSha256": "f6cada39f3fda006044390b91779767bc0ff0a28c7bcdada5ecf82319c7d2db6",
+      "catalogSha256": "231d59576d0461e0f5401d1335b54763182252c42b7548a36f7c6d25831e3d29",
       "attorneyReview": "pending"
     },
     {
@@ -2745,7 +2683,7 @@
       "citation": "Cal. Penal Code § 192(c)(3)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:192"
       ],
@@ -2753,7 +2691,7 @@
       "acquiredPrimaryKeys": [
         "PEN:192"
       ],
-      "catalogSha256": "75fabc63a6bd48cf1c2b023b0e986b28dabbaa1807e1766d3c09b6a25ad93a61",
+      "catalogSha256": "4c0e1986c65992f26a516afb07a9b2d8ca1269e6b51fd6e73a7bfa0341975798",
       "attorneyReview": "pending"
     },
     {
@@ -2834,7 +2772,7 @@
       "citation": "Cal. Penal Code § 261(a)(2)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2842,7 +2780,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "56c2784a4d89806e745945da884c7134664a80610fb45f76dadf09d3170c0274",
+      "catalogSha256": "21a5b87c36b655cb7d32a381a3f4c5384d8eb0acbd3f59af60d50bf96021632b",
       "attorneyReview": "pending"
     },
     {
@@ -2851,7 +2789,7 @@
       "citation": "Cal. Penal Code § 261(a)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2859,7 +2797,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "c6eeae412d9301705ec42cde2c31bab10594bb93c7af6cb7797a91cf628f12cb",
+      "catalogSha256": "e8737ba3035393ab8e07bab83e3529105d0136fa0d4ba7761aa8dcbb9d66a71e",
       "attorneyReview": "pending"
     },
     {
@@ -2868,7 +2806,7 @@
       "citation": "Cal. Penal Code § 261(a)(3)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2876,7 +2814,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "a67a48721ea9d596ce1f6b8446c68450c840b9b97bec1c71d6d66e5071f9857f",
+      "catalogSha256": "e1e6a2dae95af7421514f574d290e1a196127c736553a767b3515ec916447a47",
       "attorneyReview": "pending"
     },
     {
@@ -2885,7 +2823,7 @@
       "citation": "Cal. Penal Code § 261(a)(4)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2893,7 +2831,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "ce9ba2def39cb4a8583cfebf6c9ddae37ba5d646703a694e39dbae40cd4d88cf",
+      "catalogSha256": "1fb7ff60f3d00d2ac3a829e796c14e32a3216b6c264c08d3af1fbe414edffd9e",
       "attorneyReview": "pending"
     },
     {
@@ -2902,7 +2840,7 @@
       "citation": "Cal. Penal Code § 261(a)(5)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2910,7 +2848,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "3aaea959def2834b577179ffb25e88cc3447c0e6083cf3612b750d1b4ffdf90c",
+      "catalogSha256": "d43afd38534aa790de2053aef7058de5cf081f86d0d8429801e9c107a9e8c4af",
       "attorneyReview": "pending"
     },
     {
@@ -2919,7 +2857,7 @@
       "citation": "Cal. Penal Code § 261(a)(6)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2927,7 +2865,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "f0b9c666537ee003328616db155498781758e3c56c80482d9780e41bc7237f35",
+      "catalogSha256": "d2856b2124dfa7d68f956f2a5ad1c09235bd01935653505f94704af057d53ed4",
       "attorneyReview": "pending"
     },
     {
@@ -2936,7 +2874,7 @@
       "citation": "Cal. Penal Code § 261(a)(7)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261"
       ],
@@ -2944,7 +2882,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261"
       ],
-      "catalogSha256": "6ba423b6b93421a275dac03cc96025ce7bc6d534b18dbb6d5f6d10a6e4024815",
+      "catalogSha256": "71b4dba25daec0f6e12159895132d18180655058aff47fa767e38332507982fc",
       "attorneyReview": "pending"
     },
     {

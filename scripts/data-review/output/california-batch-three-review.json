@@ -1,0 +1,1477 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_shared_source_corrections_not_full_legal_certification",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "sourceAsOf": "2026-09-24",
+  "groups": [
+    {
+      "name": "Rape subdivisions",
+      "count": 7
+    },
+    {
+      "name": "Murder, robbery, and attempts",
+      "count": 6
+    },
+    {
+      "name": "Manslaughter subdivisions",
+      "count": 5
+    }
+  ],
+  "documents": {
+    "PEN:188": [
+      {
+        "id": "PEN188.201810152",
+        "lawCode": "PEN",
+        "section": "188.",
+        "opStatutes": "2018",
+        "opChapter": "1015",
+        "opSection": "2",
+        "effectiveDate": "2019-01-01 00:00:00",
+        "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2018, Ch. 1015, Sec. 2.   (SB 1437)   Effective January 1, 2019.",
+        "contentMember": "LAW_SECTION_TBL_93652.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93652,
+        "tableRowSha256": "35dcb1f753011a9afbf15aad3e7f61f167ab60db410204a139efc719e3b15e62",
+        "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>For purposes of Section 187, malice may be express or implied.</p><p>(1)<span class=\"EnSpace\"/>Malice is express when there is manifested a deliberate intention to unlawfully take away the life of a fellow creature.</p><p>(2)<span class=\"EnSpace\"/>Malice is implied when no considerable provocation appears, or when the circumstances attending the killing show an abandoned and malignant heart.</p><p>(3)<span class=\"EnSpace\"/>Except as stated in subdivision (e) of Section 189, in order to be convicted of murder, a principal in a crime shall act with\n\t\t\t\t\t\tmalice aforethought. Malice shall not be imputed to a person based solely on his or her participation in a crime.</p><p>(b)<span class=\"EnSpace\"/>If it is shown that the killing resulted from an intentional act with express or implied malice, as defined in subdivision (a), no other mental state need be shown to establish the mental state of malice aforethought. Neither an awareness of the obligation to act within the general body of laws regulating society nor acting despite that awareness is included within the definition of malice.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=188."
+      }
+    ],
+    "PEN:190": [
+      {
+        "id": "PEN190.19987606",
+        "lawCode": "PEN",
+        "section": "190.",
+        "opStatutes": "1998",
+        "opChapter": "760",
+        "opSection": "6",
+        "effectiveDate": null,
+        "versionId": "id_139058fc-5eed-11dd-a1ac-b5b3460007dd",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 1998, Ch. 760, Sec. 6.   Approved in Proposition 19 at the March 7, 2000, election.   Prior History: Added Nov. 7, 1978, by initiative Prop. 7; amended June 7, 1988, by Prop. 67 (from Stats. 1987, Ch. 1006); amended June 7, 1994, by Prop. 179 (from Stats. 1993, Ch. 609); amended June 2, 1998, by Prop. 222 (from Stats. 1997, Ch. 413, Sec. 1, which incorporated Stats. 1996, Ch. 598).",
+        "contentMember": "LAW_SECTION_TBL_89770.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89770,
+        "tableRowSha256": "40220fbab5f275c7179811b8e06fb822d9237fc5adbc1437c172dd6d5a302a6c",
+        "contentSha256": "d348e281b41218d01a177437fa29ede8af480df7482acdde25364b75d19384c4",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Every person guilty of murder in the first degree shall be punished by death, imprisonment in the state prison for life without the possibility of parole, or imprisonment in the state prison for a term of 25 years to life.  The penalty to be applied shall be determined as provided in Sections 190.1, 190.2, 190.3, 190.4, and 190.5.</p><p>Except as provided in subdivision (b), (c), or (d), every person guilty of murder in the second degree shall be punished by imprisonment in the state prison for a term of 15 years to life.</p><p>(b)<span class=\"EnSpace\"/>Except as provided in subdivision (c), every person guilty of murder in the second degree shall be punished by imprisonment in the state prison for a term of 25 years to life if the victim was a peace officer, as defined in subdivision (a) of Section 830.1, subdivision (a), (b), or (c) of Section 830.2, subdivision (a) of Section 830.33, or Section 830.5, who was killed while engaged in the performance of his or her duties, and the defendant knew, or reasonably should have known, that the victim was a peace officer engaged in the performance of his or her duties.</p><p>(c)<span class=\"EnSpace\"/>Every person guilty of murder in the second degree shall be punished by imprisonment in the state prison for a term of life without the possibility of parole if the victim was a peace officer, as defined in subdivision (a) of Section 830.1, subdivision (a), (b), or (c) of Section 830.2, subdivision (a) of Section 830.33, or Section 830.5, who was killed while engaged in the performance of his or her duties, and the defendant knew, or reasonably should have known, that the victim was a peace officer engaged in the performance of his or her duties, and any of the following facts has been charged and found true:</p><p>(1)<span class=\"EnSpace\"/>The defendant specifically intended to kill the peace officer.</p><p>(2)<span class=\"EnSpace\"/>The defendant specifically intended to inflict great bodily injury, as defined in Section 12022.7, on a peace officer.</p><p>(3)<span class=\"EnSpace\"/>The defendant personally used a dangerous or deadly weapon in the commission of the offense, in violation of subdivision (b) of Section 12022.</p><p>(4)<span class=\"EnSpace\"/>The defendant personally used a firearm in the commission of the offense, in violation of Section 12022.5.</p><p>(d)<span class=\"EnSpace\"/>Every person guilty of murder in the second degree shall be punished by imprisonment in the state prison for a term of 20 years to life if the killing was perpetrated by means of shooting a firearm from a motor vehicle, intentionally at another person outside of the vehicle with the intent to inflict great bodily injury.</p><p>(e)<span class=\"EnSpace\"/>Article 2.5 (commencing with Section 2930) of Chapter 7 of Title 1 of Part 3 shall not apply to reduce any minimum term of a sentence imposed pursuant to this section.  A person sentenced pursuant to this section shall not be released on parole prior to serving the minimum term of confinement prescribed by this section.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=190."
+      }
+    ],
+    "PEN:190.2": [
+      {
+        "id": "PEN190.2.201842343",
+        "lawCode": "PEN",
+        "section": "190.2.",
+        "opStatutes": "2018",
+        "opChapter": "423",
+        "opSection": "43",
+        "effectiveDate": "2019-01-01 00:00:00",
+        "versionId": "id_61f2faea-f96f-11e8-bd10-077ff3712fb6",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2018, Ch. 423, Sec. 43.   (SB 1494)   Effective January 1, 2019.   Prior History: Added Nov. 7, 1978, by initiative Prop. 7; amended June 5, 1990, by Prop. 114 (from Stats. 1989, Ch. 1165) and by initiative Prop. 115; amended March 26, 1996, by Prop. 196 (from Stats. 1995, Ch. 478, Sec. 2).",
+        "contentMember": "LAW_SECTION_TBL_89772.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89772,
+        "tableRowSha256": "bc25ea52475bc9b0d8fb6d7a292c2c1d7cf768ebd86531e17ee974555dc285f3",
+        "contentSha256": "626e8615c79328bc6c11287134cabad90a894daaf42b685e35e84ec63caa3b81",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The penalty for a defendant who is found guilty of murder in the first degree is death or imprisonment in the state prison for life without the possibility of parole if one or more of the following special circumstances has been found under Section 190.4 to be true:</p><p>(1)<span class=\"EnSpace\"/>The murder was intentional and carried out for financial gain.</p><p>(2)<span class=\"EnSpace\"/>The defendant was convicted previously of murder in the first or second degree. For the purpose of this paragraph, an offense committed in another jurisdiction, which if committed in California would be punishable as first or second degree\n\t\t\t\t\t\tmurder, shall be deemed murder in the first or second degree.</p><p>(3)<span class=\"EnSpace\"/>The defendant, in this proceeding, has been convicted of more than one offense of murder in the first or second degree.</p><p>(4)<span class=\"EnSpace\"/>The murder was committed by means of a destructive device, bomb, or explosive planted, hidden, or concealed in any place, area, dwelling, building, or structure, and the defendant knew, or reasonably should have known, that his or her act or acts would create a great risk of death to one or more human beings.</p><p>(5)<span class=\"EnSpace\"/>The murder was committed for the purpose of avoiding or preventing a lawful arrest, or perfecting or attempting to perfect, an escape from lawful custody.</p><p>(6)<span class=\"EnSpace\"/>The murder\n\t\t\t\t\t\twas committed by means of a destructive device, bomb, or explosive that the defendant mailed or delivered, attempted to mail or deliver, or caused to be mailed or delivered, and the defendant knew, or reasonably should have known, that his or her act or acts would create a great risk of death to one or more human beings.</p><p>(7)<span class=\"EnSpace\"/>The victim was a peace officer, as defined in Section 830.1, 830.2, 830.3, 830.31, 830.32, 830.33, 830.34, 830.35, 830.36, 830.37, 830.4, 830.5, 830.6, 830.10, 830.11, or 830.12, who, while engaged in the course of the performance of his or her duties, was intentionally killed, and the defendant knew, or reasonably should have known, that the victim was a peace officer engaged in the performance of his or her duties; or the victim was a peace officer, as defined in the above-enumerated sections, or a former peace officer\n\t\t\t\t\t\tunder any of those sections, and was intentionally killed in retaliation for the performance of his or her official duties.</p><p>(8)<span class=\"EnSpace\"/>The victim was a federal law enforcement officer or agent who, while engaged in the course of the performance of his or her duties, was intentionally killed, and the defendant knew, or reasonably should have known, that the victim was a federal law enforcement officer or agent engaged in the performance of his or her duties; or the victim was a federal law enforcement officer or agent, and was intentionally killed in retaliation for the performance of his or her official duties.</p><p>(9)<span class=\"EnSpace\"/>The victim was a firefighter, as defined in Section 245.1, who, while engaged in the course of the performance of his or her duties, was intentionally killed, and the defendant\n\t\t\t\t\t\tknew, or reasonably should have known, that the victim was a firefighter engaged in the performance of his or her duties.</p><p>(10)<span class=\"EnSpace\"/>The victim was a witness to a crime who was intentionally killed for the purpose of preventing his or her testimony in any criminal or juvenile proceeding, and the killing was not committed during the commission or attempted commission, of the crime to which he or she was a witness; or the victim was a witness to a crime and was intentionally killed in retaliation for his or her testimony in any criminal or juvenile proceeding. As used in this paragraph, “juvenile proceeding” means a proceeding brought pursuant to Section 602 or 707 of the Welfare and Institutions Code.</p><p>(11)<span class=\"EnSpace\"/>The victim was a prosecutor or assistant prosecutor or a former\n\t\t\t\t\t\tprosecutor or assistant prosecutor of any local or state prosecutor’s office in this or any other state, or of a federal prosecutor’s office, and the murder was intentionally carried out in retaliation for, or to prevent the performance of, the victim’s official duties.</p><p>(12)<span class=\"EnSpace\"/>The victim was a judge or former judge of any court of record in the local, state, or federal system in this or any other state, and the murder was intentionally carried out in retaliation for, or to prevent the performance of, the victim’s official duties.</p><p>(13)<span class=\"EnSpace\"/>The victim was an elected or appointed official or former official of the federal government, or of any local or state government of this or any other state, and the killing was intentionally carried out in retaliation for, or to prevent the performance\n\t\t\t\t\t\tof, the victim’s official duties.</p><p>(14)<span class=\"EnSpace\"/>The murder was especially heinous, atrocious, or cruel, manifesting exceptional depravity. As used in this section, the phrase “especially heinous, atrocious, or cruel, manifesting exceptional depravity” means a conscienceless or pitiless crime that is unnecessarily torturous to the victim.</p><p>(15)<span class=\"EnSpace\"/>The defendant intentionally killed the victim by means of lying in wait.</p><p>(16)<span class=\"EnSpace\"/>The victim was intentionally killed because of his or her race, color, religion, nationality, or country of origin.</p><p>(17)<span class=\"EnSpace\"/>The murder was committed while the defendant was engaged in, or was an accomplice in, the commission of, attempted commission of, or\n\t\t\t\t\t\tthe immediate flight after committing, or attempting to commit, the following felonies:</p><p>(A)<span class=\"EnSpace\"/>Robbery in violation of Section 211 or 212.5.</p><p>(B)<span class=\"EnSpace\"/>Kidnapping in violation of Section 207, 209, or 209.5.</p><p>(C)<span class=\"EnSpace\"/>Rape in violation of Section 261.</p><p>(D)<span class=\"EnSpace\"/>Sodomy in violation of Section 286.</p><p>(E)<span class=\"EnSpace\"/>The performance of a lewd or lascivious act upon the person of a child under the age of 14 years in violation of Section 288.</p><p>(F)<span class=\"EnSpace\"/>Oral copulation in violation of Section\n\t\t\t\t\t\t287 or former Section 288a.</p><p>(G)<span class=\"EnSpace\"/>Burglary in the first or second degree in violation of Section 460.</p><p>(H)<span class=\"EnSpace\"/>Arson in violation of subdivision (b) of Section 451.</p><p>(I)<span class=\"EnSpace\"/>Train wrecking in violation of Section 219.</p><p>(J)<span class=\"EnSpace\"/>Mayhem in violation of Section 203.</p><p>(K)<span class=\"EnSpace\"/>Rape by instrument in violation of Section 289.</p><p>(L)<span class=\"EnSpace\"/>Carjacking, as defined in Section 215.</p><p>(M)<span class=\"EnSpace\"/>To prove the special circumstances of kidnapping in subparagraph (B), or arson in subparagraph (H), if there\n\t\t\t\t\t\tis specific intent to kill, it is only required that there be proof of the elements of those felonies. If so established, those two special circumstances are proven even if the felony of kidnapping or arson is committed primarily or solely for the purpose of facilitating the murder.</p><p>(18)<span class=\"EnSpace\"/>The murder was intentional and involved the infliction of torture.</p><p>(19)<span class=\"EnSpace\"/>The defendant intentionally killed the victim by the administration of poison.</p><p>(20)<span class=\"EnSpace\"/>The victim was a juror in any court of record in the local, state, or federal system in this or any other state, and the murder was intentionally carried out in retaliation for, or to prevent the performance of, the victim’s official duties.</p><p>(21)<span class=\"EnSpace\"/>The murder was intentional and perpetrated by means of discharging a firearm from a motor vehicle, intentionally at another person or persons outside the vehicle with the intent to inflict death. For purposes of this paragraph, “motor vehicle” means any vehicle as defined in Section 415 of the Vehicle Code.</p><p>(22)<span class=\"EnSpace\"/>The defendant intentionally killed the victim while the defendant was an active participant in a criminal street gang, as defined in subdivision (f) of Section 186.22, and the murder was carried out to further the activities of the criminal street gang.</p><p>(b)<span class=\"EnSpace\"/>Unless an intent to kill is specifically required under subdivision (a) for a special circumstance enumerated therein, an actual killer, as to whom the special circumstance has been found to be true\n\t\t\t\t\t\tunder Section 190.4, need not have had any intent to kill at the time of the commission of the offense which is the basis of the special circumstance in order to suffer death or confinement in the state prison for life without the possibility of parole.</p><p>(c)<span class=\"EnSpace\"/>Every person, not the actual killer, who, with the intent to kill, aids, abets, counsels, commands, induces, solicits, requests, or assists any actor in the commission of murder in the first degree shall be punished by death or imprisonment in the state prison for life without the possibility of parole if one or more of the special circumstances enumerated in subdivision (a) has been found to be true under Section 190.4.</p><p>(d)<span class=\"EnSpace\"/>Notwithstanding subdivision (c), every person, not the actual killer, who, with reckless indifference to human life\n\t\t\t\t\t\tand as a major participant, aids, abets, counsels, commands, induces, solicits, requests, or assists in the commission of a felony enumerated in paragraph (17) of subdivision (a) which results in the death of some person or persons, and who is found guilty of murder in the first degree therefor, shall be punished by death or imprisonment in the state prison for life without the possibility of parole if a special circumstance enumerated in paragraph (17) of subdivision (a) has been found to be true under Section 190.4.</p><p>The penalty shall be determined as provided in this section and Sections 190.1, 190.3, 190.4, and 190.5.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=190.2."
+      }
+    ],
+    "PEN:190.5": [
+      {
+        "id": "PEN190.5.199012",
+        "lawCode": "PEN",
+        "section": "190.5.",
+        "opStatutes": "1990",
+        "opChapter": null,
+        "opSection": "12",
+        "effectiveDate": null,
+        "versionId": "id_65f5571a-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended June 5, 1990, by initiative Proposition 115, Sec. 12.",
+        "contentMember": "LAW_SECTION_TBL_93693.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93693,
+        "tableRowSha256": "edba7888396be71aeb76110b1f88fc09f9753cf269d230c9cd0b0c7bd05b6f24",
+        "contentSha256": "e856cdfe69b75c11cf58ff6a77350dd5aaaa542cf4ed309dc64738f4862f4292",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Notwithstanding any other provision of law, the death penalty shall not be imposed upon any person who is under the age of 18 at the time of the commission of the crime.  The burden of proof as to the age of such person shall be upon the defendant.</p><p>(b)<span class=\"EnSpace\"/>The penalty for a defendant found guilty of murder in the first degree, in any case in which one or more special circumstances enumerated in Section 190.2 or 190.25 has been found to be true under Section 190.4, who was 16 years of age or older and under the age of 18 years at the time of the commission of the crime, shall be confinement in the state prison for life without the possibility of parole or, at the discretion of the court, 25 years to life.</p><p>(c)<span class=\"EnSpace\"/>The trier of fact shall determine the existence of any special circumstance pursuant to the procedure set forth in Section 190.4.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=190.5."
+      }
+    ],
+    "PEN:193": [
+      {
+        "id": "PEN193.201115282",
+        "lawCode": "PEN",
+        "section": "193.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "282",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 282.   (AB 109)   Effective April 4, 2011.   Operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.",
+        "contentMember": "LAW_SECTION_TBL_93773.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93773,
+        "tableRowSha256": "a0c785cdb97e60b41ac3ac68e4bf630d7d7a48f3b2684bdce52d4e5c958db496",
+        "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Voluntary manslaughter is punishable by imprisonment in the state prison for 3, 6, or 11 years.</p><p>(b)<span class=\"EnSpace\"/>Involuntary manslaughter is punishable by imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years.</p><p>(c)<span class=\"EnSpace\"/>Vehicular manslaughter is punishable as follows:</p><p>(1)<span class=\"EnSpace\"/>A violation of paragraph (1) of subdivision (c) of Section 192 is punishable either by imprisonment in the county jail for not more than one year or by imprisonment in the state prison for two, four, or six years.</p><p>(2)<span class=\"EnSpace\"/>A violation of paragraph (2) of subdivision (c) of Section 192 is punishable by imprisonment in the county jail for not more than one year.</p><p>(3)<span class=\"EnSpace\"/>A violation of paragraph (3) of subdivision (c) of Section 192 is punishable by imprisonment in the state prison for 4, 6, or 10 years.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=193."
+      }
+    ],
+    "PEN:212": [
+      {
+        "id": "PEN212.1963372",
+        "lawCode": "PEN",
+        "section": "212.",
+        "opStatutes": "1963",
+        "opChapter": "372",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_660c3ac2-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "4.",
+        "article": null,
+        "history": "Amended by Stats. 1963, Ch. 372.",
+        "contentMember": "LAW_SECTION_TBL_93934.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93934,
+        "tableRowSha256": "8aa329faed504aa112ccb158bba963cf8a83e4f7d99498eb09c309d25f3ecbe8",
+        "contentSha256": "4366d0e9deae26e6d37894e1a62ef97a1e0c10d4156d1e43bf6c7ba69328c679",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>The fear mentioned in Section 211 may be either:</p><p>1.<span class=\"EnSpace\"/>The fear of an unlawful injury to the person or property of the person robbed, or of any relative of his or member of his family; or,</p><p>2.<span class=\"EnSpace\"/>The fear of an immediate and unlawful injury to the person or property of anyone in the company of the person robbed at the time of the robbery.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=212."
+      }
+    ],
+    "PEN:213": [
+      {
+        "id": "PEN213.19947891",
+        "lawCode": "PEN",
+        "section": "213.",
+        "opStatutes": "1994",
+        "opChapter": "789",
+        "opSection": "1",
+        "effectiveDate": "1995-01-01 00:00:00",
+        "versionId": "id_660c3ac6-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "4.",
+        "article": null,
+        "history": "Amended by Stats. 1994, Ch. 789, Sec. 1.   Effective January 1, 1995.",
+        "contentMember": "LAW_SECTION_TBL_93971.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93971,
+        "tableRowSha256": "0a777543ec3712276f7c9073cb965e8ebd05b94fe68ca677f6dcb08cae078a3d",
+        "contentSha256": "ba4fca68c53c0225f3137a440af7be9af771a68f84baf65cbf1798499b1cacf7",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Robbery is punishable as follows:</p><p>(1)<span class=\"EnSpace\"/>Robbery of the first degree  is punishable as follows:</p><p>(A)<span class=\"EnSpace\"/>If the defendant, voluntarily acting in concert with two or more other persons, commits the robbery within an inhabited dwelling house, a vessel as defined in Section 21 of the Harbors and Navigation Code, which is inhabited and designed for habitation, an inhabited floating home as defined in subdivision (d) of Section 18075.55 of the Health and Safety Code, a trailer coach as defined in the Vehicle Code, which is inhabited, or the inhabited portion of any other building, by imprisonment in the state prison for three, six, or nine years.</p><p>(B)<span class=\"EnSpace\"/>In all cases other than that specified in subparagraph (A), by imprisonment in the state prison for three, four, or six years.</p><p>(2)<span class=\"EnSpace\"/>Robbery of the second degree is punishable by imprisonment in the state prison for two, three, or five years.</p><p>(b)<span class=\"EnSpace\"/>Notwithstanding Section 664, attempted robbery in violation of paragraph (2) of subdivision (a) is punishable by imprisonment in the state prison.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=213."
+      }
+    ],
+    "PEN:21a": [
+      {
+        "id": "PEN21a.19865191",
+        "lawCode": "PEN",
+        "section": "21a.",
+        "opStatutes": "1986",
+        "opChapter": "519",
+        "opSection": "1",
+        "effectiveDate": null,
+        "versionId": "id_6505790b-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": null,
+        "part": null,
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 1986, Ch. 519, Sec. 1.",
+        "contentMember": "LAW_SECTION_TBL_92098.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 92098,
+        "tableRowSha256": "936faa76ce5998f977aad1597283b962ff9c281c0ea3f17cd7d8a0e65e698db4",
+        "contentSha256": "51011f96ecb3b1e6507d7a6ef101565727f54df351ff975cc7dc1c623d3f85d8",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>An attempt to commit a crime consists of two elements: a specific intent to commit the crime, and a direct but ineffectual act done toward its commission.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=21a."
+      }
+    ],
+    "PEN:261.6": [
+      {
+        "id": "PEN261.6.202162618",
+        "lawCode": "PEN",
+        "section": "261.6.",
+        "opStatutes": "2021",
+        "opChapter": "626",
+        "opSection": "18",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+        "division": null,
+        "title": "9.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2021, Ch. 626, Sec. 18.   (AB 1171)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_94007.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 94007,
+        "tableRowSha256": "6da357d9676b095e54dabef27b7ebc8b5a74550fa32ac78b8e1a19d986a70d60",
+        "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>In prosecutions under Section 261, 286, 287, or 289, or former Section 262 or 288a, in which consent is at issue, “consent” means positive cooperation in act or attitude pursuant to an exercise of free will. The person must act freely and voluntarily and have knowledge of the nature of the act or transaction involved.</p><p> (b)<span class=\"EnSpace\"/>A current or previous dating or marital relationship is not sufficient to constitute consent if consent is at issue in a prosecution under Section 261, 286, 287, or 289, or former Section 262 or 288a.</p><p>(c)<span class=\"EnSpace\"/>This section shall not affect the admissibility of evidence or the burden of proof on the issue of consent.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261.6."
+      }
+    ],
+    "PEN:264": [
+      {
+        "id": "PEN264.202162621",
+        "lawCode": "PEN",
+        "section": "264.",
+        "opStatutes": "2021",
+        "opChapter": "626",
+        "opSection": "21",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+        "division": null,
+        "title": "9.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2021, Ch. 626, Sec. 21.   (AB 1171)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_94046.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 94046,
+        "tableRowSha256": "c78e5e9efd4c4d4e59a44ad17c9271d21e441e2a4c29091b44c0b43ea117bc02",
+        "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (c), rape, as defined in Section 261 or former Section 262, is punishable by imprisonment in the state prison for three, six, or eight years.</p><p>(b)<span class=\"EnSpace\"/>In addition to any punishment imposed under this section the judge may assess a fine not to exceed seventy dollars ($70) against a person who violates Section 261 or former Section 262 with the proceeds of this fine to be used in accordance with Section 1463.23. The court shall, however, take into consideration the defendant’s ability to pay, and no defendant shall be denied probation because of the defendant’s inability to pay the fine permitted under this subdivision.</p><p>(c)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>A person who commits\n\t\t\t\t  rape in violation of paragraph (2) of subdivision (a) of Section 261 upon a child who is under 14 years of age shall be punished by imprisonment in the state prison for 9, 11, or 13 years.</p><p>(2)<span class=\"EnSpace\"/>A person who commits rape in violation of paragraph (2) of subdivision (a) of Section 261 upon a minor who is 14 years of age or older shall be punished by imprisonment in the state prison for 7, 9, or 11 years.</p><p>(3)<span class=\"EnSpace\"/>This subdivision does not preclude prosecution under Section 269, Section 288.7, or any other law.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=264."
+      }
+    ],
+    "PEN:269": [
+      {
+        "id": "PEN269.201842347",
+        "lawCode": "PEN",
+        "section": "269.",
+        "opStatutes": "2018",
+        "opChapter": "423",
+        "opSection": "47",
+        "effectiveDate": "2019-01-01 00:00:00",
+        "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+        "division": null,
+        "title": "9.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2018, Ch. 423, Sec. 47.   (SB 1494)   Effective January 1, 2019.   Note: This section was amended November 7, 2006, by initiative Proposition 83.",
+        "contentMember": "LAW_SECTION_TBL_93779.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 93779,
+        "tableRowSha256": "68b5bf0b2864c620b2420112000f902eca58cfa77e01d04fee8aac6823101320",
+        "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who commits any of the following acts upon a child who is under 14 years of age and seven or more years younger than the person is guilty of aggravated sexual assault of a child:</p><p>(1)<span class=\"EnSpace\"/>Rape, in violation of paragraph (2) or (6) of subdivision (a) of Section 261.</p><p>(2)<span class=\"EnSpace\"/>Rape or sexual penetration, in concert, in violation of Section 264.1.</p><p>(3)<span class=\"EnSpace\"/>Sodomy, in violation of paragraph (2) or (3) of subdivision (c), or subdivision (d), of Section 286.</p><p>(4)<span class=\"EnSpace\"/>Oral\n\t\t\t\t\t\tcopulation, in violation of paragraph (2) or (3) of subdivision (c), or subdivision (d), of Section 287 or former Section 288a.</p><p>(5)<span class=\"EnSpace\"/>Sexual penetration, in violation of subdivision (a) of Section 289.</p><p>(b)<span class=\"EnSpace\"/>Any person who violates this section is guilty of a felony and shall be punished by imprisonment in the state prison for 15 years to life.</p><p>(c)<span class=\"EnSpace\"/>The court shall impose a consecutive sentence for each offense that results in a conviction under this section if the crimes involve separate victims or involve the same victim on separate occasions as\n\t\t\t\t\t\tdefined in subdivision (d) of Section 667.6.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=269."
+      }
+    ],
+    "PEN:288.7": [
+      {
+        "id": "PEN288.7.20063379",
+        "lawCode": "PEN",
+        "section": "288.7.",
+        "opStatutes": "2006",
+        "opChapter": "337",
+        "opSection": "9",
+        "effectiveDate": "2006-09-20 00:00:00",
+        "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+        "division": null,
+        "title": "9.",
+        "part": "1.",
+        "chapter": "5.",
+        "article": null,
+        "history": "Added by Stats. 2006, Ch. 337, Sec. 9.   Effective September 20, 2006.",
+        "contentMember": "LAW_SECTION_TBL_94687.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 94687,
+        "tableRowSha256": "78f991eb9321e419dac4e82d370d7ad3637e595dd2d4792e6963056f8ed8b161",
+        "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person 18 years of age or older who engages in sexual intercourse or sodomy with a child who is 10 years of age or younger is guilty of a felony and shall be punished by imprisonment in the state prison for a term of 25 years to life.</p><p>(b)<span class=\"EnSpace\"/>Any person 18 years of age or older who engages in oral copulation or sexual penetration, as defined in Section 289, with a child who is 10 years of age or younger is guilty of a felony and shall be punished by imprisonment in the state prison for a term of 15 years to life.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=288.7."
+      }
+    ],
+    "PEN:667.6": [
+      {
+        "id": "PEN667.6.202162630",
+        "lawCode": "PEN",
+        "section": "667.6.",
+        "opStatutes": "2021",
+        "opChapter": "626",
+        "opSection": "30",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+        "division": null,
+        "title": "16.",
+        "part": "1.",
+        "chapter": null,
+        "article": null,
+        "history": "Amended by Stats. 2021, Ch. 626, Sec. 30.   (AB 1171)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_89792.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:17",
+        "tableRow": 89792,
+        "tableRowSha256": "34d9009847a58679b0031d60ef74f0c00bcfbcd50721cb2bff3d752c07fe7fd6",
+        "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (e) and who has been convicted previously of any of those offenses shall receive a five-year enhancement for each of those prior convictions.</p><p>(b)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (e) and who has served two or more prior prison terms as defined in Section 667.5 for any of those offenses shall receive a 10-year enhancement for each of those prior terms.</p><p>(c)<span class=\"EnSpace\"/>In lieu of the term provided in Section 1170.1, a full, separate, and consecutive term may be imposed for each violation of an offense specified in subdivision (e) if the crimes involve the same victim on the same occasion. A term may be imposed\n\t\t\t\t  consecutively pursuant to this subdivision if a person is convicted of at least one offense specified in subdivision (e). If the term is imposed consecutively pursuant to this subdivision, it shall be served consecutively to any other term of imprisonment, and shall commence from the time the person otherwise would have been released from imprisonment. The term shall not be included in any determination pursuant to Section 1170.1. Any other term imposed subsequent to that term shall not be merged therein but shall commence at the time the person otherwise would have been released from prison.</p><p>(d)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/> A full, separate, and consecutive term shall be imposed for each violation of an offense specified in subdivision (e) if the crimes involve separate victims or involve the same victim on separate occasions.</p><p> (2)<span class=\"EnSpace\"/> In determining whether crimes against a single\n\t\t\t\t  victim were committed on separate occasions under this subdivision, the court shall consider whether, between the commission of one sex crime and another, the defendant had a reasonable opportunity to reflect upon the defendant’s actions and nevertheless resumed sexually assaultive behavior. Neither the duration of time between crimes, nor whether or not the defendant lost or abandoned the opportunity to attack, shall be, in and of itself, determinative on the issue of whether the crimes in question occurred on separate occasions.</p><p> (3)<span class=\"EnSpace\"/> The term shall be served consecutively to any other term of imprisonment and shall commence from the time the person otherwise would have been released from imprisonment. The term shall not be included in any determination pursuant to Section 1170.1. Any other term imposed subsequent to that term shall not be merged therein but shall commence at the time the person otherwise would have been released from\n\t\t\t\t  prison.</p><p>(e)<span class=\"EnSpace\"/>This section shall apply to the following offenses:</p><p>(1)<span class=\"EnSpace\"/>Rape, in violation of paragraph (2), (3), (6), or (7) of subdivision (a) of Section 261.</p><p>(2)<span class=\"EnSpace\"/>Rape, in violation of paragraph (1), (4), or (5) of subdivision (a) of former Section 262.</p><p>(3)<span class=\"EnSpace\"/>Rape or sexual penetration, in concert, in violation of Section 264.1.</p><p>(4)<span class=\"EnSpace\"/>Sodomy, in violation of paragraph (2) or (3) of subdivision (c), or subdivision (d) or (k), of Section 286.</p><p>(5)<span class=\"EnSpace\"/>Lewd or lascivious act, in violation of subdivision (b) of Section 288.</p><p>(6)<span class=\"EnSpace\"/>Continuous sexual abuse of a child, in violation\n\t\t\t\t  of Section 288.5.</p><p>(7)<span class=\"EnSpace\"/>Oral copulation, in violation of paragraph (2) or (3) of subdivision (c), or subdivision (d) or (k), of Section 287 or of former Section 288a.</p><p>(8)<span class=\"EnSpace\"/>Sexual penetration, in violation of subdivision (a) or (g) of Section 289.</p><p>(9)<span class=\"EnSpace\"/>As a present offense under subdivision (c) or (d), assault with intent to commit a specified sexual offense, in violation of Section 220.</p><p>(10)<span class=\"EnSpace\"/>As a prior conviction under subdivision (a) or (b), an offense committed in another jurisdiction that includes all of the elements of an offense specified in this subdivision.</p><p>(f)<span class=\"EnSpace\"/>In addition to any enhancement imposed pursuant to subdivision (a) or (b), the court may also impose a fine not to exceed\n\t\t\t\t  twenty thousand dollars ($20,000) for anyone sentenced under those provisions. The fine imposed and collected pursuant to this subdivision shall be deposited in the Victim-Witness Assistance Fund to be available for appropriation to fund child sexual exploitation and child sexual abuse victim counseling centers and prevention programs established pursuant to Section 13837. If the court orders a fine to be imposed pursuant to this subdivision, the actual administrative cost of collecting that fine, not to exceed 2 percent of the total amount paid, may be paid into the general fund of the county treasury for the use and benefit of the county.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.6."
+      }
+    ],
+    "PEN:667.61": [
+      {
+        "id": "PEN667.61.202162631",
+        "lawCode": "PEN",
+        "section": "667.61.",
+        "opStatutes": "2021",
+        "opChapter": "626",
+        "opSection": "31",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+        "division": null,
+        "title": "16.",
+        "part": "1.",
+        "chapter": null,
+        "article": null,
+        "history": "Amended by Stats. 2021, Ch. 626, Sec. 31.   (AB 1171)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_89793.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:17",
+        "tableRow": 89793,
+        "tableRowSha256": "a308b2a89471c78e0b9ccb3e2677d35d660228f5a252347853bec2caea8d0656",
+        "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (j), (l), or (m), a person who is convicted of an offense specified in subdivision (c) under one or more of the circumstances specified in subdivision (d) or under two or more of the circumstances specified in subdivision (e) shall be punished by imprisonment in the state prison for 25 years to life.</p><p>(b)<span class=\"EnSpace\"/>Except as provided in subdivision (a), (j), (l), or (m), a person who is convicted of an offense specified in subdivision (c) under one of the circumstances specified in subdivision (e) shall be punished by imprisonment in the state prison for 15 years to life.</p><p>(c)<span class=\"EnSpace\"/>This section shall apply to any of the following offenses:</p><p>(1)<span class=\"EnSpace\"/>Rape, in violation of paragraph (2) or (6) of subdivision (a) of Section 261.</p><p>(2)<span class=\"EnSpace\"/>Rape, in violation of paragraph (1) or (4) of subdivision (a) of former Section 262.</p><p>(3)<span class=\"EnSpace\"/>Rape or sexual penetration, in concert, in violation of Section 264.1.</p><p>(4)<span class=\"EnSpace\"/>Lewd or lascivious act, in violation of subdivision (b) of Section 288.</p><p>(5)<span class=\"EnSpace\"/>Sexual penetration, in violation of subdivision (a) of Section 289.</p><p>(6)<span class=\"EnSpace\"/>Sodomy, in violation of paragraph (2) or (3) of subdivision (c), or subdivision (d), of Section 286.</p><p>(7)<span class=\"EnSpace\"/>Oral copulation, in violation of paragraph (2) or (3) of subdivision\n\t\t\t\t  (c), or subdivision (d), of Section 287 or former Section 288a.</p><p>(8)<span class=\"EnSpace\"/>Lewd or lascivious act, in violation of subdivision (a) of Section 288.</p><p>(9)<span class=\"EnSpace\"/>Continuous sexual abuse of a child, in violation of Section 288.5.</p><p>(d)<span class=\"EnSpace\"/>The following circumstances shall apply to the offenses specified in subdivision (c):</p><p>(1)<span class=\"EnSpace\"/>The defendant has been previously convicted of an offense specified in subdivision (c), including an offense committed in another jurisdiction that includes all of the elements of an offense specified in subdivision (c).</p><p>(2)<span class=\"EnSpace\"/>The defendant kidnapped the victim of the present offense and the movement of the victim substantially increased the risk of harm to the victim over and above that\n\t\t\t\t  level of risk necessarily inherent in the underlying offense in subdivision (c).</p><p>(3)<span class=\"EnSpace\"/>The defendant inflicted aggravated mayhem or torture on the victim or another person in the commission of the present offense in violation of Section 205 or 206.</p><p>(4)<span class=\"EnSpace\"/>The defendant committed the present offense during the commission of a burglary of the first degree, as defined in subdivision (a) of Section 460, with intent to commit an offense specified in subdivision (c).</p><p>(5)<span class=\"EnSpace\"/>The defendant committed the present offense in violation of Section 264.1, subdivision (d) of Section 286, or subdivision (d) of Section 287 or former Section 288a, and, in the commission of that offense, any person committed any act described in paragraph (2), (3), or (4) of this subdivision.</p><p>(6)<span class=\"EnSpace\"/>The defendant personally inflicted great bodily injury on the victim or another person in the commission of the present offense in violation of Section 12022.53, 12022.7, or 12022.8.</p><p>(7)<span class=\"EnSpace\"/>The defendant personally inflicted bodily harm on the victim who was under 14 years of age.</p><p>(e)<span class=\"EnSpace\"/>The following circumstances shall apply to the offenses specified in subdivision (c):</p><p>(1)<span class=\"EnSpace\"/>Except as provided in paragraph (2) of subdivision (d), the defendant kidnapped the victim of the present offense in violation of Section 207, 209, or 209.5.</p><p>(2)<span class=\"EnSpace\"/>Except as provided in paragraph (4) of subdivision (d), the defendant committed the present offense during the commission of a burglary in violation of Section 459.</p><p>(3)<span class=\"EnSpace\"/>The defendant personally used a dangerous or deadly weapon or a firearm in the commission of the present offense in violation of Section 12022, 12022.3, 12022.5, or 12022.53.</p><p>(4)<span class=\"EnSpace\"/>The defendant has been convicted in the present case or cases of committing an offense specified in subdivision (c) against more than one victim.</p><p>(5)<span class=\"EnSpace\"/>The defendant engaged in the tying or binding of the victim or another person in the commission of the present offense.</p><p>(6)<span class=\"EnSpace\"/>The defendant administered a controlled substance to the victim in the commission of the present offense in violation of Section 12022.75.</p><p>(7)<span class=\"EnSpace\"/>The defendant committed the present offense in violation of Section 264.1, subdivision (d) of Section\n\t\t\t\t  286, or subdivision (d) of Section 287 or former Section 288a, and, in the commission of that offense, any person committed an act described in paragraph (1), (2), (3), (5), or (6) of this subdivision or paragraph (6) of subdivision (d).</p><p>(f)<span class=\"EnSpace\"/>If only the minimum number of circumstances specified in subdivision (d) or (e) that are required for the punishment provided in subdivision (a), (b), (j), (l), or (m) to apply have been pled and proved, that circumstance or those circumstances shall be used as the basis for imposing the term provided in subdivision (a), (b), (j), (l), or (m) whichever is greater, rather than being used to impose the punishment authorized under any other law, unless another law provides for a greater penalty or the punishment under another law can be imposed in addition to the punishment provided by this section. However, if any additional circumstance or circumstances specified in subdivision (d) or (e) have been pled and\n\t\t\t\t  proved, the minimum number of circumstances shall be used as the basis for imposing the term provided in subdivision (a), (j), or (l) and any other additional circumstance or circumstances shall be used to impose any punishment or enhancement authorized under any other law.</p><p>(g)<span class=\"EnSpace\"/>Notwithstanding Section 1385 or any other law, the court shall not strike any allegation, admission, or finding of any of the circumstances specified in subdivision (d) or (e) for any person who is subject to punishment under this section.</p><p>(h)<span class=\"EnSpace\"/>Notwithstanding any other law, probation shall not be granted to, nor shall the execution or imposition of sentence be suspended for, a person who is subject to punishment under this section.</p><p>(i)<span class=\"EnSpace\"/>For any offense specified in paragraphs (1) to (7), inclusive, of subdivision (c), or in paragraphs (1) to\n\t\t\t\t  (6), inclusive, of subdivision (n), the court shall impose a consecutive sentence for each offense that results in a conviction under this section if the crimes involve separate victims or involve the same victim on separate occasions as defined in subdivision (d) of Section 667.6.</p><p>(j)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (c), with the exception of a violation of subdivision (a) of Section 288, upon a victim who is a child under 14 years of age under one or more of the circumstances specified in subdivision (d) or under two or more of the circumstances specified in subdivision (e), shall be punished by imprisonment in the state prison for life without the possibility of parole. Where the person was under 18 years of age at the time of the offense, the person shall be punished by imprisonment in the state prison for 25 years to life.</p><p>(2)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (c) under one of the circumstances specified in subdivision (e), upon a victim who is a child under 14 years of age, shall be punished by imprisonment in the state prison for 25 years to life.</p><p>(k)<span class=\"EnSpace\"/>As used in this section, “bodily harm” means any substantial physical injury resulting from the use of force that is more than the force necessary to commit an offense specified in subdivision (c).</p><p>(<i>l</i>)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (n) under one or more of the circumstances specified in subdivision (d) or under two or more of the circumstances specified in subdivision (e), upon a victim who is a minor 14 years of age or older shall be punished by imprisonment in the state prison for life without the possibility of parole. If the person who was convicted was under 18\n\t\t\t\t  years of age at the time of the offense, the person shall be punished by imprisonment in the state prison for 25 years to life.</p><p>(m)<span class=\"EnSpace\"/>A person who is convicted of an offense specified in subdivision (n) under one of the circumstances specified in subdivision (e) against a minor 14 years of age or older shall be punished by imprisonment in the state prison for 25 years to life.</p><p>(n)<span class=\"EnSpace\"/>Subdivisions (l) and (m) shall apply to any of the following offenses:</p><p>(1)<span class=\"EnSpace\"/>Rape, in violation of paragraph (2) of subdivision (a) of Section 261.</p><p>(2)<span class=\"EnSpace\"/>Rape, in violation of paragraph (1) of subdivision (a) of former Section 262.</p><p>(3)<span class=\"EnSpace\"/>Rape or sexual penetration, in concert, in violation of Section 264.1.</p><p>(4)<span class=\"EnSpace\"/>Sexual penetration, in violation of paragraph (1) of subdivision (a) of Section 289.</p><p>(5)<span class=\"EnSpace\"/>Sodomy, in violation of paragraph (2) of subdivision (c) of Section 286, or in violation of subdivision (d) of Section 286.</p><p>(6)<span class=\"EnSpace\"/>Oral copulation, in violation of paragraph (2) of subdivision (c) of Section 287 or former Section 288a, or in violation of subdivision (d) of Section 287 or former Section 288a.</p><p>(o)<span class=\"EnSpace\"/>The penalties provided in this section shall apply only if the existence of any circumstance specified in subdivision (d) or (e) is alleged in the accusatory pleading pursuant to this section, and is either admitted by the defendant in open court or found to be true by the trier of fact.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.61."
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ca-rape-261-a1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "c6eeae412d9301705ec42cde2c31bab10594bb93c7af6cb7797a91cf628f12cb",
+      "correctionSha256": "37e46285b507269a0bf448fbee0b5e51b3cc2ef12bf34b7ed6c154b538bb9020",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a2",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "56c2784a4d89806e745945da884c7134664a80610fb45f76dadf09d3170c0274",
+      "correctionSha256": "2516494c96260fb243fc29715f46c248dbc8ab26d32a56d42a0ca50d1dd5c57e",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a3",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "a67a48721ea9d596ce1f6b8446c68450c840b9b97bec1c71d6d66e5071f9857f",
+      "correctionSha256": "cc9c0c21d607938f4f9a4607d88ab44db3d10184820c845a1816abaae7757ee2",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a4",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "ce9ba2def39cb4a8583cfebf6c9ddae37ba5d646703a694e39dbae40cd4d88cf",
+      "correctionSha256": "8ec7da746d1c5455ce1c357f62d87d0a151a4a709aebfe9534a8260a627fa285",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a5",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "3aaea959def2834b577179ffb25e88cc3447c0e6083cf3612b750d1b4ffdf90c",
+      "correctionSha256": "4e9389f1541e196c39f8c75ae3a13f47137c547895fa927874f25ee5663f3071",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a6",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "f0b9c666537ee003328616db155498781758e3c56c80482d9780e41bc7237f35",
+      "correctionSha256": "f6161c8323bbb736c4d635effbb0cfabf0990a2846f678fc1f2d9bd7ff0f3e8f",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-rape-261-a7",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "6ba423b6b93421a275dac03cc96025ce7bc6d534b18dbb6d5f6d10a6e4024815",
+      "correctionSha256": "dbfe6c881d223d92efe97ec053ef03b077418fd155b26fc99eaf33c929af6eb6",
+      "sources": [
+        {
+          "key": "PEN:261",
+          "versions": [
+            {
+              "versionId": "id_7600f52e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "6a20b294dfd80c00152ae2489ece55aea88bcb79da3af6a321d57409018f7afb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:264",
+          "versions": [
+            {
+              "versionId": "id_d672be01-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "ed12b35d9ad2fa6ca0193608734b655190c6f56cefa23378c146ef7fd5a23deb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-murder-in-the-first-degree",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "c5333028d7c507f7798aadb8c76b7b338fa3743dad673adc15d8a29c0b990fdc",
+      "correctionSha256": "88141fe70b01c0d7435227bcf87ff5d06e668c2a0584d46ae07cdebd6d74cb82",
+      "sources": [
+        {
+          "key": "PEN:187",
+          "versions": [
+            {
+              "versionId": "id_ce651269-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "05e46d7b858036e7a44a4551be5cfaeb2865f276370955253299b3bb103549e1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:188",
+          "versions": [
+            {
+              "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+            }
+          ]
+        },
+        {
+          "key": "PEN:189",
+          "versions": [
+            {
+              "versionId": "id_6b542af5-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "dd7f02da5ad3d26bab8f758f1acaf045d7cd42f2963b5a58daf9391a1cfa2e79"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190",
+          "versions": [
+            {
+              "versionId": "id_139058fc-5eed-11dd-a1ac-b5b3460007dd",
+              "contentSha256": "d348e281b41218d01a177437fa29ede8af480df7482acdde25364b75d19384c4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190.2",
+          "versions": [
+            {
+              "versionId": "id_61f2faea-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "626e8615c79328bc6c11287134cabad90a894daaf42b685e35e84ec63caa3b81"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190.5",
+          "versions": [
+            {
+              "versionId": "id_65f5571a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e856cdfe69b75c11cf58ff6a77350dd5aaaa542cf4ed309dc64738f4862f4292"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-murder-in-the-second-degree",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "bca66ae9714ca45f1a85b9de075f3a14591d7fd396303eca9703ee487eb43061",
+      "correctionSha256": "d83bb82c540948e8e3a3bb17c4a72c9a1e8fe8e8b00b8c470c7468ba13e262af",
+      "sources": [
+        {
+          "key": "PEN:187",
+          "versions": [
+            {
+              "versionId": "id_ce651269-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "05e46d7b858036e7a44a4551be5cfaeb2865f276370955253299b3bb103549e1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:188",
+          "versions": [
+            {
+              "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+            }
+          ]
+        },
+        {
+          "key": "PEN:189",
+          "versions": [
+            {
+              "versionId": "id_6b542af5-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "dd7f02da5ad3d26bab8f758f1acaf045d7cd42f2963b5a58daf9391a1cfa2e79"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190",
+          "versions": [
+            {
+              "versionId": "id_139058fc-5eed-11dd-a1ac-b5b3460007dd",
+              "contentSha256": "d348e281b41218d01a177437fa29ede8af480df7482acdde25364b75d19384c4"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-attempted-murder",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "dce3ea593ba60fd2d13327297e9831ff47f6bcd789c85829ad12a1e47eb84483",
+      "correctionSha256": "743ada82ef73f5e039d74280d8dafed46f10766368a4339ff5c8e135724559e6",
+      "sources": [
+        {
+          "key": "PEN:187",
+          "versions": [
+            {
+              "versionId": "id_ce651269-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "05e46d7b858036e7a44a4551be5cfaeb2865f276370955253299b3bb103549e1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:188",
+          "versions": [
+            {
+              "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+            }
+          ]
+        },
+        {
+          "key": "PEN:189",
+          "versions": [
+            {
+              "versionId": "id_6b542af5-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "dd7f02da5ad3d26bab8f758f1acaf045d7cd42f2963b5a58daf9391a1cfa2e79"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190.2",
+          "versions": [
+            {
+              "versionId": "id_61f2faea-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "626e8615c79328bc6c11287134cabad90a894daaf42b685e35e84ec63caa3b81"
+            }
+          ]
+        },
+        {
+          "key": "PEN:21a",
+          "versions": [
+            {
+              "versionId": "id_6505790b-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "51011f96ecb3b1e6507d7a6ef101565727f54df351ff975cc7dc1c623d3f85d8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:664",
+          "versions": [
+            {
+              "versionId": "id_1484e09b-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "f1755ee8ccaea51afaad649b33c516d652ad60c478fbc12d9a70fb1e6f3c22c8"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-robbery-in-the-first-degree",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "3117d786ba63d545b5ab3f7d7398454dba04fd5027f3526c670a62e056a47d1b",
+      "correctionSha256": "f3b8e0e0950fd2bb2d5d107b1bbae729998d9eac012553a5d9a1015371c8c811",
+      "sources": [
+        {
+          "key": "PEN:211",
+          "versions": [
+            {
+              "versionId": "id_66018c60-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e59f92c3044fa1208efaf24f1a56a45983a2a834045d43f34aa385f0c6f4469f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212",
+          "versions": [
+            {
+              "versionId": "id_660c3ac2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4366d0e9deae26e6d37894e1a62ef97a1e0c10d4156d1e43bf6c7ba69328c679"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212.5",
+          "versions": [
+            {
+              "versionId": "id_660c3ac4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1d3bdeceeafa9a7d186d20227408674841b757d551d63b90904b635dbc282612"
+            }
+          ]
+        },
+        {
+          "key": "PEN:213",
+          "versions": [
+            {
+              "versionId": "id_660c3ac6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "ba4fca68c53c0225f3137a440af7be9af771a68f84baf65cbf1798499b1cacf7"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-robbery-in-the-second-degree",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "c0a0faab26de2503d2ad1d9c83e8b4e244ea812c07715a01db3c890180e8e14f",
+      "correctionSha256": "57d9929606a120093c61084e3810501d9b44da9b190a4148afd96f3029b188f4",
+      "sources": [
+        {
+          "key": "PEN:211",
+          "versions": [
+            {
+              "versionId": "id_66018c60-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e59f92c3044fa1208efaf24f1a56a45983a2a834045d43f34aa385f0c6f4469f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212",
+          "versions": [
+            {
+              "versionId": "id_660c3ac2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4366d0e9deae26e6d37894e1a62ef97a1e0c10d4156d1e43bf6c7ba69328c679"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212.5",
+          "versions": [
+            {
+              "versionId": "id_660c3ac4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1d3bdeceeafa9a7d186d20227408674841b757d551d63b90904b635dbc282612"
+            }
+          ]
+        },
+        {
+          "key": "PEN:213",
+          "versions": [
+            {
+              "versionId": "id_660c3ac6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "ba4fca68c53c0225f3137a440af7be9af771a68f84baf65cbf1798499b1cacf7"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-attempted-robbery",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "387f8ce136589898c7e8c9b1c1677d8c3068969cd03ac77f3a3e39c9219da5aa",
+      "correctionSha256": "6bb4c7461f20e0eeed364dcd9c3cad14d161bbcae460874c9803278921250705",
+      "sources": [
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:211",
+          "versions": [
+            {
+              "versionId": "id_66018c60-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e59f92c3044fa1208efaf24f1a56a45983a2a834045d43f34aa385f0c6f4469f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212",
+          "versions": [
+            {
+              "versionId": "id_660c3ac2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4366d0e9deae26e6d37894e1a62ef97a1e0c10d4156d1e43bf6c7ba69328c679"
+            }
+          ]
+        },
+        {
+          "key": "PEN:212.5",
+          "versions": [
+            {
+              "versionId": "id_660c3ac4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1d3bdeceeafa9a7d186d20227408674841b757d551d63b90904b635dbc282612"
+            }
+          ]
+        },
+        {
+          "key": "PEN:213",
+          "versions": [
+            {
+              "versionId": "id_660c3ac6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "ba4fca68c53c0225f3137a440af7be9af771a68f84baf65cbf1798499b1cacf7"
+            }
+          ]
+        },
+        {
+          "key": "PEN:21a",
+          "versions": [
+            {
+              "versionId": "id_6505790b-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "51011f96ecb3b1e6507d7a6ef101565727f54df351ff975cc7dc1c623d3f85d8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:664",
+          "versions": [
+            {
+              "versionId": "id_1484e09b-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "f1755ee8ccaea51afaad649b33c516d652ad60c478fbc12d9a70fb1e6f3c22c8"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-voluntary-manslaughter",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "9dd54a954b9c2e199ea099a0509618940542f91806bb59435a609ebba0180af3",
+      "correctionSha256": "060f7f6f0c26c583f116296a5d26b68c2d71cf5632ddcdbf440e702f775aff84",
+      "sources": [
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193",
+          "versions": [
+            {
+              "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-involuntary-manslaughter",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "c217eaff5428626372e92290f99dda1e7dcfd15b270a79570a9dae570bb7b75f",
+      "correctionSha256": "ca881d65c23e309337da2431b939ed8404cf5000e42685cd6062ba3d997c0555",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193",
+          "versions": [
+            {
+              "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "9dcf221b45f62dc7926d78d44ed3b74518e8a1873a87198bf518879e8aff0b69",
+      "correctionSha256": "8f4b1ce87ca7a8a03894e6637c0ca2d2275f03ec2db870a9198093ce122a2d52",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193",
+          "versions": [
+            {
+              "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c2",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "f6cada39f3fda006044390b91779767bc0ff0a28c7bcdada5ecf82319c7d2db6",
+      "correctionSha256": "53d7ed739877b0ffa13a0207fb53dced1d01b85970102082acb0ac338c2dafd1",
+      "sources": [
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193",
+          "versions": [
+            {
+              "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c3",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "75fabc63a6bd48cf1c2b023b0e986b28dabbaa1807e1766d3c09b6a25ad93a61",
+      "correctionSha256": "7b20ac84312b07a108739e1facdff10dfdd02e036e4906041410cfabcfd86c16",
+      "sources": [
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193",
+          "versions": [
+            {
+              "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+            }
+          ]
+        },
+        {
+          "key": "PEN:550",
+          "versions": [
+            {
+              "versionId": "id_c7c645fd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "d66f5763c7bc025577fb89b31b0cbf96a3d3166945cd061d991fd25054c0a1a6"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case-law interpretation, charged enhancements, individualized sentencing and eligibility, and professional translation review. This bounded statutory pass does not approve every incorporated legal provision."
+    }
+  ]
+}

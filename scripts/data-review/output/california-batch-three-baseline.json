@@ -1,0 +1,940 @@
+{
+  "schemaVersion": 1,
+  "scope": "historical_pre_correction_catalog_snapshot",
+  "records": [
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a1",
+        "officialTitle": "Rape of a Person Unable to Consent Due to a Disability",
+        "code": "261(a)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse",
+          "The victim was incapable of giving legal consent because of a mental disorder or developmental or physical disability",
+          "The defendant knew or reasonably should have known of the victim's condition"
+        ],
+        "mentalState": "Intentional sexual intercourse with knowledge or constructive knowledge of the victim's incapacity.",
+        "grading": "Felony.",
+        "penalty": "Punishable under Penal Code §§ 261 and 264; the term depends on the charged circumstance.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "c6eeae412d9301705ec42cde2c31bab10594bb93c7af6cb7797a91cf628f12cb"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a2",
+        "officialTitle": "Rape by Force, Violence, Duress, or Threat",
+        "code": "261(a)(2)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(2)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse with another person",
+          "The act was accomplished against the person's will by force, violence, duress, menace, or fear"
+        ],
+        "mentalState": "Intentional sexual intercourse with knowledge of the coercive circumstance.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 264.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "56c2784a4d89806e745945da884c7134664a80610fb45f76dadf09d3170c0274"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a3",
+        "officialTitle": "Rape of a Person Unable to Resist Due to Intoxication",
+        "code": "261(a)(3)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(3)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse",
+          "The victim was prevented from resisting because of intoxication",
+          "The defendant knew or reasonably should have known of the victim's condition"
+        ],
+        "mentalState": "Intentional sexual intercourse with knowledge or constructive knowledge of the victim's intoxication.",
+        "grading": "Felony.",
+        "penalty": "Punishable under Penal Code §§ 261 and 264; the term depends on the charged circumstance.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "a67a48721ea9d596ce1f6b8446c68450c840b9b97bec1c71d6d66e5071f9857f"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a4",
+        "officialTitle": "Rape of a Person Unconscious of the Nature of the Act",
+        "code": "261(a)(4)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(4)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse",
+          "The victim was unconscious of the nature of the act because the victim was unconscious or asleep, or was unaware of the act or its essential characteristics due to fraud"
+        ],
+        "mentalState": "Intentional sexual intercourse under the statutory unconsciousness or fraud circumstance.",
+        "grading": "Felony.",
+        "penalty": "Punishable under Penal Code §§ 261 and 264; the term depends on the charged circumstance.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "ce9ba2def39cb4a8583cfebf6c9ddae37ba5d646703a694e39dbae40cd4d88cf"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a5",
+        "officialTitle": "Rape by Mistaken Identity",
+        "code": "261(a)(5)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(5)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse",
+          "The defendant induced the victim to submit by artifice, pretense, or concealment",
+          "The victim submitted under the belief that the defendant was someone else"
+        ],
+        "mentalState": "Intentional sexual intercourse using the charged artifice, pretense, or concealment.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 264.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "3aaea959def2834b577179ffb25e88cc3447c0e6083cf3612b750d1b4ffdf90c"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a6",
+        "officialTitle": "Rape by Threat of Future Retaliation",
+        "code": "261(a)(6)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(6)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse against the victim's will",
+          "The defendant threatened future retaliation",
+          "There was a reasonable possibility the threat would be carried out"
+        ],
+        "mentalState": "Intentional sexual intercourse under a threat with a reasonable possibility of execution.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 264.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "f0b9c666537ee003328616db155498781758e3c56c80482d9780e41bc7237f35"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-rape-261-a7",
+        "officialTitle": "Rape by Threat of Official Authority",
+        "code": "261(a)(7)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261(a)(7)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse against the victim's will",
+          "The defendant threatened to use the authority of a public official to incarcerate, arrest, or deport the victim",
+          "The victim reasonably believed the defendant was a public official"
+        ],
+        "mentalState": "Intentional sexual intercourse under the charged threat of official authority.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 264.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-rape-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "6ba423b6b93421a275dac03cc96025ce7bc6d534b18dbb6d5f6d10a6e4024815"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-attempted-murder",
+        "officialTitle": "Attempted Murder",
+        "code": "664, 187",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code §§ 664, 187",
+        "classification": "offense",
+        "elements": [
+          "The defendant intended to kill",
+          "The defendant took a direct but ineffective step toward killing another person"
+        ],
+        "mentalState": "Express malice and intent to kill.",
+        "grading": "Felony; degree and punishment depend on the charged theory.",
+        "penalty": "Felony; non-premeditated attempted murder is generally punishable by 5, 7, or 9 years, while willful, deliberate, and premeditated attempted murder is punishable by life with the possibility of parole under Penal Code § 664.",
+        "juryInstruction": {
+          "ref": "CALCRIM 600",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-attempted-murder"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 664",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=664&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 187",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=187&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 600",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "dce3ea593ba60fd2d13327297e9831ff47f6bcd789c85829ad12a1e47eb84483"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-attempted-robbery",
+        "officialTitle": "Attempted Robbery",
+        "code": "664, 211",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code §§ 664, 211",
+        "classification": "offense",
+        "elements": [
+          "The defendant intended to commit robbery",
+          "The defendant took a direct but ineffective step toward committing robbery"
+        ],
+        "mentalState": "Intent to commit robbery.",
+        "grading": "Felony",
+        "penalty": "Felony; punishment is governed by the attempted-offense and robbery provisions in Penal Code §§ 664 and 213 and depends on the robbery degree and charged facts.",
+        "juryInstruction": {
+          "ref": "CALCRIM 460",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-attempted-robbery"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 664",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=664&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 211",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=211&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 460",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "387f8ce136589898c7e8c9b1c1677d8c3068969cd03ac77f3a3e39c9219da5aa"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-murder-in-the-first-degree",
+        "officialTitle": "Murder — First Degree",
+        "code": "187(a), 189",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code §§ 187(a), 189",
+        "classification": "offense",
+        "elements": [
+          "A human being was killed",
+          "The defendant acted with malice aforethought",
+          "The killing falls within a first-degree category in § 189"
+        ],
+        "mentalState": "Malice aforethought; the applicable § 189 theory must be proved.",
+        "grading": "First-degree murder",
+        "penalty": "State-prison terms include 25 years to life or life without parole in circumstances specified by statute; special circumstances can alter punishment.",
+        "juryInstruction": {
+          "ref": "CALCRIM 521",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-murder-in-the-first-degree"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 187",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=187&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 189",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=189&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 521",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "c5333028d7c507f7798aadb8c76b7b338fa3743dad673adc15d8a29c0b990fdc"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-murder-in-the-second-degree",
+        "officialTitle": "Murder — Second Degree",
+        "code": "187(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 187(a)",
+        "classification": "offense",
+        "elements": [
+          "A human being was killed",
+          "The defendant acted with malice aforethought",
+          "The killing was not first-degree murder under § 189"
+        ],
+        "mentalState": "Malice aforethought.",
+        "grading": "Second-degree murder",
+        "penalty": "State-prison term is generally 15 years to life, with statutory variations for specified circumstances.",
+        "juryInstruction": {
+          "ref": "CALCRIM 520",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-murder-in-the-second-degree"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 187",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=187&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 520",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "bca66ae9714ca45f1a85b9de075f3a14591d7fd396303eca9703ee487eb43061"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-robbery-in-the-first-degree",
+        "officialTitle": "First-Degree Robbery",
+        "code": "211, 212.5(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 212.5(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant took personal property from another or their immediate presence",
+          "The taking was accomplished by force or fear",
+          "The defendant intended to permanently deprive the owner"
+        ],
+        "mentalState": "Intent to permanently deprive, plus the charged force-or-fear theory.",
+        "grading": "Felony",
+        "penalty": "State-prison term depends on the degree and applicable subdivision.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1600",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-robbery-in-the-first-degree"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 211",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=211&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 212.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=212.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1600",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "3117d786ba63d545b5ab3f7d7398454dba04fd5027f3526c670a62e056a47d1b"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-robbery-in-the-second-degree",
+        "officialTitle": "Second-Degree Robbery",
+        "code": "211, 212.5(c)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 212.5(c)",
+        "classification": "offense",
+        "elements": [
+          "The defendant took personal property from another or their immediate presence",
+          "The taking was accomplished by force or fear",
+          "The defendant intended to permanently deprive the owner"
+        ],
+        "mentalState": "Intent to permanently deprive, plus the charged force-or-fear theory.",
+        "grading": "Felony",
+        "penalty": "State-prison term depends on the degree and applicable subdivision.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1600",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-robbery-in-the-second-degree"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 211",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=211&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 212.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=212.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1600",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "c0a0faab26de2503d2ad1d9c83e8b4e244ea812c07715a01db3c890180e8e14f"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-involuntary-manslaughter",
+        "officialTitle": "Involuntary Manslaughter",
+        "code": "192(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 192(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed an unlawful killing without malice",
+          "The killing occurred during a qualifying misdemeanor or lawful act performed without due caution",
+          "The act or omission caused the death"
+        ],
+        "mentalState": "Criminal negligence or the mental state specified by the charged theory.",
+        "grading": "Felony.",
+        "penalty": "Punishable under Penal Code § 193(b) by imprisonment pursuant to Penal Code § 1170(h) for two, three, or four years.",
+        "juryInstruction": {
+          "ref": "CALCRIM 580",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-involuntary-manslaughter"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 192",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 580",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "c217eaff5428626372e92290f99dda1e7dcfd15b270a79570a9dae570bb7b75f"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-vehicular-manslaughter-192-c1",
+        "officialTitle": "Vehicular Manslaughter With Gross Negligence",
+        "code": "192(c)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 192(c)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a vehicle",
+          "The defendant committed an unlawful act or a lawful act performed in an unlawful manner while driving",
+          "The act caused the death of another person",
+          "The defendant acted with gross negligence"
+        ],
+        "mentalState": "Gross negligence.",
+        "grading": "Wobbler.",
+        "penalty": "Punishable by county jail up to 1 year or state prison for 2, 4, or 6 years under Penal Code § 193(c)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 592",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-criminally-negligent-homicide"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 192",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 592",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "9dcf221b45f62dc7926d78d44ed3b74518e8a1873a87198bf518879e8aff0b69"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-vehicular-manslaughter-192-c2",
+        "officialTitle": "Vehicular Manslaughter Without Gross Negligence",
+        "code": "192(c)(2)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 192(c)(2)",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a vehicle",
+          "The defendant committed an unlawful act or a lawful act performed in an unlawful manner while driving",
+          "The act caused the death of another person",
+          "The defendant did not act with gross negligence"
+        ],
+        "mentalState": "The charged act occurred without gross negligence.",
+        "grading": "Misdemeanor.",
+        "penalty": "Punishable by county jail up to 1 year under Penal Code § 193(c)(2).",
+        "juryInstruction": {
+          "ref": "CALCRIM 592",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-criminally-negligent-homicide"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 192",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 592",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "f6cada39f3fda006044390b91779767bc0ff0a28c7bcdada5ecf82319c7d2db6"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-vehicular-manslaughter-192-c3",
+        "officialTitle": "Vehicular Manslaughter for Financial Gain",
+        "code": "192(c)(3)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 192(c)(3)",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a vehicle",
+          "The defendant knowingly caused a vehicle collision",
+          "The defendant acted in connection with a violation of Penal Code § 550(a)(3) for financial gain",
+          "The collision proximately caused the death of another person"
+        ],
+        "mentalState": "Knowing collision caused for financial gain.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 4, 6, or 10 years in state prison under Penal Code § 193(c)(3).",
+        "juryInstruction": {
+          "ref": "CALCRIM 592",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-criminally-negligent-homicide"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 192",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 592",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "75fabc63a6bd48cf1c2b023b0e986b28dabbaa1807e1766d3c09b6a25ad93a61"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-voluntary-manslaughter",
+        "officialTitle": "Voluntary Manslaughter",
+        "code": "192(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 192(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant unlawfully killed a human being",
+          "The killing was without malice",
+          "The killing occurred under a circumstance recognized by § 192(a)"
+        ],
+        "mentalState": "Intent to kill or conscious disregard as required by the applicable theory, without malice.",
+        "grading": "Felony",
+        "penalty": "Three, six, or eleven years in state prison, subject to statutory changes and case-specific rules.",
+        "juryInstruction": {
+          "ref": "CALCRIM 570",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-voluntary-manslaughter"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 192",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 570",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "9dd54a954b9c2e199ea099a0509618940542f91806bb59435a609ebba0180af3"
+    }
+  ]
+}

@@ -169,3 +169,66 @@ The 97-test focused suite initially found one old assertion comparing the displa
 After review and merge, pull in Replit, refresh the California source references with `npm run db:seed:california` against the intended database, republish, and check public rollout. No production seed or deployment occurred here. Missing newly required references withhold affected records until refreshed. Complete case-law, record-specific priors/enhancements, sentencing/DMV calculations, and independent legal approval remain beyond the bounded pass.
 
 Offline reproduction: run `node --import tsx scripts/data-review/california-verification/reuse-review.ts`, then `node --import tsx scripts/data-review/california-verification/coverage.ts`. Both use committed evidence and need no archive download or credentials.
+
+## Combined 18-record pass (September 26, 2026)
+
+The next three connected source groups are now corrected together: seven §261
+rape subdivisions; six murder, robbery, and attempt records; and five §192
+manslaughter records. The batch reuses all seven distinct primary sections and
+adds 14 supporting sections from the same hash-verified September 24 archive.
+Its 18 records share 28 primary/dependency sections. No network recrawl was needed;
+current official web pages for §§190, 193, 213 and 264 were also consulted as a
+cross-check. Historical baseline and source-version/hash bindings remain separate
+from the previous two batches.
+
+Material distinctions now reach exact-ID summaries and penalties in English,
+Spanish and Chinese (translations remain drafts):
+
+- §261(a)(2)'s child-victim terms are separated from §264(a)'s ordinary rape term;
+  the disability branch does not presume inability to consent. Additional fines,
+  registration, life-term and consecutive-term provisions are flagged rather than
+  presenting the base term as an absolute maximum.
+- Murder's express/implied malice and felony-murder participation limits are
+  distinguished from attempted murder's intent to kill. Special-circumstance and
+  protected-victim punishments are conditional; statutory capital exposure is
+  not described as an execution-policy conclusion.
+- First-degree robbery's group/inhabited-location term is distinct from its
+  ordinary term. Attempted second-degree robbery uses §213(b) and §18(a), not
+  automatic halving under §664.
+- The three vehicular-manslaughter branches retain their own categories and
+  penalties, including 364-day misdemeanor limits and §192(c)(1)'s felony option.
+  Involuntary manslaughter retains §1170(h)'s custody-location qualifications.
+
+Artifacts: `california-batch-three-baseline.json`,
+`california-batch-three-review.json` and its readable Markdown companion.
+`shared/california-batch-three-corrections.json` supplies the runtime corrections.
+Reproduce the offline validation/reports with:
+
+```sh
+node --import tsx scripts/data-review/california-verification/combined-review.ts
+node --import tsx scripts/data-review/california-verification/coverage.ts
+```
+
+The validator rejects changed source content, missing punishment dependencies,
+duplicate/missing records, ambiguous versions, future-effective versions, catalog
+drift and promotion of this pass to full certification. All 49 corrections retain
+disjoint stable IDs. Tests cover the important legal branch distinctions and
+exact-ID explanations; production-browser checks exercise catalog and rules
+propagation and the misdemeanor/felony selector.
+
+After this batch: **49 of 99 configured selectable records corrected; 50 remain**,
+across 37 shared-source groups. Research evidence totals 125 sections/127 versions.
+There are still 21 withheld canonical labels. None of these counts establishes
+statewide completeness or live deployment parity. The next useful combined queue
+can cover age-based unlawful intercourse (§261.5), intoxication-related vehicular
+manslaughter (§191.5), and the sexual-battery/lewd-act groups (§§243.4, 288), reusing
+this batch's sentencing research. Individual legal review, case law, enhancements,
+incorporated definitions, and professional translation review remain separate;
+there is no new attorney data-entry assignment for this delivery.
+
+Validation: the California-focused tests passed after replacing three superseded
+format/generic-slug assertions with structured category and exact-ID assertions.
+Application typecheck, production build and all eight production-browser checks
+passed. No external AI calls, production credentials, real case submissions,
+production seed or deployment were used. Replit still needs the California seed
+and republish steps after merge.
