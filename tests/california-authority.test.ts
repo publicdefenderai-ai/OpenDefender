@@ -184,12 +184,12 @@ describe("authoritative California charge release", () => {
 
     const withoutGrossNegligence = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-192-c2");
     expect(withoutGrossNegligence?.citation).toBe("Cal. Penal Code § 192(c)(2)");
-    expect(withoutGrossNegligence?.grading).toBe("Misdemeanor.");
-    expect(withoutGrossNegligence?.penalty).toContain("§ 193(c)(2)");
+    expect(withoutGrossNegligence?.categories).toEqual(["misdemeanor"]);
+    expect(withoutGrossNegligence?.penalty).toContain("§193(c)(2)");
 
     const financialGain = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-192-c3");
     expect(financialGain?.citation).toBe("Cal. Penal Code § 192(c)(3)");
-    expect(financialGain?.grading).toBe("Felony.");
+    expect(financialGain?.categories).toEqual(["felony"]);
     expect(financialGain?.elements.join(" ")).toContain("financial gain");
 
     const closeInAge = getCaliforniaCanonicalRecord("ca-unlawful-sexual-intercourse-261-5-b");
@@ -235,8 +235,8 @@ describe("authoritative California charge release", () => {
     const involuntary = CALIFORNIA_CANONICAL_RECORDS.find(
       (record) => record.canonicalId === "ca-involuntary-manslaughter",
     );
-    expect(involuntary?.grading).toBe("Felony.");
-    expect(involuntary?.penalty).toContain("§ 193(b)");
+    expect(involuntary?.categories).toEqual(["felony"]);
+    expect(involuntary?.penalty).toContain("§193(b)");
     const minor = getChargeById("ca-minor-in-possession");
     expect(minor?.category).toBe("misdemeanor");
     expect(minor?.maxPenalty).toContain("$250");
@@ -296,7 +296,8 @@ describe("authoritative California charge release", () => {
       "en",
       "ca-murder-in-the-second-degree",
     );
-    expect(explanation?.slug).toBe("murder-in-the-second-degree");
+    expect(explanation?.canonicalChargeId).toBe("ca-murder-in-the-second-degree");
+    expect(explanation?.plainSummary).toContain("an intent to kill is not required");
   });
 
   it("does not silently accept an untracked legacy ID", () => {
