@@ -1,0 +1,268 @@
+[
+  {
+    "id": "ca-unlawful-sexual-intercourse-261-5-b",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "19",
+      "290.006"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Intercourse with a nonspouse under 18 whose age is no more than three years older or younger than the accused (§261.5(a)–(b)). The close-in-age rule makes this branch a misdemeanor; it is not a blanket exemption from criminal liability.",
+      "es": "Relación sexual con una persona menor de 18 años que no es cónyuge y cuya edad difiere en no más de tres años, mayor o menor, de la persona acusada (§261.5(a)–(b)). La proximidad de edad determina delito menor; no elimina la responsabilidad penal.",
+      "zh": "与非配偶、未满18岁且年龄比被告大或小不超过三岁的人性交（第261.5(a)至(b)条）。年龄接近使该分支属于轻罪，并不是全面免除刑事责任。"
+    },
+    "penalty": {
+      "en": "Misdemeanor under §261.5(b). The default §19 punishment is up to 6 months in county jail, a base fine up to $1,000, or both. Section 261.5(e) separately permits civil penalties for adults and an additional fine up to $70 based on ability to pay. Civil penalties are not jail terms. Registration, including possible court-ordered registration under §290.006, and other consequences need individual review.",
+      "es": "Delito menor conforme al §261.5(b). La pena supletoria del §19 es hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. El §261.5(e) permite por separado sanciones civiles para adultos y una multa adicional de hasta $70 considerando la capacidad de pago. Las sanciones civiles no son penas de cárcel. El registro, incluido el posible registro ordenado judicialmente conforme al §290.006, y otras consecuencias requieren revisión individual.",
+      "zh": "第261.5(b)条规定为轻罪。第19条默认刑罚为县监狱最高6个月、最高1,000美元基本罚金，或两者并处。第261.5(e)条另行允许对成年人施加民事罚款，并依据支付能力处最高70美元附加罚金。民事罚款不是监禁刑。登记，包括第290.006条可能由法院命令的登记，及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-unlawful-sexual-intercourse-261-5-c",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "290.006"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Intercourse with a nonspouse under 18 who is more than three years younger than the accused (§261.5(a), (c)). The more-than-three-year gap differs from the close-in-age misdemeanor and from subdivision (d)’s specific age thresholds.",
+      "es": "Relación sexual con una persona menor de 18 años que no es cónyuge y es más de tres años menor que la persona acusada (§261.5(a), (c)). Ese intervalo difiere del delito menor por edades cercanas y de los umbrales específicos del inciso (d).",
+      "zh": "与非配偶、未满18岁且比被告小超过三岁的人性交（第261.5(a)、(c)条）。超过三岁年龄差不同于年龄接近的轻罪分支及(d)款的特定年龄门槛。"
+    },
+    "penalty": {
+      "en": "Under §261.5(c), misdemeanor jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. The §1170(h) exclusions determine custody location; this does not guarantee county-jail placement. Section 261.5(e) separately permits civil penalties for adults and an additional fine up to $70 based on ability to pay. Civil penalties are not jail terms. Registration, including possible court-ordered registration under §290.006, and other consequences need individual review.",
+      "es": "Según el §261.5(c), hasta 364 días por delito menor (§18.5) o reclusión por delito grave bajo el §1170(h), normalmente 16 meses, 2 o 3 años. Las exclusiones del §1170(h) determinan el lugar de reclusión; no se garantiza cárcel del condado. El §261.5(e) permite por separado sanciones civiles para adultos y una multa adicional de hasta $70 considerando la capacidad de pago. Las sanciones civiles no son penas de cárcel. El registro, incluido el posible registro ordenado judicialmente conforme al §290.006, y otras consecuencias requieren revisión individual.",
+      "zh": "依第261.5(c)条，可按轻罪监禁最高364天（第18.5条），或按第1170(h)条重罪监禁，通常为16个月、2年或3年。第1170(h)条排除规则决定服刑地点，不能保证在县监狱执行。第261.5(e)条另行允许对成年人施加民事罚款，并依据支付能力处最高70美元附加罚金。民事罚款不是监禁刑。登记，包括第290.006条可能由法院命令的登记，及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-unlawful-sexual-intercourse-261-5-d",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "290.006"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Intercourse by a person aged 21 or older with a nonspouse under 16 (§261.5(a), (d)). These exact age thresholds matter; this is not a rule covering every adult/minor age difference.",
+      "es": "Relación sexual de una persona de 21 años o más con otra menor de 16 que no es su cónyuge (§261.5(a), (d)). Importan esos umbrales exactos; no es una regla para cualquier diferencia de edad entre adulto y menor.",
+      "zh": "21岁或以上者与未满16岁的非配偶性交（第261.5(a)、(d)条）。须使用这些准确年龄门槛，并非所有成年人与未成年人的年龄组合都适用。"
+    },
+    "penalty": {
+      "en": "Under §261.5(d), misdemeanor jail up to 364 days (§18.5) or felony imprisonment under §1170(h) for 2, 3, or 4 years. Custody location depends on §1170(h) eligibility. If probation is granted, §261.5(f) bars community service at a school or where children congregate. Section 261.5(e) separately permits civil penalties for adults and an additional fine up to $70 based on ability to pay. Civil penalties are not jail terms. Registration, including possible court-ordered registration under §290.006, and other consequences need individual review.",
+      "es": "Según el §261.5(d), hasta 364 días por delito menor (§18.5) o 2, 3 o 4 años por delito grave bajo el §1170(h). El lugar de reclusión depende de su elegibilidad. Si se concede libertad condicional, el §261.5(f) prohíbe servicio comunitario en escuelas o lugares donde se reúnen niños. El §261.5(e) permite por separado sanciones civiles para adultos y una multa adicional de hasta $70 considerando la capacidad de pago. Las sanciones civiles no son penas de cárcel. El registro, incluido el posible registro ordenado judicialmente conforme al §290.006, y otras consecuencias requieren revisión individual.",
+      "zh": "依第261.5(d)条，可按轻罪监禁最高364天（第18.5条），或按第1170(h)条重罪监禁2年、3年或4年。服刑地点取决于第1170(h)条资格。如获缓刑，第261.5(f)条禁止在学校或儿童聚集地点完成社区服务。第261.5(e)条另行允许对成年人施加民事罚款，并依据支付能力处最高70美元附加罚金。民事罚款不是监禁刑。登记，包括第290.006条可能由法院命令的登记，及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-gross-vehicular-manslaughter-191-5-a",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "188",
+      "192",
+      "192.5"
+    ],
+    "supportingVehicleSections": [
+      "23140",
+      "23152",
+      "23153",
+      "23540",
+      "23542",
+      "23546",
+      "23548",
+      "23550",
+      "23552"
+    ],
+    "summary": {
+      "en": "Unlawful killing without malice while driving in violation of VEH §§23140, 23152, or 23153, with the gross negligence and proximate causation required by PEN §191.5(a). Intoxication and a death alone do not establish all elements; the statute also preserves possible murder prosecution when malice is established.",
+      "es": "Muerte ilícita sin malicia al conducir en infracción de VEH §§23140, 23152 o 23153, con negligencia grave y causalidad próxima conforme a PEN §191.5(a). Intoxicación y muerte por sí solas no acreditan todos los elementos; puede proceder acusación de asesinato si se demuestra malicia.",
+      "zh": "违反车辆法第23140、23152或23153条驾车，在具备刑法第191.5(a)条要求的重大过失及近因关系时，无谋杀恶意地非法致人死亡。酒药影响及死亡本身不足以满足全部要件；证明恶意时仍可能起诉谋杀。"
+    },
+    "penalty": {
+      "en": "Ordinarily 4, 6, or 10 years in state prison (§191.5(c)(1)). Specified prior convictions instead trigger 15 years to life under §191.5(d), only when the required facts are alleged and admitted or found true (§191.5(h)); not every DUI prior qualifies. If probation is granted, the current §191.5(e) requires 3–5 years. Enhancements, license consequences, fines, and restitution require separate review.",
+      "es": "Ordinariamente 4, 6 o 10 años de prisión estatal (§191.5(c)(1)). Ciertos antecedentes activan 15 años a cadena perpetua (§191.5(d)), solo si los hechos requeridos se alegan y admiten o acreditan (§191.5(h)); no cualquier DUI previo sirve. Si se concede libertad condicional, el §191.5(e) vigente exige de 3 a 5 años. Aumentos, licencia, multas y restitución requieren revisión aparte.",
+      "zh": "普通刑期为州监狱4年、6年或10年（第191.5(c)(1)条）。特定前科依第191.5(d)条触发15年至终身，但须依(h)款指控并承认或认定所需事实；并非所有DUI前科均符合条件。如获缓刑，现行(e)款要求3至5年。加重处罚、驾照后果、罚金及赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-vehicular-manslaughter-191-5-b",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "18.5",
+      "17",
+      "1170",
+      "188"
+    ],
+    "supportingVehicleSections": [
+      "23140",
+      "23152",
+      "23153"
+    ],
+    "summary": {
+      "en": "Unlawful killing without malice while driving in violation of VEH §§23140, 23152, or 23153, without gross negligence but with the unlawful act or manner and proximate causation required by PEN §191.5(b). Distinguish the gross-negligence branch rather than using the DUI label alone.",
+      "es": "Muerte ilícita sin malicia al conducir en infracción de VEH §§23140, 23152 o 23153, sin negligencia grave pero con el acto o modo ilícito y causalidad próxima requeridos por PEN §191.5(b). Debe distinguirse de la modalidad con negligencia grave; la etiqueta DUI no basta.",
+      "zh": "违反车辆法第23140、23152或23153条驾车，在无重大过失但具备刑法第191.5(b)条要求的违法行为或方式及近因关系时，无谋杀恶意地非法致人死亡。须区别重大过失分支，不能仅凭DUI标签判断。"
+    },
+    "penalty": {
+      "en": "Under §191.5(c)(2), misdemeanor county jail up to 364 days (§18.5), or felony imprisonment under §1170(h) for 16 months, 2 years, or 4 years. The upper felony term is 4 years, not the default 3. Section 191.5(d)’s 15-to-life prior-conviction provision applies to subdivision (a), not this branch. If probation is granted, §191.5(e) requires 3–5 years. Custody eligibility, enhancements, license consequences, fines, and restitution need separate review.",
+      "es": "Según el §191.5(c)(2), hasta 364 días de cárcel del condado por delito menor (§18.5), o 16 meses, 2 o 4 años por delito grave bajo el §1170(h). El máximo de esta escala es 4 años, no los 3 supletorios. La regla de 15 años a perpetua del §191.5(d) corresponde al inciso (a), no a este. Si hay libertad condicional, el §191.5(e) exige de 3 a 5 años. Elegibilidad de reclusión, aumentos, licencia, multas y restitución requieren revisión aparte.",
+      "zh": "依第191.5(c)(2)条，可按轻罪处县监狱最高364天（第18.5条），或依第1170(h)条重罪监禁16个月、2年或4年。此处最高档为4年，不是默认的3年。第191.5(d)条前科导致15年至终身的规则适用于(a)款，不适用于本分支。如获缓刑，(e)款要求3至5年。服刑资格、加重处罚、驾照后果、罚金及赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-sexual-battery-243-4-a",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Touching a legally defined intimate part against the person’s will, for sexual arousal, gratification, or abuse, while that person is unlawfully restrained by the accused or an accomplice (§243.4(a)). Subdivision (f) requires skin contact for this branch; subdivision (e)’s broader through-clothing rule must not be substituted.",
+      "es": "Tocar una parte íntima legalmente definida contra la voluntad, con finalidad de excitación, gratificación o abuso sexual, mientras la persona está ilegalmente restringida por la persona acusada o un cómplice (§243.4(a)). El inciso (f) exige contacto con la piel para esta modalidad; no debe sustituirse por la regla más amplia del inciso (e) sobre contacto a través de la ropa.",
+      "zh": "在被告或共犯非法限制对方人身自由时，为性唤起、满足或性虐待目的，违背其意愿触摸法定私密部位（第243.4(a)条）。本分支依(f)款要求接触对方皮肤，不可套用(e)款更广的隔着受害人衣物接触规则。"
+    },
+    "penalty": {
+      "en": "Under §243.4(a), misdemeanor jail up to 364 days (§18.5) with a fine up to $2,000, or felony state prison for 2, 3, or 4 years with a fine up to $10,000. Section 243.4(k) makes its minor-victim/prior-felony combination felony-only, with the stated prison term and fine. Registration under §290, sentencing factors, enhancements, and other consequences require separate review.",
+      "es": "Según el §243.4(a), hasta 364 días por delito menor (§18.5) con multa de hasta $2,000, o 2, 3 o 4 años de prisión estatal por delito grave con multa de hasta $10,000. El §243.4(k) hace exclusivamente grave la combinación especificada de víctima menor y condena grave previa, con esa pena de prisión y multa. Registro del §290, factores de pena, aumentos y otras consecuencias requieren revisión aparte.",
+      "zh": "依第243.4(a)条，可按轻罪监禁最高364天（第18.5条）并处最高2,000美元罚金，或按重罪处州监狱2年、3年或4年并处最高10,000美元罚金。第243.4(k)条对其规定的未成年受害人与既往重罪定罪组合仅允许重罪，并适用规定监禁及罚金。第290条登记、量刑因素、加重处罚及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-sexual-battery-243-4-e1",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Against-will intimate touching for sexual arousal, gratification, or abuse, including the compelled-touching conduct specified in §243.4(e)(1). Physical contact may be direct or through either person’s clothing (§243.4(e)(2)); unlawful restraint is not an element of this misdemeanor branch.",
+      "es": "Contacto íntimo contra la voluntad con finalidad de excitación, gratificación o abuso sexual, incluida la conducta de contacto obligado del §243.4(e)(1). Puede ser directo o a través de la ropa de cualquiera (§243.4(e)(2)); la restricción ilegal no es elemento de esta modalidad de delito menor.",
+      "zh": "为性唤起、满足或性虐待目的，违背意愿进行私密接触，包括第243.4(e)(1)条规定的强迫接触行为。接触可直接或隔着任一方衣物进行（(e)(2)款）；本轻罪分支不要求非法限制人身自由。"
+    },
+    "penalty": {
+      "en": "Misdemeanor under §243.4(e)(1): up to 6 months in county jail, a fine up to $2,000, or both. If the accused was the victim’s employer, the fine ceiling is $3,000 with the same jail limit. This is not subdivision (a)’s felony/state-prison alternative. Registration under §290 and other case-specific consequences require separate review.",
+      "es": "Delito menor según el §243.4(e)(1): hasta 6 meses de cárcel del condado, multa de hasta $2,000, o ambas. Si la persona acusada era empleadora de la víctima, la multa máxima es $3,000 con el mismo límite de cárcel. No es la alternativa grave de prisión estatal del inciso (a). Registro del §290 y otras consecuencias requieren revisión aparte.",
+      "zh": "第243.4(e)(1)条轻罪：县监狱最高6个月、最高2,000美元罚金，或两者并处。若被告是受害人的雇主，罚金上限为3,000美元，监禁上限不变。这不是(a)款的重罪或州监狱替代处罚。第290条登记及其他个案后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-lewd-act-child-288-a",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "290",
+      "667.61"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "A willful lewd or lascivious act upon or with the body of a child under 14, with the sexual intent required by §288(a). Do not substitute the separate 14-or-15-year-old/ten-year-gap branch, or automatically import subdivision (b)’s force requirement into this record.",
+      "es": "Acto deliberado lascivo sobre o con el cuerpo de un menor de 14 años, con la intención sexual requerida por el §288(a). No debe sustituirse por la modalidad de 14 o 15 años con diferencia de diez años, ni incorporarse automáticamente la fuerza exigida por el inciso (b).",
+      "zh": "对未满14岁儿童的身体故意实施猥亵行为，且具有第288(a)条要求的性意图。不得套用14或15岁且年龄差十年的单独分支，也不得自动将(b)款强力要求加入本条目。"
+    },
+    "penalty": {
+      "en": "Ordinary §288(a) term: 3, 6, or 8 years in state prison. If personal infliction of statutory bodily harm is pleaded and proved, §288(i) instead requires life with the possibility of parole. Section 288(e) permits an additional fine up to $10,000 for this branch. Section 667.61 may supply other life-term exposure for specified allegations; registration under §290, enhancements, and other consequences require separate review.",
+      "es": "Pena ordinaria del §288(a): 3, 6 u 8 años de prisión estatal. Si se alega y prueba lesión corporal personal conforme a la definición legal, el §288(i) exige cadena perpetua con posibilidad de libertad condicional. El §288(e) permite multa adicional de hasta $10,000 para esta modalidad. El §667.61 puede imponer otras penas perpetuas por ciertas alegaciones; registro del §290, aumentos y otras consecuencias requieren revisión aparte.",
+      "zh": "第288(a)条普通刑期为州监狱3年、6年或8年。如指控并证明被告亲自造成法定身体伤害，第288(i)条改为终身监禁并可假释。第288(e)条允许本分支另处最高10,000美元罚金。特定指控可能依第667.61条产生其他无期刑风险；第290条登记、加重处罚及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-lewd-act-child-288-c1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "A lewd act with the sexual intent specified in §288(a), involving a child aged 14 or 15 and a person at least ten years older (§288(c)(1)). The ten-year difference is measured birth date to birth date. This is distinct from intercourse under §261.5 and from §288(a)’s under-14 branch.",
+      "es": "Acto lascivo con la intención sexual del §288(a), con un menor de 14 o 15 años y una persona al menos diez años mayor (§288(c)(1)). La diferencia se mide entre las fechas de nacimiento. Se distingue de relaciones sexuales del §261.5 y de la modalidad menor de 14 del §288(a).",
+      "zh": "具有第288(a)条性意图的猥亵行为，涉及14或15岁儿童，且行为人至少年长十岁（第288(c)(1)条）。十年差距按双方出生日期计算。不同于第261.5条性交或第288(a)条未满14岁分支。"
+    },
+    "penalty": {
+      "en": "Under §288(c)(1), felony state prison for 1, 2, or 3 years, or misdemeanor county jail up to 364 days (§18.5). The felony lower term is one year, not the generic 16 months. Subdivision (a)’s bodily-harm life term and subdivision (e)’s additional fine are not automatically transferred to this branch. Registration under §290, other fines, and case-specific consequences require separate review.",
+      "es": "Según el §288(c)(1), 1, 2 o 3 años de prisión estatal por delito grave, o hasta 364 días de cárcel del condado por delito menor (§18.5). El término grave inferior es un año, no los 16 meses genéricos. No se trasladan automáticamente la perpetua por lesión del inciso (a) ni la multa adicional del inciso (e). Registro del §290, otras multas y consecuencias requieren revisión aparte.",
+      "zh": "依第288(c)(1)条，可按重罪处州监狱1年、2年或3年，或按轻罪处县监狱最高364天（第18.5条）。重罪最低档是一年，不是通用的16个月。不得自动套用(a)款身体伤害的无期刑或(e)款附加罚金。第290条登记、其他罚金及个案后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-sexual-penetration-289-a1a",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "261.6",
+      "269",
+      "288.7",
+      "667.61",
+      "667.6",
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Sexual penetration against the person’s will by force, violence, duress, menace, or fear of immediate unlawful bodily injury (§289(a)(1)(A)). The definition in §289(k) includes specified objects and body parts and a sexual purpose; the ordinary adult branch must be distinguished from the child-age branches.",
+      "es": "Penetración sexual contra la voluntad mediante fuerza, violencia, coacción, amenaza o temor de lesión corporal ilícita inmediata (§289(a)(1)(A)). La definición del §289(k) incluye objetos y partes corporales especificados y finalidad sexual; debe distinguirse la modalidad ordinaria para adultos de las de menores.",
+      "zh": "以强力、暴力、胁迫、威吓或立即非法身体伤害的恐惧，违背对方意愿实施性侵入（第289(a)(1)(A)条）。第289(k)条定义包括特定物体和身体部位及性目的；须区别普通成年人分支与儿童年龄分支。"
+    },
+    "penalty": {
+      "en": "Ordinary §289(a)(1)(A) term: 3, 6, or 8 years in state prison. The adjacent age-specific terms are 8, 10, or 12 years for a child under 14 (B), and 6, 8, or 10 years for a minor aged 14–17 (C). Verify the charged subdivision and age rather than applying the adult term to every case. This is not a total ceiling: §§269, 288.7, 667.61 and 667.6 can affect punishment when their conditions apply. Registration under §290, enhancements, fines, and individualized sentencing require separate review.",
+      "es": "Pena ordinaria del §289(a)(1)(A): 3, 6 u 8 años de prisión estatal. Los incisos vecinos establecen 8, 10 o 12 años para menores de 14 (B), y 6, 8 o 10 años para menores de 14 a 17 (C). Deben verificarse inciso y edad, sin aplicar la pena adulta a todos los casos. No es un máximo total: §§269, 288.7, 667.61 y 667.6 pueden afectar la pena si se cumplen sus condiciones. Registro del §290, aumentos, multas y sentencia individual requieren revisión aparte.",
+      "zh": "第289(a)(1)(A)条普通刑期为州监狱3年、6年或8年。相邻年龄分支规定未满14岁为8年、10年或12年（B），14至17岁为6年、8年或10年（C）。须核对被控分款及年龄，不可对所有案件套用成年人刑期。这不是总刑罚上限：符合条件时，第269、288.7、667.61及667.6条可影响处罚。第290条登记、加重处罚、罚金及个别量刑须另行审查。"
+    }
+  },
+  {
+    "id": "ca-sexual-penetration-289-a1b",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "261.6",
+      "269",
+      "288.7",
+      "667.61",
+      "667.6",
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Sexual penetration of a child under 14 against the child’s will through the force, violence, duress, menace, or fear specified in §289(a)(1)(B). This is the under-14 force branch, distinct from the ordinary and 14–17 age branches. The statutory penetration definition in §289(k) applies.",
+      "es": "Penetración sexual de un menor de 14 años contra su voluntad mediante la fuerza, violencia, coacción, amenaza o temor del §289(a)(1)(B). Es la modalidad con fuerza para menores de 14, distinta de la ordinaria y de 14 a 17. Se aplica la definición del §289(k).",
+      "zh": "以第289(a)(1)(B)条规定的强力、暴力、胁迫、威吓或恐惧，违背未满14岁儿童意愿实施性侵入。这是未满14岁强力分支，不同于普通或14至17岁分支，适用第289(k)条定义。"
+    },
+    "penalty": {
+      "en": "Under §289(a)(1)(B), 8, 10, or 12 years in state prison. Do not substitute §289(a)(1)(A)’s 3/6/8-year range or (C)’s 6/8/10-year range. This is not a total ceiling: §§269, 288.7, 667.61 and 667.6 can affect punishment when their conditions apply. Registration under §290, enhancements, fines, and individualized sentencing require separate review.",
+      "es": "Según el §289(a)(1)(B), 8, 10 o 12 años de prisión estatal. No debe sustituirse por la escala 3/6/8 del inciso (A) ni la 6/8/10 del (C). No es un máximo total: §§269, 288.7, 667.61 y 667.6 pueden afectar la pena si se cumplen sus condiciones. Registro del §290, aumentos, multas y sentencia individual requieren revisión aparte.",
+      "zh": "依第289(a)(1)(B)条，可处州监狱8年、10年或12年。不得套用(A)款3/6/8年或(C)款6/8/10年的刑期。这不是总刑罚上限：符合条件时，第269、288.7、667.61及667.6条可影响处罚。第290条登记、加重处罚、罚金及个别量刑须另行审查。"
+    }
+  }
+]

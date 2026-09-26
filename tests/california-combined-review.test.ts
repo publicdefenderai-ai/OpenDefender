@@ -6,10 +6,10 @@ import { CALIFORNIA_CHARGE_CORRECTIONS } from "../shared/california-corrections"
 import corrections from "../shared/california-batch-three-corrections.json";
 
 describe("California combined 18-record statutory review", () => {
-  it("keeps 49 disjoint corrections and accounts for the three source groups", () => {
+  it("keeps 60 disjoint corrections and accounts for the three source groups", () => {
     expect(validateCaliforniaCombinedReview()).toEqual({ corrections: 18, addedSections: 14, addedVersions: 14, sharedSources: 28 });
-    expect(new Set(CALIFORNIA_CHARGE_CORRECTIONS.map(r => r.id)).size).toBe(49);
-    expect(CALIFORNIA_CHARGE_CORRECTIONS).toHaveLength(49);
+    expect(new Set(CALIFORNIA_CHARGE_CORRECTIONS.map(r => r.id)).size).toBe(60);
+    expect(CALIFORNIA_CHARGE_CORRECTIONS).toHaveLength(60);
   });
   it("rejects missing sentencing authority even when the primary statute is retained", () => {
     const review = readCaliforniaCombinedReview();

@@ -8,8 +8,8 @@ import { readCaliforniaReuseReview, validateCaliforniaReuseReview } from "../scr
 describe("California combined reuse batch", () => {
   it("accounts for six disjoint corrections while preserving the initial batch", () => {
     expect(validateCaliforniaReuseReview()).toEqual({ corrections: 6, addedSections: 2, addedVersions: 3 });
-    expect(CALIFORNIA_CHARGE_CORRECTIONS).toHaveLength(49);
-    expect(new Set(CALIFORNIA_CHARGE_CORRECTIONS.map(row => row.id)).size).toBe(49);
+    expect(CALIFORNIA_CHARGE_CORRECTIONS).toHaveLength(60);
+    expect(new Set(CALIFORNIA_CHARGE_CORRECTIONS.map(row => row.id)).size).toBe(60);
   });
   it("rejects a missing punishment source", () => {
     const review = readCaliforniaReuseReview();
