@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_shared_source_corrections_not_full_legal_certification",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "sourceAsOf": "2026-09-24",
+  "documents": {
+    "PEN:192.5": [
+      {
+        "id": "PEN192.5.20077475",
+        "lawCode": "PEN",
+        "section": "192.5.",
+        "opStatutes": "2007",
+        "opChapter": "747",
+        "opSection": "5",
+        "effectiveDate": "2008-01-01 00:00:00",
+        "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2007, Ch. 747, Sec. 5.   Effective January 1, 2008.",
+        "contentMember": "LAW_SECTION_TBL_89876.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89876,
+        "tableRowSha256": "b6d474bda7c2a0d0ceacdcc11eaf7b88d6a636ebc6758943c7913ca976b7c50f",
+        "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes:</p><p>(a)<span class=\"EnSpace\"/>Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence.</p><p>(b)<span class=\"EnSpace\"/>Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence.</p><p>(c)<span class=\"EnSpace\"/>Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence.</p><p>(d)<span class=\"EnSpace\"/>Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence.</p><p>(e)<span class=\"EnSpace\"/>A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=192.5."
+      }
+    ],
+    "PEN:290.006": [
+      {
+        "id": "PEN290.006.2020794",
+        "lawCode": "PEN",
+        "section": "290.006.",
+        "opStatutes": "2020",
+        "opChapter": "79",
+        "opSection": "4",
+        "effectiveDate": "2021-01-01 00:00:00",
+        "versionId": "id_cef70fe8-34f2-11eb-85c5-e3cf0180a085",
+        "division": null,
+        "title": "9.",
+        "part": "1.",
+        "chapter": "5.5.",
+        "article": null,
+        "history": "Amended (as added by Stats. 2017, Ch. 541, Sec. 4) by Stats. 2020, Ch. 79, Sec. 4.   (SB 145)   Effective January 1, 2021.   Section operative January 1, 2021, by its own provisions.",
+        "contentMember": "LAW_SECTION_TBL_89041.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 89041,
+        "tableRowSha256": "5feda8bc7dd237caac94a5254785a42b93c4cac5ad6959cc4e08b9ec539ddc94",
+        "contentSha256": "6486efce2013627fa2451494363b2d798cfcaded3c8972762b7ea86b5a9e4e5c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person ordered by any court to register pursuant to the act, who is not required to register pursuant to Section 290, shall so register, if the court finds at the time of conviction or sentencing that the person committed the offense as a result of sexual compulsion or for purposes of sexual gratification. The court shall state on the record the reasons for its findings and the reasons for requiring registration.</p><p>(b)<span class=\"EnSpace\"/>The person shall register as a tier one offender in accordance with paragraph (1) of subdivision (d) of Section 290, unless the court finds the person should register as a tier two or tier three offender and states on the record the reasons for its\n\t\t\t\t\t\tfinding.</p><p>(c)<span class=\"EnSpace\"/>In determining whether to require the person to register as a tier two or tier three offender, the court shall consider all of the following:</p><p>(1)<span class=\"EnSpace\"/>The nature of the registerable offense.</p><p>(2)<span class=\"EnSpace\"/>The age and number of victims, and whether any victim was personally unknown to the person at the time of the offense. A victim is personally unknown to the person for purposes of this paragraph if the victim was known to the offender for less than 24 hours.</p><p>(3)<span class=\"EnSpace\"/>The criminal and relevant noncriminal behavior of the person before and after conviction for the registerable offense.</p><p>(4)<span class=\"EnSpace\"/>Whether the\n\t\t\t\t\t\tperson has previously been arrested for, or convicted of, a sexually motivated offense.</p><p>(5)<span class=\"EnSpace\"/>The person’s current risk of sexual or violent reoffense, including the person’s risk level on the SARATSO static risk assessment instrument, and, if available from past supervision for a sexual offense, the person’s risk level on the SARATSO dynamic and violence risk assessment instruments.</p><p>(d)<span class=\"EnSpace\"/>This section shall become operative on January 1, 2021.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=290.006."
+      }
+    ],
+    "VEH:23140": [
+      {
+        "id": "VEH23140.200726332",
+        "lawCode": "VEH",
+        "section": "23140.",
+        "opStatutes": "2007",
+        "opChapter": "263",
+        "opSection": "32",
+        "effectiveDate": "2008-01-01 00:00:00",
+        "versionId": "id_c03db988-aa48-11dc-9c83-d76b6d9ea03b",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "1.5.",
+        "history": "Amended by Stats. 2007, Ch. 263, Sec. 32.   Effective January 1, 2008.",
+        "contentMember": "LAW_SECTION_TBL_143112.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 143112,
+        "tableRowSha256": "7044ba89fd8cf17a9e4617b505a60d8ecfd63955f496fd5146b44a060364656a",
+        "contentSha256": "14df125b358837e85e237907e4380d4d4ba11f4bcd958296142c1444b11724fc",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>It is unlawful for a person under the age of 21 years who has 0.05 percent or more, by weight, of alcohol in his or her blood to drive a vehicle.</p><p>(b)<span class=\"EnSpace\"/>A person may be found to be in violation of subdivision (a) if the person was, at the time of driving, under the age of 21 years and under the influence of, or affected by, an alcoholic beverage regardless of whether a chemical test was made to determine that person’s blood-alcohol concentration and if the trier of fact finds that the person had consumed an alcoholic beverage and was driving a vehicle while having a concentration of 0.05 percent or more, by weight, of alcohol in his or her blood.</p><p>(c)<span class=\"EnSpace\"/>Notwithstanding any provision of law to the contrary, upon a finding that a person has violated this section, the clerk of the court shall prepare within 10 days after the finding and immediately forward to the department an abstract of the record of the court in which the finding is made. That abstract shall be a public record and available for public inspection in the same manner as other records reported under Section 1803.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23140."
+      }
+    ],
+    "VEH:23153": [
+      {
+        "id": "VEH23153.20167652",
+        "lawCode": "VEH",
+        "section": "23153.",
+        "opStatutes": "2016",
+        "opChapter": "765",
+        "opSection": "2",
+        "effectiveDate": "2017-01-01 00:00:00",
+        "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "2.",
+        "history": "Amended by Stats. 2016, Ch. 765, Sec. 2.   (AB 2687)   Effective January 1, 2017.",
+        "contentMember": "LAW_SECTION_TBL_141250.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141250,
+        "tableRowSha256": "e28d94335af5cf441ced783a549bcfa14bf8e32f12b74444e2ff9a4ff263bfac",
+        "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>It is unlawful for a person, while under the influence of any alcoholic beverage, to drive a vehicle and concurrently do any act forbidden by law, or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver.</p><p>(b)<span class=\"EnSpace\"/>It is unlawful for a person, while having 0.08 percent or more, by weight, of alcohol in his or her blood to drive a vehicle and concurrently do any act forbidden by law, or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver.</p><p>In any\n\t\t\t\t\t\tprosecution under this subdivision, it is a rebuttable presumption that the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of driving the vehicle if the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of the performance of a chemical test within three hours after driving.</p><p>(c)<span class=\"EnSpace\"/>In proving the person neglected any duty imposed by law in driving the vehicle, it is not necessary to prove that any specific section of this code was violated.</p><p>(d)<span class=\"EnSpace\"/>It is unlawful for a person, while having 0.04 percent or more, by weight, of alcohol in his or her blood\n\t\t\t\t\t\tto drive a commercial motor vehicle, as defined in Section 15210 and concurrently to do any act forbidden by law or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver. In a\n\t\t\t\t\t\tprosecution under this subdivision, it is a rebuttable presumption that the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of driving the vehicle if the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of performance of a chemical test within three hours after driving.</p><p>(e)<span class=\"EnSpace\"/>Commencing July 1, 2018, it shall be unlawful for a person, while having 0.04 percent or more, by weight, of alcohol in his or her blood to drive a motor vehicle when a passenger for hire is a passenger in the vehicle at the time of the offense, and concurrently to do any act forbidden by law or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver. For purposes of this subdivision, “passenger for hire” means a passenger for whom consideration is contributed or expected as a condition of carriage in the vehicle, whether directly or indirectly flowing to the owner, operator, agent, or any other person having an interest in the vehicle. In a prosecution under this subdivision, it is a rebuttable presumption that the person had 0.04\n\t\t\t\t\t\tpercent or more, by weight, of alcohol in his or her blood at the time of driving the vehicle if the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of performance of a chemical test within three hours after driving.</p><p>(f)<span class=\"EnSpace\"/>It is unlawful for a person, while under the influence of any drug, to drive a vehicle and concurrently do any act forbidden by law, or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver.</p><p>(g)<span class=\"EnSpace\"/>It is unlawful for a person, while under the combined influence of any alcoholic beverage and drug, to drive a vehicle and concurrently do any act forbidden by law, or neglect any duty imposed by law in driving the vehicle, which act or neglect proximately causes bodily injury to any person other than the driver.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23153."
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "8c011138780be23836e5bd7c68e10258538d7743f799dfc6722c4fae858eb561",
+      "correctionSha256": "863be8d13d986f11d0567e028660a5607425e16671e068f5a5e8676c3bc58e73",
+      "sources": [
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.5",
+          "versions": [
+            {
+              "versionId": "id_d371a4e1-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f40083dbe095fceba244aa8528d40a5622bbabbad79dcadfe7f4fedf718b4980"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290.006",
+          "versions": [
+            {
+              "versionId": "id_cef70fe8-34f2-11eb-85c5-e3cf0180a085",
+              "contentSha256": "6486efce2013627fa2451494363b2d798cfcaded3c8972762b7ea86b5a9e4e5c"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-c",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "d6d6e86ff1f1a8c3d2ed73ec29fb6cf6c056e268a0ca70a22c9d29090913b42f",
+      "correctionSha256": "c48ae1839dc3ad147b101adf546727a67707fadcd95d8bdb73bfc5b1e8ad7154",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.5",
+          "versions": [
+            {
+              "versionId": "id_d371a4e1-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f40083dbe095fceba244aa8528d40a5622bbabbad79dcadfe7f4fedf718b4980"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290.006",
+          "versions": [
+            {
+              "versionId": "id_cef70fe8-34f2-11eb-85c5-e3cf0180a085",
+              "contentSha256": "6486efce2013627fa2451494363b2d798cfcaded3c8972762b7ea86b5a9e4e5c"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-d",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "4eba6f7943aa5a4831ebd59f7f62617a1349dffbc23de449f83214b68601f6b0",
+      "correctionSha256": "35716e03a12144147e5a502752a10241c7755536a3840542fe99edc5ace824af",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:261.5",
+          "versions": [
+            {
+              "versionId": "id_d371a4e1-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f40083dbe095fceba244aa8528d40a5622bbabbad79dcadfe7f4fedf718b4980"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290.006",
+          "versions": [
+            {
+              "versionId": "id_cef70fe8-34f2-11eb-85c5-e3cf0180a085",
+              "contentSha256": "6486efce2013627fa2451494363b2d798cfcaded3c8972762b7ea86b5a9e4e5c"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-gross-vehicular-manslaughter-191-5-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "6f833ca50d77b739829f05fe86e1bff72cc47ff32226963de36cf6bf46dcba15",
+      "correctionSha256": "dc6751d8e4b0b92f5b2dabbd732161db7720cdd443b0db0330134664566fdcff",
+      "sources": [
+        {
+          "key": "PEN:188",
+          "versions": [
+            {
+              "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23140",
+          "versions": [
+            {
+              "versionId": "id_c03db988-aa48-11dc-9c83-d76b6d9ea03b",
+              "contentSha256": "14df125b358837e85e237907e4380d4d4ba11f4bcd958296142c1444b11724fc"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23540",
+          "versions": [
+            {
+              "versionId": "id_7f17fa29-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "4f1deb4b82a6728ad4f10a0724e0b86723a741502a7401321a2b40f025973127"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23542",
+          "versions": [
+            {
+              "versionId": "id_8071bdcd-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "2efd10653a146e2e52b2e3fedb91deadf3241a5fe2b4d1ac3824638a3c45201d"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23546",
+          "versions": [
+            {
+              "versionId": "id_80fe465f-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "6de2c509ec182cacdd052af8e6891533b58256f3a23cdc911024e003e53012e0"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23548",
+          "versions": [
+            {
+              "versionId": "id_5fe468c6-a0fc-11dd-9a1e-ee8c329b72d4",
+              "contentSha256": "4ba692415e7cc82afb4c8ac7bf280abb600b35c9bdcf682aea85f67bcbae3c8f"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23550",
+          "versions": [
+            {
+              "versionId": "id_27ad9f5c-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "4deafe47e4702381511c584ad08f56c0e88580f8168ab1ccc25cb6146ef9ed2c"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23552",
+          "versions": [
+            {
+              "versionId": "id_97545468-10eb-11e0-aa5c-a5112ecb123a",
+              "contentSha256": "c611172866e55a894c66c2478941e47ff05f635b4d1b4b2ea1966451a8006b09"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-vehicular-manslaughter-191-5-b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "f469ad9fe9638e9741d2ab8a597a0e3072c58165799a11471f251f9214e05830",
+      "correctionSha256": "1e2247a24908345e0fbcdab87a28328f06af5d8f6129daabdc4b4e5ace95735f",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:188",
+          "versions": [
+            {
+              "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23140",
+          "versions": [
+            {
+              "versionId": "id_c03db988-aa48-11dc-9c83-d76b6d9ea03b",
+              "contentSha256": "14df125b358837e85e237907e4380d4d4ba11f4bcd958296142c1444b11724fc"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-sexual-battery-243-4-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "35216cc818c15d193ae704b1704769d7af9bf667cc6d5c7870d4a4e79950bf35",
+      "correctionSha256": "d5ba4388e0187b40f415bb00b739829ed87160919e1d8280b4ee77ebdbdefae6",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.4",
+          "versions": [
+            {
+              "versionId": "id_74fccb9c-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "82221df02882eb2377dc55970ad0f337a45bda409ca65b4668a18aa9920a1c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-sexual-battery-243-4-e1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "d35a9798dd9d0b8133362d0b870f44862cd5bd4a4ec87878853037e54bad8b48",
+      "correctionSha256": "3716291745fb32d1dc6caca12dd9af8a5453ff6f93c4d79e81d070027ef7fcf8",
+      "sources": [
+        {
+          "key": "PEN:243.4",
+          "versions": [
+            {
+              "versionId": "id_74fccb9c-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "82221df02882eb2377dc55970ad0f337a45bda409ca65b4668a18aa9920a1c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-lewd-act-child-288-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "6923911b2a0c718f4673136130830e15d245b70038eefe1b0bd87b760dcc80ef",
+      "correctionSha256": "aff0d19e9601e9d645b3fd17f47c76201afec2f9282f4db39dc76141de8f466b",
+      "sources": [
+        {
+          "key": "PEN:288",
+          "versions": [
+            {
+              "versionId": "id_9e1d5ac2-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "847c6ca05b74ec430cf1846349137c7eb98898cccab235ea9e29a32a577a2232"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-lewd-act-child-288-c1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "2014eccc669283bcb43459b48f44240a824db87419de2c6816a1a93ac68a4056",
+      "correctionSha256": "53edb5c7381f440e5af50ca77f09a4b3e40ee09375e5c77fc9ca8b60dabb86c8",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288",
+          "versions": [
+            {
+              "versionId": "id_9e1d5ac2-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "847c6ca05b74ec430cf1846349137c7eb98898cccab235ea9e29a32a577a2232"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-sexual-penetration-289-a1a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "df3e886aae1c09a8b5790a904fe640125d5a341780f1304153fd1110802b91db",
+      "correctionSha256": "e9d28cd769c0af5942f65880b61f6c2b341795ea8b2d0d590093b60983110d2a",
+      "sources": [
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:289",
+          "versions": [
+            {
+              "versionId": "id_b0e9bb49-1a6a-11e3-bf3f-e4070c8a0d79",
+              "contentSha256": "c9b33463983c3f14677c88a35e0f11357db724c7d9ec4292407cd5b59db28286"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    },
+    {
+      "id": "ca-sexual-penetration-289-a1b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "0633637030fa05c9d0969790191b3a1fb9f4cc6e0ecfed356c27e2bbd4ad231d",
+      "correctionSha256": "c525caff937312a750c601cf612c6623397a40589fed89ac9131f59fd4731490",
+      "sources": [
+        {
+          "key": "PEN:261.6",
+          "versions": [
+            {
+              "versionId": "id_d45694bd-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "cb8da76b15a352eb68af0e1bdde397293b2086a39e9e93532deea1f89c5c905c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:269",
+          "versions": [
+            {
+              "versionId": "id_fc36888c-f967-11e8-bd10-077ff3712fb6",
+              "contentSha256": "0d4fa2306d713e5ddbf96615a3a21d2d5ea7de0ece6cbd1fef59bf0f570843ae"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288.7",
+          "versions": [
+            {
+              "versionId": "id_71301c9a-4d5c-11db-a430-aa41ff8cf6bd",
+              "contentSha256": "ccfb2e220d6cdc537dc0c0e82b342e7d085fce17a3e07256e212c3d02d0a346d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:289",
+          "versions": [
+            {
+              "versionId": "id_b0e9bb49-1a6a-11e3-bf3f-e4070c8a0d79",
+              "contentSha256": "c9b33463983c3f14677c88a35e0f11357db724c7d9ec4292407cd5b59db28286"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.6",
+          "versions": [
+            {
+              "versionId": "id_f5f01d27-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "5d7a27b66e5da0fb08ebdc73ce6e7a164ad941cc321f008c4bc80f986d7cc718"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667.61",
+          "versions": [
+            {
+              "versionId": "id_f67ca5b9-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "90dd74cc1811b7e64b645402b12f98646b3497a0c0a6377de3dd560e70834394"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Independent legal review, case law, charged enhancements, registration details, individualized sentencing, incorporated definitions and professional translation review remain outside this bounded statutory pass."
+    }
+  ]
+}

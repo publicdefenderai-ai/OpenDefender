@@ -232,3 +232,51 @@ Application typecheck, production build and all eight production-browser checks
 passed. No external AI calls, production credentials, real case submissions,
 production seed or deployment were used. Replit still needs the California seed
 and republish steps after merge.
+
+## Age and driving combined pass (September 26, 2026)
+
+This batch corrects 11 records across five shared-primary-source groups: three
+§261.5 age-based intercourse records; two §191.5 intoxication-related vehicular
+manslaughter records; two §243.4 sexual-battery records; two §288 lewd-act records;
+and two §289 sexual-penetration records. All primary sections were already retained.
+Only PEN §§192.5, 290.006 and VEH §§23140, 23153 were newly extracted from the same
+hash-verified official archive. The batch uses 28 source sections in total.
+
+The changes preserve the important distinctions between age thresholds, civil
+sanctions and criminal punishment, skin-contact and through-clothing branches,
+conditional life terms, custody location, and misdemeanor/felony alternatives.
+The §191.5 summary includes the current three-to-five-year probation provision;
+its qualifying-prior life term is confined to subdivision (a). Section 288(c)(1)
+keeps its unusual one-year felony lower term. Other incorporated authorities,
+case law, enhancements, registration details, individualized sentencing and
+professional translation review remain outside this bounded correction pass.
+
+The batch adds a reusable single-version supplemental-review validator instead
+of another full copy of the prior batch logic. It validates baseline/correction
+hashes, exact source code/section/URL identity, required dependencies, version
+ambiguity, future-effective sources, and current runtime propagation. Historical
+baselines remain unchanged. Five canonical titles containing em dashes were changed
+to colons: the two murder degrees and three DUI occurrence titles. The robbery
+names did not contain that punctuation. A test checks all canonical titles.
+
+Reproduce the offline evidence validation and accounting with:
+
+```sh
+node --import tsx scripts/data-review/california-verification/age-driving-review.ts
+node --import tsx scripts/data-review/california-verification/coverage.ts
+```
+
+The readable review is `scripts/data-review/output/california-batch-four-review.md`.
+After this batch, **60 of 99 configured selectable records have bounded corrections;
+39 remain across 32 source groups**. There are 129 retained sections/131 versions
+and still 21 withheld canonical labels. These counts do not establish statewide
+completeness, full legal certification, or deployed availability.
+
+Validation: 79 California-focused tests passed across the suite and targeted
+reruns, with two existing opt-in tests skipped. The affected older test now checks
+structured categories rather than superseded grading prose. Application typecheck,
+production build, and nine production-browser checks passed. Browser checks cover
+all 60 corrections in the API, rules guidance, and the age-gap misdemeanor/felony
+selector. No real case inputs, external AI calls, production credentials, seed or
+deployment were used. Replit requires the existing California seed/republish steps
+after merge. No new attorney data-entry task is required for this batch.

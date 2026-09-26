@@ -164,12 +164,12 @@ describe("authoritative California charge release", () => {
 
     const gross = getCaliforniaCanonicalRecord("ca-gross-vehicular-manslaughter-191-5-a");
     expect(gross?.citation).toBe("Cal. Penal Code § 191.5(a)");
-    expect(gross?.grading).toBe("Felony.");
+    expect(gross?.categories).toEqual(["felony"]);
     expect(gross?.penalty).toContain("4, 6, or 10 years");
 
     const intoxicated = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-191-5-b");
     expect(intoxicated?.citation).toBe("Cal. Penal Code § 191.5(b)");
-    expect(intoxicated?.grading).toBe("Wobbler.");
+    expect(intoxicated?.categories).toEqual(["misdemeanor", "felony"]);
     expect(intoxicated?.penalty).toContain("16 months, 2 years, or 4 years");
 
     const agricultural = getCaliforniaCanonicalRecord("ca-grand-theft-agricultural-487-b1a");
@@ -195,13 +195,13 @@ describe("authoritative California charge release", () => {
     const closeInAge = getCaliforniaCanonicalRecord("ca-unlawful-sexual-intercourse-261-5-b");
     expect(closeInAge?.citation).toBe("Cal. Penal Code § 261.5(b)");
     expect(closeInAge?.elements.join(" ")).toContain("not more than 3 years older or younger");
-    expect(closeInAge?.grading).toBe("Misdemeanor.");
+    expect(closeInAge?.categories).toEqual(["misdemeanor"]);
 
     const ageDifference = getCaliforniaCanonicalRecord("ca-unlawful-sexual-intercourse-261-5-c");
     expect(ageDifference?.citation).toBe("Cal. Penal Code § 261.5(c)");
     expect(ageDifference?.elements.join(" ")).toContain("more than 3 years younger");
     expect(ageDifference?.elements.join(" ")).not.toContain("10 years");
-    expect(ageDifference?.grading).toBe("Misdemeanor or felony.");
+    expect(ageDifference?.categories).toEqual(["misdemeanor", "felony"]);
 
     expect(getCaliforniaCanonicalRecord("ca-dui-23152-a")?.officialTitle).toBe(
       "Driving Under the Influence of Alcohol",

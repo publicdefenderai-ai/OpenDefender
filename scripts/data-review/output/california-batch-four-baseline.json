@@ -1,0 +1,554 @@
+{
+  "schemaVersion": 1,
+  "scope": "historical_pre_correction_catalog_snapshot",
+  "records": [
+    {
+      "record": {
+        "canonicalId": "ca-unlawful-sexual-intercourse-261-5-b",
+        "officialTitle": "Unlawful Sexual Intercourse With a Minor",
+        "code": "261.5(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261.5(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse with a person under 18",
+          "The minor was not more than 3 years older or younger than the defendant"
+        ],
+        "mentalState": "Intentional sexual intercourse; knowledge of age is not required for the statutory offense.",
+        "grading": "Misdemeanor.",
+        "penalty": "Punishable by county jail up to 1 year and/or a fine under Penal Code § 261.5(b).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1070",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-statutory-rape"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1070",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "8c011138780be23836e5bd7c68e10258538d7743f799dfc6722c4fae858eb561"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-unlawful-sexual-intercourse-261-5-c",
+        "officialTitle": "Unlawful Sexual Intercourse With a Minor, Age-Difference Variant",
+        "code": "261.5(c)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261.5(c)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse with a person under 18",
+          "The minor was more than 3 years younger than the defendant"
+        ],
+        "mentalState": "Intentional sexual intercourse; the statutory age and age-difference facts must be proved.",
+        "grading": "Misdemeanor or felony.",
+        "penalty": "Punishable by county jail up to 1 year or imprisonment under Penal Code § 1170(h), as provided by Penal Code § 261.5(c).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1070",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-statutory-rape"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1070",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "d6d6e86ff1f1a8c3d2ed73ec29fb6cf6c056e268a0ca70a22c9d29090913b42f"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-unlawful-sexual-intercourse-261-5-d",
+        "officialTitle": "Unlawful Sexual Intercourse With a Minor, Felony Variant",
+        "code": "261.5(d)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 261.5(d)",
+        "classification": "offense",
+        "elements": [
+          "The defendant engaged in sexual intercourse with a person under 16",
+          "The defendant was at least 21 years old"
+        ],
+        "mentalState": "Intentional sexual intercourse; the statutory age facts must be proved.",
+        "grading": "Wobbler.",
+        "penalty": "May be punished as a misdemeanor or felony under Penal Code § 261.5(d), with felony imprisonment under Penal Code § 1170(h).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1070",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-statutory-rape"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 261.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1070",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "4eba6f7943aa5a4831ebd59f7f62617a1349dffbc23de449f83214b68601f6b0"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-gross-vehicular-manslaughter-191-5-a",
+        "officialTitle": "Gross Vehicular Manslaughter While Intoxicated",
+        "code": "191.5(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 191.5(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant unlawfully killed another person while driving a vehicle",
+          "The defendant violated Vehicle Code § 23140, § 23152, or § 23153",
+          "The defendant committed an unlawful act or a lawful act performed in an unlawful manner while driving",
+          "The defendant acted with gross negligence"
+        ],
+        "mentalState": "Gross negligence and the statutory intoxicated-driving violation.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 4, 6, or 10 years in state prison under Penal Code § 191.5(a), subject to statutory enhancements.",
+        "juryInstruction": {
+          "ref": "CALCRIM 590",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-vehicular-homicide"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 191.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=191.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 590",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "6f833ca50d77b739829f05fe86e1bff72cc47ff32226963de36cf6bf46dcba15"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-vehicular-manslaughter-191-5-b",
+        "officialTitle": "Vehicular Manslaughter While Intoxicated",
+        "code": "191.5(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 191.5(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant unlawfully killed another person while driving a vehicle",
+          "The defendant violated Vehicle Code § 23140, § 23152, or § 23153",
+          "The defendant committed an unlawful act or a lawful act performed in an unlawful manner while driving",
+          "The defendant acted without gross negligence"
+        ],
+        "mentalState": "The statutory intoxicated-driving violation; gross negligence is not required.",
+        "grading": "Wobbler.",
+        "penalty": "Punishable by county jail up to 1 year or by 16 months, 2 years, or 4 years under Penal Code § 1170(h), as provided by Penal Code § 191.5(c)(2).",
+        "juryInstruction": {
+          "ref": "CALCRIM 590",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-vehicular-homicide"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 191.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=191.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 590",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "f469ad9fe9638e9741d2ab8a597a0e3072c58165799a11471f251f9214e05830"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-sexual-battery-243-4-a",
+        "officialTitle": "Sexual Battery by Restraint",
+        "code": "243.4(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 243.4(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant touched an intimate part of another person",
+          "The touching was against the person's will",
+          "The defendant restrained the victim for the purpose of sexual arousal, gratification, or abuse"
+        ],
+        "mentalState": "Intent to touch for sexual arousal, gratification, or abuse, plus intent to restrain.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 2, 3, or 4 years in state prison under Penal Code § 243.4(a).",
+        "juryInstruction": {
+          "ref": "CALCRIM 935",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-sexual-assault-in-the-third-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 243.4",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.4&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 935",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "35216cc818c15d193ae704b1704769d7af9bf667cc6d5c7870d4a4e79950bf35"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-sexual-battery-243-4-e1",
+        "officialTitle": "Misdemeanor Sexual Battery",
+        "code": "243.4(e)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 243.4(e)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant touched an intimate part of another person",
+          "The touching was against the person's will",
+          "The touching was for sexual arousal, gratification, or abuse"
+        ],
+        "mentalState": "Intent to touch for sexual arousal, gratification, or abuse.",
+        "grading": "Misdemeanor.",
+        "penalty": "Punishable by county jail up to 6 months and/or a fine under Penal Code § 243.4(e)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 938",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-sexual-assault-in-the-third-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 243.4",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.4&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 938",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "d35a9798dd9d0b8133362d0b870f44862cd5bd4a4ec87878853037e54bad8b48"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-lewd-act-child-288-a",
+        "officialTitle": "Lewd or Lascivious Act on a Child Under 14",
+        "code": "288(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 288(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed a lewd or lascivious act on or with a child",
+          "The child was under 14",
+          "The defendant acted with the intent to arouse, appeal to, or gratify sexual desire"
+        ],
+        "mentalState": "Intent to arouse, appeal to, or gratify sexual desire.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 288(a).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1110",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-child-sexual-abuse"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 288",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1110",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "6923911b2a0c718f4673136130830e15d245b70038eefe1b0bd87b760dcc80ef"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-lewd-act-child-288-c1",
+        "officialTitle": "Lewd or Lascivious Act on a Child Age 14 or 15",
+        "code": "288(c)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 288(c)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed a lewd or lascivious act on or with a child",
+          "The child was at least 14 and under 16",
+          "The defendant was at least 10 years older and acted with the required sexual intent"
+        ],
+        "mentalState": "Intent to arouse, appeal to, or gratify sexual desire.",
+        "grading": "Public offense punishable as a misdemeanor or felony.",
+        "penalty": "Punishable by county jail up to 1 year or state prison for 1, 2, or 3 years under Penal Code § 288(c)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1110",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-child-sexual-abuse"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 288",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1110",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "2014eccc669283bcb43459b48f44240a824db87419de2c6816a1a93ac68a4056"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-sexual-penetration-289-a1a",
+        "officialTitle": "Sexual Penetration by Force or Fear",
+        "code": "289(a)(1)(A)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 289(a)(1)(A)",
+        "classification": "offense",
+        "elements": [
+          "The defendant caused penetration of another person's genital or anal opening with a foreign or unknown object",
+          "The penetration was accomplished against the person's will by force, violence, duress, menace, or fear"
+        ],
+        "mentalState": "Intentional penetration with knowledge of the coercive circumstance.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 8 years in state prison under Penal Code § 289(a)(1)(A).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1045",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-sexual-assault-in-the-second-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 289",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=289&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1045",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "df3e886aae1c09a8b5790a904fe640125d5a341780f1304153fd1110802b91db"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-sexual-penetration-289-a1b",
+        "officialTitle": "Sexual Penetration of a Child Under 14 by Force or Fear",
+        "code": "289(a)(1)(B)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 289(a)(1)(B)",
+        "classification": "offense",
+        "elements": [
+          "The defendant caused penetration of another person's genital or anal opening with a foreign or unknown object",
+          "The penetration was accomplished against the person's will by force, violence, duress, menace, or fear",
+          "The victim was under 14 years of age"
+        ],
+        "mentalState": "Intentional penetration under the charged coercive circumstance.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 8, 10, or 12 years in state prison under Penal Code § 289(a)(1)(B).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1045",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-sexual-assault-in-the-second-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 289",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=289&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1045",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "0633637030fa05c9d0969790191b3a1fb9f4cc6e0ecfed356c27e2bbd4ad231d"
+    }
+  ]
+}
