@@ -3714,6 +3714,8 @@ export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
   /** True when the returned translation is machine-assisted and not yet reviewed
    *  by a fluent-speaker legal professional. Callers may show a draft notice. */
   translationDraft?: boolean;
+  /** Requested translation is unavailable; the returned legal content is English. */
+  untranslated?: boolean;
 }
 
 /**
@@ -3756,6 +3758,7 @@ export function getChargeExplanation(
           sourceUrl: record.sources[0].url, dataConfidence: "high", lastVerified: "2026-09",
         },
         jurisdictionDetailMissing: false, translationDraft: !addition && lang !== "en",
+        untranslated: addition?.translationStatus === "english_only_pending_translation" && lang !== "en",
         dataConfidence: "high", lastVerified: "2026-09",
       };
     }

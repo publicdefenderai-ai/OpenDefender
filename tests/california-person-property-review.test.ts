@@ -91,6 +91,7 @@ describe("California person/property additions", () => {
         const explanation = getChargeExplanation("An intentionally wrong display name", "CA", language, a.id)!;
         expect(explanation.plainSummary).toBe(a.summary);
         expect(explanation.degreeContext).toBe(a.penalty);
+        expect(explanation.untranslated).toBe(language !== "en");
         expect(explanation.translationDraft).toBe(false); // English fallback, not a claimed translation.
       }
     }

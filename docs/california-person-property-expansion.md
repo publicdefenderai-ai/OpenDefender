@@ -29,7 +29,7 @@ Every proposed addition binds its exact content to the primary statute and suppo
 
 New source metadata preserves the actual effective date supplied in the archive. Where it is unknown, it remains null. The September review month is not assigned as an enactment date. Source-specific dates are carried into the reference-only database manifest and included in its fingerprints. The old entries' date convention is not migrated in this batch.
 
-All new entries use English fallback in Spanish and Chinese views until translated content is reviewed. They do not inherit generic name-matched explanations or present English as a completed translation. This limitation is explicit in each definition. Localization is still open publication-quality work.
+All new entries use English fallback in Spanish and Chinese views until translated content is reviewed. They do not inherit generic name-matched explanations or present English as a completed translation. This limitation is explicit in each definition and displayed through a localized notice in the charge selector, guidance dashboard and PDF. The notice says English is being shown because the requested translation is unavailable; it does not call the English text a draft translation. Localization is still open publication-quality work.
 
 The existing California source-database boundary still withholds an addition unless its seeded identity and all expected source links exist. Production content storage remains reference-only. No real case records, production credentials, external AI requests or live database writes are used by this delivery.
 
@@ -51,3 +51,5 @@ Continue the 79 open research sections, prioritizing forgery, theft/receiving an
 ## Validation
 
 115 California-focused and public-inventory tests passed; two existing opt-in integration tests were skipped. Typecheck and production build passed. All three browser/API tests passed on the final isolated build, including all 26 API records, representative rules classifications and two exact citation searches. Acquisition replay reproduced the committed source artifact byte-for-byte. No production seed, deployment, real case input or external AI call was performed. These results do not assert that unrelated GitHub Actions installation issues are fixed.
+
+Review follow-up: the catalog guard retains name-based coverage for other records and requires exact canonical-ID explanations for every new California identity. All 152 tests in the combined California, catalog-explanation, translation-integrity and PDF-warning suite passed (two opt-in tests skipped); typecheck and production build passed again. PDF rendering tests verify Spanish and Chinese notices precede English content.

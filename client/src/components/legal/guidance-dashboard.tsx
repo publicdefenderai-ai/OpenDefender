@@ -1,3 +1,4 @@
+import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import React, { useState, useCallback, useEffect } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
@@ -724,6 +725,11 @@ function YourChargesSection({
 
             {/* Translation-draft notice — shown when explanation is machine-translated
                 and has not yet been reviewed by a fluent-speaker legal professional. */}
+            {charge.explanation?.untranslated && (
+              <p role="status" className="text-xs text-blue-800 dark:text-blue-300 mt-1">
+                {translationUnavailableNotice(i18n.language)}
+              </p>
+            )}
             {charge.explanation?.translationDraft && (
               <div className="flex items-start gap-2 p-2.5 rounded-md bg-blue-50 border border-blue-200 dark:bg-blue-950/30 dark:border-blue-800">
                 <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
