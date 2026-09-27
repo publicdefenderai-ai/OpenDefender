@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "scannerVersion": 1,
+  "scope": "state_statutory_source_discovery_not_offense_inventory",
+  "status": "source_scan_complete_legal_discovery_open",
+  "accounting": {
+    "sourceVersionRows": 162431,
+    "sourceSectionKeys": 161426,
+    "codes": 30,
+    "readFailures": 0,
+    "dispositions": {
+      "criminal_language_candidate": 6028,
+      "no_criminal_signal_detected_not_excluded": 120514,
+      "possible_penalty_target_candidate": 3530,
+      "prohibition_only_unresolved": 31354
+    },
+    "candidateSectionKeys": 40912,
+    "possiblePenaltySourceGroups": 2835,
+    "unresolvedReferenceHints": 3421,
+    "sourceHeldKeys": 72196,
+    "catalogPrimaryKeys": 70,
+    "catalogKeysMissingFromSnapshot": [],
+    "verifiedNewOffenses": 0,
+    "publishedNewCharges": 0,
+    "statewideOffenseDenominator": null
+  },
+  "byCode": [
+    {
+      "code": "BPC",
+      "sourceSectionKeys": 10483,
+      "sourceVersionRows": 10524,
+      "dispositions": {
+        "criminal_language_candidate": 713,
+        "no_criminal_signal_detected_not_excluded": 6813,
+        "possible_penalty_target_candidate": 394,
+        "prohibition_only_unresolved": 2563
+      }
+    },
+    {
+      "code": "CCP",
+      "sourceSectionKeys": 3411,
+      "sourceVersionRows": 3424,
+      "dispositions": {
+        "criminal_language_candidate": 68,
+        "no_criminal_signal_detected_not_excluded": 2752,
+        "possible_penalty_target_candidate": 35,
+        "prohibition_only_unresolved": 556
+      }
+    },
+    {
+      "code": "CIV",
+      "sourceSectionKeys": 4078,
+      "sourceVersionRows": 4087,
+      "dispositions": {
+        "criminal_language_candidate": 83,
+        "no_criminal_signal_detected_not_excluded": 2823,
+        "possible_penalty_target_candidate": 101,
+        "prohibition_only_unresolved": 1071
+      }
+    },
+    {
+      "code": "COM",
+      "sourceSectionKeys": 669,
+      "sourceVersionRows": 669,
+      "dispositions": {
+        "criminal_language_candidate": 3,
+        "no_criminal_signal_detected_not_excluded": 582,
+        "possible_penalty_target_candidate": 6,
+        "prohibition_only_unresolved": 78
+      }
+    },
+    {
+      "code": "CONS",
+      "sourceSectionKeys": 69,
+      "sourceVersionRows": 372,
+      "dispositions": {
+        "criminal_language_candidate": 16,
+        "no_criminal_signal_detected_not_excluded": 20,
+        "prohibition_only_unresolved": 33
+      }
+    },
+    {
+      "code": "CORP",
+      "sourceSectionKeys": 2430,
+      "sourceVersionRows": 2433,
+      "dispositions": {
+        "criminal_language_candidate": 75,
+        "no_criminal_signal_detected_not_excluded": 1811,
+        "possible_penalty_target_candidate": 42,
+        "prohibition_only_unresolved": 502
+      }
+    },
+    {
+      "code": "EDC",
+      "sourceSectionKeys": 11508,
+      "sourceVersionRows": 11580,
+      "dispositions": {
+        "criminal_language_candidate": 128,
+        "no_criminal_signal_detected_not_excluded": 8807,
+        "possible_penalty_target_candidate": 110,
+        "prohibition_only_unresolved": 2463
+      }
+    },
+    {
+      "code": "ELEC",
+      "sourceSectionKeys": 2373,
+      "sourceVersionRows": 2376,
+      "dispositions": {
+        "criminal_language_candidate": 130,
+        "no_criminal_signal_detected_not_excluded": 1770,
+        "possible_penalty_target_candidate": 66,
+        "prohibition_only_unresolved": 407
+      }
+    },
+    {
+      "code": "EVID",
+      "sourceSectionKeys": 506,
+      "sourceVersionRows": 506,
+      "dispositions": {
+        "criminal_language_candidate": 13,
+        "no_criminal_signal_detected_not_excluded": 395,
+        "possible_penalty_target_candidate": 36,
+        "prohibition_only_unresolved": 62
+      }
+    },
+    {
+      "code": "FAC",
+      "sourceSectionKeys": 9661,
+      "sourceVersionRows": 9663,
+      "dispositions": {
+        "criminal_language_candidate": 178,
+        "no_criminal_signal_detected_not_excluded": 7917,
+        "possible_penalty_target_candidate": 49,
+        "prohibition_only_unresolved": 1517
+      }
+    },
+    {
+      "code": "FAM",
+      "sourceSectionKeys": 1629,
+      "sourceVersionRows": 1636,
+      "dispositions": {
+        "criminal_language_candidate": 33,
+        "no_criminal_signal_detected_not_excluded": 1263,
+        "possible_penalty_target_candidate": 69,
+        "prohibition_only_unresolved": 264
+      }
+    },
+    {
+      "code": "FGC",
+      "sourceSectionKeys": 2296,
+      "sourceVersionRows": 2297,
+      "dispositions": {
+        "criminal_language_candidate": 65,
+        "no_criminal_signal_detected_not_excluded": 1630,
+        "possible_penalty_target_candidate": 94,
+        "prohibition_only_unresolved": 507
+      }
+    },
+    {
+      "code": "FIN",
+      "sourceSectionKeys": 3318,
+      "sourceVersionRows": 3320,
+      "dispositions": {
+        "criminal_language_candidate": 107,
+        "no_criminal_signal_detected_not_excluded": 2523,
+        "possible_penalty_target_candidate": 52,
+        "prohibition_only_unresolved": 636
+      }
+    },
+    {
+      "code": "GOV",
+      "sourceSectionKeys": 21691,
+      "sourceVersionRows": 21875,
+      "dispositions": {
+        "criminal_language_candidate": 369,
+        "no_criminal_signal_detected_not_excluded": 16412,
+        "possible_penalty_target_candidate": 307,
+        "prohibition_only_unresolved": 4603
+      }
+    },
+    {
+      "code": "HNC",
+      "sourceSectionKeys": 1333,
+      "sourceVersionRows": 1333,
+      "dispositions": {
+        "criminal_language_candidate": 53,
+        "no_criminal_signal_detected_not_excluded": 1060,
+        "possible_penalty_target_candidate": 40,
+        "prohibition_only_unresolved": 180
+      }
+    },
+    {
+      "code": "HSC",
+      "sourceSectionKeys": 17630,
+      "sourceVersionRows": 17730,
+      "dispositions": {
+        "criminal_language_candidate": 541,
+        "no_criminal_signal_detected_not_excluded": 12580,
+        "possible_penalty_target_candidate": 392,
+        "prohibition_only_unresolved": 4117
+      }
+    },
+    {
+      "code": "INS",
+      "sourceSectionKeys": 4511,
+      "sourceVersionRows": 4516,
+      "dispositions": {
+        "criminal_language_candidate": 107,
+        "no_criminal_signal_detected_not_excluded": 2991,
+        "possible_penalty_target_candidate": 83,
+        "prohibition_only_unresolved": 1330
+      }
+    },
+    {
+      "code": "LAB",
+      "sourceSectionKeys": 2635,
+      "sourceVersionRows": 2641,
+      "dispositions": {
+        "criminal_language_candidate": 165,
+        "no_criminal_signal_detected_not_excluded": 1783,
+        "possible_penalty_target_candidate": 120,
+        "prohibition_only_unresolved": 567
+      }
+    },
+    {
+      "code": "MVC",
+      "sourceSectionKeys": 1244,
+      "sourceVersionRows": 1246,
+      "dispositions": {
+        "criminal_language_candidate": 46,
+        "no_criminal_signal_detected_not_excluded": 1007,
+        "possible_penalty_target_candidate": 15,
+        "prohibition_only_unresolved": 176
+      }
+    },
+    {
+      "code": "PCC",
+      "sourceSectionKeys": 1658,
+      "sourceVersionRows": 1667,
+      "dispositions": {
+        "criminal_language_candidate": 24,
+        "no_criminal_signal_detected_not_excluded": 1268,
+        "possible_penalty_target_candidate": 34,
+        "prohibition_only_unresolved": 332
+      }
+    },
+    {
+      "code": "PEN",
+      "sourceSectionKeys": 5741,
+      "sourceVersionRows": 5763,
+      "dispositions": {
+        "criminal_language_candidate": 2040,
+        "no_criminal_signal_detected_not_excluded": 2587,
+        "possible_penalty_target_candidate": 519,
+        "prohibition_only_unresolved": 595
+      }
+    },
+    {
+      "code": "PRC",
+      "sourceSectionKeys": 8179,
+      "sourceVersionRows": 8188,
+      "dispositions": {
+        "criminal_language_candidate": 89,
+        "no_criminal_signal_detected_not_excluded": 6739,
+        "possible_penalty_target_candidate": 59,
+        "prohibition_only_unresolved": 1292
+      }
+    },
+    {
+      "code": "PROB",
+      "sourceSectionKeys": 2710,
+      "sourceVersionRows": 2711,
+      "dispositions": {
+        "criminal_language_candidate": 17,
+        "no_criminal_signal_detected_not_excluded": 2370,
+        "possible_penalty_target_candidate": 39,
+        "prohibition_only_unresolved": 284
+      }
+    },
+    {
+      "code": "PUC",
+      "sourceSectionKeys": 7566,
+      "sourceVersionRows": 7568,
+      "dispositions": {
+        "criminal_language_candidate": 95,
+        "no_criminal_signal_detected_not_excluded": 6185,
+        "possible_penalty_target_candidate": 48,
+        "prohibition_only_unresolved": 1238
+      }
+    },
+    {
+      "code": "RTC",
+      "sourceSectionKeys": 7319,
+      "sourceVersionRows": 7366,
+      "dispositions": {
+        "criminal_language_candidate": 165,
+        "no_criminal_signal_detected_not_excluded": 5348,
+        "possible_penalty_target_candidate": 185,
+        "prohibition_only_unresolved": 1621
+      }
+    },
+    {
+      "code": "SHC",
+      "sourceSectionKeys": 4625,
+      "sourceVersionRows": 4632,
+      "dispositions": {
+        "criminal_language_candidate": 30,
+        "no_criminal_signal_detected_not_excluded": 3981,
+        "possible_penalty_target_candidate": 5,
+        "prohibition_only_unresolved": 609
+      }
+    },
+    {
+      "code": "UIC",
+      "sourceSectionKeys": 1115,
+      "sourceVersionRows": 1120,
+      "dispositions": {
+        "criminal_language_candidate": 14,
+        "no_criminal_signal_detected_not_excluded": 875,
+        "possible_penalty_target_candidate": 15,
+        "prohibition_only_unresolved": 211
+      }
+    },
+    {
+      "code": "VEH",
+      "sourceSectionKeys": 3781,
+      "sourceVersionRows": 3824,
+      "dispositions": {
+        "criminal_language_candidate": 363,
+        "no_criminal_signal_detected_not_excluded": 2264,
+        "possible_penalty_target_candidate": 266,
+        "prohibition_only_unresolved": 888
+      }
+    },
+    {
+      "code": "WAT",
+      "sourceSectionKeys": 10123,
+      "sourceVersionRows": 10139,
+      "dispositions": {
+        "criminal_language_candidate": 61,
+        "no_criminal_signal_detected_not_excluded": 9030,
+        "possible_penalty_target_candidate": 65,
+        "prohibition_only_unresolved": 967
+      }
+    },
+    {
+      "code": "WIC",
+      "sourceSectionKeys": 7134,
+      "sourceVersionRows": 7225,
+      "dispositions": {
+        "criminal_language_candidate": 237,
+        "no_criminal_signal_detected_not_excluded": 4928,
+        "possible_penalty_target_candidate": 284,
+        "prohibition_only_unresolved": 1685
+      }
+    }
+  ],
+  "failures": [],
+  "limits": [
+    "A candidate section is not an offense. References, civil provisions, procedures and historical text produce false positives.",
+    "No-signal sections are not certified noncriminal. Independent inventories and negative-sample audits remain necessary.",
+    "Active flags and effective-date metadata do not select current operative law. All versions and identity conflicts remain visible.",
+    "Possible penalty targets are broad research hints, not findings that a prohibition exists or a punishment applies.",
+    "Blanket scopes are retained unexpanded; code-specific hierarchy and penalty applicability need review.",
+    "Ranges, subdivision applicability and uncertain cross-code references remain unresolved; no grade is propagated.",
+    "State regulations, local ordinances, uncodified enactments and comprehensive case-law enforceability are not scanned here.",
+    "Severity-unknown candidates are not assumed minor. Only reviewed low-priority candidates may enter the explicit deferral inventory."
+  ],
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "asOf": "2026-09-27",
+  "catalogSha256": "efb257bafb6a8495d095aee29defbd4c006275898de14aa9e1482769239b63a1",
+  "deferredCandidateCount": 0,
+  "deferrals": [],
+  "code": {
+    "discover-statewide.py": "c4a46ba80180012db10d4d1f2312870974d504ac034b6c24f74afad6d4ea455b",
+    "extract-bulk.py": "3a237a325de59a0af2a150e5fe2fa6a8c3f3bf5cb818d090edd5d3da1fe2d17d"
+  },
+  "artifacts": [
+    {
+      "file": "source-versions.jsonl.gz",
+      "sha256": "f238f6ef7f2aae09c774a311f68abbc9c48cd71097af1c8cb9e5653966d11462",
+      "bytes": 32927530,
+      "rows": 162431
+    },
+    {
+      "file": "section-accounting.jsonl.gz",
+      "sha256": "bb6d7d4d558bbe3cf86e1865329f0bfd814a5bdac2fb19e347c0f10e226d7737",
+      "bytes": 850205,
+      "rows": 161426
+    },
+    {
+      "file": "possible-penalty-groups.jsonl.gz",
+      "sha256": "82257baf526607f75c0b08f1767f46047c27ef9e3cbc3f382da2992b1069d314",
+      "bytes": 55254,
+      "rows": 2835
+    },
+    {
+      "file": "unresolved-references.jsonl.gz",
+      "sha256": "c991a11236071a4efce36785e0c64c19e87ed4cc464d20c3d94204a55d9207e5",
+      "bytes": 69928,
+      "rows": 3421
+    },
+    {
+      "file": "review-batches.json",
+      "sha256": "5e8da567a6b3997a0ec132f5a649aed342ab528ae34cc1e23599839208bb905e",
+      "rows": 6480
+    }
+  ]
+}
