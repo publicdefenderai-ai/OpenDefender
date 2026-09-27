@@ -121,7 +121,8 @@ const releaseCheckCaliforniaSelectableChargeIds = [
   "ca-accessory-after-the-fact-32",
   "ca-criminal-solicitation-653f-a",
   "ca-criminal-solicitation-653f-b",
-  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/california-person-property-additions.json"), "utf8")).map(row => row.id),
+  ...["california-person-property-additions.json", "california-forgery-theft-additions.json"].flatMap(file =>
+    JSON.parse(readFileSync(resolve(process.cwd(), "shared", file), "utf8")).map(row => row.id)),
 ];
 // The Ohio manifest on disk is the legacy ledger; these source-first IDs are
 // composed by the server loader only while its short-lived refresh receipt is

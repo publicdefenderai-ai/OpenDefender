@@ -56,4 +56,17 @@ describe("California corrections require seeded supporting references", () => {
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
   });
 
+  it("requires the vessel definition from Harbors and Navigation, not a same-number Penal Code section", async () => {
+    const id = "ca-pen-496d-a";
+    const rows = seed.links.filter(link => link.chargeId === id).map(link => {
+      const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+    });
+    state.ids = [id]; state.rows = rows;
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));
+    expect(rows.some(row => row.sourceUrl.includes("lawCode=HNC"))).toBe(true);
+    state.rows = rows.map(row => ({ ...row, sourceUrl: row.sourceUrl.replace("lawCode=HNC", "lawCode=PEN") }));
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
+  });
+
 });

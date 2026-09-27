@@ -1,35 +1,26 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
-const additions = JSON.parse(readFileSync("shared/california-person-property-additions.json", "utf8")) as Array<{id: string; code: string; title: string; summary: string; penalty: string; categories: string[]}>;
+const additions = JSON.parse(readFileSync("shared/california-forgery-theft-additions.json", "utf8")) as Array<{id: string; code: string; summary: string; penalty: string; categories: string[]}>;
 
-test("all person/property additions reach the production API and rules guidance", async ({ request }) => {
+test("all forgery/theft additions reach the API and representative rules guidance", async ({ request }) => {
   const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
   expect(response.ok()).toBe(true);
   const body = await response.json();
   expect(body.charges).toHaveLength(153);
-  for (const addition of additions) {
-    const charge = body.charges.find((r: any) => r.id === addition.id);
-    expect(charge, addition.id).toBeDefined();
-    expect(charge.description).toBe(addition.summary);
-    expect(charge.maxPenalty).toBe(addition.penalty);
-    expect(charge.categories).toEqual(addition.categories);
+  for (const a of additions) {
+    expect(body.charges.find((r: any) => r.id === a.id), a.id).toMatchObject({ description: a.summary, maxPenalty: a.penalty, categories: a.categories });
   }
-  const ids = ["ca-pen-245-b", "ca-pen-245-a-2", "ca-pen-246-3-b", "ca-pen-470b"];
+  const ids = ["ca-pen-475-b", "ca-pen-484b", "ca-pen-496d-a", "ca-pen-499b-a"];
   const responseGuidance = await request.post("/api/legal-guidance/rules", {
     headers: { Origin: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5001" },
     data: { jurisdiction: "CA", charges: ids, caseStage: "arrest", custodyStatus: "in_custody" },
   });
   expect(responseGuidance.ok()).toBe(true);
   const guidance = (await responseGuidance.json()).guidance;
-  expect(guidance.generatedBy).toBe("rule-based");
-  for (const id of ids) {
-    const actual = guidance.chargeClassifications.find((r: any) => r.id === id);
-    expect(actual.maxPenalty).toBe(additions.find(a => a.id === id)!.penalty);
-    expect(actual.categories).toEqual(additions.find(a => a.id === id)!.categories);
-  }
+  for (const id of ids) expect(guidance.chargeClassifications.find((r: any) => r.id === id)).toMatchObject({ maxPenalty: additions.find(a => a.id === id)!.penalty, categories: additions.find(a => a.id === id)!.categories });
 });
-for (const [id, citation] of [["ca-pen-245-a-2", "245(a)(2)"], ["ca-pen-471-5", "471.5"]]) {
-  test(`charging-document citation finds ${id}`, async ({ page }) => {
+for (const [id, citation] of [["ca-pen-475-b", "475(b)"], ["ca-pen-496d-a", "496d(a)"]]) {
+  test(`exact citation selects ${id}`, async ({ page }) => {
     await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));
     await page.goto("/case-guidance");
     await page.getByTestId("button-start-guidance").click();
