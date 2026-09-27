@@ -1,9 +1,10 @@
+import { californiaReceiptStatus } from "../shared/california-freshness-core.mjs";
 /** Read-only deadline alarm. Does not validate legal content or renew evidence. */
 import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const REQUIRED = ["ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
+const REQUIRED = ["california-archive-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
 export function checkStatutoryReceipts(root = process.cwd(), now = new Date()) {
   if (!Number.isFinite(now.getTime())) throw new Error("Invalid check time");
   const directory = resolve(root, "scripts/data-review/output");
@@ -12,6 +13,7 @@ export function checkStatutoryReceipts(root = process.cwd(), now = new Date()) {
   const receipts = names.map(name => {
     try {
       const receipt = JSON.parse(readFileSync(resolve(directory, name), "utf8"));
+      if (name === "california-archive-refresh-receipt.json" && californiaReceiptStatus(receipt, now) === "invalid") throw new Error("Invalid California archive binding");
       const checkedAt = Date.parse(receipt.checkedAt), expiresAt = Date.parse(receipt.expiresAt);
       if (typeof receipt.checkedAt !== "string" || typeof receipt.expiresAt !== "string" || !Number.isFinite(checkedAt) || !Number.isFinite(expiresAt) || checkedAt > now.getTime() || expiresAt <= checkedAt) throw new Error("Invalid receipt dates");
       const remainingHours = (expiresAt - now.getTime()) / 3_600_000;

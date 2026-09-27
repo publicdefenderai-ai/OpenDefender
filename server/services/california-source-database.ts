@@ -1,3 +1,4 @@
+import { isCaliforniaEvidenceFresh } from "@shared/california-freshness";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
 import { db } from "../db";
@@ -188,6 +189,7 @@ function sourceValues(source: CaliforniaSourceSeed) {
 export async function seedCaliforniaSourceDatabase(
   seed: CaliforniaSourceDatabaseSeed = buildCaliforniaSourceDatabaseSeed(),
 ): Promise<CaliforniaSourceDatabaseResult> {
+  if (!isCaliforniaEvidenceFresh()) throw new Error("California evidence is stale or invalid; refresh and review before seeding");
   assertCaliforniaSourceDatabaseSeed(seed);
   const runId = randomUUID();
   const startedAt = new Date();
@@ -552,13 +554,13 @@ export async function getCaliforniaChargeProvenance(
   chargeId: string,
 ): Promise<CaliforniaChargeProvenance | null> {
   const record = getCaliforniaCanonicalRecord(chargeId);
-  if (!record || !record.selectable) return null;
+  if (!isCaliforniaEvidenceFresh() || !record || !record.selectable) return null;
 
   const rows = await getCurrentCaliforniaProvenanceRows(record.canonicalId);
 
   // A charge is not provenance-safe if a current link disappeared during a
   // partial seed. Never return partial authority to guidance or exports.
-  if (!hasCompleteCaliforniaEvidence(record, rows)) return null;
+  if (!isCaliforniaEvidenceFresh() || !hasCompleteCaliforniaEvidence(record, rows)) return null;
 
   return {
     chargeId: record.canonicalId,
@@ -575,6 +577,7 @@ export async function getCaliforniaChargeProvenance(
  * making an incomplete record available through another route.
  */
 export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<string>> {
+  if (!isCaliforniaEvidenceFresh()) return new Set();
   const [latestRun] = await db
     .select({ metadata: statuteIngestionRuns.metadata })
     .from(statuteIngestionRuns)
@@ -620,6 +623,7 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     rowsByCharge.set(row.chargeId, rows);
   }
 
+  if (!isCaliforniaEvidenceFresh()) return new Set();
   return new Set(candidateIds.filter((chargeId) => {
     const record = getCaliforniaCanonicalRecord(chargeId);
     return Boolean(

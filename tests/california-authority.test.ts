@@ -1,4 +1,5 @@
-import { describe, expect, it } from "vitest";
+import californiaReceipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
   CALIFORNIA_ADDITION_IDS,
@@ -22,6 +23,7 @@ import {
 import { getChargeExplanation } from "../shared/charge-explanations";
 
 describe("authoritative California charge release", () => {
+  afterEach(() => vi.useRealTimers());
   it("accounts for every legacy California record exactly once", () => {
     expect(CALIFORNIA_LEGACY_DISPOSITIONS).toHaveLength(115);
     expect(new Set(CALIFORNIA_LEGACY_DISPOSITIONS.map((entry) => entry.legacyId)).size).toBe(115);
@@ -29,6 +31,7 @@ describe("authoritative California charge release", () => {
   });
 
   it("requires complete canonical evidence for every selectable record", () => {
+    vi.useFakeTimers(); vi.setSystemTime(new Date(californiaReceipt.checkedAt));
     expect(CALIFORNIA_CANONICAL_RECORDS.length).toBeGreaterThan(0);
     for (const record of CALIFORNIA_CANONICAL_RECORDS.filter((record) => record.selectable)) {
       expect(record.selectable).toBe(true);

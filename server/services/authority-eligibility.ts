@@ -1,3 +1,4 @@
+import { isCaliforniaEvidenceFresh } from "@shared/california-freshness";
 import { getSelectableCharges } from "@shared/criminal-charges";
 import { CALIFORNIA_CANONICAL_RECORDS } from "@shared/california-authority";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
@@ -12,6 +13,7 @@ const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
 );
 
 function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }): boolean {
+  if (charge.jurisdiction === "CA" && !isCaliforniaEvidenceFresh()) return false;
   if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !isOhioReviewedSourceFresh()) return false;
   return charge.jurisdiction !== "OH" ||
     !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
