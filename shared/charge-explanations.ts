@@ -1,7 +1,7 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
-import { getCaliforniaExplanationSlug, getCaliforniaBatchCorrection, getCaliforniaCanonicalRecord } from "./california-authority";
+import { getCaliforniaExplanationSlug, getCaliforniaAddition, getCaliforniaBatchCorrection, getCaliforniaCanonicalRecord } from "./california-authority";
 import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
 import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
@@ -3732,7 +3732,13 @@ export function getChargeExplanation(
   // Exact California corrections must not fall through to a generic assault,
   // domestic-violence, or failure-to-identify explanation with different scope.
   if (canonicalChargeId && normalizeJurisdictionCode(jurisdiction ?? "") === "ca") {
-    const correction = getCaliforniaBatchCorrection(canonicalChargeId);
+    const addition = getCaliforniaAddition(canonicalChargeId);
+    // No generic name match or fabricated translation for a new exact identity.
+    // Until translations are reviewed, all locales explicitly use the English fallback.
+    const correction = getCaliforniaBatchCorrection(canonicalChargeId) ?? (addition ? {
+      summary: { en: addition.summary, es: addition.summary, zh: addition.summary },
+      penalty: { en: addition.penalty, es: addition.penalty, zh: addition.penalty },
+    } : undefined);
     const record = getCaliforniaCanonicalRecord(canonicalChargeId);
     if (correction && record) {
       const requested = (language ?? "en").split("-")[0].toLowerCase();
@@ -3749,7 +3755,7 @@ export function getChargeExplanation(
           penaltyClass: correction.penalty[lang], source: "California Legislative Information",
           sourceUrl: record.sources[0].url, dataConfidence: "high", lastVerified: "2026-09",
         },
-        jurisdictionDetailMissing: false, translationDraft: lang !== "en",
+        jurisdictionDetailMissing: false, translationDraft: !addition && lang !== "en",
         dataConfidence: "high", lastVerified: "2026-09",
       };
     }

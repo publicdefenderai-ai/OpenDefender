@@ -45,7 +45,7 @@ export interface CaliforniaSnapshotSeed {
   hashBasis: CaliforniaSnapshotHashBasis;
   retrievedAt: null;
   manifestImportedAt: Date;
-  effectiveDateStart: string;
+  effectiveDateStart: string | null;
   effectiveDateEnd: null;
   status: "current";
   requiresReview: false;
@@ -109,7 +109,7 @@ export interface CaliforniaSourceDatabaseAudit {
   };
   currentness: {
     status: "current";
-    effectiveDateStarts: string[];
+    effectiveDateStarts: Array<string | null>;
     currentSnapshotCount: number;
     allSourcesMarkedCurrentLawText: boolean;
     verificationMethod: "committed_authority_manifest";
@@ -183,6 +183,7 @@ export function buildCaliforniaReferenceHash(
     subdivision: record.code,
     effectiveDate: record.currentness.effectiveDate,
     currentnessEvidence: record.currentness.evidence,
+    ...(source.effectiveDate !== undefined ? { sourceEffectiveDate: source.effectiveDate } : {}),
   };
   return createHash("sha256").update(JSON.stringify(reference)).digest("hex");
 }
@@ -219,7 +220,7 @@ function auditProvisionFor(
     contentHash: buildCaliforniaReferenceHash(record, source),
     hashBasis: "reference_metadata",
     retrievedAt: null,
-    effectiveDateStart: record.currentness.effectiveDate,
+    effectiveDateStart: source.effectiveDate !== undefined ? source.effectiveDate : record.currentness.effectiveDate,
     effectiveDateEnd: null,
     supportRole: supportRoleFor(source),
     subdivision: record.code,
@@ -455,7 +456,7 @@ export function buildCaliforniaSourceDatabaseSeed(
         hashBasis: "reference_metadata",
           retrievedAt: null,
           manifestImportedAt: retrievedAt,
-        effectiveDateStart: record.currentness.effectiveDate,
+        effectiveDateStart: source.effectiveDate !== undefined ? source.effectiveDate : record.currentness.effectiveDate,
         effectiveDateEnd: null,
         status: "current",
         requiresReview: false,

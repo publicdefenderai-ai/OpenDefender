@@ -227,6 +227,7 @@ import {
 import { getNorthCarolinaApprovedDisplayName } from './north-carolina-approved-display-names';
 import {
   assertCaliforniaInventoryComplete,
+  getCaliforniaAdditionCharges,
   getCaliforniaCanonicalCharge,
   getCaliforniaCanonicalCharges,
   getCaliforniaCanonicalRecord,
@@ -94678,6 +94679,8 @@ criminalCharges.push(...phase5JuvenileCharges);
 criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
 // Additive source-first Florida identities never replace or alias legacy rows.
 criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges);
+// Source-first California additions preserve the separate legacy inventory.
+criminalCharges.push(...getCaliforniaAdditionCharges());
 
 
 export const chargeCategories: Record<string, string[]> = {

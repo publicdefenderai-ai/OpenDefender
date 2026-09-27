@@ -1,0 +1,3815 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_person_property_additions_not_statewide_certification",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "acquisitionSha256": "aa12d432c6f9d662cc7cdd72954dfb6acc53bf311132df32139321b2ba09aa33",
+  "records": [
+    {
+      "id": "ca-pen-244",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "6cfdadf7cd4d8dae885837936a2b2c254c72794fe2c8e73481d38c09d96e6f9c",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:244",
+          "versions": [
+            {
+              "versionId": "id_665bbaa8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "526e6a625f37ec9b119185771be5ee1ae9135f9a821f21bb6bc6ae890df87548"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:244",
+        "start": 0,
+        "end": 516,
+        "text": "Any person who willfully and maliciously places or throws, or causes to be placed or thrown, upon the person of another, any vitriol, corrosive acid, flammable substance, or caustic chemical of any nature, with the intent to injure the flesh or disfigure the body of that person, is punishable by imprisonment in the state prison for two, three or four years. As used in this section, “flammable substance” means gasoline, petroleum products, or flammable liquids with a flashpoint of 150 degrees Fahrenheit or less."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-244-5-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8f493fb61511e8d328e49f0cf55b9e6264d56f7709bc1a554f3e907fe0f1d709",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:16780",
+          "versions": [
+            {
+              "versionId": "id_dbb77a55-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "f6262066064f76e370e07149f241489e2d50709cb235b4c3f448b48acfd699cd"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:244.5",
+          "versions": [
+            {
+              "versionId": "id_2add5b0b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89d76aca3731172b7bb50fb91f0609a2935c0db66a3870ef22b56e2bcd64fae4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:244.5",
+        "start": 281,
+        "end": 1299,
+        "text": "(b) Every person who commits an assault upon the person of another with a stun gun or less lethal weapon, as defined in Section 16780, shall be punished by imprisonment in a county jail for a term not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months, two, or three years. (c) Every person who commits an assault upon the person of a peace officer or firefighter with a stun gun or less lethal weapon, as defined in Section 16780, who knows or reasonably should know that the person is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the county jail for a term not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years. (d) This section shall not be construed to preclude or in any way limit the applicability of Section 245 in any criminal prosecution."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-244-5-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "ca697733aa2e02bb41b9c90f634f4a9903a81521859f3ea5296ae39db58e5683",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:16780",
+          "versions": [
+            {
+              "versionId": "id_dbb77a55-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "f6262066064f76e370e07149f241489e2d50709cb235b4c3f448b48acfd699cd"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:244.5",
+          "versions": [
+            {
+              "versionId": "id_2add5b0b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89d76aca3731172b7bb50fb91f0609a2935c0db66a3870ef22b56e2bcd64fae4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.1",
+          "versions": [
+            {
+              "versionId": "id_665d414e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "47926a28a8cc6b798cc8971f87af3924c73b5d8b421227bd4e295be920c005fc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:244.5",
+        "start": 601,
+        "end": 1299,
+        "text": "(c) Every person who commits an assault upon the person of a peace officer or firefighter with a stun gun or less lethal weapon, as defined in Section 16780, who knows or reasonably should know that the person is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the county jail for a term not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years. (d) This section shall not be construed to preclude or in any way limit the applicability of Section 245 in any criminal prosecution."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "77f4476652047e3e8b4ca2cc03c60025beff293dd46575779f3d754174275fc4",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.2",
+          "versions": [
+            {
+              "versionId": "id_665d4150-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "6836dc6abece302186e8658893d967819f49ed316ad92945c71c95db184d7f6a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.2",
+        "start": 0,
+        "end": 850,
+        "text": "Every person who commits an assault with a deadly weapon or instrument or by any means of force likely to produce great bodily injury upon the person of an operator, driver, or passenger on a bus, taxicab, streetcar, cable car, trackless trolley, or other motor vehicle, including a vehicle operated on stationary rails or on a track or rail suspended in the air, used for the transportation of persons for hire, or upon the person of a station agent or ticket agent for the entity providing such transportation, when the driver, operator, or agent is engaged in the performance of his or her duties, and where the person who commits the assault knows or reasonably should know that the victim is engaged in the performance of his or her duties, or is a passenger, shall be punished by imprisonment in the state prison for three, four, or five years."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-3",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "a2f3a57cd7a92463895654448c3aa6eacde7216f4eda44ad025fbae285ac7f87",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.3",
+          "versions": [
+            {
+              "versionId": "id_fa5166a3-0f4a-11e0-9b76-a227e281d99a",
+              "contentSha256": "fe547878b8b9b34c463ee273e67e97555e153a57f2c0d78be8fcec89bcbd937d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:831",
+          "versions": [
+            {
+              "versionId": "id_a0b9577d-df53-11e7-967b-c7bde29c26e0",
+              "contentSha256": "3af3064c640190df01ae069797d09068c68a1c2d28c164bb58b76d3f5ec9cdeb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:831.5",
+          "versions": [
+            {
+              "versionId": "id_6c9e19e5-0bdd-11ea-912d-915c88c10a14",
+              "contentSha256": "f35d30c5c6801d552ca850bd1125d68024250209e9ca14418656942b880c7b1f"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.3",
+        "start": 0,
+        "end": 769,
+        "text": "Every person who commits an assault with a deadly weapon or instrument or by any means likely to produce great bodily injury upon the person of a custodial officer as defined in Section 831 or 831.5, and who knows or reasonably should know that the victim is a custodial officer engaged in the performance of that person’s duties, shall be punished by imprisonment in the state prison for three, four, or five years. When a person is convicted of a violation of this section in a case involving use of a deadly weapon or instrument, and such weapon or instrument is owned by that person, the court may, in its discretion, order that the weapon or instrument be deemed a nuisance and shall be confiscated and destroyed in the manner provided by Sections 18000 and 18005."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-5-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "ca97dc6b5c57096474df467aef4d1e812aad9a3d64bb44575663509d058b85cd",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.5",
+          "versions": [
+            {
+              "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+            }
+          ]
+        },
+        {
+          "key": "PEN:626",
+          "versions": [
+            {
+              "versionId": "id_92f1a286-0931-11ed-8b25-e1cb6bae3d49",
+              "contentSha256": "978e1b247506ea024aafc678b6883a8d0bede11d9f1c160d59b11fa862ec7e9c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.5",
+        "start": 0,
+        "end": 1500,
+        "text": "(a) Every person who commits an assault with a deadly weapon or instrument, other than a firearm, or by any means likely to produce great bodily injury upon the person of a school employee, and who knows or reasonably should know that the victim is a school employee engaged in the performance of his or her duties, when that school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for three, four, or five years, or in a county jail not exceeding one year. (b) Every person who commits an assault with a firearm upon the person of a school employee, and who knows or reasonably should know that the victim is a school employee engaged in the performance of his or her duties, when the school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years, or in a county jail for not less than six months and not exceeding one year. (c) Every person who commits an assault upon the person of a school employee with a stun gun or taser, and who knows or reasonably should know that the person is a school employee engaged in the performance of his or her duties, when the school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in a county jail for a term not exceeding one year or by imprisonment in the state prison for two, three, or four years. This subdivision shall not be construed to preclude or in"
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-5-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "5884a45d26229425bd2d1df8424cc440c6bbd5a03ad7d3073dd88410ab3bd91f",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.5",
+          "versions": [
+            {
+              "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+            }
+          ]
+        },
+        {
+          "key": "PEN:626",
+          "versions": [
+            {
+              "versionId": "id_92f1a286-0931-11ed-8b25-e1cb6bae3d49",
+              "contentSha256": "978e1b247506ea024aafc678b6883a8d0bede11d9f1c160d59b11fa862ec7e9c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.5",
+        "start": 524,
+        "end": 2002,
+        "text": "(b) Every person who commits an assault with a firearm upon the person of a school employee, and who knows or reasonably should know that the victim is a school employee engaged in the performance of his or her duties, when the school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years, or in a county jail for not less than six months and not exceeding one year. (c) Every person who commits an assault upon the person of a school employee with a stun gun or taser, and who knows or reasonably should know that the person is a school employee engaged in the performance of his or her duties, when the school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in a county jail for a term not exceeding one year or by imprisonment in the state prison for two, three, or four years. This subdivision shall not be construed to preclude or in any way limit the applicability of Section 245 in any criminal prosecution. (d) As used in the section, “school employee” means any person employed as a permanent or probationary certificated or classified employee of a school district on a part-time or full-time basis, including a substitute teacher. “School employee,” as used in this section, also includes a student teacher, or a school board member. “School,” as used in this section, has the same meaning as that term is defined in Section 626."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-5-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9451453080b41157e98f93dc5bd280326bd5ccd5035491ccb4c036a6b19ff1f3",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.5",
+          "versions": [
+            {
+              "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+            }
+          ]
+        },
+        {
+          "key": "PEN:626",
+          "versions": [
+            {
+              "versionId": "id_92f1a286-0931-11ed-8b25-e1cb6bae3d49",
+              "contentSha256": "978e1b247506ea024aafc678b6883a8d0bede11d9f1c160d59b11fa862ec7e9c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.5",
+        "start": 982,
+        "end": 2002,
+        "text": "(c) Every person who commits an assault upon the person of a school employee with a stun gun or taser, and who knows or reasonably should know that the person is a school employee engaged in the performance of his or her duties, when the school employee is engaged in the performance of his or her duties, shall be punished by imprisonment in a county jail for a term not exceeding one year or by imprisonment in the state prison for two, three, or four years. This subdivision shall not be construed to preclude or in any way limit the applicability of Section 245 in any criminal prosecution. (d) As used in the section, “school employee” means any person employed as a permanent or probationary certificated or classified employee of a school district on a part-time or full-time basis, including a substitute teacher. “School employee,” as used in this section, also includes a student teacher, or a school board member. “School,” as used in this section, has the same meaning as that term is defined in Section 626."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-6-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2606534129240ba90bd9844e6efb339bfa594933721d97d13aad3a3daaa4ec6c",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.6",
+          "versions": [
+            {
+              "versionId": "id_2db5814f-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "6ec6e928a05bde88e99b2a868b1408205b2428ac74890c78c5c3aae3afa2d765"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.6",
+        "start": 563,
+        "end": 1669,
+        "text": "(c) A violation of this section that does not result in serious bodily injury is a misdemeanor, punishable by a fine of not less than one hundred dollars ($100), nor more than five thousand dollars ($5,000), or imprisonment in the county jail for not more than one year, or both. (d) Any person who personally engages in hazing that results in death or serious bodily injury as defined in paragraph (4) of subdivision (f) of Section 243 of the Penal Code, is guilty of either a misdemeanor or a felony, and shall be punished by imprisonment in county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170. (e) The person against whom the hazing is directed may commence a civil action for injury or damages. The action may be brought against any participants in the hazing, or any organization to which the student is seeking membership whose agents, directors, trustees, managers, or officers authorized, requested, commanded, participated in, or ratified the hazing. (f) Prosecution under this section shall not prohibit prosecution under any other provision of law."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-6-d",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "115b1183ef7f6adbf34a086d4cb051e407e8858a3a3bec35171c9f5ae8b952df",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243",
+          "versions": [
+            {
+              "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.6",
+          "versions": [
+            {
+              "versionId": "id_2db5814f-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "6ec6e928a05bde88e99b2a868b1408205b2428ac74890c78c5c3aae3afa2d765"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245.6",
+        "start": 843,
+        "end": 1669,
+        "text": "(d) Any person who personally engages in hazing that results in death or serious bodily injury as defined in paragraph (4) of subdivision (f) of Section 243 of the Penal Code, is guilty of either a misdemeanor or a felony, and shall be punished by imprisonment in county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170. (e) The person against whom the hazing is directed may commence a civil action for injury or damages. The action may be brought against any participants in the hazing, or any organization to which the student is seeking membership whose agents, directors, trustees, managers, or officers authorized, requested, commanded, participated in, or ratified the hazing. (f) Prosecution under this section shall not prohibit prosecution under any other provision of law."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-246",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "791393021f5a66d2af8189535eca4771c09f2c873d55591be6db95405b0b8bfa",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:246",
+          "versions": [
+            {
+              "versionId": "id_665ec7f6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "23675e6a5c24b81197c9fb1564fa005def9f521dead2c5827cfcd0cdeed5c92f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "VEH:243",
+          "versions": [
+            {
+              "versionId": "id_087bc94c-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "c6a74e6506446851780a513ad72a928c7bcd09eb066f2092f190eb421b10b830"
+            }
+          ]
+        },
+        {
+          "key": "VEH:362",
+          "versions": [
+            {
+              "versionId": "id_089433ba-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "56daf0fa66151e3fd26378e032314697356c8b8adfac83c361f141480260ffa1"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:246",
+        "start": 0,
+        "end": 642,
+        "text": "Any person who shall maliciously and willfully discharge a firearm at an inhabited dwelling house, occupied building, occupied motor vehicle, occupied aircraft, inhabited housecar, as defined in Section 362 of the Vehicle Code, or inhabited camper, as defined in Section 243 of the Vehicle Code, is guilty of a felony, and upon conviction shall be punished by imprisonment in the state prison for three, five, or seven years, or by imprisonment in the county jail for a term of not less than six months and not exceeding one year. As used in this section, “inhabited” means currently being used for dwelling purposes, whether occupied or not."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-246-3-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "592fa476a5447622b6fb64bd8d1b26f242e5a1ad4a438ff6a9435a50ee387750",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:246.3",
+          "versions": [
+            {
+              "versionId": "id_2f239041-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "cae7b0a75a649a60d6eae85e9cfd2120de50b058f886e8c35f89db566c2922a4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:246.3",
+        "start": 342,
+        "end": 802,
+        "text": "(b) Except as otherwise authorized by law, any person who willfully discharges a BB device in a grossly negligent manner which could result in injury or death to a person is guilty of a public offense and shall be punished by imprisonment in a county jail not exceeding one year. (c) As used in this section, “BB device” means any instrument that expels a projectile, such as a BB or a pellet, through the force of air pressure, gas pressure, or spring action."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-247-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "cc4a2a184e6257b3e54d45edfb8f7f503210ee81b57854b82f997cbd5ae5e920",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:247",
+          "versions": [
+            {
+              "versionId": "id_66604e9c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d5527af87c76ce2f83734bf10b0d7e631cabe2ec70066d3bbf040de4109163e6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:247",
+        "start": 0,
+        "end": 664,
+        "text": "(a) Any person who willfully and maliciously discharges a firearm at an unoccupied aircraft is guilty of a felony. (b) Any person who discharges a firearm at an unoccupied motor vehicle or an uninhabited building or dwelling house is guilty of a public offense punishable by imprisonment in the county jail for not more than one year or in the state prison. This subdivision does not apply to shooting at an abandoned vehicle, unoccupied vehicle, uninhabited building, or dwelling house with the permission of the owner. As used in this section and Section 246 “aircraft” means any contrivance intended for and capable of transporting persons through the airspace."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-247-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "e239cb582069e8805cdd90cfaf5db713e2221a9dfc716d38aae253ff93784058",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:247",
+          "versions": [
+            {
+              "versionId": "id_66604e9c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d5527af87c76ce2f83734bf10b0d7e631cabe2ec70066d3bbf040de4109163e6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:247",
+        "start": 115,
+        "end": 664,
+        "text": "(b) Any person who discharges a firearm at an unoccupied motor vehicle or an uninhabited building or dwelling house is guilty of a public offense punishable by imprisonment in the county jail for not more than one year or in the state prison. This subdivision does not apply to shooting at an abandoned vehicle, unoccupied vehicle, uninhabited building, or dwelling house with the permission of the owner. As used in this section and Section 246 “aircraft” means any contrivance intended for and capable of transporting persons through the airspace."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-247-5",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "0afe6b660dd7ecb6a4c7f82cb8abf0fc7ffcc500f755216f91127651be2c6d9f",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:247.5",
+          "versions": [
+            {
+              "versionId": "id_30a2dd43-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "c9f88c539dfafd78a70bb74c0567d3fd37480b39d3e4a1dad2363514a0410ef1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:247.5",
+        "start": 0,
+        "end": 1043,
+        "text": "Any person who willfully and maliciously discharges a laser at an aircraft, whether in motion or in flight, while occupied, is guilty of a violation of this section, which shall be punishable as either a misdemeanor by imprisonment in the county jail for not more than one year or by a fine of one thousand dollars ($1,000), or a felony by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months, two years, or three years, or by a fine of two thousand dollars ($2,000). This section does not apply to the conduct of laser development activity by or on behalf of the United States Armed Forces. As used in this section, “aircraft” means any contrivance intended for and capable of transporting persons through the airspace. As used in this section, “laser” means a device that utilizes the natural oscillations of atoms or molecules between energy levels for generating coherent electromagnetic radiation in the ultraviolet, visible, or infrared region of the spectrum, and when discharged exceeds one milliwatt continuous wave."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-248",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b0dfd4484ef9a0a8b3a05801ca0a0509e28035903f1bafe02453a73e427d5bd8",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:248",
+          "versions": [
+            {
+              "versionId": "id_66604ea0-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "04d0bc639d9692c6c4c7a7a78e469f107c4498620a27b271b2741f7080de3926"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:248",
+        "start": 0,
+        "end": 383,
+        "text": "Any person who, with the intent to interfere with the operation of an aircraft, willfully shines a light or other bright device, of an intensity capable of impairing the operation of an aircraft, at an aircraft, shall be punished by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-470a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b0b59f6c1158afb27d85325cd651365d194f25a3fc903a3bf2de7e0a0b1603b7",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470",
+          "versions": [
+            {
+              "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+              "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470a",
+          "versions": [
+            {
+              "versionId": "id_91b8afd9-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "9a882135d19bb40835fdde2ba4b64565ba0c0aa0afa56840bb701dcf0eed9ec8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:470a",
+        "start": 0,
+        "end": 432,
+        "text": "Every person who alters, falsifies, forges, duplicates or in any manner reproduces or counterfeits any driver’s license or identification card issued by a governmental agency with the intent that such driver’s license or identification card be used to facilitate the commission of any forgery, is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-470b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f9ea2f764ceb2a1c74292f228bbbb7c152779c72d3b2e66a0045bb04bff5169b",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470",
+          "versions": [
+            {
+              "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+              "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470a",
+          "versions": [
+            {
+              "versionId": "id_91b8afd9-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "9a882135d19bb40835fdde2ba4b64565ba0c0aa0afa56840bb701dcf0eed9ec8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470b",
+          "versions": [
+            {
+              "versionId": "id_92f74a5b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "334c9732a2a4d6f107c48a80e3caab611ae5f03af2843acdccc2bc4645b947d3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:470b",
+        "start": 0,
+        "end": 434,
+        "text": "Every person who displays or causes or permits to be displayed or has in his or her possession any driver’s license or identification card of the type enumerated in Section 470a with the intent that the driver’s license or identification card be used to facilitate the commission of any forgery, is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-471-5",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "bc398c54fbc6e4be5bcd78f3c845baa988be045e9a199def86dc6c26aef23c84",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:471.5",
+          "versions": [
+            {
+              "versionId": "id_67aeee24-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "7f7ef2791aa32c375761d34be3e86702ca895cf6d186c79525f1b23461e351f9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:471.5",
+        "start": 0,
+        "end": 185,
+        "text": "Any person who alters or modifies the medical record of any person, with fraudulent intent, or who, with fraudulent intent, creates any false medical record, is guilty of a misdemeanor."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-243-d",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "be111f0549b96d524d5b7b7bcbadfaac3a1458bfda17f1e87aed42ae811d5923",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243",
+          "versions": [
+            {
+              "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243",
+        "start": 3949,
+        "end": 5449,
+        "text": "(d) When a battery is committed against any person and serious bodily injury is inflicted on the person, the battery is punishable by imprisonment in a county jail not exceeding one year or imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years. (e) (1) When a battery is committed against a spouse, a person with whom the defendant is cohabiting, a person who is the parent of the defendant’s child, former spouse, fiancé, or fiancée, or a person with whom the defendant currently has, or has previously had, a dating or engagement relationship, the battery is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail for a period of not more than one year, or by both that fine and imprisonment. If probation is granted, or the execution or imposition of the sentence is suspended, it shall be a condition thereof that the defendant participate in, for no less than one year, and successfully complete, a batterer’s treatment program, as described in Section 1203.097, or if none is available, another appropriate counseling program designated by the court. However, this provision shall not be construed as requiring a city, a county, or a city and county to provide a new program or higher level of service as contemplated by Section 6 of Article XIII B of the California Constitution. (2) Upon conviction of a violation of this subdivision, if probation is granted, the conditions of probation may include, in lieu of "
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-a-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "836d04d2a5c94a8e6902068a7b6bd3733b8b22cfef529f323f20c38556cf11ad",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 355,
+        "end": 1855,
+        "text": "(2) Any person who commits an assault upon the person of another with a firearm shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not less than six months and not exceeding one year, or by both a fine not exceeding ten thousand dollars ($10,000) and imprisonment. (3) Any person who commits an assault upon the person of another with a machinegun, as defined in Section 16880, or an assault weapon, as defined in Section 30510 or 30515, or a .50 BMG rifle, as defined in Section 30530, shall be punished by imprisonment in the state prison for 4, 8, or 12 years. (4) Any person who commits an assault upon the person of another by any means of force likely to produce great bodily injury shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not exceeding one year, or by a fine not exceeding ten thousand dollars ($10,000), or by both the fine and imprisonment. (b) Any person who commits an assault upon the person of another with a semiautomatic firearm shall be punished by imprisonment in the state prison for three, six, or nine years. (c) Any person who commits an assault with a deadly weapon or instrument, other than a firearm, or by any means likely to produce great bodily injury upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when"
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-a-4",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "acc26009fcb9ff6e5e9f367b8fde1d4c5668c36fd886a326761a27a056129bab",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 977,
+        "end": 2477,
+        "text": "(4) Any person who commits an assault upon the person of another by any means of force likely to produce great bodily injury shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not exceeding one year, or by a fine not exceeding ten thousand dollars ($10,000), or by both the fine and imprisonment. (b) Any person who commits an assault upon the person of another with a semiautomatic firearm shall be punished by imprisonment in the state prison for three, six, or nine years. (c) Any person who commits an assault with a deadly weapon or instrument, other than a firearm, or by any means likely to produce great bodily injury upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for three, four, or five years. (d) (1) Any person who commits an assault with a firearm upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years. (2) Any person who commits a"
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "706beb1f2a74e4fb20df6e8a8221e30016df65ec51ace7fe0c5ecfd35765e6f5",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 1332,
+        "end": 2832,
+        "text": "(b) Any person who commits an assault upon the person of another with a semiautomatic firearm shall be punished by imprisonment in the state prison for three, six, or nine years. (c) Any person who commits an assault with a deadly weapon or instrument, other than a firearm, or by any means likely to produce great bodily injury upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for three, four, or five years. (d) (1) Any person who commits an assault with a firearm upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years. (2) Any person who commits an assault upon the person of a peace officer or firefighter with a semiautomatic firearm and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in "
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "d64e645efd3a1a0376e947d170cd68da56637722b56d37461fd6eebfaab95132",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.1",
+          "versions": [
+            {
+              "versionId": "id_665d414e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "47926a28a8cc6b798cc8971f87af3924c73b5d8b421227bd4e295be920c005fc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 1511,
+        "end": 3011,
+        "text": "(c) Any person who commits an assault with a deadly weapon or instrument, other than a firearm, or by any means likely to produce great bodily injury upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for three, four, or five years. (d) (1) Any person who commits an assault with a firearm upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years. (2) Any person who commits an assault upon the person of a peace officer or firefighter with a semiautomatic firearm and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for five, seven, or nine years. (3) Any person who commits an assault with a machinegun, as defined in Section 16880, or an assault weapon, as defined in Section "
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-d-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2dd4e2a7d0074c2d926f48b4775c8bb21a99a1d0f0a78a6c043f24bbe2314579",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.1",
+          "versions": [
+            {
+              "versionId": "id_665d414e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "47926a28a8cc6b798cc8971f87af3924c73b5d8b421227bd4e295be920c005fc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 2027,
+        "end": 3527,
+        "text": "(d) (1) Any person who commits an assault with a firearm upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for four, six, or eight years. (2) Any person who commits an assault upon the person of a peace officer or firefighter with a semiautomatic firearm and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for five, seven, or nine years. (3) Any person who commits an assault with a machinegun, as defined in Section 16880, or an assault weapon, as defined in Section 30510 or 30515, or a .50 BMG rifle, as defined in Section 30530, upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for 6, 9, or 12 years. (e) When a person is convicted of a violation of this section in a case involving use of a deadly weapon or instrument or firearm, and the weapon or instrument or firearm is owned by t"
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    },
+    {
+      "id": "ca-pen-245-d-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "c69a36756272b9c0cce9ed2254976c0e84670b368e3cf905a05a349199bc923e",
+      "sourceAsOf": "2026-09-24",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18000",
+          "versions": [
+            {
+              "versionId": "id_8b784d0d-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "df72dcad4eee95a2b42dd39c1d4aea343f2bf954ac4ad71200cfcf275753079b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18005",
+          "versions": [
+            {
+              "versionId": "id_8c7cc4bf-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "81b0aac06430bf9e589b217edea83586a00c4f698747fac7d72c558429c2242a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245",
+          "versions": [
+            {
+              "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.1",
+          "versions": [
+            {
+              "versionId": "id_665d414e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "47926a28a8cc6b798cc8971f87af3924c73b5d8b421227bd4e295be920c005fc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:245",
+        "start": 2449,
+        "end": 3882,
+        "text": "(2) Any person who commits an assault upon the person of a peace officer or firefighter with a semiautomatic firearm and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, when the peace officer or firefighter is engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for five, seven, or nine years. (3) Any person who commits an assault with a machinegun, as defined in Section 16880, or an assault weapon, as defined in Section 30510 or 30515, or a .50 BMG rifle, as defined in Section 30530, upon the person of a peace officer or firefighter, and who knows or reasonably should know that the victim is a peace officer or firefighter engaged in the performance of his or her duties, shall be punished by imprisonment in the state prison for 6, 9, or 12 years. (e) When a person is convicted of a violation of this section in a case involving use of a deadly weapon or instrument or firearm, and the weapon or instrument or firearm is owned by that person, the court shall order that the weapon or instrument or firearm be deemed a nuisance, and it shall be confiscated and disposed of in the manner provided by Sections 18000 and 18005. (f) As used in this section, “peace officer” refers to any person designated as a peace officer in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2."
+      },
+      "remainingWork": "Independent legal review and case-specific defenses/enhancements remain. English fallback is intentional pending translated content review; deployment requires source seeding and parity checks."
+    }
+  ],
+  "sections": [
+    {
+      "key": "PEN:187",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree",
+        "ca-attempted-murder"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ce651269-8257-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "05e46d7b858036e7a44a4551be5cfaeb2865f276370955253299b3bb103549e1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:188",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Murder malice definition and limitations. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_443f3866-f96f-11e8-bd10-077ff3712fb6",
+          "contentSha256": "710fc32e490a289cadd055efa6f75306dc747c57f25944691f1683c6878ac263"
+        }
+      ]
+    },
+    {
+      "key": "PEN:189",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Murder degrees and felony-murder liability rules; retain as offense dependencies. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [
+        "ca-murder-in-the-first-degree"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6b542af5-0bdc-11ea-912d-915c88c10a14",
+          "contentSha256": "dd7f02da5ad3d26bab8f758f1acaf045d7cd42f2963b5a58daf9391a1cfa2e79"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Murder punishment and parole minima. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_139058fc-5eed-11dd-a1ac-b5b3460007dd",
+          "contentSha256": "d348e281b41218d01a177437fa29ede8af480df7482acdde25364b75d19384c4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.03",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Hate-crime murder penalty allegation. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_463e1d80-6538-11d9-bd15-b3cbb5da6f1d",
+          "contentSha256": "bb33a23505474fa6cdbffcd93519ac62a927c29116ee2b0baa80ba0d4e40ebf9"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.05",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Prior-murder penalty and hearing rules. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f0c42c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "7aed42c95228291fdffe426751230fe9811d0b9f00b09e5aea4f9c0328e7cf40"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.1",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Capital case trial phases. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f0c42e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "74f13bb52b60ecad50a5c10cb20e39cf41bdc1a2bc0d1356698a39665e9c4fcd"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.2",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Special-circumstance allegations and penalties. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_61f2faea-f96f-11e8-bd10-077ff3712fb6",
+          "contentSha256": "626e8615c79328bc6c11287134cabad90a894daaf42b685e35e84ec63caa3b81"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.25",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Special-circumstance life-without-parole penalty for specified transit and jury-related victims. Not a new standalone selector entry.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f24ad2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "dfbc791fe18da5bcbc5a35c81bccf8fe6a7b2efbbfbf6625b8ae5d101dd05458"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.3",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Capital penalty hearing and factors. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f3d074-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d225f50268647ccfc9e28959ec7b7089ff5bf6d4051ac5f6dafd7f5977735412"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.4",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Special-circumstance findings and penalty procedure. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f3d076-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "3395feadbfc6febd368eb8358a16d59ec8971752223b4c435ddf7c0ecdc35749"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.41",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Corpus-delicti proof rule for felony-based special circumstances. Not a new standalone selector entry.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f3d078-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "5e99b15181c820c72c4000bc6678412171adc26e4f41c1af7a900122f6c0aab4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.5",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Age-related murder sentencing; constitutional limits require independent review. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f5571a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "e856cdfe69b75c11cf58ff6a77350dd5aaaa542cf4ed309dc64738f4862f4292"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.6",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Capital appellate timing. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6cc480b3-ac4f-11e6-a380-dc6ef5283cf5",
+          "contentSha256": "52c156c9380619d6a0abf29d593275b4b22bbf5e506efafb958458748f3175d4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:190.8",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Capital record preparation procedure. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f55720-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "4376ef01199847d1f3d9ce0324aa91a3ab2a1eb624dc4a5c9f08132a171ef657"
+        }
+      ]
+    },
+    {
+      "key": "PEN:191",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Abolishes the common-law petit-treason distinction and treats those killings as homicide. Not a new standalone selector entry.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65f6ddc4-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ca4fb2a231fbcf1a36977860c44cd9277379bbb397ad7e6e432096fd6587eeab"
+        }
+      ]
+    },
+    {
+      "key": "PEN:191.5",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-gross-vehicular-manslaughter-191-5-a",
+        "ca-vehicular-manslaughter-191-5-b"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:192",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-voluntary-manslaughter",
+        "ca-involuntary-manslaughter",
+        "ca-vehicular-manslaughter-192-c1",
+        "ca-vehicular-manslaughter-192-c2",
+        "ca-vehicular-manslaughter-192-c3"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:192.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Manslaughter punishment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_108a298d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "221b16cc3d16c042e36c9263b53414192f0eff4b86ea1cd7fc1e0c8145523159"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193.5",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Vessel-manslaughter punishment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_11e043af-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "89875539405f82a842e7084314dc09e7d8c2c96a74c5b5100ce13b8612663389"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193.7",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Habitual-traffic-offender consequence. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ce96a6dc-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "903fa00e604be934a7a6745bcc4f9e5179fe07ea4aa4ffa1f85ddd011965ce5a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193.8",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_cedefa7e-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "dd910da312fdb851ee6887c218f52f02d5f0cc15d9a8a15ffd7d384026b15a83"
+        }
+      ]
+    },
+    {
+      "key": "PEN:196",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Justifiable homicide by peace officers. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7516cb67-0bdc-11ea-912d-915c88c10a14",
+          "contentSha256": "40c3d47ac5f0c712402e81b5c907fcf1a0087079ec67a01b79463b2e1c3e762d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:197",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Justifiable homicide rules. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_48f263f3-c635-11e6-a742-84f150336b2e",
+          "contentSha256": "baf5209643ec1516a7b1d7d273ca43811c1416bd55bac020d6b1fa849f671f6a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:198",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Limits on fear as justification. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65fb71bc-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "1f7ee7f8a3f50c73acd2ba4cd5de9be61b73b2417021a672b6116b4739f1053c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:198.5",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Residential-entry presumption. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_65fb71be-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "c8d6e208c2a0d30e924a57fbcc063cda8fd1b637052b374f991a8182da21ae58"
+        }
+      ]
+    },
+    {
+      "key": "PEN:240",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Assault definition; paired with punishment provisions. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [
+        "ca-assault-240"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-assault-on-peace-officer"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.1",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_1d0f938d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "793d3c1894000d659c0f3db8028cc036a43a2ace7324f5910e1a5f28738bb93a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.2",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665292be-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "16ff14c30a4c8603cc1aacf826c11885ccf8dbab874a6fe5b422841229cda2bd"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.3",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_66541960-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f47af1588422c15bec3ae1254f234f2df6152e7c47bdc3d1a3ddc44b13cb98b6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.4",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_206993ff-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "fb6e68f96c2b49dfca70203c6e87e1afe4fa4f8f6deabba95b32d362b9b261df"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_cb1340eb-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "f992e5eb80727cfc11e4bf66d39eedc44cfc45d274d8aa1de8b75c6c8093cef6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.6",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_66541964-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "caa8ab80947fce18a81870692dc292a7f1dbeda5a0e6167ec40f9d054ec108cb"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.7",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_21d6dea1-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "1d6777b84896b4d18cbc044f27c053ebb6a388e5e0f02b2262cdac69d057d609"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.8",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_66541968-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d0e202abeb0c5016c70338f0d212e52ef406b4e1b4bb284e0ae7e5fcb80af999"
+        }
+      ]
+    },
+    {
+      "key": "PEN:242",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Battery definition; paired with punishment provisions. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [
+        "ca-domestic-battery",
+        "ca-battery-243-a"
+      ],
+      "additionIds": [
+        "ca-pen-243-d"
+      ],
+      "versions": [
+        {
+          "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.1",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_24f95455-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "e8ecb4af2bb97b663cb15ebecdf272785088c09f55a6d5f42629599753a2ca58"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.10",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665bbaa6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "30d1a40c6294ef8a3844df9fe264c4693eac68cf0943c41ee0641f10133cb801"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.15",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_8368a1eb-a358-11e5-b6cb-8d365f46d37f",
+          "contentSha256": "e64529f63e99ae18b88f44e3094326c0be17ff2ed49ed65cfcd9b83dae956a59"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.2",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665726b0-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6e9b04f792ec1f522914b98dbabd73e37919aeee41338de1c6168040a70c826"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.25",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665726b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "e2a7e23ffa6a46986a2757cda19298db1955d97898d8af1f18c9f302c5ea4a3a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.3",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_73f127fa-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "5993b0ba6b57f506cf3271ed331c618f924e2430f0a9a351564fb70734e224ea"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.35",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665726b6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "68467ee992f00d195608c34ba5658010c56d48aca5c55a047176575d5d400aca"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.4",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-sexual-battery-243-4-a",
+        "ca-sexual-battery-243-4-e1"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_74fccb9c-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "82221df02882eb2377dc55970ad0f337a45bda409ca65b4668a18aa9920a1c7b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.6",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_267015d7-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "7e1db5c24ea49cc0ccb2ad91f9d04ac75065753ea8a319d942197dc79b8a4e7d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.65",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_cc529ebd-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "141387e027893f940f0c1a28c9bbaff14ae82374d67c110cc5b018cf452ce61a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.7",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665a33fe-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "53013931ad1a2ec5953f36522b4997d484f7705ee24bfdbfe57544509bb2fe81"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.8",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665a3400-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "c09c41b4bf25fa5ac5735b793794209974b2ed295e953ded0af790c633d12c7f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.83",
+      "status": "deferred_low_priority_infraction",
+      "reason": "Attendee sporting-event conduct is expressly an infraction capped at $250 in (d). Lower-priority publication work is deferred; this is not an unknown-severity misdemeanor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665a3402-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "a16f4e71840e6d55ce5d1d546bfe79c43ed8637704811395c52f44dcec808f5c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.9",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665a3404-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "76faf48e833e754b1bf295983d13356494d2d6c6c319a8458ce3a72f5e2ed637"
+        }
+      ]
+    },
+    {
+      "key": "PEN:244",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-244"
+      ],
+      "versions": [
+        {
+          "versionId": "id_665bbaa8-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "526e6a625f37ec9b119185771be5ee1ae9135f9a821f21bb6bc6ae890df87548"
+        }
+      ]
+    },
+    {
+      "key": "PEN:244.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-244-5-b",
+        "ca-pen-244-5-c"
+      ],
+      "versions": [
+        {
+          "versionId": "id_2add5b0b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "89d76aca3731172b7bb50fb91f0609a2935c0db66a3870ef22b56e2bcd64fae4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [
+        "ca-assault-with-deadly-weapon"
+      ],
+      "additionIds": [
+        "ca-pen-245-a-2",
+        "ca-pen-245-a-4",
+        "ca-pen-245-b",
+        "ca-pen-245-c",
+        "ca-pen-245-d-1",
+        "ca-pen-245-d-2"
+      ],
+      "versions": [
+        {
+          "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245.1",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Firefighter and rescue-personnel definitions. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665d414e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "47926a28a8cc6b798cc8971f87af3924c73b5d8b421227bd4e295be920c005fc"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245.2",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-245-2"
+      ],
+      "versions": [
+        {
+          "versionId": "id_665d4150-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "6836dc6abece302186e8658893d967819f49ed316ad92945c71c95db184d7f6a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245.3",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-245-3"
+      ],
+      "versions": [
+        {
+          "versionId": "id_fa5166a3-0f4a-11e0-9b76-a227e281d99a",
+          "contentSha256": "fe547878b8b9b34c463ee273e67e97555e153a57f2c0d78be8fcec89bcbd937d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-245-5-a",
+        "ca-pen-245-5-b",
+        "ca-pen-245-5-c"
+      ],
+      "versions": [
+        {
+          "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+        }
+      ]
+    },
+    {
+      "key": "PEN:245.6",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-245-6-c",
+        "ca-pen-245-6-d"
+      ],
+      "versions": [
+        {
+          "versionId": "id_2db5814f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "6ec6e928a05bde88e99b2a868b1408205b2428ac74890c78c5c3aae3afa2d765"
+        }
+      ]
+    },
+    {
+      "key": "PEN:246",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-246"
+      ],
+      "versions": [
+        {
+          "versionId": "id_665ec7f6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "23675e6a5c24b81197c9fb1564fa005def9f521dead2c5827cfcd0cdeed5c92f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:246.1",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Vehicle forfeiture and sale procedure. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665ec7f8-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "b5a2fa3a5509928b7f4ab73ba555177a3f1dbba513a75847b5185b2dfb56bbe0"
+        }
+      ]
+    },
+    {
+      "key": "PEN:246.3",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [
+        "ca-discharge-of-firearm-in-city"
+      ],
+      "additionIds": [
+        "ca-pen-246-3-b"
+      ],
+      "versions": [
+        {
+          "versionId": "id_2f239041-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cae7b0a75a649a60d6eae85e9cfd2120de50b058f886e8c35f89db566c2922a4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:247",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-247-a",
+        "ca-pen-247-b"
+      ],
+      "versions": [
+        {
+          "versionId": "id_66604e9c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d5527af87c76ce2f83734bf10b0d7e631cabe2ec70066d3bbf040de4109163e6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:247.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-247-5"
+      ],
+      "versions": [
+        {
+          "versionId": "id_30a2dd43-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "c9f88c539dfafd78a70bb74c0567d3fd37480b39d3e4a1dad2363514a0410ef1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:248",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-248"
+      ],
+      "versions": [
+        {
+          "versionId": "id_66604ea0-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "04d0bc639d9692c6c4c7a7a78e469f107c4498620a27b271b2741f7080de3926"
+        }
+      ]
+    },
+    {
+      "key": "PEN:470",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-forgery"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+          "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:470a",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-470a"
+      ],
+      "versions": [
+        {
+          "versionId": "id_91b8afd9-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "9a882135d19bb40835fdde2ba4b64565ba0c0aa0afa56840bb701dcf0eed9ec8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:470b",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-470b"
+      ],
+      "versions": [
+        {
+          "versionId": "id_92f74a5b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "334c9732a2a4d6f107c48a80e3caab611ae5f03af2843acdccc2bc4645b947d3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:471",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67aeee22-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "aea92e35813c079eff4e0c3eab783993be4c992ffba1653ee48ccb98d3ae3942"
+        }
+      ]
+    },
+    {
+      "key": "PEN:471.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Only the linked exact addition identities are proposed; other subdivisions and overlapping charges remain subject to review.",
+      "existingIds": [],
+      "additionIds": [
+        "ca-pen-471-5"
+      ],
+      "versions": [
+        {
+          "versionId": "id_67aeee24-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "7f7ef2791aa32c375761d34be3e86702ca895cf6d186c79525f1b23461e351f9"
+        }
+      ]
+    },
+    {
+      "key": "PEN:472",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67aeee26-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "7c572a70ecdae8d3f63542e98fb37f97bcd68bff9ba8bb45bf7a132b20de95d4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:473",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Forgery punishment and value/prior/identity-theft exceptions. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+          "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+        }
+      ]
+    },
+    {
+      "key": "PEN:474",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_96ea567f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "48fa1bb8e4381aca3b386733a2c9270ba1da2bdeb26f1dc7d0fbb8dbb80d6f19"
+        }
+      ]
+    },
+    {
+      "key": "PEN:475",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b074cc-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "948b329c7171b08cb174bd82ca3f349c6ee0087933254cba37161500fa6ccef5"
+        }
+      ]
+    },
+    {
+      "key": "PEN:476",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b1fb6e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "417185f772aa6382ac5dd71fe11d99da270d2e23dd167064168d8d1fba50c180"
+        }
+      ]
+    },
+    {
+      "key": "PEN:476a",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-check-fraud"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7030e5b2-65eb-11e4-b7fe-f60a5c818cd8",
+          "contentSha256": "7ddbe13073765519291ca95ae9229762502991adaa18ab45c3741790613d7380"
+        }
+      ]
+    },
+    {
+      "key": "PEN:477",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b1fb72-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "592bb6863e9855a9732f7826f3936e8c0ff0d69dcf768741eda37270457c6122"
+        }
+      ]
+    },
+    {
+      "key": "PEN:478",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Counterfeiting punishment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_98561b81-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cf4b5548463c02098b833878c6a84287a2afcb1a7199338e859ce902a3771222"
+        }
+      ]
+    },
+    {
+      "key": "PEN:479",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_99caba23-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cd0c7d41f36fa5eb0b5b497e90d69ef2ee97bf89d2d1583782c66eec056e4952"
+        }
+      ]
+    },
+    {
+      "key": "PEN:480",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_9b334ad5-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cfcb19c39bb2a52b9a53b9de007032f9c91880334fbe545a646e12853ae42248"
+        }
+      ]
+    },
+    {
+      "key": "PEN:481",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_9c8bd5f7-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "52e5c659c093b3cb6f0773163a928ef3b48ac33d43e1817fa915d91d09de99c6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:481.1",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b3821c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "940687a02bdb1d6f0209da138b79b48824855e458bea2c5cde1452818d0e8004"
+        }
+      ]
+    },
+    {
+      "key": "PEN:482",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b3821e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8b464583c8be8738bacce300ba8dcd66df6c4d10e7ffdd1f917dd3d1d83245c2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:483",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b38220-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "b25a29643e8f5b3851d59da4bc15fd71186239336ed3bf12cf63ce4645293cf2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:483.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_9e113d79-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "90d77d63e021ada036e9c7d69247d6fc30d7e39a77f4588ab8fa8a1a28825355"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-petty-theft"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b508c6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "fc9c0f9bb3c2f28a98a6b0b55b068b8a3b2fdf0ffba16d7a6d9c9d3bea6e0920"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484.1",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b68f68-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6720c1af1521400a31eb5bd28ca7893f39fb7012b380fd7b3d374d3177e38ad"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484b",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a03d935b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "68ed102b771adf8d85be3fcb523943ff94558f8a890ea52e5ac4e689ce5b09b2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484c",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b68f6c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "9ea06fce68ad7f6f0c0b60a2aa0083a01069594f6640ba25ec18ee0224883f15"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484e",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484f",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484g",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-credit-card-fraud"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_2b101b06-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "caa60b72d8531a6982ce2f0ec0ecd72c421d9e2f2af9a1bb83355bb24760d925"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484h",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_2c7b91e8-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "154cd4517cd2aa52d16d42a7275a2cb761ae4d9c998ac3745f84e1cef32255e8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484i",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a1b90fcd-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "83846562b647761b96c6cfa8461e77dc526d0599cb578d3eb3d71df915268363"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484j",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b99cba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "084316c90777cfc80486ae3a9d9a64455fdbbad6bd5a810834bf20034e0abda6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:485",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67bb235c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "832d70396c2bc1eec89fa84a03993b4e1d4152a969bcf15f2912f8e20b3d10d0"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-grand-theft-487-a",
+        "ca-grand-theft-agricultural-487-b1a",
+        "ca-grand-theft-firearm-487-d2"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487a",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_501b5f15-8664-11e4-9fd7-cecd375806d8",
+          "contentSha256": "2dc0f4b65fe465fda37916befcefba337d8c8c65aa22138d1b482e904a244391"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487b",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a3301f6f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "d48d2280ef2c0a88667c4297465c2ac64743ede7f175a0a8ed3bab6783f91806"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487c",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_3130676e-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "fdf2aec96aae805e2a5affecd663111c91541c1a13681f3a6954d6abd5d341c4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487d",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a49ea391-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "6180b069ecd1e52adb16ab4ebf82432b63f557ef3b2821f202f745a5ae6260a8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487e",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_d0972681-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "305f3b893af804ce484cad07a1225dcfd13c9350d8de3d8b8a82576eed7910c3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487f",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_d193aef3-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "c02aa7ef207dac3b5635b6ccf849ffff55525f04b5308ec5ed0cefaa3f95091e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487g",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67bcaa0e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "0f2118a4299f9cee378bfdd9cc33dc4aa84303d2e2618a3c698fcfb5e2aea2f3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487h",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_e7a93781-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "03a8c06f62848e175753ced7b47b5ab742e78d2341fae2157fcb0d87014a7381"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487i",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6ff249e6-cb73-11dd-898a-f4578c730531",
+          "contentSha256": "dae462b0a4c80880edb5bd5e6e2e0df4283b3c25385d162ccd436b7c7b0dae01"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487j",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_8c6c0b53-30cf-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "8699d561d41e7604de24ca06946a5ff9dfc7432f49c843ac492507d7cfbc27d8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487k",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_e2ea837d-0bd9-11ea-912d-915c88c10a14",
+          "contentSha256": "cb0abada8a5f0598e7bee7ba78b2aaddacba7d655e16315fe150ec6ab4d11270"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487m",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_b29279f7-5c47-11ec-9d2f-c3e210bbbdff",
+          "contentSha256": "f5f7c8cb13c20806a15258f47e29a5aa1dce678ea559104f2ca3cfe51904f629"
+        }
+      ]
+    },
+    {
+      "key": "PEN:488",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Petty-theft classification. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67bcaa10-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8bbb7e2c6dc36360c00ff5bd522238e8b0d1173673a0809dc44c51fe9e682aa9"
+        }
+      ]
+    },
+    {
+      "key": "PEN:489",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Grand-theft punishment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+          "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Petty-theft punishment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.1",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Possible petty-theft infraction treatment. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67be30b8-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "21bb1fdd7b6a261ece08d5deeb95548e6968bd4051144d61d17c572b3c2a132b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.2",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Value-based petty-theft classification and exclusions. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [
+        "ca-petty-theft"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+          "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.4",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67be30ba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ff63b69ba75506d2eff6c1236c2d9e2fb9cbd14a7416ba766b00e5b7d8b53f62"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.7",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_5462d1fb-89e5-11db-b11b-b207fcb01266",
+          "contentSha256": "9e2a58882045142173f938312dfcd3c3500ae60a7445ec671deabc42cd0cfae5"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.8",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-theft-by-receiving"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_745a4414-65eb-11e4-b7fe-f60a5c818cd8",
+          "contentSha256": "f5f3244a9daf84fe647acaad48f66aafba9bd9ab17abdec2c14a982d292a098b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7d52e50d-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "43d5d1812dc63504000fbc92aac8cbc2b43cd4f9e4b8a83e31250e95c6183716"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496.6",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7f40361f-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "290e919c120c655eb59e44674e21d8951891d2b689adf1301006ca6241ffd4fc"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496a",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_8024ef92-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7529691222241c4acc832df771e622a4f49cc4949f82cece07cf70b94aa8f971"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496b",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c13e0c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "be0fd2ba0dc7705ded6bce7128169fed92f0965833ba7a610f8090de103c2252"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496c",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c2c4ae-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f1873e5771bb1c0f1f3c59c09465dccf547a81b9cf30b18adb833d3f553b660f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496d",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_aba49509-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "ae249a10b9ba0136a02089b727df0f5fce9868956577ba8f617283f39ea65f48"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496e",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_811e6ac4-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "748a5f9c9abbe584e6053a0476d69acd62792e594e6158c4b88d04687ea0f88b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:497",
+      "status": "substantive_research_open",
+      "reason": "Out-of-state theft, embezzlement or knowing receipt followed by bringing property into California: charging identity and applicability require substantive review; not excluded as procedural.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c2c4b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8c32699b2671f28e4705aa1816c9d51a9d8cf3335233f09e71f5957d01d6aa12"
+        }
+      ]
+    },
+    {
+      "key": "PEN:498",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+          "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499b",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c44b58-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ce86d8713b89ba4d47162c34dc3f446433e5d420abc8e1e4461d0bb75e3808fa"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499c",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ad1c8f0b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "db4c5d0e2fd2f817b51f99a7329d1480f57bad14a439cd4061e45412a0c56b08"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499d",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ae8df95d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "7417c04eb3f7a5ccebd30bdfb2ee9ea9966c093a09ad395836a849eb4006bc80"
+        }
+      ]
+    },
+    {
+      "key": "PEN:500",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_b0107aaf-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "a3dc87fb677880b98eae2223dc7b69968c7a3ac044cca518e8302c5751a66809"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502",
+      "status": "existing_catalog_source_other_branches_open",
+      "reason": "Existing canonical records use this section; that does not establish full subdivision coverage.",
+      "existingIds": [
+        "ca-computer-crime-502-c1",
+        "ca-computer-crime-502-c5"
+      ],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_9f6099b1-0bdc-11ea-912d-915c88c10a14",
+          "contentSha256": "6eef3b31611b417549b70d4d1a2b4c5449ef42ed75e42b6e2ebaef32fc3e214e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.01",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Computer-related forfeiture procedure. Not proposed as a new standalone selector entry in this batch.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_e8e37c09-a358-11e5-b6cb-8d365f46d37f",
+          "contentSha256": "1c1c83c330906a027ce64cb6b658a6c09226fa6fcf7185474979cbf1167e9a92"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.5",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c8df46-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "04705519c9fd31476aaa45a7ed9651c688ee3805f2ae6d887a7071f3a273718a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.6",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.7",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c8df4a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "cb033994d208fe698bf0ed9b59a1980aa4ee76f7c300f5821c0ca72a6c785244"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.8",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_801e624b-c635-11e6-a742-84f150336b2e",
+          "contentSha256": "8686967b5edc8f421916cc3e66adf2743e2445b335d7910b38a3f9d248f964de"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.9",
+      "status": "substantive_research_open",
+      "reason": "Full source retained and grouped; identity, dependencies and applicability still require substantive review before publication. Severity is not presumed minor.",
+      "existingIds": [],
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_5b560c94-6538-11d9-bd15-b3cbb5da6f1d",
+          "contentSha256": "339d88b7d4a5770aac9ea8e7d8a03cef4c5861b3389003256577758a127b5b38"
+        }
+      ]
+    }
+  ],
+  "deferrals": [
+    {
+      "key": "PEN:243.83",
+      "decision": "withhold_low_priority_infraction",
+      "reason": "Prioritize consequential person/property offenses before the expressly capped sporting-event infraction.",
+      "severityEvidence": "Subdivision (d): infraction; fine not exceeding $250; specified penalty assessments excluded.",
+      "reviewedBy": "Codex statutory research; not attorney approval",
+      "reviewedAt": "2026-09-27",
+      "revisitCondition": "After higher-priority offenses and independent discovery-miss review."
+    }
+  ]
+}

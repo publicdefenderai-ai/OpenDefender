@@ -14,6 +14,9 @@ import { readCaliforniaFinancialPropertyReview, validateCaliforniaFinancialPrope
 
 import { readCaliforniaRemainingCatalogReview, validateCaliforniaRemainingCatalogReview } from "./remaining-catalog-review";
 
+import additions from "../../../shared/california-person-property-additions.json";
+import { validateCaliforniaPersonPropertyReview, readCaliforniaPersonPropertyAcquisition } from "./person-property-review";
+
 import openLegalQuestions from "./open-review-items.json";
 
 interface SourceExpansion {
@@ -48,7 +51,10 @@ export function buildCaliforniaCoverage() {
   const expansion: SourceExpansion | null = fs.existsSync(expansionPath) ? JSON.parse(fs.readFileSync(expansionPath, "utf8")) : null;
   if (expansion) validateCaliforniaSourceExpansion(expansion, review);
   const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(combined.documents), ...Object.keys(ageDriving.documents), ...Object.keys(financial.documents), ...Object.keys(remainingCatalog.documents), ...Object.keys(expansion?.documents ?? {})]);
-  const corrected = new Set(corrections.map(row => row.id));
+  const additionAccounting = validateCaliforniaPersonPropertyReview();
+  const additionEvidence = readCaliforniaPersonPropertyAcquisition();
+  Object.keys(additionEvidence.documents).forEach(key => acquiredKeys.add(key));
+  const corrected = new Set([...corrections.map(row => row.id), ...additions.map(row => row.id)]);
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
     const primaryKeys = [...new Set(record.sources.filter(source => source.kind === "statute").map(source => {
@@ -108,7 +114,8 @@ export function buildCaliforniaCoverage() {
       specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedAdditionPass: additionAccounting.additions,
+      boundedCorrectionPass: additionAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -119,16 +126,16 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
     limits: [
       "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-      "99 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+      `${selectable.length} configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.`,
       "The legacy inventory overlaps the canonical inventory and must not be added to it.",
       "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
-      "No statewide offense enumeration exists yet. Acquiring all primary catalog sources does not establish completeness or discover every missing charge.",
+      "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary.",
     ],
     byLawCode: [...new Set(selectable.map(row => row.lawCode))].sort().map(lawCode => ({
       lawCode, selectable: selectable.filter(row => row.lawCode === lawCode).length,
@@ -167,7 +174,7 @@ export function renderCaliforniaCoverage(report: ReturnType<typeof buildCaliforn
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const report = buildCaliforniaCoverage();
-  fs.writeFileSync(new URL("../output/california-catalog-coverage.json", import.meta.url), JSON.stringify(report, null, 2) + "\n");
-  fs.writeFileSync(new URL("../output/california-catalog-coverage.md", import.meta.url), renderCaliforniaCoverage(report));
+  fs.writeFileSync(new URL("../output/california-expanded-catalog-coverage.json", import.meta.url), JSON.stringify(report, null, 2) + "\n");
+  fs.writeFileSync(new URL("../output/california-expanded-catalog-coverage.md", import.meta.url), renderCaliforniaCoverage(report));
   console.log(JSON.stringify(report.accounting));
 }
