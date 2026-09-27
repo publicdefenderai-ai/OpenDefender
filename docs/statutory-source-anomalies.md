@@ -29,3 +29,14 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Preserve both literal bands. Do not silently change an inclusive endpoint or choose a penalty for the overlap.
 - **Attorney question:** Identify controlling authority for exactly 100 pounds, or leave the boundary unresolved. See the [focused review questions](california-remaining-attorney-questions.md).
 - **Traceability:** `scripts/data-review/output/california-batch-six-review.json`, `documents["HSC:12700"]`, retains official XML, version metadata, content hash, and URL from the September 24 snapshot.
+
+## CA-002: Lifeguard definition points to the process-server paragraph
+
+- **Recorded:** September 27, 2026, during the protected-person source review.
+- **Status:** Apparent cross-reference error; no attorney decision or authoritative correction established.
+- **Literal source:** [Penal Code §243(f)(7)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243.) defines lifeguard by reference to paragraph (5) of §241(d).
+- **Discrepancy:** In the same retained snapshot, [§241(d)(5)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=241.) defines process server; §241(d)(4) defines lifeguard.
+- **Likely interpretation:** Paragraph (4) appears to be the intended destination. This is an editorial inference, not an attorney-approved or judicial interpretation.
+- **Treatment:** Preserve the literal paragraph (5) reference. Do not silently change the statute or use the inferred destination to clear lifeguard-related publication. This batch adds only §243(c)(2)'s separately supported peace-officer injury branch, not the broader (b)/(c)(1) branches.
+- **Remaining agent work:** Inspect amendment history and relevant interpretive authority before requesting any legal decision needed for publication.
+- **Traceability:** `scripts/data-review/output/california-protected-person-review.json`, `sourceAnomalies[0]`, binds the three exact excerpts and source-version hashes to the September 24 archive. The source XML itself is unchanged.

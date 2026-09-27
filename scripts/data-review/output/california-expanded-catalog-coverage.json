@@ -3,11 +3,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 174,
-    "configuredSelectable": 153,
+    "canonicalRecords": 195,
+    "configuredSelectable": 174,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 54,
-    "boundedCorrectionPass": 153,
+    "boundedAdditionPass": 75,
+    "boundedCorrectionPass": 174,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -18,21 +18,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 102,
+    "distinctSelectablePrimarySections": 121,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 102,
-    "selectableRecordsWithAllPrimaryTextAcquired": 153,
-    "totalAcquiredSectionsIncludingDependencies": 297,
-    "totalAcquiredVersionsIncludingDependencies": 300,
+    "acquiredSelectablePrimarySections": 121,
+    "selectableRecordsWithAllPrimaryTextAcquired": 174,
+    "totalAcquiredSectionsIncludingDependencies": 304,
+    "totalAcquiredVersionsIncludingDependencies": 307,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "153 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "174 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -52,8 +52,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 133,
-      "corrected": 133,
+      "selectable": 154,
+      "corrected": 154,
       "awaitingCorrection": 0
     },
     {
@@ -456,9 +456,82 @@
       "section": "241",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241&lawCode=PEN",
       "recordIds": [
-        "ca-assault-on-peace-officer"
+        "ca-assault-on-peace-officer",
+        "ca-pen-241-b"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.2&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-2-a-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.3&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-3-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.4&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-4"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.7",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.7&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-7"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241.8",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241.8&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-241-8-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -467,9 +540,73 @@
       "recordIds": [
         "ca-domestic-battery",
         "ca-battery-243-a",
-        "ca-pen-243-d"
+        "ca-pen-243-d",
+        "ca-pen-243-c-2"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.10",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.10&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-10-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.15",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.15&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-15"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.2&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-2-a-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.25",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.25&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-25"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.3&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.35",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.35&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-35-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -478,6 +615,42 @@
       "recordIds": [
         "ca-sexual-battery-243-4-a",
         "ca-sexual-battery-243-4-e1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.65",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.65&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-65-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.7",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.7&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-7"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.8",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.8&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-8-a"
       ],
       "alreadyRetained": false
     },
@@ -4308,6 +4481,367 @@
         "PEN:499d"
       ],
       "catalogSha256": "bd875efab2a849793850aeb281975f90ba627ec428326cbe9a81691713a9d090",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-1",
+      "title": "Assault on a custodial officer",
+      "citation": "Cal. Penal Code § 241.1",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.1"
+      ],
+      "catalogSha256": "5cab256b34fc513c72a7b351204a9f23da5e4076ef7a0468f462df9a7d767990",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-2-a-1",
+      "title": "Assault on school or park property",
+      "citation": "Cal. Penal Code § 241.2(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.2"
+      ],
+      "catalogSha256": "b4280ed5fbb444ac3d7d9d1648db4702a8357f1521bb4e16e23bf39464e151c0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-3-a",
+      "title": "Assault on public-transportation property or a vehicle",
+      "citation": "Cal. Penal Code § 241.3(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.3"
+      ],
+      "catalogSha256": "e6c6a08992511e2119dbace4dd16661738944dc18a539a577f05a1a8d51d42e1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-4",
+      "title": "Assault on a school-district police officer",
+      "citation": "Cal. Penal Code § 241.4",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.4"
+      ],
+      "catalogSha256": "055b5896f793ce94fe4fd05c5962acab700854e7c50a525e3b96d5e12e0bbfc3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-5-a",
+      "title": "Assault on a highway worker",
+      "citation": "Cal. Penal Code § 241.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.5"
+      ],
+      "catalogSha256": "7224ac179c6f11621671c10ace8d8f59a0d0ddf4dcfc818d81a13153df82fafd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-6",
+      "title": "Assault on a school employee",
+      "citation": "Cal. Penal Code § 241.6",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.6"
+      ],
+      "catalogSha256": "3161c5feaa48953b8a1ca20437cc4cd9d51c74e2621cc83181f5776a7a192004",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-7",
+      "title": "Assault on a juror by a party to the case",
+      "citation": "Cal. Penal Code § 241.7",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.7"
+      ],
+      "catalogSha256": "33f6acbc338870375d74eaf1a5120d655f414f2c809a3223e0cade2d25755673",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-8-a",
+      "title": "Assault motivated by military service",
+      "citation": "Cal. Penal Code § 241.8(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241.8"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:241.8"
+      ],
+      "catalogSha256": "070bf7423cafcd3c35b7a01ee9802fa9924d3cea8e383cfe7793f321ccc547f3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-1",
+      "title": "Battery on a custodial officer",
+      "citation": "Cal. Penal Code § 243.1",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.1"
+      ],
+      "catalogSha256": "d9d52934926700fbba0d07e09a662100509b74e5b7f783ce93791af5f1acac8e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-10-a",
+      "title": "Battery motivated by military service",
+      "citation": "Cal. Penal Code § 243.10(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.10"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.10"
+      ],
+      "catalogSha256": "5b890c6d3f79a572f15a00db32d239e000a0c95cb4ddd810bba9c9ee74e55180",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-15",
+      "title": "Battery by a local-jail prisoner on a nonprisoner",
+      "citation": "Cal. Penal Code § 243.15",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.15"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.15"
+      ],
+      "catalogSha256": "a1a7e67fdac4f9b62a5a60110e305220221b8d09118174bb54fff9289063a555",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-2-a-1",
+      "title": "Battery on school, park, or hospital grounds",
+      "citation": "Cal. Penal Code § 243.2(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.2"
+      ],
+      "catalogSha256": "6ce958c5e56f4e45148eb4a01fe6664a9e58139fe89684a7a597267be84a93d6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-25",
+      "title": "Battery on an elder or dependent adult",
+      "citation": "Cal. Penal Code § 243.25",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.25"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.25"
+      ],
+      "catalogSha256": "5d937acf4f837bd688c3e02dc85fb79e215eb910691e943c2390c3ca4ef70df5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-3",
+      "title": "Battery on transit personnel or a passenger",
+      "citation": "Cal. Penal Code § 243.3",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.3"
+      ],
+      "catalogSha256": "c805495131078b0da3809b7b1f1139fad771aa5dc22a81817502739b541c93ed",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-35-a",
+      "title": "Battery on public-transportation property or a vehicle",
+      "citation": "Cal. Penal Code § 243.35(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.35"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.35"
+      ],
+      "catalogSha256": "104337d318b7fec39bdf778b323ec5ce19855951f84f4aeb9d5c7716d5e95077",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-6",
+      "title": "Battery on a school employee",
+      "citation": "Cal. Penal Code § 243.6",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.6"
+      ],
+      "catalogSha256": "8a2eca04d4f900ebb5d567d8730ce78b5973ca97a4af8c280826a7d0767ac331",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-65-a",
+      "title": "Battery on a highway worker",
+      "citation": "Cal. Penal Code § 243.65(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.65"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.65"
+      ],
+      "catalogSha256": "6622e5afe656c9d8a87dde6e7da5ed52f9d7b437c89885168a9abe0a460ee173",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-7",
+      "title": "Battery on a juror by a party to the case",
+      "citation": "Cal. Penal Code § 243.7",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.7"
+      ],
+      "catalogSha256": "e8db83329893f19b3754aa1206ba11a511ebd12c333420365129e46a13c74545",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-8-a",
+      "title": "Battery on a sports official",
+      "citation": "Cal. Penal Code § 243.8(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.8"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.8"
+      ],
+      "catalogSha256": "a993bb47dfb9728e94904f71615d3b96762582cd3cb0e4ce3c621e4300d97a2f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-241-b",
+      "title": "Assault on a parking control officer",
+      "citation": "Cal. Penal Code § 241(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:241"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:241"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:241"
+      ],
+      "catalogSha256": "ed7a0f551a440b06ea36fdf7db2a63158fed977c53d37882d55854bb42a3119d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-c-2",
+      "title": "Battery causing injury to a peace officer",
+      "citation": "Cal. Penal Code § 243(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:243"
+      ],
+      "catalogSha256": "b9915908a4c4fbd0c286551dbb29dfdda53845b882ae8f707457d56a6f5a4074",
       "attorneyReview": "pending"
     }
   ]

@@ -1,6 +1,6 @@
 # California verification: first delivery
 
-**Latest proposed release (September 27): 153 selectable identities, including 28 new forgery/theft additions.** PR #20 is merged with 125 configured choices. See [the next combined expansion](california-forgery-theft-expansion.md) for the review and remaining queue; the earlier sections below preserve project history.
+**Latest proposed release (September 27): 174 selectable identities, including 21 new protected-person and public-place additions.** PR #21 is merged with 153 configured choices. See [the next combined expansion](california-protected-person-expansion.md) for its review and remaining queue; the earlier sections below preserve project history.
 
 Started September 24, 2026. This delivery establishes a reproducible baseline and official source acquisition for a 25-record batch. It does not certify or publish those records.
 
