@@ -1,0 +1,3367 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_forgery_theft_additions_not_statewide_certification",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "previousReviewSha256": "479bb773f031dc4fcde6c21ae92a6212571dd452f78f249944e8d96c82aee63e",
+  "acquisitionSha256": "26a47b280a53184d12f429788cb2386456b5b683e9135b07cabd16e12db115e7",
+  "records": [
+    {
+      "id": "ca-pen-471",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "d3a3c28e9b6c5356306b6dcaaa46c19bb45302c639fcd141bb235034fa814871",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470",
+          "versions": [
+            {
+              "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+              "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:471",
+          "versions": [
+            {
+              "versionId": "id_67aeee22-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "aea92e35813c079eff4e0c3eab783993be4c992ffba1653ee48ccb98d3ae3942"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:471",
+        "start": 0,
+        "end": 212,
+        "text": "Every person who, with intent to defraud another, makes, forges, or alters any entry in any book of records, or any instrument purporting to be any record or return specified in Section 470, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-472",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8da05cd767a7abfc5be27556d768de41ee081543c7fc333290e87367e914d337",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:472",
+          "versions": [
+            {
+              "versionId": "id_67aeee26-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "7c572a70ecdae8d3f63542e98fb37f97bcd68bff9ba8bb45bf7a132b20de95d4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:472",
+        "start": 0,
+        "end": 613,
+        "text": "Every person who, with intent to defraud another, forges, or counterfeits the seal of this State, the seal of any public officer authorized by law, the seal of any Court of record, or the seal of any corporation, or any other public seal authorized or recognized by the laws of this State, or of any other State, Government, or country, or who falsely makes, forges, or counterfeits any impression purporting to be an impression of any such seal, or who has in his possession any such counterfeited seal or impression thereof, knowing it to be counterfeited, and willfully conceals the same, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-474",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "6287c3db449cd9b5fdca2edd8874fd7e928d38d52868a62de2bb2ba9c0fdc412",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:474",
+          "versions": [
+            {
+              "versionId": "id_96ea567f-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "48fa1bb8e4381aca3b386733a2c9270ba1da2bdeb26f1dc7d0fbb8dbb80d6f19"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:474",
+        "start": 0,
+        "end": 856,
+        "text": "Every person who knowingly and willfully sends by telegraph or telephone to any person a false or forged message, purporting to be from a telegraph or telephone office, or from any other person, or who willfully delivers or causes to be delivered to any person any such message falsely purporting to have been received by telegraph or telephone, or who furnishes, or conspires to furnish, or causes to be furnished to any agent, operator, or employee, to be sent by telegraph or telephone, or to be delivered, any such message, knowing the same to be false or forged, with the intent to deceive, injure, or defraud another, is punishable by imprisonment in a county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170, or by a fine not exceeding ten thousand dollars ($10,000), or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-475-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "934abbe922559bb90d5f8edad5ae99e522938796f3bd3293cf15a175c4109261",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470",
+          "versions": [
+            {
+              "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+              "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:475",
+          "versions": [
+            {
+              "versionId": "id_67b074cc-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "948b329c7171b08cb174bd82ca3f349c6ee0087933254cba37161500fa6ccef5"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:475",
+        "start": 0,
+        "end": 890,
+        "text": "(a) Every person who possesses or receives, with the intent to pass or facilitate the passage or utterance of any forged, altered, or counterfeit items, or completed items contained in subdivision (d) of Section 470 with intent to defraud, knowing the same to be forged, altered, or counterfeit, is guilty of forgery. (b) Every person who possesses any blank or unfinished check, note, bank bill, money order, or traveler’s check, whether real or fictitious, with the intention of completing the same or the intention of facilitating the completion of the same, in order to defraud any person, is guilty of forgery. (c) Every person who possesses any completed check, money order, traveler’s check, warrant or county order, whether real or fictitious, with the intent to utter or pass or facilitate the utterance or passage of the same, in order to defraud any person, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-475-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "3013b3220feec4818986f32658eabf56fef1e4322c413fea9c4861e10e092776",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:475",
+          "versions": [
+            {
+              "versionId": "id_67b074cc-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "948b329c7171b08cb174bd82ca3f349c6ee0087933254cba37161500fa6ccef5"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:475",
+        "start": 0,
+        "end": 890,
+        "text": "(a) Every person who possesses or receives, with the intent to pass or facilitate the passage or utterance of any forged, altered, or counterfeit items, or completed items contained in subdivision (d) of Section 470 with intent to defraud, knowing the same to be forged, altered, or counterfeit, is guilty of forgery. (b) Every person who possesses any blank or unfinished check, note, bank bill, money order, or traveler’s check, whether real or fictitious, with the intention of completing the same or the intention of facilitating the completion of the same, in order to defraud any person, is guilty of forgery. (c) Every person who possesses any completed check, money order, traveler’s check, warrant or county order, whether real or fictitious, with the intent to utter or pass or facilitate the utterance or passage of the same, in order to defraud any person, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-475-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8f2a275f6a22bd18e292f628011a822ab589b00aa9f074964278878d27f09d64",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:475",
+          "versions": [
+            {
+              "versionId": "id_67b074cc-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "948b329c7171b08cb174bd82ca3f349c6ee0087933254cba37161500fa6ccef5"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:475",
+        "start": 0,
+        "end": 890,
+        "text": "(a) Every person who possesses or receives, with the intent to pass or facilitate the passage or utterance of any forged, altered, or counterfeit items, or completed items contained in subdivision (d) of Section 470 with intent to defraud, knowing the same to be forged, altered, or counterfeit, is guilty of forgery. (b) Every person who possesses any blank or unfinished check, note, bank bill, money order, or traveler’s check, whether real or fictitious, with the intention of completing the same or the intention of facilitating the completion of the same, in order to defraud any person, is guilty of forgery. (c) Every person who possesses any completed check, money order, traveler’s check, warrant or county order, whether real or fictitious, with the intent to utter or pass or facilitate the utterance or passage of the same, in order to defraud any person, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-476",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "6d46d735a3e77d0525bfd9d141f3e222838c6c12127474257f177f152663fe04",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:186.9",
+          "versions": [
+            {
+              "versionId": "id_c5c8461b-6a83-11ed-823c-e74f056edb17",
+              "contentSha256": "2056e3b703bb85eb487ef310dcccfdbe69053ed000a4b8af48bc9a6779490d4e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:476",
+          "versions": [
+            {
+              "versionId": "id_67b1fb6e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "417185f772aa6382ac5dd71fe11d99da270d2e23dd167064168d8d1fba50c180"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:476",
+        "start": 0,
+        "end": 500,
+        "text": "Every person who makes, passes, utters, or publishes, with intent to defraud any other person, or who, with the like intent, attempts to pass, utter, or publish, or who has in his or her possession, with like intent to utter, pass, or publish, any fictitious or altered bill, note, or check, purporting to be the bill, note, or check, or other instrument in writing for the payment of money or property of any real or fictitious financial institution as defined in Section 186.9 is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-479",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "bb43faba9ed07b9b5b3154bff6fe420ffd325f21740c7877c3e8e0a5f2752af1",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:479",
+          "versions": [
+            {
+              "versionId": "id_99caba23-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "cd0c7d41f36fa5eb0b5b497e90d69ef2ee97bf89d2d1583782c66eec056e4952"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:479",
+        "start": 0,
+        "end": 545,
+        "text": "Every person who has in his possession, or receives for any other person, any counterfeit gold or silver coin of the species current in this state, or any counterfeit gold dust, gold or silver bullion or bars, lumps, pieces or nuggets, with the intention to sell, utter, put off or pass the same, or permits, causes or procures the same to be sold, uttered or passed, with intention to defraud any person, knowing the same to be counterfeit, is punishable by imprisonment pursuant to subdivision (h) of Section 1170 for two, three or four years."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-480-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "89b2dab2bf07f1ccda84b976304b384fff2b1711c8d27aa15313bc0a9362965c",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:480",
+          "versions": [
+            {
+              "versionId": "id_9b334ad5-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "cfcb19c39bb2a52b9a53b9de007032f9c91880334fbe545a646e12853ae42248"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502",
+          "versions": [
+            {
+              "versionId": "id_9f6099b1-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "6eef3b31611b417549b70d4d1a2b4c5449ef42ed75e42b6e2ebaef32fc3e214e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502.01",
+          "versions": [
+            {
+              "versionId": "id_e8e37c09-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "1c1c83c330906a027ce64cb6b658a6c09226fa6fcf7185474979cbf1167e9a92"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:480",
+        "start": 0,
+        "end": 1091,
+        "text": "(a) Every person who makes, or knowingly has in his or her possession any die, plate, or any apparatus, paper, metal, machine, or other thing whatever, made use of in counterfeiting coin current in this state, or in counterfeiting gold dust, gold or silver bars, bullion, lumps, pieces, or nuggets, or in counterfeiting bank notes or bills, is punishable by imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years; and all dies, plates, apparatus, papers, metals, or machines intended for the purpose aforesaid, must be destroyed. (b) (1) If the counterfeiting apparatus or machine used to violate this section is a computer, computer system, or computer network, the apparatus or machine shall be disposed of pursuant to Section 502.01. (2) For the purposes of this section, “computer system” and “computer network” have the same meaning as that specified in Section 502. The terms “computer, computer system, or computer network” include any software or data residing on the computer, computer system, or computer network used in a violation of this section."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-481",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "3764e56126e26e4c7f8804590add6f98d7c577335950fd8bbdc99860b8f85c10",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:481",
+          "versions": [
+            {
+              "versionId": "id_9c8bd5f7-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "52e5c659c093b3cb6f0773163a928ef3b48ac33d43e1817fa915d91d09de99c6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:481",
+        "start": 0,
+        "end": 743,
+        "text": "Every person who counterfeits, forges, or alters any ticket, check, order, coupon, receipt for fare, or pass, issued by any railroad or steamship company, or by any lessee or manager thereof, designed to entitle the holder to ride in the cars or vessels of such company, or who utters, publishes, or puts into circulation, any such counterfeit or altered ticket, check, or order, coupon, receipt for fare, or pass, with intent to defraud any such railroad or steamship company, or any lessee thereof, or any other person, is punishable by imprisonment in a county jail, not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170, or by fine not exceeding one thousand dollars, or by both that imprisonment and fine."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-483-5-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "dce46df3b45de5b0798e67701a02c9cd8e5842e7dc5b79d3458f0133882949b6",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:483.5",
+          "versions": [
+            {
+              "versionId": "id_9e113d79-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "90d77d63e021ada036e9c7d69247d6fc30d7e39a77f4588ab8fa8a1a28825355"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:483.5",
+        "start": 0,
+        "end": 3013,
+        "text": "(a) No deceptive identification document shall be manufactured, sold, offered for sale, furnished, offered to be furnished, transported, offered to be transported, or imported or offered to be imported into this state unless there is diagonally across the face of the document, in not less than 14-point type and printed conspicuously on the document in permanent ink, the following statement: NOT A GOVERNMENT DOCUMENT and, also printed conspicuously on the document, the name of the manufacturer. (b) No document-making device may be possessed with the intent that the device will be used to manufacture, alter, or authenticate a deceptive identification document. (c) As used in this section, “deceptive identification document” means any document not issued by a governmental agency of this state, another state, the federal government, a foreign government, a political subdivision of a foreign government, an international government, or an international quasi-governmental organization, which purports to be, or which might deceive an ordinary reasonable person into believing that it is, a document issued by such an agency, including, but not limited to, a driver’s license, identification card, birth certificate, passport, or social security card. (d) As used in this section, “document-making device” includes, but is not limited to, an implement, tool, equipment, impression, laminate, card, template, computer file, computer disk, electronic device, hologram, laminate machine or computer hardware or software. (e) Any person who violates or proposes to violate this section may be enjoined by any court of competent jurisdiction. Actions for injunction under this section may be prosecuted by the Attorney General, any district attorney, or any city attorney prosecuting on behalf of the people of the State of California under Section 41803.5 of the Government Code in this state in the name of the people of the State of California upon their own complaint or upon the complaint of any person. (f) Any person who violates the provisions of subdivision (a) who knows or reasonably should know that the deceptive identification document will be used for fraudulent purposes is guilty of a crime, and upon conviction therefor, shall be punished by imprisonment in a county jail not to exceed one year, or by imprisonment pursuant to subdivision (h) of Section 1170. Any person who violates the provisions of subdivision (b) is guilty of a misdemeanor punishable by imprisonment in a county jail not exceeding one year, or by a fine not exceeding one thousand dollars ($1,000), or by both imprisonment and a fine. Any document-making device may be seized by law enforcement and shall be forfeited to law enforcement or destroyed by order of the court upon a finding that the device was intended to be used to manufacture, alter, or authenticate a deceptive identification document. The court may make such a finding in the absence of a defendant for whom a bench warrant has been issued by the court."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-483-5-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "fd66a4bbe9383a5b3fa06761d24d27881a3ef1e65a4b636ddd5c755dfdec70f0",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:483.5",
+          "versions": [
+            {
+              "versionId": "id_9e113d79-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "90d77d63e021ada036e9c7d69247d6fc30d7e39a77f4588ab8fa8a1a28825355"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:483.5",
+        "start": 0,
+        "end": 3013,
+        "text": "(a) No deceptive identification document shall be manufactured, sold, offered for sale, furnished, offered to be furnished, transported, offered to be transported, or imported or offered to be imported into this state unless there is diagonally across the face of the document, in not less than 14-point type and printed conspicuously on the document in permanent ink, the following statement: NOT A GOVERNMENT DOCUMENT and, also printed conspicuously on the document, the name of the manufacturer. (b) No document-making device may be possessed with the intent that the device will be used to manufacture, alter, or authenticate a deceptive identification document. (c) As used in this section, “deceptive identification document” means any document not issued by a governmental agency of this state, another state, the federal government, a foreign government, a political subdivision of a foreign government, an international government, or an international quasi-governmental organization, which purports to be, or which might deceive an ordinary reasonable person into believing that it is, a document issued by such an agency, including, but not limited to, a driver’s license, identification card, birth certificate, passport, or social security card. (d) As used in this section, “document-making device” includes, but is not limited to, an implement, tool, equipment, impression, laminate, card, template, computer file, computer disk, electronic device, hologram, laminate machine or computer hardware or software. (e) Any person who violates or proposes to violate this section may be enjoined by any court of competent jurisdiction. Actions for injunction under this section may be prosecuted by the Attorney General, any district attorney, or any city attorney prosecuting on behalf of the people of the State of California under Section 41803.5 of the Government Code in this state in the name of the people of the State of California upon their own complaint or upon the complaint of any person. (f) Any person who violates the provisions of subdivision (a) who knows or reasonably should know that the deceptive identification document will be used for fraudulent purposes is guilty of a crime, and upon conviction therefor, shall be punished by imprisonment in a county jail not to exceed one year, or by imprisonment pursuant to subdivision (h) of Section 1170. Any person who violates the provisions of subdivision (b) is guilty of a misdemeanor punishable by imprisonment in a county jail not exceeding one year, or by a fine not exceeding one thousand dollars ($1,000), or by both imprisonment and a fine. Any document-making device may be seized by law enforcement and shall be forfeited to law enforcement or destroyed by order of the court upon a finding that the device was intended to be used to manufacture, alter, or authenticate a deceptive identification document. The court may make such a finding in the absence of a defendant for whom a bench warrant has been issued by the court."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "4297dd98b42eeb527578c1b29b4b8ca30f6ffb2efbb0a7fe1b792668de9164a2",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484b",
+          "versions": [
+            {
+              "versionId": "id_a03d935b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "68ed102b771adf8d85be3fcb523943ff94558f8a890ea52e5ac4e689ce5b09b2"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484b",
+        "start": 0,
+        "end": 978,
+        "text": "Any person who receives money for the purpose of obtaining or paying for services, labor, materials or equipment and willfully fails to apply such money for such purpose by either willfully failing to complete the improvements for which funds were provided or willfully failing to pay for services, labor, materials or equipment provided incident to such construction, and wrongfully diverts the funds to a use other than that for which the funds were received, shall be guilty of a public offense and shall be punishable by a fine not exceeding ten thousand dollars ($10,000), or by imprisonment in a county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170, or by both that fine and that imprisonment if the amount diverted is in excess of two thousand three hundred fifty dollars ($2,350). If the amount diverted is less than or equal to two thousand three hundred fifty dollars ($2,350), the person shall be guilty of a misdemeanor."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484f-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "cde44e6cff06804f2586268490fa46e1bcc8a403a9640886d98896cb543d0709",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484f",
+          "versions": [
+            {
+              "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484f",
+        "start": 0,
+        "end": 508,
+        "text": "(a) Every person who, with the intent to defraud, designs, makes, alters, or embosses a counterfeit access card or utters or otherwise attempts to use a counterfeit access card is guilty of forgery. (b) A person other than the cardholder or a person authorized by him or her who, with the intent to defraud, signs the name of another or of a fictitious person to an access card, sales slip, sales draft, or instrument for the payment of money which evidences an access card transaction, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484f-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "5220670c12dad388f57db571824581db10147dd8ccc72250a7c2bd3e58298e0a",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484f",
+          "versions": [
+            {
+              "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484f",
+        "start": 0,
+        "end": 508,
+        "text": "(a) Every person who, with the intent to defraud, designs, makes, alters, or embosses a counterfeit access card or utters or otherwise attempts to use a counterfeit access card is guilty of forgery. (b) A person other than the cardholder or a person authorized by him or her who, with the intent to defraud, signs the name of another or of a fictitious person to an access card, sales slip, sales draft, or instrument for the payment of money which evidences an access card transaction, is guilty of forgery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484h-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "5862893d29f8a0c10c973e270fd494b59597a1921c4bb853d34e17450dd4ab99",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484e",
+          "versions": [
+            {
+              "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484h",
+          "versions": [
+            {
+              "versionId": "id_2c7b91e8-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "154cd4517cd2aa52d16d42a7275a2cb761ae4d9c998ac3745f84e1cef32255e8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484h",
+        "start": 0,
+        "end": 1373,
+        "text": "Every retailer or other person who, with intent to defraud: (a) Furnishes money, goods, services or anything else of value upon presentation of an access card obtained or retained in violation of Section 484e or an access card which he or she knows is a counterfeit access card or is forged, expired, or revoked, and who receives any payment therefor, is guilty of theft. If the payment received by the retailer or other person for all money, goods, services, and other things of value furnished in violation of this section exceeds nine hundred fifty dollars ($950) in any consecutive six-month period, then the same shall constitute grand theft. (b) Presents for payment a sales slip or other evidence of an access card transaction, and receives payment therefor, without furnishing in the transaction money, goods, services, or anything else of value that is equal in value to the amount of the sales slip or other evidence of an access card transaction, is guilty of theft. If the difference between the value of all money, goods, services, and anything else of value actually furnished and the payment or payments received by the retailer or other person therefor upon presentation of a sales slip or other evidence of an access card transaction exceeds nine hundred fifty dollars ($950) in any consecutive six-month period, then the same shall constitute grand theft."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484h-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "51e4d58a79774fea8dbb0e7548955904266a0f3bcf45ba55a994c5ed213ed5a7",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484e",
+          "versions": [
+            {
+              "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484h",
+          "versions": [
+            {
+              "versionId": "id_2c7b91e8-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "154cd4517cd2aa52d16d42a7275a2cb761ae4d9c998ac3745f84e1cef32255e8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484h",
+        "start": 0,
+        "end": 1373,
+        "text": "Every retailer or other person who, with intent to defraud: (a) Furnishes money, goods, services or anything else of value upon presentation of an access card obtained or retained in violation of Section 484e or an access card which he or she knows is a counterfeit access card or is forged, expired, or revoked, and who receives any payment therefor, is guilty of theft. If the payment received by the retailer or other person for all money, goods, services, and other things of value furnished in violation of this section exceeds nine hundred fifty dollars ($950) in any consecutive six-month period, then the same shall constitute grand theft. (b) Presents for payment a sales slip or other evidence of an access card transaction, and receives payment therefor, without furnishing in the transaction money, goods, services, or anything else of value that is equal in value to the amount of the sales slip or other evidence of an access card transaction, is guilty of theft. If the difference between the value of all money, goods, services, and anything else of value actually furnished and the payment or payments received by the retailer or other person therefor upon presentation of a sales slip or other evidence of an access card transaction exceeds nine hundred fifty dollars ($950) in any consecutive six-month period, then the same shall constitute grand theft."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484i-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9bfd00110b1f8cdc3075024ea02e0bdbcd88fc343fd80844eb499a680fce9aeb",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484i",
+          "versions": [
+            {
+              "versionId": "id_a1b90fcd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "83846562b647761b96c6cfa8461e77dc526d0599cb578d3eb3d71df915268363"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484i",
+        "start": 0,
+        "end": 1080,
+        "text": "(a) Every person who possesses an incomplete access card, with intent to complete it without the consent of the issuer, is guilty of a misdemeanor. (b) Every person who, with the intent to defraud, makes, alters, varies, changes, or modifies access card account information on any part of an access card, including information encoded in a magnetic stripe or other medium on the access card not directly readable by the human eye, or who authorizes or consents to alteration, variance, change, or modification of access card account information by another, in a manner that causes transactions initiated by that access card to be charged or billed to a person other than the cardholder to whom the access card was issued, is guilty of forgery. (c) Every person who designs, makes, possesses, or traffics in card making equipment or incomplete access cards with the intent that the equipment or cards be used to make counterfeit access cards, is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484i-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "59900a6f1becf4fa251fbbf559ea95984a2e8525db70e94dbc55faf6a5734ab9",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484i",
+          "versions": [
+            {
+              "versionId": "id_a1b90fcd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "83846562b647761b96c6cfa8461e77dc526d0599cb578d3eb3d71df915268363"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484i",
+        "start": 0,
+        "end": 1080,
+        "text": "(a) Every person who possesses an incomplete access card, with intent to complete it without the consent of the issuer, is guilty of a misdemeanor. (b) Every person who, with the intent to defraud, makes, alters, varies, changes, or modifies access card account information on any part of an access card, including information encoded in a magnetic stripe or other medium on the access card not directly readable by the human eye, or who authorizes or consents to alteration, variance, change, or modification of access card account information by another, in a manner that causes transactions initiated by that access card to be charged or billed to a person other than the cardholder to whom the access card was issued, is guilty of forgery. (c) Every person who designs, makes, possesses, or traffics in card making equipment or incomplete access cards with the intent that the equipment or cards be used to make counterfeit access cards, is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484i-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9930cd100225b52299b3e31bee4cea4e945273488bf2b5ceb3b3fd287eac3a5a",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484i",
+          "versions": [
+            {
+              "versionId": "id_a1b90fcd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "83846562b647761b96c6cfa8461e77dc526d0599cb578d3eb3d71df915268363"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484i",
+        "start": 0,
+        "end": 1080,
+        "text": "(a) Every person who possesses an incomplete access card, with intent to complete it without the consent of the issuer, is guilty of a misdemeanor. (b) Every person who, with the intent to defraud, makes, alters, varies, changes, or modifies access card account information on any part of an access card, including information encoded in a magnetic stripe or other medium on the access card not directly readable by the human eye, or who authorizes or consents to alteration, variance, change, or modification of access card account information by another, in a manner that causes transactions initiated by that access card to be charged or billed to a person other than the cardholder to whom the access card was issued, is guilty of forgery. (c) Every person who designs, makes, possesses, or traffics in card making equipment or incomplete access cards with the intent that the equipment or cards be used to make counterfeit access cards, is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-484j",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9c87fa367290ed4d1ded9d11f5307a3638f25425ff34b16c373d641d43f74c39",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484j",
+          "versions": [
+            {
+              "versionId": "id_67b99cba-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "084316c90777cfc80486ae3a9d9a64455fdbbad6bd5a810834bf20034e0abda6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484j",
+        "start": 0,
+        "end": 879,
+        "text": "Any person who publishes the number or code of an existing, canceled, revoked, expired or nonexistent access card, personal identification number, computer password, access code, debit card number, bank account number, or the numbering or coding which is employed in the issuance of access cards, with the intent that it be used or with knowledge or reason to believe that it will be used to avoid the payment of any lawful charge, or with intent to defraud or aid another in defrauding, is guilty of a misdemeanor. As used in this section, “publishes” means the communication of information to any one or more persons, either orally, in person or by telephone, radio or television, or on a computer network or computer bulletin board, or in a writing of any kind, including without limitation a letter or memorandum, circular or handbill, newspaper or magazine article, or book."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-485",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "3e2e7a38d587b54fdbe879f1d52a656ff8d0d03c8a6148dd3980d866e1be72c3",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:485",
+          "versions": [
+            {
+              "versionId": "id_67bb235c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "832d70396c2bc1eec89fa84a03993b4e1d4152a969bcf15f2912f8e20b3d10d0"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:488",
+          "versions": [
+            {
+              "versionId": "id_67bcaa10-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8bbb7e2c6dc36360c00ff5bd522238e8b0d1173673a0809dc44c51fe9e682aa9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:485",
+        "start": 0,
+        "end": 345,
+        "text": "One who finds lost property under circumstances which give him knowledge of or means of inquiry as to the true owner, and who appropriates such property to his own use, or to the use of another person not entitled thereto, without first making reasonable and just efforts to find the owner and to restore the property to him, is guilty of theft."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-496-5-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8e38af6cb35671700f8b7cb356c8f1202bca8b6c9a63efc0079734585a1b07c8",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:496.5",
+          "versions": [
+            {
+              "versionId": "id_7d52e50d-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "43d5d1812dc63504000fbc92aac8cbc2b43cd4f9e4b8a83e31250e95c6183716"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10852",
+          "versions": [
+            {
+              "versionId": "id_0c6c64a9-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "e5e1ee1eda9e3e6f9b3dabfa7e35a41f3e64a89742c8816f34e318e47bd64133"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:496.5",
+        "start": 0,
+        "end": 2572,
+        "text": "(a) A person who unlawfully possesses property that was acquired through one or more acts of theft from a vehicle, unlawful entry of a vehicle, burglary of a locked vehicle, or vehicle tampering as defined in Section 10852 of the Vehicle Code, whether or not the person committed the act of theft, burglary, or vehicle tampering, is guilty of automotive property theft for resale when both of the following apply: (1) The property is not possessed for personal use and the person has the intent to sell or exchange the property for value, or the intent to act in concert with one or more persons to sell or exchange the property for value. (2) The value of the possessed property exceeds nine hundred fifty dollars ($950). For purposes of determining the value of the property, the property described in paragraph (1) can be considered in the aggregate with any of the following: (A) Any other such property possessed by the person with such intent within the last two years. (B) Any property possessed by another person acting in concert with the first person to sell or exchange the property for value, when that property was acquired through one or more acts of theft from a vehicle, unlawful entry of a vehicle, burglary of a locked vehicle, or vehicle tampering as defined in Section 10852 of the Vehicle Code, regardless of the identity of the person committing the acts of theft, burglary, or vehicle tampering. (b) For the purpose of determining, in any proceeding, whether the defendant had the intent to sell or exchange the property for value, the trier of fact may consider any competent evidence, including, but not limited to, the following: (1) Whether the defendant has in the past two years sold or exchanged for value any property acquired through theft from a vehicle, burglary of a locked vehicle, or vehicle tampering as defined in Section 10852 of the Vehicle Code, or through any related offenses, including any conduct that occurred in other jurisdictions, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act, as provided by subdivision (b) of Section 1101 of the Evidence Code. (2) Whether the property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, including use or consumption by one’s immediate family. (c) A violation of subdivision (a) is punishable by imprisonment in the county jail for up to one year or pursuant to subdivision (h) of Section 1170. (d) This section does not preclude or prohibit prosecution under any other law."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-496-6-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "e42eebd1d1d0e73f7fc4e4ba1cdcfcf2d42392943e18a7d6a34e2214dff3fbeb",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:496.6",
+          "versions": [
+            {
+              "versionId": "id_7f40361f-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "290e919c120c655eb59e44674e21d8951891d2b689adf1301006ca6241ffd4fc"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:496.6",
+        "start": 0,
+        "end": 2325,
+        "text": "(a) Any person who possesses property unlawfully that was acquired through one or more acts of shoplifting, theft, or burglary from a retail business, whether or not the person committed the act of shoplifting, theft, or burglary, is guilty of the unlawful deprivation of a retail business opportunity when both of the following apply: (1) The property is not possessed for personal use and the person has the intent to sell, exchange, or return the merchandise for value, or the intent to act in concert with one or more persons to sell, exchange, or return the merchandise for value. (2) The value of the possessed property exceeds nine hundred fifty dollars ($950). For purposes of determining the value of the property, the property described in paragraph (1) can be considered in the aggregate with either of the following: (A) Any other such property possessed by the person with such intent within the prior two years. (B) Any property possessed by another person acting in concert with the first person to sell, exchange, or return the merchandise for value, when such property was acquired through one or more acts of shoplifting, theft, or burglary from a retail business, regardless of the identity of the person committing the act of shoplifting, theft, or burglary. (b) For the purpose of determining in any proceeding whether the defendant has the intent to sell, exchange, or return the merchandise for value, the trier of fact may consider any competent evidence, including, but not limited to, the following: (1) Whether the defendant has in the prior two years sold, exchanged, or returned for value merchandise acquired through shoplifting, theft, or burglary from a retail business, or through any related offense, including any conduct that occurred in other jurisdictions, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act, as provided by subdivision (b) of Section 1101 of the Evidence Code. (2) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, including use or consumption by one’s immediate family. (c) The criminal deprivation of a retail business opportunity is punishable by imprisonment in the county jail for up to one year or pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-496d-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "5cbfecb538a6eb55b3b72e31ebabbf682f4f60829d9c9a7a08a78838c5ba308b",
+      "sources": [
+        {
+          "key": "HNC:21",
+          "versions": [
+            {
+              "versionId": "id_d9fef5d4-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "f069465e8a26d8509bba4534a2ec43f22fdc062e9cf2979c5aeb5b837bf52489"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:496d",
+          "versions": [
+            {
+              "versionId": "id_aba49509-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "ae249a10b9ba0136a02089b727df0f5fce9868956577ba8f617283f39ea65f48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.5",
+          "versions": [
+            {
+              "versionId": "id_1750d1df-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "5253d13d79c426f83a575b7b31beea175af24abcf27e25b0b512422e84a24bfe"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "VEH:415",
+          "versions": [
+            {
+              "versionId": "id_193117a4-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "a4f6f4e034e66731caab7bd2205c08b8f1af037885d3ddd9ee849d4986e02360"
+            }
+          ]
+        },
+        {
+          "key": "VEH:565",
+          "versions": [
+            {
+              "versionId": "id_08b772dc-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "cf8bfcbcce6050118a0e3444c78403df0aca4e569e0f2a8537a6392b521f213b"
+            }
+          ]
+        },
+        {
+          "key": "VEH:630",
+          "versions": [
+            {
+              "versionId": "id_08c09ad2-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "5d03d7157352d46dff637d5e370a85194cc5134d21fa68ca0c052e8a76a3560c"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:496d",
+        "start": 0,
+        "end": 1130,
+        "text": "(a) Every person who buys or receives any motor vehicle, as defined in Section 415 of the Vehicle Code, any trailer, as defined in Section 630 of the Vehicle Code, any special construction equipment, as defined in Section 565 of the Vehicle Code, or any vessel, as defined in Section 21 of the Harbors and Navigation Code, that has been stolen or that has been obtained in any manner constituting theft or extortion, knowing the property to be stolen or obtained, or who conceals, sells, withholds, or aids in concealing, selling, or withholding any motor vehicle, trailer, special construction equipment, or vessel from the owner, knowing the property to be so stolen or obtained, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months or two or three years or a fine of not more than ten thousand dollars ($10,000), or both, or by imprisonment in a county jail not to exceed one year or a fine of not more than one thousand dollars ($1,000), or both. (b) For the purposes of this section, the terms “special construction equipment” and “vessel” are limited to motorized vehicles and vessels."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-499b-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "3f5f7ddc305221052a3b36191453eeab05ffb74e94c8d54ed2eb17b7e5009918",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499",
+          "versions": [
+            {
+              "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+              "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499b",
+          "versions": [
+            {
+              "versionId": "id_67c44b58-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "ce86d8713b89ba4d47162c34dc3f446433e5d420abc8e1e4461d0bb75e3808fa"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:499b",
+        "start": 0,
+        "end": 708,
+        "text": "(a) Any person who shall, without the permission of the owner thereof, take any bicycle for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding four hundred dollars ($400), or by imprisonment in a county jail not exceeding three months, or by both that fine and imprisonment. (b) Any person who shall, without the permission of the owner thereof, take any vessel for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-499b-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "76353784a3ea94a02facd8488c413fcef34d960663e15fe2ab53ffaa0f1e4c04",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499",
+          "versions": [
+            {
+              "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+              "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499b",
+          "versions": [
+            {
+              "versionId": "id_67c44b58-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "ce86d8713b89ba4d47162c34dc3f446433e5d420abc8e1e4461d0bb75e3808fa"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:499b",
+        "start": 0,
+        "end": 708,
+        "text": "(a) Any person who shall, without the permission of the owner thereof, take any bicycle for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding four hundred dollars ($400), or by imprisonment in a county jail not exceeding three months, or by both that fine and imprisonment. (b) Any person who shall, without the permission of the owner thereof, take any vessel for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    },
+    {
+      "id": "ca-pen-499d",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "495509b1ad710e447ad1a22115543242b367bcd91a24398882b219bc67dcc122",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499d",
+          "versions": [
+            {
+              "versionId": "id_ae8df95d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "7417c04eb3f7a5ccebd30bdfb2ee9ea9966c093a09ad395836a849eb4006bc80"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:499d",
+        "start": 0,
+        "end": 682,
+        "text": "Any person who operates or takes an aircraft not his own, without the consent of the owner thereof, and with intent to either permanently or temporarily deprive the owner thereof of his title to or possession of such vehicle, whether with or without intent to steal the same, or any person who is a party or accessory to or an accomplice in any operation or unauthorized taking or stealing is guilty of a felony, and upon conviction thereof shall be punished by imprisonment in a county jail for not more than one year or by imprisonment pursuant to subdivision (h) of Section 1170, or by a fine of not more than ten thousand dollars ($10,000) or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, production seed and deployment parity remain."
+    }
+  ],
+  "sections": [
+    {
+      "key": "PEN:192.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_cedefa7e-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "dd910da312fdb851ee6887c218f52f02d5f0cc15d9a8a15ffd7d384026b15a83"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_1d0f938d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "793d3c1894000d659c0f3db8028cc036a43a2ace7324f5910e1a5f28738bb93a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.2",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665292be-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "16ff14c30a4c8603cc1aacf826c11885ccf8dbab874a6fe5b422841229cda2bd"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.3",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_66541960-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f47af1588422c15bec3ae1254f234f2df6152e7c47bdc3d1a3ddc44b13cb98b6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.4",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_206993ff-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "fb6e68f96c2b49dfca70203c6e87e1afe4fa4f8f6deabba95b32d362b9b261df"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_cb1340eb-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "f992e5eb80727cfc11e4bf66d39eedc44cfc45d274d8aa1de8b75c6c8093cef6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.6",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_66541964-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "caa8ab80947fce18a81870692dc292a7f1dbeda5a0e6167ec40f9d054ec108cb"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_21d6dea1-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "1d6777b84896b4d18cbc044f27c053ebb6a388e5e0f02b2262cdac69d057d609"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_66541968-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d0e202abeb0c5016c70338f0d212e52ef406b4e1b4bb284e0ae7e5fcb80af999"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_24f95455-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "e8ecb4af2bb97b663cb15ebecdf272785088c09f55a6d5f42629599753a2ca58"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.10",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665bbaa6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "30d1a40c6294ef8a3844df9fe264c4693eac68cf0943c41ee0641f10133cb801"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.15",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_8368a1eb-a358-11e5-b6cb-8d365f46d37f",
+          "contentSha256": "e64529f63e99ae18b88f44e3094326c0be17ff2ed49ed65cfcd9b83dae956a59"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.2",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665726b0-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6e9b04f792ec1f522914b98dbabd73e37919aeee41338de1c6168040a70c826"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.25",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665726b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "e2a7e23ffa6a46986a2757cda19298db1955d97898d8af1f18c9f302c5ea4a3a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.3",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_73f127fa-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "5993b0ba6b57f506cf3271ed331c618f924e2430f0a9a351564fb70734e224ea"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.35",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665726b6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "68467ee992f00d195608c34ba5658010c56d48aca5c55a047176575d5d400aca"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.6",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_267015d7-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "7e1db5c24ea49cc0ccb2ad91f9d04ac75065753ea8a319d942197dc79b8a4e7d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.65",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_cc529ebd-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "141387e027893f940f0c1a28c9bbaff14ae82374d67c110cc5b018cf452ce61a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665a33fe-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "53013931ad1a2ec5953f36522b4997d484f7705ee24bfdbfe57544509bb2fe81"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665a3400-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "c09c41b4bf25fa5ac5735b793794209974b2ed295e953ded0af790c633d12c7f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.9",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_665a3404-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "76faf48e833e754b1bf295983d13356494d2d6c6c319a8458ce3a72f5e2ed637"
+        }
+      ]
+    },
+    {
+      "key": "PEN:471",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-471"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67aeee22-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "aea92e35813c079eff4e0c3eab783993be4c992ffba1653ee48ccb98d3ae3942"
+        }
+      ]
+    },
+    {
+      "key": "PEN:472",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-472"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67aeee26-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "7c572a70ecdae8d3f63542e98fb37f97bcd68bff9ba8bb45bf7a132b20de95d4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:474",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-474"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_96ea567f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "48fa1bb8e4381aca3b386733a2c9270ba1da2bdeb26f1dc7d0fbb8dbb80d6f19"
+        }
+      ]
+    },
+    {
+      "key": "PEN:475",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-475-a",
+        "ca-pen-475-b",
+        "ca-pen-475-c"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67b074cc-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "948b329c7171b08cb174bd82ca3f349c6ee0087933254cba37161500fa6ccef5"
+        }
+      ]
+    },
+    {
+      "key": "PEN:476",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-476"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67b1fb6e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "417185f772aa6382ac5dd71fe11d99da270d2e23dd167064168d8d1fba50c180"
+        }
+      ]
+    },
+    {
+      "key": "PEN:477",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b1fb72-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "592bb6863e9855a9732f7826f3936e8c0ff0d69dcf768741eda37270457c6122"
+        }
+      ]
+    },
+    {
+      "key": "PEN:479",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-479"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_99caba23-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cd0c7d41f36fa5eb0b5b497e90d69ef2ee97bf89d2d1583782c66eec056e4952"
+        }
+      ]
+    },
+    {
+      "key": "PEN:480",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-480-a"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_9b334ad5-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "cfcb19c39bb2a52b9a53b9de007032f9c91880334fbe545a646e12853ae42248"
+        }
+      ]
+    },
+    {
+      "key": "PEN:481",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-481"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_9c8bd5f7-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "52e5c659c093b3cb6f0773163a928ef3b48ac33d43e1817fa915d91d09de99c6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:481.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b3821c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "940687a02bdb1d6f0209da138b79b48824855e458bea2c5cde1452818d0e8004"
+        }
+      ]
+    },
+    {
+      "key": "PEN:482",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b3821e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8b464583c8be8738bacce300ba8dcd66df6c4d10e7ffdd1f917dd3d1d83245c2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:483",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b38220-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "b25a29643e8f5b3851d59da4bc15fd71186239336ed3bf12cf63ce4645293cf2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:483.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-483-5-a",
+        "ca-pen-483-5-b"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_9e113d79-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "90d77d63e021ada036e9c7d69247d6fc30d7e39a77f4588ab8fa8a1a28825355"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b68f68-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6720c1af1521400a31eb5bd28ca7893f39fb7012b380fd7b3d374d3177e38ad"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484b",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-484b"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_a03d935b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "68ed102b771adf8d85be3fcb523943ff94558f8a890ea52e5ac4e689ce5b09b2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b68f6c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "9ea06fce68ad7f6f0c0b60a2aa0083a01069594f6640ba25ec18ee0224883f15"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open: access-card theft needs its own section 490.2 valuation analysis, including People v. Romanowski. Do not inherit the grading of access-card forgery.",
+      "versions": [
+        {
+          "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484f",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-484f-a",
+        "ca-pen-484f-b"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484h",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-484h-a",
+        "ca-pen-484h-b"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_2c7b91e8-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "154cd4517cd2aa52d16d42a7275a2cb761ae4d9c998ac3745f84e1cef32255e8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484i",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-484i-a",
+        "ca-pen-484i-b",
+        "ca-pen-484i-c"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_a1b90fcd-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "83846562b647761b96c6cfa8461e77dc526d0599cb578d3eb3d71df915268363"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484j",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-484j"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67b99cba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "084316c90777cfc80486ae3a9d9a64455fdbbad6bd5a810834bf20034e0abda6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:485",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-485"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67bb235c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "832d70396c2bc1eec89fa84a03993b4e1d4152a969bcf15f2912f8e20b3d10d0"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487a",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_501b5f15-8664-11e4-9fd7-cecd375806d8",
+          "contentSha256": "2dc0f4b65fe465fda37916befcefba337d8c8c65aa22138d1b482e904a244391"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487b",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_a3301f6f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "d48d2280ef2c0a88667c4297465c2ac64743ede7f175a0a8ed3bab6783f91806"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_3130676e-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "fdf2aec96aae805e2a5affecd663111c91541c1a13681f3a6954d6abd5d341c4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487d",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_a49ea391-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "6180b069ecd1e52adb16ab4ebf82432b63f557ef3b2821f202f745a5ae6260a8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_d0972681-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "305f3b893af804ce484cad07a1225dcfd13c9350d8de3d8b8a82576eed7910c3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487f",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_d193aef3-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "c02aa7ef207dac3b5635b6ccf849ffff55525f04b5308ec5ed0cefaa3f95091e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487g",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67bcaa0e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "0f2118a4299f9cee378bfdd9cc33dc4aa84303d2e2618a3c698fcfb5e2aea2f3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487h",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_e7a93781-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "03a8c06f62848e175753ced7b47b5ab742e78d2341fae2157fcb0d87014a7381"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487i",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_6ff249e6-cb73-11dd-898a-f4578c730531",
+          "contentSha256": "dae462b0a4c80880edb5bd5e6e2e0df4283b3c25385d162ccd436b7c7b0dae01"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487j",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_8c6c0b53-30cf-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "8699d561d41e7604de24ca06946a5ff9dfc7432f49c843ac492507d7cfbc27d8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487k",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_e2ea837d-0bd9-11ea-912d-915c88c10a14",
+          "contentSha256": "cb0abada8a5f0598e7bee7ba78b2aaddacba7d655e16315fe150ec6ab4d11270"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487m",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_b29279f7-5c47-11ec-9d2f-c3e210bbbdff",
+          "contentSha256": "f5f7c8cb13c20806a15258f47e29a5aa1dce678ea559104f2ca3cfe51904f629"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.4",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67be30ba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ff63b69ba75506d2eff6c1236c2d9e2fb9cbd14a7416ba766b00e5b7d8b53f62"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_5462d1fb-89e5-11db-b11b-b207fcb01266",
+          "contentSha256": "9e2a58882045142173f938312dfcd3c3500ae60a7445ec671deabc42cd0cfae5"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-496-5-a"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_7d52e50d-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "43d5d1812dc63504000fbc92aac8cbc2b43cd4f9e4b8a83e31250e95c6183716"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496.6",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-496-6-a"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_7f40361f-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "290e919c120c655eb59e44674e21d8951891d2b689adf1301006ca6241ffd4fc"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496a",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_8024ef92-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7529691222241c4acc832df771e622a4f49cc4949f82cece07cf70b94aa8f971"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496b",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c13e0c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "be0fd2ba0dc7705ded6bce7128169fed92f0965833ba7a610f8090de103c2252"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c2c4ae-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f1873e5771bb1c0f1f3c59c09465dccf547a81b9cf30b18adb833d3f553b660f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496d",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-496d-a"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_aba49509-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "ae249a10b9ba0136a02089b727df0f5fce9868956577ba8f617283f39ea65f48"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_811e6ac4-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "748a5f9c9abbe584e6053a0476d69acd62792e594e6158c4b88d04687ea0f88b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:497",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c2c4b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8c32699b2671f28e4705aa1816c9d51a9d8cf3335233f09e71f5957d01d6aa12"
+        }
+      ]
+    },
+    {
+      "key": "PEN:498",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+          "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499b",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-499b-a",
+        "ca-pen-499b-b"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_67c44b58-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ce86d8713b89ba4d47162c34dc3f446433e5d420abc8e1e4461d0bb75e3808fa"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_ad1c8f0b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "db4c5d0e2fd2f817b51f99a7329d1480f57bad14a439cd4061e45412a0c56b08"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499d",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-499d"
+      ],
+      "reason": "The listed charging branches are bound to the primary text and shared penalty dependencies. This does not certify every theory or sentencing consequence in the section.",
+      "versions": [
+        {
+          "versionId": "id_ae8df95d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "7417c04eb3f7a5ccebd30bdfb2ee9ea9966c093a09ad395836a849eb4006bc80"
+        }
+      ]
+    },
+    {
+      "key": "PEN:500",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_b0107aaf-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "a3dc87fb677880b98eae2223dc7b69968c7a3ac044cca518e8302c5751a66809"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df46-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "04705519c9fd31476aaa45a7ed9651c688ee3805f2ae6d887a7071f3a273718a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.6",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df4a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "cb033994d208fe698bf0ed9b59a1980aa4ee76f7c300f5821c0ca72a6c785244"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_801e624b-c635-11e6-a742-84f150336b2e",
+          "contentSha256": "8686967b5edc8f421916cc3e66adf2743e2445b335d7910b38a3f9d248f964de"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.9",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Still open for substantive research; not published by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_5b560c94-6538-11d9-bd15-b3cbb5da6f1d",
+          "contentSha256": "339d88b7d4a5770aac9ea8e7d8a03cef4c5861b3389003256577758a127b5b38"
+        }
+      ]
+    }
+  ],
+  "researchNotes": [
+    {
+      "topic": "Section 496d is not section 496(a)",
+      "sourceUrl": "https://supreme.courts.ca.gov/sites/default/files/supremecourt/default/2022-08/S249495.pdf",
+      "authority": "People v. Orozco (2020), S249495",
+      "finding": "Official opinion search text confirms Proposition 47 did not extend section 496(a) mandatory misdemeanor treatment to section 496d. No comprehensive subsequent-treatment audit claimed."
+    },
+    {
+      "topic": "Independent charging-identity cross-check",
+      "sourceUrl": "https://courts.ca.gov/system/files/2024-08/calcrim_2023_edition_1.pdf",
+      "authority": "Official CALCRIM 2023, instructions 1925-1926, 1930-1933 and 1935; access-card series 1953-1955",
+      "finding": "Official published instruction index separately identifies seal forgery/possession, the three section 475 branches, counterfeiting equipment, fictitious checks and access-card forgery. Instruction 1933 confirms knowledge of counterfeiting use, not an added fraudulent-intent element. This older edition is an identity and mental-state cross-check, not current instruction certification or proof of completeness."
+    }
+  ]
+}

@@ -6,7 +6,7 @@ const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/c
 describe("California catalog coverage boundaries", () => {
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 146, configuredSelectable: 125, withheldCanonicalLabels: 21, boundedCorrectionPass: 125, boundedAdditionPass: 26, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 82, selectableRecordsWithAllPrimaryTextAcquired: 125, totalAcquiredSectionsIncludingDependencies: 290, totalAcquiredVersionsIncludingDependencies: 293 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 174, configuredSelectable: 153, withheldCanonicalLabels: 21, boundedCorrectionPass: 153, boundedAdditionPass: 54, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 102, selectableRecordsWithAllPrimaryTextAcquired: 153, totalAcquiredSectionsIncludingDependencies: 297, totalAcquiredVersionsIncludingDependencies: 300 });
     expect(report.accounting.specificOpenLegalQuestions).toBe(3);
     expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");

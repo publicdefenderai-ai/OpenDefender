@@ -28,7 +28,7 @@ export function personPropertyDocuments(acquisition = readCaliforniaPersonProper
   }
   return documents;
 }
-function sourceText(xml: string) {
+export function sourceText(xml: string) {
   return xml.replace(/<[^>]*>/g, " ").replace(/&#(x[\da-f]+|\d+);|&(amp|lt|gt|quot|apos);/gi, (_, num, named) => num
     ? String.fromCodePoint(parseInt(num[0].toLowerCase() === "x" ? num.slice(1) : num, num[0].toLowerCase() === "x" ? 16 : 10))
     : ({ amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" }[named.toLowerCase()]!)).replace(/\s+/g, " ").trim();

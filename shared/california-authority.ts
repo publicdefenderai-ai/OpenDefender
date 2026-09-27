@@ -9,7 +9,7 @@
  */
 
 import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
-import additions from "./california-person-property-additions.json";
+import { CALIFORNIA_ADDITIONS as additions } from "./california-additions";
 import type { CriminalCharge } from "./criminal-charges";
 
 export type CaliforniaDisposition =
@@ -44,7 +44,7 @@ export interface CaliforniaCanonicalRecord {
   disposition: Exclude<CaliforniaDisposition, "alias" | "remove" | "reselection-required">;
   officialTitle: string;
   code: string;
-  lawCode: "PEN" | "HSC" | "VEH" | "BPC" | "RTC" | "FAM" | "WIC";
+  lawCode: "PEN" | "HSC" | "VEH" | "BPC" | "RTC" | "FAM" | "WIC" | "HNC";
   citation: string;
   classification: CaliforniaClassification;
   elements: string[];
@@ -86,6 +86,7 @@ const LAW_CODE_LABELS: Record<CaliforniaCanonicalRecord["lawCode"], string> = {
   RTC: "Cal. Revenue & Taxation Code",
   FAM: "Cal. Family Code",
   WIC: "Cal. Welfare & Institutions Code",
+  HNC: "Cal. Harbors & Navigation Code",
 };
 
 function leginfoUrl(lawCode: CaliforniaCanonicalRecord["lawCode"], code: string): string {
@@ -1817,7 +1818,7 @@ for (const addition of additions) {
   });
   metadata.currentness = {
     status: "current", effectiveDate: (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[`PEN:${addition.code.match(/^\d+(?:\.\d+)*[a-z]?/)![0]}`] ?? null,
-    evidence: `Official PUBINFO source acquired ${addition.sourceAsOf}; bounded statutory review retained in california-person-property-review.json. This review does not refresh the archive or certify all case-law consequences.`,
+    evidence: `Official PUBINFO source acquired ${addition.sourceAsOf}; bounded statutory review retained in ${addition.reviewArtifact}. This review does not refresh the archive or certify all case-law consequences.`,
   };
   metadata.sources.push(...addition.supportingKeys.map(key => {
     const [lawCode, section] = key.split(":") as [CaliforniaCanonicalRecord["lawCode"], string];

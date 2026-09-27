@@ -9,7 +9,7 @@ import { buildCaliforniaSourceDatabaseSeed, buildCaliforniaReferenceHash } from 
 describe("California person/property additions", () => {
   it("binds 26 new identities and accounts for all 142 candidate sections without clearing the open queue", () => {
     const result = validateCaliforniaPersonPropertyReview();
-    expect(result).toMatchObject({ additions: 26, candidateSections: 142, reusedSections: 39, newSections: 118, configuredSelectable: 125 });
+    expect(result).toMatchObject({ additions: 26, candidateSections: 142, reusedSections: 39, newSections: 118, configuredSelectable: 153 });
     expect(result.dispositions.substantive_research_open).toBe(79);
     expect(result.dispositions.deferred_low_priority_infraction).toBe(1);
     expect(CALIFORNIA_LEGACY_DISPOSITIONS).toHaveLength(115);
@@ -74,8 +74,8 @@ describe("California person/property additions", () => {
   it("projects the same identity, categories and text through catalog, guidance, explanation and source manifest", () => {
     const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-27T00:00:00Z"));
     const visible = getChargesByJurisdiction("CA");
-    expect(visible).toHaveLength(125);
-    expect(new Set(visible.map(c => c.id)).size).toBe(125);
+    expect(visible).toHaveLength(153);
+    expect(new Set(visible.map(c => c.id)).size).toBe(153);
     for (const a of additions) {
       const charge = getChargeById(a.id)!;
       expect(charge.description).toBe(a.summary);
