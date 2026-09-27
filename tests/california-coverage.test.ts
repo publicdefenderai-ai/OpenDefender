@@ -1,21 +1,25 @@
 import { describe, expect, it } from "vitest";
 import fs from "node:fs";
-import { buildCaliforniaCoverage, validateCaliforniaSourceExpansion } from "../scripts/data-review/california-verification/coverage";
+import { buildCaliforniaCoverage, renderCaliforniaCoverage, validateCaliforniaSourceExpansion } from "../scripts/data-review/california-verification/coverage";
 const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-source-expansion.json", "utf8"));
 
 describe("California catalog coverage boundaries", () => {
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 71, awaitingCorrectionPass: 28, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 136, totalAcquiredVersionsIncludingDependencies: 138 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 99, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 172, totalAcquiredVersionsIncludingDependencies: 175 });
+    expect(report.accounting.specificOpenLegalQuestions).toBe(3);
+    expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved"]);
+    expect(renderCaliforniaCoverage(report)).toContain("known legal questions");
+    expect(renderCaliforniaCoverage(report)).not.toContain("Next largest groups: .");
     expect(report.accounting.boundedCorrectionPass + report.accounting.awaitingCorrectionPass).toBe(report.accounting.configuredSelectable);
     expect(report.records.filter(row => row.status === "withheld_canonical_label")).toHaveLength(21);
     expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-coverage.json", "utf8"))).toEqual(report);
   });
-  it("groups all 28 remaining records exactly once and does not split shared primary sources", () => {
+  it("groups all 0 remaining records exactly once and does not split shared primary sources", () => {
     const report = buildCaliforniaCoverage();
     const ids = report.groups.flatMap(group => group.recordIds);
-    expect(ids).toHaveLength(28);
-    expect(new Set(ids).size).toBe(28);
+    expect(ids).toHaveLength(0);
+    expect(new Set(ids).size).toBe(0);
     expect([...ids].sort()).toEqual(report.records.filter(row => row.status === "awaiting_statutory_correction_pass").map(row => row.id).sort());
     const sources = report.groups.flatMap(group => group.primaryKeys);
     expect(new Set(sources).size).toBe(sources.length);

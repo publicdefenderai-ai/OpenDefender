@@ -1,0 +1,729 @@
+[
+  {
+    "id": "ca-failure-to-appear-1320-a",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "19"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Willfully failing to appear to evade court process after release on one’s own recognizance on a misdemeanor charge or conviction (§1320(a)). This provision does not describe release on bail. The 14-day evidentiary presumption is not permission to miss the original appearance date.",
+      "es": "Faltar voluntariamente a una comparecencia para eludir el proceso tras liberación bajo palabra por acusación o condena de delito menor (§1320(a)). No describe libertad bajo fianza. La presunción probatoria de 14 días no autoriza faltar a la fecha original.",
+      "zh": "因轻罪指控或定罪获自行具结释放后，为逃避法院程序故意不按要求出庭（第1320(a)条）。本条并非保释金释放规则。14天证据推定不是允许错过原定日期的宽限期。"
+    },
+    "penalty": {
+      "en": "Misdemeanor. Section 19 supplies the default: up to 6 months in county jail, a base fine up to $1,000, or both. The underlying case, warrants, and other charges remain separate; the presumption’s application requires legal review.",
+      "es": "Delito menor. §19 establece hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. El caso original, órdenes de arresto y otras acusaciones son independientes; aplicar la presunción exige revisión jurídica.",
+      "zh": "轻罪。第19条默认处罚为县监狱最高6个月、最高1,000美元基本罚金，或两者并处。原案件、逮捕令及其他指控另行处理；推定的适用须法律审查。"
+    }
+  },
+  {
+    "id": "ca-failure-to-appear-1320-b",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Willfully failing to appear to evade court process after release on one’s own recognizance on a felony charge or conviction (§1320(b)). Do not substitute this provision for failure to appear while on bail. The 14-day presumption is not a grace period.",
+      "es": "Faltar voluntariamente para eludir el proceso tras liberación bajo palabra por acusación o condena de delito grave (§1320(b)). No sustituye la disposición para libertad bajo fianza. La presunción de 14 días no es un plazo de gracia.",
+      "zh": "因重罪指控或定罪获自行具结释放后，为逃避程序故意不出庭（第1320(b)条）。不可将其替代适用于缴纳保释金后不出庭的条款。14天推定不是宽限期。"
+    },
+    "penalty": {
+      "en": "Section 1320(b) calls the offense a felony but expressly permits county jail up to 364 days (§18.5) or §1170(h) imprisonment, ordinarily 16 months, 2 years, or 3 years; a base fine up to $5,000, or fine and imprisonment, is also authorized. Section 17 governs misdemeanor treatment. Custody location, the underlying case, and other consequences need individual review.",
+      "es": "§1320(b) lo denomina delito grave, pero permite expresamente hasta 364 días de cárcel del condado (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años; autoriza multa base de hasta $5,000, o multa y reclusión. §17 regula el trato como delito menor. Lugar de reclusión y consecuencias individuales requieren revisión.",
+      "zh": "第1320(b)条称其为重罪，但明文允许县监狱最高364天（第18.5条），或依第1170(h)条监禁，通常16个月、2年或3年；也允许最高5,000美元基本罚金或罚金及监禁并处。第17条规定轻罪处理。服刑地点、原案件及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-criminal-solicitation-653f-a",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Soliciting another to commit one of the crimes specifically listed in §653f(a), with intent that it be committed. This is not every request to commit any crime. Section 653f(g) requires two witnesses or one witness and corroborating circumstances.",
+      "es": "Solicitar a otra persona uno de los delitos expresamente enumerados en §653f(a), con intención de que se cometa. No cubre cualquier solicitud delictiva. §653f(g) exige dos testigos o uno con circunstancias corroborantes.",
+      "zh": "意图使犯罪实施而教唆他人实施第653f(a)条具体列明的犯罪，并非所有犯罪请求均适用。第653f(g)条要求两名证人，或一名证人及佐证情形。"
+    },
+    "penalty": {
+      "en": "Up to 364 days in county jail (§18.5) or §1170(h) imprisonment, ordinarily 16 months, 2 years, or 3 years. The base fine ceiling is the greater of $10,000 or the fine available for the solicited offense, and a fine may accompany imprisonment. The target offense and other greater-punishment provisions require review; this is not a universal $10,000 cap.",
+      "es": "Hasta 364 días de cárcel del condado (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. El límite de multa base es el mayor de $10,000 o la multa del delito solicitado, y puede combinarse con reclusión. Deben revisarse delito objetivo y disposiciones de pena mayor; $10,000 no es un máximo universal.",
+      "zh": "县监狱最高364天（第18.5条），或依第1170(h)条监禁，通常16个月、2年或3年。基本罚金上限为10,000美元与所教唆犯罪可处罚金中较高者，可与监禁并处。须审查目标犯罪及更重处罚规定；10,000美元不是一律适用的上限。"
+    }
+  },
+  {
+    "id": "ca-criminal-solicitation-653f-b",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Soliciting another to commit or join in murder, with intent that the murder be committed (§653f(b)). Section 653f(g) requires two witnesses or one witness and corroborating circumstances. This is distinct from attempted murder and conspiracy.",
+      "es": "Solicitar a otra persona cometer o participar en un asesinato, con intención de que ocurra (§653f(b)). §653f(g) exige dos testigos o uno con corroboración. Es distinto de tentativa y conspiración.",
+      "zh": "意图使谋杀实施而教唆他人实施或参与谋杀（第653f(b)条）。第653f(g)条要求两名证人或一名证人加佐证。不同于谋杀未遂及共谋。"
+    },
+    "penalty": {
+      "en": "3, 6, or 9 years in state prison under §653f(b). Do not borrow the county-jail alternative from (a). Fines, enhancements, other charges, and individual sentencing remain separate; §653f(h) preserves prosecution under laws providing greater punishment.",
+      "es": "3, 6 o 9 años de prisión estatal bajo §653f(b). No debe trasladarse la alternativa de cárcel del condado de (a). Multas, aumentos y sentencia individual requieren revisión; §653f(h) preserva leyes de mayor pena.",
+      "zh": "第653f(b)条规定州监狱3年、6年或9年。不得套用(a)款县监狱选项。罚金、加重、其他指控及个别量刑另审；第653f(h)条保留依更重处罚法律起诉的可能。"
+    }
+  },
+  {
+    "id": "ca-accessory-after-the-fact-32",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "After a felony, harboring, concealing, or aiding its principal with the knowledge and intent to help that person avoid arrest, trial, conviction, or punishment required by §32. Mere association or knowledge alone does not establish the offense.",
+      "es": "Tras un delito grave, albergar, ocultar o ayudar a su autor con el conocimiento e intención de evitar arresto, juicio, condena o castigo exigidos por §32. La mera relación o conocimiento no basta.",
+      "zh": "重罪发生后，以第32条要求的知情及帮助主犯逃避逮捕、审判、定罪或处罚的意图，窝藏、隐匿或援助主犯。单纯交往或知情不足。"
+    },
+    "penalty": {
+      "en": "Unless another punishment is specified, §33 permits a base fine up to $5,000, county jail up to 364 days (§18.5), §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years, or both fine and imprisonment. This is not automatic punishment equal to the principal’s felony; custody and case-specific consequences need review.",
+      "es": "Salvo pena distinta, §33 permite multa base de hasta $5,000, cárcel del condado hasta 364 días (§18.5), reclusión bajo §1170(h) normalmente de 16 meses, 2 o 3 años, o multa y reclusión. No equivale automáticamente a la pena del autor principal; requiere revisión individual.",
+      "zh": "除另有处罚规定外，第33条允许最高5,000美元基本罚金、县监狱最高364天（第18.5条）、第1170(h)条通常16个月、2年或3年监禁，或罚金与监禁并处。并非自动适用主犯重罪的相同处罚；须审查服刑及个案后果。"
+    }
+  },
+  {
+    "id": "ca-conspiracy-182-a1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "184",
+      "190",
+      "530.5"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "An agreement by two or more people to commit a crime under §182(a)(1), with the required criminal intent and an overt act under §184. The charging document must identify the target crime; agreement alone does not supply all statutory requirements.",
+      "es": "Acuerdo entre dos o más personas para cometer un delito bajo §182(a)(1), con intención criminal y acto manifiesto conforme a §184. Debe identificarse el delito objetivo; el acuerdo solo no satisface todos los requisitos.",
+      "zh": "两人以上依第182(a)(1)条约定犯罪，并具备所需犯罪意图及第184条要求的外显行为。起诉文件须明确目标犯罪；仅有协议不足以满足全部法定要求。"
+    },
+    "penalty": {
+      "en": "For a target felony, §182 generally uses that felony’s punishment, with degree and multiple-target rules; conspiracy to murder uses first-degree murder punishment. Other covered conspiracies can carry up to 364 days (§18.5), §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years, a base fine up to $10,000, or both. A felony identity-theft conspiracy permits a fine up to $25,000. There is no single accurate maximum without the target offense and statutory branch; do not treat every conspiracy as a felony with one generic term.",
+      "es": "Para un delito objetivo grave, §182 usa generalmente su pena, con reglas de grado y múltiples objetivos; conspirar para asesinato usa la pena de primer grado. Otras conspiraciones cubiertas permiten hasta 364 días (§18.5), reclusión bajo §1170(h) normalmente de 16 meses, 2 o 3 años, multa base hasta $10,000, o ambas. Conspiración grave para robo de identidad permite multa hasta $25,000. No hay máximo único sin delito objetivo y modalidad.",
+      "zh": "目标为重罪时，第182条通常按该重罪处罚，并有罪级及多个目标规则；共谋谋杀适用一级谋杀处罚。其他所涵盖共谋可处最高364天（第18.5条）、第1170(h)条通常16个月、2年或3年监禁、最高10,000美元基本罚金，或两者并处。身份盗用重罪共谋允许最高25,000美元罚金。未明确目标罪及分支，不能给出准确统一上限；不可把所有共谋当成单一固定刑期的重罪。"
+    }
+  },
+  {
+    "id": "ca-carjacking",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "211"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Taking a vehicle from another’s possession or a passenger’s person or immediate presence, against the person’s will, by force or fear, with intent to deprive possession temporarily or permanently (§215). It is not simply any vehicle theft.",
+      "es": "Tomar un vehículo de la posesión de otra persona o de la persona o presencia inmediata de un pasajero, contra su voluntad, con fuerza o miedo e intención de privar temporal o permanentemente de la posesión (§215). No es cualquier hurto de vehículo.",
+      "zh": "以强力或恐惧，违背意愿从他人持有处或乘客身上、近旁夺取车辆，并意图暂时或永久剥夺占有（第215条）。并非所有车辆盗窃均属此罪。"
+    },
+    "penalty": {
+      "en": "3, 5, or 9 years in state prison (§215(b)). Section 215(c) permits charging both carjacking and robbery but prohibits punishment under both §§215 and 211 for the same act. Enhancements and other consequences require separate review; the base term is not a total sentence prediction.",
+      "es": "3, 5 o 9 años de prisión estatal (§215(b)). §215(c) permite acusar también robo, pero prohíbe castigar bajo §§215 y 211 por el mismo acto. Aumentos y otras consecuencias requieren revisión; no es predicción de pena total.",
+      "zh": "州监狱3年、5年或9年（第215(b)条）。(c)款允许同时指控劫车与抢劫，但禁止对同一行为同时按第215及211条处罚。加重及其他后果另审；基本刑期不是总刑期预测。"
+    }
+  },
+  {
+    "id": "ca-discharge-of-firearm-in-city",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Willfully discharging a firearm with gross negligence that could cause injury or death (§246.3(a)). This statute does not require discharge within a city. BB devices have a separate misdemeanor branch in (b).",
+      "es": "Disparar voluntariamente un arma de fuego con negligencia grave que pueda causar lesiones o muerte (§246.3(a)). No se exige que el disparo ocurra en una ciudad. Los dispositivos de balines tienen modalidad menor distinta en (b).",
+      "zh": "故意以可能致人受伤或死亡的重大过失方式发射枪支（第246.3(a)条）。本条不要求在城市内开枪。BB装置在(b)款有独立轻罪分支。"
+    },
+    "penalty": {
+      "en": "Firearm branch: county jail up to 364 days (§18.5), or §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years. Do not use a six-month misdemeanor ceiling or import the BB-device classification. Fines, enhancements, firearm consequences, and custody eligibility require individual review.",
+      "es": "Modalidad de arma de fuego: hasta 364 días de cárcel del condado (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. No use máximo menor de seis meses ni clasificación de balines. Multas, aumentos y consecuencias requieren revisión individual.",
+      "zh": "枪支分支可处县监狱最高364天（第18.5条），或依第1170(h)条通常监禁16个月、2年或3年。不得使用六个月轻罪上限或套用BB装置罪级。罚金、加重、枪支后果及服刑资格须个别审查。"
+    }
+  },
+  {
+    "id": "ca-felon-in-possession-of-firearm",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "18",
+      "23515"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "This entry addresses the prior-conviction branch of §29800: owning, buying, receiving, possessing, or controlling a firearm while within a qualifying prohibited class. Federal convictions and out-of-state relief have specific limitations in (c)–(f); a prior conviction should not be matched by its label alone.",
+      "es": "Esta entrada trata la modalidad de condena previa de §29800: poseer, comprar, recibir o controlar un arma dentro de una clase prohibida. Condenas federales y rehabilitación de otros estados tienen límites específicos en (c)–(f); no basta el nombre del antecedente.",
+      "zh": "本项针对第29800条前科分支：属于符合条件的禁止类别时，拥有、购买、接收、持有或控制枪支。联邦定罪及外州权利恢复在(c)至(f)款有特定限制；不可仅凭前科名称匹配。"
+    },
+    "penalty": {
+      "en": "Felony. Section 18(a) supplies 16 months, 2 years, or 3 years in state prison where the felony statute prescribes no different term. Section 29800 does not itself direct this offense to §1170(h) county-jail sentencing. Prior matching, restoration of rights, constitutional defenses, fines and enhancements require legal review.",
+      "es": "Delito grave. §18(a) establece 16 meses, 2 o 3 años de prisión estatal cuando no se fija otra pena. §29800 no remite por sí mismo a cárcel del condado bajo §1170(h). Antecedentes, restitución de derechos, defensas constitucionales, multas y aumentos exigen revisión jurídica.",
+      "zh": "重罪。重罪法条未另定刑期时，第18(a)条规定州监狱16个月、2年或3年。第29800条本身并未将此罪交由第1170(h)条县监狱规则处理。前科匹配、权利恢复、宪法抗辩、罚金及加重须法律审查。"
+    }
+  },
+  {
+    "id": "ca-unlawful-carrying-of-weapon",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18",
+      "18.5",
+      "1170",
+      "23515",
+      "16580",
+      "25450",
+      "25610",
+      "25655"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Carrying a concealable firearm concealed on the person or within a vehicle under the circumstances in §25400(a). Open belt-holster carry is not concealment under (b). Licenses, lawful transport, and statutory exemptions must be checked; this is not a ban on all weapon possession.",
+      "es": "Llevar ocultamente un arma de fuego ocultable en la persona o vehículo en las circunstancias de §25400(a). Una funda de cinturón visible no es ocultación bajo (b). Deben comprobarse licencias, transporte lícito y excepciones; no prohíbe toda posesión de armas.",
+      "zh": "在第25400(a)条情形下，身上或车辆内隐蔽携带可藏于身上的枪支。依(b)款，公开腰带枪套携带不属隐蔽。须核对许可、合法运输及法定豁免，并非禁止一切武器持有。"
+    },
+    "penalty": {
+      "en": "Ordinary (c)(7): up to 364 days (§18.5), base fine up to $1,000, or both. Paragraphs (c)(5)–(6) allow misdemeanor or §1170(h) felony sentencing, ordinarily 16 months, 2 years, or 3 years. Paragraphs (c)(1)–(4) are felony-only and use the §18 default state-prison term absent another provision. Subdivisions (d)–(e) add special prior-conviction minimum-jail rules and an unusual-case exception. Identify the charged paragraph before stating punishment; exemptions, priors, and individual sentencing require review.",
+      "es": "Caso ordinario (c)(7): hasta 364 días (§18.5), multa base hasta $1,000, o ambas. (c)(5)–(6) permiten delito menor o grave bajo §1170(h), normalmente 16 meses, 2 o 3 años. (c)(1)–(4) son solo graves y usan pena supletoria de prisión estatal del §18 salvo otra norma. (d)–(e) añaden mínimos especiales por antecedentes y excepción extraordinaria. Identifique el párrafo acusado; excepciones y sentencia requieren revisión.",
+      "zh": "普通(c)(7)款：最高364天（第18.5条）、最高1,000美元基本罚金，或并处。(c)(5)至(6)款允许轻罪或第1170(h)条重罪处罚，通常16个月、2年或3年。(c)(1)至(4)款仅为重罪，无其他规定时适用第18条默认州监狱刑期。(d)至(e)款另有特定前科最低监禁及特殊案件例外。须先明确被控款项，再审豁免、前科及个别量刑。"
+    }
+  },
+  {
+    "id": "ca-possession-of-prohibited-weapon",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "30510",
+      "30515",
+      "30675",
+      "30900",
+      "30945",
+      "31100"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Possession in California of an assault weapon as statutorily defined, subject to chapter exemptions (§30605). Definitions in §§30510–30515, registration, permits, and lawful possession provisions matter; the generic name “prohibited weapon” is not enough to identify the offense.",
+      "es": "Poseer en California un arma de asalto definida legalmente, sujeto a las excepciones del capítulo (§30605). Importan §§30510–30515, registro, permisos y posesión lícita; el nombre genérico de arma prohibida no basta.",
+      "zh": "在加州持有法定定义的攻击性武器，受该章豁免规定限制（第30605条）。须核对第30510至30515条定义、登记、许可及合法持有；笼统的“违禁武器”名称不足以识别罪名。"
+    },
+    "penalty": {
+      "en": "Under §30605(a), up to 364 days in county jail (§18.5) or §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years. The fine-only first-violation exception in (b), capped at $500, requires every listed condition, including historical registration timing and relinquishment; it is not a general first-offense option. Current court orders, weapon classification, and exemptions require separate enforceability review. This statutory pass does not resolve constitutional litigation.",
+      "es": "§30605(a): hasta 364 días de cárcel del condado (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. La excepción de primera infracción con solo multa hasta $500 de (b) exige todas las condiciones, incluidas fechas históricas de registro y entrega; no es opción general. Órdenes judiciales vigentes, clasificación y excepciones requieren revisión de aplicabilidad. No se resuelve litigio constitucional.",
+      "zh": "第30605(a)条：县监狱最高364天（第18.5条），或依第1170(h)条通常监禁16个月、2年或3年。(b)款初次仅罚金最高500美元的例外要求满足全部条件，包括历史登记期限及交出武器，并非普通初犯选项。现行法院命令、武器分类及豁免须另行审查可执行性。本法条审查不解决宪法诉讼。"
+    }
+  },
+  {
+    "id": "ca-indecent-exposure-314-1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18",
+      "18.5",
+      "19",
+      "288",
+      "290"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Willful and lewd exposure in a public place or where others are present to be offended or annoyed (§314(1)). Mere nudity is not the full statutory test. Nonconsensual entry into an inhabited location and specified prior convictions change the punishment branch.",
+      "es": "Exposición voluntaria y lasciva en público o donde haya personas que puedan ofenderse o molestarse (§314(1)). La desnudez sola no es toda la prueba. Entrada sin consentimiento en lugar habitado y ciertos antecedentes cambian la pena.",
+      "zh": "故意且淫亵地在公共场所或有其他可能受冒犯、骚扰者在场之处暴露（第314(1)条）。单纯裸体不满足完整法定标准。未经同意进入有人居住地点及特定前科会改变处罚分支。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor: up to 6 months and a base fine up to $1,000, or either, under §19. After nonconsensual entry into a specified inhabited location, up to 364 days (§18.5) or state prison; a second §314(1) conviction or first following a §288 conviction is a felony. Where no different felony term is specified, §18 supplies 16 months, 2 years, or 3 years in state prison. Section 290 registration and exact prior/entry facts need separate review.",
+      "es": "Delito menor ordinario: hasta 6 meses y multa base hasta $1,000, o cualquiera, bajo §19. Tras entrada sin consentimiento en lugar habitado especificado: hasta 364 días (§18.5) o prisión estatal; segunda condena §314(1), o primera tras §288, es grave. §18 suple con 16 meses, 2 o 3 años de prisión estatal. Registro §290 y hechos exactos requieren revisión.",
+      "zh": "普通轻罪依第19条可处最高6个月及最高1,000美元基本罚金，亦可单处。未经同意进入特定有人居住地点后，最高364天（第18.5条）或州监狱；第二次第314(1)条定罪，或已有第288条前科后的首次定罪为重罪。未另定重罪刑期时，第18条规定州监狱16个月、2年或3年。第290条登记及准确前科、进入事实须另审。"
+    }
+  },
+  {
+    "id": "ca-failure-to-pay-child-support",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "18.5"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Willful failure without lawful excuse to provide necessary clothing, food, shelter, medical attendance, or other remedial care for a minor child (§270). This is not simply any unpaid civil support balance; parentage, ability to provide, willfulness, and lawful excuse matter.",
+      "es": "Incumplimiento voluntario sin excusa lícita de proporcionar ropa, alimento, vivienda, atención médica u otros cuidados necesarios a un hijo menor (§270). No es cualquier deuda civil de manutención; importan filiación, capacidad, voluntad y excusa.",
+      "zh": "无合法理由故意未向未成年子女提供必要衣物、食物、住所、医疗或其他救护照顾（第270条）。并非任何未付民事抚养费均构成此罪；亲子关系、提供能力、故意及合法理由均重要。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor: up to 364 days in county jail (§18.5), base fine up to $2,000, or both. The text also contains a noticed-parentage-adjudication branch with county jail or a state-prison term of one year and one day. Published case law limits felony treatment based solely on a parentage adjudication (People v. Gregori, 144 Cal.App.3d 353). The felony branch’s application remains unresolved here and requires attorney review; neither automatic felony exposure nor a universal misdemeanor-only ceiling is asserted.",
+      "es": "Delito menor ordinario: hasta 364 días de cárcel del condado (§18.5), multa base hasta $2,000, o ambas. El texto también contiene una modalidad por determinación de filiación notificada con cárcel del condado o prisión estatal de un año y un día. Jurisprudencia publicada limita el trato grave basado solo en filiación (People v. Gregori, 144 Cal.App.3d 353). La aplicabilidad grave queda sin resolver y exige revisión letrada; no se afirma gravedad automática ni máximo universal menor.",
+      "zh": "普通轻罪为县监狱最高364天（第18.5条）、最高2,000美元基本罚金，或并处。条文另有已通知亲子关系裁定分支，可处县监狱或州监狱一年零一天。已公布判例限制仅凭亲子裁定按重罪处理（People v. Gregori, 144 Cal.App.3d 353）。本项未解决重罪分支适用性，须律师审查；既不称自动有重罪风险，也不称一律只有轻罪上限。"
+    }
+  },
+  {
+    "id": "ca-littering",
+    "categories": [
+      "infraction"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Discarding or scattering small quantities of waste in an improper place (§374.4). The private-owner exception in (b) has specified hazard and nuisance limits. This is distinct from every form of dumping or environmental violation.",
+      "es": "Arrojar o dispersar pequeñas cantidades de residuos en lugar indebido (§374.4). La excepción del propietario privado en (b) tiene límites por riesgos y molestias. No abarca toda forma de vertido o infracción ambiental.",
+      "zh": "在不当地点丢弃、散落少量废弃物（第374.4条）。(b)款私人业主例外受特定危险及公害限制。不同于所有倾倒或环境违法行为。"
+    },
+    "penalty": {
+      "en": "Infraction, with no incarceration under §19.6. Mandatory base fine: $250–$1,000 first conviction, $500–$1,500 second, $750–$3,000 third or later (§374.4(d)). The court may also require at least eight hours of litter pickup under (e). Assessments and case-specific conditions are additional questions.",
+      "es": "Infracción sin cárcel bajo §19.6. Multa base obligatoria: $250–$1,000 primera condena, $500–$1,500 segunda, $750–$3,000 tercera o posterior (§374.4(d)). Puede exigirse recoger basura al menos ocho horas bajo (e). Recargos y condiciones requieren revisión.",
+      "zh": "违章，依第19.6条不监禁。强制基本罚金：首次250至1,000美元，第二次500至1,500美元，第三次及以后750至3,000美元（第374.4(d)条）。法院可依(e)款另要求至少八小时捡拾垃圾。附加费用及个案条件另审。"
+    }
+  },
+  {
+    "id": "ca-animal-cruelty-misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "599b",
+      "599c"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "The §597(b) entry covers specified cruel treatment, overwork, deprivation of necessities, and failures of care by a person with custody of an animal. The statutory exceptions and definitions matter. This charge can be prosecuted as a misdemeanor or felony.",
+      "es": "La entrada §597(b) cubre maltrato especificado, sobretrabajo, privación de necesidades y falta de cuidado por quien tiene custodia del animal. Importan excepciones y definiciones. Puede acusarse como delito menor o grave.",
+      "zh": "第597(b)条涵盖特定虐待、过度劳役、剥夺必需品，以及看管动物者未尽照顾义务。须注意法定例外及定义。本指控可按轻罪或重罪起诉。"
+    },
+    "penalty": {
+      "en": "Under §597(d), misdemeanor jail up to 364 days (§18.5), or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Either branch permits a base fine up to $20,000, or fine and imprisonment. Subdivision (g) provides forfeiture of qualifying seized animals and impoundment costs. Other animal-possession restrictions, treatment orders, enhancements, and individual sentencing need separate review.",
+      "es": "§597(d): hasta 364 días por delito menor (§18.5), o reclusión grave bajo §1170(h), normalmente 16 meses, 2 o 3 años. Ambas modalidades permiten multa base hasta $20,000, o multa y reclusión. (g) prevé decomiso de ciertos animales y costos de custodia. Otras restricciones y sentencia requieren revisión.",
+      "zh": "第597(d)条允许轻罪最高364天（第18.5条），或第1170(h)条重罪通常16个月、2年或3年。任一分支可处最高20,000美元基本罚金，或罚金监禁并处。(g)款规定没收符合条件的扣押动物及收容费用。其他持有动物限制、治疗命令、加重及个别量刑须另审。"
+    }
+  },
+  {
+    "id": "ca-fare-evasion",
+    "categories": [
+      "infraction",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Fare evasion on a public transit facility or vehicle under §640(c)(1), including crossing posted fare-control boundaries without valid fare. Section 640(g) bars infraction or misdemeanor charges against minors for the fare offenses in (c)(1)–(3); administrative procedures are separate.",
+      "es": "Evadir tarifa en instalación o vehículo de transporte público bajo §640(c)(1), incluido cruzar límites señalados sin boleto válido. §640(g) prohíbe acusaciones de infracción o delito menor contra menores por (c)(1)–(3); el trámite administrativo es distinto.",
+      "zh": "在公共交通设施或车辆中逃票（第640(c)(1)条），包括无有效票券越过标示的付费边界。第640(g)条禁止对未成年人就(c)(1)至(3)款票务行为提起违章或轻罪指控；行政程序另行处理。"
+    },
+    "penalty": {
+      "en": "For adults, first or second violation: infraction, base fine up to $250 and community service up to 48 hours over no more than 30 days, outside work/school hours. Third or later: misdemeanor, base fine up to $400, up to 90 days in county jail, or both (§640(a)(1)). Authorized local administrative alternatives and juvenile administrative penalties are not ordinary criminal Case Guidance routes; verify the citation’s issuing authority and procedure.",
+      "es": "Adultos: primera o segunda infracción, multa base hasta $250 y servicio comunitario hasta 48 horas en no más de 30 días, fuera de trabajo/escuela. Tercera o posterior: delito menor, multa hasta $400, cárcel hasta 90 días, o ambas (§640(a)(1)). Alternativas administrativas locales y sanciones juveniles no son rutas penales ordinarias; verifique autoridad y trámite.",
+      "zh": "成年人首次或第二次为违章：最高250美元基本罚金，并可要求在不超过30天内完成最高48小时社区服务，避开上班上学时间。第三次及以后为轻罪：最高400美元基本罚金、县监狱最高90天，或并处（第640(a)(1)条）。地方行政替代及未成年人行政处罚不属普通刑事指导路线；须核对发单机构及程序。"
+    }
+  },
+  {
+    "id": "ca-public-intoxication",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "19"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Public intoxication under §647(f) requires inability to care for one’s own or others’ safety, or interference with free use of a public way because of intoxication. Being intoxicated in public alone is not enough. Section 647(g) contains a civil protective-custody route and exceptions.",
+      "es": "§647(f) exige intoxicación pública que impida cuidar la seguridad propia/ajena o interfiera con el libre uso de una vía pública. Estar intoxicado en público no basta. §647(g) prevé custodia protectora civil y excepciones.",
+      "zh": "第647(f)条要求公共场所醉态导致无法照顾自己或他人安全，或因醉态妨碍公共通道自由使用。单纯在公共场所醉酒不足。(g)款设民事保护性看护路线及例外。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor default under §19: up to 6 months in county jail, base fine up to $1,000, or both. A person placed in §647(g) civil protective custody cannot later be criminally prosecuted or subjected to juvenile proceedings on the facts giving rise to that placement. Eligibility and statutory exceptions must be checked; civil custody is not a criminal conviction.",
+      "es": "Pena menor supletoria §19: hasta 6 meses, multa base hasta $1,000, o ambas. Quien recibe custodia protectora civil bajo §647(g) no puede después ser procesado penal o juvenilmente por los hechos que la motivaron. Deben revisarse requisitos y excepciones; no es condena penal.",
+      "zh": "第19条普通轻罪默认最高6个月、最高1,000美元基本罚金，或并处。被置于第647(g)条民事保护性看护者，不能随后就导致该安置的事实被刑事起诉或进入少年程序。须核对资格及例外；民事看护不是刑事定罪。"
+    }
+  },
+  {
+    "id": "ca-prostitution-solicitation",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "19",
+      "1170",
+      "236.1"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Section 647(b) separates receiving compensation, paying an adult, and paying a minor; agreement requires an additional act in furtherance under (b)(4). Subdivision (b)(5) excludes exploited minors receiving consideration. Confirm the exact subdivision, ages, conduct, and offense date.",
+      "es": "§647(b) distingue recibir pago, pagar a adulto y pagar a menor; el acuerdo requiere acto adicional bajo (b)(4). (b)(5) excluye a menores explotados que reciben contraprestación. Verifique inciso, edades, conducta y fecha.",
+      "zh": "第647(b)条区分收取报酬、向成年人付款及向未成年人付款；达成协议须有(b)(4)款规定的进一步行为。(b)(5)款排除收取对价的被剥削未成年人。须核对准确分款、年龄、行为及犯罪日期。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor default: up to 6 months and a base fine up to $1,000, or either (§19). Current §647(l) has materially different adult/minor branches: qualifying solicitation permits 2 days to 364 days (§18.5), up to $10,000, or both, with an unusual-case minimum-jail exception. Subdivision (l)(2) adds a §1170(h) felony alternative for specified age/exploitation conditions; repeat (l)(2) violations are felony-only under (l)(3). Providing compensation under (b)(2) or (b)(3) adds a $1,000 fine under (l)(5). Do not apply the ordinary misdemeanor ceiling to every §647(b) case; exact age, knowledge, payment, prior, and probation conditions require review.",
+      "es": "Pena menor ordinaria: hasta 6 meses y multa base hasta $1,000, o cualquiera (§19). §647(l) vigente distingue modalidades adulto/menor: ciertos casos permiten 2 a 364 días (§18.5), hasta $10,000, o ambas, con excepción extraordinaria al mínimo. (l)(2) añade alternativa grave bajo §1170(h) por condiciones de edad/explotación; reincidencia en (l)(2) es solo grave bajo (l)(3). Pagar bajo (b)(2)/(b)(3) añade $1,000 bajo (l)(5). No aplique el máximo ordinario a todos los casos; revise hechos exactos.",
+      "zh": "普通轻罪默认最高6个月及最高1,000美元基本罚金，亦可单处（第19条）。现行第647(l)条另区分成年人与未成年人分支：符合条件的教唆可处2至364天（第18.5条）、最高10,000美元罚金，或并处，最低监禁有特殊案件例外。(l)(2)款对特定年龄、剥削情形增加第1170(h)条重罪选项，重复违反(l)(2)依(l)(3)仅为重罪。依(b)(2)/(b)(3)支付对价，依(l)(5)另加1,000美元罚金。不可对全部案件套用普通轻罪上限；准确年龄、知情、付款、前科及缓刑条件须审查。"
+    }
+  },
+  {
+    "id": "ca-open-container-23222-a",
+    "categories": [
+      "infraction"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [
+      "23220",
+      "23229",
+      "40000.1",
+      "42001"
+    ],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Possessing an opened, unsealed, or partly emptied alcoholic-beverage receptacle on one’s person while driving on a highway or the public-access lands specified by §23220(c) (§23222(a)). This is the driver/on-person branch, not every passenger or container anywhere in a vehicle.",
+      "es": "Poseer en la persona un recipiente de alcohol abierto, sin sello o parcialmente vacío al conducir por carretera o terrenos de acceso público de §23220(c) (§23222(a)). Es la modalidad del conductor y posesión personal, no cualquier pasajero o recipiente.",
+      "zh": "在公路或第23220(c)条规定的公共通行土地上驾车时，随身持有已开封、封口破损或部分倒空的酒精饮料容器（第23222(a)条）。针对驾驶人随身持有，并非车辆内所有乘客或容器。"
+    },
+    "penalty": {
+      "en": "Infraction under VEH §40000.1, with no jail under PEN §19.6. The default VEH §42001(a) base fine ceilings are $100, $200 for a qualifying second infraction within one year, and $250 for a qualifying third or later infraction within one year. Assessments may add to the base fine. Do not import passenger exceptions from §23229 into this driver provision.",
+      "es": "Infracción bajo VEH §40000.1, sin cárcel conforme a PEN §19.6. Límites de multa base VEH §42001(a): $100, $200 por segunda infracción que cumpla el plazo de un año y $250 por tercera o posterior que lo cumpla. Pueden añadirse recargos. Las excepciones de pasajeros de §23229 no se trasladan al conductor.",
+      "zh": "依车辆法第40000.1条为违章，刑法第19.6条不允许监禁。车辆法第42001(a)条默认基本罚金上限为100美元；一年内符合条件的第二次为200美元，第三次及以后为250美元。附加费用可能另计。不可把第23229条乘客例外套用于本驾驶人条款。"
+    }
+  },
+  {
+    "id": "ca-open-container-23222-b",
+    "categories": [
+      "infraction"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [
+      "11018.1",
+      "11362.7"
+    ],
+    "supportingVehicleSections": [
+      "23220"
+    ],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "While driving on the specified roads or public-access lands, possessing on one’s person an opened or unsealed cannabis receptacle or loose cannabis flower outside a container (§23222(b)). The trunk exception in (b)(2) and documented qualified-patient/closed-container exception in (c) must be checked.",
+      "es": "Al conducir en vías o terrenos públicos indicados, poseer personalmente recipiente de cannabis abierto o sin sello, o flor suelta sin recipiente (§23222(b)). Deben revisarse excepción de maletero (b)(2) y de paciente acreditado con recipiente cerrado (c).",
+      "zh": "在规定道路或公共通行土地驾车时，随身持有已开封或封口破损的大麻容器，或未装入容器的散装花（第23222(b)条）。须核对(b)(2)款后备箱例外及(c)款有证明的合格患者、封闭容器例外。"
+    },
+    "penalty": {
+      "en": "Infraction with a base fine up to $100 under §23222(b)(1); no jail for the infraction under PEN §19.6. This specific $100 provision is not the general escalating VEH §42001 fine schedule. Assessments and any separate intoxicated-driving charge require separate review.",
+      "es": "Infracción con multa base hasta $100 bajo §23222(b)(1), sin cárcel conforme a PEN §19.6. No es la escala general creciente de VEH §42001. Recargos y cualquier acusación separada por conducir intoxicado requieren revisión.",
+      "zh": "第23222(b)(1)条违章基本罚金最高100美元；刑法第19.6条不允许违章监禁。此特定100美元规定并非车辆法第42001条的一般递增罚金表。附加费用及另行醉驾指控须另审。"
+    }
+  },
+  {
+    "id": "ca-minor-in-possession",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [
+      "25667",
+      "25668"
+    ],
+    "summary": {
+      "en": "A person under 21 possessing alcohol on a street, highway, public place, or place open to the public (§25662(a)). Authorized delivery/employment and parental-disposition defenses, qualifying 911 medical-assistance immunity (§25667), and qualified educational tasting (§25668) must be checked.",
+      "es": "Persona menor de 21 que posee alcohol en calle, carretera o lugar público o abierto al público (§25662(a)). Deben revisarse entrega/empleo autorizado, instrucciones parentales, inmunidad por llamada médica al 911 (§25667) y cata educativa cualificada (§25668).",
+      "zh": "未满21岁者在街道、公路、公共场所或向公众开放处持有酒类（第25662(a)条）。须审查授权递送、雇佣或父母处置指示抗辩、符合条件的911医疗求助豁免（第25667条）及合格教学品尝（第25668条）。"
+    },
+    "penalty": {
+      "en": "Misdemeanor, but §25662(a) specifies a $250 fine or 24–32 hours of community service for a first violation, not a default jail term. A second or later violation permits a fine up to $500, 36–48 hours of community service, or a combination. Service must be outside work/school hours. Other statutory consequences are separate and need review; do not infer incarceration merely from the misdemeanor label.",
+      "es": "Delito menor, pero §25662(a) fija $250 de multa o 24–32 horas de servicio comunitario para primera infracción, no cárcel supletoria. Segunda o posterior permite hasta $500, 36–48 horas de servicio, o combinación. Servicio fuera de trabajo/escuela. Otras consecuencias requieren revisión; no infiera cárcel solo por la etiqueta.",
+      "zh": "虽为轻罪，第25662(a)条首次规定250美元罚金或24至32小时社区服务，并非默认监禁。第二次及以后可处最高500美元、36至48小时社区服务，或组合处罚。服务须避开工作及上学时间。其他法定后果另审；不得仅凭轻罪标签推定监禁。"
+    }
+  },
+  {
+    "id": "ca-possession-with-intent-to-distribute",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "1170"
+    ],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11056",
+      "11057",
+      "11058"
+    ],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Possessing for sale or purchasing for purposes of sale the controlled substances specifically covered by HSC §11351. Match the substance to the incorporated schedules; not every drug falls under this section. Simple personal possession is a different charging theory.",
+      "es": "Poseer para vender o comprar con fin de venta sustancias específicamente cubiertas por HSC §11351. Debe cotejarse la sustancia con listas incorporadas; no toda droga está cubierta. Posesión personal simple es distinta.",
+      "zh": "为销售而持有或购买健康安全法第11351条具体涵盖的受控物质。须与所引用清单匹配，并非所有药物适用；单纯个人持有是不同指控理论。"
+    },
+    "penalty": {
+      "en": "2, 3, or 4 years under PEN §1170(h), as expressly specified by HSC §11351. Section 11370.1 is not this offense’s penalty authority. Eligibility exclusions can require state-prison custody; county jail is not guaranteed. Quantity, priors, enhancements, fines, and other consequences require separate review.",
+      "es": "2, 3 o 4 años bajo PEN §1170(h), expresamente fijados por HSC §11351. §11370.1 no es su autoridad de pena. Exclusiones pueden exigir prisión estatal; no se garantiza cárcel del condado. Cantidad, antecedentes, aumentos y multas requieren revisión.",
+      "zh": "健康安全法第11351条明定依刑法第1170(h)条监禁2年、3年或4年。第11370.1条并非本罪处罚依据。资格排除可要求州监狱服刑，并非保证县监狱。数量、前科、加重、罚金及其他后果须另审。"
+    }
+  },
+  {
+    "id": "ca-distribution-of-controlled-substance",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "1170"
+    ],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11056",
+      "11057",
+      "11058"
+    ],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "HSC §11352 covers specified sale, furnishing, administration, giving away, import, transport, offer, and attempt acts involving its listed substances, subject to the statutory prescription exception. Under (c), transport means transport for sale; mere movement for personal use is not that branch.",
+      "es": "HSC §11352 cubre venta, suministro, administración, entrega, importación, transporte, oferta y ciertos intentos respecto de sustancias enumeradas, sujeto a excepción de receta. Bajo (c), transportar significa para venta; movimiento personal no es esa modalidad.",
+      "zh": "健康安全法第11352条涵盖列明物质的特定销售、供应、给药、赠送、进口、运输、要约及企图行为，并有处方例外。依(c)款，运输指为销售而运输；个人使用的单纯移动不属该分支。"
+    },
+    "penalty": {
+      "en": "Ordinary §11352(a): 3, 4, or 5 years under PEN §1170(h). Transport for sale from one California county to another noncontiguous county uses 3, 6, or 9 years under (b). Custody location depends on §1170(h) eligibility; enhancements, quantity rules, fines, and other consequences remain separate. These are not universal state-prison or total-sentence predictions.",
+      "es": "§11352(a) ordinario: 3, 4 o 5 años bajo PEN §1170(h). Transporte para venta entre condados californianos no contiguos: 3, 6 o 9 años bajo (b). Lugar de reclusión depende de elegibilidad; aumentos, cantidad, multas y otras consecuencias son aparte. No son predicciones universales de prisión estatal o pena total.",
+      "zh": "普通第11352(a)条为刑法第1170(h)条3年、4年或5年；为销售从加州一个县运至另一不相邻县，依(b)款为3年、6年或9年。服刑地点取决于第1170(h)条资格；加重、数量规则、罚金及其他后果另审。不可一律认定州监狱或总刑期。"
+    }
+  },
+  {
+    "id": "ca-maintaining-drug-house",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18",
+      "18.5"
+    ],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11056",
+      "11057",
+      "11058"
+    ],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Opening or maintaining a place for the purpose of unlawfully selling, giving away, or using substances covered by HSC §11366. The maintained-place purpose and incorporated substance list matter; finding drugs at a location alone does not establish every element.",
+      "es": "Abrir o mantener un lugar con finalidad de vender, regalar o usar ilícitamente sustancias cubiertas por HSC §11366. Importan finalidad y lista incorporada; hallar drogas allí no acredita todo el delito.",
+      "zh": "为非法销售、赠送或使用健康安全法第11366条涵盖物质而开设或维持场所。须核对持续场所目的及物质清单；仅在地点发现药物不满足全部要件。"
+    },
+    "penalty": {
+      "en": "HSC §11366 expressly allows county jail up to 364 days (PEN §18.5) or state prison. The default felony term under PEN §18 is 16 months, 2 years, or 3 years. Do not describe this as felony-only or substitute §1170(h) county-jail sentencing for its express state-prison alternative. Fines, enhancements, and case-law requirements need separate review.",
+      "es": "HSC §11366 permite expresamente hasta 364 días de cárcel del condado (PEN §18.5) o prisión estatal. Pena grave supletoria PEN §18: 16 meses, 2 o 3 años. No es solo grave ni debe sustituirse la alternativa estatal por cárcel §1170(h). Multas, aumentos y jurisprudencia requieren revisión.",
+      "zh": "健康安全法第11366条明许县监狱最高364天（刑法第18.5条）或州监狱。刑法第18条默认重罪刑期为16个月、2年或3年。不得称仅为重罪，或以第1170(h)条县监狱规则替代明文州监狱选项。罚金、加重及判例要求须另审。"
+    }
+  },
+  {
+    "id": "ca-manufacturing-controlled-substance",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "1170"
+    ],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11056",
+      "11057",
+      "11058",
+      "11379.7"
+    ],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Manufacturing or the specified chemical preparation/extraction/synthesis acts involving scheduled substances under HSC §11379.6(a), subject to legal exceptions. Merely offering to do those acts is separately punished under (e); confirm which conduct is charged.",
+      "es": "Fabricar o realizar los actos químicos especificados respecto de sustancias controladas bajo HSC §11379.6(a), sujeto a excepciones. Solo ofrecerlos se castiga por separado bajo (e); verifique conducta acusada.",
+      "zh": "实施健康安全法第11379.6(a)条对受控物质规定的制造、化学制备、提取或合成行为，受法律例外限制。单纯提出实施要约依(e)款另罚；须核对指控行为。"
+    },
+    "penalty": {
+      "en": "Actual (a) conduct: 3, 5, or 7 years under PEN §1170(h) and a base fine up to $50,000. An offer under (e) instead carries 3, 4, or 5 years. HSC §11379.7 adds 2 or 5 years for qualifying methamphetamine/PCP cases involving a child under 16; §11379.6(b)–(d) also identifies aggravating circumstances. Custody, enhancements, and total sentencing need individual review.",
+      "es": "Conducta de (a): 3, 5 o 7 años bajo PEN §1170(h) y multa base hasta $50,000. Oferta de (e): 3, 4 o 5 años. HSC §11379.7 añade 2 o 5 años en ciertos casos de metanfetamina/PCP con menor de 16; §11379.6(b)–(d) enumera agravantes. Reclusión y pena total requieren revisión individual.",
+      "zh": "(a)款实际行为依刑法第1170(h)条处3年、5年或7年及最高50,000美元基本罚金；(e)款要约为3年、4年或5年。健康安全法第11379.7条对涉及未满16岁儿童的特定甲基苯丙胺、PCP案件另加2年或5年；第11379.6(b)至(d)条另列加重情形。服刑、加重及总量刑须个别审查。"
+    }
+  },
+  {
+    "id": "ca-illegal-fireworks-12677",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [
+      "12505",
+      "12700",
+      "12702"
+    ],
+    "supportingVehicleSections": [],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Possession of dangerous fireworks without a valid permit (HSC §12677), using the definition in §12505. Section 12700 supplies punishment by gross weight including packaging and other conditions. Do not substitute ordinary fireworks or a local ordinance without checking the charged statute.",
+      "es": "Poseer fuegos artificiales peligrosos sin permiso válido (HSC §12677), según §12505. §12700 fija pena por peso bruto incluido embalaje y otras condiciones. No sustituya fuegos ordinarios u ordenanza local sin verificar la acusación.",
+      "zh": "未经有效许可持有危险烟花（健康安全法第12677条），定义见第12505条。第12700条按包括包装的毛重及其他条件处罚。须核对指控法条，不可替换成普通烟花或地方条例。"
+    },
+    "penalty": {
+      "en": "For unaltered dangerous fireworks, §12700(b)(1) uses misdemeanor jail up to 364 days (§18.5), a $1,000–$2,000 base fine, or both below 25 pounds, with a distinct repeat rule. Paragraph (b)(2) states a 25–100-pound jail/fine branch ($2,000–$10,000); (b)(3) states a 100–5,000-pound branch ($10,000–$20,000) with a §1170(h) felony option; (b)(4) covers over 5,000 pounds ($20,000–$100,000) with that option. The text overlaps at exactly 100 pounds: classification and penalty at that boundary remain unresolved, not automatically assigned. Altered fireworks, repeat offenses, licensing, and §12702 delivery-to-minors cases require separate review. These base ranges exclude assessments.",
+      "es": "Para fuegos peligrosos no alterados, §12700(b)(1) permite hasta 364 días (§18.5), multa base $1,000–$2,000, o ambas, por menos de 25 libras, con regla distinta de reincidencia. (b)(2) señala 25–100 libras ($2,000–$10,000); (b)(3), 100–5,000 ($10,000–$20,000), con opción grave §1170(h); (b)(4), más de 5,000 ($20,000–$100,000), con esa opción. Exactamente 100 libras aparece en dos ramas: clasificación y pena quedan sin resolver, no asignadas automáticamente. Alteraciones, antecedentes, licencias y entrega a menores §12702 requieren revisión. Rangos sin recargos.",
+      "zh": "对未经改装的危险烟花，第12700(b)(1)条不足25磅可处最高364天轻罪监禁（第18.5条）、1,000至2,000美元基本罚金，或并处，累犯另有规则。(b)(2)款列25至100磅监禁及罚金分支（2,000至10,000美元）；(b)(3)列100至5,000磅（10,000至20,000美元），含第1170(h)条重罪选项；(b)(4)列超过5,000磅（20,000至100,000美元），亦有该选项。准确100磅在文字上重叠，此边界罪级及刑罚未解决，不自动分配。改装、累犯、许可及第12702条向未成年人交付案件须另审。基本金额不含附加费。"
+    }
+  },
+  {
+    "id": "ca-driving-without-insurance",
+    "categories": [
+      "infraction"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [
+      "16020",
+      "16029",
+      "40611"
+    ],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Failure to provide evidence of financial responsibility when lawfully requested under VEH §16028. Insurance is not the only lawful form of financial responsibility. The section bars a stop solely to check this evidence and contains an employer-vehicle rule; proof and actual coverage are different questions.",
+      "es": "No proporcionar prueba de responsabilidad financiera requerida legalmente bajo VEH §16028. El seguro no es la única forma válida. No se permite detener solo para comprobarla y hay regla de vehículo del empleador; prueba y cobertura real son distintas.",
+      "zh": "依车辆法第16028条被合法要求时未提供经济责任证明。保险并非唯一合法经济责任形式。本条禁止仅为查证此事而拦车，并有雇主车辆规则；证明与实际保障是不同问题。"
+    },
+    "penalty": {
+      "en": "Infraction under §16029: first conviction base fine $100–$200 plus assessments; a subsequent conviction within three years, $200–$500 plus assessments. Ability-to-pay relief is expressly preserved by (e)(2). Proof that responsibility existed when cited supports dismissal under §16028(e), generally with a $25 transaction fee under §40611; buying coverage later is not the same showing. Impoundment and insurance-maintenance orders are possible under §16029 and require individual review. No jail for this infraction.",
+      "es": "Infracción §16029: primera condena $100–$200 más recargos; posterior dentro de tres años $200–$500 más recargos. (e)(2) preserva alivio por capacidad de pago. Prueba de responsabilidad al momento de citar permite desestimación §16028(e), generalmente con tarifa $25 bajo §40611; contratar después no es igual. Pueden existir incautación y órdenes de cobertura bajo §16029. Sin cárcel por esta infracción.",
+      "zh": "第16029条违章：首次定罪基本罚金100至200美元加附加费；三年内再次定罪200至500美元加附加费。(e)(2)款明确保留按支付能力减免。证明开单时已具经济责任，可依第16028(e)条撤销，通常依第40611条收25美元手续费；事后购买保障不同。第16029条还允许扣车及维持保险命令，须个别审查。本违章不监禁。"
+    }
+  },
+  {
+    "id": "ca-expired-registration",
+    "categories": [
+      "infraction"
+    ],
+    "supportingSections": [
+      "19.6"
+    ],
+    "supportingHealthSections": [],
+    "supportingVehicleSections": [
+      "40000.1",
+      "42001",
+      "40303.5",
+      "40522",
+      "40610",
+      "40611",
+      "40616"
+    ],
+    "supportingBusinessSections": [],
+    "summary": {
+      "en": "Operating, moving, or leaving a vehicle in the covered highway/public-parking locations without required registration and fees (§4000(a)(1)), subject to its exceptions. Through the stated January 1, 2030 endpoint, (a)(4) limits enforcement based solely on this violation before the second month after expiration; a stop for another violation can still permit enforcement. This does not extend registration validity.",
+      "es": "Operar, mover o dejar vehículo en vías/estacionamientos cubiertos sin registro y tasas exigidos (§4000(a)(1)), sujeto a excepciones. Hasta el término indicado de 1 de enero de 2030, (a)(4) limita aplicación basada solo en esto antes del segundo mes tras vencer; otra infracción permite actuar. No prorroga la matrícula.",
+      "zh": "未具所需登记及缴费，在涵盖公路、公共停车处驾驶、移动或停放车辆（第4000(a)(1)条），受例外限制。至条文所列2030年1月1日期限，(a)(4)款限制在到期后第二个月以前仅凭此违例执法；因其他违例拦停仍可执法。这不延长登记有效期。"
+    },
+    "penalty": {
+      "en": "Infraction under §40000.1. Default §42001(a) base ceilings: $100, qualifying second infraction within one year $200, qualifying third or later $250, plus applicable assessments. Eligible corrected registration citations can be dismissed through §§40303.5, 40522, 40610 and 40616, generally with the §40611 $25 transaction fee. Fraud/persistent neglect, immediate safety hazards, or inability/refusal to correct can disqualify that route. Registration fees remain separate. Check the offense date and the notice’s correction deadline before relying on dismissal.",
+      "es": "Infracción §40000.1. Máximos base §42001(a): $100, segunda cualificada en un año $200, tercera o posterior $250, más recargos. Citaciones de registro corregidas elegibles pueden desestimarse bajo §§40303.5, 40522, 40610 y 40616, generalmente con tarifa $25 de §40611. Fraude/negligencia persistente, peligro inmediato o imposibilidad/negativa de corregir pueden excluir esa vía. Tasas de registro son aparte. Verifique fecha del hecho y plazo de corrección antes de confiar en la desestimación.",
+      "zh": "依第40000.1条为违章。第42001(a)条默认基本上限100美元，一年内符合条件的第二次200美元、第三次及以后250美元，另加适用附加费。符合条件的已纠正登记传票可依第40303.5、40522、40610及40616条撤销，通常有第40611条25美元手续费。欺诈、持续疏忽、即时安全危险或不能、不愿及时纠正可排除此路线。登记费另计。在依赖撤销路线前，应核对违法日期及通知上的纠正期限。"
+    }
+  }
+]

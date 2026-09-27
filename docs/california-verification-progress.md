@@ -340,3 +340,67 @@ passed across the main run and two added selector checks, exercising all 71
 corrections in the API plus rules guidance and classification alternatives. No
 real case inputs, external AI calls, production credentials, seed, or deployment
 were used.
+
+## Remaining 28-record combined pass (September 27, 2026)
+
+All 28 remaining configured records received a bounded statutory correction pass
+in one batch. The batch combines process/liability, public-order, firearm, drug,
+regulatory, and traffic groups. It reuses all 25 primary sections and 14 previously
+retained supporting sections, adding 36 supporting sections with 37 versions from
+the same hash-verified September 24 official archive. Its 28 records share 75 source
+sections. No new archive download or separate per-record acquisition was needed.
+
+Material corrections include the misdemeanor alternative for maintaining a drug
+premises; the firearm-discharge misdemeanor ceiling; the state-prison default for
+§29800 instead of an unsupported §1170(h) custody claim; the 2026 prostitution
+age/payment branches; animal-cruelty alternatives; target-dependent conspiracy;
+minor fare-evasion exclusions; and financial-responsibility dismissal based on
+coverage when cited rather than later purchase. Exact-ID summaries and penalties
+reach the catalog and all three language paths. Translations remain drafts.
+
+The supplemental validator now accepts explicitly scoped passages shared by every
+retained version, while still requiring complete version/hash bindings. VEH §40610
+has current/repealing and future-operative versions with the same effective-date
+metadata: neither is silently selected. Only common registration-correction rules
+support this batch; the motorcycle difference is outside the claim. Missing shared
+passages, future-only text, omitted versions, and unreviewed future effective dates
+fail validation. Business and Professions Code supporting links are now represented
+explicitly, including §§25667–25668 immunity/exception references.
+
+Reproduce the committed evidence and reports without a database or credentials:
+
+```sh
+node --import tsx scripts/data-review/california-verification/remaining-catalog-review.ts
+node --import tsx scripts/data-review/california-verification/coverage.ts
+```
+
+The readable review is `scripts/data-review/output/california-batch-six-review.md`.
+All **99 configured selectable records now have bounded corrections; zero await
+this first catalog pass**. This is not 99 fully certified offenses or statewide
+completeness. The 21 withheld canonical labels remain separate, and there is no
+statewide offense denominator. Research evidence totals 172 sections/175 versions.
+
+Three specific questions remain visible in machine-readable accounting and the
+[attorney question packet](california-remaining-attorney-questions.md): §270 felony
+applicability after Gregori, the exactly-100-pound fireworks boundary, and current
+§30605 definition-specific enforceability. No automatic answer is supplied. The
+fireworks overlap is recorded in the cross-state statutory-anomaly inventory.
+Known future changes to §§40610 and 4000 are documented for monitoring; this does
+not install a scheduler. The retained snapshot is still September 24, not the date
+of this report.
+
+After PR review/merge, the next release work is the existing Replit California
+seed/republish followed by live count, exact-ID, category, penalty, and guidance
+parity checks. Broader missing-charge discovery remains a separate statewide
+project. A zero catalog queue does not remove legal-review or deployment needs.
+
+Validation: 100 California-focused tests passed across the suite and targeted
+reruns; two existing opt-in tests were skipped. Two older assertions were updated
+for corrected fare wording and a charge that now shares sentencing dependencies.
+Typecheck and production build passed. Twelve browser checks passed initially;
+one existing age-gap selector case timed out during jurisdiction selection and
+passed on its focused rerun, for 13 successful cases overall. All 99 corrections
+were checked through the production API, with representative rules/selector paths.
+No real cases, external AI requests, production database, seed or deployment were
+used. These local results do not certify the separate GitHub Actions installation
+issue as fixed.

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ca-270-felony-applicability",
+    "chargeId": "ca-failure-to-pay-child-support",
+    "status": "unresolved",
+    "question": "Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?",
+    "sourceKeys": ["PEN:270"],
+    "reviewDocument": "docs/california-remaining-attorney-questions.md"
+  },
+  {
+    "id": "ca-12700-exactly-100-pounds",
+    "chargeId": "ca-illegal-fireworks-12677",
+    "status": "unresolved",
+    "question": "What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?",
+    "sourceKeys": ["HSC:12700"],
+    "reviewDocument": "docs/california-remaining-attorney-questions.md"
+  },
+  {
+    "id": "ca-30605-enforceability",
+    "chargeId": "ca-possession-of-prohibited-weapon",
+    "status": "unresolved",
+    "question": "Which currently operative court orders affect the weapon definitions relevant to this possession charge?",
+    "sourceKeys": ["PEN:30510", "PEN:30515", "PEN:30605"],
+    "reviewDocument": "docs/california-remaining-attorney-questions.md"
+  }
+]

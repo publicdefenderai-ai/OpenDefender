@@ -12,6 +12,10 @@ import { readCaliforniaCombinedReview, validateCaliforniaCombinedReview } from "
 import { readCaliforniaAgeDrivingReview, validateCaliforniaAgeDrivingReview } from "./age-driving-review";
 import { readCaliforniaFinancialPropertyReview, validateCaliforniaFinancialPropertyReview } from "./financial-property-review";
 
+import { readCaliforniaRemainingCatalogReview, validateCaliforniaRemainingCatalogReview } from "./remaining-catalog-review";
+
+import openLegalQuestions from "./open-review-items.json";
+
 interface SourceExpansion {
   schemaVersion: number; scope: string; archive: { sha256: string };
   statutoryUniverse: Array<{ lawCode: string; distinctSections: number; versionRows: number }>;
@@ -38,10 +42,12 @@ export function buildCaliforniaCoverage() {
   const ageDrivingAccounting = validateCaliforniaAgeDrivingReview(ageDriving);
   const financial = readCaliforniaFinancialPropertyReview();
   const financialAccounting = validateCaliforniaFinancialPropertyReview(financial);
+  const remainingCatalog = readCaliforniaRemainingCatalogReview();
+  const remainingAccounting = validateCaliforniaRemainingCatalogReview(remainingCatalog);
   const expansionPath = new URL("../output/california-catalog-source-expansion.json", import.meta.url);
   const expansion: SourceExpansion | null = fs.existsSync(expansionPath) ? JSON.parse(fs.readFileSync(expansionPath, "utf8")) : null;
   if (expansion) validateCaliforniaSourceExpansion(expansion, review);
-  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(combined.documents), ...Object.keys(ageDriving.documents), ...Object.keys(financial.documents), ...Object.keys(expansion?.documents ?? {})]);
+  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(combined.documents), ...Object.keys(ageDriving.documents), ...Object.keys(financial.documents), ...Object.keys(remainingCatalog.documents), ...Object.keys(expansion?.documents ?? {})]);
   const corrected = new Set(corrections.map(row => row.id));
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
@@ -70,6 +76,10 @@ export function buildCaliforniaCoverage() {
     };
   });
   for (const id of corrected) if (!records.some(record => record.id === id && record.selectable)) throw new Error(`Corrected record lost: ${id}`);
+  for (const item of openLegalQuestions) {
+    if (!records.some(row => row.id === item.chargeId && row.selectable) || item.status !== "unresolved" || !item.question || !item.sourceKeys.every(key => acquiredKeys.has(key))) throw new Error("Invalid open California review item");
+  }
+  if (new Set(openLegalQuestions.map(item => item.id)).size !== openLegalQuestions.length) throw new Error("Duplicate open California review item");
   const pending = records.filter(record => record.status === "awaiting_statutory_correction_pass");
   // Connected components ensure overlapping primary sources are read once.
   // These are engineering queues, not claims of shared elements or penalties.
@@ -95,9 +105,10 @@ export function buildCaliforniaCoverage() {
   return {
     schemaVersion: 1, scope: "catalog_accounting_not_statewide_offense_coverage",
     accounting: {
+      specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -108,7 +119,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
@@ -126,7 +137,7 @@ export function buildCaliforniaCoverage() {
     })),
     recommendedReuseBatch: pending.filter(row => row.primaryKeys.length > 0 && row.primaryKeys.length === row.retainedPrimaryKeys.length).map(row => row.id),
     statutoryUniverse: expansion?.statutoryUniverse ?? null,
-    sourceRequests, groups, records,
+    openLegalQuestions, sourceRequests, groups, records,
   };
 }
 
@@ -139,11 +150,13 @@ export function renderCaliforniaCoverage(report: ReturnType<typeof buildCaliforn
     `Primary-source acquisition: ${a.acquiredSelectablePrimarySections}/${a.distinctSelectablePrimarySections} declared sections, covering the primary links of ${a.selectableRecordsWithAllPrimaryTextAcquired}/${a.configuredSelectable} configured records. Total retained research sources including dependencies: ${a.totalAcquiredSectionsIncludingDependencies} sections/${a.totalAcquiredVersionsIncludingDependencies} versions.`, "",
     "| Code | Selectable | Correction pass | Awaiting correction pass |", "| --- | ---: | ---: | ---: |",
     ...report.byLawCode.map(row => `| ${row.lawCode} | ${row.selectable} | ${row.corrected} | ${row.awaitingCorrection} |`), "",
-    "## Next reuse batch", "", "These records share primary texts already used in the first batch. Their unreviewed subdivisions and missing dependencies still need substantive review.", "",
+    "## Remaining work", "",
+    ...report.openLegalQuestions.map(item => `- ${item.chargeId}: ${item.question}`), "",
+    "See docs/california-remaining-attorney-questions.md for sources and proposed treatment. These focused questions are not an exhaustive list of all legal-review needs.", "",
     ...report.recommendedReuseBatch.map(id => `- ${id}`),
-    ...(report.recommendedReuseBatch.length ? [] : ["The first-batch reuse queue is complete. Next largest groups: " + report.groups.slice(0, 3).map(group => `${group.id} (${group.recordIds.length} records)`).join("; ") + "."]), "",
+    ...(report.recommendedReuseBatch.length ? [] : [report.groups.length ? "Next largest groups: " + report.groups.slice(0, 3).map(group => `${group.id} (${group.recordIds.length} records)`).join("; ") + "." : "The existing selectable catalog has completed its bounded correction pass. Independent review, known legal questions, deployment parity, and statewide missing-charge discovery remain."]), "",
     `${a.awaitingCorrectionPass} remaining records form ${a.remainingSharedSourceGroups} shared-primary-source groups using ${a.remainingPrimarySections} distinct sections. ${a.remainingRecordsWithAllPrimaryTextAlreadyRetained} already have all primary text in the first-batch bundle; this is acquisition only, not verification.`, "",
-    "| Shared source group | Records | Primary text acquired | Record IDs |", "| --- | ---: | --- | --- |",
+    ...(report.groups.length ? ["| Shared source group | Records | Primary text acquired | Record IDs |", "| --- | ---: | --- | --- |"] : []),
     ...report.groups.map(group => `| ${group.id} | ${group.recordIds.length} | ${group.acquiredPrimaryKeys.length}/${group.primaryKeys.length} sections | ${group.recordIds.join(", ")} |`), "",
     "## Withheld canonical labels", "", ...report.records.filter(record => !record.selectable).map(record => `- ${record.id}: ${record.citation}`), "",
     "## State source-discovery starting point", "",

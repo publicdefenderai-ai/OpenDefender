@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
-const corrections = ["shared/california-batch-one-corrections.json", "shared/california-batch-two-corrections.json", "shared/california-batch-three-corrections.json", "shared/california-batch-four-corrections.json", "shared/california-batch-five-corrections.json"].flatMap(path => JSON.parse(readFileSync(path, "utf8"))) as Array<{ id: string; categories: string[]; penalty: { en: string } }>;
+const corrections = ["shared/california-batch-one-corrections.json", "shared/california-batch-two-corrections.json", "shared/california-batch-three-corrections.json", "shared/california-batch-four-corrections.json", "shared/california-batch-five-corrections.json", "shared/california-batch-six-corrections.json"].flatMap(path => JSON.parse(readFileSync(path, "utf8"))) as Array<{ id: string; categories: string[]; penalty: { en: string } }>;
 
 test("California corrections reach the production catalog and rules guidance", async ({ request }) => {
   const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
@@ -21,7 +21,7 @@ test("California corrections reach the production catalog and rules guidance", a
   const guidance = (await responseGuidance.json()).guidance;
   expect(guidance.generatedBy).toBe("rule-based");
   expect(guidance.chargeClassifications[0].maxPenalty).toBe(row.penalty.en);
-  const ids = ["ca-insurance-fraud-550-b1", "ca-credit-card-fraud", "ca-embezzlement", "ca-petty-theft", "ca-possession-of-controlled-substance", "ca-dui-third-offense", "ca-grand-theft-firearm-487-d2", "ca-attempted-robbery", "ca-rape-261-a2", "ca-vehicular-manslaughter-192-c1", "ca-vehicular-manslaughter-191-5-b", "ca-unlawful-sexual-intercourse-261-5-d"];
+  const ids = ["ca-prostitution-solicitation", "ca-animal-cruelty-misdemeanor", "ca-maintaining-drug-house", "ca-failure-to-pay-child-support", "ca-driving-without-insurance", "ca-insurance-fraud-550-b1", "ca-credit-card-fraud", "ca-embezzlement", "ca-petty-theft", "ca-possession-of-controlled-substance", "ca-dui-third-offense", "ca-grand-theft-firearm-487-d2", "ca-attempted-robbery", "ca-rape-261-a2", "ca-vehicular-manslaughter-192-c1", "ca-vehicular-manslaughter-191-5-b", "ca-unlawful-sexual-intercourse-261-5-d"];
   const classified = await request.post("/api/legal-guidance/rules", {
     headers: { Origin: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5001" },
     data: { jurisdiction: "CA", charges: ids, caseStage: "arrest", custodyStatus: "in_custody" },
@@ -51,6 +51,8 @@ test("California screener finds the precise deadly-weapon charge by citation", a
 });
 
 for (const [id, search, label] of [
+  ["ca-maintaining-drug-house", "11366", "Misdemeanor / Felony"],
+  ["ca-animal-cruelty-misdemeanor", "597", "Misdemeanor / Felony"],
   ["ca-insurance-fraud-550-b1", "550(b)(1)", "Misdemeanor / Felony"],
   ["ca-credit-card-fraud", "484g", "Misdemeanor / Felony / Infraction"],
   ["ca-unlawful-sexual-intercourse-261-5-c", "261.5(c)", "Misdemeanor / Felony"],

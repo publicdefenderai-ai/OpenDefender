@@ -19,3 +19,13 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 
 - §4301.21: effective date `2016-08-31`; SHA-256 `19a1c8ec66f15d0467037b2336548c3f4868e967ec2c6b7f9b5cdcdffaf7b4ec`.
 - §4301.62: effective date `2024-04-30`; SHA-256 `e05b8c011c5d9c45903ae495ba4edc3a5c8a82157c29af6c766db39bbbbd2ce0`.
+
+## CA-001: Overlapping 100-pound fireworks penalty bands in HSC §12700(b)
+
+- **Recorded:** September 27, 2026, during the remaining California catalog pass.
+- **Status:** Apparent boundary overlap; interpretation unresolved, no attorney decision yet.
+- **Official source:** [HSC §12700(b)(2)–(3)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12700.).
+- **Discrepancy:** The 25–100-pound and 100–5,000-pound bands both include exactly 100 pounds of unaltered dangerous fireworks, gross including packaging. Their fine ranges and felony alternatives differ.
+- **Treatment:** Preserve both literal bands. Do not silently change an inclusive endpoint or choose a penalty for the overlap.
+- **Attorney question:** Identify controlling authority for exactly 100 pounds, or leave the boundary unresolved. See the [focused review questions](california-remaining-attorney-questions.md).
+- **Traceability:** `scripts/data-review/output/california-batch-six-review.json`, `documents["HSC:12700"]`, retains official XML, version metadata, content hash, and URL from the September 24 snapshot.
