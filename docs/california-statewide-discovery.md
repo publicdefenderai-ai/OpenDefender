@@ -33,13 +33,15 @@ The [generated report](../scripts/data-review/output/california-statewide/README
 
 The existing California Vitest bridge runs all Python unittest files in CI. Tests cover source failures, path traversal, version and code identity, range handling, unexpanded blanket scope, deterministic ledger bytes, deferral safeguards and committed accounting/hash reconciliation.
 
-## Next combined publication batch
+## First combined publication batch
 
-Start with Penal Code Part 1, Title 8, Chapters 1 and 9, and Title 13, Chapters 4 and 5: **142 candidate section keys in four related person/property groups** (27 + 40 + 20 + 55). This is an engineering batch, not a claim of 142 missing crimes or a frequency estimate. Deduplicate existing records, inspect definitions and shared punishment provisions together, and split only when legal complexity makes a single review impractical. Adjacent dependencies and independently identified omissions can be added without creating a separate small PR.
+The first batch uses Penal Code Part 1, Title 8, Chapters 1 and 9, and Title 13, Chapters 4 and 5: **142 candidate section keys in four related person/property groups** (27 + 40 + 20 + 55). This is an engineering batch, not a claim of 142 missing crimes or a frequency estimate. Deduplicate existing records, inspect definitions and shared punishment provisions together, and split only when legal complexity makes a single review impractical. Adjacent dependencies and independently identified omissions can be added without creating a separate small PR.
 
 Before publication, each proposed record needs a defensible charging name/aliases, precise code and subdivision, elements, classification and punishment, retained evidence, current operative version, and resolved applicability. Then check selection, guidance and source-database parity. Attorney review should receive specific legal questions with context, not routine retrieval or data-entry assignments.
 
 Use independent charging inventories and official jury-instruction references to test discovery recall, plus stratified samples from no-signal sections. Those checks are still outstanding; the lexical scan alone cannot certify statewide completeness. Later batches cover the remaining Penal Code, Health and Safety, Vehicle and Business and Professions groups, then other codes and criminally enforceable regulations. Regulations, local ordinances, uncodified enactments and comprehensive enforceability research are outside this initial scan.
+
+The [first person/property expansion](california-person-property-expansion.md) now proposes 26 additions from this batch. Its section accounting leaves 79 sections in substantive research; the entire batch is not marked complete.
 
 ## Accuracy and stopping rules
 

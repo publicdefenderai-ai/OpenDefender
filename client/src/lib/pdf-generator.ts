@@ -1,3 +1,4 @@
+import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
@@ -638,13 +639,13 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
       // Translation-draft notice — shown when the explanation was machine-translated
       // and has not yet been reviewed by a fluent-speaker legal professional.
-      if (explanation?.translationDraft === true) {
+      if (explanation?.untranslated === true || explanation?.translationDraft === true) {
         checkPageBreak(15);
         doc.setFontSize(9);
         doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
         doc.setTextColor(30, 80, 160); // blue to distinguish from amber attorney-review warning
         yPosition = addText(
-          translationDraftWarningLocalized,
+          explanation.untranslated ? translationUnavailableNotice(language) : translationDraftWarningLocalized,
           margin + 5,
           yPosition
         );

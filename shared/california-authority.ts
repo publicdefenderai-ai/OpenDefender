@@ -9,6 +9,7 @@
  */
 
 import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
+import additions from "./california-person-property-additions.json";
 import type { CriminalCharge } from "./criminal-charges";
 
 export type CaliforniaDisposition =
@@ -31,6 +32,8 @@ export interface CaliforniaSource {
   citation: string;
   url: string;
   currentLawText: boolean;
+  /** Actual source metadata when known; null preserves an unknown effective date. */
+  effectiveDate?: string | null;
 }
 
 export interface CaliforniaCanonicalRecord {
@@ -52,7 +55,7 @@ export interface CaliforniaCanonicalRecord {
   currentness: {
     status: "current";
     evidence: string;
-    effectiveDate: string;
+    effectiveDate: string | null;
   };
   sources: CaliforniaSource[];
   juryInstruction?: {
@@ -1801,6 +1804,32 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
 ];
 
+/** New identities are independent of the frozen 115-row legacy reconciliation. */
+export const CALIFORNIA_ADDITION_IDS = new Set(additions.map(row => row.id));
+export function getCaliforniaAddition(id: string) { return additions.find(row => row.id === id); }
+for (const addition of additions) {
+  const metadata = record({
+    canonicalId: addition.id, legacyIds: [], officialTitle: addition.title,
+    code: addition.code, lawCode: "PEN", citation: `Cal. Penal Code § ${addition.code}`,
+    classification: "offense", elements: [addition.summary], mentalState: addition.mentalState,
+    grading: addition.categories.join(" or "), categories: addition.categories as CriminalCharge["categories"],
+    penalty: addition.penalty,
+  });
+  metadata.currentness = {
+    status: "current", effectiveDate: (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[`PEN:${addition.code.match(/^\d+(?:\.\d+)*[a-z]?/)![0]}`] ?? null,
+    evidence: `Official PUBINFO source acquired ${addition.sourceAsOf}; bounded statutory review retained in california-person-property-review.json. This review does not refresh the archive or certify all case-law consequences.`,
+  };
+  metadata.sources.push(...addition.supportingKeys.map(key => {
+    const [lawCode, section] = key.split(":") as [CaliforniaCanonicalRecord["lawCode"], string];
+    return { ...STATUTE_SOURCE(lawCode, `${LAW_CODE_LABELS[lawCode]} § ${section}`, section), kind: "classification" as const };
+  }));
+  for (const source of metadata.sources) {
+    const url = new URL(source.url);
+    source.effectiveDate = (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[`${url.searchParams.get("lawCode")}:${url.searchParams.get("sectionNum")}`] ?? null;
+  }
+  CALIFORNIA_CANONICAL_RECORDS.push(metadata);
+}
+
 const byCanonicalId = new Map(
   CALIFORNIA_CANONICAL_RECORDS.map((entry) => [entry.canonicalId, entry]),
 );
@@ -2040,6 +2069,7 @@ const selectableCanonicalIds = new Set(
       .filter((entry) => entry.disposition === "retain" || entry.disposition === "rename")
       .map((entry) => entry.canonicalId),
     ...Object.values(CALIFORNIA_RESELECTION_ALTERNATIVES).flat(),
+    ...CALIFORNIA_ADDITION_IDS,
   ],
 );
 for (const record of CALIFORNIA_CANONICAL_RECORDS) {
@@ -2072,6 +2102,7 @@ export function getCaliforniaCanonicalCharge(
   const metadata = getCaliforniaCanonicalRecord(legacyCharge.id);
   if (!metadata) return undefined;
   const correction = getCaliforniaBatchCorrection(metadata.canonicalId);
+  const addition = getCaliforniaAddition(metadata.canonicalId);
   return {
     ...legacyCharge,
     id: metadata.canonicalId,
@@ -2093,6 +2124,7 @@ export function getCaliforniaCanonicalCharge(
       maxPenaltyEs: correction.penalty.es,
       maxPenaltyZh: correction.penalty.zh,
     } : {}),
+    ...(addition ? { description: addition.summary } : {}),
     maxPenalty: metadata.penalty,
     commonDefenses: ["The available defenses depend on the exact statutory elements and facts; discuss them with a California criminal-defense attorney."],
     evidenceToGather: ["Obtain the charging document and the exact statutory subdivision before evaluating the allegations."],
@@ -2103,8 +2135,19 @@ export function getCaliforniaCanonicalCharge(
     sourceUrls: metadata.sources
       .filter((source) => source.kind === "statute")
       .map((source) => source.url),
-    lastVerified: "2026-08",
+    lastVerified: CALIFORNIA_ADDITION_IDS.has(metadata.canonicalId) ? "2026-09" : "2026-08",
   };
+}
+
+/** Minimal source-first seeds; canonical projection supplies common guidance fields. */
+export function getCaliforniaAdditionCharges(): CriminalCharge[] {
+  return additions.map(row => getCaliforniaCanonicalCharge({
+    id: row.id, name: row.title, code: row.code, jurisdiction: "CA",
+    category: row.categories[0] as CriminalCharge["category"],
+    description: row.summary, maxPenalty: row.penalty,
+    searchAliases: [`PC ${row.code}`, `Penal Code ${row.code}`, row.title],
+    commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
+  })!);
 }
 
 export function getCaliforniaReselectionOptions(
@@ -2120,7 +2163,7 @@ export function getCaliforniaCanonicalCharges(
 ): CriminalCharge[] {
   const byId = new Map(legacyCharges.map((charge) => [charge.id, charge]));
   return CALIFORNIA_CANONICAL_RECORDS.flatMap((metadata) => {
-    const source = byId.get(metadata.legacyIds[0]);
+    const source = byId.get(CALIFORNIA_ADDITION_IDS.has(metadata.canonicalId) ? metadata.canonicalId : metadata.legacyIds[0]);
     if (!source) return [];
     const canonical = getCaliforniaCanonicalCharge({
       ...source,
@@ -2177,7 +2220,7 @@ export function getCaliforniaReconciliationInventory(): CaliforniaReconciliation
 
 export function assertCaliforniaInventoryComplete(currentIds: string[]): void {
   const expected = new Set(CALIFORNIA_LEGACY_DISPOSITIONS.map((entry) => entry.legacyId));
-  const actual = new Set(currentIds);
+  const actual = new Set(currentIds.filter(id => !CALIFORNIA_ADDITION_IDS.has(id)));
   const missing = [...actual].filter((id) => !expected.has(id));
   const stale = [...expected].filter((id) => !actual.has(id));
   if (missing.length || stale.length || expected.size !== 115) {

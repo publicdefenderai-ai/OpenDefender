@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
+  CALIFORNIA_ADDITION_IDS,
   CALIFORNIA_EXPLANATION_SLUGS,
   CALIFORNIA_LEGACY_DISPOSITIONS,
   CALIFORNIA_SOURCE_MANIFEST,
@@ -32,7 +33,7 @@ describe("authoritative California charge release", () => {
     for (const record of CALIFORNIA_CANONICAL_RECORDS.filter((record) => record.selectable)) {
       expect(record.selectable).toBe(true);
       expect(record.currentness.status).toBe("current");
-      expect(record.currentness.effectiveDate).toMatch(/^\d{4}-\d{2}$/);
+      if (!CALIFORNIA_ADDITION_IDS.has(record.canonicalId)) expect(record.currentness.effectiveDate).toMatch(/^\d{4}-\d{2}$/);
       expect(record.elements.length).toBeGreaterThan(0);
       expect(record.mentalState.length).toBeGreaterThan(0);
       expect(record.grading.length).toBeGreaterThan(0);

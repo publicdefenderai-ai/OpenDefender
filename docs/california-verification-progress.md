@@ -1,5 +1,7 @@
 # California verification: first delivery
 
+**Latest proposed release (September 27): 125 selectable identities, including 26 new person/property additions.** PR #19's statewide discovery is merged. See [current expansion status](california-person-property-expansion.md) for the release boundary and remaining work; the earlier sections below preserve the project history.
+
 Started September 24, 2026. This delivery establishes a reproducible baseline and official source acquisition for a 25-record batch. It does not certify or publish those records.
 
 ## Measured baseline
@@ -422,3 +424,21 @@ four Penal Code groups, reusing common authorities and deduplicating existing
 records. Minor ambiguous candidates may be deferred with reasons and severity
 evidence; unknown severity alone is never treated as minor. Independent miss
 checks and legal currentness review remain necessary.
+
+## First statewide expansion: 26 person/property identities
+
+PR #19 is merged. The [person/property expansion](california-person-property-expansion.md)
+proposes 26 new exact choices, raising configured selectable coverage from 99 to
+125. It includes serious-injury battery, distinct firearm and protected-victim
+assault branches, hazing, aircraft offenses and forgery-related identification
+and medical-record offenses. Existing negligent firearm discharge is retained
+without a duplicate. The historical 115-row reconciliation remains unchanged.
+
+The 142-section batch has explicit dispositions, with 79 sections still requiring
+substantive research and no claim of chapter completeness. One clearly minor
+sporting-event infraction is deferred with severity evidence and a revisit
+condition. Research evidence now totals 290 sections/293 versions, with 39 sources
+reused in this batch and 118 newly retained. The underlying archive acquisition
+remains September 24. New source effective dates are preserved separately from
+review timing, including unknowns. New entries use English fallback until
+translations are reviewed. Production seeding and deployment remain separate.

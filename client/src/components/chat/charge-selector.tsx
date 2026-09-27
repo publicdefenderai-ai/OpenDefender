@@ -1,3 +1,4 @@
+import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import { useState, useEffect } from "react";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { motion } from "framer-motion";
@@ -455,6 +456,11 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                                 : explanationLanguage === "zh"
                                   ? "尚待律师审阅。"
                                   : "Pending attorney review."}
+                            </p>
+                          )}
+                          {localizedExplanation?.untranslated && (
+                            <p role="status" className="text-xs text-blue-800 dark:text-blue-300 mt-1">
+                              {translationUnavailableNotice(explanationLanguage)}
                             </p>
                           )}
                           {localizedExplanation?.translationDraft && (

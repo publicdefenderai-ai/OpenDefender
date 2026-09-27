@@ -42,4 +42,18 @@ describe("California corrections require seeded supporting references", () => {
     state.rows = state.rows.map(row => isPenalty(row) ? { ...row, sourceUrl: row.sourceUrl.replace("lawCode=HSC", "lawCode=PEN") } : row);
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([unaffected]));
   });
+  it("withholds a new addition until its exact source dependencies have been seeded", async () => {
+    const id = "ca-pen-244-5-b";
+    const additionLinks = seed.links.filter(link => link.chargeId === id).map(link => {
+      const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+    });
+    state.ids = [id]; state.rows = additionLinks;
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));
+    state.rows = additionLinks.filter(row => new URL(row.sourceUrl).searchParams.get("sectionNum") !== "16780");
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
+    state.rows = additionLinks; state.ids = [];
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
+  });
+
 });

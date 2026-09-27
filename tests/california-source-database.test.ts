@@ -20,13 +20,13 @@ describe("California source database manifest", () => {
     const linkedChargeIds = new Set(seed.links.map((link) => link.chargeId));
 
     expect(seed.selectableChargeIds).toHaveLength(selectable.length);
-    expect(seed.selectableChargeIds).toHaveLength(99);
+    expect(seed.selectableChargeIds).toHaveLength(125);
     expect(linkedChargeIds).toEqual(new Set(selectable.map((record) => record.canonicalId)));
     expect(seed.snapshots).toHaveLength(seed.links.length);
     expect(seed.snapshots.every((snapshot) => snapshot.jurisdiction === "CA")).toBe(true);
     expect(seed.selectableChargeIds).not.toContain("ca-wire-fraud");
     expect(seed.selectableChargeIds).not.toContain("ca-gang-enhancement");
-    expect(seed.catalogRecords).toHaveLength(99);
+    expect(seed.catalogRecords).toHaveLength(125);
     expect(seed.legacyInventory).toHaveLength(115);
     expect(seed.audit.inventory).toMatchObject({
       legacyRecordCount: 115,

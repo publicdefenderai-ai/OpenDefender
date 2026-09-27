@@ -1,12 +1,21 @@
 import { describe, expect, it } from 'vitest';
 import { getChargeExplanation } from '../shared/charge-explanations';
+import { CALIFORNIA_ADDITION_IDS } from '../shared/california-authority';
 import { criminalCharges } from '../shared/criminal-charges';
 
 describe('charge explanation catalog coverage', () => {
-  it('has an explanation for every distinct charge name within its catalog jurisdiction', () => {
+  it('has an explanation by name for legacy records and by canonical ID for California additions', () => {
     // A jurisdiction-specific statutory name must not require a generic
     // explanation that could accidentally export that state's law elsewhere.
-    const charges = [...new Map(criminalCharges.map(charge =>
+    // New statutory branches require canonical IDs: display names need not be
+    // unique. Check every addition by ID, retaining the name-only guarantee for
+    // all other records instead of silently dropping unmatched additions.
+    for (const id of CALIFORNIA_ADDITION_IDS) {
+      const charge = criminalCharges.find(row => row.id === id)!;
+      expect(charge, id).toBeDefined();
+      expect(getChargeExplanation(charge.name, charge.jurisdiction, 'en', id)?.canonicalChargeId, id).toBe(id);
+    }
+    const charges = [...new Map(criminalCharges.filter(charge => !CALIFORNIA_ADDITION_IDS.has(charge.id)).map(charge =>
       [`${charge.jurisdiction}:${charge.name}`, charge])).values()];
     const unmatchedChargeNames = charges.filter(
       charge => getChargeExplanation(charge.name, charge.jurisdiction) === null,

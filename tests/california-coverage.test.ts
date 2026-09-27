@@ -6,14 +6,14 @@ const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/c
 describe("California catalog coverage boundaries", () => {
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 99, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 172, totalAcquiredVersionsIncludingDependencies: 175 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 146, configuredSelectable: 125, withheldCanonicalLabels: 21, boundedCorrectionPass: 125, boundedAdditionPass: 26, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 82, selectableRecordsWithAllPrimaryTextAcquired: 125, totalAcquiredSectionsIncludingDependencies: 290, totalAcquiredVersionsIncludingDependencies: 293 });
     expect(report.accounting.specificOpenLegalQuestions).toBe(3);
     expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");
     expect(renderCaliforniaCoverage(report)).not.toContain("Next largest groups: .");
     expect(report.accounting.boundedCorrectionPass + report.accounting.awaitingCorrectionPass).toBe(report.accounting.configuredSelectable);
     expect(report.records.filter(row => row.status === "withheld_canonical_label")).toHaveLength(21);
-    expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-coverage.json", "utf8"))).toEqual(report);
+    expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-expanded-catalog-coverage.json", "utf8"))).toEqual(report);
   });
   it("groups all 0 remaining records exactly once and does not split shared primary sources", () => {
     const report = buildCaliforniaCoverage();

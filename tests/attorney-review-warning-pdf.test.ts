@@ -281,3 +281,30 @@ describe('B — generateGuidancePDF pending-attorney-review warning', () => {
     expect(warningPos).toBeLessThan(summaryPos);
   });
 });
+
+describe('unavailable translation notice in PDF', () => {
+  it.each([
+    ['es', 'Esta explicación aún no está disponible en español. Se muestra en inglés.'],
+    ['zh', '此说明尚无中文版本，现显示英文内容。'],
+  ])('warns before English legal content in %s without calling it a draft translation', async (language, notice) => {
+    clearCaptured();
+    mockGetChargeExplanation.mockReturnValue({
+      plainSummary: 'English fallback legal explanation',
+      untranslated: true,
+      translationDraft: false,
+    });
+    await generateGuidancePDF(makeGuidance() as any, language);
+    const text = allRenderedText();
+    expect(text).toContain(notice);
+    expect(text.indexOf(notice)).toBeLessThan(text.indexOf('English fallback legal explanation'));
+    expect(text).not.toContain('Traducción provisional');
+    expect(text).not.toContain('翻译草稿');
+  });
+
+  it('does not warn of a missing translation when English was requested', async () => {
+    clearCaptured();
+    mockGetChargeExplanation.mockReturnValue({ plainSummary: 'English content', untranslated: false, translationDraft: false });
+    await generateGuidancePDF(makeGuidance() as any, 'en');
+    expect(allRenderedText()).not.toContain('Showing English.');
+  });
+});
