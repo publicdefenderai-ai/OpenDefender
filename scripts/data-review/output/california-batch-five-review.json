@@ -1,0 +1,984 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_shared_source_corrections_not_full_legal_certification",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "sourceAsOf": "2026-09-24",
+  "documents": {
+    "PEN:186.9": [
+      {
+        "id": "PEN186.9.2022452203",
+        "lawCode": "PEN",
+        "section": "186.9.",
+        "opStatutes": "2022",
+        "opChapter": "452",
+        "opSection": "203",
+        "effectiveDate": "2023-01-01 00:00:00",
+        "versionId": "id_c5c8461b-6a83-11ed-823c-e74f056edb17",
+        "division": null,
+        "title": "7.",
+        "part": "1.",
+        "chapter": "10.",
+        "article": null,
+        "history": "Amended by Stats. 2022, Ch. 452, Sec. 203.   (SB 1498)   Effective January 1, 2023.",
+        "contentMember": "LAW_SECTION_TBL_89648.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89648,
+        "tableRowSha256": "24efaaa9eeff63da25414d2a6424ce64c7fcd4e3c2f940890c9dd037319c9a54",
+        "contentSha256": "2056e3b703bb85eb487ef310dcccfdbe69053ed000a4b8af48bc9a6779490d4e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As used in this chapter:</p><p>(a)<span class=\"EnSpace\"/>“Conducts” includes, but is not limited to, initiating, concluding, or participating in conducting, initiating, or concluding a transaction.</p><p>(b)<span class=\"EnSpace\"/>“Financial institution” means, when located or doing business in this state, any national bank or banking association, state bank or banking association, commercial bank or trust company organized under the laws of the United States or any state, any private bank, industrial savings bank, savings bank or thrift institution, savings and loan association, or building and loan association organized under the laws of the United States or any state, any insured institution as defined in Section 401 of the National Housing Act (12 U.S.C. Sec. 1724(a)), any\n\t\t\t\t  credit union organized under the laws of the United States or any state, any national banking association or corporation acting under Chapter 6 (commencing with Section 601) of Title 12 of the United States Code, any agency, agent or branch of a foreign bank, any currency dealer or exchange, any person or business engaged primarily in the cashing of checks, any person or business who regularly engages in the issuing, selling, or redeeming of traveler’s checks, money orders, or similar instruments, any broker or dealer in securities registered or required to be registered with the Securities and Exchange Commission under the Securities Exchange Act of 1934 or with the Commissioner of Financial Protection and Innovation under Part 3 (commencing with Section 25200) of Division 1 of Title 4 of the Corporations Code, any licensed transmitter of funds or other person or business regularly engaged in transmitting funds to a foreign nation for others, any investment banker or investment company, any insurer, any\n\t\t\t\t  dealer in gold, silver, or platinum bullion or coins, diamonds, emeralds, rubies, or sapphires, any pawnbroker, any telegraph company, any person or business regularly engaged in the delivery, transmittal, or holding of mail or packages, any person or business that conducts a transaction involving the transfer of title to any real property, vehicle, vessel, or aircraft, any personal property broker, any person or business acting as a real property securities dealer within the meaning of Section 10237 of the Business and Professions Code, whether licensed to do so or not, any person or business acting within the meaning and scope of subdivisions (d) and (e) of Section 10131 and Section 10131.1 of the Business and Professions Code, whether licensed to do so or not, any person or business regularly engaged in gaming within the meaning and scope of Section 330, any person or business regularly engaged in pool selling or bookmaking within the meaning and scope of Section 337a, any person or business regularly\n\t\t\t\t  engaged in horse racing whether licensed to do so or not under the Business and Professions Code, any person or business engaged in the operation of a gambling ship within the meaning and scope of Section 11317, any person or business engaged in controlled gambling within the meaning and scope of subdivision (e) of Section 19805 of the Business and Professions Code, whether registered to do so or not, and any person or business defined as a “bank,” “financial agency,” or “financial institution” by Section 5312 of Title 31 of the United States Code or Section 103.11 of Title 31 of the Code of Federal Regulations and any successor provisions thereto.</p><p>(c)<span class=\"EnSpace\"/>“Transaction” includes the deposit, withdrawal, transfer, bailment, loan, pledge, payment, or exchange of currency, or a monetary instrument, as defined by subdivision (d), or the electronic, wire, magnetic, or manual transfer of funds between accounts by, through, or to, a financial institution\n\t\t\t\t  as defined by subdivision (b).</p><p>(d)<span class=\"EnSpace\"/>“Monetary instrument” means United States currency and coin; the currency, coin, and foreign bank drafts of any foreign country; payment warrants issued by the United States, this state, or any city, county, or city and county of this state or any other political subdivision thereof; any bank check, cashier’s check, traveler’s check, or money order; any personal check, stock, investment security, or negotiable instrument in bearer form or otherwise in a form in which title thereto passes upon delivery; gold, silver, or platinum bullion or coins; and diamonds, emeralds, rubies, or sapphires. Except for foreign bank drafts and federal, state, county, or city warrants, “monetary instrument” does not include personal checks made payable to the order of a named party which have not been endorsed or which bear restrictive endorsements, and also does not include personal checks which have been endorsed by the named\n\t\t\t\t  party and deposited by the named party into the named party’s account with a financial institution.</p><p>(e)<span class=\"EnSpace\"/>“Criminal activity” means a criminal offense punishable under the laws of this state by death, imprisonment in the state prison, or imprisonment pursuant to subdivision (h) of Section 1170 or from a criminal offense committed in another jurisdiction punishable under the laws of that jurisdiction by death or imprisonment for a term exceeding one year.</p><p>(f)<span class=\"EnSpace\"/>“Foreign bank draft” means a bank draft or check issued or made out by a foreign bank, savings and loan, casa de cambio, credit union, currency dealer or exchanger, check cashing business, money transmitter, insurance company, investment or private bank, or any other foreign financial institution that provides similar financial services, on an account in the name of the foreign bank or foreign financial institution held at a\n\t\t\t\t  bank or other financial institution located in the United States or a territory of the United States.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=186.9."
+      }
+    ],
+    "PEN:473": [
+      {
+        "id": "PEN473.20146",
+        "lawCode": "PEN",
+        "section": "473.",
+        "opStatutes": "2014",
+        "opChapter": null,
+        "opSection": "6",
+        "effectiveDate": null,
+        "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "4.",
+        "article": null,
+        "history": "Amended November 4, 2014, by initiative Proposition 47, Sec. 6.",
+        "contentMember": "LAW_SECTION_TBL_94162.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 94162,
+        "tableRowSha256": "2a506fa73f7d146d9556884a56f1b2e37c556d28456d92a4608b931de953f277",
+        "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Forgery is punishable by imprisonment in a county jail for not more than one year, or by imprisonment pursuant to subdivision (h) of Section 1170.</p><p>(b)<span class=\"EnSpace\"/>Notwithstanding subdivision (a), any person who is guilty of forgery relating to a check, bond, bank bill, note, cashier’s check, traveler’s check, or money order, where the value of the check, bond, bank bill, note, cashier’s check, traveler’s check, or money order does not exceed nine hundred fifty dollars ($950), shall be punishable by imprisonment in a county jail for not more than one year, except that such person may instead be punished pursuant to subdivision (h) of Section 1170 if that person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of\n\t\t\t\t  subdivision (e) of Section 667 or for an offense requiring registration pursuant to subdivision (c) of Section 290. This subdivision shall not be applicable to any person who is convicted both of forgery and of identity theft, as defined in Section 530.5. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=473."
+      }
+    ],
+    "PEN:484e": [
+      {
+        "id": "PEN484e.19984689",
+        "lawCode": "PEN",
+        "section": "484e.",
+        "opStatutes": "1998",
+        "opChapter": "468",
+        "opSection": "9",
+        "effectiveDate": "1999-01-01 00:00:00",
+        "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "5.",
+        "article": null,
+        "history": "Repealed and added by Stats. 1998, Ch. 468, Sec. 9.   Effective January 1, 1999.",
+        "contentMember": "LAW_SECTION_TBL_94247.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 94247,
+        "tableRowSha256": "2ed167e0f3293e9c3ea211674f3572fb12ff5e45dd9d6437ebf564816c1649cd",
+        "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Every person who, with intent to defraud, sells, transfers, or conveys, an access card, without the cardholder’s or issuer’s consent, is guilty of grand theft.</p><p>(b)<span class=\"EnSpace\"/>Every person, other than the issuer, who within any consecutive 12-month period, acquires access cards issued in the names of four or more persons which he or she has reason to know were taken or retained under circumstances which constitute a violation of subdivision (a), (c), or (d) is guilty of grand theft.</p><p>(c)<span class=\"EnSpace\"/>Every person who, with the intent to defraud, acquires or retains possession of an access card without the cardholder’s or issuer’s consent, with intent to use, sell, or transfer it to a person other than the cardholder or issuer is guilty of petty theft.</p><p>(d)<span class=\"EnSpace\"/>Every person who acquires or retains possession of access card account information with respect to an access card validly issued to another person, without the cardholder’s or issuer’s consent, with the intent to use it fraudulently, is guilty of grand theft.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484e."
+      }
+    ],
+    "PEN:484f": [
+      {
+        "id": "PEN484f.199846811",
+        "lawCode": "PEN",
+        "section": "484f.",
+        "opStatutes": "1998",
+        "opChapter": "468",
+        "opSection": "11",
+        "effectiveDate": "1999-01-01 00:00:00",
+        "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "5.",
+        "article": null,
+        "history": "Repealed and added by Stats. 1998, Ch. 468, Sec. 11.   Effective January 1, 1999.",
+        "contentMember": "LAW_SECTION_TBL_89169.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 89169,
+        "tableRowSha256": "eaefabb540bdcaa562eb34e80d1f8e3ceac523e4ff216d8dfe1c315a8d745b63",
+        "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Every person who, with the intent to defraud, designs, makes, alters, or embosses a counterfeit access card or utters or otherwise attempts to use a counterfeit access card is guilty of forgery.</p><p>(b)<span class=\"EnSpace\"/>A person other than the cardholder or a person authorized by him or her who, with the intent to defraud, signs the name of another or of a fictitious person to an access card, sales slip, sales draft, or instrument for the payment of money which evidences an access card transaction,\n\t\t\t\tis guilty of forgery.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484f."
+      }
+    ],
+    "PEN:502.01": [
+      {
+        "id": "PEN502.01.20152911",
+        "lawCode": "PEN",
+        "section": "502.01.",
+        "opStatutes": "2015",
+        "opChapter": "291",
+        "opSection": "1",
+        "effectiveDate": "2016-01-01 00:00:00",
+        "versionId": "id_e8e37c09-a358-11e5-b6cb-8d365f46d37f",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "5.",
+        "article": null,
+        "history": "Amended by Stats. 2015, Ch. 291, Sec. 1.   (SB 676)   Effective January 1, 2016.",
+        "contentMember": "LAW_SECTION_TBL_89420.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 89420,
+        "tableRowSha256": "26a595c63907364222a422698ad83a18ca423fb96b8f26eec5f4a9f706cc2b99",
+        "contentSha256": "1c1c83c330906a027ce64cb6b658a6c09226fa6fcf7185474979cbf1167e9a92",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>As used in this section:</p><p>(1)<span class=\"EnSpace\"/>“Property subject to forfeiture” means any property of the defendant that is illegal telecommunications equipment as defined in subdivision (g) of Section 502.8, or a computer, computer system, or computer network, and any software or data residing thereon, if the telecommunications device, computer, computer system, or computer network was used in committing a\n\t\t\t\tviolation of, or conspiracy to commit a violation of, subdivision (b) of Section 272, Section 288, 288.2, 311.1, 311.2, 311.3, 311.4, 311.5, 311.10, 311.11, 422, 470, 470a, 472, 475, 476, 480, 483.5, 484g, or subdivision (a), (b), or (d) of Section 484e, subdivision (a) of Section 484f, subdivision (b) or (c) of Section 484i, subdivision (c) of Section 502, or Section 502.7, 502.8, 529, 529a, or 530.5, 537e, 593d, 593e, 646.9, or subdivision (j) of Section 647, or was used as a repository for the storage of software or data obtained in violation of those provisions. Forfeiture shall not be available for any property used solely in the commission of an infraction. If the defendant is a minor, it also includes property of the parent or guardian of the defendant.</p><p>(2)<span class=\"EnSpace\"/>“Sentencing court” means the court sentencing a person found guilty of violating or conspiring to commit a violation of subdivision (b) of Section 272, Section 288, 288.2, 311.1,\n\t\t\t\t311.2, 311.3, 311.4, 311.5, 311.10, 311.11, 422, 470, 470a, 472, 475, 476, 480, 483.5, 484g, or subdivision (a), (b), or (d) of Section 484e, subdivision (d) of Section 484e, subdivision (a) of Section 484f, subdivision (b) or (c) of Section 484i, subdivision (c) of Section 502, or Section 502.7, 502.8, 529, 529a, 530.5, 537e, 593d, 593e, 646.9, or subdivision (j) of Section 647, or, in the case of a minor, found to be a person described in Section 602 of the Welfare and Institutions Code because of a violation of those provisions, the juvenile court.</p><p>(3)<span class=\"EnSpace\"/>“Interest” means any property interest in the property subject to forfeiture.</p><p>(4)<span class=\"EnSpace\"/>“Security interest” means an interest that is a lien, mortgage, security interest, or interest under a conditional sales contract.</p><p>(5)<span class=\"EnSpace\"/>“Value” has the following meanings:</p><p>(A)<span class=\"EnSpace\"/>When counterfeit items of computer software are manufactured or possessed for sale, the “value” of those items shall be equivalent to the retail price or fair market price of the true items that are counterfeited.</p><p>(B)<span class=\"EnSpace\"/>When counterfeited but unassembled components of computer software packages are recovered, including, but not limited to, counterfeited computer diskettes, instruction manuals, or licensing envelopes, the “value” of those components of computer software packages shall be equivalent to the retail price or fair market price of the number of completed computer software packages that could have been made from those components.</p><p>(b)<span class=\"EnSpace\"/>The sentencing court shall, upon petition by the prosecuting attorney, at any time following sentencing, or by agreement of all parties, at the time of sentencing, conduct a\n\t\t\t\thearing to determine whether any property or property interest is subject to forfeiture under this section. At the forfeiture hearing, the prosecuting attorney shall have the burden of establishing, by a preponderance of the evidence, that the property or property interests are subject to forfeiture. The prosecuting attorney may retain seized property that may be subject to forfeiture until the sentencing hearing.</p><p>(c)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Prior to the commencement of a forfeiture proceeding, the law enforcement agency seizing the property subject to forfeiture shall make an investigation as to any person other than the defendant who may have an interest in it. At least 30 days before the hearing to determine whether the property should be forfeited, the prosecuting agency shall send notice of the hearing to any person who may have an interest in the property that arose before the seizure.</p><p>(2)<span class=\"EnSpace\"/>A person claiming an interest in the property shall file a motion for the redemption of that interest at least 10 days before the hearing on forfeiture, and shall send a copy of the motion to the prosecuting agency and to the probation department.</p><p>(3)<span class=\"EnSpace\"/>If a motion to redeem an interest has been filed, the sentencing court shall hold a hearing to identify all persons who possess valid interests in the property. No person shall hold a valid interest in the property if, by a preponderance of the evidence, the prosecuting agency shows that the person knew or should have known that the property was being used in violation of, or conspiracy to commit a violation of, subdivision (b) of Section 272, Section 288, 288.2, 311.1, 311.2, 311.3, 311.4, 311.5, 311.10, 311.11, 470, 470a, 472, 475, 476, 480, 483.5, 484g, or subdivision (a), (b), or (d) of Section 484e, subdivision (a) of Section 484f, subdivision (b) or (c) of Section 484i,\n\t\t\t\tsubdivision (c) of Section 502, or Section 502.7, 502.8, 529, 529a, 530.5, 537e, 593d, 593e, 646.9, or subdivision (j) of Section 647, and that the person did not take reasonable steps to prevent that use, or if the interest is a security interest, the person knew or should have known at the time that the security interest was created that the property would be used for a violation.</p><p>(d)<span class=\"EnSpace\"/>If the sentencing court finds that a person holds a valid interest in the property, the following provisions shall apply:</p><p>(1)<span class=\"EnSpace\"/>The court shall determine the value of the property.</p><p>(2)<span class=\"EnSpace\"/>The court shall determine the value of each valid interest in the property.</p><p>(3)<span class=\"EnSpace\"/>If the value of the property is greater than the value of the interest, the holder of the interest shall be\n\t\t\t\tentitled to ownership of the property upon paying the court the difference between the value of the property and the value of the valid interest.</p><p>If the holder of the interest declines to pay the amount determined under paragraph (2), the court may order the property sold and designate the prosecutor or any other agency to sell the property. The designated agency shall be entitled to seize the property and the holder of the interest shall forward any documentation underlying the interest, including any ownership certificates for that property, to the designated agency. The designated agency shall sell the property and pay the owner of the interest the proceeds, up to the value of that interest.</p><p>(4)<span class=\"EnSpace\"/>If the value of the property is less than the value of the interest, the designated agency shall sell the property and pay the owner of the interest the proceeds, up to the value of that interest.</p><p>(e)<span class=\"EnSpace\"/>If the defendant was a minor at the time of the offense, this subdivision shall apply to property subject to forfeiture that is the property of the parent or guardian of the minor.</p><p>(1)<span class=\"EnSpace\"/>The prosecuting agency shall notify the parent or guardian of the forfeiture hearing at least 30 days before the date set for the hearing.</p><p>(2)<span class=\"EnSpace\"/>The computer or telecommunications device shall not be subject to forfeiture if the parent or guardian files a signed statement with the court at least 10 days before the date set for the hearing that the minor shall not have access to any computer or telecommunications device owned by the parent or guardian for two years after the date on which the minor is sentenced.</p><p>(3)<span class=\"EnSpace\"/>If the minor is convicted of a violation of Section 288,\n\t\t\t\t288.2, 311.1, 311.2, 311.3, 311.4, 311.5, 311.10, 311.11, 470, 470a, 472, 476, 480, or subdivision (b) of Section 484e, subdivision (d) of Section 484e, subdivision (a) of Section 484f, subdivision (b) of Section 484i, subdivision (c) of Section 502, or Section 502.7, 502.8, 529, 529a, 530.5, or subdivision (j) of Section 647, within two years after the date on which the minor is sentenced, and the violation involves a computer or telecommunications device owned by the parent or guardian, the original property subject to forfeiture, and the property involved in the new offense, shall be subject to forfeiture notwithstanding paragraph (2).</p><p>(4)<span class=\"EnSpace\"/>Notwithstanding paragraph (1), (2), or (3), or any other provision of this chapter, if a minor’s parent or guardian makes full restitution to the victim of a crime enumerated in this chapter in an amount or manner determined by the court, the forfeiture provisions of this chapter do not apply to the\n\t\t\t\tproperty of that parent or guardian if the property was located in the family’s primary residence during the commission of the crime.</p><p>(f)<span class=\"EnSpace\"/>Notwithstanding any other provision of this chapter, the court may exercise its discretion to deny forfeiture where the court finds that the convicted defendant, or minor adjudicated to come within the jurisdiction of the juvenile court, is not likely to use the property otherwise subject to forfeiture for future illegal acts.</p><p>(g)<span class=\"EnSpace\"/>If the defendant is found to have the only valid interest in the property subject to forfeiture, it shall be distributed as follows:</p><p>(1)<span class=\"EnSpace\"/>First, to the victim, if the victim elects to take the property as full or partial restitution for injury, victim expenditures, or compensatory damages, as defined in paragraph (1) of subdivision (e) of Section 502. If\n\t\t\t\tthe victim elects to receive the property under this paragraph, the value of the property shall be determined by the court and that amount shall be credited against the restitution owed by the defendant. The victim shall not be penalized for electing not to accept the forfeited property in lieu of full or partial restitution.</p><p>(2)<span class=\"EnSpace\"/>Second, at the discretion of the court, to one or more of the following agencies or entities:</p><p>(A)<span class=\"EnSpace\"/>The prosecuting agency.</p><p>(B)<span class=\"EnSpace\"/>The public entity of which the prosecuting agency is a part.</p><p>(C)<span class=\"EnSpace\"/>The public entity whose officers or employees conducted the investigation resulting in forfeiture.</p><p>(D)<span class=\"EnSpace\"/>Other state and local public entities, including school districts.</p><p>(E)<span class=\"EnSpace\"/>Nonprofit charitable organizations.</p><p>(h)<span class=\"EnSpace\"/>If the property is to be sold, the court may designate the prosecuting agency or any other agency to sell the property at auction. The proceeds of the sale shall be distributed by the court as follows:</p><p>(1)<span class=\"EnSpace\"/>To the bona fide or innocent purchaser or encumbrancer, conditional sales vendor, or mortgagee of the property up to the amount of his or her interest in the property, if the court orders a distribution to that person.</p><p>(2)<span class=\"EnSpace\"/>The balance, if any, to be retained by the court, subject to the provisions for distribution under subdivision (g).</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=502.01."
+      }
+    ],
+    "PEN:514": [
+      {
+        "id": "PEN514.19761139",
+        "lawCode": "PEN",
+        "section": "514.",
+        "opStatutes": "1976",
+        "opChapter": "1139",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_67d9cf60-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "6.",
+        "article": null,
+        "history": "Amended by Stats. 1976, Ch. 1139.",
+        "contentMember": "LAW_SECTION_TBL_94377.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 94377,
+        "tableRowSha256": "2d742119949503e83259a90835776d9996abd968a8d3ef6798febb57ae9aed7f",
+        "contentSha256": "3d0268b2d96c016d7994680410e0d12a4602ab048cacd142a593e9342e23a177",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every person guilty of embezzlement is punishable in the manner prescribed for theft of property of the value or kind embezzled; and where the property embezzled is an evidence of debt or right of action, the sum due upon it or secured to be paid by it must be taken as its value; if the embezzlement or defalcation is of the public funds of the United States, or of this state, or of any county or municipality within this state, the offense is a felony, and is punishable by imprisonment in the state prison; and the person so convicted is ineligible thereafter to any office of honor, trust, or profit in this state.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=514."
+      }
+    ],
+    "PEN:530.55": [
+      {
+        "id": "PEN530.55.202129645",
+        "lawCode": "PEN",
+        "section": "530.55.",
+        "opStatutes": "2021",
+        "opChapter": "296",
+        "opSection": "45",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_ee7e4a79-5c47-11ec-9d2f-c3e210bbbdff",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 2021, Ch. 296, Sec. 45.   (AB 1096)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_94220.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 94220,
+        "tableRowSha256": "8585a9a0ba8f8fad2fccb67a8ea3919eef965d132b6af3fdd16379335f9c74ef",
+        "contentSha256": "53fde01498456f98046ca63c00111289aba16bcdef11e4baa1c49a2faf08f5d9",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>For purposes of this chapter, “person” means a natural person, living or deceased, firm, association, organization, partnership, business trust, company, corporation, limited liability company, or public entity, or any other legal entity.</p><p>(b)<span class=\"EnSpace\"/>For purposes of this chapter, “personal identifying information” means any name, address, telephone number, health insurance number, taxpayer identification number, school identification number, state or federal driver’s license, or identification number, social security number, place of employment, employee identification number, professional or occupational number, mother’s maiden name, demand deposit account\n\t\t\t\t\t\tnumber, savings account number, checking account number, PIN (personal identification number) or password, United States Citizenship and Immigration Services-assigned number, government passport number, date of birth, unique biometric data including fingerprint, facial scan identifiers, voiceprint, retina or iris image, or other unique physical representation, unique electronic data including information identification number assigned to the person, address or routing code, telecommunication identifying information or access device, information contained in a birth or death certificate, or credit card number of an individual person, or an equivalent form of identification.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=530.55."
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ca-computer-crime-502-c1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "58f9bc11e0162bd2e368b98481ff089c5605236431cb791503258157fd1fca1d",
+      "correctionSha256": "59481f599fe4087aadefb5965a99230b255f8cafa03f8e9a02ac0254861ac335",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502",
+          "versions": [
+            {
+              "versionId": "id_9f6099b1-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "6eef3b31611b417549b70d4d1a2b4c5449ef42ed75e42b6e2ebaef32fc3e214e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502.01",
+          "versions": [
+            {
+              "versionId": "id_e8e37c09-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "1c1c83c330906a027ce64cb6b658a6c09226fa6fcf7185474979cbf1167e9a92"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-computer-crime-502-c5",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "e97722bdee0e60c4ed24eb5cb3f9f4d287fd24408a591a565a2d40e2ad8a90dd",
+      "correctionSha256": "55dabb57a8e6c697c80327c2efbbdd811510b7672a1c6a26e80c6600afad915a",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502",
+          "versions": [
+            {
+              "versionId": "id_9f6099b1-0bdc-11ea-912d-915c88c10a14",
+              "contentSha256": "6eef3b31611b417549b70d4d1a2b4c5449ef42ed75e42b6e2ebaef32fc3e214e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502.01",
+          "versions": [
+            {
+              "versionId": "id_e8e37c09-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "1c1c83c330906a027ce64cb6b658a6c09226fa6fcf7185474979cbf1167e9a92"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-identity-theft-530-5-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "657366e33ed445d86b00afa85a6505ff3c95b8566a6d0b7b6ff978681a22b42a",
+      "correctionSha256": "8d0316666752194b9418eb82ef065b48cdf78a16d38aec0fc45749a5987af22c",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.55",
+          "versions": [
+            {
+              "versionId": "id_ee7e4a79-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "53fde01498456f98046ca63c00111289aba16bcdef11e4baa1c49a2faf08f5d9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-identity-theft-530-5-c1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "92aee95ae85c2f554aff837ba3b88942f6fca6b548c867053ca73f08954bfe72",
+      "correctionSha256": "82a8c0d7098dba8bba524ea3ecfe44bb6ed3f48596e7ebe8f7439114dbde1e05",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.55",
+          "versions": [
+            {
+              "versionId": "id_ee7e4a79-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "53fde01498456f98046ca63c00111289aba16bcdef11e4baa1c49a2faf08f5d9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-insurance-fraud-550-a1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "3b459c5e4baef9d599113ccbd9b9fd251544460427cb49dc6516f45600889d92",
+      "correctionSha256": "ea11909781ff8d0ec19d8e22621f8279e0a09443713d9c758d7b46e39480507c",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:550",
+          "versions": [
+            {
+              "versionId": "id_c7c645fd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "d66f5763c7bc025577fb89b31b0cbf96a3d3166945cd061d991fd25054c0a1a6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-insurance-fraud-550-b1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "07025e083115eabfe256d4ddab1d518f3693b76f7867a680265deb3af7f8e529",
+      "correctionSha256": "c9fd03bc57b25ef2335ee7e6541aa770cdd6d43e8064ccace0e59f4cbcca9ff4",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:550",
+          "versions": [
+            {
+              "versionId": "id_c7c645fd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "d66f5763c7bc025577fb89b31b0cbf96a3d3166945cd061d991fd25054c0a1a6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-money-laundering",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "023638ba34c1a9ed66f428c7d5a4af56ed3c3be965278ad805a3eb2e9852ceaf",
+      "correctionSha256": "68589e9a7baa836dd4273d98d919056be9f391901b7f8d5f8d79e6c33102e27a",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:186.10",
+          "versions": [
+            {
+              "versionId": "id_02996fbd-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "1dc480ec95a88e92dff0218e1ebefa4313e82ae996158a131672c3a3038e1ba5"
+            }
+          ]
+        },
+        {
+          "key": "PEN:186.9",
+          "versions": [
+            {
+              "versionId": "id_c5c8461b-6a83-11ed-823c-e74f056edb17",
+              "contentSha256": "2056e3b703bb85eb487ef310dcccfdbe69053ed000a4b8af48bc9a6779490d4e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-forgery",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "2748422e02b8837c9660977834379bf47fa482fde3eb762babadc2b58563f08d",
+      "correctionSha256": "c6ffb4a91cc3f57d0cdc9ed3c68e7a7d62855130e87234d43b07cd07f6585912",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:470",
+          "versions": [
+            {
+              "versionId": "id_3dd7e66d-72d9-11da-a721-bb9aa253beb1",
+              "contentSha256": "85a08079ab7de2c12ae2c82298c22ec93a050d7d1251808e0268c4baaf05c39b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:473",
+          "versions": [
+            {
+              "versionId": "id_6be35d80-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "a0dd0dd38243130f505a9684d57ef257b2f828eda68fc896da99cf587430d642"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-check-fraud",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "a5d8b8078ec7d734219bfa16064931d34dd69b0e159f8ba285c401040d44b0a0",
+      "correctionSha256": "5c197485e137cf76e26036f286c9fed1d9cb633f7b55b9450ddd8c0d246ced6a",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:476a",
+          "versions": [
+            {
+              "versionId": "id_7030e5b2-65eb-11e4-b7fe-f60a5c818cd8",
+              "contentSha256": "7ddbe13073765519291ca95ae9229762502991adaa18ab45c3741790613d7380"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-credit-card-fraud",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "a31e7ec8351f0fed26703c1d497a86fc2031a38bce85305fd685b049a2fa544b",
+      "correctionSha256": "aa1d05d3e4e6e7991199d583cf492c2c0211ae80e81fb7b6bff8ecba296962a2",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19.7",
+          "versions": [
+            {
+              "versionId": "id_65026bc1-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "65590084fe5af413948812144d5f363588dba4ffbba109e8dcb251567502ae85"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484e",
+          "versions": [
+            {
+              "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484f",
+          "versions": [
+            {
+              "versionId": "id_67b99cb2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "72fc3a072c8c22c574ed9e542a0d167ab2c2cbb57bdb0ab1026bff8e5741c3ed"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484g",
+          "versions": [
+            {
+              "versionId": "id_2b101b06-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "caa60b72d8531a6982ce2f0ec0ecd72c421d9e2f2af9a1bb83355bb24760d925"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:488",
+          "versions": [
+            {
+              "versionId": "id_67bcaa10-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8bbb7e2c6dc36360c00ff5bd522238e8b0d1173673a0809dc44c51fe9e682aa9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.1",
+          "versions": [
+            {
+              "versionId": "id_67be30b8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "21bb1fdd7b6a261ece08d5deeb95548e6968bd4051144d61d17c572b3c2a132b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-embezzlement",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "907e4258f6a033643a9a93dc3d6d5d24008cba00f9c9c8c1e4007a0dd36a96b1",
+      "correctionSha256": "e87ff240f160b431de0527063318b013ce8dc7bfc3f3c7f1c6311a9d7bd2caa1",
+      "remainingWork": "Independent legal review, case-law limits, offense-date applicability, exact charging theory and prior-conviction matching, sentencing enhancements, restitution, and professional translation review remain. This pass does not certify the total sentence or live deployment.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19.7",
+          "versions": [
+            {
+              "versionId": "id_65026bc1-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "65590084fe5af413948812144d5f363588dba4ffbba109e8dcb251567502ae85"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:488",
+          "versions": [
+            {
+              "versionId": "id_67bcaa10-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8bbb7e2c6dc36360c00ff5bd522238e8b0d1173673a0809dc44c51fe9e682aa9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.1",
+          "versions": [
+            {
+              "versionId": "id_67be30b8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "21bb1fdd7b6a261ece08d5deeb95548e6968bd4051144d61d17c572b3c2a132b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:503",
+          "versions": [
+            {
+              "versionId": "id_67d3b4c2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "192aa9aba9969f8c5d1d439db7542f995e057b54f134ffca72837cc719479223"
+            }
+          ]
+        },
+        {
+          "key": "PEN:514",
+          "versions": [
+            {
+              "versionId": "id_67d9cf60-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "3d0268b2d96c016d7994680410e0d12a4602ab048cacd142a593e9342e23a177"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

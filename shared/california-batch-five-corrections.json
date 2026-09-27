@@ -1,0 +1,277 @@
+[
+  {
+    "id": "ca-computer-crime-502-c1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "502.01"
+    ],
+    "summary": {
+      "en": "Knowingly accessing and, without permission, altering, damaging, deleting, destroying, or otherwise using computer data or systems to defraud, deceive, extort, or wrongfully control or obtain money, property, or data (§502(c)(1)). Unauthorized access alone is not this specific branch. The employment exceptions in §502(h)–(i) require separate attention.",
+      "es": "Acceder a sabiendas y, sin permiso, alterar, dañar, borrar, destruir o usar datos o sistemas para defraudar, engañar, extorsionar u obtener o controlar indebidamente dinero, bienes o datos (§502(c)(1)). El acceso no autorizado por sí solo no es esta modalidad. Deben examinarse las excepciones laborales del §502(h)–(i).",
+      "zh": "明知地访问电脑数据或系统，并未经许可更改、损坏、删除、毁坏或以其他方式使用，以实施诈骗、欺骗、勒索或不当控制、取得金钱、财产或数据（第502(c)(1)条）。单纯未经授权访问并不等于本分支。须另审第502(h)至(i)条的雇佣例外。"
+    },
+    "penalty": {
+      "en": "Both §502(c)(1) and (c)(5) use §502(d)(1): misdemeanor jail up to 364 days (§18.5), a base fine up to $5,000, or both; or felony imprisonment under §1170(h) for 16 months, 2 years, or 3 years and a base fine up to $10,000. This branch has no $950 loss threshold for the felony alternative. Civil damages and forfeiture under §502.01 are separate; custody location, restitution, and other consequences require individual review.",
+      "es": "Ambos incisos §502(c)(1) y (c)(5) se rigen por §502(d)(1): delito menor con hasta 364 días de cárcel (§18.5), multa base de hasta $5,000, o ambas; o delito grave con 16 meses, 2 o 3 años bajo §1170(h) y multa base de hasta $10,000. Esta modalidad no exige pérdidas superiores a $950 para la alternativa grave. Daños civiles y decomiso bajo §502.01 son distintos; lugar de reclusión, restitución y otras consecuencias requieren revisión individual.",
+      "zh": "第502(c)(1)及(c)(5)条均适用(d)(1)款：轻罪可处最高364天监禁（第18.5条）、最高5,000美元基本罚金，或两者并处；重罪依第1170(h)条处16个月、2年或3年监禁及最高10,000美元基本罚金。本分支的重罪选项没有950美元损失门槛。民事损害赔偿及第502.01条没收另行处理；服刑地点、赔偿及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-computer-crime-502-c5",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "502.01"
+    ],
+    "summary": {
+      "en": "Knowingly and without permission disrupting computer services, causing their disruption, or denying services to an authorized user (§502(c)(5)). This is the disruption/denial branch; use the exact subdivision on the charging document. The employment exceptions in §502(h)–(i) require separate attention.",
+      "es": "A sabiendas y sin permiso, interrumpir servicios informáticos, causar su interrupción o denegarlos a un usuario autorizado (§502(c)(5)). Es la modalidad de interrupción o denegación; debe usarse el inciso exacto del documento de acusación. Deben examinarse las excepciones laborales del §502(h)–(i).",
+      "zh": "明知且未经许可中断电脑服务、导致中断，或拒绝向授权用户提供服务（第502(c)(5)条）。这是中断或拒绝服务分支，应核对起诉文件的准确分款。须另审第502(h)至(i)条的雇佣例外。"
+    },
+    "penalty": {
+      "en": "Both §502(c)(1) and (c)(5) use §502(d)(1): misdemeanor jail up to 364 days (§18.5), a base fine up to $5,000, or both; or felony imprisonment under §1170(h) for 16 months, 2 years, or 3 years and a base fine up to $10,000. This branch has no $950 loss threshold for the felony alternative. Civil damages and forfeiture under §502.01 are separate; custody location, restitution, and other consequences require individual review.",
+      "es": "Ambos incisos §502(c)(1) y (c)(5) se rigen por §502(d)(1): delito menor con hasta 364 días de cárcel (§18.5), multa base de hasta $5,000, o ambas; o delito grave con 16 meses, 2 o 3 años bajo §1170(h) y multa base de hasta $10,000. Esta modalidad no exige pérdidas superiores a $950 para la alternativa grave. Daños civiles y decomiso bajo §502.01 son distintos; lugar de reclusión, restitución y otras consecuencias requieren revisión individual.",
+      "zh": "第502(c)(1)及(c)(5)条均适用(d)(1)款：轻罪可处最高364天监禁（第18.5条）、最高5,000美元基本罚金，或两者并处；重罪依第1170(h)条处16个月、2年或3年监禁及最高10,000美元基本罚金。本分支的重罪选项没有950美元损失门槛。民事损害赔偿及第502.01条没收另行处理；服刑地点、赔偿及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-identity-theft-530-5-a",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "530.55"
+    ],
+    "summary": {
+      "en": "Willfully obtaining another person’s identifying information and using it for an unlawful purpose without consent (§530.5(a)); the information and person definitions are in §530.55. This use branch differs from possession with intent to defraud under (c)(1).",
+      "es": "Obtener voluntariamente información identificativa ajena y usarla para un fin ilícito sin consentimiento (§530.5(a)); §530.55 define información y persona. Esta modalidad de uso difiere de poseerla con intención de defraudar bajo (c)(1).",
+      "zh": "故意取得他人的身份信息，并未经同意用于非法目的（第530.5(a)条）；信息及人的定义见第530.55条。本使用分支不同于(c)(1)款意图诈骗而持有信息的分支。"
+    },
+    "penalty": {
+      "en": "Misdemeanor or felony: §530.5(a) permits a fine, county jail up to 364 days (§18.5), or both, or imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. The subdivision does not state a fine amount; this review does not supply an unsupported cap. Custody location, restitution, other charges, and case-specific sentencing remain for review.",
+      "es": "Delito menor o grave: §530.5(a) permite multa, hasta 364 días de cárcel del condado (§18.5), ambas, o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. El inciso no fija el importe de multa; esta revisión no inventa un límite. Lugar de reclusión, restitución, otras acusaciones y sentencia individual requieren revisión.",
+      "zh": "可为轻罪或重罪：第530.5(a)条允许罚金、县监狱最高364天（第18.5条），或两者并处，也可依第1170(h)条监禁，通常为16个月、2年或3年。该款未载明罚金额，本审查不提供无依据的上限。服刑地点、赔偿、其他指控及个案量刑仍须审查。"
+    }
+  },
+  {
+    "id": "ca-identity-theft-530-5-c1",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "18.5",
+      "530.55"
+    ],
+    "summary": {
+      "en": "Acquiring or retaining another person’s identifying information with intent to defraud (§530.5(c)(1), definitions in §530.55). Actual use is not the act specified by this possession branch. A prior §530.5 conviction or information of 10 or more people belongs to the separate (c)(2)/(c)(3) branches.",
+      "es": "Adquirir o conservar información identificativa ajena con intención de defraudar (§530.5(c)(1), definiciones en §530.55). Esta modalidad de posesión no exige como acto el uso efectivo. Un antecedente bajo §530.5 o información de 10 o más personas corresponde a modalidades distintas, (c)(2)/(c)(3).",
+      "zh": "意图诈骗而取得或继续持有他人身份信息（第530.5(c)(1)条，定义见第530.55条）。本持有分支规定的行为不要求实际使用。第530.5条前科或涉及10人以上信息属于另行的(c)(2)/(c)(3)分支。"
+    },
+    "penalty": {
+      "en": "This (c)(1) branch is a misdemeanor: a fine, up to 364 days in county jail (§18.5), or both. Section 530.5(c)(1) does not specify a fine amount. Do not import the felony alternative from (c)(2) or (c)(3) without that separate charged basis. Restitution and other consequences require individual review.",
+      "es": "Esta modalidad (c)(1) es delito menor: multa, hasta 364 días de cárcel del condado (§18.5), o ambas. §530.5(c)(1) no fija el importe de multa. No debe trasladarse la alternativa grave de (c)(2) o (c)(3) sin esa base acusatoria distinta. Restitución y otras consecuencias requieren revisión individual.",
+      "zh": "本(c)(1)分支为轻罪：可处罚金、县监狱最高364天（第18.5条），或两者并处。第530.5(c)(1)条未规定罚金额。没有相应独立指控依据时，不得套用(c)(2)或(c)(3)的重罪选项。赔偿及其他后果须个别审查。"
+    }
+  },
+  {
+    "id": "ca-insurance-fraud-550-a1",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "1170"
+    ],
+    "summary": {
+      "en": "Knowingly presenting or causing presentation of a false or fraudulent claim for payment of loss or injury (§550(a)(1)), including the forms of participation specified in (a). This false-claim branch differs from a false material statement under (b)(1).",
+      "es": "Presentar a sabiendas o causar la presentación de una reclamación falsa o fraudulenta por pérdida o lesión (§550(a)(1)), incluidas las formas de participación del inciso (a). Esta modalidad difiere de una declaración material falsa bajo (b)(1).",
+      "zh": "明知地提出或促使提出虚假或欺诈性的损失、伤害付款索赔（第550(a)(1)条），包括(a)款所列参与方式。本虚假索赔分支不同于(b)(1)款的虚假重要事实陈述。"
+    },
+    "penalty": {
+      "en": "Felony under §550(c)(1): 2, 3, or 5 years under §1170(h), and a base fine up to $50,000 or twice the fraud amount, whichever is greater. The $950 health-care-claim rule in (c)(2) does not supply a misdemeanor alternative for (a)(1). Restitution is mandatory under §550(c)(4). Qualifying pleaded/proved priors can add two-year enhancements under (e) and restrict probation under (d); (i) doubles fines for qualifying auto-insurance claims in a designated fraud crisis area. These are base terms, not total exposure.",
+      "es": "Delito grave bajo §550(c)(1): 2, 3 o 5 años conforme a §1170(h), y multa base de hasta $50,000 o el doble del fraude, lo que sea mayor. La regla de $950 para reclamaciones sanitarias de (c)(2) no proporciona alternativa de delito menor para (a)(1). La restitución es obligatoria bajo §550(c)(4). Antecedentes que cumplan los requisitos, alegados y probados, pueden añadir aumentos de dos años bajo (e) y restringir la libertad condicional bajo (d); (i) duplica multas para ciertas reclamaciones de seguro de auto en zonas designadas de crisis por fraude. Son penas base, no la exposición total.",
+      "zh": "依第550(c)(1)条为重罪：第1170(h)条监禁2年、3年或5年，并处最高50,000美元或诈骗金额两倍的基本罚金，以较高者为准。(c)(2)款医疗索赔的950美元规则不能为(a)(1)款提供轻罪选项。第550(c)(4)条要求赔偿。符合条件且已指控并证明的前科可依(e)款增加两年刑期，并依(d)款限制缓刑；(i)款对指定诈骗危机地区符合条件的汽车保险索赔加倍罚金。所列为基本刑罚，并非总风险上限。"
+    }
+  },
+  {
+    "id": "ca-insurance-fraud-550-b1",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "summary": {
+      "en": "Presenting or causing a written or oral statement in support of or opposition to an insurance claim, knowing it contains false or misleading information about a material fact (§550(b)(1)); the participation language in (b) also applies. Verify this branch rather than selecting the separate false-claim branch.",
+      "es": "Presentar o causar una declaración escrita u oral en apoyo u oposición a una reclamación de seguro, sabiendo que contiene información falsa o engañosa sobre un hecho material (§550(b)(1)); también rige la participación prevista en (b). Debe verificarse esta modalidad y no elegir la distinta de reclamación falsa.",
+      "zh": "提出或促使提出支持或反对保险索赔的书面或口头陈述，明知其中含有关于重要事实的虚假或误导信息（第550(b)(1)条）；亦适用(b)款参与规定。应核对本分支，而非选择不同的虚假索赔分支。"
+    },
+    "penalty": {
+      "en": "Misdemeanor or felony under §550(c)(3): the misdemeanor alternative permits up to 364 days in county jail (§18.5), a base fine up to $10,000, or both. The felony alternative permits 2, 3, or 5 years under §1170(h), a base fine up to $50,000 or twice the fraud amount, whichever is greater, or both. Restitution is mandatory under §550(c)(4). Qualifying pleaded/proved priors can add two-year enhancements under (e) and restrict probation under (d); (i) doubles fines for qualifying auto-insurance claims in a designated fraud crisis area. These are base terms, not total exposure.",
+      "es": "Delito menor o grave bajo §550(c)(3): la alternativa menor permite hasta 364 días de cárcel del condado (§18.5), multa base de hasta $10,000, o ambas. La alternativa grave permite 2, 3 o 5 años bajo §1170(h), multa base de hasta $50,000 o el doble del fraude, lo que sea mayor, o ambas. La restitución es obligatoria bajo §550(c)(4). Antecedentes que cumplan los requisitos, alegados y probados, pueden añadir aumentos de dos años bajo (e) y restringir la libertad condicional bajo (d); (i) duplica multas para ciertas reclamaciones de seguro de auto en zonas designadas de crisis por fraude. Son penas base, no la exposición total.",
+      "zh": "依第550(c)(3)条可为轻罪或重罪：轻罪可处县监狱最高364天（第18.5条）、最高10,000美元基本罚金，或两者并处。重罪可依第1170(h)条监禁2年、3年或5年，处最高50,000美元或诈骗金额两倍的基本罚金（以较高者为准），或两者并处。第550(c)(4)条要求赔偿。符合条件且已指控并证明的前科可依(e)款增加两年刑期，并依(d)款限制缓刑；(i)款对指定诈骗危机地区符合条件的汽车保险索赔加倍罚金。所列为基本刑罚，并非总风险上限。"
+    }
+  },
+  {
+    "id": "ca-money-laundering",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "186.9"
+    ],
+    "summary": {
+      "en": "Conducting or attempting financial-institution transactions totaling over $5,000 within seven days or over $25,000 within 30 days, with the criminal-promotion intent or proceeds knowledge required by §186.10(a). Definitions and exclusions in §186.9 matter; merely handling money is not enough. The statute adds a special proof requirement for attorneys accepting criminal-defense fees.",
+      "es": "Realizar o intentar transacciones mediante instituciones financieras por más de $5,000 en siete días o más de $25,000 en 30 días, con intención de promover actividad criminal o conocimiento de su origen ilícito según §186.10(a). Importan definiciones y exclusiones de §186.9; manejar dinero no basta. Hay un requisito probatorio especial para honorarios de defensa penal.",
+      "zh": "通过金融机构实施或企图实施七日内总额超过5,000美元或30日内超过25,000美元的交易，并具备第186.10(a)条要求的促进犯罪意图或对犯罪收益的知情。第186.9条定义和排除规则重要；单纯经手金钱不足。律师收取刑事辩护费用另有特别证明要求。"
+    },
+    "penalty": {
+      "en": "Misdemeanor jail up to 364 days (§18.5), or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Section 186.10(a) permits a fine up to the greater of $250,000 or twice the value transacted, or imprisonment and fine; for a second or later conviction the fine ceiling becomes the greater of $500,000 or five times the value. Subdivision (c) adds 1–4 years for specified transaction-value bands when the required facts are charged and admitted or found true. Exact boundaries, aggregation, custody location, and other consequences require individual review; the base term is not a total ceiling.",
+      "es": "Hasta 364 días por delito menor (§18.5), o reclusión por delito grave bajo §1170(h), normalmente 16 meses, 2 o 3 años. §186.10(a) permite multa de hasta el mayor de $250,000 o el doble del valor transado, o prisión y multa; para segunda condena o posterior, el límite es el mayor de $500,000 o cinco veces el valor. El inciso (c) añade 1 a 4 años en ciertos intervalos de valor si los hechos requeridos se alegan y admiten o prueban. Límites exactos, agregación, lugar de reclusión y otras consecuencias requieren revisión individual; la pena base no es un máximo total.",
+      "zh": "轻罪最高364天监禁（第18.5条），或依第1170(h)条重罪监禁，通常为16个月、2年或3年。第186.10(a)条允许罚金最高为250,000美元与交易额两倍中较高者，或监禁及罚金并处；第二次及以后定罪的罚金上限为500,000美元与交易额五倍中较高者。(c)款在所需事实被指控且承认或认定属实时，对特定交易金额区间增加1至4年。准确边界、合并计算、服刑地点及其他后果须个别审查；基本刑期并非总上限。"
+    }
+  },
+  {
+    "id": "ca-forgery",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "473",
+      "667",
+      "290",
+      "530.5"
+    ],
+    "summary": {
+      "en": "Forgery under §470 covers specified acts such as signing another or a fictitious name without authority, counterfeiting handwriting or seals, falsifying records, or making or passing specified false instruments, with the required intent to defraud and knowledge. The charged act and instrument determine which branch applies.",
+      "es": "La falsificación bajo §470 abarca actos específicos como firmar nombres ajenos o ficticios sin autoridad, falsificar escritura o sellos, alterar registros o hacer o transmitir ciertos instrumentos falsos, con intención de defraudar y conocimiento requeridos. El acto e instrumento acusados determinan la modalidad.",
+      "zh": "第470条伪造罪涵盖特定行为，如未经授权签署他人或虚构姓名、伪造笔迹或印章、篡改记录、制作或传递特定虚假文书，并须具备所需诈骗意图及知情。适用分支取决于被控行为及文书类型。"
+    },
+    "penalty": {
+      "en": "Punishment comes from §473: ordinarily misdemeanor jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. For the seven listed monetary instruments valued at $950 or less, §473(b) requires misdemeanor treatment unless its specified serious-prior/registration exceptions apply. That subsection also excludes a person convicted of both forgery and §530.5 identity theft; applying that exception to particular convictions requires legal review. Do not apply the $950 rule to every kind of forged document. Fines, restitution, custody location, and other consequences require separate review.",
+      "es": "La pena proviene de §473: normalmente hasta 364 días por delito menor (§18.5) o reclusión por delito grave bajo §1170(h), ordinariamente 16 meses, 2 o 3 años. Para los siete instrumentos monetarios enumerados de valor no superior a $950, §473(b) exige trato de delito menor salvo sus excepciones específicas por antecedentes graves o registro. También excluye a quien sea condenado tanto por falsificación como por robo de identidad bajo §530.5; aplicar esa excepción exige revisión jurídica. La regla de $950 no cubre todo documento falso. Multas, restitución, lugar de reclusión y otras consecuencias requieren revisión aparte.",
+      "zh": "处罚来自第473条：通常为轻罪最高364天（第18.5条），或依第1170(h)条重罪监禁，通常16个月、2年或3年。列明的七类金额文书价值不超过950美元时，(b)款要求按轻罪处理，除非适用其特定严重前科或登记例外。该款亦排除同时被判伪造及第530.5条身份盗用罪者；针对具体定罪适用此例外须法律审查。不得对所有伪造文书套用950美元规则。罚金、赔偿、服刑地点及其他后果须另审。"
+    }
+  },
+  {
+    "id": "ca-check-fraud",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "667",
+      "290"
+    ],
+    "summary": {
+      "en": "Willfully making, drawing, uttering, or delivering a check, draft, or order with intent to defraud, knowing sufficient funds or credit are lacking to cover it and other outstanding instruments (§476a(a)). An unpaid or bounced check alone does not establish intent and knowledge.",
+      "es": "Hacer, librar, emitir o entregar voluntariamente un cheque, giro u orden con intención de defraudar, sabiendo que faltan fondos o crédito para cubrirlo y los demás instrumentos pendientes (§476a(a)). Un cheque impagado por sí solo no acredita intención y conocimiento.",
+      "zh": "意图诈骗而故意制作、签发、使用或交付支票、汇票或付款令，明知资金或信用不足以支付该项及其他未兑付票据（第476a(a)条）。单纯未付款或退票不足以证明意图和知情。"
+    },
+    "penalty": {
+      "en": "Under §476a(a), misdemeanor jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Under (b), a charged-and-convicted aggregate of $950 or less ordinarily receives misdemeanor treatment. The text contains specified serious-prior/registration exceptions, a three-or-more listed California conviction exception, and separately worded out-of-state/federal conviction exceptions. Do not reduce these to a universal three-prior rule; exact prior matching requires legal review. Fines, restitution, custody location, and other consequences remain separate.",
+      "es": "Según §476a(a), hasta 364 días por delito menor (§18.5) o reclusión por delito grave bajo §1170(h), normalmente 16 meses, 2 o 3 años. Bajo (b), el total acusado y objeto de condena de $950 o menos normalmente recibe trato de delito menor. Hay excepciones específicas por antecedentes graves o registro, por tres o más condenas californianas enumeradas y otras redactadas separadamente para condenas de otros estados o federales. No deben resumirse como regla universal de tres antecedentes; su correspondencia exacta exige revisión jurídica. Multas, restitución, lugar de reclusión y otras consecuencias son aparte.",
+      "zh": "依第476a(a)条，轻罪可处最高364天（第18.5条），或依第1170(h)条重罪监禁，通常16个月、2年或3年。(b)款下，被指控且定罪的合计金额不超过950美元时通常按轻罪处理。条文含特定严重前科或登记例外、三次以上列明加州定罪例外，以及另行表述的外州或联邦定罪例外。不可概括成一律要求三次前科；准确前科匹配须法律审查。罚金、赔偿、服刑地点及其他后果另行处理。"
+    }
+  },
+  {
+    "id": "ca-credit-card-fraud",
+    "categories": [
+      "misdemeanor",
+      "felony",
+      "infraction"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "487",
+      "488",
+      "489",
+      "490",
+      "490.1",
+      "490.2",
+      "666.1",
+      "667",
+      "290",
+      "19.6",
+      "19.7",
+      "484e",
+      "484f"
+    ],
+    "summary": {
+      "en": "Access-card theft under §484g requires intent to defraud and the specified unauthorized or fraudulent card/account use or representation. More than $950 obtained in any consecutive six-month period constitutes grand theft under this section. Cross-references to §§484e–484f describe certain unlawfully obtained or altered cards; those sections are not interchangeable charges.",
+      "es": "El hurto con tarjeta de acceso bajo §484g exige intención de defraudar y el uso o representación no autorizado o fraudulento especificado. Obtener más de $950 en seis meses consecutivos constituye hurto mayor bajo esta sección. Las referencias a §§484e–484f describen ciertas tarjetas obtenidas o alteradas ilícitamente; no son acusaciones intercambiables.",
+      "zh": "第484g条支付卡盗窃要求诈骗意图及所规定的未经授权或欺诈性卡片、账户使用或身份表示。任意连续六个月取得超过950美元，依本条构成重大盗窃。对第484e至484f条的引用描述某些非法取得或变造卡片；各条指控不可互换。"
+    },
+    "penalty": {
+      "en": "Ordinary petty theft under §490 carries up to 6 months in county jail, a base fine up to $1,000, or both. Ordinary non-firearm grand theft under §489(c) permits up to 364 days (§18.5) or §1170(h) imprisonment, ordinarily 16 months, 2 years, or 3 years. Section 490.1 permits an infraction (base fine up to $250, no jail) for qualifying theft of $50 or less with no theft-related prior, at prosecutorial discretion. Sections 490.2 and 666.1 contain prior-conviction exceptions that can change the ordinary low-value misdemeanor result. Verify charged theory, value, aggregation, priors, and custody eligibility; restitution and other consequences remain separate.",
+      "es": "El hurto menor ordinario bajo §490 conlleva hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. El hurto mayor ordinario sin arma de fuego bajo §489(c) permite hasta 364 días (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. §490.1 permite infracción (multa base de hasta $250, sin cárcel) para ciertos hurtos de $50 o menos sin antecedentes relacionados con hurto, a discreción fiscal. §§490.2 y 666.1 contienen excepciones por antecedentes que pueden cambiar el resultado menor ordinario de bajo valor. Deben verificarse teoría acusada, valor, agregación, antecedentes y elegibilidad de reclusión; restitución y otras consecuencias son aparte.",
+      "zh": "第490条普通小额盗窃可处县监狱最高6个月、最高1,000美元基本罚金，或两者并处。第489(c)条普通非枪支重大盗窃可处最高364天（第18.5条），或依第1170(h)条监禁，通常16个月、2年或3年。第490.1条允许检方酌情将符合条件的50美元以下且无盗窃相关前科的案件按违章处理（最高250美元基本罚金，无监禁）。第490.2及666.1条包含可改变普通低价值轻罪结果的前科例外。须核对指控理论、价值、合并计算、前科及服刑资格；赔偿及其他后果另审。"
+    }
+  },
+  {
+    "id": "ca-embezzlement",
+    "categories": [
+      "misdemeanor",
+      "felony",
+      "infraction"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "487",
+      "488",
+      "489",
+      "490",
+      "490.1",
+      "490.2",
+      "666.1",
+      "667",
+      "290",
+      "19.6",
+      "19.7",
+      "18",
+      "514"
+    ],
+    "summary": {
+      "en": "Fraudulently appropriating property entrusted to the accused (§503). Section 514 supplies punishment according to the value or kind of property, with a separate public-funds rule. A breach of trust or failure to repay alone does not establish every element of fraudulent appropriation.",
+      "es": "Apropiarse fraudulentamente de bienes confiados a la persona acusada (§503). §514 fija la pena según valor o tipo de bien y una regla distinta para fondos públicos. Incumplir la confianza o no reembolsar por sí solo no acredita todos los elementos.",
+      "zh": "以欺诈方式侵占被托付给被告的财产（第503条）。第514条按价值或财产种类规定处罚，并对公款设独立规则。单纯违反信任或未偿还不足以证明欺诈侵占的全部要件。"
+    },
+    "penalty": {
+      "en": "Ordinary petty theft under §490 carries up to 6 months in county jail, a base fine up to $1,000, or both. Ordinary non-firearm grand theft under §489(c) permits up to 364 days (§18.5) or §1170(h) imprisonment, ordinarily 16 months, 2 years, or 3 years. Section 490.1 permits an infraction (base fine up to $250, no jail) for qualifying theft of $50 or less with no theft-related prior, at prosecutorial discretion. Sections 490.2 and 666.1 contain prior-conviction exceptions that can change the ordinary low-value misdemeanor result. Verify charged theory, value, aggregation, priors, and custody eligibility; restitution and other consequences remain separate. Section 514 separately classifies embezzlement of specified public funds as a state-prison felony and disqualifies the convicted person from public office; that branch needs specific review rather than assuming an ordinary petty-theft result. Firearm property also requires the distinct §489(a)/§490.2(c) treatment.",
+      "es": "El hurto menor ordinario bajo §490 conlleva hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. El hurto mayor ordinario sin arma de fuego bajo §489(c) permite hasta 364 días (§18.5) o reclusión bajo §1170(h), normalmente 16 meses, 2 o 3 años. §490.1 permite infracción (multa base de hasta $250, sin cárcel) para ciertos hurtos de $50 o menos sin antecedentes relacionados con hurto, a discreción fiscal. §§490.2 y 666.1 contienen excepciones por antecedentes que pueden cambiar el resultado menor ordinario de bajo valor. Deben verificarse teoría acusada, valor, agregación, antecedentes y elegibilidad de reclusión; restitución y otras consecuencias son aparte. §514 clasifica por separado la malversación de ciertos fondos públicos como delito grave con prisión estatal e inhabilitación para cargo público; esa modalidad requiere revisión específica y no suponer hurto menor ordinario. Los bienes que sean armas de fuego también requieren el tratamiento distinto de §489(a)/§490.2(c).",
+      "zh": "第490条普通小额盗窃可处县监狱最高6个月、最高1,000美元基本罚金，或两者并处。第489(c)条普通非枪支重大盗窃可处最高364天（第18.5条），或依第1170(h)条监禁，通常16个月、2年或3年。第490.1条允许检方酌情将符合条件的50美元以下且无盗窃相关前科的案件按违章处理（最高250美元基本罚金，无监禁）。第490.2及666.1条包含可改变普通低价值轻罪结果的前科例外。须核对指控理论、价值、合并计算、前科及服刑资格；赔偿及其他后果另审。第514条另将特定公款侵占定为州监狱重罪，并取消定罪者担任公职资格；本分支须具体审查，不可假定普通小额盗窃结果。枪支财产亦须依第489(a)/490.2(c)条另行处理。"
+    }
+  }
+]
