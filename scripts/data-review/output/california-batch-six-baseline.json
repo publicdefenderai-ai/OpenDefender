@@ -1,0 +1,1198 @@
+{
+  "schemaVersion": 1,
+  "scope": "pre_correction_catalog_baseline",
+  "records": [
+    {
+      "catalogSha256": "802988039575a77b062c12505335a33a10c9e36c0a9ac5be6f49bb3ca8a7666c",
+      "record": {
+        "canonicalId": "ca-failure-to-appear-1320-a",
+        "officialTitle": "Failure to Appear After Release on Misdemeanor Charge",
+        "code": "1320(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 1320(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant was released on their own recognizance after being charged with or convicted of a misdemeanor",
+          "The defendant willfully failed to appear as required to evade the court process",
+          "The defendant had notice of the appearance obligation"
+        ],
+        "mentalState": "Willful failure to appear with knowledge of the required date and place.",
+        "grading": "Misdemeanor.",
+        "penalty": "Punishable by a fine up to $1,000, county jail up to 6 months, or both under Penal Code § 1320(a).",
+        "legacyIds": [
+          "ca-failure-to-appear"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 1320",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "289b0be9531b880c0c441ef089ea90b489d0cdac2bcd9c8962e3ced1137e202a",
+      "record": {
+        "canonicalId": "ca-failure-to-appear-1320-b",
+        "officialTitle": "Failure to Appear After Release on Felony Charge",
+        "code": "1320(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 1320(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant was released on their own recognizance after being charged with or convicted of a felony",
+          "The defendant willfully failed to appear as required to evade the court process",
+          "The defendant had notice of the appearance obligation"
+        ],
+        "mentalState": "Willful failure to appear with knowledge of the required date and place.",
+        "grading": "Felony.",
+        "penalty": "Punishable by a fine up to $5,000, county jail up to 1 year, imprisonment under Penal Code § 1170(h), or both under Penal Code § 1320(b).",
+        "legacyIds": [
+          "ca-failure-to-appear"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 1320",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "81c941ec1a974ba63309f964814de28b809c9fe9b6837d2b5bd6cb5a32d3d033",
+      "record": {
+        "canonicalId": "ca-prostitution-solicitation",
+        "officialTitle": "Soliciting or Agreeing to Engage in Prostitution",
+        "code": "647(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 647(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant solicited or agreed to engage in an act of prostitution",
+          "The defendant acted with the intent required by § 647(b)"
+        ],
+        "mentalState": "Specific intent to engage in or solicit the prohibited commercial sex act.",
+        "grading": "Misdemeanor",
+        "penalty": "Misdemeanor punishable by county jail up to 6 months and/or a fine under Penal Code § 647(b).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-prostitution-solicitation"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 647",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=647&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "9b5c2161c43f1b29d2fb14e257b2997e2c853c30d659c397abc0cb8c7b5b0c3d",
+      "record": {
+        "canonicalId": "ca-public-intoxication",
+        "officialTitle": "Public Intoxication",
+        "code": "647(f)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 647(f)",
+        "classification": "offense",
+        "elements": [
+          "The defendant was willfully under the influence of an intoxicating liquor, drug, or controlled substance in a public place",
+          "The defendant was unable to exercise care for safety or interfered with or obstructed a street, sidewalk, or other passage"
+        ],
+        "mentalState": "Willfully being under the influence; the required inability or interference must be proved.",
+        "grading": "Misdemeanor",
+        "penalty": "Misdemeanor punishable by county jail up to 6 months and/or a fine under Penal Code § 647(f).",
+        "juryInstruction": {
+          "ref": "CALCRIM 2960",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-public-intoxication"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 647",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=647&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2960",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "58941cda429b1e4f1eca3bc915ed7e6453de152db7f52432a51247a8156c863b",
+      "record": {
+        "canonicalId": "ca-criminal-solicitation-653f-a",
+        "officialTitle": "Solicitation to Commit a Specified Crime",
+        "code": "653f(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 653f(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant solicited another person to commit one of the crimes specified in Penal Code § 653f(a)",
+          "The defendant intended that the solicited crime be committed"
+        ],
+        "mentalState": "Intent that the solicited crime be committed.",
+        "grading": "Punishment varies by the crime solicited.",
+        "penalty": "Punishable by up to 1 year in county jail, imprisonment under Penal Code § 1170(h), a fine up to $10,000, or both under Penal Code § 653f(a).",
+        "legacyIds": [
+          "ca-criminal-solicitation"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 653f",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=653f&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "9224ba5ad99f93532750727be0c2c095f243eeee44fe96dff19a95950800c472",
+      "record": {
+        "canonicalId": "ca-criminal-solicitation-653f-b",
+        "officialTitle": "Solicitation to Commit Murder",
+        "code": "653f(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 653f(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant solicited another person to commit murder",
+          "The defendant intended that the murder be committed"
+        ],
+        "mentalState": "Intent that the solicited murder be committed.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 3, 6, or 9 years in state prison under Penal Code § 653f(b).",
+        "legacyIds": [
+          "ca-criminal-solicitation"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 653f",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=653f&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "9f8ac5cbb0ed687947fe8ab12f1681cb9ebb1cd27371acde5df0fdd373eef0d4",
+      "record": {
+        "canonicalId": "ca-open-container-23222-a",
+        "officialTitle": "Driving With an Open Alcoholic Beverage",
+        "code": "23222(a)",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code § 23222(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a motor vehicle",
+          "The defendant had an opened alcoholic beverage on their person or in the passenger compartment"
+        ],
+        "mentalState": "Voluntary driving with the prohibited opened container.",
+        "grading": "Infraction.",
+        "penalty": "An infraction punishable by a fine under Vehicle Code § 23222(a).",
+        "legacyIds": [
+          "ca-open-container"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23222",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23222&lawCode=VEH",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "544c0bd7015d021dc47663b9ddb64707f7a87cfeb22e740ca18af16c7dfebb25",
+      "record": {
+        "canonicalId": "ca-open-container-23222-b",
+        "officialTitle": "Driving With an Open Cannabis Receptacle",
+        "code": "23222(b)(1)",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code § 23222(b)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a motor vehicle",
+          "The defendant possessed an opened cannabis receptacle, a receptacle with a broken seal, or loose cannabis flower on their person"
+        ],
+        "mentalState": "Voluntary driving with the prohibited opened cannabis receptacle or cannabis.",
+        "grading": "Infraction.",
+        "penalty": "An infraction punishable by a fine up to $100 under Vehicle Code § 23222(b)(1).",
+        "legacyIds": [
+          "ca-open-container"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23222",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23222&lawCode=VEH",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "07be1dd4b5ab9539900b0062536d0cb0ffc1f2190f0a119348eb659219618768",
+      "record": {
+        "canonicalId": "ca-minor-in-possession",
+        "officialTitle": "Minor in Possession of Alcohol",
+        "code": "25662",
+        "lawCode": "BPC",
+        "citation": "Cal. Business & Professions Code § 25662",
+        "classification": "offense",
+        "elements": [
+          "The defendant was under the statutory age",
+          "The defendant possessed an alcoholic beverage in a public place or other covered circumstance"
+        ],
+        "mentalState": "Knowing possession.",
+        "grading": "Misdemeanor under Business and Professions Code § 25662(a).",
+        "penalty": "First violation: $250 fine or 24–32 hours of community service; subsequent violation: up to $500 fine or 36–48 hours of community service under § 25662(a).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-minor-in-possession"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Business & Professions Code § 25662",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25662&lawCode=BPC",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "88466f6f876617a074d55ceadc257744ebe519e3d1e4b350a00323d3f503582b",
+      "record": {
+        "canonicalId": "ca-possession-with-intent-to-distribute",
+        "officialTitle": "Possession for Sale of a Controlled Substance",
+        "code": "11351",
+        "lawCode": "HSC",
+        "citation": "Cal. Health & Safety Code § 11351",
+        "classification": "offense",
+        "elements": [
+          "The defendant possessed a controlled substance",
+          "The defendant knew of its presence and character",
+          "The defendant possessed it with intent to sell"
+        ],
+        "mentalState": "Knowledge plus intent to sell.",
+        "grading": "Felony",
+        "penalty": "Felony punishable by imprisonment under Health and Safety Code § 11370.1/ Penal Code § 1170(h), with the applicable term depending on the charged substance and statutory facts under § 11351.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2302",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-possession-with-intent-to-distribute"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Health & Safety Code § 11351",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11351&lawCode=HSC",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2302",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "27834afdc355ef02b6ae1926f81b832901677e2875ac4955a54d679943222bc4",
+      "record": {
+        "canonicalId": "ca-distribution-of-controlled-substance",
+        "officialTitle": "Sale or Transportation of a Controlled Substance",
+        "code": "11352",
+        "lawCode": "HSC",
+        "citation": "Cal. Health & Safety Code § 11352",
+        "classification": "offense",
+        "elements": [
+          "The defendant sold, furnished, administered, transported, or offered to do so with a controlled substance",
+          "The defendant knew of the substance's presence and character",
+          "The substance was listed in the charged schedule"
+        ],
+        "mentalState": "Knowledge of the substance's presence and character, plus the intent required by the charged act.",
+        "grading": "Felony",
+        "penalty": "Felony; the applicable state-prison term depends on whether the charged § 11352 act is sale, transport, or another listed act and on the statutory facts.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2300",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-distribution-of-controlled-substance"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Health & Safety Code § 11352",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11352&lawCode=HSC",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2300",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "95dfb5c5b58473ef5c4dca852c04a0df97f173aefe7d08f00e84c11a7f7d1c3e",
+      "record": {
+        "canonicalId": "ca-maintaining-drug-house",
+        "officialTitle": "Maintaining a Place for Selling or Using Controlled Substances",
+        "code": "11366",
+        "lawCode": "HSC",
+        "citation": "Cal. Health & Safety Code § 11366",
+        "classification": "offense",
+        "elements": [
+          "The defendant opened or maintained a place",
+          "The place was used for unlawfully selling, giving away, or using a controlled substance"
+        ],
+        "mentalState": "Knowledge of and intentional maintenance of the place for the prohibited purpose.",
+        "grading": "Felony",
+        "penalty": "Felony punishable by imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under Health and Safety Code § 11366.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-maintaining-drug-house"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Health & Safety Code § 11366",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11366&lawCode=HSC",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "83601266b7ee1f97398086e66f21f2a42b033edd00efae29091e615ca41410d2",
+      "record": {
+        "canonicalId": "ca-manufacturing-controlled-substance",
+        "officialTitle": "Manufacturing a Controlled Substance",
+        "code": "11379.6",
+        "lawCode": "HSC",
+        "citation": "Cal. Health & Safety Code § 11379.6",
+        "classification": "offense",
+        "elements": [
+          "The defendant manufactured or attempted to manufacture a controlled substance",
+          "The defendant knew the substance's nature",
+          "The conduct involved a process identified by the statute"
+        ],
+        "mentalState": "Knowledge of the substance and intent to manufacture.",
+        "grading": "Felony",
+        "penalty": "Felony punishable by imprisonment for 3, 5, or 7 years under Health and Safety Code § 11379.6, subject to the charged conduct and statutory facts.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2330",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-manufacturing-controlled-substance"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Health & Safety Code § 11379.6",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11379.6&lawCode=HSC",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2330",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "569322a31d4646c6194bc9adcda8c5dff9384646a9f268af5ccf0586b9932ef1",
+      "record": {
+        "canonicalId": "ca-illegal-fireworks-12677",
+        "officialTitle": "Unlawful Possession of Dangerous Fireworks Without a Permit",
+        "code": "12677",
+        "lawCode": "HSC",
+        "citation": "Cal. Health & Safety Code § 12677",
+        "classification": "offense",
+        "elements": [
+          "The defendant possessed dangerous fireworks",
+          "The defendant did not hold a valid permit"
+        ],
+        "mentalState": "Knowing possession of dangerous fireworks without a valid permit.",
+        "grading": "Misdemeanor.",
+        "penalty": "Health and Safety Code § 12677 states the prohibition but not a specific term in its text; applicable fireworks penalty provisions govern punishment.",
+        "legacyIds": [
+          "ca-illegal-fireworks"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Health & Safety Code § 12677",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12677&lawCode=HSC",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "34d4228be783181b98bb5bbb16867635d388c6d7f71efd66272c5e83eda6ed9b",
+      "record": {
+        "canonicalId": "ca-conspiracy-182-a1",
+        "officialTitle": "Conspiracy to Commit a Crime",
+        "code": "182(a)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 182(a)(1)",
+        "classification": "offense",
+        "elements": [
+          "Two or more people agreed to commit a crime",
+          "The defendant intended that the crime be committed",
+          "One conspirator committed an overt act in furtherance of the agreement"
+        ],
+        "mentalState": "Intent to agree and intent that the target crime be committed.",
+        "grading": "Follows the target offense; a felony conspiracy is punished as the target felony.",
+        "penalty": "Punishment is the same manner and extent as the target felony under Penal Code § 182(a)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 415",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-conspiracy"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 182",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=182&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 415",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "7a3bc922cc02b8a79677ddc9fb1c94d04e187afeadcfe68f763930bf3047956f",
+      "record": {
+        "canonicalId": "ca-carjacking",
+        "officialTitle": "Carjacking",
+        "code": "215",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 215",
+        "classification": "offense",
+        "elements": [
+          "The defendant took a motor vehicle from another person's possession or immediate presence",
+          "The taking was accomplished by force or fear",
+          "The defendant intended to deprive the person of possession"
+        ],
+        "mentalState": "Intent to deprive, plus force or fear.",
+        "grading": "Felony",
+        "penalty": "State-prison term is generally three, five, or nine years, with statutory variations.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1550",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-carjacking"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 215",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=215&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1550",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "03b60019d7e5da5565d96aa030f445341b7d29461abadde88216d6b5d0d899e8",
+      "record": {
+        "canonicalId": "ca-discharge-of-firearm-in-city",
+        "officialTitle": "Negligent Discharge of a Firearm",
+        "code": "246.3",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 246.3",
+        "classification": "offense",
+        "elements": [
+          "The defendant willfully discharged a firearm",
+          "The defendant discharged it in a grossly negligent manner",
+          "The discharge could result in injury or death"
+        ],
+        "mentalState": "Gross negligence.",
+        "grading": "Misdemeanor or felony depending on the charged subdivision.",
+        "penalty": "Misdemeanor punishment may include county jail up to 6 months; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under § 246.3.",
+        "juryInstruction": {
+          "ref": "CALCRIM 970",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-discharge-of-firearm-in-city"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 246.3",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=246.3&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 970",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "abe3e61bc5460cf6d7751bf4f996559bcbec6c944ea07b4da1bf8f24bc4574aa",
+      "record": {
+        "canonicalId": "ca-unlawful-carrying-of-weapon",
+        "officialTitle": "Carrying a Concealed Firearm",
+        "code": "25400",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 25400",
+        "classification": "offense",
+        "elements": [
+          "The defendant carried a firearm concealed on their person or within a vehicle",
+          "The defendant knew of the firearm's presence",
+          "The firearm was capable of being concealed"
+        ],
+        "mentalState": "Knowledge of the firearm's presence; additional knowledge and status requirements depend on the charged subdivision.",
+        "grading": "Misdemeanor or felony depending on circumstances.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on the charged § 25400 circumstances.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-unlawful-carrying-of-weapon"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 25400",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25400&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "723bf1521dd662a26c964f4d81996f050abca9355dc17471575983cca911a204",
+      "record": {
+        "canonicalId": "ca-failure-to-pay-child-support",
+        "officialTitle": "Failure to Provide Child Support",
+        "code": "270",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 270",
+        "classification": "offense",
+        "elements": [
+          "The defendant had the ability to provide support",
+          "The defendant willfully failed to provide required support for a child"
+        ],
+        "mentalState": "Willful failure with ability to provide.",
+        "grading": "Misdemeanor",
+        "penalty": "Misdemeanor punishable by county jail up to 1 year and/or a fine under Penal Code § 270.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-failure-to-pay-child-support"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 270",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=270&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "eff54efa78b3830c0fabbdc8223f0ad8da02fd0dc610b75114a83446a4b65ca4",
+      "record": {
+        "canonicalId": "ca-felon-in-possession-of-firearm",
+        "officialTitle": "Possession of a Firearm by a Person Prohibited by Prior Conviction",
+        "code": "29800",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 29800",
+        "classification": "offense",
+        "elements": [
+          "The defendant possessed or had custody or control of a firearm",
+          "The defendant had a disqualifying prior conviction or status",
+          "The defendant knew of the firearm's presence"
+        ],
+        "mentalState": "Knowledge of the firearm's presence; the disqualifying status is generally established by the record.",
+        "grading": "Felony",
+        "penalty": "Felony punishable by imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under § 29800, subject to statutory exceptions.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2510",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-felon-in-possession-of-firearm"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 29800",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29800&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2510",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "40d14224f90b51c5b06f412c8d79f3457f5b37bfa9df8796ab46dbc205d17ac4",
+      "record": {
+        "canonicalId": "ca-possession-of-prohibited-weapon",
+        "officialTitle": "Possession of an Assault Weapon",
+        "code": "30605",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 30605",
+        "classification": "offense",
+        "elements": [
+          "The defendant possessed an assault weapon",
+          "The weapon met the statutory definition",
+          "The defendant knew of the weapon's presence"
+        ],
+        "mentalState": "Knowledge of possession; the statutory weapon definition must be met.",
+        "grading": "Felony-level offense with an alternate county-jail punishment under Penal Code § 30605(a).",
+        "penalty": "County jail up to 1 year or imprisonment under Penal Code § 1170(h); a qualifying first violation may instead be punishable by a fine under § 30605(b).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-possession-of-prohibited-weapon"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 30605",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=30605&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "6b84c75d213439a8592bf044d39aa99b0ec56f36c49284d751f2d645fde4c9ff",
+      "record": {
+        "canonicalId": "ca-indecent-exposure-314-1",
+        "officialTitle": "Indecent Exposure",
+        "code": "314(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 314(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant willfully and lewdly exposed the body or private parts in a public place or where others may be offended"
+        ],
+        "mentalState": "Willful and lewd exposure.",
+        "grading": "Misdemeanor.",
+        "penalty": "Generally punishable as a misdemeanor; specific dwelling and repeat-conviction penalties are stated in Penal Code § 314.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1160",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-indecent-exposure"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 314",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=314&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1160",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "dacc386b1f4d15f5cb1f40415fb1790296bbc81ad816fc228fda27f2b8daa39d",
+      "record": {
+        "canonicalId": "ca-accessory-after-the-fact-32",
+        "officialTitle": "Accessory After the Fact",
+        "code": "32, 33",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code §§ 32, 33",
+        "classification": "offense",
+        "elements": [
+          "Another person committed a felony",
+          "The defendant harbored, concealed, or aided that person",
+          "The defendant knew the person committed the felony and intended to help them avoid arrest, trial, conviction, or punishment"
+        ],
+        "mentalState": "Knowledge of the felony and intent to help the felon avoid justice.",
+        "grading": "Felony.",
+        "penalty": "Punishable by a fine up to $5,000, imprisonment under Penal Code § 1170(h), county jail up to 1 year, or both under Penal Code § 33.",
+        "juryInstruction": {
+          "ref": "CALCRIM 440",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-accessory-after-the-fact"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 32",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=32&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 33",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=33&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 440",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "4b9d9d19c9b593cb982e68a92ba765547fe0f0ed856ba3f42d427ad9a334bb2c",
+      "record": {
+        "canonicalId": "ca-littering",
+        "officialTitle": "Littering",
+        "code": "374.4",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 374.4",
+        "classification": "offense",
+        "elements": [
+          "The defendant discarded waste or other material",
+          "The discard occurred in a place and manner prohibited by § 374.4"
+        ],
+        "mentalState": "Intentional or knowing discard as specified by the statute.",
+        "grading": "Infraction or misdemeanor depending on the charged amount and circumstances.",
+        "penalty": "Infraction with mandatory fines of $250–$1,000 for a first conviction, $500–$1,500 for a second, and $750–$3,000 for a third or subsequent conviction under Penal Code § 374.4.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-littering"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 374.4",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=374.4&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "f2337b95b82e0aa558667c6c4dcf7af0756a88ce3674593f032b222acf243e27",
+      "record": {
+        "canonicalId": "ca-animal-cruelty-misdemeanor",
+        "officialTitle": "Animal Cruelty",
+        "code": "597(b)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 597(b)",
+        "classification": "offense",
+        "elements": [
+          "The defendant cruelly killed, injured, overworked, beat, or neglected an animal",
+          "The conduct fell within the misdemeanor subdivision"
+        ],
+        "mentalState": "Intentional or criminally negligent conduct as specified by the charged theory.",
+        "grading": "Misdemeanor under § 597(b); other subdivisions differ.",
+        "penalty": "Misdemeanor punishable by county jail up to 1 year and/or a fine under Penal Code § 597(b).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-animal-cruelty-misdemeanor"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 597",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=597&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "29d9899417c30b8d1e748a87ad8c773338178fa038ccde16167618ade224b3be",
+      "record": {
+        "canonicalId": "ca-fare-evasion",
+        "officialTitle": "Evasion of Payment on Public Transit",
+        "code": "640(c)(1), 640(a)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 640(c)(1); penalty cross-reference: § 640(a)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant evaded payment of a public transit system fare by entering without valid fare",
+          "The conduct occurred in or on a public transportation system facility or vehicle"
+        ],
+        "mentalState": "Intentional evasion of payment.",
+        "grading": "Infraction on a first or second violation; a third or subsequent violation of § 640(c)(1) is a misdemeanor under the § 640(a)(1) penalty cross-reference.",
+        "penalty": "First or second violation: infraction with a fine up to $250 and community service; third or subsequent violation of § 640(c)(1): misdemeanor with a fine up to $400, county jail up to 90 days, or both under § 640(a)(1).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-fare-evasion"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 640",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=640&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "1968335448af7e52a7a0de21586151305afed415be90edef9c7898d809a2efe6",
+      "record": {
+        "canonicalId": "ca-driving-without-insurance",
+        "officialTitle": "Failure to Maintain Evidence of Financial Responsibility",
+        "code": "16028",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code § 16028",
+        "classification": "offense",
+        "elements": [
+          "The defendant drove a motor vehicle",
+          "The defendant failed to provide evidence of financial responsibility when required"
+        ],
+        "mentalState": "Driving without the required evidence; exact defenses depend on the facts.",
+        "grading": "Infraction",
+        "penalty": "Infraction; the fine and proof-of-financial-responsibility consequences depend on the violation and any later proof under Vehicle Code § 16028.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-driving-without-insurance"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 16028",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16028&lawCode=VEH",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "c04ac07299f578848fb42d54f341223a0bc1febf58e83cf076a8f6efab06f80e",
+      "record": {
+        "canonicalId": "ca-expired-registration",
+        "officialTitle": "Operating an Unregistered Vehicle",
+        "code": "4000(a)(1)",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code § 4000(a)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant operated a motor vehicle on a highway",
+          "The vehicle was not registered as required"
+        ],
+        "mentalState": "Operation of an unregistered vehicle; statutory exceptions may apply.",
+        "grading": "Infraction unless another provision applies.",
+        "penalty": "Infraction; registration fees, statutory fines, and any applicable assessments depend on the violation under Vehicle Code § 4000(a)(1).",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-expired-registration"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 4000",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4000&lawCode=VEH",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    }
+  ]
+}

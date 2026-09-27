@@ -1,6 +1,6 @@
 # California coverage and remaining review queue
 
-Configured selectable: 99. Bounded correction pass: 71. Awaiting that pass: 28. Withheld canonical labels: 21.
+Configured selectable: 99. Bounded correction pass: 99. Awaiting that pass: 0. Withheld canonical labels: 21.
 
 Statewide offense coverage: unknown. Live deployment parity: not established by this offline report.
 
@@ -10,49 +10,27 @@ Statewide offense coverage: unknown. Live deployment parity: not established by 
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - No statewide offense enumeration exists yet. Acquiring all primary catalog sources does not establish completeness or discover every missing charge.
 
-Primary-source acquisition: 69/69 declared sections, covering the primary links of 99/99 configured records. Total retained research sources including dependencies: 136 sections/138 versions.
+Primary-source acquisition: 69/69 declared sections, covering the primary links of 99/99 configured records. Total retained research sources including dependencies: 172 sections/175 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |
-| BPC | 1 | 0 | 1 |
-| HSC | 7 | 2 | 5 |
-| PEN | 79 | 61 | 18 |
-| VEH | 12 | 8 | 4 |
+| BPC | 1 | 1 | 0 |
+| HSC | 7 | 7 | 0 |
+| PEN | 79 | 79 | 0 |
+| VEH | 12 | 12 | 0 |
 
-## Next reuse batch
+## Remaining work
 
-These records share primary texts already used in the first batch. Their unreviewed subdivisions and missing dependencies still need substantive review.
+- ca-failure-to-pay-child-support: Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?
+- ca-illegal-fireworks-12677: What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?
+- ca-possession-of-prohibited-weapon: Which currently operative court orders affect the weapon definitions relevant to this possession charge?
 
-The first-batch reuse queue is complete. Next largest groups: PEN:1320 (2 records); PEN:647 (2 records); PEN:653f (2 records).
+See docs/california-remaining-attorney-questions.md for sources and proposed treatment. These focused questions are not an exhaustive list of all legal-review needs.
 
-28 remaining records form 24 shared-primary-source groups using 25 distinct sections. 0 already have all primary text in the first-batch bundle; this is acquisition only, not verification.
+The existing selectable catalog has completed its bounded correction pass. Independent review, known legal questions, deployment parity, and statewide missing-charge discovery remain.
 
-| Shared source group | Records | Primary text acquired | Record IDs |
-| --- | ---: | --- | --- |
-| PEN:1320 | 2 | 1/1 sections | ca-failure-to-appear-1320-a, ca-failure-to-appear-1320-b |
-| PEN:647 | 2 | 1/1 sections | ca-prostitution-solicitation, ca-public-intoxication |
-| PEN:653f | 2 | 1/1 sections | ca-criminal-solicitation-653f-a, ca-criminal-solicitation-653f-b |
-| VEH:23222 | 2 | 1/1 sections | ca-open-container-23222-a, ca-open-container-23222-b |
-| BPC:25662 | 1 | 1/1 sections | ca-minor-in-possession |
-| HSC:11351 | 1 | 1/1 sections | ca-possession-with-intent-to-distribute |
-| HSC:11352 | 1 | 1/1 sections | ca-distribution-of-controlled-substance |
-| HSC:11366 | 1 | 1/1 sections | ca-maintaining-drug-house |
-| HSC:11379.6 | 1 | 1/1 sections | ca-manufacturing-controlled-substance |
-| HSC:12677 | 1 | 1/1 sections | ca-illegal-fireworks-12677 |
-| PEN:182 | 1 | 1/1 sections | ca-conspiracy-182-a1 |
-| PEN:215 | 1 | 1/1 sections | ca-carjacking |
-| PEN:246.3 | 1 | 1/1 sections | ca-discharge-of-firearm-in-city |
-| PEN:25400 | 1 | 1/1 sections | ca-unlawful-carrying-of-weapon |
-| PEN:270 | 1 | 1/1 sections | ca-failure-to-pay-child-support |
-| PEN:29800 | 1 | 1/1 sections | ca-felon-in-possession-of-firearm |
-| PEN:30605 | 1 | 1/1 sections | ca-possession-of-prohibited-weapon |
-| PEN:314 | 1 | 1/1 sections | ca-indecent-exposure-314-1 |
-| PEN:32+PEN:33 | 1 | 2/2 sections | ca-accessory-after-the-fact-32 |
-| PEN:374.4 | 1 | 1/1 sections | ca-littering |
-| PEN:597 | 1 | 1/1 sections | ca-animal-cruelty-misdemeanor |
-| PEN:640 | 1 | 1/1 sections | ca-fare-evasion |
-| VEH:16028 | 1 | 1/1 sections | ca-driving-without-insurance |
-| VEH:4000 | 1 | 1/1 sections | ca-expired-registration |
+0 remaining records form 0 shared-primary-source groups using 0 distinct sections. 0 already have all primary text in the first-batch bundle; this is acquisition only, not verification.
+
 
 ## Withheld canonical labels
 

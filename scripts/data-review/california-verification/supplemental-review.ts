@@ -1,17 +1,18 @@
-/** Reusable checks for future bounded batches that rely on single-version sources. */
+/** Reusable checks for bounded batches with single versions or explicitly scoped common-version evidence. */
 import { createHash } from "node:crypto";
 import { getCaliforniaCanonicalRecord, getCaliforniaCorrectionDependencies } from "../../../shared/california-authority";
 export const californiaEvidenceHash = (value: unknown) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 export interface SupplementalSource { lawCode: string; section: string; versionId: string; contentXml: string; contentSha256: string; effectiveDate: string | null; sourceUrl: string }
 export interface SupplementalReview {
   schemaVersion: number; scope: string; archiveSha256: string; sourceAsOf: string;
+  commonVersionEvidence?: Array<{ key: string; scope: string; passages: string[] }>;
   documents: Record<string, SupplementalSource[]>;
   records: Array<{ id: string; status: string; baselineSha256: string; correctionSha256: string; remainingWork: string; sources: Array<{ key: string; versions: Array<{ versionId: string; contentSha256: string }> }> }>;
 }
 export function validateSupplementalCaliforniaReview(input: {
   review: SupplementalReview;
   baseline: { records: Array<{ catalogSha256: string; record: { canonicalId: string; sources: Array<{ kind: string; url: string }> } }> };
-  corrections: Array<{ id: string; categories: string[]; supportingSections: string[]; supportingVehicleSections?: string[]; supportingHealthSections?: string[]; penalty: { en: string } }>;
+  corrections: Array<{ id: string; categories: string[]; supportingSections: string[]; supportingVehicleSections?: string[]; supportingHealthSections?: string[]; supportingBusinessSections?: string[]; penalty: { en: string } }>;
   retained: Record<string, SupplementalSource[]>; archiveSha256: string; sourceAsOf: string; expectedCount: number;
 }) {
   const { review, baseline, corrections, retained } = input;
@@ -23,6 +24,15 @@ export function validateSupplementalCaliforniaReview(input: {
     for (const doc of versions) {
       const url = new URL(doc.sourceUrl);
       if (`${doc.lawCode}:${doc.section.replace(/\.$/, "")}` !== key || createHash("sha256").update(doc.contentXml).digest("hex") !== doc.contentSha256 || url.hostname !== "leginfo.legislature.ca.gov" || `${url.searchParams.get("lawCode")}:${url.searchParams.get("sectionNum")?.replace(/\.$/, "")}` !== key) throw new Error("Supplemental source changed");
+    }
+  }
+  const common = review.commonVersionEvidence ?? [];
+  if (new Set(common.map(item => item.key)).size !== common.length) throw new Error("Duplicate common-version evidence");
+  for (const item of common) {
+    const versions = documents[item.key];
+    if (!item.scope.trim() || !item.passages.length || !versions || versions.length < 2) throw new Error("Invalid common-version evidence");
+    for (const passage of item.passages) {
+      if (!passage.trim() || versions.some(doc => !doc.contentXml.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().includes(passage))) throw new Error("Common passage missing from a source version");
     }
   }
   const expectedIds = baseline.records.map(row => row.record.canonicalId).sort();
@@ -41,11 +51,13 @@ export function validateSupplementalCaliforniaReview(input: {
     for (const source of row.sources) {
       const versions = documents[source.key];
       if (versions?.some(doc => doc.effectiveDate && doc.effectiveDate.slice(0, 10) > review.sourceAsOf)) throw new Error("Future source requires separate review");
-      if (versions?.length !== 1 || source.versions.length !== 1 || source.versions[0].versionId !== versions[0].versionId || source.versions[0].contentSha256 !== versions[0].contentSha256) throw new Error("Supplemental version evidence incomplete or ambiguous");
+      const expectedBindings = versions?.map(doc => ({ versionId: doc.versionId, contentSha256: doc.contentSha256 }));
+      if (!versions || (versions.length !== 1 && !common.some(item => item.key === source.key)) || JSON.stringify(source.versions) !== JSON.stringify(expectedBindings)) throw new Error("Supplemental version evidence incomplete or ambiguous");
     }
     for (const dep of deps) if (!current.sources.some(source => { const u = new URL(source.url); return source.kind === "classification" && u.searchParams.get("lawCode") === dep.lawCode && u.searchParams.get("sectionNum")?.replace(/\.$/, "") === dep.section; })) throw new Error("Supplemental runtime dependency missing");
   }
   const used = new Set(review.records.flatMap(row => row.sources.map(s => s.key)));
+  if (common.some(item => !used.has(item.key))) throw new Error("Unused common-version evidence");
   if (Object.keys(review.documents).some(key => !used.has(key))) throw new Error("Unused new source");
   return { corrections: review.records.length, addedSections: Object.keys(review.documents).length, addedVersions: Object.values(review.documents).reduce((n,v) => n + v.length, 0), sharedSources: used.size };
 }

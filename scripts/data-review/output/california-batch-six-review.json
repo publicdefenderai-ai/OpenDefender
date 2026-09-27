@@ -1,0 +1,2541 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_shared_source_corrections_not_full_legal_certification",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "sourceAsOf": "2026-09-24",
+  "commonVersionEvidence": [
+    {
+      "key": "VEH:40610",
+      "scope": "Registration correction and the three shared disqualifiers only. Retain both current/repealing and future-operative versions. The motorcycle-specific fourth disqualifier differs on January 1, 2027 and is outside this registration claim. No winning version is selected from the shared effective-date metadata.",
+      "passages": [
+        "(a) (1) Except as provided in paragraph (2), if, after an arrest, crash investigation, or other law enforcement action, it appears that a violation has occurred involving a registration, license, all-terrain vehicle safety certificate, or mechanical requirement of this code, and none of the disqualifying conditions set forth in subdivision (b) exist and the investigating officer decides to take enforcement action, the officer shall prepare, in triplicate, and the violator shall sign, a written notice containing the violator’s promise to correct the alleged violation and to deliver proof of correction of the violation to the issuing agency.",
+        "(1) Evidence of fraud or persistent neglect. (2) The violation presents an immediate safety hazard. (3) The violator does not agree to, or cannot, promptly correct the violation."
+      ]
+    }
+  ],
+  "documents": {
+    "BPC:25667": [
+      {
+        "id": "BPC25667.20102453",
+        "lawCode": "BPC",
+        "section": "25667.",
+        "opStatutes": "2010",
+        "opChapter": "245",
+        "opSection": "3",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_f35c0a0a-168d-11e0-9477-defc54a20998",
+        "division": "9.",
+        "title": null,
+        "part": null,
+        "chapter": "16.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 245, Sec. 3.   (AB 1999)   Effective January 1, 2011.",
+        "contentMember": "LAW_SECTION_TBL_161756.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-09-17 01:00:29",
+        "tableRow": 161756,
+        "tableRowSha256": "83e4d195b096dd98d0c1ace660a6e9d2cb5c4addbb2638515a051f1474abd95b",
+        "contentSha256": "680c06af3d413d96563b89611c0ff09ddfafa2db13e3094fa84d707ff969165d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person under the age of 21 years shall be immune from criminal prosecution under subdivision (a) of Section 25662 and subdivision (b) of Section 25658, where the person establishes all of the following:</p><p>(1)<span class=\"EnSpace\"/>The underage person called 911 and reported that\n\t\t\t\t  either himself or herself or another person was in need of medical assistance due to alcohol consumption.</p><p>(2)<span class=\"EnSpace\"/>The underage person was the first person to make the 911 report.</p><p>(3)<span class=\"EnSpace\"/>The underage person, who reported that another person was in need of medical assistance, remained on the scene with the other person until that medical assistance arrived and cooperated with medical assistance and law enforcement personnel on the scene.</p><p>(b)<span class=\"EnSpace\"/>This section shall not provide immunity from criminal prosecution for any offense that involves activities made dangerous by the consumption of alcoholic beverages, including, but not limited to, a violation of Section 23103 of the Vehicle Code, as specified by Section 23103.5 of the Vehicle Code, or a violation of Sections 23152 and 23153 of the Vehicle Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=25667."
+      }
+    ],
+    "BPC:25668": [
+      {
+        "id": "BPC25668.202037020",
+        "lawCode": "BPC",
+        "section": "25668.",
+        "opStatutes": "2020",
+        "opChapter": "370",
+        "opSection": "20",
+        "effectiveDate": "2021-01-01 00:00:00",
+        "versionId": "id_8e5532bf-397f-11eb-923f-f1b2d79fc0b2",
+        "division": "9.",
+        "title": null,
+        "part": null,
+        "chapter": "16.",
+        "article": "3.",
+        "history": "Amended by Stats. 2020, Ch. 370, Sec. 20.   (SB 1371)   Effective January 1, 2021.",
+        "contentMember": "LAW_SECTION_TBL_155643.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-09-17 01:00:29",
+        "tableRow": 155643,
+        "tableRowSha256": "484d8a27995903891eaa4ce6f251a8a837e81adca029a7188da2147e31c45768",
+        "contentSha256": "3b88c9c0ff3f7bf57a92d1a1482300ca973f393e21c39e30443f967a4a466550",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>A qualified student may taste an alcoholic beverage, and both the student and the qualified academic institution in which the student is enrolled shall not be subject to criminal prosecution under subdivision (a) of Section 25658 and subdivision (a) of Section 25662, if all of the following criteria are met:</p><p>(1)<span class=\"EnSpace\"/>The qualified student tastes the alcoholic beverage while enrolled in a qualified academic institution.</p><p>(2)<span class=\"EnSpace\"/>The qualified academic institution has established an associate’s degree or bachelor’s degree program in any of the following:</p><p>(A)<span class=\"EnSpace\"/>Hotel management.</p><p>(B)<span class=\"EnSpace\"/>Culinary arts.</p><p>(C)<span class=\"EnSpace\"/>Enology or brewing that is designed to train industry professionals in the production of wine or beer.</p><p>(3)<span class=\"EnSpace\"/>The qualified student tastes the alcoholic beverage for educational purposes as part of the instruction in a course required for an associate’s degree or bachelor’s degree.</p><p>(4)<span class=\"EnSpace\"/>The alcoholic beverage remains in the control of an authorized instructor of the qualified academic institution who is at least 21 years of age.</p><p>(b)<span class=\"EnSpace\"/>This section shall not be construed to allow a student under 21 years of age to receive an alcoholic beverage unless it is delivered as part of the student’s curriculum requirements.</p><p>(c)<span class=\"EnSpace\"/>A license or permit is not required to be\n\t\t\t\t  held by a qualified academic institution engaging in the activities authorized by this section, provided an extra fee or charge is not imposed for the alcoholic beverages tasted.</p><p>(d)<span class=\"EnSpace\"/>For the purposes of this section, the following terms have the following meanings:</p><p>(1)<span class=\"EnSpace\"/>“Qualified academic institution” means a public college or university accredited by a commission recognized by the United States Department of Education.</p><p>(2)<span class=\"EnSpace\"/>“Qualified student” means a student enrolled in a qualified academic institution who is at least 18 years of age.</p><p>(3)<span class=\"EnSpace\"/>“Taste” means to draw an alcoholic beverage into the mouth, but does not include swallowing or otherwise consuming the alcoholic beverage.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=25668."
+      }
+    ],
+    "HSC:11018.1": [
+      {
+        "id": "HSC11018.1.202524825",
+        "lawCode": "HSC",
+        "section": "11018.1.",
+        "opStatutes": "2025",
+        "opChapter": "248",
+        "opSection": "25",
+        "effectiveDate": "2026-01-01 00:00:00",
+        "versionId": "id_1747f3f6-c985-11f0-aea3-3b460998bfb4",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 2025, Ch. 248, Sec. 25.   (AB 8)   Effective January 1, 2026.   Note: This section was added on Nov. 8, 2016, by initiative Prop. 64.",
+        "contentMember": "LAW_SECTION_TBL_103161.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 103161,
+        "tableRowSha256": "58c60bdf9704f83bb123a05d876a39409d928f033d236e709dbae419aefe2640",
+        "contentSha256": "69ff1530701c2372ab4cf78d2f4352823ea3d4d8f4db5c728b88427a70f1e29b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>“Cannabis products” means a product containing cannabis or cannabis concentrate and includes, but is not limited to, edible, topical, and inhaled products, and products intended for use on, or consumption by, an animal.</p><p>(b)<span class=\"EnSpace\"/>It shall be presumed that a product intended for human or animal consumption that contains or purports to contain any tetrahydrocannabinol is a cannabis product, regardless of the nature or source of the cannabinoids. This presumption may be rebutted by evidence showing that the product complies with Chapter 9 (commencing with Section 111920) of Part 5 of Division 104 and any regulations promulgated pursuant to that\n\t\t\t\t\t\tchapter.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11018.1."
+      }
+    ],
+    "HSC:11057": [
+      {
+        "id": "HSC11057.2024981",
+        "lawCode": "HSC",
+        "section": "11057.",
+        "opStatutes": "2024",
+        "opChapter": "98",
+        "opSection": "1",
+        "effectiveDate": "2025-01-01 00:00:00",
+        "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": null,
+        "history": "Amended by Stats. 2024, Ch. 98, Sec. 1.   (AB 2018)   Effective January 1, 2025.",
+        "contentMember": "LAW_SECTION_TBL_64914.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 64914,
+        "tableRowSha256": "aa0a365642d6e86d9179643ca04f98d986d38f1955a53dd4866641be0193cc09",
+        "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The controlled substances listed in this section are included in Schedule IV.</p><p>(b)<span class=\"EnSpace\"/>Schedule IV shall consist of the drugs and other substances, by whatever official name, common or usual name, chemical name, or brand name designated, listed in this section.</p><p>(c)<span class=\"EnSpace\"/>Narcotic drugs. Unless specifically excepted or unless listed in another schedule, any material, compound, mixture, or preparation containing any of the following narcotic drugs, or their salts calculated as the free anhydrous base or alkaloid, in limited quantities as set forth below:</p><p>(1)<span class=\"EnSpace\"/>Not more than 1 milligram of difenoxin and not less than 25 micrograms of atropine sulfate\n\t\t\t\t  per dosage unit.</p><p>(2)<span class=\"EnSpace\"/>Dextropropoxyphene (alpha-(+)-4-dimethylamino-1, 2-diphenyl-3-methyl-2-propionoxybutane).</p><p>(3)<span class=\"EnSpace\"/>Butorphanol.</p><p>(d)<span class=\"EnSpace\"/>Depressants. Unless specifically excepted in Section 11059 or elsewhere, or unless listed in another schedule, any material, compound, mixture, or preparation which contains any quantity of the following substances, including its salts, isomers, and salts of isomers whenever the existence of those salts, isomers, and salts of isomers is possible within the specific chemical designation:</p><p>(1)<span class=\"EnSpace\"/>Alprazolam.</p><p>(2)<span class=\"EnSpace\"/>Barbital.</p><p>(3)<span class=\"EnSpace\"/>Chloral betaine.</p><p>(4)<span class=\"EnSpace\"/>Chloral hydrate.</p><p>(5)<span class=\"EnSpace\"/>Chlordiazepoxide.</p><p>(6)<span class=\"EnSpace\"/>Clobazam.</p><p>(7)<span class=\"EnSpace\"/>Clonazepam.</p><p>(8)<span class=\"EnSpace\"/>Clorazepate.</p><p>(9)<span class=\"EnSpace\"/>Diazepam.</p><p>(10)<span class=\"EnSpace\"/>Estazolam.</p><p>(11)<span class=\"EnSpace\"/>Ethchlorvynol.</p><p>(12)<span class=\"EnSpace\"/>Ethinamate.</p><p>(13)<span class=\"EnSpace\"/>Flunitrazepam.</p><p>(14)<span class=\"EnSpace\"/>Flurazepam.</p><p>(15)<span class=\"EnSpace\"/>Halazepam.</p><p>(16)<span class=\"EnSpace\"/>Lorazepam.</p><p>(17)<span class=\"EnSpace\"/>Mebutamate.</p><p>(18)<span class=\"EnSpace\"/>Meprobamate.</p><p>(19)<span class=\"EnSpace\"/>Methohexital.</p><p>(20)<span class=\"EnSpace\"/>Methylphenobarbital (Mephobarbital).</p><p>(21)<span class=\"EnSpace\"/>Midazolam.</p><p>(22)<span class=\"EnSpace\"/>Nitrazepam.</p><p>(23)<span class=\"EnSpace\"/>Oxazepam.</p><p>(24)<span class=\"EnSpace\"/>Paraldehyde.</p><p>(25)<span class=\"EnSpace\"/>Petrichoral.</p><p>(26)<span class=\"EnSpace\"/>Phenobarbital.</p><p>(27)<span class=\"EnSpace\"/>Prazepam.</p><p>(28)<span class=\"EnSpace\"/>Quazepam.</p><p>(29)<span class=\"EnSpace\"/>Temazepam.</p><p>(30)<span class=\"EnSpace\"/>Triazolam.</p><p>(31)<span class=\"EnSpace\"/>Zaleplon.</p><p>(32)<span class=\"EnSpace\"/>Zolpidem.</p><p>(e)<span class=\"EnSpace\"/>Stimulants. Unless specifically excepted or unless listed in another schedule, any material, compound, mixture, or preparation which contains any quantity of the following substances having a stimulant effect on the central nervous system, including its salts, isomers (whether optical, position, or geometric), and salts of those isomers is possible within the specific chemical designation:</p><p>(1)<span class=\"EnSpace\"/>Diethylpropion.</p><p>(2)<span class=\"EnSpace\"/>Mazindol.</p><p>(3)<span class=\"EnSpace\"/>Modafinil.</p><p>(4)<span class=\"EnSpace\"/>Phentermine.</p><p>(5)<span class=\"EnSpace\"/>Pemoline (including organometallic complexes and chelates thereof).</p><p>(6)<span class=\"EnSpace\"/>Pipradrol.</p><p>(7)<span class=\"EnSpace\"/>SPA ((-)-1-dimethylamino-1,2-diphenylethane).</p><p>(8)<span class=\"EnSpace\"/>Cathine ((+)-norpseudoephedrine).</p><p>(f)<span class=\"EnSpace\"/>Other substances. Unless specifically excepted or unless listed in another schedule, any material, compound, mixture, or preparation which contains any quantity of pentazocine, including its salts.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11057."
+      }
+    ],
+    "HSC:11058": [
+      {
+        "id": "HSC11058.1986631",
+        "lawCode": "HSC",
+        "section": "11058.",
+        "opStatutes": "1986",
+        "opChapter": "63",
+        "opSection": "1",
+        "effectiveDate": "1986-04-23 00:00:00",
+        "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": null,
+        "history": "Amended by Stats. 1986, Ch. 63, Sec. 1.   Effective April 23, 1986.",
+        "contentMember": "LAW_SECTION_TBL_64915.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 64915,
+        "tableRowSha256": "297d46d724f976242242a7f8d05cec566920b961d25a2332f682bef021ff4944",
+        "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)\n                <span class=\"EnSpace\"/>The controlled substances listed in this section are included in Schedule V.\n              </p><p>(b)\n                <span class=\"EnSpace\"/>Schedule V shall consist of the drugs and other substances, by whatever official name, common or usual name, chemical name, or brand name designated, listed in this section.\n              </p><p>(c)\n                <span class=\"EnSpace\"/>Narcotic drugs containing nonnarcotic active medicinal ingredients.  Any compound, mixture, or preparation containing any of the following narcotic drugs, or their salts calculated as the free anhydrous base or alkaloid, in limited quantities as set forth below, which shall include one or more nonnarcotic active medicinal ingredients in sufficient proportion to confer upon the compound, mixture, or preparation valuable medicinal qualities other than those possessed by narcotic drugs alone:\n              </p><p>(1)\n                <span class=\"EnSpace\"/>Not more than 200 milligrams of codeine per 100 milliliters or per 100 grams.\n              </p><p>(2)\n                <span class=\"EnSpace\"/>Not more than 100 milligrams of dihydrocodeine per 100 milliliters or per 100 grams.\n              </p><p>(3)\n                <span class=\"EnSpace\"/>Not more than 100 milligrams of ethylmorphine per 100 milliliters or per 100 grams.\n              </p><p>(4)\n                <span class=\"EnSpace\"/>Not more than 2.5 milligrams of diphenoxylate and not less than 25 micrograms of atropine sulfate per dosage unit.\n              </p><p>(5)\n                <span class=\"EnSpace\"/>Not more than 100 milligrams of opium per 100 milliliters or per 100 grams.\n              </p><p>(6)\n                <span class=\"EnSpace\"/>Not more than 0.5 milligram of difenoxin and not less than 25 micrograms of atropine sulfate per dosage unit.\n              </p><p>(d)\n                <span class=\"EnSpace\"/>Buprenorphine.\n              </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11058."
+      }
+    ],
+    "HSC:11362.7": [
+      {
+        "id": "HSC11362.7.2017775112",
+        "lawCode": "HSC",
+        "section": "11362.7.",
+        "opStatutes": "2017",
+        "opChapter": "775",
+        "opSection": "112",
+        "effectiveDate": "2018-01-01 00:00:00",
+        "versionId": "id_3d5c389e-e4ef-11e7-99d3-2f570f4f10eb",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "6.",
+        "article": "2.5.",
+        "history": "Amended by Stats. 2017, Ch. 775, Sec. 112.   (SB 798)   Effective January 1, 2018.",
+        "contentMember": "LAW_SECTION_TBL_72268.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 72268,
+        "tableRowSha256": "72ad4d2c4344cb2fbf866c907e02d77184d1949269e51d3ae47d9c557159df32",
+        "contentSha256": "4954fdddae7b869ce5a3d0adde1f4a440f3fcd684c6018a9fb2cf1845d2be07d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>For purposes of this article, the following definitions shall apply:</p><p>(a)<span class=\"EnSpace\"/>“Attending physician” means an individual who possesses a license in good standing to practice medicine, podiatry, or osteopathy issued by the Medical Board of California, the California Board of Podiatric Medicine, or the Osteopathic Medical Board of California and who has taken responsibility for an aspect of the medical care, treatment, diagnosis, counseling, or referral of a patient and who has conducted a medical examination of that patient before recording in the patient’s medical record the physician’s assessment of whether the patient has a serious medical condition and whether the medical use of cannabis is\n\t\t\t\t\t\tappropriate.</p><p>(b)<span class=\"EnSpace\"/>“Department” means the State Department of Public Health.</p><p>(c)<span class=\"EnSpace\"/>“Person with an identification card” means an individual who is a qualified patient who has applied for and received a valid identification card pursuant to this article.</p><p>(d)<span class=\"EnSpace\"/>“Primary caregiver” means the individual, designated by a qualified patient, who has consistently assumed responsibility for the housing, health, or safety of that patient, and may include any of the following:</p><p>(1)<span class=\"EnSpace\"/>In a case in which a qualified patient or person with an identification card receives medical care or supportive services, or both, from a clinic licensed pursuant to Chapter 1 (commencing with\n\t\t\t\t\t\tSection 1200) of Division 2, a health care facility licensed pursuant to Chapter 2 (commencing with Section 1250) of Division 2, a residential care facility for persons with chronic life-threatening illness licensed pursuant to Chapter 3.01 (commencing with Section 1568.01) of Division 2, a residential care facility for the elderly licensed pursuant to Chapter 3.2 (commencing with Section 1569) of Division 2, a hospice, or a home health agency licensed pursuant to Chapter 8 (commencing with Section 1725) of Division 2, the owner or operator, or no more than three employees who are designated by the owner or operator, of the clinic, facility, hospice, or home health agency, if designated as a primary caregiver by that qualified patient or person with an identification card.</p><p>(2)<span class=\"EnSpace\"/>An individual who has been designated as a primary caregiver by\n\t\t\t\t\t\tmore than one qualified patient or person with an identification card, if every qualified patient or person with an identification card who has designated that individual as a primary caregiver resides in the same city or county as the primary caregiver.</p><p>(3)<span class=\"EnSpace\"/>An individual who has been designated as a primary caregiver by a qualified patient or person with an identification card who resides in a city or county other than that of the primary caregiver, if the individual has not been designated as a primary caregiver by any other qualified patient or person with an identification card.</p><p>(e)<span class=\"EnSpace\"/>A primary caregiver shall be at least 18 years of age, unless the primary caregiver is the parent of a minor child who is a qualified patient or a person with an identification card or the primary\n\t\t\t\t\t\tcaregiver is a person otherwise entitled to make medical decisions under state law pursuant to Section 6922, 7002, 7050, or 7120 of the Family Code.</p><p>(f)<span class=\"EnSpace\"/>“Qualified patient” means a person who is entitled to the protections of Section 11362.5, but who does not have an identification card issued pursuant to this article.</p><p>(g)<span class=\"EnSpace\"/>“Identification card” means a document issued by the department that identifies a person authorized to engage in the medical use of cannabis and the person’s designated primary caregiver, if any.</p><p>(h)<span class=\"EnSpace\"/>“Serious medical condition” means all of the following medical conditions:</p><p>(1)<span class=\"EnSpace\"/>Acquired immune deficiency syndrome (AIDS).</p><p>(2)<span class=\"EnSpace\"/>Anorexia.</p><p>(3)<span class=\"EnSpace\"/>Arthritis.</p><p>(4)<span class=\"EnSpace\"/>Cachexia.</p><p>(5)<span class=\"EnSpace\"/>Cancer.</p><p>(6)<span class=\"EnSpace\"/>Chronic pain.</p><p>(7)<span class=\"EnSpace\"/>Glaucoma.</p><p>(8)<span class=\"EnSpace\"/>Migraine.</p><p>(9)<span class=\"EnSpace\"/>Persistent muscle spasms, including, but not limited to, spasms associated with multiple sclerosis.</p><p>(10)<span class=\"EnSpace\"/>Seizures, including, but not limited to, seizures associated with epilepsy.</p><p>(11)<span class=\"EnSpace\"/>Severe nausea.</p><p>(12)<span class=\"EnSpace\"/>Any other chronic or persistent medical symptom that either:</p><p>(A)<span class=\"EnSpace\"/>Substantially limits the ability of the person to conduct one or more major life activities as defined in the federal Americans with Disabilities Act of 1990 (Public Law 101-336).</p><p>(B)<span class=\"EnSpace\"/>If not alleviated, may cause serious harm to the patient’s safety or physical or mental health.</p><p>(i)<span class=\"EnSpace\"/>“Written documentation” means accurate reproductions of those portions of a patient’s medical records that have been created by the attending physician, that contain the information required by paragraph (2) of subdivision (a) of Section 11362.715, and that the patient may submit as\n\t\t\t\t\t\tpart of an application for an identification card.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11362.7."
+      }
+    ],
+    "HSC:11379.7": [
+      {
+        "id": "HSC11379.7.19968711",
+        "lawCode": "HSC",
+        "section": "11379.7.",
+        "opStatutes": "1996",
+        "opChapter": "871",
+        "opSection": "1",
+        "effectiveDate": "1997-01-01 00:00:00",
+        "versionId": "id_f60e7e25-291f-11d9-8b50-d28ad8cc76ba",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "6.",
+        "article": "5.",
+        "history": "Added by Stats. 1996, Ch. 871, Sec. 1.   Effective January 1, 1997.",
+        "contentMember": "LAW_SECTION_TBL_108451.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 108451,
+        "tableRowSha256": "162c17914abb7d1cde5226b5627d36daee65e7312ddb03f6bbea517a379df011",
+        "contentSha256": "3063ef92142cb347d5425178c8bedd71a9c561af5157dadf40991bbbd0b0b47d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)\n                  <span class=\"EnSpace\"/>Except as provided in subdivision (b), any person convicted of a violation of subdivision (a) of Section 11379.6 or Section 11383, or of an attempt to violate subdivision (a) of Section 11379.6 or Section 11383, as those sections relate to methamphetamine or phencyclidine, when the commission or attempted commission of the crime occurs in a structure where any child under 16 years of age is present, shall, in addition and consecutive to the punishment prescribed for the felony of which he or she has been convicted, be punished by an additional term of two years in the state prison.\n                </p><p>(b)\n                  <span class=\"EnSpace\"/>Any person convicted of a violation of subdivision (a) of Section 11379.6 or Section 11383, or of an attempt to violate subdivision (a) of Section 11379.6 or Section 11383, as those sections relate to methamphetamine or phencyclidine, where the commission of the crime causes any child under 16 years of age to suffer great bodily injury, shall, in addition and consecutive to the punishment prescribed for the felony of which he or she has been convicted, be punished by an additional term of five years in the state prison.\n                </p><p>(c)\n                  <span class=\"EnSpace\"/>As used in this section, “structure” means any house, apartment building, shop, warehouse, barn, building, vessel, railroad car, cargo container, motor vehicle, housecar, trailer, trailer coach, camper, mine, floating home, or other enclosed structure capable of holding a child and manufacturing equipment.\n                </p><p>(d)\n                  <span class=\"EnSpace\"/>As used in this section, “great bodily injury” has the same meaning as defined in Section 12022.7 of the Penal Code.\n                </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11379.7."
+      }
+    ],
+    "HSC:12505": [
+      {
+        "id": "HSC12505.1977513",
+        "lawCode": "HSC",
+        "section": "12505.",
+        "opStatutes": "1977",
+        "opChapter": "513",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_f840c741-291f-11d9-8b50-d28ad8cc76ba",
+        "division": "11.",
+        "title": null,
+        "part": "2.",
+        "chapter": "1.",
+        "article": null,
+        "history": "Amended by Stats. 1977, Ch. 513.",
+        "contentMember": "LAW_SECTION_TBL_75147.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:14",
+        "tableRow": 75147,
+        "tableRowSha256": "5458312ec848b11ad495d1547f9e4def7beaad223b3170fed5ae362f477237dc",
+        "contentSha256": "6c799ff2a111e2b077409d562af298093efbd369a21e42223320a0287e646efa",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>“Dangerous fireworks” includes all of the following:</p><p>(a)\n                  <span class=\"EnSpace\"/>Any fireworks which contain any of the following:\n                </p><p>(1)\n                  <span class=\"EnSpace\"/>Arsenic sulfide, arsenates, or arsenites.\n                </p><p>(2)\n                  <span class=\"EnSpace\"/>Boron.\n                </p><p>(3)\n                  <span class=\"EnSpace\"/>Chlorates, except:\n                </p><p>(A)\n                  <span class=\"EnSpace\"/>In colored smoke mixture in which an equal or greater amount of sodium bicarbonate is included.\n                </p><p>(B)\n                  <span class=\"EnSpace\"/>In caps and party poppers.\n                </p><p>(C)\n                  <span class=\"EnSpace\"/>In those small items (such as ground spinners) wherein the total powder content does not exceed 4 grams of which not greater than 15 percent (or 600 milligrams) is potassium, sodium, or barium chlorate.\n                </p><p>(4)\n                  <span class=\"EnSpace\"/>Gallates or Gallic acid.\n                </p><p>(5)\n                  <span class=\"EnSpace\"/>Magnesium (magnesium-aluminum alloys, called magnalium, are permitted).\n                </p><p>(6)\n                  <span class=\"EnSpace\"/>Mercury salts.\n                </p><p>(7)\n                  <span class=\"EnSpace\"/>Phosphorous (red or white except that red phosphorus is permissible in caps and party poppers).\n                </p><p>(8)\n                  <span class=\"EnSpace\"/>Picrates or picric acid.\n                </p><p>(9)\n                  <span class=\"EnSpace\"/>Thiocyanates.\n                </p><p>(10)\n                  <span class=\"EnSpace\"/>Titanium, except in particle size greater than 100-mesh.\n                </p><p>(11)\n                  <span class=\"EnSpace\"/>Zirconium.\n                </p><p>(b)\n                  <span class=\"EnSpace\"/>Firecrackers.\n                </p><p>(c)\n                  <span class=\"EnSpace\"/>Skyrockets and rockets, including all devices which employ any combustible or explosive material and which rise in the air during discharge.\n                </p><p>(d)\n                  <span class=\"EnSpace\"/>Roman candles, including all devices which discharge balls of fire into the air.\n                </p><p>(e)\n                  <span class=\"EnSpace\"/>Chasers, including all devices which dart or travel about the surface of the ground during discharge.\n                </p><p>(f)\n                  <span class=\"EnSpace\"/>Sparklers more than 10 inches in length or one-fourth of one inch in diameter.\n                </p><p>(g)\n                  <span class=\"EnSpace\"/>All fireworks designed and intended by the manufacturer to create the element of surprise upon the user.  These items include, but are not limited to, auto-foolers, cigarette loads, exploding golf balls, and trick matches.\n                </p><p>(h)\n                  <span class=\"EnSpace\"/>Fireworks known as devil-on-the-walk, or any other firework which explodes through means of friction, unless otherwise classified by the State Fire Marshal pursuant to this part.\n                </p><p>(i)\n                  <span class=\"EnSpace\"/>Torpedoes of all kinds which explode on impact.\n                </p><p>(j)\n                  <span class=\"EnSpace\"/>Fireworks kits.\n                </p><p>(k)\n                  <span class=\"EnSpace\"/>Such other fireworks examined and tested by the State Fire Marshal and determined by him, with the advice of the State Board of Fire Services, to possess characteristics of design or construction which make such fireworks unsafe for use by any person not specially qualified or trained in the use of fireworks.\n                </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12505."
+      }
+    ],
+    "HSC:12700": [
+      {
+        "id": "HSC12700.20233684",
+        "lawCode": "HSC",
+        "section": "12700.",
+        "opStatutes": "2023",
+        "opChapter": "368",
+        "opSection": "4",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_c93f3905-84a8-11ee-bcfe-9f16e66157a6",
+        "division": "11.",
+        "title": null,
+        "part": "2.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 2023, Ch. 368, Sec. 4.   (AB 1403)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_75417.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:14",
+        "tableRow": 75417,
+        "tableRowSha256": "4a0923fc40ba1b4aecc94697ddf006e33c1ed26f59f9dea50b807603da1a4870",
+        "contentSha256": "e84789dfbb86ce87d7769b23e3b8f7c01362056a9b5ed67da36a5e75dbdd1bf0",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in Section 12702 and subdivision (b), a person who violates any provision of this part, or any regulations issued pursuant to this part, is guilty of a misdemeanor, and upon conviction shall be punished by a fine of not less than one thousand dollars ($1,000) or more than two thousand dollars ($2,000), or by imprisonment in the county jail for not exceeding one year, or by both that fine and imprisonment.</p><p>(b)<span class=\"EnSpace\"/>A person who violates any provision of this part, or any regulations issued pursuant to this part, by possessing dangerous fireworks shall be subject to the following:</p><p>(1)<span class=\"EnSpace\"/>A person who possesses a gross weight, including packaging, of less than 25 pounds of unaltered\n\t\t\t\t  dangerous fireworks, as defined in Section 12505, is guilty of a misdemeanor, and upon conviction shall be punished by a fine of not less than one thousand dollars ($1,000) or more than two thousand dollars ($2,000), or by imprisonment in the county jail for not exceeding one year, or both that fine and imprisonment. Upon a second or subsequent conviction, a person shall be punished by a fine of not less than two thousand dollars ($2,000), or by imprisonment in a county jail not exceeding one year or by both that fine and imprisonment.</p><p>(2)<span class=\"EnSpace\"/>A person who possesses a gross weight, including packaging, of not less than 25 pounds or more than 100 pounds of unaltered dangerous fireworks, as defined in Section 12505, is guilty of a public offense, and upon conviction shall be punished by imprisonment in a county jail for not more than one year, or by a fine of not less than two thousand dollars ($2,000) or more than ten thousand dollars ($10,000), or\n\t\t\t\t  by both that fine and imprisonment.</p><p>(3)<span class=\"EnSpace\"/>A person who possesses a gross weight, including packaging, of not less than 100 pounds or more than 5,000 pounds of unaltered dangerous fireworks, as defined in Section 12505, is guilty of a public offense, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code or a county jail for not more than one year, or by a fine of not less than ten thousand dollars ($10,000) or more than twenty thousand dollars ($20,000), or by both that fine and imprisonment.</p><p>(4)<span class=\"EnSpace\"/>A person who possesses a gross weight, including packaging, of more than 5,000 pounds of unaltered dangerous fireworks, as defined in Section 12505, is guilty of a public offense, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code, or a county jail for not more than\n\t\t\t\t  one year, or by a fine of not less than twenty thousand dollars ($20,000) or more than one hundred thousand dollars ($100,000), or by both that fine and imprisonment.</p><p>(c)<span class=\"EnSpace\"/>Subdivision (b) shall not apply to a person who holds and is operating within the scope of a valid license as described in Section 12516 or valid permit as described in Section 12522.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12700."
+      }
+    ],
+    "PEN:16580": [
+      {
+        "id": "PEN16580.20107116",
+        "lawCode": "PEN",
+        "section": "16580.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dbb0ea7b-0ebc-11e0-9b76-a227e281d99a",
+        "division": "2.",
+        "title": "1.",
+        "part": "6.",
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_90894.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 90894,
+        "tableRowSha256": "3ca7a19bce888e1fea2271a385ae44f84b59784e1f37a5a4987a804906706b0a",
+        "contentSha256": "f76eb8b71749aaf64a6c612acbd6d18f091086486b5bd82cc8f1278d29bf1b4b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as stated in subdivision (c), the following provisions are continuations of provisions that were included in former Chapter 1 (commencing with Section 12000) of Title 2 of Part 4, entitled “Firearms,” when that chapter was repealed by the Deadly Weapons Recodification Act of 2010: </p><p>(1)<span class=\"EnSpace\"/>Sections 12001 to 12022.95, inclusive. </p><p>(2)<span class=\"EnSpace\"/>Sections 16120 to 16140, inclusive. </p><p>(3)<span class=\"EnSpace\"/>Subdivision (b) of Section 16170, to the extent it continues former Sections 12001, 12060, 12078, 12085, and 12088.8, as those sections read when they were repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(4)<span class=\"EnSpace\"/>Subdivision (c) of Section 16170. </p><p>(5)<span class=\"EnSpace\"/>Section 16190. </p><p>(6)<span class=\"EnSpace\"/>Sections 16220 to 16240, inclusive. </p><p>(7)<span class=\"EnSpace\"/>Section 16250, to the extent it continues former Section 12001, as that section read when it was repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(8)<span class=\"EnSpace\"/>Section 16260. </p><p>(9)<span class=\"EnSpace\"/>Sections 16320 to 16340, inclusive. </p><p>(10)<span class=\"EnSpace\"/>Section 16360. </p><p>(11)<span class=\"EnSpace\"/>Sections 16400 to 16410, inclusive. </p><p>(12)<span class=\"EnSpace\"/>Section 16430. </p><p>(13)<span class=\"EnSpace\"/>Section 16450, to the extent it continues former Sections 12060 and 12086, as those sections read when they were repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(14)<span class=\"EnSpace\"/>Subdivision (b) of Section 16460. </p><p>(15)<span class=\"EnSpace\"/>Section 16470. </p><p>(16)<span class=\"EnSpace\"/>Section 16490. </p><p>(17)<span class=\"EnSpace\"/>Subdivision (a) of Section 16520, to the extent it\n\t\t\t\tcontinues former Section 12001, as that section read when it was repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(18)<span class=\"EnSpace\"/>Subdivisions (b) to (g), inclusive, of Section 16520. </p><p>(19)<span class=\"EnSpace\"/>Sections 16530 to 16550, inclusive. </p><p>(20)<span class=\"EnSpace\"/>Section 16570. </p><p>(21)<span class=\"EnSpace\"/>Sections 16600 to 16640, inclusive. </p><p>(22)<span class=\"EnSpace\"/>Section 16650, to the extent it continues former Section 12060, as that section read when it was repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(23)<span class=\"EnSpace\"/>Section 16662, to the extent it continues former Section 12060, as that section read when it was repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(24)<span class=\"EnSpace\"/>Sections 16670 to 16690, inclusive. </p><p>(25)<span class=\"EnSpace\"/>Sections 16720 to 16760, inclusive. </p><p>(26)<span class=\"EnSpace\"/>Sections 16800 and 16810. </p><p>(27)<span class=\"EnSpace\"/>Sections 16830 to 16870, inclusive. </p><p>(28)<span class=\"EnSpace\"/>Sections 16920 to 16960, inclusive. </p><p>(29)<span class=\"EnSpace\"/>Sections 16990 and 17000. </p><p>(30)<span class=\"EnSpace\"/>Sections 17020 to 17070, inclusive. </p><p>(31)<span class=\"EnSpace\"/>Section 17090, to the extent it continues former Section 12020, as that section read when it was repealed by the Deadly Weapons Recodification Act of 2010. </p><p>(32)<span class=\"EnSpace\"/>Section 17110. </p><p>(33)<span class=\"EnSpace\"/>Section 17125. </p><p>(34)<span class=\"EnSpace\"/>Section 17160. </p><p>(35)<span class=\"EnSpace\"/>Sections 17170 to 17200, inclusive. </p><p>(36)<span class=\"EnSpace\"/>Sections 17270 to 17290, inclusive. </p><p>(37)<span class=\"EnSpace\"/>Sections 17310 and 17315. </p><p>(38)<span class=\"EnSpace\"/>Sections 17330 to 17505, inclusive. </p><p>(39)<span class=\"EnSpace\"/>Sections 17515 to 18500, inclusive. </p><p>(40)<span class=\"EnSpace\"/>Sections 19100 to 19290, inclusive. </p><p>(41)<span class=\"EnSpace\"/>Sections 20200 to 21390, inclusive. </p><p>(42)<span class=\"EnSpace\"/>Sections\n\t\t\t\t21790 to 22490, inclusive. </p><p>(43)<span class=\"EnSpace\"/>Sections 23500 to 30290, inclusive. </p><p>(44)<span class=\"EnSpace\"/>Sections 30345 to 30365, inclusive. </p><p>(45)<span class=\"EnSpace\"/>Sections 31500 to 31590, inclusive. </p><p>(46)<span class=\"EnSpace\"/>Sections 31705 to 31830, inclusive. </p><p>(47)<span class=\"EnSpace\"/>Sections 32310 to 32450, inclusive. </p><p>(48)<span class=\"EnSpace\"/>Sections 32900 to 33320, inclusive. </p><p>(49)<span class=\"EnSpace\"/>Sections 33600 to 34370, inclusive. </p><p>(b)<span class=\"EnSpace\"/>Except as stated in subdivision (c), the provisions listed in subdivision (a) may be referred to as “former Chapter 1 provisions.” </p><p>(c)<span class=\"EnSpace\"/>Subdivision (a) does not include any provision that was first codified in one of the specified numerical ranges after the effective date of the Deadly Weapons Recodification Act of 2010.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16580."
+      }
+    ],
+    "PEN:184": [
+      {
+        "id": "PEN184.1919125",
+        "lawCode": "PEN",
+        "section": "184.",
+        "opStatutes": "1919",
+        "opChapter": "125",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_65d6d33e-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "7.",
+        "part": "1.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 1919, Ch. 125.",
+        "contentMember": "LAW_SECTION_TBL_89641.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89641,
+        "tableRowSha256": "c1ada11341d4f6c8b1366ffaea1bf4098f418dd7cfa7de1b0df7d7f436096a93",
+        "contentSha256": "8d021d15a69f8b4a9d5c94f6eb3b3091cd1871dee8507a9853ddae6b59e0fe43",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>No agreement amounts to a conspiracy, unless some act, beside such agreement, be done within this state to effect the object thereof, by one or more of the parties to such agreement and the trial of cases of conspiracy may be had in any county in which any such act be done.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=184."
+      }
+    ],
+    "PEN:23515": [
+      {
+        "id": "PEN23515.20107116",
+        "lawCode": "PEN",
+        "section": "23515.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dbe8270b-0ebc-11e0-9b76-a227e281d99a",
+        "division": "1.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_76439.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 76439,
+        "tableRowSha256": "b1d69c91eaaac3769703693c7e1e379b2c3ef8d77584d67e0c929346a64c2878",
+        "contentSha256": "24facaa4be7c2499910ddc6eafe04064822ec7d520872da64b9f7d78cbf012f4",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p> As used in the provisions listed in Section 16580, an offense that involves the violent use of a firearm includes any of the following: </p><p>(a)<span class=\"EnSpace\"/>A violation of paragraph (2) or (3) of subdivision (a) of Section 245 or a violation of subdivision (d) of Section 245. </p><p>(b)<span class=\"EnSpace\"/>A violation of Section 246. </p><p>(c)<span class=\"EnSpace\"/>A violation of paragraph (2) of subdivision (a) of Section 417. </p><p>(d)<span class=\"EnSpace\"/>A violation of subdivision (c) of Section 417.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=23515."
+      }
+    ],
+    "PEN:236.1": [
+      {
+        "id": "PEN236.1.20242266",
+        "lawCode": "PEN",
+        "section": "236.1.",
+        "opStatutes": "2024",
+        "opChapter": "226",
+        "opSection": "6",
+        "effectiveDate": "2025-01-01 00:00:00",
+        "versionId": "id_f0f76267-ac20-11ef-b77a-e14b39306f8a",
+        "division": null,
+        "title": "8.",
+        "part": "1.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 2024, Ch. 226, Sec. 6.   (AB 3278)   Effective January 1, 2025.",
+        "contentMember": "LAW_SECTION_TBL_90078.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 90078,
+        "tableRowSha256": "a50414fc5e095ce51d3da6d23c7269a6aea771996a5ead5e086fd79de2ffe5dc",
+        "contentSha256": "386eb7271be5b4426b5dab885e1f616ddab2b0f9a811b44f5de01facbf863db1",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>A person who deprives or violates the personal liberty of another with the intent to obtain forced labor or services, is guilty of human trafficking and shall be punished by imprisonment in the state prison for 5, 8, or 12 years and a fine of not more than five hundred thousand dollars ($500,000).</p><p>(b)<span class=\"EnSpace\"/>A person who deprives or violates the personal liberty of another with the intent to effect or maintain a violation of Section 266, 266h, 266i, 266j, 267, 311.1, 311.2, 311.3, 311.4, 311.5, 311.6, or 518 is guilty of human trafficking and shall be punished by imprisonment in the state prison for 8, 14, or 20 years and a fine of not more than five hundred thousand dollars ($500,000).</p><p>(c)<span class=\"EnSpace\"/>A person who\n\t\t\t\t  causes, induces, or persuades, or attempts to cause, induce, or persuade, a person who is a minor at the time of commission of the offense to engage in a commercial sex act, with the intent to effect or maintain a violation of Section 266, 266h, 266i, 266j, 267, 311.1, 311.2, 311.3, 311.4, 311.5, 311.6, or 518 is guilty of human trafficking. A violation of this subdivision is punishable by imprisonment in the state prison as follows:</p><p>(1)<span class=\"EnSpace\"/>Five, 8, or 12 years and a fine of not more than five hundred thousand dollars ($500,000).</p><p>(2)<span class=\"EnSpace\"/>Fifteen years to life and a fine of not more than five hundred thousand dollars ($500,000) when the offense involves force, fear, fraud, deceit, coercion, violence, duress, menace, or threat of unlawful injury to the victim or to another person.</p><p>(d)<span class=\"EnSpace\"/>In determining whether a minor was\n\t\t\t\t  caused, induced, or persuaded to engage in a commercial sex act, the totality of the circumstances, including the age of the victim, the victim’s relationship to the trafficker or agents of the trafficker, and any handicap or disability of the victim, shall be considered.</p><p>(e)<span class=\"EnSpace\"/>Consent by a victim of human trafficking who is a minor at the time of the commission of the offense is not a defense to a criminal prosecution under this section.</p><p>(f)<span class=\"EnSpace\"/>Mistake of fact as to the age of a victim of human trafficking who is a minor at the time of the commission of the offense is not a defense to a criminal prosecution under this section.</p><p>(g)<span class=\"EnSpace\"/>The Legislature finds that the definition of human trafficking in this section is equivalent to the federal definition of a severe form of trafficking found in Section 7102(11) of Title 22 of\n\t\t\t\t  the United States Code.</p><p>(h)<span class=\"EnSpace\"/>For purposes of this chapter, the following definitions apply:</p><p>(1)<span class=\"EnSpace\"/>“Coercion” includes a scheme, plan, or pattern intended to cause a person to believe that failure to perform an act would result in serious harm to or physical restraint against any person; the abuse or threatened abuse of the legal process; debt bondage; or providing and facilitating the possession of a controlled substance to a person with the intent to impair the person’s judgment.</p><p>(2)<span class=\"EnSpace\"/>“Commercial sex act” means sexual conduct on account of which anything of value is given or received by a person.</p><p>(3)<span class=\"EnSpace\"/>“Deprivation or violation of the personal liberty of another” includes substantial and sustained restriction of another’s liberty accomplished through force,\n\t\t\t\t  fear, fraud, deceit, coercion, violence, duress, menace, or threat of unlawful injury to the victim or to another person, under circumstances where the person receiving or apprehending the threat reasonably believes that it is likely that the person making the threat would carry it out.</p><p>(4)<span class=\"EnSpace\"/>“Duress” includes a direct or implied threat of force, violence, danger, hardship, or retribution sufficient to cause a reasonable person to acquiesce in or perform an act which the person would otherwise not have submitted to or performed; a direct or implied threat to destroy, conceal, remove, confiscate, or possess an actual or purported passport or immigration document of the victim; or knowingly destroying, concealing, removing, confiscating, or possessing an actual or purported passport or immigration document of the victim.</p><p>(5)<span class=\"EnSpace\"/>“Forced labor or services” means labor or services that are\n\t\t\t\t  performed or provided by a person and are obtained or maintained through force, fraud, duress, or coercion, or equivalent conduct that would reasonably overbear the will of the person.</p><p>(6)<span class=\"EnSpace\"/>“Great bodily injury” means a significant or substantial physical injury.</p><p>(7)<span class=\"EnSpace\"/>“Minor” means a person less than 18 years of age.</p><p>(8)<span class=\"EnSpace\"/>“Serious harm” includes any harm, whether physical or nonphysical, including psychological, financial, or reputational harm, that is sufficiently serious, under all the surrounding circumstances, to compel a reasonable person of the same background and in the same circumstances to perform or to continue performing labor, services, or commercial sexual acts in order to avoid incurring that harm.</p><p>(i)<span class=\"EnSpace\"/>The total circumstances, including the\n\t\t\t\t  age of the victim, the relationship between the victim and the trafficker or agents of the trafficker, and any handicap or disability of the victim, shall be factors to consider in determining the presence of “deprivation or violation of the personal liberty of another,” “duress,” and “coercion” as described in this section.</p><p>(j)<span class=\"EnSpace\"/>In any case brought pursuant to this section, the prosecutor shall consider whether to seek protective orders pursuant to Section 136.2.</p><p>(k)<span class=\"EnSpace\"/>A court shall report a conviction of subdivision (a), (b), or (c) of this section that occurred while the person was using a commercial motor vehicle, as defined in Section 15210 of the Vehicle Code, to the Department of Motor Vehicles.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=236.1."
+      }
+    ],
+    "PEN:25450": [
+      {
+        "id": "PEN25450.20132671",
+        "lawCode": "PEN",
+        "section": "25450.",
+        "opStatutes": "2013",
+        "opChapter": "267",
+        "opSection": "1",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6995800e-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended by Stats. 2013, Ch. 267, Sec. 1.   (AB 703)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_84527.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 84527,
+        "tableRowSha256": "44ec8f597f8313cbedbb7c37e9aedce52aaa9ff1a04f103226d73170930156a7",
+        "contentSha256": "1e8eafd958c813b4fac5a92953185174b39f816997966d565051e7195c0af790",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As provided in this article, Section 25400 does not apply to, or affect, any of the following:</p><p>(a)<span class=\"EnSpace\"/>Any peace officer, listed in Section 830.1 or 830.2, or subdivision (a) of Section 830.33, whether active or honorably retired.</p><p>(b)<span class=\"EnSpace\"/>Any other duly appointed peace officer.</p><p>(c)<span class=\"EnSpace\"/>Any honorably retired peace officer listed in subdivision (c) of Section 830.5.</p><p>(d)<span class=\"EnSpace\"/>Any other honorably retired peace officer who during the course and scope of his or her appointment as a peace officer was authorized to, and did, carry a firearm.</p><p>(e)<span class=\"EnSpace\"/>Any full-time paid peace officer of another state or the federal government who is carrying out official duties while in California.</p><p>(f)<span class=\"EnSpace\"/>Any person summoned by any of these officers to assist in making arrests or preserving the peace while the person is actually engaged in assisting that officer.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25450."
+      }
+    ],
+    "PEN:25610": [
+      {
+        "id": "PEN25610.20232498",
+        "lawCode": "PEN",
+        "section": "25610.",
+        "opStatutes": "2023",
+        "opChapter": "249",
+        "opSection": "8",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_941a536b-8258-11ee-bcfe-9f16e66157a6",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Amended by Stats. 2023, Ch. 249, Sec. 8.   (SB 2)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_85289.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 85289,
+        "tableRowSha256": "56c2ba1ed5ece124414f47f1f471bcaf8fa76e7af59d73740bb922f7aaa1b281",
+        "contentSha256": "f36801d81b5aed3aaf476a645f1143298854afa0222b2bdca956dde5cf8afb90",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25400 shall not be construed to prohibit any citizen of the United States over 18 years of age who resides or is temporarily within this state, and who is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm, from transporting or carrying any pistol, revolver, or other firearm capable of being concealed upon the person for any purpose specified in Sections 25510 to 25595, inclusive, provided that either of the following applies to the firearm:</p><p>(a)<span class=\"EnSpace\"/>The firearm is unloaded, within a motor vehicle, and locked in the vehicle’s trunk or in a locked container in the vehicle.</p><p>(b)<span class=\"EnSpace\"/>The firearm is\n\t\t\t\t\t\tunloaded, carried by the person directly to or from any motor vehicle, and, while carrying the firearm, the firearm is contained within a locked container.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25610."
+      }
+    ],
+    "PEN:25655": [
+      {
+        "id": "PEN25655.20107116",
+        "lawCode": "PEN",
+        "section": "25655.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dbffa77d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83657.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83657,
+        "tableRowSha256": "3ac6cddd7bdc10fd411ee1bb04e0944c524d89569de91121effef172e3f394b9",
+        "contentSha256": "3e13ddc3b9119f3b58fd16ef6eb221d98eca615bd5eef0990469b9bf50ed4fda",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25400 does not apply to, or affect, the carrying of a pistol, revolver, or other firearm capable of being concealed upon the person by a person who is authorized to carry that weapon in a concealed manner pursuant to Chapter 4 (commencing with Section 26150).</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25655."
+      }
+    ],
+    "PEN:30510": [
+      {
+        "id": "PEN30510.202454015",
+        "lawCode": "PEN",
+        "section": "30510.",
+        "opStatutes": "2024",
+        "opChapter": "540",
+        "opSection": "15",
+        "effectiveDate": "2025-01-01 00:00:00",
+        "versionId": "id_e4f7fbff-ac21-11ef-b77a-e14b39306f8a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "1.",
+        "history": "Amended by Stats. 2024, Ch. 540, Sec. 15.   (AB 3064)   Effective January 1, 2025.",
+        "contentMember": "LAW_SECTION_TBL_92209.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92209,
+        "tableRowSha256": "37a2384bfa13cd107d90843fd8facaed8a30c8f37250df898ccfa3eee78f0113",
+        "contentSha256": "5611cd72ae223fb14a09d04aced17f5893a9bf8aa739eee34e63b81e1d5579b7",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As used in this chapter and in Sections 16780, 17000, 27555, 27560, 27565, 27875, 27920, 27966, and 28000, “assault weapon” means the following designated semiautomatic firearms:</p><p>(a)<span class=\"EnSpace\"/>All of the following specified rifles:</p><p>(1)<span class=\"EnSpace\"/>All AK series including, but not limited to, the models identified as follows:</p><p>(A)<span class=\"EnSpace\"/>Made in China AK, AKM, AKS, AK47, AK47S, 56, 56S, 84S, and 86S.</p><p>(B)<span class=\"EnSpace\"/>Norinco 56, 56S, 84S, and 86S.</p><p>(C)<span class=\"EnSpace\"/>Poly Technologies AKS and AK47.</p><p>(D)<span class=\"EnSpace\"/>MAADI AK47 and ARM.</p><p>(2)<span class=\"EnSpace\"/>UZI and Galil.</p><p>(3)<span class=\"EnSpace\"/>Beretta AR-70.</p><p>(4)<span class=\"EnSpace\"/>CETME Sporter.</p><p>(5)<span class=\"EnSpace\"/>Colt AR-15 series.</p><p>(6)<span class=\"EnSpace\"/>Daewoo K-1, K-2, Max 1, Max 2, AR 100, and AR 110C.</p><p>(7)<span class=\"EnSpace\"/>Fabrique Nationale FAL, LAR, FNC, 308 Match, and Sporter.</p><p>(8)<span class=\"EnSpace\"/>MAS 223.</p><p>(9)<span class=\"EnSpace\"/>HK-91, HK-93,\n\t\t\t\t\t\tHK-94, and HK-PSG-1.</p><p>(10)<span class=\"EnSpace\"/>The following MAC types:</p><p>(A)<span class=\"EnSpace\"/>RPB Industries Inc. sM10 and sM11.</p><p>(B)<span class=\"EnSpace\"/>SWD Incorporated M11.</p><p>(11)<span class=\"EnSpace\"/>SKS with detachable magazine.</p><p>(12)<span class=\"EnSpace\"/>SIG AMT, PE-57, SG 550, and SG 551.</p><p>(13)<span class=\"EnSpace\"/>Springfield Armory BM59 and SAR-48.</p><p>(14)<span class=\"EnSpace\"/>Sterling MK-6.</p><p>(15)<span class=\"EnSpace\"/>Steyr AUG.</p><p>(16)<span class=\"EnSpace\"/>Valmet M62S, M71S, and M78S.</p><p>(17)<span class=\"EnSpace\"/>Armalite AR-180.</p><p>(18)<span class=\"EnSpace\"/>Bushmaster Assault Rifle.</p><p>(19)<span class=\"EnSpace\"/>Calico M-900.</p><p>(20)<span class=\"EnSpace\"/>J&amp;R ENG M-68.</p><p>(21)<span class=\"EnSpace\"/>Weaver Arms Nighthawk.</p><p>(b)<span class=\"EnSpace\"/>All of the following specified pistols:</p><p>(1)<span class=\"EnSpace\"/>UZI.</p><p>(2)<span class=\"EnSpace\"/>Encom MP-9 and MP-45.</p><p>(3)<span class=\"EnSpace\"/>The following MAC types:</p><p>(A)<span class=\"EnSpace\"/>RPB Industries Inc. sM10 and sM11.</p><p>(B)<span class=\"EnSpace\"/>SWD Incorporated M-11.</p><p>(C)<span class=\"EnSpace\"/>Advance Armament Inc. M-11.</p><p>(D)<span class=\"EnSpace\"/>Military Armament Corp. Ingram M-11.</p><p>(4)<span class=\"EnSpace\"/>Intratec TEC-9.</p><p>(5)<span class=\"EnSpace\"/>Sites Spectre.</p><p>(6)<span class=\"EnSpace\"/>Sterling MK-7.</p><p>(7)<span class=\"EnSpace\"/>Calico M-950.</p><p>(8)<span class=\"EnSpace\"/>Bushmaster Pistol.</p><p>(c)<span class=\"EnSpace\"/>All of the following specified shotguns:</p><p>(1)<span class=\"EnSpace\"/>Franchi SPAS 12 and LAW 12.</p><p>(2)<span class=\"EnSpace\"/>Striker 12.</p><p>(3)<span class=\"EnSpace\"/>The Streetsweeper type S/S Inc. SS/12.</p><p>(d)<span class=\"EnSpace\"/>Any firearm declared to be an assault weapon by the court pursuant to former Section 12276.5, as it read in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, which is specified as an assault weapon in a list promulgated pursuant to former Section 12276.5, as it read in Section 3 of Chapter 954 of the Statutes of 1991.</p><p>(e)<span class=\"EnSpace\"/>This section is declaratory of existing law and a clarification of the law and the\n\t\t\t\t\t\tLegislature’s intent which bans the weapons enumerated in this section, the weapons included in the list promulgated by the Attorney General pursuant to former Section 12276.5, as it read in Section 3 of Chapter 954 of the Statutes of 1991, and any other models that are only variations of those weapons with minor differences, regardless of the manufacturer. The Legislature has defined assault weapons as the types, series, and models listed in this section because it was the most effective way to identify and restrict a specific class of semiautomatic weapons.</p><p>(f)<span class=\"EnSpace\"/>As used in this section, “series” includes all other models that are only variations, with minor differences, of those models listed in subdivision (a), regardless of the manufacturer.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30510."
+      }
+    ],
+    "PEN:30515": [
+      {
+        "id": "PEN30515.20202938",
+        "lawCode": "PEN",
+        "section": "30515.",
+        "opStatutes": "2020",
+        "opChapter": "29",
+        "opSection": "38",
+        "effectiveDate": "2020-08-06 00:00:00",
+        "versionId": "id_2008557d-d8f7-11ea-9efd-3da19d7eb114",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "1.",
+        "history": "Amended by Stats. 2020, Ch. 29, Sec. 38.   (SB 118)   Effective August 6, 2020.",
+        "contentMember": "LAW_SECTION_TBL_92210.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92210,
+        "tableRowSha256": "faedbcd6ab2d5a4f88bf42053280bf2ac8591bbb3739100c478eeefa0fc473d0",
+        "contentSha256": "50339b6ead0bed07018f65205319aa90189ad7e97c80bfb48ae6945d6327ee19",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Notwithstanding Section 30510, “assault weapon” also means any of the following:</p><p>(1)<span class=\"EnSpace\"/>A semiautomatic, centerfire rifle that does not have a fixed magazine but has any one of the following:</p><p>(A)<span class=\"EnSpace\"/>A pistol grip that protrudes conspicuously beneath the action of the weapon.</p><p>(B)<span class=\"EnSpace\"/>A thumbhole stock.</p><p>(C)<span class=\"EnSpace\"/>A folding or telescoping stock.</p><p>(D)<span class=\"EnSpace\"/>A grenade launcher or flare launcher.</p><p>(E)<span class=\"EnSpace\"/>A\n\t\t\t\t\t\tflash suppressor.</p><p>(F)<span class=\"EnSpace\"/>A forward pistol grip.</p><p>(2)<span class=\"EnSpace\"/>A semiautomatic, centerfire rifle that has a fixed magazine with the capacity to accept more than 10 rounds.</p><p>(3)<span class=\"EnSpace\"/>A semiautomatic, centerfire rifle that has an overall length of less than 30 inches.</p><p>(4)<span class=\"EnSpace\"/>A semiautomatic pistol that does not have a fixed magazine but has any one of the following:</p><p>(A)<span class=\"EnSpace\"/>A threaded barrel, capable of accepting a flash suppressor, forward handgrip, or silencer.</p><p>(B)<span class=\"EnSpace\"/>A second handgrip.</p><p>(C)<span class=\"EnSpace\"/>A shroud\n\t\t\t\t\t\tthat is attached to, or partially or completely encircles, the barrel that allows the bearer to fire the weapon without burning the bearer’s hand, except a slide that encloses the barrel.</p><p>(D)<span class=\"EnSpace\"/>The capacity to accept a detachable magazine at some location outside of the pistol grip.</p><p>(5)<span class=\"EnSpace\"/>A semiautomatic pistol with a fixed magazine that has the capacity to accept more than 10 rounds.</p><p>(6)<span class=\"EnSpace\"/>A semiautomatic shotgun that has both of the following:</p><p>(A)<span class=\"EnSpace\"/>A folding or telescoping stock.</p><p>(B)<span class=\"EnSpace\"/>A pistol grip that protrudes conspicuously beneath the action of the weapon, thumbhole stock, or vertical handgrip.</p><p>(7)<span class=\"EnSpace\"/>A semiautomatic shotgun that does not have a fixed magazine.</p><p>(8)<span class=\"EnSpace\"/>Any shotgun with a revolving cylinder.</p><p>(9)<span class=\"EnSpace\"/>A semiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that does not have a fixed magazine, but that has any one of the following:</p><p>(A)<span class=\"EnSpace\"/>A pistol grip that protrudes conspicuously beneath the action of the weapon.</p><p>(B)<span class=\"EnSpace\"/>A thumbhole stock.</p><p>(C)<span class=\"EnSpace\"/>A folding or telescoping stock.</p><p>(D)<span class=\"EnSpace\"/>A grenade launcher or flare launcher.</p><p>(E)<span class=\"EnSpace\"/>A flash suppressor.</p><p>(F)<span class=\"EnSpace\"/>A forward pistol grip.</p><p>(G)<span class=\"EnSpace\"/>A threaded barrel, capable of accepting a flash suppressor, forward handgrip, or silencer.</p><p>(H)<span class=\"EnSpace\"/>A second handgrip.</p><p>(I)<span class=\"EnSpace\"/>A shroud that is attached to, or partially or completely encircles, the barrel that allows the bearer to fire the weapon without burning the bearer’s hand, except a slide that encloses the barrel.</p><p>(J)<span class=\"EnSpace\"/>The capacity to accept a detachable magazine at some location outside of the pistol grip.</p><p>(10)<span class=\"EnSpace\"/>A\n\t\t\t\t\t\tsemiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that has a fixed magazine with the capacity to accept more than 10 rounds.</p><p>(11)<span class=\"EnSpace\"/>A semiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that has an overall length of less than 30 inches.</p><p>(b)<span class=\"EnSpace\"/>For purposes of this section, “fixed magazine” means an ammunition feeding device contained in, or permanently attached to, a firearm in such a manner that the device cannot be removed without disassembly of the firearm action.</p><p>(c)<span class=\"EnSpace\"/>The Legislature finds a significant public purpose in exempting from the definition of “assault weapon” pistols that are designed expressly for use in Olympic target shooting events. Therefore, those pistols that\n\t\t\t\t\t\tare sanctioned by the International Olympic Committee and by USA Shooting, the national governing body for international shooting competition in the United States, and that were used for Olympic target shooting purposes as of January 1, 2001, and that would otherwise fall within the definition of “assault weapon” pursuant to this section are exempt, as provided in subdivision (d).</p><p>(d)<span class=\"EnSpace\"/>“Assault weapon” does not include either of the following:</p><p>(1)<span class=\"EnSpace\"/>Any antique firearm.</p><p>(2)<span class=\"EnSpace\"/>Any of the following pistols, because they are consistent with the significant public purpose expressed in subdivision (c):<table border=\"0\" frame=\"void\" id=\"id_70F8BD9F-FD50-4AEB-88BB-C34D9B6289C9\" rules=\"none\" width=\"416\"><tbody><tr><td width=\"208\">MANUFACTURER</td><td width=\"208\">MODEL</td><td width=\"208\">CALIBER</td></tr><tr><td width=\"208\"/><td width=\"208\"/><td width=\"208\"/></tr><tr><td width=\"208\">BENELLI</td><td width=\"208\">MP90</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">BENELLI</td><td width=\"208\">MP90</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">BENELLI</td><td width=\"208\">MP95</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">BENELLI</td><td width=\"208\">MP95</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">HAMMERLI</td><td width=\"208\">280</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">HAMMERLI</td><td width=\"208\">280</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">HAMMERLI</td><td width=\"208\">SP20</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">HAMMERLI</td><td width=\"208\">SP20</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">GPO</td><td width=\"208\">.22 SHORT</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">GP-SCHUMANN</td><td width=\"208\">.22 SHORT</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">HP</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">MP</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">SP</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">PARDINI</td><td width=\"208\">SPE</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">WALTHER</td><td width=\"208\">GSP</td><td width=\"208\">.22LR</td></tr><tr><td width=\"208\">WALTHER</td><td width=\"208\">GSP</td><td width=\"208\">.32 S&amp;W LONG</td></tr><tr><td width=\"208\">WALTHER</td><td width=\"208\">OSP</td><td width=\"208\">.22 SHORT</td></tr><tr><td width=\"208\">WALTHER</td><td width=\"208\">OSP-2000</td><td width=\"208\">.22 SHORT</td></tr></tbody></table></p><p>(3)<span class=\"EnSpace\"/>The Department of Justice shall create a program that is consistent with the purposes stated in subdivision (c) to exempt new models of competitive pistols that would otherwise fall within the definition of “assault weapon” pursuant to this section from being classified as an assault weapon. The exempt competitive pistols may be based on recommendations by USA Shooting consistent with the regulations contained in the USA Shooting Official Rules or may be based on the recommendation or rules of any other organization that the department deems relevant.</p><p>(e)<span class=\"EnSpace\"/>The provisions of this section are\n\t\t\t\t\t\tseverable. If any provision of this section or its application is held invalid, that invalidity shall not affect other provisions or applications that can be given effect without the invalid provision or application.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30515."
+      }
+    ],
+    "PEN:30675": [
+      {
+        "id": "PEN30675.20107116",
+        "lawCode": "PEN",
+        "section": "30675.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6e4725-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82962.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82962,
+        "tableRowSha256": "a2b6b689110b0a9902afe37bce87ebc2b2ff8ddf2998674f9e5b294230076d21",
+        "contentSha256": "64d2dcb3eefad7be9c05dd92002440c9e40a4150bff1e26ecf92041b5a8bcdd7",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Sections 30605 and 30610 shall not apply to any of the following persons:</p><p>(1)<span class=\"EnSpace\"/>A person acting in accordance with Section 31000 or 31005.</p><p>(2)<span class=\"EnSpace\"/>A person who has a permit to possess an assault weapon or a .50 BMG rifle issued pursuant to Section 31000 or 31005 when that person is acting in accordance with Section 31000 or 31005 or Article 5 (commencing with Section 30900).</p><p>(b)<span class=\"EnSpace\"/>Sections 30600, 30605, and 30610 shall not apply to any of the following persons:</p><p>(1)<span class=\"EnSpace\"/>A person acting in accordance with Article\n\t\t\t\t\t\t\t\t5 (commencing with Section 30900).</p><p>(2)<span class=\"EnSpace\"/>A person acting in accordance with Section 31000, 31005, 31050, or 31055.</p><p>(c)<span class=\"EnSpace\"/>Sections 30605 and 30610 shall not apply to the registered owner of an assault weapon or a .50 BMG rifle possessing that firearm in accordance with Section 30945. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30675."
+      }
+    ],
+    "PEN:30900": [
+      {
+        "id": "PEN30900.20202940",
+        "lawCode": "PEN",
+        "section": "30900.",
+        "opStatutes": "2020",
+        "opChapter": "29",
+        "opSection": "40",
+        "effectiveDate": "2020-08-06 00:00:00",
+        "versionId": "id_2c124ddf-d8f7-11ea-9efd-3da19d7eb114",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Amended by Stats. 2020, Ch. 29, Sec. 40.   (SB 118)   Effective August 6, 2020.",
+        "contentMember": "LAW_SECTION_TBL_92433.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92433,
+        "tableRowSha256": "cb947d052c3583a5a50fcf5e0dbdc205e685709e916ff41671ab305a7afe81d0",
+        "contentSha256": "f1a071d1e17386709d94a57afa28403c74abb66fa866314f6d3f85e356983b60",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who, prior to June 1, 1989, lawfully possessed an assault weapon, as defined in former Section 12276, as added by Section 3 of Chapter 19 of the Statutes of 1989, shall register the firearm by January 1, 1991, and any person who lawfully possessed an assault weapon prior to the date it was specified as an assault weapon pursuant to former Section 12276.5, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended by Section 1 of Chapter 874 of the Statutes of 1990 or Section 3 of Chapter 954 of the Statutes of 1991, shall register the firearm within 90 days with the Department of Justice pursuant to those procedures that the department may establish.</p><p>(2)<span class=\"EnSpace\"/>Except as provided in Section 30600, any person who\n\t\t\t\t\t\tlawfully possessed an assault weapon prior to the date it was defined as an assault weapon pursuant to former Section 12276.1, as it read in Section 7 of Chapter 129 of the Statutes of 1999, and which was not specified as an assault weapon under former Section 12276, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended at any time before January 1, 2001, or former Section 12276.5, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended at any time before January 1, 2001, shall register the firearm by January 1, 2001, with the department pursuant to those procedures that the department may establish.</p><p>(3)<span class=\"EnSpace\"/>The registration shall contain a description of the firearm that identifies it uniquely, including all identification marks, the full name, address, date of birth, and thumbprint of the owner, and any\n\t\t\t\t\t\tother information that the department may deem appropriate.</p><p>(4)<span class=\"EnSpace\"/>The department may charge a fee for registration of up to twenty dollars ($20) per person but not to exceed the reasonable processing costs of the department. After the department establishes fees sufficient to reimburse the department for processing costs, fees charged shall increase at a rate not to exceed the legislatively approved annual cost-of-living adjustment for the department’s budget or as otherwise increased through the Budget Act but not to exceed the reasonable costs of the department. The fees shall be deposited into the Dealers’ Record of Sale Special Account.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who, from January 1, 2001, to December 31, 2016, inclusive, lawfully possessed an assault weapon that does\n\t\t\t\t\t\tnot have a fixed magazine, as defined in Section 30515, including those weapons with an ammunition feeding device that can be readily removed from the firearm with the use of a tool, shall register the firearm before July 1, 2018, but not before the effective date of the regulations adopted pursuant to paragraph (5), with the department pursuant to those procedures that the department may establish by regulation pursuant to paragraph (5).</p><p>(2)<span class=\"EnSpace\"/>Registrations shall be submitted electronically via the Internet utilizing a public-facing application made available by the department.</p><p>(3)<span class=\"EnSpace\"/>The registration shall contain a description of the firearm that identifies it uniquely, including all identification marks, the date the firearm was acquired, the name and address of the individual\n\t\t\t\t\t\tfrom whom, or business from which, the firearm was acquired, as well as the registrant’s full name, address, telephone number, date of birth, sex, height, weight, eye color, hair color, and California driver’s license number or California identification card number.</p><p>(4)<span class=\"EnSpace\"/>The department may charge a fee in an amount of up to fifteen dollars ($15) per person but not to exceed the reasonable processing costs of the department. The fee shall be paid by debit or credit card at the time that the electronic registration is submitted to the department. The fee shall be deposited in the Dealers’ Record of Sale Special Account to be used for purposes of this section.</p><p>(5)<span class=\"EnSpace\"/>The department shall adopt regulations for the purpose of implementing this subdivision. These regulations are exempt from the\n\t\t\t\t\t\tAdministrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code).</p><p>(c)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who, prior to September 1, 2020, lawfully possessed an assault weapon as defined by paragraph (9), (10), or (11) of subdivision (a) of Section 30515, and is eligible to register an assault weapon as set forth in Section 30950, shall submit an application to register the firearm before January 1, 2022, but not before the effective date of the regulations adopted pursuant to paragraph (5), with the department pursuant to those procedures that the department may establish by regulation pursuant to paragraph\n\t\t\t\t\t\t(5).</p><p>(2)<span class=\"EnSpace\"/>Registration applications shall be submitted in a manner and format to be specified by the department in regulations adopted pursuant to paragraph (5).</p><p>(3)<span class=\"EnSpace\"/>The registration application shall contain a description of the firearm that identifies it uniquely, including all identification marks, the date the firearm was acquired, the name and address of the individual from whom, or business from which, the firearm was acquired, as well as the registrant’s full name, address, telephone number, date of birth, sex, height, weight, eye color, hair color, and California driver’s license number or California identification card number, and any other information that the department may deem appropriate. The registration application shall also contain photographs of the firearm, as\n\t\t\t\t\t\tspecified by the department in regulations adopted pursuant to paragraph (5).</p><p>(4)<span class=\"EnSpace\"/>For each registration application, the department may charge a fee that consists of the amount the department is authorized to require a dealer to charge each firearm purchaser under subdivision (a) of Section 28233, not to exceed the reasonable processing costs of the department. For registration applications seeking to register multiple firearms, the fee shall increase by up to five dollars ($5) for each additional firearm after the first, not to exceed the reasonable processing costs of the department. The fee shall be paid in a manner specified by the department in regulations adopted\n\t\t\t\t\t\tpursuant to paragraph (5) at the time the registration application is submitted to the department. The fee shall be deposited in the Dealers’ Record of Sale Special Account to be used for purposes of this section.</p><p>(5)<span class=\"EnSpace\"/>The department shall adopt regulations for the purpose of implementing this subdivision and paragraphs (9), (10), and (11) of subdivision (a) of Section 30515. These regulations are exempt from the Administrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code).</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30900."
+      }
+    ],
+    "PEN:30945": [
+      {
+        "id": "PEN30945.20107116",
+        "lawCode": "PEN",
+        "section": "30945.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc71a2ad-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83168.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83168,
+        "tableRowSha256": "d42dec4997bf59096d5cd1781f07f3ddc2ee36ba26df241c0fc386bc745bcb74",
+        "contentSha256": "f8119e7506edc94e65ed05b7b49e7696d5036a4c78cf99a4cdc92f525f347bc4",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Unless a permit allowing additional uses is first obtained under Section 31000, a person who has registered an assault weapon or registered a .50 BMG rifle under this article may possess it only under any of the following conditions:</p><p>(a)<span class=\"EnSpace\"/>At that person’s residence, place of business, or other property owned by that person, or on property owned by another with the owner’s express permission.</p><p>(b)<span class=\"EnSpace\"/>While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets.</p><p>(c)<span class=\"EnSpace\"/>While on a target range that holds a regulatory\n\t\t\t\t\t\t\t\tor business license for the purpose of practicing shooting at that target range.</p><p>(d)<span class=\"EnSpace\"/>While on the premises of a shooting club that is licensed pursuant to the Fish and Game Code.</p><p>(e)<span class=\"EnSpace\"/>While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms.</p><p>(f)<span class=\"EnSpace\"/>While on publicly owned land, if the possession and use of a firearm described in Section 30510, 30515, 30520, or 30530, is specifically permitted by the managing agency of the land.</p><p>(g)<span class=\"EnSpace\"/>While transporting the assault weapon or .50 BMG rifle between any of the places mentioned\n\t\t\t\t\t\t\t\tin this section, or to any licensed gun dealer, for servicing or repair pursuant to Section 31050, if the assault weapon is transported as required by Sections 16850 and 25610.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30945."
+      }
+    ],
+    "PEN:31100": [
+      {
+        "id": "PEN31100.20107116",
+        "lawCode": "PEN",
+        "section": "31100.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc73c5a5-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "8.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92543.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92543,
+        "tableRowSha256": "e0656857724222b72b69519028f19957235f4070633a6cfc172dc41bf41bb9d7",
+        "contentSha256": "cd385065e512bcd76241cd8dd7ab05d5f1972a6bc4bdc1b65edbfbc6e44ce16d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Any individual may arrange in advance to relinquish an assault weapon or a .50 BMG rifle to a police or sheriff’s department. The assault weapon or .50 BMG rifle shall be transported in accordance with Sections 16850 and 25610.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31100."
+      }
+    ],
+    "PEN:599b": [
+      {
+        "id": "PEN599b.200278714",
+        "lawCode": "PEN",
+        "section": "599b.",
+        "opStatutes": "2002",
+        "opChapter": "787",
+        "opSection": "14",
+        "effectiveDate": "2003-01-01 00:00:00",
+        "versionId": "id_685ba8f8-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "14.",
+        "part": "1.",
+        "chapter": null,
+        "article": null,
+        "history": "Amended by Stats. 2002, Ch. 787, Sec. 14.   Effective January 1, 2003.",
+        "contentMember": "LAW_SECTION_TBL_90352.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:17",
+        "tableRow": 90352,
+        "tableRowSha256": "6cd05670258c101de1dd98cef9e868b5c9618c1cf789fb6607b81077f0928122",
+        "contentSha256": "82bc13aacfd7e511d1771c42750299ca37ea513731f7f2d2a71bd10b52e02986",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>In this title, the word “animal” includes every dumb creature; the words “torment,” “torture,” and “cruelty” include every act, omission, or neglect whereby unnecessary or unjustifiable physical pain or suffering is caused or permitted; and the words “owner” and “person” include corporations as well as individuals; and the knowledge and acts of any agent of, or person employed by, a corporation in regard to animals transported, owned, or employed by, or in the custody of, the corporation, must be held to be the act and knowledge of the corporation as well as the\n\t\t\t\tagent or employee.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=599b."
+      }
+    ],
+    "PEN:599c": [
+      {
+        "id": "PEN599c.1905519",
+        "lawCode": "PEN",
+        "section": "599c.",
+        "opStatutes": "1905",
+        "opChapter": "519",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_685ba8fa-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "14.",
+        "part": "1.",
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 1905, Ch. 519.",
+        "contentMember": "LAW_SECTION_TBL_94943.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:17",
+        "tableRow": 94943,
+        "tableRowSha256": "55b5c097213315a3ace34c809ba15834fc85032ae82a424caceb45ff1eeea748",
+        "contentSha256": "790bfe89c903cdb446f82946ee68ecd1c53a5094a28c53e8975a6af9142d92e6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>No part of this title shall be construed as interfering with any of the laws of this state known as the “game laws,” or any laws for or against the destruction of certain birds, nor must this title be construed as interfering with the right to destroy any venomous reptile, or any animal known as dangerous to life, limb, or property, or to interfere with the right to kill all animals used for food, or with properly conducted scientific experiments or investigations performed under the authority of the faculty of a regularly incorporated medical college or university of this state.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=599c."
+      }
+    ],
+    "VEH:16020": [
+      {
+        "id": "VEH16020.202229513",
+        "lawCode": "VEH",
+        "section": "16020.",
+        "opStatutes": "2022",
+        "opChapter": "295",
+        "opSection": "13",
+        "effectiveDate": "2023-01-01 00:00:00",
+        "versionId": "id_0ab2f547-6aad-11ed-823c-e74f056edb17",
+        "division": "7.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "2.",
+        "history": "Amended by Stats. 2022, Ch. 295, Sec. 13.   (AB 2956)   Effective January 1, 2023.",
+        "contentMember": "LAW_SECTION_TBL_141835.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141835,
+        "tableRowSha256": "b73f31d05d8b2ab4eedad5f4c205239620edb6b242b44808b2d59cd1b1b55209",
+        "contentSha256": "17b7f9bea30b270c062f3603db145fe2beaff147b30914918b9720308fdda83b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>All drivers and all owners of a motor vehicle shall at all times be able to establish financial responsibility pursuant to Section 16021, and shall at all times carry in the vehicle evidence of the form of financial responsibility in effect for the vehicle.</p><p>(b)<span class=\"EnSpace\"/>“Evidence of financial responsibility” means any of the following:</p><p>(1)<span class=\"EnSpace\"/>A form issued by an insurance company or charitable risk pool, as specified by the department pursuant to Section 4000.37.</p><p>(2)<span class=\"EnSpace\"/>If the owner is a self-insurer, as provided in Section 16052 or a\n\t\t\t\t\t\tdepositor, as provided in Section 16054.2, the certificate of\n\t\t\t\t\t\tself-insurance or the assignment of deposit letter issued by the department.</p><p>(3)<span class=\"EnSpace\"/>An insurance covering note or binder pursuant to Section 382 or 382.5 of the Insurance Code.</p><p>(4)<span class=\"EnSpace\"/>A showing that the vehicle is owned or leased by, or under the direction of, the United States or a public entity, as defined in Section 811.2 of the Government Code.</p><p>(c)<span class=\"EnSpace\"/>For purposes of this section, “evidence of financial responsibility” also may be obtained by a law enforcement officer and court personnel from an electronic reporting system when that system becomes available for use by law enforcement officers.</p><p>(d)<span class=\"EnSpace\"/>For purposes of this section, “evidence of financial responsibility”\n\t\t\t\t\t\talso includes any of the following:</p><p>(1)<span class=\"EnSpace\"/>The name of the insurance company and the number of an insurance policy or surety bond that was in effect at the time of the accident or at the time that evidence of financial responsibility is required to be provided pursuant to Section 16028, if that information is contained in the vehicle registration records of the department.</p><p>(2)<span class=\"EnSpace\"/>The identifying motor carrier of property permit number issued by the Department of the California Highway Patrol to the motor carrier of property as defined in Section 34601, and displayed on the motor vehicle in the manner specified by the Department of the California Highway Patrol.</p><p>(3)<span class=\"EnSpace\"/>The identifying number issued to the household mover by\n\t\t\t\t\t\tthe Bureau of Household Goods and Services and displayed on the motor vehicle in the manner specified by the bureau or an identifying number issued to the passenger stage carrier or transportation charter party carrier by the Public Utilities Commission and displayed on the motor vehicle in the manner specified by the commission.</p><p>(e)<span class=\"EnSpace\"/>Evidence of financial responsibility does not include an identification number in paragraph (1), (2), or (3) of subdivision (d) if the carrier is currently suspended by the issuing agency for lack or lapse of insurance or other form of financial responsibility.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=16020."
+      }
+    ],
+    "VEH:16029": [
+      {
+        "id": "VEH16029.199988012",
+        "lawCode": "VEH",
+        "section": "16029.",
+        "opStatutes": "1999",
+        "opChapter": "880",
+        "opSection": "12",
+        "effectiveDate": "2000-01-01 00:00:00",
+        "versionId": "id_0e87cac6-2921-11d9-a1bb-e0ce1cd664b1",
+        "division": "7.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "2.",
+        "history": "Amended by Stats. 1999, Ch. 880, Sec. 12.   Effective January 1, 2000.",
+        "contentMember": "LAW_SECTION_TBL_141838.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141838,
+        "tableRowSha256": "12500902bad94790eb68ae7d5248c883e18aa3cf763dbc5d8e9b2730768ef296",
+        "contentSha256": "bdf9c45a7f56f9020a8f760580db32bb7bf609fed44e975253317924285309f2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Notwithstanding any other provision of law, a violation of subdivision (a) of Section 16028 is an infraction and shall be punished as follows:</p><p>(a)<span class=\"EnSpace\"/>Upon a first conviction, by a fine of not less than one hundred dollars ($100) and not more than two hundred dollars ($200), plus penalty assessments.</p><p>(b)<span class=\"EnSpace\"/>Upon a subsequent conviction, occurring within three years of a prior conviction, by a fine of not less than two hundred dollars ($200) and not more than five hundred dollars ($500), plus penalty assessments.</p><p>(c)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>At the discretion of the court, for good cause, and in addition to the penalties specified in subdivisions (a) and (b), the court may order the impoundment of the vehicle for which the owner could not produce evidence of financial responsibility in violation of subdivision (a) of Section 16028.</p><p>(2)<span class=\"EnSpace\"/>A vehicle impounded pursuant to paragraph (1) shall be released to the legal owner of the vehicle or the legal owner’s agent if all of the following conditions are met:</p><p>(A)<span class=\"EnSpace\"/>The legal owner is a motor vehicle dealer, bank, credit union, acceptance corporation, or other licensed financial institution legally operating in this state.</p><p>(B)<span class=\"EnSpace\"/>The legal owner or the legal owner’s agent pays all towing and storage fees related to the seizure of the vehicle.</p><p>(C)<span class=\"EnSpace\"/>The legal owner or the legal owner’s agent presents foreclosure documents or an affidavit of repossession for the vehicle.</p><p>(3)<span class=\"EnSpace\"/>(A)<span class=\"EnSpace\"/>A legal owner or the legal owner’s agent that obtains release of the vehicle pursuant to paragraph (2) shall not release the vehicle to the registered owner of the vehicle or any agents of the registered owner, unless the registered owner is a rental car agency, except upon presentation of evidence of financial responsibility, as defined in Section 16020, for the vehicle.  The legal owner or the legal owner’s agent shall make every reasonable effort to ensure that the evidence of financial responsibility that is presented is valid.</p><p>(B)<span class=\"EnSpace\"/>Prior to relinquishing the vehicle, the legal owner may require the registered owner to pay all towing and storage charges related to impoundment and any administrative charges authorized under Section 22850.5 that were incurred by the legal owner in connection with obtaining custody of the vehicle.</p><p>(4)<span class=\"EnSpace\"/>A vehicle impounded under paragraph (1) shall be released to a rental car agency if the agency is either the legal owner or the registered owner of the vehicle and the agency pays all towing and storage fees related to the seizure of the vehicle.</p><p>(5)<span class=\"EnSpace\"/>A vehicle impounded under paragraph (1) shall be released to the registered owner of the vehicle only upon presentation of evidence of financial responsibility, as defined in Section 16020, for that vehicle, and evidence that all towing and storage fees related to the seizure of the vehicle are paid.</p><p>This paragraph does not apply to a person, entity, or agency who is entitled to release of a vehicle under paragraph (2) or (4) and is either:</p><p>(A)<span class=\"EnSpace\"/>The registered and the legal owner and is described in subparagraph (A) of paragraph (2).</p><p>(B)<span class=\"EnSpace\"/>The registered owner or legal owner and is described in paragraph (4).</p><p>(d)<span class=\"EnSpace\"/>It is the intent of the Legislature that fines collected pursuant to this section be used to reduce the number of uninsured drivers and not be used to generate revenue for general purposes.</p><p>(e)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Except as provided in this subdivision, the court shall impose a fine that is greater than the minimum fine specified in subdivision (a) or (b), and may not reduce that fine to the minimum specified fine authorized under those provisions, unless the defendant has presented the court with evidence of financial responsibility, as defined in Section 16020, for the vehicle.  In no event may the court impose a fine that is less than the minimum specified in subdivision (a) or (b), or impose a fine that exceeds the maximum specified fine authorized under those subdivisions.  In addition to the fine authorized under subdivision (a) or (b), the court  may issue an order directing the defendant to maintain insurance coverage satisfying the financial responsibility laws for at least one year from the date of the order.</p><p>(2)<span class=\"EnSpace\"/>Notwithstanding any other provision of law, the imposition of the fine required under subdivision (a) or (b) is mandatory upon conviction of a violation of subdivision (a) of Section 16028 and may not be waived, suspended, or reduced below the minimum fines, unless the court in its discretion reduces or waives the fine based on the defendant’s ability to pay.  The court may direct that the fine and penalty assessments be paid within a limited time or in installments on specified dates.  The Legislature hereby declares that it is in the interest of justice that the minimum fines set forth in subdivisions (a) and (b) for these offenses be enforced by the court, as provided in this subdivision.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=16029."
+      }
+    ],
+    "VEH:23220": [
+      {
+        "id": "VEH23220.20172321",
+        "lawCode": "VEH",
+        "section": "23220.",
+        "opStatutes": "2017",
+        "opChapter": "232",
+        "opSection": "1",
+        "effectiveDate": "2018-01-01 00:00:00",
+        "versionId": "id_99b2d50a-e42b-11e7-99d3-2f570f4f10eb",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "2.",
+        "history": "Amended by Stats. 2017, Ch. 232, Sec. 1.   (SB 65)   Effective January 1, 2018.",
+        "contentMember": "LAW_SECTION_TBL_142509.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 142509,
+        "tableRowSha256": "dfa33067de59f81a6f896504f2c51a46f70efee4a9b5c37cde5fe62279196ee1",
+        "contentSha256": "dbd372c5df519172f6e3d0eac0a10e5cbffb68fa9f475411d5a94166c2259928",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>A person shall not drink any alcoholic beverage or smoke or ingest marijuana or any marijuana product while driving a motor vehicle on any lands described in subdivision (c).</p><p>(b)<span class=\"EnSpace\"/>A person shall not drink any alcoholic beverage or smoke or ingest marijuana or any marijuana product while riding as a passenger in any motor vehicle being driven on any lands described in subdivision (c).</p><p>(c)<span class=\"EnSpace\"/>As used in this section, “lands” means those lands to which the Chappie-Z’berg Off-Highway Motor Vehicle Law of 1971 (Division 16.5 (commencing with Section 38000)) applies as to off-highway motor vehicles, as described in Section 38001.</p><p>(d)<span class=\"EnSpace\"/>A violation of subdivision (a) or (b) shall be punished as an infraction.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23220."
+      }
+    ],
+    "VEH:23229": [
+      {
+        "id": "VEH23229.20196368",
+        "lawCode": "VEH",
+        "section": "23229.",
+        "opStatutes": "2019",
+        "opChapter": "636",
+        "opSection": "8",
+        "effectiveDate": "2020-01-01 00:00:00",
+        "versionId": "id_433b1de4-0a3a-11ea-b6da-5da4e7e1313d",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "2.",
+        "history": "Amended by Stats. 2019, Ch. 636, Sec. 8.   (AB 1810)   Effective January 1, 2020.",
+        "contentMember": "LAW_SECTION_TBL_141350.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141350,
+        "tableRowSha256": "9108916138f4a3c1a8d1866d8afb0dbc14aa16829a655948113f46dd621aa940",
+        "contentSha256": "b5e326f401782137c9016abebbe94e1414c8859e8f9f676c0385476c55e892f8",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in Section 23229.1, Section 23221, as it applies to an alcoholic beverage, and Section 23223 do not apply to passengers in any bus, taxicab, or limousine for hire licensed to transport passengers pursuant to the Public Utilities Code or proper local authority, the living quarters of a housecar or camper, or of a pedicab operated pursuant to Article 4.5 (commencing with Section 21215) of Chapter 1.</p><p>(b)<span class=\"EnSpace\"/>Except as provided in Section\n\t\t\t\t\t\t23229.1, Section 23225 does not apply to the driver or owner of a bus, taxicab, or limousine for hire licensed to transport passengers pursuant to the Public Utilities Code or proper local authority, or of a pedicab operated pursuant to Article 4.5 (commencing with Section 21215) of Chapter 1.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23229."
+      }
+    ],
+    "VEH:40522": [
+      {
+        "id": "VEH40522.19922585",
+        "lawCode": "VEH",
+        "section": "40522.",
+        "opStatutes": "1992",
+        "opChapter": "258",
+        "opSection": "5",
+        "effectiveDate": "1993-01-01 00:00:00",
+        "versionId": "id_15c3c0a3-2921-11d9-a1bb-e0ce1cd664b1",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended by Stats. 1992, Ch. 258, Sec. 5.   Effective January 1, 1993.",
+        "contentMember": "LAW_SECTION_TBL_144790.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 144790,
+        "tableRowSha256": "03e805a46fe13db17b07ec6bba81fae326eb32eeb2f50e474be7e8ea9ea09850",
+        "contentSha256": "b216633e022fb821e3417ea34dc7e0358ee309ecb9a26ff1359816c93a343df6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Whenever a person is arrested for violations specified in Section 40303.5 and none of the disqualifying conditions set forth in subdivision (b) of Section 40610 exist, and the officer issues a notice to appear, the notice shall specify the offense charged and note in a form approved by the Judicial Council that the charge shall be dismissed on proof of correction. If the arrested person presents, by mail or in person, proof of correction, as prescribed in Section 40616, on or before the date on which the person promised to appear, the court shall dismiss the\n\t\t\t\tviolation or violations charged pursuant to Section 40303.5.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40522."
+      }
+    ],
+    "VEH:40610": [
+      {
+        "id": "VEH40610.20225954",
+        "lawCode": "VEH",
+        "section": "40610.",
+        "opStatutes": "2022",
+        "opChapter": "595",
+        "opSection": "4",
+        "effectiveDate": "2023-01-01 00:00:00",
+        "versionId": "id_b9f54a2d-6aad-11ed-823c-e74f056edb17",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Amended by Stats. 2022, Ch. 595, Sec. 4.   (AB 2496)   Effective January 1, 2023.   Repealed as of January 1, 2027, by its own provisions.    See later operative version added by Sec. 5 of Stats. 2022, Ch. 595.",
+        "contentMember": "LAW_SECTION_TBL_142044.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 142044,
+        "tableRowSha256": "52ac2f4e20c6d4a1e49a3626ebed16c731b697a57c8ee2b5091e97abbbddf163",
+        "contentSha256": "dc26ee5ab4a095e3fab75362ed5ba37d96882292e5b534513eabfa6be858ee7b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Except as provided in paragraph (2), if, after an arrest, crash investigation, or other law enforcement action, it appears that a violation has occurred involving a registration, license, all-terrain vehicle safety certificate, or mechanical requirement of this code, and none of the disqualifying conditions set forth in subdivision (b) exist and the investigating officer decides to take enforcement action, the officer shall prepare, in triplicate, and the violator shall sign, a written notice containing the violator’s promise to correct the alleged violation and to deliver proof of correction of the violation to the issuing agency.</p><p>(2)<span class=\"EnSpace\"/>If a person is arrested\n\t\t\t\t\t\tfor a violation of Section 4454, and none of the disqualifying conditions set forth in subdivision (b) exist, the arresting officer shall prepare, in triplicate, and the violator shall sign, a written notice containing the violator’s promise to correct the alleged violation and to deliver proof of correction of the violation to the issuing agency. In lieu of issuing a notice to correct violation pursuant to this section, the officer may issue a notice to appear, as specified in Section 40522.</p><p>(b)<span class=\"EnSpace\"/>Pursuant to subdivision (a), a notice to correct violation shall be issued as provided in this section or a notice to appear shall be issued as provided in Section 40522, unless the officer finds any of the following:</p><p>(1)<span class=\"EnSpace\"/>Evidence of fraud or persistent neglect.</p><p>(2)<span class=\"EnSpace\"/>The violation presents an immediate safety hazard.</p><p>(3)<span class=\"EnSpace\"/>The violator does not agree to, or cannot, promptly correct the violation.</p><p>(4)<span class=\"EnSpace\"/>The violation cited is of subdivision (a) of Section 27151 for a motorcycle.</p><p>(c)<span class=\"EnSpace\"/>If any of the conditions set forth in subdivision (b) exist, the procedures specified in this section or Section 40522 are inapplicable, and the officer may take other appropriate enforcement action.</p><p>(d)<span class=\"EnSpace\"/>Except as otherwise provided in subdivision (a), the notice to correct violation shall be on a form approved by the Judicial Council and, in addition to the owner’s or operator’s\n\t\t\t\t\t\taddress and identifying information, shall contain an estimate of the reasonable time required for correction and proof of correction of the particular defect, not to exceed 30 days, or 90 days for the all-terrain vehicle safety certificate.</p><p>(e)<span class=\"EnSpace\"/>This section shall remain in effect only until January 1, 2027, and as of that date is repealed.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40610."
+      },
+      {
+        "id": "VEH40610.20225955",
+        "lawCode": "VEH",
+        "section": "40610.",
+        "opStatutes": "2022",
+        "opChapter": "595",
+        "opSection": "5",
+        "effectiveDate": "2023-01-01 00:00:00",
+        "versionId": "id_99de912f-6aad-11ed-823c-e74f056edb17",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Repealed (in Sec. 4) and added by Stats. 2022, Ch. 595, Sec. 5.   (AB 2496)   Effective January 1, 2023.   Operative January 1, 2027, by its own provisions.",
+        "contentMember": "LAW_SECTION_TBL_142045.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 142045,
+        "tableRowSha256": "45aa3a73a218a702499838287de3906ee78dc7c3a6577aa06ec66852dacacc2d",
+        "contentSha256": "2e94f9337c653950f6fa67809abf5eef753662351772041989dce8906ce43446",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Except as provided in paragraph (2), if, after an arrest, crash investigation, or other law enforcement action, it appears that a violation has occurred involving a registration, license, all-terrain vehicle safety certificate, or mechanical requirement of this code, and none of the disqualifying conditions set forth in subdivision (b) exist and the investigating officer decides to take enforcement action, the officer shall prepare, in triplicate, and the violator shall sign, a written notice containing the violator’s promise to correct the alleged violation and to deliver proof of correction of the violation to the issuing agency.</p><p>(2)<span class=\"EnSpace\"/>If a person is arrested\n\t\t\t\t\t\tfor a violation of Section 4454, and none of the disqualifying conditions set forth in subdivision (b) exist, the arresting officer shall prepare, in triplicate, and the violator shall sign, a written notice containing the violator’s promise to correct the alleged violation and to deliver proof of correction of the violation to the issuing agency. In lieu of issuing a notice to correct violation pursuant to this section, the officer may issue a notice to appear, as specified in Section 40522.</p><p>(b)<span class=\"EnSpace\"/>Pursuant to subdivision (a), a notice to correct violation shall be issued as provided in this section or a notice to appear shall be issued as provided in Section 40522, unless the officer finds any of the following:</p><p>(1)<span class=\"EnSpace\"/>Evidence of fraud or persistent neglect.</p><p>(2)<span class=\"EnSpace\"/>The violation presents an immediate safety hazard.</p><p>(3)<span class=\"EnSpace\"/>The violator does not agree to, or cannot, promptly correct the violation.</p><p>(c)<span class=\"EnSpace\"/>If any of the conditions set forth in subdivision (b) exist, the procedures specified in this section or Section 40522 are inapplicable, and the officer may take other appropriate enforcement action.</p><p>(d)<span class=\"EnSpace\"/>Except as otherwise provided in subdivision (a), the notice to correct violation shall be on a form approved by the Judicial Council and, in addition to the owner’s or operator’s address and identifying information, shall contain an estimate of the reasonable time required for correction and proof of correction of the\n\t\t\t\t\t\tparticular defect, not to exceed 30 days, or 90 days for the all-terrain vehicle safety certificate.</p><p>(e)<span class=\"EnSpace\"/>This section shall become operative on January 1, 2027.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40610."
+      }
+    ],
+    "VEH:40611": [
+      {
+        "id": "VEH40611.20217937",
+        "lawCode": "VEH",
+        "section": "40611.",
+        "opStatutes": "2021",
+        "opChapter": "79",
+        "opSection": "37",
+        "effectiveDate": "2021-07-16 00:00:00",
+        "versionId": "id_45985ba3-e96a-11eb-b9f5-ab4283d06f98",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Amended by Stats. 2021, Ch. 79, Sec. 37.   (AB 143)   Effective July 16, 2021.",
+        "contentMember": "LAW_SECTION_TBL_144837.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 144837,
+        "tableRowSha256": "a4846b69632b139a133a9493be1dda57657c99961d29b23b4ba4ff8429200cde",
+        "contentSha256": "a181a426c03e5b88e92a71e32e4dcacea6e507ee79cec7a9a255f800ba75d2d9",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Upon proof of correction of an alleged violation of Section 12500 or 12951, or any violation cited pursuant to Section 40610, or upon submission of evidence of financial responsibility pursuant to subdivision (e) of Section 16028, the clerk shall collect a twenty-five-dollar ($25) transaction fee for each violation. The fees shall be deposited by the clerk in accordance with Section 68084 of the Government Code.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>For each citation, ten dollars ($10) shall be allocated monthly as follows:</p><p>(A)<span class=\"EnSpace\"/>Thirty-three percent shall be transferred to the local governmental entity in whose jurisdiction the citation was issued for deposit in\n\t\t\t\t\t\tthe general fund of the entity.</p><p>(B)<span class=\"EnSpace\"/>Thirty-four percent shall be transferred to the State Treasury for deposit in the State Penalty Fund established by Section 1464 of the Penal Code.</p><p>(C)<span class=\"EnSpace\"/>Thirty-three percent shall be deposited in the county general fund.</p><p>(2)<span class=\"EnSpace\"/>The remainder of the fees collected on each citation shall be deposited in the State Court Facilities Construction Fund, established in Section 70371 of the Government Code.</p><p>(c)<span class=\"EnSpace\"/>No fee shall be imposed pursuant to this section if the violation notice is processed only by the issuing agency and no record of the action is transmitted to the court.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40611."
+      }
+    ],
+    "VEH:42001": [
+      {
+        "id": "VEH42001.20069003",
+        "lawCode": "VEH",
+        "section": "42001.",
+        "opStatutes": "2006",
+        "opChapter": "900",
+        "opSection": "3",
+        "effectiveDate": "2007-01-01 00:00:00",
+        "versionId": "id_518aee3c-85f6-11db-a73d-a6a081de931e",
+        "division": "18.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Amended by Stats. 2006, Ch. 900, Sec. 3.   Effective January 1, 2007.",
+        "contentMember": "LAW_SECTION_TBL_142143.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 142143,
+        "tableRowSha256": "27b8851b3b2c8c4902be0b3b9d936242105b727190ee371654b6dafcc9074dbd",
+        "contentSha256": "5923189525cdd1af1fbc8618d80b4605c64f39ea9256129628a52042f6d7a0a2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in this code, a person convicted of an infraction for a violation of this code or of a local ordinance adopted pursuant to this code shall be punished as follows:</p><p>(1)<span class=\"EnSpace\"/>By a fine not exceeding one hundred dollars ($100).</p><p>(2)<span class=\"EnSpace\"/>For a second infraction occurring within one year of a prior infraction that resulted in a conviction, a fine not exceeding two hundred dollars ($200).</p><p>(3)<span class=\"EnSpace\"/>For a third or subsequent infraction occurring within one year of two or more prior infractions that resulted in convictions, a fine not exceeding two hundred fifty dollars ($250).</p><p>(b)<span class=\"EnSpace\"/>A pedestrian convicted of an infraction for a violation of this code or any local ordinance adopted pursuant to this code shall be punished by a fine not exceeding fifty dollars ($50).</p><p>(c)<span class=\"EnSpace\"/>A person convicted of a violation of subdivision (a) or (b) of Section 27150.3 shall be punished by a fine of two hundred fifty dollars ($250), and a person convicted of a violation of subdivision (c) of Section 27150.3 shall be punished by a fine of one thousand dollars ($1,000).</p><p>(d)<span class=\"EnSpace\"/>Notwithstanding any other provision of law, a local public entity that employs peace officers, as designated under Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2 of the Penal Code, the California State University, and the University of California may, by ordinance or resolution, establish a schedule of fines applicable to infractions committed by bicyclists within its jurisdiction. A fine, including all penalty assessments and court costs, established pursuant to this subdivision shall not exceed the maximum fine, including penalty assessment and court costs, otherwise authorized by this code for that violation. If a bicycle fine schedule is adopted, it shall be used by the courts having jurisdiction over the area within which the ordinance or resolution is applicable instead of the fines, including penalty assessments and court costs, otherwise applicable under this code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=42001."
+      }
+    ],
+    "HSC:12702": [
+      {
+        "id": "HSC12702.20233685",
+        "lawCode": "HSC",
+        "section": "12702.",
+        "opStatutes": "2023",
+        "opChapter": "368",
+        "opSection": "5",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_cb9cd817-84a8-11ee-bcfe-9f16e66157a6",
+        "division": "11.",
+        "title": null,
+        "part": "2.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 2023, Ch. 368, Sec. 5.   (AB 1403)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_108444.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:14",
+        "tableRow": 108444,
+        "tableRowSha256": "b347889c95c1c78844e9aaed5642029396a79d6bd9d600cb3c6d5a0afcc1ff07",
+        "contentSha256": "b1ee95311f537349201b4669c24c0d928c05cd8628f6d934dd7cc05529175d3b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Notwithstanding Section 12700:</p><p>(a) <span class=\"EnSpace\"/>A person who violates this part by selling, giving, or delivering any dangerous fireworks to any person under 18 years of age is guilty of a misdemeanor and upon a first conviction shall be punished as prescribed in subdivision (b) of Section 12700.</p><p>(b) <span class=\"EnSpace\"/>Upon a second or subsequent conviction of the offense, the person shall be punished by an additional fine of ten thousand dollars ($10,000), or by imprisonment in a county jail for up to one year or by both that fine and imprisonment. The person shall not be granted probation and the execution of the sentence imposed upon the person shall not be suspended by the\n\t\t\t\t  court.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12702."
+      }
+    ],
+    "VEH:40303.5": [
+      {
+        "id": "VEH40303.5.2021571",
+        "lawCode": "VEH",
+        "section": "40303.5.",
+        "opStatutes": "2021",
+        "opChapter": "57",
+        "opSection": "1",
+        "effectiveDate": "2022-01-01 00:00:00",
+        "versionId": "id_f05312ff-5840-11ec-bcae-6b903ee2f864",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "1.",
+        "history": "Amended by Stats. 2021, Ch. 57, Sec. 1.   (AB 591)   Effective January 1, 2022.",
+        "contentMember": "LAW_SECTION_TBL_141819.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:21",
+        "tableRow": 141819,
+        "tableRowSha256": "67ff0a9b0108264e997c48d76d8ed680e73772bb837399308644fe1463e7a75e",
+        "contentSha256": "9bf85417fafd1e9c6ce7362727d7db55373ab0b03ccd14bdbe05c3af0d89acb3",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>An arresting officer shall permit a person arrested for any of the following offenses to execute a notice containing a promise to correct the violation in accordance with the provisions of Section 40610 unless the arresting officer finds that any of the disqualifying conditions specified in subdivision (b) of Section 40610 exist:</p><p>(a)<span class=\"EnSpace\"/>A registration infraction set forth in Division 3 (commencing with Section 4000).</p><p>(b)<span class=\"EnSpace\"/>A driver’s license infraction set forth in Division 6 (commencing with Section 12500), and subdivision (a) of Section 12951, relating to possession of a driver’s license.</p><p>(c)<span class=\"EnSpace\"/>Section 21201, relating to bicycle equipment.</p><p>(d)<span class=\"EnSpace\"/>Subdivision (a) of Section 21212.</p><p>(e)<span class=\"EnSpace\"/>An infraction involving equipment set forth in Division 12 (commencing with Section 24000), Division 13 (commencing with Section 29000), Division 14.8 (commencing with Section 34500), Division 16 (commencing with Section 36000), Division 16.5 (commencing with Section 38000), and Division 16.7 (commencing with Section 39000).</p><p>(f)<span class=\"EnSpace\"/>Section 2482, relating to registration decals for vehicles transporting inedible kitchen grease.</p><p>(g)<span class=\"EnSpace\"/>Section 9850, relating to expired vessel registration.</p><p>(h)<span class=\"EnSpace\"/>Section 9853.2, relating to the display of vessel identification numbers.</p><p>(i)<span class=\"EnSpace\"/>Section 678.11 of the Harbors and Navigation Code, relating to possessing a vessel operator card.</p><p>(j)<span class=\"EnSpace\"/>Subparagraph (a) or (c) of Section 190.00 of Title 13 of the California Code of Regulations, relating to the display of vessel identification numbers.</p><p>(k)<span class=\"EnSpace\"/>Section 190.01 of Title 13 of the California Code of Regulations, relating to vessel registration stickers.</p><p>(l)<span class=\"EnSpace\"/>Section 6565.8 of Title 14 of the California Code of Regulations, relating to personal floatation devices on vessels.</p><p>(m)<span class=\"EnSpace\"/>Section 6569 of Title 14 of the California Code of Regulations, relating to serviceable fire extinguishers on vessels.</p><p>(n)<span class=\"EnSpace\"/>Section 6572 of\n\t\t\t\t  Title 14 of the California Code of Regulations, relating to markings on fire extinguishers on vessels.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40303.5."
+      }
+    ],
+    "VEH:40616": [
+      {
+        "id": "VEH40616.202368127",
+        "lawCode": "VEH",
+        "section": "40616.",
+        "opStatutes": "2023",
+        "opChapter": "681",
+        "opSection": "27",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_c3014149-8322-11ee-bcfe-9f16e66157a6",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Amended by Stats. 2023, Ch. 681, Sec. 27.   (AB 1263)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_144876.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 144876,
+        "tableRowSha256": "681b17499929a534f9220412a72fa59f6787b141626a8cf2533e6abc9614f2e3",
+        "contentSha256": "2833d7535570770e64b0b735d84bacae0eba4cd6212e4697179b3958e0b1fb36",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Any person willfully violating a written promise to correct or willfully failing to deliver proof of correction of violation is guilty of a misdemeanor. Proof of correction may consist of a certification by an authorized representative of one of the following agencies that the alleged violation has been corrected:</p><p>(a)<span class=\"EnSpace\"/>Brake, lamp, smog device, or muffler violations may be certified as corrected by any station licensed or contracted to inspect and certify for the violation pursuant to Article 6.5 (commencing with Section 9888.5) of Chapter 20.3 of Division 3 of the Business and Professions Code or Section 27150.2.</p><p>(b)<span class=\"EnSpace\"/>Driver license and registration violations may be certified as\n\t\t\t\t  corrected by the Department of Motor Vehicles or by any clerk or deputy clerk of a court.</p><p>(c)<span class=\"EnSpace\"/>Any violation may be certified as corrected by a police department, the California Highway Patrol, sheriff, marshal, or other law enforcement agency regularly engaged in enforcement of the Vehicle Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40616."
+      }
+    ],
+    "VEH:40000.1": [
+      {
+        "id": "VEH40000.1.19711178",
+        "lawCode": "VEH",
+        "section": "40000.1.",
+        "opStatutes": "1971",
+        "opChapter": "1178",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_158cd207-2921-11d9-a1bb-e0ce1cd664b1",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Added by Stats. 1971, Ch. 1178.",
+        "contentMember": "LAW_SECTION_TBL_141276.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:21",
+        "tableRow": 141276,
+        "tableRowSha256": "0d6e119caa6d86a05c187a07c1ca6b588f714928c69717d0d6e30c9d0368ddff",
+        "contentSha256": "51b949ee5fb9f4e447d6e5f85fc79abf5084c9856e961396e87362f23383ea20",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Except as otherwise provided in this article, it is unlawful and constitutes an infraction for any person to violate, or fail to comply with any provision of this code, or any local ordinance adopted pursuant to this code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.1."
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ca-failure-to-appear-1320-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "802988039575a77b062c12505335a33a10c9e36c0a9ac5be6f49bb3ca8a7666c",
+      "correctionSha256": "1bc2582f8d940a3bbdc50d805c9f0f5ae9ebec95747aa6f9b289680669363385",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1320",
+          "versions": [
+            {
+              "versionId": "id_30cb579b-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "0724b2012cb7412149e25c5bcda0b671683cca112e0156b79894f7f310f650e9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-failure-to-appear-1320-b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "289b0be9531b880c0c441ef089ea90b489d0cdac2bcd9c8962e3ced1137e202a",
+      "correctionSha256": "11001429c81a2f786930181dcb8ead1aa4853ffa5e1df6585875cff34e260a26",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1320",
+          "versions": [
+            {
+              "versionId": "id_30cb579b-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "0724b2012cb7412149e25c5bcda0b671683cca112e0156b79894f7f310f650e9"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-criminal-solicitation-653f-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "58941cda429b1e4f1eca3bc915ed7e6453de152db7f52432a51247a8156c863b",
+      "correctionSha256": "d48e37528f8a1246c54606bf3a7309a5f333c463088b6cfa67d9b22d6a76e439",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:653f",
+          "versions": [
+            {
+              "versionId": "id_f32c8a93-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "712fc1242b4558240883ff8fd40394b85ec76bc15eccdd56f3917bed144030f2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-criminal-solicitation-653f-b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "9224ba5ad99f93532750727be0c2c095f243eeee44fe96dff19a95950800c472",
+      "correctionSha256": "8666bbfca80da07aad5bd49ff5bb6dc8e24a6bc2c1a2df5fad3ecfdd2c077104",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:653f",
+          "versions": [
+            {
+              "versionId": "id_f32c8a93-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "712fc1242b4558240883ff8fd40394b85ec76bc15eccdd56f3917bed144030f2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-accessory-after-the-fact-32",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "dacc386b1f4d15f5cb1f40415fb1790296bbc81ad816fc228fda27f2b8daa39d",
+      "correctionSha256": "b4de3c5238b9a2e7c00e9b92c2936077fa6fb6719f39f3c5d4ec0e67e7cdbada",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:32",
+          "versions": [
+            {
+              "versionId": "id_65102789-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "f9b599b241cc4c60cf38ef8bb6d4dbd321caae34049115cbfe1e24927cccc97d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:33",
+          "versions": [
+            {
+              "versionId": "id_bc4fa92b-660d-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a8b66dcd33525a023d6814b22f17b422f047a4bdb9f2e9abef48040020e55f45"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-conspiracy-182-a1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "34d4228be783181b98bb5bbb16867635d388c6d7f71efd66272c5e83eda6ed9b",
+      "correctionSha256": "75522f6fa81c67eb6764d62ac93fc09190cf9e6a80195124881924fcbea9ab18",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:182",
+          "versions": [
+            {
+              "versionId": "id_0144b52b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "c4f1130c7d9d5f25e387e52f8b0ccff70b7c3477783fa1adec41e8f216077278"
+            }
+          ]
+        },
+        {
+          "key": "PEN:184",
+          "versions": [
+            {
+              "versionId": "id_65d6d33e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8d021d15a69f8b4a9d5c94f6eb3b3091cd1871dee8507a9853ddae6b59e0fe43"
+            }
+          ]
+        },
+        {
+          "key": "PEN:190",
+          "versions": [
+            {
+              "versionId": "id_139058fc-5eed-11dd-a1ac-b5b3460007dd",
+              "contentSha256": "d348e281b41218d01a177437fa29ede8af480df7482acdde25364b75d19384c4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:530.5",
+          "versions": [
+            {
+              "versionId": "id_ba79e27b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "a5547a6c50b81766018a28ac5cc64f8629293cb7b7566d9f0c8123aed959c935"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-carjacking",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "7a3bc922cc02b8a79677ddc9fb1c94d04e187afeadcfe68f763930bf3047956f",
+      "correctionSha256": "3a9acca9c06cffb840ff242cf4cd351b8440c62c8e14e9d39bac4a60d522b487",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:211",
+          "versions": [
+            {
+              "versionId": "id_66018c60-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e59f92c3044fa1208efaf24f1a56a45983a2a834045d43f34aa385f0c6f4469f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:215",
+          "versions": [
+            {
+              "versionId": "id_660c3aca-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "81872223d181297c6188f91d3be8c2796a56e403244929d2aba13318d79fe2ed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-discharge-of-firearm-in-city",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "03b60019d7e5da5565d96aa030f445341b7d29461abadde88216d6b5d0d899e8",
+      "correctionSha256": "22b456af800bd9d184bcadc51b706fefd4a7fb0d7ec853b2c445a263f60865d7",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:246.3",
+          "versions": [
+            {
+              "versionId": "id_2f239041-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "cae7b0a75a649a60d6eae85e9cfd2120de50b058f886e8c35f89db566c2922a4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-felon-in-possession-of-firearm",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "eff54efa78b3830c0fabbdc8223f0ad8da02fd0dc610b75114a83446a4b65ca4",
+      "correctionSha256": "756aec44058f088830d729654dfdcdb1502c70308d24ad1801de002261e680dd",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:23515",
+          "versions": [
+            {
+              "versionId": "id_dbe8270b-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "24facaa4be7c2499910ddc6eafe04064822ec7d520872da64b9f7d78cbf012f4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:29800",
+          "versions": [
+            {
+              "versionId": "id_32bd7478-c957-11f0-aea3-3b460998bfb4",
+              "contentSha256": "75825aa1d58858efec71c5727d6614ab0f19ee47014aecbaa9572890804d7a8d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-unlawful-carrying-of-weapon",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "abe3e61bc5460cf6d7751bf4f996559bcbec6c944ea07b4da1bf8f24bc4574aa",
+      "correctionSha256": "a2ee30d8830cda71e21509976aad795560ac76c6c1dcd6e0823d5c5c4b1cf8e5",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:16580",
+          "versions": [
+            {
+              "versionId": "id_dbb0ea7b-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "f76eb8b71749aaf64a6c612acbd6d18f091086486b5bd82cc8f1278d29bf1b4b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:23515",
+          "versions": [
+            {
+              "versionId": "id_dbe8270b-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "24facaa4be7c2499910ddc6eafe04064822ec7d520872da64b9f7d78cbf012f4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:25400",
+          "versions": [
+            {
+              "versionId": "id_b29cae99-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "016701910b6769423a31c29d6d4dcc8c4f144d47e7d855cd61445b79032f99fa"
+            }
+          ]
+        },
+        {
+          "key": "PEN:25450",
+          "versions": [
+            {
+              "versionId": "id_6995800e-6e93-11e3-8818-ebf46b809fe7",
+              "contentSha256": "1e8eafd958c813b4fac5a92953185174b39f816997966d565051e7195c0af790"
+            }
+          ]
+        },
+        {
+          "key": "PEN:25610",
+          "versions": [
+            {
+              "versionId": "id_941a536b-8258-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f36801d81b5aed3aaf476a645f1143298854afa0222b2bdca956dde5cf8afb90"
+            }
+          ]
+        },
+        {
+          "key": "PEN:25655",
+          "versions": [
+            {
+              "versionId": "id_dbffa77d-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "3e13ddc3b9119f3b58fd16ef6eb221d98eca615bd5eef0990469b9bf50ed4fda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-possession-of-prohibited-weapon",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "40d14224f90b51c5b06f412c8d79f3457f5b37bfa9df8796ab46dbc205d17ac4",
+      "correctionSha256": "cd3a4447c9bacd91a613c88126845e871818bee169167081bf5dd10bb36f4c1f",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30510",
+          "versions": [
+            {
+              "versionId": "id_e4f7fbff-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "5611cd72ae223fb14a09d04aced17f5893a9bf8aa739eee34e63b81e1d5579b7"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30515",
+          "versions": [
+            {
+              "versionId": "id_2008557d-d8f7-11ea-9efd-3da19d7eb114",
+              "contentSha256": "50339b6ead0bed07018f65205319aa90189ad7e97c80bfb48ae6945d6327ee19"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30605",
+          "versions": [
+            {
+              "versionId": "id_bf69cff7-660f-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "146974989df769275245ed2a8b09205ec0ed26b64120fed0d47c8be5036b9b29"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30675",
+          "versions": [
+            {
+              "versionId": "id_dc6e4725-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "64d2dcb3eefad7be9c05dd92002440c9e40a4150bff1e26ecf92041b5a8bcdd7"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30900",
+          "versions": [
+            {
+              "versionId": "id_2c124ddf-d8f7-11ea-9efd-3da19d7eb114",
+              "contentSha256": "f1a071d1e17386709d94a57afa28403c74abb66fa866314f6d3f85e356983b60"
+            }
+          ]
+        },
+        {
+          "key": "PEN:30945",
+          "versions": [
+            {
+              "versionId": "id_dc71a2ad-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "f8119e7506edc94e65ed05b7b49e7696d5036a4c78cf99a4cdc92f525f347bc4"
+            }
+          ]
+        },
+        {
+          "key": "PEN:31100",
+          "versions": [
+            {
+              "versionId": "id_dc73c5a5-0ebc-11e0-9b76-a227e281d99a",
+              "contentSha256": "cd385065e512bcd76241cd8dd7ab05d5f1972a6bc4bdc1b65edbfbc6e44ce16d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-indecent-exposure-314-1",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "6b84c75d213439a8592bf044d39aa99b0ec56f36c49284d751f2d645fde4c9ff",
+      "correctionSha256": "1ec450c12b248ae7da71ece44545ceeaac1548b6c914f11b7f17363350c35bbd",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:288",
+          "versions": [
+            {
+              "versionId": "id_9e1d5ac2-f96f-11e8-bd10-077ff3712fb6",
+              "contentSha256": "847c6ca05b74ec430cf1846349137c7eb98898cccab235ea9e29a32a577a2232"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:314",
+          "versions": [
+            {
+              "versionId": "id_d7422650-d6db-11db-b81b-ce5eb9ce5e18",
+              "contentSha256": "e21b3e1fd231f80c456ef162cc10f29ee6e3210e5ebb2460e13d9bf5898ae1d6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-failure-to-pay-child-support",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "723bf1521dd662a26c964f4d81996f050abca9355dc17471575983cca911a204",
+      "correctionSha256": "fddd78d5f7c117b16a52414992bbbf2e0953925db85634f8d9f377b4c924f9f7",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:270",
+          "versions": [
+            {
+              "versionId": "id_666e0a78-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "055e99618b1b56152d0b864e760037e7e0a12f2ffa9f5190ceeeede6521bb199"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-littering",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "4b9d9d19c9b593cb982e68a92ba765547fe0f0ed856ba3f42d427ad9a334bb2c",
+      "correctionSha256": "82dbbbd4044370a7bcea48e4b5adb3d6e2bfb01dc241a4f691c8edbdc5833572",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:374.4",
+          "versions": [
+            {
+              "versionId": "id_532b6363-89e5-11db-b11b-b207fcb01266",
+              "contentSha256": "e34cd7630ef200f6c3d0cc9e34d3ee9f83459fe301586e574c0b3405e69a0f05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-animal-cruelty-misdemeanor",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "f2337b95b82e0aa558667c6c4dcf7af0756a88ce3674593f032b222acf243e27",
+      "correctionSha256": "09c736b401f8b76a40afed32d4d3120fa2f33c78b59c26be81534d8ec82f4388",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:597",
+          "versions": [
+            {
+              "versionId": "id_dd0ff481-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "80eb733427937424a95217fdc6fdc593bba4227e39799ba2ba877dd3be4e90f6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:599b",
+          "versions": [
+            {
+              "versionId": "id_685ba8f8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82bc13aacfd7e511d1771c42750299ca37ea513731f7f2d2a71bd10b52e02986"
+            }
+          ]
+        },
+        {
+          "key": "PEN:599c",
+          "versions": [
+            {
+              "versionId": "id_685ba8fa-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "790bfe89c903cdb446f82946ee68ecd1c53a5094a28c53e8975a6af9142d92e6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-fare-evasion",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "29d9899417c30b8d1e748a87ad8c773338178fa038ccde16167618ade224b3be",
+      "correctionSha256": "2b3708568cc612a20e0bc3b9fc3a8e04a11b2bf0e6ddcd36e9eabcb8aeb53ef6",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:640",
+          "versions": [
+            {
+              "versionId": "id_7fd5157f-df53-11e7-967b-c7bde29c26e0",
+              "contentSha256": "9aa66fa26e00b5855165f10680c830f4d502b2f493e377d01e597521634e2c1d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-public-intoxication",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "9b5c2161c43f1b29d2fb14e257b2997e2c853c30d659c397abc0cb8c7b5b0c3d",
+      "correctionSha256": "e8213c70a37a15b1c9c1d11bc10eede0fd28108b422fb9e618c3b35549b254d9",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:647",
+          "versions": [
+            {
+              "versionId": "id_842ac06a-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "641b833976fab37e559cd387920ceba92250da6c1486977396fcaddcf51abcad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-prostitution-solicitation",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "81c941ec1a974ba63309f964814de28b809c9fe9b6837d2b5bd6cb5a32d3d033",
+      "correctionSha256": "84233a4edbcdb57b98f49469708a193705085c9268c0d388c215fc27c0c9eb96",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:236.1",
+          "versions": [
+            {
+              "versionId": "id_f0f76267-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "386eb7271be5b4426b5dab885e1f616ddab2b0f9a811b44f5de01facbf863db1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:647",
+          "versions": [
+            {
+              "versionId": "id_842ac06a-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "641b833976fab37e559cd387920ceba92250da6c1486977396fcaddcf51abcad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-open-container-23222-a",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "9f8ac5cbb0ed687947fe8ab12f1681cb9ebb1cd27371acde5df0fdd373eef0d4",
+      "correctionSha256": "d6c4fc0dd18a05eac33d5e4eb8b1fe8cf2d7b456003906b5c04d3d8b41ba5763",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23220",
+          "versions": [
+            {
+              "versionId": "id_99b2d50a-e42b-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "dbd372c5df519172f6e3d0eac0a10e5cbffb68fa9f475411d5a94166c2259928"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23222",
+          "versions": [
+            {
+              "versionId": "id_2fa75e0a-0a3a-11ea-b6da-5da4e7e1313d",
+              "contentSha256": "26799118557c692837075188da3445b09036cb4e145a430a10c690cb8a3c131a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23229",
+          "versions": [
+            {
+              "versionId": "id_433b1de4-0a3a-11ea-b6da-5da4e7e1313d",
+              "contentSha256": "b5e326f401782137c9016abebbe94e1414c8859e8f9f676c0385476c55e892f8"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.1",
+          "versions": [
+            {
+              "versionId": "id_158cd207-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "51b949ee5fb9f4e447d6e5f85fc79abf5084c9856e961396e87362f23383ea20"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42001",
+          "versions": [
+            {
+              "versionId": "id_518aee3c-85f6-11db-a73d-a6a081de931e",
+              "contentSha256": "5923189525cdd1af1fbc8618d80b4605c64f39ea9256129628a52042f6d7a0a2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-open-container-23222-b",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "544c0bd7015d021dc47663b9ddb64707f7a87cfeb22e740ca18af16c7dfebb25",
+      "correctionSha256": "6009272e4aa2af4be6144fd7d954a30e5ba186426687651a5257c9f115df6be0",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:11018.1",
+          "versions": [
+            {
+              "versionId": "id_1747f3f6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "69ff1530701c2372ab4cf78d2f4352823ea3d4d8f4db5c728b88427a70f1e29b"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.7",
+          "versions": [
+            {
+              "versionId": "id_3d5c389e-e4ef-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "4954fdddae7b869ce5a3d0adde1f4a440f3fcd684c6018a9fb2cf1845d2be07d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23220",
+          "versions": [
+            {
+              "versionId": "id_99b2d50a-e42b-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "dbd372c5df519172f6e3d0eac0a10e5cbffb68fa9f475411d5a94166c2259928"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23222",
+          "versions": [
+            {
+              "versionId": "id_2fa75e0a-0a3a-11ea-b6da-5da4e7e1313d",
+              "contentSha256": "26799118557c692837075188da3445b09036cb4e145a430a10c690cb8a3c131a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-minor-in-possession",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "07be1dd4b5ab9539900b0062536d0cb0ffc1f2190f0a119348eb659219618768",
+      "correctionSha256": "f9707e34cce3f01fe9471f5a604b32986c3abf4605e9a6cc079c384e5409bf7d",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "BPC:25662",
+          "versions": [
+            {
+              "versionId": "id_acc6938d-0d49-11ea-912d-915c88c10a14",
+              "contentSha256": "524c429413c447002931b9e6a738bc7619c6f59e2a49cf5d78036ce0b2cf8a05"
+            }
+          ]
+        },
+        {
+          "key": "BPC:25667",
+          "versions": [
+            {
+              "versionId": "id_f35c0a0a-168d-11e0-9477-defc54a20998",
+              "contentSha256": "680c06af3d413d96563b89611c0ff09ddfafa2db13e3094fa84d707ff969165d"
+            }
+          ]
+        },
+        {
+          "key": "BPC:25668",
+          "versions": [
+            {
+              "versionId": "id_8e5532bf-397f-11eb-923f-f1b2d79fc0b2",
+              "contentSha256": "3b88c9c0ff3f7bf57a92d1a1482300ca973f393e21c39e30443f967a4a466550"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-possession-with-intent-to-distribute",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "88466f6f876617a074d55ceadc257744ebe519e3d1e4b350a00323d3f503582b",
+      "correctionSha256": "27e9abcd27cbf556e01e8603a3d126b5542b9a9c8d5a92d097e8195222d45a52",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11351",
+          "versions": [
+            {
+              "versionId": "id_62943d40-618d-11e0-8037-955a394cd808",
+              "contentSha256": "0dde14016ebcbc0cf2d011bbc31bf2d9f04498f2ec6b563195758ebbbf6fb0c3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-distribution-of-controlled-substance",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "27834afdc355ef02b6ae1926f81b832901677e2875ac4955a54d679943222bc4",
+      "correctionSha256": "bb850f7353bb190d86272478a7b246ece8f43ad578644d978fa3b75fcaf79d63",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11352",
+          "versions": [
+            {
+              "versionId": "id_2b9d8583-87c8-11e4-8ac3-c8fece1f812a",
+              "contentSha256": "424da4810fc23efd7225bb62abd0cbc811105b32382ddad24d636af1ccaf6d94"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-maintaining-drug-house",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "95dfb5c5b58473ef5c4dca852c04a0df97f173aefe7d08f00e84c11a7f7d1c3e",
+      "correctionSha256": "eed9897504fd1de96805bf0e030388b6212c26d0997c2e125deb14eed9fd4695",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11366",
+          "versions": [
+            {
+              "versionId": "id_f5f92121-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "035688f6663cbc105f7dde223edfdb644d18067913336d0d4fc058dec68728bb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-manufacturing-controlled-substance",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "83601266b7ee1f97398086e66f21f2a42b033edd00efae29091e615ca41410d2",
+      "correctionSha256": "40781fe97ac26d3c43336ee703ec5b6d85be01702d5a45ff6423b260c18a47f7",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11379.6",
+          "versions": [
+            {
+              "versionId": "id_e4b7ec3d-a500-11e5-8e4d-9850dceaeb4c",
+              "contentSha256": "11459cc8e1437d5f6dbf050c066085a284f59ff4419edd4e16d0d41d43f7d691"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11379.7",
+          "versions": [
+            {
+              "versionId": "id_f60e7e25-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "3063ef92142cb347d5425178c8bedd71a9c561af5157dadf40991bbbd0b0b47d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-illegal-fireworks-12677",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "569322a31d4646c6194bc9adcda8c5dff9384646a9f268af5ccf0586b9932ef1",
+      "correctionSha256": "ba21482fe65465476f42ec03daf54fc6f598a9dac32d895a92ae9f41aaac9e90",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "HSC:12505",
+          "versions": [
+            {
+              "versionId": "id_f840c741-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "6c799ff2a111e2b077409d562af298093efbd369a21e42223320a0287e646efa"
+            }
+          ]
+        },
+        {
+          "key": "HSC:12677",
+          "versions": [
+            {
+              "versionId": "id_f8689aa3-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "dd37799ec1ae53901e30e07896f0e504a09d3a268835b28b0e4448aa50547a2a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:12700",
+          "versions": [
+            {
+              "versionId": "id_c93f3905-84a8-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "e84789dfbb86ce87d7769b23e3b8f7c01362056a9b5ed67da36a5e75dbdd1bf0"
+            }
+          ]
+        },
+        {
+          "key": "HSC:12702",
+          "versions": [
+            {
+              "versionId": "id_cb9cd817-84a8-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "b1ee95311f537349201b4669c24c0d928c05cd8628f6d934dd7cc05529175d3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-driving-without-insurance",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "1968335448af7e52a7a0de21586151305afed415be90edef9c7898d809a2efe6",
+      "correctionSha256": "cc61ae4fcf6eea842e9ca3b1b74fba34fa0d519fcdf5061987c6b1dfc1e0cfe9",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "VEH:16020",
+          "versions": [
+            {
+              "versionId": "id_0ab2f547-6aad-11ed-823c-e74f056edb17",
+              "contentSha256": "17b7f9bea30b270c062f3603db145fe2beaff147b30914918b9720308fdda83b"
+            }
+          ]
+        },
+        {
+          "key": "VEH:16028",
+          "versions": [
+            {
+              "versionId": "id_0bb8cc89-6aad-11ed-823c-e74f056edb17",
+              "contentSha256": "6de01fbadec740f7c0239581211272ffc16a7a154a97913e5751a22f3b0c3ee2"
+            }
+          ]
+        },
+        {
+          "key": "VEH:16029",
+          "versions": [
+            {
+              "versionId": "id_0e87cac6-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "bdf9c45a7f56f9020a8f760580db32bb7bf609fed44e975253317924285309f2"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40611",
+          "versions": [
+            {
+              "versionId": "id_45985ba3-e96a-11eb-b9f5-ab4283d06f98",
+              "contentSha256": "a181a426c03e5b88e92a71e32e4dcacea6e507ee79cec7a9a255f800ba75d2d9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca-expired-registration",
+      "status": "bounded_correction_proposed",
+      "baselineSha256": "c04ac07299f578848fb42d54f341223a0bc1febf58e83cf076a8f6efab06f80e",
+      "correctionSha256": "1db25c52f9c97ceb1faf5ed6880fed504828ac612d3361f066ef46b7b2556647",
+      "remainingWork": "Independent legal and professional translation review, offense-date applicability, precise charge/subdivision matching, enhancements, and individualized sentencing remain. Child-support felony applicability, the exactly-100-pound fireworks boundary, and assault-weapon enforceability have specific unresolved review notes; no statewide completeness or live deployment is certified.",
+      "sources": [
+        {
+          "key": "PEN:19.6",
+          "versions": [
+            {
+              "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6"
+            }
+          ]
+        },
+        {
+          "key": "VEH:4000",
+          "versions": [
+            {
+              "versionId": "id_a276def1-8322-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "fcca92c5844d9bb2a9fd26dd81d7f3cfd02d2ccecc3ba912ce978918fc3c3f4a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.1",
+          "versions": [
+            {
+              "versionId": "id_158cd207-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "51b949ee5fb9f4e447d6e5f85fc79abf5084c9856e961396e87362f23383ea20"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40303.5",
+          "versions": [
+            {
+              "versionId": "id_f05312ff-5840-11ec-bcae-6b903ee2f864",
+              "contentSha256": "9bf85417fafd1e9c6ce7362727d7db55373ab0b03ccd14bdbe05c3af0d89acb3"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40522",
+          "versions": [
+            {
+              "versionId": "id_15c3c0a3-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "b216633e022fb821e3417ea34dc7e0358ee309ecb9a26ff1359816c93a343df6"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40610",
+          "versions": [
+            {
+              "versionId": "id_b9f54a2d-6aad-11ed-823c-e74f056edb17",
+              "contentSha256": "dc26ee5ab4a095e3fab75362ed5ba37d96882292e5b534513eabfa6be858ee7b"
+            },
+            {
+              "versionId": "id_99de912f-6aad-11ed-823c-e74f056edb17",
+              "contentSha256": "2e94f9337c653950f6fa67809abf5eef753662351772041989dce8906ce43446"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40611",
+          "versions": [
+            {
+              "versionId": "id_45985ba3-e96a-11eb-b9f5-ab4283d06f98",
+              "contentSha256": "a181a426c03e5b88e92a71e32e4dcacea6e507ee79cec7a9a255f800ba75d2d9"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40616",
+          "versions": [
+            {
+              "versionId": "id_c3014149-8322-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "2833d7535570770e64b0b735d84bacae0eba4cd6212e4697179b3958e0b1fb36"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42001",
+          "versions": [
+            {
+              "versionId": "id_518aee3c-85f6-11db-a73d-a6a081de931e",
+              "contentSha256": "5923189525cdd1af1fbc8618d80b4605c64f39ea9256129628a52042f6d7a0a2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

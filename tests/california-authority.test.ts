@@ -73,8 +73,8 @@ describe("authoritative California charge release", () => {
     expect(getChargeById("ca-assault-in-the-second-degree")).toBeUndefined();
     expect(getChargeById("ca-accessory-after-the-fact")).toBeUndefined();
     expect(getChargeById("ca-resisting-arrest")?.maxPenalty).toContain("up to 364 days");
-    expect(getChargeById("ca-failure-to-pay-child-support")?.maxPenalty).toContain("up to 1 year");
-    expect(getChargeById("ca-animal-cruelty-misdemeanor")?.maxPenalty).toContain("up to 1 year");
+    expect(getChargeById("ca-failure-to-pay-child-support")?.maxPenalty).toContain("up to 364 days");
+    expect(getChargeById("ca-animal-cruelty-misdemeanor")?.maxPenalty).toContain("up to 364 days");
     expect(getChargeById("ca-reckless-driving")?.maxPenalty).toContain("5–90 days");
     expect(CALIFORNIA_CANONICAL_RECORDS.find((record) => record.code === "415")?.penalty).toContain("90 days");
     expect(isChargeIdRequiringReselection("ca-wire-fraud")).toBe(true);
@@ -247,8 +247,9 @@ describe("authoritative California charge release", () => {
     ]);
     const fare = getChargeById("ca-fare-evasion");
     expect(fare?.statuteCitations?.[0]).toContain("§ 640(c)(1)");
-    expect(fare?.maxPenalty).toContain("third or subsequent violation of § 640(c)(1)");
-    expect(fare?.maxPenalty).toContain("§ 640(a)(1)");
+    expect(fare?.categories).toEqual(["infraction", "misdemeanor"]);
+    expect(fare?.maxPenalty).toContain("Third or later: misdemeanor");
+    expect(fare?.maxPenalty).toContain("§640(a)(1)");
   });
 
   it("keeps each canonical primary-source URL aligned with its statutory section", () => {

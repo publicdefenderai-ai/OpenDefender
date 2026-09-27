@@ -25,7 +25,7 @@ describe("California corrections require seeded supporting references", () => {
     state.ids = [affected, unaffected];
     state.rows = links;
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([affected, unaffected]));
-    state.rows = links.filter(row => new URL(row.sourceUrl).searchParams.get("sectionNum")?.replace(/\.$/, "") !== "18.5");
+    state.rows = links.filter(row => !(row.chargeId === affected && new URL(row.sourceUrl).searchParams.get("sectionNum")?.replace(/\.$/, "") === "18.5"));
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([unaffected]));
   });
   it("requires the Health and Safety Code penalty rather than a same-number Penal Code reference", async () => {
