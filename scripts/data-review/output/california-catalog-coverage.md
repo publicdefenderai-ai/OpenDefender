@@ -1,6 +1,6 @@
 # California coverage and remaining review queue
 
-Configured selectable: 99. Bounded correction pass: 49. Awaiting that pass: 50. Withheld canonical labels: 21.
+Configured selectable: 99. Bounded correction pass: 60. Awaiting that pass: 39. Withheld canonical labels: 21.
 
 Statewide offense coverage: unknown. Live deployment parity: not established by this offline report.
 
@@ -10,31 +10,26 @@ Statewide offense coverage: unknown. Live deployment parity: not established by 
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - No statewide offense enumeration exists yet. Acquiring all primary catalog sources does not establish completeness or discover every missing charge.
 
-Primary-source acquisition: 69/69 declared sections, covering the primary links of 99/99 configured records. Total retained research sources including dependencies: 125 sections/127 versions.
+Primary-source acquisition: 69/69 declared sections, covering the primary links of 99/99 configured records. Total retained research sources including dependencies: 129 sections/131 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |
 | BPC | 1 | 0 | 1 |
 | HSC | 7 | 2 | 5 |
-| PEN | 79 | 39 | 40 |
+| PEN | 79 | 50 | 29 |
 | VEH | 12 | 8 | 4 |
 
 ## Next reuse batch
 
 These records share primary texts already used in the first batch. Their unreviewed subdivisions and missing dependencies still need substantive review.
 
-The first-batch reuse queue is complete. Next largest groups: PEN:261.5 (3 records); PEN:1320 (2 records); PEN:191.5 (2 records).
+The first-batch reuse queue is complete. Next largest groups: PEN:1320 (2 records); PEN:502 (2 records); PEN:530.5 (2 records).
 
-50 remaining records form 37 shared-primary-source groups using 38 distinct sections. 0 already have all primary text in the first-batch bundle; this is acquisition only, not verification.
+39 remaining records form 32 shared-primary-source groups using 33 distinct sections. 0 already have all primary text in the first-batch bundle; this is acquisition only, not verification.
 
 | Shared source group | Records | Primary text acquired | Record IDs |
 | --- | ---: | --- | --- |
-| PEN:261.5 | 3 | 1/1 sections | ca-unlawful-sexual-intercourse-261-5-b, ca-unlawful-sexual-intercourse-261-5-c, ca-unlawful-sexual-intercourse-261-5-d |
 | PEN:1320 | 2 | 1/1 sections | ca-failure-to-appear-1320-a, ca-failure-to-appear-1320-b |
-| PEN:191.5 | 2 | 1/1 sections | ca-gross-vehicular-manslaughter-191-5-a, ca-vehicular-manslaughter-191-5-b |
-| PEN:243.4 | 2 | 1/1 sections | ca-sexual-battery-243-4-a, ca-sexual-battery-243-4-e1 |
-| PEN:288 | 2 | 1/1 sections | ca-lewd-act-child-288-a, ca-lewd-act-child-288-c1 |
-| PEN:289 | 2 | 1/1 sections | ca-sexual-penetration-289-a1a, ca-sexual-penetration-289-a1b |
 | PEN:502 | 2 | 1/1 sections | ca-computer-crime-502-c1, ca-computer-crime-502-c5 |
 | PEN:530.5 | 2 | 1/1 sections | ca-identity-theft-530-5-a, ca-identity-theft-530-5-c1 |
 | PEN:550 | 2 | 1/1 sections | ca-insurance-fraud-550-a1, ca-insurance-fraud-550-b1 |

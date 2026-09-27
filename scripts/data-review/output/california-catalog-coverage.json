@@ -5,8 +5,8 @@
     "canonicalRecords": 120,
     "configuredSelectable": 99,
     "withheldCanonicalLabels": 21,
-    "boundedCorrectionPass": 49,
-    "awaitingCorrectionPass": 50,
+    "boundedCorrectionPass": 60,
+    "awaitingCorrectionPass": 39,
     "legacyRows": 115,
     "legacyDispositions": {
       "retain": 49,
@@ -17,13 +17,13 @@
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
     "distinctSelectablePrimarySections": 69,
-    "remainingSharedSourceGroups": 37,
-    "remainingPrimarySections": 38,
+    "remainingSharedSourceGroups": 32,
+    "remainingPrimarySections": 33,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 69,
     "selectableRecordsWithAllPrimaryTextAcquired": 99,
-    "totalAcquiredSectionsIncludingDependencies": 125,
-    "totalAcquiredVersionsIncludingDependencies": 127,
+    "totalAcquiredSectionsIncludingDependencies": 129,
+    "totalAcquiredVersionsIncludingDependencies": 131,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
@@ -51,8 +51,8 @@
     {
       "lawCode": "PEN",
       "selectable": 79,
-      "corrected": 39,
-      "awaitingCorrection": 40
+      "corrected": 50,
+      "awaitingCorrection": 29
     },
     {
       "lawCode": "VEH",
@@ -880,21 +880,6 @@
   ],
   "groups": [
     {
-      "id": "PEN:261.5",
-      "recordIds": [
-        "ca-unlawful-sexual-intercourse-261-5-b",
-        "ca-unlawful-sexual-intercourse-261-5-c",
-        "ca-unlawful-sexual-intercourse-261-5-d"
-      ],
-      "primaryKeys": [
-        "PEN:261.5"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:261.5"
-      ]
-    },
-    {
       "id": "PEN:1320",
       "recordIds": [
         "ca-failure-to-appear-1320-a",
@@ -906,62 +891,6 @@
       "retainedPrimaryKeys": [],
       "acquiredPrimaryKeys": [
         "PEN:1320"
-      ]
-    },
-    {
-      "id": "PEN:191.5",
-      "recordIds": [
-        "ca-gross-vehicular-manslaughter-191-5-a",
-        "ca-vehicular-manslaughter-191-5-b"
-      ],
-      "primaryKeys": [
-        "PEN:191.5"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:191.5"
-      ]
-    },
-    {
-      "id": "PEN:243.4",
-      "recordIds": [
-        "ca-sexual-battery-243-4-a",
-        "ca-sexual-battery-243-4-e1"
-      ],
-      "primaryKeys": [
-        "PEN:243.4"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:243.4"
-      ]
-    },
-    {
-      "id": "PEN:288",
-      "recordIds": [
-        "ca-lewd-act-child-288-a",
-        "ca-lewd-act-child-288-c1"
-      ],
-      "primaryKeys": [
-        "PEN:288"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:288"
-      ]
-    },
-    {
-      "id": "PEN:289",
-      "recordIds": [
-        "ca-sexual-penetration-289-a1a",
-        "ca-sexual-penetration-289-a1b"
-      ],
-      "primaryKeys": [
-        "PEN:289"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:289"
       ]
     },
     {
@@ -1379,7 +1308,7 @@
   "records": [
     {
       "id": "ca-murder-in-the-first-degree",
-      "title": "Murder — First Degree",
+      "title": "Murder: First Degree",
       "citation": "Cal. Penal Code §§ 187(a), 189",
       "lawCode": "PEN",
       "selectable": true,
@@ -1393,12 +1322,12 @@
         "PEN:187",
         "PEN:189"
       ],
-      "catalogSha256": "087b3f9f18794b3cf4097e5508b0be38c9dbe909984bbc217406813669aff812",
+      "catalogSha256": "cdb6c61043bfcfaf1a8283df6938d44e6781ed80032ece4d1e96a97298a91c09",
       "attorneyReview": "pending"
     },
     {
       "id": "ca-murder-in-the-second-degree",
-      "title": "Murder — Second Degree",
+      "title": "Murder: Second Degree",
       "citation": "Cal. Penal Code § 187(a)",
       "lawCode": "PEN",
       "selectable": true,
@@ -1410,7 +1339,7 @@
       "acquiredPrimaryKeys": [
         "PEN:187"
       ],
-      "catalogSha256": "c9bed2b7f3465f199bc428423444f55e034cb1e8534250b34a31c7849319f738",
+      "catalogSha256": "b92a42d87a4d5f139c19ee746c2e6d732922331d104dc53b71f2680ea46f7f0e",
       "attorneyReview": "pending"
     },
     {
@@ -2158,7 +2087,7 @@
     },
     {
       "id": "ca-dui-first-offense",
-      "title": "Driving Under the Influence — First Offense",
+      "title": "Driving Under the Influence: First Offense",
       "citation": "Cal. Vehicle Code § 23152",
       "lawCode": "VEH",
       "selectable": false,
@@ -2172,12 +2101,12 @@
       "acquiredPrimaryKeys": [
         "VEH:23152"
       ],
-      "catalogSha256": "7c7a920d1ce84b862107269b75749f080f00961e667c25b79f11ccd8d82a4046",
+      "catalogSha256": "f6c3f3164af13a088f27e982ba177acf291ccbe49a6f55de31f01191cb2fc0a7",
       "attorneyReview": "pending"
     },
     {
       "id": "ca-dui-second-offense",
-      "title": "Driving Under the Influence — Second Offense",
+      "title": "Driving Under the Influence: Second Offense",
       "citation": "Cal. Vehicle Code §§ 23152, 23540",
       "lawCode": "VEH",
       "selectable": true,
@@ -2194,12 +2123,12 @@
         "VEH:23152",
         "VEH:23540"
       ],
-      "catalogSha256": "cab716d516a51d6194f7c35d103b01708af2cedc06306b56b1a1be575533168b",
+      "catalogSha256": "8544f0a5c3ff5778651019cd59266aeb4e7e9a13179f45988d0f68dd6369288a",
       "attorneyReview": "pending"
     },
     {
       "id": "ca-dui-third-offense",
-      "title": "Driving Under the Influence — Third Offense",
+      "title": "Driving Under the Influence: Third Offense",
       "citation": "Cal. Vehicle Code §§ 23152, 23546",
       "lawCode": "VEH",
       "selectable": true,
@@ -2216,7 +2145,7 @@
         "VEH:23152",
         "VEH:23546"
       ],
-      "catalogSha256": "d27cdf99d63ff0174f8a69637bf26bead1a38443d513ead117feda9553966c25",
+      "catalogSha256": "8eba6fc29c51f6f4b9cf906c8cb63779398232e325001f7b3b7a61086ab42f46",
       "attorneyReview": "pending"
     },
     {
@@ -2700,7 +2629,7 @@
       "citation": "Cal. Penal Code § 191.5(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:191.5"
       ],
@@ -2708,7 +2637,7 @@
       "acquiredPrimaryKeys": [
         "PEN:191.5"
       ],
-      "catalogSha256": "6f833ca50d77b739829f05fe86e1bff72cc47ff32226963de36cf6bf46dcba15",
+      "catalogSha256": "b53437c8cac281617bf501590f7c0f11eb84ccb110ff0acd17614b349b3974ff",
       "attorneyReview": "pending"
     },
     {
@@ -2717,7 +2646,7 @@
       "citation": "Cal. Penal Code § 191.5(b)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:191.5"
       ],
@@ -2725,7 +2654,7 @@
       "acquiredPrimaryKeys": [
         "PEN:191.5"
       ],
-      "catalogSha256": "f469ad9fe9638e9741d2ab8a597a0e3072c58165799a11471f251f9214e05830",
+      "catalogSha256": "b373f57abd1ffeeed8e826760fa9d838cdcb37282216538c430f11ab9d396d2b",
       "attorneyReview": "pending"
     },
     {
@@ -2891,7 +2820,7 @@
       "citation": "Cal. Penal Code § 289(a)(1)(A)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:289"
       ],
@@ -2899,7 +2828,7 @@
       "acquiredPrimaryKeys": [
         "PEN:289"
       ],
-      "catalogSha256": "df3e886aae1c09a8b5790a904fe640125d5a341780f1304153fd1110802b91db",
+      "catalogSha256": "617876d6965043f397c341520bc91c05be4c611fac8b625d53c2fc1c7e498ae1",
       "attorneyReview": "pending"
     },
     {
@@ -2908,7 +2837,7 @@
       "citation": "Cal. Penal Code § 289(a)(1)(B)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:289"
       ],
@@ -2916,7 +2845,7 @@
       "acquiredPrimaryKeys": [
         "PEN:289"
       ],
-      "catalogSha256": "0633637030fa05c9d0969790191b3a1fb9f4cc6e0ecfed356c27e2bbd4ad231d",
+      "catalogSha256": "3553b618090fe0afa7b4a573c63ae5f70b5d9402ac2020b0f80b3e5b83b1b9de",
       "attorneyReview": "pending"
     },
     {
@@ -2925,7 +2854,7 @@
       "citation": "Cal. Penal Code § 243.4(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:243.4"
       ],
@@ -2933,7 +2862,7 @@
       "acquiredPrimaryKeys": [
         "PEN:243.4"
       ],
-      "catalogSha256": "35216cc818c15d193ae704b1704769d7af9bf667cc6d5c7870d4a4e79950bf35",
+      "catalogSha256": "0cb153842a53ea1074bd43c90585ce929997d92eb3c190e10e2cf0f2e5dd18be",
       "attorneyReview": "pending"
     },
     {
@@ -2942,7 +2871,7 @@
       "citation": "Cal. Penal Code § 243.4(e)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:243.4"
       ],
@@ -2950,7 +2879,7 @@
       "acquiredPrimaryKeys": [
         "PEN:243.4"
       ],
-      "catalogSha256": "d35a9798dd9d0b8133362d0b870f44862cd5bd4a4ec87878853037e54bad8b48",
+      "catalogSha256": "bbbc6be45fd799a33942b6b0f1e3dd64ef51791fc4c2025a9bce5d70cbe5db95",
       "attorneyReview": "pending"
     },
     {
@@ -2959,7 +2888,7 @@
       "citation": "Cal. Penal Code § 261.5(b)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261.5"
       ],
@@ -2967,7 +2896,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261.5"
       ],
-      "catalogSha256": "8c011138780be23836e5bd7c68e10258538d7743f799dfc6722c4fae858eb561",
+      "catalogSha256": "6cebccc31ece911bfe18397efb256576e612b31cced5a64225fd2107884aac8c",
       "attorneyReview": "pending"
     },
     {
@@ -2976,7 +2905,7 @@
       "citation": "Cal. Penal Code § 261.5(c)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261.5"
       ],
@@ -2984,7 +2913,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261.5"
       ],
-      "catalogSha256": "d6d6e86ff1f1a8c3d2ed73ec29fb6cf6c056e268a0ca70a22c9d29090913b42f",
+      "catalogSha256": "923b40ab5a2fb1460522913781c3f954e8df8804344846d8920b13888e09f06e",
       "attorneyReview": "pending"
     },
     {
@@ -2993,7 +2922,7 @@
       "citation": "Cal. Penal Code § 261.5(d)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:261.5"
       ],
@@ -3001,7 +2930,7 @@
       "acquiredPrimaryKeys": [
         "PEN:261.5"
       ],
-      "catalogSha256": "4eba6f7943aa5a4831ebd59f7f62617a1349dffbc23de449f83214b68601f6b0",
+      "catalogSha256": "69daa58b8be971ab28ac060b5a80ad59f58c568c6be24e6e24dd0df80ebfdcb1",
       "attorneyReview": "pending"
     },
     {
@@ -3010,7 +2939,7 @@
       "citation": "Cal. Penal Code § 288(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:288"
       ],
@@ -3018,7 +2947,7 @@
       "acquiredPrimaryKeys": [
         "PEN:288"
       ],
-      "catalogSha256": "6923911b2a0c718f4673136130830e15d245b70038eefe1b0bd87b760dcc80ef",
+      "catalogSha256": "96914e3a2703991482cf23d41fa1c28819deb66dc84512ba28c6f9c85a8e655e",
       "attorneyReview": "pending"
     },
     {
@@ -3027,7 +2956,7 @@
       "citation": "Cal. Penal Code § 288(c)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:288"
       ],
@@ -3035,7 +2964,7 @@
       "acquiredPrimaryKeys": [
         "PEN:288"
       ],
-      "catalogSha256": "2014eccc669283bcb43459b48f44240a824db87419de2c6816a1a93ac68a4056",
+      "catalogSha256": "45f8d657182a8b7649c02bf68cc80ff3df4a6606783044516d292225ff51ee32",
       "attorneyReview": "pending"
     },
     {

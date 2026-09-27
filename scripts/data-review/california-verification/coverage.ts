@@ -9,6 +9,8 @@ import { readCaliforniaReview, validateCaliforniaReview } from "./review";
 
 import { readCaliforniaCombinedReview, validateCaliforniaCombinedReview } from "./combined-review";
 
+import { readCaliforniaAgeDrivingReview, validateCaliforniaAgeDrivingReview } from "./age-driving-review";
+
 interface SourceExpansion {
   schemaVersion: number; scope: string; archive: { sha256: string };
   statutoryUniverse: Array<{ lawCode: string; distinctSections: number; versionRows: number }>;
@@ -31,10 +33,12 @@ export function buildCaliforniaCoverage() {
   const reuseAccounting = validateCaliforniaReuseReview(reuse);
   const combined = readCaliforniaCombinedReview();
   const combinedAccounting = validateCaliforniaCombinedReview(combined);
+  const ageDriving = readCaliforniaAgeDrivingReview();
+  const ageDrivingAccounting = validateCaliforniaAgeDrivingReview(ageDriving);
   const expansionPath = new URL("../output/california-catalog-source-expansion.json", import.meta.url);
   const expansion: SourceExpansion | null = fs.existsSync(expansionPath) ? JSON.parse(fs.readFileSync(expansionPath, "utf8")) : null;
   if (expansion) validateCaliforniaSourceExpansion(expansion, review);
-  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(combined.documents), ...Object.keys(expansion?.documents ?? {})]);
+  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(combined.documents), ...Object.keys(ageDriving.documents), ...Object.keys(expansion?.documents ?? {})]);
   const corrected = new Set(corrections.map(row => row.id));
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
@@ -90,7 +94,7 @@ export function buildCaliforniaCoverage() {
     accounting: {
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -101,7 +105,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },

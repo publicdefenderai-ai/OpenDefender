@@ -226,7 +226,7 @@ const PENALTY_INFRACTION =
 export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   record({
     canonicalId: "ca-murder-in-the-first-degree",
-    officialTitle: "Murder — First Degree",
+    officialTitle: "Murder: First Degree",
     code: "187(a), 189",
     lawCode: "PEN",
     citation: "Cal. Penal Code §§ 187(a), 189",
@@ -239,7 +239,7 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
   record({
     canonicalId: "ca-murder-in-the-second-degree",
-    officialTitle: "Murder — Second Degree",
+    officialTitle: "Murder: Second Degree",
     code: "187(a)",
     lawCode: "PEN",
     citation: "Cal. Penal Code § 187(a)",
@@ -779,7 +779,7 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
   record({
     canonicalId: "ca-dui-first-offense",
-    officialTitle: "Driving Under the Influence — First Offense",
+    officialTitle: "Driving Under the Influence: First Offense",
     code: "23152",
     lawCode: "VEH",
     citation: "Cal. Vehicle Code § 23152",
@@ -792,7 +792,7 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
   record({
     canonicalId: "ca-dui-second-offense",
-    officialTitle: "Driving Under the Influence — Second Offense",
+    officialTitle: "Driving Under the Influence: Second Offense",
     code: "23152; 23540",
     lawCode: "VEH",
     citation: "Cal. Vehicle Code §§ 23152, 23540",
@@ -805,7 +805,7 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
   record({
     canonicalId: "ca-dui-third-offense",
-    officialTitle: "Driving Under the Influence — Third Offense",
+    officialTitle: "Driving Under the Influence: Third Offense",
     code: "23152; 23546",
     lawCode: "VEH",
     citation: "Cal. Vehicle Code §§ 23152, 23546",

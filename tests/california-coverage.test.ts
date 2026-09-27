@@ -6,16 +6,16 @@ const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/c
 describe("California catalog coverage boundaries", () => {
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 49, awaitingCorrectionPass: 50, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 125, totalAcquiredVersionsIncludingDependencies: 127 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 60, awaitingCorrectionPass: 39, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 129, totalAcquiredVersionsIncludingDependencies: 131 });
     expect(report.accounting.boundedCorrectionPass + report.accounting.awaitingCorrectionPass).toBe(report.accounting.configuredSelectable);
     expect(report.records.filter(row => row.status === "withheld_canonical_label")).toHaveLength(21);
     expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-coverage.json", "utf8"))).toEqual(report);
   });
-  it("groups all 50 remaining records exactly once and does not split shared primary sources", () => {
+  it("groups all 39 remaining records exactly once and does not split shared primary sources", () => {
     const report = buildCaliforniaCoverage();
     const ids = report.groups.flatMap(group => group.recordIds);
-    expect(ids).toHaveLength(50);
-    expect(new Set(ids).size).toBe(50);
+    expect(ids).toHaveLength(39);
+    expect(new Set(ids).size).toBe(39);
     expect([...ids].sort()).toEqual(report.records.filter(row => row.status === "awaiting_statutory_correction_pass").map(row => row.id).sort());
     const sources = report.groups.flatMap(group => group.primaryKeys);
     expect(new Set(sources).size).toBe(sources.length);
