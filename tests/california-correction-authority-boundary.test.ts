@@ -69,4 +69,17 @@ describe("California corrections require seeded supporting references", () => {
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
   });
 
+  it("requires the school-police definition from the Education Code", async () => {
+    const id = "ca-pen-241-4";
+    const rows = seed.links.filter(link => link.chargeId === id).map(link => {
+      const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+    });
+    state.ids = [id]; state.rows = rows;
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));
+    expect(rows.some(row => row.sourceUrl.includes("lawCode=EDC"))).toBe(true);
+    state.rows = rows.filter(row => !row.sourceUrl.includes("lawCode=EDC"));
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
+  });
+
 });

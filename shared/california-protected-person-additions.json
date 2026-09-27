@@ -1,0 +1,629 @@
+[
+  {
+    "id": "ca-pen-241-1",
+    "lawCode": "PEN",
+    "code": "241.1",
+    "title": "Assault on a custodial officer",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a custodial officer defined in section 831 or 831.5 while performing duties. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h); misdemeanor alternative: up to 364 days in county jail. Section 17 governs misdemeanor treatment. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672",
+      "PEN:831",
+      "PEN:831.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.1": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:831": "2018-01-01",
+      "PEN:831.5": "2020-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-241-2-a-1",
+    "lawCode": "PEN",
+    "code": "241.2(a)(1)",
+    "title": "Assault on school or park property",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault against any person on school property or in a publicly maintained or operated park as defined by the statute. Facilities used for professional sports or commercial events are excluded from its park definition.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. Separate juvenile counseling provisions may apply under subdivision (a)(2). These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.2": "2002-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-3-a",
+    "lawCode": "PEN",
+    "code": "241.3(a)",
+    "title": "Assault on public-transportation property or a vehicle",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault against any person on a covered transportation provider’s property or motor vehicle. The definition includes specified for-hire providers and schoolbuses; station property includes reserved passenger parking.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.3": "1997-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-4",
+    "lawCode": "PEN",
+    "code": "241.4",
+    "title": "Assault on a school-district police officer",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a peace officer performing duties as a member of a school district police department under Education Code section 38000. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h); misdemeanor alternative: up to 364 days in county jail. Section 17 governs misdemeanor treatment. This entry covers the school-district-officer branch; the section’s opening ordinary-assault sentence has different punishment. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "EDC:38000",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672",
+      "PEN:830.32"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "EDC:38000": "2020-06-29",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.4": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:830.32": "2001-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-241-5-a",
+    "lawCode": "PEN",
+    "code": "241.5(a)",
+    "title": "Assault on a highway worker",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a highway worker performing duties, with knowledge or reason to know that status and duty. The definition covers specified public employees, contractors and volunteers performing listed work in highway or local-road work zones.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "LAB:1720.4",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "LAB:1720.4": "2023-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.5": "2010-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-6",
+    "lawCode": "PEN",
+    "code": "241.6",
+    "title": "Assault on a school employee",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a school employee performing duties or in retaliation for a duty-related act, on or off campus and regardless of the time. The accused must know or reasonably be expected to know the victim is a school employee. Conduct arising during an otherwise lawful labor dispute is excluded.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. Knowledge or reason to know school-employee status; the duty or retaliation requirement must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:245.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.6": "1994-01-01",
+      "PEN:245.5": "1993-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-7",
+    "lawCode": "PEN",
+    "code": "241.7",
+    "title": "Assault on a juror by a party to the case",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a selected and sworn juror or alternate by a party to that civil or criminal case, during the pending action or after trial. This section does not apply merely because the victim served on an unrelated jury.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h); misdemeanor alternative: up to 364 days in county jail. Section 17 governs misdemeanor treatment. The statute also provides a fine up to $2,000, or both that fine and the misdemeanor jail term. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. The accused must be a party to the case in which the victim was selected and sworn.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.7": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-8-a",
+    "lawCode": "PEN",
+    "code": "241.8(a)",
+    "title": "Assault motivated by military service",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault against a member of the United States Armed Forces because of that military service. The bias must be a cause in fact and, when there are concurrent motives, a substantial factor in the assault.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. Bias concerning the victim’s military service must meet the statutory causation requirement.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241.8": "2004-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-1",
+    "lawCode": "PEN",
+    "code": "243.1",
+    "title": "Battery on a custodial officer",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on a custodial officer as defined in section 831, while the officer is performing duties, with knowledge or reason to know that status and duty. This section cites section 831, not every person working at a detention facility.",
+    "penalty": "Felony: 16 months, 2 years, or 3 years under section 1170(h). These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672",
+      "PEN:831"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.1": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:831": "2018-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-243-10-a",
+    "lawCode": "PEN",
+    "code": "243.10(a)",
+    "title": "Battery motivated by military service",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery against a member of the United States Armed Forces because of that military service. The bias must be a cause in fact and, with concurrent motives, a substantial factor in the battery.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. Bias concerning military service must meet the statutory causation requirement.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.10": "2004-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-15",
+    "lawCode": "PEN",
+    "code": "243.15",
+    "title": "Battery by a local-jail prisoner on a nonprisoner",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. A person confined in, sentenced to, or serving a sentence in a specified city or county jail, industrial farm, or industrial road camp commits battery on someone who is not confined or sentenced there. The statutory custody and victim-status requirements matter.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h); misdemeanor alternative: up to 364 days in county jail. Section 17 governs misdemeanor treatment. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The specified custody and nonprisoner-victim conditions must be established.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.15": "2016-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-2-a-1",
+    "lawCode": "PEN",
+    "code": "243.2(a)(1)",
+    "title": "Battery on school, park, or hospital grounds",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery against any person on covered school or park property or public/private hospital grounds. The statute defines those locations, excludes facilities used for professional sports or commercial events from park coverage, excludes otherwise lawful labor disputes, and preserves the different school-employee rule in section 243.6.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. Separate juvenile counseling provisions may apply under subdivision (a)(2). These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:243.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.2": "2002-01-01",
+      "PEN:243.6": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-25",
+    "lawCode": "PEN",
+    "code": "243.25",
+    "title": "Battery on an elder or dependent adult",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on an elder or dependent adult as defined in section 368, with actual knowledge of that status. This provision does not use only a should-have-known standard. An elder is a person age 65 or older; dependent-adult status requires the statutory conditions.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. Actual knowledge that the victim is an elder or dependent adult.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:368",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.25": "2003-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-3",
+    "lawCode": "PEN",
+    "code": "243.3",
+    "title": "Battery on transit personnel or a passenger",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on the transit operators, drivers, passengers, station/ticket agents, or other transportation-provider personnel covered by the statute. The accused must know or reasonably be expected to know the applicable duty or passenger status. Injury triggers a different sentencing branch.",
+    "penalty": "Without injury: misdemeanor, up to 364 days in county jail, a fine up to $10,000, or both. If injury is inflicted: felony alternative of 16 months, 2 years, or 3 years in state prison, or misdemeanor alternative of up to 364 days in county jail; a fine up to $10,000 or both fine and imprisonment is also authorized. This injury branch specifies state prison, not section 1170(h). These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.3": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-35-a",
+    "lawCode": "PEN",
+    "code": "243.35(a)",
+    "title": "Battery on public-transportation property or a vehicle",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery against any person on a covered transportation provider’s property or in its motor vehicle, except as provided by section 243.3. Station property includes reserved passenger parking. This location-based provision must not displace section 243.3’s victim and injury rules.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:243.3",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.3": "2026-01-01",
+      "PEN:243.35": "1997-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-6",
+    "lawCode": "PEN",
+    "code": "243.6",
+    "title": "Battery on a school employee",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on a school employee performing duties or in retaliation for a duty-related act, on or off campus and regardless of the time, with knowledge or reason to know school-employee status. Otherwise lawful labor disputes are excluded; injury changes the available punishment.",
+    "penalty": "Without injury: misdemeanor, up to 364 days in county jail, a fine up to $2,000, or both. If injury is inflicted: up to 364 days in county jail, a fine up to $2,000, or a felony term of 16 months, 2 years, or 3 years under section 1170(h). The injury clause lists alternatives and does not repeat the no-injury clause’s both-fine-and-jail wording. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. Knowledge or reason to know school-employee status; the duty or retaliation requirement must be established.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:245.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.6": "2011-04-04",
+      "PEN:245.5": "1993-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-65-a",
+    "lawCode": "PEN",
+    "code": "243.65(a)",
+    "title": "Battery on a highway worker",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on a highway worker performing duties, with knowledge or reason to know that status and duty. The statutory definition includes specified employees, contractors and volunteers performing listed work in highway or local-road work zones.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "LAB:1720.4",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "LAB:1720.4": "2023-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.65": "2010-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-7",
+    "lawCode": "PEN",
+    "code": "243.7",
+    "title": "Battery on a juror by a party to the case",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on a selected and sworn juror or alternate by a party to that civil or criminal case, while the action is pending or after trial. Prior jury service in an unrelated case is not enough.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years in state prison. Misdemeanor alternative: up to 364 days in county jail, a fine up to $5,000, or both. This section specifies state prison rather than section 1170(h). These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must be a party to the case in which the victim was selected and sworn.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.7": null,
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-8-a",
+    "lawCode": "PEN",
+    "code": "243.8(a)",
+    "title": "Battery on a sports official",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery on a qualified sports official immediately before, during, or immediately after an organized amateur or professional athletic contest in which the official participates. Knowledge or reason to know the official is performing duties is required. The definition requires registration with or membership in a qualifying sports-official education/training organization.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243.8": null,
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-241-b",
+    "lawCode": "PEN",
+    "code": "241(b)",
+    "title": "Assault on a parking control officer",
+    "summary": "An unlawful attempt with present ability to apply violent force is required; actual contact or injury is not required. Assault on a city or county parking control officer performing duties, with knowledge or reason to know parking-control-officer status. This differs from the separate traffic-officer branch.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a fine up to $2,000, or both. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful act with awareness of facts that would lead a reasonable person to realize it would directly and probably result in force, with present ability. Intent to injure is not required. Knowledge or reason to know the victim is a parking control officer. The victim must be performing duties.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:240",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:241": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-c-2",
+    "lawCode": "PEN",
+    "code": "243(c)(2)",
+    "title": "Battery causing injury to a peace officer",
+    "summary": "A willful and unlawful use of force or violence is required; harmful or offensive contact can suffice without physical injury. Battery causing injury to a peace officer performing duties, with knowledge or reason to know that status and duty. Section 243(f)(5) defines injury as a physical injury requiring professional medical treatment. The statute includes specified uniformed private-security work performed concurrently with peace-officer duties.",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h); misdemeanor alternative: up to 364 days in county jail. Section 17 governs misdemeanor treatment. The statute also permits a fine up to $10,000, or both that fine and imprisonment. These are adult base penalties, not total sentence predictions. Restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful harmful or offensive contact, rather than accidental touching; intent to injure is not required. The accused must know or reasonably be expected to know the specified status and performance of duties.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243": "2025-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    }
+  }
+]

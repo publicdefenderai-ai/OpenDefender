@@ -6,7 +6,7 @@ test("all forgery/theft additions reach the API and representative rules guidanc
   const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
   expect(response.ok()).toBe(true);
   const body = await response.json();
-  expect(body.charges).toHaveLength(153);
+  expect(body.charges).toHaveLength(174);
   for (const a of additions) {
     expect(body.charges.find((r: any) => r.id === a.id), a.id).toMatchObject({ description: a.summary, maxPenalty: a.penalty, categories: a.categories });
   }

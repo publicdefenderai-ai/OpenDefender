@@ -1,0 +1,2333 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_protected_person_additions_not_statewide_certification",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "previousReviewSha256": "70e93f08cc601ddd53b69a2bec769ed2e19ec0665954504d90883590f0dbae26",
+  "acquisitionSha256": "1945fbd3fd42175e954344b367dac6109aea6434c42fd91118fa40d456666133",
+  "records": [
+    {
+      "id": "ca-pen-241-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "74d6973beeec55328428e4c982ac803354e52a259ab3a70170116e319034f282",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.1",
+          "versions": [
+            {
+              "versionId": "id_1d0f938d-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "793d3c1894000d659c0f3db8028cc036a43a2ace7324f5910e1a5f28738bb93a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:831",
+          "versions": [
+            {
+              "versionId": "id_a0b9577d-df53-11e7-967b-c7bde29c26e0",
+              "contentSha256": "3af3064c640190df01ae069797d09068c68a1c2d28c164bb58b76d3f5ec9cdeb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:831.5",
+          "versions": [
+            {
+              "versionId": "id_6c9e19e5-0bdd-11ea-912d-915c88c10a14",
+              "contentSha256": "f35d30c5c6801d552ca850bd1125d68024250209e9ca14418656942b880c7b1f"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.1",
+        "start": 0,
+        "end": 416,
+        "text": "When an assault is committed against the person of a custodial officer as defined in Section 831 or 831.5, and the person committing the offense knows or reasonably should know that the victim is a custodial officer engaged in the performance of his or her duties, the offense shall be punished by imprisonment in the county jail not exceeding one year or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-2-a-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "4c153621fdc3fabe1ca1ab066bb3b022003698df6f8cf5010efa01af42749f34",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.2",
+          "versions": [
+            {
+              "versionId": "id_665292be-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "16ff14c30a4c8603cc1aacf826c11885ccf8dbab874a6fe5b422841229cda2bd"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.2",
+        "start": 0,
+        "end": 1259,
+        "text": "(a) (1) When an assault is committed on school or park property against any person, the assault is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in the county jail not exceeding one year, or by both that fine and imprisonment. (2) When a violation of this section is committed by a minor on school property, the court may, in addition to any other fine, sentence, or as a condition of probation, order the minor to attend counseling as deemed appropriate by the court at the expense of the minor’s parents. The court shall take into consideration the ability of the minor’s parents to pay, however, no minor shall be relieved of attending counseling because of the minor’s parents’ inability to pay for the counseling imposed by this section. (b) “School,” as used in this section, means any elementary school, junior high school, four-year high school, senior high school, adult school or any branch thereof, opportunity school, continuation high school, regional occupational center, evening high school, technical school, or community college. (c) “Park,” as used in this section, means any publicly maintained or operated park. It does not include any facility when used for professional sports or commercial events."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-3-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "374eafa94a41ff7c85cc83af01040b267114bb1dbaa5ff695e60dba86ad20b47",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.3",
+          "versions": [
+            {
+              "versionId": "id_66541960-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "f47af1588422c15bec3ae1254f234f2df6152e7c47bdc3d1a3ddc44b13cb98b6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.3",
+        "start": 0,
+        "end": 884,
+        "text": "(a) When an assault is committed against any person on the property of, or on a motor vehicle of, a public transportation provider, the offense shall be punished by a fine not to exceed two thousand dollars ($2,000), or by imprisonment in a county jail not to exceed one year, or by both the fine and imprisonment. (b) As used in this section, “public transportation provider” means a publicly or privately owned entity that operates, for the transportation of persons for hire, a bus, taxicab, streetcar, cable car, trackless trolley, or other motor vehicle, including a vehicle operated on stationary rails or on a track or rail suspended in air, or that operates a schoolbus. (c) As used in this section, “on the property of” means the entire station where public transportation is available, including the parking lot reserved for the public who utilize the transportation system."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-4",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "60b604fa5a4df070abe1b76143005e76411c23f7450bbfafb47986dfd069fcb2",
+      "sources": [
+        {
+          "key": "EDC:38000",
+          "versions": [
+            {
+              "versionId": "id_0a3a1171-c130-11ea-aeb4-db1ca18666e5",
+              "contentSha256": "672b4704f820148de55e81221b2f36b78ee15eec564d5e0e477d42f781ec8b4c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.4",
+          "versions": [
+            {
+              "versionId": "id_206993ff-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "fb6e68f96c2b49dfca70203c6e87e1afe4fa4f8f6deabba95b32d362b9b261df"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830.32",
+          "versions": [
+            {
+              "versionId": "id_698ed1ca-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a460acacf82eca5d299dbbd3464c3d2fc2384f857350ccd03a6e9ccaee05c922"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.4",
+        "start": 0,
+        "end": 680,
+        "text": "An assault is punishable by fine not exceeding one thousand dollars ($1,000), or by imprisonment in the county jail not exceeding six months, or by both. When the assault is committed against the person of a peace officer engaged in the performance of his or her duties as a member of a police department of a school district pursuant to Section 38000 of the Education Code, and the person committing the offense knows or reasonably should know that the victim is a peace officer engaged in the performance of his or her duties, the offense shall be punished by imprisonment in the county jail not exceeding one year or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-5-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8c76241df1ccaec64b3c5a793aecf8e86829d2b5e7d19ac23050a18f4ab60221",
+      "sources": [
+        {
+          "key": "LAB:1720.4",
+          "versions": [
+            {
+              "versionId": "id_235b485c-7278-11ed-adbb-9148faa5f64e",
+              "contentSha256": "e919144d887fdfc0fec9161e053740352f1c0194c3d06123ee105d9a69f49637"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.5",
+          "versions": [
+            {
+              "versionId": "id_cb1340eb-f3aa-11de-a127-d5e287cac7f8",
+              "contentSha256": "f992e5eb80727cfc11e4bf66d39eedc44cfc45d274d8aa1de8b75c6c8093cef6"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.5",
+        "start": 0,
+        "end": 1408,
+        "text": "(a) When an assault is committed against a highway worker engaged in the performance of his or her duties and the person committing the offense knows or reasonably should know that the victim is a highway worker engaged in the performance of his or her duties, the offense shall be punishable by a fine not to exceed two thousand dollars ($2,000) or by imprisonment in a county jail up to one year or by both that fine and imprisonment. (b) As used in this section, “highway worker” means an employee of the Department of Transportation, a contractor or employee of a contractor while working under contract with the Department of Transportation, an employee of a city, county, or city and county, a contractor or employee of a contractor while working under contract with a city, county, or city and county, or a volunteer as defined in Section 1720.4 of the Labor Code who does one or more of the following: (1) Performs maintenance, repair, or construction of state highway or local street or road infrastructures and associated rights-of-way in highway or local street or road work zones. (2) Operates equipment on state highway or local street or road infrastructures and associated rights-of-way in highway or local street or road work zones. (3) Performs any related maintenance work, as required, on state highway or local street or road infrastructures in highway or local street or road work zones."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-6",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "e3d324324245d8236e528ff39b69724dab6168d4eca1c29d82959d86757808f8",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.6",
+          "versions": [
+            {
+              "versionId": "id_66541964-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "caa8ab80947fce18a81870692dc292a7f1dbeda5a0e6167ec40f9d054ec108cb"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.5",
+          "versions": [
+            {
+              "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.6",
+        "start": 0,
+        "end": 750,
+        "text": "When an assault is committed against a school employee engaged in the performance of his or her duties, or in retaliation for an act performed in the course of his or her duties, whether on or off campus, during the schoolday or at any other time, and the person committing the offense knows or reasonably should know the victim is a school employee, the assault is punishable by imprisonment in a county jail not exceeding one year, or by a fine not exceeding two thousand dollars ($2,000), or by both the fine and imprisonment. For purposes of this section, “school employee” has the same meaning as defined in subdivision (d) of Section 245.5. This section shall not apply to conduct arising during the course of an otherwise lawful labor dispute."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-7",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "cb22076d1371d509d847f39d2b144ecd4254d89e34bddb3f07c40b674a0831cd",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.7",
+          "versions": [
+            {
+              "versionId": "id_21d6dea1-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "1d6777b84896b4d18cbc044f27c053ebb6a388e5e0f02b2262cdac69d057d609"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.7",
+        "start": 0,
+        "end": 529,
+        "text": "Any person who is a party to a civil or criminal action in which a jury has been selected to try the case and who, while the legal action is pending or after the conclusion of the trial, commits an assault against any juror or alternate juror who was selected and sworn in that legal action, shall be punished by a fine not to exceed two thousand dollars ($2,000), or by imprisonment in the county jail not exceeding one year, or by both such fine and imprisonment, or by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-8-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f1162b4754a446a5a6cde94c779fade07898c07fadb069f03b8fc58a3d507963",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241.8",
+          "versions": [
+            {
+              "versionId": "id_66541968-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d0e202abeb0c5016c70338f0d212e52ef406b4e1b4bb284e0ae7e5fcb80af999"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241.8",
+        "start": 0,
+        "end": 579,
+        "text": "(a) Any person who commits an assault against a member of the United States Armed Forces because of the victim’s service in the United States Armed Forces shall be punished by a fine not exceeding two thousand dollars ($2,000), by imprisonment in a county jail for a period not exceeding one year, or by both that fine and imprisonment. (b) “Because of” means that the bias motivation must be a cause in fact of the assault, whether or not other causes exist. When multiple concurrent motives exist, the prohibited bias must be a substantial factor in bringing about the assault."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b2f5a22ed690e1c937e8a09e67e3fc6fa526ed892a34c50f9653e3dcab7c21cd",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.1",
+          "versions": [
+            {
+              "versionId": "id_24f95455-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "e8ecb4af2bb97b663cb15ebecdf272785088c09f55a6d5f42629599753a2ca58"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:831",
+          "versions": [
+            {
+              "versionId": "id_a0b9577d-df53-11e7-967b-c7bde29c26e0",
+              "contentSha256": "3af3064c640190df01ae069797d09068c68a1c2d28c164bb58b76d3f5ec9cdeb"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.1",
+        "start": 0,
+        "end": 441,
+        "text": "When a battery is committed against the person of a custodial officer as defined in Section 831 of the Penal Code, and the person committing the offense knows or reasonably should know that the victim is a custodial officer engaged in the performance of his or her duties, and the custodial officer is engaged in the performance of his or her duties, the offense shall be punished by imprisonment pursuant to subdivision (h) of Section 1170."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-10-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "a755afa5e9316ebab1e18867a8ce7467e9fb0e0b23aceeb94c14ad3ce0839442",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.10",
+          "versions": [
+            {
+              "versionId": "id_665bbaa6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "30d1a40c6294ef8a3844df9fe264c4693eac68cf0943c41ee0641f10133cb801"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.10",
+        "start": 0,
+        "end": 578,
+        "text": "(a) Any person who commits a battery against a member of the United States Armed Forces because of the victim’s service in the United States Armed Forces shall be punished by a fine not exceeding two thousand dollars ($2,000), by imprisonment in a county jail for a period not exceeding one year, or by both that fine and imprisonment. (b) “Because of” means that the bias motivation must be a cause in fact of the battery, whether or not other causes exist. When multiple concurrent motives exist, the prohibited bias must be a substantial factor in bringing about the battery."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-15",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "4aed0b8c4f02a27bb46a5b103c2edd5a0b4bd393f3ac3e2aea49f865a5f993f3",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.15",
+          "versions": [
+            {
+              "versionId": "id_8368a1eb-a358-11e5-b6cb-8d365f46d37f",
+              "contentSha256": "e64529f63e99ae18b88f44e3094326c0be17ff2ed49ed65cfcd9b83dae956a59"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.15",
+        "start": 0,
+        "end": 438,
+        "text": "Every person confined in, sentenced to, or serving a sentence in, a city or county jail, industrial farm, or industrial road camp in this state, who commits a battery upon the person of any individual who is not himself or herself a person confined or sentenced therein, is guilty of a public offense and is subject to punishment by imprisonment pursuant to subdivision (h) of Section 1170, or in a county jail for not more than one year."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-2-a-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2669cd7e4c6a41c79c7fe602ed86eecf4954605e99ca88e922f5d60d4d0c2081",
+      "sources": [
+        {
+          "key": "HSC:1250",
+          "versions": [
+            {
+              "versionId": "id_6f634ea3-6b9b-11e5-80cd-e3ced8a7d88c",
+              "contentSha256": "b991f7a6ecdffb2c20868edabeb07f0796f57d5706df7bffd864ee0f4eff96d7"
+            }
+          ]
+        },
+        {
+          "key": "HSC:1250.2",
+          "versions": [
+            {
+              "versionId": "id_d44b5f80-b8b7-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "25fc5d8484ce0ff97f7e3f0bc0c8eecd3a412d36814fca9a87073765f555dd72"
+            }
+          ]
+        },
+        {
+          "key": "HSC:1250.3",
+          "versions": [
+            {
+              "versionId": "id_d7626382-b8b7-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "28fff0bc22268d6f56b62e6a8742eb75ac754d8f40517776ad90f944ff6c3352"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.2",
+          "versions": [
+            {
+              "versionId": "id_665726b0-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d6e9b04f792ec1f522914b98dbabd73e37919aeee41338de1c6168040a70c826"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.6",
+          "versions": [
+            {
+              "versionId": "id_267015d7-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "7e1db5c24ea49cc0ccb2ad91f9d04ac75065753ea8a319d942197dc79b8a4e7d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.2",
+        "start": 0,
+        "end": 1758,
+        "text": "(a) (1) Except as otherwise provided in Section 243.6, when a battery is committed on school property, park property, or the grounds of a public or private hospital, against any person, the battery is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in the county jail not exceeding one year, or by both the fine and imprisonment. (2) When a violation of this section is committed by a minor on school property, the court may, in addition to any other fine, sentence, or as a condition of probation, order the minor to attend counseling as deemed appropriate by the court at the expense of the minor’s parents. The court shall take into consideration the ability of the minor’s parents to pay, however, no minor shall be relieved of attending counseling because of the minor’s parents’ inability to pay for the counseling imposed by this section. (b) For the purposes of this section, the following terms have the following meanings: (1) “Hospital” means a facility for the diagnosis, care, and treatment of human illness that is subject to, or specifically exempted from, the licensure requirements of Chapter 2 (commencing with Section 1250) of Division 2 of the Health and Safety Code. (2) “Park” means any publicly maintained or operated park. It does not include any facility when used for professional sports or commercial events. (3) “School” means any elementary school, junior high school, four-year high school, senior high school, adult school or any branch thereof, opportunity school, continuation high school, regional occupational center, evening high school, technical school, or community college. (c) This section shall not apply to conduct arising during the course of an otherwise lawful labor dispute."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-25",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f8d4b6d3ca76dfb84abb19004d162231444b787a9785a00b618dcaa327f0a030",
+      "sources": [
+        {
+          "key": "HSC:1250",
+          "versions": [
+            {
+              "versionId": "id_6f634ea3-6b9b-11e5-80cd-e3ced8a7d88c",
+              "contentSha256": "b991f7a6ecdffb2c20868edabeb07f0796f57d5706df7bffd864ee0f4eff96d7"
+            }
+          ]
+        },
+        {
+          "key": "HSC:1250.2",
+          "versions": [
+            {
+              "versionId": "id_d44b5f80-b8b7-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "25fc5d8484ce0ff97f7e3f0bc0c8eecd3a412d36814fca9a87073765f555dd72"
+            }
+          ]
+        },
+        {
+          "key": "HSC:1250.3",
+          "versions": [
+            {
+              "versionId": "id_d7626382-b8b7-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "28fff0bc22268d6f56b62e6a8742eb75ac754d8f40517776ad90f944ff6c3352"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.25",
+          "versions": [
+            {
+              "versionId": "id_665726b2-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "e2a7e23ffa6a46986a2757cda19298db1955d97898d8af1f18c9f302c5ea4a3a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:368",
+          "versions": [
+            {
+              "versionId": "id_07bd9da1-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "e855e6c34aa41014b76d14403b210804f0618ebff5f6588366b7eb055bdf6ad0"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.25",
+        "start": 0,
+        "end": 356,
+        "text": "When a battery is committed against the person of an elder or a dependent adult as defined in Section 368, with knowledge that he or she is an elder or a dependent adult, the offense shall be punishable by a fine not to exceed two thousand dollars ($2,000), or by imprisonment in a county jail not to exceed one year, or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-3",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "43c06cfd76d9c9cf2799167b2d1be00cbb4eda492adb7ad211014dee07734ae0",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.3",
+          "versions": [
+            {
+              "versionId": "id_73f127fa-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "5993b0ba6b57f506cf3271ed331c618f924e2430f0a9a351564fb70734e224ea"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.3",
+        "start": 0,
+        "end": 1255,
+        "text": "If a battery is committed against the person of an operator, driver, or passenger on a bus, taxicab, streetcar, cable car, trackless trolley, or other motor vehicle, including a vehicle operated on stationary rails or on a track or rail suspended in the air, used for the transportation of persons for hire, or against a schoolbus driver, or against the person of a station agent or ticket agent for the entity providing the transportation, or against a public transportation provider, or against an employee or contractor of a public transportation provider, and the person who commits the offense knows or reasonably should know that the victim, in the case of an operator, driver, or agent, employee, or contractor, is engaged in the performance of their duties, or is a passenger the offense shall be punished by a fine not exceeding ten thousand dollars ($10,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment. If an injury is inflicted on that victim, the offense shall be punished by a fine not exceeding ten thousand dollars ($10,000), or by imprisonment in a county jail not exceeding one year or in the state prison for 16 months, or two or three years, or by both that fine and imprisonment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-35-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b3dbe786b4eea36f50f175783a42688ba71201fe4c32fc2bb64881bb4a2ccc1a",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.3",
+          "versions": [
+            {
+              "versionId": "id_73f127fa-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "5993b0ba6b57f506cf3271ed331c618f924e2430f0a9a351564fb70734e224ea"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.35",
+          "versions": [
+            {
+              "versionId": "id_665726b6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "68467ee992f00d195608c34ba5658010c56d48aca5c55a047176575d5d400aca"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.35",
+        "start": 0,
+        "end": 920,
+        "text": "(a) Except as provided in Section 243.3, when a battery is committed against any person on the property of, or in a motor vehicle of, a public transportation provider, the offense shall be punished by a fine not to exceed two thousand dollars ($2,000), or by imprisonment in a county jail not to exceed one year, or by both the fine and imprisonment. (b) As used in this section, “public transportation provider” means a publicly or privately owned entity that operates, for the transportation of persons for hire, a bus, taxicab, streetcar, cable car, trackless trolley, or other motor vehicle, including a vehicle operated on stationary rails or on a track or rail suspended in air, or that operates a schoolbus. (c) As used in this section, “on the property of” means the entire station where public transportation is available, including the parking lot reserved for the public who utilize the transportation system."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-6",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "1189a92cffdb92059e03ec1768c1953cd532d08f78190c33686a8fcfb6f69037",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.6",
+          "versions": [
+            {
+              "versionId": "id_267015d7-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "7e1db5c24ea49cc0ccb2ad91f9d04ac75065753ea8a319d942197dc79b8a4e7d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:245.5",
+          "versions": [
+            {
+              "versionId": "id_665ec7f4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "36da806a20b42bcc2e2355a9090a8fc6d45e8f3491cb34d81fc2669253506187"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.6",
+        "start": 0,
+        "end": 1059,
+        "text": "When a battery is committed against a school employee engaged in the performance of his or her duties, or in retaliation for an act performed in the course of his or her duties, whether on or off campus, during the schoolday or at any other time, and the person committing the offense knows or reasonably should know that the victim is a school employee, the battery is punishable by imprisonment in a county jail not exceeding one year, or by a fine not exceeding two thousand dollars ($2,000), or by both the fine and imprisonment. However, if an injury is inflicted on the victim, the battery shall be punishable by imprisonment in a county jail for not more than one year, or by a fine of not more than two thousand dollars ($2,000), or by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months, or two or three years. For purposes of this section, “school employee” has the same meaning as defined in subdivision (d) of Section 245.5. This section shall not apply to conduct arising during the course of an otherwise lawful labor dispute."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-65-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "dad1f95f387fbcc016cdbce191666e7850ebaf81a6946534d80f30e835273abf",
+      "sources": [
+        {
+          "key": "LAB:1720.4",
+          "versions": [
+            {
+              "versionId": "id_235b485c-7278-11ed-adbb-9148faa5f64e",
+              "contentSha256": "e919144d887fdfc0fec9161e053740352f1c0194c3d06123ee105d9a69f49637"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.65",
+          "versions": [
+            {
+              "versionId": "id_cc529ebd-f3aa-11de-a127-d5e287cac7f8",
+              "contentSha256": "141387e027893f940f0c1a28c9bbaff14ae82374d67c110cc5b018cf452ce61a"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.65",
+        "start": 0,
+        "end": 1429,
+        "text": "(a) When a battery is committed against the person of a highway worker engaged in the performance of his or her duties and the person committing the offense knows or reasonably should know that the victim is a highway worker engaged in the performance of his or her duties, the offense shall be punished by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment. (b) As used in this section, “highway worker” means an employee of the Department of Transportation, a contractor or employee of a contractor while working under contract with the Department of Transportation, an employee of a city, county, or city and county, a contractor or employee of a contractor while working under contract with a city, county, or city and county, or a volunteer as defined in Section 1720.4 of the Labor Code who does one or more of the following: (1) Performs maintenance, repair, or construction of state highway or local street or road infrastructures and associated rights-of-way in highway or local street or road work zones. (2) Operates equipment on state highway or local street or road infrastructures and associated rights-of-way in highway or local street or road work zones. (3) Performs any related maintenance work, as required, on state highway or local street or road infrastructures in highway or local street or road work zones."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-7",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "21cea54b1600c596d15c0fff607b3ab3b56aa9044eec6446d12c34ecd04d7a77",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.7",
+          "versions": [
+            {
+              "versionId": "id_665a33fe-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "53013931ad1a2ec5953f36522b4997d484f7705ee24bfdbfe57544509bb2fe81"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.7",
+        "start": 0,
+        "end": 548,
+        "text": "Any person who is a party to a civil or criminal action in which a jury has been selected to try the case and who, while the legal action is pending or after the conclusion of the trial commits a battery against any juror or alternate juror who was selected and sworn in that legal action shall be punished by a fine not to exceed five thousand dollars ($5,000), or by imprisonment in the county jail not exceeding one year, or by both such fine and imprisonment, or by the imprisonment in the state prison for 16 months, or for two or three years."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-8-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b6057017de026008ad29ebe3097d8a18dd1b59228df7be8c43d0d7f39ec5ec97",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243.8",
+          "versions": [
+            {
+              "versionId": "id_665a3400-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "c09c41b4bf25fa5ac5735b793794209974b2ed295e953ded0af790c633d12c7f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243.8",
+        "start": 0,
+        "end": 952,
+        "text": "(a) When a battery is committed against a sports official immediately prior to, during, or immediately following an interscholastic, intercollegiate, or any other organized amateur or professional athletic contest in which the sports official is participating, and the person who commits the offense knows or reasonably should know that the victim is engaged in the performance of his or her duties, the offense shall be punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in the county jail not exceeding one year, or by both that fine and imprisonment. (b) For purposes of this section, “sports official” means any individual who serves as a referee, umpire, linesman, or who serves in a similar capacity but may be known by a different title or name and is duly registered by, or a member of, a local, state, regional, or national organization engaged in part in providing education and training to sports officials."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-241-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "30879fd940bd3397fff845fd1938db196fd95558857429cdb8e79b6aeadcc109",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241",
+          "versions": [
+            {
+              "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:241",
+        "start": 0,
+        "end": 5408,
+        "text": "(a) An assault is punishable by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in the county jail not exceeding six months, or by both the fine and imprisonment. (b) When an assault is committed against the person of a parking control officer engaged in the performance of their duties, and the person committing the offense knows or reasonably should know that the victim is a parking control officer, the assault is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in the county jail not exceeding six months, or by both the fine and imprisonment. (c) When an assault is committed against the person of a peace officer, firefighter, emergency medical technician, lifeguard, process server, traffic officer, code enforcement officer, animal control officer, or search and rescue member engaged in the performance of their duties, or a physician or nurse engaged in rendering emergency medical care outside a hospital, clinic, or other health care facility, or a physician, nurse, or other health care worker of a hospital engaged in providing services within the emergency department, and the person committing the offense knows or reasonably should know that the victim is a peace officer, firefighter, emergency medical technician, lifeguard, process server, traffic officer, code enforcement officer, animal control officer, or search and rescue member engaged in the performance of their duties, or a physician or nurse engaged in rendering emergency medical care, or a physician, nurse, or other health care worker of a hospital engaged in providing services within the emergency department, the assault is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail not exceeding one year, or by both the fine and imprisonment. (d) As used in this section, the following definitions apply: (1) Peace officer means any person defined in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2. (2) “Emergency medical technician” means a person who is either an EMT-I, EMT-II, or EMT-P (paramedic), and possesses a valid certificate or license under the standards of Division 2.5 (commencing with Section 1797) of the Health and Safety Code. (3) “Nurse” means a person who possesses a valid certificate or license under the standards of Chapter 6 (commencing with Section 2700) or 6.5 (commencing with Section 2840) of Division 2 of the Business and Professions Code or a nurse of a hospital engaged in providing services within the emergency department. (4) “Lifeguard” means a person who is: (A) Employed as a lifeguard by the state, a county, or a city, and is designated by local ordinance as a public officer who has a duty and responsibility to enforce local ordinances and misdemeanors through the issuance of citations. (B) Wearing distinctive clothing which includes written identification of the person’s status as a lifeguard and which clearly identifies the employing organization. (5) “Process server” means any person who meets the standards or is expressly exempt from the standards set forth in Section 22350 of the Business and Professions Code. (6) “Traffic officer” means any person employed by a county or city to monitor and enforce state laws and local ordinances relating to parking and the operation of vehicles. (7) “Animal control officer” means any person employed by a county or city for purposes of enforcing animal control laws or regulations. (8) (A) “Code enforcement officer” means any person who is not described in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2 and who is employed by any governmental subdivision, public or quasi-public corporation, public agency, public service corporation, any town, city, county, or municipal corporation, whether incorporated or chartered, that has enforcement authority for health, safety, and welfare requirements, and whose duties include enforcement of any statute, rules, regulations, or standards, and who is authorized to issue citations, or file formal complaints. (B) “Code enforcement officer” also includes any person who is employed by the Department of Housing and Community Development who has enforcement authority for health, safety, and welfare requirements pursuant to the Employee Housing Act (Part 1 (commencing with Section 17000) of Division 13 of the Health and Safety Code); the State Housing Law (Part 1.5 (commencing with Section 17910) of Division 13 of the Health and Safety Code); the Manufactured Housing Act of 1980 (Part 2 (commencing with Section 18000) of Division 13 of the Health and Safety Code); the Mobilehome Parks Act (Part 2.1 (commencing with Section 18200) of Division 13 of the Health and Safety Code); and the Special Occupancy Parks Act (Part 2.3 (commencing with Section 18860) of Division 13 of the Health and Safety Code). (9) “Parking control officer” means any person employed by a city, county, or city and county, to monitor and enforce state laws and local ordinances relating to parking. (10) “Search and rescue member” means any person who is part of an organized search and rescue team managed by a governmental agency. (11) “Health care worker” means a person who, in the course and scope of employment, performs duties directly associated with the care and treatment rendered by the hospital’s emergency department or the department’s security."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    },
+    {
+      "id": "ca-pen-243-c-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "cad214aca47a7d52ccbcd7c8d2c4186bd406e2d193d619b7ee8eb839d30a05af",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:242",
+          "versions": [
+            {
+              "versionId": "id_6655a00a-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "1be30dba78babf5aac2d05bd9f69c0e43c6c6de835b1bf38ccd237ef28cf1c47"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243",
+          "versions": [
+            {
+              "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:243",
+        "start": 0,
+        "end": 12554,
+        "text": "(a) A battery is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail not exceeding six months, or by both that fine and imprisonment. (b) When a battery is committed against the person of a peace officer, custodial officer, firefighter, emergency medical technician, lifeguard, security officer, custody assistant, process server, traffic officer, code enforcement officer, animal control officer, or search and rescue member engaged in the performance of their duties, whether on or off duty, including when the peace officer is in a police uniform and is concurrently performing the duties required of them as a peace officer while also employed in a private capacity as a part-time or casual private security guard or patrolman, or a nonsworn employee of a probation department engaged in the performance of their duties, whether on or off duty, or a physician or nurse engaged in rendering emergency medical care outside a hospital, clinic, or other health care facility, or a physician, nurse, or other health care worker of a hospital engaged in providing services within the emergency department, and the person committing the offense knows or reasonably should know that the victim is a peace officer, custodial officer, firefighter, emergency medical technician, lifeguard, security officer, custody assistant, process server, traffic officer, code enforcement officer, animal control officer, or search and rescue member engaged in the performance of their duties, nonsworn employee of a probation department, or a physician or nurse engaged in rendering emergency medical care, or a physician, nurse, or other health care worker of a hospital engaged in providing services within the emergency department, the battery is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment. (c) (1) When a battery is committed against a custodial officer, firefighter, emergency medical technician, lifeguard, process server, traffic officer, or animal control officer engaged in the performance of their duties, whether on or off duty, or a nonsworn employee of a probation department engaged in the performance of their duties, whether on or off duty, or a physician or nurse engaged in rendering emergency medical care outside a hospital, clinic, or other health care facility, and the person committing the offense knows or reasonably should know that the victim is a nonsworn employee of a probation department, custodial officer, firefighter, emergency medical technician, lifeguard, process server, traffic officer, or animal control officer engaged in the performance of their duties, or a physician or nurse engaged in rendering emergency medical care, and an injury is inflicted on that victim, the battery is punishable by a fine of not more than two thousand dollars ($2,000), by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment, or by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months, or two or three years. (2) When the battery specified in paragraph (1) is committed against a peace officer engaged in the performance of their duties, whether on or off duty, including when the peace officer is in a police uniform and is concurrently performing the duties required of them as a peace officer while also employed in a private capacity as a part-time or casual private security guard or patrolman and the person committing the offense knows or reasonably should know that the victim is a peace officer engaged in the performance of their duties, the battery is punishable by a fine of not more than ten thousand dollars ($10,000), or by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170 for 16 months, or two or three years, or by both that fine and imprisonment. (d) When a battery is committed against any person and serious bodily injury is inflicted on the person, the battery is punishable by imprisonment in a county jail not exceeding one year or imprisonment pursuant to subdivision (h) of Section 1170 for two, three, or four years. (e) (1) When a battery is committed against a spouse, a person with whom the defendant is cohabiting, a person who is the parent of the defendant’s child, former spouse, fiancé, or fiancée, or a person with whom the defendant currently has, or has previously had, a dating or engagement relationship, the battery is punishable by a fine not exceeding two thousand dollars ($2,000), or by imprisonment in a county jail for a period of not more than one year, or by both that fine and imprisonment. If probation is granted, or the execution or imposition of the sentence is suspended, it shall be a condition thereof that the defendant participate in, for no less than one year, and successfully complete, a batterer’s treatment program, as described in Section 1203.097, or if none is available, another appropriate counseling program designated by the court. However, this provision shall not be construed as requiring a city, a county, or a city and county to provide a new program or higher level of service as contemplated by Section 6 of Article XIII B of the California Constitution. (2) Upon conviction of a violation of this subdivision, if probation is granted, the conditions of probation may include, in lieu of a fine, one or both of the following requirements: (A) That the defendant make payments to a domestic violence shelter-based program, up to a maximum of five thousand dollars ($5,000). (B) That the defendant reimburse the victim for reasonable costs of counseling and other reasonable expenses that the court finds are the direct result of the defendant’s offense. For any order to pay a fine, make payments to a domestic violence shelter-based program, or pay restitution as a condition of probation under this subdivision, the court shall make a determination of the defendant’s ability to pay. In no event shall any order to make payments to a domestic violence shelter-based program be made if it would impair the ability of the defendant to pay direct restitution to the victim or court-ordered child support. If the injury to a married person is caused in whole or in part by the criminal acts of their spouse in violation of this section, the community property shall not be used to discharge the liability of the offending spouse for restitution to the injured spouse, required by Section 1203.04, as operative on or before August 2, 1995, or Section 1202.4, or to a shelter for costs with regard to the injured spouse and dependents, required by this section, until all separate property of the offending spouse is exhausted. (3) Upon conviction of a violation of this subdivision, if probation is granted or the execution or imposition of the sentence is suspended and the person has been previously convicted of a violation of this subdivision or Section 273.5, the person shall be imprisoned for not less than 48 hours in addition to the conditions in paragraph (1). However, the court, upon a showing of good cause, may elect not to impose the mandatory minimum imprisonment as required by this subdivision and may, under these circumstances, grant probation or order the suspension of the execution or imposition of the sentence. (4) The Legislature finds and declares that these specified crimes merit special consideration when imposing a sentence so as to display society’s condemnation for these crimes of violence upon victims with whom a close relationship has been formed. (5) If a peace officer makes an arrest for a violation of paragraph (1) of subdivision (e) of this section, the peace officer is not required to inform the victim of their right to make a citizen’s arrest pursuant to subdivision (b) of Section 836. (f) As used in this section: (1) “Peace officer” means any person defined in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2. (2) “Emergency medical technician” means a person who is either an EMT-I, EMT-II, or EMT-P (paramedic), and possesses a valid certificate or license under the standards of Division 2.5 (commencing with Section 1797) of the Health and Safety Code. (3) “Nurse” means a person who possesses a valid certificate or license under the standards of Chapter 6 (commencing with Section 2700) or 6.5 (commencing with Section 2840) of Division 2 of the Business and Professions Code or a nurse of a hospital engaged in providing services within the emergency department. (4) “Serious bodily injury” means a serious impairment of physical condition, including, but not limited to, the following: loss of consciousness; concussion; bone fracture; protracted loss or impairment of function of any bodily member or organ; a wound requiring extensive suturing; and serious disfigurement. (5) “Injury” means any physical injury which requires professional medical treatment. (6) “Custodial officer” means any person who has the responsibilities and duties described in Section 831 and who is employed by a law enforcement agency of any city or county or who performs those duties as a volunteer. (7) “Lifeguard” means a person defined in paragraph (5) of subdivision (d) of Section 241. (8) “Traffic officer” means any person employed by a city, county, or city and county to monitor and enforce state laws and local ordinances relating to parking and the operation of vehicles. (9) “Animal control officer” means any person employed by a city, county, or city and county for purposes of enforcing animal control laws or regulations. (10) “Dating relationship” means frequent, intimate associations primarily characterized by the expectation of affectional or sexual involvement independent of financial considerations. (11) (A) “Code enforcement officer” means any person who is not described in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2 and who is employed by any governmental subdivision, public or quasi-public corporation, public agency, public service corporation, any town, city, county, or municipal corporation, whether incorporated or chartered, who has enforcement authority for health, safety, and welfare requirements, and whose duties include enforcement of any statute, rules, regulations, or standards, and who is authorized to issue citations, or file formal complaints. (B) “Code enforcement officer” also includes any person who is employed by the Department of Housing and Community Development who has enforcement authority for health, safety, and welfare requirements pursuant to the Employee Housing Act (Part 1 (commencing with Section 17000) of Division 13 of the Health and Safety Code); the State Housing Law (Part 1.5 (commencing with Section 17910) of Division 13 of the Health and Safety Code); the Manufactured Housing Act of 1980 (Part 2 (commencing with Section 18000) of Division 13 of the Health and Safety Code); the Mobilehome Parks Act (Part 2.1 (commencing with Section 18200) of Division 13 of the Health and Safety Code); and the Special Occupancy Parks Act (Part 2.3 (commencing with Section 18860) of Division 13 of the Health and Safety Code). (12) “Custody assistant” means any person who has the responsibilities and duties described in Section 831.7 and who is employed by a law enforcement agency of any city, county, or city and county. (13) “Search and rescue member” means any person who is part of an organized search and rescue team managed by a government agency. (14) “Security officer” means any person who has the responsibilities and duties described in Section 831.4 and who is employed by a law enforcement agency of any city, county, or city and county. (15) “Health care worker” means a person who, in the course and scope of employment, performs duties directly associated with the care and treatment rendered by the hospital’s emergency department or the department’s security. (g) It is the intent of the Legislature by amendments to this section at the 1981–82 and 1983–84 Regular Sessions to abrogate the holdings in cases such as People v. Corey, 21 Cal. 3d 738, and Cervantez v. J.C. Penney Co., 24 Cal. 3d 579, and to reinstate prior judicial interpretations of this section as they relate to criminal sanctions for battery on peace officers who are employed, on a part-time or casual basis, while wearing a police uniform as private security guards or patrolmen and to allow the exercise of peace officer powers concurrently with that employment."
+      },
+      "remainingWork": "Independent legal review, fact-specific defenses and sentencing, reviewed translations, source seeding and live deployment parity remain."
+    }
+  ],
+  "sections": [
+    {
+      "key": "PEN:192.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:193.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_cedefa7e-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "dd910da312fdb851ee6887c218f52f02d5f0cc15d9a8a15ffd7d384026b15a83"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-b"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.1",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-1"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_1d0f938d-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "793d3c1894000d659c0f3db8028cc036a43a2ace7324f5910e1a5f28738bb93a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.2",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-2-a-1"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665292be-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "16ff14c30a4c8603cc1aacf826c11885ccf8dbab874a6fe5b422841229cda2bd"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.3",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-3-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_66541960-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f47af1588422c15bec3ae1254f234f2df6152e7c47bdc3d1a3ddc44b13cb98b6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.4",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-4"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_206993ff-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "fb6e68f96c2b49dfca70203c6e87e1afe4fa4f8f6deabba95b32d362b9b261df"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.5",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-5-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_cb1340eb-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "f992e5eb80727cfc11e4bf66d39eedc44cfc45d274d8aa1de8b75c6c8093cef6"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.6",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-6"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_66541964-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "caa8ab80947fce18a81870692dc292a7f1dbeda5a0e6167ec40f9d054ec108cb"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.7",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-7"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_21d6dea1-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "1d6777b84896b4d18cbc044f27c053ebb6a388e5e0f02b2262cdac69d057d609"
+        }
+      ]
+    },
+    {
+      "key": "PEN:241.8",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-241-8-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_66541968-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d0e202abeb0c5016c70338f0d212e52ef406b4e1b4bb284e0ae7e5fcb80af999"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-c-2"
+      ],
+      "reason": "Adds only the injury-to-peace-officer branch in (c)(2). The lifeguard cross-reference in (f)(7) remains literal and unresolved; (b) and (c)(1) are not added by this batch.",
+      "versions": [
+        {
+          "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.1",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-1"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_24f95455-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "e8ecb4af2bb97b663cb15ebecdf272785088c09f55a6d5f42629599753a2ca58"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.10",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-10-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665bbaa6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "30d1a40c6294ef8a3844df9fe264c4693eac68cf0943c41ee0641f10133cb801"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.15",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-15"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_8368a1eb-a358-11e5-b6cb-8d365f46d37f",
+          "contentSha256": "e64529f63e99ae18b88f44e3094326c0be17ff2ed49ed65cfcd9b83dae956a59"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.2",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-2-a-1"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665726b0-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6e9b04f792ec1f522914b98dbabd73e37919aeee41338de1c6168040a70c826"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.25",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-25"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665726b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "e2a7e23ffa6a46986a2757cda19298db1955d97898d8af1f18c9f302c5ea4a3a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.3",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-3"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_73f127fa-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "5993b0ba6b57f506cf3271ed331c618f924e2430f0a9a351564fb70734e224ea"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.35",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-35-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665726b6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "68467ee992f00d195608c34ba5658010c56d48aca5c55a047176575d5d400aca"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.6",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-6"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_267015d7-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "7e1db5c24ea49cc0ccb2ad91f9d04ac75065753ea8a319d942197dc79b8a4e7d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.65",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-65-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_cc529ebd-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "141387e027893f940f0c1a28c9bbaff14ae82374d67c110cc5b018cf452ce61a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.7",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-7"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665a33fe-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "53013931ad1a2ec5953f36522b4997d484f7705ee24bfdbfe57544509bb2fe81"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.8",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "additionIds": [
+        "ca-pen-243-8-a"
+      ],
+      "reason": "The listed branches are reviewed; other theories and subdivisions are not certified.",
+      "versions": [
+        {
+          "versionId": "id_665a3400-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "c09c41b4bf25fa5ac5735b793794209974b2ed295e953ded0af790c633d12c7f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:243.9",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open consequential offense: resolve the duration of the unspecified county-jail alternative and local-detention-facility applicability before publication. The felony term is explicit; this is not a minor-offense deferral.",
+      "versions": [
+        {
+          "versionId": "id_665a3404-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "76faf48e833e754b1bf295983d13356494d2d6c6c319a8458ce3a72f5e2ed637"
+        }
+      ]
+    },
+    {
+      "key": "PEN:477",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b1fb72-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "592bb6863e9855a9732f7826f3936e8c0ff0d69dcf768741eda37270457c6122"
+        }
+      ]
+    },
+    {
+      "key": "PEN:481.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b3821c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "940687a02bdb1d6f0209da138b79b48824855e458bea2c5cde1452818d0e8004"
+        }
+      ]
+    },
+    {
+      "key": "PEN:482",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b3821e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8b464583c8be8738bacce300ba8dcd66df6c4d10e7ffdd1f917dd3d1d83245c2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:483",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b38220-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "b25a29643e8f5b3851d59da4bc15fd71186239336ed3bf12cf63ce4645293cf2"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484.1",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b68f68-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6720c1af1521400a31eb5bd28ca7893f39fb7012b380fd7b3d374d3177e38ad"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b68f6c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "9ea06fce68ad7f6f0c0b60a2aa0083a01069594f6640ba25ec18ee0224883f15"
+        }
+      ]
+    },
+    {
+      "key": "PEN:484e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487a",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_501b5f15-8664-11e4-9fd7-cecd375806d8",
+          "contentSha256": "2dc0f4b65fe465fda37916befcefba337d8c8c65aa22138d1b482e904a244391"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487b",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_a3301f6f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "d48d2280ef2c0a88667c4297465c2ac64743ede7f175a0a8ed3bab6783f91806"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_3130676e-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "fdf2aec96aae805e2a5affecd663111c91541c1a13681f3a6954d6abd5d341c4"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487d",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_a49ea391-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "6180b069ecd1e52adb16ab4ebf82432b63f557ef3b2821f202f745a5ae6260a8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_d0972681-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "305f3b893af804ce484cad07a1225dcfd13c9350d8de3d8b8a82576eed7910c3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487f",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_d193aef3-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "c02aa7ef207dac3b5635b6ccf849ffff55525f04b5308ec5ed0cefaa3f95091e"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487g",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67bcaa0e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "0f2118a4299f9cee378bfdd9cc33dc4aa84303d2e2618a3c698fcfb5e2aea2f3"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487h",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_e7a93781-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "03a8c06f62848e175753ced7b47b5ab742e78d2341fae2157fcb0d87014a7381"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487i",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_6ff249e6-cb73-11dd-898a-f4578c730531",
+          "contentSha256": "dae462b0a4c80880edb5bd5e6e2e0df4283b3c25385d162ccd436b7c7b0dae01"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487j",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_8c6c0b53-30cf-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "8699d561d41e7604de24ca06946a5ff9dfc7432f49c843ac492507d7cfbc27d8"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487k",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_e2ea837d-0bd9-11ea-912d-915c88c10a14",
+          "contentSha256": "cb0abada8a5f0598e7bee7ba78b2aaddacba7d655e16315fe150ec6ab4d11270"
+        }
+      ]
+    },
+    {
+      "key": "PEN:487m",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_b29279f7-5c47-11ec-9d2f-c3e210bbbdff",
+          "contentSha256": "f5f7c8cb13c20806a15258f47e29a5aa1dce678ea559104f2ca3cfe51904f629"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.4",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67be30ba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ff63b69ba75506d2eff6c1236c2d9e2fb9cbd14a7416ba766b00e5b7d8b53f62"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_5462d1fb-89e5-11db-b11b-b207fcb01266",
+          "contentSha256": "9e2a58882045142173f938312dfcd3c3500ae60a7445ec671deabc42cd0cfae5"
+        }
+      ]
+    },
+    {
+      "key": "PEN:490.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496a",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_8024ef92-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7529691222241c4acc832df771e622a4f49cc4949f82cece07cf70b94aa8f971"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496b",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c13e0c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "be0fd2ba0dc7705ded6bce7128169fed92f0965833ba7a610f8090de103c2252"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c2c4ae-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f1873e5771bb1c0f1f3c59c09465dccf547a81b9cf30b18adb833d3f553b660f"
+        }
+      ]
+    },
+    {
+      "key": "PEN:496e",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_811e6ac4-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "748a5f9c9abbe584e6053a0476d69acd62792e594e6158c4b88d04687ea0f88b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:497",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c2c4b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8c32699b2671f28e4705aa1816c9d51a9d8cf3335233f09e71f5957d01d6aa12"
+        }
+      ]
+    },
+    {
+      "key": "PEN:498",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+          "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+        }
+      ]
+    },
+    {
+      "key": "PEN:499c",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_ad1c8f0b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "db4c5d0e2fd2f817b51f99a7329d1480f57bad14a439cd4061e45412a0c56b08"
+        }
+      ]
+    },
+    {
+      "key": "PEN:500",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_b0107aaf-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "a3dc87fb677880b98eae2223dc7b69968c7a3ac044cca518e8302c5751a66809"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.5",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df46-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "04705519c9fd31476aaa45a7ed9651c688ee3805f2ae6d887a7071f3a273718a"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.6",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.7",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_67c8df4a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "cb033994d208fe698bf0ed9b59a1980aa4ee76f7c300f5821c0ca72a6c785244"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.8",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_801e624b-c635-11e6-a742-84f150336b2e",
+          "contentSha256": "8686967b5edc8f421916cc3e66adf2743e2445b335d7910b38a3f9d248f964de"
+        }
+      ]
+    },
+    {
+      "key": "PEN:502.9",
+      "status": "substantive_research_open",
+      "additionIds": [],
+      "reason": "Open substantive research; unpublished by this batch and not assumed minor.",
+      "versions": [
+        {
+          "versionId": "id_5b560c94-6538-11d9-bd15-b3cbb5da6f1d",
+          "contentSha256": "339d88b7d4a5770aac9ea8e7d8a03cef4c5861b3389003256577758a127b5b38"
+        }
+      ]
+    }
+  ],
+  "sourceAnomalies": [
+    {
+      "id": "CA-002",
+      "status": "apparent_cross_reference_error_unresolved",
+      "literalReference": "PEN:241(d)(5)",
+      "likelyReference": "PEN:241(d)(4)",
+      "treatment": "Preserve source text. Likely destination is an editorial inference, not attorney-approved interpretation. No automatic substitution or lifeguard-branch publication.",
+      "evidence": [
+        {
+          "key": "PEN:243",
+          "start": 9216,
+          "end": 9302,
+          "text": "“Lifeguard” means a person defined in paragraph (5) of subdivision (d) of Section 241.",
+          "versions": [
+            {
+              "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241",
+          "start": 2569,
+          "end": 2584,
+          "text": "(4) “Lifeguard”",
+          "versions": [
+            {
+              "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241",
+          "start": 3008,
+          "end": 3028,
+          "text": "(5) “Process server”",
+          "versions": [
+            {
+              "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scheduledSourceChanges": [
+    {
+      "key": "LAB:1720.4",
+      "transitionDate": "2031-01-01",
+      "kind": "scheduled_repeal",
+      "treatment": "Operative in this snapshot; monitor the known repeal rather than silently treating the definition as timeless.",
+      "evidence": {
+        "key": "LAB:1720.4",
+        "start": 2184,
+        "end": 2246,
+        "text": "This section shall remain in effect only until January 1, 2031",
+        "versions": [
+          {
+            "versionId": "id_235b485c-7278-11ed-adbb-9148faa5f64e",
+            "contentSha256": "e919144d887fdfc0fec9161e053740352f1c0194c3d06123ee105d9a69f49637"
+          }
+        ]
+      }
+    }
+  ],
+  "researchNotes": [
+    {
+      "authority": "Official CALCRIM statutory index",
+      "sourceUrl": "https://courts.ca.gov/sites/default/files/courts/default/2024-12/calcrim-2021.pdf",
+      "finding": "The official index separately identifies school-employee assault/battery and custodial-officer battery. This older index is only an independent identity cross-check, not current instruction or case-law certification."
+    }
+  ]
+}

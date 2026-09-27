@@ -8,6 +8,7 @@
  * currentness evidence are all present.
  */
 
+import { CALIFORNIA_LAW_CODE_LABELS as LAW_CODE_LABELS, californiaPrimaryIdentity, type CaliforniaLawCode } from "./california-law-codes";
 import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
 import { CALIFORNIA_ADDITIONS as additions } from "./california-additions";
 import type { CriminalCharge } from "./criminal-charges";
@@ -44,7 +45,7 @@ export interface CaliforniaCanonicalRecord {
   disposition: Exclude<CaliforniaDisposition, "alias" | "remove" | "reselection-required">;
   officialTitle: string;
   code: string;
-  lawCode: "PEN" | "HSC" | "VEH" | "BPC" | "RTC" | "FAM" | "WIC" | "HNC";
+  lawCode: CaliforniaLawCode;
   citation: string;
   classification: CaliforniaClassification;
   elements: string[];
@@ -77,17 +78,6 @@ export interface CaliforniaLegacyDisposition {
 const LEGINFO_BASE = "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml";
 const CALCRIM_URL =
   "https://www.courts.ca.gov/partners/california-jury-instructions";
-
-const LAW_CODE_LABELS: Record<CaliforniaCanonicalRecord["lawCode"], string> = {
-  PEN: "Cal. Penal Code",
-  HSC: "Cal. Health & Safety Code",
-  VEH: "Cal. Vehicle Code",
-  BPC: "Cal. Business & Professions Code",
-  RTC: "Cal. Revenue & Taxation Code",
-  FAM: "Cal. Family Code",
-  WIC: "Cal. Welfare & Institutions Code",
-  HNC: "Cal. Harbors & Navigation Code",
-};
 
 function leginfoUrl(lawCode: CaliforniaCanonicalRecord["lawCode"], code: string): string {
   const section = code.match(/\d+(?:\.\d+)*(?:[a-z])?/)![0];
@@ -1809,15 +1799,16 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
 export const CALIFORNIA_ADDITION_IDS = new Set(additions.map(row => row.id));
 export function getCaliforniaAddition(id: string) { return additions.find(row => row.id === id); }
 for (const addition of additions) {
+  const primary = californiaPrimaryIdentity(addition.lawCode, addition.code);
   const metadata = record({
     canonicalId: addition.id, legacyIds: [], officialTitle: addition.title,
-    code: addition.code, lawCode: "PEN", citation: `Cal. Penal Code § ${addition.code}`,
+    code: addition.code, lawCode: primary.lawCode, citation: primary.citation,
     classification: "offense", elements: [addition.summary], mentalState: addition.mentalState,
     grading: addition.categories.join(" or "), categories: addition.categories as CriminalCharge["categories"],
     penalty: addition.penalty,
   });
   metadata.currentness = {
-    status: "current", effectiveDate: (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[`PEN:${addition.code.match(/^\d+(?:\.\d+)*[a-z]?/)![0]}`] ?? null,
+    status: "current", effectiveDate: (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[primary.key] ?? null,
     evidence: `Official PUBINFO source acquired ${addition.sourceAsOf}; bounded statutory review retained in ${addition.reviewArtifact}. This review does not refresh the archive or certify all case-law consequences.`,
   };
   metadata.sources.push(...addition.supportingKeys.map(key => {
@@ -2146,7 +2137,7 @@ export function getCaliforniaAdditionCharges(): CriminalCharge[] {
     id: row.id, name: row.title, code: row.code, jurisdiction: "CA",
     category: row.categories[0] as CriminalCharge["category"],
     description: row.summary, maxPenalty: row.penalty,
-    searchAliases: [`PC ${row.code}`, `Penal Code ${row.code}`, row.title],
+    searchAliases: [`${row.lawCode === "PEN" ? "PC" : row.lawCode} ${row.code}`, `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title],
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
   })!);
 }

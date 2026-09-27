@@ -41,7 +41,7 @@ Before publication, each proposed record needs a defensible charging name/aliase
 
 Use independent charging inventories and official jury-instruction references to test discovery recall, plus stratified samples from no-signal sections. Those checks are still outstanding; the lexical scan alone cannot certify statewide completeness. Later batches cover the remaining Penal Code, Health and Safety, Vehicle and Business and Professions groups, then other codes and criminally enforceable regulations. Regulations, local ordinances, uncodified enactments and comprehensive enforceability research are outside this initial scan.
 
-The [first person/property expansion](california-person-property-expansion.md) added 26 choices in merged PR #20. Its frozen accounting left 79 sections in substantive research. The [successor forgery/theft batch](california-forgery-theft-expansion.md) proposes 28 more choices from 20 of those sections, leaving 59 in substantive research. Neither batch claims every branch or the entire four-group scope is complete.
+The [first person/property expansion](california-person-property-expansion.md) added 26 choices in merged PR #20. Its frozen accounting left 79 sections in substantive research. The [successor forgery/theft batch](california-forgery-theft-expansion.md) added 28 more choices from 20 of those sections in merged PR #21, leaving 59 in substantive research. The [protected-person successor](california-protected-person-expansion.md) proposes 21 choices from 19 of those sections plus new branches of §§241 and 243, leaving 40 sections in substantive research. Neither batch claims every branch or the entire four-group scope is complete.
 
 ## Accuracy and stopping rules
 
