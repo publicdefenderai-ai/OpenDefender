@@ -404,3 +404,21 @@ were checked through the production API, with representative rules/selector path
 No real cases, external AI requests, production database, seed or deployment were
 used. These local results do not certify the separate GitHub Actions installation
 issue as fixed.
+
+
+## Statewide discovery after the catalog pass: September 27
+
+PR #18 is merged. The [statewide discovery delivery](california-statewide-discovery.md)
+now accounts for all 162,431 version rows across 30 codes, with no source read
+failures. There are 6,028 criminal-language candidate keys, 3,530 indirect-reference
+candidates, 31,354 unresolved prohibition keys and 120,514 no-signal keys. None of
+these is a verified offense count. All 70 canonical catalog source keys are present.
+
+The complete accounting and chapter batches are retained with source hashes.
+Blanket penalties and ranges remain explicit unresolved research instead of being
+applied automatically. No new charges are published by this delivery. The next
+combined substantive batch starts with 142 person/property candidate sections in
+four Penal Code groups, reusing common authorities and deduplicating existing
+records. Minor ambiguous candidates may be deferred with reasons and severity
+evidence; unknown severity alone is never treated as minor. Independent miss
+checks and legal currentness review remain necessary.
