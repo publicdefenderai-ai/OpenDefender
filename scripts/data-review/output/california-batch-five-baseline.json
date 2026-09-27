@@ -1,0 +1,540 @@
+{
+  "schemaVersion": 1,
+  "scope": "pre_correction_catalog_baseline",
+  "records": [
+    {
+      "catalogSha256": "58f9bc11e0162bd2e368b98481ff089c5605236431cb791503258157fd1fca1d",
+      "record": {
+        "canonicalId": "ca-computer-crime-502-c1",
+        "officialTitle": "Unauthorized Computer Access to Defraud or Obtain Property",
+        "code": "502(c)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 502(c)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant knowingly accessed or used a computer, system, or network without permission or beyond permission",
+          "The defendant acted to defraud, extort, or wrongfully obtain property"
+        ],
+        "mentalState": "Knowing unauthorized access or use with intent to defraud, extort, or wrongfully obtain property.",
+        "grading": "Felony or misdemeanor depending on the charged conduct and loss.",
+        "penalty": "Punishment depends on the charged conduct and loss under Penal Code § 502(d)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1520",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-computer-fraud"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 502",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=502&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1520",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "e97722bdee0e60c4ed24eb5cb3f9f4d287fd24408a591a565a2d40e2ad8a90dd",
+      "record": {
+        "canonicalId": "ca-computer-crime-502-c5",
+        "officialTitle": "Unauthorized Computer Damage or Disruption",
+        "code": "502(c)(5)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 502(c)(5)",
+        "classification": "offense",
+        "elements": [
+          "The defendant knowingly and without permission disrupted or denied computer services to an authorized user"
+        ],
+        "mentalState": "Knowing disruption or denial of computer services without permission.",
+        "grading": "Felony or misdemeanor under Penal Code § 502(d)(1).",
+        "penalty": "A felony may be punished by 16 months, 2 years, or 3 years and a fine up to $10,000; a misdemeanor may be punished by up to 1 year in county jail and a fine up to $5,000 under Penal Code § 502(d)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1520",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-computer-fraud"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 502",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=502&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1520",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "657366e33ed445d86b00afa85a6505ff3c95b8566a6d0b7b6ff978681a22b42a",
+      "record": {
+        "canonicalId": "ca-identity-theft-530-5-a",
+        "officialTitle": "Identity Theft",
+        "code": "530.5(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 530.5(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant willfully obtained another person's personal identifying information",
+          "The defendant used the information for an unlawful purpose without consent"
+        ],
+        "mentalState": "Willful unauthorized use of another person's identifying information for an unlawful purpose.",
+        "grading": "Wobbler.",
+        "penalty": "May be punished as a misdemeanor or felony under Penal Code § 530.5(a); felony imprisonment may be imposed under Penal Code § 1170(h).",
+        "juryInstruction": {
+          "ref": "CALCRIM 2040",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-identity-theft"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 530.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2040",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "92aee95ae85c2f554aff837ba3b88942f6fca6b548c867053ca73f08954bfe72",
+      "record": {
+        "canonicalId": "ca-identity-theft-530-5-c1",
+        "officialTitle": "Acquiring Personal Identifying Information With Intent to Defraud",
+        "code": "530.5(c)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 530.5(c)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant acquired or retained another person's personal identifying information",
+          "The defendant acted without authorization",
+          "The defendant intended to defraud"
+        ],
+        "mentalState": "Intent to defraud.",
+        "grading": "Misdemeanor.",
+        "penalty": "Punishable by a fine or county jail up to 1 year under Penal Code § 530.5(c)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 2040",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-identity-theft"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 530.5",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530.5&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2040",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "3b459c5e4baef9d599113ccbd9b9fd251544460427cb49dc6516f45600889d92",
+      "record": {
+        "canonicalId": "ca-insurance-fraud-550-a1",
+        "officialTitle": "Insurance Fraud by False Claim",
+        "code": "550(a)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 550(a)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant presented or caused a false or fraudulent insurance claim or application to be presented to an insurer",
+          "The defendant knew the claim or application was false or fraudulent"
+        ],
+        "mentalState": "Knowledge that the claim or application was false or fraudulent, with intent to defraud.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 2, 3, or 5 years under Penal Code § 550(a)(1) and the penalty provisions of § 550(a).",
+        "juryInstruction": {
+          "ref": "CALCRIM 2000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-insurance-fraud"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 550",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=550&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "07025e083115eabfe256d4ddab1d518f3693b76f7867a680265deb3af7f8e529",
+      "record": {
+        "canonicalId": "ca-insurance-fraud-550-b1",
+        "officialTitle": "Insurance Fraud by False Statement",
+        "code": "550(b)(1)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 550(b)(1)",
+        "classification": "offense",
+        "elements": [
+          "The defendant made or prepared a written or oral statement as part of an insurance claim or application",
+          "The statement contained materially false or misleading information",
+          "The defendant knew it was false or misleading"
+        ],
+        "mentalState": "Knowing presentation of a materially false or misleading insurance statement with intent to defraud.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 2, 3, or 5 years, or by the alternative fine and county-jail penalties stated in Penal Code § 550(b)(1).",
+        "juryInstruction": {
+          "ref": "CALCRIM 2000",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-insurance-fraud"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 550",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=550&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2000",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "023638ba34c1a9ed66f428c7d5a4af56ed3c3be965278ad805a3eb2e9852ceaf",
+      "record": {
+        "canonicalId": "ca-money-laundering",
+        "officialTitle": "Money Laundering",
+        "code": "186.10",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 186.10",
+        "classification": "offense",
+        "elements": [
+          "The defendant conducted or attempted a qualifying financial transaction",
+          "The transaction involved proceeds of criminal activity",
+          "The defendant acted with the knowledge and intent required by § 186.10"
+        ],
+        "mentalState": "Knowledge that the transaction involved criminal proceeds plus the statutory intent.",
+        "grading": "Felony or misdemeanor depending on amount and circumstances.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on the amount and circumstances under § 186.10.",
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-money-laundering"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 186.10",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=186.10&lawCode=PEN",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "2748422e02b8837c9660977834379bf47fa482fde3eb762babadc2b58563f08d",
+      "record": {
+        "canonicalId": "ca-forgery",
+        "officialTitle": "Forgery",
+        "code": "470",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 470",
+        "classification": "offense",
+        "elements": [
+          "The defendant made, altered, uttered, or possessed a listed writing or instrument",
+          "The writing was false or completed without authorization",
+          "The defendant acted with intent to defraud"
+        ],
+        "mentalState": "Intent to defraud.",
+        "grading": "Misdemeanor or felony depending on the charged instrument and subdivision.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on the charged instrument under § 470.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1900",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-forgery"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 470",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=470&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1900",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "a5d8b8078ec7d734219bfa16064931d34dd69b0e159f8ba285c401040d44b0a0",
+      "record": {
+        "canonicalId": "ca-check-fraud",
+        "officialTitle": "Making, Drawing, or Uttering a Check with Insufficient Funds",
+        "code": "476a",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 476a",
+        "classification": "offense",
+        "elements": [
+          "The defendant made, drew, uttered, or delivered a check or draft",
+          "The defendant knew there were insufficient funds or credit",
+          "The defendant acted with intent to defraud"
+        ],
+        "mentalState": "Knowledge of insufficient funds plus intent to defraud.",
+        "grading": "Misdemeanor or felony depending on amount and prior history.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on the amount and prior history under § 476a.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1950",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-check-fraud"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 476a",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=476a&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1950",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "a31e7ec8351f0fed26703c1d497a86fc2031a38bce85305fd685b049a2fa544b",
+      "record": {
+        "canonicalId": "ca-credit-card-fraud",
+        "officialTitle": "Fraudulent Use of an Access Card",
+        "code": "484g",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 484g",
+        "classification": "offense",
+        "elements": [
+          "The defendant used an access card or account information",
+          "The defendant used it without consent or with intent to defraud",
+          "The transaction met the charged statutory circumstance"
+        ],
+        "mentalState": "Intent to defraud or the mental state specified by the charged subdivision.",
+        "grading": "Misdemeanor or felony depending on the value and circumstances.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on the charged § 484g conduct and value.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1803",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-credit-card-fraud"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 484g",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484g&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1803",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    },
+    {
+      "catalogSha256": "907e4258f6a033643a9a93dc3d6d5d24008cba00f9c9c8c1e4007a0dd36a96b1",
+      "record": {
+        "canonicalId": "ca-embezzlement",
+        "officialTitle": "Embezzlement",
+        "code": "503",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 503",
+        "classification": "offense",
+        "elements": [
+          "The defendant was entrusted with property",
+          "The defendant fraudulently appropriated it",
+          "The defendant intended to permanently deprive the owner"
+        ],
+        "mentalState": "Fraudulent intent.",
+        "grading": "Misdemeanor or felony depending on value and circumstances.",
+        "penalty": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on value and the charged § 503 theory.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1806",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-embezzlement"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 503",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=503&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1806",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      }
+    }
+  ]
+}

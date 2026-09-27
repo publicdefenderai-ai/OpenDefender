@@ -280,3 +280,63 @@ all 60 corrections in the API, rules guidance, and the age-gap misdemeanor/felon
 selector. No real case inputs, external AI calls, production credentials, seed or
 deployment were used. Replit requires the existing California seed/republish steps
 after merge. No new attorney data-entry task is required for this batch.
+
+## Financial and property combined pass (September 26, 2026)
+
+Eleven records across eight source groups are corrected together: computer crimes
+(two), identity theft (two), insurance fraud (two), money laundering, forgery, bad
+checks, access-card theft, and embezzlement. All eight primary sections were already
+retained. Seven supporting sections were extracted from the hash-verified official
+archive: PEN §§186.9, 473, 484e, 484f, 502.01, 514, and 530.55. The batch uses 30
+sections overall, reusing 23. Official live pages for §§473, 514, and 550 were also
+consulted. No new archive download or primary-source crawl was necessary.
+
+Material corrections include:
+
+- §550(b)(1) now exposes both misdemeanor and felony alternatives under (c)(3),
+  while (a)(1) keeps its felony punishment under (c)(1). Fines, mandatory
+  restitution, conditional prior enhancements and crisis-area fine doubling
+  remain visible rather than disappearing behind a base prison term.
+- §530.5(c)(1) remains a misdemeanor distinct from the use, prior, and ten-person
+  branches. Neither identity-theft entry invents a fine cap absent from its text.
+- The two §502 branches share (d)(1) punishment without importing unrelated loss
+  thresholds. Civil recovery and forfeiture are distinguished from criminal fines.
+- Forgery links its actual penalty authority, §473. Low-value treatment is limited
+  to the listed instruments and its exceptions. Bad-check treatment preserves the
+  separate wording for California and out-of-state/federal prior convictions.
+- Access-card theft and embezzlement distinguish ordinary six-month petty theft,
+  grand theft, conditional infractions, and prior-conviction exceptions. The
+  public-funds and firearm branches of embezzlement are flagged for specific review.
+- Money laundering includes its aggregation periods, escalating fines, and
+  conditional additional terms rather than treating the ordinary base as a ceiling.
+
+The reusable supplemental validator introduced in the previous batch handles all
+new evidence checks; this batch adds only its bindings and a small rendering entry
+point. Historical baselines remain unchanged. Spanish and Chinese texts are drafts
+for professional review. Case law, exact prior matching, offense-date applicability,
+individualized sentencing, and independent legal review remain outside this bounded
+pass. No attorney data-entry assignment is introduced.
+
+Reproduce using:
+
+```sh
+node --import tsx scripts/data-review/california-verification/financial-property-review.ts
+node --import tsx scripts/data-review/california-verification/coverage.ts
+```
+
+The readable checklist is `scripts/data-review/output/california-batch-five-review.md`.
+After this batch: **71 of 99 configured selectable records have bounded corrections;
+28 remain across 24 primary-source groups**. Research evidence totals 136 sections
+and 138 versions. The 21 withheld labels remain separate. These figures describe
+the existing catalog, not statewide completeness or verified live deployment.
+
+Replit needs the existing California seed and republish steps after merge. The
+GitHub workflow dependency-installation problem previously observed is separate;
+local test success does not establish green GitHub Actions.
+
+Validation: 88 California-focused tests passed, with two existing opt-in tests
+skipped. Typecheck and production build passed. Eleven production-browser checks
+passed across the main run and two added selector checks, exercising all 71
+corrections in the API plus rules guidance and classification alternatives. No
+real case inputs, external AI calls, production credentials, seed, or deployment
+were used.

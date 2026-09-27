@@ -5,8 +5,8 @@
     "canonicalRecords": 120,
     "configuredSelectable": 99,
     "withheldCanonicalLabels": 21,
-    "boundedCorrectionPass": 60,
-    "awaitingCorrectionPass": 39,
+    "boundedCorrectionPass": 71,
+    "awaitingCorrectionPass": 28,
     "legacyRows": 115,
     "legacyDispositions": {
       "retain": 49,
@@ -17,13 +17,13 @@
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
     "distinctSelectablePrimarySections": 69,
-    "remainingSharedSourceGroups": 32,
-    "remainingPrimarySections": 33,
+    "remainingSharedSourceGroups": 24,
+    "remainingPrimarySections": 25,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 69,
     "selectableRecordsWithAllPrimaryTextAcquired": 99,
-    "totalAcquiredSectionsIncludingDependencies": 129,
-    "totalAcquiredVersionsIncludingDependencies": 131,
+    "totalAcquiredSectionsIncludingDependencies": 136,
+    "totalAcquiredVersionsIncludingDependencies": 138,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
@@ -51,8 +51,8 @@
     {
       "lawCode": "PEN",
       "selectable": 79,
-      "corrected": 50,
-      "awaitingCorrection": 29
+      "corrected": 61,
+      "awaitingCorrection": 18
     },
     {
       "lawCode": "VEH",
@@ -894,48 +894,6 @@
       ]
     },
     {
-      "id": "PEN:502",
-      "recordIds": [
-        "ca-computer-crime-502-c1",
-        "ca-computer-crime-502-c5"
-      ],
-      "primaryKeys": [
-        "PEN:502"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:502"
-      ]
-    },
-    {
-      "id": "PEN:530.5",
-      "recordIds": [
-        "ca-identity-theft-530-5-a",
-        "ca-identity-theft-530-5-c1"
-      ],
-      "primaryKeys": [
-        "PEN:530.5"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:530.5"
-      ]
-    },
-    {
-      "id": "PEN:550",
-      "recordIds": [
-        "ca-insurance-fraud-550-a1",
-        "ca-insurance-fraud-550-b1"
-      ],
-      "primaryKeys": [
-        "PEN:550"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:550"
-      ]
-    },
-    {
       "id": "PEN:647",
       "recordIds": [
         "ca-prostitution-solicitation",
@@ -1069,19 +1027,6 @@
       ]
     },
     {
-      "id": "PEN:186.10",
-      "recordIds": [
-        "ca-money-laundering"
-      ],
-      "primaryKeys": [
-        "PEN:186.10"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:186.10"
-      ]
-    },
-    {
       "id": "PEN:215",
       "recordIds": [
         "ca-carjacking"
@@ -1198,58 +1143,6 @@
       "retainedPrimaryKeys": [],
       "acquiredPrimaryKeys": [
         "PEN:374.4"
-      ]
-    },
-    {
-      "id": "PEN:470",
-      "recordIds": [
-        "ca-forgery"
-      ],
-      "primaryKeys": [
-        "PEN:470"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:470"
-      ]
-    },
-    {
-      "id": "PEN:476a",
-      "recordIds": [
-        "ca-check-fraud"
-      ],
-      "primaryKeys": [
-        "PEN:476a"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:476a"
-      ]
-    },
-    {
-      "id": "PEN:484g",
-      "recordIds": [
-        "ca-credit-card-fraud"
-      ],
-      "primaryKeys": [
-        "PEN:484g"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:484g"
-      ]
-    },
-    {
-      "id": "PEN:503",
-      "recordIds": [
-        "ca-embezzlement"
-      ],
-      "primaryKeys": [
-        "PEN:503"
-      ],
-      "retainedPrimaryKeys": [],
-      "acquiredPrimaryKeys": [
-        "PEN:503"
       ]
     },
     {
@@ -1642,7 +1535,7 @@
       "citation": "Cal. Penal Code § 484g",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:484g"
       ],
@@ -1650,7 +1543,7 @@
       "acquiredPrimaryKeys": [
         "PEN:484g"
       ],
-      "catalogSha256": "a31e7ec8351f0fed26703c1d497a86fc2031a38bce85305fd685b049a2fa544b",
+      "catalogSha256": "3f93e507819d0486287bf989eae4ae07645b7653f86fc7f0419e0b73b2536ca2",
       "attorneyReview": "pending"
     },
     {
@@ -1659,7 +1552,7 @@
       "citation": "Cal. Penal Code § 503",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:503"
       ],
@@ -1667,7 +1560,7 @@
       "acquiredPrimaryKeys": [
         "PEN:503"
       ],
-      "catalogSha256": "907e4258f6a033643a9a93dc3d6d5d24008cba00f9c9c8c1e4007a0dd36a96b1",
+      "catalogSha256": "4b9c33019544b1fc9711969180cd6615f9d6ae30bb5eabe00053ec07fbacc721",
       "attorneyReview": "pending"
     },
     {
@@ -1968,7 +1861,7 @@
       "citation": "Cal. Penal Code § 476a",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:476a"
       ],
@@ -1976,7 +1869,7 @@
       "acquiredPrimaryKeys": [
         "PEN:476a"
       ],
-      "catalogSha256": "a5d8b8078ec7d734219bfa16064931d34dd69b0e159f8ba285c401040d44b0a0",
+      "catalogSha256": "28844e63d7b537dda719a9e849d14b9f777bedd7a836ab55869deb9ffee3491a",
       "attorneyReview": "pending"
     },
     {
@@ -2002,7 +1895,7 @@
       "citation": "Cal. Penal Code § 470",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:470"
       ],
@@ -2010,7 +1903,7 @@
       "acquiredPrimaryKeys": [
         "PEN:470"
       ],
-      "catalogSha256": "2748422e02b8837c9660977834379bf47fa482fde3eb762babadc2b58563f08d",
+      "catalogSha256": "4863360c63911a4a424f1b5913bda2e96d718f95b9893d96ced1b4ae31aa5d95",
       "attorneyReview": "pending"
     },
     {
@@ -2561,7 +2454,7 @@
       "citation": "Cal. Penal Code § 186.10",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:186.10"
       ],
@@ -2569,7 +2462,7 @@
       "acquiredPrimaryKeys": [
         "PEN:186.10"
       ],
-      "catalogSha256": "023638ba34c1a9ed66f428c7d5a4af56ed3c3be965278ad805a3eb2e9852ceaf",
+      "catalogSha256": "775cabb39ada802f5bdd9eecfe9f3c188f7e0d55c3fae87f119a74baf2cf4268",
       "attorneyReview": "pending"
     },
     {
@@ -3030,7 +2923,7 @@
       "citation": "Cal. Penal Code § 530.5(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:530.5"
       ],
@@ -3038,7 +2931,7 @@
       "acquiredPrimaryKeys": [
         "PEN:530.5"
       ],
-      "catalogSha256": "657366e33ed445d86b00afa85a6505ff3c95b8566a6d0b7b6ff978681a22b42a",
+      "catalogSha256": "a314e6699b7ca321aa6b725e27457a5737b1c1670b22d72fb029c39d435adc31",
       "attorneyReview": "pending"
     },
     {
@@ -3047,7 +2940,7 @@
       "citation": "Cal. Penal Code § 530.5(c)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:530.5"
       ],
@@ -3055,7 +2948,7 @@
       "acquiredPrimaryKeys": [
         "PEN:530.5"
       ],
-      "catalogSha256": "92aee95ae85c2f554aff837ba3b88942f6fca6b548c867053ca73f08954bfe72",
+      "catalogSha256": "1429f18fa52804446de0b246a7878c88ce20af1742300d4a437f33dc3e5fb24a",
       "attorneyReview": "pending"
     },
     {
@@ -3064,7 +2957,7 @@
       "citation": "Cal. Penal Code § 550(a)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:550"
       ],
@@ -3072,7 +2965,7 @@
       "acquiredPrimaryKeys": [
         "PEN:550"
       ],
-      "catalogSha256": "3b459c5e4baef9d599113ccbd9b9fd251544460427cb49dc6516f45600889d92",
+      "catalogSha256": "1fa0bdbe1c888bddbbcb2d0a02ca4fbf91b80820f1eed9a0be177fc82a716765",
       "attorneyReview": "pending"
     },
     {
@@ -3081,7 +2974,7 @@
       "citation": "Cal. Penal Code § 550(b)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:550"
       ],
@@ -3089,7 +2982,7 @@
       "acquiredPrimaryKeys": [
         "PEN:550"
       ],
-      "catalogSha256": "07025e083115eabfe256d4ddab1d518f3693b76f7867a680265deb3af7f8e529",
+      "catalogSha256": "3f78fbc424eb51c2a5fd9472ffac276662e39872f6ee18b6037eddb8dd19728e",
       "attorneyReview": "pending"
     },
     {
@@ -3098,7 +2991,7 @@
       "citation": "Cal. Penal Code § 502(c)(1)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:502"
       ],
@@ -3106,7 +2999,7 @@
       "acquiredPrimaryKeys": [
         "PEN:502"
       ],
-      "catalogSha256": "58f9bc11e0162bd2e368b98481ff089c5605236431cb791503258157fd1fca1d",
+      "catalogSha256": "04db82c038b5eaf3ede3bc7297c007a487aa75f7d1f253c5400ab4145ee98786",
       "attorneyReview": "pending"
     },
     {
@@ -3115,7 +3008,7 @@
       "citation": "Cal. Penal Code § 502(c)(5)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:502"
       ],
@@ -3123,7 +3016,7 @@
       "acquiredPrimaryKeys": [
         "PEN:502"
       ],
-      "catalogSha256": "e97722bdee0e60c4ed24eb5cb3f9f4d287fd24408a591a565a2d40e2ad8a90dd",
+      "catalogSha256": "a8964e714066dc8493d7620e03cee07a66c47e08aa8738d962180ff78b9320fd",
       "attorneyReview": "pending"
     },
     {
