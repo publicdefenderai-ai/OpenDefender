@@ -79,13 +79,17 @@ export function buildCaliforniaCoverage() {
       return key;
     }))].sort();
     if (record.selectable && !primaryKeys.length) throw new Error(`Selectable record has no primary source: ${record.canonicalId}`);
+    // This is a configured-catalog fingerprint, not live eligibility. Keep
+    // receipt age/holds out of historical accounting hashes.
+    const { status: runtimeStatus, ...currentnessEvidence } = record.currentness;
+    void runtimeStatus;
     return {
       id: record.canonicalId, title: record.officialTitle, citation: record.citation,
       lawCode: record.lawCode, selectable: record.selectable,
       status: !record.selectable ? "withheld_canonical_label" : corrected.has(record.canonicalId) ? "bounded_correction_pass" : "awaiting_statutory_correction_pass",
       primaryKeys, retainedPrimaryKeys: primaryKeys.filter(key => review.documents[key]?.length),
       acquiredPrimaryKeys: primaryKeys.filter(key => acquiredKeys.has(key)),
-      catalogSha256: createHash("sha256").update(JSON.stringify(record)).digest("hex"),
+      catalogSha256: createHash("sha256").update(JSON.stringify({ ...record, currentness: currentnessEvidence })).digest("hex"),
       attorneyReview: record.attorneyReview,
     };
   });
@@ -117,6 +121,7 @@ export function buildCaliforniaCoverage() {
   const selectable = records.filter(record => record.selectable);
   const sourceRequests = [...requests.values()].sort((a,b) => `${a.lawCode}:${a.section}`.localeCompare(`${b.lawCode}:${b.section}`));
   return {
+    catalogHashBasis: "configured_record_excluding_runtime_currentness_status",
     schemaVersion: 1, scope: "catalog_accounting_not_statewide_offense_coverage",
     accounting: {
       specificOpenLegalQuestions: openLegalQuestions.length,

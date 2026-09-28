@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "status": "matched",
+  "method": "retained_section_comparison",
+  "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "archiveBytes": 1279738518,
+  "observedArchiveSha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6",
+  "heldSourceKeys": [
+    "PEN:30515"
+  ],
+  "checkedAt": "2026-09-28T04:30:01.918254+00:00",
+  "expiresAt": "2026-10-05T04:30:01.918254+00:00"
+}

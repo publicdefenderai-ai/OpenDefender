@@ -72,9 +72,23 @@ operative injunction or other binding limitation that changes availability? Plea
 provide the order/date and its scope, or approve retaining unresolved enforceability
 status pending a current docket review. We are not asking you to populate weapon lists.
 
-**Current treatment:** Preserve statutory punishment, registration/permit caveats,
-and an explicit unresolved enforceability warning. Do not assert that historical
-litigation invalidates every §30605 charge or that this pass has resolved litigation.
+**Current treatment (updated September 28):** Withhold
+`ca-possession-of-prohibited-weapon` from live selection and provenance. The new
+publisher archive replaces the retained §30515 definition with two versions:
+Stats. 2026, Ch. 354, Sec. 6 (history says repealed January 1, 2029) and Sec. 7
+(history says operative January 1, 2029). Both rows carry an effective date of
+September 20, 2026 and an active flag. Neither the shared date nor that flag alone
+chooses the applicable version.
+
+The new source text and metadata are retained in
+`scripts/data-review/output/california-changed-source-evidence.json`; the previous
+text remains in `california-batch-six-review.json`. Alongside the court-order
+question above, confirm which definition applies to the alleged conduct date and
+whether our linked §30605 guidance requires any change. This is a specific legal
+review, not a request to enter or reconstruct source data. No other configured
+charge declares §30515 as a dependency. The other 303 retained sections renewed
+without changes to text or legal/version metadata. Do not infer that this hold
+means every §30605 charge is legally invalid.
 
 ## Known future changes to monitor
 

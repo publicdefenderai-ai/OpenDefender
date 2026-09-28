@@ -1,9 +1,17 @@
-import { describe, expect, it } from "vitest";
+import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import fs from "node:fs";
 import { buildCaliforniaCoverage, renderCaliforniaCoverage, validateCaliforniaSourceExpansion } from "../scripts/data-review/california-verification/coverage";
 const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-source-expansion.json", "utf8"));
 
 describe("California catalog coverage boundaries", () => {
+  afterEach(() => vi.useRealTimers());
+  it("keeps configured accounting reproducible across runtime receipt expiry", () => {
+    vi.useFakeTimers(); vi.setSystemTime(new Date(receipt.checkedAt));
+    const fresh = buildCaliforniaCoverage();
+    vi.setSystemTime(new Date(receipt.expiresAt));
+    expect(buildCaliforniaCoverage()).toEqual(fresh);
+  });
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
     expect(report.accounting).toMatchObject({ canonicalRecords: 195, configuredSelectable: 174, withheldCanonicalLabels: 21, boundedCorrectionPass: 174, boundedAdditionPass: 75, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 121, selectableRecordsWithAllPrimaryTextAcquired: 174, totalAcquiredSectionsIncludingDependencies: 304, totalAcquiredVersionsIncludingDependencies: 307 });

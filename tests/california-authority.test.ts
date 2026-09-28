@@ -1,4 +1,5 @@
-import { describe, expect, it } from "vitest";
+import californiaReceipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
   CALIFORNIA_ADDITION_IDS,
@@ -22,17 +23,19 @@ import {
 import { getChargeExplanation } from "../shared/charge-explanations";
 
 describe("authoritative California charge release", () => {
+  afterEach(() => vi.useRealTimers());
   it("accounts for every legacy California record exactly once", () => {
     expect(CALIFORNIA_LEGACY_DISPOSITIONS).toHaveLength(115);
     expect(new Set(CALIFORNIA_LEGACY_DISPOSITIONS.map((entry) => entry.legacyId)).size).toBe(115);
     expect(getCaliforniaReconciliationInventory()).toHaveLength(115);
   });
 
-  it("requires complete canonical evidence for every selectable record", () => {
+  it("retains configured evidence while respecting the changed-source hold", () => {
+    vi.useFakeTimers(); vi.setSystemTime(new Date(californiaReceipt.checkedAt));
     expect(CALIFORNIA_CANONICAL_RECORDS.length).toBeGreaterThan(0);
     for (const record of CALIFORNIA_CANONICAL_RECORDS.filter((record) => record.selectable)) {
       expect(record.selectable).toBe(true);
-      expect(record.currentness.status).toBe("current");
+      expect(record.currentness.status).toBe(record.canonicalId === "ca-possession-of-prohibited-weapon" ? "invalid" : "current");
       if (!CALIFORNIA_ADDITION_IDS.has(record.canonicalId)) expect(record.currentness.effectiveDate).toMatch(/^\d{4}-\d{2}$/);
       expect(record.elements.length).toBeGreaterThan(0);
       expect(record.mentalState.length).toBeGreaterThan(0);

@@ -11,6 +11,7 @@
 import { CALIFORNIA_LAW_CODE_LABELS as LAW_CODE_LABELS, californiaPrimaryIdentity, type CaliforniaLawCode } from "./california-law-codes";
 import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
 import { CALIFORNIA_ADDITIONS as additions } from "./california-additions";
+import { getCaliforniaEvidenceStatus } from "./california-freshness";
 import type { CriminalCharge } from "./criminal-charges";
 
 export type CaliforniaDisposition =
@@ -54,7 +55,7 @@ export interface CaliforniaCanonicalRecord {
   categories?: CriminalCharge["categories"];
   penalty: string;
   currentness: {
-    status: "current";
+    status: "current" | "stale" | "invalid";
     evidence: string;
     effectiveDate: string | null;
   };
@@ -2066,6 +2067,25 @@ const selectableCanonicalIds = new Set(
 );
 for (const record of CALIFORNIA_CANONICAL_RECORDS) {
   record.selectable = selectableCanonicalIds.has(record.canonicalId);
+  // Configured catalog membership stays reproducible. Runtime eligibility also
+  // requires a fresh receipt; a retained metadata object must not freeze status.
+  Object.defineProperty(record.currentness, "status", {
+    enumerable: true,
+    get: () => getCaliforniaRecordEvidenceStatus(record),
+  });
+}
+
+/** Evaluate only this record's declared statutory dependencies; never inherit a changed source. */
+export function getCaliforniaRecordEvidenceStatus(record: CaliforniaCanonicalRecord, now = new Date()) {
+  try {
+    const keys = record.sources.filter(source => source.kind !== "jury-instruction").map(source => {
+      const url = new URL(source.url);
+      return `${url.searchParams.get("lawCode")}:${url.searchParams.get("sectionNum")?.replace(/\.$/, "")}`;
+    });
+    return keys.length ? getCaliforniaEvidenceStatus(now, keys) : "invalid";
+  } catch {
+    return "invalid";
+  }
 }
 
 export function getCaliforniaCanonicalRecord(id: string): CaliforniaCanonicalRecord | undefined {

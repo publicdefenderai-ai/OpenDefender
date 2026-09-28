@@ -1,3 +1,4 @@
+import { getCaliforniaEvidenceSummary, isCaliforniaEvidenceFresh } from "@shared/california-freshness";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
 import { db } from "../db";
@@ -36,6 +37,7 @@ export interface CaliforniaSourceDatabaseResult {
 }
 
 export interface CaliforniaSourceDatabaseStatus {
+  archiveEvidence: ReturnType<typeof getCaliforniaEvidenceSummary>;
   sourceCount: number;
   snapshotCount: number;
   currentSnapshotCount: number;
@@ -188,6 +190,7 @@ function sourceValues(source: CaliforniaSourceSeed) {
 export async function seedCaliforniaSourceDatabase(
   seed: CaliforniaSourceDatabaseSeed = buildCaliforniaSourceDatabaseSeed(),
 ): Promise<CaliforniaSourceDatabaseResult> {
+  if (!isCaliforniaEvidenceFresh()) throw new Error("California evidence is stale or invalid; refresh and review before seeding");
   assertCaliforniaSourceDatabaseSeed(seed);
   const runId = randomUUID();
   const startedAt = new Date();
@@ -515,6 +518,7 @@ export async function getCaliforniaSourceDatabaseStatus(): Promise<CaliforniaSou
   const audit = metadata?.audit ?? buildCaliforniaSourceDatabaseSeed(new Date(0)).audit;
 
   return {
+    archiveEvidence: getCaliforniaEvidenceSummary(),
     sourceCount: Number(sourceCount[0]?.count ?? 0),
     snapshotCount: Number(snapshotCount[0]?.count ?? 0),
     currentSnapshotCount: Number(currentSnapshotCount[0]?.count ?? 0),
@@ -552,13 +556,13 @@ export async function getCaliforniaChargeProvenance(
   chargeId: string,
 ): Promise<CaliforniaChargeProvenance | null> {
   const record = getCaliforniaCanonicalRecord(chargeId);
-  if (!record || !record.selectable) return null;
+  if (!isCaliforniaEvidenceFresh() || !record || !record.selectable || record.currentness.status !== "current") return null;
 
   const rows = await getCurrentCaliforniaProvenanceRows(record.canonicalId);
 
   // A charge is not provenance-safe if a current link disappeared during a
   // partial seed. Never return partial authority to guidance or exports.
-  if (!hasCompleteCaliforniaEvidence(record, rows)) return null;
+  if (record.currentness.status !== "current" || !hasCompleteCaliforniaEvidence(record, rows)) return null;
 
   return {
     chargeId: record.canonicalId,
@@ -575,6 +579,7 @@ export async function getCaliforniaChargeProvenance(
  * making an incomplete record available through another route.
  */
 export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<string>> {
+  if (!isCaliforniaEvidenceFresh()) return new Set();
   const [latestRun] = await db
     .select({ metadata: statuteIngestionRuns.metadata })
     .from(statuteIngestionRuns)
@@ -620,10 +625,11 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     rowsByCharge.set(row.chargeId, rows);
   }
 
+  if (!isCaliforniaEvidenceFresh()) return new Set();
   return new Set(candidateIds.filter((chargeId) => {
     const record = getCaliforniaCanonicalRecord(chargeId);
     return Boolean(
-      record?.selectable &&
+      record?.selectable && record.currentness.status === "current" &&
       hasCompleteCaliforniaEvidence(record, rowsByCharge.get(chargeId) ?? []),
     );
   }));

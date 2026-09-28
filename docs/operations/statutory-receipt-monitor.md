@@ -1,6 +1,6 @@
 # Activate daily statutory evidence deadline checks
 
-The three committed Ohio/Florida receipts are short-lived. A missed deadline
+The four committed Ohio/Florida/California receipts are short-lived. A missed deadline
 withholds reviewed charge selections. This check is a deadline alarm, not a source
 refresh, content validator, or legal approval. It makes no network or database
 calls and requires no npm dependencies after checkout.
@@ -29,7 +29,7 @@ After merging the maintenance PR, a repository owner can install the workflow:
    `.github/workflows/statutory-evidence-freshness.yml` with those contents, and
    commit it to main through the normal review process.
 3. In Actions, select **Statutory evidence receipt deadlines**, run it manually,
-   and verify the three receipt results. Confirm scheduled Actions are enabled.
+   and verify the four receipt results. Confirm scheduled Actions are enabled.
 4. Enable GitHub Actions failure notifications for the person responsible for
    source maintenance and confirm they receive failures. A failing job alone is
    not a guaranteed human notification.
@@ -45,3 +45,7 @@ For Florida, follow `docs/florida-refresh-runbook.md`. For Ohio, use the existin
 `refresh-ohio-chapter-2903-pilot.ts` and `refresh-ohio-reviewed-sources.ts` procedures.
 Retrieve real official evidence and review changes; never edit receipt dates to
 silence the alarm. A later automation for retrieval/review is a separate decision.
+
+For California, follow `docs/california-freshness-runbook.md`. The monitor also
+rejects a revoked receipt, wrong archive/comparison binding or a lifetime exceeding the
+seven-day policy. Full source comparison is separate from this deadline alarm.

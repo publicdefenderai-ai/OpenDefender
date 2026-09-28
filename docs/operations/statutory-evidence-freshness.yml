@@ -7,6 +7,9 @@ on:
   pull_request:
     paths:
       - 'scripts/check-statutory-receipt-freshness.mjs'
+      - 'shared/california-freshness-core.mjs'
+      - 'shared/california-retained-pins.json'
+      - 'scripts/data-review/output/california-retained-refresh-comparison.json'
       - 'scripts/data-review/output/*-refresh-receipt.json'
       - '.github/workflows/statutory-evidence-freshness.yml'
 permissions:
