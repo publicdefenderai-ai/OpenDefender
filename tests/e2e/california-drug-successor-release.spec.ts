@@ -6,8 +6,8 @@ test("all drug-successor additions reach the API and representative rules guidan
   const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
   expect(response.ok()).toBe(true);
   const body = await response.json();
-  // One of 236 configured records depends on the changed PEN:30515 definition.
-  expect(body.charges).toHaveLength(235);
+  // One of 257 configured records depends on the changed PEN:30515 definition.
+  expect(body.charges).toHaveLength(256);
   expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
   for (const a of additions) {
     expect(body.charges.find((r: any) => r.id === a.id), a.id).toMatchObject({ description: a.summary, maxPenalty: a.penalty, categories: a.categories });

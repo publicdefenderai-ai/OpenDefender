@@ -1,0 +1,2119 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_driving_vessel_publication_not_family_completeness",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "acquisitionSha256": "7fdb3076f914cdd23b450d709987ce98572ba6580c78574193a0646486804ea2",
+  "previousReviewSha256": "dcc9edb3f4db5313021dcdba3f44ffc18fb973a3ab291b7e6c1521cb503a0c82",
+  "limits": [
+    "Publication covers only the 21 named branches; injury DUI, licensing, racing and other gaps remain open.",
+    "No sentencing or enforceability uncertainty is silently treated as a minor-offense deferral.",
+    "Pins and unchanged-source comparison are required for promoted research sources; acquisition time is never renewed by replay.",
+    "Statutes govern punishment. Instruction matches are bounded and do not establish complete coverage."
+  ],
+  "records": [
+    {
+      "id": "ca-veh-2800-1-a",
+      "primaryKey": "VEH:2800.1",
+      "definitionSha256": "bb241603ae328c46d98c5c23e7ca13b964b45107097b792220e2dfc3cd64be4e",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.1",
+        "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+        "start": 0,
+        "end": 1749,
+        "text": "(a) Any person who, while operating a motor vehicle and with the intent to evade, willfully flees or otherwise attempts to elude a pursuing peace officer’s motor vehicle, is guilty of a misdemeanor punishable by imprisonment in a county jail for not more than one year if all of the following conditions exist: (1) The peace officer’s motor vehicle is exhibiting at least one lighted red lamp visible from the front and the person either sees or reasonably should have seen the lamp. (2) The peace officer’s motor vehicle is sounding a siren as may be reasonably necessary. (3) The peace officer’s motor vehicle is distinctively marked. (4) The peace officer’s motor vehicle is operated by a peace officer, as defined in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2 of the Penal Code, and that peace officer is wearing a distinctive uniform. (b) Any person who, while operating a motor vehicle and with the intent to evade, willfully flees or otherwise attempts to elude a pursuing peace officer’s bicycle, is guilty of a misdemeanor punishable by imprisonment in a county jail for not more than one year if the following conditions exist: (1) The peace officer’s bicycle is distinctively marked. (2) The peace officer’s bicycle is operated by a peace officer, as defined in paragraph (4) of subdivision (a), and that peace officer is wearing a distinctive uniform. (3) The peace officer gives a verbal command to stop. (4) The peace officer sounds a horn that produces a sound of at least 115 decibels. (5) The peace officer gives a hand signal commanding the person to stop. (6) The person is aware or reasonably should have been aware of the verbal command, horn, and hand signal, but refuses to comply with the command to stop."
+      }
+    },
+    {
+      "id": "ca-veh-2800-1-b",
+      "primaryKey": "VEH:2800.1",
+      "definitionSha256": "211a1c38c547938e4d5509a28356e6af6b548f3ddc33a5af4c648cbbbfeafc45",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.1",
+        "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+        "start": 0,
+        "end": 1749,
+        "text": "(a) Any person who, while operating a motor vehicle and with the intent to evade, willfully flees or otherwise attempts to elude a pursuing peace officer’s motor vehicle, is guilty of a misdemeanor punishable by imprisonment in a county jail for not more than one year if all of the following conditions exist: (1) The peace officer’s motor vehicle is exhibiting at least one lighted red lamp visible from the front and the person either sees or reasonably should have seen the lamp. (2) The peace officer’s motor vehicle is sounding a siren as may be reasonably necessary. (3) The peace officer’s motor vehicle is distinctively marked. (4) The peace officer’s motor vehicle is operated by a peace officer, as defined in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2 of the Penal Code, and that peace officer is wearing a distinctive uniform. (b) Any person who, while operating a motor vehicle and with the intent to evade, willfully flees or otherwise attempts to elude a pursuing peace officer’s bicycle, is guilty of a misdemeanor punishable by imprisonment in a county jail for not more than one year if the following conditions exist: (1) The peace officer’s bicycle is distinctively marked. (2) The peace officer’s bicycle is operated by a peace officer, as defined in paragraph (4) of subdivision (a), and that peace officer is wearing a distinctive uniform. (3) The peace officer gives a verbal command to stop. (4) The peace officer sounds a horn that produces a sound of at least 115 decibels. (5) The peace officer gives a hand signal commanding the person to stop. (6) The person is aware or reasonably should have been aware of the verbal command, horn, and hand signal, but refuses to comply with the command to stop."
+      }
+    },
+    {
+      "id": "ca-veh-2800-2",
+      "primaryKey": "VEH:2800.2",
+      "definitionSha256": "7889d53a14025df5bdf41d488a4ec9e15d671ed4832fa63b7952522a68c3d5e0",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:12810",
+          "versions": [
+            {
+              "versionId": "id_121b5d91-eee8-11de-a33d-82cc13b244c3",
+              "contentSha256": "8ca5d846a4763c4437193b4a3bbb261c1d162d6cce8586fcea227d69703ded31"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.2",
+          "versions": [
+            {
+              "versionId": "id_0a017fa8-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "223ec2e7a9e87975bcf65556552870e13ed6950a1b916212ea1c93df4e81ba82"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.2",
+        "versionId": "id_0a017fa8-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 948,
+        "text": "(a) If a person flees or attempts to elude a pursuing peace officer in violation of Section 2800.1 and the pursued vehicle is driven in a willful or wanton disregard for the safety of persons or property, the person driving the vehicle, upon conviction, shall be punished by imprisonment in the state prison, or by confinement in the county jail for not less than six months nor more than one year. The court may also impose a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or may impose both that imprisonment or confinement and fine. (b) For purposes of this section, a willful or wanton disregard for the safety of persons or property includes, but is not limited to, driving while fleeing or attempting to elude a pursuing peace officer during which time either three or more violations that are assigned a traffic violation point count under Section 12810 occur, or damage to property occurs."
+      }
+    },
+    {
+      "id": "ca-veh-2800-3-a",
+      "primaryKey": "VEH:2800.3",
+      "definitionSha256": "6200174830618bff6855cb057864e5e5a983e4825873f411017a5b4d178be1b1",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:243",
+          "versions": [
+            {
+              "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.3",
+          "versions": [
+            {
+              "versionId": "id_dec85701-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b2bc0de384f4c89efb5c76743966c26aad22e5cff2952ebc93f18a2c09e7bc4a"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.3",
+        "versionId": "id_dec85701-78eb-11da-b426-9220345f4b4d",
+        "start": 0,
+        "end": 1160,
+        "text": "(a) Whenever willful flight or attempt to elude a pursuing peace officer in violation of Section 2800.1 proximately causes serious bodily injury to any person, the person driving the pursued vehicle, upon conviction, shall be punished by imprisonment in the state prison for three, five, or seven years, by imprisonment in a county jail for not more than one year, or by a fine of not less than two thousand dollars ($2,000) nor more than ten thousand dollars ($10,000), or by both that fine and imprisonment. (b) Whenever willful flight or attempt to elude a pursuing peace officer in violation of Section 2800.1 proximately causes death to a person, the person driving the pursued vehicle, upon conviction, shall be punished by imprisonment in the state prison for a term of 4, 6, or 10 years. (c) Nothing in this section shall preclude the imposition of a greater sentence pursuant to Section 190 of the Penal Code or any other provisions of law applicable to punishment for an unlawful death. (d) For the purposes of this section, “serious bodily injury” has the same meaning as defined in paragraph (4) of subdivision (f) of Section 243 of the Penal Code."
+      }
+    },
+    {
+      "id": "ca-veh-2800-3-b",
+      "primaryKey": "VEH:2800.3",
+      "definitionSha256": "19db1419b4fdf70e6776c641f52b6cd88741f181b6d9b47c0997efc8ec9182e2",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.3",
+          "versions": [
+            {
+              "versionId": "id_dec85701-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b2bc0de384f4c89efb5c76743966c26aad22e5cff2952ebc93f18a2c09e7bc4a"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.3",
+        "versionId": "id_dec85701-78eb-11da-b426-9220345f4b4d",
+        "start": 0,
+        "end": 1160,
+        "text": "(a) Whenever willful flight or attempt to elude a pursuing peace officer in violation of Section 2800.1 proximately causes serious bodily injury to any person, the person driving the pursued vehicle, upon conviction, shall be punished by imprisonment in the state prison for three, five, or seven years, by imprisonment in a county jail for not more than one year, or by a fine of not less than two thousand dollars ($2,000) nor more than ten thousand dollars ($10,000), or by both that fine and imprisonment. (b) Whenever willful flight or attempt to elude a pursuing peace officer in violation of Section 2800.1 proximately causes death to a person, the person driving the pursued vehicle, upon conviction, shall be punished by imprisonment in the state prison for a term of 4, 6, or 10 years. (c) Nothing in this section shall preclude the imposition of a greater sentence pursuant to Section 190 of the Penal Code or any other provisions of law applicable to punishment for an unlawful death. (d) For the purposes of this section, “serious bodily injury” has the same meaning as defined in paragraph (4) of subdivision (f) of Section 243 of the Penal Code."
+      }
+    },
+    {
+      "id": "ca-veh-2800-4",
+      "primaryKey": "VEH:2800.4",
+      "definitionSha256": "caa81bc5fecf00ee52ddebf2957054582930f3faa0a2b5c2fb3ce88dd4786e8d",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.1",
+          "versions": [
+            {
+              "versionId": "id_de7d925f-78eb-11da-b426-9220345f4b4d",
+              "contentSha256": "b15ec0a817da492f7e0fb57a383124e8c56254bbc15a87ecd82a210b1cc27350"
+            }
+          ]
+        },
+        {
+          "key": "VEH:2800.4",
+          "versions": [
+            {
+              "versionId": "id_0b840b10-cae5-11e1-982a-8b0bdafc98c6",
+              "contentSha256": "47634953eec8add482a7681abde66b443c53afd590d5e4c2ef23d6d6f64bcb18"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:2800.4",
+        "versionId": "id_0b840b10-cae5-11e1-982a-8b0bdafc98c6",
+        "start": 0,
+        "end": 597,
+        "text": "Whenever a person willfully flees or attempts to elude a pursuing peace officer in violation of Section 2800.1, and the person operating the pursued vehicle willfully drives that vehicle on a highway in a direction opposite to that in which the traffic lawfully moves upon that highway, the person upon conviction is punishable by imprisonment for not less than six months nor more than one year in a county jail or by imprisonment in the state prison, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that fine and imprisonment."
+      }
+    },
+    {
+      "id": "ca-veh-20001-b-1",
+      "primaryKey": "VEH:20001",
+      "definitionSha256": "a5d121e26b58640300e148a23add5ae095ee070093e522865d4ce8cb9b2d51ce",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20001",
+          "versions": [
+            {
+              "versionId": "id_b568be88-aa48-11dc-9c83-d76b6d9ea03b",
+              "contentSha256": "5e54cb8c4badfe0208ce3e39fdd4ddd9149a8fce206201459c747dcda54b1feb"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20003",
+          "versions": [
+            {
+              "versionId": "id_0ee68ca8-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "79df9d179094a6da5c79f7a2c38e80e79c22628a92b69efce5ed58b3377a02d9"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20004",
+          "versions": [
+            {
+              "versionId": "id_0ee8134a-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "ef4511104074176185584a97c0bb3d94cc44ca1f72c8fe10c4226b5da718414a"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:20001",
+        "versionId": "id_b568be88-aa48-11dc-9c83-d76b6d9ea03b",
+        "start": 0,
+        "end": 2340,
+        "text": "(a) The driver of a vehicle involved in an accident resulting in injury to a person, other than himself or herself, or in the death of a person shall immediately stop the vehicle at the scene of the accident and shall fulfill the requirements of Sections 20003 and 20004. (b) (1) Except as provided in paragraph (2), a person who violates subdivision (a) shall be punished by imprisonment in the state prison, or in a county jail for not more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. (2) If the accident described in subdivision (a) results in death or permanent, serious injury, a person who violates subdivision (a) shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not less than 90 days nor more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. However, the court, in the interests of justice and for reasons stated in the record, may reduce or eliminate the minimum imprisonment required by this paragraph. (3) In imposing the minimum fine required by this subdivision, the court shall take into consideration the defendant’s ability to pay the fine and, in the interests of justice and for reasons stated in the record, may reduce the amount of that minimum fine to less than the amount otherwise required by this subdivision. (c) A person who flees the scene of the crime after committing a violation of Section 191.5 of, or paragraph (1) of subdivision (c) of Section 192 of the Penal Code, upon conviction of any of those sections, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision. (d) As used in this section, “permanent, serious injury” means the loss or permanent impairment of function of a bodily member or organ."
+      }
+    },
+    {
+      "id": "ca-veh-20001-b-2",
+      "primaryKey": "VEH:20001",
+      "definitionSha256": "f9abf95d56675579ffc976902e6f450682a834e935935779f2105dd053b08c19",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192",
+          "versions": [
+            {
+              "versionId": "id_cf915d6b-8257-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "f301aa7e6ec3dfb47fd0c0367b519ad5a71ec79d3e652ba18229bc38e91be31a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20001",
+          "versions": [
+            {
+              "versionId": "id_b568be88-aa48-11dc-9c83-d76b6d9ea03b",
+              "contentSha256": "5e54cb8c4badfe0208ce3e39fdd4ddd9149a8fce206201459c747dcda54b1feb"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20003",
+          "versions": [
+            {
+              "versionId": "id_0ee68ca8-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "79df9d179094a6da5c79f7a2c38e80e79c22628a92b69efce5ed58b3377a02d9"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20004",
+          "versions": [
+            {
+              "versionId": "id_0ee8134a-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "ef4511104074176185584a97c0bb3d94cc44ca1f72c8fe10c4226b5da718414a"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:20001",
+        "versionId": "id_b568be88-aa48-11dc-9c83-d76b6d9ea03b",
+        "start": 0,
+        "end": 2340,
+        "text": "(a) The driver of a vehicle involved in an accident resulting in injury to a person, other than himself or herself, or in the death of a person shall immediately stop the vehicle at the scene of the accident and shall fulfill the requirements of Sections 20003 and 20004. (b) (1) Except as provided in paragraph (2), a person who violates subdivision (a) shall be punished by imprisonment in the state prison, or in a county jail for not more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. (2) If the accident described in subdivision (a) results in death or permanent, serious injury, a person who violates subdivision (a) shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not less than 90 days nor more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. However, the court, in the interests of justice and for reasons stated in the record, may reduce or eliminate the minimum imprisonment required by this paragraph. (3) In imposing the minimum fine required by this subdivision, the court shall take into consideration the defendant’s ability to pay the fine and, in the interests of justice and for reasons stated in the record, may reduce the amount of that minimum fine to less than the amount otherwise required by this subdivision. (c) A person who flees the scene of the crime after committing a violation of Section 191.5 of, or paragraph (1) of subdivision (c) of Section 192 of the Penal Code, upon conviction of any of those sections, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision. (d) As used in this section, “permanent, serious injury” means the loss or permanent impairment of function of a bodily member or organ."
+      }
+    },
+    {
+      "id": "ca-veh-20002-a",
+      "primaryKey": "VEH:20002",
+      "definitionSha256": "28b19d7f5b5d0429181d8e973a1db134a5bbc714c6e610de95ac6dce2bcb0b5f",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:20002",
+          "versions": [
+            {
+              "versionId": "id_0ee68ca6-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "077bd3beef2e2da0788a0a3d4a8e3dd682b1f6084db830a8ee6b98a88d451503"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:20002",
+        "versionId": "id_0ee68ca6-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 2362,
+        "text": "(a) The driver of any vehicle involved in an accident resulting only in damage to any property, including vehicles, shall immediately stop the vehicle at the nearest location that will not impede traffic or otherwise jeopardize the safety of other motorists. Moving the vehicle in accordance with this subdivision does not affect the question of fault. The driver shall also immediately do either of the following: (1) Locate and notify the owner or person in charge of that property of the name and address of the driver and owner of the vehicle involved and, upon locating the driver of any other vehicle involved or the owner or person in charge of any damaged property, upon being requested, present his or her driver’s license, and vehicle registration, to the other driver, property owner, or person in charge of that property. The information presented shall include the current residence address of the driver and of the registered owner. If the registered owner of an involved vehicle is present at the scene, he or she shall also, upon request, present his or her driver’s license information, if available, or other valid identification to the other involved parties. (2) Leave in a conspicuous place on the vehicle or other property damaged a written notice giving the name and address of the driver and of the owner of the vehicle involved and a statement of the circumstances thereof and shall without unnecessary delay notify the police department of the city wherein the collision occurred or, if the collision occurred in unincorporated territory, the local headquarters of the Department of the California Highway Patrol. (b) Any person who parks a vehicle which, prior to the vehicle again being driven, becomes a runaway vehicle and is involved in an accident resulting in damage to any property, attended or unattended, shall comply with the requirements of this section relating to notification and reporting and shall, upon conviction thereof, be liable to the penalties of this section for failure to comply with the requirements. (c) Any person failing to comply with all the requirements of this section is guilty of a misdemeanor and, upon conviction thereof, shall be punished by imprisonment in the county jail not exceeding six months, or by a fine not exceeding one thousand dollars ($1,000), or by both that imprisonment and fine."
+      }
+    },
+    {
+      "id": "ca-pen-192-5-a",
+      "primaryKey": "PEN:192.5",
+      "definitionSha256": "852300e1b994af1de3eff48481edae65767e66bc646676c6f87105a9ac463c9d",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193.5",
+          "versions": [
+            {
+              "versionId": "id_11e043af-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89875539405f82a842e7084314dc09e7d8c2c96a74c5b5100ce13b8612663389"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:192.5",
+        "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+        "start": 0,
+        "end": 2222,
+        "text": "Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes: (a) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (b) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (c) Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (d) Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (e) A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision."
+      }
+    },
+    {
+      "id": "ca-pen-192-5-b",
+      "primaryKey": "PEN:192.5",
+      "definitionSha256": "ff5181bf1aa7ce6921ee1321a9f018291445a9edbe6c5f95571ac160579515ca",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193.5",
+          "versions": [
+            {
+              "versionId": "id_11e043af-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89875539405f82a842e7084314dc09e7d8c2c96a74c5b5100ce13b8612663389"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:192.5",
+        "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+        "start": 0,
+        "end": 2222,
+        "text": "Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes: (a) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (b) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (c) Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (d) Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (e) A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision."
+      }
+    },
+    {
+      "id": "ca-pen-192-5-c",
+      "primaryKey": "PEN:192.5",
+      "definitionSha256": "ad6c802199ab3b9cce61b950f511e0d9816557104695bbd3c118ffa8895bf6a8",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193.5",
+          "versions": [
+            {
+              "versionId": "id_11e043af-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89875539405f82a842e7084314dc09e7d8c2c96a74c5b5100ce13b8612663389"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:192.5",
+        "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+        "start": 0,
+        "end": 2222,
+        "text": "Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes: (a) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (b) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (c) Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (d) Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (e) A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision."
+      }
+    },
+    {
+      "id": "ca-pen-192-5-d",
+      "primaryKey": "PEN:192.5",
+      "definitionSha256": "389adad19d6d0f20e7aa17919acaf65fe51b5565be08429ff1f8f5d17d4b037b",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:193.5",
+          "versions": [
+            {
+              "versionId": "id_11e043af-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "89875539405f82a842e7084314dc09e7d8c2c96a74c5b5100ce13b8612663389"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:192.5",
+        "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+        "start": 0,
+        "end": 2222,
+        "text": "Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes: (a) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (b) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (c) Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (d) Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (e) A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision."
+      }
+    },
+    {
+      "id": "ca-hnc-655-b",
+      "primaryKey": "HNC:655",
+      "definitionSha256": "ad5c6576a096aa5635c4599b39ee66b29962821bb90bb9dbaa2d8fffdc35d77e",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.1",
+          "versions": [
+            {
+              "versionId": "id_0de6ee7c-d7b5-11e7-8ae0-bddf6e708bba",
+              "contentSha256": "c9d4c0ed6126e7a6515114ca3cf147156fd41b1c831d1c2d66ff809a9778e399"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.5",
+          "versions": [
+            {
+              "versionId": "id_3c443f0e-45a8-11dc-be41-8acf69e6f11b",
+              "contentSha256": "904589bd996377b38c40455c9558c944c90621dd96ca4ed09146614e09999637"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655",
+        "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 4979,
+        "text": "(a) No person shall use any vessel or manipulate water skis, an aquaplane, or a similar device in a reckless or negligent manner so as to endanger the life, limb, or property of any person. The department shall adopt regulations for the use of vessels, water skis, aquaplanes, or similar devices in a manner that will minimize the danger to life, limb, or property consistent with reasonable use of the equipment for the purpose for which it was designed. (b) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or the combined influence of an alcoholic beverage and any drug. (c) No person shall operate any recreational vessel or manipulate any water skis, aquaplane, or similar device if the person has an alcohol concentration of 0.08 percent or more in his or her blood. (d) No person shall operate any vessel other than a recreational vessel if the person has an alcohol concentration of 0.04 percent or more in his or her blood. (e) No person shall operate any vessel, or manipulate water skis, an aquaplane, or a similar device who is addicted to the use of any drug. This subdivision does not apply to a person who is participating in a narcotic treatment program approved pursuant to Article 3 (commencing with Section 11875) of Chapter 1 of Part 3 of Division 10.5 of the Health and Safety Code. (f) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or under the combined influence of an alcoholic beverage and any drug, and while so operating, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, water skis, aquaplane, or similar device, which act or neglect proximately causes bodily injury to any person other than himself or herself. (g) Notwithstanding any other provision of law, information, verbal or otherwise, which is obtained from a commissioned, warrant, or petty officer of the United States Coast Guard who directly observed the offense may be used as the sole basis for establishing the necessary reasonable cause for a peace officer of this state to make an arrest pursuant to the United States Constitution, the California Constitution, and Section 836 of the Penal Code for violations of subdivisions (b), (c), (d), and (e) of this section. (h) In any prosecution under subdivision (c), it is a rebuttable presumption that the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of operation of a recreational vessel if the person had an alcohol concentration of 0.08 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (i) In any prosecution under subdivision (d), it is a rebuttable presumption that the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of operation of a vessel other than a recreational vessel if the person had an alcohol concentration of 0.04 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (j) Upon the trial of any criminal action, or preliminary proceeding in a criminal action, arising out of acts alleged to have been committed by any person who was operating a vessel or manipulating water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage in violation of subdivision (b) or (f), the amount of alcohol in the person’s blood at the time of the test, as shown by a chemical test of that person’s blood, breath, or urine, shall give rise to the following presumptions affecting the burden of proof: (1) If there was at that time less than 0.05 percent, by weight, of alcohol in the person’s blood, it shall be presumed that the person was not under the influence of an alcoholic beverage at the time of the alleged offense. (2) If there was at that time 0.05 percent or more, but less than 0.08 percent, by weight, of alcohol in the person’s blood, that fact shall not give rise to any presumption that the person was or was not under the influence of an alcoholic beverage, but the fact may be considered with other competent evidence in determining whether the person was under the influence of an alcoholic beverage at the time of the alleged offense. (3) If there was at that time 0.08 percent or more, by weight, of alcohol in the person’s blood, it shall be presumed that the person was under the influence of an alcoholic beverage at the time of the alleged offense. (k) This section does not limit the introduction of any other competent evidence bearing upon the question whether the person ingested any alcoholic beverage or was under the influence of an alcoholic beverage at the time of the alleged offense. ( l ) This section applies to foreign vessels using waters subject to state jurisdiction."
+      }
+    },
+    {
+      "id": "ca-hnc-655-c",
+      "primaryKey": "HNC:655",
+      "definitionSha256": "448a461ea0acd6888512f30fce74be4c6b2f4fa5192bb46b01a46e684d66fb77",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.1",
+          "versions": [
+            {
+              "versionId": "id_0de6ee7c-d7b5-11e7-8ae0-bddf6e708bba",
+              "contentSha256": "c9d4c0ed6126e7a6515114ca3cf147156fd41b1c831d1c2d66ff809a9778e399"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.5",
+          "versions": [
+            {
+              "versionId": "id_3c443f0e-45a8-11dc-be41-8acf69e6f11b",
+              "contentSha256": "904589bd996377b38c40455c9558c944c90621dd96ca4ed09146614e09999637"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655",
+        "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 4979,
+        "text": "(a) No person shall use any vessel or manipulate water skis, an aquaplane, or a similar device in a reckless or negligent manner so as to endanger the life, limb, or property of any person. The department shall adopt regulations for the use of vessels, water skis, aquaplanes, or similar devices in a manner that will minimize the danger to life, limb, or property consistent with reasonable use of the equipment for the purpose for which it was designed. (b) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or the combined influence of an alcoholic beverage and any drug. (c) No person shall operate any recreational vessel or manipulate any water skis, aquaplane, or similar device if the person has an alcohol concentration of 0.08 percent or more in his or her blood. (d) No person shall operate any vessel other than a recreational vessel if the person has an alcohol concentration of 0.04 percent or more in his or her blood. (e) No person shall operate any vessel, or manipulate water skis, an aquaplane, or a similar device who is addicted to the use of any drug. This subdivision does not apply to a person who is participating in a narcotic treatment program approved pursuant to Article 3 (commencing with Section 11875) of Chapter 1 of Part 3 of Division 10.5 of the Health and Safety Code. (f) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or under the combined influence of an alcoholic beverage and any drug, and while so operating, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, water skis, aquaplane, or similar device, which act or neglect proximately causes bodily injury to any person other than himself or herself. (g) Notwithstanding any other provision of law, information, verbal or otherwise, which is obtained from a commissioned, warrant, or petty officer of the United States Coast Guard who directly observed the offense may be used as the sole basis for establishing the necessary reasonable cause for a peace officer of this state to make an arrest pursuant to the United States Constitution, the California Constitution, and Section 836 of the Penal Code for violations of subdivisions (b), (c), (d), and (e) of this section. (h) In any prosecution under subdivision (c), it is a rebuttable presumption that the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of operation of a recreational vessel if the person had an alcohol concentration of 0.08 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (i) In any prosecution under subdivision (d), it is a rebuttable presumption that the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of operation of a vessel other than a recreational vessel if the person had an alcohol concentration of 0.04 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (j) Upon the trial of any criminal action, or preliminary proceeding in a criminal action, arising out of acts alleged to have been committed by any person who was operating a vessel or manipulating water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage in violation of subdivision (b) or (f), the amount of alcohol in the person’s blood at the time of the test, as shown by a chemical test of that person’s blood, breath, or urine, shall give rise to the following presumptions affecting the burden of proof: (1) If there was at that time less than 0.05 percent, by weight, of alcohol in the person’s blood, it shall be presumed that the person was not under the influence of an alcoholic beverage at the time of the alleged offense. (2) If there was at that time 0.05 percent or more, but less than 0.08 percent, by weight, of alcohol in the person’s blood, that fact shall not give rise to any presumption that the person was or was not under the influence of an alcoholic beverage, but the fact may be considered with other competent evidence in determining whether the person was under the influence of an alcoholic beverage at the time of the alleged offense. (3) If there was at that time 0.08 percent or more, by weight, of alcohol in the person’s blood, it shall be presumed that the person was under the influence of an alcoholic beverage at the time of the alleged offense. (k) This section does not limit the introduction of any other competent evidence bearing upon the question whether the person ingested any alcoholic beverage or was under the influence of an alcoholic beverage at the time of the alleged offense. ( l ) This section applies to foreign vessels using waters subject to state jurisdiction."
+      }
+    },
+    {
+      "id": "ca-hnc-655-d",
+      "primaryKey": "HNC:655",
+      "definitionSha256": "e3695a857f47a6d112cb82324beef1565283ed633e91356aee6640dab21d4baa",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.1",
+          "versions": [
+            {
+              "versionId": "id_0de6ee7c-d7b5-11e7-8ae0-bddf6e708bba",
+              "contentSha256": "c9d4c0ed6126e7a6515114ca3cf147156fd41b1c831d1c2d66ff809a9778e399"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.5",
+          "versions": [
+            {
+              "versionId": "id_3c443f0e-45a8-11dc-be41-8acf69e6f11b",
+              "contentSha256": "904589bd996377b38c40455c9558c944c90621dd96ca4ed09146614e09999637"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655",
+        "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 4979,
+        "text": "(a) No person shall use any vessel or manipulate water skis, an aquaplane, or a similar device in a reckless or negligent manner so as to endanger the life, limb, or property of any person. The department shall adopt regulations for the use of vessels, water skis, aquaplanes, or similar devices in a manner that will minimize the danger to life, limb, or property consistent with reasonable use of the equipment for the purpose for which it was designed. (b) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or the combined influence of an alcoholic beverage and any drug. (c) No person shall operate any recreational vessel or manipulate any water skis, aquaplane, or similar device if the person has an alcohol concentration of 0.08 percent or more in his or her blood. (d) No person shall operate any vessel other than a recreational vessel if the person has an alcohol concentration of 0.04 percent or more in his or her blood. (e) No person shall operate any vessel, or manipulate water skis, an aquaplane, or a similar device who is addicted to the use of any drug. This subdivision does not apply to a person who is participating in a narcotic treatment program approved pursuant to Article 3 (commencing with Section 11875) of Chapter 1 of Part 3 of Division 10.5 of the Health and Safety Code. (f) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or under the combined influence of an alcoholic beverage and any drug, and while so operating, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, water skis, aquaplane, or similar device, which act or neglect proximately causes bodily injury to any person other than himself or herself. (g) Notwithstanding any other provision of law, information, verbal or otherwise, which is obtained from a commissioned, warrant, or petty officer of the United States Coast Guard who directly observed the offense may be used as the sole basis for establishing the necessary reasonable cause for a peace officer of this state to make an arrest pursuant to the United States Constitution, the California Constitution, and Section 836 of the Penal Code for violations of subdivisions (b), (c), (d), and (e) of this section. (h) In any prosecution under subdivision (c), it is a rebuttable presumption that the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of operation of a recreational vessel if the person had an alcohol concentration of 0.08 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (i) In any prosecution under subdivision (d), it is a rebuttable presumption that the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of operation of a vessel other than a recreational vessel if the person had an alcohol concentration of 0.04 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (j) Upon the trial of any criminal action, or preliminary proceeding in a criminal action, arising out of acts alleged to have been committed by any person who was operating a vessel or manipulating water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage in violation of subdivision (b) or (f), the amount of alcohol in the person’s blood at the time of the test, as shown by a chemical test of that person’s blood, breath, or urine, shall give rise to the following presumptions affecting the burden of proof: (1) If there was at that time less than 0.05 percent, by weight, of alcohol in the person’s blood, it shall be presumed that the person was not under the influence of an alcoholic beverage at the time of the alleged offense. (2) If there was at that time 0.05 percent or more, but less than 0.08 percent, by weight, of alcohol in the person’s blood, that fact shall not give rise to any presumption that the person was or was not under the influence of an alcoholic beverage, but the fact may be considered with other competent evidence in determining whether the person was under the influence of an alcoholic beverage at the time of the alleged offense. (3) If there was at that time 0.08 percent or more, by weight, of alcohol in the person’s blood, it shall be presumed that the person was under the influence of an alcoholic beverage at the time of the alleged offense. (k) This section does not limit the introduction of any other competent evidence bearing upon the question whether the person ingested any alcoholic beverage or was under the influence of an alcoholic beverage at the time of the alleged offense. ( l ) This section applies to foreign vessels using waters subject to state jurisdiction."
+      }
+    },
+    {
+      "id": "ca-hnc-655-f",
+      "primaryKey": "HNC:655",
+      "definitionSha256": "70eabcb93cbb8c031d7f86475ab7b6899df944138e2612f1165de8663c2e33e5",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655",
+          "versions": [
+            {
+              "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "a7e9960632faa411b5afca07a265908fba2ec62c7910542c3cfb95a660ec0c7b"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.1",
+          "versions": [
+            {
+              "versionId": "id_0de6ee7c-d7b5-11e7-8ae0-bddf6e708bba",
+              "contentSha256": "c9d4c0ed6126e7a6515114ca3cf147156fd41b1c831d1c2d66ff809a9778e399"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.5",
+          "versions": [
+            {
+              "versionId": "id_3c443f0e-45a8-11dc-be41-8acf69e6f11b",
+              "contentSha256": "904589bd996377b38c40455c9558c944c90621dd96ca4ed09146614e09999637"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:191.5",
+          "versions": [
+            {
+              "versionId": "id_6db84a80-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "d3a51f9252d0d3afba2203b263f4ae8274e3d1e1f5fc8f5a8f9a27fc74f56b3b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:192.5",
+          "versions": [
+            {
+              "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+              "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23153",
+          "versions": [
+            {
+              "versionId": "id_34e0386b-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "fa4f6560a335c8025548762d6dd7d3c5dfef964f5849d539d85cf04d330d645e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655",
+        "versionId": "id_dabf869e-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 4979,
+        "text": "(a) No person shall use any vessel or manipulate water skis, an aquaplane, or a similar device in a reckless or negligent manner so as to endanger the life, limb, or property of any person. The department shall adopt regulations for the use of vessels, water skis, aquaplanes, or similar devices in a manner that will minimize the danger to life, limb, or property consistent with reasonable use of the equipment for the purpose for which it was designed. (b) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or the combined influence of an alcoholic beverage and any drug. (c) No person shall operate any recreational vessel or manipulate any water skis, aquaplane, or similar device if the person has an alcohol concentration of 0.08 percent or more in his or her blood. (d) No person shall operate any vessel other than a recreational vessel if the person has an alcohol concentration of 0.04 percent or more in his or her blood. (e) No person shall operate any vessel, or manipulate water skis, an aquaplane, or a similar device who is addicted to the use of any drug. This subdivision does not apply to a person who is participating in a narcotic treatment program approved pursuant to Article 3 (commencing with Section 11875) of Chapter 1 of Part 3 of Division 10.5 of the Health and Safety Code. (f) No person shall operate any vessel or manipulate water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage, any drug, or under the combined influence of an alcoholic beverage and any drug, and while so operating, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, water skis, aquaplane, or similar device, which act or neglect proximately causes bodily injury to any person other than himself or herself. (g) Notwithstanding any other provision of law, information, verbal or otherwise, which is obtained from a commissioned, warrant, or petty officer of the United States Coast Guard who directly observed the offense may be used as the sole basis for establishing the necessary reasonable cause for a peace officer of this state to make an arrest pursuant to the United States Constitution, the California Constitution, and Section 836 of the Penal Code for violations of subdivisions (b), (c), (d), and (e) of this section. (h) In any prosecution under subdivision (c), it is a rebuttable presumption that the person had 0.08 percent or more, by weight, of alcohol in his or her blood at the time of operation of a recreational vessel if the person had an alcohol concentration of 0.08 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (i) In any prosecution under subdivision (d), it is a rebuttable presumption that the person had 0.04 percent or more, by weight, of alcohol in his or her blood at the time of operation of a vessel other than a recreational vessel if the person had an alcohol concentration of 0.04 percent or more in his or her blood at the time of the performance of a chemical test within three hours after the operation. (j) Upon the trial of any criminal action, or preliminary proceeding in a criminal action, arising out of acts alleged to have been committed by any person who was operating a vessel or manipulating water skis, an aquaplane, or a similar device while under the influence of an alcoholic beverage in violation of subdivision (b) or (f), the amount of alcohol in the person’s blood at the time of the test, as shown by a chemical test of that person’s blood, breath, or urine, shall give rise to the following presumptions affecting the burden of proof: (1) If there was at that time less than 0.05 percent, by weight, of alcohol in the person’s blood, it shall be presumed that the person was not under the influence of an alcoholic beverage at the time of the alleged offense. (2) If there was at that time 0.05 percent or more, but less than 0.08 percent, by weight, of alcohol in the person’s blood, that fact shall not give rise to any presumption that the person was or was not under the influence of an alcoholic beverage, but the fact may be considered with other competent evidence in determining whether the person was under the influence of an alcoholic beverage at the time of the alleged offense. (3) If there was at that time 0.08 percent or more, by weight, of alcohol in the person’s blood, it shall be presumed that the person was under the influence of an alcoholic beverage at the time of the alleged offense. (k) This section does not limit the introduction of any other competent evidence bearing upon the question whether the person ingested any alcoholic beverage or was under the influence of an alcoholic beverage at the time of the alleged offense. ( l ) This section applies to foreign vessels using waters subject to state jurisdiction."
+      }
+    },
+    {
+      "id": "ca-hnc-655-4-a",
+      "primaryKey": "HNC:655.4",
+      "definitionSha256": "c8892fa749117ace54ace80e4f11071f70068db02e64574e8fbd88311854d9d4",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.4",
+          "versions": [
+            {
+              "versionId": "id_dac293e8-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "8165eb4f16c40826dc6d9e44070749ba0553ac400296db4aa1b02d3c7b1baf33"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655.4",
+        "versionId": "id_dac293e8-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 588,
+        "text": "(a) No person shall serve as a crew member on any charter boat while under the influence of intoxicating liquor, any drug, or the combined influence of intoxicating liquor and any drug. (b) No person shall serve as a crew member on any charter boat while under the influence of intoxicating liquor, any drug, or under the combined influence of intoxicating liquor and any drug, and while so serving, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, which act or neglect proximately causes bodily injury to any person other than himself or herself."
+      }
+    },
+    {
+      "id": "ca-hnc-655-4-b",
+      "primaryKey": "HNC:655.4",
+      "definitionSha256": "b97e79438f5fd3fa519fcb5415fa05930c5fc18eb921ebd28e273d927227b26c",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:655.4",
+          "versions": [
+            {
+              "versionId": "id_dac293e8-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "8165eb4f16c40826dc6d9e44070749ba0553ac400296db4aa1b02d3c7b1baf33"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:655.4",
+        "versionId": "id_dac293e8-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 588,
+        "text": "(a) No person shall serve as a crew member on any charter boat while under the influence of intoxicating liquor, any drug, or the combined influence of intoxicating liquor and any drug. (b) No person shall serve as a crew member on any charter boat while under the influence of intoxicating liquor, any drug, or under the combined influence of intoxicating liquor and any drug, and while so serving, do any act forbidden by law, or neglect any duty imposed by law in the use of the vessel, which act or neglect proximately causes bodily injury to any person other than himself or herself."
+      }
+    },
+    {
+      "id": "ca-hnc-656-2",
+      "primaryKey": "HNC:656.2",
+      "definitionSha256": "2a893119bbc634043b7e5682920b6146915262d9bba969403eafacd8ed08dfb5",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:656.1",
+          "versions": [
+            {
+              "versionId": "id_dac5a132-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "02f7bd5a5d28e88638562c7d4d33ec5d83f3e3027a52920bda90636c4b658c5f"
+            }
+          ]
+        },
+        {
+          "key": "HNC:656.2",
+          "versions": [
+            {
+              "versionId": "id_dac5a134-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "039dd5722b4dbb1e8f2892843ca1f04f23b5425b553bdf7a6fd9d760aa43debc"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:656.2",
+        "versionId": "id_dac5a134-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 713,
+        "text": "In addition to the requirements of Section 656.1, the operator of any vessel involved in an accident in the waters of this state who knows or has reason to know that the accident resulted in injury to any person shall furnish his or her name, address, and the registration number of the vessel, and the name of the owner, to the person injured, or occupant of any other vessel involved, or shall furnish that information to any peace officer at the scene of the accident, and shall render to any injured person reasonable assistance, including transportation for medical treatment if required or requested by the injured person, so far as the operator can do so without serious danger to the vessel or passengers."
+      }
+    },
+    {
+      "id": "ca-hnc-656-3",
+      "primaryKey": "HNC:656.3",
+      "definitionSha256": "34c1db9df99326aa7465dc8a6b2047bd3f00a74543eb448ccf7acb2a24db634a",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "HNC:651",
+          "versions": [
+            {
+              "versionId": "id_fd04933b-4063-11ef-b069-b1769ac346c3",
+              "contentSha256": "c930e62ad6a7e8e9bd7a726fd99ae1462302cbfae2a403cea05c6fde9d4d7b0a"
+            }
+          ]
+        },
+        {
+          "key": "HNC:656.1",
+          "versions": [
+            {
+              "versionId": "id_dac5a132-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "02f7bd5a5d28e88638562c7d4d33ec5d83f3e3027a52920bda90636c4b658c5f"
+            }
+          ]
+        },
+        {
+          "key": "HNC:656.2",
+          "versions": [
+            {
+              "versionId": "id_dac5a134-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "039dd5722b4dbb1e8f2892843ca1f04f23b5425b553bdf7a6fd9d760aa43debc"
+            }
+          ]
+        },
+        {
+          "key": "HNC:656.3",
+          "versions": [
+            {
+              "versionId": "id_dac5a136-291f-11d9-8b42-9b0306ddc896",
+              "contentSha256": "eb1717bf859135dfd7fa316c7337ba807a77387ee5de6f5b80b03bdb21438c77"
+            }
+          ]
+        },
+        {
+          "key": "HNC:668",
+          "versions": [
+            {
+              "versionId": "id_cfc7f117-75a8-11e4-8fd2-bcf449a1e949",
+              "contentSha256": "12380c027778e01da6343ff9dc5c4f5933991cd68a9f07263ef885608b8c846f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HNC:656.3",
+        "versionId": "id_dac5a136-291f-11d9-8b42-9b0306ddc896",
+        "start": 0,
+        "end": 602,
+        "text": "In addition to the requirements of Sections 656.1 and 656.2, the operator of any vessel involved in an accident in the waters of this state who knows or has reason to know that the accident resulted in the death or disappearance of any person shall, after fulfilling the requirements of this division, and if there is no peace officer at the scene of the accident to whom to furnish the information required by Section 656.2, without delay, report the accident to the law enforcement agency having jurisdiction over the waterway or, if unknown, the sheriff of the county in which the accident occurred."
+      }
+    }
+  ],
+  "crosswalk": [
+    {
+      "instruction": "2100",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1481,
+      "lastPage": 1487,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2101",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1488,
+      "lastPage": 1492,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2102",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1493,
+      "lastPage": 1497,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2110",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-dui-23152-a",
+        "ca-dui-23152-f",
+        "ca-dui-23152-g"
+      ],
+      "firstPage": 1498,
+      "lastPage": 1502,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2111",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-dui-23152-b"
+      ],
+      "firstPage": 1503,
+      "lastPage": 1505,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2112",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1506,
+      "lastPage": 1508,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2113",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1509,
+      "lastPage": 1510,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2114",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1511,
+      "lastPage": 1513,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2125",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1514,
+      "lastPage": 1516,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2126",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1517,
+      "lastPage": 1518,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2130",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1519,
+      "lastPage": 1521,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2131",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1522,
+      "lastPage": 1526,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2140",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-20001-b-1",
+        "ca-veh-20001-b-2"
+      ],
+      "firstPage": 1527,
+      "lastPage": 1532,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2141",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1533,
+      "lastPage": 1538,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2142",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1539,
+      "lastPage": 1540,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2150",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-20002-a"
+      ],
+      "firstPage": 1541,
+      "lastPage": 1544,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2151",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1545,
+      "lastPage": 1548,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2160",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1549,
+      "lastPage": 1550,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2180",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-3-a",
+        "ca-veh-2800-3-b"
+      ],
+      "firstPage": 1551,
+      "lastPage": 1554,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2181",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-2"
+      ],
+      "firstPage": 1555,
+      "lastPage": 1558,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2182",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-1-a"
+      ],
+      "firstPage": 1559,
+      "lastPage": 1562,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2200",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-reckless-driving"
+      ],
+      "firstPage": 1563,
+      "lastPage": 1565,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2201",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1566,
+      "lastPage": 1567,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2202",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1568,
+      "lastPage": 1570,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2220",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1571,
+      "lastPage": 1573,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2221",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-driving-without-license"
+      ],
+      "firstPage": 1574,
+      "lastPage": 1575,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2222",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1576,
+      "lastPage": 1578,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2240",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1579,
+      "lastPage": 1579,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2241",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1580,
+      "lastPage": 1581,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2242",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1582,
+      "lastPage": 1583,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    }
+  ],
+  "remainingGroups": [
+    {
+      "name": "Injury DUI and omitted DUI branches",
+      "keys": [
+        "VEH:23153",
+        "VEH:23152",
+        "VEH:23140"
+      ],
+      "reviewQuestion": "Separate injury causation, alcohol/drug/commercial/passenger branches and prior-dependent punishment. Existing 23152(a)/(b)/(f)/(g) choices do not cover every branch.",
+      "addedIds": [],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Hit-and-run and post-collision duties",
+      "keys": [
+        "VEH:20001",
+        "VEH:20002",
+        "VEH:20003",
+        "VEH:20004"
+      ],
+      "reviewQuestion": "Distinguish injury/death from property-only accidents, driver from controlling-owner duties, knowledge, and the separate manslaughter flight enhancement.",
+      "addedIds": [
+        "ca-veh-20001-b-1",
+        "ca-veh-20001-b-2",
+        "ca-veh-20002-a"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Evasion",
+      "keys": [
+        "VEH:2800.1",
+        "VEH:2800.2",
+        "VEH:2800.3",
+        "VEH:2800.4"
+      ],
+      "reviewQuestion": "Separate ordinary flight, reckless flight, serious injury/death, and opposite-direction flight. Retain pursuit-identification predicates and grade-specific terms.",
+      "addedIds": [
+        "ca-veh-2800-1-a",
+        "ca-veh-2800-1-b",
+        "ca-veh-2800-2",
+        "ca-veh-2800-3-a",
+        "ca-veh-2800-3-b",
+        "ca-veh-2800-4"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Suspended licenses and court duties",
+      "keys": [
+        "VEH:14601",
+        "VEH:14601.1",
+        "VEH:14601.2",
+        "VEH:14601.3",
+        "VEH:14601.4",
+        "VEH:14601.5",
+        "VEH:12951",
+        "VEH:40508"
+      ],
+      "reviewQuestion": "Identify the suspension basis, knowledge, repeat branches, injury and court appearance duties. Do not copy one suspension penalty across the family.",
+      "addedIds": [],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Reckless driving and street racing",
+      "keys": [
+        "VEH:23103",
+        "VEH:23104",
+        "VEH:23105",
+        "VEH:23109",
+        "VEH:23109.1"
+      ],
+      "reviewQuestion": "Separate ordinary reckless driving, injury branches, speed contests, exhibitions and assistance. Verify current subdivisions against the literal instruction headings.",
+      "addedIds": [],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Vessels and maritime offenses",
+      "keys": [
+        "HNC:655",
+        "HNC:655.1",
+        "HNC:655.2",
+        "HNC:655.3",
+        "HNC:655.4",
+        "HNC:655.5",
+        "HNC:655.6",
+        "HNC:655.7",
+        "PEN:192.5",
+        "PEN:193.8",
+        "PEN:499"
+      ],
+      "reviewQuestion": "Review vessel DUI, injury, repeat consequences, refusal and procedural context, vessel manslaughter and taking vessels. Do not import Vehicle Code punishment by analogy.",
+      "addedIds": [
+        "ca-pen-192-5-a",
+        "ca-pen-192-5-b",
+        "ca-pen-192-5-c",
+        "ca-pen-192-5-d",
+        "ca-hnc-655-b",
+        "ca-hnc-655-c",
+        "ca-hnc-655-d",
+        "ca-hnc-655-f",
+        "ca-hnc-655-4-a",
+        "ca-hnc-655-4-b"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Vehicle identification and chop shops",
+      "keys": [
+        "VEH:10801",
+        "VEH:10802",
+        "VEH:10803"
+      ],
+      "reviewQuestion": "Separate operating a chop shop, altering identifiers, and possession/sale branches; resolve intent and statutory value/quantity or exception conditions.",
+      "addedIds": [],
+      "status": "bounded_additions_do_not_close_group"
+    }
+  ],
+  "decisions": [
+    "VEH 2800.3(a) is a misdemeanor/felony alternative with 3/5/7-year felony terms; death under (b) is felony-only with 4/6/10-year terms. Neither uses the default felony range.",
+    "VEH 20001 injury and death/permanent-serious-injury penalties are separate. The driver conduct is in (a); charging-paper aliases preserve that reference for both penalty branches. Nondriving owners/passengers remain open.",
+    "PEN 193.5(b) expressly uses 16 months, 2 years or 4 years under 1170(h). The other vessel-manslaughter subdivisions have different custody rules.",
+    "HNC 668(g) requires a fine with custody for operator injury under 655(f). HNC 668(e) expressly includes charter crew under 655.4, including its injury branch; operator felony punishment is not transferred to crew.",
+    "PEN 193.8 concerns adult entrustment to an intoxicated minor, not the punishment for vessel manslaughter. PEN 499 concerns recidivist 499b punishment, not a standalone generic vessel-taking offense. Both remain research carry-forwards.",
+    "HNC 655(e) addiction status and its treatment exception remain open. No generic intoxication choice silently includes that branch."
+  ]
+}

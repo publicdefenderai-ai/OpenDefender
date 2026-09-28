@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-The combined drug follow-up proposes 18 additional choices, taking the configured catalog from 218 to 236: the 99 original corrected choices and 137 additions. There are 162 distinct primary sections and 403 retained sections/407 versions including dependencies. The existing changed weapon source still withholds one configured record, leaving 235 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
+The driving/vessel publication batch proposes 21 additional choices, taking the configured catalog from 236 to 257: 99 original corrected choices and 158 additions. There are 173 distinct primary sections and 421 retained publication sections/425 versions including dependencies. The changed weapon source still withholds one configured record, leaving 256 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -75,3 +75,16 @@ The independent comparison now also retains the entire February 2026 CALCRIM veh
 Review 38 priority statutes in seven shared-source groups: injury DUI and omitted DUI branches; hit-and-run; evasion; suspended-license and court duties; reckless driving and street racing; vessels; and vehicle identification/chop shops. Remaining candidates stay visible without being downgraded to minor offenses. Vessel offenses and commercial-driving branches that lack their own instruction heading remain in the statutory queue.
 
 Run `node --import tsx scripts/data-review/california-verification/driving-vessels-review.ts` to validate sources and regenerate the crosswalk and readable review order. `acquire-driving-vessels.py` and `extract-driving-benchmark.py` replay from the already retained archive/PDF with their original receipts. The ordinary tests validate committed evidence offline, including Python parser tests through the existing Vitest wrapper. This packet adds no selectable charges yet; publication requires subdivision, penalty, exception, translation-status and currentness checks for each proposed choice.
+
+
+## Driving and vessel publication: first combined batch
+
+The successor proposes 21 choices: six evasion branches, three driver hit-and-run branches, four vessel-manslaughter branches, four vessel DUI branches, two impaired-charter-crew branches, and two vessel accident-duty branches. These share 11 primary sections and 31 total dependencies. Seventeen research sections graduate to monitored publication evidence, 13 dependencies were already retained, and VEH 12810 is newly acquired for the traffic-point predicate. Only dependencies actually used by published choices are added to pins; the broader research packet remains a research inventory.
+
+The unchanged-source comparison now covers 421 sections/425 versions. PEN 30515 remains the sole changed source; the original acquisition and October 5 expiry are preserved. Currentness and deployment remain separate from substantive review.
+
+Run `node --import tsx scripts/data-review/california-verification/driving-publication-review.ts` to validate definitions, primary excerpts, all dependencies and the successor instruction accounting. `acquire-driving-publication.py` replays the dependency acquisition. The previous research packet is preserved; five previously unpublished instruction entries now have bounded matches, while nondriving-owner duties, injury DUI, omitted DUI branches, licensing, racing and vehicle identification remain open.
+
+Two research labels require care: PEN 193.8 concerns entrusting a vehicle to an intoxicated minor, not vessel-manslaughter punishment (which is in PEN 193.5); PEN 499 concerns specified recidivist 499b conduct, not a generic vessel-taking offense. Neither has been published by analogy. HNC 655(e)'s addiction-status branch and treatment exception also remain open. None of these is dismissed as a minor charge.
+
+Next publication group: combine injury DUI and omitted DUI branches with suspended-license/court duties and injury reckless-driving/racing where shared sentencing sources permit. Keep vehicle-identification and remaining vessel/owner duties in the explicit queue. The existing 3-6 substantive-batch planning range is not reduced merely because part of one family is published.
