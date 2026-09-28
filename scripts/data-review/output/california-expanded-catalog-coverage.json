@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 195,
-    "configuredSelectable": 174,
+    "canonicalRecords": 212,
+    "configuredSelectable": 191,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 75,
-    "boundedCorrectionPass": 174,
+    "boundedAdditionPass": 92,
+    "boundedCorrectionPass": 191,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,12 +19,12 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 121,
+    "distinctSelectablePrimarySections": 130,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 121,
-    "selectableRecordsWithAllPrimaryTextAcquired": 174,
+    "acquiredSelectablePrimarySections": 130,
+    "selectableRecordsWithAllPrimaryTextAcquired": 191,
     "totalAcquiredSectionsIncludingDependencies": 304,
     "totalAcquiredVersionsIncludingDependencies": 307,
     "statewideOffenseDenominator": null,
@@ -33,7 +33,7 @@
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "174 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "191 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -53,8 +53,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 154,
-      "corrected": 154,
+      "selectable": 171,
+      "corrected": 171,
       "awaitingCorrection": 0
     },
     {
@@ -1100,6 +1100,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "484e",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484e&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-484e-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "484f",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484f&lawCode=PEN",
       "recordIds": [
@@ -1169,12 +1178,60 @@
     },
     {
       "lawCode": "PEN",
+      "section": "487g",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487g&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-487g"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487h",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487h&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-487h-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487j",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487j&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-487j"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487k",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487k&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-487k"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "490.2",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=490.2&lawCode=PEN",
       "recordIds": [
         "ca-petty-theft"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "490.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=490.4&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-490-4-a-1",
+        "ca-pen-490-4-a-2",
+        "ca-pen-490-4-a-3",
+        "ca-pen-490-4-a-4"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -1214,11 +1271,33 @@
     },
     {
       "lawCode": "PEN",
+      "section": "498",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=498&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-498-b-1",
+        "ca-pen-498-b-2",
+        "ca-pen-498-b-3",
+        "ca-pen-498-b-4",
+        "ca-pen-498-b-5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "499b",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=499b&lawCode=PEN",
       "recordIds": [
         "ca-pen-499b-a",
         "ca-pen-499b-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "499c",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=499c&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-499c-c"
       ],
       "alreadyRetained": false
     },
@@ -1238,6 +1317,16 @@
       "recordIds": [
         "ca-computer-crime-502-c1",
         "ca-computer-crime-502-c5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "502.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=502.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-502-6-a",
+        "ca-pen-502-6-b"
       ],
       "alreadyRetained": false
     },
@@ -4843,6 +4932,295 @@
         "PEN:243"
       ],
       "catalogSha256": "e2629254e59df40541d68b3c34e85b387d13af98a3805395cd1520e478a413e0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-484e-c",
+      "title": "Fraudulent possession of an access card",
+      "citation": "Cal. Penal Code § 484e(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:484e"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484e"
+      ],
+      "catalogSha256": "4875295c8dbcf571145dd9c89dc5faa5e1afe4f1a58a7ee673b431252d2ecc97",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-487g",
+      "title": "Taking or obtaining an animal for commercial use",
+      "citation": "Cal. Penal Code § 487g",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487g"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:487g"
+      ],
+      "catalogSha256": "27fb7591b2685f752f9fb3ce20162fc186c01ccb8586176171bac0ef71a25692",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-487h-a",
+      "title": "Grand theft of cargo worth more than $950",
+      "citation": "Cal. Penal Code § 487h(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487h"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:487h"
+      ],
+      "catalogSha256": "07d4d062b9e58d73e67d1cc90972861233f897ac038a74623e7ceaa9f5083e3d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-487j",
+      "title": "Grand theft of copper worth more than $950",
+      "citation": "Cal. Penal Code § 487j",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487j"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:487j"
+      ],
+      "catalogSha256": "a7d5bc1fdf912f88c12458d71b41c6cd3f647f215431cf77a8b737614d6a8f80",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-487k",
+      "title": "Grand theft of agricultural equipment worth more than $950",
+      "citation": "Cal. Penal Code § 487k",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487k"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:487k"
+      ],
+      "catalogSha256": "530daca36490a89f6226c2cc572b83faad2266c68f104f30da14cfb808d9fd3c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-490-4-a-1",
+      "title": "Organized retail theft: stealing merchandise for resale",
+      "citation": "Cal. Penal Code § 490.4(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:490.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:490.4"
+      ],
+      "catalogSha256": "77d6a1561c9a6cb47ee7f4d9d036a90cdb24f48a1df2d29506ee70411a858b74",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-490-4-a-2",
+      "title": "Organized retail theft: receiving organized-retail-theft merchandise",
+      "citation": "Cal. Penal Code § 490.4(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:490.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:490.4"
+      ],
+      "catalogSha256": "0ef52f744a04bb8797f1a332c2786a0c8777ba4483be930d6dbcd9832dc4cc63",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-490-4-a-3",
+      "title": "Organized retail theft: stealing as an agent of an organized plan",
+      "citation": "Cal. Penal Code § 490.4(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:490.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:490.4"
+      ],
+      "catalogSha256": "fdfd352017c34673faad3230205c32ac852ae44aacbde3d70d7efc63c9d14a00",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-490-4-a-4",
+      "title": "Organized retail theft: organizing or financing retail theft",
+      "citation": "Cal. Penal Code § 490.4(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:490.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:490.4"
+      ],
+      "catalogSha256": "ddc7454fc111c086b5f0d439f11e07cf8bad7003a9135b154afe7fa26f7c0896",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-498-b-1",
+      "title": "Utility theft: diverting utility services",
+      "citation": "Cal. Penal Code § 498(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:498"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:498"
+      ],
+      "catalogSha256": "5be7b4fb199e91107acc902c4e45a09bbd74aeb70296c0eabaeba65d6fc22c01",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-498-b-2",
+      "title": "Utility theft: preventing accurate utility metering",
+      "citation": "Cal. Penal Code § 498(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:498"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:498"
+      ],
+      "catalogSha256": "07a3b0ab4299cddeecc008d90a3eed0a8ab6806d554e36c7c981b1d8d48377a7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-498-b-3",
+      "title": "Utility theft: tampering with utility property",
+      "citation": "Cal. Penal Code § 498(b)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:498"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:498"
+      ],
+      "catalogSha256": "ca805c43dde51eecc9725770ad9289993dc867b4d4ebe6b0d798d4a16a6972b4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-498-b-4",
+      "title": "Utility theft: unauthorized utility connection or reconnection",
+      "citation": "Cal. Penal Code § 498(b)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:498"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:498"
+      ],
+      "catalogSha256": "7659a45b5531c9cdff3145284d82fad8156d4574a5f8a8458622401a77025f6e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-498-b-5",
+      "title": "Utility theft: knowingly benefiting from unauthorized utility services",
+      "citation": "Cal. Penal Code § 498(b)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:498"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:498"
+      ],
+      "catalogSha256": "9f39eaf7a7cf36988135db312fa2694643a1f8548917dab197e7227f4ca350f0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-499c-c",
+      "title": "Trade-secret bribery",
+      "citation": "Cal. Penal Code § 499c(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:499c"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:499c"
+      ],
+      "catalogSha256": "37dc9973267b01b6be3819dd87f9c56926eeb460e852e9d98aafa5bb3a0a1b60",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-502-6-a",
+      "title": "Fraudulent possession or use of a payment-card scanning device",
+      "citation": "Cal. Penal Code § 502.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:502.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502.6"
+      ],
+      "catalogSha256": "39b1b9427f7c1b52b163769bad8746016ede2ea41f56ffe987688ad09b3907b4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-502-6-b",
+      "title": "Fraudulent possession or use of a payment-card reencoder",
+      "citation": "Cal. Penal Code § 502.6(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:502.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502.6"
+      ],
+      "catalogSha256": "6191a05ca6e3b78b746eeadf54c4112717fa35c5a2d8f2635db9337a3529fa1f",
       "attorneyReview": "pending"
     }
   ]
