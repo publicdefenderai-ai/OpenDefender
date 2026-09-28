@@ -64,7 +64,15 @@ export function validateCaliforniaControlledSubstancesReview(review = readCalifo
   if (ids.length !== 27 || new Set(ids).size !== ids.length || !same(review.records.map(r => r.id).sort(), ids)) throw new Error("Drug addition accounting changed");
   for (const section of review.sections) {
     const assigned = definitions.filter(a => primary(a) === section.key).map(a => a.id);
-    const existing = CALIFORNIA_CANONICAL_RECORDS.filter(r => r.selectable && !ids.includes(r.canonicalId) && `${r.lawCode}:${r.code.split("(")[0]}` === section.key).map(r => r.canonicalId);
+    // This historical packet must not reclassify its gaps when a later batch
+    // adds an identity. Bind only the six entries present at this review.
+    const existingByKey: Record<string, string[]> = {
+      "HSC:11350": ["ca-possession-of-controlled-substance"], "HSC:11351": ["ca-possession-with-intent-to-distribute"],
+      "HSC:11352": ["ca-distribution-of-controlled-substance"], "HSC:11364": ["ca-possession-of-drug-paraphernalia"],
+      "HSC:11366": ["ca-maintaining-drug-house"], "HSC:11379.6": ["ca-manufacturing-controlled-substance"],
+    };
+    const existing = existingByKey[section.key] ?? [];
+    if (existing.some(id => !getCaliforniaCanonicalRecord(id)?.selectable)) throw new Error("Historical catalog identity lost");
     const status = assigned.length ? "addition_branches_reviewed_other_branches_open" : existing.length ? "existing_entry_not_family_completion" : section.key === "BPC:4326" ? "benchmark_source_absent" : "substantive_research_open";
     if (section.status !== status || !section.reason.trim() || !same(section.additionIds, assigned) || !same(section.existingIds, existing) || !same(section.versions, bindings(section.key))) throw new Error("Unbound section disposition");
     if (section.key === "BPC:4326") { if (section.evidence !== null || docs[section.key]) throw new Error("Invented absent source"); }
