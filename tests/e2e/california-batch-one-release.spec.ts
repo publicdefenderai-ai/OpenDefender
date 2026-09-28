@@ -8,6 +8,11 @@ test("California corrections reach the production catalog and rules guidance", a
   const body = await response.json();
   for (const row of corrections) {
     const charge = body.charges.find((item: any) => item.id === row.id);
+    // PEN 30515 changed in the retained-source comparison; do not revive its record.
+    if (row.id === "ca-possession-of-prohibited-weapon") {
+      expect(charge).toBeUndefined();
+      continue;
+    }
     expect(charge, row.id).toBeDefined();
     expect(charge.maxPenalty).toBe(row.penalty.en);
     expect(charge.categories).toEqual(row.categories);

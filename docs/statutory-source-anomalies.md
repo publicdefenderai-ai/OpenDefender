@@ -2,6 +2,8 @@
 
 This inventory records discrepancies in official source text separately from our interpretations. An apparent error is not a legislative correction or a judicial holding. Preserve the official text and version; never silently repair it. Future entries should include the literal reference, supporting sources, confidence/status, reviewer decision, and remaining research. Do not count ordinary parser failures as statutory errors.
 
+This document is the canonical cross-state anomaly index. Each entry links to its retained evidence; historical batch-specific fields are evidence containers, not a competing registry. Confirmed corrections or resolutions should update the indexed status without rewriting historical source text.
+
 ## OH-001: Apparent exception cross-reference error in §4301.21(D)
 
 - **Recorded:** September 24, 2026, following project-owner attorney review.
@@ -49,3 +51,20 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Preserve both statements. Do not silently delete the prison alternative, relabel the offense, or publish a misdemeanor-only ceiling. This branch remains unpublished substantive research, not a minor-charge deferral.
 - **Remaining agent work:** Check amendment history and controlling interpretation, then pose a focused attorney question only if the ambiguity remains material to publication. The other subsections require their own grading and restitution review.
 - **Traceability:** `scripts/data-review/output/california-specialized-property-review.json`, section `PEN:502.8`, binds the complete plain-text evidence to retained version and content hashes. Official XML remains in `california-person-property-acquisition.json` from the September 24 archive; subsequent freshness is controlled separately.
+
+## CA-004: CALCRIM syringe instructions reference a section absent from the archive
+
+- **Recorded:** September 28, 2026, during the independent drug-instruction crosswalk.
+- **Status:** Source discrepancy requiring history research, not a confirmed statutory error or repeal determination.
+- **Sources:** The official [February 2026 CALCRIM edition](https://courts.ca.gov/system/files/file/calcrim-2026.pdf), instructions 2412 and 2413 (physical PDF pages 1698-1700), references Business and Professions Code section 4326. Extraction of that identity from the retained September 24 legislative archive returned no version.
+- **Treatment:** Keep both instructions in the benchmark as `benchmark_source_absent`. Do not synthesize a charge from the instruction, silently substitute another statute, or infer repeal from an absent archive row.
+- **Remaining agent work:** Inspect official amendment/repeal history and source availability before deciding whether these are obsolete instruction references or an archive omission. No attorney data-entry request is needed.
+- **Traceability:** `california-controlled-substances-benchmark-source.json` retains the original PDF receipt, hash and relevant page text; `california-controlled-substances-acquisition.json` records the archive hash and absent probe. Both are in `scripts/data-review/output/`, and the crosswalk validator preserves the open discrepancy.
+
+## CA-005: CALCRIM manufacturing-offer instruction retains an older subdivision citation
+
+- **Recorded:** September 28, 2026, while checking the next drug group against the retained instruction pages.
+- **Status:** Citation mismatch between instruction and retained statute; amendment history has not yet been certified.
+- **Sources:** CALCRIM 2331's title and authority cite HSC 11379.6(a) and (c). The retained [section 11379.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11379.6.) places the offer offense and its 3/4/5-year term in (e); (c) addresses an aggravating proximity fact.
+- **Treatment:** Preserve the literal instruction text. Use the retained statute's subdivision (e) for any future offer entry; do not transfer the manufacturing offense's 3/5/7-year term. The crosswalk's earlier gap description echoed (c) and is corrected before PR25 merges; no offer charge was published by that packet.
+- **Traceability:** `california-controlled-substances-benchmark-source.json`, physical pages 1622-1623; section XML in `california-batch-six-review.json`. The controlled-substances crosswalk retains the unresolved source discrepancy.

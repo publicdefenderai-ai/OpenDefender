@@ -510,7 +510,7 @@ export default {
         },
         "coverage": {
           "federalStatutes": "{{count}} entradas federales en el conjunto mantenido.",
-          "charges": "{{count}} registros de cargos; el orden es delito grave / delito menor / infracción.",
+          "charges": "{{count}} registros de cargos; el orden es delito grave / delito menor / infracción. Los registros de California con alternativas se cuentan en el nivel más grave indicado, incluidas las variantes condicionales; esto no predice el cargo ni la sentencia de un caso individual.",
           "explanations": "{{count}} explicaciones tienen una fuente registrada; las capas jurisdiccionales adicionales no son uniformes.",
           "procedure": "{{count}} jurisdicciones (total / registros de confianza media).",
           "collateral": "{{count}} jurisdicciones (consecuencias / licencia / inmigración / registro).",

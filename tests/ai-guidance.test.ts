@@ -17,12 +17,16 @@
  *    shape, matching what routes.ts uses when generateClaudeGuidance throws.
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterAll } from 'vitest';
 
 // ── vi.hoisted(): variables created here are available inside vi.mock factories ──
-const { mockMessagesCreate } = vi.hoisted(() => ({
-  mockMessagesCreate: vi.fn(),
-}));
+const { mockMessagesCreate } = vi.hoisted(() => {
+  // The SDK is mocked below. Initialize the service with a fake key, never a
+  // developer's real credential, so these tests exercise the AI request offline.
+  vi.stubEnv('ANTHROPIC_API_KEY', 'test-only-mocked-key');
+  return { mockMessagesCreate: vi.fn() };
+});
+afterAll(() => vi.unstubAllEnvs());
 
 // ── @anthropic-ai/sdk mock ────────────────────────────────────────────────────
 // Must use a regular function (not arrow) as the constructor so `new Anthropic()`
@@ -543,6 +547,34 @@ describe('AI selected-charge scope guard', () => {
 
       expect(result.overview).toContain(`Guidance for ${selectedDrugId}`);
       expect(result.overview).not.toContain('220.03');
+    }
+  });
+});
+
+
+describe('reviewed classification alternatives in the actual AI request', () => {
+  it('carries both tiers and ordinary penalty conditions without inferring felony priors', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse(VALID_CLAUDE_JSON));
+    await generateClaudeGuidance({ ...BASE_CASE, jurisdiction: 'CA', charges: ['ca-hsc-11377-a', 'ca-pen-490-4-a-1'], priorConvictions: true } as any, 'ca-alternative-tiers');
+    const prompt = mockMessagesCreate.mock.calls.at(-1)![0].messages[0].content as string;
+    const line = prompt.split('\n').find(l => l.startsWith('CATALOG CHARGE DETAILS: '))!;
+    const details = JSON.parse(line.slice('CATALOG CHARGE DETAILS: '.length));
+    expect(details).toHaveLength(2);
+    expect(details[0]).toMatchObject({ id: 'ca-hsc-11377-a', categories: ['misdemeanor','felony'], displayTier: 'felony' });
+    expect(details[0].maxPenalty).toContain('Ordinarily up to 364 days');
+    expect(details[0].maxPenalty).toContain('qualifying prior');
+    expect(details[0].citation).toContain('11377(a)');
+    expect(details[1].categories).toEqual(['misdemeanor','felony']);
+    expect(prompt).toContain('not the filed classification or a sentence prediction');
+    expect(prompt).toContain('A generic prior-convictions answer does not establish a qualifying prior');
+  });
+  it('does not supply reviewed details for unknown or cross-jurisdiction selections', async () => {
+    for (const [i, fields] of [{ chargesUnknown: true, charges: ['ca-hsc-11377-a'] }, {charges: ['ny-possession-with-intent-to-distribute']}].entries()) {
+      mockMessagesCreate.mockResolvedValue(makeMockApiResponse(VALID_CLAUDE_JSON));
+      await generateClaudeGuidance({ ...BASE_CASE, jurisdiction: 'CA', ...fields } as any, `ca-unknown-scope-${i}`);
+      const prompt = mockMessagesCreate.mock.calls.at(-1)![0].messages[0].content as string;
+      expect(prompt).not.toContain('CATALOG CHARGE DETAILS:');
+      expect(prompt).toContain('Do not infer a specific offense or degree');
     }
   });
 });

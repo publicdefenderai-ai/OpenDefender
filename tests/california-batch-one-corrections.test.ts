@@ -40,7 +40,8 @@ describe("California bounded correction delivery", () => {
   });
   it("does not apply the ordinary misdemeanor penalty to first-time unlicensed driving", () => {
     const charge = getChargeById("ca-driving-without-license")!;
-    expect(charge.category).toBe("infraction");
+    // Primary tier displays the highest listed exposure, not this person's sentence.
+    expect(charge.category).toBe("misdemeanor");
     expect(charge.categories).toEqual(["infraction", "misdemeanor"]);
     expect(charge.maxPenalty).toContain("$100 base fine and no jail");
     expect(charge.maxPenalty).toContain("third or later violation");
@@ -71,13 +72,13 @@ describe("California bounded correction delivery", () => {
   });
   it("keeps ordinary theft and possession classifications separate from their exceptional paths", () => {
     const theft = getChargeById("ca-petty-theft")!;
-    expect(theft.category).toBe("misdemeanor");
+    expect(theft.category).toBe("felony");
     expect(theft.categories).toEqual(["misdemeanor", "infraction", "felony"]);
     expect(theft.description).toContain("$50 or less");
     expect(theft.description).toContain("no theft-related prior conviction");
     expect(theft.maxPenalty).toContain("separate repeat-theft path");
     const possession = getChargeById("ca-possession-of-controlled-substance")!;
-    expect(possession.category).toBe("misdemeanor");
+    expect(possession.category).toBe("felony");
     expect(possession.categories).toEqual(["misdemeanor", "felony"]);
     expect(possession.maxPenalty).toContain("not a §11395 sentencing calculation");
     const paraphernalia = getChargeById("ca-possession-of-drug-paraphernalia")!;

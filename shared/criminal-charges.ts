@@ -229,6 +229,7 @@ import {
   assertCaliforniaInventoryComplete,
   getCaliforniaAdditionCharges,
   getCaliforniaCanonicalCharge,
+  getCaliforniaPrimaryCategory,
   getCaliforniaCanonicalCharges,
   getCaliforniaCanonicalRecord,
   getCaliforniaCitation,
@@ -94984,11 +94985,14 @@ const currentCaliforniaIds = criminalCharges
   .map((charge) => charge.id);
 assertCaliforniaInventoryComplete(currentCaliforniaIds);
 // Direct catalog readers need the same explicit alternatives as canonical
-// lookups. Preserve legacy IDs and primary categories for inventory accounting.
+// lookups. Use the same highest-listed display/count tier while preserving IDs.
 for (const charge of criminalCharges) {
   if (charge.jurisdiction !== 'CA') continue;
   const categories = getCaliforniaCanonicalRecord(charge.id)?.categories;
-  if (categories) charge.categories = [...categories];
+  if (categories) {
+    charge.categories = [...categories];
+    charge.category = getCaliforniaPrimaryCategory(categories);
+  }
 }
 chargeCategories['CA'] = getCaliforniaCanonicalCharges(
   criminalCharges.filter((charge) => charge.jurisdiction === 'CA'),
