@@ -47,5 +47,5 @@ Retrieve real official evidence and review changes; never edit receipt dates to
 silence the alarm. A later automation for retrieval/review is a separate decision.
 
 For California, follow `docs/california-freshness-runbook.md`. The monitor also
-rejects a revoked receipt, wrong archive binding or a lifetime exceeding the
+rejects a revoked receipt, wrong archive/comparison binding or a lifetime exceeding the
 seven-day policy. Full source comparison is separate from this deadline alarm.

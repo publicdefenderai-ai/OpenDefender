@@ -2071,8 +2071,21 @@ for (const record of CALIFORNIA_CANONICAL_RECORDS) {
   // requires a fresh receipt; a retained metadata object must not freeze status.
   Object.defineProperty(record.currentness, "status", {
     enumerable: true,
-    get: () => getCaliforniaEvidenceStatus(),
+    get: () => getCaliforniaRecordEvidenceStatus(record),
   });
+}
+
+/** Evaluate only this record's declared statutory dependencies; never inherit a changed source. */
+export function getCaliforniaRecordEvidenceStatus(record: CaliforniaCanonicalRecord, now = new Date()) {
+  try {
+    const keys = record.sources.filter(source => source.kind !== "jury-instruction").map(source => {
+      const url = new URL(source.url);
+      return `${url.searchParams.get("lawCode")}:${url.searchParams.get("sectionNum")?.replace(/\.$/, "")}`;
+    });
+    return keys.length ? getCaliforniaEvidenceStatus(now, keys) : "invalid";
+  } catch {
+    return "invalid";
+  }
 }
 
 export function getCaliforniaCanonicalRecord(id: string): CaliforniaCanonicalRecord | undefined {
