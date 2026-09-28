@@ -12,7 +12,7 @@ import { buildCollateralConsequenceContextBlock } from '../../shared/collateral-
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 import { getLocusContext, LOCUS_ATTRIBUTION } from './locus-lookup';
-import { getChargeById, getChargesByJurisdiction, normalizeChargeId, NY_THIRD_DEGREE_POSSESSION_ID } from '@shared/criminal-charges';
+import { getChargeById, getChargesByJurisdiction, normalizeChargeId, getVerifiedCitation, NY_THIRD_DEGREE_POSSESSION_ID } from '@shared/criminal-charges';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -147,6 +147,7 @@ interface ClaudeGuidance {
     code?: string;
     title: string;
     classification: string;
+    categories?: string[];
     maxPenalty: string;
   }>;
   mockQA?: Array<{
@@ -213,10 +214,20 @@ function escapeRegExp(value: string): string {
 }
 
 function buildSelectedChargeScope(caseDetails: CaseDetails): string {
-  const selected = selectedChargeIds(caseDetails)
+  const charges = caseDetails.chargesUnknown ? [] : selectedChargeIds(caseDetails)
     .map(id => getChargeById(id))
-    .filter(Boolean)
-    .map(charge => `${charge!.name} (${charge!.code})`);
+    .filter((charge): charge is NonNullable<typeof charge> => Boolean(charge &&
+      charge.jurisdiction === caseDetails.jurisdiction.trim().toUpperCase()));
+  const selected = charges.map(charge => `${charge.name} (${charge.code})`);
+  const reviewedDetails = charges.map(charge => ({
+    id: charge.id,
+    title: charge.name,
+    citation: getVerifiedCitation(charge) ?? charge.code,
+    categories: charge.categories?.length ? charge.categories : [charge.category],
+    displayTier: charge.category,
+    description: charge.description,
+    maxPenalty: charge.maxPenalty,
+  }));
 
   if (selected.length === 0) {
     return 'The specific charges are unknown or were not recognized. Do not infer a specific offense or degree.';
@@ -225,6 +236,11 @@ function buildSelectedChargeScope(caseDetails: CaseDetails): string {
   const schoolStatus = caseDetails.schoolZoneStatus || 'not answered';
   return [
     `Selected charges only: ${selected.join('; ')}`,
+    'CATALOG CHARGE DETAILS: ' + JSON.stringify(reviewedDetails),
+    'The categories array lists alternatives. displayTier is for catalog display/counting only, not the filed classification or a sentence prediction.',
+    'Use the reviewed description and penalty conditions. Do not assume a felony alternative, qualifying prior conviction, registration requirement or enhancement applies without supporting facts. A generic prior-convictions answer does not establish a qualifying prior.',
+    'When the filing classification or triggering facts are unknown, explain the alternatives conditionally and ask the user to confirm the charged subdivision and classification with counsel.',
+
     `School-zone or location-based drug allegation status: ${schoolStatus}.`,
     'Discuss only the selected charges and facts that are independently relevant to them.',
     'Do not relabel a selected possession offense as sale, distribution, trafficking, or manufacturing.',

@@ -1350,7 +1350,7 @@
     {
       "key": "HSC:11370.6",
       "status": "substantive_research_open",
-      "reason": "Drug-proceeds possession, purchase and investment require separate knowledge, amount, timing and penalty review; CALCRIM 2430-2432.",
+      "reason": "Review proceeds possession and intended purchase separately; subdivision (b) adds attorney-fee intent requirements. CALCRIM 2430-2432.",
       "additionIds": [],
       "existingIds": [],
       "versions": [
@@ -1810,7 +1810,7 @@
     {
       "key": "HSC:11379.6",
       "status": "existing_entry_not_family_completion",
-      "reason": "Existing manufacturing entry does not substitute for the separate offer penalty in subdivision (c), exposed by CALCRIM 2331.",
+      "reason": "The existing manufacturing entry does not cover the separate offer penalty in subdivision (e). CALCRIM 2331 still cites (c); preserve and index the discrepancy.",
       "additionIds": [],
       "existingIds": [
         "ca-manufacturing-controlled-substance"
@@ -5108,7 +5108,7 @@
       "lastPage": 1623,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11379.6(c) offer branch remains unpublished; manufacturing penalty must not be substituted."
+      "reason": "CALCRIM still cites HSC 11379.6(c), but the retained statute places offering in subdivision (e). The offer branch remains unpublished; do not substitute the manufacturing penalty."
     },
     {
       "instruction": "2335",
@@ -5164,7 +5164,7 @@
       "lastPage": 1643,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11360 interstate cannabis branch remains open."
+      "reason": "HSC:11359 cannabis possession-for-sale branches remain open."
     },
     {
       "instruction": "2361",
@@ -5172,7 +5172,7 @@
       "lastPage": 1646,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11359 sale-possession branches remain open."
+      "reason": "HSC:11360(a) transporting for sale or giving away cannabis above the stated quantity remains open."
     },
     {
       "instruction": "2363",
@@ -5180,7 +5180,7 @@
       "lastPage": 1649,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11358 cultivation branches remain open."
+      "reason": "HSC:11360(a) offering or attempting transport for sale, or offering to give away cannabis, remains open."
     },
     {
       "instruction": "2364",
@@ -5188,7 +5188,7 @@
       "lastPage": 1652,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "Sentencing allegations tied to unpublished HSC:11358/11359/11360 branches; not an independent charge."
+      "reason": "Penalty allegations under HSC:11360(a)(3) accompany the unpublished base offense; not an independent charge."
     },
     {
       "instruction": "2370",
@@ -5196,7 +5196,7 @@
       "lastPage": 1655,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "Cannabis authorization defense requires review with the unpublished commercial branches."
+      "reason": "HSC:11358(c)-(d) cannabis cultivation branches remain open."
     },
     {
       "instruction": "2375",
@@ -5365,7 +5365,7 @@
       "lastPage": 1702,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11370.6 drug-money purchase/investment branch remains open."
+      "reason": "HSC:11370.6(a) knowing possession of drug proceeds above $100,000 remains open."
     },
     {
       "instruction": "2431",
@@ -5373,7 +5373,7 @@
       "lastPage": 1704,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11370.6 drug-money possession branch remains open."
+      "reason": "HSC:11370.6(a) money intended for an unlawful purchase and a substantial-furtherance act remains open."
     },
     {
       "instruction": "2432",
@@ -5381,7 +5381,7 @@
       "lastPage": 1708,
       "status": "publication_gap",
       "chargeIds": [],
-      "reason": "HSC:11370.6 intended use branch remains open."
+      "reason": "HSC:11370.6(b) imposes an additional intent requirement for attorney fees; review with subdivision (a), not as a separate investment offense."
     },
     {
       "instruction": "2440",

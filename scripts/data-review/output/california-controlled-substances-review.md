@@ -353,18 +353,18 @@ The official February 2026 CALCRIM drug chapter supplies 46 independently enumer
 | 2320 | 1615-1616 | catalog branch matches found | ca-hsc-11368 Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2321 | 1617-1618 | catalog branch matches found | ca-hsc-11368 Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2330 | 1619-1621 | catalog branch matches found | ca-manufacturing-controlled-substance Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
-| 2331 | 1622-1623 | publication gap |  HSC:11379.6(c) offer branch remains unpublished; manufacturing penalty must not be substituted. |
+| 2331 | 1622-1623 | publication gap |  CALCRIM still cites HSC 11379.6(c), but the retained statute places offering in subdivision (e). The offer branch remains unpublished; do not substitute the manufacturing penalty. |
 | 2335 | 1624-1625 | publication gap |  HSC:11383/11383.5 precursor branches need shared chemical/intent review. |
 | 2336 | 1626-1627 | publication gap |  HSC:11383/11383.5 precursor branches need shared chemical/intent review. |
 | 2337 | 1628-1629 | publication gap |  HSC:11383/11383.5 precursor branches need shared chemical/intent review. |
 | 2338 | 1630-1632 | publication gap |  HSC:11383/11383.5 precursor branches need shared chemical/intent review. |
 | 2350 | 1633-1636 | publication gap |  HSC:11360 commercial cannabis branches remain open. |
 | 2351 | 1637-1639 | publication gap |  HSC:11360 commercial cannabis branches remain open. |
-| 2352 | 1640-1643 | publication gap |  HSC:11360 interstate cannabis branch remains open. |
-| 2361 | 1644-1646 | publication gap |  HSC:11359 sale-possession branches remain open. |
-| 2363 | 1647-1649 | publication gap |  HSC:11358 cultivation branches remain open. |
-| 2364 | 1650-1652 | publication gap |  Sentencing allegations tied to unpublished HSC:11358/11359/11360 branches; not an independent charge. |
-| 2370 | 1653-1655 | publication gap |  Cannabis authorization defense requires review with the unpublished commercial branches. |
+| 2352 | 1640-1643 | publication gap |  HSC:11359 cannabis possession-for-sale branches remain open. |
+| 2361 | 1644-1646 | publication gap |  HSC:11360(a) transporting for sale or giving away cannabis above the stated quantity remains open. |
+| 2363 | 1647-1649 | publication gap |  HSC:11360(a) offering or attempting transport for sale, or offering to give away cannabis, remains open. |
+| 2364 | 1650-1652 | publication gap |  Penalty allegations under HSC:11360(a)(3) accompany the unpublished base offense; not an independent charge. |
+| 2370 | 1653-1655 | publication gap |  HSC:11358(c)-(d) cannabis cultivation branches remain open. |
 | 2375 | 1656-1658 | catalog branch matches found | ca-hsc-11357-b-2 Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2376 | 1659-1662 | catalog branch matches found | ca-hsc-11357-c Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2380 | 1663-1666 | partial catalog match | ca-hsc-11353-c, ca-hsc-11380-a Adult branches matched; HSC:11354 under-18 actor branches remain a juvenile-routing gap. |
@@ -381,9 +381,9 @@ The official February 2026 CALCRIM drug chapter supplies 46 independently enumer
 | 2410 | 1695-1697 | catalog branch matches found | ca-possession-of-drug-paraphernalia Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2412 | 1698-1698 | benchmark source absent |  BPC:4326 is absent from the official archive extraction. Investigate source history before using this instruction as a charge identity. |
 | 2413 | 1699-1700 | benchmark source absent |  BPC:4326 is absent from the official archive extraction. Investigate source history before using this instruction as a charge identity. |
-| 2430 | 1701-1702 | publication gap |  HSC:11370.6 drug-money purchase/investment branch remains open. |
-| 2431 | 1703-1704 | publication gap |  HSC:11370.6 drug-money possession branch remains open. |
-| 2432 | 1705-1708 | publication gap |  HSC:11370.6 intended use branch remains open. |
+| 2430 | 1701-1702 | publication gap |  HSC:11370.6(a) knowing possession of drug proceeds above $100,000 remains open. |
+| 2431 | 1703-1704 | publication gap |  HSC:11370.6(a) money intended for an unlawful purchase and a substantial-furtherance act remains open. |
+| 2432 | 1705-1708 | publication gap |  HSC:11370.6(b) imposes an additional intent requirement for attorney fees; review with subdivision (a), not as a separate investment offense. |
 | 2440 | 1709-1710 | catalog branch matches found | ca-maintaining-drug-house Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction. |
 | 2441 | 1711-1712 | publication gap |  HSC:11366.8 false-compartment branch remains open. |
 
@@ -457,7 +457,7 @@ These gaps are engineering research, not requests for attorney data entry. No un
 | HSC:11370.1 | addition branches reviewed other branches open | Bounded adult base-offense description only; no certification of every enhancement, litigation issue or authorization exception. |
 | HSC:11370.2 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
 | HSC:11370.4 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
-| HSC:11370.6 | substantive research open | Drug-proceeds possession, purchase and investment require separate knowledge, amount, timing and penalty review; CALCRIM 2430-2432. |
+| HSC:11370.6 | substantive research open | Review proceeds possession and intended purchase separately; subdivision (b) adds attorney-fee intent requirements. CALCRIM 2430-2432. |
 | HSC:11370.9 | substantive research open | Review drug-proceeds transactions and valuation/fine rules alongside section 11370.6. |
 | HSC:11371 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
 | HSC:11371.1 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
@@ -479,7 +479,7 @@ These gaps are engineering research, not requests for attorney data entry. No un
 | HSC:11379 | addition branches reviewed other branches open | Bounded adult base-offense description only; no certification of every enhancement, litigation issue or authorization exception. |
 | HSC:11379.2 | addition branches reviewed other branches open | Bounded adult base-offense description only; no certification of every enhancement, litigation issue or authorization exception. |
 | HSC:11379.5 | addition branches reviewed other branches open | Bounded adult base-offense description only; no certification of every enhancement, litigation issue or authorization exception. |
-| HSC:11379.6 | existing entry not family completion | Existing manufacturing entry does not substitute for the separate offer penalty in subdivision (c), exposed by CALCRIM 2331. |
+| HSC:11379.6 | existing entry not family completion | The existing manufacturing entry does not cover the separate offer penalty in subdivision (e). CALCRIM 2331 still cites (c); preserve and index the discrepancy. |
 | HSC:11379.7 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
 | HSC:11379.8 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |
 | HSC:11379.9 | substantive research open | Retained for shared-context research. No standalone publication or low-severity deferral is authorized; check offense, penalty, authorization and procedural roles before disposition. |

@@ -60,3 +60,11 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Keep both instructions in the benchmark as `benchmark_source_absent`. Do not synthesize a charge from the instruction, silently substitute another statute, or infer repeal from an absent archive row.
 - **Remaining agent work:** Inspect official amendment/repeal history and source availability before deciding whether these are obsolete instruction references or an archive omission. No attorney data-entry request is needed.
 - **Traceability:** `california-controlled-substances-benchmark-source.json` retains the original PDF receipt, hash and relevant page text; `california-controlled-substances-acquisition.json` records the archive hash and absent probe. Both are in `scripts/data-review/output/`, and the crosswalk validator preserves the open discrepancy.
+
+## CA-005: CALCRIM manufacturing-offer instruction retains an older subdivision citation
+
+- **Recorded:** September 28, 2026, while checking the next drug group against the retained instruction pages.
+- **Status:** Citation mismatch between instruction and retained statute; amendment history has not yet been certified.
+- **Sources:** CALCRIM 2331's title and authority cite HSC 11379.6(a) and (c). The retained [section 11379.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11379.6.) places the offer offense and its 3/4/5-year term in (e); (c) addresses an aggravating proximity fact.
+- **Treatment:** Preserve the literal instruction text. Use the retained statute's subdivision (e) for any future offer entry; do not transfer the manufacturing offense's 3/5/7-year term. The crosswalk's earlier gap description echoed (c) and is corrected before PR25 merges; no offer charge was published by that packet.
+- **Traceability:** `california-controlled-substances-benchmark-source.json`, physical pages 1622-1623; section XML in `california-batch-six-review.json`. The controlled-substances crosswalk retains the unresolved source discrepancy.
