@@ -10,7 +10,7 @@ import { buildCaliforniaSourceDatabaseSeed } from "../server/data/california-sou
 
 describe("California protected-person and public-place review", () => {
   it("binds 21 additions and retains unresolved consequential offenses", () => {
-    expect(validateCaliforniaProtectedPersonReview()).toEqual({ additions: 21, candidateSections: 61, reviewedPrimarySections: 21, remainingResearchSections: 40, reusedSections: 71, newSections: 7, newVersions: 7, configuredSelectable: 236 });
+    expect(validateCaliforniaProtectedPersonReview()).toEqual({ additions: 21, candidateSections: 61, reviewedPrimarySections: 21, remainingResearchSections: 40, reusedSections: 71, newSections: 7, newVersions: 7, configuredSelectable: 257 });
     const review = readCaliforniaProtectedPersonReview();
     expect(review.sections.find(s => s.key === "PEN:243.9")?.status).toBe("substantive_research_open");
     expect(getChargeById("ca-pen-243-9-a")).toBeUndefined();
@@ -64,7 +64,7 @@ describe("California protected-person and public-place review", () => {
   });
   it("projects all 21 additions into guidance, exact explanations and source seeding", () => {
     const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-27T00:00:00Z"));
-    expect(getChargesByJurisdiction("CA")).toHaveLength(236);
+    expect(getChargesByJurisdiction("CA")).toHaveLength(257);
     for (const a of additions) {
       expect(getChargeById(a.id)).toMatchObject({ name: a.title, code: a.code, description: a.summary, maxPenalty: a.penalty, categories: a.categories });
       expect(classifyChargesForGuidance([a.id])[0]).toMatchObject({ id: a.id, maxPenalty: a.penalty, categories: a.categories });

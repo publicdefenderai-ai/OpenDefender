@@ -14,7 +14,7 @@ describe("California catalog coverage boundaries", () => {
   });
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 257, configuredSelectable: 236, withheldCanonicalLabels: 21, boundedCorrectionPass: 236, boundedAdditionPass: 137, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 162, selectableRecordsWithAllPrimaryTextAcquired: 236, totalAcquiredSectionsIncludingDependencies: 403, totalAcquiredVersionsIncludingDependencies: 407 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 278, configuredSelectable: 257, withheldCanonicalLabels: 21, boundedCorrectionPass: 257, boundedAdditionPass: 158, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 173, selectableRecordsWithAllPrimaryTextAcquired: 257, totalAcquiredSectionsIncludingDependencies: 421, totalAcquiredVersionsIncludingDependencies: 425 });
     expect(report.accounting.specificOpenLegalQuestions).toBe(3);
     expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");

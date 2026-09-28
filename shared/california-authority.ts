@@ -8,7 +8,7 @@
  * currentness evidence are all present.
  */
 
-import { CALIFORNIA_LAW_CODE_LABELS as LAW_CODE_LABELS, californiaPrimaryIdentity, type CaliforniaLawCode } from "./california-law-codes";
+import { CALIFORNIA_LAW_CODE_LABELS as LAW_CODE_LABELS, californiaPrimaryIdentity, californiaCitationSearchAliases, type CaliforniaLawCode } from "./california-law-codes";
 import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
 import { CALIFORNIA_ADDITIONS as additions } from "./california-additions";
 import { getCaliforniaEvidenceStatus } from "./california-freshness";
@@ -2130,6 +2130,7 @@ export function getCaliforniaCanonicalCharge(
     id: metadata.canonicalId,
     name: metadata.officialTitle,
     code: metadata.code,
+    searchAliases: [...new Set([...(legacyCharge.searchAliases ?? []), ...californiaCitationSearchAliases(metadata.lawCode, metadata.code)])],
     description: `${metadata.officialTitle} under ${metadata.citation}. The prosecution generally must prove: ${metadata.elements.join("; ")}.`,
     categories: metadata.categories,
     category: getCaliforniaPrimaryCategory(metadata.categories, metadata.grading),
@@ -2161,7 +2162,7 @@ export function getCaliforniaAdditionCharges(): CriminalCharge[] {
     id: row.id, name: row.title, code: row.code, jurisdiction: "CA",
     category: getCaliforniaPrimaryCategory(row.categories),
     description: row.summary, maxPenalty: row.penalty,
-    searchAliases: [`${row.lawCode === "PEN" ? "PC" : row.lawCode} ${row.code}`, `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title, ...("searchAliases" in row ? row.searchAliases : [])],
+    searchAliases: [...californiaCitationSearchAliases(row.lawCode, row.code), `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title, ...("searchAliases" in row ? row.searchAliases : [])],
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
   })!);
 }

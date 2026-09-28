@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 257,
-    "configuredSelectable": 236,
+    "canonicalRecords": 278,
+    "configuredSelectable": 257,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 137,
-    "boundedCorrectionPass": 236,
+    "boundedAdditionPass": 158,
+    "boundedCorrectionPass": 257,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 162,
+    "distinctSelectablePrimarySections": 173,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 162,
-    "selectableRecordsWithAllPrimaryTextAcquired": 236,
-    "totalAcquiredSectionsIncludingDependencies": 403,
-    "totalAcquiredVersionsIncludingDependencies": 407,
+    "acquiredSelectablePrimarySections": 173,
+    "selectableRecordsWithAllPrimaryTextAcquired": 257,
+    "totalAcquiredSectionsIncludingDependencies": 421,
+    "totalAcquiredVersionsIncludingDependencies": 425,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "236 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "257 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -46,6 +46,12 @@
       "awaitingCorrection": 0
     },
     {
+      "lawCode": "HNC",
+      "selectable": 8,
+      "corrected": 8,
+      "awaitingCorrection": 0
+    },
+    {
       "lawCode": "HSC",
       "selectable": 52,
       "corrected": 52,
@@ -53,14 +59,14 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 171,
-      "corrected": 171,
+      "selectable": 175,
+      "corrected": 175,
       "awaitingCorrection": 0
     },
     {
       "lawCode": "VEH",
-      "selectable": 12,
-      "corrected": 12,
+      "selectable": 21,
+      "corrected": 21,
       "awaitingCorrection": 0
     }
   ],
@@ -258,6 +264,46 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25662&lawCode=BPC",
       "recordIds": [
         "ca-minor-in-possession"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HNC",
+      "section": "655",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=655&lawCode=HNC",
+      "recordIds": [
+        "ca-hnc-655-b",
+        "ca-hnc-655-c",
+        "ca-hnc-655-d",
+        "ca-hnc-655-f"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HNC",
+      "section": "655.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=655.4&lawCode=HNC",
+      "recordIds": [
+        "ca-hnc-655-4-a",
+        "ca-hnc-655-4-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HNC",
+      "section": "656.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=656.2&lawCode=HNC",
+      "recordIds": [
+        "ca-hnc-656-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HNC",
+      "section": "656.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=656.3&lawCode=HNC",
+      "recordIds": [
+        "ca-hnc-656-3"
       ],
       "alreadyRetained": false
     },
@@ -711,6 +757,18 @@
         "ca-vehicular-manslaughter-192-c1",
         "ca-vehicular-manslaughter-192-c2",
         "ca-vehicular-manslaughter-192-c3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "192.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-192-5-a",
+        "ca-pen-192-5-b",
+        "ca-pen-192-5-c",
+        "ca-pen-192-5-d"
       ],
       "alreadyRetained": false
     },
@@ -1737,6 +1795,25 @@
     },
     {
       "lawCode": "VEH",
+      "section": "20001",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20001&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-20001-b-1",
+        "ca-veh-20001-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "20002",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20002&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-20002-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
       "section": "23103",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23103&lawCode=VEH",
       "recordIds": [
@@ -1785,6 +1862,44 @@
         "ca-dui-third-offense"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "2800.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2800.1&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-2800-1-a",
+        "ca-veh-2800-1-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "2800.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2800.2&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-2800-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "2800.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2800.3&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-2800-3-a",
+        "ca-veh-2800-3-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "2800.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2800.4&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-2800-4"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "VEH",
@@ -6287,6 +6402,363 @@
         "HSC:11370.9"
       ],
       "catalogSha256": "89b67a77ed569cbc91d2f4ebcb1718229ad98658f6afc40ad6fdd2b6f8282fb7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-1-a",
+      "title": "Evading a peace officer in a motor vehicle",
+      "citation": "Cal. Vehicle Code § 2800.1(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.1"
+      ],
+      "catalogSha256": "1038a4c9349dc35141c5b9d95940dff2c969a8e3291246d810caf4a7a406875d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-1-b",
+      "title": "Evading a peace officer on a bicycle",
+      "citation": "Cal. Vehicle Code § 2800.1(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.1"
+      ],
+      "catalogSha256": "a2348a9b0f1498bc10547ca39761f49678520a90b26233ab9357d228f8c7d40a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-2",
+      "title": "Evading a peace officer with willful or wanton disregard",
+      "citation": "Cal. Vehicle Code § 2800.2",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.2"
+      ],
+      "catalogSha256": "30217d3594afad23efc6b3176fe8cbf27df8f782f6d1f14b6ad31ce83d901852",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-3-a",
+      "title": "Evading a peace officer causing serious bodily injury",
+      "citation": "Cal. Vehicle Code § 2800.3(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.3"
+      ],
+      "catalogSha256": "f4901cf111a6e1ce45498b25c559a64e45785063819a19516dc2b874ccb4454e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-3-b",
+      "title": "Evading a peace officer causing death",
+      "citation": "Cal. Vehicle Code § 2800.3(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.3"
+      ],
+      "catalogSha256": "8525aef579b83facb81921afc12ce745ff68005883a618270ff354b18a882042",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-2800-4",
+      "title": "Evading a peace officer while driving against traffic",
+      "citation": "Cal. Vehicle Code § 2800.4",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:2800.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:2800.4"
+      ],
+      "catalogSha256": "f75052904d1afb21bcccc2b02f5c77359f29bff5b178ef081055ccfcc89066f0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-20001-b-1",
+      "title": "Hit-and-run involving injury",
+      "citation": "Cal. Vehicle Code § 20001(b)(1)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:20001"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:20001"
+      ],
+      "catalogSha256": "c5d01eba22b61f586df0bd3b5c646e7688f59a61ab536a41127c5f27dbebfdf7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-20001-b-2",
+      "title": "Hit-and-run involving death or permanent serious injury",
+      "citation": "Cal. Vehicle Code § 20001(b)(2)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:20001"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:20001"
+      ],
+      "catalogSha256": "56432f8a9bf1e5808a21e91218fb285560fa27dc9245febf1ec46c58e65e7cf1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-20002-a",
+      "title": "Hit-and-run involving property damage",
+      "citation": "Cal. Vehicle Code § 20002(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:20002"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:20002"
+      ],
+      "catalogSha256": "4178f4bfc52537da6a9abe146ecca33bbbcde47c20c4fd8da6726be9499f9fc6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-192-5-a",
+      "title": "Vessel manslaughter: intoxication and gross negligence",
+      "citation": "Cal. Penal Code § 192.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:192.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192.5"
+      ],
+      "catalogSha256": "7d82293994996896108bccf21fd16f64d7a99b6b567f6cf9c58c0d62a585ff93",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-192-5-b",
+      "title": "Vessel manslaughter: intoxication without gross negligence",
+      "citation": "Cal. Penal Code § 192.5(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:192.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192.5"
+      ],
+      "catalogSha256": "ad452a24c5518fbe2697e4d318f8fd8b9782c712b5b1b8ff585efe1f0ea488f4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-192-5-c",
+      "title": "Vessel manslaughter: gross negligence",
+      "citation": "Cal. Penal Code § 192.5(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:192.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192.5"
+      ],
+      "catalogSha256": "7b48729e3e58a16022c3cd8add46e191c6e5dd81ebbc226a602808edbe32439c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-192-5-d",
+      "title": "Vessel manslaughter: ordinary negligence",
+      "citation": "Cal. Penal Code § 192.5(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:192.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192.5"
+      ],
+      "catalogSha256": "9ef9b85ee0b3f1b5f9fe46fc1f0428d0c7a05729aaa45fb3a3e298d04d8b1c92",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-b",
+      "title": "Operating a vessel or water-sport device under the influence",
+      "citation": "Cal. Harbors & Navigation Code § 655(b)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655"
+      ],
+      "catalogSha256": "f7168f9c5888cefe997b5ad311fa8c45e634ccf9497c7eda35592cf0e941eaae",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-c",
+      "title": "Operating a recreational vessel with blood alcohol of 0.08 percent or more",
+      "citation": "Cal. Harbors & Navigation Code § 655(c)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655"
+      ],
+      "catalogSha256": "ae7e827c3ad33bbe079e0a90079375dc31eeb007d25cd30cb598e0a42adb7cdd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-d",
+      "title": "Operating a nonrecreational vessel with blood alcohol of 0.04 percent or more",
+      "citation": "Cal. Harbors & Navigation Code § 655(d)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655"
+      ],
+      "catalogSha256": "98ac339a06542f214ad201f7bb4e3507e79ee4cad3aceeeda5d029a1c92de7f2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-f",
+      "title": "Operating a vessel under the influence causing injury",
+      "citation": "Cal. Harbors & Navigation Code § 655(f)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655"
+      ],
+      "catalogSha256": "6f11498a6bb16fa9bf7690a018670631af349075c0020c2af7aadbda2d7006ea",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-4-a",
+      "title": "Serving as impaired charter-boat crew",
+      "citation": "Cal. Harbors & Navigation Code § 655.4(a)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655.4"
+      ],
+      "catalogSha256": "dae5d49b66260eaae7a1d134296248baf1962a5d40b738fbd4e0ef069347ee19",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-655-4-b",
+      "title": "Serving as impaired charter-boat crew causing injury",
+      "citation": "Cal. Harbors & Navigation Code § 655.4(b)",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:655.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:655.4"
+      ],
+      "catalogSha256": "5fd5df71946ced2de7fdf5b3ccf52f020fd8c13a582e3989943618f422fc4ac4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-656-2",
+      "title": "Failure to perform vessel accident duties involving injury",
+      "citation": "Cal. Harbors & Navigation Code § 656.2",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:656.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:656.2"
+      ],
+      "catalogSha256": "9578206406f40f45cb6aada4213a27ab0ca34c7cda20150a97c25a1e44674579",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hnc-656-3",
+      "title": "Failure to perform vessel accident duties involving death or disappearance",
+      "citation": "Cal. Harbors & Navigation Code § 656.3",
+      "lawCode": "HNC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HNC:656.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HNC:656.3"
+      ],
+      "catalogSha256": "ea8af1e484884302d2160198b8ff7f1cc24d82a079f57993a40a9d892a8a7e89",
       "attorneyReview": "pending"
     }
   ]

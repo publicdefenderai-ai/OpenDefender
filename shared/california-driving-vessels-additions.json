@@ -1,0 +1,782 @@
+[
+  {
+    "id": "ca-veh-2800-1-a",
+    "lawCode": "VEH",
+    "code": "2800.1(a)",
+    "title": "Evading a peace officer in a motor vehicle",
+    "summary": "While driving, willfully fleeing or trying to evade a pursuing peace officer with intent to evade. The pursuing vehicle must display a lighted red lamp visible from the front that the driver sees or reasonably should see, use a siren as reasonably necessary, be distinctively marked, and be driven by an officer in a distinctive uniform.",
+    "penalty": "Misdemeanor: up to 364 days in county jail. Penal Code section 672 permits an additional fine up to $1,000 where no other fine is prescribed. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null,
+      "VEH:2800.1": "2006-01-01"
+    },
+    "calcrim": [
+      "2182"
+    ],
+    "searchAliases": [
+      "VC 2800.1",
+      "misdemeanor evading"
+    ]
+  },
+  {
+    "id": "ca-veh-2800-1-b",
+    "lawCode": "VEH",
+    "code": "2800.1(b)",
+    "title": "Evading a peace officer on a bicycle",
+    "summary": "While driving a motor vehicle, willfully fleeing or trying to evade a pursuing peace officer on a distinctively marked bicycle with intent to evade. The uniformed officer must give a verbal stop command, sound a horn of at least 115 decibels, and give a hand signal to stop. The driver must be aware or reasonably should be aware of those signals and refuse to comply.",
+    "penalty": "Misdemeanor: up to 364 days in county jail. Penal Code section 672 permits an additional fine up to $1,000 where no other fine is prescribed. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null,
+      "VEH:2800.1": "2006-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "bicycle officer evasion"
+    ]
+  },
+  {
+    "id": "ca-veh-2800-2",
+    "lawCode": "VEH",
+    "code": "2800.2",
+    "title": "Evading a peace officer with willful or wanton disregard",
+    "summary": "Driving a pursued vehicle with willful or wanton disregard for the safety of people or property while violating section 2800.1. This includes flight involving three or more traffic violations assigned points under section 12810, or property damage; those are not the only qualifying forms of disregard. The underlying section 2800.1 pursuit and intent requirements must also be proved; merely failing to stop does not establish all elements.",
+    "penalty": "Misdemeanor or felony: county jail for 6 months to 364 days, or state prison for 16 months, 2 years or 3 years under Penal Code section 18. A fine of $1,000 to $10,000 may be imposed alone or with custody. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established. Willful or wanton disregard is an additional condition.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:830",
+      "VEH:12810",
+      "VEH:2800.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:830": null,
+      "VEH:12810": "2010-01-01",
+      "VEH:2800.1": "2006-01-01",
+      "VEH:2800.2": "1999-01-01"
+    },
+    "calcrim": [
+      "2181"
+    ],
+    "searchAliases": [
+      "felony evading",
+      "reckless evasion"
+    ]
+  },
+  {
+    "id": "ca-veh-2800-3-a",
+    "lawCode": "VEH",
+    "code": "2800.3(a)",
+    "title": "Evading a peace officer causing serious bodily injury",
+    "summary": "Willful flight or attempted evasion in violation of section 2800.1 that proximately causes serious bodily injury to another person. Serious bodily injury uses the definition in Penal Code section 243(f)(4). The underlying section 2800.1 pursuit and intent requirements must also be proved; merely failing to stop does not establish all elements.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail or 3, 5 or 7 years in state prison; a fine of $2,000 to $10,000 may be imposed alone or with imprisonment. The death branch has a different penalty. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established. The flight must proximately cause the serious injury.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:243",
+      "PEN:830",
+      "VEH:2800.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "PEN:830": null,
+      "VEH:2800.1": "2006-01-01",
+      "VEH:2800.3": "2006-01-01"
+    },
+    "calcrim": [
+      "2180"
+    ],
+    "searchAliases": [
+      "evading causing injury"
+    ]
+  },
+  {
+    "id": "ca-veh-2800-3-b",
+    "lawCode": "VEH",
+    "code": "2800.3(b)",
+    "title": "Evading a peace officer causing death",
+    "summary": "Willful flight or attempted evasion in violation of section 2800.1 that proximately causes a person's death. The underlying section 2800.1 pursuit and intent requirements must also be proved; merely failing to stop does not establish all elements.",
+    "penalty": "Felony: 4, 6 or 10 years in state prison. Penal Code section 672 permits an additional fine up to $10,000 where no other fine is prescribed. Section 2800.3(c) preserves greater punishment otherwise applicable to an unlawful death; this entry does not decide a separate homicide allegation. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established. The flight must proximately cause death.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "PEN:830",
+      "VEH:2800.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null,
+      "VEH:2800.1": "2006-01-01",
+      "VEH:2800.3": "2006-01-01"
+    },
+    "calcrim": [
+      "2180"
+    ],
+    "searchAliases": [
+      "fatal evasion"
+    ]
+  },
+  {
+    "id": "ca-veh-2800-4",
+    "lawCode": "VEH",
+    "code": "2800.4",
+    "title": "Evading a peace officer while driving against traffic",
+    "summary": "Willfully driving the pursued vehicle on a highway opposite the lawful direction of traffic while fleeing or attempting to evade in violation of section 2800.1. The underlying section 2800.1 pursuit and intent requirements must also be proved; merely failing to stop does not establish all elements.",
+    "penalty": "Misdemeanor or felony: county jail for 6 months to 364 days, or state prison for 16 months, 2 years or 3 years under Penal Code section 18. A fine of $1,000 to $10,000 may be imposed alone or with imprisonment. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Willful flight or attempted evasion while driving, with intent to evade; every applicable pursuit-identification condition in section 2800.1 must be established. Driving opposite the lawful traffic direction must be willful.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:830",
+      "VEH:2800.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:830": null,
+      "VEH:2800.1": "2006-01-01",
+      "VEH:2800.4": "2012-06-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "wrong way evading"
+    ]
+  },
+  {
+    "id": "ca-veh-20001-b-1",
+    "lawCode": "VEH",
+    "code": "20001(b)(1)",
+    "title": "Hit-and-run involving injury",
+    "summary": "A driver involved in an accident causing injury to another person fails to stop and perform the identification, reasonable-assistance and applicable reporting duties in sections 20001(a), 20003 and 20004. The driver must know of the accident and know of injury or know facts making injury reasonably probable. Causing the collision or being at fault is not required. This entry is for the driver; a nondriving owner or controlling passenger requires separate analysis. Death or permanent serious injury uses the separate subdivision (b)(2) penalty.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under Penal Code section 18. A fine of $1,000 to $10,000 may be imposed alone or with imprisonment; the court may reduce the minimum fine based on ability to pay and stated interests-of-justice reasons. Section 20001(c)'s separate five-year flight enhancement requires a qualifying manslaughter conviction and a charged and admitted or proven allegation; it is not automatic for every hit-and-run. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the accident and actual or reasonably probable injury, followed by willful failure to perform a required duty.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "VEH:20003",
+      "VEH:20004"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "VEH:20001": "2008-01-01",
+      "VEH:20003": "1995-01-01",
+      "VEH:20004": null
+    },
+    "calcrim": [
+      "2140"
+    ],
+    "searchAliases": [
+      "VC 20001(a)",
+      "injury hit and run"
+    ]
+  },
+  {
+    "id": "ca-veh-20001-b-2",
+    "lawCode": "VEH",
+    "code": "20001(b)(2)",
+    "title": "Hit-and-run involving death or permanent serious injury",
+    "summary": "A driver involved in an accident causing death or permanent serious injury fails to stop and perform the identification, reasonable-assistance and applicable reporting duties in sections 20001(a), 20003 and 20004. The driver must know of the accident and know of injury or know facts making injury reasonably probable. Causing the collision or being at fault is not required. This entry is for the driver; a nondriving owner or controlling passenger requires separate analysis. Permanent serious injury means loss or permanent impairment of the function of a bodily member or organ.",
+    "penalty": "Misdemeanor or felony: 90 days to 364 days in county jail or 2, 3 or 4 years in state prison. A fine of $1,000 to $10,000 may be imposed alone or with imprisonment; the court may reduce the minimum fine based on ability to pay and stated interests-of-justice reasons. The court may reduce or eliminate the 90-day minimum for stated interests-of-justice reasons. Section 20001(c)'s separate five-year flight enhancement requires a qualifying manslaughter conviction and a charged and admitted or proven allegation; it is not automatic for every hit-and-run. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the accident and actual or reasonably probable injury, followed by willful failure to perform a required duty.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "VEH:20003",
+      "VEH:20004"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "VEH:20001": "2008-01-01",
+      "VEH:20003": "1995-01-01",
+      "VEH:20004": null
+    },
+    "calcrim": [
+      "2140"
+    ],
+    "searchAliases": [
+      "VC 20001(a)",
+      "fatal hit and run"
+    ]
+  },
+  {
+    "id": "ca-veh-20002-a",
+    "lawCode": "VEH",
+    "code": "20002(a)",
+    "title": "Hit-and-run involving property damage",
+    "summary": "A driver involved in an accident causing only damage to someone else's property, who knows of the damage or knows facts making it probable, willfully fails to stop safely and perform the required notification and identification duties. The driver must either locate and notify the owner or person in charge, or leave the required written notice and notify the appropriate police or Highway Patrol office without unnecessary delay. Fault for causing the collision is not required. The parked-runaway-vehicle branch in subdivision (b) is outside this entry.",
+    "penalty": "Misdemeanor under section 20002(c): up to 6 months in county jail, a fine up to $1,000, or both. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the accident and actual or reasonably probable property damage, followed by willful failure to perform a required duty.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:20002": "2002-01-01"
+    },
+    "calcrim": [
+      "2150"
+    ],
+    "searchAliases": [
+      "misdemeanor hit and run",
+      "property damage hit and run"
+    ]
+  },
+  {
+    "id": "ca-pen-192-5-a",
+    "lawCode": "PEN",
+    "code": "192.5(a)",
+    "title": "Vessel manslaughter: intoxication and gross negligence",
+    "summary": "Unlawfully causing a human death without malice while operating a vessel, in violation of HNC section 655(b), (c), (d), (e) or (f), during an unlawful act not amounting to a felony, or a lawful act performed unlawfully that might cause death, with gross negligence. The causal link, underlying unlawful conduct and required level of negligence must be proved; a fatal accident alone is insufficient.",
+    "penalty": "Felony: 4, 6 or 10 years in state prison, under Penal Code section 193.5(a). Penal Code section 672 permits an additional fine up to $10,000 where no other fine is prescribed. Fleeing the scene may add a consecutive five-year state-prison term under section 192.5(e), but only if the allegation is charged and admitted or proved. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Unlawful killing without malice, with gross negligence and causation; the intoxication branch additionally requires a listed HNC 655 violation.",
+    "supportingKeys": [
+      "HNC:655",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:193.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:655": "1998-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:192.5": "2008-01-01",
+      "PEN:193.5": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating manslaughter intoxication and gross negligence"
+    ]
+  },
+  {
+    "id": "ca-pen-192-5-b",
+    "lawCode": "PEN",
+    "code": "192.5(b)",
+    "title": "Vessel manslaughter: intoxication without gross negligence",
+    "summary": "Unlawfully causing a human death without malice while operating a vessel, in violation of HNC section 655(b), (c), (d), (e) or (f), during an unlawful act not amounting to a felony, or a lawful act performed unlawfully that might cause death, with ordinary negligence and without gross negligence. The causal link, underlying unlawful conduct and required level of negligence must be proved; a fatal accident alone is insufficient.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail or 16 months, 2 years or 4 years under Penal Code section 1170(h), under Penal Code section 193.5(b). The felony middle term is 2 years and upper term is 4 years, not the ordinary 3-year default. Section 1170(h) terms are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony where no other fine is prescribed. Fleeing the scene may add a consecutive five-year state-prison term under section 192.5(e), but only if the allegation is charged and admitted or proved. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Unlawful killing without malice, with ordinary negligence and causation; the intoxication branch additionally requires a listed HNC 655 violation.",
+    "supportingKeys": [
+      "HNC:655",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:193.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:655": "1998-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:192.5": "2008-01-01",
+      "PEN:193.5": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating manslaughter intoxication without gross negligence"
+    ]
+  },
+  {
+    "id": "ca-pen-192-5-c",
+    "lawCode": "PEN",
+    "code": "192.5(c)",
+    "title": "Vessel manslaughter: gross negligence",
+    "summary": "Unlawfully causing a human death without malice while operating a vessel, during an unlawful act not amounting to a felony, or a lawful act performed unlawfully that might cause death, with gross negligence. The causal link, underlying unlawful conduct and required level of negligence must be proved; a fatal accident alone is insufficient.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail or 2, 4 or 6 years in state prison, under Penal Code section 193.5(c). Penal Code section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony where no other fine is prescribed. Fleeing the scene may add a consecutive five-year state-prison term under section 192.5(e), but only if the allegation is charged and admitted or proved. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Unlawful killing without malice, with gross negligence and causation; the intoxication branch additionally requires a listed HNC 655 violation.",
+    "supportingKeys": [
+      "HNC:655",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:193.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:655": "1998-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:192.5": "2008-01-01",
+      "PEN:193.5": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating manslaughter gross negligence"
+    ]
+  },
+  {
+    "id": "ca-pen-192-5-d",
+    "lawCode": "PEN",
+    "code": "192.5(d)",
+    "title": "Vessel manslaughter: ordinary negligence",
+    "summary": "Unlawfully causing a human death without malice while operating a vessel, during an unlawful act not amounting to a felony, or a lawful act performed unlawfully that might cause death, with ordinary negligence and without gross negligence. The causal link, underlying unlawful conduct and required level of negligence must be proved; a fatal accident alone is insufficient.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, under Penal Code section 193.5(d). Penal Code section 672 permits an additional fine up to $1,000 where no other fine is prescribed. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Unlawful killing without malice, with ordinary negligence and causation; the intoxication branch additionally requires a listed HNC 655 violation.",
+    "supportingKeys": [
+      "HNC:655",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:193.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:655": "1998-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:192.5": "2008-01-01",
+      "PEN:193.5": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating manslaughter ordinary negligence"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-b",
+    "lawCode": "HNC",
+    "code": "655(b)",
+    "title": "Operating a vessel or water-sport device under the influence",
+    "summary": "Operating a vessel, or manipulating water skis, an aquaplane or similar device, while under the influence of alcohol, drugs, or both. Impairment must affect safe operation; alcohol presence alone is not the same as impairment.",
+    "penalty": "Ordinarily a misdemeanor under HNC section 668(e): up to 6 months in county jail, a fine up to $1,000, or both. A qualifying prior within seven years under section 668(f) can raise jail exposure to 364 days, with a fine up to $1,000 or both; not every prior conviction qualifies. Alcohol/drug program conditions may apply. Willful refusal of chemical testing requires a pleaded and proved allegation under section 655.5 for its possible added penalties within the section 668 limits. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary operation plus the charged impairment or blood-alcohol condition; a higher repeat penalty needs its qualifying prior.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:655.1",
+      "HNC:655.5",
+      "HNC:668",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192.5",
+      "VEH:23152",
+      "VEH:23153"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655": "1998-01-01",
+      "HNC:655.1": "2018-01-01",
+      "HNC:655.5": null,
+      "HNC:668": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating under the influence",
+      "BUI 655(b)"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-c",
+    "lawCode": "HNC",
+    "code": "655(c)",
+    "title": "Operating a recreational vessel with blood alcohol of 0.08 percent or more",
+    "summary": "Operating a recreational vessel, or manipulating water skis, an aquaplane or similar device, with blood alcohol of 0.08 percent or more. The applicable recreational-vessel definition matters. A qualifying chemical test within three hours creates a rebuttable presumption, not an irrebuttable finding.",
+    "penalty": "Ordinarily a misdemeanor under HNC section 668(e): up to 6 months in county jail, a fine up to $1,000, or both. A qualifying prior within seven years under section 668(f) can raise jail exposure to 364 days, with a fine up to $1,000 or both; not every prior conviction qualifies. Alcohol/drug program conditions may apply. Willful refusal of chemical testing requires a pleaded and proved allegation under section 655.5 for its possible added penalties within the section 668 limits. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary operation plus the charged impairment or blood-alcohol condition; a higher repeat penalty needs its qualifying prior.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:655.1",
+      "HNC:655.5",
+      "HNC:668",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192.5",
+      "VEH:23152",
+      "VEH:23153"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655": "1998-01-01",
+      "HNC:655.1": "2018-01-01",
+      "HNC:655.5": null,
+      "HNC:668": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating under the influence",
+      "BUI 655(c)"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-d",
+    "lawCode": "HNC",
+    "code": "655(d)",
+    "title": "Operating a nonrecreational vessel with blood alcohol of 0.04 percent or more",
+    "summary": "Operating a vessel other than a recreational vessel with blood alcohol of 0.04 percent or more. The lower limit depends on the type of vessel. A qualifying chemical test within three hours creates a rebuttable presumption, not an irrebuttable finding.",
+    "penalty": "Ordinarily a misdemeanor under HNC section 668(e): up to 6 months in county jail, a fine up to $1,000, or both. A qualifying prior within seven years under section 668(f) can raise jail exposure to 364 days, with a fine up to $1,000 or both; not every prior conviction qualifies. Alcohol/drug program conditions may apply. Willful refusal of chemical testing requires a pleaded and proved allegation under section 655.5 for its possible added penalties within the section 668 limits. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary operation plus the charged impairment or blood-alcohol condition; a higher repeat penalty needs its qualifying prior.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:655.1",
+      "HNC:655.5",
+      "HNC:668",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192.5",
+      "VEH:23152",
+      "VEH:23153"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655": "1998-01-01",
+      "HNC:655.1": "2018-01-01",
+      "HNC:655.5": null,
+      "HNC:668": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating under the influence",
+      "BUI 655(d)"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-f",
+    "lawCode": "HNC",
+    "code": "655(f)",
+    "title": "Operating a vessel under the influence causing injury",
+    "summary": "While operating a vessel or manipulating water skis, an aquaplane or similar device under the influence of alcohol, drugs or both, committing an unlawful act or neglecting a legal duty in its use that proximately causes bodily injury to another person. Injury to the operator alone is insufficient; impairment and the additional act or duty breach must be established.",
+    "penalty": "Misdemeanor or felony under HNC section 668(g): county jail for 90 days to 364 days, or 16 months, 2 years or 3 years under Penal Code section 1170(h), AND a fine of $250 to $5,000. Section 1170(h) terms are ordinarily served in county jail, subject to its state-prison exclusions. Under section 668(h), probation with specified priors within seven years carries a jail condition of at least 5 days or at least 90 days, depending on the qualifying prior, up to 364 days, plus the $250-$5,000 fine. Sections 668(i)-(j) restrict avoidance of qualifying-prior minimums. Treatment conditions and a pleaded and proved chemical-test refusal allegation under section 655.5 may also matter. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Operation while impaired, an additional unlawful act or breached legal duty, and proximate causation of injury to another.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:655.1",
+      "HNC:655.5",
+      "HNC:668",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192.5",
+      "VEH:23152",
+      "VEH:23153"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655": "1998-01-01",
+      "HNC:655.1": "2018-01-01",
+      "HNC:655.5": null,
+      "HNC:668": "2015-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating DUI causing injury",
+      "felony BUI"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-4-a",
+    "lawCode": "HNC",
+    "code": "655.4(a)",
+    "title": "Serving as impaired charter-boat crew",
+    "summary": "Serving as a crew member on a charter boat while under the influence of alcohol, drugs or both. This is a crew-member charge; it is not interchangeable with the operator offense in section 655.",
+    "penalty": "Misdemeanor under HNC section 668(e): up to 6 months in county jail, a fine up to $1,000, or both. Alcohol/drug treatment may be a probation condition. Section 668(e) expressly includes section 655.4; the felony/custody-and-fine provision in 668(g) instead names section 655(f) and is not imported into this crew-member branch. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Serving as crew while impaired.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655.4": null,
+      "HNC:668": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "intoxicated charter crew"
+    ]
+  },
+  {
+    "id": "ca-hnc-655-4-b",
+    "lawCode": "HNC",
+    "code": "655.4(b)",
+    "title": "Serving as impaired charter-boat crew causing injury",
+    "summary": "Serving as a crew member on a charter boat while under the influence of alcohol, drugs or both. While serving, the person must also commit an unlawful act or neglect a legal duty in vessel use that proximately causes bodily injury to someone else. This is a crew-member charge; it is not interchangeable with the operator offense in section 655.",
+    "penalty": "Misdemeanor under HNC section 668(e): up to 6 months in county jail, a fine up to $1,000, or both. Alcohol/drug treatment may be a probation condition. Section 668(e) expressly includes section 655.4; the felony/custody-and-fine provision in 668(g) instead names section 655(f) and is not imported into this crew-member branch. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Serving as crew while impaired, plus an unlawful act or breached duty that proximately causes another person's injury.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:655.4": null,
+      "HNC:668": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "intoxicated charter crew"
+    ]
+  },
+  {
+    "id": "ca-hnc-656-2",
+    "lawCode": "HNC",
+    "code": "656.2",
+    "title": "Failure to perform vessel accident duties involving injury",
+    "summary": "A vessel operator involved in an accident in California waters who knows or has reason to know it caused injury fails to perform the statutory accident duties. Section 656.2 requires identifying information and reasonable assistance, including requested or needed medical transport, so far as it can be provided without serious danger to the vessel or passengers. Applicable duties under section 656.1 also apply.",
+    "penalty": "Misdemeanor or felony under HNC section 668(c): up to 364 days in county jail or 16 months, 2 years or 3 years under Penal Code section 1170(h); a fine of $1,000 to $10,000 may be imposed alone or with imprisonment. Section 1170(h) terms are ordinarily served in county jail, subject to its state-prison exclusions. For stated interests-of-justice reasons and considering ability to pay, the court may reduce the minimum fine. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know of the specified accident consequence and failure to perform a required duty.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:656.1",
+      "HNC:668",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:656.1": null,
+      "HNC:656.2": null,
+      "HNC:668": "2015-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating hit and run",
+      "vessel hit and run"
+    ]
+  },
+  {
+    "id": "ca-hnc-656-3",
+    "lawCode": "HNC",
+    "code": "656.3",
+    "title": "Failure to perform vessel accident duties involving death or disappearance",
+    "summary": "A vessel operator involved in an accident in California waters who knows or has reason to know it caused death or disappearance fails to perform the statutory accident duties. Section 656.3 requires reporting without delay to the waterway law-enforcement agency, or the county sheriff if unknown, when no peace officer is at the scene to receive the required information. Applicable duties under section 656.1 and 656.2 also apply.",
+    "penalty": "Misdemeanor or felony under HNC section 668(c): up to 364 days in county jail or 16 months, 2 years or 3 years under Penal Code section 1170(h); a fine of $1,000 to $10,000 may be imposed alone or with imprisonment. Section 1170(h) terms are ordinarily served in county jail, subject to its state-prison exclusions. For stated interests-of-justice reasons and considering ability to pay, the court may reduce the minimum fine. These are adult base penalties. Enhancements, restitution, assessments, probation and case-specific sentencing rules can change the outcome.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know of the specified accident consequence and failure to perform a required duty.",
+    "supportingKeys": [
+      "HNC:651",
+      "HNC:656.1",
+      "HNC:656.2",
+      "HNC:668",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:651": "2024-07-02",
+      "HNC:656.1": null,
+      "HNC:656.2": null,
+      "HNC:656.3": null,
+      "HNC:668": "2015-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "boating hit and run",
+      "vessel hit and run"
+    ]
+  }
+]

@@ -95008,6 +95008,18 @@ chargeCategories['Drug Offenses'] = Array.from(new Set([
   }),
 ]));
 
+// Keep the reviewed driving/vessel additions in both existing traffic groups.
+for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
+  chargeCategories[group] = Array.from(new Set([
+    ...chargeCategories[group],
+    ...chargeCategories['CA'].filter(id => {
+      const record = getCaliforniaCanonicalRecord(id);
+      return record?.lawCode === 'VEH' || record?.lawCode === 'HNC' ||
+        (record?.lawCode === 'PEN' && record.code.startsWith('192.5('));
+    }),
+  ]));
+}
+
 // Keep the state grouping aligned with the same no-alias Ohio selector
 // boundary used below. The canonical source-first records are additive and
 // the historical degree labels remain visible only to persisted-case
