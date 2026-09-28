@@ -487,6 +487,7 @@ export async function registerRoutes(
           citation: verifiedCitation ?? null,
           name,
           canonicalName: charge.name,
+          ...(charge.searchAliases?.length ? { searchAliases: charge.searchAliases } : {}),
           category: charge.category,
           ...(charge.categories ? { categories: charge.categories } : {}),
           description,

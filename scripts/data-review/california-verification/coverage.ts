@@ -24,6 +24,8 @@ import { validateCaliforniaSpecializedPropertyReview } from "./specialized-prope
 
 import { validateCaliforniaControlledSubstancesReview, readCaliforniaControlledSubstancesAcquisition } from "./controlled-substances-review";
 
+import { validateCaliforniaDrugSuccessorReview, readCaliforniaDrugSuccessorAcquisition } from "./drug-successor-review";
+
 import openLegalQuestions from "./open-review-items.json";
 
 interface SourceExpansion {
@@ -69,6 +71,8 @@ export function buildCaliforniaCoverage() {
   const specializedAccounting = validateCaliforniaSpecializedPropertyReview();
   const drugAccounting = validateCaliforniaControlledSubstancesReview();
   Object.keys(readCaliforniaControlledSubstancesAcquisition().documents).forEach(key => acquiredKeys.add(key));
+  const successorAccounting = validateCaliforniaDrugSuccessorReview();
+  Object.keys(readCaliforniaDrugSuccessorAcquisition().documents).forEach(key => acquiredKeys.add(key));
   const corrected = new Set([...corrections.map(row => row.id), ...additions.map(row => row.id)]);
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
@@ -134,8 +138,8 @@ export function buildCaliforniaCoverage() {
       specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions,
-      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions,
+      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -146,7 +150,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
