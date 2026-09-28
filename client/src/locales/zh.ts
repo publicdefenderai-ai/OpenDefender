@@ -510,7 +510,7 @@ export default {
         },
         "coverage": {
           "federalStatutes": "维护集合中有 {{count}} 条联邦法条记录。",
-          "charges": "{{count}} 条刑事指控记录；顺序为重罪 / 轻罪 / 违法行为。",
+          "charges": "{{count}} 条刑事指控记录；顺序为重罪 / 轻罪 / 违法行为。 加州记录如有多种分类，按所列最严重的类别计数，包括有条件适用的情况；这并不预测个案的指控或刑罚。",
           "explanations": "{{count}} 条指控解释有记录来源；司法辖区覆盖层并不统一。",
           "procedure": "{{count}} 个司法辖区（总数 / 中等可信度记录）。",
           "collateral": "{{count}} 个司法辖区（附带后果 / 驾照 / 移民 / 登记）。",

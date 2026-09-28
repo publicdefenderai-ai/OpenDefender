@@ -508,7 +508,7 @@ export default {
         },
         "coverage": {
           "federalStatutes": "{{count}} federal entries in the maintained seed set.",
-          "charges": "{{count}} charge records; tier order is felony / misdemeanor / infraction.",
+          "charges": "{{count}} charge records; tier order is felony / misdemeanor / infraction. California records with alternatives count under the highest listed tier, including conditional branches; this does not predict the charge or sentence in an individual case.",
           "explanations": "{{count}} explanation entries have a recorded source; jurisdiction overlays are additional and not uniform.",
           "procedure": "{{count}} jurisdictions (total / medium-confidence records).",
           "collateral": "{{count}} jurisdictions (collateral / driver's-license / immigration / registry).",

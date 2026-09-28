@@ -2108,6 +2108,16 @@ export function isCaliforniaSelectableId(id: string): boolean {
   return getCaliforniaCanonicalRecord(id)?.selectable === true;
 }
 
+/** Display/count tier is the highest listed exposure, not a prediction of filing or sentence.
+ * Full alternatives remain on categories; reviewed JSON order is never a grading rule.
+ */
+export function getCaliforniaPrimaryCategory(categories?: readonly string[], grading = ""): CriminalCharge["category"] {
+  const tiers = ["felony", "misdemeanor", "infraction"] as const;
+  return tiers.find(tier => categories?.includes(tier))
+    ?? tiers.find(tier => grading.toLowerCase().includes(tier))
+    ?? "felony";
+}
+
 export function getCaliforniaCanonicalCharge(
   legacyCharge: CriminalCharge,
 ): CriminalCharge | undefined {
@@ -2122,13 +2132,7 @@ export function getCaliforniaCanonicalCharge(
     code: metadata.code,
     description: `${metadata.officialTitle} under ${metadata.citation}. The prosecution generally must prove: ${metadata.elements.join("; ")}.`,
     categories: metadata.categories,
-    category: metadata.categories?.[0] ?? (
-      metadata.grading.toLowerCase().includes("infraction")
-        ? "infraction"
-        : metadata.grading.toLowerCase().includes("misdemeanor") &&
-            !metadata.grading.toLowerCase().includes("felony")
-          ? "misdemeanor"
-          : "felony"),
+    category: getCaliforniaPrimaryCategory(metadata.categories, metadata.grading),
     ...(correction ? {
       description: correction.summary.en,
       descriptionEs: correction.summary.es,
@@ -2155,7 +2159,7 @@ export function getCaliforniaCanonicalCharge(
 export function getCaliforniaAdditionCharges(): CriminalCharge[] {
   return additions.map(row => getCaliforniaCanonicalCharge({
     id: row.id, name: row.title, code: row.code, jurisdiction: "CA",
-    category: row.categories[0] as CriminalCharge["category"],
+    category: getCaliforniaPrimaryCategory(row.categories),
     description: row.summary, maxPenalty: row.penalty,
     searchAliases: [`${row.lawCode === "PEN" ? "PC" : row.lawCode} ${row.code}`, `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title],
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
