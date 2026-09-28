@@ -7,7 +7,7 @@ test("all person/property additions reach the production API and rules guidance"
   expect(response.ok()).toBe(true);
   const body = await response.json();
   // One of 257 configured records depends on the changed PEN:30515 definition.
-  expect(body.charges).toHaveLength(256);
+  expect(body.charges).toHaveLength(280);
   expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
   for (const addition of additions) {
     const charge = body.charges.find((r: any) => r.id === addition.id);

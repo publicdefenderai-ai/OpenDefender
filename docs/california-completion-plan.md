@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-The driving/vessel publication batch proposes 21 additional choices, taking the configured catalog from 236 to 257: 99 original corrected choices and 158 additions. There are 173 distinct primary sections and 421 retained publication sections/425 versions including dependencies. The changed weapon source still withholds one configured record, leaving 256 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
+The combined traffic successor proposes 24 additional choices, taking the configured catalog from 257 to 281: 99 original corrected choices and 182 additions. There are 184 distinct primary sections and 450 retained publication sections/456 versions including dependencies. The changed weapon source still withholds one configured record, leaving 280 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -88,3 +88,16 @@ Run `node --import tsx scripts/data-review/california-verification/driving-publi
 Two research labels require care: PEN 193.8 concerns entrusting a vehicle to an intoxicated minor, not vessel-manslaughter punishment (which is in PEN 193.5); PEN 499 concerns specified recidivist 499b conduct, not a generic vessel-taking offense. Neither has been published by analogy. HNC 655(e)'s addiction-status branch and treatment exception also remain open. None of these is dismissed as a minor charge.
 
 Next publication group: combine injury DUI and omitted DUI branches with suspended-license/court duties and injury reckless-driving/racing where shared sentencing sources permit. Keep vehicle-identification and remaining vessel/owner duties in the explicit queue. The existing 3-6 substantive-batch planning range is not reduced merely because part of one family is published.
+
+
+## Traffic successor: DUI, licensing and racing
+
+Twenty-four proposed choices cover six injury-DUI branches, two commercial/passenger BAC branches, six suspended/restricted-license branches, three injury reckless-driving branches, five racing/exhibition branches, license presentation and willful traffic failure to appear. Thirty dependencies are reused; 29 additional publication sections (31 versions) are retained, including 16 promoted research sections. The archive comparison confirms 449 unchanged sections and the existing PEN 30515 hold; the original receipt date and expiry are preserved.
+
+The statutory infraction alternatives for VEH 14601.1, 23109(c), and 40508 remain distinct from neighboring misdemeanor provisions. The review separates ordinary custody and mandatory fines from probation alternatives, and does not infer felony eligibility from a generic prior conviction. CA-006 records an apparent subdivision-reference error without rewriting the statute.
+
+VEH 13352, 23103.5, 23573 and 23575 retain both the current and 2033-operative versions; explicit version decisions prevent treating a shared effective date or active flag as proof of current operation. Known transition dates withhold dependent records pending review even after a new archive receipt. VEH 23109's sideshow-specific license provision is tracked for 2029.
+
+Run `node --import tsx scripts/data-review/california-verification/traffic-review.ts` for the source-bound report and successor instruction accounting. Replay `acquire-traffic.py` against the original retained archive.
+
+Next: combine the remaining significant vehicle-identification/chop-shop and nondriving-owner duty questions, then move to an independent missing-charge pass for offenses against people and weapons. Addiction-status, under-21 and entrustment provisions remain explicitly open; none is silently classified as minor. The statewide estimate remains 3-6 substantive batches plus a combined benchmark/release pass because major nontraffic families still need examination.
