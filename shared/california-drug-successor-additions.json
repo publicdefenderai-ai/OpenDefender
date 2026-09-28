@@ -1,0 +1,725 @@
+[
+  {
+    "id": "ca-hsc-11358",
+    "lawCode": "HSC",
+    "code": "11358",
+    "title": "Adult unlawful cultivation of more than six cannabis plants",
+    "summary": "For a person age 18 or older, unlawfully planting, cultivating, harvesting, drying or processing more than six living cannabis plants under subdivisions (c)-(d). Exactly six plants does not satisfy this greater-than-six branch. Under-18 cases and the age-18-to-20 six-or-fewer infraction are outside this entry. Lawful adult-use, medical and licensed commercial activity must be distinguished from unlawful conduct. A license alone does not excuse acts outside its state/local authorization and governing requirements.",
+    "penalty": "Ordinary subdivision (c): up to 6 months in county jail, a fine up to $500, or both. Subdivision (d) permits a felony term of 16 months, 2 years or 3 years under Penal Code section 1170(h) only for a qualifying serious/registrable prior, two or more prior subdivision (c) convictions, or the specified environmental conditions in (d)(3). Those conditions require the listed statutory violation or intentional/grossly negligent substantial environmental harm; an environmental concern alone is insufficient. Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. The $500 figure is the ordinary subdivision (c) fine, not a complete calculation for a felony case. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowing unlawful cultivation and the adult-age/plant-count conditions; a felony branch requires its additional statutory facts.",
+    "supportingKeys": [
+      "BPC:26032",
+      "HSC:11006.5",
+      "HSC:11018",
+      "HSC:11018.5",
+      "HSC:11362.1",
+      "HSC:11362.3",
+      "HSC:11362.5",
+      "HSC:11362.7",
+      "HSC:11362.765",
+      "HSC:11362.77",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:290",
+      "PEN:667"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:26032": "2017-06-27",
+      "HSC:11006.5": "2026-01-01",
+      "HSC:11018": "2026-01-01",
+      "HSC:11018.5": "2026-01-01",
+      "HSC:11358": "2024-01-01",
+      "HSC:11362.1": "2017-06-27",
+      "HSC:11362.3": "2017-06-27",
+      "HSC:11362.5": null,
+      "HSC:11362.7": "2018-01-01",
+      "HSC:11362.765": "2017-06-27",
+      "HSC:11362.77": "2017-06-27",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667": "2022-01-01"
+    },
+    "calcrim": [
+      "2370"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11359",
+    "lawCode": "HSC",
+    "code": "11359",
+    "title": "Adult unlawful possession of cannabis for sale",
+    "summary": "For a person age 18 or older, knowingly possessing a usable amount of cannabis with intent that it be unlawfully sold. Possession for personal use is not possession for sale. Under-18 cases use a separate route. Lawful adult-use, medical and licensed commercial activity must be distinguished from unlawful conduct. A license alone does not excuse acts outside its state/local authorization and governing requirements.",
+    "penalty": "Ordinary subdivision (b): up to 6 months in county jail, a fine up to $500, or both. A 16-month, 2-year or 3-year felony term under section 1170(h) is possible under (c) for a qualifying serious/registrable prior, two prior (b) convictions, or knowing sale/attempted sale to a minor. Subdivision (d) separately covers an actor age 21 or older knowingly using a person age 20 or younger in the specified unlawful cannabis activities. Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Section 11372(a) also lists this offense for an additional fine up to $20,000; the $500 ordinary fine is not presented as an all-in monetary ceiling. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the cannabis and intent to sell; each higher-penalty age, prior-conviction or knowing-minor-sale condition must be established.",
+    "supportingKeys": [
+      "BPC:26032",
+      "HSC:11006.5",
+      "HSC:11018",
+      "HSC:11018.5",
+      "HSC:11362.1",
+      "HSC:11362.3",
+      "HSC:11362.5",
+      "HSC:11362.7",
+      "HSC:11362.765",
+      "HSC:11362.77",
+      "HSC:11372",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:290",
+      "PEN:667"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:26032": "2017-06-27",
+      "HSC:11006.5": "2026-01-01",
+      "HSC:11018": "2026-01-01",
+      "HSC:11018.5": "2026-01-01",
+      "HSC:11359": "2017-06-27",
+      "HSC:11362.1": "2017-06-27",
+      "HSC:11362.3": "2017-06-27",
+      "HSC:11362.5": null,
+      "HSC:11362.7": "2018-01-01",
+      "HSC:11362.765": "2017-06-27",
+      "HSC:11362.77": "2017-06-27",
+      "HSC:11372": "2024-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667": "2022-01-01"
+    },
+    "calcrim": [
+      "2352"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11360-a",
+    "lawCode": "HSC",
+    "code": "11360(a)",
+    "title": "Adult unlawful cannabis sale, distribution, import or transport for sale",
+    "summary": "For a person age 18 or older, unlawfully selling, furnishing, administering, giving away, importing or transporting cannabis for sale, or making the specified offers or attempts. Transport requires a sale purpose; moving personal-use cannabis is not enough. An offer requires intent to carry it out. The separate (b) small-quantity, nonconcentrated-cannabis giveaway/transport infraction must not be assigned the (a) penalty. Lawful adult-use, medical and licensed commercial activity must be distinguished from unlawful conduct. A license alone does not excuse acts outside its state/local authorization and governing requirements.",
+    "penalty": "Ordinary subdivision (a)(2): up to 6 months in county jail, a fine up to $500, or both. Subdivision (a)(3) permits a 2-, 3- or 4-year felony term under section 1170(h) for a qualifying serious/registrable prior, two prior (a)(2) convictions, the specified knowing minor-related acts, or the specified interstate import/export acts involving more than 28.5 grams of cannabis or more than 4 grams of concentrate. The interstate concentrate threshold is 4 grams, not the 8-gram personal-possession threshold. Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Section 11372(a) also lists this offense for an additional fine up to $20,000; the $500 ordinary fine is not an all-in monetary ceiling. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the cannabis and unlawful act; sale intent for transport and intent to perform an offer. Any felony-triggering facts require separate proof.",
+    "supportingKeys": [
+      "BPC:26032",
+      "HSC:11006.5",
+      "HSC:11018",
+      "HSC:11018.5",
+      "HSC:11362.1",
+      "HSC:11362.3",
+      "HSC:11362.5",
+      "HSC:11362.7",
+      "HSC:11362.765",
+      "HSC:11362.77",
+      "HSC:11372",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:290",
+      "PEN:667"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:26032": "2017-06-27",
+      "HSC:11006.5": "2026-01-01",
+      "HSC:11018": "2026-01-01",
+      "HSC:11018.5": "2026-01-01",
+      "HSC:11360": "2017-06-27",
+      "HSC:11362.1": "2017-06-27",
+      "HSC:11362.3": "2017-06-27",
+      "HSC:11362.5": null,
+      "HSC:11362.7": "2018-01-01",
+      "HSC:11362.765": "2017-06-27",
+      "HSC:11362.77": "2017-06-27",
+      "HSC:11372": "2024-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667": "2022-01-01"
+    },
+    "calcrim": [
+      "2350",
+      "2351",
+      "2361",
+      "2363",
+      "2364"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11383",
+    "lawCode": "HSC",
+    "code": "11383",
+    "title": "Possession of specified PCP precursors with intent to manufacture",
+    "summary": "Knowingly possessing the specific chemical combinations, compounds, mixtures, isomers or sufficient immediate precursors covered by subdivisions (a)-(d), with intent to manufacture PCP or the analog specified by the applicable branch. Different branches cover different substances; possession of an ordinary chemical without the required manufacture intent is insufficient. Licensed manufacturers and persons authorized by Board of Pharmacy regulation are excluded.",
+    "penalty": "Felony: 2, 4 or 6 years under Penal Code section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession, the specified substance or combination and the particular manufacture or transfer intent; recipient-manufacture knowledge is separately required for sections 11383.6 and 11383.7.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "HSC:11383": "2011-04-04",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2336"
+    ],
+    "searchAliases": [
+      "PCP precursor possession",
+      "phencyclidine precursor possession"
+    ]
+  },
+  {
+    "id": "ca-hsc-11383-5",
+    "lawCode": "HSC",
+    "code": "11383.5",
+    "title": "Possession of specified methamphetamine precursors with intent to manufacture",
+    "summary": "Knowingly possessing a chemical combination, substance, isomer, sufficient immediate precursor, essential chemical or mixture specified in subdivisions (a)-(f), with the required intent to manufacture methamphetamine or the analog/N-ethylamphetamine covered by that particular branch. This is not a ban on every medicine or chemical containing a listed ingredient. Licensed manufacturers and persons authorized by Board of Pharmacy regulation are excluded.",
+    "penalty": "Felony: 2, 4 or 6 years under Penal Code section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession, the specified substance or combination and the particular manufacture or transfer intent; recipient-manufacture knowledge is separately required for sections 11383.6 and 11383.7.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "HSC:11383.5": "2011-04-04",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2335",
+      "2337",
+      "2338"
+    ],
+    "searchAliases": [
+      "ephedrine possession with intent to manufacture",
+      "pseudoephedrine possession with intent to manufacture",
+      "methamphetamine precursor possession"
+    ]
+  },
+  {
+    "id": "ca-hsc-11383-6",
+    "lawCode": "HSC",
+    "code": "11383.6",
+    "title": "Possession of specified PCP precursors for transfer to a manufacturer",
+    "summary": "Knowingly possessing a listed chemical combination, compound, mixture, isomer or sufficient immediate precursor under subdivisions (a)-(d), intending to sell, transfer or furnish it to another, and knowing it will be used to manufacture PCP or the analog covered by that branch. The transfer purpose and knowledge are distinct from an intent personally to manufacture. Licensed manufacturers and persons authorized by Board of Pharmacy regulation are excluded.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under Penal Code section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession, the specified substance or combination and the particular manufacture or transfer intent; recipient-manufacture knowledge is separately required for sections 11383.6 and 11383.7.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "HSC:11383.6": "2011-04-04",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "PCP precursors for sale or transfer"
+    ]
+  },
+  {
+    "id": "ca-hsc-11383-7",
+    "lawCode": "HSC",
+    "code": "11383.7",
+    "title": "Possession of specified methamphetamine precursors for transfer to a manufacturer",
+    "summary": "Knowingly possessing a listed chemical combination, substance, isomer, sufficient immediate precursor, essential chemical or mixture under subdivisions (a)-(f), intending to sell, transfer or furnish it, and knowing the recipient will use it to manufacture the drug specified in that branch. Branch-specific drug names control; they must not be inferred from the parallel manufacturing statute. Licensed manufacturers and persons authorized by Board of Pharmacy regulation are excluded.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under Penal Code section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession, the specified substance or combination and the particular manufacture or transfer intent; recipient-manufacture knowledge is separately required for sections 11383.6 and 11383.7.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "HSC:11383.7": "2011-04-04",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "ephedrine or pseudoephedrine for transfer to manufacture",
+      "methamphetamine precursors for sale"
+    ]
+  },
+  {
+    "id": "ca-hsc-11366-8-a",
+    "lawCode": "HSC",
+    "code": "11366.8(a)",
+    "title": "Possessing or using a vehicle false compartment for controlled substances",
+    "summary": "Possessing, using or controlling a false compartment in or attached to a vehicle with intent to store, conceal, smuggle or transport a controlled substance in it. Under the definition reflected in CALCRIM 2441 and People v. Arias, original factory equipment must be modified, altered or supplemented; merely hiding drugs in an unchanged factory space is not enough. Vehicle includes aircraft, boats and other listed conveyances.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. Felony alternative: 16 months, 2 years or 3 years under section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to store, conceal, smuggle or transport a controlled substance in the qualifying false compartment; innocent construction or use is insufficient.",
+    "supportingKeys": [
+      "HSC:11007",
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11007": "1987-09-26",
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11366.8": "2011-04-04",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2441"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11366-8-b",
+    "lawCode": "HSC",
+    "code": "11366.8(b)",
+    "title": "Constructing or installing a vehicle false compartment for controlled substances",
+    "summary": "Designing, constructing, building, altering, fabricating, installing or attaching a false compartment for or to a vehicle, with intent to store, conceal, smuggle or transport a controlled substance in it. The qualifying alteration/addition to factory equipment matters; this does not criminalize an unchanged ordinary vehicle storage space.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to store, conceal, smuggle or transport a controlled substance in the qualifying false compartment; innocent construction or use is insufficient.",
+    "supportingKeys": [
+      "HSC:11007",
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11007": "1987-09-26",
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11366.8": "2011-04-04",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2441"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11370-6-a",
+    "lawCode": "HSC",
+    "code": "11370.6(a)",
+    "title": "Possession of more than $100,000 in drug proceeds or money for an unlawful drug purchase",
+    "summary": "Two distinct theories: knowingly possessing more than $100,000 in money or negotiable instruments obtained from the specified unlawful drug activity; or possessing more than $100,000 intended for an unlawful drug purchase and committing an act in substantial furtherance of that purchase. Exactly $100,000 is insufficient. For an attorney accepting a criminal-investigation/proceeding fee, subdivision (b) additionally requires intent to participate in the unlawful conduct or disguise its source/nature; receiving a fee alone is insufficient.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. Felony alternative: 2, 3 or 4 years under section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Proceeds theory: knowledge of the unlawful source. Purchase theory: intent to make an unlawful purchase plus a substantial-furtherance act. The special attorney-fee intent rule must be preserved.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11370.6": "2011-04-04",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2430",
+      "2431",
+      "2432"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11379-6-e",
+    "lawCode": "HSC",
+    "code": "11379.6(e)",
+    "title": "Offering to manufacture a controlled substance",
+    "summary": "Offering to manufacture, compound, convert, produce, derive, process or prepare a scheduled controlled substance by the chemical-extraction or chemical-synthesis means in subdivision (a), with intent to carry out the offer. A completed manufacturing operation is not required. The retained statute puts this offense in (e), although CALCRIM 2331 still cites (c).",
+    "penalty": "Felony: 3, 4 or 5 years under section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. The manufacturing offense in (a) has a different 3/5/7-year term and a fine up to $50,000; those are not substituted for this offer branch. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "An offer and intent to perform the unlawful manufacture, including the required knowledge of controlled character.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11372.7": "2026-01-01",
+      "HSC:11379.6": "2016-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [
+      "2331"
+    ],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11550-e-1",
+    "lawCode": "HSC",
+    "code": "11550(e)(1)",
+    "title": "Being under the influence of specified drugs while possessing a loaded firearm",
+    "summary": "Unlawfully being under the influence of cocaine, cocaine base, heroin, methamphetamine or PCP while in immediate personal possession of a loaded, operable firearm. The statute includes a motor vehicle passenger compartment within immediate personal possession. It requires being under the influence, not merely possessing a drug; the separate armed-possession offense is section 11370.1.",
+    "penalty": "First-conviction alternatives: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison. Under (f), a second or later conviction under (e) carries 2, 3 or 4 years in state prison. Penal Code section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. Subdivision (d) permits an additional fine up to $70, subject to ability to pay. The specified deferred-entry/preguilty-plea drug-court route is unavailable for (e) under (g); this is not a blanket determination of eligibility for every other program. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Unlawful influence of one of the listed drugs and immediate personal possession of an actually loaded, operable firearm.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11550": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11366-6",
+    "lawCode": "HSC",
+    "code": "11366.6",
+    "title": "Using fortified premises for specified unlawful drug activity",
+    "summary": "Using a building, room, space or enclosure specifically designed to suppress law-enforcement entry, for selling, manufacturing or possessing for sale one of the listed drugs. The list includes cocaine/cocaine base, heroin, PCP, amphetamine, methamphetamine and LSD. This differs from a premises owner merely making property available under section 11366.5.",
+    "penalty": "Felony: 3, 4 or 5 years under section 1170(h). Terms under Penal Code section 1170(h) are ordinarily served in county jail, subject to its state-prison exclusions. Penal Code section 672 permits an additional fine up to $10,000 for a felony when no other fine is prescribed. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Use of the specially designed premises for the specified unlawful drug purpose; fortification alone does not establish every element.",
+    "supportingKeys": [
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11372.7",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11366.6": "2011-04-04",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "calcrim": [],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11366-7-b",
+    "lawCode": "HSC",
+    "code": "11366.7(b)",
+    "title": "Retail or wholesale sale of supplies for unlawful drug manufacture",
+    "summary": "A retailer or wholesaler sells a chemical, drug, laboratory apparatus or device knowing or intending that it will be used to unlawfully manufacture, compound, convert, process or prepare a controlled substance for unlawful sale or distribution. Ordinary supply sales without the required knowledge or intent are outside this offense.",
+    "penalty": "Up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison; a fine up to $25,000; or both imprisonment and the fine. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "The seller must be a retailer or wholesaler and have knowledge or intent concerning the specified unlawful manufacture for sale/distribution.",
+    "supportingKeys": [
+      "HSC:11007",
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11372.7",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11007": "1987-09-26",
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11366.7": "1995-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": []
+  },
+  {
+    "id": "ca-hsc-11370-9-a",
+    "lawCode": "HSC",
+    "code": "11370.9(a)",
+    "title": "Receiving or transacting in unlawful drug proceeds",
+    "summary": "Knowingly receiving or acquiring proceeds, or engaging in a transaction involving proceeds, known to be derived from an offense under the specified controlled-substance divisions, with intent to conceal/disguise or help conceal/disguise the specified attributes, or to avoid a state or federal reporting requirement. Under (f), the transaction or related transactions within 30 days must involve over $25,000, or the proceeds must exceed $25,000; exactly $25,000 is insufficient. Subdivision (g) excludes the specified criminal-defense advice/representation fees received by an attorney.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. State-prison alternative: 2, 3 or 4 years. A fine up to $250,000 or twice the value of the proceeds/property, whichever is greater, may be imposed alone or with imprisonment. Each violation can be separately punished. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the unlawful source or intended unlawful use, the specified act, and intent to conceal/disguise or avoid reporting. A large transaction by itself is insufficient.",
+    "supportingKeys": [
+      "HSC:11372.7",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11370.9": "1994-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "drug money laundering"
+    ]
+  },
+  {
+    "id": "ca-hsc-11370-9-b",
+    "lawCode": "HSC",
+    "code": "11370.9(b)",
+    "title": "Providing property to further an unlawful drug offense",
+    "summary": "Knowingly providing, transferring, investing, concealing, transporting, maintaining an interest in, or otherwise making available something of value known to be intended for committing or furthering a violation of the specified controlled-substance divisions, with intent to conceal/disguise or help conceal/disguise the specified attributes, or to avoid a state or federal reporting requirement. Under (f), the transaction or related transactions within 30 days must involve over $25,000, or the proceeds must exceed $25,000; exactly $25,000 is insufficient. Subdivision (g) excludes the specified criminal-defense advice/representation fees received by an attorney.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. State-prison alternative: 2, 3 or 4 years. A fine up to $250,000 or twice the value of the proceeds/property, whichever is greater, may be imposed alone or with imprisonment. Each violation can be separately punished. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the unlawful source or intended unlawful use, the specified act, and intent to conceal/disguise or avoid reporting. A large transaction by itself is insufficient.",
+    "supportingKeys": [
+      "HSC:11372.7",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11370.9": "1994-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "drug money laundering"
+    ]
+  },
+  {
+    "id": "ca-hsc-11370-9-c",
+    "lawCode": "HSC",
+    "code": "11370.9(c)",
+    "title": "Organizing transport or transfer of unlawful drug proceeds",
+    "summary": "Knowingly directing, planning, organizing, initiating, financing, managing, supervising or facilitating transport or transfer of proceeds known to be derived from an offense under the specified controlled-substance divisions, with intent to conceal/disguise or help conceal/disguise the specified attributes, or to avoid a state or federal reporting requirement. Under (f), the transaction or related transactions within 30 days must involve over $25,000, or the proceeds must exceed $25,000; exactly $25,000 is insufficient. Subdivision (g) excludes the specified criminal-defense advice/representation fees received by an attorney.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. State-prison alternative: 2, 3 or 4 years. A fine up to $250,000 or twice the value of the proceeds/property, whichever is greater, may be imposed alone or with imprisonment. Each violation can be separately punished. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the unlawful source or intended unlawful use, the specified act, and intent to conceal/disguise or avoid reporting. A large transaction by itself is insufficient.",
+    "supportingKeys": [
+      "HSC:11372.7",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11370.9": "1994-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "drug money laundering"
+    ]
+  },
+  {
+    "id": "ca-hsc-11370-9-d",
+    "lawCode": "HSC",
+    "code": "11370.9(d)",
+    "title": "Conducting a transaction designed to conceal unlawful drug proceeds",
+    "summary": "Knowingly conducting a transaction in drug proceeds that is designed, at least partly, to conceal or disguise their nature, location, source, ownership or control, with intent to conceal/disguise or help conceal/disguise the specified attributes, or to avoid a state or federal reporting requirement. Under (f), the transaction or related transactions within 30 days must involve over $25,000, or the proceeds must exceed $25,000; exactly $25,000 is insufficient. Subdivision (g) excludes the specified criminal-defense advice/representation fees received by an attorney.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. State-prison alternative: 2, 3 or 4 years. A fine up to $250,000 or twice the value of the proceeds/property, whichever is greater, may be imposed alone or with imprisonment. Each violation can be separately punished. A drug-program fee up to $150 under section 11372.7 depends on ability to pay. Adult base penalties are shown; enhancements, restitution, assessments and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowledge of the unlawful source or intended unlawful use, the specified act, and intent to conceal/disguise or avoid reporting. A large transaction by itself is insufficient.",
+    "supportingKeys": [
+      "HSC:11372.7",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11370.9": "1994-01-01",
+      "HSC:11372.7": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "drug money laundering"
+    ]
+  }
+]

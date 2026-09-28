@@ -1,0 +1,2579 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_drug_successor_not_statewide_certification",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "previousReviewSha256": "591c783adf11ae01c506a6752496c98cff910b044bf7aed861c68b37f9ef43fa",
+  "acquisitionSha256": "17c4c319f398ac9657d0a9fa7ded76bfec0b74349a5dd6d5047a319776c98a72",
+  "benchmarkSha256": "8081660cbb32e56dabd5b94a580633c18deccb93a4c3178881671e9897a62c53",
+  "sections": [
+    {
+      "key": "HSC:11358",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11358"
+      ],
+      "remainingWork": "Adult greater-than-six branch only. Under-18 and age-18-to-20 six-or-fewer branches remain outside this entry; environmental predicates require their specific facts.",
+      "versions": [
+        {
+          "versionId": "id_6f45e3bd-84a7-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "b281d3c637868930f652ec1ecb325299f18eb94f436aaac74f3e2675972951d9"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11358",
+        "versionId": "id_6f45e3bd-84a7-11ee-bcfe-9f16e66157a6",
+        "start": 0,
+        "end": 2718,
+        "text": "Each person who plants, cultivates, harvests, dries, or processes cannabis plants, or any part thereof, except as otherwise provided by law, shall be punished as follows: (a) Each person under 18 years of age who plants, cultivates, harvests, dries, or processes any cannabis plants shall be punished in the same manner provided in paragraph (1) of subdivision (b) of Section 11357. (b) Each person at least 18 years of age but less than 21 years of age who plants, cultivates, harvests, dries, or processes not more than six living cannabis plants shall be guilty of an infraction and a fine of not more than one hundred dollars ($100). (c) Each person 18 years of age or over who plants, cultivates, harvests, dries, or processes more than six living cannabis plants shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both that fine and imprisonment. (d) Notwithstanding subdivision (c), a person 18 years of age or over who plants, cultivates, harvests, dries, or processes more than six living cannabis plants, or any part thereof, except as otherwise provided by law, may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if any of the following conditions exist: (1) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code. (2) The person has two or more prior convictions under subdivision (c). (3) The offense resulted in any of the following: (A) Violation of Section 1052 of the Water Code relating to illegal diversion of water. (B) Violation of Section 13260, 13264, 13272, or 13387 of the Water Code relating to discharge of water. (C) Violation of Section 5650 or 5652 of the Fish and Game Code relating to waters of the state. (D) Violation of Section 1602 of the Fish and Game Code relating to rivers, streams, and lakes. (E) Violation of Section 374.8 of the Penal Code relating to hazardous substances or Section 25189.5, 25189.6, or 25189.7 of the Health and Safety Code relating to hazardous waste. (F) Violation of Section 2080 of the Fish and Game Code relating to endangered and threatened species or Section 3513 of the Fish and Game Code relating to the Migratory Bird Treaty Act, or Section 2000 of the Fish and Game Code relating to the unlawful taking of fish and wildlife. (G) Intentionally or with gross negligence causing substantial environmental harm to surface or ground water, public lands, or other public resources."
+      }
+    },
+    {
+      "key": "HSC:11359",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11359"
+      ],
+      "remainingWork": "Adult entry only. Under-18 cases require a separate juvenile route. Licensing, medical authorization and specific felony-trigger facts must be assessed individually.",
+      "versions": [
+        {
+          "versionId": "id_aab62661-61d2-11e7-8adc-8aa4aa845353",
+          "contentSha256": "5a2ecda1b871babc05213be62fd61e9bcd15fbe5afebf3d3518c5c5c7f87f8a7"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11359",
+        "versionId": "id_aab62661-61d2-11e7-8adc-8aa4aa845353",
+        "start": 0,
+        "end": 1665,
+        "text": "Every person who possesses for sale any cannabis, except as otherwise provided by law, shall be punished as follows: (a) Every person under the age of 18 who possesses cannabis for sale shall be punished in the same manner provided in paragraph (1) of subdivision (b) of Section 11357. (b) Every person 18 years of age or over who possesses cannabis for sale shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both such fine and imprisonment. (c) Notwithstanding subdivision (b), a person 18 years of age or over who possesses cannabis for sale may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if: (1) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code; (2) The person has two or more prior convictions under subdivision (b); or (3) The offense occurred in connection with the knowing sale or attempted sale of cannabis to a person under the age of 18 years. (d) Notwithstanding subdivision (b), a person 21 years of age or over who possesses cannabis for sale may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if the offense involves knowingly hiring, employing, or using a person 20 years of age or younger in unlawfully cultivating, transporting, carrying, selling, offering to sell, giving away, preparing for sale, or peddling any cannabis."
+      }
+    },
+    {
+      "key": "HSC:11360",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11360-a"
+      ],
+      "remainingWork": "Adult (a) entry only; (b) small-quantity infraction and under-18 route remain unpublished. Transportation must be for sale. Federal law is outside this state authorization.",
+      "versions": [
+        {
+          "versionId": "id_b17c28a3-61d2-11e7-8adc-8aa4aa845353",
+          "contentSha256": "b4b6e086030fb497fde8895bd0ce31f92419ff24a1a03e7e7b3200c409c7f82e"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11360",
+        "versionId": "id_b17c28a3-61d2-11e7-8adc-8aa4aa845353",
+        "start": 0,
+        "end": 2626,
+        "text": "(a) Except as otherwise provided by this section or as authorized by law, every person who transports, imports into this state, sells, furnishes, administers, or gives away, or offers to transport, import into this state, sell, furnish, administer, or give away, or attempts to import into this state or transport any cannabis shall be punished as follows: (1) Persons under the age of 18 years shall be punished in the same manner as provided in paragraph (1) of subdivision (b) of Section 11357. (2) Persons 18 years of age or over shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both such fine and imprisonment. (3) Notwithstanding paragraph (2), a person 18 years of age or over may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of two, three, or four years if: (A) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code; (B) The person has two or more prior convictions under paragraph (2); (C) The offense involved the knowing sale, attempted sale, or the knowing offer to sell, furnish, administer, or give away cannabis to a person under the age of 18 years; or (D) The offense involved the import, offer to import, or attempted import into this state, or the transport for sale, offer to transport for sale, or attempted transport for sale out of this state, of more than 28.5 grams of cannabis or more than four grams of concentrated cannabis. (b) Except as authorized by law, every person who gives away, offers to give away, transports, offers to transport, or attempts to transport not more than 28.5 grams of cannabis, other than concentrated cannabis, is guilty of an infraction and shall be punished by a fine of not more than one hundred dollars ($100). In any case in which a person is arrested for a violation of this subdivision and does not demand to be taken before a magistrate, that person shall be released by the arresting officer upon presentation of satisfactory evidence of identity and giving his or her written promise to appear in court, as provided in Section 853.6 of the Penal Code, and shall not be subjected to booking. (c) For purposes of this section, “transport” means to transport for sale. (d) This section does not preclude or limit prosecution for any aiding and abetting or conspiracy offenses."
+      }
+    },
+    {
+      "key": "HSC:11366.6",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11366-6"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_8324e10a-618d-11e0-8037-955a394cd808",
+          "contentSha256": "f031c0795a2a33f3e9ce6d891756175ae79dc0072119a2127bdb4747ff0fee63"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11366.6",
+        "versionId": "id_8324e10a-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 548,
+        "text": "Any person who utilizes a building, room, space, or enclosure specifically designed to suppress law enforcement entry in order to sell, manufacture, or possess for sale any amount of cocaine base as specified in paragraph (1) of subdivision (f) of Section 11054, cocaine as specified in paragraph (6) of subdivision (b) of Section 11055, heroin, phencyclidine, amphetamine, methamphetamine, or lysergic acid diethylamide shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, four, or five years."
+      }
+    },
+    {
+      "key": "HSC:11366.7",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11366-7-b"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_f5faa7c7-291f-11d9-8b50-d28ad8cc76ba",
+          "contentSha256": "14e419ff13c5af4803ff1cf50d681777322ad1b59a2776e2a037d8341e2f0d6b"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11366.7",
+        "versionId": "id_f5faa7c7-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 704,
+        "text": "(a) This section shall apply to the following: (1) Any chemical or drug. (2) Any laboratory apparatus or device. (b) Any retailer or wholesaler who sells any item in paragraph (1) or (2) of subdivision (a) with knowledge or the intent that it will be used to unlawfully manufacture, compound, convert, process, or prepare a controlled substance for unlawful sale or distribution, shall be punished by imprisonment in a county jail for not more than one year, or in the state prison, or by a fine not exceeding twenty-five thousand dollars ($25,000), or by both that imprisonment and fine. Any fine collected pursuant to this section shall be distributed as specified in Section 1463.10 of the Penal Code."
+      }
+    },
+    {
+      "key": "HSC:11366.8",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11366-8-a",
+        "ca-hsc-11366-8-b"
+      ],
+      "remainingWork": "Both principal conduct branches reviewed with the factory-equipment limitation; case-specific intent and qualifying alteration remain necessary.",
+      "versions": [
+        {
+          "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+          "contentSha256": "c8e2c1ccc1571c169dc717d5d4e82a27927dbed91d8f3d9662ecb03c17ac6a58"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11366.8",
+        "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 1494,
+        "text": "(a) Every person who possesses, uses, or controls a false compartment with the intent to store, conceal, smuggle, or transport a controlled substance within the false compartment shall be punished by imprisonment in a county jail for a term of imprisonment not to exceed one year or pursuant to subdivision (h) of Section 1170 of the Penal Code. (b) Every person who designs, constructs, builds, alters, or fabricates a false compartment for, or installs or attaches a false compartment to, a vehicle with the intent to store, conceal, smuggle, or transport a controlled substance shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months or two or three years. (c) The term “vehicle” means any of the following vehicles without regard to whether the vehicles are private or commercial, including, but not limited to, cars, trucks, buses, aircraft, boats, ships, yachts, and vessels. (d) The term “false compartment” means any box, container, space, or enclosure that is intended for use or designed for use to conceal, hide, or otherwise prevent discovery of any controlled substance within or attached to a vehicle, including, but not limited to, any of the following: (1) False, altered, or modified fuel tanks. (2) Original factory equipment of a vehicle that is modified, altered, or changed. (3) Compartment, space, or box that is added to, or fabricated, made, or created from, existing compartments, spaces, or boxes within a vehicle."
+      }
+    },
+    {
+      "key": "HSC:11370.6",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11370-6-a"
+      ],
+      "remainingWork": "Both subdivision (a) theories and (b) attorney-fee conditions are described together; no independent fee offense is created.",
+      "versions": [
+        {
+          "versionId": "id_87d7babe-618d-11e0-8037-955a394cd808",
+          "contentSha256": "855019e868efb926b3e6158281f6e2effe1eb011065eaa9507ce7a740547ac91"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11370.6",
+        "versionId": "id_87d7babe-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2035,
+        "text": "(a) Every person who possesses any moneys or negotiable instruments in excess of one hundred thousand dollars ($100,000) which have been obtained as the result of the unlawful sale, possession for sale, transportation, manufacture, offer for sale, or offer to manufacture any controlled substance listed in Section 11054, 11055, 11056, 11057, or 11058, with knowledge that the moneys or negotiable instruments have been so obtained, and any person who possesses any moneys or negotiable instruments in excess of one hundred thousand dollars ($100,000) which are intended by that person for the unlawful purchase of any controlled substance listed in Section 11054, 11055, 11056, 11057, or 11058 and who commits an act in substantial furtherance of the unlawful purchase, shall be punished by imprisonment in a county jail for a term not to exceed one year, or by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, three, or four years. (b) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, when a case charged under subdivision (a) involves an attorney who accepts a fee for representing a client in a criminal investigation or proceeding, the prosecution shall additionally be required to prove that the moneys or negotiable instruments were accepted by the attorney with the intent to participate in the unlawful conduct described in subdivision (a) or to disguise or aid in disguising the source of the funds or the nature of the criminal activity. (c) In determining the guilt or innocence of a person charged under subdivision (a), the trier of fact may consider the following in addition to any other relevant evidence: (1) The lack of gainful employment by the person charged. (2) The expert opinion of a qualified controlled substances expert as to the source of the assets. (3) The existence of documents or ledgers that indicate sales of controlled substances."
+      }
+    },
+    {
+      "key": "HSC:11370.9",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11370-9-a",
+        "ca-hsc-11370-9-b",
+        "ca-hsc-11370-9-c",
+        "ca-hsc-11370-9-d"
+      ],
+      "remainingWork": "Four conduct branches preserve shared amount, intent, fine and attorney-fee limits. This is not a federal laundering entry.",
+      "versions": [
+        {
+          "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+          "contentSha256": "7bf3e0210953c13cf5bac2856b984fda3f7094050de2ef77af9d6ce5537116b0"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11370.9",
+        "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 4173,
+        "text": "(a) It is unlawful for any person knowingly to receive or acquire proceeds, or engage in a transaction involving proceeds, known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (b) It is unlawful for any person knowingly to give, sell, transfer, trade, invest, conceal, transport, or maintain an interest in, or otherwise make available, anything of value which that person knows is intended to be used for the purpose of committing, or furthering the commission of, any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (c) It is unlawful for any person knowingly to direct, plan, organize, initiate, finance, manage, supervise, or facilitate the transportation or transfer of proceeds known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (d) It is unlawful for any person knowingly to conduct a transaction involving proceeds derived from a violation of this division or Division 10.1 when the transaction is designed in whole or in part to conceal or disguise the nature, location, source, ownership, or control of the proceeds known to be derived from a violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (e) A violation of this section shall be punished by imprisonment in a county jail for not more than one year or in the state prison for a period of two, three, or four years, by a fine of not more than two hundred fifty thousand dollars ($250,000) or twice the value of the proceeds or property involved in the violation, whichever is greater, or by both that imprisonment and fine. Notwithstanding any other provision of law, each violation of this section shall constitute a separate, punishable offense without limitation. (f) This section shall apply only to a transaction, or series of related transactions within a 30-day period, involving over twenty-five thousand dollars ($25,000) or to proceeds of a value exceeding twenty-five thousand dollars ($25,000). (g) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, this section is not intended to apply to the receipt of, or a related transaction involving, a fee by an attorney for the purpose of providing advice or representing a person in a criminal investigation or prosecution. (h) For the purposes of this section, the following terms have the following meanings: (1) “Proceeds” means property acquired or derived directly or indirectly from, produced through, or realized through any violation of this division or Division 10.1. (2) “Transaction” includes a purchase, sale, trade, loan, pledge, investment, gift, transfer, transmission, delivery, deposit, withdrawal, payment, electronic, magnetic, or manual transfer between accounts, exchange of currency, extension of credit, purchase or sale of any monetary instrument, or any other acquisition or disposition of property by whatever means effected. (3) “Represented by a law enforcement officer” means any representation of fact made by a peace officer as defined in Section 7 of the Penal Code, or a federal officer described in subsection (e) of Sections 1956 and 1957 of Title 18 of the United States Code, or by another person at the direction of, or with the approval of, that peace officer or federal officer."
+      }
+    },
+    {
+      "key": "HSC:11379.6",
+      "previousStatus": "existing_entry_not_family_completion",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11379-6-e"
+      ],
+      "remainingWork": "Adds (e) offers to the earlier manufacturing entry. CALCRIM 2331 retains an older (c) citation; the statute controls. No separate aggravating-factor charge is created.",
+      "versions": [
+        {
+          "versionId": "id_e4b7ec3d-a500-11e5-8e4d-9850dceaeb4c",
+          "contentSha256": "11459cc8e1437d5f6dbf050c066085a284f59ff4419edd4e16d0d41d43f7d691"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11379.6",
+        "versionId": "id_e4b7ec3d-a500-11e5-8e4d-9850dceaeb4c",
+        "start": 0,
+        "end": 2087,
+        "text": "(a) Except as otherwise provided by law, every person who manufactures, compounds, converts, produces, derives, processes, or prepares, either directly or indirectly by chemical extraction or independently by means of chemical synthesis, any controlled substance specified in Section 11054, 11055, 11056, 11057, or 11058 shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, five, or seven years and by a fine not exceeding fifty thousand dollars ($50,000). (b) Except when an enhancement pursuant to Section 11379.7 is pled and proved, the fact that a person under 16 years of age resided in a structure in which a violation of this section involving methamphetamine occurred shall be considered a factor in aggravation by the sentencing court. (c) Except when an enhancement pursuant to Section 11379.7 is pled and proved, the fact that a violation of this section involving methamphetamine occurred within 200 feet of an occupied residence or any structure where another person was present at the time the offense was committed may be considered a factor in aggravation by the sentencing court. (d) The fact that a violation of this section involving the use of a volatile solvent to chemically extract concentrated cannabis occurred within 300 feet of an occupied residence or any structure where another person was present at the time the offense was committed may be considered a factor in aggravation by the sentencing court. (e) Except as otherwise provided by law, every person who offers to perform an act which is punishable under subdivision (a) shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, four, or five years. (f) All fines collected pursuant to subdivision (a) shall be transferred to the State Treasury for deposit in the Clandestine Drug Lab Clean-up Account, as established by Section 5 of Chapter 1295 of the Statutes of 1987. The transmission to the State Treasury shall be carried out in the same manner as fines collected for the state by the county."
+      }
+    },
+    {
+      "key": "HSC:11383",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11383"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_a62ee946-618d-11e0-8037-955a394cd808",
+          "contentSha256": "4bd9a40e17107e9d8798b95bb4c3b9689892e25d311e401c75c885760a15cf39"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11383",
+        "versionId": "id_a62ee946-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2070,
+        "text": "(a) Any person who possesses at the same time any of the following combinations, a combination product thereof, or possesses any compound or mixture containing the chemicals listed in the following combinations, with the intent to manufacture phencyclidine (PCP) or any of its analogs specified in subdivision (d) of Section 11054 or subdivision (e) of Section 11055, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Piperidine and cyclohexanone. (2) Pyrrolidine and cyclohexanone. (3) Morpholine and cyclohexanone. (b) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section, with the intent to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Phencyclidine (PCP). (2) Any analog of PCP specified in subdivision (d) of Section 11054, or in subdivision (e) of Section 11055. (c) Any person who possesses any compound or mixture containing piperidine, cyclohexanone, pyrrolidine, morpholine, 1-phenylcyclohexylamine (PCA), 1-piperidinocyclohexanecarbonitrile (PCC), or phenylmagnesium bromide (PMB) with the intent to manufacture phencyclidine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (d) Any person who possesses immediate precursors sufficient for the manufacture of piperidine, cyclohexanone, pyrrolidine, morpholine, or phenylmagnesium bromide (PMB) with the intent to manufacture phencyclidine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (e) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "key": "HSC:11383.5",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11383-5"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_a8231828-618d-11e0-8037-955a394cd808",
+          "contentSha256": "655518648e2a83129772c7518bc300db7511fe543d4466387c09992b69cb7740"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11383.5",
+        "versionId": "id_a8231828-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 4509,
+        "text": "(a) Any person who possesses both methylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to manufacture methamphetamine, or who possesses both ethylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to manufacture N-ethylamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (b) (1) Any person who, with the intent to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055, possesses ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses a substance containing ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses at the same time any of the following, or a combination product thereof, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (A) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus hydriodic acid. (B) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, thionyl chloride and hydrogen gas. (C) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus phosphorus pentachloride and hydrogen gas. (D) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, chloroephedrine and chloropseudoephedrine, or phenylpropanolamine, plus any reducing agent. (2) Any person who, with the intent to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055, possesses hydriodic acid or a reducing agent or any product containing hydriodic acid or a reducing agent is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (c) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section, with the intent to manufacture any of the following controlled substances, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Methamphetamine. (2) Any analog of methamphetamine specified in subdivision (d) of Section 11055. (3) N-ethylamphetamine. (d) Any person who possesses immediate precursors sufficient for the manufacture of methylamine, ethylamine, phenyl-2-propanone, ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (e) Any person who possesses essential chemicals sufficient to manufacture hydriodic acid or a reducing agent, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (f) Any person who possesses any compound or mixture containing ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (g) For purposes of this section, a “reducing agent” for the purposes of manufacturing methamphetamine means an agent that causes reduction to occur by either donating a hydrogen atom to an organic compound or by removing an oxygen atom from an organic compound. (h) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "key": "HSC:11383.6",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11383-6"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_ab5da9ba-618d-11e0-8037-955a394cd808",
+          "contentSha256": "737ba1229cbb311b497b9e2a5779bbd63e944f7f7f9adc5c797ae6bb56b34982"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11383.6",
+        "versionId": "id_ab5da9ba-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2594,
+        "text": "(a) Any person who possesses at the same time any of the following combinations, a combination product thereof, or possesses any compound or mixture containing the chemicals listed in the following combinations, with the intent to sell, transfer, or otherwise furnish those chemicals, combinations, or mixtures to another person with the knowledge that they will be used to manufacture phencyclidine (PCP) or any of its analogs specified in subdivision (d) of Section 11054 or subdivision (e) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Piperidine and cyclohexanone. (2) Pyrrolidine and cyclohexanone. (3) Morpholine and cyclohexanone. (b) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section with the intent to sell, transfer, or otherwise furnish the isomer to another person with the knowledge that they will be used to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Phencyclidine (PCP). (2) Any analog of PCP specified in subdivision (d) of Section 11054, or in subdivision (e) of Section 11055. (c) Any person who possesses any compound or mixture containing piperidine, cyclohexanone, pyrrolidine, morpholine, 1-phenylcyclohexylamine (PCA), 1-piperidinocyclohexanecarbonitrile (PCC), or phenylmagnesium bromide (PMB) with the intent to sell, transfer, or otherwise furnish the compound or mixture to another person with the knowledge that it will be used to manufacture phencyclidine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (d) Any person who possesses immediate precursors sufficient for the manufacture of piperidine, cyclohexanone, pyrrolidine, morpholine, or phenylmagnesium bromide (PMB) with the intent to sell, transfer or otherwise furnish the immediate precursors to another person with the knowledge that they will be used to manufacture phencyclidine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (e) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "key": "HSC:11383.7",
+      "previousStatus": "substantive_research_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11383-7"
+      ],
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "versions": [
+        {
+          "versionId": "id_ad4e562c-618d-11e0-8037-955a394cd808",
+          "contentSha256": "846e8f072a199fd7bc6ff435a0d8b8df8e1b9954736af4806fe243281d66bf23"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11383.7",
+        "versionId": "id_ad4e562c-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 5518,
+        "text": "(a) Any person who possesses both methylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine, or who possesses both ethylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (b) (1) Any person who possesses ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses a substance containing ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses at the same time any of the following, or a combination product thereof, with the intent to sell, transfer, or otherwise furnish those chemicals, substances, or products to another person with the knowledge that they will be used to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (A) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus hydriodic acid. (B) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, thionyl chloride and hydrogen gas. (C) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus phosphorus pentachloride and hydrogen gas. (D) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, chloroephedrine and chloropseudoephedrine, or phenylpropanolamine, plus any reducing agent. (2) Any person who possesses hydriodic acid or a reducing agent or any product containing hydriodic acid or a reducing agent with the intent to sell, transfer, or otherwise furnish that chemical, product, or substance to another person with the knowledge that they will be used to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (c) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section with the intent to sell, transfer, or otherwise furnish any of the compounds to another person with the knowledge that they will be used to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Methamphetamine. (2) Any analog of methamphetamine specified in subdivision (d) of Section 11055. (3) N-ethylamphetamine. (d) Any person who possesses immediate precursors sufficient for the manufacture of methylamine, ethylamine, phenyl-2-propanone, ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to sell, transfer, or otherwise furnish these substances to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (e) Any person who possesses essential chemicals sufficient to manufacture hydriodic acid or a reducing agent with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (f) Any person who possesses any compound or mixture containing ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to sell, transfer, or otherwise furnish that compound or mixture to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (g) For purposes of this section, a “reducing agent” for the purposes of manufacturing methamphetamine means an agent that causes reduction to occur by either donating a hydrogen atom to an organic compound or by removing an oxygen atom from an organic compound. (h) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "key": "HSC:11550",
+      "previousStatus": "addition_branches_reviewed_other_branches_open",
+      "status": "bounded_successor_branches_reviewed",
+      "additionIds": [
+        "ca-hsc-11550-e-1"
+      ],
+      "remainingWork": "Adds armed (e)(1), with (f) repeat punishment, to the previous (a) entry. Drug use, possession and influence are not interchangeable.",
+      "versions": [
+        {
+          "versionId": "id_4c793c03-87c8-11e4-8ac3-c8fece1f812a",
+          "contentSha256": "ea50b869c62e92cb913490325d90ad9590c24910d929d4c0299ce782d8bbeb4f"
+        }
+      ],
+      "evidence": {
+        "key": "HSC:11550",
+        "versionId": "id_4c793c03-87c8-11e4-8ac3-c8fece1f812a",
+        "start": 0,
+        "end": 4712,
+        "text": "(a) A person shall not use, or be under the influence of any controlled substance that is (1) specified in subdivision (b), (c), or (e), or paragraph (1) of subdivision (f) of Section 11054, specified in paragraph (14), (15), (21), (22), or (23) of subdivision (d) of Section 11054, specified in subdivision (b) or (c) of Section 11055, or specified in paragraph (1) or (2) of subdivision (d) or in paragraph (3) of subdivision (e) of Section 11055, or (2) a narcotic drug classified in Schedule III, IV, or V, except when administered by or under the direction of a person licensed by the state to dispense, prescribe, or administer controlled substances. It shall be the burden of the defense to show that it comes within the exception. A person convicted of violating this subdivision is guilty of a misdemeanor and shall be sentenced to serve a term of not more than one year in a county jail. The court may also place a person convicted under this subdivision on probation for a period not to exceed five years. (b) (1) A person who is convicted of violating subdivision (a) when the offense occurred within seven years of that person being convicted of two or more separate violations of that subdivision, and refuses to complete a licensed drug rehabilitation program offered by the court pursuant to subdivision (c), shall be punished by imprisonment in a county jail for not less than 180 days nor more than one year. In no event does the court have the power to absolve a person convicted of a violation of subdivision (a) who is punishable under this subdivision from the obligation of spending at least 180 days in confinement in a county jail unless there are no licensed drug rehabilitation programs reasonably available. (2) For the purpose of this section, a drug rehabilitation program is not reasonably available unless the person is not required to pay more than the court determines that he or she is reasonably able to pay in order to participate in the program. (c) (1) The court may, when it would be in the interest of justice, permit a person convicted of a violation of subdivision (a) punishable under subdivision (a) or (b) to complete a licensed drug rehabilitation program in lieu of part or all of the imprisonment in a county jail. As a condition of sentencing, the court may require the offender to pay all or a portion of the drug rehabilitation program. (2) In order to alleviate jail overcrowding and to provide recidivist offenders with a reasonable opportunity to seek rehabilitation pursuant to this subdivision, counties are encouraged to include provisions to augment licensed drug rehabilitation programs in their substance abuse proposals and applications submitted to the state for federal and state drug abuse funds. (d) In addition to any fine assessed under this section, the judge may assess a fine not to exceed seventy dollars ($70) against a person who violates this section, with the proceeds of this fine to be used in accordance with Section 1463.23 of the Penal Code. The court shall, however, take into consideration the defendant’s ability to pay, and a defendant shall not be denied probation because of his or her inability to pay the fine permitted under this subdivision. (e) (1) Notwithstanding subdivisions (a) and (b) or any other law, a person who is unlawfully under the influence of cocaine, cocaine base, heroin, methamphetamine, or phencyclidine while in the immediate personal possession of a loaded, operable firearm is guilty of a public offense punishable by imprisonment in a county jail for not exceeding one year or in state prison. (2) As used in this subdivision “immediate personal possession” includes, but is not limited to, the interior passenger compartment of a motor vehicle. (f) Every person who violates subdivision (e) is punishable upon the second and each subsequent conviction by imprisonment in the state prison for two, three, or four years. (g) This section does not prevent deferred entry of judgment or a defendant’s participation in a preguilty plea drug court program under Chapter 2.5 (commencing with Section 1000) of Title 6 of Part 2 of the Penal Code unless the person is charged with violating subdivision (b) or (c) of Section 243 of the Penal Code. A person charged with violating this section by being under the influence of any controlled substance which is specified in paragraph (21), (22), or (23) of subdivision (d) of Section 11054 or in paragraph (3) of subdivision (e) of Section 11055 and with violating either subdivision (b) or (c) of Section 243 of the Penal Code or with a violation of subdivision (e) shall be ineligible for deferred entry of judgment or a preguilty plea drug court program."
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "ca-hsc-11358",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f79ab3b5c3de82497dc1160bfd9c9ddde50b65870c2a6e8b195e033735e0b124",
+      "remainingWork": "Adult greater-than-six branch only. Under-18 and age-18-to-20 six-or-fewer branches remain outside this entry; environmental predicates require their specific facts.",
+      "sources": [
+        {
+          "key": "BPC:26032",
+          "versions": [
+            {
+              "versionId": "id_f79b9351-5dd3-11e7-a5be-8a65cfa92785",
+              "contentSha256": "374bf337c8acbc75f9a14e6a837a62a2a4b9f755df67c905889a8201f9ce5d43"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11006.5",
+          "versions": [
+            {
+              "versionId": "id_15dec702-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "f8e5511caa379bc9475232ba9fad3ffa6ee30dc50d02146c7032dbfa2c8bf04a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018",
+          "versions": [
+            {
+              "versionId": "id_16956cd4-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "c65dd118c0b45d08b666b22ce431ee316a53fdcb94b470ad4d113964c29f2943"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018.5",
+          "versions": [
+            {
+              "versionId": "id_17f91b88-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "12bb07f04355377091f69e37bd800ff36db869963f274960ca5a97abd63e5518"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11358",
+          "versions": [
+            {
+              "versionId": "id_6f45e3bd-84a7-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "b281d3c637868930f652ec1ecb325299f18eb94f436aaac74f3e2675972951d9"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.1",
+          "versions": [
+            {
+              "versionId": "id_c8c1cceb-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "be7ff3b0738161e111a95ca3f64b0406098c9c19323e5b955927612fffee5d58"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.3",
+          "versions": [
+            {
+              "versionId": "id_cdbcac1f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "98ab9f584d6619f55219783f671627e2f92240fa88661242f111f928459aca5f"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.5",
+          "versions": [
+            {
+              "versionId": "id_f5da9c65-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "5fad81a47db2b95c24d4778d80ecdff2b06a646d413e5ce4a52c3566f9aa21f6"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.7",
+          "versions": [
+            {
+              "versionId": "id_3d5c389e-e4ef-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "4954fdddae7b869ce5a3d0adde1f4a440f3fcd684c6018a9fb2cf1845d2be07d"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.765",
+          "versions": [
+            {
+              "versionId": "id_e9e9597b-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "5072ad4efc93f21ebd85fedf3591f5c1ea127dadb5e3f67c5cd5ccca7272f132"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.77",
+          "versions": [
+            {
+              "versionId": "id_f74f5f6f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "b5d92e10c89c0b0bc5110c4b978cf1493fbc2dabd1016781787b3f54b86ff78a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11358",
+        "versionId": "id_6f45e3bd-84a7-11ee-bcfe-9f16e66157a6",
+        "start": 0,
+        "end": 2718,
+        "text": "Each person who plants, cultivates, harvests, dries, or processes cannabis plants, or any part thereof, except as otherwise provided by law, shall be punished as follows: (a) Each person under 18 years of age who plants, cultivates, harvests, dries, or processes any cannabis plants shall be punished in the same manner provided in paragraph (1) of subdivision (b) of Section 11357. (b) Each person at least 18 years of age but less than 21 years of age who plants, cultivates, harvests, dries, or processes not more than six living cannabis plants shall be guilty of an infraction and a fine of not more than one hundred dollars ($100). (c) Each person 18 years of age or over who plants, cultivates, harvests, dries, or processes more than six living cannabis plants shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both that fine and imprisonment. (d) Notwithstanding subdivision (c), a person 18 years of age or over who plants, cultivates, harvests, dries, or processes more than six living cannabis plants, or any part thereof, except as otherwise provided by law, may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if any of the following conditions exist: (1) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code. (2) The person has two or more prior convictions under subdivision (c). (3) The offense resulted in any of the following: (A) Violation of Section 1052 of the Water Code relating to illegal diversion of water. (B) Violation of Section 13260, 13264, 13272, or 13387 of the Water Code relating to discharge of water. (C) Violation of Section 5650 or 5652 of the Fish and Game Code relating to waters of the state. (D) Violation of Section 1602 of the Fish and Game Code relating to rivers, streams, and lakes. (E) Violation of Section 374.8 of the Penal Code relating to hazardous substances or Section 25189.5, 25189.6, or 25189.7 of the Health and Safety Code relating to hazardous waste. (F) Violation of Section 2080 of the Fish and Game Code relating to endangered and threatened species or Section 3513 of the Fish and Game Code relating to the Migratory Bird Treaty Act, or Section 2000 of the Fish and Game Code relating to the unlawful taking of fish and wildlife. (G) Intentionally or with gross negligence causing substantial environmental harm to surface or ground water, public lands, or other public resources."
+      }
+    },
+    {
+      "id": "ca-hsc-11359",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "6f2520df32b37f268218c0585b11910ad331ebb96fba4aaaccb5edeffe7cece0",
+      "remainingWork": "Adult entry only. Under-18 cases require a separate juvenile route. Licensing, medical authorization and specific felony-trigger facts must be assessed individually.",
+      "sources": [
+        {
+          "key": "BPC:26032",
+          "versions": [
+            {
+              "versionId": "id_f79b9351-5dd3-11e7-a5be-8a65cfa92785",
+              "contentSha256": "374bf337c8acbc75f9a14e6a837a62a2a4b9f755df67c905889a8201f9ce5d43"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11006.5",
+          "versions": [
+            {
+              "versionId": "id_15dec702-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "f8e5511caa379bc9475232ba9fad3ffa6ee30dc50d02146c7032dbfa2c8bf04a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018",
+          "versions": [
+            {
+              "versionId": "id_16956cd4-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "c65dd118c0b45d08b666b22ce431ee316a53fdcb94b470ad4d113964c29f2943"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018.5",
+          "versions": [
+            {
+              "versionId": "id_17f91b88-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "12bb07f04355377091f69e37bd800ff36db869963f274960ca5a97abd63e5518"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11359",
+          "versions": [
+            {
+              "versionId": "id_aab62661-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "5a2ecda1b871babc05213be62fd61e9bcd15fbe5afebf3d3518c5c5c7f87f8a7"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.1",
+          "versions": [
+            {
+              "versionId": "id_c8c1cceb-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "be7ff3b0738161e111a95ca3f64b0406098c9c19323e5b955927612fffee5d58"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.3",
+          "versions": [
+            {
+              "versionId": "id_cdbcac1f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "98ab9f584d6619f55219783f671627e2f92240fa88661242f111f928459aca5f"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.5",
+          "versions": [
+            {
+              "versionId": "id_f5da9c65-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "5fad81a47db2b95c24d4778d80ecdff2b06a646d413e5ce4a52c3566f9aa21f6"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.7",
+          "versions": [
+            {
+              "versionId": "id_3d5c389e-e4ef-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "4954fdddae7b869ce5a3d0adde1f4a440f3fcd684c6018a9fb2cf1845d2be07d"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.765",
+          "versions": [
+            {
+              "versionId": "id_e9e9597b-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "5072ad4efc93f21ebd85fedf3591f5c1ea127dadb5e3f67c5cd5ccca7272f132"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.77",
+          "versions": [
+            {
+              "versionId": "id_f74f5f6f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "b5d92e10c89c0b0bc5110c4b978cf1493fbc2dabd1016781787b3f54b86ff78a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372",
+          "versions": [
+            {
+              "versionId": "id_76bf5783-84a7-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "d64685ed504a284710e3a4ac1eef7ca788239faea1d94dd3d9916d3c59687cc6"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11359",
+        "versionId": "id_aab62661-61d2-11e7-8adc-8aa4aa845353",
+        "start": 0,
+        "end": 1665,
+        "text": "Every person who possesses for sale any cannabis, except as otherwise provided by law, shall be punished as follows: (a) Every person under the age of 18 who possesses cannabis for sale shall be punished in the same manner provided in paragraph (1) of subdivision (b) of Section 11357. (b) Every person 18 years of age or over who possesses cannabis for sale shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both such fine and imprisonment. (c) Notwithstanding subdivision (b), a person 18 years of age or over who possesses cannabis for sale may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if: (1) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code; (2) The person has two or more prior convictions under subdivision (b); or (3) The offense occurred in connection with the knowing sale or attempted sale of cannabis to a person under the age of 18 years. (d) Notwithstanding subdivision (b), a person 21 years of age or over who possesses cannabis for sale may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code if the offense involves knowingly hiring, employing, or using a person 20 years of age or younger in unlawfully cultivating, transporting, carrying, selling, offering to sell, giving away, preparing for sale, or peddling any cannabis."
+      }
+    },
+    {
+      "id": "ca-hsc-11360-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9a53ca8628ee6b81bf2d910055e03ee918edada8829b247e61d0465628bb43b0",
+      "remainingWork": "Adult (a) entry only; (b) small-quantity infraction and under-18 route remain unpublished. Transportation must be for sale. Federal law is outside this state authorization.",
+      "sources": [
+        {
+          "key": "BPC:26032",
+          "versions": [
+            {
+              "versionId": "id_f79b9351-5dd3-11e7-a5be-8a65cfa92785",
+              "contentSha256": "374bf337c8acbc75f9a14e6a837a62a2a4b9f755df67c905889a8201f9ce5d43"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11006.5",
+          "versions": [
+            {
+              "versionId": "id_15dec702-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "f8e5511caa379bc9475232ba9fad3ffa6ee30dc50d02146c7032dbfa2c8bf04a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018",
+          "versions": [
+            {
+              "versionId": "id_16956cd4-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "c65dd118c0b45d08b666b22ce431ee316a53fdcb94b470ad4d113964c29f2943"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11018.5",
+          "versions": [
+            {
+              "versionId": "id_17f91b88-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "12bb07f04355377091f69e37bd800ff36db869963f274960ca5a97abd63e5518"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11360",
+          "versions": [
+            {
+              "versionId": "id_b17c28a3-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "b4b6e086030fb497fde8895bd0ce31f92419ff24a1a03e7e7b3200c409c7f82e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.1",
+          "versions": [
+            {
+              "versionId": "id_c8c1cceb-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "be7ff3b0738161e111a95ca3f64b0406098c9c19323e5b955927612fffee5d58"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.3",
+          "versions": [
+            {
+              "versionId": "id_cdbcac1f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "98ab9f584d6619f55219783f671627e2f92240fa88661242f111f928459aca5f"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.5",
+          "versions": [
+            {
+              "versionId": "id_f5da9c65-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "5fad81a47db2b95c24d4778d80ecdff2b06a646d413e5ce4a52c3566f9aa21f6"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.7",
+          "versions": [
+            {
+              "versionId": "id_3d5c389e-e4ef-11e7-99d3-2f570f4f10eb",
+              "contentSha256": "4954fdddae7b869ce5a3d0adde1f4a440f3fcd684c6018a9fb2cf1845d2be07d"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.765",
+          "versions": [
+            {
+              "versionId": "id_e9e9597b-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "5072ad4efc93f21ebd85fedf3591f5c1ea127dadb5e3f67c5cd5ccca7272f132"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11362.77",
+          "versions": [
+            {
+              "versionId": "id_f74f5f6f-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "b5d92e10c89c0b0bc5110c4b978cf1493fbc2dabd1016781787b3f54b86ff78a"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372",
+          "versions": [
+            {
+              "versionId": "id_76bf5783-84a7-11ee-bcfe-9f16e66157a6",
+              "contentSha256": "d64685ed504a284710e3a4ac1eef7ca788239faea1d94dd3d9916d3c59687cc6"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11360",
+        "versionId": "id_b17c28a3-61d2-11e7-8adc-8aa4aa845353",
+        "start": 0,
+        "end": 2626,
+        "text": "(a) Except as otherwise provided by this section or as authorized by law, every person who transports, imports into this state, sells, furnishes, administers, or gives away, or offers to transport, import into this state, sell, furnish, administer, or give away, or attempts to import into this state or transport any cannabis shall be punished as follows: (1) Persons under the age of 18 years shall be punished in the same manner as provided in paragraph (1) of subdivision (b) of Section 11357. (2) Persons 18 years of age or over shall be punished by imprisonment in a county jail for a period of not more than six months or by a fine of not more than five hundred dollars ($500), or by both such fine and imprisonment. (3) Notwithstanding paragraph (2), a person 18 years of age or over may be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of two, three, or four years if: (A) The person has one or more prior convictions for an offense specified in clause (iv) of subparagraph (C) of paragraph (2) of subdivision (e) of Section 667 of the Penal Code or for an offense requiring registration pursuant to subdivision (c) of Section 290 of the Penal Code; (B) The person has two or more prior convictions under paragraph (2); (C) The offense involved the knowing sale, attempted sale, or the knowing offer to sell, furnish, administer, or give away cannabis to a person under the age of 18 years; or (D) The offense involved the import, offer to import, or attempted import into this state, or the transport for sale, offer to transport for sale, or attempted transport for sale out of this state, of more than 28.5 grams of cannabis or more than four grams of concentrated cannabis. (b) Except as authorized by law, every person who gives away, offers to give away, transports, offers to transport, or attempts to transport not more than 28.5 grams of cannabis, other than concentrated cannabis, is guilty of an infraction and shall be punished by a fine of not more than one hundred dollars ($100). In any case in which a person is arrested for a violation of this subdivision and does not demand to be taken before a magistrate, that person shall be released by the arresting officer upon presentation of satisfactory evidence of identity and giving his or her written promise to appear in court, as provided in Section 853.6 of the Penal Code, and shall not be subjected to booking. (c) For purposes of this section, “transport” means to transport for sale. (d) This section does not preclude or limit prosecution for any aiding and abetting or conspiracy offenses."
+      }
+    },
+    {
+      "id": "ca-hsc-11383",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b0d2f1e0163fff3f6d45ba34ba5ea0b3c447072d3a180cd99fbd5021d51d775b",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11383",
+          "versions": [
+            {
+              "versionId": "id_a62ee946-618d-11e0-8037-955a394cd808",
+              "contentSha256": "4bd9a40e17107e9d8798b95bb4c3b9689892e25d311e401c75c885760a15cf39"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11383",
+        "versionId": "id_a62ee946-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2070,
+        "text": "(a) Any person who possesses at the same time any of the following combinations, a combination product thereof, or possesses any compound or mixture containing the chemicals listed in the following combinations, with the intent to manufacture phencyclidine (PCP) or any of its analogs specified in subdivision (d) of Section 11054 or subdivision (e) of Section 11055, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Piperidine and cyclohexanone. (2) Pyrrolidine and cyclohexanone. (3) Morpholine and cyclohexanone. (b) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section, with the intent to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Phencyclidine (PCP). (2) Any analog of PCP specified in subdivision (d) of Section 11054, or in subdivision (e) of Section 11055. (c) Any person who possesses any compound or mixture containing piperidine, cyclohexanone, pyrrolidine, morpholine, 1-phenylcyclohexylamine (PCA), 1-piperidinocyclohexanecarbonitrile (PCC), or phenylmagnesium bromide (PMB) with the intent to manufacture phencyclidine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (d) Any person who possesses immediate precursors sufficient for the manufacture of piperidine, cyclohexanone, pyrrolidine, morpholine, or phenylmagnesium bromide (PMB) with the intent to manufacture phencyclidine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (e) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "id": "ca-hsc-11383-5",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9aafb3fdbe9cd98ee19874143f5a4959e90435319a3abc1acdd29a8c577457f0",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11383.5",
+          "versions": [
+            {
+              "versionId": "id_a8231828-618d-11e0-8037-955a394cd808",
+              "contentSha256": "655518648e2a83129772c7518bc300db7511fe543d4466387c09992b69cb7740"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11383.5",
+        "versionId": "id_a8231828-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 4509,
+        "text": "(a) Any person who possesses both methylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to manufacture methamphetamine, or who possesses both ethylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to manufacture N-ethylamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (b) (1) Any person who, with the intent to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055, possesses ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses a substance containing ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses at the same time any of the following, or a combination product thereof, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (A) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus hydriodic acid. (B) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, thionyl chloride and hydrogen gas. (C) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus phosphorus pentachloride and hydrogen gas. (D) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, chloroephedrine and chloropseudoephedrine, or phenylpropanolamine, plus any reducing agent. (2) Any person who, with the intent to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055, possesses hydriodic acid or a reducing agent or any product containing hydriodic acid or a reducing agent is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (c) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section, with the intent to manufacture any of the following controlled substances, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years: (1) Methamphetamine. (2) Any analog of methamphetamine specified in subdivision (d) of Section 11055. (3) N-ethylamphetamine. (d) Any person who possesses immediate precursors sufficient for the manufacture of methylamine, ethylamine, phenyl-2-propanone, ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (e) Any person who possesses essential chemicals sufficient to manufacture hydriodic acid or a reducing agent, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (f) Any person who possesses any compound or mixture containing ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to manufacture methamphetamine, is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years. (g) For purposes of this section, a “reducing agent” for the purposes of manufacturing methamphetamine means an agent that causes reduction to occur by either donating a hydrogen atom to an organic compound or by removing an oxygen atom from an organic compound. (h) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "id": "ca-hsc-11383-6",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "746f1e3b18e83e8096a4bf4341bd26b720ac8c1cae511f8ad503e218af4d6db9",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11383.6",
+          "versions": [
+            {
+              "versionId": "id_ab5da9ba-618d-11e0-8037-955a394cd808",
+              "contentSha256": "737ba1229cbb311b497b9e2a5779bbd63e944f7f7f9adc5c797ae6bb56b34982"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11383.6",
+        "versionId": "id_ab5da9ba-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2594,
+        "text": "(a) Any person who possesses at the same time any of the following combinations, a combination product thereof, or possesses any compound or mixture containing the chemicals listed in the following combinations, with the intent to sell, transfer, or otherwise furnish those chemicals, combinations, or mixtures to another person with the knowledge that they will be used to manufacture phencyclidine (PCP) or any of its analogs specified in subdivision (d) of Section 11054 or subdivision (e) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Piperidine and cyclohexanone. (2) Pyrrolidine and cyclohexanone. (3) Morpholine and cyclohexanone. (b) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section with the intent to sell, transfer, or otherwise furnish the isomer to another person with the knowledge that they will be used to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Phencyclidine (PCP). (2) Any analog of PCP specified in subdivision (d) of Section 11054, or in subdivision (e) of Section 11055. (c) Any person who possesses any compound or mixture containing piperidine, cyclohexanone, pyrrolidine, morpholine, 1-phenylcyclohexylamine (PCA), 1-piperidinocyclohexanecarbonitrile (PCC), or phenylmagnesium bromide (PMB) with the intent to sell, transfer, or otherwise furnish the compound or mixture to another person with the knowledge that it will be used to manufacture phencyclidine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (d) Any person who possesses immediate precursors sufficient for the manufacture of piperidine, cyclohexanone, pyrrolidine, morpholine, or phenylmagnesium bromide (PMB) with the intent to sell, transfer or otherwise furnish the immediate precursors to another person with the knowledge that they will be used to manufacture phencyclidine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (e) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "id": "ca-hsc-11383-7",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f72b445b9b8a3b51038f91b8178a8867e80ddd0343232f2bae8f57ba2ade9873",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11383.7",
+          "versions": [
+            {
+              "versionId": "id_ad4e562c-618d-11e0-8037-955a394cd808",
+              "contentSha256": "846e8f072a199fd7bc6ff435a0d8b8df8e1b9954736af4806fe243281d66bf23"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11383.7",
+        "versionId": "id_ad4e562c-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 5518,
+        "text": "(a) Any person who possesses both methylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine, or who possesses both ethylamine and phenyl-2-propanone (phenylacetone) at the same time with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (b) (1) Any person who possesses ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses a substance containing ephedrine or pseudoephedrine, or any salts, isomers, or salts of isomers of ephedrine or pseudoephedrine, or who possesses at the same time any of the following, or a combination product thereof, with the intent to sell, transfer, or otherwise furnish those chemicals, substances, or products to another person with the knowledge that they will be used to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (A) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus hydriodic acid. (B) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, thionyl chloride and hydrogen gas. (C) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, or phenylpropanolamine, plus phosphorus pentachloride and hydrogen gas. (D) Ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, N-methylpseudoephedrine, N-ethylpseudoephedrine, chloroephedrine and chloropseudoephedrine, or phenylpropanolamine, plus any reducing agent. (2) Any person who possesses hydriodic acid or a reducing agent or any product containing hydriodic acid or a reducing agent with the intent to sell, transfer, or otherwise furnish that chemical, product, or substance to another person with the knowledge that they will be used to manufacture methamphetamine or any of its analogs specified in subdivision (d) of Section 11055 is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (c) Any person who possesses the optical, positional, or geometric isomer of any of the compounds listed in this section with the intent to sell, transfer, or otherwise furnish any of the compounds to another person with the knowledge that they will be used to manufacture these controlled substances is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years: (1) Methamphetamine. (2) Any analog of methamphetamine specified in subdivision (d) of Section 11055. (3) N-ethylamphetamine. (d) Any person who possesses immediate precursors sufficient for the manufacture of methylamine, ethylamine, phenyl-2-propanone, ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to sell, transfer, or otherwise furnish these substances to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (e) Any person who possesses essential chemicals sufficient to manufacture hydriodic acid or a reducing agent with the intent to sell, transfer, or otherwise furnish those chemicals to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (f) Any person who possesses any compound or mixture containing ephedrine, pseudoephedrine, norpseudoephedrine, N-methylephedrine, N-ethylephedrine, phenylpropanolamine, hydriodic acid or a reducing agent, thionyl chloride, or phosphorus pentachloride, with the intent to sell, transfer, or otherwise furnish that compound or mixture to another person with the knowledge that they will be used to manufacture methamphetamine is guilty of a felony and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, two, or three years. (g) For purposes of this section, a “reducing agent” for the purposes of manufacturing methamphetamine means an agent that causes reduction to occur by either donating a hydrogen atom to an organic compound or by removing an oxygen atom from an organic compound. (h) This section does not apply to drug manufacturers licensed by this state or persons authorized by regulation of the Board of Pharmacy to possess those substances or combinations of substances."
+      }
+    },
+    {
+      "id": "ca-hsc-11366-8-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "0be7e9453ba629da6ea949fafe323468e0589aa034964fb25d6e5e9c25ec31db",
+      "remainingWork": "Both principal conduct branches reviewed with the factory-equipment limitation; case-specific intent and qualifying alteration remain necessary.",
+      "sources": [
+        {
+          "key": "HSC:11007",
+          "versions": [
+            {
+              "versionId": "id_f561c391-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "a45015882b04399cb2935fda530d557999502b6363a784348291f1d6fda2cc2c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11366.8",
+          "versions": [
+            {
+              "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+              "contentSha256": "c8e2c1ccc1571c169dc717d5d4e82a27927dbed91d8f3d9662ecb03c17ac6a58"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11366.8",
+        "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 1494,
+        "text": "(a) Every person who possesses, uses, or controls a false compartment with the intent to store, conceal, smuggle, or transport a controlled substance within the false compartment shall be punished by imprisonment in a county jail for a term of imprisonment not to exceed one year or pursuant to subdivision (h) of Section 1170 of the Penal Code. (b) Every person who designs, constructs, builds, alters, or fabricates a false compartment for, or installs or attaches a false compartment to, a vehicle with the intent to store, conceal, smuggle, or transport a controlled substance shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months or two or three years. (c) The term “vehicle” means any of the following vehicles without regard to whether the vehicles are private or commercial, including, but not limited to, cars, trucks, buses, aircraft, boats, ships, yachts, and vessels. (d) The term “false compartment” means any box, container, space, or enclosure that is intended for use or designed for use to conceal, hide, or otherwise prevent discovery of any controlled substance within or attached to a vehicle, including, but not limited to, any of the following: (1) False, altered, or modified fuel tanks. (2) Original factory equipment of a vehicle that is modified, altered, or changed. (3) Compartment, space, or box that is added to, or fabricated, made, or created from, existing compartments, spaces, or boxes within a vehicle."
+      }
+    },
+    {
+      "id": "ca-hsc-11366-8-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "eef832ee85fce704542b477f472e82759c98fbb5f18b977e8384badb351cbac8",
+      "remainingWork": "Both principal conduct branches reviewed with the factory-equipment limitation; case-specific intent and qualifying alteration remain necessary.",
+      "sources": [
+        {
+          "key": "HSC:11007",
+          "versions": [
+            {
+              "versionId": "id_f561c391-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "a45015882b04399cb2935fda530d557999502b6363a784348291f1d6fda2cc2c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11366.8",
+          "versions": [
+            {
+              "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+              "contentSha256": "c8e2c1ccc1571c169dc717d5d4e82a27927dbed91d8f3d9662ecb03c17ac6a58"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11366.8",
+        "versionId": "id_85c6dc1c-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 1494,
+        "text": "(a) Every person who possesses, uses, or controls a false compartment with the intent to store, conceal, smuggle, or transport a controlled substance within the false compartment shall be punished by imprisonment in a county jail for a term of imprisonment not to exceed one year or pursuant to subdivision (h) of Section 1170 of the Penal Code. (b) Every person who designs, constructs, builds, alters, or fabricates a false compartment for, or installs or attaches a false compartment to, a vehicle with the intent to store, conceal, smuggle, or transport a controlled substance shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months or two or three years. (c) The term “vehicle” means any of the following vehicles without regard to whether the vehicles are private or commercial, including, but not limited to, cars, trucks, buses, aircraft, boats, ships, yachts, and vessels. (d) The term “false compartment” means any box, container, space, or enclosure that is intended for use or designed for use to conceal, hide, or otherwise prevent discovery of any controlled substance within or attached to a vehicle, including, but not limited to, any of the following: (1) False, altered, or modified fuel tanks. (2) Original factory equipment of a vehicle that is modified, altered, or changed. (3) Compartment, space, or box that is added to, or fabricated, made, or created from, existing compartments, spaces, or boxes within a vehicle."
+      }
+    },
+    {
+      "id": "ca-hsc-11370-6-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "33b72daa56a9309128cb68533138e02684f92d2f1cc66016de3e8a583ba30340",
+      "remainingWork": "Both subdivision (a) theories and (b) attorney-fee conditions are described together; no independent fee offense is created.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11370.6",
+          "versions": [
+            {
+              "versionId": "id_87d7babe-618d-11e0-8037-955a394cd808",
+              "contentSha256": "855019e868efb926b3e6158281f6e2effe1eb011065eaa9507ce7a740547ac91"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11370.6",
+        "versionId": "id_87d7babe-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 2035,
+        "text": "(a) Every person who possesses any moneys or negotiable instruments in excess of one hundred thousand dollars ($100,000) which have been obtained as the result of the unlawful sale, possession for sale, transportation, manufacture, offer for sale, or offer to manufacture any controlled substance listed in Section 11054, 11055, 11056, 11057, or 11058, with knowledge that the moneys or negotiable instruments have been so obtained, and any person who possesses any moneys or negotiable instruments in excess of one hundred thousand dollars ($100,000) which are intended by that person for the unlawful purchase of any controlled substance listed in Section 11054, 11055, 11056, 11057, or 11058 and who commits an act in substantial furtherance of the unlawful purchase, shall be punished by imprisonment in a county jail for a term not to exceed one year, or by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, three, or four years. (b) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, when a case charged under subdivision (a) involves an attorney who accepts a fee for representing a client in a criminal investigation or proceeding, the prosecution shall additionally be required to prove that the moneys or negotiable instruments were accepted by the attorney with the intent to participate in the unlawful conduct described in subdivision (a) or to disguise or aid in disguising the source of the funds or the nature of the criminal activity. (c) In determining the guilt or innocence of a person charged under subdivision (a), the trier of fact may consider the following in addition to any other relevant evidence: (1) The lack of gainful employment by the person charged. (2) The expert opinion of a qualified controlled substances expert as to the source of the assets. (3) The existence of documents or ledgers that indicate sales of controlled substances."
+      }
+    },
+    {
+      "id": "ca-hsc-11379-6-e",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "f1a6e03d8d815e3d958948ac5e2f7a68625df93c13a451a4c6703869880c5be1",
+      "remainingWork": "Adds (e) offers to the earlier manufacturing entry. CALCRIM 2331 retains an older (c) citation; the statute controls. No separate aggravating-factor charge is created.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11379.6",
+          "versions": [
+            {
+              "versionId": "id_e4b7ec3d-a500-11e5-8e4d-9850dceaeb4c",
+              "contentSha256": "11459cc8e1437d5f6dbf050c066085a284f59ff4419edd4e16d0d41d43f7d691"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11379.6",
+        "versionId": "id_e4b7ec3d-a500-11e5-8e4d-9850dceaeb4c",
+        "start": 0,
+        "end": 2087,
+        "text": "(a) Except as otherwise provided by law, every person who manufactures, compounds, converts, produces, derives, processes, or prepares, either directly or indirectly by chemical extraction or independently by means of chemical synthesis, any controlled substance specified in Section 11054, 11055, 11056, 11057, or 11058 shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, five, or seven years and by a fine not exceeding fifty thousand dollars ($50,000). (b) Except when an enhancement pursuant to Section 11379.7 is pled and proved, the fact that a person under 16 years of age resided in a structure in which a violation of this section involving methamphetamine occurred shall be considered a factor in aggravation by the sentencing court. (c) Except when an enhancement pursuant to Section 11379.7 is pled and proved, the fact that a violation of this section involving methamphetamine occurred within 200 feet of an occupied residence or any structure where another person was present at the time the offense was committed may be considered a factor in aggravation by the sentencing court. (d) The fact that a violation of this section involving the use of a volatile solvent to chemically extract concentrated cannabis occurred within 300 feet of an occupied residence or any structure where another person was present at the time the offense was committed may be considered a factor in aggravation by the sentencing court. (e) Except as otherwise provided by law, every person who offers to perform an act which is punishable under subdivision (a) shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, four, or five years. (f) All fines collected pursuant to subdivision (a) shall be transferred to the State Treasury for deposit in the Clandestine Drug Lab Clean-up Account, as established by Section 5 of Chapter 1295 of the Statutes of 1987. The transmission to the State Treasury shall be carried out in the same manner as fines collected for the state by the county."
+      }
+    },
+    {
+      "id": "ca-hsc-11550-e-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "1adf0b092686da8fe70e2692c5c5e87b93eb63b5b5247f16a6e1b89848348ce2",
+      "remainingWork": "Adds armed (e)(1), with (f) repeat punishment, to the previous (a) entry. Drug use, possession and influence are not interchangeable.",
+      "sources": [
+        {
+          "key": "HSC:11550",
+          "versions": [
+            {
+              "versionId": "id_4c793c03-87c8-11e4-8ac3-c8fece1f812a",
+              "contentSha256": "ea50b869c62e92cb913490325d90ad9590c24910d929d4c0299ce782d8bbeb4f"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11550",
+        "versionId": "id_4c793c03-87c8-11e4-8ac3-c8fece1f812a",
+        "start": 0,
+        "end": 4712,
+        "text": "(a) A person shall not use, or be under the influence of any controlled substance that is (1) specified in subdivision (b), (c), or (e), or paragraph (1) of subdivision (f) of Section 11054, specified in paragraph (14), (15), (21), (22), or (23) of subdivision (d) of Section 11054, specified in subdivision (b) or (c) of Section 11055, or specified in paragraph (1) or (2) of subdivision (d) or in paragraph (3) of subdivision (e) of Section 11055, or (2) a narcotic drug classified in Schedule III, IV, or V, except when administered by or under the direction of a person licensed by the state to dispense, prescribe, or administer controlled substances. It shall be the burden of the defense to show that it comes within the exception. A person convicted of violating this subdivision is guilty of a misdemeanor and shall be sentenced to serve a term of not more than one year in a county jail. The court may also place a person convicted under this subdivision on probation for a period not to exceed five years. (b) (1) A person who is convicted of violating subdivision (a) when the offense occurred within seven years of that person being convicted of two or more separate violations of that subdivision, and refuses to complete a licensed drug rehabilitation program offered by the court pursuant to subdivision (c), shall be punished by imprisonment in a county jail for not less than 180 days nor more than one year. In no event does the court have the power to absolve a person convicted of a violation of subdivision (a) who is punishable under this subdivision from the obligation of spending at least 180 days in confinement in a county jail unless there are no licensed drug rehabilitation programs reasonably available. (2) For the purpose of this section, a drug rehabilitation program is not reasonably available unless the person is not required to pay more than the court determines that he or she is reasonably able to pay in order to participate in the program. (c) (1) The court may, when it would be in the interest of justice, permit a person convicted of a violation of subdivision (a) punishable under subdivision (a) or (b) to complete a licensed drug rehabilitation program in lieu of part or all of the imprisonment in a county jail. As a condition of sentencing, the court may require the offender to pay all or a portion of the drug rehabilitation program. (2) In order to alleviate jail overcrowding and to provide recidivist offenders with a reasonable opportunity to seek rehabilitation pursuant to this subdivision, counties are encouraged to include provisions to augment licensed drug rehabilitation programs in their substance abuse proposals and applications submitted to the state for federal and state drug abuse funds. (d) In addition to any fine assessed under this section, the judge may assess a fine not to exceed seventy dollars ($70) against a person who violates this section, with the proceeds of this fine to be used in accordance with Section 1463.23 of the Penal Code. The court shall, however, take into consideration the defendant’s ability to pay, and a defendant shall not be denied probation because of his or her inability to pay the fine permitted under this subdivision. (e) (1) Notwithstanding subdivisions (a) and (b) or any other law, a person who is unlawfully under the influence of cocaine, cocaine base, heroin, methamphetamine, or phencyclidine while in the immediate personal possession of a loaded, operable firearm is guilty of a public offense punishable by imprisonment in a county jail for not exceeding one year or in state prison. (2) As used in this subdivision “immediate personal possession” includes, but is not limited to, the interior passenger compartment of a motor vehicle. (f) Every person who violates subdivision (e) is punishable upon the second and each subsequent conviction by imprisonment in the state prison for two, three, or four years. (g) This section does not prevent deferred entry of judgment or a defendant’s participation in a preguilty plea drug court program under Chapter 2.5 (commencing with Section 1000) of Title 6 of Part 2 of the Penal Code unless the person is charged with violating subdivision (b) or (c) of Section 243 of the Penal Code. A person charged with violating this section by being under the influence of any controlled substance which is specified in paragraph (21), (22), or (23) of subdivision (d) of Section 11054 or in paragraph (3) of subdivision (e) of Section 11055 and with violating either subdivision (b) or (c) of Section 243 of the Penal Code or with a violation of subdivision (e) shall be ineligible for deferred entry of judgment or a preguilty plea drug court program."
+      }
+    },
+    {
+      "id": "ca-hsc-11366-6",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2f97827f29d3c14fff5c1ee8d1ce2595e23b00a7137188ae87ad5fc06c7c7c13",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11366.6",
+          "versions": [
+            {
+              "versionId": "id_8324e10a-618d-11e0-8037-955a394cd808",
+              "contentSha256": "f031c0795a2a33f3e9ce6d891756175ae79dc0072119a2127bdb4747ff0fee63"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11366.6",
+        "versionId": "id_8324e10a-618d-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 548,
+        "text": "Any person who utilizes a building, room, space, or enclosure specifically designed to suppress law enforcement entry in order to sell, manufacture, or possess for sale any amount of cocaine base as specified in paragraph (1) of subdivision (f) of Section 11054, cocaine as specified in paragraph (6) of subdivision (b) of Section 11055, heroin, phencyclidine, amphetamine, methamphetamine, or lysergic acid diethylamide shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for three, four, or five years."
+      }
+    },
+    {
+      "id": "ca-hsc-11366-7-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b137cd9bf3b907cee0a300d6e19f1bc5b6020a4a1e7763c829959b1eec6d37be",
+      "remainingWork": "The statutory chemical/actor/intent and authorization limits remain case-specific. No claim of complete litigation or sentencing-enhancement review.",
+      "sources": [
+        {
+          "key": "HSC:11007",
+          "versions": [
+            {
+              "versionId": "id_f561c391-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "a45015882b04399cb2935fda530d557999502b6363a784348291f1d6fda2cc2c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11054",
+          "versions": [
+            {
+              "versionId": "id_8e8422d9-61d2-11e7-8adc-8aa4aa845353",
+              "contentSha256": "2bc8e6677a7d98229a95b1cbed6d2ed1b7709ccab337aaac3cbaa13bb50fec4c"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11055",
+          "versions": [
+            {
+              "versionId": "id_db894a02-fa52-11e8-bd10-077ff3712fb6",
+              "contentSha256": "8ee07f550c83d5233b0dda30a85dcddedada6a598e551d1a1e8e0d823c68e595"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11056",
+          "versions": [
+            {
+              "versionId": "id_189c877a-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "366f9d3ad24de1f40d58b79a8d1a1f4282a225ed78027386690c4976efbca58e"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11057",
+          "versions": [
+            {
+              "versionId": "id_6a66cdc0-b8b8-11ef-87f5-6bbf55a2195e",
+              "contentSha256": "0b0e126dac20bbba677e5c72b989954daf1e809043092d82eeb1178039cccaca"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11058",
+          "versions": [
+            {
+              "versionId": "id_f578cd45-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "0ecd60d5590457bde7af44d83a5173bd23bd21e0b83a6d58b6ebeaaf4e6ccb89"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11366.7",
+          "versions": [
+            {
+              "versionId": "id_f5faa7c7-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "14e419ff13c5af4803ff1cf50d681777322ad1b59a2776e2a037d8341e2f0d6b"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11366.7",
+        "versionId": "id_f5faa7c7-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 704,
+        "text": "(a) This section shall apply to the following: (1) Any chemical or drug. (2) Any laboratory apparatus or device. (b) Any retailer or wholesaler who sells any item in paragraph (1) or (2) of subdivision (a) with knowledge or the intent that it will be used to unlawfully manufacture, compound, convert, process, or prepare a controlled substance for unlawful sale or distribution, shall be punished by imprisonment in a county jail for not more than one year, or in the state prison, or by a fine not exceeding twenty-five thousand dollars ($25,000), or by both that imprisonment and fine. Any fine collected pursuant to this section shall be distributed as specified in Section 1463.10 of the Penal Code."
+      }
+    },
+    {
+      "id": "ca-hsc-11370-9-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "36c99e0fb1ca0639a5d57790791d9735fdb0b413af557cdb2814591e12292709",
+      "remainingWork": "Four conduct branches preserve shared amount, intent, fine and attorney-fee limits. This is not a federal laundering entry.",
+      "sources": [
+        {
+          "key": "HSC:11370.9",
+          "versions": [
+            {
+              "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "7bf3e0210953c13cf5bac2856b984fda3f7094050de2ef77af9d6ce5537116b0"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11370.9",
+        "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 4173,
+        "text": "(a) It is unlawful for any person knowingly to receive or acquire proceeds, or engage in a transaction involving proceeds, known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (b) It is unlawful for any person knowingly to give, sell, transfer, trade, invest, conceal, transport, or maintain an interest in, or otherwise make available, anything of value which that person knows is intended to be used for the purpose of committing, or furthering the commission of, any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (c) It is unlawful for any person knowingly to direct, plan, organize, initiate, finance, manage, supervise, or facilitate the transportation or transfer of proceeds known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (d) It is unlawful for any person knowingly to conduct a transaction involving proceeds derived from a violation of this division or Division 10.1 when the transaction is designed in whole or in part to conceal or disguise the nature, location, source, ownership, or control of the proceeds known to be derived from a violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (e) A violation of this section shall be punished by imprisonment in a county jail for not more than one year or in the state prison for a period of two, three, or four years, by a fine of not more than two hundred fifty thousand dollars ($250,000) or twice the value of the proceeds or property involved in the violation, whichever is greater, or by both that imprisonment and fine. Notwithstanding any other provision of law, each violation of this section shall constitute a separate, punishable offense without limitation. (f) This section shall apply only to a transaction, or series of related transactions within a 30-day period, involving over twenty-five thousand dollars ($25,000) or to proceeds of a value exceeding twenty-five thousand dollars ($25,000). (g) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, this section is not intended to apply to the receipt of, or a related transaction involving, a fee by an attorney for the purpose of providing advice or representing a person in a criminal investigation or prosecution. (h) For the purposes of this section, the following terms have the following meanings: (1) “Proceeds” means property acquired or derived directly or indirectly from, produced through, or realized through any violation of this division or Division 10.1. (2) “Transaction” includes a purchase, sale, trade, loan, pledge, investment, gift, transfer, transmission, delivery, deposit, withdrawal, payment, electronic, magnetic, or manual transfer between accounts, exchange of currency, extension of credit, purchase or sale of any monetary instrument, or any other acquisition or disposition of property by whatever means effected. (3) “Represented by a law enforcement officer” means any representation of fact made by a peace officer as defined in Section 7 of the Penal Code, or a federal officer described in subsection (e) of Sections 1956 and 1957 of Title 18 of the United States Code, or by another person at the direction of, or with the approval of, that peace officer or federal officer."
+      }
+    },
+    {
+      "id": "ca-hsc-11370-9-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "542b07cc40e76861c108c89c72851a7c53adafc8d2a228ee97c3f5ec9dce3300",
+      "remainingWork": "Four conduct branches preserve shared amount, intent, fine and attorney-fee limits. This is not a federal laundering entry.",
+      "sources": [
+        {
+          "key": "HSC:11370.9",
+          "versions": [
+            {
+              "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "7bf3e0210953c13cf5bac2856b984fda3f7094050de2ef77af9d6ce5537116b0"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11370.9",
+        "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 4173,
+        "text": "(a) It is unlawful for any person knowingly to receive or acquire proceeds, or engage in a transaction involving proceeds, known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (b) It is unlawful for any person knowingly to give, sell, transfer, trade, invest, conceal, transport, or maintain an interest in, or otherwise make available, anything of value which that person knows is intended to be used for the purpose of committing, or furthering the commission of, any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (c) It is unlawful for any person knowingly to direct, plan, organize, initiate, finance, manage, supervise, or facilitate the transportation or transfer of proceeds known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (d) It is unlawful for any person knowingly to conduct a transaction involving proceeds derived from a violation of this division or Division 10.1 when the transaction is designed in whole or in part to conceal or disguise the nature, location, source, ownership, or control of the proceeds known to be derived from a violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (e) A violation of this section shall be punished by imprisonment in a county jail for not more than one year or in the state prison for a period of two, three, or four years, by a fine of not more than two hundred fifty thousand dollars ($250,000) or twice the value of the proceeds or property involved in the violation, whichever is greater, or by both that imprisonment and fine. Notwithstanding any other provision of law, each violation of this section shall constitute a separate, punishable offense without limitation. (f) This section shall apply only to a transaction, or series of related transactions within a 30-day period, involving over twenty-five thousand dollars ($25,000) or to proceeds of a value exceeding twenty-five thousand dollars ($25,000). (g) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, this section is not intended to apply to the receipt of, or a related transaction involving, a fee by an attorney for the purpose of providing advice or representing a person in a criminal investigation or prosecution. (h) For the purposes of this section, the following terms have the following meanings: (1) “Proceeds” means property acquired or derived directly or indirectly from, produced through, or realized through any violation of this division or Division 10.1. (2) “Transaction” includes a purchase, sale, trade, loan, pledge, investment, gift, transfer, transmission, delivery, deposit, withdrawal, payment, electronic, magnetic, or manual transfer between accounts, exchange of currency, extension of credit, purchase or sale of any monetary instrument, or any other acquisition or disposition of property by whatever means effected. (3) “Represented by a law enforcement officer” means any representation of fact made by a peace officer as defined in Section 7 of the Penal Code, or a federal officer described in subsection (e) of Sections 1956 and 1957 of Title 18 of the United States Code, or by another person at the direction of, or with the approval of, that peace officer or federal officer."
+      }
+    },
+    {
+      "id": "ca-hsc-11370-9-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "ba78d87ca5704f0b30170f7a33c506f1ddb53d44d85b1cc1f944b16a634c0b72",
+      "remainingWork": "Four conduct branches preserve shared amount, intent, fine and attorney-fee limits. This is not a federal laundering entry.",
+      "sources": [
+        {
+          "key": "HSC:11370.9",
+          "versions": [
+            {
+              "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "7bf3e0210953c13cf5bac2856b984fda3f7094050de2ef77af9d6ce5537116b0"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11370.9",
+        "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 4173,
+        "text": "(a) It is unlawful for any person knowingly to receive or acquire proceeds, or engage in a transaction involving proceeds, known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (b) It is unlawful for any person knowingly to give, sell, transfer, trade, invest, conceal, transport, or maintain an interest in, or otherwise make available, anything of value which that person knows is intended to be used for the purpose of committing, or furthering the commission of, any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (c) It is unlawful for any person knowingly to direct, plan, organize, initiate, finance, manage, supervise, or facilitate the transportation or transfer of proceeds known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (d) It is unlawful for any person knowingly to conduct a transaction involving proceeds derived from a violation of this division or Division 10.1 when the transaction is designed in whole or in part to conceal or disguise the nature, location, source, ownership, or control of the proceeds known to be derived from a violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (e) A violation of this section shall be punished by imprisonment in a county jail for not more than one year or in the state prison for a period of two, three, or four years, by a fine of not more than two hundred fifty thousand dollars ($250,000) or twice the value of the proceeds or property involved in the violation, whichever is greater, or by both that imprisonment and fine. Notwithstanding any other provision of law, each violation of this section shall constitute a separate, punishable offense without limitation. (f) This section shall apply only to a transaction, or series of related transactions within a 30-day period, involving over twenty-five thousand dollars ($25,000) or to proceeds of a value exceeding twenty-five thousand dollars ($25,000). (g) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, this section is not intended to apply to the receipt of, or a related transaction involving, a fee by an attorney for the purpose of providing advice or representing a person in a criminal investigation or prosecution. (h) For the purposes of this section, the following terms have the following meanings: (1) “Proceeds” means property acquired or derived directly or indirectly from, produced through, or realized through any violation of this division or Division 10.1. (2) “Transaction” includes a purchase, sale, trade, loan, pledge, investment, gift, transfer, transmission, delivery, deposit, withdrawal, payment, electronic, magnetic, or manual transfer between accounts, exchange of currency, extension of credit, purchase or sale of any monetary instrument, or any other acquisition or disposition of property by whatever means effected. (3) “Represented by a law enforcement officer” means any representation of fact made by a peace officer as defined in Section 7 of the Penal Code, or a federal officer described in subsection (e) of Sections 1956 and 1957 of Title 18 of the United States Code, or by another person at the direction of, or with the approval of, that peace officer or federal officer."
+      }
+    },
+    {
+      "id": "ca-hsc-11370-9-d",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b8b8f83225241959c6cdbbe5fe4d7fd788441ca10c96703a8411fbec7f3d5857",
+      "remainingWork": "Four conduct branches preserve shared amount, intent, fine and attorney-fee limits. This is not a federal laundering entry.",
+      "sources": [
+        {
+          "key": "HSC:11370.9",
+          "versions": [
+            {
+              "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+              "contentSha256": "7bf3e0210953c13cf5bac2856b984fda3f7094050de2ef77af9d6ce5537116b0"
+            }
+          ]
+        },
+        {
+          "key": "HSC:11372.7",
+          "versions": [
+            {
+              "versionId": "id_29bb28a6-c985-11f0-aea3-3b460998bfb4",
+              "contentSha256": "09421061bfc615374d3a701fb8791ac8c0c61c1db11088b38041ece420830296"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "HSC:11370.9",
+        "versionId": "id_f600c25d-291f-11d9-8b50-d28ad8cc76ba",
+        "start": 0,
+        "end": 4173,
+        "text": "(a) It is unlawful for any person knowingly to receive or acquire proceeds, or engage in a transaction involving proceeds, known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (b) It is unlawful for any person knowingly to give, sell, transfer, trade, invest, conceal, transport, or maintain an interest in, or otherwise make available, anything of value which that person knows is intended to be used for the purpose of committing, or furthering the commission of, any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (c) It is unlawful for any person knowingly to direct, plan, organize, initiate, finance, manage, supervise, or facilitate the transportation or transfer of proceeds known to be derived from any violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (d) It is unlawful for any person knowingly to conduct a transaction involving proceeds derived from a violation of this division or Division 10.1 when the transaction is designed in whole or in part to conceal or disguise the nature, location, source, ownership, or control of the proceeds known to be derived from a violation of this division or Division 10.1 with the intent to conceal or disguise or aid in concealing or disguising the nature, location, ownership, control, or source of the proceeds or to avoid a transaction reporting requirement under state or federal law. (e) A violation of this section shall be punished by imprisonment in a county jail for not more than one year or in the state prison for a period of two, three, or four years, by a fine of not more than two hundred fifty thousand dollars ($250,000) or twice the value of the proceeds or property involved in the violation, whichever is greater, or by both that imprisonment and fine. Notwithstanding any other provision of law, each violation of this section shall constitute a separate, punishable offense without limitation. (f) This section shall apply only to a transaction, or series of related transactions within a 30-day period, involving over twenty-five thousand dollars ($25,000) or to proceeds of a value exceeding twenty-five thousand dollars ($25,000). (g) In consideration of the constitutional right to counsel afforded by the Sixth Amendment to the United States Constitution and Section 15 of Article 1 of the California Constitution, this section is not intended to apply to the receipt of, or a related transaction involving, a fee by an attorney for the purpose of providing advice or representing a person in a criminal investigation or prosecution. (h) For the purposes of this section, the following terms have the following meanings: (1) “Proceeds” means property acquired or derived directly or indirectly from, produced through, or realized through any violation of this division or Division 10.1. (2) “Transaction” includes a purchase, sale, trade, loan, pledge, investment, gift, transfer, transmission, delivery, deposit, withdrawal, payment, electronic, magnetic, or manual transfer between accounts, exchange of currency, extension of credit, purchase or sale of any monetary instrument, or any other acquisition or disposition of property by whatever means effected. (3) “Represented by a law enforcement officer” means any representation of fact made by a peace officer as defined in Section 7 of the Penal Code, or a federal officer described in subsection (e) of Sections 1956 and 1957 of Title 18 of the United States Code, or by another person at the direction of, or with the approval of, that peace officer or federal officer."
+      }
+    }
+  ],
+  "crosswalk": [
+    {
+      "instruction": "2300",
+      "firstPage": 1589,
+      "lastPage": 1592,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11379-a",
+        "ca-hsc-11379-b",
+        "ca-distribution-of-controlled-substance"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2301",
+      "firstPage": 1593,
+      "lastPage": 1595,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11379-a",
+        "ca-hsc-11379-b",
+        "ca-distribution-of-controlled-substance"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2302",
+      "firstPage": 1596,
+      "lastPage": 1598,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11351-5",
+        "ca-hsc-11378",
+        "ca-hsc-11378-5",
+        "ca-possession-with-intent-to-distribute"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2303",
+      "firstPage": 1599,
+      "lastPage": 1601,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11370-1-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2304",
+      "firstPage": 1602,
+      "lastPage": 1604,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11377-a",
+        "ca-possession-of-controlled-substance"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2305",
+      "firstPage": 1605,
+      "lastPage": 1606,
+      "status": "non_offense_instruction",
+      "chargeIds": [],
+      "reason": "Momentary-possession defense; not a separate charge.",
+      "previousStatus": "non_offense_instruction"
+    },
+    {
+      "instruction": "2306",
+      "firstPage": 1607,
+      "lastPage": 1608,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11350-5-a",
+        "ca-hsc-11377-5-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2307",
+      "firstPage": 1609,
+      "lastPage": 1610,
+      "status": "penalty_context_only",
+      "chargeIds": [
+        "ca-hsc-11377-a",
+        "ca-possession-of-controlled-substance"
+      ],
+      "reason": "HSC:11395 treatment-mandated felony is described conditionally in possession guidance; no separate charging identity is claimed.",
+      "previousStatus": "penalty_context_only"
+    },
+    {
+      "instruction": "2315",
+      "firstPage": 1611,
+      "lastPage": 1612,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11355",
+        "ca-hsc-11382"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2316",
+      "firstPage": 1613,
+      "lastPage": 1614,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11355",
+        "ca-hsc-11382"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2320",
+      "firstPage": 1615,
+      "lastPage": 1616,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11368"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2321",
+      "firstPage": 1617,
+      "lastPage": 1618,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11368"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2330",
+      "firstPage": 1619,
+      "lastPage": 1621,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-manufacturing-controlled-substance"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2331",
+      "firstPage": 1622,
+      "lastPage": 1623,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11379-6-e"
+      ],
+      "reason": "Offering is HSC 11379.6(e) in the retained statute; the instruction still cites (c). Preserve CA-005 and use the statute.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2335",
+      "firstPage": 1624,
+      "lastPage": 1625,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11383-5"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2336",
+      "firstPage": 1626,
+      "lastPage": 1627,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11383"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2337",
+      "firstPage": 1628,
+      "lastPage": 1629,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11383-5"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2338",
+      "firstPage": 1630,
+      "lastPage": 1632,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11383-5"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2350",
+      "firstPage": 1633,
+      "lastPage": 1636,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11360-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2351",
+      "firstPage": 1637,
+      "lastPage": 1639,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11360-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2352",
+      "firstPage": 1640,
+      "lastPage": 1643,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11359"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2361",
+      "firstPage": 1644,
+      "lastPage": 1646,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11360-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2363",
+      "firstPage": 1647,
+      "lastPage": 1649,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11360-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2364",
+      "firstPage": 1650,
+      "lastPage": 1652,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11360-a"
+      ],
+      "reason": "Felony allegations are conditional within the adult HSC 11360(a) entry, not a separate substantive offense.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2370",
+      "firstPage": 1653,
+      "lastPage": 1655,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11358"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2375",
+      "firstPage": 1656,
+      "lastPage": 1658,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11357-b-2"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2376",
+      "firstPage": 1659,
+      "lastPage": 1662,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11357-c"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2380",
+      "firstPage": 1663,
+      "lastPage": 1666,
+      "status": "partial_catalog_match",
+      "chargeIds": [
+        "ca-hsc-11353-c",
+        "ca-hsc-11380-a"
+      ],
+      "reason": "Adult branches matched; HSC:11354 under-18 actor branches remain a juvenile-routing gap.",
+      "previousStatus": "partial_catalog_match"
+    },
+    {
+      "instruction": "2381",
+      "firstPage": 1667,
+      "lastPage": 1669,
+      "status": "partial_catalog_match",
+      "chargeIds": [
+        "ca-hsc-11353-c",
+        "ca-hsc-11380-a"
+      ],
+      "reason": "Adult branches matched; HSC:11354 under-18 actor branches remain a juvenile-routing gap.",
+      "previousStatus": "partial_catalog_match"
+    },
+    {
+      "instruction": "2382",
+      "firstPage": 1670,
+      "lastPage": 1672,
+      "status": "partial_catalog_match",
+      "chargeIds": [
+        "ca-hsc-11353-b"
+      ],
+      "reason": "Adult branches matched; HSC:11354 under-18 actor branches remain a juvenile-routing gap.",
+      "previousStatus": "partial_catalog_match"
+    },
+    {
+      "instruction": "2383",
+      "firstPage": 1673,
+      "lastPage": 1675,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11380-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2384",
+      "firstPage": 1676,
+      "lastPage": 1678,
+      "status": "partial_catalog_match",
+      "chargeIds": [
+        "ca-hsc-11353-a",
+        "ca-hsc-11380-a"
+      ],
+      "reason": "Adult branches matched; HSC:11354 under-18 actor branches remain a juvenile-routing gap.",
+      "previousStatus": "partial_catalog_match"
+    },
+    {
+      "instruction": "2390",
+      "firstPage": 1679,
+      "lastPage": 1681,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11361-a",
+        "ca-hsc-11361-b"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2391",
+      "firstPage": 1682,
+      "lastPage": 1684,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11361-a",
+        "ca-hsc-11361-b"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2392",
+      "firstPage": 1685,
+      "lastPage": 1686,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11361-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2393",
+      "firstPage": 1687,
+      "lastPage": 1688,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11361-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2400",
+      "firstPage": 1689,
+      "lastPage": 1691,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11550-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2401",
+      "firstPage": 1692,
+      "lastPage": 1694,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-hsc-11365-a"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2410",
+      "firstPage": 1695,
+      "lastPage": 1697,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-possession-of-drug-paraphernalia"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2412",
+      "firstPage": 1698,
+      "lastPage": 1698,
+      "status": "benchmark_source_absent",
+      "chargeIds": [],
+      "reason": "BPC:4326 is absent from the official archive extraction. Investigate source history before using this instruction as a charge identity.",
+      "previousStatus": "benchmark_source_absent"
+    },
+    {
+      "instruction": "2413",
+      "firstPage": 1699,
+      "lastPage": 1700,
+      "status": "benchmark_source_absent",
+      "chargeIds": [],
+      "reason": "BPC:4326 is absent from the official archive extraction. Investigate source history before using this instruction as a charge identity.",
+      "previousStatus": "benchmark_source_absent"
+    },
+    {
+      "instruction": "2430",
+      "firstPage": 1701,
+      "lastPage": 1702,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11370-6-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2431",
+      "firstPage": 1703,
+      "lastPage": 1704,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11370-6-a"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2432",
+      "firstPage": 1705,
+      "lastPage": 1708,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11370-6-a"
+      ],
+      "reason": "The attorney-fee intent condition is included in HSC 11370.6(a) guidance, not published as a separate charge.",
+      "previousStatus": "publication_gap"
+    },
+    {
+      "instruction": "2440",
+      "firstPage": 1709,
+      "lastPage": 1710,
+      "status": "catalog_branch_matches_found",
+      "chargeIds": [
+        "ca-maintaining-drug-house"
+      ],
+      "reason": "Exact statutory branches matched below. This does not certify all alternative acts, defenses or enhancements within the instruction.",
+      "previousStatus": "catalog_branch_matches_found"
+    },
+    {
+      "instruction": "2441",
+      "firstPage": 1711,
+      "lastPage": 1712,
+      "status": "bounded_successor_matches",
+      "chargeIds": [
+        "ca-hsc-11366-8-a",
+        "ca-hsc-11366-8-b"
+      ],
+      "reason": "The new entries match the cited adult branches, with statutory exceptions and remaining case-specific limits. This does not certify every alternative instruction or juvenile application.",
+      "previousStatus": "publication_gap"
+    }
+  ],
+  "limits": [
+    "All 16 prior instruction-gap entries now have bounded matches, not a statewide completeness score.",
+    "Four partial juvenile-actor instruction matches, two absent-source references, HSC 11395 standalone identity and remaining chapter research remain.",
+    "New cannabis summaries preserve ordinary fines and the literal additional-fine authority rather than promising an all-in $500 cap.",
+    "Independent legal review is pending. The original source-refresh clock and changed-source holds remain."
+  ]
+}

@@ -94997,6 +94997,16 @@ for (const charge of criminalCharges) {
 chargeCategories['CA'] = getCaliforniaCanonicalCharges(
   criminalCharges.filter((charge) => charge.jurisdiction === 'CA'),
 ).map((charge) => charge.id);
+// Source-first drug IDs need the same topical grouping as older name-based IDs.
+chargeCategories['Drug Offenses'] = Array.from(new Set([
+  ...chargeCategories['Drug Offenses'],
+  ...chargeCategories['CA'].filter(id => {
+    const record = getCaliforniaCanonicalRecord(id);
+    if (record?.lawCode !== 'HSC') return false;
+    const section = Number(record.code.split('(')[0]);
+    return (section >= 11350 && section < 11396) || section === 11550;
+  }),
+]));
 
 // Keep the state grouping aligned with the same no-alias Ohio selector
 // boundary used below. The canonical source-first records are additive and

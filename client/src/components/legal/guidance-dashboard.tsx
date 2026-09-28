@@ -602,7 +602,8 @@ function YourChargesSection({
     normalizedJurisdiction === "SC" ||
     normalizedJurisdiction === "IL" ||
     normalizedJurisdiction === "OH" ||
-    normalizedJurisdiction === "GA";
+    normalizedJurisdiction === "GA" ||
+    normalizedJurisdiction === "CA";
   const { data: currentAuthorityCharges } = useQuery<{ charges?: Array<{ id: string }> }>({
     queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
     queryFn: async () => {

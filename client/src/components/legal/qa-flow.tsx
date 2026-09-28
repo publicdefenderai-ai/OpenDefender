@@ -477,7 +477,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
-  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"].includes(formData.jurisdiction);
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "CA"].includes(formData.jurisdiction);
   const isOhio = formData.jurisdiction?.toUpperCase() === "OH";
 
   useEffect(() => {
@@ -531,6 +531,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         const description = typeof charge.description === "string" ? charge.description : "";
         return name.toLowerCase().includes(q) ||
           code.toLowerCase().includes(q) ||
+          charge.searchAliases?.some((alias: string) => alias.toLowerCase().includes(q)) ||
           description.toLowerCase().includes(q);
       })
     : categoryFiltered;

@@ -2161,7 +2161,7 @@ export function getCaliforniaAdditionCharges(): CriminalCharge[] {
     id: row.id, name: row.title, code: row.code, jurisdiction: "CA",
     category: getCaliforniaPrimaryCategory(row.categories),
     description: row.summary, maxPenalty: row.penalty,
-    searchAliases: [`${row.lawCode === "PEN" ? "PC" : row.lawCode} ${row.code}`, `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title],
+    searchAliases: [`${row.lawCode === "PEN" ? "PC" : row.lawCode} ${row.code}`, `${row.lawCode === "PEN" ? "Penal Code" : LAW_CODE_LABELS[row.lawCode]} ${row.code}`, row.title, ...("searchAliases" in row ? row.searchAliases : [])],
     commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
   })!);
 }

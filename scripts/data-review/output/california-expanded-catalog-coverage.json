@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 239,
-    "configuredSelectable": 218,
+    "canonicalRecords": 257,
+    "configuredSelectable": 236,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 119,
-    "boundedCorrectionPass": 218,
+    "boundedAdditionPass": 137,
+    "boundedCorrectionPass": 236,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 150,
+    "distinctSelectablePrimarySections": 162,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 150,
-    "selectableRecordsWithAllPrimaryTextAcquired": 218,
-    "totalAcquiredSectionsIncludingDependencies": 402,
-    "totalAcquiredVersionsIncludingDependencies": 406,
+    "acquiredSelectablePrimarySections": 162,
+    "selectableRecordsWithAllPrimaryTextAcquired": 236,
+    "totalAcquiredSectionsIncludingDependencies": 403,
+    "totalAcquiredVersionsIncludingDependencies": 407,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "218 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "236 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -47,8 +47,8 @@
     },
     {
       "lawCode": "HSC",
-      "selectable": 34,
-      "corrected": 34,
+      "selectable": 52,
+      "corrected": 52,
       "awaitingCorrection": 0
     },
     {
@@ -338,6 +338,33 @@
     },
     {
       "lawCode": "HSC",
+      "section": "11358",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11358&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11358"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11359",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11359&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11359"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11360",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11360&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11360-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
       "section": "11361",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11361&lawCode=HSC",
       "recordIds": [
@@ -385,6 +412,34 @@
     },
     {
       "lawCode": "HSC",
+      "section": "11366.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11366.6&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11366-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11366.7",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11366.7&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11366-7-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11366.8",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11366.8&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11366-8-a",
+        "ca-hsc-11366-8-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
       "section": "11368",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11368&lawCode=HSC",
       "recordIds": [
@@ -398,6 +453,27 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11370.1&lawCode=HSC",
       "recordIds": [
         "ca-hsc-11370-1-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11370.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11370.6&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11370-6-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11370.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11370.9&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11370-9-a",
+        "ca-hsc-11370-9-b",
+        "ca-hsc-11370-9-c",
+        "ca-hsc-11370-9-d"
       ],
       "alreadyRetained": false
     },
@@ -471,7 +547,8 @@
       "section": "11379.6",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11379.6&lawCode=HSC",
       "recordIds": [
-        "ca-manufacturing-controlled-substance"
+        "ca-manufacturing-controlled-substance",
+        "ca-hsc-11379-6-e"
       ],
       "alreadyRetained": false
     },
@@ -495,10 +572,47 @@
     },
     {
       "lawCode": "HSC",
+      "section": "11383",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11383&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11383"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11383.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11383.5&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11383-5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11383.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11383.6&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11383-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11383.7",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11383.7&lawCode=HSC",
+      "recordIds": [
+        "ca-hsc-11383-7"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
       "section": "11550",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11550&lawCode=HSC",
       "recordIds": [
-        "ca-hsc-11550-a"
+        "ca-hsc-11550-a",
+        "ca-hsc-11550-e-1"
       ],
       "alreadyRetained": false
     },
@@ -5867,6 +5981,312 @@
         "HSC:11377.5"
       ],
       "catalogSha256": "eaa7a0703bbf7761442d6a6aa1f792ea9665bb301f340f5113527727e8d30086",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11358",
+      "title": "Adult unlawful cultivation of more than six cannabis plants",
+      "citation": "Cal. Health & Safety Code § 11358",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11358"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11358"
+      ],
+      "catalogSha256": "9eceeb6692fb4485333040d238f4d9bd214f0d706c04c763a05021d70d7c4cea",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11359",
+      "title": "Adult unlawful possession of cannabis for sale",
+      "citation": "Cal. Health & Safety Code § 11359",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11359"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11359"
+      ],
+      "catalogSha256": "23e4663c2d004cdea2e3a627644032b091052cd456f104f0ad30ae4530aa031c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11360-a",
+      "title": "Adult unlawful cannabis sale, distribution, import or transport for sale",
+      "citation": "Cal. Health & Safety Code § 11360(a)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11360"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11360"
+      ],
+      "catalogSha256": "2d68c6a6df9132d95662b01733cb183e4ac03bb8a7754f776e5e7d6c450852cd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11383",
+      "title": "Possession of specified PCP precursors with intent to manufacture",
+      "citation": "Cal. Health & Safety Code § 11383",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11383"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11383"
+      ],
+      "catalogSha256": "415e45a7d5f6253b02fec4d10514d48e172d2a76ade53f0dd1e6a08e7c9b13c7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11383-5",
+      "title": "Possession of specified methamphetamine precursors with intent to manufacture",
+      "citation": "Cal. Health & Safety Code § 11383.5",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11383.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11383.5"
+      ],
+      "catalogSha256": "bba19ca534a6c8ab3d71b0c6d9ccf49c3833183b4aef785b82ac75aa5a7d5ad9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11383-6",
+      "title": "Possession of specified PCP precursors for transfer to a manufacturer",
+      "citation": "Cal. Health & Safety Code § 11383.6",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11383.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11383.6"
+      ],
+      "catalogSha256": "eb3996476092d4326c6d758e18555ade6c9964a233095648c6976a487d226f86",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11383-7",
+      "title": "Possession of specified methamphetamine precursors for transfer to a manufacturer",
+      "citation": "Cal. Health & Safety Code § 11383.7",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11383.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11383.7"
+      ],
+      "catalogSha256": "3ccd7df4320d5161271626465eb7deebc3068071c841c0d2968ea256e01fb7bf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11366-8-a",
+      "title": "Possessing or using a vehicle false compartment for controlled substances",
+      "citation": "Cal. Health & Safety Code § 11366.8(a)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11366.8"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366.8"
+      ],
+      "catalogSha256": "dd5b5e7d31346e3281c31c6e161dcf1baebebeb96b6927209c59c4acf8a931d5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11366-8-b",
+      "title": "Constructing or installing a vehicle false compartment for controlled substances",
+      "citation": "Cal. Health & Safety Code § 11366.8(b)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11366.8"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366.8"
+      ],
+      "catalogSha256": "0c48efadfc301f505d7e84abc86f772aa295f42bdec44a8e28b8ec0db60c34cb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11370-6-a",
+      "title": "Possession of more than $100,000 in drug proceeds or money for an unlawful drug purchase",
+      "citation": "Cal. Health & Safety Code § 11370.6(a)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11370.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11370.6"
+      ],
+      "catalogSha256": "a0b0a59ffbf4fabc0c5fcb392bb685e1bfe31c9f931dea31150f67dc5262359a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11379-6-e",
+      "title": "Offering to manufacture a controlled substance",
+      "citation": "Cal. Health & Safety Code § 11379.6(e)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11379.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11379.6"
+      ],
+      "catalogSha256": "258a586fa1652bfddff6bb9450975ccd2ad47d861e97d49520b0d22560382d51",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11550-e-1",
+      "title": "Being under the influence of specified drugs while possessing a loaded firearm",
+      "citation": "Cal. Health & Safety Code § 11550(e)(1)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11550"
+      ],
+      "catalogSha256": "ea4bda0247c902e541d9648abc54ef1b94786632db8a1996ae462a140e8bcc9d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11366-6",
+      "title": "Using fortified premises for specified unlawful drug activity",
+      "citation": "Cal. Health & Safety Code § 11366.6",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11366.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366.6"
+      ],
+      "catalogSha256": "59335faee22f059d4939ed013c0afdd39685ca72b32485517b0668eed6f1f7f7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11366-7-b",
+      "title": "Retail or wholesale sale of supplies for unlawful drug manufacture",
+      "citation": "Cal. Health & Safety Code § 11366.7(b)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11366.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366.7"
+      ],
+      "catalogSha256": "6babe55370fd96656a204061a0ec14fba07ee890d7144a3298367b32b0fb4b48",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11370-9-a",
+      "title": "Receiving or transacting in unlawful drug proceeds",
+      "citation": "Cal. Health & Safety Code § 11370.9(a)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11370.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11370.9"
+      ],
+      "catalogSha256": "7bc4989e737322bd2fbb9aa7d5a2add87b3a2911a4acd8f72c082d693a2e07e7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11370-9-b",
+      "title": "Providing property to further an unlawful drug offense",
+      "citation": "Cal. Health & Safety Code § 11370.9(b)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11370.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11370.9"
+      ],
+      "catalogSha256": "8b2c44e603b44f72dd148aeb5f8da554f0725903ff0614fea1727e58fceca968",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11370-9-c",
+      "title": "Organizing transport or transfer of unlawful drug proceeds",
+      "citation": "Cal. Health & Safety Code § 11370.9(c)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11370.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11370.9"
+      ],
+      "catalogSha256": "752c666f13201da944545383c00ba0cc263e1f546fb626365bd633d149a43144",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-hsc-11370-9-d",
+      "title": "Conducting a transaction designed to conceal unlawful drug proceeds",
+      "citation": "Cal. Health & Safety Code § 11370.9(d)",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11370.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11370.9"
+      ],
+      "catalogSha256": "89b67a77ed569cbc91d2f4ebcb1718229ad98658f6afc40ad6fdd2b6f8282fb7",
       "attorneyReview": "pending"
     }
   ]
