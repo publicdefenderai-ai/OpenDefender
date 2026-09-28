@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-The combined traffic successor proposes 24 additional choices, taking the configured catalog from 257 to 281: 99 original corrected choices and 182 additions. There are 184 distinct primary sections and 450 retained publication sections/456 versions including dependencies. The changed weapon source still withholds one configured record, leaving 280 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
+The vehicle-identification successor proposes ten additional choices, taking the configured catalog from 281 to 291: 99 original corrected choices and 192 additions. There are 192 distinct primary sections and 461 retained publication sections/467 versions including dependencies. The changed weapon source still withholds one configured record, leaving 290 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -101,3 +101,16 @@ VEH 13352, 23103.5, 23573 and 23575 retain both the current and 2033-operative v
 Run `node --import tsx scripts/data-review/california-verification/traffic-review.ts` for the source-bound report and successor instruction accounting. Replay `acquire-traffic.py` against the original retained archive.
 
 Next: combine the remaining significant vehicle-identification/chop-shop and nondriving-owner duty questions, then move to an independent missing-charge pass for offenses against people and weapons. Addiction-status, under-21 and entrustment provisions remain explicitly open; none is silently classified as minor. The statewide estimate remains 3-6 substantive batches plus a combined benchmark/release pass because major nontraffic families still need examination.
+
+
+## Vehicle identification and remaining duties
+
+Ten proposed choices cover chop-shop ownership/operation, sale-related VIN alteration, the distinct dealing and possession branches of 10803, unauthorized identification-mark alteration, possession/dealing with removed identifiers, runaway parked-vehicle reporting, vehicle tampering, unauthorized custodial use, and false vehicle-theft reports with a conditional repeat branch. Seven dependencies are reused; eleven publication sections are added, including three promoted research sections. CALCRIM 2242 now has an exact bounded match. The owner/passenger instructions 2141 and 2151 remain open rather than being credited to the new runaway-vehicle entry.
+
+The packet carries seven source-bound remaining findings: two owner/control liability branches; the entrustment exception's absent HSC 113785 reference (CA-007); habitual-offender predicates and notice; suspended-license injury sentencing scope; repeat temporary-taking predicates; and a documented lower-priority misdemeanor deferral for 10853. Research-only probes are kept separate from runtime pins. There are no new attorney data-entry assignments.
+
+Run `node --import tsx scripts/data-review/california-verification/vehicle-identification-review.ts` to validate and render the packet. `acquire-vehicle-identification.py` replays against the original archive, including its exact missing-definition probe. Fresh comparison covers 461 sections/467 versions and preserves the receipt's original acquisition and expiry.
+
+This batch builds on merged PR29, including its transition-inventory validation fix. It remains a separate review from the preceding traffic publication.
+
+Next priority: the independent missing-charge pass for offenses against people and weapons, combining related sections. Carry forward the remaining vehicle questions explicitly rather than cycling through low-priority traffic clauses before reviewing another major family. The 3-6 substantive-batch planning range remains provisional and is not a claim of statewide completeness.

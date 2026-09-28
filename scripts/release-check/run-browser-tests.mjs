@@ -67,6 +67,7 @@ const testProcess = spawn(
     "tests/e2e/california-drug-successor-release.spec.ts",
     "tests/e2e/california-driving-publication-release.spec.ts",
     "tests/e2e/california-traffic-release.spec.ts",
+    "tests/e2e/california-vehicle-identification-release.spec.ts",
     "tests/e2e/source-readiness-gate.spec.ts",
     "tests/e2e/multilingual-mobile-layout.spec.ts",
     "tests/e2e/localized-mobile-actions.spec.ts",

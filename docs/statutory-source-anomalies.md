@@ -78,3 +78,12 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Keep the literal reference and disclose the mismatch in the charge explanation. Do not rewrite either statute or imply that the exception's application has been resolved. Knowledge, actual suspension and the applicable exception still require case-specific assessment.
 - **Traceability:** `california-traffic-review.json` binds §14601.1 and §12500 by version ID and content hash; original XML is retained unchanged in the publication acquisitions. The review decision preserves both subdivision references.
 - **Remaining work:** Check amendment history and interpretive authority if a user's circumstances make this narrow exception material; do not ask an attorney merely to transcribe either source.
+
+## CA-007: Intoxicated-minor entrustment exception references an absent food-facility definition
+
+- **Recorded:** September 28, 2026, during the vehicle-identification and remaining-duty review.
+- **Status:** Unresolved source-reference discrepancy, not a confirmed repeal or statutory-error determination.
+- **Literal source:** [Penal Code §193.8(b)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=193.8.) incorporates HSC §113785 for the food-facility definition in its parking-arrangement exception. The exact HSC:113785 probe returns no version in the retained September 24 archive. The neighboring incorporated hotel/motel definition in BPC §25503.16(b) is retained.
+- **Treatment:** Keep the literal reference and the absent probe. Do not silently substitute a newer food-facility definition or infer repeal from absence. The entrustment entry remains unpublished pending source-history review; Penal Code §19.8's infraction alternative does not resolve the exception.
+- **Traceability:** `california-vehicle-identification-acquisition.json` binds the archive receipt, `missingResearchKeys` and separate `researchDocuments`. `california-vehicle-identification-review.json` binds the source text and remaining decision. Research-only documents do not renew publication evidence or enter runtime pins.
+- **Remaining work:** Inspect official amendment history, identify the intended definition if supported, and request a legal decision only if material uncertainty remains.
