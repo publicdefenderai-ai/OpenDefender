@@ -65,3 +65,49 @@ test("California questionnaire excludes the changed weapon source", async ({ pag
   await expect(page.getByText("No charges found. Try a different search term or category.")).toBeVisible();
   await expect(page.getByTestId("checkbox-charge-ca-possession-of-prohibited-weapon")).toHaveCount(0);
 });
+
+for (const unavailable of [false, true]) {
+  test(`California dashboard ${unavailable ? "withholds saved details when authority is unavailable" : "shows details only with current authority"}`, async ({ page }) => {
+    await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));
+    await page.route("**/api/captcha/config", route => route.fulfill({ json: { required: false, siteKey: null } }));
+    const id = "ca-hsc-11379-6-e";
+    await page.route("**/api/criminal-charges?**", route => route.fulfill({ json: {
+      success: true, charges: unavailable ? [] : [{ id, name: "Offer to manufacture a controlled substance", code: "11379.6(e)", category: "felony", description: "Reviewed offer branch" }], totalAvailable: unavailable ? 0 : 1,
+    } }));
+    await page.route("**/api/legal-guidance/stream", route => route.fulfill({
+      contentType: "text/event-stream",
+      body: `data: ${JSON.stringify({ type: "complete", success: true, guidance: {
+        jurisdiction: "CA", overview: "Saved guidance authority test.",
+        criticalAlerts: [], immediateActions: [], nextSteps: [], deadlines: [], rights: [], resources: [],
+        warnings: [], evidenceToGather: [], courtPreparation: [], avoidActions: [], timeline: [],
+        chargeClassifications: [{ id, name: "Offer to manufacture a controlled substance", code: "11379.6(e)", classification: "felony" }],
+      } })}\n\n`,
+    }));
+    await page.goto("/case-guidance");
+    await page.getByTestId("button-start-guidance").click();
+    await page.getByTestId("button-choose-ai").click();
+    await page.getByTestId("select-jurisdiction").click();
+    await page.getByRole("option", { name: "California", exact: true }).click();
+    await page.getByTestId("button-next-jurisdiction").click();
+    await page.getByRole("checkbox", { name: "I don't know what charges I'm facing", exact: true }).click();
+    await page.getByTestId("button-next-case-details").click();
+    await page.getByTestId("select-case-stage").click();
+    await page.getByRole("option", { name: /Pre-trial/i }).click();
+    await page.getByTestId("select-custody-status").click();
+    await page.getByRole("option", { name: /not in custody/i }).click();
+    await page.getByTestId("select-has-attorney").click();
+    await page.getByRole("option", { name: /^No$/ }).click();
+    await page.getByTestId("button-continue-status").click();
+    await page.getByTestId("button-continue-background").click();
+    await page.getByRole("button", { name: /^Next/ }).click();
+    await page.getByRole("button", { name: /Get My Case Support/i }).click();
+    if (unavailable) {
+      await expect(page.getByTestId("charge-reselection-warning-0")).toBeVisible();
+      await expect(page.getByText(/We cannot show charge-specific information/)).toBeVisible();
+      await expect(page.getByRole("button", { name: /Read the Law/i })).toHaveCount(0);
+    } else {
+      await expect(page.getByRole("button", { name: /Read the Law/i })).toBeVisible();
+      await expect(page.getByTestId("charge-reselection-warning-0")).toHaveCount(0);
+    }
+  });
+}
