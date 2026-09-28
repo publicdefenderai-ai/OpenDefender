@@ -1,0 +1,1880 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_specialized_property_additions_not_statewide_certification",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "previousReviewSha256": "df4f51e5d92e4a6afaf96b755325936bdf0375c40bb8db40c69187145463b733",
+  "newSources": 0,
+  "sections": [
+    {
+      "key": "PEN:192.5",
+      "status": "substantive_research_open",
+      "reason": "Consequential open item: separate vessel-manslaughter branches, section 193 penalties, Harbors and Navigation Code 655 predicates, and the charged fleeing enhancement. Carry into the combined driving/vessel batch; not a minor deferral.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_ce4db6fa-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "315ddf61607124f7fc61bd480856b8b760d881b077a81984115b15379ea1e18e"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:192.5",
+        "start": 0,
+        "end": 2222,
+        "text": "Vehicular manslaughter pursuant to subdivision (b) of Section 191.5 and subdivision (c) of Section 192 is the unlawful killing of a human being without malice aforethought, and includes: (a) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, and with gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (b) Operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of an unlawful act, not amounting to felony, but without gross negligence; or operating a vessel in violation of subdivision (b), (c), (d), (e), or (f) of Section 655 of the Harbors and Navigation Code, and in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (c) Operating a vessel in the commission of an unlawful act, not amounting to a felony, and with gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, and with gross negligence. (d) Operating a vessel in the commission of an unlawful act, not amounting to a felony, but without gross negligence; or operating a vessel in the commission of a lawful act that might produce death, in an unlawful manner, but without gross negligence. (e) A person who flees the scene of the crime after committing a violation of subdivision (a), (b), or (c), upon conviction, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision."
+      }
+    },
+    {
+      "key": "PEN:193.8",
+      "status": "substantive_research_open",
+      "reason": "Retain the adult-to-intoxicated-minor vehicle-transfer offense for the driving batch. Requires a sustained petition or conviction for a specified predicate, lack of the minor's lawful possession right, and commercial exceptions; do not treat transfer alone as sufficient.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_cedefa7e-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "dd910da312fdb851ee6887c218f52f02d5f0cc15d9a8a15ffd7d384026b15a83"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:193.8",
+        "start": 0,
+        "end": 1727,
+        "text": "(a) An adult, who is the registered owner of a motor vehicle or in possession of a motor vehicle, shall not relinquish possession of the vehicle to a minor for the purpose of driving if the following conditions exist: (1) The adult owner or person in possession of the vehicle knew or reasonably should have known that the minor was intoxicated at the time possession was relinquished. (2) A petition was sustained or the minor was convicted of a violation of Section 23103 as specified in Section 23103.5, 23140, 23152, or 23153 of the Vehicle Code or a violation of Section 191.5 or subdivision (a) of Section 192.5. (3) The minor does not otherwise have a lawful right to possession of the vehicle. (b) The offense described in subdivision (a) shall not apply to commercial bailments, motor vehicle leases, or parking arrangements, whether or not for compensation, provided by hotels, motels, or food facilities for customers, guests, or other invitees thereof. For purposes of this subdivision, hotel and motel shall have the same meaning as in subdivision (b) of Section 25503.16 of the Business and Professions Code and food facility shall have the same meaning as in Section 113785 of the Health and Safety Code. (c) If an adult is convicted of the offense described in subdivision (a), that person shall be punished by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding six months, or by both the fine and imprisonment. An adult convicted of the offense described in subdivision (a) shall not be subject to driver’s license suspension or revocation or attendance at a licensed alcohol or drug education and counseling program for persons who drive under the influence."
+      }
+    },
+    {
+      "key": "PEN:243.9",
+      "status": "substantive_research_open",
+      "reason": "Consequential open item: detention-facility gassing. Resolve the unspecific county-jail alternative separately from the explicit 2/3/4-year state-prison alternative, plus facility and victim definitions. Not a minor deferral.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_665a3404-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "76faf48e833e754b1bf295983d13356494d2d6c6c319a8458ce3a72f5e2ed637"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:243.9",
+        "start": 0,
+        "end": 2783,
+        "text": "(a) Every person confined in any local detention facility who commits a battery by gassing upon the person of any peace officer, as defined in Chapter 4.5 (commencing with Section 830) of Title 3 of Part 2, or employee of the local detention facility is guilty of aggravated battery and shall be punished by imprisonment in a county jail or by imprisonment in the state prison for two, three, or four years. (b) For purposes of this section, “gassing” means intentionally placing or throwing, or causing to be placed or thrown, upon the person of another, any human excrement or other bodily fluids or bodily substances or any mixture containing human excrement or other bodily fluids or bodily substances that results in actual contact with the person’s skin or membranes. (c) The person in charge of the local detention facility shall use every available means to immediately investigate all reported or suspected violations of subdivision (a), including, but not limited to, the use of forensically acceptable means of preserving and testing the suspected gassing substance to confirm the presence of human excrement or other bodily fluids or bodily substances. If there is probable cause to believe that the inmate has violated subdivision (a), the chief medical officer of the local detention facility, or his or her designee, may, when he or she deems it medically necessary to protect the health of an officer or employee who may have been subject to a violation of this section, order the inmate to receive an examination or test for hepatitis or tuberculosis or both hepatitis and tuberculosis on either a voluntary or involuntary basis immediately after the event, and periodically thereafter as determined to be necessary by the medical officer in order to ensure that further hepatitis or tuberculosis transmission does not occur. These decisions shall be consistent with an occupational exposure as defined by the Center for Disease Control and Prevention. The results of any examination or test shall be provided to the officer or employee who has been subject to a reported or suspected violation of this section. Nothing in this subdivision shall be construed to otherwise supersede the operation of Title 8 (commencing with Section 7500). Any person performing tests, transmitting test results, or disclosing information pursuant to this section shall be immune from civil liability for any action taken in accordance with this section. (d) The person in charge of the local detention facility shall refer all reports for which there is probable cause to believe that the inmate has violated subdivision (a) to the local district attorney for prosecution. (e) Nothing in this section shall preclude prosecution under both this section and any other provision of law."
+      }
+    },
+    {
+      "key": "PEN:477",
+      "status": "substantive_research_open",
+      "reason": "Keep counterfeiting of precious-metal money/materials in the specialized financial queue; bind sections 478/479 and distinguish making from knowing circulation before adding choices. No low-severity assumption.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b1fb72-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "592bb6863e9855a9732f7826f3936e8c0ff0d69dcf768741eda37270457c6122"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:477",
+        "start": 0,
+        "end": 482,
+        "text": "Every person who counterfeits any of the species of gold or silver coin current in this State, or any kind or species of gold dust, gold or silver bullion, or bars, lumps, pieces, or nuggets, or who sells, passes, or gives in payment such counterfeit coin, dust, bullion, bars, lumps, pieces, or nuggets, or permits, causes, or procures the same to be sold, uttered, or passed, with intention to defraud any person, knowing the same to be counterfeited, is guilty of counterfeiting."
+      }
+    },
+    {
+      "key": "PEN:481.1",
+      "status": "substantive_research_open",
+      "reason": "Separate fare-media counterfeiting from possession/circulation and retain Public Utilities Code 99211 provider definition. Subdivision (a) can be a felony; not a minor omission.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b3821c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "940687a02bdb1d6f0209da138b79b48824855e458bea2c5cde1452818d0e8004"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:481.1",
+        "start": 0,
+        "end": 967,
+        "text": "(a) Every person who counterfeits, forges, or alters any fare media designed to entitle the holder to a ride on vehicles of a public transportation system, as defined by Section 99211 of the Public Utilities Code, or on vehicles operated by entities subsidized by the Department of Transportation is punishable by imprisonment in a county jail, not exceeding one year, or in the state prison. (b) Every person who knowingly possesses any counterfeit, forged, or altered fare media designed to entitle the holder to a ride on vehicles of a public transportation system, as defined by Section 99211 of the Public Utilities Code, or on vehicles operated by entities subsidized by the Department of Transportation, or who utters, publishes, or puts into circulation any fare media with intent to defraud is punishable by imprisonment in a county jail not exceeding one year, or by a fine not exceeding one thousand dollars ($1,000), or by both that imprisonment and fine."
+      }
+    },
+    {
+      "key": "PEN:482",
+      "status": "substantive_research_open",
+      "reason": "Narrow canceled railroad/steamship-ticket restoration offense retained for later specialization. Source states up to six months and/or a $1,000 fine. Omission is a priority decision, not a claim that the offense is obsolete.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b3821e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8b464583c8be8738bacce300ba8dcd66df6c4d10e7ffdd1f917dd3d1d83245c2"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:482",
+        "start": 0,
+        "end": 956,
+        "text": "Every person who, for the purpose of restoring to its original appearance and nominal value in whole or in part, removes, conceals, fills up, or obliterates, the cuts, marks, punch-holes, or other evidence of cancellation, from any ticket, check, order, coupon, receipt for fare, or pass, issued by any railroad or steamship company, or any lessee or manager thereof, canceled in whole or in part, with intent to dispose of by sale or gift, or to circulate the same, or with intent to defraud the railroad or steamship company, or lessee thereof, or any other person, or who, with like intent to defraud, offers for sale, or in payment of fare on the railroad or vessel of the company, such ticket, check, order, coupon, or pass, knowing the same to have been so restored, in whole or in part, is punishable by imprisonment in the county jail not exceeding six months, or by a fine not exceeding one thousand dollars, or by both such imprisonment and fine."
+      }
+    },
+    {
+      "key": "PEN:483",
+      "status": "substantive_research_open",
+      "reason": "Transfer of nontransferable common-carrier passage instruments requires Government Code 26002.5 and Public Utilities Code 40180.5/99151 exception checks. Keep unpublished pending those dependencies.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b38220-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "b25a29643e8f5b3851d59da4bc15fd71186239336ed3bf12cf63ce4645293cf2"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:483",
+        "start": 0,
+        "end": 515,
+        "text": "Except as otherwise provided in Section 26002.5 of the Government Code and Sections 40180.5 and 99151 of the Public Utilities Code, any person, firm, corporation, partnership, or association that shall sell to another any ticket, pass, scrip, mileage or commutation book, coupon, or other instrument for passage on a common carrier, for the use of any person not entitled to use the same according to the terms thereof, or of the book or portion thereof from which it was detached, shall be guilty of a misdemeanor."
+      }
+    },
+    {
+      "key": "PEN:484.1",
+      "status": "substantive_research_open",
+      "reason": "Pawnbroker/secondhand-dealer identity or title misrepresentation is declared theft. Resolve valuation, generic theft grading, and special restitution before adding a distinct entry.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b68f68-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d6720c1af1521400a31eb5bd28ca7893f39fb7012b380fd7b3d374d3177e38ad"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:484.1",
+        "start": 0,
+        "end": 1227,
+        "text": "(a) Any person who knowingly gives false information or provides false verification as to the person’s true identity or as to the person’s ownership interest in property or the person’s authority to sell property in order to receive money or other valuable consideration from a pawnbroker or secondhand dealer and who receives money or other valuable consideration from the pawnbroker or secondhand dealer is guilty of theft. (b) Upon conviction of the offense described in subdivision (a), the court may require, in addition to any sentence or fine imposed, that the defendant make restitution to the pawnbroker or secondhand dealer in an amount not exceeding the actual losses sustained pursuant to the provisions of subdivision (c) of Section 13967 of the Government Code, as operative on or before September 28, 1994, if the defendant is denied probation, or Section 1203.04, as operative on or before August 2, 1995, if the defendant is granted probation or Section 1202.4. (c) Upon the setting of a court hearing date for sentencing of any person convicted under this section, the probation officer, if one is assigned, shall notify the pawnbroker or secondhand dealer or coin dealer of the time and place of the hearing."
+      }
+    },
+    {
+      "key": "PEN:484c",
+      "status": "substantive_research_open",
+      "reason": "Construction-loan false vouchers are declared embezzlement. Bind embezzlement grading and determine the required fund diversion rather than borrowing a neighboring theft penalty.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67b68f6c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "9ea06fce68ad7f6f0c0b60a2aa0083a01069594f6640ba25ec18ee0224883f15"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:484c",
+        "start": 0,
+        "end": 176,
+        "text": "Any person who submits a false voucher to obtain construction loan funds and does not use the funds for the purpose for which the claim was submitted is guilty of embezzlement."
+      }
+    },
+    {
+      "key": "PEN:484e",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish only the explicitly petty-theft possession branch (c). Transfer, four-card acquisition, and account-information branches remain open for value-based reduction and case-law review; do not infer their grade from the word grand alone.",
+      "additionIds": [
+        "ca-pen-484e-c"
+      ],
+      "versions": [
+        {
+          "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:484e",
+        "start": 0,
+        "end": 1003,
+        "text": "(a) Every person who, with intent to defraud, sells, transfers, or conveys, an access card, without the cardholder’s or issuer’s consent, is guilty of grand theft. (b) Every person, other than the issuer, who within any consecutive 12-month period, acquires access cards issued in the names of four or more persons which he or she has reason to know were taken or retained under circumstances which constitute a violation of subdivision (a), (c), or (d) is guilty of grand theft. (c) Every person who, with the intent to defraud, acquires or retains possession of an access card without the cardholder’s or issuer’s consent, with intent to use, sell, or transfer it to a person other than the cardholder or issuer is guilty of petty theft. (d) Every person who acquires or retains possession of access card account information with respect to an access card validly issued to another person, without the cardholder’s or issuer’s consent, with the intent to use it fraudulently, is guilty of grand theft."
+      }
+    },
+    {
+      "key": "PEN:487a",
+      "status": "substantive_research_open",
+      "reason": "Livestock and carcass branches remain open for section 490.2 valuation/reduction and section 489(b)'s specific fine. Do not apply a blanket grand-theft label regardless of value.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_501b5f15-8664-11e4-9fd7-cecd375806d8",
+          "contentSha256": "2dc0f4b65fe465fda37916befcefba337d8c8c65aa22138d1b482e904a244391"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487a",
+        "start": 0,
+        "end": 1341,
+        "text": "(a) Every person who feloniously steals, takes, carries, leads, or drives away any horse, mare, gelding, any bovine animal, any caprine animal, mule, jack, jenny, sheep, lamb, hog, sow, boar, gilt, barrow, or pig, which is the personal property of another, or who fraudulently appropriates that same property which has been entrusted to him or her, or who knowingly and designedly, by any false or fraudulent representation or pretense, defrauds any other person of that same property, or who causes or procures others to report falsely of his or her wealth or mercantile character and by thus imposing upon any person, obtains credit and thereby fraudulently gets or obtains possession of that same property, is guilty of grand theft. (b) Every person who shall feloniously steal, take, transport or carry the carcass of any bovine, caprine, equine, ovine, or suine animal or of any mule, jack or jenny, which is the personal property of another, or who shall fraudulently appropriate such property which has been entrusted to him or her, is guilty of grand theft. (c) Every person who shall feloniously steal, take, transport, or carry any portion of the carcass of any bovine, caprine, equine, ovine, or suine animal or of any mule, jack, or jenny, which has been killed without the consent of the owner thereof, is guilty of grand theft."
+      }
+    },
+    {
+      "key": "PEN:487b",
+      "status": "substantive_research_open",
+      "reason": "Severed real-property theft has a literal $250 threshold and felony language. Resolve the interaction with section 490.2 before choosing a publishable value threshold.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a3301f6f-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "d48d2280ef2c0a88667c4297465c2ac64743ede7f175a0a8ed3bab6783f91806"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487b",
+        "start": 0,
+        "end": 344,
+        "text": "Every person who converts real estate of the value of two hundred fifty dollars ($250) or more into personal property by severance from the realty of another, and with felonious intent to do so, steals, takes, and carries away that property is guilty of grand theft and is punishable by imprisonment pursuant to subdivision (h) of Section 1170."
+      }
+    },
+    {
+      "key": "PEN:487c",
+      "status": "substantive_research_open",
+      "reason": "Severed real-property petty theft states a below-$250 threshold and a one-year jail alternative. Keep it distinct from generic six-month petty theft while resolving the paired 487b/490.2 boundary.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_3130676e-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "fdf2aec96aae805e2a5affecd663111c91541c1a13681f3a6954d6abd5d341c4"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487c",
+        "start": 0,
+        "end": 444,
+        "text": "Every person who converts real estate of the value of less than two hundred fifty dollars ($250) into personal property by severance from the realty of another, and with felonious intent to do so steals, takes, and carries away that property is guilty of petty theft and is punishable by imprisonment in the county jail for not more than one year, or by a fine not exceeding one thousand dollars ($1,000), or by both that fine and imprisonment."
+      }
+    },
+    {
+      "key": "PEN:487d",
+      "status": "substantive_research_open",
+      "reason": "Mining-material theft includes attempts and an express felony term. Retain for review of value-based reduction and attempt treatment rather than assuming ordinary completed grand theft.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_a49ea391-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "6180b069ecd1e52adb16ab4ebf82432b63f557ef3b2821f202f745a5ae6260a8"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487d",
+        "start": 0,
+        "end": 335,
+        "text": "Every person who feloniously steals, takes, and carries away, or attempts to take, steal, and carry from any mining claim, tunnel, sluice, undercurrent, riffle box, or sulfurate machine, another’s gold dust, amalgam, or quicksilver is guilty of grand theft and is punishable by imprisonment pursuant to subdivision (h) of Section 1170."
+      }
+    },
+    {
+      "key": "PEN:487e",
+      "status": "substantive_research_open",
+      "reason": "Companion-animal theft above $950: acquire the Food and Agricultural Code 31752.5 feral-cat exclusion alongside paired 487f before adding species-specific choices.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_d0972681-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "305f3b893af804ce484cad07a1225dcfd13c9350d8de3d8b8a82576eed7910c3"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487e",
+        "start": 0,
+        "end": 638,
+        "text": "(a) Every person who feloniously steals, takes, or carries away a companion animal of another which is of a value exceeding nine hundred fifty dollars ($950) is guilty of grand theft. (b) (1) For purposes of this section, “companion animal” means an animal, including, but not limited to, a dog or a cat that a person keeps and provides care for as a household pet or otherwise for the purpose of companionship, emotional support, service, or protection. (2) For purposes of this section, “companion animal” excludes feral animals, including, but not limited to, feral cats as defined in Section 31752.5 of the Food and Agricultural Code."
+      }
+    },
+    {
+      "key": "PEN:487f",
+      "status": "substantive_research_open",
+      "reason": "Companion-animal theft at or below $950: review with 487e and the statutory feral-animal exclusion; keep prior-conviction grading separate from ordinary petty theft.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_d193aef3-6a83-11ed-823c-e74f056edb17",
+          "contentSha256": "c02aa7ef207dac3b5635b6ccf849ffff55525f04b5308ec5ed0cefaa3f95091e"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487f",
+        "start": 0,
+        "end": 642,
+        "text": "(a) Every person who feloniously steals, takes, or carries away a companion animal of another which is of a value not exceeding nine hundred fifty dollars ($950) is guilty of petty theft. (b) (1) For purposes of this section, “companion animal” means an animal, including, but not limited to, a dog or a cat that a person keeps and provides care for as a household pet or otherwise for the purpose of companionship, emotional support, service, or protection. (2) For purposes of this section, “companion animal” excludes feral animals, including, but not limited to, feral cats as defined in Section 31752.5 of the Food and Agricultural Code."
+      }
+    },
+    {
+      "key": "PEN:487g",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish the bounded animal-taking/fraud offense for commercial use with its express jail/state-prison alternatives. No claim that this completes every animal offense or determines case-specific reduction eligibility.",
+      "additionIds": [
+        "ca-pen-487g"
+      ],
+      "versions": [
+        {
+          "versionId": "id_67bcaa0e-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "0f2118a4299f9cee378bfdd9cc33dc4aa84303d2e2618a3c698fcfb5e2aea2f3"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487g",
+        "start": 0,
+        "end": 451,
+        "text": "Every person who steals or maliciously takes or carries away any animal of another for purposes of sale, medical research, slaughter, or other commercial use, or who knowingly, by any false representation or pretense, defrauds another person of any animal for purposes of sale, medical research, slaughter, or other commercial use is guilty of a public offense punishable by imprisonment in a county jail not exceeding one year or in the state prison."
+      }
+    },
+    {
+      "key": "PEN:487h",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish the more-than-$950 cargo branch with its definition and express 487/487a/487d exceptions. Do not absorb specialized livestock, mining, or firearm punishment into ordinary cargo theft.",
+      "additionIds": [
+        "ca-pen-487h-a"
+      ],
+      "versions": [
+        {
+          "versionId": "id_e7a93781-f3aa-11de-a127-d5e287cac7f8",
+          "contentSha256": "03a8c06f62848e175753ced7b47b5ab742e78d2341fae2157fcb0d87014a7381"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487h",
+        "start": 0,
+        "end": 423,
+        "text": "(a) Every person who steals, takes, or carries away cargo of another, if the cargo taken is of a value exceeding nine hundred fifty dollars ($950), except as provided in Sections 487, 487a, and 487d, is guilty of grand theft. (b) For the purposes of this section, “cargo” means any goods, wares, products, or manufactured merchandise that has been loaded into a trailer, railcar, or cargo container, awaiting or in transit."
+      }
+    },
+    {
+      "key": "PEN:487i",
+      "status": "substantive_research_open",
+      "reason": "Public-housing fraud retains a literal more-than-$400 threshold. Resolve section 490.2 and applicable fraud authority before treating that threshold as a current felony boundary.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_6ff249e6-cb73-11dd-898a-f4578c730531",
+          "contentSha256": "dae462b0a4c80880edb5bd5e6e2e0df4283b3c25385d162ccd436b7c7b0dae01"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487i",
+        "start": 0,
+        "end": 138,
+        "text": "Any person who defrauds a housing program of a public housing authority of more than four hundred dollars ($400) is guilty of grand theft."
+      }
+    },
+    {
+      "key": "PEN:487j",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish more-than-$950 copper theft with the separate misdemeanor fine and the felony imprisonment-and-fine wording retained.",
+      "additionIds": [
+        "ca-pen-487j"
+      ],
+      "versions": [
+        {
+          "versionId": "id_8c6c0b53-30cf-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "8699d561d41e7604de24ca06946a5ff9dfc7432f49c843ac492507d7cfbc27d8"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487j",
+        "start": 0,
+        "end": 585,
+        "text": "Every person who steals, takes, or carries away copper materials of another, including, but not limited to, copper wire, copper cable, copper tubing, and copper piping, which are of a value exceeding nine hundred fifty dollars ($950) is guilty of grand theft. Grand theft of copper shall be punishable by a fine not exceeding two thousand five hundred dollars ($2,500), by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment, or by imprisonment pursuant to subdivision (h) of Section 1170 and a fine not exceeding ten thousand dollars ($10,000)."
+      }
+    },
+    {
+      "key": "PEN:487k",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish qualifying agricultural-equipment theft above $950 with section 489(c) grading; preserve the food-production use element.",
+      "additionIds": [
+        "ca-pen-487k"
+      ],
+      "versions": [
+        {
+          "versionId": "id_e2ea837d-0bd9-11ea-912d-915c88c10a14",
+          "contentSha256": "cb0abada8a5f0598e7bee7ba78b2aaddacba7d655e16315fe150ec6ab4d11270"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487k",
+        "start": 0,
+        "end": 294,
+        "text": "A person who steals, takes, or carries away tractors, all-terrain vehicles, or other agricultural equipment, or any portion thereof, used in the acquisition or production of food for public consumption, which are of a value exceeding nine hundred fifty dollars ($950), is guilty of grand theft."
+      }
+    },
+    {
+      "key": "PEN:487m",
+      "status": "substantive_research_open",
+      "reason": "Wage theft is consequential and remains open for Labor Code wage/gratuity definitions, one-employee versus aggregate thresholds, the 12-month period, and contractor coverage. Group with financial/employment offenses, not minor deferrals.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_b29279f7-5c47-11ec-9d2f-c3e210bbbdff",
+          "contentSha256": "f5f7c8cb13c20806a15258f47e29a5aa1dce678ea559104f2ca3cfe51904f629"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:487m",
+        "start": 0,
+        "end": 1379,
+        "text": "(a) Notwithstanding Sections 215 and 216 of the Labor Code, the intentional theft of wages in an amount greater than nine hundred fifty dollars ($950) from any one employee, or two thousand three hundred fifty dollars ($2,350) in the aggregate from two or more employees, by an employer in any consecutive 12-month period may be punished as grand theft. (b) For purposes of this section, “theft of wages” is the intentional deprivation of wages, as defined in Section 200 of the Labor Code, gratuities, as defined in Section 350 of the Labor Code, benefits, or other compensation, by unlawful means, with the knowledge that the wages, gratuities, benefits, or other compensation is due to the employee under the law. (c) For purposes of this section, “employee” includes an independent contractor and “employer” includes the hiring entity of an independent contractor. (d) Wages, gratuities, benefits, or other compensation that are the subject of a prosecution under this section may be recovered as restitution in accordance with Sections 1202.4 and 1203.1. This section does not prohibit the employee or the Labor Commissioner from commencing a civil action to seek remedies provided for under the Labor Code for acts prosecuted under this section. (e) This section does not constitute a change in, and does not expand or limit the scope of conduct prohibited by, Section 487."
+      }
+    },
+    {
+      "key": "PEN:490.4",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish four distinct organized-retail-theft branches. Preserve different participant counts and the two-occasion/value condition for (a)(1)-(3), which does not govern the organizing branch (a)(4).",
+      "additionIds": [
+        "ca-pen-490-4-a-1",
+        "ca-pen-490-4-a-2",
+        "ca-pen-490-4-a-3",
+        "ca-pen-490-4-a-4"
+      ],
+      "versions": [
+        {
+          "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:490.4",
+        "start": 0,
+        "end": 3191,
+        "text": "(a) A person who commits any of the following acts is guilty of organized retail theft and shall be punished pursuant to subdivision (b): (1) Acts in concert with one or more persons to steal merchandise from one or more merchant’s premises or online marketplace with the intent to sell, exchange, or return the merchandise for value. (2) Acts in concert with two or more persons to receive, purchase, or possess merchandise described in paragraph (1), knowing or believing it to have been stolen. (3) Acts as an agent of another individual or group of individuals to steal merchandise from one or more merchant’s premises or online marketplaces as part of an organized plan to commit theft. (4) Recruits, coordinates, organizes, supervises, directs, manages, or finances another to undertake any of the acts described in paragraph (1) or (2) or any other statute defining theft of merchandise. (b) Organized retail theft is punishable as follows: (1) If violations of paragraph (1), (2), or (3) of subdivision (a) are committed on two or more separate occasions within a 12-month period, and if the aggregated value of the merchandise stolen, received, purchased, or possessed within that 12-month period exceeds nine hundred fifty dollars ($950), the offense is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (2) Any other violation of paragraph (1), (2), or (3) of subdivision (a) that is not described in paragraph (1) of this subdivision is punishable by imprisonment in a county jail not exceeding one year. (3) A violation of paragraph (4) of subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (c) For the purpose of determining whether the defendant acted in concert with another person or persons in any proceeding, the trier of fact may consider any competent evidence, including, but not limited to, all of the following: (1) The defendant has previously acted in concert with another person or persons in committing acts constituting theft, or any related offense, including any conduct that occurred in counties other than the county of the current offense, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act. (2) That the defendant used or possessed an artifice, instrument, container, device, or other article capable of facilitating the removal of merchandise from a retail establishment without paying the purchase price and use of the artifice, instrument, container, or device or other article is part of an organized plan to commit theft. (3) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, and the property is intended for resale. (d) In a prosecution under this section, the prosecutor shall not be required to charge any other coparticipant of the organized retail theft. (e) Upon conviction of an offense under this section, the court shall consider ordering, as a condition of probation, that the defendant stay away from retail establishments with a reasonable nexus to the crime committed."
+      }
+    },
+    {
+      "key": "PEN:490.5",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Supporting provision: petty-theft mandatory fine, civil recovery, detention rules, and a theater-refusal cross-reference to 602.1. Retain as a penalty/procedure dependency; no invented standalone crime covering the whole section. The 602.1 conduct stays in public-order review.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67be30ba-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ff63b69ba75506d2eff6c1236c2d9e2fb9cbd14a7416ba766b00e5b7d8b53f62"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:490.5",
+        "start": 0,
+        "end": 11676,
+        "text": "(a) Upon a first conviction for petty theft involving merchandise taken from a merchant’s premises or a book or other library materials taken from a library facility, a person shall be punished by a mandatory fine of not less than fifty dollars ($50) and not more than one thousand dollars ($1,000) for each such violation; and may also be punished by imprisonment in the county jail, not exceeding six months, or both such fine and imprisonment. (b) When an unemancipated minor’s willful conduct would constitute petty theft involving merchandise taken from a merchant’s premises or a book or other library materials taken from a library facility, any merchant or library facility who has been injured by that conduct may bring a civil action against the parent or legal guardian having control and custody of the minor. For the purposes of those actions the misconduct of the unemancipated minor shall be imputed to the parent or legal guardian having control and custody of the minor. The parent or legal guardian having control or custody of an unemancipated minor whose conduct violates this subdivision shall be jointly and severally liable with the minor to a merchant or to a library facility for damages of not less than fifty dollars ($50) nor more than five hundred dollars ($500), plus costs. In addition to the foregoing damages, the parent or legal guardian shall be jointly and severally liable with the minor to the merchant for the retail value of the merchandise if it is not recovered in a merchantable condition, or to a library facility for the fair market value of its book or other library materials. Recovery of these damages may be had in addition to, and is not limited by, any other provision of law which limits the liability of a parent or legal guardian for the tortious conduct of a minor. An action for recovery of damages, pursuant to this subdivision, may be brought in small claims court if the total damages do not exceed the jurisdictional limit of that court, or in any other appropriate court; however, total damages, including the value of the merchandise or book or other library materials, shall not exceed five hundred dollars ($500) for each action brought under this section. The provisions of this subdivision are in addition to other civil remedies and do not limit merchants or other persons to elect to pursue other civil remedies, except that the provisions of Section 1714.1 of the Civil Code shall not apply herein. (c) When an adult or emancipated minor has unlawfully taken merchandise from a merchant’s premises, or a book or other library materials from a library facility, the adult or emancipated minor shall be liable to the merchant or library facility for damages of not less than fifty dollars ($50) nor more than five hundred dollars ($500), plus costs. In addition to the foregoing damages, the adult or emancipated minor shall be liable to the merchant for the retail value of the merchandise if it is not recovered in merchantable condition, or to a library facility for the fair market value of its book or other library materials. An action for recovery of damages, pursuant to this subdivision, may be brought in small claims court if the total damages do not exceed the jurisdictional limit of such court, or in any other appropriate court. The provisions of this subdivision are in addition to other civil remedies and do not limit merchants or other persons to elect to pursue other civil remedies. (d) In lieu of the fines prescribed by subdivision (a), any person may be required to perform public services designated by the court, provided that in no event shall any such person be required to perform less than the number of hours of such public service necessary to satisfy the fine assessed by the court as provided by subdivision (a) at the minimum wage prevailing in the state at the time of sentencing. (e) All fines collected under this section shall be collected and distributed in accordance with Sections 1463 and 1463.1 of the Penal Code; provided, however, that a county may, by a majority vote of the members of its board of supervisors, allocate any amount up to, but not exceeding 50 percent of such fines to the county superintendent of schools for allocation to local school districts. The fines allocated shall be administered by the county superintendent of schools to finance public school programs, which provide counseling or other educational services designed to discourage shoplifting, theft, and burglary. Subject to rules and regulations as may be adopted by the Superintendent of Public Instruction, each county superintendent of schools shall allocate such funds to school districts within the county which submit project applications designed to further the educational purposes of this section. The costs of administration of this section by each county superintendent of schools shall be paid from the funds allocated to the county superintendent of schools. (f) (1) A merchant may detain a person for a reasonable time for the purpose of conducting an investigation in a reasonable manner whenever the merchant has probable cause to believe the person to be detained is attempting to unlawfully take or has unlawfully taken merchandise from the merchant’s premises. A theater owner may detain a person for a reasonable time for the purpose of conducting an investigation in a reasonable manner whenever the theater owner has probable cause to believe the person to be detained is attempting to operate a video recording device within the premises of a motion picture theater without the authority of the owner of the theater. A person employed by a library facility may detain a person for a reasonable time for the purpose of conducting an investigation in a reasonable manner whenever the person employed by a library facility has probable cause to believe the person to be detained is attempting to unlawfully remove or has unlawfully removed books or library materials from the premises of the library facility. (2) In making the detention a merchant, theater owner, or a person employed by a library facility may use a reasonable amount of nondeadly force necessary to protect himself or herself and to prevent escape of the person detained or the loss of tangible or intangible property. (3) During the period of detention any items which a merchant or theater owner, or any items which a person employed by a library facility has probable cause to believe are unlawfully taken from the premises of the merchant or library facility, or recorded on theater premises, and which are in plain view may be examined by the merchant, theater owner, or person employed by a library facility for the purposes of ascertaining the ownership thereof. (4) A merchant, theater owner, a person employed by a library facility, or an agent thereof, having probable cause to believe the person detained was attempting to unlawfully take or has taken any item from the premises, or was attempting to operate a video recording device within the premises of a motion picture theater without the authority of the owner of the theater, may request the person detained to voluntarily surrender the item or recording. Should the person detained refuse to surrender the recording or item of which there is probable cause to believe has been recorded on or unlawfully taken from the premises, or attempted to be recorded or unlawfully taken from the premises, a limited and reasonable search may be conducted by those authorized to make the detention in order to recover the item. Only packages, shopping bags, handbags or other property in the immediate possession of the person detained, but not including any clothing worn by the person, may be searched pursuant to this subdivision. Upon surrender or discovery of the item, the person detained may also be requested, but may not be required, to provide adequate proof of his or her true identity. (5) If any person admitted to a theater in which a motion picture is to be or is being exhibited, refuses or fails to give or surrender possession or to cease operation of any video recording device that the person has brought into or attempts to bring into that theater, then a theater owner shall have the right to refuse admission to that person or request that the person leave the premises and shall thereupon offer to refund and, unless that offer is refused, refund to that person the price paid by that person for admission to that theater. If the person thereafter refuses to leave the theater or cease operation of the video recording device, then the person shall be deemed to be intentionally interfering with and obstructing those attempting to carry on a lawful business within the meaning of Section 602.1. (6) A peace officer who accepts custody of a person arrested for an offense contained in this section may, subsequent to the arrest, search the person arrested and his or her immediate possessions for any item or items alleged to have been taken. (7) In any civil action brought by any person resulting from a detention or arrest by a merchant, it shall be a defense to such action that the merchant detaining or arresting such person had probable cause to believe that the person had stolen or attempted to steal merchandise and that the merchant acted reasonably under all the circumstances. In any civil action brought by any person resulting from a detention or arrest by a theater owner or person employed by a library facility, it shall be a defense to that action that the theater owner or person employed by a library facility detaining or arresting that person had probable cause to believe that the person was attempting to operate a video recording device within the premises of a motion picture theater without the authority of the owner of the theater or had stolen or attempted to steal books or library materials and that the person employed by a library facility acted reasonably under all the circumstances. (g) As used in this section: (1) “Merchandise” means any personal property, capable of manual delivery, displayed, held or offered for retail sale by a merchant. (2) “Merchant” means an owner or operator, and the agent, consignee, employee, lessee, or officer of an owner or operator, of any premises used for the retail purchase or sale of any personal property capable of manual delivery. (3) “Theater owner” means an owner or operator, and the agent, employee, consignee, lessee, or officer of an owner or operator, of any premises used for the exhibition or performance of motion pictures to the general public. (4) The terms “book or other library materials” include any book, plate, picture, photograph, engraving, painting, drawing, map, newspaper, magazine, pamphlet, broadside, manuscript, document, letter, public record, microform, sound recording, audiovisual material in any format, magnetic or other tape, electronic data-processing record, artifact, or other documentary, written or printed material regardless of physical form or characteristics, or any part thereof, belonging to, on loan to, or otherwise in the custody of a library facility. (5) The term “library facility” includes any public library; any library of an educational, historical or eleemosynary institution, organization or society; any museum; any repository of public records. (h) Any library facility shall post at its entrance and exit a conspicuous sign to read as follows: “IN ORDER TO PREVENT THE THEFT OF BOOKS AND LIBRARY MATERIALS, STATE LAW AUTHORIZES THE DETENTION FOR A REASONABLE PERIOD OF ANY PERSON USING THESE FACILITIES SUSPECTED OF COMMITTING “LIBRARY THEFT” (PENAL CODE SECTION 490.5).”"
+      }
+    },
+    {
+      "key": "PEN:490.7",
+      "status": "deferred_low_priority_offense",
+      "reason": "Documented low-priority deferral: taking more than 25 free newspapers with a specified intent. First offense is a $250-maximum infraction; repeat misdemeanor is up to 10 days and/or $500. Revisit if actual charging documents or independent benchmark show practical demand.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_5462d1fb-89e5-11db-b11b-b207fcb01266",
+          "contentSha256": "9e2a58882045142173f938312dfcd3c3500ae60a7445ec671deabc42cd0cfae5"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:490.7",
+        "start": 0,
+        "end": 2613,
+        "text": "(a) The Legislature finds that free newspapers provide a key source of information to the public, in many cases providing an important alternative to the news and ideas expressed in other local media sources. The Legislature further finds that the unauthorized taking of multiple copies of free newspapers, whether done to sell them to recycling centers, to injure a business competitor, to deprive others of the opportunity to read them, or for any other reason, injures the rights of readers, writers, publishers, and advertisers, and impoverishes the marketplace of ideas in California. (b) No person shall take more than twenty-five (25) copies of the current issue of a free or complimentary newspaper if done with the intent to do one or more of the following: (1) Recycle the newspapers for cash or other payment. (2) Sell or barter the newspaper. (3) Deprive others of the opportunity to read or enjoy the newspaper. (4) Harm a business competitor. (c) This section does not apply to the owner or operator of the newsrack in which the copies are placed, the owner or operator of the property on which the newsrack is placed, the publisher, the printer, the distributor, the deliverer of the newspaper, or to any advertiser in that issue, or to any other person who has the express permission to do so from any of these entities. (d) Any newspaper publisher may provide express permission to take more than twenty-five (25) copies of the current issue of a free or complimentary newspaper by indicating on the newsrack or in the newspaper itself, that people may take a greater number of copies if they wish. (e) A first violation of subdivision (b) shall be an infraction punishable by a fine not exceeding two hundred fifty dollars ($250). A second or subsequent violation shall be punishable as an infraction or a misdemeanor. A misdemeanor conviction under this section is punishable by a fine not exceeding five hundred dollars ($500), imprisonment of up to 10 days in a county jail, or by both that fine and imprisonment. The court may order community service in lieu of the punishment otherwise provided for an infraction or misdemeanor in the amount of 20 hours for an infraction, and 40 hours for a misdemeanor. A misdemeanor conviction under this section shall not constitute a conviction for petty theft. (f) This section shall not be construed to repeal, modify, or weaken any existing legal prohibitions against the taking of private property. (g) For purposes of this section, an issue is current if no more than half of the period of time until the distribution of the next issue has passed."
+      }
+    },
+    {
+      "key": "PEN:490.8",
+      "status": "substantive_research_open",
+      "reason": "Used as a supporting source for organized-retail-theft restraining orders. Its separate misdemeanor for violating an order in (f) remains open for notice/service and mens rea review; do not classify the whole section as merely procedural.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:490.8",
+        "start": 0,
+        "end": 4664,
+        "text": "(a) A court sentencing a defendant for any violation described in subdivision (b) shall consider issuing an order restraining the defendant from entering the premises of the retail establishment, that may be valid for up to two years, as determined by the court. (b) Subdivision (a) shall apply to a person convicted of any of the following offenses: (1) Shoplifting in violation of Section 459.5. (2) Any theft, including a violation of Section 487 or 488, from a retail establishment. (3) Organized retail theft in violation of Section 490.4. (4) Any vandalism of a retail establishment in violation of Section 594. (5) Any assault or battery of an employee of a retail establishment while that person is working at the retail establishment, including a violation of Section 240, 242, or 245. (c) (1) An order issued pursuant to subdivision (a) shall prohibit the restrained person from entering the retail establishment, or being present on the grounds of, or any parking lot adjacent to and used to service, the retail establishment. (2) If the retail establishment is part of a chain or franchise, the court may include other retail establishments in that chain or franchise within a specified geographic range in the order. (d) In determining whether to impose a retail crime restraining order pursuant to subdivision (a) or (e), the court shall consider whether the retail establishment is the only place that sells food, pharmaceuticals, or other basic life necessities within one mile of where the individual resides, or otherwise creates undue hardship for the individual. (e) (1) A prosecuting attorney, city attorney, county counsel, or attorney representing a retail establishment may file a petition requesting a retail crime restraining order for an individual who has been arrested, including, but not limited to, the issuance of a citation in lieu of a custodial arrest pursuant to Section 853.6, two or more times for any of the offenses listed in subdivision (b) within the same retail establishment. (2) An order issued pursuant to this subdivision shall be issued after a hearing. (3) The respondent shall be personally served with notice of the hearing and shall be entitled to representation by court-appointed counsel. (4) The petitioner shall bear the burden of proving, by a preponderance of the evidence, that the respondent, on two or more separate occasions, committed an offense described in subdivision (b) within the retail establishment or on the grounds thereof. (5) The court may issue an order restraining the respondent from entering the premises of the retail establishment for a period not to exceed two years if the court finds by a preponderance of the evidence that both of the following are true: (A) The respondent, on two or more separate occasions, committed an offense described in subdivision (b) within the retail establishment or on the grounds thereof. (B) There is a substantial likelihood that the individual will return to the retail establishment. (6) (A) An order issued pursuant to this subdivision shall prohibit the restrained person from entering the retail establishment, or being present on the grounds of, or any parking lot adjacent to and used to service, the retail establishment. (B) If the retail establishment is part of a chain or franchise, the court may include other retail establishments in that chain or franchise within a specified geographic range in the order. (f) A violation of an order issued pursuant to this section is punishable as a misdemeanor. Declarative of existing law, prosecution under this section shall not preclude prosecution for any other offenses committed during a violation of this section. (g) Notwithstanding Section 853.6, an officer arresting a person for a violation of this section is not required to release the person pursuant to a written notice to appear. (h) Declarative of existing law, a court may offer an individual charged with a violation of this section an opportunity to participate in a diversion program for which they are eligible, including those described in Title 6 (commencing with Section 976) of Part 2. (i) If a person subject to a retail crime restraining order issued pursuant to this section was not present in court at the time the order was issued or renewed, the retail crime restraining order shall be personally served on the restrained person by a law enforcement officer, or by a person as provided in Section 414.10 of the Code of Civil Procedure. (j) The Judicial Council may prescribe the form of the petitions and orders and any other documents, and may promulgate any rules of court, necessary to implement this section."
+      }
+    },
+    {
+      "key": "PEN:496a",
+      "status": "substantive_research_open",
+      "reason": "Consequential dealer receipt of utility/transport metals: due diligence, identification, and Business and Professions Code 21607 retention dependencies remain open. Express felony alternative prevents minor-deferral treatment.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_8024ef92-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7529691222241c4acc832df771e622a4f49cc4949f82cece07cf70b94aa8f971"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:496a",
+        "start": 0,
+        "end": 1594,
+        "text": "(a) Every person who is a dealer in or collector of junk, metals, or secondhand materials, or the agent, employee, or representative of such dealer or collector, and who buys or receives any wire, cable, copper, lead, solder, mercury, iron, or brass which they know or reasonably should know is ordinarily used by or ordinarily belongs to a railroad or other transportation, telephone, telegraph, gas, water, or electric light company, or a county, city, city and county, or other political subdivision of this state engaged in furnishing public utility service, without using due diligence to ascertain that the person selling or delivering the same has a legal right to do so, is guilty of criminally receiving that property, and shall be punished by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail for not more than one year, or by both that fine and imprisonment, or by imprisonment pursuant to subdivision (h) of Section 1170, or by a fine of not more than five thousand dollars ($5,000), or by both that fine and imprisonment. (b) Any person who buys or receives material pursuant to subdivision (a) shall obtain evidence of their identity from the seller, including, but not limited to, that person’s full name, signature, address, driver’s license number, and vehicle license number, and the license number of the vehicle delivering the material. (c) The record of the transaction shall include an appropriate description of the material purchased and the record shall be maintained pursuant to Section 21607 of the Business and Professions Code."
+      }
+    },
+    {
+      "key": "PEN:496b",
+      "status": "substantive_research_open",
+      "reason": "Specialized receipt of marked library materials requires diligent inquiry and has separate above-$50 and at-or-below-$50 penalties. Retain both branches for later review; do not substitute the ordinary receiving-stolen-property penalty.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c13e0c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "be0fd2ba0dc7705ded6bce7128169fed92f0965833ba7a610f8090de103c2252"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:496b",
+        "start": 0,
+        "end": 1130,
+        "text": "Every person who, being a dealer in or collector of second-hand books or other literary material, or the agent, employee or representative of such dealer, or collector, buys or receives any book, manuscript, map, chart, or other work of literature, belonging to, and bearing any mark or indicia of ownership by a public or incorporated library, college or university, without ascertaining by diligent inquiry that the person selling or delivering the same has a legal right to do so, is guilty of criminally receiving such property in the first degree if such property be of the value of more than fifty dollars, and is punishable by imprisonment in the county jail for not more than one year, or by a fine of not more than twice the value of the property received, or by both such fine and imprisonment; and is guilty of criminally receiving such property in the second degree if such property be of the value of fifty dollars or under, and is punishable by imprisonment in the county jail for not more than one month, or by a fine of not more than twice the value of the property received, or by both such fine and imprisonment."
+      }
+    },
+    {
+      "key": "PEN:496c",
+      "status": "substantive_research_open",
+      "reason": "Title-information copying, inducement, and receipt are theft; source uses compilation/acquisition cost as value. Resolve valuation and theft grading for each branch before publication.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c2c4ae-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "f1873e5771bb1c0f1f3c59c09465dccf547a81b9cf30b18adb833d3f553b660f"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:496c",
+        "start": 0,
+        "end": 1843,
+        "text": "Any person who shall copy, transcribe, photograph or otherwise make a record or memorandum of the contents of any private and unpublished paper, book, record, map or file, containing information relating to the title to real property or containing information used in the business of examining, certifying or insuring titles to real property and belonging to any person, firm or corporation engaged in the business of examining, certifying, or insuring titles to real property, without the consent of the owner of such paper, book, record, map or file, and with the intent to use the same or the contents thereof, or to dispose of the same or the contents thereof to others for use, in the business of examining, certifying, or insuring titles to real property, shall be guilty of theft, and any person who shall induce another to violate the provisions of this section by giving, offering, or promising to such another any gift, gratuity, or thing of value or by doing or promising to do any act beneficial to such another, shall be guilty of theft; and any person who shall receive or acquire from another any copy, transcription, photograph or other record or memorandum of the contents of any private and unpublished paper, book, record, map or file containing information relating to the title to real property or containing information used in the business of examining, certifying or insuring titles to real property, with the knowledge that the same or the contents thereof has or have been acquired, prepared or compiled in violation of this section shall be guilty of theft. The contents of any such private and unpublished paper, book, record, map or file is hereby defined to be personal property, and in determining the value thereof for the purposes of this section the cost of acquiring and compiling the same shall be the test."
+      }
+    },
+    {
+      "key": "PEN:496e",
+      "status": "substantive_research_open",
+      "reason": "Scrap-metal possession/reporting offense requires Business and Professions Code 21609.1, knowing-possession versus failure-to-report separation, and resolution of the penalty 'in addition to any other penalty'. Keep unpublished without assuming fine-only severity.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_811e6ac4-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "748a5f9c9abbe584e6053a0476d69acd62792e594e6158c4b88d04687ea0f88b"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:496e",
+        "start": 0,
+        "end": 2162,
+        "text": "(a) Any person who is engaged in the salvage, recycling, purchase, or sale of scrap metal and who possesses any of the following items that were owned or previously owned by any public agency, city, county, city and county, special district, or private utility that have been stolen or obtained in any manner constituting theft or extortion, knowing the property to be so stolen or obtained, or fails to report possession of the items pursuant to Section 21609.1 of the Business and Professions Code, is guilty of a crime: (1) A fire hydrant or any reasonably recognizable part of that hydrant. (2) Any fire department connection, including, but not limited to, reasonably recognizable bronze or brass fittings and parts. (3) Maintenance hole covers or lids, or any reasonably recognizable part of those maintenance hole covers and lids. (4) Backflow devices and connections to that device, or any part of that device. (5) Reasonably recognizable street lights, traffic signals, and their reasonably recognizable related equipment, including, but not limited to, all of the following: (A) Controller devices. (B) Light-emitting diode (LED) fixtures. (C) Ornamental or historical, modern, or pedestrian poles made of concrete, steel, brass, cast iron, or aluminum. (D) Solar street lighting components, such as solar panels, steel poles, and battery packs. (E) Colocation equipment. (F) Conductors, wiring, and cabling, including fiber optic cables. (G) Cameras. (H) Air quality sensors. (I) Digital banners and signs. (J) Pedestrian and cycling counters. (6) Active grade crossing signals. (7) Sewer flow monitoring station equipment. (8) Sewer pump station instrumentation and controls. (9) Stormwater auto sampling equipment and instrumentation. (10) Stormwater pump station instrumentation and controls. (11) Irrigation wiring. (12) Plaques. (13) Communications or broadband infrastructure or equipment. (14) Electric vehicle chargers. (15) Water meters and water meter components. (b) A person who violates subdivision (a) shall, in addition to any other penalty provided by law, be subject to a criminal fine of not more than five thousand dollars ($5,000)."
+      }
+    },
+    {
+      "key": "PEN:497",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Supporting jurisdiction/punishment provision for stolen or embezzled property brought into California. Underlying theft, embezzlement, or receipt must be identified; no generic standalone choice added.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c2c4b2-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8c32699b2671f28e4705aa1816c9d51a9d8cf3335233f09e71f5957d01d6aa12"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:497",
+        "start": 0,
+        "end": 332,
+        "text": "Every person who, in another state or country steals or embezzles the property of another, or receives such property knowing it to have been stolen or embezzled, and brings the same into this state, may be convicted and punished in the same manner as if such larceny, or embezzlement, or receiving, had been committed in this state."
+      }
+    },
+    {
+      "key": "PEN:498",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish five conduct branches with the shared intent requirement. Preserve more-than-$950 OR qualifying-prior escalation and the additional knowledge/reason-to-believe requirement for benefit receipt. Utility status must satisfy the definition in 498(a), not any provider of services.",
+      "additionIds": [
+        "ca-pen-498-b-1",
+        "ca-pen-498-b-2",
+        "ca-pen-498-b-3",
+        "ca-pen-498-b-4",
+        "ca-pen-498-b-5"
+      ],
+      "versions": [
+        {
+          "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+          "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "key": "PEN:499",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Supporting repeat-conviction penalty for listed vehicle/vessel theft statutes, with prior imprisonment requirements. Retain for the driving/vessel sentencing matrix, not a new ordinary theft identity.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+          "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:499",
+        "start": 0,
+        "end": 1078,
+        "text": "(a) Any person who, having been convicted of a previous violation of Section 10851 of the Vehicle Code, or of subdivision (d) of Section 487, involving a vehicle or vessel, and having served a term therefor in any penal institution or having been imprisoned therein as a condition of probation for the offense, is subsequently convicted of a violation of Section 499b, involving a vehicle or vessel, is punishable for the subsequent offense by imprisonment in the county jail not exceeding one year or the state prison for 16 months, two, or three years. (b) Any person convicted of a violation of Section 499b, who has been previously convicted under charges separately brought and tried two or more times of a violation of Section 499b, all such violations involving a vehicle or vessel, and who has been imprisoned therefore as a condition of probation or otherwise at least once, is punishable by imprisonment in the county jail for not more than one year or in the state prison for 16 months, two, or three years. (c) This section shall become operative on January 1, 1997."
+      }
+    },
+    {
+      "key": "PEN:499c",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish only trade-secret bribery under (c), with its express fine and incarceration alternatives. The four theft acts in (b) remain open for independent grading/valuation research; (c)'s penalty is not assigned to them.",
+      "additionIds": [
+        "ca-pen-499c-c"
+      ],
+      "versions": [
+        {
+          "versionId": "id_ad1c8f0b-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "db4c5d0e2fd2f817b51f99a7329d1480f57bad14a439cd4061e45412a0c56b08"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:499c",
+        "start": 0,
+        "end": 4120,
+        "text": "(a) As used in this section: (1) “Access” means to approach, a way or means of approaching, nearing, admittance to, including to instruct, communicate with, store information in, or retrieve information from a computer system or computer network. (2) “Article” means any object, material, device, or substance or copy thereof, including any writing, record, recording, drawing, sample, specimen, prototype, model, photograph, micro-organism, blueprint, map, or tangible representation of a computer program or information, including both human and computer readable information and information while in transit. (3) “Benefit” means gain or advantage, or anything regarded by the beneficiary as gain or advantage, including benefit to any other person or entity in whose welfare he or she is interested. (4) “Computer system” means a machine or collection of machines, one or more of which contain computer programs and information, that performs functions, including, but not limited to, logic, arithmetic, information storage and retrieval, communications, and control. (5) “Computer network” means an interconnection of two or more computer systems. (6) “Computer program” means an ordered set of instructions or statements, and related information that, when automatically executed in actual or modified form in a computer system, causes it to perform specified functions. (7) “Copy” means any facsimile, replica, photograph or other reproduction of an article, and any note, drawing or sketch made of or from an article. (8) “Representing” means describing, depicting, containing, constituting, reflecting or recording. (9) “Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (A) Derives independent economic value, actual or potential, from not being generally known to the public or to other persons who can obtain economic value from its disclosure or use; and (B) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy. (b) Every person is guilty of theft who, with intent to deprive or withhold the control of a trade secret from its owner, or with an intent to appropriate a trade secret to his or her own use or to the use of another, does any of the following: (1) Steals, takes, carries away, or uses without authorization, a trade secret. (2) Fraudulently appropriates any article representing a trade secret entrusted to him or her. (3) Having unlawfully obtained access to the article, without authority makes or causes to be made a copy of any article representing a trade secret. (4) Having obtained access to the article through a relationship of trust and confidence, without authority and in breach of the obligations created by that relationship, makes or causes to be made, directly from and in the presence of the article, a copy of any article representing a trade secret. (c) Every person who promises, offers or gives, or conspires to promise or offer to give, to any present or former agent, employee or servant of another, a benefit as an inducement, bribe or reward for conveying, delivering or otherwise making available an article representing a trade secret owned by his or her present or former principal, employer or master, to any person not authorized by the owner to receive or acquire the trade secret and every present or former agent, employee, or servant, who solicits, accepts, receives or takes a benefit as an inducement, bribe or reward for conveying, delivering or otherwise making available an article representing a trade secret owned by his or her present or former principal, employer or master, to any person not authorized by the owner to receive or acquire the trade secret, shall be punished by imprisonment in a county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170, or by a fine not exceeding five thousand dollars ($5,000), or by both that fine and imprisonment. (d) In a prosecution for a violation of this section, it shall be no defense that the person returned or intended to return the article."
+      }
+    },
+    {
+      "key": "PEN:500",
+      "status": "substantive_research_open",
+      "reason": "Consequential foreign-remittance failures: verify Financial Code 1800.5/1810.5 references and the exact $950-or-more felony boundary, including aggregation. Retain in financial batch rather than silently repairing references.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_b0107aaf-660e-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "a3dc87fb677880b98eae2223dc7b69968c7a3ac044cca518e8302c5751a66809"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:500",
+        "start": 0,
+        "end": 1647,
+        "text": "(a) Any person who receives money for the actual or purported purpose of transmitting the same or its equivalent to foreign countries as specified in Section 1800.5 of the Financial Code who fails to do at least one of the following acts unless otherwise instructed by the customer is guilty of a misdemeanor or felony as set forth in subdivision (b): (1) Forward the money as represented to the customer within 10 days of receipt of the funds. (2) Give instructions within 10 days of receipt of the customer’s funds, committing equivalent funds to the person designated by the customer. (3) Refund to the customer any money not forwarded as represented within 10 days of the customer’s written request for a refund pursuant to subdivision (a) of Section 1810.5 of the Financial Code. (b) (1) If the total value of the funds received from the customer is less than nine hundred fifty dollars ($950), the offense set forth in subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or by a fine not exceeding one thousand dollars ($1,000), or by both that imprisonment and fine. (2) If the total value of the money received from the customer is nine hundred fifty dollars ($950) or more, or if the total value of all moneys received by the person from different customers is nine hundred fifty dollars ($950) or more, and the receipts were part of a common scheme or plan, the offense set forth in subdivision (a) is punishable by imprisonment pursuant to subdivision (h) of Section 1170 for 16 months, two, or three years, by a fine not exceeding ten thousand dollars ($10,000), or by both that imprisonment and fine."
+      }
+    },
+    {
+      "key": "PEN:502.5",
+      "status": "substantive_research_open",
+      "reason": "Removal of mortgaged improvements is declared larceny. Resolve valuation, consent and foreclosure-stage conditions, and larceny grading before adding a distinct offense.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c8df46-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "04705519c9fd31476aaa45a7ed9651c688ee3805f2ae6d887a7071f3a273718a"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:502.5",
+        "start": 0,
+        "end": 1179,
+        "text": "Every person who, after mortgaging or encumbering by deed of trust any real property, and during the existence of such mortgage or deed of trust, or after such mortgaged or encumbered property shall have been sold under an order and decree of foreclosure or at trustee’s sale, and with intent to defraud or injure the mortgagee or the beneficiary or trustee, under such deed of trust, his representatives, successors or assigns, or the purchaser of such mortgaged or encumbered premises at such foreclosure or trustee’s sale, his representatives, successors or assigns, takes, removes or carries away from such mortgaged or encumbered premises, or otherwise disposes of or permits the taking, removal or carrying away or otherwise disposing of any house, barn, windmill, water tank, pump, engine or other part of the freehold that is attached or affixed to such premises as an improvement thereon, without the written consent of the mortgagee or beneficiary, under deed of trust, his representatives, successors or assigns, or the purchaser at such foreclosure or trustee’s sale, his representatives, successors or assigns, is guilty of larceny and shall be punished accordingly."
+      }
+    },
+    {
+      "key": "PEN:502.6",
+      "status": "addition_branches_reviewed_other_branches_open",
+      "reason": "Publish separate scanning-device and reencoder identities, requiring knowledge, willfulness and intent to defraud. Preserve the statutory $1,000 fine and equipment destruction/forfeiture consequences.",
+      "additionIds": [
+        "ca-pen-502-6-a",
+        "ca-pen-502-6-b"
+      ],
+      "versions": [
+        {
+          "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:502.6",
+        "start": 0,
+        "end": 2610,
+        "text": "(a) Any person who knowingly, willfully, and with the intent to defraud, possesses a scanning device, or who knowingly, willfully, and with intent to defraud, uses a scanning device to access, read, obtain, memorize or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card without the permission of the authorized user of the payment card is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (b) Any person who knowingly, willfully, and with the intent to defraud, possesses a reencoder, or who knowingly, willfully, and with intent to defraud, uses a reencoder to place encoded information on the magnetic strip or stripe of a payment card or any electronic medium that allows an authorized transaction to occur, without the permission of the authorized user of the payment card from which the information is being reencoded is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (c) Any scanning device or reencoder described in subdivision (e) owned by the defendant and possessed or used in violation of subdivision (a) or (b) may be seized and be destroyed as contraband by the sheriff of the county in which the scanning device or reencoder was seized. (d) Any computer, computer system, computer network, or any software or data, owned by the defendant, which is used during the commission of any public offense described in this section or any computer, owned by the defendant, which is used as a repository for the storage of software or data illegally obtained in violation of this section shall be subject to forfeiture. (e) As used in this section, the following definitions apply: (1) “Scanning device” means a scanner, reader, or any other electronic device that is used to access, read, scan, obtain, memorize, or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card. (2) “Reencoder” means an electronic device that places encoded information from the magnetic strip or stripe of a payment card on to the magnetic strip or stripe of a different payment card. (3) “Payment card” means a credit card, debit card, or any other card that is issued to an authorized user and that allows the user to obtain, purchase, or receive goods, services, money, or anything else of value. (f) Nothing in this section shall preclude prosecution under any other provision of law."
+      }
+    },
+    {
+      "key": "PEN:502.7",
+      "status": "substantive_research_open",
+      "reason": "Telephone/telegraph service fraud has several conduct branches, an express five-year recidivist felony rule, and restitution/forfeiture. Resolve ordinary misdemeanor/felony grading before adding entries.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_67c8df4a-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "cb033994d208fe698bf0ed9b59a1980aa4ee76f7c300f5821c0ca72a6c785244"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:502.7",
+        "start": 0,
+        "end": 5885,
+        "text": "(a) Any person who, knowingly, willfully, and with intent to defraud a person providing telephone or telegraph service, avoids or attempts to avoid, or aids, abets or causes another to avoid the lawful charge, in whole or in part, for telephone or telegraph service by any of the following means is guilty of a misdemeanor or a felony, except as provided in subdivision (g): (1) By charging the service to an existing telephone number or credit card number without the authority of the subscriber thereto or the lawful holder thereof. (2) By charging the service to a nonexistent telephone number or credit card number, or to a number associated with telephone service which is suspended or terminated, or to a revoked or canceled (as distinguished from expired) credit card number, notice of the suspension, termination, revocation, or cancellation of the telephone service or credit card having been given to the subscriber thereto or the holder thereof. (3) By use of a code, prearranged scheme, or other similar stratagem or device whereby the person, in effect, sends or receives information. (4) By rearranging, tampering with, or making connection with telephone or telegraph facilities or equipment, whether physically, electrically, acoustically, inductively, or otherwise, or by using telephone or telegraph service with knowledge or reason to believe that the rearrangement, tampering, or connection existed at the time of the use. (5) By using any other deception, false pretense, trick, scheme, device, conspiracy, or means, including the fraudulent use of false, altered, or stolen identification. (b) Any person who does either of the following is guilty of a misdemeanor or a felony, except as provided in subdivision (g): (1) Makes, possesses, sells, gives, or otherwise transfers to another, or offers or advertises any instrument, apparatus, or device with intent to use it or with knowledge or reason to believe it is intended to be used to avoid any lawful telephone or telegraph toll charge or to conceal the existence or place of origin or destination of any telephone or telegraph message. (2) Sells, gives, or otherwise transfers to another or offers, or advertises plans or instructions for making or assembling an instrument, apparatus, or device described in paragraph (1) of this subdivision with knowledge or reason to believe that they may be used to make or assemble the instrument, apparatus, or device. (c) Any person who publishes the number or code of an existing, canceled, revoked, expired, or nonexistent credit card, or the numbering or coding which is employed in the issuance of credit cards, with the intent that it be used or with knowledge or reason to believe that it will be used to avoid the payment of any lawful telephone or telegraph toll charge is guilty of a misdemeanor. Subdivision (g) shall not apply to this subdivision. As used in this section, “publishes” means the communication of information to any one or more persons, either orally, in person or by telephone, radio, or television, or electronic means, including, but not limited to, a bulletin board system, or in a writing of any kind, including without limitation a letter or memorandum, circular or handbill, newspaper, or magazine article, or book. (d) Any person who is the issuee of a calling card, credit card, calling code, or any other means or device for the legal use of telecommunications services and who receives anything of value for knowingly allowing another person to use the means or device in order to fraudulently obtain telecommunications services is guilty of a misdemeanor or a felony, except as provided in subdivision (g). (e) Subdivision (a) applies when the telephone or telegraph communication involved either originates or terminates, or both originates and terminates, in this state, or when the charges for service would have been billable, in normal course, by a person providing telephone or telegraph service in this state, but for the fact that the charge for service was avoided, or attempted to be avoided, by one or more of the means set forth in subdivision (a). (f) Jurisdiction of an offense under this section is in the jurisdictional territory where the telephone call or telegram involved in the offense originates or where it terminates, or the jurisdictional territory to which the bill for the service is sent or would have been sent but for the fact that the service was obtained or attempted to be obtained by one or more of the means set forth in subdivision (a). (g) Theft of any telephone or telegraph services under this section by a person who has a prior misdemeanor or felony conviction for theft of services under this section within the past five years, is a felony. (h) Any person or telephone company defrauded by any acts prohibited under this section shall be entitled to restitution for the entire amount of the charges avoided from any person or persons convicted under this section. (i) Any instrument, apparatus, device, plans, instructions, or written publication described in subdivision (b) or (c) may be seized under warrant or incident to a lawful arrest, and, upon the conviction of a person for a violation of subdivision (a), (b), or (c), the instrument, apparatus, device, plans, instructions, or written publication may be destroyed as contraband by the sheriff of the county in which the person was convicted or turned over to the person providing telephone or telegraph service in the territory in which it was seized. (j) Any computer, computer system, computer network, or any software or data, owned by the defendant, which is used during the commission of any public offense described in this section or any computer, owned by the defendant, which is used as a repository for the storage of software or data illegally obtained in violation of this section shall be subject to forfeiture."
+      }
+    },
+    {
+      "key": "PEN:502.8",
+      "status": "substantive_research_open",
+      "reason": "Consequential open source conflict: (d) calls the offense a misdemeanor yet includes state-prison punishment. Preserve literal text for legal review; do not silently resolve it or infer a misdemeanor-only route. Other branches and mandatory restitution remain separately reviewable.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_801e624b-c635-11e6-a742-84f150336b2e",
+          "contentSha256": "8686967b5edc8f421916cc3e66adf2743e2445b335d7910b38a3f9d248f964de"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:502.8",
+        "start": 0,
+        "end": 3543,
+        "text": "(a) Any person who knowingly advertises illegal telecommunications equipment is guilty of a misdemeanor. (b) Any person who possesses or uses illegal telecommunications equipment intending to avoid the payment of any lawful charge for telecommunications service or to facilitate other criminal conduct is guilty of a misdemeanor. (c) Any person found guilty of violating subdivision (b), who has previously been convicted of the same offense, shall be guilty of a felony, punishable by imprisonment in state prison, a fine of up to fifty thousand dollars ($50,000), or both. (d) Any person who possesses illegal telecommunications equipment with intent to sell, transfer, or furnish or offer to sell, transfer, or furnish the equipment to another, intending to avoid the payment of any lawful charge for telecommunications service or to facilitate other criminal conduct is guilty of a misdemeanor punishable by one year in a county jail or imprisonment in state prison or a fine of up to ten thousand dollars ($10,000), or both. (e) Any person who possesses 10 or more items of illegal telecommunications equipment with intent to sell or offer to sell the equipment to another, intending to avoid payment of any lawful charge for telecommunications service or to facilitate other criminal conduct, is guilty of a felony, punishable by imprisonment in state prison, a fine of up to fifty thousand dollars ($50,000), or both. (f) Any person who manufactures 10 or more items of illegal telecommunications equipment with intent to sell or offer to sell the equipment to another, intending to avoid the payment of any lawful charge for telecommunications service or to facilitate other criminal conduct is guilty of a felony punishable by imprisonment in state prison or a fine of up to fifty thousand dollars ($50,000), or both. (g) For purposes of this section, “illegal telecommunications equipment” means equipment that operates to evade the lawful charges for any telecommunications service; surreptitiously intercept electronic serial numbers or mobile identification numbers; alter electronic serial numbers; circumvent efforts to confirm legitimate access to a telecommunications account; conceal from any telecommunications service provider or lawful authority the existence, place of origin, or destination of any telecommunication; or otherwise facilitate any other criminal conduct. “Illegal telecommunications equipment” includes, but is not limited to, any unauthorized electronic serial number or mobile identification number, whether incorporated into a wireless telephone or other device or otherwise. Items specified in this subdivision shall be considered illegal telecommunications equipment notwithstanding any statement or disclaimer that the items are intended for educational, instructional, or similar purposes. (h) (1) In the event that a person violates the provisions of this section with the intent to avoid the payment of any lawful charge for telecommunications service to a telecommunications service provider, the court shall order the person to pay restitution to the telecommunications service provider in an amount that is the greater of the following: (A) Five thousand dollars ($5,000). (B) Three times the amount of actual damages, if any, sustained by the telecommunications service provider, plus reasonable attorney fees. (2) It is not a necessary prerequisite to an order of restitution under this section that the telecommunications service provider has suffered, or be threatened with, actual damages."
+      }
+    },
+    {
+      "key": "PEN:502.9",
+      "status": "supporting_or_procedural_provision",
+      "reason": "Supporting aggravation provision, not a standalone crime. Retain its literal reference to section 288 for elder/dependent-person definitions as an apparent reference issue for later verification; do not silently replace it.",
+      "additionIds": [],
+      "versions": [
+        {
+          "versionId": "id_5b560c94-6538-11d9-bd15-b3cbb5da6f1d",
+          "contentSha256": "339d88b7d4a5770aac9ea8e7d8a03cef4c5861b3389003256577758a127b5b38"
+        }
+      ],
+      "evidence": {
+        "key": "PEN:502.9",
+        "start": 0,
+        "end": 253,
+        "text": "Upon conviction of a felony violation under this chapter, the fact that the victim was an elder or dependent person, as defined in Section 288, shall be considered a circumstance in aggravation when imposing a term under subdivision (b) of Section 1170."
+      }
+    }
+  ],
+  "records": [
+    {
+      "id": "ca-pen-484e-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "730c0e33e96fed0d9feb012efae6e5a416945c94b5962d3ea67163e004a2f3a9",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484d",
+          "versions": [
+            {
+              "versionId": "id_67b8160e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "70ad3bf2a2e45dc6721dd561ef8d454041b1f26d070d1e02b32d5e19704cb8e3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484e",
+          "versions": [
+            {
+              "versionId": "id_67b81610-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "d422add32d7a29d579d87c3e216660ea82e8aef31b7ffb3b01ce6b43aaa768b1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.1",
+          "versions": [
+            {
+              "versionId": "id_67be30b8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "21bb1fdd7b6a261ece08d5deeb95548e6968bd4051144d61d17c572b3c2a132b"
+            }
+          ]
+        },
+        {
+          "key": "PEN:666.1",
+          "versions": [
+            {
+              "versionId": "id_acfe6e6c-a29f-11ef-937a-a7e03d23829a",
+              "contentSha256": "b570b8e20dec276e0bb7b4dee110a8a2c821c7b9746ee1e316770cd35f8653ad"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:484e",
+        "start": 0,
+        "end": 1003,
+        "text": "(a) Every person who, with intent to defraud, sells, transfers, or conveys, an access card, without the cardholder’s or issuer’s consent, is guilty of grand theft. (b) Every person, other than the issuer, who within any consecutive 12-month period, acquires access cards issued in the names of four or more persons which he or she has reason to know were taken or retained under circumstances which constitute a violation of subdivision (a), (c), or (d) is guilty of grand theft. (c) Every person who, with the intent to defraud, acquires or retains possession of an access card without the cardholder’s or issuer’s consent, with intent to use, sell, or transfer it to a person other than the cardholder or issuer is guilty of petty theft. (d) Every person who acquires or retains possession of access card account information with respect to an access card validly issued to another person, without the cardholder’s or issuer’s consent, with the intent to use it fraudulently, is guilty of grand theft."
+      }
+    },
+    {
+      "id": "ca-pen-487g",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "29246db4aa718f1ec2592904e826d68576ac37bff9f626c389e74bb8f5bcdfaf",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487g",
+          "versions": [
+            {
+              "versionId": "id_67bcaa0e-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "0f2118a4299f9cee378bfdd9cc33dc4aa84303d2e2618a3c698fcfb5e2aea2f3"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:487g",
+        "start": 0,
+        "end": 451,
+        "text": "Every person who steals or maliciously takes or carries away any animal of another for purposes of sale, medical research, slaughter, or other commercial use, or who knowingly, by any false representation or pretense, defrauds another person of any animal for purposes of sale, medical research, slaughter, or other commercial use is guilty of a public offense punishable by imprisonment in a county jail not exceeding one year or in the state prison."
+      }
+    },
+    {
+      "id": "ca-pen-487h-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "348f6437a57cea58fdb4e7cb3d2da4aaa6553d1cf8e6daf13ce70644f90545f5",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487a",
+          "versions": [
+            {
+              "versionId": "id_501b5f15-8664-11e4-9fd7-cecd375806d8",
+              "contentSha256": "2dc0f4b65fe465fda37916befcefba337d8c8c65aa22138d1b482e904a244391"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487d",
+          "versions": [
+            {
+              "versionId": "id_a49ea391-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "6180b069ecd1e52adb16ab4ebf82432b63f557ef3b2821f202f745a5ae6260a8"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487h",
+          "versions": [
+            {
+              "versionId": "id_e7a93781-f3aa-11de-a127-d5e287cac7f8",
+              "contentSha256": "03a8c06f62848e175753ced7b47b5ab742e78d2341fae2157fcb0d87014a7381"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:487h",
+        "start": 0,
+        "end": 423,
+        "text": "(a) Every person who steals, takes, or carries away cargo of another, if the cargo taken is of a value exceeding nine hundred fifty dollars ($950), except as provided in Sections 487, 487a, and 487d, is guilty of grand theft. (b) For the purposes of this section, “cargo” means any goods, wares, products, or manufactured merchandise that has been loaded into a trailer, railcar, or cargo container, awaiting or in transit."
+      }
+    },
+    {
+      "id": "ca-pen-487j",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "478d04ab029775c4c0a5562add18bd7610ef3d28acd831f54e0c7d5f469f9755",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487j",
+          "versions": [
+            {
+              "versionId": "id_8c6c0b53-30cf-11e1-a5d5-ab3cb917b6aa",
+              "contentSha256": "8699d561d41e7604de24ca06946a5ff9dfc7432f49c843ac492507d7cfbc27d8"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:487j",
+        "start": 0,
+        "end": 585,
+        "text": "Every person who steals, takes, or carries away copper materials of another, including, but not limited to, copper wire, copper cable, copper tubing, and copper piping, which are of a value exceeding nine hundred fifty dollars ($950) is guilty of grand theft. Grand theft of copper shall be punishable by a fine not exceeding two thousand five hundred dollars ($2,500), by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment, or by imprisonment pursuant to subdivision (h) of Section 1170 and a fine not exceeding ten thousand dollars ($10,000)."
+      }
+    },
+    {
+      "id": "ca-pen-487k",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "41a4d96f2a711ff068e05fd2a4e76f6e1c3f2a52457a80722c2a59b54892bafe",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487k",
+          "versions": [
+            {
+              "versionId": "id_e2ea837d-0bd9-11ea-912d-915c88c10a14",
+              "contentSha256": "cb0abada8a5f0598e7bee7ba78b2aaddacba7d655e16315fe150ec6ab4d11270"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:487k",
+        "start": 0,
+        "end": 294,
+        "text": "A person who steals, takes, or carries away tractors, all-terrain vehicles, or other agricultural equipment, or any portion thereof, used in the acquisition or production of food for public consumption, which are of a value exceeding nine hundred fifty dollars ($950), is guilty of grand theft."
+      }
+    },
+    {
+      "id": "ca-pen-490-4-a-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "bae0b5469d8bb77b4e06601af95529ef55f12641eedb7e8c97517472008bae9a",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.4",
+          "versions": [
+            {
+              "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.8",
+          "versions": [
+            {
+              "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:490.4",
+        "start": 0,
+        "end": 3191,
+        "text": "(a) A person who commits any of the following acts is guilty of organized retail theft and shall be punished pursuant to subdivision (b): (1) Acts in concert with one or more persons to steal merchandise from one or more merchant’s premises or online marketplace with the intent to sell, exchange, or return the merchandise for value. (2) Acts in concert with two or more persons to receive, purchase, or possess merchandise described in paragraph (1), knowing or believing it to have been stolen. (3) Acts as an agent of another individual or group of individuals to steal merchandise from one or more merchant’s premises or online marketplaces as part of an organized plan to commit theft. (4) Recruits, coordinates, organizes, supervises, directs, manages, or finances another to undertake any of the acts described in paragraph (1) or (2) or any other statute defining theft of merchandise. (b) Organized retail theft is punishable as follows: (1) If violations of paragraph (1), (2), or (3) of subdivision (a) are committed on two or more separate occasions within a 12-month period, and if the aggregated value of the merchandise stolen, received, purchased, or possessed within that 12-month period exceeds nine hundred fifty dollars ($950), the offense is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (2) Any other violation of paragraph (1), (2), or (3) of subdivision (a) that is not described in paragraph (1) of this subdivision is punishable by imprisonment in a county jail not exceeding one year. (3) A violation of paragraph (4) of subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (c) For the purpose of determining whether the defendant acted in concert with another person or persons in any proceeding, the trier of fact may consider any competent evidence, including, but not limited to, all of the following: (1) The defendant has previously acted in concert with another person or persons in committing acts constituting theft, or any related offense, including any conduct that occurred in counties other than the county of the current offense, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act. (2) That the defendant used or possessed an artifice, instrument, container, device, or other article capable of facilitating the removal of merchandise from a retail establishment without paying the purchase price and use of the artifice, instrument, container, or device or other article is part of an organized plan to commit theft. (3) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, and the property is intended for resale. (d) In a prosecution under this section, the prosecutor shall not be required to charge any other coparticipant of the organized retail theft. (e) Upon conviction of an offense under this section, the court shall consider ordering, as a condition of probation, that the defendant stay away from retail establishments with a reasonable nexus to the crime committed."
+      }
+    },
+    {
+      "id": "ca-pen-490-4-a-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "6f3814993c45e58ad271ca7052306aebf1fbe50b4642058ff21cedf2963a6548",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.4",
+          "versions": [
+            {
+              "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.8",
+          "versions": [
+            {
+              "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:490.4",
+        "start": 0,
+        "end": 3191,
+        "text": "(a) A person who commits any of the following acts is guilty of organized retail theft and shall be punished pursuant to subdivision (b): (1) Acts in concert with one or more persons to steal merchandise from one or more merchant’s premises or online marketplace with the intent to sell, exchange, or return the merchandise for value. (2) Acts in concert with two or more persons to receive, purchase, or possess merchandise described in paragraph (1), knowing or believing it to have been stolen. (3) Acts as an agent of another individual or group of individuals to steal merchandise from one or more merchant’s premises or online marketplaces as part of an organized plan to commit theft. (4) Recruits, coordinates, organizes, supervises, directs, manages, or finances another to undertake any of the acts described in paragraph (1) or (2) or any other statute defining theft of merchandise. (b) Organized retail theft is punishable as follows: (1) If violations of paragraph (1), (2), or (3) of subdivision (a) are committed on two or more separate occasions within a 12-month period, and if the aggregated value of the merchandise stolen, received, purchased, or possessed within that 12-month period exceeds nine hundred fifty dollars ($950), the offense is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (2) Any other violation of paragraph (1), (2), or (3) of subdivision (a) that is not described in paragraph (1) of this subdivision is punishable by imprisonment in a county jail not exceeding one year. (3) A violation of paragraph (4) of subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (c) For the purpose of determining whether the defendant acted in concert with another person or persons in any proceeding, the trier of fact may consider any competent evidence, including, but not limited to, all of the following: (1) The defendant has previously acted in concert with another person or persons in committing acts constituting theft, or any related offense, including any conduct that occurred in counties other than the county of the current offense, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act. (2) That the defendant used or possessed an artifice, instrument, container, device, or other article capable of facilitating the removal of merchandise from a retail establishment without paying the purchase price and use of the artifice, instrument, container, or device or other article is part of an organized plan to commit theft. (3) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, and the property is intended for resale. (d) In a prosecution under this section, the prosecutor shall not be required to charge any other coparticipant of the organized retail theft. (e) Upon conviction of an offense under this section, the court shall consider ordering, as a condition of probation, that the defendant stay away from retail establishments with a reasonable nexus to the crime committed."
+      }
+    },
+    {
+      "id": "ca-pen-490-4-a-3",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2a4fe8889014fd6adde150077127c037e08c5bbb54a6cca8084d05814d2662e6",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.4",
+          "versions": [
+            {
+              "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.8",
+          "versions": [
+            {
+              "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:490.4",
+        "start": 0,
+        "end": 3191,
+        "text": "(a) A person who commits any of the following acts is guilty of organized retail theft and shall be punished pursuant to subdivision (b): (1) Acts in concert with one or more persons to steal merchandise from one or more merchant’s premises or online marketplace with the intent to sell, exchange, or return the merchandise for value. (2) Acts in concert with two or more persons to receive, purchase, or possess merchandise described in paragraph (1), knowing or believing it to have been stolen. (3) Acts as an agent of another individual or group of individuals to steal merchandise from one or more merchant’s premises or online marketplaces as part of an organized plan to commit theft. (4) Recruits, coordinates, organizes, supervises, directs, manages, or finances another to undertake any of the acts described in paragraph (1) or (2) or any other statute defining theft of merchandise. (b) Organized retail theft is punishable as follows: (1) If violations of paragraph (1), (2), or (3) of subdivision (a) are committed on two or more separate occasions within a 12-month period, and if the aggregated value of the merchandise stolen, received, purchased, or possessed within that 12-month period exceeds nine hundred fifty dollars ($950), the offense is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (2) Any other violation of paragraph (1), (2), or (3) of subdivision (a) that is not described in paragraph (1) of this subdivision is punishable by imprisonment in a county jail not exceeding one year. (3) A violation of paragraph (4) of subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (c) For the purpose of determining whether the defendant acted in concert with another person or persons in any proceeding, the trier of fact may consider any competent evidence, including, but not limited to, all of the following: (1) The defendant has previously acted in concert with another person or persons in committing acts constituting theft, or any related offense, including any conduct that occurred in counties other than the county of the current offense, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act. (2) That the defendant used or possessed an artifice, instrument, container, device, or other article capable of facilitating the removal of merchandise from a retail establishment without paying the purchase price and use of the artifice, instrument, container, or device or other article is part of an organized plan to commit theft. (3) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, and the property is intended for resale. (d) In a prosecution under this section, the prosecutor shall not be required to charge any other coparticipant of the organized retail theft. (e) Upon conviction of an offense under this section, the court shall consider ordering, as a condition of probation, that the defendant stay away from retail establishments with a reasonable nexus to the crime committed."
+      }
+    },
+    {
+      "id": "ca-pen-490-4-a-4",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "5bc5c0c3c77d6853e02040f1083671312166d95eab615d55f4ade1eed8dc64ab",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.4",
+          "versions": [
+            {
+              "versionId": "id_0c36a2ab-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "0ec7bf8ae06a48ee5aadf2dac36fe5560329199acaa0e3c6c3b7819826c11aef"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.8",
+          "versions": [
+            {
+              "versionId": "id_7b438d0b-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "e6539354bfde66c2274982f3ebe9ec968bd27a0ba2fbf6550aa7f84f2ff5bf3c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:490.4",
+        "start": 0,
+        "end": 3191,
+        "text": "(a) A person who commits any of the following acts is guilty of organized retail theft and shall be punished pursuant to subdivision (b): (1) Acts in concert with one or more persons to steal merchandise from one or more merchant’s premises or online marketplace with the intent to sell, exchange, or return the merchandise for value. (2) Acts in concert with two or more persons to receive, purchase, or possess merchandise described in paragraph (1), knowing or believing it to have been stolen. (3) Acts as an agent of another individual or group of individuals to steal merchandise from one or more merchant’s premises or online marketplaces as part of an organized plan to commit theft. (4) Recruits, coordinates, organizes, supervises, directs, manages, or finances another to undertake any of the acts described in paragraph (1) or (2) or any other statute defining theft of merchandise. (b) Organized retail theft is punishable as follows: (1) If violations of paragraph (1), (2), or (3) of subdivision (a) are committed on two or more separate occasions within a 12-month period, and if the aggregated value of the merchandise stolen, received, purchased, or possessed within that 12-month period exceeds nine hundred fifty dollars ($950), the offense is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (2) Any other violation of paragraph (1), (2), or (3) of subdivision (a) that is not described in paragraph (1) of this subdivision is punishable by imprisonment in a county jail not exceeding one year. (3) A violation of paragraph (4) of subdivision (a) is punishable by imprisonment in a county jail not exceeding one year or pursuant to subdivision (h) of Section 1170. (c) For the purpose of determining whether the defendant acted in concert with another person or persons in any proceeding, the trier of fact may consider any competent evidence, including, but not limited to, all of the following: (1) The defendant has previously acted in concert with another person or persons in committing acts constituting theft, or any related offense, including any conduct that occurred in counties other than the county of the current offense, if relevant to demonstrate a fact other than the defendant’s disposition to commit the act. (2) That the defendant used or possessed an artifice, instrument, container, device, or other article capable of facilitating the removal of merchandise from a retail establishment without paying the purchase price and use of the artifice, instrument, container, or device or other article is part of an organized plan to commit theft. (3) The property involved in the offense is of a type or quantity that would not normally be purchased for personal use or consumption, and the property is intended for resale. (d) In a prosecution under this section, the prosecutor shall not be required to charge any other coparticipant of the organized retail theft. (e) Upon conviction of an offense under this section, the court shall consider ordering, as a condition of probation, that the defendant stay away from retail establishments with a reasonable nexus to the crime committed."
+      }
+    },
+    {
+      "id": "ca-pen-498-b-1",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "9821116d263f0eb04a5588444bbe5369a54d5b2104b74d414918b60eb35998d1",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:498",
+          "versions": [
+            {
+              "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "id": "ca-pen-498-b-2",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "51a5afbfe4f830ea6910acdb582aff5da9b139c29b6396fed0834eac17c09871",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:498",
+          "versions": [
+            {
+              "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "id": "ca-pen-498-b-3",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "321ab72db56a13322d5c7d2050f1dbd6c76eec1b813d92841673a4ee0f1f2748",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:498",
+          "versions": [
+            {
+              "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "id": "ca-pen-498-b-4",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "8afd8b930bfb354e29e20cbefab6375542a594da32328f5d974e1449326c1ddd",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:498",
+          "versions": [
+            {
+              "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "id": "ca-pen-498-b-5",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "65955ad59f08a056f1bba21bf3f5bd22257cee26c40081d98452b76bab4a9fc2",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18",
+          "versions": [
+            {
+              "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+              "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:19",
+          "versions": [
+            {
+              "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518"
+            }
+          ]
+        },
+        {
+          "key": "PEN:498",
+          "versions": [
+            {
+              "versionId": "id_371642e6-0a63-11df-9776-ca689a346e49",
+              "contentSha256": "0e3c9446f361a72412757c395ca7ce5046d9d0cf4ba2b57c5bd582c7f279126d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:498",
+        "start": 0,
+        "end": 3619,
+        "text": "(a) The following definitions govern the construction of this section: (1) “Person” means any individual, or any partnership, firm, association, corporation, limited liability company, or other legal entity. (2) “Utility” means any electrical, gas, or water corporation as those terms are defined in the Public Utilities Code, and electrical, gas, or water systems operated by any political subdivision. (3) “Customer” means the person in whose name utility service is provided. (4) “Utility service” means the provision of electricity, gas, water, or any other service provided by the utility for compensation. (5) “Divert” means to change the intended course or path of electricity, gas, or water without the authorization or consent of the utility. (6) “Tamper” means to rearrange, injure, alter, interfere with, or otherwise prevent from performing a normal or customary function. (7) “Reconnection” means the reconnection of utility service by a customer or other person after service has been lawfully disconnected by the utility. (b) Any person who, with intent to obtain for himself or herself utility services without paying the full lawful charge therefor, or with intent to enable another person to do so, or with intent to deprive any utility of any part of the full lawful charge for utility services it provides, commits, authorizes, solicits, aids, or abets any of the following shall be guilty of a misdemeanor: (1) Diverts or causes to be diverted utility services, by any means. (2) Prevents any utility meter, or other device used in determining the charge for utility services, from accurately performing its measuring function by tampering or by any other means. (3) Tampers with any property owned by or used by the utility to provide utility services. (4) Makes or causes to be made any connection with or reconnection with property owned or used by the utility to provide utility services without the authorization or consent of the utility. (5) Uses or receives the direct benefit of all or a portion of utility services with knowledge or reason to believe that the diversion, tampering, or unauthorized connection existed at the time of that use, or that the use or receipt was otherwise without the authorization or consent of the utility. (c) In any prosecution under this section, the presence of any of the following objects, circumstances, or conditions on premises controlled by the customer or by the person using or receiving the direct benefit of all or a portion of utility services obtained in violation of this section shall permit an inference that the customer or person intended to and did violate this section: (1) Any instrument, apparatus, or device primarily designed to be used to obtain utility services without paying the full lawful charge therefor. (2) Any meter that has been altered, tampered with, or bypassed so as to cause no measurement or inaccurate measurement of utility services. (d) If the value of all utility services obtained in violation of this section totals more than nine hundred fifty dollars ($950) or if the defendant has previously been convicted of an offense under this section or any former section which would be an offense under this section, or of an offense under the laws of another state or of the United States which would have been an offense under this section if committed in this state, then the violation is punishable by imprisonment in a county jail for not more than one year, or in the state prison. (e) This section shall not be construed to preclude the applicability of any other provision of the criminal law of this state."
+      }
+    },
+    {
+      "id": "ca-pen-499c-c",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "b91e45c1843bffc43b51bcb028cf82ae646dd974813212098ef698449c4495bc",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:499c",
+          "versions": [
+            {
+              "versionId": "id_ad1c8f0b-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "db4c5d0e2fd2f817b51f99a7329d1480f57bad14a439cd4061e45412a0c56b08"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:499c",
+        "start": 0,
+        "end": 4120,
+        "text": "(a) As used in this section: (1) “Access” means to approach, a way or means of approaching, nearing, admittance to, including to instruct, communicate with, store information in, or retrieve information from a computer system or computer network. (2) “Article” means any object, material, device, or substance or copy thereof, including any writing, record, recording, drawing, sample, specimen, prototype, model, photograph, micro-organism, blueprint, map, or tangible representation of a computer program or information, including both human and computer readable information and information while in transit. (3) “Benefit” means gain or advantage, or anything regarded by the beneficiary as gain or advantage, including benefit to any other person or entity in whose welfare he or she is interested. (4) “Computer system” means a machine or collection of machines, one or more of which contain computer programs and information, that performs functions, including, but not limited to, logic, arithmetic, information storage and retrieval, communications, and control. (5) “Computer network” means an interconnection of two or more computer systems. (6) “Computer program” means an ordered set of instructions or statements, and related information that, when automatically executed in actual or modified form in a computer system, causes it to perform specified functions. (7) “Copy” means any facsimile, replica, photograph or other reproduction of an article, and any note, drawing or sketch made of or from an article. (8) “Representing” means describing, depicting, containing, constituting, reflecting or recording. (9) “Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (A) Derives independent economic value, actual or potential, from not being generally known to the public or to other persons who can obtain economic value from its disclosure or use; and (B) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy. (b) Every person is guilty of theft who, with intent to deprive or withhold the control of a trade secret from its owner, or with an intent to appropriate a trade secret to his or her own use or to the use of another, does any of the following: (1) Steals, takes, carries away, or uses without authorization, a trade secret. (2) Fraudulently appropriates any article representing a trade secret entrusted to him or her. (3) Having unlawfully obtained access to the article, without authority makes or causes to be made a copy of any article representing a trade secret. (4) Having obtained access to the article through a relationship of trust and confidence, without authority and in breach of the obligations created by that relationship, makes or causes to be made, directly from and in the presence of the article, a copy of any article representing a trade secret. (c) Every person who promises, offers or gives, or conspires to promise or offer to give, to any present or former agent, employee or servant of another, a benefit as an inducement, bribe or reward for conveying, delivering or otherwise making available an article representing a trade secret owned by his or her present or former principal, employer or master, to any person not authorized by the owner to receive or acquire the trade secret and every present or former agent, employee, or servant, who solicits, accepts, receives or takes a benefit as an inducement, bribe or reward for conveying, delivering or otherwise making available an article representing a trade secret owned by his or her present or former principal, employer or master, to any person not authorized by the owner to receive or acquire the trade secret, shall be punished by imprisonment in a county jail not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170, or by a fine not exceeding five thousand dollars ($5,000), or by both that fine and imprisonment. (d) In a prosecution for a violation of this section, it shall be no defense that the person returned or intended to return the article."
+      }
+    },
+    {
+      "id": "ca-pen-502-6-a",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "37806034b07b18eb87cf08c74eae95b720edc5e04da207608180c66903b0b590",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502.6",
+          "versions": [
+            {
+              "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:502.6",
+        "start": 0,
+        "end": 2610,
+        "text": "(a) Any person who knowingly, willfully, and with the intent to defraud, possesses a scanning device, or who knowingly, willfully, and with intent to defraud, uses a scanning device to access, read, obtain, memorize or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card without the permission of the authorized user of the payment card is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (b) Any person who knowingly, willfully, and with the intent to defraud, possesses a reencoder, or who knowingly, willfully, and with intent to defraud, uses a reencoder to place encoded information on the magnetic strip or stripe of a payment card or any electronic medium that allows an authorized transaction to occur, without the permission of the authorized user of the payment card from which the information is being reencoded is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (c) Any scanning device or reencoder described in subdivision (e) owned by the defendant and possessed or used in violation of subdivision (a) or (b) may be seized and be destroyed as contraband by the sheriff of the county in which the scanning device or reencoder was seized. (d) Any computer, computer system, computer network, or any software or data, owned by the defendant, which is used during the commission of any public offense described in this section or any computer, owned by the defendant, which is used as a repository for the storage of software or data illegally obtained in violation of this section shall be subject to forfeiture. (e) As used in this section, the following definitions apply: (1) “Scanning device” means a scanner, reader, or any other electronic device that is used to access, read, scan, obtain, memorize, or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card. (2) “Reencoder” means an electronic device that places encoded information from the magnetic strip or stripe of a payment card on to the magnetic strip or stripe of a different payment card. (3) “Payment card” means a credit card, debit card, or any other card that is issued to an authorized user and that allows the user to obtain, purchase, or receive goods, services, money, or anything else of value. (f) Nothing in this section shall preclude prosecution under any other provision of law."
+      }
+    },
+    {
+      "id": "ca-pen-502-6-b",
+      "status": "bounded_statutory_addition_proposed",
+      "definitionSha256": "2bbc767888b9ff5199cb2f8f971d74d7b973c07bda65230c2fd3726dda9ba38f",
+      "remainingWork": "Independent legal review and case-specific exceptions remain. This review does not certify every branch of the primary section or establish statewide completeness.",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:502.6",
+          "versions": [
+            {
+              "versionId": "id_67c8df48-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "927ca743fa8df0cfe32e481e9dc02f3867af48f64eb34dfa4cc75d5bc17cf13b"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "PEN:502.6",
+        "start": 0,
+        "end": 2610,
+        "text": "(a) Any person who knowingly, willfully, and with the intent to defraud, possesses a scanning device, or who knowingly, willfully, and with intent to defraud, uses a scanning device to access, read, obtain, memorize or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card without the permission of the authorized user of the payment card is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (b) Any person who knowingly, willfully, and with the intent to defraud, possesses a reencoder, or who knowingly, willfully, and with intent to defraud, uses a reencoder to place encoded information on the magnetic strip or stripe of a payment card or any electronic medium that allows an authorized transaction to occur, without the permission of the authorized user of the payment card from which the information is being reencoded is guilty of a misdemeanor, punishable by a term in a county jail not to exceed one year, or a fine of one thousand dollars ($1,000), or both the imprisonment and fine. (c) Any scanning device or reencoder described in subdivision (e) owned by the defendant and possessed or used in violation of subdivision (a) or (b) may be seized and be destroyed as contraband by the sheriff of the county in which the scanning device or reencoder was seized. (d) Any computer, computer system, computer network, or any software or data, owned by the defendant, which is used during the commission of any public offense described in this section or any computer, owned by the defendant, which is used as a repository for the storage of software or data illegally obtained in violation of this section shall be subject to forfeiture. (e) As used in this section, the following definitions apply: (1) “Scanning device” means a scanner, reader, or any other electronic device that is used to access, read, scan, obtain, memorize, or store, temporarily or permanently, information encoded on the magnetic strip or stripe of a payment card. (2) “Reencoder” means an electronic device that places encoded information from the magnetic strip or stripe of a payment card on to the magnetic strip or stripe of a different payment card. (3) “Payment card” means a credit card, debit card, or any other card that is issued to an authorized user and that allows the user to obtain, purchase, or receive goods, services, money, or anything else of value. (f) Nothing in this section shall preclude prosecution under any other provision of law."
+      }
+    }
+  ],
+  "deferrals": [
+    {
+      "key": "PEN:490.7",
+      "reviewer": "Codex engineering source review; not attorney approval",
+      "reviewedAt": "2026-09-28",
+      "reason": "Low-priority specialized offense under the owner’s accuracy-first publication policy.",
+      "severityEvidence": "Section 490.7(e): first offense is an infraction with a maximum $250 fine; a repeat misdemeanor carries up to 10 days in county jail and/or a maximum $500 fine.",
+      "revisitCondition": "An official charging inventory, actual charging document, or independent benchmark shows practical demand.",
+      "evidenceSectionKey": "PEN:490.7"
+    }
+  ]
+}

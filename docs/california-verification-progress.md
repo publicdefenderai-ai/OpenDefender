@@ -442,3 +442,9 @@ reused in this batch and 118 newly retained. The underlying archive acquisition
 remains September 24. New source effective dates are preserved separately from
 review timing, including unknowns. New entries use English fallback until
 translations are reviewed. Production seeding and deployment remain separate.
+
+## September 28: specialized-property successor and practical stopping point
+
+The proposed specialized-property batch adds 17 choices from nine retained primary sections. Configured choices rise from 174 to 191; one changed-source hold leaves 190 runtime-eligible while the receipt is valid. This is not a production deployment claim. All 40 carry-forward sections have specific evidence-bound dispositions: 26 substantive gaps remain, four are supporting provisions, one is a documented minor deferral, and nine have bounded added branches. Prior unresolved subdivisions remain open.
+
+The [completion plan](california-completion-plan.md) budgets approximately four to seven more substantial review batches after this one, plus an independent benchmark and release pass. This estimate concerns important-charge coverage with documented omissions, not exhaustive statewide certification. The next priority is the combined controlled-substances group and independent benchmark mapping, rather than another pass through obscure property leftovers.

@@ -20,6 +20,8 @@ import { validateCaliforniaPersonPropertyReview, readCaliforniaPersonPropertyAcq
 
 import { validateCaliforniaProtectedPersonReview, readCaliforniaProtectedPersonAcquisition } from "./protected-person-review";
 
+import { validateCaliforniaSpecializedPropertyReview } from "./specialized-property-review";
+
 import openLegalQuestions from "./open-review-items.json";
 
 interface SourceExpansion {
@@ -62,6 +64,7 @@ export function buildCaliforniaCoverage() {
   Object.keys(forgeryEvidence.documents).forEach(key => acquiredKeys.add(key));
   const protectedAccounting = validateCaliforniaProtectedPersonReview();
   Object.keys(readCaliforniaProtectedPersonAcquisition().documents).forEach(key => acquiredKeys.add(key));
+  const specializedAccounting = validateCaliforniaSpecializedPropertyReview();
   const corrected = new Set([...corrections.map(row => row.id), ...additions.map(row => row.id)]);
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
@@ -127,8 +130,8 @@ export function buildCaliforniaCoverage() {
       specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions,
-      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions,
+      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,

@@ -8,7 +8,7 @@ import { getCaliforniaCanonicalRecord } from "../shared/california-authority";
 
 describe("California combined forgery/theft expansion", () => {
   it("reuses evidence and keeps all 79 prior open sections accounted for", () => {
-    expect(validateCaliforniaForgeryTheftReview()).toEqual({ additions: 28, candidateSections: 79, reviewedPrimarySections: 20, remainingResearchSections: 59, reusedSections: 98, newSections: 7, newVersions: 7, configuredSelectable: 174 });
+    expect(validateCaliforniaForgeryTheftReview()).toEqual({ additions: 28, candidateSections: 79, reviewedPrimarySections: 20, remainingResearchSections: 59, reusedSections: 98, newSections: 7, newVersions: 7, configuredSelectable: 191 });
     expect(readCaliforniaForgeryTheftReview().sections.find(s => s.key === "PEN:484e")?.status).toBe("substantive_research_open");
     expect(getChargeById("ca-pen-484e-d")).toBeUndefined();
   });
@@ -44,8 +44,8 @@ describe("California combined forgery/theft expansion", () => {
   });
   it("projects every exact branch into selection, explanations, guidance and the source seed", () => {
     const visible = getChargesByJurisdiction("CA");
-    expect(visible).toHaveLength(174);
-    expect(new Set(visible.map(c => c.id)).size).toBe(174);
+    expect(visible).toHaveLength(191);
+    expect(new Set(visible.map(c => c.id)).size).toBe(191);
     const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-27T00:00:00Z"));
     for (const a of additions) {
       expect(getChargeById(a.id)).toMatchObject({ code: a.code, name: a.title, description: a.summary, maxPenalty: a.penalty, categories: a.categories });

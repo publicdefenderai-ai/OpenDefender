@@ -40,3 +40,12 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Preserve the literal paragraph (5) reference. Do not silently change the statute or use the inferred destination to clear lifeguard-related publication. This batch adds only §243(c)(2)'s separately supported peace-officer injury branch, not the broader (b)/(c)(1) branches.
 - **Remaining agent work:** Inspect amendment history and relevant interpretive authority before requesting any legal decision needed for publication.
 - **Traceability:** `scripts/data-review/output/california-protected-person-review.json`, `sourceAnomalies[0]`, binds the three exact excerpts and source-version hashes to the September 24 archive. The source XML itself is unchanged.
+
+## CA-003: Misdemeanor label with a state-prison alternative in PEN §502.8(d)
+
+- **Recorded:** September 28, 2026, during specialized-property review.
+- **Status:** Apparent classification/punishment inconsistency; interpretation unresolved, no attorney determination.
+- **Literal source:** [Penal Code §502.8(d)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=502.8.) describes specified possession for transfer of illegal telecommunications equipment as a misdemeanor while also providing a state-prison alternative.
+- **Treatment:** Preserve both statements. Do not silently delete the prison alternative, relabel the offense, or publish a misdemeanor-only ceiling. This branch remains unpublished substantive research, not a minor-charge deferral.
+- **Remaining agent work:** Check amendment history and controlling interpretation, then pose a focused attorney question only if the ambiguity remains material to publication. The other subsections require their own grading and restitution review.
+- **Traceability:** `scripts/data-review/output/california-specialized-property-review.json`, section `PEN:502.8`, binds the complete plain-text evidence to retained version and content hashes. Official XML remains in `california-person-property-acquisition.json` from the September 24 archive; subsequent freshness is controlled separately.

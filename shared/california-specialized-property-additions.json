@@ -1,0 +1,501 @@
+[
+  {
+    "id": "ca-pen-484e-c",
+    "lawCode": "PEN",
+    "code": "484e(c)",
+    "title": "Fraudulent possession of an access card",
+    "summary": "Acquiring or keeping an access card without the cardholder’s or issuer’s consent, intending to defraud and to use, sell, or transfer it to someone other than the cardholder or issuer. An access card includes qualifying account numbers and other means of account access defined in section 484d. This entry covers subdivision (c), not the separately graded transfer, multiple-card, or account-information branches.",
+    "penalty": "Ordinary petty theft: up to 6 months in county jail, a fine up to $1,000, or both under section 490. Section 490.1 permits an infraction with a fine up to $250 when the value does not exceed $50 and the person has no other theft or theft-related conviction. Qualifying prior convictions can permit felony treatment under section 666.1: up to 364 days in county jail or 16 months, 2 years, or 3 years under section 1170(h); a second or subsequent section 666.1 conviction carries a county-jail or state-prison alternative. The charging document and prior history matter. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "infraction",
+      "felony"
+    ],
+    "mentalState": "Intent to defraud and intent to use, sell, or transfer the card as specified; possession alone is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:484d",
+      "PEN:490",
+      "PEN:490.1",
+      "PEN:666.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:484d": null,
+      "PEN:484e": "1999-01-01",
+      "PEN:490": null,
+      "PEN:490.1": null,
+      "PEN:666.1": "2024-12-18"
+    }
+  },
+  {
+    "id": "ca-pen-487g",
+    "lawCode": "PEN",
+    "code": "487g",
+    "title": "Taking or obtaining an animal for commercial use",
+    "summary": "Stealing or maliciously taking or carrying away another person’s animal for sale, medical research, slaughter, or another commercial use; also knowingly defrauding someone of an animal by false representation or pretense for those purposes. This provision does not state a dollar threshold.",
+    "penalty": "State-prison alternative: 16 months, 2 years, or 3 years under section 18. Misdemeanor alternative: up to 364 days in county jail under sections 17 and 18.5. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Stealing or malicious taking, or knowing false representation or pretense, for one of the specified commercial purposes.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:487g": "1996-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-487h-a",
+    "lawCode": "PEN",
+    "code": "487h(a)",
+    "title": "Grand theft of cargo worth more than $950",
+    "summary": "Stealing, taking, or carrying away another person’s cargo worth more than $950. Cargo means goods or merchandise loaded into a trailer, railcar, or cargo container awaiting or in transit. Section 487h expressly excepts situations governed by sections 487, 487a, and 487d; those branches must be checked separately.",
+    "penalty": "For the ordinary non-firearm branch under section 489(c), Felony alternative: 16 months, 2 years, or 3 years under section 1170(h), ordinarily in county jail but subject to its state-prison exclusions. Misdemeanor alternative: up to 364 days in county jail under sections 17 and 18.5. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Theft of another person’s cargo, not mere possession or an accidental handling error.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:487",
+      "PEN:487a",
+      "PEN:487d",
+      "PEN:489",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:487": "2025-01-01",
+      "PEN:487a": "2015-01-01",
+      "PEN:487d": "2011-04-04",
+      "PEN:487h": "2010-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-487j",
+    "lawCode": "PEN",
+    "code": "487j",
+    "title": "Grand theft of copper worth more than $950",
+    "summary": "Stealing, taking, or carrying away another person’s copper materials worth more than $950, including wire, cable, tubing, or piping. Exactly $950 does not satisfy this section’s stated value threshold.",
+    "penalty": "Misdemeanor alternative: a fine up to $2,500, up to 364 days in county jail, or both. The felony alternative expressly combines imprisonment under section 1170(h), ordinarily 16 months, 2 years, or 3 years, and a fine up to $10,000. Section 1170(h) includes state-prison exclusions. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Theft of another person’s copper materials; the prosecution must establish the qualifying value.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:487j": "2012-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-487k",
+    "lawCode": "PEN",
+    "code": "487k",
+    "title": "Grand theft of agricultural equipment worth more than $950",
+    "summary": "Stealing, taking, or carrying away tractors, all-terrain vehicles, other agricultural equipment, or a portion of that equipment worth more than $950, used in acquiring or producing food for public consumption.",
+    "penalty": "Section 489(c) supplies the ordinary penalty. Felony alternative: 16 months, 2 years, or 3 years under section 1170(h), ordinarily in county jail but subject to its state-prison exclusions. Misdemeanor alternative: up to 364 days in county jail under sections 17 and 18.5. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Theft of qualifying agricultural equipment belonging to another; the stated value and food-production use are required.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:489",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:487k": "2020-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-490-4-a-1",
+    "lawCode": "PEN",
+    "code": "490.4(a)(1)",
+    "title": "Organized retail theft: stealing merchandise for resale",
+    "summary": "Acting in concert with one or more other persons to steal merchandise from a merchant’s premises or an online marketplace, intending to sell, exchange, or return it for value.",
+    "penalty": "Ordinarily up to 364 days in county jail. If violations occur on two or more separate occasions within 12 months and the aggregated value exceeds $950, the misdemeanor alternative remains available and the felony alternative is 16 months, 2 years, or 3 years under section 1170(h). Section 1170(h) has state-prison exclusions. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. The court must consider a probation stay-away condition under section 490.4(e) and a retail restraining order under section 490.8; an order is not automatic. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Concerted theft with intent to sell, exchange, or return the merchandise for value.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:490.8",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:490.4": "2025-01-01",
+      "PEN:490.8": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-490-4-a-2",
+    "lawCode": "PEN",
+    "code": "490.4(a)(2)",
+    "title": "Organized retail theft: receiving organized-retail-theft merchandise",
+    "summary": "Acting in concert with two or more other persons to receive, buy, or possess merchandise stolen in the manner described in section 490.4(a)(1), knowing or believing it was stolen. This branch requires two or more other participants, not just one.",
+    "penalty": "Ordinarily up to 364 days in county jail. If violations occur on two or more separate occasions within 12 months and the aggregated value exceeds $950, the misdemeanor alternative remains available and the felony alternative is 16 months, 2 years, or 3 years under section 1170(h). Section 1170(h) has state-prison exclusions. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. The court must consider a probation stay-away condition under section 490.4(e) and a retail restraining order under section 490.8; an order is not automatic. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Knowing or believing the merchandise was stolen, with the specified concerted receiving, purchase, or possession.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:490.8",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:490.4": "2025-01-01",
+      "PEN:490.8": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-490-4-a-3",
+    "lawCode": "PEN",
+    "code": "490.4(a)(3)",
+    "title": "Organized retail theft: stealing as an agent of an organized plan",
+    "summary": "Acting as an agent of another individual or group to steal merchandise from a merchant’s premises or an online marketplace as part of an organized theft plan.",
+    "penalty": "Ordinarily up to 364 days in county jail. If violations occur on two or more separate occasions within 12 months and the aggregated value exceeds $950, the misdemeanor alternative remains available and the felony alternative is 16 months, 2 years, or 3 years under section 1170(h). Section 1170(h) has state-prison exclusions. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. The court must consider a probation stay-away condition under section 490.4(e) and a retail restraining order under section 490.8; an order is not automatic. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Theft as an agent of another individual or group as part of an organized plan.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:490.8",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:490.4": "2025-01-01",
+      "PEN:490.8": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-490-4-a-4",
+    "lawCode": "PEN",
+    "code": "490.4(a)(4)",
+    "title": "Organized retail theft: organizing or financing retail theft",
+    "summary": "Recruiting, coordinating, organizing, supervising, directing, managing, or financing another person to undertake the acts in section 490.4(a)(1) or (2), or another statutory form of theft of merchandise.",
+    "penalty": "This organizing branch permits a misdemeanor of up to 364 days in county jail or a felony of 16 months, 2 years, or 3 years under section 1170(h). The separate two-occasion and more-than-$950 conditions in section 490.4(b)(1) do not govern this branch. Section 1170(h) has state-prison exclusions. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. The court must consider a probation stay-away condition under section 490.4(e) and a retail restraining order under section 490.8; an order is not automatic. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Participation in recruiting, organizing, directing, financing, or another specified role to bring about the theft conduct; mere association is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:490.8",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:490.4": "2025-01-01",
+      "PEN:490.8": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-498-b-1",
+    "lawCode": "PEN",
+    "code": "498(b)(1)",
+    "title": "Utility theft: diverting utility services",
+    "summary": "Diverting or causing the diversion of utility services. The person must intend to obtain services without paying the full lawful charge, enable someone else to do so, or deprive the utility of part of its lawful charge. Committing, authorizing, soliciting, aiding, or abetting the listed act is covered. The provider and services must qualify under section 498(a), which covers specified electrical, gas, or water utilities, including public systems; this is not a general charge for any unpaid service.",
+    "penalty": "Ordinary misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. If the services exceed $950 in value OR the person has a qualifying prior conviction under section 498, former section 498, or an equivalent law of another state or the United States, section 498(d) permits up to 364 days in county jail or 16 months, 2 years, or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to evade or deprive the utility of the full lawful charge. The specified conduct must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:498": "2010-01-25",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-498-b-2",
+    "lawCode": "PEN",
+    "code": "498(b)(2)",
+    "title": "Utility theft: preventing accurate utility metering",
+    "summary": "Preventing a utility meter, by tampering or another means, from accurately measuring services provided. The person must intend to obtain services without paying the full lawful charge, enable someone else to do so, or deprive the utility of part of its lawful charge. Committing, authorizing, soliciting, aiding, or abetting the listed act is covered. The provider and services must qualify under section 498(a), which covers specified electrical, gas, or water utilities, including public systems; this is not a general charge for any unpaid service.",
+    "penalty": "Ordinary misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. If the services exceed $950 in value OR the person has a qualifying prior conviction under section 498, former section 498, or an equivalent law of another state or the United States, section 498(d) permits up to 364 days in county jail or 16 months, 2 years, or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to evade or deprive the utility of the full lawful charge. The specified conduct must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:498": "2010-01-25",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-498-b-3",
+    "lawCode": "PEN",
+    "code": "498(b)(3)",
+    "title": "Utility theft: tampering with utility property",
+    "summary": "Tampering with property owned or used by the utility to provide utility services. The person must intend to obtain services without paying the full lawful charge, enable someone else to do so, or deprive the utility of part of its lawful charge. Committing, authorizing, soliciting, aiding, or abetting the listed act is covered. The provider and services must qualify under section 498(a), which covers specified electrical, gas, or water utilities, including public systems; this is not a general charge for any unpaid service.",
+    "penalty": "Ordinary misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. If the services exceed $950 in value OR the person has a qualifying prior conviction under section 498, former section 498, or an equivalent law of another state or the United States, section 498(d) permits up to 364 days in county jail or 16 months, 2 years, or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to evade or deprive the utility of the full lawful charge. The specified conduct must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:498": "2010-01-25",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-498-b-4",
+    "lawCode": "PEN",
+    "code": "498(b)(4)",
+    "title": "Utility theft: unauthorized utility connection or reconnection",
+    "summary": "Making or causing a connection or reconnection with utility property without the utility’s authorization. The person must intend to obtain services without paying the full lawful charge, enable someone else to do so, or deprive the utility of part of its lawful charge. Committing, authorizing, soliciting, aiding, or abetting the listed act is covered. The provider and services must qualify under section 498(a), which covers specified electrical, gas, or water utilities, including public systems; this is not a general charge for any unpaid service.",
+    "penalty": "Ordinary misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. If the services exceed $950 in value OR the person has a qualifying prior conviction under section 498, former section 498, or an equivalent law of another state or the United States, section 498(d) permits up to 364 days in county jail or 16 months, 2 years, or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to evade or deprive the utility of the full lawful charge. The specified conduct must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:498": "2010-01-25",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-498-b-5",
+    "lawCode": "PEN",
+    "code": "498(b)(5)",
+    "title": "Utility theft: knowingly benefiting from unauthorized utility services",
+    "summary": "Using or receiving the direct benefit of all or part of utility services with knowledge or reason to believe that diversion, tampering, or an unauthorized connection existed, or that the use or receipt lacked utility authorization. The person must intend to obtain services without paying the full lawful charge, enable someone else to do so, or deprive the utility of part of its lawful charge. Committing, authorizing, soliciting, aiding, or abetting the listed act is covered. The provider and services must qualify under section 498(a), which covers specified electrical, gas, or water utilities, including public systems; this is not a general charge for any unpaid service.",
+    "penalty": "Ordinary misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. If the services exceed $950 in value OR the person has a qualifying prior conviction under section 498, former section 498, or an equivalent law of another state or the United States, section 498(d) permits up to 364 days in county jail or 16 months, 2 years, or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Intent to evade or deprive the utility of the full lawful charge. This benefit-receiving branch additionally requires knowledge or reason to believe the specified unauthorized circumstances.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:498": "2010-01-25",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-499c-c",
+    "lawCode": "PEN",
+    "code": "499c(c)",
+    "title": "Trade-secret bribery",
+    "summary": "Promising, offering, giving, or conspiring to offer or give a benefit to another’s present or former agent, employee, or servant to induce or reward making the owner’s trade-secret material available to an unauthorized person. Also covers an agent, employee, or servant soliciting, accepting, receiving, or taking that benefit. A trade secret must have independent economic value from secrecy and be subject to reasonable secrecy efforts. This entry does not apply subdivision (c)’s penalty to the separate theft acts in subdivision (b).",
+    "penalty": "Felony alternative: 16 months, 2 years, or 3 years under section 1170(h), ordinarily in county jail but subject to its state-prison exclusions. Misdemeanor alternative: up to 364 days in county jail under sections 17 and 18.5. Section 499c(c) also permits a fine up to $5,000, or both that fine and imprisonment. Returning or intending to return the material is not a defense under subdivision (d). These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Offering or taking the benefit as an inducement, bribe, or reward for the specified unauthorized disclosure.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:499c": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-502-6-a",
+    "lawCode": "PEN",
+    "code": "502.6(a)",
+    "title": "Fraudulent possession or use of a payment-card scanning device",
+    "summary": "Knowingly and willfully possessing a scanning device with intent to defraud, or knowingly and willfully using one with intent to defraud to access, read, obtain, memorize, or store information encoded on a payment card’s magnetic strip without the authorized user’s permission. Mere ownership of equipment without the required fraudulent intent is insufficient.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a $1,000 fine as specified by section 502.6, or both. A defendant-owned scanning device or reencoder possessed or used in the violation may be seized and destroyed; specified defendant-owned computers, software, or data are subject to forfeiture under subdivisions (c) and (d). These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge, willfulness, and intent to defraud are required for both possession and use.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:502.6": "2003-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-502-6-b",
+    "lawCode": "PEN",
+    "code": "502.6(b)",
+    "title": "Fraudulent possession or use of a payment-card reencoder",
+    "summary": "Knowingly and willfully possessing a reencoder with intent to defraud, or knowingly and willfully using one with intent to defraud to put encoded information from a payment card onto another card or an electronic medium allowing an authorized transaction, without the permission of the authorized user of the source card. Mere ownership of equipment without the required fraudulent intent is insufficient.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a $1,000 fine as specified by section 502.6, or both. A defendant-owned scanning device or reencoder possessed or used in the violation may be seized and destroyed; specified defendant-owned computers, software, or data are subject to forfeiture under subdivisions (c) and (d). These are adult base penalties; enhancements, restitution, assessments, and case-specific sentencing rules may change the result.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge, willfulness, and intent to defraud are required for both possession and use.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:502.6": "2003-01-01"
+    }
+  }
+]
