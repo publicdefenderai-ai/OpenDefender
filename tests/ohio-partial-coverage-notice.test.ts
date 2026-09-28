@@ -47,8 +47,9 @@ describe("Ohio partial charge coverage notice", () => {
     expect(chargeSelectorSource).toContain('role="note"');
     expect(qaFlowSource).toContain('data-testid="ohio-partial-coverage-notice"');
     expect(chargeSelectorSource).toContain('data-testid="ohio-partial-coverage-notice"');
-    expect(chargeSelectorSource).toContain(
-      '["NY", "TX", "FL", "PA", "SC", "OH"].includes(jurisdiction.toUpperCase())',
+    // Other jurisdictions joining the authority path must not break Ohio's contract.
+    expect(chargeSelectorSource).toMatch(
+      /isAuthorityBacked = \[[^\]]*"OH"[^\]]*\]\.includes\(jurisdiction\.toUpperCase\(\)\)/,
     );
   });
 });
