@@ -15,3 +15,12 @@ export function californiaPrimaryIdentity(lawCode: CaliforniaLawCode, code: stri
   if (!section) throw new Error("Unparseable California primary section");
   return { lawCode, key: `${lawCode}:${section}`, citation: `${CALIFORNIA_LAW_CODE_LABELS[lawCode]} § ${code}` };
 }
+
+/** Common charging-paper spellings supplement, rather than replace, archive codes. */
+export function californiaCitationSearchAliases(lawCode: CaliforniaLawCode, code: string): string[] {
+  const abbreviations: Partial<Record<CaliforniaLawCode, string>> = {
+    PEN: "PC", VEH: "VC", HSC: "H&S", BPC: "B&P", HNC: "H&N",
+  };
+  return [...new Set([abbreviations[lawCode] ?? lawCode, lawCode,
+    CALIFORNIA_LAW_CODE_LABELS[lawCode].replace(/^Cal\. /, "")])].map(label => `${label} ${code}`);
+}

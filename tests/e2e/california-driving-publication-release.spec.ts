@@ -22,3 +22,11 @@ for(const [query,id] of [['boating DUI causing injury','ca-hnc-655-f'],['VC 2000
     const choice=page.getByTestId(`checkbox-charge-${id}`);await expect(choice).toBeVisible();await choice.locator('..').click();await expect(choice).toBeChecked();
   });
 }
+
+test('common statutory abbreviations find current California charges through API search',async({request})=>{
+  for(const [query,id] of [['VC 2800.2','ca-veh-2800-2'],['H&S 11350','ca-possession-of-controlled-substance'],['H&S 11377','ca-hsc-11377-a'],['H&N 655(f)','ca-hnc-655-f'],['VC 20001(a)','ca-veh-20001-b-1']]){
+    const response=await request.get(`/api/criminal-charges?jurisdiction=CA&search=${encodeURIComponent(query)}`);
+    expect(response.ok()).toBe(true);
+    expect((await response.json()).charges.some((r:any)=>r.id===id),query).toBe(true);
+  }
+});
