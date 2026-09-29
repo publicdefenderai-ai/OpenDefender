@@ -1,3 +1,5 @@
+import {buildRegistrationContextBlock} from './registration-guidance';
+
 /**
  * Collateral Consequences — 50-State + DC Data
  *
@@ -2029,7 +2031,7 @@ export const IMMIGRATION_CONSEQUENCE_RULES: Record<string, ImmigrationConsequenc
  * 'substantially_compliant' = mostly aligned but with state variations.
  * 'non_compliant'          = state uses its own system, not SORNA-aligned.
  */
-export type SornaCompliance = 'compliant' | 'substantially_compliant' | 'non_compliant';
+export type SornaCompliance = 'compliant' | 'substantially_compliant' | 'non_compliant' | 'not_reviewed';
 
 export interface SexOffenderRule {
   state: string;
@@ -2065,6 +2067,7 @@ export interface SexOffenderRule {
   lastVerified: string;
 }
 
+// Legacy research inventory, not approved prompt input. See registration-guidance.ts.
 export const SEX_OFFENDER_RULES: Record<string, SexOffenderRule> = {
 
   // ── Alabama ────────────────────────────────────────────────────────────────
@@ -2080,7 +2083,7 @@ export const SEX_OFFENDER_RULES: Record<string, SexOffenderRule> = {
   AR: { state: 'AR', stateName: 'Arkansas', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Ark. Code Ann. §§ 12-12-901 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
 
   // ── California ─────────────────────────────────────────────────────────────
-  CA: { state: 'CA', stateName: 'California', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Cal. Penal Code §§ 290 et seq. (as amended by AB 1149, 2021)', notes: 'California adopted a 3-tier system in 2021 (AB 1149). Tier 1: 10 years; Tier 2: 20 years; Tier 3: lifetime. Effective 2025 for retroactive petitions.', dataConfidence: 'high', lastVerified: '2026-07' },
+  CA: { state: 'CA', stateName: 'California', sornaCompliance: 'not_reviewed', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: null, publicOnlineRegistry: true, source: 'Cal. Penal Code § 290; https://oag.ca.gov/system/files/media/sb384-registrant-faqs.pdf', notes: 'Legacy research only, not an individualized rule. SB 384 introduced tiered registration effective January 1, 2021. Adult minimum periods and termination exceptions need individual review. Residence restrictions can be case-specific; no blanket distance is approved here. SORNA compliance is not reviewed.', dataConfidence: 'low', lastVerified: '2026-09' },
 
   // ── Colorado ───────────────────────────────────────────────────────────────
   CO: { state: 'CO', stateName: 'Colorado', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Colo. Rev. Stat. §§ 16-22-101 et seq.', notes: 'Colorado uses its own classification system. Most Tier 1 equivalent registrants: 10 years. Sexually violent predators: lifetime.', dataConfidence: 'medium', lastVerified: '2026-07' },
@@ -2231,11 +2234,13 @@ export function getDriversLicenseRule(jurisdiction: string): DriversLicenseRule 
 }
 
 /**
- * Returns the sex offender rule for a state, or null if not found.
+ * Legacy research accessor; not an approval for individualized guidance.
+ * Returns null for missing or low-confidence records.
  */
 export function getSexOffenderRule(jurisdiction: string): SexOffenderRule | null {
   const key = jurisdiction.trim().toUpperCase();
-  return SEX_OFFENDER_RULES[key] ?? null;
+  const rule = SEX_OFFENDER_RULES[key];
+  return rule && rule.dataConfidence !== 'low' ? rule : null;
 }
 
 /**
@@ -2273,6 +2278,8 @@ export function buildCollateralConsequenceContextBlock(
   const lines: string[] = [
     `COLLATERAL CONSEQUENCES — ${rule.stateName.toUpperCase()} (verified ${rule.lastVerified}):`,
   ];
+
+  lines.push(buildRegistrationContextBlock(jurisdiction));
 
   // Voting
   const vr = rule.voting;

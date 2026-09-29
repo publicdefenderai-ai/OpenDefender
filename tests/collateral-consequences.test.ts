@@ -231,7 +231,7 @@ describe('SEX_OFFENDER_RULES', () => {
   });
 
   it('every entry has required fields with correct types', () => {
-    const compliance = ['compliant', 'substantially_compliant', 'non_compliant'];
+    const compliance = ['compliant', 'substantially_compliant', 'non_compliant', 'not_reviewed'];
     for (const [code, rule] of Object.entries(SEX_OFFENDER_RULES)) {
       expect(compliance.includes(rule.sornaCompliance), `${code}.sornaCompliance invalid`).toBe(true);
       expect(

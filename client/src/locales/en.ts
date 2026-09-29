@@ -511,7 +511,7 @@ export default {
           "charges": "{{count}} charge records; tier order is felony / misdemeanor / infraction. California records with alternatives count under the highest listed tier, including conditional branches; this does not predict the charge or sentence in an individual case.",
           "explanations": "{{count}} explanation entries have a recorded source; jurisdiction overlays are additional and not uniform.",
           "procedure": "{{count}} jurisdictions (total / medium-confidence records).",
-          "collateral": "{{count}} jurisdictions (collateral / driver's-license / immigration / registry).",
+          "collateral": "{{count}} stored jurisdiction records (collateral / driver’s-license / immigration / registry). Registry totals count research records, not verified guidance coverage.",
           "rights": "General constitutional-rights summaries; no uniform state-by-state coverage claim.",
           "expungement": "{{count}} jurisdiction records, including federal.",
           "diversion": "{{count}} programs (total / currently active).",
@@ -6653,9 +6653,9 @@ export default {
       },
       "sexOffender": {
         "title": "Sex Offender Registration Risk",
-        "what": "A conviction for a sex offense triggers mandatory registration under your state's sex offender registry law and under the federal Sex Offender Registration and Notification Act (SORNA, 34 U.S.C. § 20901). Registration lasts 10–15 years for lower-tier offenses and lifetime for serious or repeat offenses in most states. It requires regular in-person check-ins, address verification, and public online listing. Many states add residency restrictions — typically 500–2,000 feet from schools, parks, and day care centers — that severely limit where you can live.",
-        "clock": "Registration is required immediately upon conviction, upon release from incarceration, or upon arrival in any jurisdiction where you live, work, or go to school. Failure to register or update your registration is itself a separate state and federal felony.",
-        "action": "The tier and duration of registration is determined at sentencing. An attorney experienced in sex offender law should advise you before you enter any plea, because the registration consequences are often permanent and cannot be undone by expungement. Ask specifically about the minimum registration period and any petition for removal available under state law.",
+        "what": "Some convictions can require sex-offender registration. Whether registration applies, its duration, public disclosure and residence restrictions depend on the exact offense, jurisdiction and individual circumstances. A charge alone does not establish these consequences.",
+        "clock": "Registration and update deadlines vary. Confirm applicable duties promptly with counsel and the registering agency. Failure to comply can be a separate offense; its classification and any federal liability depend on the law and facts.",
+        "action": "Before any plea, ask counsel whether registration applies, how a tier is assigned, the minimum period, reporting duties and any available termination petition. Completion of a minimum period does not necessarily end registration automatically.",
         "linkLabel": "Find legal help"
       }
     },
