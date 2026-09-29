@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-PR31 is merged. The next combined violence/detention publication proposes 28 choices, bringing the configured catalog to 319: 99 corrected originals and 220 additions. It covers 210 distinct primary sections, with 505 retained publication sections/511 versions including dependencies. PEN 30515 remains held, leaving 318 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
+PR32 is merged. The combined sexual-offense publication proposes 64 choices, bringing the configured catalog to 383: 99 corrected originals and 284 additions. It covers 221 distinct primary sections, with 511 retained publication sections/517 versions including dependencies. PEN 30515 remains held, leaving 382 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -18,8 +18,8 @@ The people/weapons benchmark now makes the next work concrete: 207 instructions 
 
 | Next work package | Scope |
 | --- | --- |
-| Serious violence, abuse and detention | Combined publication review of mayhem, torture, child/elder harm, domestic injury, kidnapping, hostage-taking, trafficking and child abduction. Start with the 19 primary/supporting sections named in the people/weapons packet. |
-| Sexual-offense branches | Shared age, force, incapacity, custody, exploitation and registration provisions. Reuse the same evidence packet and review exact subdivisions together. |
+| Serious violence, abuse and detention | First 28 branches merged in PR32. Carry forward the fine question, kidnapping siblings and elder financial branches. |
+| Sexual-offense branches | This combined batch adds 64 bounded choices. Finish registration, image-based exploitation, contact-with-intent, child annoyance/molestation and sexual-battery gaps together; custody branches need enforceability research. |
 | Weapons, threats and hate crimes | Combine clear conduct branches where practical; keep prohibited-person predicates, changed-source restrictions and enforceability questions explicit. |
 | Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
 | Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
@@ -139,3 +139,16 @@ Seventy dependencies are bound: 26 reused and 44 newly monitored, including 36 p
 The report preserves the January 2026 torture parole-minimum distinction, age/actor/intent branches, conditional prior terms and trafficking's additional fine/terms. The felony false-imprisonment fine limit is expressly unresolved in the user-facing explanation and in attorney question 4. Kidnapping 207(c)/(d), elder financial offenses and the other people/weapons groups remain research, not minor-charge deferrals.
 
 Run `node --import tsx scripts/data-review/california-verification/violence-detention-review.ts` for the source-bound review and successor crosswalk. Replay `acquire-violence-detention.py` against the retained original archive. Next substantive group: combine the remaining sexual-offense branches using the already retained shared evidence, followed by weapons/threats and the remaining statewide families.
+
+
+## Sexual offenses: combined publication
+
+Sixty-four choices cover 13 primary sections: oral copulation, sodomy, the remaining core sexual-penetration branches, in-concert rape/penetration, aggravated child sexual assault, caretaker/forced lewd acts, harmful-matter grooming, arranged meetings, continuous abuse, adult conduct with young children, pimping, pandering and procurement. The 42 newly matched instruction entries receive bounded credit only. Existing rape, lewd-child and penetration choices are preserved.
+
+The 25 required source sections reuse 19 already monitored sections and add six, including three promoted from research. The unchanged-source comparison covers 510 of 511 publication sections; PEN 30515 remains held. The original receipt acquisition time and expiry remain unchanged. The review preserves differing age/coercion terms, proof of incapacity, caretaker exceptions, conditional life/consecutive sentences and separate additional fines.
+
+The successor carries forward all three violence/detention findings, including attorney question 4. Registration violations, image-based exploitation, contact-with-intent penalties, child annoyance/molestation, sexual-battery siblings and custody enforceability remain explicit substantive research. None is dismissed as a minor omission. No new attorney data-entry assignment is created.
+
+Run `node --import tsx scripts/data-review/california-verification/sexual-offenses-review.ts` for the source-bound review and cumulative instruction crosswalk. `acquire-sexual-offenses.py` replays the frozen predecessor providers and the original archive. Shared expected catalog totals now live in one test fixture so each batch does not require dozens of manual count edits; independent per-batch counts and source checks remain.
+
+Next: finish the remaining significant sexual-offense branches as a combined group, then weapons/threats/hate crimes and the remaining major families. The prior work-package estimate remains provisional; this is not statewide completeness.

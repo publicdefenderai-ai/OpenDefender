@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from 'vitest';
 import additions from '../shared/california-traffic-additions.json';
 import receipt from '../scripts/data-review/output/california-archive-refresh-receipt.json';
@@ -11,7 +12,7 @@ import {getChargeExplanation} from '../shared/charge-explanations';
 const row=(code:string)=>additions.find(a=>a.code===code)!;
 describe('California traffic publication',()=>{
   it('accounts for all 24 branches without closing the benchmark',()=>{
-    expect(validateTrafficReview()).toEqual({additions:24,primarySections:12,reusedSections:30,newSections:29,newVersions:31,promotedResearchSections:16,configuredSelectable:319});
+    expect(validateTrafficReview()).toEqual({additions:24,primarySections:12,reusedSections:30,newSections:29,newVersions:31,promotedResearchSections:16,configuredSelectable:CA_CATALOG_COUNTS.configured});
     const r=readTrafficReview();expect(r.crosswalk).toHaveLength(30);
     for(const id of ['2141','2151','2242'])expect(r.crosswalk.find(x=>x.instruction===id)?.status).toBe('unpublished_branch_requires_substantive_review');
     expect(r.remainingGroups.every(g=>g.status==='bounded_additions_do_not_close_group')).toBe(true);

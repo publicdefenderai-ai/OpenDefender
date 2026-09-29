@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from "vitest";
 import additions from "../shared/california-drug-successor-additions.json";
 import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
@@ -10,7 +11,7 @@ const row=(code:string)=>additions.find(a=>a.code===code)!;
 
 describe("California combined drug successor",()=>{
   it("reuses primary sources and accounts for every previous benchmark gap without clearing unrelated holds",()=>{
-    expect(validateCaliforniaDrugSuccessorReview()).toEqual({additions:18,primarySections:14,reusedSections:38,newSections:1,newVersions:1,newBenchmarkMatches:16,configuredSelectable:319});
+    expect(validateCaliforniaDrugSuccessorReview()).toEqual({additions:18,primarySections:14,reusedSections:38,newSections:1,newVersions:1,newBenchmarkMatches:16,configuredSelectable:CA_CATALOG_COUNTS.configured});
     const review=readCaliforniaDrugSuccessorReview();
     expect(review.crosswalk).toHaveLength(46);
     expect(review.crosswalk.filter(r=>r.status==="partial_catalog_match")).toHaveLength(4);

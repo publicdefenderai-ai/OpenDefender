@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import { describe, expect, it } from "vitest";
 import additions from "../shared/california-specialized-property-additions.json";
 import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
@@ -10,7 +11,7 @@ const byCode = (code: string) => additions.find(a => a.code === code)!;
 
 describe("California specialized-property source reuse", () => {
   it("accounts for all 40 sections without clearing consequential omissions", () => {
-    expect(validateCaliforniaSpecializedPropertyReview()).toEqual({ additions: 17, candidateSections: 40, reviewedPrimarySections: 9, remainingResearchSections: 26, supportingSections: 4, deferredSections: 1, reusedSections: 52, newSections: 0, configuredSelectable: 319 });
+    expect(validateCaliforniaSpecializedPropertyReview()).toEqual({ additions: 17, candidateSections: 40, reviewedPrimarySections: 9, remainingResearchSections: 26, supportingSections: 4, deferredSections: 1, reusedSections: 52, newSections: 0, configuredSelectable: CA_CATALOG_COUNTS.configured });
     const sections = readCaliforniaSpecializedPropertyReview().sections;
     for (const key of ["PEN:192.5", "PEN:243.9", "PEN:487m", "PEN:490.8", "PEN:500", "PEN:502.8"]) expect(sections.find(s => s.key === key)?.status, key).toBe("substantive_research_open");
     expect(sections.find(s => s.key === "PEN:490.7")).toMatchObject({ status: "deferred_low_priority_offense", reason: expect.stringContaining("Revisit") });
@@ -66,10 +67,10 @@ describe("California specialized-property source reuse", () => {
   it("projects every choice into exact-ID explanations, guidance and seeding with expiry still enforced", () => {
     const now = new Date(receipt.checkedAt);
     const seed = buildCaliforniaSourceDatabaseSeed(now);
-    expect(getChargesByJurisdiction("CA")).toHaveLength(319);
+    expect(getChargesByJurisdiction("CA")).toHaveLength(CA_CATALOG_COUNTS.configured);
     // The seed preserves configured identities; runtime authority checks apply holds.
-    expect(seed.selectableChargeIds).toHaveLength(319);
-    expect(seed.selectableChargeIds.filter(id => getCaliforniaRecordEvidenceStatus(getCaliforniaCanonicalRecord(id)!, now) === "current")).toHaveLength(318);
+    expect(seed.selectableChargeIds).toHaveLength(CA_CATALOG_COUNTS.configured);
+    expect(seed.selectableChargeIds.filter(id => getCaliforniaRecordEvidenceStatus(getCaliforniaCanonicalRecord(id)!, now) === "current")).toHaveLength(CA_CATALOG_COUNTS.eligible);
     for (const a of additions) {
       expect(getChargeById(a.id)).toMatchObject({ name: a.title, code: a.code, description: a.summary, maxPenalty: a.penalty, categories: a.categories });
       expect(classifyChargesForGuidance([a.id])[0]).toMatchObject({ id: a.id, maxPenalty: a.penalty, categories: a.categories });

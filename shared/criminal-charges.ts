@@ -95020,6 +95020,18 @@ for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
   ]));
 }
 
+// Include reviewed sexual branches in both existing topical filters.
+const californiaSexualSections = new Set(['264.1','266h','266i','266j','269','286','287','288','288.2','288.4','288.5','288.7','289']);
+for (const group of ['Sexual Offenses', 'Sexual Crimes']) {
+  chargeCategories[group] = Array.from(new Set([
+    ...chargeCategories[group],
+    ...chargeCategories['CA'].filter(id => {
+      const record = getCaliforniaCanonicalRecord(id);
+      return record?.lawCode === 'PEN' && californiaSexualSections.has(record.code.split('(')[0]);
+    }),
+  ]));
+}
+
 // Reviewed people/detention choices must also be discoverable in topical filters.
 const californiaPeopleSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368','207','209','209.5','210.5','236','236.1','237','278','278.5']);
 const californiaAssaultSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368']);
