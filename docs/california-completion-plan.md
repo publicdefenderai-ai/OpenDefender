@@ -1,10 +1,10 @@
 # California practical completion plan
 
-Updated September 28, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
+Updated September 29, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
 
-PR32 is merged. The combined sexual-offense publication proposes 64 choices, bringing the configured catalog to 383: 99 corrected originals and 284 additions. It covers 221 distinct primary sections, with 511 retained publication sections/517 versions including dependencies. PEN 30515 remains held, leaving 382 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
+PR34 is merged. The registration/exploitation successor proposes 26 choices, bringing the configured catalog to 409: 99 corrected originals and 310 additions. It covers 233 distinct primary sections, with 529 retained publication sections/535 versions including dependencies. PEN 30515 remains held, leaving 408 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -19,7 +19,7 @@ The people/weapons benchmark now makes the next work concrete: 207 instructions 
 | Next work package | Scope |
 | --- | --- |
 | Serious violence, abuse and detention | First 28 branches merged in PR32. Carry forward the fine question, kidnapping siblings and elder financial branches. |
-| Sexual-offense branches | This combined batch adds 64 bounded choices. Finish registration, image-based exploitation, contact-with-intent, child annoyance/molestation and sexual-battery gaps together; custody branches need enforceability research. |
+| Sexual-offense branches | The first 64 choices are merged; the successor adds 26 registration/exploitation and related branches. Commercial image distribution, special registration duties and custody enforceability remain explicit research holds. |
 | Weapons, threats and hate crimes | Combine clear conduct branches where practical; keep prohibited-person predicates, changed-source restrictions and enforceability questions explicit. |
 | Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
 | Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
@@ -152,3 +152,16 @@ The successor carries forward all three violence/detention findings, including a
 Run `node --import tsx scripts/data-review/california-verification/sexual-offenses-review.ts` for the source-bound review and cumulative instruction crosswalk. `acquire-sexual-offenses.py` replays the frozen predecessor providers and the original archive. Shared expected catalog totals now live in one test fixture so each batch does not require dozens of manual count edits; independent per-batch counts and source checks remain.
 
 Next: finish the remaining significant sexual-offense branches as a combined group, then weapons/threats/hate crimes and the remaining major families. The prior work-package estimate remains provisional; this is not statewide completeness.
+
+
+## Registration and exploitation: combined successor
+
+Twenty-six choices cover 13 primary sections, including four registration duties, actual/synthetic image-possession branches, distribution/production, child contact and annoyance, remaining sexual battery, incest, obscene live conduct and animal sexual abuse. Thirteen additional instruction entries gain bounded matches. The successor preserves historic crosswalk evidence while updating the broad sexual-family finding to distinguish work completed from specific remaining holds.
+
+Forty-three source sections reuse 25 retained dependencies and add 18 to monitoring, including 13 promoted research sections. The fresh-archive replay confirms 528 of 529 sections unchanged; PEN 30515 remains held. Neither the authentic acquisition time nor the October 5 expiry is extended. The additions preserve registration knowledge/notice conditions, the distinct 30-day misdemeanor rule, actual/synthetic obscenity distinctions, prior-conviction and quantity-based terms, and additional fines.
+
+Commercial distribution under 311.2(b) remains a significant classification question concerning the fine alternative and sections 17/18, not a minor omission. Special registration duties, Internet-identifier enforceability and custody-conduct branches remain research. No new attorney assignment is needed to review this publication batch. The existing felony false-imprisonment question remains open.
+
+The registration overview now has independent retained-text and rendered-prose assertions for each adult tier period. These detect changed anchors; they do not certify exceptions or automate legal interpretation. Run `registration-exploitation-review.ts` for the cumulative source-bound report and `acquire-registration-exploitation.py` for frozen-provider acquisition replay.
+
+Next: the combined weapons, threats and hate-crime group, followed by justice/public-order/property gaps and targeted other-code/homicide/gang benchmark work. The same practical-completion stop conditions apply; these counts are not a statewide coverage percentage.
