@@ -1,0 +1,2830 @@
+{
+  "schemaVersion": 1,
+  "scope": "five_people_weapons_families_not_homicide_or_statewide_certification",
+  "families": [
+    {
+      "id": "assault_abuse",
+      "firstPage": 603,
+      "lastPage": 805,
+      "tocFirstPage": 599,
+      "tocLastPage": 602,
+      "instructionIds": [
+        "800",
+        "801",
+        "810",
+        "820",
+        "821",
+        "822",
+        "823",
+        "830",
+        "831",
+        "840",
+        "841",
+        "850",
+        "851",
+        "852A",
+        "852B",
+        "853A",
+        "853B",
+        "860",
+        "861",
+        "862",
+        "863",
+        "875",
+        "876",
+        "877",
+        "890",
+        "891",
+        "900",
+        "901",
+        "902",
+        "903",
+        "904",
+        "905",
+        "906",
+        "907",
+        "908",
+        "915",
+        "916",
+        "917",
+        "925",
+        "926",
+        "935",
+        "936",
+        "937",
+        "938",
+        "945",
+        "946",
+        "947",
+        "948",
+        "949",
+        "950",
+        "951",
+        "960",
+        "965",
+        "966",
+        "967",
+        "968",
+        "969",
+        "970",
+        "980",
+        "981",
+        "982",
+        "983",
+        "984",
+        "985"
+      ]
+    },
+    {
+      "id": "sexual_offenses",
+      "firstPage": 811,
+      "lastPage": 1042,
+      "tocFirstPage": 807,
+      "tocLastPage": 810,
+      "instructionIds": [
+        "1000",
+        "1001",
+        "1002",
+        "1003",
+        "1004",
+        "1005",
+        "1015",
+        "1016",
+        "1017",
+        "1018",
+        "1019",
+        "1020",
+        "1021",
+        "1022",
+        "1030",
+        "1031",
+        "1032",
+        "1033",
+        "1034",
+        "1035",
+        "1036",
+        "1037",
+        "1045",
+        "1046",
+        "1047",
+        "1048",
+        "1049",
+        "1050",
+        "1051",
+        "1060",
+        "1070",
+        "1071",
+        "1072",
+        "1080",
+        "1081",
+        "1082",
+        "1090",
+        "1091",
+        "1092",
+        "1100",
+        "1101",
+        "1102",
+        "1110",
+        "1111",
+        "1112",
+        "1120",
+        "1121",
+        "1122",
+        "1123",
+        "1124",
+        "1125",
+        "1126",
+        "1127",
+        "1128",
+        "1140",
+        "1141",
+        "1142",
+        "1143",
+        "1144",
+        "1145",
+        "1150",
+        "1151",
+        "1152",
+        "1153",
+        "1154",
+        "1155",
+        "1160",
+        "1161",
+        "1162",
+        "1170",
+        "1180",
+        "1181",
+        "1190",
+        "1191A",
+        "1191B",
+        "1192",
+        "1193",
+        "1194"
+      ]
+    },
+    {
+      "id": "kidnapping_trafficking",
+      "firstPage": 1045,
+      "lastPage": 1098,
+      "tocFirstPage": 1043,
+      "tocLastPage": 1044,
+      "instructionIds": [
+        "1200",
+        "1201",
+        "1202",
+        "1203",
+        "1204",
+        "1215",
+        "1225",
+        "1226",
+        "1240",
+        "1241",
+        "1242",
+        "1243",
+        "1244",
+        "1250",
+        "1251",
+        "1252"
+      ]
+    },
+    {
+      "id": "threats_hate",
+      "firstPage": 1101,
+      "lastPage": 1138,
+      "tocFirstPage": 1099,
+      "tocLastPage": 1100,
+      "instructionIds": [
+        "1300",
+        "1301",
+        "1302",
+        "1303",
+        "1304",
+        "1305",
+        "1350",
+        "1351",
+        "1352",
+        "1353",
+        "1354",
+        "1355"
+      ]
+    },
+    {
+      "id": "weapons",
+      "firstPage": 1717,
+      "lastPage": 1848,
+      "tocFirstPage": 1713,
+      "tocLastPage": 1716,
+      "instructionIds": [
+        "2500",
+        "2501",
+        "2502",
+        "2503",
+        "2510",
+        "2511",
+        "2512",
+        "2513",
+        "2514",
+        "2520",
+        "2521",
+        "2522",
+        "2530",
+        "2540",
+        "2541",
+        "2542",
+        "2543",
+        "2544",
+        "2545",
+        "2546",
+        "2560",
+        "2561",
+        "2562",
+        "2570",
+        "2571",
+        "2572",
+        "2573",
+        "2574",
+        "2575",
+        "2576",
+        "2577",
+        "2578",
+        "2579",
+        "2590",
+        "2591",
+        "2592",
+        "2593"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "800",
+      "family": "assault_abuse",
+      "firstPage": 603,
+      "heading": "800. Aggravated Mayhem (Pen. Code, § 205)",
+      "sourceKeys": [
+        "PEN:205"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "801",
+      "family": "assault_abuse",
+      "firstPage": 606,
+      "heading": "801. Mayhem (Pen. Code, § 203)",
+      "sourceKeys": [
+        "PEN:203"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "810",
+      "family": "assault_abuse",
+      "firstPage": 609,
+      "heading": "810. Torture (Pen. Code, § 206)",
+      "sourceKeys": [
+        "PEN:206"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "820",
+      "family": "assault_abuse",
+      "firstPage": 613,
+      "heading": "820. Assault Causing Death of Child (Pen. Code, § 273ab(a))",
+      "sourceKeys": [
+        "PEN:273ab"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "821",
+      "family": "assault_abuse",
+      "firstPage": 616,
+      "heading": "821. Child Abuse Likely to Produce Great Bodily Harm or Death (Pen. Code, § 273a(a))",
+      "sourceKeys": [
+        "PEN:273a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "822",
+      "family": "assault_abuse",
+      "firstPage": 621,
+      "heading": "822. Inﬂicting Physical Punishment on Child (Pen. Code, § 273d(a))",
+      "sourceKeys": [
+        "PEN:273d"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "823",
+      "family": "assault_abuse",
+      "firstPage": 624,
+      "heading": "823. Child Abuse (Misdemeanor) (Pen. Code, § 273a(b))",
+      "sourceKeys": [
+        "PEN:273a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "830",
+      "family": "assault_abuse",
+      "firstPage": 627,
+      "heading": "830. Abuse of Elder or Dependent Adult Likely to Produce Great Bodily Harm or Death (Pen. Code, § 368(b)(1))",
+      "sourceKeys": [
+        "PEN:368"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "831",
+      "family": "assault_abuse",
+      "firstPage": 632,
+      "heading": "831. Abuse of Elder or Dependent Adult (Pen. Code, § 368(c))",
+      "sourceKeys": [
+        "PEN:368"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "840",
+      "family": "assault_abuse",
+      "firstPage": 636,
+      "heading": "840. Inﬂicting Injury on Spouse, Cohabitant, or Fellow Parent Resulting in Traumatic Condition (Pen. Code, § 273.5(a))",
+      "sourceKeys": [
+        "PEN:273.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "841",
+      "family": "assault_abuse",
+      "firstPage": 641,
+      "heading": "841. Simple Battery: Against Spouse, Cohabitant, or Fellow Parent (Pen. Code, § 243(e)(1))",
+      "sourceKeys": [
+        "PEN:243"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-domestic-battery"
+      ]
+    },
+    {
+      "id": "850",
+      "family": "assault_abuse",
+      "firstPage": 644,
+      "heading": "850. Testimony on Intimate Partner Battering and Its Effects: Credibility of Complaining Witness",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "851",
+      "family": "assault_abuse",
+      "firstPage": 647,
+      "heading": "851. Testimony on Intimate Partner Battering and Its Effects: Offered by the Defense",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "852A",
+      "family": "assault_abuse",
+      "firstPage": 649,
+      "heading": "852A. Evidence of Uncharged Domestic Violence",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "852B",
+      "family": "assault_abuse",
+      "firstPage": 654,
+      "heading": "852B. Evidence of Charged Domestic Violence",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "853A",
+      "family": "assault_abuse",
+      "firstPage": 656,
+      "heading": "853A. Evidence of Uncharged Abuse of Elder or Dependent Person",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "853B",
+      "family": "assault_abuse",
+      "firstPage": 660,
+      "heading": "853B. Evidence of Charged Abuse of Elder or Dependent Person",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "860",
+      "family": "assault_abuse",
+      "firstPage": 663,
+      "heading": "860. Assault on Fireﬁghter or Peace Officer With Deadly Weapon or Force Likely to Produce Great Bodily Injury (Pen. Code, §§ 240, 245(c) & (d))",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:245"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-245-c",
+        "ca-pen-245-d-1",
+        "ca-pen-245-d-2"
+      ]
+    },
+    {
+      "id": "861",
+      "family": "assault_abuse",
+      "firstPage": 669,
+      "heading": "861. Assault on Fireﬁghter or Peace Officer With Stun Gun or Less Lethal Weapon (Pen. Code, §§ 240, 244.5(c))",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:244.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-244-5-c"
+      ]
+    },
+    {
+      "id": "862",
+      "family": "assault_abuse",
+      "firstPage": 673,
+      "heading": "862. Assault on Custodial Officer With Deadly Weapon or Force Likely to Produce Great Bodily Injury (Pen. Code, §§ 240, 245, 245.3)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:245",
+        "PEN:245.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-245-3"
+      ]
+    },
+    {
+      "id": "863",
+      "family": "assault_abuse",
+      "firstPage": 677,
+      "heading": "863. Assault on Transportation Personnel or Passenger With Deadly Weapon or Force Likely to Produce Great Bodily Injury (Pen. Code, §§ 240, 245, 245.2)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:245",
+        "PEN:245.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-245-2"
+      ]
+    },
+    {
+      "id": "875",
+      "family": "assault_abuse",
+      "firstPage": 681,
+      "heading": "875. Assault With Deadly Weapon or Force Likely to Produce Great Bodily Injury (Pen. Code, §§ 240, 245(a)(1)–(4), (b))",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:245"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-assault-with-deadly-weapon",
+        "ca-pen-245-a-2",
+        "ca-pen-245-a-4",
+        "ca-pen-245-b"
+      ]
+    },
+    {
+      "id": "876",
+      "family": "assault_abuse",
+      "firstPage": 686,
+      "heading": "876. Assault With Stun Gun or Less Lethal Weapon (Pen. Code, §§ 240, 244.5(b))",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:244.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-244-5-b"
+      ]
+    },
+    {
+      "id": "877",
+      "family": "assault_abuse",
+      "firstPage": 689,
+      "heading": "877. Assault With Caustic Chemicals (Pen. Code, § 244)",
+      "sourceKeys": [
+        "PEN:244"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-244"
+      ]
+    },
+    {
+      "id": "890",
+      "family": "assault_abuse",
+      "firstPage": 691,
+      "heading": "890. Assault With Intent to Commit Speciﬁed Crimes [While Committing First Degree Burglary] (Pen. Code, § 220(a), (b))",
+      "sourceKeys": [
+        "PEN:220"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "891",
+      "family": "assault_abuse",
+      "firstPage": 695,
+      "heading": "891. Assault With Intent to Commit Mayhem (Pen. Code, § 220(a))",
+      "sourceKeys": [
+        "PEN:220"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "900",
+      "family": "assault_abuse",
+      "firstPage": 698,
+      "heading": "900. Assault on Fireﬁghter, Peace Officer or Other Speciﬁed Victim (Pen. Code, §§ 240, 241)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "901",
+      "family": "assault_abuse",
+      "firstPage": 702,
+      "heading": "901. Assault on Custodial Officer (Pen. Code, §§ 240, 241.1)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-1"
+      ]
+    },
+    {
+      "id": "902",
+      "family": "assault_abuse",
+      "firstPage": 705,
+      "heading": "902. Assault on Military Personnel (Pen. Code, §§ 240, 241.8)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.8"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-8-a"
+      ]
+    },
+    {
+      "id": "903",
+      "family": "assault_abuse",
+      "firstPage": 708,
+      "heading": "903. Assault on School District Peace Officer (Pen. Code, §§ 240, 241.4)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-4"
+      ]
+    },
+    {
+      "id": "904",
+      "family": "assault_abuse",
+      "firstPage": 711,
+      "heading": "904. Assault on School Employee (Pen. Code, §§ 240, 241.6)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-6"
+      ]
+    },
+    {
+      "id": "905",
+      "family": "assault_abuse",
+      "firstPage": 714,
+      "heading": "905. Assault on Juror (Pen. Code, §§ 240, 241.7)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.7"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-7"
+      ]
+    },
+    {
+      "id": "906",
+      "family": "assault_abuse",
+      "firstPage": 717,
+      "heading": "906. Assault Committed on School or Park Property (Pen. Code, §§ 240, 241.2)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-2-a-1"
+      ]
+    },
+    {
+      "id": "907",
+      "family": "assault_abuse",
+      "firstPage": 720,
+      "heading": "907. Assault Committed on Public Transportation Provider’s Property or Vehicle (Pen. Code, §§ 240, 241.3)",
+      "sourceKeys": [
+        "PEN:240",
+        "PEN:241.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-241-3-a"
+      ]
+    },
+    {
+      "id": "908",
+      "family": "assault_abuse",
+      "firstPage": 723,
+      "heading": "908. Assault Under Color of Authority (Pen. Code, § 149)",
+      "sourceKeys": [
+        "PEN:149"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "915",
+      "family": "assault_abuse",
+      "firstPage": 728,
+      "heading": "915. Simple Assault (Pen. Code, § 240)",
+      "sourceKeys": [
+        "PEN:240"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-assault-240"
+      ]
+    },
+    {
+      "id": "916",
+      "family": "assault_abuse",
+      "firstPage": 731,
+      "heading": "916. Assault by Conditional Threat",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "917",
+      "family": "assault_abuse",
+      "firstPage": 733,
+      "heading": "917. Insulting Words Are Not a Defense",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "925",
+      "family": "assault_abuse",
+      "firstPage": 735,
+      "heading": "925. Battery Causing Serious Bodily Injury (Pen. Code, §§ 242, 243(d))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-d"
+      ]
+    },
+    {
+      "id": "926",
+      "family": "assault_abuse",
+      "firstPage": 738,
+      "heading": "926. Battery Against Speciﬁed Victim Not a Peace Officer (Pen. Code, §§ 242, 243(b)–(c)(1))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "935",
+      "family": "assault_abuse",
+      "firstPage": 741,
+      "heading": "935. Sexual Battery: Felony (Pen. Code, §§ 242, 243.4(a) & (d))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-sexual-battery-243-4-a"
+      ]
+    },
+    {
+      "id": "936",
+      "family": "assault_abuse",
+      "firstPage": 745,
+      "heading": "936. Sexual Battery on Institutionalized Victim (Pen. Code, §§ 242, 243.4(b) & (d))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "937",
+      "family": "assault_abuse",
+      "firstPage": 748,
+      "heading": "937. Sexual Battery: By Fraudulent Representation (Pen. Code, §§ 242, 243.4(c))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "938",
+      "family": "assault_abuse",
+      "firstPage": 750,
+      "heading": "938. Sexual Battery: Misdemeanor (Pen. Code, § 243.4(e)(1))",
+      "sourceKeys": [
+        "PEN:243.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-sexual-battery-243-4-e1"
+      ]
+    },
+    {
+      "id": "945",
+      "family": "assault_abuse",
+      "firstPage": 752,
+      "heading": "945. Battery Against Peace Officer (Pen. Code, §§ 242, 243(b), (c)(2))",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-c-2"
+      ]
+    },
+    {
+      "id": "946",
+      "family": "assault_abuse",
+      "firstPage": 756,
+      "heading": "946. Battery Against Custodial Officer (Pen. Code, §§ 242, 243.1)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-1"
+      ]
+    },
+    {
+      "id": "947",
+      "family": "assault_abuse",
+      "firstPage": 759,
+      "heading": "947. Simple Battery Against Military Personnel (Pen. Code, §§ 242, 243.10)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.10"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-10-a"
+      ]
+    },
+    {
+      "id": "948",
+      "family": "assault_abuse",
+      "firstPage": 762,
+      "heading": "948. Battery Against Transportation Personnel or Passenger (Pen. Code, §§ 242, 243.3)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-3"
+      ]
+    },
+    {
+      "id": "949",
+      "family": "assault_abuse",
+      "firstPage": 765,
+      "heading": "949. Battery Against School Employee (Pen. Code, §§ 242, 243.6)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-6"
+      ]
+    },
+    {
+      "id": "950",
+      "family": "assault_abuse",
+      "firstPage": 768,
+      "heading": "950. Battery Against a Juror (Pen. Code, §§ 242, 243.7)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.7"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-7"
+      ]
+    },
+    {
+      "id": "951",
+      "family": "assault_abuse",
+      "firstPage": 770,
+      "heading": "951. Battery Committed on School, Park, or Hospital Property (Pen. Code, §§ 242, 243.2)",
+      "sourceKeys": [
+        "PEN:242",
+        "PEN:243.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-243-2-a-1"
+      ]
+    },
+    {
+      "id": "960",
+      "family": "assault_abuse",
+      "firstPage": 772,
+      "heading": "960. Simple Battery (Pen. Code, § 242)",
+      "sourceKeys": [
+        "PEN:242"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "965",
+      "family": "assault_abuse",
+      "firstPage": 775,
+      "heading": "965. Shooting at Inhabited House or Occupied Motor Vehicle (Pen. Code, § 246)",
+      "sourceKeys": [
+        "PEN:246"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-246"
+      ]
+    },
+    {
+      "id": "966",
+      "family": "assault_abuse",
+      "firstPage": 779,
+      "heading": "966. Shooting at Uninhabited House or Unoccupied Motor Vehicle (Pen. Code, § 247(b))",
+      "sourceKeys": [
+        "PEN:247"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-247-b"
+      ]
+    },
+    {
+      "id": "967",
+      "family": "assault_abuse",
+      "firstPage": 781,
+      "heading": "967. Shooting at Unoccupied Aircraft (Pen. Code, § 247(a))",
+      "sourceKeys": [
+        "PEN:247"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-pen-247-a"
+      ]
+    },
+    {
+      "id": "968",
+      "family": "assault_abuse",
+      "firstPage": 783,
+      "heading": "968. Shooting From Motor Vehicle (Pen. Code, § 26100(c) & (d))",
+      "sourceKeys": [
+        "PEN:26100"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "969",
+      "family": "assault_abuse",
+      "firstPage": 785,
+      "heading": "969. Permitting Someone to Shoot From Vehicle (Pen. Code, § 26100(b))",
+      "sourceKeys": [
+        "PEN:26100"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "970",
+      "family": "assault_abuse",
+      "firstPage": 787,
+      "heading": "970. Shooting Firearm or BB Device in Grossly Negligent Manner (Pen. Code, § 246.3)",
+      "sourceKeys": [
+        "PEN:246.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-discharge-of-firearm-in-city",
+        "ca-pen-246-3-b"
+      ]
+    },
+    {
+      "id": "980",
+      "family": "assault_abuse",
+      "firstPage": 790,
+      "heading": "980. Brandishing Firearm in Presence of Occupant of Motor Vehicle (Pen. Code, § 417.3)",
+      "sourceKeys": [
+        "PEN:417.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "981",
+      "family": "assault_abuse",
+      "firstPage": 792,
+      "heading": "981. Brandishing Firearm in Presence of Peace Officer (Pen. Code, § 417(c) & (e))",
+      "sourceKeys": [
+        "PEN:417"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "982",
+      "family": "assault_abuse",
+      "firstPage": 796,
+      "heading": "982. Brandishing Firearm or Deadly Weapon to Resist Arrest (Pen. Code, § 417.8)",
+      "sourceKeys": [
+        "PEN:417.8"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "983",
+      "family": "assault_abuse",
+      "firstPage": 799,
+      "heading": "983. Brandishing Firearm or Deadly Weapon: Misdemeanor (Pen. Code, § 417(a)(1) & (2))",
+      "sourceKeys": [
+        "PEN:417"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "984",
+      "family": "assault_abuse",
+      "firstPage": 802,
+      "heading": "984. Brandishing Firearm: Misdemeanor—Public Place (Pen. Code, § 417(a)(2)(A))",
+      "sourceKeys": [
+        "PEN:417"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "985",
+      "family": "assault_abuse",
+      "firstPage": 804,
+      "heading": "985. Brandishing Imitation Firearm (Pen. Code, § 417.4)",
+      "sourceKeys": [
+        "PEN:417.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1000",
+      "family": "sexual_offenses",
+      "firstPage": 811,
+      "heading": "1000. Rape by Force, Fear, or Threats (Pen. Code, § 261(a)(2), (6) & (7))",
+      "sourceKeys": [
+        "PEN:261"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-rape-261-a2",
+        "ca-rape-261-a6",
+        "ca-rape-261-a7"
+      ]
+    },
+    {
+      "id": "1001",
+      "family": "sexual_offenses",
+      "firstPage": 817,
+      "heading": "1001. Rape in Concert (Pen. Code, § 264.1)",
+      "sourceKeys": [
+        "PEN:264.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1002",
+      "family": "sexual_offenses",
+      "firstPage": 820,
+      "heading": "1002. Rape of Intoxicated Woman (Pen. Code, § 261(a)(3))",
+      "sourceKeys": [
+        "PEN:261"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-rape-261-a3"
+      ]
+    },
+    {
+      "id": "1003",
+      "family": "sexual_offenses",
+      "firstPage": 823,
+      "heading": "1003. Rape of Unconscious Woman (Pen. Code, § 261(a)(4))",
+      "sourceKeys": [
+        "PEN:261"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-rape-261-a4"
+      ]
+    },
+    {
+      "id": "1004",
+      "family": "sexual_offenses",
+      "firstPage": 826,
+      "heading": "1004. Rape of a Disabled Woman (Pen. Code, § 261(a)(1))",
+      "sourceKeys": [
+        "PEN:261"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-rape-261-a1"
+      ]
+    },
+    {
+      "id": "1005",
+      "family": "sexual_offenses",
+      "firstPage": 828,
+      "heading": "1005. Rape by Fraud (Pen. Code, § 261(a)(5))",
+      "sourceKeys": [
+        "PEN:261"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-rape-261-a5"
+      ]
+    },
+    {
+      "id": "1015",
+      "family": "sexual_offenses",
+      "firstPage": 830,
+      "heading": "1015. Oral Copulation by Force, Fear, or Threats (Pen. Code, § 287(c)(2) & (3), (k))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1016",
+      "family": "sexual_offenses",
+      "firstPage": 835,
+      "heading": "1016. Oral Copulation in Concert (Pen. Code, § 287(d))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1017",
+      "family": "sexual_offenses",
+      "firstPage": 837,
+      "heading": "1017. Oral Copulation of an Intoxicated Person (Pen. Code, § 287(a), (i))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1018",
+      "family": "sexual_offenses",
+      "firstPage": 840,
+      "heading": "1018. Oral Copulation of an Unconscious Person (Pen. Code, § 287(a), (f))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1019",
+      "family": "sexual_offenses",
+      "firstPage": 842,
+      "heading": "1019. Oral Copulation of a Disabled Person (Pen. Code, § 287(a), (g))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1020",
+      "family": "sexual_offenses",
+      "firstPage": 844,
+      "heading": "1020. Oral Copulation of a Disabled Person in a Mental Hospital (Pen. Code, § 287(a), (h))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1021",
+      "family": "sexual_offenses",
+      "firstPage": 846,
+      "heading": "1021. Oral Copulation by Fraud (Pen. Code, § 287(a), (j))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1022",
+      "family": "sexual_offenses",
+      "firstPage": 848,
+      "heading": "1022. Oral Copulation While in Custody (Pen. Code, § 287(a), (e))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1030",
+      "family": "sexual_offenses",
+      "firstPage": 850,
+      "heading": "1030. Sodomy by Force, Fear, or Threats (Pen. Code, § 286(c)(2) & (3), (k))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1031",
+      "family": "sexual_offenses",
+      "firstPage": 856,
+      "heading": "1031. Sodomy in Concert (Pen. Code, § 286(d))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1032",
+      "family": "sexual_offenses",
+      "firstPage": 858,
+      "heading": "1032. Sodomy of an Intoxicated Person (Pen. Code, § 286(i))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1033",
+      "family": "sexual_offenses",
+      "firstPage": 860,
+      "heading": "1033. Sodomy of an Unconscious Person (Pen. Code, § 286(f))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1034",
+      "family": "sexual_offenses",
+      "firstPage": 862,
+      "heading": "1034. Sodomy of a Disabled Person (Pen. Code, § 286(g))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1035",
+      "family": "sexual_offenses",
+      "firstPage": 864,
+      "heading": "1035. Sodomy of a Disabled Person in a Mental Hospital (Pen. Code, § 286(h))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1036",
+      "family": "sexual_offenses",
+      "firstPage": 866,
+      "heading": "1036. Sodomy by Fraud (Pen. Code, § 286(j))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1037",
+      "family": "sexual_offenses",
+      "firstPage": 868,
+      "heading": "1037. Sodomy While in Custody (Pen. Code, § 286(e))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1045",
+      "family": "sexual_offenses",
+      "firstPage": 870,
+      "heading": "1045. Sexual Penetration by Force, Fear, or Threats (Pen. Code, § 289(a)(1) & (2), (g))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-sexual-penetration-289-a1a",
+        "ca-sexual-penetration-289-a1b"
+      ]
+    },
+    {
+      "id": "1046",
+      "family": "sexual_offenses",
+      "firstPage": 876,
+      "heading": "1046. Sexual Penetration in Concert (Pen. Code, §§ 264.1, 289(a)(1))",
+      "sourceKeys": [
+        "PEN:264.1",
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1047",
+      "family": "sexual_offenses",
+      "firstPage": 878,
+      "heading": "1047. Sexual Penetration of an Intoxicated Person (Pen. Code, § 289(e))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1048",
+      "family": "sexual_offenses",
+      "firstPage": 881,
+      "heading": "1048. Sexual Penetration of an Unconscious Person (Pen. Code, § 289(d))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1049",
+      "family": "sexual_offenses",
+      "firstPage": 884,
+      "heading": "1049. Sexual Penetration of a Disabled Person (Pen. Code, § 289(b))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1050",
+      "family": "sexual_offenses",
+      "firstPage": 886,
+      "heading": "1050. Sexual Penetration of a Disabled Person in a Mental Hospital (Pen. Code, § 289(c))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1051",
+      "family": "sexual_offenses",
+      "firstPage": 889,
+      "heading": "1051. Sexual Penetration by Fraud (Pen. Code, § 289(f))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1060",
+      "family": "sexual_offenses",
+      "firstPage": 891,
+      "heading": "1060. Lewd or Lascivious Act: Dependent Person (Pen. Code, § 288(b)(2) & (c)(2))",
+      "sourceKeys": [
+        "PEN:288"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1070",
+      "family": "sexual_offenses",
+      "firstPage": 897,
+      "heading": "1070. Unlawful Sexual Intercourse: Defendant 21 or Older (Pen. Code, § 261.5(a) & (d))",
+      "sourceKeys": [
+        "PEN:261.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-unlawful-sexual-intercourse-261-5-d"
+      ]
+    },
+    {
+      "id": "1071",
+      "family": "sexual_offenses",
+      "firstPage": 900,
+      "heading": "1071. Unlawful Sexual Intercourse: Minor More Than Three Years Younger (Pen. Code, § 261.5(a) & (c))",
+      "sourceKeys": [
+        "PEN:261.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-unlawful-sexual-intercourse-261-5-c"
+      ]
+    },
+    {
+      "id": "1072",
+      "family": "sexual_offenses",
+      "firstPage": 903,
+      "heading": "1072. Misdemeanor Unlawful Sexual Intercourse: Minor Within Three Years of Defendant’s Age (Pen. Code, § 261.5(a) & (b))",
+      "sourceKeys": [
+        "PEN:261.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-unlawful-sexual-intercourse-261-5-b"
+      ]
+    },
+    {
+      "id": "1080",
+      "family": "sexual_offenses",
+      "firstPage": 906,
+      "heading": "1080. Oral Copulation With Person Under 14 (Pen. Code, § 287(c)(1))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1081",
+      "family": "sexual_offenses",
+      "firstPage": 908,
+      "heading": "1081. Oral Copulation With Minor: Defendant 21 or Older (Pen. Code, § 287(b)(2))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1082",
+      "family": "sexual_offenses",
+      "firstPage": 910,
+      "heading": "1082. Oral Copulation With Person Under 18 (Pen. Code, § 287(b)(1))",
+      "sourceKeys": [
+        "PEN:287"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1090",
+      "family": "sexual_offenses",
+      "firstPage": 912,
+      "heading": "1090. Sodomy With Person Under 14 (Pen. Code, § 286(c)(1))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1091",
+      "family": "sexual_offenses",
+      "firstPage": 914,
+      "heading": "1091. Sodomy With Minor: Defendant 21 or Older (Pen. Code, § 286(b)(2))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1092",
+      "family": "sexual_offenses",
+      "firstPage": 916,
+      "heading": "1092. Sodomy With Person Under 18 (Pen. Code, § 286(b)(1))",
+      "sourceKeys": [
+        "PEN:286"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1100",
+      "family": "sexual_offenses",
+      "firstPage": 918,
+      "heading": "1100. Sexual Penetration With Person Under 14 (Pen. Code, § 289(j))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1101",
+      "family": "sexual_offenses",
+      "firstPage": 920,
+      "heading": "1101. Sexual Penetration With Minor: Defendant 21 or Older (Pen. Code, § 289(i))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1102",
+      "family": "sexual_offenses",
+      "firstPage": 923,
+      "heading": "1102. Sexual Penetration With Person Under 18 (Pen. Code, § 289(h))",
+      "sourceKeys": [
+        "PEN:289"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1110",
+      "family": "sexual_offenses",
+      "firstPage": 926,
+      "heading": "1110. Lewd or Lascivious Act: Child Under 14 Years (Pen. Code, § 288(a))",
+      "sourceKeys": [
+        "PEN:288"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-lewd-act-child-288-a"
+      ]
+    },
+    {
+      "id": "1111",
+      "family": "sexual_offenses",
+      "firstPage": 930,
+      "heading": "1111. Lewd or Lascivious Act: By Force or Fear (Pen. Code, § 288(b)(1))",
+      "sourceKeys": [
+        "PEN:288"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1112",
+      "family": "sexual_offenses",
+      "firstPage": 934,
+      "heading": "1112. Lewd or Lascivious Act: Child 14 or 15 Years (Pen. Code, § 288(c)(1))",
+      "sourceKeys": [
+        "PEN:288"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-lewd-act-child-288-c1"
+      ]
+    },
+    {
+      "id": "1120",
+      "family": "sexual_offenses",
+      "firstPage": 937,
+      "heading": "1120. Continuous Sexual Abuse (Pen. Code, § 288.5(a))",
+      "sourceKeys": [
+        "PEN:288.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1121",
+      "family": "sexual_offenses",
+      "firstPage": 941,
+      "heading": "1121. Annoying or Molesting a Child in a Dwelling (Pen. Code, § 647.6(a)–(c))",
+      "sourceKeys": [
+        "PEN:647.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1122",
+      "family": "sexual_offenses",
+      "firstPage": 945,
+      "heading": "1122. Annoying or Molesting a Child (Pen. Code, § 647.6(a)–(c))",
+      "sourceKeys": [
+        "PEN:647.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1123",
+      "family": "sexual_offenses",
+      "firstPage": 949,
+      "heading": "1123. Aggravated Sexual Assault of Child Under 14 Years (Pen. Code, § 269(a))",
+      "sourceKeys": [
+        "PEN:269"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1124",
+      "family": "sexual_offenses",
+      "firstPage": 951,
+      "heading": "1124. Contacting Minor With Intent to Commit Certain Felonies (Pen. Code, § 288.3(a))",
+      "sourceKeys": [
+        "PEN:288.3"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1125",
+      "family": "sexual_offenses",
+      "firstPage": 953,
+      "heading": "1125. Arranging Meeting With Minor for Lewd Purpose (Pen. Code, § 288.4(a)(1))",
+      "sourceKeys": [
+        "PEN:288.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1126",
+      "family": "sexual_offenses",
+      "firstPage": 955,
+      "heading": "1126. Going to Meeting With Minor for Lewd Purpose (Pen. Code, § 288.4(b))",
+      "sourceKeys": [
+        "PEN:288.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1127",
+      "family": "sexual_offenses",
+      "firstPage": 958,
+      "heading": "1127. Engaging in Sexual Intercourse or Sodomy With Child 10 Years of Age or Younger (Pen. Code, § 288.7(a))",
+      "sourceKeys": [
+        "PEN:288.7"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1128",
+      "family": "sexual_offenses",
+      "firstPage": 960,
+      "heading": "1128. Engaging in Oral Copulation or Sexual Penetration With Child 10 Years of Age or Younger (Pen. Code, § 288.7(b))",
+      "sourceKeys": [
+        "PEN:288.7"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1140",
+      "family": "sexual_offenses",
+      "firstPage": 963,
+      "heading": "1140. Distributing, Sending, or Exhibiting Harmful Material (Pen. Code, § 288.2(a)(1) & (2))",
+      "sourceKeys": [
+        "PEN:288.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1141",
+      "family": "sexual_offenses",
+      "firstPage": 969,
+      "heading": "1141. Distributing Obscene Matter Showing Sexual Conduct by a Minor (Pen. Code, §§ 311.1(a), 311.2(b))",
+      "sourceKeys": [
+        "PEN:311.1",
+        "PEN:311.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1142",
+      "family": "sexual_offenses",
+      "firstPage": 976,
+      "heading": "1142. Distributing or Intending to Distribute Obscene Matter (Pen. Code, § 311.2(a))",
+      "sourceKeys": [
+        "PEN:311.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1143",
+      "family": "sexual_offenses",
+      "firstPage": 983,
+      "heading": "1143. Obscene Live Conduct (Pen. Code, § 311.6)",
+      "sourceKeys": [
+        "PEN:311.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1144",
+      "family": "sexual_offenses",
+      "firstPage": 987,
+      "heading": "1144. Using a Minor to Perform Prohibited Acts (Pen. Code, § 311.4(b), (c))",
+      "sourceKeys": [
+        "PEN:311.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1145",
+      "family": "sexual_offenses",
+      "firstPage": 991,
+      "heading": "1145. Possession of Matter Depicting Minor Engaged in Sexual Conduct (Pen. Code, § 311.11(a))",
+      "sourceKeys": [
+        "PEN:311.11"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1150",
+      "family": "sexual_offenses",
+      "firstPage": 994,
+      "heading": "1150. Pimping (Pen. Code, § 266h)",
+      "sourceKeys": [
+        "PEN:266h"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1151",
+      "family": "sexual_offenses",
+      "firstPage": 998,
+      "heading": "1151. Pandering (Pen. Code, § 266i)",
+      "sourceKeys": [
+        "PEN:266i"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1152",
+      "family": "sexual_offenses",
+      "firstPage": 1002,
+      "heading": "1152. Child Procurement (Pen. Code, § 266j)",
+      "sourceKeys": [
+        "PEN:266j"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1153",
+      "family": "sexual_offenses",
+      "firstPage": 1005,
+      "heading": "1153. Prostitution: Engaging in Act (Pen. Code, § 647(b))",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1154",
+      "family": "sexual_offenses",
+      "firstPage": 1007,
+      "heading": "1154. Prostitution: Soliciting Another (Pen. Code, § 647(b))",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1155",
+      "family": "sexual_offenses",
+      "firstPage": 1009,
+      "heading": "1155. Prostitution: Agreeing to Engage in Act (Pen. Code, § 647(b))",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1160",
+      "family": "sexual_offenses",
+      "firstPage": 1011,
+      "heading": "1160. Indecent Exposure (Pen. Code, § 314)",
+      "sourceKeys": [
+        "PEN:314"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-indecent-exposure-314-1"
+      ]
+    },
+    {
+      "id": "1161",
+      "family": "sexual_offenses",
+      "firstPage": 1015,
+      "heading": "1161. Lewd Conduct in Public (Pen. Code, § 647(a))",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1162",
+      "family": "sexual_offenses",
+      "firstPage": 1017,
+      "heading": "1162. Soliciting Lewd Conduct in Public (Pen. Code, § 647(a))",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1170",
+      "family": "sexual_offenses",
+      "firstPage": 1020,
+      "heading": "1170. Failure to Register as Sex Offender (Pen. Code, § 290(b))",
+      "sourceKeys": [
+        "PEN:290"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1180",
+      "family": "sexual_offenses",
+      "firstPage": 1025,
+      "heading": "1180. Incest (Pen. Code, § 285)",
+      "sourceKeys": [
+        "PEN:285"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1181",
+      "family": "sexual_offenses",
+      "firstPage": 1028,
+      "heading": "1181. Sexual Abuse of Animal (Pen. Code, § 286.5)",
+      "sourceKeys": [
+        "PEN:286.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1190",
+      "family": "sexual_offenses",
+      "firstPage": 1031,
+      "heading": "1190. Other Evidence Not Required to Support Testimony in Sex Offense Case",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1191A",
+      "family": "sexual_offenses",
+      "firstPage": 1032,
+      "heading": "1191A. Evidence of Uncharged Sex Offense",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1191B",
+      "family": "sexual_offenses",
+      "firstPage": 1036,
+      "heading": "1191B. Evidence of Charged Sex Offense",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1192",
+      "family": "sexual_offenses",
+      "firstPage": 1038,
+      "heading": "1192. Testimony on Rape Trauma Syndrome",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1193",
+      "family": "sexual_offenses",
+      "firstPage": 1040,
+      "heading": "1193. Testimony on Child Sexual Abuse Accommodation Syndrome",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1194",
+      "family": "sexual_offenses",
+      "firstPage": 1042,
+      "heading": "1194. Consent: Prior Sexual Intercourse",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1200",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1045,
+      "heading": "1200. Kidnapping: For Child Molestation (Pen. Code, §§ 207(b), 288(a))",
+      "sourceKeys": [
+        "PEN:207",
+        "PEN:288"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1201",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1048,
+      "heading": "1201. Kidnapping: Child or Person Incapable of Consent (Pen. Code, § 207(a), (e))",
+      "sourceKeys": [
+        "PEN:207"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1202",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1052,
+      "heading": "1202. Kidnapping: For Ransom, Reward, Extortion, or to Exact From Another Person (Pen. Code, § 209(a))",
+      "sourceKeys": [
+        "PEN:209"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1203",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1058,
+      "heading": "1203. Kidnapping: For Robbery, Rape, or Other Sex Offenses (Pen. Code, § 209(b))",
+      "sourceKeys": [
+        "PEN:209"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1204",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1063,
+      "heading": "1204. Kidnapping: During Carjacking (Pen. Code, §§ 207(a), 209.5(a), (b), 215(a))",
+      "sourceKeys": [
+        "PEN:207",
+        "PEN:209.5",
+        "PEN:215"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1215",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1067,
+      "heading": "1215. Kidnapping (Pen. Code, § 207(a))",
+      "sourceKeys": [
+        "PEN:207"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1225",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1073,
+      "heading": "1225. Defense to Kidnapping: Protecting Child From Imminent Harm (Pen. Code, § 207(f)(1))",
+      "sourceKeys": [
+        "PEN:207"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1226",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1075,
+      "heading": "1226. Defense to Kidnapping: Citizen’s Arrest (Pen. Code, §§ 207(f)(2), 834, 837)",
+      "sourceKeys": [
+        "PEN:207",
+        "PEN:834",
+        "PEN:837"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1240",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1077,
+      "heading": "1240. Felony False Imprisonment (Pen. Code, §§ 236, 237)",
+      "sourceKeys": [
+        "PEN:236",
+        "PEN:237"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1241",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1080,
+      "heading": "1241. False Imprisonment: Hostage (Pen. Code, §§ 210.5, 236)",
+      "sourceKeys": [
+        "PEN:210.5",
+        "PEN:236"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1242",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1082,
+      "heading": "1242. Misdemeanor False Imprisonment (Pen. Code, § 236)",
+      "sourceKeys": [
+        "PEN:236"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1243",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1084,
+      "heading": "1243. Human Trafficking (Pen. Code, § 236.1(a) & (b))",
+      "sourceKeys": [
+        "PEN:236.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1244",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1087,
+      "heading": "1244. Human Trafficking of a Minor for Commercial Sex Act (Pen. Code, § 236.1(c))",
+      "sourceKeys": [
+        "PEN:236.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1250",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1089,
+      "heading": "1250. Child Abduction: No Right to Custody (Pen. Code, §§ 277, 278)",
+      "sourceKeys": [
+        "PEN:277",
+        "PEN:278"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1251",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1093,
+      "heading": "1251. Child Abduction: By Depriving Right to Custody or Visitation (Pen. Code, §§ 277, 278.5)",
+      "sourceKeys": [
+        "PEN:277",
+        "PEN:278.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1252",
+      "family": "kidnapping_trafficking",
+      "firstPage": 1096,
+      "heading": "1252. Defense to Child Abduction: Protection From Immediate Injury (Pen. Code, § 278.7(a) and (b))",
+      "sourceKeys": [
+        "PEN:278.7"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1300",
+      "family": "threats_hate",
+      "firstPage": 1101,
+      "heading": "1300. Criminal Threat (Pen. Code, § 422)",
+      "sourceKeys": [
+        "PEN:422"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": [
+        "ca-menacing"
+      ]
+    },
+    {
+      "id": "1301",
+      "family": "threats_hate",
+      "firstPage": 1106,
+      "heading": "1301. Stalking (Pen. Code, § 646.9(a), (e)–(h))",
+      "sourceKeys": [
+        "PEN:646.9"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1302",
+      "family": "threats_hate",
+      "firstPage": 1110,
+      "heading": "1302. Terrorizing by Destructive Device, Explosive, or Arson (Pen. Code, § 11413)",
+      "sourceKeys": [
+        "PEN:11413"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1303",
+      "family": "threats_hate",
+      "firstPage": 1114,
+      "heading": "1303. Terrorism by Symbol (Pen. Code, § 11411(a) & (b))",
+      "sourceKeys": [
+        "PEN:11411"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1304",
+      "family": "threats_hate",
+      "firstPage": 1116,
+      "heading": "1304. Cross Burning and Religious Symbol Desecration (Pen. Code, § 11411(c))",
+      "sourceKeys": [
+        "PEN:11411"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1305",
+      "family": "threats_hate",
+      "firstPage": 1118,
+      "heading": "1305. Obstructing Religion by Threat (Pen. Code, § 11412)",
+      "sourceKeys": [
+        "PEN:11412"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1350",
+      "family": "threats_hate",
+      "firstPage": 1119,
+      "heading": "1350. Hate Crime: Misdemeanor Interference With Civil Rights by Force (Pen. Code, § 422.6(a))",
+      "sourceKeys": [
+        "PEN:422.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1351",
+      "family": "threats_hate",
+      "firstPage": 1123,
+      "heading": "1351. Hate Crime: Misdemeanor Interference With Civil Rights by Threat (Pen. Code, § 422.6(a) & (c))",
+      "sourceKeys": [
+        "PEN:422.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1352",
+      "family": "threats_hate",
+      "firstPage": 1126,
+      "heading": "1352. Hate Crime: Misdemeanor Interference With Civil Rights by Damaging Property (Pen. Code, § 422.6(b))",
+      "sourceKeys": [
+        "PEN:422.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1353",
+      "family": "threats_hate",
+      "firstPage": 1129,
+      "heading": "1353. Hate Crime: Disability Deﬁned",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1354",
+      "family": "threats_hate",
+      "firstPage": 1131,
+      "heading": "1354. Hate Crime Allegation: Felony (Pen. Code, § 422.75(a)–(c))",
+      "sourceKeys": [
+        "PEN:422.75"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "1355",
+      "family": "threats_hate",
+      "firstPage": 1135,
+      "heading": "1355. Hate Crime Allegation: Misdemeanor (Pen. Code, § 422.7)",
+      "sourceKeys": [
+        "PEN:422.7"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2500",
+      "family": "weapons",
+      "firstPage": 1717,
+      "heading": "2500. Illegal Possession, Etc. of Weapon",
+      "sourceKeys": [],
+      "kind": "generic_weapon_template",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2501",
+      "family": "weapons",
+      "firstPage": 1723,
+      "heading": "2501. Carrying Concealed Explosive or Dirk or Dagger (Pen. Code, §§ 21310, 16470)",
+      "sourceKeys": [
+        "PEN:16470",
+        "PEN:21310"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2502",
+      "family": "weapons",
+      "firstPage": 1727,
+      "heading": "2502. Possession, etc., of Switchblade Knife (Pen. Code, § 21510)",
+      "sourceKeys": [
+        "PEN:21510"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2503",
+      "family": "weapons",
+      "firstPage": 1730,
+      "heading": "2503. Possession of Deadly Weapon With Intent to Assault (Pen. Code, § 17500)",
+      "sourceKeys": [
+        "PEN:17500"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2510",
+      "family": "weapons",
+      "firstPage": 1733,
+      "heading": "2510. Possession of Firearm by Person Prohibited Due to Conviction—No Stipulation to Conviction (Pen. Code, §§ 29800, 29805, 29820, 29900)",
+      "sourceKeys": [
+        "PEN:29800",
+        "PEN:29805",
+        "PEN:29820",
+        "PEN:29900"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2511",
+      "family": "weapons",
+      "firstPage": 1740,
+      "heading": "2511. Possession of Firearm by Person Prohibited Due to Conviction—Stipulation to Conviction (Pen. Code, §§ 29800, 29805, 29820, 29900)",
+      "sourceKeys": [
+        "PEN:29800",
+        "PEN:29805",
+        "PEN:29820",
+        "PEN:29900"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2512",
+      "family": "weapons",
+      "firstPage": 1746,
+      "heading": "2512. Possession of Firearm by Person Prohibited by Court Order (Pen. Code, §§ 29815, 29825)",
+      "sourceKeys": [
+        "PEN:29815",
+        "PEN:29825"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2513",
+      "family": "weapons",
+      "firstPage": 1751,
+      "heading": "2513. Possession of Firearm by Person Addicted to a Narcotic Drug (Pen. Code, § 29800)",
+      "sourceKeys": [
+        "PEN:29800"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2514",
+      "family": "weapons",
+      "firstPage": 1755,
+      "heading": "2514. Possession of Firearm by Person Prohibited by Statute: Self-Defense",
+      "sourceKeys": [],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2520",
+      "family": "weapons",
+      "firstPage": 1759,
+      "heading": "2520. Carrying Concealed Firearm on Person (Pen. Code, § 25400(a)(2))",
+      "sourceKeys": [
+        "PEN:25400"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2521",
+      "family": "weapons",
+      "firstPage": 1762,
+      "heading": "2521. Carrying Concealed Firearm Within Vehicle (Pen. Code, § 25400(a)(1))",
+      "sourceKeys": [
+        "PEN:25400"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2522",
+      "family": "weapons",
+      "firstPage": 1766,
+      "heading": "2522. Carrying Concealed Firearm: Caused to Be Carried Within Vehicle (Pen. Code, § 25400(a)(3))",
+      "sourceKeys": [
+        "PEN:25400"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2530",
+      "family": "weapons",
+      "firstPage": 1770,
+      "heading": "2530. Carrying Loaded Firearm (Pen. Code, § 25850(a))",
+      "sourceKeys": [
+        "PEN:25850"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2540",
+      "family": "weapons",
+      "firstPage": 1774,
+      "heading": "2540. Carrying Firearm: Speciﬁed Convictions (Pen. Code, §§ 25400(a), 25850(c))",
+      "sourceKeys": [
+        "PEN:25400",
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2541",
+      "family": "weapons",
+      "firstPage": 1776,
+      "heading": "2541. Carrying Firearm: Stolen Firearm (Pen. Code, §§ 25400(c)(2), 25850(c)(2))",
+      "sourceKeys": [
+        "PEN:25400",
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2542",
+      "family": "weapons",
+      "firstPage": 1778,
+      "heading": "2542. Carrying Firearm: Active Participant in Criminal Street Gang (Pen. Code, §§ 25400(c)(3), 25850(c)(3))",
+      "sourceKeys": [
+        "PEN:25400",
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2543",
+      "family": "weapons",
+      "firstPage": 1785,
+      "heading": "2543. Carrying Firearm: Not in Lawful Possession (Pen. Code, §§ 25400(c)(4), 25850(c)(4))",
+      "sourceKeys": [
+        "PEN:25400",
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2544",
+      "family": "weapons",
+      "firstPage": 1787,
+      "heading": "2544. Carrying Firearm: Possession of Firearm Prohibited Due to Conviction, Court Order, or Mental Illness (Pen. Code, §§ 25400(c)(4), 25850(c)(4))",
+      "sourceKeys": [
+        "PEN:25400",
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2545",
+      "family": "weapons",
+      "firstPage": 1790,
+      "heading": "2545. Carrying Loaded Firearm: Not Registered Owner (Pen. Code, § 25850(c)(6))",
+      "sourceKeys": [
+        "PEN:25850"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2546",
+      "family": "weapons",
+      "firstPage": 1791,
+      "heading": "2546. Carrying Concealed Firearm: Not Registered Owner and Weapon Loaded (Pen. Code, § 25400(c)(6))",
+      "sourceKeys": [
+        "PEN:25400"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2560",
+      "family": "weapons",
+      "firstPage": 1793,
+      "heading": "2560. Possession, etc., of Assault Weapon or .50 BMG Riﬂe (Pen. Code, §§ 30605, 30600)",
+      "sourceKeys": [
+        "PEN:30600",
+        "PEN:30605"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2561",
+      "family": "weapons",
+      "firstPage": 1797,
+      "heading": "2561. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other Offense—Charged as Separate Count and as Enhancement (Pen. Code, § 30615)",
+      "sourceKeys": [
+        "PEN:30615"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2562",
+      "family": "weapons",
+      "firstPage": 1799,
+      "heading": "2562. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other Offense—Charged Only as Enhancement (Pen. Code, § 30615)",
+      "sourceKeys": [
+        "PEN:30615"
+      ],
+      "kind": "context_defense_or_allegation",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2570",
+      "family": "weapons",
+      "firstPage": 1803,
+      "heading": "2570. Possession of Destructive Device (Pen. Code, § 18710)",
+      "sourceKeys": [
+        "PEN:18710"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2571",
+      "family": "weapons",
+      "firstPage": 1806,
+      "heading": "2571. Carrying or Placing Explosive or Destructive Device on Common Carrier (Pen. Code, § 18725)",
+      "sourceKeys": [
+        "PEN:18725"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2572",
+      "family": "weapons",
+      "firstPage": 1809,
+      "heading": "2572. Possession of Explosive or Destructive Device in Speciﬁed Place (Pen. Code, § 18715)",
+      "sourceKeys": [
+        "PEN:18715"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2573",
+      "family": "weapons",
+      "firstPage": 1814,
+      "heading": "2573. Possession, Explosion, etc., of Explosive or Destructive Device With Intent to Injure or Damage (Pen. Code, § 18740)",
+      "sourceKeys": [
+        "PEN:18740"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2574",
+      "family": "weapons",
+      "firstPage": 1817,
+      "heading": "2574. Sale or Transportation of Destructive Device (Pen. Code, § 18730)",
+      "sourceKeys": [
+        "PEN:18730"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2575",
+      "family": "weapons",
+      "firstPage": 1820,
+      "heading": "2575. Offer to Sell Destructive Device (Pen. Code, § 18730)",
+      "sourceKeys": [
+        "PEN:18730"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2576",
+      "family": "weapons",
+      "firstPage": 1823,
+      "heading": "2576. Explosion of Explosive or Destructive Device With Intent to Murder (Pen. Code, § 18745)",
+      "sourceKeys": [
+        "PEN:18745"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2577",
+      "family": "weapons",
+      "firstPage": 1826,
+      "heading": "2577. Explosion of Explosive or Destructive Device Causing Bodily Injury (Pen. Code, § 18750)",
+      "sourceKeys": [
+        "PEN:18750"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2578",
+      "family": "weapons",
+      "firstPage": 1830,
+      "heading": "2578. Explosion of Explosive or Destructive Device Causing Death, Mayhem, or Great Bodily Injury (Pen. Code, § 18755)",
+      "sourceKeys": [
+        "PEN:18755"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2579",
+      "family": "weapons",
+      "firstPage": 1834,
+      "heading": "2579. Possession of Materials to Make Destructive Device or Explosive (Pen. Code, § 18720)",
+      "sourceKeys": [
+        "PEN:18720"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2590",
+      "family": "weapons",
+      "firstPage": 1837,
+      "heading": "2590. Armed Criminal Action (Pen. Code, § 25800)",
+      "sourceKeys": [
+        "PEN:25800"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2591",
+      "family": "weapons",
+      "firstPage": 1839,
+      "heading": "2591. Possession of Ammunition by Person Prohibited From Possessing Firearm Due to Conviction or Mental Illness (Pen. Code, § 30305(a))",
+      "sourceKeys": [
+        "PEN:30305"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2592",
+      "family": "weapons",
+      "firstPage": 1843,
+      "heading": "2592. Possession of Ammunition by Person Prohibited From Possessing Firearm Due to Court Order (Pen. Code, § 30305(a))",
+      "sourceKeys": [
+        "PEN:30305"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    },
+    {
+      "id": "2593",
+      "family": "weapons",
+      "firstPage": 1846,
+      "heading": "2593. Purchase, Possession, or Use of Tear Gas or Tear Gas Weapon (Pen. Code, § 22810(a), (e)(1), (g))",
+      "sourceKeys": [
+        "PEN:22810"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison",
+      "boundedChargeIds": []
+    }
+  ],
+  "discoveryGroupIds": [
+    "PEN:division=-/title=8./part=1./chapter=9.",
+    "PEN:division=-/title=9./part=1./chapter=5.5.",
+    "PEN:division=-/title=9./part=1./chapter=1.",
+    "PEN:division=-/title=11./part=1./chapter=-",
+    "PEN:division=-/title=9./part=1./chapter=2.",
+    "PEN:division=-/title=9./part=1./chapter=5.",
+    "PEN:division=-/title=1./part=4./chapter=3.",
+    "PEN:division=5./title=2./part=6./chapter=1.",
+    "PEN:division=10./title=4./part=6./chapter=1.",
+    "PEN:division=-/title=9./part=1./chapter=7.5.",
+    "PEN:division=-/title=8./part=1./chapter=8.",
+    "PEN:division=10./title=4./part=6./chapter=2.",
+    "PEN:division=9./title=4./part=6./chapter=2.",
+    "PEN:division=-/title=8./part=1./chapter=3.",
+    "PEN:division=-/title=11.5./part=1./chapter=-",
+    "PEN:division=5./title=4./part=6./chapter=3.",
+    "PEN:division=-/title=9./part=1./chapter=13.",
+    "PEN:division=5./title=4./part=6./chapter=2."
+  ],
+  "retainedArtifacts": [
+    "california-batch-one-review.json",
+    "california-batch-two-review.json",
+    "california-batch-three-review.json",
+    "california-batch-four-review.json",
+    "california-batch-five-review.json",
+    "california-batch-six-review.json",
+    "california-catalog-source-expansion.json",
+    "california-person-property-acquisition.json",
+    "california-forgery-theft-acquisition.json",
+    "california-protected-person-acquisition.json",
+    "california-controlled-substances-acquisition.json",
+    "california-drug-successor-acquisition.json",
+    "california-driving-publication-acquisition.json",
+    "california-traffic-acquisition.json",
+    "california-vehicle-identification-acquisition.json"
+  ],
+  "extraKeys": [
+    "PEN:17",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:19",
+    "PEN:19.8",
+    "PEN:672",
+    "PEN:1170",
+    "PEN:30515",
+    "PEN:30600",
+    "PEN:30605",
+    "PEN:16590",
+    "PEN:21310",
+    "PEN:21510",
+    "PEN:22210",
+    "PEN:23900",
+    "PEN:25100",
+    "PEN:25110",
+    "PEN:25200",
+    "PEN:264",
+    "PEN:264.1",
+    "PEN:266h",
+    "PEN:266i",
+    "PEN:273ab",
+    "PEN:368",
+    "PEN:646.9",
+    "PEN:290.018",
+    "PEN:208",
+    "PEN:209",
+    "PEN:209.5",
+    "PEN:210.5"
+  ],
+  "publicationGroups": [
+    {
+      "name": "Serious violence, abuse and detention",
+      "keys": [
+        "PEN:203",
+        "PEN:205",
+        "PEN:206",
+        "PEN:220",
+        "PEN:273a",
+        "PEN:273ab",
+        "PEN:273d",
+        "PEN:273.5",
+        "PEN:368",
+        "PEN:207",
+        "PEN:208",
+        "PEN:209",
+        "PEN:209.5",
+        "PEN:210.5",
+        "PEN:236",
+        "PEN:237",
+        "PEN:236.1",
+        "PEN:278",
+        "PEN:278.5"
+      ],
+      "question": "Separate existing bounded matches from missing mayhem, torture, child/elder harm, domestic injury, aggravated kidnapping, hostage and trafficking branches; verify injury, actor and age conditions with sentencing dependencies."
+    },
+    {
+      "name": "Sexual-offense branch expansion",
+      "keys": [
+        "PEN:264",
+        "PEN:264.1",
+        "PEN:266h",
+        "PEN:266i",
+        "PEN:266j",
+        "PEN:269",
+        "PEN:286",
+        "PEN:287",
+        "PEN:288",
+        "PEN:288.2",
+        "PEN:288.3",
+        "PEN:288.4",
+        "PEN:288.5",
+        "PEN:288.7",
+        "PEN:289",
+        "PEN:290",
+        "PEN:290.018",
+        "PEN:311.1",
+        "PEN:311.2",
+        "PEN:311.4",
+        "PEN:311.11",
+        "PEN:647.6"
+      ],
+      "question": "Read shared age, force, incapacity, custody, registration and exploitation provisions once; publish exact branches rather than one generic label for a whole statute. Do not infer penalty or registration consequence from an instruction title."
+    },
+    {
+      "name": "Threats, hate crimes and stalking",
+      "keys": [
+        "PEN:422",
+        "PEN:422.6",
+        "PEN:422.7",
+        "PEN:422.75",
+        "PEN:646.9",
+        "PEN:11411",
+        "PEN:11412",
+        "PEN:11413"
+      ],
+      "question": "Keep substantive conduct separate from motive enhancements; review order/prior-dependent stalking punishment and any missing threat branches."
+    },
+    {
+      "name": "Weapons conduct and explosive devices",
+      "keys": [
+        "PEN:417",
+        "PEN:417.3",
+        "PEN:417.4",
+        "PEN:417.8",
+        "PEN:26100",
+        "PEN:17500",
+        "PEN:18710",
+        "PEN:18715",
+        "PEN:18720",
+        "PEN:18725",
+        "PEN:18730",
+        "PEN:18740",
+        "PEN:18745",
+        "PEN:18750",
+        "PEN:18755",
+        "PEN:21310",
+        "PEN:21510",
+        "PEN:22810",
+        "PEN:25100",
+        "PEN:25110",
+        "PEN:25200",
+        "PEN:25400",
+        "PEN:25800",
+        "PEN:25850",
+        "PEN:29800",
+        "PEN:29805",
+        "PEN:29815",
+        "PEN:29820",
+        "PEN:29825",
+        "PEN:29900",
+        "PEN:30305",
+        "PEN:30515",
+        "PEN:30600",
+        "PEN:30605",
+        "PEN:30615"
+      ],
+      "question": "Separate carrying, possession, discharge, brandishing, prohibited-person predicates, storage and explosive conduct. Compare current source changes and enforceability before publication; PEN 30515 remains held. CALCRIM 2500 is a template requiring weapon-specific research, not one charge; 2561 retains separate-count review."
+    }
+  ]
+}

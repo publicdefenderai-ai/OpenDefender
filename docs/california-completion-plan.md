@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-The vehicle-identification successor proposes ten additional choices, taking the configured catalog from 281 to 291: 99 original corrected choices and 192 additions. There are 192 distinct primary sections and 461 retained publication sections/467 versions including dependencies. The changed weapon source still withholds one configured record, leaving 290 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
+Merged PR30 adds ten vehicle-identification choices. The configured catalog now contains 291: 99 original corrected choices and 192 additions. There are 192 distinct primary sections and 461 retained publication sections/467 versions including dependencies. The changed weapon source still withholds one configured record, leaving 290 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -14,18 +14,19 @@ The archive discovery ledger spans 30 codes and records 6,028 sections with crim
 
 ## Rough remaining effort
 
-Planning range: **3–6 more substantive batches plus one combined benchmark/release pass after this drug follow-up**. This remains a work-package estimate: the remaining families can be combined where shared sources justify it. Confidence is limited until the benchmark extends beyond the drug chapter. New serious omissions, changed law, or difficult applicability issues may expand the range. This is a work-package estimate, not a fixed number of days or a promise of exhaustive statutory completeness.
+The people/weapons benchmark now makes the next work concrete: 207 instructions across five families, with 43 bounded prior matches, 29 context/defense/allegation entries, one generic weapon template, 29 same-section comparisons still requiring branch review, and 105 entries with no same-section catalog candidate. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
 
-| Combined work package | Scope and reuse opportunity |
+| Next work package | Scope |
 | --- | --- |
-| Controlled-substances follow-up (current) | Eighteen additional choices cover the 16 previously unmatched instruction entries at a bounded adult-branch level. Reuses all 14 primary sections and adds only BPC 26032 licensing protection. |
-| Drug/alcohol carry-forward | Preserve HSC 11395 as a consequential standalone-identity gap, juvenile actor branches under HSC 11354, BPC 4326 history, and unreviewed chapter candidates. Prioritize alcohol offenses with the driving batch where appropriate. These are not minor-charge deferrals. |
-| Driving and vessels | Vehicle Code criminal driving, injury, suspended-license, evasion, and hit-and-run branches; Harbors and Navigation Code predicates; carry forward PEN 192.5, 193.8, and 499. Reuse existing DUI and traffic evidence. |
-| Remaining offenses against people and weapons | Sexual offenses, domestic violence, child/elder protection, threats/stalking, detention offenses, and weapon restrictions. Treat changed PEN 30515 versions and enforceability separately. Split into two reviewable batches if the legal distinctions become too dense. |
-| Justice, public order, property and financial gaps | Obstruction, court-order violations, custody/escape, public-order offenses, and consequential property/fraud branches. Carry forward wage theft, remittance, access-card valuation, trade-secret theft, and scrap-metal gaps. Split where shared sources do not justify one packet. |
-| Targeted other-code pass | Prioritize criminal provisions in Business and Professions, Welfare and Institutions, and other codes identified by independent references or the candidate ledger. Record obscure minor/administrative candidates as explicit deferrals after severity is established; do not interpret a whole code's review as automatic publication approval. |
+| Serious violence, abuse and detention | Combined publication review of mayhem, torture, child/elder harm, domestic injury, kidnapping, hostage-taking, trafficking and child abduction. Start with the 19 primary/supporting sections named in the people/weapons packet. |
+| Sexual-offense branches | Shared age, force, incapacity, custody, exploitation and registration provisions. Reuse the same evidence packet and review exact subdivisions together. |
+| Weapons, threats and hate crimes | Combine clear conduct branches where practical; keep prohibited-person predicates, changed-source restrictions and enforceability questions explicit. |
+| Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
+| Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
 
-Some packages can combine; the largest may need splitting. Count useful charging identities and resolved gaps, not PRs or raw section totals. Do not keep cycling through obscure leftovers in the first four statutory groups while major families remain unexamined. **Next recommended batch: driving and vessels, with alcohol overlaps and explicit drug-gap carry-forward.**
+The earlier 3-6 substantive-batch estimate remains a provisional work-package range, not a deadline. This expanded comparison shows that people/weapons alone merits several substantial publication groups; trying to force every branch into one PR would make legal review harder. Combine shared sources within each group and do not repeatedly reopen low-priority traffic clauses. No new charge or currentness approval results from acquiring this packet.
+
+Earlier consequential holds carry forward: HSC 11395 identity, minor-actor drug branches, BPC 4326 history, unresolved traffic/entrustment questions and PEN 30515. Moving to a new family does not resolve or demote those gaps.
 
 ## Independent benchmark and stop conditions
 
@@ -114,3 +115,16 @@ Run `node --import tsx scripts/data-review/california-verification/vehicle-ident
 This batch builds on merged PR29, including its transition-inventory validation fix. It remains a separate review from the preceding traffic publication.
 
 Next priority: the independent missing-charge pass for offenses against people and weapons, combining related sections. Carry forward the remaining vehicle questions explicitly rather than cycling through low-priority traffic clauses before reviewing another major family. The 3-6 substantive-batch planning range remains provisional and is not a claim of statewide completeness.
+
+
+## People and weapons: combined independent gap packet
+
+The packet combines all 207 instructions in five February 2026 CALCRIM families: assault/abuse, sexual offenses, kidnapping/trafficking, threats/hate crimes, and weapons. The 659 instruction pages and 16 printed contents pages are retained with hashes. Extraction checks each family's inventory against its own printed contents, including letter-suffixed entries such as 852A and 852B. Homicide and gangs remain outside this packet; later supplements are not certified.
+
+One archive pass retains 373 statutory sections from 18 discovery candidate groups, instruction references and explicit probes: 77 reused, 296 newly retained, none absent. The reuse-provider list and hashes are frozen so later publication batches cannot silently change replay accounting. These are original-snapshot research sources, not fresh publication evidence. Runtime pins, the PEN 30515 hold and the existing expiry remain unchanged.
+
+The crosswalk credits 43 explicit bounded prior matches, distinguishes 29 context/defense/allegation entries and one generic weapon template, and retains 134 instruction entries for comparison: 29 with same-section catalog candidates and 105 without any. Same-section hits can be misleading where a base citation such as PEN 240 or 647 links unrelated branches. They never receive automatic coverage credit. CALCRIM 2561 remains substantive separate-count research; only its enhancement-only sibling 2562 is classified as allegation context.
+
+The four named source groups carry the next publication work. No attorney data-entry assignment is needed now. Start with serious violence, abuse and detention; acquire any newly identified sentencing dependencies, verify exact branches, compare against the fresh archive, and then publish the clear choices together. Refer only a concrete unresolved interpretation with source text and a decision needed.
+
+Reproduce with `extract-people-weapons-benchmark.py`, `acquire-people-weapons.py`, and `node --import tsx scripts/data-review/california-verification/people-weapons-review.ts`. Ordinary validation and tests use committed public evidence offline; PDF/archive replay uses the retained original receipts. Parser tests run through the existing Python unittest wrapper in Vitest CI.
