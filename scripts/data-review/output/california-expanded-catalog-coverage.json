@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 4,
-    "canonicalRecords": 340,
-    "configuredSelectable": 319,
+    "canonicalRecords": 404,
+    "configuredSelectable": 383,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 220,
-    "boundedCorrectionPass": 319,
+    "boundedAdditionPass": 284,
+    "boundedCorrectionPass": 383,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 210,
+    "distinctSelectablePrimarySections": 221,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 210,
-    "selectableRecordsWithAllPrimaryTextAcquired": 319,
-    "totalAcquiredSectionsIncludingDependencies": 505,
-    "totalAcquiredVersionsIncludingDependencies": 511,
+    "acquiredSelectablePrimarySections": 221,
+    "selectableRecordsWithAllPrimaryTextAcquired": 383,
+    "totalAcquiredSectionsIncludingDependencies": 511,
+    "totalAcquiredVersionsIncludingDependencies": 517,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "319 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "383 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 203,
-      "corrected": 203,
+      "selectable": 267,
+      "corrected": 267,
       "awaitingCorrection": 0
     },
     {
@@ -1289,6 +1289,57 @@
     },
     {
       "lawCode": "PEN",
+      "section": "264.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=264.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-264-1-a",
+        "ca-pen-264-1-b-1",
+        "ca-pen-264-1-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "266h",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=266h&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-266h-a",
+        "ca-pen-266h-b-1",
+        "ca-pen-266h-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "266i",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=266i&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-266i-a",
+        "ca-pen-266i-b-1",
+        "ca-pen-266i-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "266j",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=266j&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-266j"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "269",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=269&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-269-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "270",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=270&lawCode=PEN",
       "recordIds": [
@@ -1363,11 +1414,101 @@
     },
     {
       "lawCode": "PEN",
+      "section": "286",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=286&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-286-b-1",
+        "ca-pen-286-b-2",
+        "ca-pen-286-c-1",
+        "ca-pen-286-c-2-a",
+        "ca-pen-286-c-2-b",
+        "ca-pen-286-c-2-c",
+        "ca-pen-286-c-3",
+        "ca-pen-286-d-1",
+        "ca-pen-286-d-2",
+        "ca-pen-286-d-3",
+        "ca-pen-286-f",
+        "ca-pen-286-g",
+        "ca-pen-286-h",
+        "ca-pen-286-i",
+        "ca-pen-286-j",
+        "ca-pen-286-k"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "287",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=287&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-287-b-1",
+        "ca-pen-287-b-2",
+        "ca-pen-287-c-1",
+        "ca-pen-287-c-2-a",
+        "ca-pen-287-c-2-b",
+        "ca-pen-287-c-2-c",
+        "ca-pen-287-c-3",
+        "ca-pen-287-d-1",
+        "ca-pen-287-d-2",
+        "ca-pen-287-d-3",
+        "ca-pen-287-f",
+        "ca-pen-287-g",
+        "ca-pen-287-h",
+        "ca-pen-287-i",
+        "ca-pen-287-j",
+        "ca-pen-287-k"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "288",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288&lawCode=PEN",
       "recordIds": [
         "ca-lewd-act-child-288-a",
-        "ca-lewd-act-child-288-c1"
+        "ca-lewd-act-child-288-c1",
+        "ca-pen-288-b-1",
+        "ca-pen-288-b-2",
+        "ca-pen-288-c-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288.2&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-288-2-a-1",
+        "ca-pen-288-2-a-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288.4&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-288-4-a-1",
+        "ca-pen-288-4-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-288-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288.7",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288.7&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-288-7-a",
+        "ca-pen-288-7-b"
       ],
       "alreadyRetained": false
     },
@@ -1377,7 +1518,18 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=289&lawCode=PEN",
       "recordIds": [
         "ca-sexual-penetration-289-a1a",
-        "ca-sexual-penetration-289-a1b"
+        "ca-sexual-penetration-289-a1b",
+        "ca-pen-289-a-1-c",
+        "ca-pen-289-a-2",
+        "ca-pen-289-b",
+        "ca-pen-289-c",
+        "ca-pen-289-d",
+        "ca-pen-289-e",
+        "ca-pen-289-f",
+        "ca-pen-289-g",
+        "ca-pen-289-h",
+        "ca-pen-289-i",
+        "ca-pen-289-j"
       ],
       "alreadyRetained": false
     },
@@ -4426,6 +4578,1094 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-b-1",
+      "title": "Sodomy: person under 18",
+      "citation": "Cal. Penal Code § 286(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "9f0925e495a91f0e91ea3bc9133be186ff89b74f960012c69b910424ac8e2d38",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-b-2",
+      "title": "Sodomy: defendant over 21 and person under 16",
+      "citation": "Cal. Penal Code § 286(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "c32d0e6f913bde7428e57613bc3271928b166cc11823277cc29e10b92868786d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-c-1",
+      "title": "Sodomy: child under 14 and age gap over ten years",
+      "citation": "Cal. Penal Code § 286(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "7333d47c31c21f0fc821bacb77c12dbb1260fcd72d50c593b607d936d76f37d6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-c-2-a",
+      "title": "Sodomy: force or fear",
+      "citation": "Cal. Penal Code § 286(c)(2)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "f43a000902f2200b05f8e3983f141996484a9dffaf55976ede3963a69bbd41e6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-c-2-b",
+      "title": "Sodomy: force or fear, child under 14",
+      "citation": "Cal. Penal Code § 286(c)(2)(B)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "3379dd23f27e5a40c8c08ba252bc1ea3820362fea5cfa18fe41a6c44e2ffd4e7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-c-2-c",
+      "title": "Sodomy: force or fear, minor age 14 or older",
+      "citation": "Cal. Penal Code § 286(c)(2)(C)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "eb13dc4d93f5aa1d363f5c27298ff35f5fdb8c3d9408c1048edbabb25cdf9d22",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-c-3",
+      "title": "Sodomy: threat of future retaliation",
+      "citation": "Cal. Penal Code § 286(c)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "b4a155cd1a0e13d9c76b1017fb94bd1d887f7f80698e30ab28b89271c943dd81",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-d-1",
+      "title": "Sodomy: acting in concert",
+      "citation": "Cal. Penal Code § 286(d)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "0c48321e8925ce19a178a4a0295bcef39a8389b47c5c913681a1388c9f3dc4a2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-d-2",
+      "title": "Sodomy: acting in concert, child under 14",
+      "citation": "Cal. Penal Code § 286(d)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "01ebcc12a3ed17707fac34056ffb335b31d91884d6398d9162464b8829adceb6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-d-3",
+      "title": "Sodomy: acting in concert, minor age 14 or older",
+      "citation": "Cal. Penal Code § 286(d)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "1f932cc2205ba2565855b28eee59a04a47f6b52c609af900fb0dd25879fbcd81",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-f",
+      "title": "Sodomy: person unconscious of the act",
+      "citation": "Cal. Penal Code § 286(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "bc0b7493b7d947b9551ee636deb6b6c5585d9c874a8df7529a22d85cebd438f6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-g",
+      "title": "Sodomy: person incapable of legal consent",
+      "citation": "Cal. Penal Code § 286(g)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "046cb3851efa9331a54be0f97b9f9c5412ef1bb43c1870fee59fbec8d7989855",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-h",
+      "title": "Sodomy: incapacity with both people confined in a treatment facility",
+      "citation": "Cal. Penal Code § 286(h)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "6d8cbaf0dd35bf3ba9711f94f1087cd2500ac3dc8b51a7060b76ec108bdb13ec",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-i",
+      "title": "Sodomy: person prevented from resisting by intoxication",
+      "citation": "Cal. Penal Code § 286(i)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "07b134c85840b45394fd28fdf44aa46ea594a61f0780b9975bf325ebff98f4d7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-j",
+      "title": "Sodomy: fraudulent impersonation of a known person",
+      "citation": "Cal. Penal Code § 286(j)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "d7660e7588b76d65b0824399b5e17ba6442682b994b9febb82028157fce6bf3d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-k",
+      "title": "Sodomy: threatened official arrest, incarceration or deportation",
+      "citation": "Cal. Penal Code § 286(k)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286"
+      ],
+      "catalogSha256": "061c650cded4a43eef1538141e4ce2d20caf0f4a9c61dcc8b2f0ae1cb6f9fec6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-b-1",
+      "title": "Oral copulation: person under 18",
+      "citation": "Cal. Penal Code § 287(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "b55288bf6e16176fa968cec1ef25bd7b419882c7b538da0333e77807adfa60b8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-b-2",
+      "title": "Oral copulation: defendant over 21 and person under 16",
+      "citation": "Cal. Penal Code § 287(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "01a4dad800c63f204f040c78e82ae3b0df1ef4a277e50f0fc8e1920eb95f7389",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-c-1",
+      "title": "Oral copulation: child under 14 and age gap over ten years",
+      "citation": "Cal. Penal Code § 287(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "93a3ca6c8a93468dd3cc5f3f858b381302af9f6d5948ad65013a4a85b7757ed1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-c-2-a",
+      "title": "Oral copulation: force or fear",
+      "citation": "Cal. Penal Code § 287(c)(2)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "878a9f4af8d4bc3f8f052c9cf537eb6d6081553f7e2c021f1faaa9b9dab9a9f9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-c-2-b",
+      "title": "Oral copulation: force or fear, child under 14",
+      "citation": "Cal. Penal Code § 287(c)(2)(B)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "7dbde998867da94ada28cc14d3013073c845699d945c0f3f38ec74a1ac0ca794",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-c-2-c",
+      "title": "Oral copulation: force or fear, minor age 14 or older",
+      "citation": "Cal. Penal Code § 287(c)(2)(C)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "591b40adee2ce5f610911e47a805f4612f9a3347dabfa9d2cdfedc7145abdda8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-c-3",
+      "title": "Oral copulation: threat of future retaliation",
+      "citation": "Cal. Penal Code § 287(c)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "3aea5bd596cf563d9d9889ddb123f0da36fd9b15aecf46f2e3838c5bf7f8c55d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-d-1",
+      "title": "Oral copulation: acting in concert",
+      "citation": "Cal. Penal Code § 287(d)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "eba5cfa62f2ec926212ece771b3f60b075a59bbdf60078b14b635fbe6723bd8d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-d-2",
+      "title": "Oral copulation: acting in concert, child under 14",
+      "citation": "Cal. Penal Code § 287(d)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "940a0684f9fed89b122cf3d0559b6232ff3f9124e7edb44052b5500358efacf3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-d-3",
+      "title": "Oral copulation: acting in concert, minor age 14 or older",
+      "citation": "Cal. Penal Code § 287(d)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "5a08e982fc1785f631050c16542e29c2fd63ea22a6deef61e4e5c13330ad3465",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-f",
+      "title": "Oral copulation: person unconscious of the act",
+      "citation": "Cal. Penal Code § 287(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "6442bda55e7611aaebcb724b6c998f49b2571ffa95211802fb0218012252bc22",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-g",
+      "title": "Oral copulation: person incapable of legal consent",
+      "citation": "Cal. Penal Code § 287(g)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "026d28061aba493b0eb86373fbc3bbd3925b7d863d72d623035469432a0cee34",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-h",
+      "title": "Oral copulation: incapacity with both people confined in a treatment facility",
+      "citation": "Cal. Penal Code § 287(h)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "a7a37bf99221a194f7188ee824e1ce37aa7bd3cc0d8571d4b5b39d4fb85b13c9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-i",
+      "title": "Oral copulation: person prevented from resisting by intoxication",
+      "citation": "Cal. Penal Code § 287(i)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "0d8d72207e179bcf9848401bb12eb8d8840f5395680e6ea2977d1ca756facea3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-j",
+      "title": "Oral copulation: fraudulent impersonation of a known person",
+      "citation": "Cal. Penal Code § 287(j)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "a26d100006114f0f9f3a17e0778e8527217e6a558a5300324c4d468541747e50",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-287-k",
+      "title": "Oral copulation: threatened official arrest, incarceration or deportation",
+      "citation": "Cal. Penal Code § 287(k)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:287"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:287"
+      ],
+      "catalogSha256": "ddabcb63bd8ed217151daf325ef1ff1574eb8a8761c395132d4a5d62c0fec7f0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-a-1-c",
+      "title": "Sexual penetration: force or fear, minor age 14 or older",
+      "citation": "Cal. Penal Code § 289(a)(1)(C)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "7b717203f2d3bb3eff93b8bcae7ed2fc6bc48f460746f01816634851c57a4f67",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-a-2",
+      "title": "Sexual penetration: threat of future retaliation",
+      "citation": "Cal. Penal Code § 289(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "320e998ac3355d65da5e19072dcc64fd3b9c2c48abc4fdddfff03877272b29d7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-b",
+      "title": "Sexual penetration: person incapable of legal consent",
+      "citation": "Cal. Penal Code § 289(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "a8aea8f17c2b06d689770fc52a2fe3180e11d9f828ce786fa07da06d5443ecc4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-c",
+      "title": "Sexual penetration: incapacity with both people confined in a treatment facility",
+      "citation": "Cal. Penal Code § 289(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "fe1409adc0a528103bd18c70b97d045e458a813ca19e2056d6bd4018c9733191",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-d",
+      "title": "Sexual penetration: person unconscious of the act",
+      "citation": "Cal. Penal Code § 289(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "e89947c3af93f505b4aed0a1750d3ab18a53c461c7e3d09fcbc30cf9f4b41b93",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-e",
+      "title": "Sexual penetration: person prevented from resisting by intoxication",
+      "citation": "Cal. Penal Code § 289(e)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "1f3829faf15a68986b427bc0f2250460cf72089eca6350e3035693562c8b6c97",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-f",
+      "title": "Sexual penetration: fraudulent impersonation of a known person",
+      "citation": "Cal. Penal Code § 289(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "3cc1e6ec4be14a33e6f1acd19938267856e5910f9108f11619e72a9732759003",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-g",
+      "title": "Sexual penetration: threatened official arrest, incarceration or deportation",
+      "citation": "Cal. Penal Code § 289(g)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "717e855659c2cb40ec18181e8ab89434732f303b218ad51a21db50f4036dfac7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-h",
+      "title": "Sexual penetration: person under 18",
+      "citation": "Cal. Penal Code § 289(h)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "648eea4f6bb526ee48cfc42182e388eccccaa0f5177ca4fffafc5e7b4c26c401",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-i",
+      "title": "Sexual penetration: defendant over 21 and person under 16",
+      "citation": "Cal. Penal Code § 289(i)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "dee51a2ca875eb03e63a30c55f5d9d6f72eb10422e4d604da3b4c36c843f14e7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-289-j",
+      "title": "Sexual penetration: child under 14 and age gap over ten years",
+      "citation": "Cal. Penal Code § 289(j)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "5e5bcbfbe287e2ddc45c29464745e30df83bd5e54015dcfb26811967f8a650bd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-264-1-a",
+      "title": "Rape or sexual penetration in concert: ordinary branch",
+      "citation": "Cal. Penal Code § 264.1(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:264.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:264.1"
+      ],
+      "catalogSha256": "a9e61f8acaade4e39796ef617a6ebca29b01c4b11e5e768c6c0b5d4d1407242c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-264-1-b-1",
+      "title": "Rape or sexual penetration in concert: child under 14",
+      "citation": "Cal. Penal Code § 264.1(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:264.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:264.1"
+      ],
+      "catalogSha256": "fd6ae0aed8852ed479e29cbecd8dc5fc3c52912021c859deeffad1356c42ffc2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-264-1-b-2",
+      "title": "Rape or sexual penetration in concert: minor age 14 or older",
+      "citation": "Cal. Penal Code § 264.1(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:264.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:264.1"
+      ],
+      "catalogSha256": "7e70358020e8afe4e9d65c62ecc059c744d6e28429b08a28fcc5f31cb6793a93",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-269-a",
+      "title": "Aggravated sexual assault of a child under 14",
+      "citation": "Cal. Penal Code § 269(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:269"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:269"
+      ],
+      "catalogSha256": "7d8b6b27002ee787a95b975f53912cd74d1eccae3b65056f0eb07fb218c40ada",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-b-1",
+      "title": "Lewd act with child under 14 by force or fear",
+      "citation": "Cal. Penal Code § 288(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "8f7f2b1b4f4e40c009bee173331e484eb845166012a160e4d5806a92edbf6ce9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-b-2",
+      "title": "Caretaker lewd act with a dependent person by force or fear",
+      "citation": "Cal. Penal Code § 288(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "911b1e86f82d2dcff3602b93d971bffec08607908501add4a908c3fd3e23abe8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-c-2",
+      "title": "Caretaker lewd act with a dependent person",
+      "citation": "Cal. Penal Code § 288(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "4124c762f104e2ea71b27d4e8787ab001832cfb94a863fbab8ea0e4ebcbba6b3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-2-a-1",
+      "title": "Sending harmful matter to a minor: depicting minors in sexual conduct",
+      "citation": "Cal. Penal Code § 288.2(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.2"
+      ],
+      "catalogSha256": "6d9856c16fbe632e83c56c61e9d1b474866026199aabe317f8075864ec8613fd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-2-a-2",
+      "title": "Sending harmful matter to a minor: other harmful matter",
+      "citation": "Cal. Penal Code § 288.2(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.2"
+      ],
+      "catalogSha256": "f30b8ce340dee8c913dd857998f0f9d55a718571172fb46334115686e18f0681",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-4-a-1",
+      "title": "Arranging a meeting with a minor for lewd purposes",
+      "citation": "Cal. Penal Code § 288.4(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.4"
+      ],
+      "catalogSha256": "db32793bb546bf762423bbb5e87a44b951271217090bee38048143b938644922",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-4-b",
+      "title": "Going to an arranged meeting with a minor for lewd purposes",
+      "citation": "Cal. Penal Code § 288.4(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.4"
+      ],
+      "catalogSha256": "77576fcce41e091f13790d9cda14026343d6a6ec0edba220a2ed5ed05e7cc77c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-5-a",
+      "title": "Continuous sexual abuse of a child",
+      "citation": "Cal. Penal Code § 288.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.5"
+      ],
+      "catalogSha256": "d41687ffec5205edd2430243a525fba8c6de84257041e92cbb2f365814fa1856",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-7-a",
+      "title": "Adult sexual conduct with a child age ten or younger: sexual intercourse or sodomy",
+      "citation": "Cal. Penal Code § 288.7(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.7"
+      ],
+      "catalogSha256": "e997f42169609aa478320bc1b17c25e5c1d01c78bdf39a49a9af7991d2a59331",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-7-b",
+      "title": "Adult sexual conduct with a child age ten or younger: oral copulation or sexual penetration",
+      "citation": "Cal. Penal Code § 288.7(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.7"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.7"
+      ],
+      "catalogSha256": "c55d8b65764913933c66f4c6ab343463e66d9e30bc4abcef2362ef82bd557a68",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266h-a",
+      "title": "Pimping: ordinary branch",
+      "citation": "Cal. Penal Code § 266h(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266h"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266h"
+      ],
+      "catalogSha256": "def34626eec377850d32a51c6caec3d1dbbf788a92c9f886da9af3913b3a8267",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266h-b-1",
+      "title": "Pimping: minor age 16 or 17",
+      "citation": "Cal. Penal Code § 266h(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266h"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266h"
+      ],
+      "catalogSha256": "b472a8e452b795f9edba967d263de9851c719d58469340a4fd59d7a7e1e8d322",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266h-b-2",
+      "title": "Pimping: minor under 16",
+      "citation": "Cal. Penal Code § 266h(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266h"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266h"
+      ],
+      "catalogSha256": "215ed9ac51b7d66dad02bc382aa52613dc1674e14d9bbb04e5464fab948414d4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266i-a",
+      "title": "Pandering: ordinary branch",
+      "citation": "Cal. Penal Code § 266i(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266i"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266i"
+      ],
+      "catalogSha256": "0d95aac41d192dd101731275fc5948b09b799928dac8fae3fc521ac4db210861",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266i-b-1",
+      "title": "Pandering: minor age 16 or 17",
+      "citation": "Cal. Penal Code § 266i(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266i"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266i"
+      ],
+      "catalogSha256": "423058a735a635d2799a8cdc4d0b7a29e5399ecae0ceb35bfe3ff5b20655e84d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266i-b-2",
+      "title": "Pandering: minor under 16",
+      "citation": "Cal. Penal Code § 266i(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266i"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266i"
+      ],
+      "catalogSha256": "b8cb81e026dda7ed3a1bfb94e238081b57bee130033756fcf3c5ad4e8a83beae",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-266j",
+      "title": "Providing a child under 16 for a lewd act",
+      "citation": "Cal. Penal Code § 266j",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:266j"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:266j"
+      ],
+      "catalogSha256": "07edc625cf16974263b74743a03e73492f5ad03670ab7b142ae995d2f001429a",
       "attorneyReview": "pending"
     },
     {

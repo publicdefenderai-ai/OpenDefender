@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "../fixtures/california-catalog-counts";
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
 const additions = JSON.parse(readFileSync("shared/california-person-property-additions.json", "utf8")) as Array<{id: string; code: string; title: string; summary: string; penalty: string; categories: string[]}>;
@@ -7,7 +8,7 @@ test("all person/property additions reach the production API and rules guidance"
   expect(response.ok()).toBe(true);
   const body = await response.json();
   // One of 257 configured records depends on the changed PEN:30515 definition.
-  expect(body.charges).toHaveLength(318);
+  expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
   expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
   for (const addition of additions) {
     const charge = body.charges.find((r: any) => r.id === addition.id);

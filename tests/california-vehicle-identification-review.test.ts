@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from 'vitest';
 import additions from '../shared/california-vehicle-identification-additions.json';
 import pins from '../shared/california-retained-pins.json';
@@ -9,7 +10,7 @@ import {getChargeExplanation} from '../shared/charge-explanations';
 const row=(code:string)=>additions.find(a=>a.code===code)!;
 describe('California vehicle identification and remaining duties',()=>{
   it('publishes only ten bounded branches and keeps controlling-passenger duties open',()=>{
-    expect(validateVehicleIdentificationReview()).toEqual({additions:10,primarySections:9,reusedSections:7,newSections:11,newVersions:11,promotedResearchSections:3,configuredSelectable:319});
+    expect(validateVehicleIdentificationReview()).toEqual({additions:10,primarySections:9,reusedSections:7,newSections:11,newVersions:11,promotedResearchSections:3,configuredSelectable:CA_CATALOG_COUNTS.configured});
     const r=readVehicleIdentificationReview();
     expect(r.crosswalk.find(x=>x.instruction==='2242')?.chargeIds).toEqual(['ca-veh-10802']);
     for(const id of ['2141','2151'])expect(r.crosswalk.find(x=>x.instruction===id)?.status).toBe('unpublished_branch_requires_substantive_review');

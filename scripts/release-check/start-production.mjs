@@ -121,7 +121,7 @@ const releaseCheckCaliforniaSelectableChargeIds = [
   "ca-accessory-after-the-fact-32",
   "ca-criminal-solicitation-653f-a",
   "ca-criminal-solicitation-653f-b",
-  ...["california-person-property-additions.json", "california-forgery-theft-additions.json", "california-protected-person-additions.json", "california-specialized-property-additions.json", "california-controlled-substances-additions.json", "california-drug-successor-additions.json", "california-driving-vessels-additions.json", "california-traffic-additions.json", "california-vehicle-identification-additions.json", "california-violence-detention-additions.json"].flatMap(file =>
+  ...["california-person-property-additions.json", "california-forgery-theft-additions.json", "california-protected-person-additions.json", "california-specialized-property-additions.json", "california-controlled-substances-additions.json", "california-drug-successor-additions.json", "california-driving-vessels-additions.json", "california-traffic-additions.json", "california-vehicle-identification-additions.json", "california-violence-detention-additions.json", "california-sexual-offenses-additions.json"].flatMap(file =>
     JSON.parse(readFileSync(resolve(process.cwd(), "shared", file), "utf8")).map(row => row.id)),
 ];
 // The Ohio manifest on disk is the legacy ledger; these source-first IDs are

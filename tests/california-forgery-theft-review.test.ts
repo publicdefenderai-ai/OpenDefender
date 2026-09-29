@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import { describe, expect, it } from "vitest";
 import additions from "../shared/california-forgery-theft-additions.json";
 import { readCaliforniaForgeryTheftReview, readCaliforniaForgeryTheftAcquisition, validateCaliforniaForgeryTheftReview } from "../scripts/data-review/california-verification/forgery-theft-review";
@@ -8,7 +9,7 @@ import { getCaliforniaCanonicalRecord } from "../shared/california-authority";
 
 describe("California combined forgery/theft expansion", () => {
   it("reuses evidence and keeps all 79 prior open sections accounted for", () => {
-    expect(validateCaliforniaForgeryTheftReview()).toEqual({ additions: 28, candidateSections: 79, reviewedPrimarySections: 20, remainingResearchSections: 59, reusedSections: 98, newSections: 7, newVersions: 7, configuredSelectable: 319 });
+    expect(validateCaliforniaForgeryTheftReview()).toEqual({ additions: 28, candidateSections: 79, reviewedPrimarySections: 20, remainingResearchSections: 59, reusedSections: 98, newSections: 7, newVersions: 7, configuredSelectable: CA_CATALOG_COUNTS.configured });
     expect(readCaliforniaForgeryTheftReview().sections.find(s => s.key === "PEN:484e")?.status).toBe("substantive_research_open");
     expect(getChargeById("ca-pen-484e-d")).toBeUndefined();
   });
@@ -44,8 +45,8 @@ describe("California combined forgery/theft expansion", () => {
   });
   it("projects every exact branch into selection, explanations, guidance and the source seed", () => {
     const visible = getChargesByJurisdiction("CA");
-    expect(visible).toHaveLength(319);
-    expect(new Set(visible.map(c => c.id)).size).toBe(319);
+    expect(visible).toHaveLength(CA_CATALOG_COUNTS.configured);
+    expect(new Set(visible.map(c => c.id)).size).toBe(CA_CATALOG_COUNTS.configured);
     const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-27T00:00:00Z"));
     for (const a of additions) {
       expect(getChargeById(a.id)).toMatchObject({ code: a.code, name: a.title, description: a.summary, maxPenalty: a.penalty, categories: a.categories });

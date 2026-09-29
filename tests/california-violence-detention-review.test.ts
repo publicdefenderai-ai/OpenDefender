@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from 'vitest';
 import additions from '../shared/california-violence-detention-additions.json';
 import pins from '../shared/california-retained-pins.json';
@@ -10,7 +11,7 @@ import {getChargeExplanation} from '../shared/charge-explanations';
 const row=(code:string)=>additions.find(a=>a.code===code)!;
 describe('California combined serious violence, abuse and detention',()=>{
   it('publishes 28 bounded choices and preserves unresolved fine and sibling questions',()=>{
-    expect(validateViolenceDetentionReview()).toEqual({additions:28,primarySections:18,reusedSections:26,newSections:44,newVersions:44,promotedResearchSections:36,newBenchmarkMatches:25,configuredSelectable:319});
+    expect(validateViolenceDetentionReview()).toEqual({additions:28,primarySections:18,reusedSections:26,newSections:44,newVersions:44,promotedResearchSections:36,newBenchmarkMatches:25,configuredSelectable:CA_CATALOG_COUNTS.configured});
     const r=readViolenceDetentionReview();
     expect(r.crosswalk.find(i=>i.id==='820')?.boundedChargeIds).toEqual(['ca-pen-273ab-a']);
     expect(r.crosswalk.find(i=>i.id==='1243')?.boundedChargeIds).toEqual(['ca-pen-236-1-a','ca-pen-236-1-b']);

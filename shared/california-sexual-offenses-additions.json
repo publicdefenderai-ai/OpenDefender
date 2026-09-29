@@ -1,0 +1,2144 @@
+[
+  {
+    "id": "ca-pen-286-b-1",
+    "lawCode": "PEN",
+    "code": "286(b)(1)",
+    "title": "Sodomy: person under 18",
+    "summary": "Intentional participation in sodomy with a person under 18, except where section 288 applies. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional participation; the statutory age requirement must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:288",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1092"
+    ]
+  },
+  {
+    "id": "ca-pen-286-b-2",
+    "lawCode": "PEN",
+    "code": "286(b)(2)",
+    "title": "Sodomy: defendant over 21 and person under 16",
+    "summary": "Intentional participation in sodomy by a person over 21 with someone under 16, except where section 288 applies. The statute says over 21, not 21 or older. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional participation; both age thresholds must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:288",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:286": "2013-09-09",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1091"
+    ]
+  },
+  {
+    "id": "ca-pen-286-c-1",
+    "lawCode": "PEN",
+    "code": "286(c)(1)",
+    "title": "Sodomy: child under 14 and age gap over ten years",
+    "summary": "Sodomy with a child under 14 who is more than ten years younger than the defendant. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional participation; victim age and the greater-than-ten-year age difference are separate elements.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1090"
+    ]
+  },
+  {
+    "id": "ca-pen-286-c-2-a",
+    "lawCode": "PEN",
+    "code": "286(c)(2)(A)",
+    "title": "Sodomy: force or fear",
+    "summary": "Sodomy against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1030"
+    ]
+  },
+  {
+    "id": "ca-pen-286-c-2-b",
+    "lawCode": "PEN",
+    "code": "286(c)(2)(B)",
+    "title": "Sodomy: force or fear, child under 14",
+    "summary": "Sodomy against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. The victim must be under 14. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Felony: 9, 11 or 13 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1030"
+    ]
+  },
+  {
+    "id": "ca-pen-286-c-2-c",
+    "lawCode": "PEN",
+    "code": "286(c)(2)(C)",
+    "title": "Sodomy: force or fear, minor age 14 or older",
+    "summary": "Sodomy against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. The victim must be at least 14 and under 18. Sodomy means penile-anal penetration, however slight.",
+    "penalty": "Felony: 7, 9 or 11 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1030"
+    ]
+  },
+  {
+    "id": "ca-pen-286-c-3",
+    "lawCode": "PEN",
+    "code": "286(c)(3)",
+    "title": "Sodomy: threat of future retaliation",
+    "summary": "Sodomy against the person's will through a threat of future kidnapping, false imprisonment, extreme pain, serious bodily injury or death, with a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional act using the specified future threat; a reasonable possibility of carrying it out is required.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1030"
+    ]
+  },
+  {
+    "id": "ca-pen-286-d-1",
+    "lawCode": "PEN",
+    "code": "286(d)(1)",
+    "title": "Sodomy: acting in concert",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting sodomy through force or fear of immediate unlawful bodily injury, or the specified threat of future retaliation. Future-retaliation branches require a reasonable possibility the threat will be carried out. The force/fear and retaliation alternatives must be against the person's will.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1031"
+    ]
+  },
+  {
+    "id": "ca-pen-286-d-2",
+    "lawCode": "PEN",
+    "code": "286(d)(2)",
+    "title": "Sodomy: acting in concert, child under 14",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting sodomy against the will of a child under 14 through force or fear of immediate unlawful bodily injury. Future-retaliation branches require a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 10, 12 or 14 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1031"
+    ]
+  },
+  {
+    "id": "ca-pen-286-d-3",
+    "lawCode": "PEN",
+    "code": "286(d)(3)",
+    "title": "Sodomy: acting in concert, minor age 14 or older",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting sodomy against the will of a minor at least 14 and under 18 through force or fear of immediate unlawful bodily injury. Future-retaliation branches require a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 7, 9 or 11 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1031"
+    ]
+  },
+  {
+    "id": "ca-pen-286-f",
+    "lawCode": "PEN",
+    "code": "286(f)",
+    "title": "Sodomy: person unconscious of the act",
+    "summary": "Sodomy when the person is unconscious of its nature and the defendant knows this. The statutory definition includes sleep, unawareness and specified fraud about the act or a claimed professional purpose.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge that the person is unconscious of the nature of the act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1033"
+    ]
+  },
+  {
+    "id": "ca-pen-286-g",
+    "lawCode": "PEN",
+    "code": "286(g)",
+    "title": "Sodomy: person incapable of legal consent",
+    "summary": "Sodomy when a mental disorder or developmental or physical disability prevents legal consent, and the defendant knows or reasonably should know this. Disability alone does not prove incapacity; the separate shared-facility branch is in subdivision (h).",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know of the incapacity to consent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1034"
+    ]
+  },
+  {
+    "id": "ca-pen-286-h",
+    "lawCode": "PEN",
+    "code": "286(h)",
+    "title": "Sodomy: incapacity with both people confined in a treatment facility",
+    "summary": "Sodomy when the person cannot legally consent because of a mental disorder or developmental or physical disability, the defendant knows or reasonably should know this, and both are confined in a qualifying mental-health treatment facility. Incapacity must be proved, not assumed from disability.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge or reason to know of incapacity; both people must be confined in the specified kind of facility.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1035"
+    ]
+  },
+  {
+    "id": "ca-pen-286-i",
+    "lawCode": "PEN",
+    "code": "286(i)",
+    "title": "Sodomy: person prevented from resisting by intoxication",
+    "summary": "Sodomy when an intoxicating, anesthetic or controlled substance prevents the person from resisting, and the defendant knows or reasonably should know this. Being intoxicated alone is not the complete element.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know that the substance prevents resistance.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1032"
+    ]
+  },
+  {
+    "id": "ca-pen-286-j",
+    "lawCode": "PEN",
+    "code": "286(j)",
+    "title": "Sodomy: fraudulent impersonation of a known person",
+    "summary": "Sodomy when the person submits believing the defendant is someone else known to them, and the defendant intentionally induced that mistaken identity by artifice, pretense or concealment.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to induce the mistaken belief about identity.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1036"
+    ]
+  },
+  {
+    "id": "ca-pen-286-k",
+    "lawCode": "PEN",
+    "code": "286(k)",
+    "title": "Sodomy: threatened official arrest, incarceration or deportation",
+    "summary": "Sodomy against the person's will by threatening official authority to arrest, incarcerate or deport them or another, when they reasonably believe the defendant is a public official. The defendant need not actually hold that office.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 286(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Section 667.6 can add qualifying prior-conviction enhancements and separate consecutive terms; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional coercion by the specified official-authority threat; the person's belief must be reasonable.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1030"
+    ]
+  },
+  {
+    "id": "ca-pen-287-b-1",
+    "lawCode": "PEN",
+    "code": "287(b)(1)",
+    "title": "Oral copulation: person under 18",
+    "summary": "Intentional participation in oral copulation with a person under 18, except where section 288 applies. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional participation; the statutory age requirement must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:288",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1082"
+    ]
+  },
+  {
+    "id": "ca-pen-287-b-2",
+    "lawCode": "PEN",
+    "code": "287(b)(2)",
+    "title": "Oral copulation: defendant over 21 and person under 16",
+    "summary": "Intentional participation in oral copulation by a person over 21 with someone under 16, except where section 288 applies. The statute says over 21, not 21 or older. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional participation; both age thresholds must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:288",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1081"
+    ]
+  },
+  {
+    "id": "ca-pen-287-c-1",
+    "lawCode": "PEN",
+    "code": "287(c)(1)",
+    "title": "Oral copulation: child under 14 and age gap over ten years",
+    "summary": "Oral copulation with a child under 14 who is more than ten years younger than the defendant. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional participation; victim age and the greater-than-ten-year age difference are separate elements.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1080"
+    ]
+  },
+  {
+    "id": "ca-pen-287-c-2-a",
+    "lawCode": "PEN",
+    "code": "287(c)(2)(A)",
+    "title": "Oral copulation: force or fear",
+    "summary": "Oral copulation against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1015"
+    ]
+  },
+  {
+    "id": "ca-pen-287-c-2-b",
+    "lawCode": "PEN",
+    "code": "287(c)(2)(B)",
+    "title": "Oral copulation: force or fear, child under 14",
+    "summary": "Oral copulation against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. The victim must be under 14. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Felony: 8, 10 or 12 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1015"
+    ]
+  },
+  {
+    "id": "ca-pen-287-c-2-c",
+    "lawCode": "PEN",
+    "code": "287(c)(2)(C)",
+    "title": "Oral copulation: force or fear, minor age 14 or older",
+    "summary": "Oral copulation against the person's will through force, violence, duress, menace, or fear of immediate unlawful bodily injury to that person or another. The victim must be at least 14 and under 18. Oral copulation means contact of the mouth with another person's sexual organ or anus.",
+    "penalty": "Felony: 6, 8 or 10 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual act accomplished through the specified coercion against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1015"
+    ]
+  },
+  {
+    "id": "ca-pen-287-c-3",
+    "lawCode": "PEN",
+    "code": "287(c)(3)",
+    "title": "Oral copulation: threat of future retaliation",
+    "summary": "Oral copulation against the person's will through a threat of future kidnapping, false imprisonment, extreme pain, serious bodily injury or death, with a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional act using the specified future threat; a reasonable possibility of carrying it out is required.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1015"
+    ]
+  },
+  {
+    "id": "ca-pen-287-d-1",
+    "lawCode": "PEN",
+    "code": "287(d)(1)",
+    "title": "Oral copulation: acting in concert",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting oral copulation through force or fear of immediate unlawful bodily injury, or the specified threat of future retaliation, or known or reasonably knowable incapacity to consent from a mental disorder or developmental or physical disability. Future-retaliation branches require a reasonable possibility the threat will be carried out. The force/fear and retaliation alternatives must be against the person's will.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1016"
+    ]
+  },
+  {
+    "id": "ca-pen-287-d-2",
+    "lawCode": "PEN",
+    "code": "287(d)(2)",
+    "title": "Oral copulation: acting in concert, child under 14",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting oral copulation against the will of a child under 14 through force or fear of immediate unlawful bodily injury. Future-retaliation branches require a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 10, 12 or 14 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1016"
+    ]
+  },
+  {
+    "id": "ca-pen-287-d-3",
+    "lawCode": "PEN",
+    "code": "287(d)(3)",
+    "title": "Oral copulation: acting in concert, minor age 14 or older",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting oral copulation against the will of a minor at least 14 and under 18 through force or fear of immediate unlawful bodily injury. Future-retaliation branches require a reasonable possibility the threat will be carried out.",
+    "penalty": "Felony: 8, 10 or 12 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation; aiding and abetting requires the applicable knowledge and intent, and the charged coercion or incapacity must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1016"
+    ]
+  },
+  {
+    "id": "ca-pen-287-f",
+    "lawCode": "PEN",
+    "code": "287(f)",
+    "title": "Oral copulation: person unconscious of the act",
+    "summary": "Oral copulation when the person is unconscious of its nature and the defendant knows this. The statutory definition includes sleep, unawareness and specified fraud about the act or a claimed professional purpose.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge that the person is unconscious of the nature of the act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1018"
+    ]
+  },
+  {
+    "id": "ca-pen-287-g",
+    "lawCode": "PEN",
+    "code": "287(g)",
+    "title": "Oral copulation: person incapable of legal consent",
+    "summary": "Oral copulation when a mental disorder or developmental or physical disability prevents legal consent, and the defendant knows or reasonably should know this. Disability alone does not prove incapacity; the separate shared-facility branch is in subdivision (h).",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know of the incapacity to consent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1019"
+    ]
+  },
+  {
+    "id": "ca-pen-287-h",
+    "lawCode": "PEN",
+    "code": "287(h)",
+    "title": "Oral copulation: incapacity with both people confined in a treatment facility",
+    "summary": "Oral copulation when the person cannot legally consent because of a mental disorder or developmental or physical disability, the defendant knows or reasonably should know this, and both are confined in a qualifying mental-health treatment facility. Incapacity must be proved, not assumed from disability.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge or reason to know of incapacity; both people must be confined in the specified kind of facility.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1020"
+    ]
+  },
+  {
+    "id": "ca-pen-287-i",
+    "lawCode": "PEN",
+    "code": "287(i)",
+    "title": "Oral copulation: person prevented from resisting by intoxication",
+    "summary": "Oral copulation when an intoxicating, anesthetic or controlled substance prevents the person from resisting, and the defendant knows or reasonably should know this. Being intoxicated alone is not the complete element.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge or reason to know that the substance prevents resistance.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1017"
+    ]
+  },
+  {
+    "id": "ca-pen-287-j",
+    "lawCode": "PEN",
+    "code": "287(j)",
+    "title": "Oral copulation: fraudulent impersonation of a known person",
+    "summary": "Oral copulation when the person submits believing the defendant is someone else known to them, and the defendant intentionally induced that mistaken identity by artifice, pretense or concealment.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to induce the mistaken belief about identity.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1021"
+    ]
+  },
+  {
+    "id": "ca-pen-287-k",
+    "lawCode": "PEN",
+    "code": "287(k)",
+    "title": "Oral copulation: threatened official arrest, incarceration or deportation",
+    "summary": "Oral copulation against the person's will by threatening official authority to arrest, incarcerate or deport them or another, when they reasonably believe the defendant is a public official. The defendant need not actually hold that office.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 287(m) also permits an additional fine up to $70, subject to ability to pay; this is not a total financial ceiling. Section 667.6 can add qualifying prior-conviction enhancements and separate consecutive terms; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional coercion by the specified official-authority threat; the person's belief must be reasonable.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1015"
+    ]
+  },
+  {
+    "id": "ca-pen-289-a-1-c",
+    "lawCode": "PEN",
+    "code": "289(a)(1)(C)",
+    "title": "Sexual penetration: force or fear, minor age 14 or older",
+    "summary": "Against the will of a minor at least 14 and under 18, through force, violence, duress, menace or fear of immediate unlawful bodily injury. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 6, 8 or 10 years in state prison. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1045"
+    ]
+  },
+  {
+    "id": "ca-pen-289-a-2",
+    "lawCode": "PEN",
+    "code": "289(a)(2)",
+    "title": "Sexual penetration: threat of future retaliation",
+    "summary": "Against the person's will through a threat of future kidnapping, false imprisonment, extreme pain, serious bodily injury or death that has a reasonable possibility of being carried out. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1045"
+    ]
+  },
+  {
+    "id": "ca-pen-289-b",
+    "lawCode": "PEN",
+    "code": "289(b)",
+    "title": "Sexual penetration: person incapable of legal consent",
+    "summary": "A mental disorder or developmental or physical disability prevents legal consent, and the defendant knows or reasonably should know this. Incapacity must be proved, not assumed from disability. The shared-facility branch is separate. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1049"
+    ]
+  },
+  {
+    "id": "ca-pen-289-c",
+    "lawCode": "PEN",
+    "code": "289(c)",
+    "title": "Sexual penetration: incapacity with both people confined in a treatment facility",
+    "summary": "The person cannot legally consent because of the specified mental disorder or disability, this is known or reasonably should be known, and both people are confined in a qualifying mental-health treatment facility. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. A fine up to $1,000 for a misdemeanor or $10,000 for a felony may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1050"
+    ]
+  },
+  {
+    "id": "ca-pen-289-d",
+    "lawCode": "PEN",
+    "code": "289(d)",
+    "title": "Sexual penetration: person unconscious of the act",
+    "summary": "The person is unconscious of the nature of the act and the defendant knows this. This includes sleep, unawareness and the specified fraud about the act or a claimed professional purpose. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1048"
+    ]
+  },
+  {
+    "id": "ca-pen-289-e",
+    "lawCode": "PEN",
+    "code": "289(e)",
+    "title": "Sexual penetration: person prevented from resisting by intoxication",
+    "summary": "An intoxicating, anesthetic or controlled substance prevents resistance, and this is known or reasonably should be known by the defendant. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1047"
+    ]
+  },
+  {
+    "id": "ca-pen-289-f",
+    "lawCode": "PEN",
+    "code": "289(f)",
+    "title": "Sexual penetration: fraudulent impersonation of a known person",
+    "summary": "The person submits because the defendant intentionally induced a false belief that the defendant is someone else known to that person. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1051"
+    ]
+  },
+  {
+    "id": "ca-pen-289-g",
+    "lawCode": "PEN",
+    "code": "289(g)",
+    "title": "Sexual penetration: threatened official arrest, incarceration or deportation",
+    "summary": "The act is against the person's will through a threat of official arrest, incarceration or deportation of them or another. The person reasonably believes the defendant is a public official; actual official status is not required. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Section 667.6 can add qualifying prior-conviction enhancements and separate consecutive terms; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1045"
+    ]
+  },
+  {
+    "id": "ca-pen-289-h",
+    "lawCode": "PEN",
+    "code": "289(h)",
+    "title": "Sexual penetration: person under 18",
+    "summary": "Intentional participation with a person under 18, except where section 288 applies. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison under section 18, or misdemeanor up to 364 days in county jail. A fine up to $1,000 for a misdemeanor or $10,000 for a felony may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:288",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1102"
+    ]
+  },
+  {
+    "id": "ca-pen-289-i",
+    "lawCode": "PEN",
+    "code": "289(i)",
+    "title": "Sexual penetration: defendant over 21 and person under 16",
+    "summary": "Intentional participation by a defendant over 21 with someone under 16, except where section 288 applies. Over 21 is distinct from 21 or older. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:288",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1101"
+    ]
+  },
+  {
+    "id": "ca-pen-289-j",
+    "lawCode": "PEN",
+    "code": "289(j)",
+    "title": "Sexual penetration: child under 14 and age gap over ten years",
+    "summary": "Intentional participation with a child under 14 who is more than ten years younger than the defendant. Sexual penetration means the penetration specified in section 289(k), for sexual arousal, gratification or abuse; it includes the defined foreign or unknown objects.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual arousal, gratification or abuse purpose; the charged age, coercion, knowledge or intentional deception requirement must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1100"
+    ]
+  },
+  {
+    "id": "ca-pen-264-1-a",
+    "lawCode": "PEN",
+    "code": "264.1(a)",
+    "title": "Rape or sexual penetration in concert: ordinary branch",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting rape under section 261 or sexual penetration under section 289, by force or violence against the person's will. The age-specific branches carry different terms.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. The in-concert allegation must be charged and proved or admitted. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation with the knowledge and intent required for direct commission or aiding and abetting.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:261",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:289",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:261": "2026-01-01",
+      "PEN:264.1": "2022-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1001",
+      "1046"
+    ]
+  },
+  {
+    "id": "ca-pen-264-1-b-1",
+    "lawCode": "PEN",
+    "code": "264.1(b)(1)",
+    "title": "Rape or sexual penetration in concert: child under 14",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting rape under section 261 or sexual penetration under section 289, by force or violence against the person's will. The victim must be under 14.",
+    "penalty": "Felony: 10, 12 or 14 years in state prison. The in-concert allegation must be charged and proved or admitted. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation with the knowledge and intent required for direct commission or aiding and abetting.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:261",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:289",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:261": "2026-01-01",
+      "PEN:264.1": "2022-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1001",
+      "1046"
+    ]
+  },
+  {
+    "id": "ca-pen-264-1-b-2",
+    "lawCode": "PEN",
+    "code": "264.1(b)(2)",
+    "title": "Rape or sexual penetration in concert: minor age 14 or older",
+    "summary": "Voluntarily acting together with another person, personally committing or aiding and abetting rape under section 261 or sexual penetration under section 289, by force or violence against the person's will. The victim must be at least 14 and under 18.",
+    "penalty": "Felony: 7, 9 or 11 years in state prison. The in-concert allegation must be charged and proved or admitted. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Voluntary concerted participation with the knowledge and intent required for direct commission or aiding and abetting.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:261",
+      "PEN:269",
+      "PEN:288.7",
+      "PEN:289",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:261": "2026-01-01",
+      "PEN:264.1": "2022-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1001",
+      "1046"
+    ]
+  },
+  {
+    "id": "ca-pen-269-a",
+    "lawCode": "PEN",
+    "code": "269(a)",
+    "title": "Aggravated sexual assault of a child under 14",
+    "summary": "Committing one of the listed coercive rape, in-concert rape/penetration, sodomy, oral-copulation or sexual-penetration offenses against a child under 14 who is at least seven years younger than the defendant. The exact predicate in 269(a)(1)-(5) must be established.",
+    "penalty": "Felony: 15 years to life in state prison. Separate victims or separate occasions require consecutive terms under 269(c) and 667.6(d). Parole is not guaranteed. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "The required mental state of the specific listed sexual offense, plus the statutory victim age and age difference.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:261",
+      "PEN:264.1",
+      "PEN:286",
+      "PEN:287",
+      "PEN:289",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:261": "2026-01-01",
+      "PEN:264.1": "2022-01-01",
+      "PEN:269": "2019-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:287": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 269(a)(1)",
+      "PEN 269(a)(1)",
+      "Penal Code 269(a)(1)",
+      "PC 269(a)(2)",
+      "PEN 269(a)(2)",
+      "Penal Code 269(a)(2)",
+      "PC 269(a)(3)",
+      "PEN 269(a)(3)",
+      "Penal Code 269(a)(3)",
+      "PC 269(a)(4)",
+      "PEN 269(a)(4)",
+      "Penal Code 269(a)(4)",
+      "PC 269(a)(5)",
+      "PEN 269(a)(5)",
+      "Penal Code 269(a)(5)"
+    ],
+    "calcrim": [
+      "1123"
+    ]
+  },
+  {
+    "id": "ca-pen-288-b-1",
+    "lawCode": "PEN",
+    "code": "288(b)(1)",
+    "title": "Lewd act with child under 14 by force or fear",
+    "summary": "Willfully committing a lewd act on or with a child under 14, with sexual intent, using force, violence, duress, menace or fear of immediate unlawful bodily injury.",
+    "penalty": "Felony: 5, 8 or 10 years in state prison. Section 288(e) permits an additional fine up to $10,000; other monetary obligations may apply. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful lewd act with intent to arouse, appeal to or gratify sexual desires; any caretaker, dependency and coercion elements also apply.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1111"
+    ]
+  },
+  {
+    "id": "ca-pen-288-b-2",
+    "lawCode": "PEN",
+    "code": "288(b)(2)",
+    "title": "Caretaker lewd act with a dependent person by force or fear",
+    "summary": "A statutory caretaker committing a lewd act with a dependent person, with sexual intent, using the specified force, duress, menace or fear. Sections 288(f)-(h) define the actor and dependency requirements and exclude a spouse or equivalent domestic partner.",
+    "penalty": "Felony: 5, 8 or 10 years in state prison. Section 288(e) permits an additional fine up to $10,000; other monetary obligations may apply. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful lewd act with intent to arouse, appeal to or gratify sexual desires; any caretaker, dependency and coercion elements also apply.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1060"
+    ]
+  },
+  {
+    "id": "ca-pen-288-c-2",
+    "lawCode": "PEN",
+    "code": "288(c)(2)",
+    "title": "Caretaker lewd act with a dependent person",
+    "summary": "A statutory caretaker committing a lewd act with a dependent person with sexual intent. Sections 288(f)-(h) define the actor and dependency requirements and exclude a spouse or equivalent domestic partner.",
+    "penalty": "Wobbler: felony 1, 2 or 3 years in state prison, or misdemeanor up to 364 days in county jail. A fine up to $1,000 for a misdemeanor or $10,000 for a felony may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful lewd act with intent to arouse, appeal to or gratify sexual desires; any caretaker, dependency and coercion elements also apply.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1060"
+    ]
+  },
+  {
+    "id": "ca-pen-288-2-a-1",
+    "lawCode": "PEN",
+    "code": "288.2(a)(1)",
+    "title": "Sending harmful matter to a minor: depicting minors in sexual conduct",
+    "summary": "Knowingly sending, distributing, exhibiting or offering the specified harmful matter to a person known, reasonably knowable or believed to be a minor, with both sexual-arousal intent and intent to engage in the specified sexual conduct or intimate touching. The two branches differ on whether the matter depicts minors in sexual conduct. Statutory legitimate education/science defenses and carrier protections remain applicable.",
+    "penalty": "Wobbler: felony 2, 3 or 5 years in state prison, or misdemeanor up to 364 days in county jail. A fine up to $1,000 for a misdemeanor or $10,000 for a felony may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the distribution; actual, constructive or believed minority; both required sexual purposes.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:311.4",
+      "PEN:313",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:288.2": "2014-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:311.4": "2025-01-01",
+      "PEN:313": "1995-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1140"
+    ]
+  },
+  {
+    "id": "ca-pen-288-2-a-2",
+    "lawCode": "PEN",
+    "code": "288.2(a)(2)",
+    "title": "Sending harmful matter to a minor: other harmful matter",
+    "summary": "Knowingly sending, distributing, exhibiting or offering the specified harmful matter to a person known, reasonably knowable or believed to be a minor, with both sexual-arousal intent and intent to engage in the specified sexual conduct or intimate touching. The two branches differ on whether the matter depicts minors in sexual conduct. Statutory legitimate education/science defenses and carrier protections remain applicable.",
+    "penalty": "Wobbler: felony 16 months, 2 years or 3 years in state prison, or misdemeanor up to 364 days in county jail. A fine up to $1,000 for a misdemeanor or $10,000 for a felony may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the distribution; actual, constructive or believed minority; both required sexual purposes.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:311.4",
+      "PEN:313",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:288.2": "2014-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:311.4": "2025-01-01",
+      "PEN:313": "1995-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1140"
+    ]
+  },
+  {
+    "id": "ca-pen-288-4-a-1",
+    "lawCode": "PEN",
+    "code": "288.4(a)(1)",
+    "title": "Arranging a meeting with a minor for lewd purposes",
+    "summary": "Arranging a meeting with a minor or a person believed to be a minor, motivated by the specified sexual interest in children, for genital/pubic/rectal exposure or lewd conduct. Going to the meeting is a separate branch.",
+    "penalty": "Ordinarily misdemeanor: up to 364 days in county jail and/or a fine up to $5,000. A qualifying prior conviction listed in 290(c) makes the 288.4(a)(2) branch a felony, with 16 months, 2 years or 3 years in state prison under section 18. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The specified sexual motivation and lewd purpose; the intended participant may be an adult believed to be a minor.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:288.4": "2007-10-13",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [
+      "PC 288.4(a)(2)",
+      "PEN 288.4(a)(2)",
+      "Penal Code 288.4(a)(2)"
+    ],
+    "calcrim": [
+      "1125"
+    ]
+  },
+  {
+    "id": "ca-pen-288-4-b",
+    "lawCode": "PEN",
+    "code": "288.4(b)",
+    "title": "Going to an arranged meeting with a minor for lewd purposes",
+    "summary": "Arranging the meeting described in 288.4(a)(1), with its sexual motivation and lewd purpose, and going to the arranged place at or about the arranged time. The intended participant may be an adult believed to be a minor.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Sexual motivation and lewd purpose as in 288.4(a)(1), plus attendance at the arranged place and time.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:288.4": "2007-10-13",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1126"
+    ]
+  },
+  {
+    "id": "ca-pen-288-5-a",
+    "lawCode": "PEN",
+    "code": "288.5(a)",
+    "title": "Continuous sexual abuse of a child",
+    "summary": "A person residing with or having recurring access to a child under 14 commits at least three qualifying acts of substantial sexual conduct or lewd conduct over a period of at least three months. Section 288.5(c) restricts overlapping charges involving the same child and charged period.",
+    "penalty": "Felony: 6, 12 or 16 years in state prison. A fine up to $10,000 may also be imposed under section 672. Sections 667.6 and 667.61 can require consecutive terms or life sentences, including life without parole for qualifying allegations; the base term is not an overall maximum. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "The mental state of the qualifying substantial sexual conduct or lewd acts; the access, age, duration and number-of-acts requirements must be proved.",
+    "supportingKeys": [
+      "PEN:1203.066",
+      "PEN:17",
+      "PEN:288",
+      "PEN:290",
+      "PEN:667.6",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1203.066": "2022-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:288.5": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:667.6": "2022-01-01",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1120"
+    ]
+  },
+  {
+    "id": "ca-pen-288-7-a",
+    "lawCode": "PEN",
+    "code": "288.7(a)",
+    "title": "Adult sexual conduct with a child age ten or younger: sexual intercourse or sodomy",
+    "summary": "A defendant age 18 or older engages in sexual intercourse or sodomy with a child age ten or younger. These age thresholds differ from the under-14 and age-gap statutes.",
+    "penalty": "Felony: 25 years to life in state prison. Parole is not guaranteed. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual conduct; defendant age 18 or older and child age ten or younger must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:286",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:288.7": "2006-09-20",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1127"
+    ]
+  },
+  {
+    "id": "ca-pen-288-7-b",
+    "lawCode": "PEN",
+    "code": "288.7(b)",
+    "title": "Adult sexual conduct with a child age ten or younger: oral copulation or sexual penetration",
+    "summary": "A defendant age 18 or older engages in oral copulation or sexual penetration with a child age ten or younger. These age thresholds differ from the under-14 and age-gap statutes.",
+    "penalty": "Felony: 15 years to life in state prison. Parole is not guaranteed. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional sexual conduct; defendant age 18 or older and child age ten or younger must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:287",
+      "PEN:289",
+      "PEN:290",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:287": "2019-01-01",
+      "PEN:288.7": "2006-09-20",
+      "PEN:289": "2013-09-09",
+      "PEN:290": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1128"
+    ]
+  },
+  {
+    "id": "ca-pen-266h-a",
+    "lawCode": "PEN",
+    "code": "266h(a)",
+    "title": "Pimping: ordinary branch",
+    "summary": "Knowingly deriving support from another person's prostitution earnings or specified advances, or soliciting or receiving compensation for soliciting for that person. The minor branches carry their own age requirements.",
+    "penalty": "Felony: 3, 4 or 6 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the prostitution activity and the charged support/solicitation conduct.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266h": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1150"
+    ]
+  },
+  {
+    "id": "ca-pen-266h-b-1",
+    "lawCode": "PEN",
+    "code": "266h(b)(1)",
+    "title": "Pimping: minor age 16 or 17",
+    "summary": "Knowingly deriving support from another person's prostitution earnings or specified advances, or soliciting or receiving compensation for soliciting for that person. The other person must be minor age 16 or 17.",
+    "penalty": "Felony: 3, 4 or 6 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the prostitution activity and the charged support/solicitation conduct.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266h": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1150"
+    ]
+  },
+  {
+    "id": "ca-pen-266h-b-2",
+    "lawCode": "PEN",
+    "code": "266h(b)(2)",
+    "title": "Pimping: minor under 16",
+    "summary": "Knowingly deriving support from another person's prostitution earnings or specified advances, or soliciting or receiving compensation for soliciting for that person. The other person must be minor under 16.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the prostitution activity and the charged support/solicitation conduct.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266h": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1150"
+    ]
+  },
+  {
+    "id": "ca-pen-266i-a",
+    "lawCode": "PEN",
+    "code": "266i(a)",
+    "title": "Pandering: ordinary branch",
+    "summary": "Procuring, inducing or encouraging prostitution through one of the acts specified in 266i(a)(1)-(6), including procuring a place, specified persuasion or coercion, or a payment arrangement. This is distinct from personally selling sexual services. The minor branches carry their own age requirements.",
+    "penalty": "Felony: 3, 4 or 6 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to influence, procure or facilitate prostitution through the charged statutory act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266i": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [
+      "PC 266i(a)(1)",
+      "PEN 266i(a)(1)",
+      "Penal Code 266i(a)(1)",
+      "PC 266i(a)(2)",
+      "PEN 266i(a)(2)",
+      "Penal Code 266i(a)(2)",
+      "PC 266i(a)(3)",
+      "PEN 266i(a)(3)",
+      "Penal Code 266i(a)(3)",
+      "PC 266i(a)(4)",
+      "PEN 266i(a)(4)",
+      "Penal Code 266i(a)(4)",
+      "PC 266i(a)(5)",
+      "PEN 266i(a)(5)",
+      "Penal Code 266i(a)(5)",
+      "PC 266i(a)(6)",
+      "PEN 266i(a)(6)",
+      "Penal Code 266i(a)(6)"
+    ],
+    "calcrim": [
+      "1151"
+    ]
+  },
+  {
+    "id": "ca-pen-266i-b-1",
+    "lawCode": "PEN",
+    "code": "266i(b)(1)",
+    "title": "Pandering: minor age 16 or 17",
+    "summary": "Procuring, inducing or encouraging prostitution through one of the acts specified in 266i(a)(1)-(6), including procuring a place, specified persuasion or coercion, or a payment arrangement. This is distinct from personally selling sexual services. The other person must be minor age 16 or 17.",
+    "penalty": "Felony: 3, 4 or 6 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to influence, procure or facilitate prostitution through the charged statutory act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266i": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [
+      "PC 266i(a)(1)",
+      "PEN 266i(a)(1)",
+      "Penal Code 266i(a)(1)",
+      "PC 266i(a)(2)",
+      "PEN 266i(a)(2)",
+      "Penal Code 266i(a)(2)",
+      "PC 266i(a)(3)",
+      "PEN 266i(a)(3)",
+      "Penal Code 266i(a)(3)",
+      "PC 266i(a)(4)",
+      "PEN 266i(a)(4)",
+      "Penal Code 266i(a)(4)",
+      "PC 266i(a)(5)",
+      "PEN 266i(a)(5)",
+      "Penal Code 266i(a)(5)",
+      "PC 266i(a)(6)",
+      "PEN 266i(a)(6)",
+      "Penal Code 266i(a)(6)"
+    ],
+    "calcrim": [
+      "1151"
+    ]
+  },
+  {
+    "id": "ca-pen-266i-b-2",
+    "lawCode": "PEN",
+    "code": "266i(b)(2)",
+    "title": "Pandering: minor under 16",
+    "summary": "Procuring, inducing or encouraging prostitution through one of the acts specified in 266i(a)(1)-(6), including procuring a place, specified persuasion or coercion, or a payment arrangement. This is distinct from personally selling sexual services. The other person must be minor under 16.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison. Section 266k(a) permits an additional fine up to $5,000; this is not the total financial ceiling. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to influence, procure or facilitate prostitution through the charged statutory act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266i": "2011-01-01",
+      "PEN:266k": "2015-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [
+      "PC 266i(a)(1)",
+      "PEN 266i(a)(1)",
+      "Penal Code 266i(a)(1)",
+      "PC 266i(a)(2)",
+      "PEN 266i(a)(2)",
+      "Penal Code 266i(a)(2)",
+      "PC 266i(a)(3)",
+      "PEN 266i(a)(3)",
+      "Penal Code 266i(a)(3)",
+      "PC 266i(a)(4)",
+      "PEN 266i(a)(4)",
+      "Penal Code 266i(a)(4)",
+      "PC 266i(a)(5)",
+      "PEN 266i(a)(5)",
+      "Penal Code 266i(a)(5)",
+      "PC 266i(a)(6)",
+      "PEN 266i(a)(6)",
+      "Penal Code 266i(a)(6)"
+    ],
+    "calcrim": [
+      "1151"
+    ]
+  },
+  {
+    "id": "ca-pen-266j",
+    "lawCode": "PEN",
+    "code": "266j",
+    "title": "Providing a child under 16 for a lewd act",
+    "summary": "Intentionally providing, transporting, making available or offering a child under 16 to another person for a lewd act defined in section 288, or causing, inducing or persuading the child to engage in that act with another person.",
+    "penalty": "Felony: 3, 6 or 8 years in state prison and a fine up to $15,000. Section 266k(b) permits an additional fine up to $25,000. Adult base penalties are shown. Registration, restitution, assessments and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional procurement/provision for the specified lewd purpose, or causing, inducing or persuading the child to engage in that act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:266k",
+      "PEN:288",
+      "PEN:290"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:266j": null,
+      "PEN:266k": "2015-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:290": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1152"
+    ]
+  }
+]

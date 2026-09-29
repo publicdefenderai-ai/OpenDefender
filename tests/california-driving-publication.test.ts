@@ -1,3 +1,4 @@
+import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from "vitest";
 import additions from "../shared/california-driving-vessels-additions.json";
 import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
@@ -10,7 +11,7 @@ import {buildCaliforniaSourceDatabaseSeed} from "../server/data/california-sourc
 const row=(code:string)=>additions.find(a=>a.code===code)!;
 describe('California driving/vessel publication',()=>{
   it('accounts for the bounded batch and retains unrelated instruction gaps',()=>{
-    expect(validateDrivingPublication()).toEqual({additions:21,primarySections:11,reusedSections:13,newSections:18,newVersions:18,promotedResearchSections:17,configuredSelectable:319});
+    expect(validateDrivingPublication()).toEqual({additions:21,primarySections:11,reusedSections:13,newSections:18,newVersions:18,promotedResearchSections:17,configuredSelectable:CA_CATALOG_COUNTS.configured});
     const review=readDrivingPublication();
     expect(review.crosswalk).toHaveLength(30);
     expect(review.crosswalk.find(r=>r.instruction==='2140')?.chargeIds).toHaveLength(2);
