@@ -10,7 +10,7 @@ const byCode = (code: string) => additions.find(a=>a.code===code)!;
 
 describe("California drug batch and independent miss detection", () => {
   it("accounts for the whole chapter, independent out-of-chapter probes and explicit gaps", () => {
-    expect(validateCaliforniaControlledSubstancesReview()).toEqual({additions:27,candidateSections:104,reviewedPrimarySections:20,existingPrimarySections:6,remainingResearchSections:77,absentBenchmarkSections:1,benchmarkInstructions:46,reusedSections:23,newSections:98,newVersions:99,configuredSelectable:281});
+    expect(validateCaliforniaControlledSubstancesReview()).toEqual({additions:27,candidateSections:104,reviewedPrimarySections:20,existingPrimarySections:6,remainingResearchSections:77,absentBenchmarkSections:1,benchmarkInstructions:46,reusedSections:23,newSections:98,newVersions:99,configuredSelectable:291});
     const review = readCaliforniaControlledSubstancesReview();
     for (const key of ["HSC:11358","HSC:11359","HSC:11360","HSC:11366.8","HSC:11370.6","HSC:11383","HSC:11383.5"]) expect(review.sections.find(s=>s.key===key)?.status).toBe("substantive_research_open");
     expect(review.sections.find(s=>s.key==="BPC:4326")).toMatchObject({status:"benchmark_source_absent",versions:[],evidence:null});

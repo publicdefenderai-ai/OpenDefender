@@ -1,0 +1,1244 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_vehicle_identification_publication_not_family_completeness",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "acquisitionSha256": "c86f8c9cdca82d47ede478e1d6ef85921fd260bb84d52a6f0580151b0a27a766",
+  "previousReviewSha256": "e739b15b50b12416b5d03a5467ce2159afc060119b028fb97f9afde672b08730",
+  "limits": [
+    "Publication covers only the ten named branches; owner/passenger duties and other gaps remain expressly open.",
+    "No sentencing or enforceability uncertainty is silently treated as a minor-offense deferral.",
+    "Pins and unchanged-source comparison are required for promoted research sources; acquisition time is never renewed by replay.",
+    "Statutes govern punishment. Instruction matches are bounded and do not establish complete coverage."
+  ],
+  "records": [
+    {
+      "id": "ca-veh-10801",
+      "primaryKey": "VEH:10801",
+      "definitionSha256": "f837b58651013c1641c1fe36d5ffe3768a25934f8b17baa505098f9490e40b3f",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10801",
+          "versions": [
+            {
+              "versionId": "id_15218b76-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "2c4a2972ff99c143b86d77843b036c183f7b3d924261ad69c22907f2e16ff48d"
+            }
+          ]
+        },
+        {
+          "key": "VEH:250",
+          "versions": [
+            {
+              "versionId": "id_087bc952-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "7a7cb4497870c32a537c189f95ea81423c70bd3639b03f64b0848b9f06c99ce6"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10801",
+        "versionId": "id_15218b76-61a6-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 492,
+        "text": "Any person who knowingly and intentionally owns or operates a chop shop is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, three, or four years, or by a fine of not more than fifty thousand dollars ($50,000), or by both the fine and imprisonment, or by up to one year in the county jail, or by a fine of not more than one thousand dollars ($1,000), or by both the fine and imprisonment."
+      }
+    },
+    {
+      "id": "ca-veh-10802",
+      "primaryKey": "VEH:10802",
+      "definitionSha256": "43932d6f5557679086f37ecd548a4bc3a0dc4840361e727430b1ea20133997a8",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10802",
+          "versions": [
+            {
+              "versionId": "id_169bcf68-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "f93a493aa943e2d97c682c034d98847d06de6382831a9183fdbe687ce3353cb9"
+            }
+          ]
+        },
+        {
+          "key": "VEH:671",
+          "versions": [
+            {
+              "versionId": "id_08c6b572-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "0849b686ce840554e8320a4f5e22340bbb934141bda2b7f790697c71cafabf1e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10802",
+        "versionId": "id_169bcf68-61a6-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 756,
+        "text": "Any person who knowingly alters, counterfeits, defaces, destroys, disguises, falsifies, forges, obliterates, or removes vehicle identification numbers, with the intent to misrepresent the identity or prevent the identification of motor vehicles or motor vehicle parts, for the purpose of sale, transfer, import, or export, is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, or two or three years, or by a fine of not more than twenty-five thousand dollars ($25,000), or by both the fine and imprisonment, or by up to one year in the county jail, or by a fine of not more than one thousand dollars ($1,000), or by both the fine and imprisonment."
+      }
+    },
+    {
+      "id": "ca-veh-10803-a",
+      "primaryKey": "VEH:10803",
+      "definitionSha256": "eb67fafea17b5bc03d142c0d1c015d119b6e77260d4ed475751f6ee1927bc414",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10803",
+          "versions": [
+            {
+              "versionId": "id_1809421a-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "51c96c3561bfdbf9fffb88300451de35a9eb7303414996986cd605e1226c7dbf"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10804",
+          "versions": [
+            {
+              "versionId": "id_0c69575f-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "9b649ead6ffb02204ea4d43058a4da26dc626a307fb0b427a5948e716837822b"
+            }
+          ]
+        },
+        {
+          "key": "VEH:671",
+          "versions": [
+            {
+              "versionId": "id_08c6b572-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "0849b686ce840554e8320a4f5e22340bbb934141bda2b7f790697c71cafabf1e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10803",
+        "versionId": "id_1809421a-61a6-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 1855,
+        "text": "(a) Any person who buys with the intent to resell, disposes of, sells, or transfers, more than one motor vehicle or parts from more than one motor vehicle, with the knowledge that the vehicle identification numbers of the motor vehicles or motor vehicle parts have been altered, counterfeited, defaced, destroyed, disguised, falsified, forged, obliterated, or removed for the purpose of misrepresenting the identity or preventing the identification of the motor vehicles or motor vehicle parts, is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years, or by a fine of not more than sixty thousand dollars ($60,000), or by both the fine and imprisonment, or by up to one year in the county jail, or by a fine of not more than one thousand dollars ($1,000), or by both the fine and imprisonment. (b) Any person who possesses, for the purpose of sale, transfer, import, or export, more than one motor vehicle or parts from more than one motor vehicle, with the knowledge that the vehicle identification numbers of the motor vehicles or motor vehicle parts have been altered, counterfeited, defaced, destroyed, disguised, falsified, forged, obliterated, or removed for the purpose of misrepresenting the identity or preventing the identification of the motor vehicles or motor vehicle parts, is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, or two or three years, or by a fine of not more than thirty thousand dollars ($30,000), or by both the fine and imprisonment, or by imprisonment in the county jail not exceeding one year or by a fine of not more than one thousand dollars ($1,000) or by both the fine and imprisonment."
+      }
+    },
+    {
+      "id": "ca-veh-10803-b",
+      "primaryKey": "VEH:10803",
+      "definitionSha256": "3ee41f2b21601cdb425a427e195f1b3fa4f6baddf8a09a266a25d96e52ca0547",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10803",
+          "versions": [
+            {
+              "versionId": "id_1809421a-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "51c96c3561bfdbf9fffb88300451de35a9eb7303414996986cd605e1226c7dbf"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10804",
+          "versions": [
+            {
+              "versionId": "id_0c69575f-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "9b649ead6ffb02204ea4d43058a4da26dc626a307fb0b427a5948e716837822b"
+            }
+          ]
+        },
+        {
+          "key": "VEH:671",
+          "versions": [
+            {
+              "versionId": "id_08c6b572-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "0849b686ce840554e8320a4f5e22340bbb934141bda2b7f790697c71cafabf1e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10803",
+        "versionId": "id_1809421a-61a6-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 1855,
+        "text": "(a) Any person who buys with the intent to resell, disposes of, sells, or transfers, more than one motor vehicle or parts from more than one motor vehicle, with the knowledge that the vehicle identification numbers of the motor vehicles or motor vehicle parts have been altered, counterfeited, defaced, destroyed, disguised, falsified, forged, obliterated, or removed for the purpose of misrepresenting the identity or preventing the identification of the motor vehicles or motor vehicle parts, is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for two, four, or six years, or by a fine of not more than sixty thousand dollars ($60,000), or by both the fine and imprisonment, or by up to one year in the county jail, or by a fine of not more than one thousand dollars ($1,000), or by both the fine and imprisonment. (b) Any person who possesses, for the purpose of sale, transfer, import, or export, more than one motor vehicle or parts from more than one motor vehicle, with the knowledge that the vehicle identification numbers of the motor vehicles or motor vehicle parts have been altered, counterfeited, defaced, destroyed, disguised, falsified, forged, obliterated, or removed for the purpose of misrepresenting the identity or preventing the identification of the motor vehicles or motor vehicle parts, is guilty of a public offense and, upon conviction, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, or two or three years, or by a fine of not more than thirty thousand dollars ($30,000), or by both the fine and imprisonment, or by imprisonment in the county jail not exceeding one year or by a fine of not more than one thousand dollars ($1,000) or by both the fine and imprisonment."
+      }
+    },
+    {
+      "id": "ca-veh-10750-a",
+      "primaryKey": "VEH:10750",
+      "definitionSha256": "675ad1bbb325b82468296cd124ef2e29bf64891b2e1ade1b7187277500eb875f",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "VEH:10750",
+          "versions": [
+            {
+              "versionId": "id_0c664a11-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "ebe6982347b616c86a7434f0cfb9f714b2d62a60ef552f68c140a634197afacf"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.9",
+          "versions": [
+            {
+              "versionId": "id_158fdf5b-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "fa16e6d2f24cd84bc3e260f69d26eebb6b0e150097ecb1515891e62261afc20e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42002",
+          "versions": [
+            {
+              "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20"
+            }
+          ]
+        },
+        {
+          "key": "VEH:671",
+          "versions": [
+            {
+              "versionId": "id_08c6b572-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "0849b686ce840554e8320a4f5e22340bbb934141bda2b7f790697c71cafabf1e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10750",
+        "versionId": "id_0c664a11-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 685,
+        "text": "(a) No person shall intentionally deface, destroy, or alter the motor number, other distinguishing number, or identification mark of a vehicle required or employed for registration purposes without written authorization from the department, nor shall any person place or stamp any serial, motor, or other number or mark upon a vehicle, except one assigned thereto by the department. (b) This section does not prohibit the restoration by an owner of the original vehicle identification number when the restoration is authorized by the department, nor prevent any manufacturer from placing in the ordinary course of business numbers or marks upon new motor vehicles or new parts thereof."
+      }
+    },
+    {
+      "id": "ca-veh-10751-a",
+      "primaryKey": "VEH:10751",
+      "definitionSha256": "ab805b12a354ddaa30cebde127081f05443579a457a54325bb9c30cc8db3b72d",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "VEH:10751",
+          "versions": [
+            {
+              "versionId": "id_0c67d0b3-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "7d0aa57008b5dbfd26a894815f99f55609e0f82128f5e8704426e0fc58ce231d"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.9",
+          "versions": [
+            {
+              "versionId": "id_158fdf5b-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "fa16e6d2f24cd84bc3e260f69d26eebb6b0e150097ecb1515891e62261afc20e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42002",
+          "versions": [
+            {
+              "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20"
+            }
+          ]
+        },
+        {
+          "key": "VEH:671",
+          "versions": [
+            {
+              "versionId": "id_08c6b572-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "0849b686ce840554e8320a4f5e22340bbb934141bda2b7f790697c71cafabf1e"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10751",
+        "versionId": "id_0c67d0b3-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 5491,
+        "text": "(a) No person shall knowingly buy, sell, offer for sale, receive, or have in his or her possession, any vehicle, or component part thereof, from which any serial or identification number, including, but not limited to, any number used for registration purposes, that is affixed by the manufacturer to the vehicle or component part, in whatever manner deemed proper by the manufacturer, has been removed, defaced, altered, or destroyed, unless the vehicle or component part has attached thereto an identification number assigned or approved by the department in lieu of the manufacturer’s number. (b) Whenever a vehicle described in subdivision (a), including a vehicle assembled with any component part which is in violation of subdivision (a), comes into the custody of a peace officer, it shall be destroyed, sold, or otherwise disposed of under the conditions as provided in an order by the court having jurisdiction. No court order providing for disposition shall be issued unless the person from whom the property was seized, and all claimants to the property whose interest or title is on registration records in the Department of Motor Vehicles, are provided a postseizure hearing by the court having jurisdiction within 90 days after the seizure. This subdivision shall not apply with respect to a seized vehicle or component part used as evidence in any criminal action or proceeding. Nothing in this section shall, however, preclude the return of a seized vehicle or a component part to the owner by the seizing agency following presentation of satisfactory evidence of ownership and, if determined necessary, upon the assignment of an identification number to the vehicle or component part by the department. (c) Whenever a vehicle described in subdivision (a) comes into the custody of a peace officer, the person from whom the property was seized, and all claimants to the property whose interest or title is on registration records in the Department of Motor Vehicles, shall be notified within five days, excluding Saturdays, Sundays, and holidays, after the seizure, of the date, time, and place of the hearing required in subdivision (b). The notice shall contain the information specified in subdivision (d). (d) Whenever a peace officer seizes a vehicle described in subdivision (a), the person from whom the property was seized shall be provided a notice of impoundment of the vehicle which shall serve as a receipt and contain the following information: (1) Name and address of person from whom the property was seized. (2) A statement that the vehicle seized has been impounded for investigation of a violation of Section 10751 of the California Vehicle Code and that the property will be released upon a determination that the serial or identification number has not been removed, defaced, altered, or destroyed, or upon the presentation of satisfactory evidence of ownership of the vehicle or a component part, if no other person claims an interest in the property; otherwise, a hearing regarding the disposition of the vehicle shall take place in the proper court. (3) A statement that the person from whom the property was seized, and all claimants to the property whose interest or title is on registration records in the Department of Motor Vehicles, will receive written notification of the date, time, and place of the hearing within five days, excluding Saturdays, Sundays, and holidays, after the seizure. (4) Name and address of the law enforcement agency where evidence of ownership of the vehicle or component part may be presented. (5) A statement of the contents of Section 10751 of the Vehicle Code. (e) A hearing on the disposition of the property shall be held by the superior court within 90 days after the seizure. The hearing shall be before the court without a jury. A proceeding under this section is a limited civil case. (1) If the evidence reveals either that the serial or identification number has not been removed, defaced, altered, or destroyed or that the number has been removed, defaced, altered, or destroyed but satisfactory evidence of ownership has been presented to the seizing agency or court, the property shall be released to the person entitled thereto. Nothing in this section precludes the return of the vehicle or a component part to a good faith purchaser following presentation of satisfactory evidence of ownership thereof upon the assignment of an identification number to the vehicle or component part by the department. (2) If the evidence reveals that the identification number has been removed, defaced, altered, or destroyed, and satisfactory evidence of ownership has not been presented, the vehicle shall be destroyed, sold, or otherwise disposed of as provided by court order. (3) At the hearing, the seizing agency has the burden of establishing that the serial or identification number has been removed, defaced, altered, or destroyed and that no satisfactory evidence of ownership has been presented. (f) This section does not apply to a scrap metal processor engaged primarily in the acquisition, processing, and shipment of ferrous and nonferrous scrap, and who receives dismantled vehicles from licensed dismantlers, licensed junk collectors, or licensed junk dealers as scrap metal for the purpose of recycling the dismantled vehicles for their metallic content, the end product of which is the production of material for recycling and remelting purposes for steel mills, foundries, smelters, and refiners."
+      }
+    },
+    {
+      "id": "ca-veh-20002-b",
+      "primaryKey": "VEH:20002",
+      "definitionSha256": "8f775aed769824c4543469f1af6e1da50eed31f7b28b5df667d5c43bb93b1efa",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "VEH:20002",
+          "versions": [
+            {
+              "versionId": "id_0ee68ca6-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "077bd3beef2e2da0788a0a3d4a8e3dd682b1f6084db830a8ee6b98a88d451503"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:20002",
+        "versionId": "id_0ee68ca6-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 2362,
+        "text": "(a) The driver of any vehicle involved in an accident resulting only in damage to any property, including vehicles, shall immediately stop the vehicle at the nearest location that will not impede traffic or otherwise jeopardize the safety of other motorists. Moving the vehicle in accordance with this subdivision does not affect the question of fault. The driver shall also immediately do either of the following: (1) Locate and notify the owner or person in charge of that property of the name and address of the driver and owner of the vehicle involved and, upon locating the driver of any other vehicle involved or the owner or person in charge of any damaged property, upon being requested, present his or her driver’s license, and vehicle registration, to the other driver, property owner, or person in charge of that property. The information presented shall include the current residence address of the driver and of the registered owner. If the registered owner of an involved vehicle is present at the scene, he or she shall also, upon request, present his or her driver’s license information, if available, or other valid identification to the other involved parties. (2) Leave in a conspicuous place on the vehicle or other property damaged a written notice giving the name and address of the driver and of the owner of the vehicle involved and a statement of the circumstances thereof and shall without unnecessary delay notify the police department of the city wherein the collision occurred or, if the collision occurred in unincorporated territory, the local headquarters of the Department of the California Highway Patrol. (b) Any person who parks a vehicle which, prior to the vehicle again being driven, becomes a runaway vehicle and is involved in an accident resulting in damage to any property, attended or unattended, shall comply with the requirements of this section relating to notification and reporting and shall, upon conviction thereof, be liable to the penalties of this section for failure to comply with the requirements. (c) Any person failing to comply with all the requirements of this section is guilty of a misdemeanor and, upon conviction thereof, shall be punished by imprisonment in the county jail not exceeding six months, or by a fine not exceeding one thousand dollars ($1,000), or by both that imprisonment and fine."
+      }
+    },
+    {
+      "id": "ca-veh-10852",
+      "primaryKey": "VEH:10852",
+      "definitionSha256": "9af2f55e26db7f7b65e680bc34200bffdff0c33252b8478fab2bb8e3d2c9179f",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "VEH:10852",
+          "versions": [
+            {
+              "versionId": "id_0c6c64a9-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "e5e1ee1eda9e3e6f9b3dabfa7e35a41f3e64a89742c8816f34e318e47bd64133"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.9",
+          "versions": [
+            {
+              "versionId": "id_158fdf5b-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "fa16e6d2f24cd84bc3e260f69d26eebb6b0e150097ecb1515891e62261afc20e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42002",
+          "versions": [
+            {
+              "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10852",
+        "versionId": "id_0c6c64a9-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 227,
+        "text": "No person shall either individually or in association with one or more other persons, wilfully injure or tamper with any vehicle or the contents thereof or break or remove any part of a vehicle without the consent of the owner."
+      }
+    },
+    {
+      "id": "ca-veh-10854",
+      "primaryKey": "VEH:10854",
+      "definitionSha256": "3aeb54b0e9e6049a60a9c375a1492109fa40de8ed0e19bba9f203b0264dcff97",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10854",
+          "versions": [
+            {
+              "versionId": "id_0c6c64ad-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "3691ec74a305da6e42952bde9e007d0963a0af14449cd6c9b84c04c194eecb0f"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10854",
+        "versionId": "id_0c6c64ad-2921-11d9-a1bb-e0ce1cd664b1",
+        "start": 0,
+        "end": 467,
+        "text": "Every person having the storage, care, safe-keeping, custody, or possession of any vehicle of a type subject to registration under this code who, without the consent of the owner, takes, hires, runs, drives, or uses the vehicle or who takes or removes any part thereof is guilty of a misdemeanor and upon conviction shall be punished by a fine of not exceeding one thousand dollars ($1,000) or by imprisonment in the county jail for not exceeding one year or by both."
+      }
+    },
+    {
+      "id": "ca-veh-10501-a",
+      "primaryKey": "VEH:10501",
+      "definitionSha256": "05dae9af21231240c6303ec60fa4adeb9b8e66492ba8728e002c32fc04577932",
+      "status": "bounded_statutory_addition_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:672",
+          "versions": [
+            {
+              "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09"
+            }
+          ]
+        },
+        {
+          "key": "VEH:10501",
+          "versions": [
+            {
+              "versionId": "id_10d25592-61a6-11e0-8037-955a394cd808",
+              "contentSha256": "cb4742130958f96a4cde9035adfd3129bff1fa21cf9a8a5976ed2f743c5d6a41"
+            }
+          ]
+        },
+        {
+          "key": "VEH:40000.9",
+          "versions": [
+            {
+              "versionId": "id_158fdf5b-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "fa16e6d2f24cd84bc3e260f69d26eebb6b0e150097ecb1515891e62261afc20e"
+            }
+          ]
+        },
+        {
+          "key": "VEH:42002",
+          "versions": [
+            {
+              "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20"
+            }
+          ]
+        }
+      ],
+      "primaryEvidence": {
+        "key": "VEH:10501",
+        "versionId": "id_10d25592-61a6-11e0-8037-955a394cd808",
+        "start": 0,
+        "end": 467,
+        "text": "(a) It is unlawful for any person to make or file a false or fraudulent report of theft of a vehicle required to be registered under this code with any law enforcement agency with intent to deceive. (b) If a person has been previously convicted of a violation of subdivision (a), he or she is punishable by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for 16 months, or two or three years, or in a county jail for not to exceed one year."
+      }
+    }
+  ],
+  "crosswalk": [
+    {
+      "instruction": "2100",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23153-a",
+        "ca-veh-23153-f",
+        "ca-veh-23153-g"
+      ],
+      "firstPage": 1481,
+      "lastPage": 1487,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2101",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23153-b"
+      ],
+      "firstPage": 1488,
+      "lastPage": 1492,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2102",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23153-e"
+      ],
+      "firstPage": 1493,
+      "lastPage": 1497,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2110",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-dui-23152-a",
+        "ca-dui-23152-f",
+        "ca-dui-23152-g"
+      ],
+      "firstPage": 1498,
+      "lastPage": 1502,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2111",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-dui-23152-b"
+      ],
+      "firstPage": 1503,
+      "lastPage": 1505,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2112",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1506,
+      "lastPage": 1508,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2113",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1509,
+      "lastPage": 1510,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2114",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23152-e"
+      ],
+      "firstPage": 1511,
+      "lastPage": 1513,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2125",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1514,
+      "lastPage": 1516,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2126",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1517,
+      "lastPage": 1518,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2130",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1519,
+      "lastPage": 1521,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2131",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1522,
+      "lastPage": 1526,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2140",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-20001-b-1",
+        "ca-veh-20001-b-2"
+      ],
+      "firstPage": 1527,
+      "lastPage": 1532,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2141",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1533,
+      "lastPage": 1538,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2142",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1539,
+      "lastPage": 1540,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2150",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-20002-a"
+      ],
+      "firstPage": 1541,
+      "lastPage": 1544,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2151",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "unpublished_branch_requires_substantive_review",
+      "chargeIds": [],
+      "firstPage": 1545,
+      "lastPage": 1548,
+      "note": "Do not treat a same-section sibling or a generic display name as covering this charged branch."
+    },
+    {
+      "instruction": "2160",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1549,
+      "lastPage": 1550,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2180",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-3-a",
+        "ca-veh-2800-3-b"
+      ],
+      "firstPage": 1551,
+      "lastPage": 1554,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2181",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-2"
+      ],
+      "firstPage": 1555,
+      "lastPage": 1558,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2182",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-2800-1-a"
+      ],
+      "firstPage": 1559,
+      "lastPage": 1562,
+      "note": "Only the named driver/evasion branches are added. Nondriving-owner duties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2200",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-reckless-driving",
+        "ca-veh-23104-a"
+      ],
+      "firstPage": 1563,
+      "lastPage": 1565,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2201",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23109-a"
+      ],
+      "firstPage": 1566,
+      "lastPage": 1567,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2202",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-23109-c"
+      ],
+      "firstPage": 1568,
+      "lastPage": 1570,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2220",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-14601-a",
+        "ca-veh-14601-1-a",
+        "ca-veh-14601-2-a",
+        "ca-veh-14601-5-a"
+      ],
+      "firstPage": 1571,
+      "lastPage": 1573,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2221",
+      "previousStatus": "bounded_catalog_match_not_family_complete",
+      "status": "bounded_catalog_match_not_family_complete",
+      "chargeIds": [
+        "ca-driving-without-license"
+      ],
+      "firstPage": 1574,
+      "lastPage": 1575,
+      "note": "Only the identified catalog branches are matched. This is not complete statutory coverage or a new currentness certification."
+    },
+    {
+      "instruction": "2222",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-12951-b"
+      ],
+      "firstPage": 1576,
+      "lastPage": 1578,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2240",
+      "previousStatus": "bounded_publication_match_other_branches_open",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-40508-a"
+      ],
+      "firstPage": 1579,
+      "lastPage": 1579,
+      "note": "Only the specified DUI, licensing, racing or court-duty branches are matched. Other actors, penalties and unrelated branches remain open."
+    },
+    {
+      "instruction": "2241",
+      "previousStatus": "context_or_allegation_not_separate_charge",
+      "status": "context_or_allegation_not_separate_charge",
+      "chargeIds": [],
+      "firstPage": 1580,
+      "lastPage": 1581,
+      "note": "Retain for substantive and sentencing review; this instruction is not itself a new selectable offense."
+    },
+    {
+      "instruction": "2242",
+      "previousStatus": "unpublished_branch_requires_substantive_review",
+      "status": "bounded_publication_match_other_branches_open",
+      "chargeIds": [
+        "ca-veh-10802"
+      ],
+      "firstPage": 1582,
+      "lastPage": 1583,
+      "note": "Only the specified vehicle-identification branch is matched. Other actors, penalties and unrelated branches remain open."
+    }
+  ],
+  "remainingGroups": [
+    {
+      "name": "Injury DUI and omitted DUI branches",
+      "keys": [
+        "VEH:23153",
+        "VEH:23152",
+        "VEH:23140"
+      ],
+      "reviewQuestion": "Separate injury causation, alcohol/drug/commercial/passenger branches and prior-dependent punishment. Existing 23152(a)/(b)/(f)/(g) choices do not cover every branch.",
+      "addedIds": [
+        "ca-veh-23153-a",
+        "ca-veh-23153-b",
+        "ca-veh-23153-d",
+        "ca-veh-23153-e",
+        "ca-veh-23153-f",
+        "ca-veh-23153-g",
+        "ca-veh-23152-d",
+        "ca-veh-23152-e"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Hit-and-run and post-collision duties",
+      "keys": [
+        "VEH:20001",
+        "VEH:20002",
+        "VEH:20003",
+        "VEH:20004"
+      ],
+      "reviewQuestion": "Distinguish injury/death from property-only accidents, driver from controlling-owner duties, knowledge, and the separate manslaughter flight enhancement.",
+      "addedIds": [
+        "ca-veh-20001-b-1",
+        "ca-veh-20001-b-2",
+        "ca-veh-20002-a",
+        "ca-veh-20002-b"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Evasion",
+      "keys": [
+        "VEH:2800.1",
+        "VEH:2800.2",
+        "VEH:2800.3",
+        "VEH:2800.4"
+      ],
+      "reviewQuestion": "Separate ordinary flight, reckless flight, serious injury/death, and opposite-direction flight. Retain pursuit-identification predicates and grade-specific terms.",
+      "addedIds": [
+        "ca-veh-2800-1-a",
+        "ca-veh-2800-1-b",
+        "ca-veh-2800-2",
+        "ca-veh-2800-3-a",
+        "ca-veh-2800-3-b",
+        "ca-veh-2800-4"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Suspended licenses and court duties",
+      "keys": [
+        "VEH:14601",
+        "VEH:14601.1",
+        "VEH:14601.2",
+        "VEH:14601.3",
+        "VEH:14601.4",
+        "VEH:14601.5",
+        "VEH:12951",
+        "VEH:40508"
+      ],
+      "reviewQuestion": "Identify the suspension basis, knowledge, repeat branches, injury and court appearance duties. Do not copy one suspension penalty across the family.",
+      "addedIds": [
+        "ca-veh-14601-a",
+        "ca-veh-14601-1-a",
+        "ca-veh-14601-2-a",
+        "ca-veh-14601-2-b",
+        "ca-veh-14601-5-a",
+        "ca-veh-14601-5-b",
+        "ca-veh-12951-b",
+        "ca-veh-40508-a"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Reckless driving and street racing",
+      "keys": [
+        "VEH:23103",
+        "VEH:23104",
+        "VEH:23105",
+        "VEH:23109",
+        "VEH:23109.1"
+      ],
+      "reviewQuestion": "Separate ordinary reckless driving, injury branches, speed contests, exhibitions and assistance. Verify current subdivisions against the literal instruction headings.",
+      "addedIds": [
+        "ca-veh-23104-a",
+        "ca-veh-23104-b",
+        "ca-veh-23105-a",
+        "ca-veh-23109-a",
+        "ca-veh-23109-b",
+        "ca-veh-23109-c",
+        "ca-veh-23109-d",
+        "ca-veh-23109-1-a"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Vessels and maritime offenses",
+      "keys": [
+        "HNC:655",
+        "HNC:655.1",
+        "HNC:655.2",
+        "HNC:655.3",
+        "HNC:655.4",
+        "HNC:655.5",
+        "HNC:655.6",
+        "HNC:655.7",
+        "PEN:192.5",
+        "PEN:193.8",
+        "PEN:499"
+      ],
+      "reviewQuestion": "Review vessel DUI, injury, repeat consequences, refusal and procedural context, vessel manslaughter and taking vessels. Do not import Vehicle Code punishment by analogy.",
+      "addedIds": [
+        "ca-pen-192-5-a",
+        "ca-pen-192-5-b",
+        "ca-pen-192-5-c",
+        "ca-pen-192-5-d",
+        "ca-hnc-655-b",
+        "ca-hnc-655-c",
+        "ca-hnc-655-d",
+        "ca-hnc-655-f",
+        "ca-hnc-655-4-a",
+        "ca-hnc-655-4-b"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    },
+    {
+      "name": "Vehicle identification and chop shops",
+      "keys": [
+        "VEH:10801",
+        "VEH:10802",
+        "VEH:10803"
+      ],
+      "reviewQuestion": "Separate operating a chop shop, altering identifiers, and possession/sale branches; resolve intent and statutory value/quantity or exception conditions.",
+      "addedIds": [
+        "ca-veh-10801",
+        "ca-veh-10802",
+        "ca-veh-10803-a",
+        "ca-veh-10803-b"
+      ],
+      "status": "bounded_additions_do_not_close_group"
+    }
+  ],
+  "remainingFindings": [
+    {
+      "id": "owner-passenger-injury",
+      "status": "substantive_actor_review_open",
+      "keys": [
+        "VEH:20001",
+        "VEH:20003",
+        "VEH:20004"
+      ],
+      "instructions": [
+        "2141"
+      ],
+      "reason": "CALCRIM 2141 requires presence, full authority to direct/control, knowledge and willful breach; an ordinary passenger is not automatically liable. Current entries describe the driver.",
+      "nextStep": "Review the cited owner-control authorities and extend the existing charging identities with a source-bound actor distinction; avoid duplicate choices using the same statute and penalty.",
+      "sources": [
+        {
+          "key": "VEH:20001",
+          "versionId": "id_b568be88-aa48-11dc-9c83-d76b6d9ea03b",
+          "contentSha256": "5e54cb8c4badfe0208ce3e39fdd4ddd9149a8fce206201459c747dcda54b1feb",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=20001.",
+          "excerpt": "(a) The driver of a vehicle involved in an accident resulting in injury to a person, other than himself or herself, or in the death of a person shall immediately stop the vehicle at the scene of the accident and shall fulfill the requirements of Sections 20003 and 20004. (b) (1) Except as provided in paragraph (2), a person who violates subdivision (a) shall be punished by imprisonment in the state prison, or in a county jail for not more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. (2) If the accident described in subdivision (a) results in death or permanent, serious injury, a person who violates subdivision (a) shall be punished by imprisonment in the state prison for two, three, or four years, or in a county jail for not less than 90 days nor more than one year, or by a fine of not less than one thousand dollars ($1,000) nor more than ten thousand dollars ($10,000), or by both that imprisonment and fine. However, the court, in the interests of justice and for reasons stated in the record, may reduce or eliminate the minimum imprisonment required by this paragraph. (3) In imposing the minimum fine required by this subdivision, the court shall take into consideration the defendant’s ability to pay the fine and, in the interests of justice and for reasons stated in the record, may reduce the amount of that minimum fine to less than the amount otherwise required by this subdivision. (c) A person who flees the scene of the crime after committing a violation of Section 191.5 of, or paragraph (1) of subdivision (c) of Section 192 of the Penal Code, upon conviction of any of those sections, in addition and consecutive to the punishment prescribed, shall be punished by an additional term of imprisonment of five years in the state prison. This additional term shall not be imposed unless the allegation is charged in the accusatory pleading and admitted by the defendant or found to be true by the trier of fact. The court shall not strike a finding that brings a person within the provisions of this subdivision or an allegation made pursuant to this subdivision. (d) As used in this section, “permanent, serious injury” means the loss or permanent impairment of function of a bodily member or organ."
+        },
+        {
+          "key": "VEH:20003",
+          "versionId": "id_0ee68ca8-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "79df9d179094a6da5c79f7a2c38e80e79c22628a92b69efce5ed58b3377a02d9",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=20003.",
+          "excerpt": "(a) The driver of any vehicle involved in an accident resulting in injury to or death of any person shall also give his or her name, current residence address, the names and current residence addresses of any occupant of the driver’s vehicle injured in the accident, the registration number of the vehicle he or she is driving, and the name and current residence address of the owner to the person struck or the driver or occupants of any vehicle collided with, and shall give the information to any traffic or police officer at the scene of the accident. The driver also shall render to any person injured in the accident reasonable assistance, including transporting, or making arrangements for transporting, any injured person to a physician, surgeon, or hospital for medical or surgical treatment if it is apparent that treatment is necessary or if that transportation is requested by any injured person. (b) Any driver or injured occupant of a driver’s vehicle subject to the provisions of subdivision (a) shall also, upon being requested, exhibit his or her driver’s license, if available, or, in the case of an injured occupant, any other available identification, to the person struck or to the driver or occupants of any vehicle collided with, and to any traffic or police officer at the scene of the accident."
+        },
+        {
+          "key": "VEH:20004",
+          "versionId": "id_0ee8134a-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "ef4511104074176185584a97c0bb3d94cc44ca1f72c8fe10c4226b5da718414a",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=20004.",
+          "excerpt": "In the event of death of any person resulting from an accident, the driver of any vehicle involved after fulfilling the requirements of this division, and if there be no traffic or police officer at the scene of the accident to whom to give the information required by Section 20003, shall, without delay, report the accident to the nearest office of the Department of the California Highway Patrol or office of a duly authorized police authority and submit with the report the information required by Section 20003."
+        }
+      ]
+    },
+    {
+      "id": "owner-passenger-property",
+      "status": "substantive_actor_review_open",
+      "keys": [
+        "VEH:20002"
+      ],
+      "instructions": [
+        "2151"
+      ],
+      "reason": "CALCRIM 2151 distinguishes a nondriving owner/passenger in control from a driver. Ownership alone does not establish liability.",
+      "nextStep": "Resolve the same owner-control question with the injury branch; preserve knowledge, reasonable effort to stop and inability-to-comply limitations.",
+      "sources": [
+        {
+          "key": "VEH:20002",
+          "versionId": "id_0ee68ca6-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "077bd3beef2e2da0788a0a3d4a8e3dd682b1f6084db830a8ee6b98a88d451503",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=20002.",
+          "excerpt": "(a) The driver of any vehicle involved in an accident resulting only in damage to any property, including vehicles, shall immediately stop the vehicle at the nearest location that will not impede traffic or otherwise jeopardize the safety of other motorists. Moving the vehicle in accordance with this subdivision does not affect the question of fault. The driver shall also immediately do either of the following: (1) Locate and notify the owner or person in charge of that property of the name and address of the driver and owner of the vehicle involved and, upon locating the driver of any other vehicle involved or the owner or person in charge of any damaged property, upon being requested, present his or her driver’s license, and vehicle registration, to the other driver, property owner, or person in charge of that property. The information presented shall include the current residence address of the driver and of the registered owner. If the registered owner of an involved vehicle is present at the scene, he or she shall also, upon request, present his or her driver’s license information, if available, or other valid identification to the other involved parties. (2) Leave in a conspicuous place on the vehicle or other property damaged a written notice giving the name and address of the driver and of the owner of the vehicle involved and a statement of the circumstances thereof and shall without unnecessary delay notify the police department of the city wherein the collision occurred or, if the collision occurred in unincorporated territory, the local headquarters of the Department of the California Highway Patrol. (b) Any person who parks a vehicle which, prior to the vehicle again being driven, becomes a runaway vehicle and is involved in an accident resulting in damage to any property, attended or unattended, shall comply with the requirements of this section relating to notification and reporting and shall, upon conviction thereof, be liable to the penalties of this section for failure to comply with the requirements. (c) Any person failing to comply with all the requirements of this section is guilty of a misdemeanor and, upon conviction thereof, shall be punished by imprisonment in the county jail not exceeding six months, or by a fine not exceeding one thousand dollars ($1,000), or by both that imprisonment and fine."
+        }
+      ]
+    },
+    {
+      "id": "entrusting-to-intoxicated-minor",
+      "status": "source_discrepancy_hold",
+      "keys": [
+        "PEN:193.8",
+        "PEN:19.8",
+        "BPC:25503.16"
+      ],
+      "instructions": [],
+      "reason": "PEN 193.8(b) incorporates HSC 113785 for a food-facility exception, but the exact archive probe returns no version. PEN 19.8 supplies an infraction alternative; neither this nor a likely successor definition resolves the literal reference.",
+      "nextStep": "Check amendment history for HSC 113785 before resolving CA-007. Do not silently replace the reference or infer repeal from archive absence.",
+      "sources": [
+        {
+          "key": "PEN:193.8",
+          "versionId": "id_cedefa7e-a011-11dc-ae2c-e58b95706686",
+          "contentSha256": "dd910da312fdb851ee6887c218f52f02d5f0cc15d9a8a15ffd7d384026b15a83",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=193.8.",
+          "excerpt": "(a) An adult, who is the registered owner of a motor vehicle or in possession of a motor vehicle, shall not relinquish possession of the vehicle to a minor for the purpose of driving if the following conditions exist: (1) The adult owner or person in possession of the vehicle knew or reasonably should have known that the minor was intoxicated at the time possession was relinquished. (2) A petition was sustained or the minor was convicted of a violation of Section 23103 as specified in Section 23103.5, 23140, 23152, or 23153 of the Vehicle Code or a violation of Section 191.5 or subdivision (a) of Section 192.5. (3) The minor does not otherwise have a lawful right to possession of the vehicle. (b) The offense described in subdivision (a) shall not apply to commercial bailments, motor vehicle leases, or parking arrangements, whether or not for compensation, provided by hotels, motels, or food facilities for customers, guests, or other invitees thereof. For purposes of this subdivision, hotel and motel shall have the same meaning as in subdivision (b) of Section 25503.16 of the Business and Professions Code and food facility shall have the same meaning as in Section 113785 of the Health and Safety Code. (c) If an adult is convicted of the offense described in subdivision (a), that person shall be punished by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding six months, or by both the fine and imprisonment. An adult convicted of the offense described in subdivision (a) shall not be subject to driver’s license suspension or revocation or attendance at a licensed alcohol or drug education and counseling program for persons who drive under the influence."
+        },
+        {
+          "key": "PEN:19.8",
+          "versionId": "id_ef8d4b13-ac20-11ef-b77a-e14b39306f8a",
+          "contentSha256": "36ee8c82a48bfaa1b199122b3a012502ca928b4ecea9cf1e6d49c2e5d044f72c",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.8.",
+          "excerpt": "(a) (1) The following offenses are subject to subdivision (d) of Section 17: (A) Sections 193.8, 330, 415, 485, 490.7, 555, 602.13, and 853.7. (B) Subdivision (c) of Section 532b and subdivision (o) of Section 602. (C) Subdivision (b) of Section 25658 and Sections 21672, 25661, and 25662 of the Business and Professions Code. (D) Section 27204 of the Government Code. (E) Subdivision (c) of Section 23109 and Sections 5201.1, 12500, 14601.1, 27150.1, and 40508 of the Vehicle Code. (F) Any other offense that the Legislature makes subject to subdivision (d) of Section 17. (2) Except where a lesser maximum fine is expressly provided for a violation of those sections, a violation that is an infraction is punishable by a fine not exceeding two hundred fifty dollars ($250). (b) Except in cases where a different punishment is prescribed, an offense declared to be an infraction is punishable by a fine not exceeding two hundred fifty dollars ($250). (c) Except for the violations enumerated in subdivision (d) of Section 13202.5 of the Vehicle Code and Section 14601.1 of the Vehicle Code based upon failure to appear, a conviction for an offense made an infraction under subdivision (d) of Section 17 is not grounds for the suspension, revocation, or denial of a license or for the revocation of probation or parole of the person convicted."
+        },
+        {
+          "key": "BPC:25503.16",
+          "versionId": "id_3bb4c39b-e694-11e7-99d3-2f570f4f10eb",
+          "contentSha256": "9e9a68c291f776da64d0489ba6007e536a5c9491c20babcef80ac1e5a55def09",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=25503.16.",
+          "excerpt": "(a) Nothing in this division shall prohibit the issuance or transfer of any retail on-sale or off-sale license to any person with respect to premises which are an integral part of the operations of a hotel, motel, or marine park owned by, or operated by or on behalf of, the licensee notwithstanding that a manufacturer, winegrower, manufacturer’s agent, California winegrower’s agent, rectifier, distiller, bottler, importer, wholesaler, or out-of-state distilled spirits shipper has any interest, directly or indirectly, in the premises, in the retail license, or in the retail licensee, and notwithstanding that the issuance or transfer would otherwise result in a violation of subdivision (a) of Section 25500, subdivision (a) or (b) of Section 25501, or Section 25502, if each of the following conditions is met: (1) In the case of a hotel or motel, the hotel or motel consists of not less than 25 guestroom accommodations. (2) No more than one-quarter of the total gross annual revenues of the hotel, motel, or marine park is derived from the sale by the hotel, motel, or marine park of alcoholic beverages. (3) (A) The retail licensee shall purchase no beer or distilled spirits for sale in this state other than from a wholesale licensee, and the retail licensee, except as otherwise provided in subparagraph (B), shall purchase no alcoholic beverages for sale in this state from any wholesale licensee that has any interest, directly or indirectly, in the premises, in the retail license, or in the retail licensee. (B) Notwithstanding subparagraph (A), a marine park may purchase beer or malt beverages for sale in this state from a wholesale licensee regardless of whether the wholesale licensee has any interest, directly or indirectly, in the premises, in the retail license, or in the retail licensee. (4) The retail licensee serves other brands of beer, wine, and distilled spirits in addition to the brands manufactured by the beer or distilled spirits manufacturer or produced by the winegrower holding an interest in the retail license. (5) No marine park shall sell or offer for sale any distilled spirits, except during private events or private functions held at the marine park. (b) For purposes of this section, “hotel” and “motel” shall mean an establishment containing guestroom accommodations with respect to which the predominant relationship existing between the occupants thereof and the owner or operator of the establishment is that of innkeeper and guest; for purposes of this subdivision, the existence of other legal relationships as between some occupants and the owner or operator thereof shall be immaterial. (c) For purposes of this section, “marine park” means an establishment with not less than 125 contiguous acres, located in San Diego County, the predominant purpose of which is the education or entertainment of the public through the display of marine animals and related aquatic, food service, and amusement activities, which holds permits issued by state and federal regulatory agencies authorizing the keeping of marine animals or endangered species or both, and which has an annual paid attendance of at least 2,000,000 people. (d) The Legislature finds that it is necessary and proper to require a separation between manufacturing interests, wholesale interests, and retail interests in the production and distribution of alcoholic beverages in order to prevent suppliers from dominating local markets through vertical integration and to prevent excessive sales of alcoholic beverages produced by overly aggressive marketing techniques. The Legislature further finds that the exception established by this section to the general prohibition against tied interests shall be limited to its express terms so as not to undermine the general prohibition, and intends that this section be construed accordingly."
+        }
+      ]
+    },
+    {
+      "id": "habitual-traffic-offender",
+      "status": "substantive_notice_and_predicate_review_open",
+      "keys": [
+        "VEH:14601.3"
+      ],
+      "instructions": [],
+      "reason": "A standalone offense requires the specified driving record while suspended, not merely a habitual-offender label. The statutory notice presumption and separate consecutive 14601.2 penalty need distinct treatment.",
+      "nextStep": "Verify knowledge/notice authority and exact conviction/accident predicates; do not substitute the habitual-offender enhancement for the standalone offense.",
+      "sources": [
+        {
+          "key": "VEH:14601.3",
+          "versionId": "id_590127b8-661e-11d9-8b2f-d2d285bd9e46",
+          "contentSha256": "3078090d2b06ee6b6994da39ba904c69c34e81a78702c4df3b9656154af17a2f",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=14601.3.",
+          "excerpt": "(a) It is unlawful for a person whose driving privilege has been suspended or revoked to accumulate a driving record history which results from driving during the period of suspension or revocation. A person who violates this subdivision is designated an habitual traffic offender. For purposes of this section, a driving record history means any of the following, if the driving occurred during any period of suspension or revocation: (1) Two or more convictions within a 12-month period of an offense given a violation point count of two pursuant to Section 12810. (2) Three or more convictions within a 12-month period of an offense given a violation point count of one pursuant to Section 12810. (3) Three or more accidents within a 12-month period that are subject to the reporting requirements of Section 16000. (4) Any combination of convictions or accidents, as specified in paragraphs (1) to (3), inclusive, which results during any 12-month period in a violation point count of three or more pursuant to Section 12810. (b) Knowledge of suspension or revocation of the driving privilege shall be conclusively presumed if mailed notice has been given by the department to the person pursuant to Section 13106. The presumption established by this subdivision is a presumption affecting the burden of proof. (c) The department, within 30 days of receipt of a duly certified abstract of the record of any court or accident report which results in a person being designated an habitual traffic offender, may execute and transmit by mail a notice of that designation to the office of the district attorney having jurisdiction over the location of the person’s last known address as contained in the department’s records. (d) (1) The district attorney, within 30 days of receiving the notice required in subdivision (c), shall inform the department of whether or not the person will be prosecuted for being an habitual traffic offender. (2) Notwithstanding any other provision of this section, any habitual traffic offender designated under subdivision (b) of Section 23546, subdivision (b) of Section 23550, or subdivision (b) of Section 23550.5, who is convicted of violating Section 14601.2 shall be sentenced as provided in paragraph (3) of subdivision (e). (e) Any person convicted under this section of being an habitual traffic offender shall be punished as follows: (1) Upon a first conviction, by imprisonment in the county jail for 30 days and by a fine of one thousand dollars ($1,000). (2) Upon a second or any subsequent offense within seven years of a prior conviction under this section, by imprisonment in the county jail for 180 days and by a fine of two thousand dollars ($2,000). (3) Any habitual traffic offender designated under Section 193.7 of the Penal Code or under subdivision (b) of Section 23546, subdivision (b) of Section 23550, subdivision (b) of Section 23550.5, or subdivision (d) of Section 23566 who is convicted of a violation of Section 14601.2 shall be punished by imprisonment in the county jail for 180 days and by a fine of two thousand dollars ($2,000). The penalty in this paragraph shall be consecutive to that imposed for the violation of any other law. (f) This section also applies to the operation of an off-highway motor vehicle on those lands to which the Chappie-Z’berg Off-Highway Motor Vehicle Law of 1971 (Division 16.5 (commencing with Section 38000)) applies as to off-highway motor vehicles, as described in Section 38001."
+        }
+      ]
+    },
+    {
+      "id": "suspended-license-injury",
+      "status": "substantive_penalty_scope_review_open",
+      "keys": [
+        "VEH:14601.4",
+        "VEH:14601.2",
+        "VEH:42002"
+      ],
+      "instructions": [],
+      "reason": "14601.4 imports minimum custody from 14601.2 and restricts early-release programs. It does not expressly copy every 14601.2 maximum and fine.",
+      "nextStep": "Resolve the interaction with the general misdemeanor ceiling before publishing a complete range; keep the known minimum and interlock context in the research record.",
+      "sources": [
+        {
+          "key": "VEH:14601.4",
+          "versionId": "id_e7a0f63d-c2ce-11dd-b759-d2db776ba0ad",
+          "contentSha256": "aec739498cfa7e8e4d0b03647a9acbfb4da9a98ee9964109f7fd8eca95e63088",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=14601.4.",
+          "excerpt": "(a) It is unlawful for a person, while driving a vehicle with a license suspended or revoked pursuant to Section 14601.2 to do an act forbidden by law or neglect a duty imposed by law in the driving of the vehicle, which act or neglect proximately causes bodily injury to a person other than the driver. In proving the person neglected a duty imposed by law in the driving of the vehicle, it is not necessary to prove that a specific section of this code was violated. (b) A person convicted under this section shall be imprisoned in the county jail and shall not be released upon work release, community service, or other release program before the minimum period of imprisonment, prescribed in Section 14601.2, is served. If a person is convicted of that offense and is granted probation, the court shall require that the person convicted serve at least the minimum time of imprisonment, as specified in those sections, as a term or condition of probation. (c) When the prosecution agrees to a plea of guilty or nolo contendere to a charge of a violation of this section in satisfaction of, or as a substitute for, an original charge of a violation of Section 14601.2, and the court accepts that plea, except, in the interest of justice, when the court finds it should be inappropriate, the court shall, pursuant to Section 23575, require the person convicted, in addition to other requirements, to install a certified ignition interlock device on a vehicle that the person owns or operates for a period not to exceed three years. (d) This section also applies to the operation of an off-highway motor vehicle on those lands that the Chappie-Z’berg Off-Highway Motor Vehicle Law of 1971 (Division 16.5 (commencing with Section 38000)) applies as to off-highway motor vehicles, as described in Section 38001. (e) Upon receipt of the abstract of a conviction under this section, the department shall not reinstate the privilege to operate a motor vehicle until the department receives proof of either the “Verification of Installation” form as described in paragraph (2) of subdivision (g) of Section 13386 or the Judicial Council Form I.D. 100. (f) If Section 23573 is applicable, then subdivisions (c) and (e) are not applicable."
+        },
+        {
+          "key": "VEH:14601.2",
+          "versionId": "id_2b71af51-8733-11e4-b191-b541c7e31c8c",
+          "contentSha256": "5069ece08f30e1d0ff6167fbd8185d75ecfed15fb042528151743dc7ff98cb4b",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=14601.2.",
+          "excerpt": "(a) A person shall not drive a motor vehicle at any time when that person’s driving privilege is suspended or revoked for a conviction of a violation of Section 23152 or 23153 if the person so driving has knowledge of the suspension or revocation. (b) Except in full compliance with the restriction, a person shall not drive a motor vehicle at any time when that person’s driving privilege is restricted if the person so driving has knowledge of the restriction. (c) Knowledge of the suspension or revocation of the driving privilege shall be conclusively presumed if mailed notice has been given by the department to the person pursuant to Section 13106. Knowledge of the restriction of the driving privilege shall be presumed if notice has been given by the court to the person. The presumption established by this subdivision is a presumption affecting the burden of proof. (d) A person convicted of a violation of this section shall be punished as follows: (1) Upon a first conviction, by imprisonment in the county jail for not less than 10 days or more than six months and by a fine of not less than three hundred dollars ($300) or more than one thousand dollars ($1,000), unless the person has been designated a habitual traffic offender under subdivision (b) of Section 23546, subdivision (b) of Section 23550, or subdivision (d) of Section 23550.5, in which case the person, in addition, shall be sentenced as provided in paragraph (3) of subdivision (e) of Section 14601.3. (2) If the offense occurred within five years of a prior offense that resulted in a conviction of a violation of this section or Section 14601, 14601.1, or 14601.5, by imprisonment in the county jail for not less than 30 days or more than one year and by a fine of not less than five hundred dollars ($500) or more than two thousand dollars ($2,000), unless the person has been designated a habitual traffic offender under subdivision (b) of Section 23546, subdivision (b) of Section 23550, or subdivision (d) of Section 23550.5, in which case the person, in addition, shall be sentenced as provided in paragraph (3) of subdivision (e) of Section 14601.3. (e) If a person is convicted of a first offense under this section and is granted probation, the court shall impose as a condition of probation that the person be confined in the county jail for at least 10 days. (f) If the offense occurred within five years of a prior offense that resulted in a conviction of a violation of this section or Section 14601, 14601.1, or 14601.5 and is granted probation, the court shall impose as a condition of probation that the person be confined in the county jail for at least 30 days. (g) If a person is convicted of a second or subsequent offense that results in a conviction of this section within seven years, but over five years, of a prior offense that resulted in a conviction of a violation of this section or Section 14601, 14601.1, or 14601.5 and is granted probation, the court shall impose as a condition of probation that the person be confined in the county jail for at least 10 days. (h) Pursuant to Section 23575, the court shall require a person convicted of a violation of this section to install a certified ignition interlock device on a vehicle the person owns or operates. Upon receipt of the abstract of a conviction under this section, the department shall not reinstate the privilege to operate a motor vehicle until the department receives proof of either the “Verification of Installation” form as described in paragraph (2) of subdivision (h) of Section 13386 or the Judicial Council Form I.D. 100. (i) This section does not prohibit a person who is participating in, or has completed, an alcohol or drug rehabilitation program from driving a motor vehicle that is owned or utilized by the person’s employer, during the course of employment on private property that is owned or utilized by the employer, except an offstreet parking facility, as defined in subdivision (c) of Section 12500. (j) This section also applies to the operation of an off-highway motor vehicle on those lands that the Chappie-Z’berg Off-Highway Motor Vehicle Law of 1971 (Division 16.5 (commencing with Section 38000)) applies as to off-highway motor vehicles, as described in Section 38001. (k) If Section 23573 is applicable, then subdivision (h) is not applicable."
+        },
+        {
+          "key": "VEH:42002",
+          "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=42002.",
+          "excerpt": "Unless a different penalty is expressly provided by this code, every person convicted of a misdemeanor for a violation of any of the provisions of this code shall be punished by a fine of not exceeding one thousand dollars ($1,000) or by imprisonment in the county jail for not exceeding six months, or by both such fine and imprisonment."
+        }
+      ]
+    },
+    {
+      "id": "repeat-temporary-taking",
+      "status": "substantive_prior_branch_review_open",
+      "keys": [
+        "PEN:499",
+        "PEN:499b"
+      ],
+      "instructions": [],
+      "reason": "PEN 499 has distinct prior-conviction and prior-custody predicates, while retained 499b now distinguishes bicycles from vessels. Existing ordinary 499b choices are not a complete repeat-offense treatment.",
+      "nextStep": "Review the current predicate reach and history together; do not extend vehicle references to every current bicycle/vessel branch by analogy.",
+      "sources": [
+        {
+          "key": "PEN:499",
+          "versionId": "id_4ace7deb-3839-11dc-af8e-f25e7ba9fdb0",
+          "contentSha256": "7cf6f2e0d5aa66c5873c08ea862b79933f245874691064227d1c6d8696bba725",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=499.",
+          "excerpt": "(a) Any person who, having been convicted of a previous violation of Section 10851 of the Vehicle Code, or of subdivision (d) of Section 487, involving a vehicle or vessel, and having served a term therefor in any penal institution or having been imprisoned therein as a condition of probation for the offense, is subsequently convicted of a violation of Section 499b, involving a vehicle or vessel, is punishable for the subsequent offense by imprisonment in the county jail not exceeding one year or the state prison for 16 months, two, or three years. (b) Any person convicted of a violation of Section 499b, who has been previously convicted under charges separately brought and tried two or more times of a violation of Section 499b, all such violations involving a vehicle or vessel, and who has been imprisoned therefore as a condition of probation or otherwise at least once, is punishable by imprisonment in the county jail for not more than one year or in the state prison for 16 months, two, or three years. (c) This section shall become operative on January 1, 1997."
+        },
+        {
+          "key": "PEN:499b",
+          "versionId": "id_67c44b58-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "ce86d8713b89ba4d47162c34dc3f446433e5d420abc8e1e4461d0bb75e3808fa",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=499b.",
+          "excerpt": "(a) Any person who shall, without the permission of the owner thereof, take any bicycle for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding four hundred dollars ($400), or by imprisonment in a county jail not exceeding three months, or by both that fine and imprisonment. (b) Any person who shall, without the permission of the owner thereof, take any vessel for the purpose of temporarily using or operating the same, is guilty of a misdemeanor, and shall be punishable by a fine not exceeding one thousand dollars ($1,000), or by imprisonment in a county jail not exceeding one year, or by both that fine and imprisonment."
+        }
+      ]
+    },
+    {
+      "id": "vehicle-boarding-and-manipulation",
+      "status": "documented_minor_misdemeanor_deferral",
+      "keys": [
+        "VEH:10853",
+        "VEH:40000.9",
+        "VEH:42002"
+      ],
+      "instructions": [],
+      "reason": "The source has boarding with criminal intent plus unattended-vehicle manipulation/movement clauses. 40000.9 and 42002 establish misdemeanor treatment with up to six months or $1,000 or both; this lower-priority entry is omitted instead of collapsing distinct intent predicates.",
+      "nextStep": "Revisit after major offense-family coverage, or if charging-document demand identifies this provision as important; resolve clause-specific intent before publication.",
+      "sources": [
+        {
+          "key": "VEH:10853",
+          "versionId": "id_0c6c64ab-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "eb6a8468d3ea53157f20ae7f0987b0a2f19b8bdf89642e713f7c9d9fb1e8af34",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=10853.",
+          "excerpt": "No person shall with intent to commit any malicious mischief, injury, or other crime, climb into or upon a vehicle whether it is in motion or at rest, nor shall any person attempt to manipulate any of the levers, starting mechanism, brakes, or other mechanism or device of a vehicle while the same is at rest and unattended, nor shall any person set in motion any vehicle while the same is at rest and unattended."
+        },
+        {
+          "key": "VEH:40000.9",
+          "versionId": "id_158fdf5b-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "fa16e6d2f24cd84bc3e260f69d26eebb6b0e150097ecb1515891e62261afc20e",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.9.",
+          "excerpt": "A violation of any of the following provisions shall constitute a misdemeanor, and not an infraction: Section 10501, relating to false report of vehicle theft. Sections 10750 and 10751, relating to altered or defaced vehicle identifying numbers. Section 10851.5, relating to theft of binder chains. Sections 10852 and 10853, relating to injuring or tampering with a vehicle. Section 10854, relating to unlawful use of stored vehicle."
+        },
+        {
+          "key": "VEH:42002",
+          "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+          "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=42002.",
+          "excerpt": "Unless a different penalty is expressly provided by this code, every person convicted of a misdemeanor for a violation of any of the provisions of this code shall be punished by a fine of not exceeding one thousand dollars ($1,000) or by imprisonment in the county jail for not exceeding six months, or by both such fine and imprisonment."
+        }
+      ]
+    }
+  ],
+  "decisions": [
+    "Ten distinct choices preserve each actor, mental state, purpose and punishment. This does not close the vehicle chapter.",
+    "10803 requires more than one vehicle or parts from more than one vehicle. The 10804 scrap-processing and recovered-property exceptions are dependencies, not new crimes.",
+    "10802 can apply to one vehicle or part. Its concealment intent and sale/transfer/import/export purpose distinguish it from 10750.",
+    "The 10803(a) 2/4/6-year and $60,000 felony alternatives are not transferred to possession under (b), whose alternatives are 16 months/2/3 years and $30,000.",
+    "10751(a) is a misdemeanor under 40000.9. Its separate civil property-disposition process is not presented as a criminal charge.",
+    "20002(b) concerns the person who parked a runaway vehicle. It does not resolve nondriving owner/passenger-in-control liability.",
+    "The source discrepancy involving the missing HSC 113785 definition is recorded as CA-007. Absence does not prove repeal or authorize silent substitution."
+  ]
+}

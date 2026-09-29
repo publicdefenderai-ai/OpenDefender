@@ -5180,9 +5180,121 @@
       ]
     },
     {
+      "key": "VEH:10501",
+      "expectedHash": "92e67927ab3d8c1d238e421607e3db1f7e06223cfa7e896b9c3bfcaeb92e59b4",
+      "observedHash": "92e67927ab3d8c1d238e421607e3db1f7e06223cfa7e896b9c3bfcaeb92e59b4",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10750",
+      "expectedHash": "ad441bf04627e8591848c2ac06923ac7d0825041decdc0726fb36fc51de1ed46",
+      "observedHash": "ad441bf04627e8591848c2ac06923ac7d0825041decdc0726fb36fc51de1ed46",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10751",
+      "expectedHash": "180d4f305137a954c79771e5f33d8069b30f27a8cdbbbb1edf1e530ab46351a1",
+      "observedHash": "180d4f305137a954c79771e5f33d8069b30f27a8cdbbbb1edf1e530ab46351a1",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10801",
+      "expectedHash": "392e4160e2823f15ae38088d2e2d53d30f5c2a3cb4f84e6a767a98d327303d7b",
+      "observedHash": "392e4160e2823f15ae38088d2e2d53d30f5c2a3cb4f84e6a767a98d327303d7b",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10802",
+      "expectedHash": "ff6c7d5c70a54fbc0a8a44711f56615d772e6c53b40bc83d4b334167606c9949",
+      "observedHash": "ff6c7d5c70a54fbc0a8a44711f56615d772e6c53b40bc83d4b334167606c9949",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10803",
+      "expectedHash": "5f9ed37c79e7e2565415179f5837aaf0332df6a35e88a3347969b152e68dec59",
+      "observedHash": "5f9ed37c79e7e2565415179f5837aaf0332df6a35e88a3347969b152e68dec59",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10804",
+      "expectedHash": "cd307d22fcb2b81f13fc3a2ce92b6f87d2d5cf98a948291c664afb1f73f4dd5c",
+      "observedHash": "cd307d22fcb2b81f13fc3a2ce92b6f87d2d5cf98a948291c664afb1f73f4dd5c",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
       "key": "VEH:10852",
       "expectedHash": "bfce39638fcda9ac5df3bbe9ed072867cf3bb2be8ceebad92fbe03ed567971b4",
       "observedHash": "bfce39638fcda9ac5df3bbe9ed072867cf3bb2be8ceebad92fbe03ed567971b4",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10854",
+      "expectedHash": "5d7c772761e0c7cad383ec4de1c84c3f2dc817b08799c5561dd47d9c042d70ec",
+      "observedHash": "5d7c772761e0c7cad383ec4de1c84c3f2dc817b08799c5561dd47d9c042d70ec",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -6000,6 +6112,20 @@
       ]
     },
     {
+      "key": "VEH:250",
+      "expectedHash": "1bbd4266fa0b2f7e50ad52fd7da0255ac6571a010d143089f0be5afdbf257431",
+      "observedHash": "1bbd4266fa0b2f7e50ad52fd7da0255ac6571a010d143089f0be5afdbf257431",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:07"
+      ]
+    },
+    {
       "key": "VEH:2800.1",
       "expectedHash": "273034ab54fbbc1773345c79ea6a68c7d5b65ffb7e2304f9cb760c48e9dc438e",
       "observedHash": "273034ab54fbbc1773345c79ea6a68c7d5b65ffb7e2304f9cb760c48e9dc438e",
@@ -6143,6 +6269,20 @@
       "key": "VEH:40000.15",
       "expectedHash": "8173eb7b7eef5a28f83572a6ef89a752c78809bc343ddfc271a9d71ec536cb32",
       "observedHash": "8173eb7b7eef5a28f83572a6ef89a752c78809bc343ddfc271a9d71ec536cb32",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:21"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:11"
+      ]
+    },
+    {
+      "key": "VEH:40000.9",
+      "expectedHash": "9e0d1e1a8b90898ad1b54db46819ca621f47b0c9d91d5d9ee1394c74c4c11e9b",
+      "observedHash": "9e0d1e1a8b90898ad1b54db46819ca621f47b0c9d91d5d9ee1394c74c4c11e9b",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -6313,6 +6453,20 @@
       "key": "VEH:630",
       "expectedHash": "4282eb91ade3438e29df67fd6b3fc35a79545fad489722db7aecf8e308964523",
       "observedHash": "4282eb91ade3438e29df67fd6b3fc35a79545fad489722db7aecf8e308964523",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:07"
+      ]
+    },
+    {
+      "key": "VEH:671",
+      "expectedHash": "fa78a5f16a8cdf34354bb1c9f1d3288831f3516c4f3c0a4acc865b502935f12d",
+      "observedHash": "fa78a5f16a8cdf34354bb1c9f1d3288831f3516c4f3c0a4acc865b502935f12d",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",

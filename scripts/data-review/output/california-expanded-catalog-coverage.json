@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 302,
-    "configuredSelectable": 281,
+    "canonicalRecords": 312,
+    "configuredSelectable": 291,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 182,
-    "boundedCorrectionPass": 281,
+    "boundedAdditionPass": 192,
+    "boundedCorrectionPass": 291,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 184,
+    "distinctSelectablePrimarySections": 192,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 184,
-    "selectableRecordsWithAllPrimaryTextAcquired": 281,
-    "totalAcquiredSectionsIncludingDependencies": 450,
-    "totalAcquiredVersionsIncludingDependencies": 456,
+    "acquiredSelectablePrimarySections": 192,
+    "selectableRecordsWithAllPrimaryTextAcquired": 291,
+    "totalAcquiredSectionsIncludingDependencies": 461,
+    "totalAcquiredVersionsIncludingDependencies": 467,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "281 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "291 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -65,8 +65,8 @@
     },
     {
       "lawCode": "VEH",
-      "selectable": 45,
-      "corrected": 45,
+      "selectable": 55,
+      "corrected": 55,
       "awaitingCorrection": 0
     }
   ],
@@ -1777,6 +1777,79 @@
     },
     {
       "lawCode": "VEH",
+      "section": "10501",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10501&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10501-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10750",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10750&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10750-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10751",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10751&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10751-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10801",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10801&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10801"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10802",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10802&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10802"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10803",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10803&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10803-a",
+        "ca-veh-10803-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10852",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10852&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10852"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10854",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10854&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10854"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
       "section": "12500",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12500&lawCode=VEH",
       "recordIds": [
@@ -1855,7 +1928,8 @@
       "section": "20002",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=20002&lawCode=VEH",
       "recordIds": [
-        "ca-veh-20002-a"
+        "ca-veh-20002-a",
+        "ca-veh-20002-b"
       ],
       "alreadyRetained": false
     },
@@ -7289,6 +7363,176 @@
         "VEH:40508"
       ],
       "catalogSha256": "c4011c4f22d6ecd81a0996dfe5bf9f83fd7ecfa663b857ff42e45156648c1074",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10801",
+      "title": "Knowingly owning or operating a chop shop",
+      "citation": "Cal. Vehicle Code § 10801",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10801"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10801"
+      ],
+      "catalogSha256": "4e2f95d2773c2401e151e6a400b3543f3ed19bfa539914d66e102b3b59bc2757",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10802",
+      "title": "Altering vehicle identification numbers for sale or transfer",
+      "citation": "Cal. Vehicle Code § 10802",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10802"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10802"
+      ],
+      "catalogSha256": "3dd850237232edc82f9179b04a3623ad10a91032baee967d8540e53f22e5c5ee",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10803-a",
+      "title": "Dealing in multiple vehicles or parts with altered identifiers",
+      "citation": "Cal. Vehicle Code § 10803(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10803"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10803"
+      ],
+      "catalogSha256": "528735db3bcf4c633dd79ecf37fc167e934ada02157af01f7d20791806591ebb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10803-b",
+      "title": "Possessing multiple vehicles or parts with altered identifiers for distribution",
+      "citation": "Cal. Vehicle Code § 10803(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10803"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10803"
+      ],
+      "catalogSha256": "b085f079015fac9203753d0c44feeaba218a7ecd1ef0fa953808a35049b2780b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10750-a",
+      "title": "Unauthorized alteration or stamping of vehicle identification marks",
+      "citation": "Cal. Vehicle Code § 10750(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10750"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10750"
+      ],
+      "catalogSha256": "5361525b03f38c189b9aefd0e429c77a1103ecc06178d5765ee810a5fdfb4a6d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10751-a",
+      "title": "Dealing in or possessing a vehicle or part with a removed identifier",
+      "citation": "Cal. Vehicle Code § 10751(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10751"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10751"
+      ],
+      "catalogSha256": "b6d42484f0a911c5fbf4d4e0cc4ccde04ed74a32685d2782a962fa0f0d437496",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-20002-b",
+      "title": "Failure to report property damage caused by a runaway parked vehicle",
+      "citation": "Cal. Vehicle Code § 20002(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:20002"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:20002"
+      ],
+      "catalogSha256": "caea528e9392686b056f8b4e4d843bed3c6d055c8f373876dd2f19a600b0fc63",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10852",
+      "title": "Vehicle tampering or damage without owner consent",
+      "citation": "Cal. Vehicle Code § 10852",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10852"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10852"
+      ],
+      "catalogSha256": "6d739bfc5eb71202a805fc0c22e7b2914a82f3e244f79841d975decb61d20315",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10854",
+      "title": "Unauthorized use or removal of parts by a vehicle custodian",
+      "citation": "Cal. Vehicle Code § 10854",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10854"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10854"
+      ],
+      "catalogSha256": "8b9403a47717677d62f85434315aded868530cfef17548616125af0b2d53f164",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10501-a",
+      "title": "False or fraudulent vehicle-theft report",
+      "citation": "Cal. Vehicle Code § 10501(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10501"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10501"
+      ],
+      "catalogSha256": "8ed867665f0b60a99cdd2b80368535054d8647f765b731c2c603f0e9b0876d39",
       "attorneyReview": "pending"
     }
   ]

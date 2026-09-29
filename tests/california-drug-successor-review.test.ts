@@ -10,7 +10,7 @@ const row=(code:string)=>additions.find(a=>a.code===code)!;
 
 describe("California combined drug successor",()=>{
   it("reuses primary sources and accounts for every previous benchmark gap without clearing unrelated holds",()=>{
-    expect(validateCaliforniaDrugSuccessorReview()).toEqual({additions:18,primarySections:14,reusedSections:38,newSections:1,newVersions:1,newBenchmarkMatches:16,configuredSelectable:281});
+    expect(validateCaliforniaDrugSuccessorReview()).toEqual({additions:18,primarySections:14,reusedSections:38,newSections:1,newVersions:1,newBenchmarkMatches:16,configuredSelectable:291});
     const review=readCaliforniaDrugSuccessorReview();
     expect(review.crosswalk).toHaveLength(46);
     expect(review.crosswalk.filter(r=>r.status==="partial_catalog_match")).toHaveLength(4);
