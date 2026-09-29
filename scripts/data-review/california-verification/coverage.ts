@@ -1,3 +1,4 @@
+import {validateViolenceDetentionReview,readViolenceDetentionReviewAcquisition} from "./violence-detention-review";
 import {validateVehicleIdentificationReview,readVehicleIdentificationReviewAcquisition} from "./vehicle-identification-review";
 import {validateTrafficReview,readTrafficReviewAcquisition} from "./traffic-review";
 import {validateDrivingPublication,readDrivingPublicationAcquisition} from "./driving-publication-review";
@@ -77,6 +78,8 @@ export function buildCaliforniaCoverage() {
   const successorAccounting = validateCaliforniaDrugSuccessorReview();
   const drivingAccounting=validateDrivingPublication();
   const trafficAccounting=validateTrafficReview();
+  const violenceAccounting=validateViolenceDetentionReview();
+  Object.keys(readViolenceDetentionReviewAcquisition().documents).forEach(key=>acquiredKeys.add(key));
   const vehicleAccounting=validateVehicleIdentificationReview();
   Object.keys(readVehicleIdentificationReviewAcquisition().documents).forEach(key=>acquiredKeys.add(key));
   Object.keys(readTrafficReviewAcquisition().documents).forEach(key=>acquiredKeys.add(key));
@@ -89,7 +92,7 @@ export function buildCaliforniaCoverage() {
       const url = new URL(source.url);
       const lawCode = url.searchParams.get("lawCode");
       const section = url.searchParams.get("sectionNum")?.replace(/\.$/, "");
-      if (!lawCode || !section || !/^[A-Z]+$/.test(lawCode) || !/^\d+[a-z]?(?:\.\d+)*[a-z]?$/.test(section)) throw new Error(`Unparseable primary source: ${record.canonicalId}`);
+      if (!lawCode || !section || !/^[A-Z]+$/.test(lawCode) || !/^\d+(?:\.\d+)*[a-z]*$/.test(section)) throw new Error(`Unparseable primary source: ${record.canonicalId}`);
       const key = `${lawCode}:${section}`;
       if (record.selectable) {
         const request = requests.get(key) ?? { lawCode, section, url: source.url, recordIds: [], alreadyRetained: Boolean(review.documents[key]?.length) };
@@ -147,8 +150,8 @@ export function buildCaliforniaCoverage() {
       specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions,
-      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + violenceAccounting.additions,
+      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + violenceAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -159,7 +162,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: violenceAccounting.newVersions + vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },

@@ -1,23 +1,23 @@
 # California coverage and remaining review queue
 
-Configured selectable: 291. Bounded correction pass: 291. Awaiting that pass: 0. Withheld canonical labels: 21.
+Configured selectable: 319. Bounded correction pass: 319. Awaiting that pass: 0. Withheld canonical labels: 21.
 
 Statewide offense coverage: unknown. Live deployment parity: not established by this offline report.
 
 - A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.
-- 291 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.
+- 319 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.
 - The legacy inventory overlaps the canonical inventory and must not be added to it.
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary.
 
-Primary-source acquisition: 192/192 declared sections, covering the primary links of 291/291 configured records. Total retained research sources including dependencies: 461 sections/467 versions.
+Primary-source acquisition: 210/210 declared sections, covering the primary links of 319/319 configured records. Total retained research sources including dependencies: 505 sections/511 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |
 | BPC | 1 | 1 | 0 |
 | HNC | 8 | 8 | 0 |
 | HSC | 52 | 52 | 0 |
-| PEN | 175 | 175 | 0 |
+| PEN | 203 | 203 | 0 |
 | VEH | 55 | 55 | 0 |
 
 ## Remaining work
@@ -25,6 +25,7 @@ Primary-source acquisition: 192/192 declared sections, covering the primary link
 - ca-failure-to-pay-child-support: Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?
 - ca-illegal-fireworks-12677: What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?
 - ca-possession-of-prohibited-weapon: Which currently operative court orders affect the weapon definitions relevant to this possession charge?
+- ca-pen-237-a: Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?
 
 See docs/california-remaining-attorney-questions.md for sources and proposed treatment. These focused questions are not an exhaustive list of all legal-review needs.
 

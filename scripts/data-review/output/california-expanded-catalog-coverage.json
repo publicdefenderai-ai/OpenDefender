@@ -3,12 +3,12 @@
   "schemaVersion": 1,
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
-    "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 312,
-    "configuredSelectable": 291,
+    "specificOpenLegalQuestions": 4,
+    "canonicalRecords": 340,
+    "configuredSelectable": 319,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 192,
-    "boundedCorrectionPass": 291,
+    "boundedAdditionPass": 220,
+    "boundedCorrectionPass": 319,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 192,
+    "distinctSelectablePrimarySections": 210,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 192,
-    "selectableRecordsWithAllPrimaryTextAcquired": 291,
-    "totalAcquiredSectionsIncludingDependencies": 461,
-    "totalAcquiredVersionsIncludingDependencies": 467,
+    "acquiredSelectablePrimarySections": 210,
+    "selectableRecordsWithAllPrimaryTextAcquired": 319,
+    "totalAcquiredSectionsIncludingDependencies": 505,
+    "totalAcquiredVersionsIncludingDependencies": 511,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "291 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "319 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 175,
-      "corrected": 175,
+      "selectable": 203,
+      "corrected": 203,
       "awaitingCorrection": 0
     },
     {
@@ -253,6 +253,19 @@
         "PEN:30510",
         "PEN:30515",
         "PEN:30605"
+      ],
+      "reviewDocument": "docs/california-remaining-attorney-questions.md"
+    },
+    {
+      "id": "ca-237-felony-fine",
+      "chargeId": "ca-pen-237-a",
+      "status": "unresolved",
+      "question": "Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?",
+      "sourceKeys": [
+        "PEN:236",
+        "PEN:237",
+        "PEN:672",
+        "PEN:1170"
       ],
       "reviewDocument": "docs/california-remaining-attorney-questions.md"
     }
@@ -774,6 +787,71 @@
     },
     {
       "lawCode": "PEN",
+      "section": "203",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=203&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-203"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "205",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=205&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-205"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "206",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=206&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-206"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "207",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=207&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-207-a",
+        "ca-pen-207-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "209",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=209&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-209-a",
+        "ca-pen-209-b-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "209.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=209.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-209-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "210.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=210.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-210-5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "211",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=211&lawCode=PEN",
       "recordIds": [
@@ -799,6 +877,46 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=215&lawCode=PEN",
       "recordIds": [
         "ca-carjacking"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "220",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=220&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-220-a-1",
+        "ca-pen-220-a-2",
+        "ca-pen-220-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "236",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=236&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-236"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "236.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=236.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-236-1-a",
+        "ca-pen-236-1-b",
+        "ca-pen-236-1-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "237",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=237&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-237-a"
       ],
       "alreadyRetained": false
     },
@@ -1180,12 +1298,68 @@
     },
     {
       "lawCode": "PEN",
+      "section": "273.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-273-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "273.6",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.6&lawCode=PEN",
       "recordIds": [
         "ca-protective-order-273-6-a"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273a",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273a&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-273a-a",
+        "ca-pen-273a-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273ab",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273ab&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-273ab-a",
+        "ca-pen-273ab-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273d",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273d&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-273d-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "278",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=278&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-278"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "278.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=278.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-278-5-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -1249,6 +1423,17 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=33&lawCode=PEN",
       "recordIds": [
         "ca-accessory-after-the-fact-32"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "368",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=368&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-368-b-1",
+        "ca-pen-368-c",
+        "ca-pen-368-f"
       ],
       "alreadyRetained": false
     },
@@ -7363,6 +7548,482 @@
         "VEH:40508"
       ],
       "catalogSha256": "c4011c4f22d6ecd81a0996dfe5bf9f83fd7ecfa663b857ff42e45156648c1074",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-203",
+      "title": "Mayhem",
+      "citation": "Cal. Penal Code § 203",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:203"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:203"
+      ],
+      "catalogSha256": "cdf50918836ba85de9286cbbbc33465d16ff19daa8a5688e066f25aa14748655",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-205",
+      "title": "Aggravated mayhem",
+      "citation": "Cal. Penal Code § 205",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:205"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:205"
+      ],
+      "catalogSha256": "18938f6c0ddf05c08a352046079f5257a2b0aab744a72bf0ab98ca18338cc460",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-206",
+      "title": "Torture",
+      "citation": "Cal. Penal Code § 206",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:206"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:206"
+      ],
+      "catalogSha256": "5812f23014c3f157b82451509bf706fdfea08bc64d877358b59fd8b9f6516b2b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-220-a-1",
+      "title": "Assault with intent to commit mayhem or a specified sexual offense",
+      "citation": "Cal. Penal Code § 220(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:220"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:220"
+      ],
+      "catalogSha256": "7234d10c09e48a40e0e8412e9bd1088f7fc277c0b61319050d3afdc75853fff7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-220-a-2",
+      "title": "Assault on a minor with intent to commit a specified sexual offense",
+      "citation": "Cal. Penal Code § 220(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:220"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:220"
+      ],
+      "catalogSha256": "ce4d1d45002a74d417c05c066f6a31cd87bc35b533c133acc766afe2d3f965a1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-220-b",
+      "title": "Assault during first-degree burglary with sexual-offense intent",
+      "citation": "Cal. Penal Code § 220(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:220"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:220"
+      ],
+      "catalogSha256": "bb47c834946bf743e09d186b9fd9baf89db5f3db4c3ed6d398499a53376e7f4e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273a-a",
+      "title": "Child abuse or endangerment likely to cause great bodily harm or death",
+      "citation": "Cal. Penal Code § 273a(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273a"
+      ],
+      "catalogSha256": "313e47903fc417a37f8129b65c751d00eae3362a5ac25deee35a65bf4380051e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273a-b",
+      "title": "Child abuse or endangerment: misdemeanor circumstances",
+      "citation": "Cal. Penal Code § 273a(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273a"
+      ],
+      "catalogSha256": "c9521d06edaaddd821c3a49de0b0f26916a9c4890fe5257c009006a323f37926",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273ab-a",
+      "title": "Assault by a caregiver causing death of a child under eight",
+      "citation": "Cal. Penal Code § 273ab(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273ab"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273ab"
+      ],
+      "catalogSha256": "544df34ee69484feace51622909574e0fd618fcaea39ce1ac4d933ac2ec7d33f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273ab-b",
+      "title": "Assault by a caregiver causing coma or permanent paralysis of a child under eight",
+      "citation": "Cal. Penal Code § 273ab(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273ab"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273ab"
+      ],
+      "catalogSha256": "c01721484f11135ad4d29c7d77fef43ec3fafe46285c02df6f04c58094e2f51d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273d-a",
+      "title": "Inflicting corporal injury or cruel punishment on a child",
+      "citation": "Cal. Penal Code § 273d(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273d"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273d"
+      ],
+      "catalogSha256": "6bbc1e91ea19dc9e99418cb809d04d8b51ff6a483de8d291cf83ba8646d22461",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273-5-a",
+      "title": "Corporal injury to a spouse, partner or co-parent",
+      "citation": "Cal. Penal Code § 273.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:273.5"
+      ],
+      "catalogSha256": "0bc43b38b89750a2191deb8e48f60fc6323a0526ef509b7766ae8fafa08e15c2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-b-1",
+      "title": "Elder or dependent-adult abuse likely to cause great bodily harm or death",
+      "citation": "Cal. Penal Code § 368(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "0753dffd5f315cc3a443a10a031a11859cc7cb06a3d4a2f0556cadb669dd26e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-c",
+      "title": "Elder or dependent-adult abuse: misdemeanor circumstances",
+      "citation": "Cal. Penal Code § 368(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "80428e652d091b7e4262c3198e05cdd8aaedcf5bd17627985088711b9bb6ee2f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-f",
+      "title": "False imprisonment of an elder or dependent adult by violence or deceit",
+      "citation": "Cal. Penal Code § 368(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "c1db6c5fee663bfb77bec7317f4af7a32e5d656261450e5ae563704ba306ca2c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-207-a",
+      "title": "Kidnapping by force or fear",
+      "citation": "Cal. Penal Code § 207(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:207"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:207"
+      ],
+      "catalogSha256": "a8ee5a3f530622143c3a4de3cf805f49633990beb734d4e6c8aea75c8feded73",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-207-b",
+      "title": "Kidnapping a child under fourteen for a lewd-act purpose",
+      "citation": "Cal. Penal Code § 207(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:207"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:207"
+      ],
+      "catalogSha256": "01d930cea69400b0770abfe05b6f4e18aae7cf2bc0dc0875e6215a2aac3497c6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-209-a",
+      "title": "Kidnapping or detention for ransom, reward or extortion",
+      "citation": "Cal. Penal Code § 209(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:209"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:209"
+      ],
+      "catalogSha256": "9312cffac5dfb24290379d8f3320da87f4d44916b993cd5ed99062594df4e7da",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-209-b-1",
+      "title": "Kidnapping to commit robbery or a specified sexual offense",
+      "citation": "Cal. Penal Code § 209(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:209"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:209"
+      ],
+      "catalogSha256": "97fb8db2fb88e1428fad77abcac79a4a6f07a2de689f2684f4653ee5e5f0c719",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-209-5-a",
+      "title": "Kidnapping during a carjacking",
+      "citation": "Cal. Penal Code § 209.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:209.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:209.5"
+      ],
+      "catalogSha256": "51d0827c2bfc244a85f53500adca2f85d74b463c3a40e4fba792197a40ece446",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-210-5",
+      "title": "False imprisonment for protection from arrest or use as a shield",
+      "citation": "Cal. Penal Code § 210.5",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:210.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:210.5"
+      ],
+      "catalogSha256": "6105b82f0f8f87153835ebbdabe2249e19e8b5d61b6e5ccff9f61c5905778d7f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-236",
+      "title": "False imprisonment: misdemeanor branch",
+      "citation": "Cal. Penal Code § 236",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:236"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:236"
+      ],
+      "catalogSha256": "322ded4e7f074fd8549867e317455e41758b7f2eb209ab1aaf4dd5290887b969",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-237-a",
+      "title": "False imprisonment by violence, menace, fraud or deceit",
+      "citation": "Cal. Penal Code § 237(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:237"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:237"
+      ],
+      "catalogSha256": "c79c3515d792e9dd90ab3bf2256aeafb2ed72fccf190d1519aff51d20255d2bf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-236-1-a",
+      "title": "Human trafficking for forced labor or services",
+      "citation": "Cal. Penal Code § 236.1(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:236.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:236.1"
+      ],
+      "catalogSha256": "24398ebbb87ec510c5669458080c4f9ae63a45d3e38f8421e2bd0f0ad6b0f1a2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-236-1-b",
+      "title": "Human trafficking to further specified exploitation offenses",
+      "citation": "Cal. Penal Code § 236.1(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:236.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:236.1"
+      ],
+      "catalogSha256": "416be435029b4844298e37f42b483894d1ef22ea7605b3e3f6713fe45379f035",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-236-1-c",
+      "title": "Human trafficking of a minor for a commercial sex act",
+      "citation": "Cal. Penal Code § 236.1(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:236.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:236.1"
+      ],
+      "catalogSha256": "77dc0988516ef971aef87ae762cad1da2492defc5a76d1574bdb8e144a267423",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-278",
+      "title": "Child abduction without a right to custody",
+      "citation": "Cal. Penal Code § 278",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:278"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:278"
+      ],
+      "catalogSha256": "0300410bc887d9c41f4e1099e0f0a3f9c49777ff5d29098664c88edfe15ad622",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-278-5-a",
+      "title": "Child abduction by depriving custody or visitation",
+      "citation": "Cal. Penal Code § 278.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:278.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:278.5"
+      ],
+      "catalogSha256": "b8636550506ed88e78d95abf4cca21bb3f93751ada8bda0a208e1f6bdc12d79c",
       "attorneyReview": "pending"
     },
     {

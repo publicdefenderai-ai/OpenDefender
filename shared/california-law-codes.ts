@@ -11,7 +11,7 @@ export function californiaLawCode(value: string): CaliforniaLawCode {
   return value as CaliforniaLawCode;
 }
 export function californiaPrimaryIdentity(lawCode: CaliforniaLawCode, code: string) {
-  const section = code.match(/^\d+(?:\.\d+)*[a-z]?/)?.[0];
+  const section = code.match(/^\d+(?:\.\d+)*[a-z]*(?=\(|;|$)/)?.[0];
   if (!section) throw new Error("Unparseable California primary section");
   return { lawCode, key: `${lawCode}:${section}`, citation: `${CALIFORNIA_LAW_CODE_LABELS[lawCode]} § ${code}` };
 }

@@ -4,7 +4,7 @@ Updated September 28, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-Merged PR30 adds ten vehicle-identification choices. The configured catalog now contains 291: 99 original corrected choices and 192 additions. There are 192 distinct primary sections and 461 retained publication sections/467 versions including dependencies. The changed weapon source still withholds one configured record, leaving 290 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain outside the configured catalog.
+PR31 is merged. The next combined violence/detention publication proposes 28 choices, bringing the configured catalog to 319: 99 corrected originals and 220 additions. It covers 210 distinct primary sections, with 505 retained publication sections/511 versions including dependencies. PEN 30515 remains held, leaving 318 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -128,3 +128,14 @@ The crosswalk credits 43 explicit bounded prior matches, distinguishes 29 contex
 The four named source groups carry the next publication work. No attorney data-entry assignment is needed now. Start with serious violence, abuse and detention; acquire any newly identified sentencing dependencies, verify exact branches, compare against the fresh archive, and then publish the clear choices together. Refer only a concrete unresolved interpretation with source text and a decision needed.
 
 Reproduce with `extract-people-weapons-benchmark.py`, `acquire-people-weapons.py`, and `node --import tsx scripts/data-review/california-verification/people-weapons-review.ts`. Ordinary validation and tests use committed public evidence offline; PDF/archive replay uses the retained original receipts. Parser tests run through the existing Python unittest wrapper in Vitest CI.
+
+
+## Serious violence, abuse and detention: combined publication
+
+The successor proposes 28 choices across 18 primary sections: mayhem/torture; three assault-with-intent branches; child abuse, fatal/brain-injury assault and corporal punishment; domestic injury; elder abuse and detention; kidnapping, hostage-taking and false imprisonment; trafficking; and child abduction. Twenty-five instruction entries gain bounded matches. The historical research packet is preserved, and its other families remain open.
+
+Seventy dependencies are bound: 26 reused and 44 newly monitored, including 36 promoted research sections. The unchanged-source comparison confirms 504 of 505 publication sections; PEN 30515 is the sole changed-source hold. The authentic receipt dates and expiry are preserved. Section parsing now retains multiple trailing letters, keeping PEN 273ab distinct from PEN 273a throughout citations, URLs and authority checks.
+
+The report preserves the January 2026 torture parole-minimum distinction, age/actor/intent branches, conditional prior terms and trafficking's additional fine/terms. The felony false-imprisonment fine limit is expressly unresolved in the user-facing explanation and in attorney question 4. Kidnapping 207(c)/(d), elder financial offenses and the other people/weapons groups remain research, not minor-charge deferrals.
+
+Run `node --import tsx scripts/data-review/california-verification/violence-detention-review.ts` for the source-bound review and successor crosswalk. Replay `acquire-violence-detention.py` against the retained original archive. Next substantive group: combine the remaining sexual-offense branches using the already retained shared evidence, followed by weapons/threats and the remaining statewide families.

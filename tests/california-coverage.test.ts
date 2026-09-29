@@ -14,9 +14,9 @@ describe("California catalog coverage boundaries", () => {
   });
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 312, configuredSelectable: 291, withheldCanonicalLabels: 21, boundedCorrectionPass: 291, boundedAdditionPass: 192, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 192, selectableRecordsWithAllPrimaryTextAcquired: 291, totalAcquiredSectionsIncludingDependencies: 461, totalAcquiredVersionsIncludingDependencies: 467 });
-    expect(report.accounting.specificOpenLegalQuestions).toBe(3);
-    expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved"]);
+    expect(report.accounting).toMatchObject({ canonicalRecords: 340, configuredSelectable: 319, withheldCanonicalLabels: 21, boundedCorrectionPass: 319, boundedAdditionPass: 220, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 210, selectableRecordsWithAllPrimaryTextAcquired: 319, totalAcquiredSectionsIncludingDependencies: 505, totalAcquiredVersionsIncludingDependencies: 511 });
+    expect(report.accounting.specificOpenLegalQuestions).toBe(4);
+    expect(report.openLegalQuestions.map(row => row.status)).toEqual(["unresolved", "unresolved", "unresolved", "unresolved"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");
     expect(renderCaliforniaCoverage(report)).not.toContain("Next largest groups: .");
     expect(report.accounting.boundedCorrectionPass + report.accounting.awaitingCorrectionPass).toBe(report.accounting.configuredSelectable);

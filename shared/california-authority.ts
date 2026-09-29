@@ -81,7 +81,7 @@ const CALCRIM_URL =
   "https://www.courts.ca.gov/partners/california-jury-instructions";
 
 function leginfoUrl(lawCode: CaliforniaCanonicalRecord["lawCode"], code: string): string {
-  const section = code.match(/\d+(?:\.\d+)*(?:[a-z])?/)![0];
+  const section = californiaPrimaryIdentity(lawCode, code).key.split(":")[1];
   return `${LEGINFO_BASE}?sectionNum=${encodeURIComponent(section)}&lawCode=${lawCode}`;
 }
 
@@ -161,7 +161,7 @@ export function getCaliforniaCorrectionDependencies(correction: {
 
 function record(seed: RecordSeed): CaliforniaCanonicalRecord {
   const correction = getCaliforniaBatchCorrection(seed.canonicalId);
-  const sections = [...seed.code.matchAll(/(?:^|[;,]\s*)(\d+(?:\.\d+)*(?:[a-z])?)/g)].map(
+  const sections = [...seed.code.matchAll(/(?:^|[;,]\s*)(\d+(?:\.\d+)*[a-z]*)/g)].map(
     (match) => match[1],
   );
   const statuteSources = [...new Set(sections)].map((section) =>

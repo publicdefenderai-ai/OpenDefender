@@ -8,7 +8,7 @@ export function validateCaliforniaSourceTransitions(input: unknown, knownKeys: r
   const seen = new Set<string>();
   return input.map(row => {
     if (!row || typeof row !== 'object' || typeof row.key !== 'string' ||
-        !/^[A-Z]+:\d+(?:\.\d+)*[a-z]?$/.test(row.key)) throw new Error('Invalid California transition key');
+        !/^[A-Z]+:\d+(?:\.\d+)*[a-z]*$/.test(row.key)) throw new Error('Invalid California transition key');
     californiaLawCode(row.key.split(':')[0]);
     // Syntax alone cannot catch a mistyped but plausible section number.
     if (!knownKeys.includes(row.key) || seen.has(row.key)) throw new Error('Unknown or duplicate California transition key');

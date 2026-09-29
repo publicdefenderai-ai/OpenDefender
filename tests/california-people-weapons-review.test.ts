@@ -5,8 +5,8 @@ import {CALIFORNIA_CANONICAL_RECORDS} from '../shared/california-authority';
 describe('California people/weapons combined research',()=>{
   it('accounts for all five families and keeps unresolved branches out of credited coverage',()=>{
     const r=buildPeopleWeaponsReview();
-    expect(r.counts).toEqual({candidateSections:373,reusedSections:77,newSections:296,newVersions:296,instructions:207,pages:659,boundedPriorMatches:43,contextInstructions:29,genericTemplates:1,sameSectionNeedsReview:29,noSameSectionCandidate:105});
-    expect(r.crosswalk.find(i=>i.id==='821')).toMatchObject({status:'no_same_section_catalog_candidate',boundedChargeIds:[]});
+    expect(r.counts).toEqual({candidateSections:373,reusedSections:77,newSections:296,newVersions:296,instructions:207,pages:659,boundedPriorMatches:43,contextInstructions:29,genericTemplates:1,sameSectionNeedsReview:52,noSameSectionCandidate:82});
+    expect(r.crosswalk.find(i=>i.id==='821')).toMatchObject({status:'same_section_candidates_require_branch_review',boundedChargeIds:[]});
     expect(r.crosswalk.find(i=>i.id==='937')).toMatchObject({status:'same_section_candidates_require_branch_review',boundedChargeIds:[]});
     expect(r.crosswalk.find(i=>i.id==='935')?.boundedChargeIds).toEqual(['ca-sexual-battery-243-4-a']);
     expect(r.crosswalk.find(i=>i.id==='2561')?.status).toBe('no_same_section_catalog_candidate');
