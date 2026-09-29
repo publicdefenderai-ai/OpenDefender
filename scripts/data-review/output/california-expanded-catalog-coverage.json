@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 4,
-    "canonicalRecords": 430,
-    "configuredSelectable": 409,
+    "canonicalRecords": 473,
+    "configuredSelectable": 452,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 310,
-    "boundedCorrectionPass": 409,
+    "boundedAdditionPass": 353,
+    "boundedCorrectionPass": 452,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 233,
+    "distinctSelectablePrimarySections": 256,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 233,
-    "selectableRecordsWithAllPrimaryTextAcquired": 409,
-    "totalAcquiredSectionsIncludingDependencies": 529,
-    "totalAcquiredVersionsIncludingDependencies": 535,
+    "acquiredSelectablePrimarySections": 256,
+    "selectableRecordsWithAllPrimaryTextAcquired": 452,
+    "totalAcquiredSectionsIncludingDependencies": 585,
+    "totalAcquiredVersionsIncludingDependencies": 591,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "409 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "452 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 293,
-      "corrected": 293,
+      "selectable": 336,
+      "corrected": 336,
       "awaitingCorrection": 0
     },
     {
@@ -686,6 +686,35 @@
     },
     {
       "lawCode": "PEN",
+      "section": "11411",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11411&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-11411-b",
+        "ca-pen-11411-c",
+        "ca-pen-11411-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "11412",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11412&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-11412"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "11413",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11413&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-11413-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "1320",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320&lawCode=PEN",
       "recordIds": [
@@ -714,6 +743,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "17500",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=17500&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-17500"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "182",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=182&lawCode=PEN",
       "recordIds": [
@@ -738,6 +776,90 @@
         "ca-murder-in-the-first-degree",
         "ca-murder-in-the-second-degree",
         "ca-attempted-murder"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18710",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18710&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18710-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18715",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18715&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18715-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18720",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18720&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18720"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18725",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18725&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18725-a",
+        "ca-pen-18725-b",
+        "ca-pen-18725-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18730",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18730&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18730"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18740",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18740&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18740"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18745",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18745&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18745"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18750",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18750&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18750"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "18755",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=18755&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-18755-a",
+        "ca-pen-18755-b"
       ],
       "alreadyRetained": false
     },
@@ -1257,10 +1379,40 @@
     },
     {
       "lawCode": "PEN",
+      "section": "25100",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25100&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-25100-a",
+        "ca-pen-25100-b",
+        "ca-pen-25100-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "25200",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25200&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-25200-a",
+        "ca-pen-25200-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "25400",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25400&lawCode=PEN",
       "recordIds": [
         "ca-unlawful-carrying-of-weapon"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "25800",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25800&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-25800-a"
       ],
       "alreadyRetained": false
     },
@@ -1287,6 +1439,18 @@
         "ca-unlawful-sexual-intercourse-261-5-b",
         "ca-unlawful-sexual-intercourse-261-5-c",
         "ca-unlawful-sexual-intercourse-261-5-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "26100",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=26100&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-26100-a",
+        "ca-pen-26100-b",
+        "ca-pen-26100-c",
+        "ca-pen-26100-d"
       ],
       "alreadyRetained": false
     },
@@ -1722,12 +1886,63 @@
     },
     {
       "lawCode": "PEN",
+      "section": "417",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=417&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-417-a-1",
+        "ca-pen-417-a-2-a",
+        "ca-pen-417-a-2-b",
+        "ca-pen-417-b",
+        "ca-pen-417-c",
+        "ca-pen-417-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "417.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=417.3&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-417-3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "417.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=417.4&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-417-4"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "417.8",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=417.8&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-417-8"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "422",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=422&lawCode=PEN",
       "recordIds": [
         "ca-menacing"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "422.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=422.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-422-6-a",
+        "ca-pen-422-6-b"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -2190,6 +2405,18 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=640&lawCode=PEN",
       "recordIds": [
         "ca-fare-evasion"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "646.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=646.9&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-646-9-a",
+        "ca-pen-646-9-b",
+        "ca-pen-646-9-c-1",
+        "ca-pen-646-9-c-2"
       ],
       "alreadyRetained": false
     },
@@ -4700,6 +4927,737 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-646-9-a",
+      "title": "Stalking",
+      "citation": "Cal. Penal Code § 646.9(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:646.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:646.9"
+      ],
+      "catalogSha256": "47c6b7fc9e86ee0f4d16ade477bb845fdb6067d22aa0c6316dbc203ba0935f0e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-646-9-b",
+      "title": "Stalking while a protective order is in effect",
+      "citation": "Cal. Penal Code § 646.9(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:646.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:646.9"
+      ],
+      "catalogSha256": "2c8e58da6e212a3c4163c96a16deda9b22974a881d3ceca6ae1cfab3e77225ff",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-646-9-c-1",
+      "title": "Stalking after a specified felony conviction",
+      "citation": "Cal. Penal Code § 646.9(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:646.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:646.9"
+      ],
+      "catalogSha256": "30e7aeca8bbaa2b4641d480bfc12cf92c147cadec452d3f1163b41e8db931608",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-646-9-c-2",
+      "title": "Stalking after a felony stalking conviction",
+      "citation": "Cal. Penal Code § 646.9(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:646.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:646.9"
+      ],
+      "catalogSha256": "ca01cfa8cb6870f688d68461b6c955061d343a95dbbd3ce27379ba8c4b3dfcb4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-422-6-a",
+      "title": "Interfering with civil rights by force or threat",
+      "citation": "Cal. Penal Code § 422.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:422.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:422.6"
+      ],
+      "catalogSha256": "cd7221dc4b68649b82c53f7ea5e2f0ec87e5012e8aabe57701ee45658ad88efb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-422-6-b",
+      "title": "Interfering with civil rights by damaging property",
+      "citation": "Cal. Penal Code § 422.6(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:422.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:422.6"
+      ],
+      "catalogSha256": "81b0b5596efdc3bc2caac40bfb3d4582a29cf2abf5f60c0db1598be81e498dd2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-11411-b",
+      "title": "Hanging a noose to terrorize",
+      "citation": "Cal. Penal Code § 11411(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:11411"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:11411"
+      ],
+      "catalogSha256": "44625e0542097a6b053b54f3cadfda452bb5374871079f74467752dd486e6459",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-11411-c",
+      "title": "Displaying a symbol to terrorize",
+      "citation": "Cal. Penal Code § 11411(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:11411"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:11411"
+      ],
+      "catalogSha256": "f72535533fd89965748e8a745e9b8ed98c47eddc4830fab17530103b2ef24341",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-11411-d",
+      "title": "Burning or desecrating a religious symbol to terrorize",
+      "citation": "Cal. Penal Code § 11411(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:11411"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:11411"
+      ],
+      "catalogSha256": "06b489a5912c4f868790b430996502c1cad85e15840eab8bd67d553b2b94a872",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-11412",
+      "title": "Interfering with religious exercise by a direct threat",
+      "citation": "Cal. Penal Code § 11412",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:11412"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:11412"
+      ],
+      "catalogSha256": "cf163ca347f793ea132088e57c677fdfaab6370df2effa4b4444847a35b417aa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-11413-a",
+      "title": "Terrorizing by explosive device or arson at a specified place",
+      "citation": "Cal. Penal Code § 11413(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:11413"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:11413"
+      ],
+      "catalogSha256": "3a55764e02c70633b8e8b6ac8fe11c3f096e874399c7ae8635da78d8b4512083",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18710-a",
+      "title": "Possession of a destructive device",
+      "citation": "Cal. Penal Code § 18710(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18710"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18710"
+      ],
+      "catalogSha256": "a20ab2a02df101e1f39d0292c441347581bbc93ddb79ae9608107d523b607169",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18715-a",
+      "title": "Possessing an explosive or destructive device at a specified place",
+      "citation": "Cal. Penal Code § 18715(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18715"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18715"
+      ],
+      "catalogSha256": "c46c34885320f7d6cc172a7143860471b0f48df3b25b9d3545d90f247f8b77df",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18720",
+      "title": "Possession of materials with intent to make a destructive device or explosive",
+      "citation": "Cal. Penal Code § 18720",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18720"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18720"
+      ],
+      "catalogSha256": "074696ef91c648a2fb25606feaa55cb7fef29803471bea507f0a48888754d681",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18725-a",
+      "title": "Carrying an explosive on passenger transport",
+      "citation": "Cal. Penal Code § 18725(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18725"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18725"
+      ],
+      "catalogSha256": "f3a531b682c6b2fcdb35bd2e343addcdde8d46b15cf147b48adafd1369886e31",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18725-b",
+      "title": "Carrying or placing an explosive in baggage aboard passenger transport",
+      "citation": "Cal. Penal Code § 18725(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18725"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18725"
+      ],
+      "catalogSha256": "b6277320a8110e948ab86373b669f6961b7b490bd17a324d7ba1a29ecab4b7f8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18725-c",
+      "title": "Placing an explosive in baggage checked with a common carrier",
+      "citation": "Cal. Penal Code § 18725(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18725"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18725"
+      ],
+      "catalogSha256": "bb231f038192fba6b0a10a16db3d359112d191dd00c651fe5f310cdc8599284b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18730",
+      "title": "Sale, offer for sale or transport of a destructive device",
+      "citation": "Cal. Penal Code § 18730",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18730"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18730"
+      ],
+      "catalogSha256": "a0bfa5e8c55d4d73899e59dabcbdae2ab15c77ea1f386a32564653f5e83c8317",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18740",
+      "title": "Destructive device or explosive with intent to injure, intimidate or damage",
+      "citation": "Cal. Penal Code § 18740",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18740"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18740"
+      ],
+      "catalogSha256": "94546a4cab3209ca9cf264ceafaf84557d01269d467552a9b013ca6328c711ae",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18745",
+      "title": "Exploding or attempting to explode a device with intent to murder",
+      "citation": "Cal. Penal Code § 18745",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18745"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18745"
+      ],
+      "catalogSha256": "62f8c939cfc8e8e6d47cc1102d325833d2a1f83824164033633b1cbb86a175e3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18750",
+      "title": "Exploding a device causing bodily injury",
+      "citation": "Cal. Penal Code § 18750",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18750"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18750"
+      ],
+      "catalogSha256": "00c9f19bb996b6aa2bd2282757befde0c1b74cf899a6164acaa3a01170f74936",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18755-a",
+      "title": "Exploding a device causing death",
+      "citation": "Cal. Penal Code § 18755(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18755"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18755"
+      ],
+      "catalogSha256": "94dad3bd2288d828656299153e269b2049b12f0b627be1915013b72a4b4535e1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-18755-b",
+      "title": "Exploding a device causing mayhem or great bodily injury",
+      "citation": "Cal. Penal Code § 18755(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:18755"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:18755"
+      ],
+      "catalogSha256": "a3a52e5ede75c8d6b72c63a01851f09c54867b5c4cd9290890492bb1c746e84a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-a-1",
+      "title": "Drawing or exhibiting a deadly weapon other than a firearm",
+      "citation": "Cal. Penal Code § 417(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "048b5ee8ba84265e7fd44bd55aefe93802aeaf8ebbfaced71bf328b8465866df",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-a-2-a",
+      "title": "Drawing or exhibiting a concealable firearm in public",
+      "citation": "Cal. Penal Code § 417(a)(2)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "1607e59eee5e18a0b91457b302c5acc61f92f278b988ef0098ff211cd3159291",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-a-2-b",
+      "title": "Drawing or exhibiting a firearm: other cases",
+      "citation": "Cal. Penal Code § 417(a)(2)(B)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "8661b837f26bb37857ee99b60a8b0eccae360d5406212ddc4d787c7586d657a9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-b",
+      "title": "Drawing or exhibiting a loaded firearm at a child-care or youth facility",
+      "citation": "Cal. Penal Code § 417(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "038636180425311291ce434df1a769b7ff65e257eb428ff892429650afc43de9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-c",
+      "title": "Drawing or exhibiting a firearm in the immediate presence of a peace officer",
+      "citation": "Cal. Penal Code § 417(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "680594c30b787b6c20003bfdfb0d0d9f0885031d291a0cc15f419791a5b692a8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-d",
+      "title": "Drawing or exhibiting a weapon while another person cleans graffiti",
+      "citation": "Cal. Penal Code § 417(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417"
+      ],
+      "catalogSha256": "246d00e6ecf8176daeff31b01ca56e5304cabde2c5d5c76e51b92e012ab638a1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-3",
+      "title": "Threatening display of a firearm to a motor-vehicle occupant",
+      "citation": "Cal. Penal Code § 417.3",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417.3"
+      ],
+      "catalogSha256": "c375c0d8fa2c6553ee6d1813b76b7b02bd7be42ffcc83849043aa16dbe229e24",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-4",
+      "title": "Threatening display of an imitation firearm",
+      "citation": "Cal. Penal Code § 417.4",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417.4"
+      ],
+      "catalogSha256": "e9f22694782e8073c4b60cc9192c0f57c7f2a967e67e7077a347f8860ac070c2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-417-8",
+      "title": "Drawing or exhibiting a weapon to resist arrest or detention",
+      "citation": "Cal. Penal Code § 417.8",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:417.8"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:417.8"
+      ],
+      "catalogSha256": "fae60adcb30c8d2d1985d012c020686173e5bc674d1e672122437b0196e86fe1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-26100-a",
+      "title": "Knowingly allowing an unlawful firearm in a vehicle",
+      "citation": "Cal. Penal Code § 26100(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:26100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:26100"
+      ],
+      "catalogSha256": "ad598bce2f356e64ef59973a812e2358f020c86be84c8cbc3ab1fadff325af2f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-26100-b",
+      "title": "Knowingly allowing discharge of a firearm from a vehicle",
+      "citation": "Cal. Penal Code § 26100(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:26100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:26100"
+      ],
+      "catalogSha256": "95fe5ee15d966036579802aff91236f0dc649238ba6f80b92b2203e9044af9c3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-26100-c",
+      "title": "Discharging a firearm from a vehicle at a person outside a vehicle",
+      "citation": "Cal. Penal Code § 26100(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:26100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:26100"
+      ],
+      "catalogSha256": "6d3d019f4cb7bf7733d2cf4d56bb58ffea710c1c37e415f527b3b1266f89fedc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-26100-d",
+      "title": "Discharging a firearm from a motor vehicle",
+      "citation": "Cal. Penal Code § 26100(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:26100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:26100"
+      ],
+      "catalogSha256": "049b87be88eefbe406b42fb42cf9e1e5a9e78c2a65ee493e14af40d04239b895",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-17500",
+      "title": "Having a deadly weapon with intent to assault",
+      "citation": "Cal. Penal Code § 17500",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:17500"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:17500"
+      ],
+      "catalogSha256": "09c875e7b8e6cfb4e4664c70438c7c895657fcf71111e335abf6afd7c7d89d41",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25800-a",
+      "title": "Armed criminal action",
+      "citation": "Cal. Penal Code § 25800(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25800"
+      ],
+      "catalogSha256": "1e7f05bef38cbb6a6a29f86910872bce484e82a5d3a2d88316abf15d0ef63e17",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25100-a",
+      "title": "Criminal storage of a firearm in the first degree",
+      "citation": "Cal. Penal Code § 25100(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25100"
+      ],
+      "catalogSha256": "f4020a6005b04b0393d501269db1c868fc7ff5ca43cbc39128130acbdf0d5bea",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25100-b",
+      "title": "Criminal storage of a firearm in the second degree",
+      "citation": "Cal. Penal Code § 25100(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25100"
+      ],
+      "catalogSha256": "15e4b7981b355261a35c58e5a6f3b07124e89a5e2e7aed9b0209954c133e6125",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25100-c",
+      "title": "Criminal storage of a firearm in the third degree",
+      "citation": "Cal. Penal Code § 25100(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25100"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25100"
+      ],
+      "catalogSha256": "f1cdb0f3fa15369f41c471f641960e1846143636e845a9dbf0cdc1f35d6354ae",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25200-a",
+      "title": "Storage allowing a child or prohibited person to carry a firearm off premises",
+      "citation": "Cal. Penal Code § 25200(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25200"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25200"
+      ],
+      "catalogSha256": "527f84cf18435c7657d2e3323dea5a96891a80df5ad4488027db96b2224b3767",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25200-b",
+      "title": "Storage allowing a child or prohibited person to carry a firearm to school",
+      "citation": "Cal. Penal Code § 25200(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25200"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25200"
+      ],
+      "catalogSha256": "d74a267796d8b5dab1c24a89bd914bc777481a7ed3aaa3deef4d8f46c81ae87b",
       "attorneyReview": "pending"
     },
     {

@@ -1,0 +1,1700 @@
+[
+  {
+    "id": "ca-pen-646-9-a",
+    "lawCode": "PEN",
+    "code": "646.9(a)",
+    "title": "Stalking",
+    "summary": "Willfully and maliciously repeatedly following or harassing another person, plus a credible threat intended to put that person in reasonable fear for their own or immediate family safety. A credible threat requires apparent ability; actual intent to carry it out is not required. Constitutionally protected activity and labor picketing are excluded.",
+    "penalty": "Ordinary wobbler: up to 364 days in county jail and/or a fine up to $1,000, or 16 months, 2 years or 3 years in state prison under section 18. Qualifying orders and prior convictions change the sentencing branch. Counseling is a probation condition unless excused for good cause; the court considers a protective order up to ten years. Court-ordered registration under 290.006 is possible for a felony, not automatic. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful, malicious conduct and specific intent to cause reasonable fear; the charged order/prior condition must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:273.6",
+      "PEN:290.006",
+      "PEN:422"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:290.006": "2021-01-01",
+      "PEN:422": "2026-01-01",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "stalking"
+    ],
+    "calcrim": [
+      "1301"
+    ]
+  },
+  {
+    "id": "ca-pen-646-9-b",
+    "lawCode": "PEN",
+    "code": "646.9(b)",
+    "title": "Stalking while a protective order is in effect",
+    "summary": "Willfully and maliciously repeatedly following or harassing another person, plus a credible threat intended to put that person in reasonable fear for their own or immediate family safety. A credible threat requires apparent ability; actual intent to carry it out is not required. Constitutionally protected activity and labor picketing are excluded. A restraining order, injunction or other court order against the same party must prohibit the stalking behavior and be in effect.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. The fine treatment requires review with the underlying 646.9(a) branch; no new fine ceiling is inferred. Counseling is a probation condition unless excused for good cause; the court considers a protective order up to ten years. Court-ordered registration under 290.006 is possible for a felony, not automatic. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful, malicious conduct and specific intent to cause reasonable fear; the charged order/prior condition must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:273.6",
+      "PEN:290.006",
+      "PEN:422"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:290.006": "2021-01-01",
+      "PEN:422": "2026-01-01",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "stalking"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-646-9-c-1",
+    "lawCode": "PEN",
+    "code": "646.9(c)(1)",
+    "title": "Stalking after a specified felony conviction",
+    "summary": "Willfully and maliciously repeatedly following or harassing another person, plus a credible threat intended to put that person in reasonable fear for their own or immediate family safety. A credible threat requires apparent ability; actual intent to carry it out is not required. Constitutionally protected activity and labor picketing are excluded. Requires a prior felony conviction under 273.5, 273.6 or 422, not merely any prior offense.",
+    "penalty": "Wobbler: up to 364 days in county jail and/or a fine up to $1,000, or 2, 3 or 5 years in state prison. Counseling is a probation condition unless excused for good cause; the court considers a protective order up to ten years. Court-ordered registration under 290.006 is possible for a felony, not automatic. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful, malicious conduct and specific intent to cause reasonable fear; the charged order/prior condition must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:273.6",
+      "PEN:290.006",
+      "PEN:422"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:290.006": "2021-01-01",
+      "PEN:422": "2026-01-01",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "stalking"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-646-9-c-2",
+    "lawCode": "PEN",
+    "code": "646.9(c)(2)",
+    "title": "Stalking after a felony stalking conviction",
+    "summary": "Willfully and maliciously repeatedly following or harassing another person, plus a credible threat intended to put that person in reasonable fear for their own or immediate family safety. A credible threat requires apparent ability; actual intent to carry it out is not required. Constitutionally protected activity and labor picketing are excluded. Requires a prior felony conviction under 646.9(a).",
+    "penalty": "Felony: 2, 3 or 5 years in state prison. The fine treatment requires review with the underlying stalking branch; no new fine ceiling is inferred. Counseling is a probation condition unless excused for good cause; the court considers a protective order up to ten years. Court-ordered registration under 290.006 is possible for a felony, not automatic. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful, malicious conduct and specific intent to cause reasonable fear; the charged order/prior condition must also be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:273.6",
+      "PEN:290.006",
+      "PEN:422"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:290.006": "2021-01-01",
+      "PEN:422": "2026-01-01",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "stalking"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-422-6-a",
+    "lawCode": "PEN",
+    "code": "422.6(a)",
+    "title": "Interfering with civil rights by force or threat",
+    "summary": "Willfully using force or a threat of force to interfere with another person's legally protected rights, at least partly because of an actual or perceived protected characteristic under 422.55. Speech alone is insufficient unless it threatens violence against a specific person or group and the defendant has apparent ability to carry it out. When there are multiple motives, the prohibited bias must be a substantial factor; it need not be the only or main factor.",
+    "penalty": "Wobbler under current 422.6(c): up to 364 days in county jail and/or a fine up to $5,000, or the 1170(h) default term of 16 months, 2 years or 3 years. The retained jury-instruction misdemeanor heading does not reflect this felony alternative. Community service is additionally required, capped at 400 hours over no more than 350 days, outside work/school hours; the statute does not state a numeric minimum. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful interference or knowing property damage with the specified bias and interference purpose; protected expression is not itself an offense.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:422.55",
+      "PEN:422.56",
+      "PEN:654"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:422.55": "2005-01-01",
+      "PEN:422.56": "2022-01-01",
+      "PEN:422.6": "2025-01-01",
+      "PEN:654": "2022-01-01"
+    },
+    "searchAliases": [
+      "hate crime"
+    ],
+    "calcrim": [
+      "1350",
+      "1351"
+    ]
+  },
+  {
+    "id": "ca-pen-422-6-b",
+    "lawCode": "PEN",
+    "code": "422.6(b)",
+    "title": "Interfering with civil rights by damaging property",
+    "summary": "Knowingly defacing, damaging or destroying another person's property for the purpose of intimidating or interfering with legally protected rights, at least partly because of an actual or perceived protected characteristic under 422.55. When there are multiple motives, the prohibited bias must be a substantial factor; it need not be the only or main factor.",
+    "penalty": "Wobbler under current 422.6(c): up to 364 days in county jail and/or a fine up to $5,000, or the 1170(h) default term of 16 months, 2 years or 3 years. The retained jury-instruction misdemeanor heading does not reflect this felony alternative. Community service is additionally required, capped at 400 hours over no more than 350 days, outside work/school hours; the statute does not state a numeric minimum. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful interference or knowing property damage with the specified bias and interference purpose; protected expression is not itself an offense.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:422.55",
+      "PEN:422.56",
+      "PEN:654"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:422.55": "2005-01-01",
+      "PEN:422.56": "2022-01-01",
+      "PEN:422.6": "2025-01-01",
+      "PEN:654": "2022-01-01"
+    },
+    "searchAliases": [
+      "hate crime"
+    ],
+    "calcrim": [
+      "1352"
+    ]
+  },
+  {
+    "id": "ca-pen-11411-b",
+    "lawCode": "PEN",
+    "code": "11411(b)",
+    "title": "Hanging a noose to terrorize",
+    "summary": "Hanging a noose on another person's private property without authorization, with purpose to terrorize its owner/occupant or reckless disregard of that risk; the separate listed-site alternative requires purpose to terrorize someone associated with the school, campus, public place, place of worship, cemetery or employment site. Knowledge that the noose represents a threat to life.",
+    "penalty": "Wobbler. First conviction: 16 months, 2 years or 3 years under 1170(h) and/or a fine up to $10,000, or up to 364 days in county jail and/or a fine up to $5,000. A second or subsequent conviction under (b), (c) or (d) retains the custody alternatives but raises the felony fine ceiling to $15,000 and misdemeanor ceiling to $10,000. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The specified knowledge and terrorizing purpose or private-property reckless-disregard alternative.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:11411": "2023-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "terrorism by symbol"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-11411-c",
+    "lawCode": "PEN",
+    "code": "11411(c)",
+    "title": "Displaying a symbol to terrorize",
+    "summary": "Placing or displaying a sign, mark, symbol, emblem or physical impression, including a Nazi swastika on another person's private property without authorization, with purpose to terrorize its owner/occupant or reckless disregard of that risk; the separate listed-site alternative requires purpose to terrorize someone associated with the school, campus, public place, place of worship, cemetery or employment site. The provision concerns terrorizing conduct; peaceful Hindu, Buddhist and Jain swastika symbols are not criminalized merely as symbols.",
+    "penalty": "Wobbler. First conviction: 16 months, 2 years or 3 years under 1170(h) and/or a fine up to $10,000, or up to 364 days in county jail and/or a fine up to $5,000. A second or subsequent conviction under (b), (c) or (d) retains the custody alternatives but raises the felony fine ceiling to $15,000 and misdemeanor ceiling to $10,000. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The specified knowledge and terrorizing purpose or private-property reckless-disregard alternative.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:11411": "2023-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "terrorism by symbol"
+    ],
+    "calcrim": [
+      "1303"
+    ]
+  },
+  {
+    "id": "ca-pen-11411-d",
+    "lawCode": "PEN",
+    "code": "11411(d)",
+    "title": "Burning or desecrating a religious symbol to terrorize",
+    "summary": "Knowingly burning or desecrating a religious symbol on another person's private property without authorization, with purpose to terrorize its owner/occupant or reckless disregard of that risk. The separate listed-site alternative covers burning, desecrating or destroying a known religious symbol at a school, campus, public place, place of worship, cemetery or employment site with purpose to terrorize a person associated with that site.",
+    "penalty": "Wobbler. First conviction: 16 months, 2 years or 3 years under 1170(h) and/or a fine up to $10,000, or up to 364 days in county jail and/or a fine up to $5,000. A second or subsequent conviction under (b), (c) or (d) retains the custody alternatives but raises the felony fine ceiling to $15,000 and misdemeanor ceiling to $10,000. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The specified knowledge and terrorizing purpose or private-property reckless-disregard alternative.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:11411": "2023-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "terrorism by symbol"
+    ],
+    "calcrim": [
+      "1304"
+    ]
+  },
+  {
+    "id": "ca-pen-11412",
+    "lawCode": "PEN",
+    "code": "11412",
+    "title": "Interfering with religious exercise by a direct threat",
+    "summary": "With intent to cause another to refrain from religious exercise or a religious service, causing or attempting to cause that result through a directly communicated threat of unlawful injury to a person or property. It must reasonably appear to the recipient that the threat can be carried out.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to interfere with religious exercise through the described credible threat.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:11412": null,
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1305"
+    ]
+  },
+  {
+    "id": "ca-pen-11413-a",
+    "lawCode": "PEN",
+    "code": "11413(a)",
+    "title": "Terrorizing by explosive device or arson at a specified place",
+    "summary": "Exploding, igniting or attempting to explode or ignite a destructive device or explosive, or committing arson, in or about a place specifically listed in 11413(b), with purpose to terrorize another or reckless disregard of terrorizing another. The listed place or bias-targeted private-property condition must be proved; an ordinary property fire alone does not establish this offense.",
+    "penalty": "Felony: 3, 5 or 7 years under 1170(h), and a fine up to $10,000. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Purpose to terrorize or reckless disregard of terrorizing; the charged destructive-device, explosive or arson elements must be established.",
+    "supportingKeys": [
+      "HSC:12000",
+      "HSC:1250",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:422.55",
+      "PEN:450",
+      "PEN:451"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "HSC:1250": "2015-10-04",
+      "PEN:11413": "2011-04-04",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:422.55": "2005-01-01",
+      "PEN:450": null,
+      "PEN:451": "1994-09-07"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1302"
+    ]
+  },
+  {
+    "id": "ca-pen-18710-a",
+    "lawCode": "PEN",
+    "code": "18710(a)",
+    "title": "Possession of a destructive device",
+    "summary": "Knowingly possessing a destructive device within California, with knowledge of the device's defining characteristics. Fixed ammunition over .60 caliber is excluded from this section; chapter exceptions and permits must be considered.",
+    "penalty": "Wobbler: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18, a fine up to $10,000, or both fine and custody. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing possession and knowledge of the characteristics making it a destructive device.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:18710": "2011-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2570"
+    ]
+  },
+  {
+    "id": "ca-pen-18715-a",
+    "lawCode": "PEN",
+    "code": "18715(a)",
+    "title": "Possessing an explosive or destructive device at a specified place",
+    "summary": "Recklessly or maliciously possessing a destructive device or explosive on a public street/highway, in or near a listed building or habitation, on/in/near specified passenger transport, or another public place ordinarily passed by people. The charged location and statutory device/explosive definition must be established.",
+    "penalty": "Felony: 2, 4 or 6 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Reckless or malicious possession; knowledge of the item and its explosive/destructive character.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18715": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 18715(a)(1)",
+      "PC 18715(a)(2)",
+      "PC 18715(a)(3)",
+      "PC 18715(a)(4)",
+      "PC 18715(a)(5)"
+    ],
+    "calcrim": [
+      "2572"
+    ]
+  },
+  {
+    "id": "ca-pen-18720",
+    "lawCode": "PEN",
+    "code": "18720",
+    "title": "Possession of materials with intent to make a destructive device or explosive",
+    "summary": "Possessing substances or materials with intent to make a destructive device or explosive without first obtaining a valid permit. Ordinary possession of materials without the specified intent is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Possession with specific intent to make the device or explosive without the required permit.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18720": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2579"
+    ]
+  },
+  {
+    "id": "ca-pen-18725-a",
+    "lawCode": "PEN",
+    "code": "18725(a)",
+    "title": "Carrying an explosive on passenger transport",
+    "summary": "Willfully carrying a destructive device or explosive on a vessel, aircraft, car or other vehicle transporting passengers for hire. Statutory definitions and chapter exceptions apply.",
+    "penalty": "Felony: 2, 4 or 6 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful conduct with knowledge of the explosive or destructive character.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18725": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2571"
+    ]
+  },
+  {
+    "id": "ca-pen-18725-b",
+    "lawCode": "PEN",
+    "code": "18725(b)",
+    "title": "Carrying or placing an explosive in baggage aboard passenger transport",
+    "summary": "Willfully carrying or placing a destructive device or explosive in hand baggage, a roll or other container while aboard transport for passengers for hire. Statutory definitions and chapter exceptions apply.",
+    "penalty": "Felony: 2, 4 or 6 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful conduct with knowledge of the explosive or destructive character.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18725": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2571"
+    ]
+  },
+  {
+    "id": "ca-pen-18725-c",
+    "lawCode": "PEN",
+    "code": "18725(c)",
+    "title": "Placing an explosive in baggage checked with a common carrier",
+    "summary": "Willfully placing a destructive device or explosive in baggage that is later checked with a common carrier. Statutory definitions and chapter exceptions apply.",
+    "penalty": "Felony: 2, 4 or 6 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful conduct with knowledge of the explosive or destructive character.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18725": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2571"
+    ]
+  },
+  {
+    "id": "ca-pen-18730",
+    "lawCode": "PEN",
+    "code": "18730",
+    "title": "Sale, offer for sale or transport of a destructive device",
+    "summary": "Selling, offering for sale or knowingly transporting a destructive device within California, subject to chapter exceptions and permits. Fixed ammunition over .60 caliber is excluded. An offer requires the applicable intent to sell.",
+    "penalty": "Felony: 2, 3 or 4 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the device's character; actual intent to sell for the charged offer alternative.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18730": "2011-04-04",
+      "PEN:18735": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2574",
+      "2575"
+    ]
+  },
+  {
+    "id": "ca-pen-18740",
+    "lawCode": "PEN",
+    "code": "18740",
+    "title": "Destructive device or explosive with intent to injure, intimidate or damage",
+    "summary": "Possessing, exploding, igniting or attempting to explode or ignite a destructive device or explosive with intent to injure, intimidate or terrify a person, or wrongfully injure or destroy property.",
+    "penalty": "Felony: 3, 5 or 7 years under 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to injure, intimidate, terrify or wrongfully damage.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18740": "2011-04-04",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2573"
+    ]
+  },
+  {
+    "id": "ca-pen-18745",
+    "lawCode": "PEN",
+    "code": "18745",
+    "title": "Exploding or attempting to explode a device with intent to murder",
+    "summary": "Exploding, igniting or attempting to explode or ignite a destructive device or explosive with intent to commit murder.",
+    "penalty": "Felony: life in state prison with the possibility of parole. Actual parole eligibility requires review of 3046 and any other applicable sentencing provisions. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to kill.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:12022.7",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:203",
+      "PEN:3046",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18745": "2011-01-01",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:203": null,
+      "PEN:3046": "2018-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2576"
+    ]
+  },
+  {
+    "id": "ca-pen-18750",
+    "lawCode": "PEN",
+    "code": "18750",
+    "title": "Exploding a device causing bodily injury",
+    "summary": "Willfully and maliciously exploding or igniting a destructive device or explosive that causes bodily injury to any person.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious explosion or ignition, with the required causation.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:12022.7",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:203",
+      "PEN:3046",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18750": "2011-01-01",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:203": null,
+      "PEN:3046": "2018-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2577"
+    ]
+  },
+  {
+    "id": "ca-pen-18755-a",
+    "lawCode": "PEN",
+    "code": "18755(a)",
+    "title": "Exploding a device causing death",
+    "summary": "Willfully and maliciously exploding or igniting a destructive device or explosive that causes a person's death.",
+    "penalty": "Felony: life in state prison without the possibility of parole. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious explosion or ignition, with death caused by it.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:12022.7",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:203",
+      "PEN:3046",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18755": "2011-01-01",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:203": null,
+      "PEN:3046": "2018-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2578"
+    ]
+  },
+  {
+    "id": "ca-pen-18755-b",
+    "lawCode": "PEN",
+    "code": "18755(b)",
+    "title": "Exploding a device causing mayhem or great bodily injury",
+    "summary": "Willfully and maliciously exploding or igniting a destructive device or explosive that causes mayhem or great bodily injury. Ordinary bodily injury is the separate 18750 branch.",
+    "penalty": "Felony: life in state prison. The statute does not say without parole for this branch; minimum parole eligibility under 3046 and other sentencing provisions requires individual review. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious explosion or ignition, with the specified serious result.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:12022.7",
+      "PEN:16460",
+      "PEN:16510",
+      "PEN:17",
+      "PEN:18735",
+      "PEN:18800",
+      "PEN:18900",
+      "PEN:18910",
+      "PEN:203",
+      "PEN:3046",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:16460": "2011-01-01",
+      "PEN:16510": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18735": "2011-04-04",
+      "PEN:18755": "2011-01-01",
+      "PEN:18800": "2011-01-01",
+      "PEN:18900": "2011-01-01",
+      "PEN:18910": "2011-01-01",
+      "PEN:203": null,
+      "PEN:3046": "2018-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2578"
+    ]
+  },
+  {
+    "id": "ca-pen-417-a-1",
+    "lawCode": "PEN",
+    "code": "417(a)(1)",
+    "title": "Drawing or exhibiting a deadly weapon other than a firearm",
+    "summary": "Drawing or exhibiting the specified weapon in another person's presence in a rude, angry or threatening manner, or unlawfully using it in a fight or quarrel. Self-defense is excluded. The weapon is a deadly weapon other than a firearm.",
+    "penalty": "Misdemeanor: 30 days to six months in county jail, with a possible fine up to $1,000 under 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:417": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": [
+      "983"
+    ]
+  },
+  {
+    "id": "ca-pen-417-a-2-a",
+    "lawCode": "PEN",
+    "code": "417(a)(2)(A)",
+    "title": "Drawing or exhibiting a concealable firearm in public",
+    "summary": "Drawing or exhibiting the specified weapon in another person's presence in a rude, angry or threatening manner, or unlawfully using it in a fight or quarrel. Self-defense is excluded. Requires a pistol, revolver or other concealable firearm in the public places defined in 417(f).",
+    "penalty": "Misdemeanor: three months to 364 days in county jail, a fine up to $1,000, or both. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417": "2011-04-04"
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": [
+      "983",
+      "984"
+    ]
+  },
+  {
+    "id": "ca-pen-417-a-2-b",
+    "lawCode": "PEN",
+    "code": "417(a)(2)(B)",
+    "title": "Drawing or exhibiting a firearm: other cases",
+    "summary": "Drawing or exhibiting the specified weapon in another person's presence in a rude, angry or threatening manner, or unlawfully using it in a fight or quarrel. Self-defense is excluded. A firearm may be loaded or unloaded; the special public-place concealable-firearm branch is separate.",
+    "penalty": "Misdemeanor: three months to six months in county jail, with a possible fine up to $1,000 under 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:417": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": [
+      "983"
+    ]
+  },
+  {
+    "id": "ca-pen-417-b",
+    "lawCode": "PEN",
+    "code": "417(b)",
+    "title": "Drawing or exhibiting a loaded firearm at a child-care or youth facility",
+    "summary": "Drawing or exhibiting the specified weapon in another person's presence in a rude, angry or threatening manner, or unlawfully using it in a fight or quarrel. Self-defense is excluded. Requires a loaded firearm at an open day-care center or facility conducting programs for persons under 18.",
+    "penalty": "Wobbler: three months to 364 days in county jail, or 16 months, 2 years or 3 years in state prison. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony where no specific fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "HSC:1596.76",
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:16840",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1596.76": "2019-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:16840": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-417-c",
+    "lawCode": "PEN",
+    "code": "417(c)",
+    "title": "Drawing or exhibiting a firearm in the immediate presence of a peace officer",
+    "summary": "Drawing or exhibiting a firearm, loaded or unloaded, in a rude, angry or threatening manner in the immediate presence of a peace officer lawfully performing duties. The defendant knows or reasonably should know that the person is a peace officer lawfully performing duties. This branch concerns drawing/exhibiting, not a separate fight-or-quarrel alternative. The lawful-duty and any supported self-defense issues require review.",
+    "penalty": "Wobbler: nine months to 364 days in county jail, or 16 months, 2 years or 3 years in state prison. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony where no specific fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": [
+      "981"
+    ]
+  },
+  {
+    "id": "ca-pen-417-d",
+    "lawCode": "PEN",
+    "code": "417(d)",
+    "title": "Drawing or exhibiting a weapon while another person cleans graffiti",
+    "summary": "Drawing or exhibiting the specified weapon in another person's presence in a rude, angry or threatening manner, or unlawfully using it in a fight or quarrel. Self-defense is excluded. The other person is cleaning graffiti or vandalism; this provision applies only where no different penalty governs.",
+    "penalty": "Misdemeanor: three months to 364 days in county jail, unless a different penalty applies. A fine may also be imposed under section 672, up to $1,000 where no other fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional prohibited display/use; the charged firearm, location and officer-knowledge conditions must be proved.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16530",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16530": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "brandishing"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-417-3",
+    "lawCode": "PEN",
+    "code": "417.3",
+    "title": "Threatening display of a firearm to a motor-vehicle occupant",
+    "summary": "Except in self-defense, drawing or exhibiting a loaded or unloaded firearm in the presence of a motor-vehicle occupant proceeding on a public street or highway, in a threatening manner that would cause a reasonable person fear of bodily harm.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under 1170(h); the statute separately authorizes those terms with a $3,000 fine. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional threatening display with the described circumstances; self-defense is excluded.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:417.3": "2011-04-04"
+    },
+    "searchAliases": [
+      "brandishing at vehicle"
+    ],
+    "calcrim": [
+      "980"
+    ]
+  },
+  {
+    "id": "ca-pen-417-4",
+    "lawCode": "PEN",
+    "code": "417.4",
+    "title": "Threatening display of an imitation firearm",
+    "summary": "Except in self-defense, drawing or exhibiting an imitation firearm as defined in 16700(a) in a threatening manner that would cause a reasonable person fear of bodily harm.",
+    "penalty": "Misdemeanor: 30 days to six months in county jail under 19, with a possible fine up to $1,000 under 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional threatening display; the object must meet the statutory imitation-firearm definition.",
+    "supportingKeys": [
+      "PEN:16700",
+      "PEN:17",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16700": "2017-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:417.4": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "brandishing imitation firearm"
+    ],
+    "calcrim": [
+      "985"
+    ]
+  },
+  {
+    "id": "ca-pen-417-8",
+    "lawCode": "PEN",
+    "code": "417.8",
+    "title": "Drawing or exhibiting a weapon to resist arrest or detention",
+    "summary": "Drawing or exhibiting a firearm, loaded or unloaded, or another deadly weapon with intent to resist or prevent a peace officer's arrest or detention of the defendant or another. Lawful performance and supported defensive issues require case-specific review.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to resist or prevent the arrest or detention.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:17",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:417.8": null,
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "982"
+    ]
+  },
+  {
+    "id": "ca-pen-26100-a",
+    "lawCode": "PEN",
+    "code": "26100(a)",
+    "title": "Knowingly allowing an unlawful firearm in a vehicle",
+    "summary": "A vehicle driver or owner knowingly permits another to bring or carry a firearm into the vehicle in violation of 25850 or Fish and Game Code 2006. Ownership does not require being in the vehicle; the predicate violation and exceptions must be proved.",
+    "penalty": "Misdemeanor: up to six months in county jail and/or a fine up to $1,000 under 19. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowing permission or willful and malicious discharge; knowledge is not imputed merely from ownership.",
+    "supportingKeys": [
+      "FGC:2006",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:19",
+      "PEN:25850"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FGC:2006": "2011-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:25850": "2024-01-01",
+      "PEN:26100": "2011-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-26100-b",
+    "lawCode": "PEN",
+    "code": "26100(b)",
+    "title": "Knowingly allowing discharge of a firearm from a vehicle",
+    "summary": "A vehicle driver or owner knowingly permits another person to discharge a firearm from the vehicle; the owner need not be present.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony where no specific fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowing permission or willful and malicious discharge; knowledge is not imputed merely from ownership.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:26100": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "969"
+    ]
+  },
+  {
+    "id": "ca-pen-26100-c",
+    "lawCode": "PEN",
+    "code": "26100(c)",
+    "title": "Discharging a firearm from a vehicle at a person outside a vehicle",
+    "summary": "Willfully and maliciously discharging a firearm from a motor vehicle at a person other than a motor-vehicle occupant. The statute's target limitation matters; this is not every discharge from a vehicle.",
+    "penalty": "Felony: 3, 5 or 7 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "The charged knowing permission or willful and malicious discharge; knowledge is not imputed merely from ownership.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:26100": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "968"
+    ]
+  },
+  {
+    "id": "ca-pen-26100-d",
+    "lawCode": "PEN",
+    "code": "26100(d)",
+    "title": "Discharging a firearm from a motor vehicle",
+    "summary": "Willfully and maliciously discharging a firearm from a motor vehicle, subject to the Fish and Game Code 3002 exception. The aimed-at-person branch has a different penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under 18. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony where no specific fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowing permission or willful and malicious discharge; knowledge is not imputed merely from ownership.",
+    "supportingKeys": [
+      "FGC:3002",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FGC:3002": null,
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:26100": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "968"
+    ]
+  },
+  {
+    "id": "ca-pen-17500",
+    "lawCode": "PEN",
+    "code": "17500",
+    "title": "Having a deadly weapon with intent to assault",
+    "summary": "Having a deadly weapon on one's person with intent to assault another. Mere possession without the assault intent does not establish this offense.",
+    "penalty": "Misdemeanor: up to six months in county jail and/or a fine up to $1,000 under 19. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Specific intent to assault another.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:240"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:17500": "2011-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:240": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2503"
+    ]
+  },
+  {
+    "id": "ca-pen-25800-a",
+    "lawCode": "PEN",
+    "code": "25800(a)",
+    "title": "Armed criminal action",
+    "summary": "Carrying a loaded firearm with intent to commit a felony. The intended felony and loaded-firearm condition must be identified; ordinary carrying alone is not enough.",
+    "penalty": "Wobbler: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under 18. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony where no specific fine is prescribed. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Specific intent to commit a felony while carrying a loaded firearm.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16840",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16840": "2011-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:25800": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2590"
+    ]
+  },
+  {
+    "id": "ca-pen-25100-a",
+    "lawCode": "PEN",
+    "code": "25100(a)",
+    "title": "Criminal storage of a firearm in the first degree",
+    "summary": "Keeping a firearm on premises under one's custody/control while knowing or reasonably having reason to know a child is likely to access it without parental/guardian permission, or a prohibited person is likely to access it. That person obtains it and thereby causes death or great bodily injury. The current section covers any firearm, not only a loaded one. Section 25105 exceptions and the child/prohibited-person definitions must be reviewed. Parent/guardian accidental-shooting prosecution and arrest protections in 25115/25120, and training mitigation in 25125, also require review.",
+    "penalty": "For the section operative January 1, 2026: Wobbler under 25110(a): 16 months, 2 years or 3 years under 1170(h) and/or a fine up to $10,000, or up to 364 days in county jail and/or a fine up to $1,000. Custody under 1170(h) is ordinarily served in county jail, with statutory state-prison exclusions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowledge/reasonable-knowledge and negligence conditions; do not infer liability from firearm ownership alone.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:16745",
+      "PEN:16850",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:23650",
+      "PEN:23655",
+      "PEN:25000",
+      "PEN:25105",
+      "PEN:25110",
+      "PEN:25115",
+      "PEN:25120",
+      "PEN:25125",
+      "PEN:25145",
+      "PEN:417"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:16745": "2025-01-01",
+      "PEN:16850": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:23650": "2011-01-01",
+      "PEN:23655": "2025-01-01",
+      "PEN:25000": "2011-01-01",
+      "PEN:25100": "2025-01-01",
+      "PEN:25105": "2025-01-01",
+      "PEN:25110": "2014-01-01",
+      "PEN:25115": "2011-01-01",
+      "PEN:25120": "2011-01-01",
+      "PEN:25125": "2011-01-01",
+      "PEN:25145": "2025-01-01",
+      "PEN:417": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-25100-b",
+    "lawCode": "PEN",
+    "code": "25100(b)",
+    "title": "Criminal storage of a firearm in the second degree",
+    "summary": "Keeping a firearm on premises under the person's custody/control, knowing or reasonably having reason to know that a child is likely to access it without parental/guardian permission or that a prohibited person is likely to access it. The child or prohibited person accesses the firearm and causes injury short of great bodily injury, carries it to a public place, or carries it in violation of 417. Any firearm is covered. Section 25105 exceptions and the child/prohibited-person definitions must be reviewed. Parent/guardian accidental-shooting prosecution and arrest protections in 25115/25120, and training mitigation in 25125, also require review.",
+    "penalty": "For the section operative January 1, 2026: Misdemeanor under 25110(b): up to 364 days in county jail and/or a fine up to $1,000. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowledge/reasonable-knowledge and negligence conditions; do not infer liability from firearm ownership alone.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:16745",
+      "PEN:16850",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:23650",
+      "PEN:23655",
+      "PEN:25000",
+      "PEN:25105",
+      "PEN:25110",
+      "PEN:25115",
+      "PEN:25120",
+      "PEN:25125",
+      "PEN:25145",
+      "PEN:417"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:16745": "2025-01-01",
+      "PEN:16850": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:23650": "2011-01-01",
+      "PEN:23655": "2025-01-01",
+      "PEN:25000": "2011-01-01",
+      "PEN:25100": "2025-01-01",
+      "PEN:25105": "2025-01-01",
+      "PEN:25110": "2014-01-01",
+      "PEN:25115": "2011-01-01",
+      "PEN:25120": "2011-01-01",
+      "PEN:25125": "2011-01-01",
+      "PEN:25145": "2025-01-01",
+      "PEN:417": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-25100-c",
+    "lawCode": "PEN",
+    "code": "25100(c)",
+    "title": "Criminal storage of a firearm in the third degree",
+    "summary": "Negligently storing or leaving any firearm on premises under one's custody/control where a child is likely to gain access without parental/guardian permission, and knowing or reasonably having reason to know of that likelihood. Actual access or resulting injury is not an express element of this branch. Section 25105 exceptions and the child/prohibited-person definitions must be reviewed. Parent/guardian accidental-shooting prosecution and arrest protections in 25115/25120, and training mitigation in 25125, also require review.",
+    "penalty": "For the section operative January 1, 2026: Misdemeanor under 25110(c) and 19: up to six months in county jail and/or a fine up to $1,000. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The charged knowledge/reasonable-knowledge and negligence conditions; do not infer liability from firearm ownership alone.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:16745",
+      "PEN:16850",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19",
+      "PEN:23650",
+      "PEN:23655",
+      "PEN:25000",
+      "PEN:25105",
+      "PEN:25110",
+      "PEN:25115",
+      "PEN:25120",
+      "PEN:25125",
+      "PEN:25145",
+      "PEN:417"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:16745": "2025-01-01",
+      "PEN:16850": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:23650": "2011-01-01",
+      "PEN:23655": "2025-01-01",
+      "PEN:25000": "2011-01-01",
+      "PEN:25100": "2025-01-01",
+      "PEN:25105": "2025-01-01",
+      "PEN:25110": "2014-01-01",
+      "PEN:25115": "2011-01-01",
+      "PEN:25120": "2011-01-01",
+      "PEN:25125": "2011-01-01",
+      "PEN:25145": "2025-01-01",
+      "PEN:417": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-25200-a",
+    "lawCode": "PEN",
+    "code": "25200(a)",
+    "title": "Storage allowing a child or prohibited person to carry a firearm off premises",
+    "summary": "Keeping a firearm on premises under one's custody/control with knowledge or reasonable reason to know a child may access it without parental/guardian permission, or a prohibited person may access it. That person obtains it and carries it off the premises. Section 25205 exceptions apply; actual access and removal are required.",
+    "penalty": "Misdemeanor: up to 364 days in county jail and/or a fine up to $1,000. The firearm is subject to the statutory nuisance/confiscation provisions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge or reasonable-knowledge of likely access plus the charged access/removal conditions.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16745",
+      "PEN:16850",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:23650",
+      "PEN:23655",
+      "PEN:25000",
+      "PEN:25145",
+      "PEN:25205",
+      "PEN:29300"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16745": "2025-01-01",
+      "PEN:16850": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:23650": "2011-01-01",
+      "PEN:23655": "2025-01-01",
+      "PEN:25000": "2011-01-01",
+      "PEN:25145": "2025-01-01",
+      "PEN:25200": "2020-01-01",
+      "PEN:25205": "2025-01-01",
+      "PEN:29300": "2011-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-25200-b",
+    "lawCode": "PEN",
+    "code": "25200(b)",
+    "title": "Storage allowing a child or prohibited person to carry a firearm to school",
+    "summary": "Keeping a firearm on premises under one's custody/control with knowledge or reasonable reason to know a child may access it without parental/guardian permission, or a prohibited person may access it. That person obtains it and carries it off the premises to a listed school or school-sponsored event, activity or performance. Section 25205 exceptions apply; actual access and removal are required.",
+    "penalty": "Misdemeanor: up to 364 days in county jail and/or a fine up to $5,000. The firearm is subject to the statutory nuisance/confiscation provisions. Adult base penalties are shown. Restitution, assessments, firearm restrictions and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge or reasonable-knowledge of likely access plus the charged access/removal conditions.",
+    "supportingKeys": [
+      "PEN:16520",
+      "PEN:16745",
+      "PEN:16850",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:23650",
+      "PEN:23655",
+      "PEN:25000",
+      "PEN:25145",
+      "PEN:25205",
+      "PEN:29300"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:16520": "2024-01-01",
+      "PEN:16745": "2025-01-01",
+      "PEN:16850": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:23650": "2011-01-01",
+      "PEN:23655": "2025-01-01",
+      "PEN:25000": "2011-01-01",
+      "PEN:25145": "2025-01-01",
+      "PEN:25200": "2020-01-01",
+      "PEN:25205": "2025-01-01",
+      "PEN:29300": "2011-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  }
+]

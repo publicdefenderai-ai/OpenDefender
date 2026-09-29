@@ -2,7 +2,7 @@
 export const CALIFORNIA_LAW_CODE_LABELS = {
   PEN: "Cal. Penal Code", HSC: "Cal. Health & Safety Code", VEH: "Cal. Vehicle Code",
   BPC: "Cal. Business & Professions Code", RTC: "Cal. Revenue & Taxation Code",
-  FAM: "Cal. Family Code", WIC: "Cal. Welfare & Institutions Code",
+  FGC: "Cal. Fish & Game Code", FAM: "Cal. Family Code", WIC: "Cal. Welfare & Institutions Code",
   HNC: "Cal. Harbors & Navigation Code", EDC: "Cal. Education Code", LAB: "Cal. Labor Code",
 } as const;
 export type CaliforniaLawCode = keyof typeof CALIFORNIA_LAW_CODE_LABELS;

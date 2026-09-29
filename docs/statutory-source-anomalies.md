@@ -87,3 +87,20 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Treatment:** Keep the literal reference and the absent probe. Do not silently substitute a newer food-facility definition or infer repeal from absence. The entrustment entry remains unpublished pending source-history review; Penal Code §19.8's infraction alternative does not resolve the exception.
 - **Traceability:** `california-vehicle-identification-acquisition.json` binds the archive receipt, `missingResearchKeys` and separate `researchDocuments`. `california-vehicle-identification-review.json` binds the source text and remaining decision. Research-only documents do not renew publication evidence or enter runtime pins.
 - **Remaining work:** Inspect official amendment history, identify the intended definition if supported, and request a legal decision only if material uncertainty remains.
+
+
+## CA-008: CALCRIM misdemeanor headings differ from current PEN 422.6 grading
+
+- **Recorded:** September 29, 2026, during the combined weapons/threats publication review.
+- **Status:** Verified discrepancy between the retained instruction headings and statute; not an error in the statute's felony alternative.
+- **Sources:** Retained February 2026 CALCRIM 1350, 1351 and 1352 label the interference offense a misdemeanor. [PEN 422.6(c)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=422.6.) includes an alternative under 1170(h); the official page identifies AB 2099, effective January 1, 2025.
+- **Treatment:** Preserve instruction headings and page hashes. Publish 422.6(a)/(b) with both misdemeanor/felony alternatives and a bounded instruction match. The source's community-service wording gives a 400-hour/350-day ceiling but no numeric minimum; do not invent a minimum.
+- **Traceability:** `california-weapons-threats-review.json`, `sourceAnomalies`, binds the statutory version/hash, text and instruction pages. Statutory XML and historical benchmark are unchanged. This document remains the human-readable cross-batch inventory; the batch supplies machine-readable evidence.
+
+## CA-009: CALCRIM symbol-terrorism instructions retain older PEN 11411 branches
+
+- **Recorded:** September 29, 2026, in the same review.
+- **Status:** Verified citation/conduct mismatch; no rewrite of either retained source.
+- **Sources:** CALCRIM 1303 cites 11411(a)/(b) and includes a two-occasion alternative; 1304 cites (c). Current [PEN 11411](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=11411.) places nooses in (b), signs/symbols in (c), religious-symbol conduct in (d), and repeat-conviction penalties in (e). It also names broader listed sites than the instruction. The official page identifies AB 2282, effective January 1, 2023.
+- **Treatment:** Use current statutory subdivisions, knowledge and purpose/recklessness distinctions; never copy the two-occasion element into the new branches. Retain bounded comparisons for sign/religious-symbol conduct, with an explicit discrepancy marker. Do not claim the older sign instruction verifies the current noose branch.
+- **Traceability:** `california-weapons-threats-review.json`, `sourceAnomalies`, binds exact section evidence and the retained 1303/1304 page identities/hashes. Underlying sources remain unchanged.

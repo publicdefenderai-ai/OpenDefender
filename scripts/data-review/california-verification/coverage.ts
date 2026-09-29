@@ -1,3 +1,4 @@
+import {validateWeaponsThreatsReview,readWeaponsThreatsReviewAcquisition} from "./weapons-threats-review";
 import {validateRegistrationExploitationReview,readRegistrationExploitationReviewAcquisition} from "./registration-exploitation-review";
 import {validateSexualOffensesReview,readSexualOffensesReviewAcquisition} from "./sexual-offenses-review";
 import {validateViolenceDetentionReview,readViolenceDetentionReviewAcquisition} from "./violence-detention-review";
@@ -80,6 +81,8 @@ export function buildCaliforniaCoverage() {
   const successorAccounting = validateCaliforniaDrugSuccessorReview();
   const drivingAccounting=validateDrivingPublication();
   const trafficAccounting=validateTrafficReview();
+  const weaponsAccounting=validateWeaponsThreatsReview();
+  Object.keys(readWeaponsThreatsReviewAcquisition().documents).forEach(key=>acquiredKeys.add(key));
   const registrationAccounting=validateRegistrationExploitationReview();
   Object.keys(readRegistrationExploitationReviewAcquisition().documents).forEach(key=>acquiredKeys.add(key));
   const sexualAccounting=validateSexualOffensesReview();
@@ -156,8 +159,8 @@ export function buildCaliforniaCoverage() {
       specificOpenLegalQuestions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + registrationAccounting.additions + sexualAccounting.additions + violenceAccounting.additions,
-      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + registrationAccounting.additions + sexualAccounting.additions + violenceAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedAdditionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + weaponsAccounting.additions + registrationAccounting.additions + sexualAccounting.additions + violenceAccounting.additions,
+      boundedCorrectionPass: additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + weaponsAccounting.additions + registrationAccounting.additions + sexualAccounting.additions + violenceAccounting.additions + verifiedAccounting.corrections + reuseAccounting.corrections + combinedAccounting.corrections + ageDrivingAccounting.corrections + financialAccounting.corrections + remainingAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -168,7 +171,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: registrationAccounting.newVersions + sexualAccounting.newVersions + violenceAccounting.newVersions + vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: weaponsAccounting.newVersions + registrationAccounting.newVersions + sexualAccounting.newVersions + violenceAccounting.newVersions + vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
