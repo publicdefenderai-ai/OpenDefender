@@ -9,7 +9,7 @@ import {getChargeExplanation} from '../shared/charge-explanations';
 const row=(code:string)=>additions.find(a=>a.code===code)!;
 describe('California vehicle identification and remaining duties',()=>{
   it('publishes only ten bounded branches and keeps controlling-passenger duties open',()=>{
-    expect(validateVehicleIdentificationReview()).toEqual({additions:10,primarySections:9,reusedSections:7,newSections:11,newVersions:11,promotedResearchSections:3,configuredSelectable:291});
+    expect(validateVehicleIdentificationReview()).toEqual({additions:10,primarySections:9,reusedSections:7,newSections:11,newVersions:11,promotedResearchSections:3,configuredSelectable:319});
     const r=readVehicleIdentificationReview();
     expect(r.crosswalk.find(x=>x.instruction==='2242')?.chargeIds).toEqual(['ca-veh-10802']);
     for(const id of ['2141','2151'])expect(r.crosswalk.find(x=>x.instruction===id)?.status).toBe('unpublished_branch_requires_substantive_review');

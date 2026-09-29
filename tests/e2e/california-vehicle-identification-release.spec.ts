@@ -4,7 +4,7 @@ const additions=JSON.parse(readFileSync('shared/california-vehicle-identificatio
 test('Vehicle-identification and duty choices reach authority-gated API and rules guidance',async({request})=>{
   const response=await request.get('/api/criminal-charges?jurisdiction=CA&limit=500');
   expect(response.ok()).toBe(true);
-  const body=await response.json();expect(body.charges).toHaveLength(290);
+  const body=await response.json();expect(body.charges).toHaveLength(318);
   for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
   expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
   const ids=['ca-veh-10803-a','ca-veh-10803-b','ca-veh-10751-a','ca-veh-10501-a'];

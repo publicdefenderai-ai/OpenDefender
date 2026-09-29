@@ -1,0 +1,991 @@
+[
+  {
+    "id": "ca-pen-203",
+    "lawCode": "PEN",
+    "code": "203",
+    "title": "Mayhem",
+    "summary": "Unlawfully and maliciously causing a bodily loss, disabling injury, disfigurement, or injury to the tongue, eye, nose, ear or lip specified in Penal Code 203. The type and duration of the injury matter; not every serious injury is mayhem.",
+    "penalty": "Felony: 2, 4 or 8 years in state prison under section 204. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Malicious conduct causing the specified injury; aggravated mayhem has a distinct specific-intent requirement.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:204",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:203": null,
+      "PEN:204": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "801"
+    ]
+  },
+  {
+    "id": "ca-pen-205",
+    "lawCode": "PEN",
+    "code": "205",
+    "title": "Aggravated mayhem",
+    "summary": "Intentionally causing permanent disability or disfigurement, or depriving someone of a limb, organ or body member, under circumstances showing extreme indifference to that person's physical or psychological well-being. Intent to kill is not required.",
+    "penalty": "Felony: life in state prison with the possibility of parole. A fine up to $10,000 may also be imposed under section 672. Parole is not guaranteed. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to cause the permanent disabling/disfiguring injury or bodily deprivation, with extreme indifference.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:205": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "800"
+    ]
+  },
+  {
+    "id": "ca-pen-206",
+    "lawCode": "PEN",
+    "code": "206",
+    "title": "Torture",
+    "summary": "Inflicting great bodily injury with intent to cause cruel or extreme pain and suffering for revenge, extortion, persuasion or a sadistic purpose. Actual experience of pain by the injured person need not be proved. This is a distinct offense from murder by torture.",
+    "penalty": "Felony: life imprisonment under section 206.1. A fine up to $10,000 may also be imposed under section 672. Section 206.1 sets a minimum of seven years before parole eligibility, raised to ten years for torture committed on or after January 1, 2026 by an adult with care or custody of a victim age 14 or younger. Other sentencing rules can require longer; parole is not guaranteed. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific intent to cause cruel or extreme pain for one of the statutory purposes.",
+    "supportingKeys": [
+      "PEN:12022.7",
+      "PEN:17",
+      "PEN:206.1",
+      "PEN:3046",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:12022.7": "2024-12-18",
+      "PEN:17": "2026-01-01",
+      "PEN:206": null,
+      "PEN:206.1": "2026-01-01",
+      "PEN:3046": "2018-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "810"
+    ]
+  },
+  {
+    "id": "ca-pen-220-a-1",
+    "lawCode": "PEN",
+    "code": "220(a)(1)",
+    "title": "Assault with intent to commit mayhem or a specified sexual offense",
+    "summary": "Assaulting another with intent to commit mayhem, rape, sodomy, oral copulation, or an offense under 264.1, 288 or 289. The specified sexual-intent branch against a person under 18 has a different punishment under 220(a)(2); the first-degree-burglary sexual-intent branch is governed by 220(b).",
+    "penalty": "Felony: 2, 4 or 6 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Assault plus specific intent to commit the identified further offense.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:240",
+      "PEN:264.1",
+      "PEN:286",
+      "PEN:287",
+      "PEN:288",
+      "PEN:289",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:220": "2010-09-09",
+      "PEN:240": null,
+      "PEN:264.1": "2022-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "890",
+      "891"
+    ]
+  },
+  {
+    "id": "ca-pen-220-a-2",
+    "lawCode": "PEN",
+    "code": "220(a)(2)",
+    "title": "Assault on a minor with intent to commit a specified sexual offense",
+    "summary": "Assaulting a person under 18 with intent to commit rape, sodomy, oral copulation, or an offense under 264.1, 288 or 289. Intent to commit mayhem alone does not invoke this higher age-based branch. The first-degree-burglary branch under 220(b) is separate.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Assault and the specified sexual-offense intent; victim age must be established.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:240",
+      "PEN:264.1",
+      "PEN:286",
+      "PEN:287",
+      "PEN:288",
+      "PEN:289",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:220": "2010-09-09",
+      "PEN:240": null,
+      "PEN:264.1": "2022-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "890"
+    ]
+  },
+  {
+    "id": "ca-pen-220-b",
+    "lawCode": "PEN",
+    "code": "220(b)",
+    "title": "Assault during first-degree burglary with sexual-offense intent",
+    "summary": "During a first-degree burglary, assaulting another with intent to commit rape, sodomy, oral copulation, or an offense under 264.1, 288 or 289. Both the burglary and assault-intent requirements must be established; mayhem alone is not a listed predicate for this branch.",
+    "penalty": "Felony: life in state prison with the possibility of parole. A fine up to $10,000 may also be imposed under section 672. Parole is not guaranteed. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "First-degree burglary plus assault with the specified sexual-offense intent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:240",
+      "PEN:264.1",
+      "PEN:286",
+      "PEN:287",
+      "PEN:288",
+      "PEN:289",
+      "PEN:459",
+      "PEN:460",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:220": "2010-09-09",
+      "PEN:240": null,
+      "PEN:264.1": "2022-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:459": "2026-01-01",
+      "PEN:460": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "890"
+    ]
+  },
+  {
+    "id": "ca-pen-273a-a",
+    "lawCode": "PEN",
+    "code": "273a(a)",
+    "title": "Child abuse or endangerment likely to cause great bodily harm or death",
+    "summary": "Willfully inflicting unjustifiable physical pain or mental suffering on a child, or causing/permitting suffering, injury or endangerment under the applicable statutory branch. Care or custody is required for the custodial injury/endangerment branches. Indirect-harm branches require criminal negligence; an ordinary accident is not enough. Reasonable parental discipline must be distinguished from unlawful conduct. This branch requires circumstances likely to produce great bodily harm or death; actual great bodily injury is not required.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail, or 2, 4 or 6 years in state prison. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Section 273a(c) specifies probation conditions, including a four-year minimum term and treatment, subject to its stated waiver provision. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful direct infliction; criminal negligence for the applicable indirect-harm branches.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273a": "1998-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "felony child endangerment",
+      "PC 273a(a)"
+    ],
+    "calcrim": [
+      "821"
+    ]
+  },
+  {
+    "id": "ca-pen-273a-b",
+    "lawCode": "PEN",
+    "code": "273a(b)",
+    "title": "Child abuse or endangerment: misdemeanor circumstances",
+    "summary": "Willfully inflicting unjustifiable physical pain or mental suffering on a child, or causing/permitting suffering, injury or endangerment under the applicable statutory branch. Care or custody is required for the custodial injury/endangerment branches. Indirect-harm branches require criminal negligence; an ordinary accident is not enough. Reasonable parental discipline must be distinguished from unlawful conduct. This branch concerns circumstances other than those likely to produce great bodily harm or death.",
+    "penalty": "Misdemeanor: up to six months in county jail, a fine up to $1,000, or both under section 19. Section 273a(c) specifies probation conditions, including a four-year minimum term and treatment, subject to its stated waiver provision. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful direct infliction; criminal negligence for the applicable indirect-harm branches.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:273a": "1998-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "823"
+    ]
+  },
+  {
+    "id": "ca-pen-273ab-a",
+    "lawCode": "PEN",
+    "code": "273ab(a)",
+    "title": "Assault by a caregiver causing death of a child under eight",
+    "summary": "A person with care or custody of a child under eight assaults the child using force likely to cause great bodily injury, and the assault causes the child's death. The caregiver, age, force and causation requirements must each be established.",
+    "penalty": "Felony: 25 years to life in state prison. A fine up to $10,000 may also be imposed under section 672. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful assault with awareness of the facts making the force likely to cause great bodily injury; intent to kill is not an element.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:273ab": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "child assault resulting in death"
+    ],
+    "calcrim": [
+      "820"
+    ]
+  },
+  {
+    "id": "ca-pen-273ab-b",
+    "lawCode": "PEN",
+    "code": "273ab(b)",
+    "title": "Assault by a caregiver causing coma or permanent paralysis of a child under eight",
+    "summary": "A person with care or custody of a child under eight assaults the child using force likely to cause great bodily injury, resulting in coma due to brain injury or paralysis of a permanent nature. The statute defines paralysis as major or complete loss of motor function from injury to the nervous system or a muscular mechanism.",
+    "penalty": "Felony: life in state prison with the possibility of parole. A fine up to $10,000 may also be imposed under section 672. Parole is not guaranteed. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful assault with the required force and resulting coma or permanent paralysis.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:273ab": "2011-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-273d-a",
+    "lawCode": "PEN",
+    "code": "273d(a)",
+    "title": "Inflicting corporal injury or cruel punishment on a child",
+    "summary": "Willfully inflicting cruel or inhuman corporal punishment or injury on a child that causes a traumatic physical condition. The condition may be a minor or serious wound or bodily injury caused by physical force; lawful reasonable discipline is not enough.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail, or 2, 4 or 6 years under section 1170(h); a fine up to $6,000, or both imprisonment and fine. A qualifying prior conviction of this offense can add four years under 273d(b), subject to its ten-year washout provision. Probation carries treatment/protective-order conditions and a three-year minimum under 273d(c), subject to its waiver provision. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful infliction causing a traumatic condition; not merely accidental injury.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273d": "2011-09-21"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "822"
+    ]
+  },
+  {
+    "id": "ca-pen-273-5-a",
+    "lawCode": "PEN",
+    "code": "273.5(a)",
+    "title": "Corporal injury to a spouse, partner or co-parent",
+    "summary": "Willfully inflicting physical injury resulting in a traumatic condition on a current/former spouse, cohabitant, fiance or dating partner, or the other parent of the person's child. A minor injury can qualify; strangulation or suffocation injuries are expressly included. The relationship and injury requirements distinguish this from domestic battery without injury.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail, or 2, 3 or 4 years in state prison; a fine up to $6,000, or both. Specified convictions within seven years can raise the fine to $10,000 and, under 273.5(f)(1), the prison alternatives to 2, 4 or 5 years. A qualifying 243(e) prior follows 273.5(f)(2), retaining 2, 3 or 4 years. Probation, prior-related jail minimums and protective orders require separate review; any prior conviction does not automatically trigger these increases. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful direct infliction of injury causing a traumatic condition.",
+    "supportingKeys": [
+      "FAM:7611",
+      "FAM:7612",
+      "PEN:1203.097",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:243",
+      "PEN:243.4",
+      "PEN:244",
+      "PEN:244.5",
+      "PEN:245"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FAM:7611": "2020-01-01",
+      "FAM:7612": "2019-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "PEN:243.4": "2026-01-01",
+      "PEN:244": "1996-01-01",
+      "PEN:244.5": "2011-04-04",
+      "PEN:245": "2012-01-01",
+      "PEN:273.5": "2025-01-01"
+    },
+    "searchAliases": [
+      "domestic violence corporal injury",
+      "spousal abuse"
+    ],
+    "calcrim": [
+      "840"
+    ]
+  },
+  {
+    "id": "ca-pen-368-b-1",
+    "lawCode": "PEN",
+    "code": "368(b)(1)",
+    "title": "Elder or dependent-adult abuse likely to cause great bodily harm or death",
+    "summary": "An elder is age 65 or older; a dependent adult is an adult age 18-64 meeting the statutory disability, limitation or inpatient-facility definition. Willful unjustifiable suffering, injury or endangerment under circumstances likely to produce great bodily harm or death, with knowledge or reason to know the person's protected status. Custody and criminal-negligence requirements depend on the charged direct or indirect-harm branch.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail, a fine up to $6,000, or both under the county-jail/fine alternative; the felony prison terms are 2, 3 or 4 years. Great bodily injury can add 3 years for a victim under 70 or 5 years at 70 or older; proximately causing death can add 5 or 7 years respectively. Section 368(j) restricts overlapping injury/death enhancements. Do not add all these terms together automatically. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful conduct; knowledge or reason to know elder/dependent status; criminal negligence where required by an indirect-harm branch.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:12022.7",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:368": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "830"
+    ]
+  },
+  {
+    "id": "ca-pen-368-c",
+    "lawCode": "PEN",
+    "code": "368(c)",
+    "title": "Elder or dependent-adult abuse: misdemeanor circumstances",
+    "summary": "An elder is age 65 or older; a dependent adult is an adult age 18-64 meeting the statutory disability, limitation or inpatient-facility definition. Unjustifiable suffering, injury or endangerment under circumstances other than those likely to cause great bodily harm or death. Knowledge or reason to know the protected status is required. A permitting-harm theory requires the applicable legal duty; ordinary negligence or an accident is not automatically criminal abuse.",
+    "penalty": "Misdemeanor: ordinarily up to six months in county jail, a fine up to $1,000, or both under section 19. A second or subsequent violation of 368(c) permits up to 364 days in county jail, a fine up to $2,000, or both. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The applicable willful-conduct, duty and criminal-negligence requirements depend on the direct or indirect-harm branch; knowledge or reason to know protected status.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:368": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "831"
+    ]
+  },
+  {
+    "id": "ca-pen-368-f",
+    "lawCode": "PEN",
+    "code": "368(f)",
+    "title": "False imprisonment of an elder or dependent adult by violence or deceit",
+    "summary": "An elder is age 65 or older; a dependent adult is an adult age 18-64 meeting the statutory disability, limitation or inpatient-facility definition. Unlawfully restraining, confining or detaining the person against their will through violence, menace, fraud or deceit. This protected-person branch has its own punishment; it does not borrow the ordinary false-imprisonment term.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h). A fine up to $10,000 may also be imposed under section 672. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional unlawful restraint using the specified means.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:236",
+      "PEN:237",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:236": null,
+      "PEN:237": "2011-04-04",
+      "PEN:368": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-207-a",
+    "lawCode": "PEN",
+    "code": "207(a)",
+    "title": "Kidnapping by force or fear",
+    "summary": "Taking or detaining a person by force or fear and moving them a substantial distance without valid consent. Movement must be more than slight or trivial. A reasonable actual belief in consent can matter. A child or person incapable of consent requires the applicable illegal-purpose and knowledge analysis; ownership, custody or a family relationship alone does not establish guilt. Section 207(f) preserves imminent-harm and lawful-arrest exceptions.",
+    "penalty": "Felony: ordinarily 3, 5 or 8 years in state prison under 208(a). A victim under 14 can trigger 5, 8 or 11 years under 208(b), subject to its specified parent/court-access exceptions. A fine up to $10,000 may also be imposed under 672. Section 208(c) specifies a 12-month jail probation condition unless the court states qualifying reasons for a lesser condition. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional force/fear and substantial nonconsensual movement; special rules apply to persons unable to consent.",
+    "supportingKeys": [
+      "FAM:7611",
+      "PEN:17",
+      "PEN:208",
+      "PEN:672",
+      "PEN:834",
+      "PEN:837"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FAM:7611": "2020-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:207": "2004-01-01",
+      "PEN:208": "1998-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:834": null,
+      "PEN:837": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1201",
+      "1215"
+    ]
+  },
+  {
+    "id": "ca-pen-207-b",
+    "lawCode": "PEN",
+    "code": "207(b)",
+    "title": "Kidnapping a child under fourteen for a lewd-act purpose",
+    "summary": "Enticing, persuading, hiring or otherwise inducing a child under 14 to travel as specified in 207(b), for the purpose of committing an act under section 288. Force is not necessary for this particular branch. The statutory imminent-harm and lawful-arrest exceptions remain applicable.",
+    "penalty": "Felony: section 208(b) ordinarily provides 5, 8 or 11 years in state prison for a victim under 14; its specified parent/court-access exceptions to that higher range require review, with 208(a) providing 3, 5 or 8 years. A fine up to $10,000 may also be imposed under 672. Probation conditions under 208(c) require separate review. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Specific purpose of committing a section 288 act with the child.",
+    "supportingKeys": [
+      "FAM:7611",
+      "PEN:17",
+      "PEN:208",
+      "PEN:288",
+      "PEN:672",
+      "PEN:834",
+      "PEN:837"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FAM:7611": "2020-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:207": "2004-01-01",
+      "PEN:208": "1998-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:834": null,
+      "PEN:837": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1200"
+    ]
+  },
+  {
+    "id": "ca-pen-209-a",
+    "lawCode": "PEN",
+    "code": "209(a)",
+    "title": "Kidnapping or detention for ransom, reward or extortion",
+    "summary": "Seizing, confining, enticing, abducting or holding another for ransom, reward, extortion, or to exact money or another valuable thing. Unlike ordinary kidnapping, this branch can be established by detention without substantial movement.",
+    "penalty": "Felony: life in state prison with the possibility of parole when the aggravated conditions are absent; life without the possibility of parole when the person suffers death or bodily harm, or is intentionally confined in a manner exposing them to a substantial likelihood of death. A fine up to $10,000 may also be imposed under 672. The aggravated facts must be established; parole eligibility is not a promise of release. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to hold or detain for the specified ransom, reward, extortion or value-extraction purpose.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:209": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1202"
+    ]
+  },
+  {
+    "id": "ca-pen-209-b-1",
+    "lawCode": "PEN",
+    "code": "209(b)(1)",
+    "title": "Kidnapping to commit robbery or a specified sexual offense",
+    "summary": "Kidnapping or carrying away a person to commit robbery, rape, oral copulation, sodomy, or a listed sexual offense. The movement must exceed what is merely incidental to the intended offense and increase the risk of harm beyond that offense's ordinary risk. The source also retains a reference to former section 262; it is not rewritten as a currently separate offense.",
+    "penalty": "Felony: life in state prison with the possibility of parole. A fine up to $10,000 may also be imposed under 672. Section 209(d) restricts double punishment with 667.61 for the same act. Parole is not guaranteed. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Kidnapping with the specific intent to commit the listed further offense.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:207",
+      "PEN:211",
+      "PEN:261",
+      "PEN:264.1",
+      "PEN:286",
+      "PEN:287",
+      "PEN:288",
+      "PEN:289",
+      "PEN:667.61",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:207": "2004-01-01",
+      "PEN:209": "2022-01-01",
+      "PEN:211": null,
+      "PEN:261": "2026-01-01",
+      "PEN:264.1": "2022-01-01",
+      "PEN:286": "2013-09-09",
+      "PEN:287": "2019-01-01",
+      "PEN:288": "2019-01-01",
+      "PEN:289": "2013-09-09",
+      "PEN:667.61": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1203"
+    ]
+  },
+  {
+    "id": "ca-pen-209-5-a",
+    "lawCode": "PEN",
+    "code": "209.5(a)",
+    "title": "Kidnapping during a carjacking",
+    "summary": "During and to facilitate a carjacking, kidnapping a person who is not a participant in the carjacking. Movement must go beyond incidental movement, cover a substantial distance from the carjacking vicinity, and increase the victim's risk beyond the carjacking itself.",
+    "penalty": "Felony: life in state prison with the possibility of parole. A fine up to $10,000 may also be imposed under 672. Parole is not guaranteed; the statute separately specifies conditions if probation is granted. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Kidnapping to facilitate the carjacking, with all movement and risk requirements.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:207",
+      "PEN:215",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:207": "2004-01-01",
+      "PEN:209.5": "1993-10-01",
+      "PEN:215": "1993-10-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1204"
+    ]
+  },
+  {
+    "id": "ca-pen-210-5",
+    "lawCode": "PEN",
+    "code": "210.5",
+    "title": "False imprisonment for protection from arrest or use as a shield",
+    "summary": "Unlawfully restraining another to protect against arrest in a way that substantially increases the person's risk of harm, or to use the person as a shield. Ordinary restraint alone does not establish this special-purpose offense.",
+    "penalty": "Felony: 3, 5 or 8 years under section 1170(h). A fine up to $10,000 may also be imposed under 672. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional false imprisonment for the specified arrest-protection or shield purpose.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:236",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:210.5": "2011-04-04",
+      "PEN:236": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "hostage false imprisonment"
+    ],
+    "calcrim": [
+      "1241"
+    ]
+  },
+  {
+    "id": "ca-pen-236",
+    "lawCode": "PEN",
+    "code": "236",
+    "title": "False imprisonment: misdemeanor branch",
+    "summary": "Intentionally and unlawfully restraining, detaining or confining a person so they must stay or go somewhere against their will. A jail or locked room is not necessary. Violence beyond that needed for restraint, menace, fraud or deceit can establish the separate felony branch under 237(a).",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $1,000, or both under 237(a) and 18.5. This entry is the ordinary misdemeanor branch; the aggravated felony and protected-person branches have different punishment. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional unlawful restraint against the person's will.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:237"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:236": null,
+      "PEN:237": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1242"
+    ]
+  },
+  {
+    "id": "ca-pen-237-a",
+    "lawCode": "PEN",
+    "code": "237(a)",
+    "title": "False imprisonment by violence, menace, fraud or deceit",
+    "summary": "Intentionally and unlawfully restraining, confining or detaining another against their will by violence, menace, fraud or deceit. Violence requires force beyond what is reasonably necessary to restrain; menace involves an express or implied threat of harm. The elder/dependent-adult branch under 368(f) is separate.",
+    "penalty": "Felony custody: 16 months, 2 years or 3 years under 1170(h). Fine exposure on this felony branch requires separate review; the $1,000 amount expressly stated for ordinary misdemeanor false imprisonment is not a verified felony fine ceiling. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional unlawful restraint using violence, menace, fraud or deceit.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:236",
+      "PEN:368"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:236": null,
+      "PEN:237": "2011-04-04",
+      "PEN:368": "2025-01-01"
+    },
+    "searchAliases": [
+      "PC 236 felony",
+      "PC 236/237",
+      "felony false imprisonment"
+    ],
+    "calcrim": [
+      "1240"
+    ]
+  },
+  {
+    "id": "ca-pen-236-1-a",
+    "lawCode": "PEN",
+    "code": "236.1(a)",
+    "title": "Human trafficking for forced labor or services",
+    "summary": "Substantially restricting another person's liberty through the means defined in 236.1, with intent to obtain forced labor or services. This can involve coercion, fraud, debt bondage or abuse of legal process and does not require transportation across a border.",
+    "penalty": "Felony: 5, 8 or 12 years in state prison and a fine up to $500,000. Section 236.4 permits an additional fine up to $1 million, a 5/7/10-year consecutive term for great bodily injury, and five-year consecutive terms for qualifying separately brought and tried prior trafficking convictions. These additions are conditional, not automatic in every case. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to obtain forced labor or services through the statutory deprivation of liberty.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:236.4"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:236.1": "2025-01-01",
+      "PEN:236.4": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1243"
+    ]
+  },
+  {
+    "id": "ca-pen-236-1-b",
+    "lawCode": "PEN",
+    "code": "236.1(b)",
+    "title": "Human trafficking to further specified exploitation offenses",
+    "summary": "Depriving another of personal liberty with intent to effect or maintain one of the exploitation or extortion offenses specifically listed in 236.1(b). The particular predicate offense and the statutory liberty restriction must be established; not every exploitative act automatically satisfies this branch.",
+    "penalty": "Felony: 8, 14 or 20 years in state prison and a fine up to $500,000. Section 236.4 permits an additional fine up to $1 million, a 5/7/10-year consecutive term for great bodily injury, and five-year consecutive terms for qualifying separately brought and tried prior trafficking convictions. These additions are conditional, not automatic in every case. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to effect or maintain a specifically listed predicate offense.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:236.4",
+      "PEN:266",
+      "PEN:266h",
+      "PEN:266i",
+      "PEN:266j",
+      "PEN:267",
+      "PEN:311.1",
+      "PEN:311.2",
+      "PEN:311.3",
+      "PEN:311.4",
+      "PEN:311.5",
+      "PEN:311.6",
+      "PEN:518"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:236.1": "2025-01-01",
+      "PEN:236.4": null,
+      "PEN:266": "2020-01-01",
+      "PEN:266h": "2011-01-01",
+      "PEN:266i": "2011-01-01",
+      "PEN:266j": null,
+      "PEN:267": "1983-09-27",
+      "PEN:311.1": "2025-01-01",
+      "PEN:311.2": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:311.4": "2025-01-01",
+      "PEN:311.5": null,
+      "PEN:311.6": null,
+      "PEN:518": "2018-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1243"
+    ]
+  },
+  {
+    "id": "ca-pen-236-1-c",
+    "lawCode": "PEN",
+    "code": "236.1(c)",
+    "title": "Human trafficking of a minor for a commercial sex act",
+    "summary": "Causing, inducing or persuading, or attempting to cause, induce or persuade, a person under 18 to engage in a commercial sex act, with intent to effect or maintain a listed predicate offense. Force or coercion is not required for the base branch. The minor's consent and a mistake about their age are not defenses under this statute.",
+    "penalty": "Felony: ordinarily 5, 8 or 12 years in state prison and a fine up to $500,000. The force, fear, fraud, deceit, coercion, violence, duress, menace or unlawful-injury-threat branch under 236.1(c)(2) carries 15 years to life and a fine up to $500,000. Section 236.4 permits an additional fine up to $1 million, a 5/7/10-year consecutive term for great bodily injury, and five-year consecutive terms for qualifying separately brought and tried prior trafficking convictions. These additions are conditional, not automatic in every case. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to effect or maintain a listed predicate offense through causing or attempting to cause the minor's commercial sex act.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:236.4",
+      "PEN:266",
+      "PEN:266h",
+      "PEN:266i",
+      "PEN:266j",
+      "PEN:267",
+      "PEN:311.1",
+      "PEN:311.2",
+      "PEN:311.3",
+      "PEN:311.4",
+      "PEN:311.5",
+      "PEN:311.6",
+      "PEN:518"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:236.1": "2025-01-01",
+      "PEN:236.4": null,
+      "PEN:266": "2020-01-01",
+      "PEN:266h": "2011-01-01",
+      "PEN:266i": "2011-01-01",
+      "PEN:266j": null,
+      "PEN:267": "1983-09-27",
+      "PEN:311.1": "2025-01-01",
+      "PEN:311.2": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:311.4": "2025-01-01",
+      "PEN:311.5": null,
+      "PEN:311.6": null,
+      "PEN:518": "2018-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1244"
+    ]
+  },
+  {
+    "id": "ca-pen-278",
+    "lawCode": "PEN",
+    "code": "278",
+    "title": "Child abduction without a right to custody",
+    "summary": "Maliciously taking, enticing, keeping, withholding or concealing a child under 18, without a right to custody, intending to detain or conceal the child from a lawful custodian. The child's willingness to go does not itself supply a defense. Custody rights must be checked against applicable law and court orders.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail and/or a fine up to $1,000; or 2, 3 or 4 years under 1170(h) and/or a fine up to $10,000. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Section 278.6 also requires restitution for qualifying locating and recovery costs. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Malicious taking/withholding and specific intent to detain or conceal from a lawful custodian.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:277",
+      "PEN:278.6",
+      "PEN:279"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:277": "1997-01-01",
+      "PEN:278": "2011-04-04",
+      "PEN:278.6": "1997-01-01",
+      "PEN:279": "1997-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1250"
+    ]
+  },
+  {
+    "id": "ca-pen-278-5-a",
+    "lawCode": "PEN",
+    "code": "278.5(a)",
+    "title": "Child abduction by depriving custody or visitation",
+    "summary": "Taking, enticing, keeping, withholding or concealing a child under 18 while maliciously depriving a lawful custodian of custody or another person of a lawful visitation right. A parent may be subject to this statute. Section 278.7 provides a conditional immediate-harm protection with reporting and custody-proceeding requirements; it is not blanket permission to disregard a custody order.",
+    "penalty": "Misdemeanor or felony: up to 364 days in county jail and/or a fine up to $1,000; or 16 months, 2 years or 3 years under 1170(h) and/or a fine up to $10,000. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Section 278.6 also requires restitution for qualifying locating and recovery costs. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Malicious deprivation of a lawful custody or visitation right.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:277",
+      "PEN:278.6",
+      "PEN:278.7",
+      "PEN:279"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:277": "1997-01-01",
+      "PEN:278.5": "2011-04-04",
+      "PEN:278.6": "1997-01-01",
+      "PEN:278.7": "1997-01-01",
+      "PEN:279": "1997-01-01"
+    },
+    "searchAliases": [
+      "custodial interference",
+      "parental child abduction"
+    ],
+    "calcrim": [
+      "1251"
+    ]
+  }
+]

@@ -1,7 +1,7 @@
-# California: three focused legal-review questions
+# California: focused legal-review questions
 
-Prepared September 27, 2026. The remaining 28 catalog records have a bounded
-statutory correction pass. These questions concern legal interpretation and
+Updated September 28, 2026. The reviewed catalog and proposed violence/detention
+additions retain the following questions about legal interpretation and
 current enforceability, not data entry. A correction is not full legal approval.
 The platform text explicitly preserves uncertainty for these branches.
 
@@ -103,3 +103,14 @@ means every §30605 charge is legally invalid.
 This document records monitoring needs. It does not install a scheduler or refresh
 source evidence. Live publication still requires the normal seed/deploy and parity
 checks after independent PR review.
+
+
+## 4. Felony false imprisonment: fine ceiling under §§237(a) and 672
+
+**Read:** [PEN §236](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=236.), [§237(a)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=237.), [§672](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=672.), and [§1170(h)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.). Full source text is retained in the violence/detention review packet.
+
+**Context:** Section 237(a)'s first sentence provides the ordinary fine/jail alternatives. Its second sentence prescribes felony custody when violence, menace, fraud or deceit is proved. Section 672 authorizes a default fine when no fine is otherwise prescribed. We have established the felony custody alternatives but have not established which fine ceiling applies to that branch. This is distinct from whether a proved aggravated branch can be reduced under §17(b).
+
+**Question to answer:** Does the first sentence's $1,000 ceiling also apply to the aggravated felony, or is a different felony fine available under §672? Please identify controlling authority for the fine treatment, or approve retaining the expressly unresolved fine limit.
+
+**Current treatment:** The separate felony choice gives the 16-month/two-/three-year custody alternatives and explicitly says its fine exposure requires review. The misdemeanor entry retains its verified $1,000 ceiling and 364-day custody maximum. No numerical felony fine ceiling is inferred. This narrow question does not prevent review of the other 27 proposed choices.

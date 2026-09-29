@@ -4,7 +4,9 @@
     "chargeId": "ca-failure-to-pay-child-support",
     "status": "unresolved",
     "question": "Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?",
-    "sourceKeys": ["PEN:270"],
+    "sourceKeys": [
+      "PEN:270"
+    ],
     "reviewDocument": "docs/california-remaining-attorney-questions.md"
   },
   {
@@ -12,7 +14,9 @@
     "chargeId": "ca-illegal-fireworks-12677",
     "status": "unresolved",
     "question": "What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?",
-    "sourceKeys": ["HSC:12700"],
+    "sourceKeys": [
+      "HSC:12700"
+    ],
     "reviewDocument": "docs/california-remaining-attorney-questions.md"
   },
   {
@@ -20,7 +24,24 @@
     "chargeId": "ca-possession-of-prohibited-weapon",
     "status": "unresolved",
     "question": "Which currently operative court orders affect the weapon definitions relevant to this possession charge?",
-    "sourceKeys": ["PEN:30510", "PEN:30515", "PEN:30605"],
+    "sourceKeys": [
+      "PEN:30510",
+      "PEN:30515",
+      "PEN:30605"
+    ],
+    "reviewDocument": "docs/california-remaining-attorney-questions.md"
+  },
+  {
+    "id": "ca-237-felony-fine",
+    "chargeId": "ca-pen-237-a",
+    "status": "unresolved",
+    "question": "Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?",
+    "sourceKeys": [
+      "PEN:236",
+      "PEN:237",
+      "PEN:672",
+      "PEN:1170"
+    ],
     "reviewDocument": "docs/california-remaining-attorney-questions.md"
   }
 ]

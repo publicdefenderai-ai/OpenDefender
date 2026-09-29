@@ -1,3 +1,4 @@
+import violenceDetention from "./california-violence-detention-additions.json";
 import vehicleIdentification from "./california-vehicle-identification-additions.json";
 import traffic from "./california-traffic-additions.json";
 /** Keep each reviewed batch immutable while projecting one runtime catalog. */
@@ -18,5 +19,6 @@ export const CALIFORNIA_ADDITIONS = [
   ...drugSuccessor.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-drug-successor-review.json" })),
   ...drivingVessels.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-driving-publication-review.json" })),
   ...traffic.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-traffic-review.json" })),
+  ...violenceDetention.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-violence-detention-review.json" })),
   ...vehicleIdentification.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-vehicle-identification-review.json" })),
 ];

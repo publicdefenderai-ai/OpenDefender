@@ -1,19 +1,19 @@
 import {expect,test} from '@playwright/test';
 import {readFileSync} from 'node:fs';
-const additions=JSON.parse(readFileSync('shared/california-traffic-additions.json','utf8')) as Array<{id:string;code:string;summary:string;penalty:string;categories:string[]}>;
-test('DUI, licensing and racing choices reach authority-gated API and rules guidance',async({request})=>{
+const additions=JSON.parse(readFileSync('shared/california-violence-detention-additions.json','utf8')) as Array<{id:string;code:string;summary:string;penalty:string;categories:string[]}>;
+test('Violence, abuse and detention choices reach authority-gated API and rules guidance',async({request})=>{
   const response=await request.get('/api/criminal-charges?jurisdiction=CA&limit=500');
   expect(response.ok()).toBe(true);
   const body=await response.json();expect(body.charges).toHaveLength(318);
   for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
   expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
-  const ids=['ca-veh-23153-f','ca-veh-14601-1-a','ca-veh-23109-c','ca-veh-40508-a'];
+  const ids=['ca-pen-273a-a','ca-pen-273ab-a','ca-pen-236-1-c','ca-pen-237-a'];
   const result=await request.post('/api/legal-guidance/rules',{headers:{Origin:process.env.PLAYWRIGHT_BASE_URL??'http://127.0.0.1:5001'},data:{jurisdiction:'CA',charges:ids,caseStage:'arrest',custodyStatus:'in_custody'}});
   expect(result.ok()).toBe(true);
   const guidance=(await result.json()).guidance;
   for(const id of ids)expect(guidance.chargeClassifications.find((r:any)=>r.id===id)).toMatchObject({maxPenalty:additions.find(a=>a.id===id)!.penalty,categories:additions.find(a=>a.id===id)!.categories});
 });
-for(const [query,id] of [['VC 23153(f)','ca-veh-23153-f'],['VC 14601.1(a)','ca-veh-14601-1-a'],['VC 23109(c)','ca-veh-23109-c']]){
+for(const [query,id] of [['PC 273ab(a)','ca-pen-273ab-a'],['torture','ca-pen-206'],['custodial interference','ca-pen-278-5-a'],['PC 236/237','ca-pen-237-a']]){
   test(`charging-paper search finds ${id}`,async({page})=>{
     await page.route('**/api/ai/status',r=>r.fulfill({json:{available:true}}));
     await page.goto('/case-guidance');await page.getByTestId('button-start-guidance').click();await page.getByTestId('button-choose-ai').click();

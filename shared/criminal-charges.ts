@@ -95020,6 +95020,19 @@ for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
   ]));
 }
 
+// Reviewed people/detention choices must also be discoverable in topical filters.
+const californiaPeopleSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368','207','209','209.5','210.5','236','236.1','237','278','278.5']);
+const californiaAssaultSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368']);
+for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], ['Assault Crimes', californiaAssaultSections]] as const) {
+  chargeCategories[group] = Array.from(new Set([
+    ...chargeCategories[group],
+    ...chargeCategories['CA'].filter(id => {
+      const record = getCaliforniaCanonicalRecord(id);
+      return record?.lawCode === 'PEN' && sections.has(record.code.split('(')[0]);
+    }),
+  ]));
+}
+
 // Keep the state grouping aligned with the same no-alias Ohio selector
 // boundary used below. The canonical source-first records are additive and
 // the historical degree labels remain visible only to persisted-case
