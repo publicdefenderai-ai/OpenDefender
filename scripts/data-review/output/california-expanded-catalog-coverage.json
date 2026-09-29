@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 4,
-    "canonicalRecords": 404,
-    "configuredSelectable": 383,
+    "canonicalRecords": 430,
+    "configuredSelectable": 409,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 284,
-    "boundedCorrectionPass": 383,
+    "boundedAdditionPass": 310,
+    "boundedCorrectionPass": 409,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 221,
+    "distinctSelectablePrimarySections": 233,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 221,
-    "selectableRecordsWithAllPrimaryTextAcquired": 383,
-    "totalAcquiredSectionsIncludingDependencies": 511,
-    "totalAcquiredVersionsIncludingDependencies": 517,
+    "acquiredSelectablePrimarySections": 233,
+    "selectableRecordsWithAllPrimaryTextAcquired": 409,
+    "totalAcquiredSectionsIncludingDependencies": 529,
+    "totalAcquiredVersionsIncludingDependencies": 535,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "383 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "409 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 267,
-      "corrected": 267,
+      "selectable": 293,
+      "corrected": 293,
       "awaitingCorrection": 0
     },
     {
@@ -1092,7 +1092,10 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.4&lawCode=PEN",
       "recordIds": [
         "ca-sexual-battery-243-4-a",
-        "ca-sexual-battery-243-4-e1"
+        "ca-sexual-battery-243-4-e1",
+        "ca-pen-243-4-b",
+        "ca-pen-243-4-c",
+        "ca-pen-243-4-d"
       ],
       "alreadyRetained": false
     },
@@ -1414,6 +1417,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "285",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=285&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-285"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "286",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=286&lawCode=PEN",
       "recordIds": [
@@ -1433,6 +1445,15 @@
         "ca-pen-286-i",
         "ca-pen-286-j",
         "ca-pen-286-k"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "286.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=286.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-286-5-a"
       ],
       "alreadyRetained": false
     },
@@ -1480,6 +1501,15 @@
       "recordIds": [
         "ca-pen-288-2-a-1",
         "ca-pen-288-2-a-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288.3&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-288-3-a"
       ],
       "alreadyRetained": false
     },
@@ -1535,6 +1565,34 @@
     },
     {
       "lawCode": "PEN",
+      "section": "290",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=290&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-290-b"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "290.011",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=290.011&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-290-011-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "290.012",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=290.012&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-290-012-a",
+        "ca-pen-290-012-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "29800",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29800&lawCode=PEN",
       "recordIds": [
@@ -1548,6 +1606,59 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=30605&lawCode=PEN",
       "recordIds": [
         "ca-possession-of-prohibited-weapon"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "311.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=311.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-311-1-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "311.11",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=311.11&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-311-11-a-1",
+        "ca-pen-311-11-a-2",
+        "ca-pen-311-11-b",
+        "ca-pen-311-11-c-1",
+        "ca-pen-311-11-c-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "311.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=311.2&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-311-2-a",
+        "ca-pen-311-2-c-1",
+        "ca-pen-311-2-d-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "311.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=311.4&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-311-4-a",
+        "ca-pen-311-4-b",
+        "ca-pen-311-4-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "311.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=311.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-311-6"
       ],
       "alreadyRetained": false
     },
@@ -2089,6 +2200,17 @@
       "recordIds": [
         "ca-public-intoxication",
         "ca-prostitution-solicitation"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "647.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=647.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-647-6-a-1",
+        "ca-pen-647-6-a-2",
+        "ca-pen-647-6-b"
       ],
       "alreadyRetained": false
     },
@@ -4578,6 +4700,450 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-4-b",
+      "title": "Sexual battery: institutionalized person",
+      "citation": "Cal. Penal Code § 243.4(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "1b12ec9ff554da33cb2fd5c3fc8df94fc7382ad6fd19bb80b80d89814af70eac",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-4-c",
+      "title": "Sexual battery: fraudulent professional purpose",
+      "citation": "Cal. Penal Code § 243.4(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "4200495491e88cc40ddff4ca3fd871ad922d05fa09d394d192927c803070ff3b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-4-d",
+      "title": "Sexual battery: compelled touching or masturbation",
+      "citation": "Cal. Penal Code § 243.4(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "d4f1df46d5228b5bc3545b6dffe1a1ea9cacbd10032e45fd5e388073d7387e70",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-288-3-a",
+      "title": "Contacting or attempting to contact a minor with intent to commit a listed offense",
+      "citation": "Cal. Penal Code § 288.3(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:288.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288.3"
+      ],
+      "catalogSha256": "99833284dd6eac127b64b2d1c1fc29239c41dd93448dea1a452ca80b4cc20f76",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-6-a-1",
+      "title": "Annoying or molesting a child",
+      "citation": "Cal. Penal Code § 647.6(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647.6"
+      ],
+      "catalogSha256": "6bb7b9c25886a18ebf68077a6a20c979856a06f49725fcb29772466983e1c652",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-6-a-2",
+      "title": "Sexually motivated conduct toward an adult believed to be a child",
+      "citation": "Cal. Penal Code § 647.6(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647.6"
+      ],
+      "catalogSha256": "a7725abec6c73929397924dc07629f53cba2c540c1586c52e1fd683cffec3746",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-6-b",
+      "title": "Annoying or molesting a child after unauthorized dwelling entry",
+      "citation": "Cal. Penal Code § 647.6(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647.6"
+      ],
+      "catalogSha256": "b53354c31ee3dbde3eaeabdc118f4f4202139d5d03f42df9f86c6c323291f198",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-1-a",
+      "title": "Distribution of obscene sexual matter depicting minors",
+      "citation": "Cal. Penal Code § 311.1(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.1"
+      ],
+      "catalogSha256": "69e8f8f0f705808522a97070d0c34550cdde966befd2a4ccac7463a0c46edd78",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-2-a",
+      "title": "Distribution of obscene matter",
+      "citation": "Cal. Penal Code § 311.2(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.2"
+      ],
+      "catalogSha256": "1e79b0835349132f2e716d19ad701882a69e770581bccce8e0904b206b32bfde",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-2-c-1",
+      "title": "Distribution of sexual matter depicting minors to an adult",
+      "citation": "Cal. Penal Code § 311.2(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.2"
+      ],
+      "catalogSha256": "b373114ce1007d23b0e7e4abab9639837f99bace8a623db36bacea295a1aca4e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-2-d-1",
+      "title": "Distribution of sexual matter depicting minors to a minor",
+      "citation": "Cal. Penal Code § 311.2(d)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.2"
+      ],
+      "catalogSha256": "e6838dabb7e88767603012ab4d4fe35a4b561326fc52c59ddce2f334320eae1f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-4-a",
+      "title": "Using a minor to assist with obscene-matter activity",
+      "citation": "Cal. Penal Code § 311.4(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.4"
+      ],
+      "catalogSha256": "a47a0547a294cfafe2a84fdae08625990e78b0746080309dc622c575b80ca656",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-4-b",
+      "title": "Using a minor in sexual material for commercial purposes",
+      "citation": "Cal. Penal Code § 311.4(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.4"
+      ],
+      "catalogSha256": "a755161555f0c7b69c8a1f64270d240be8fa09766b9295d8af6cc4ba2564c859",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-4-c",
+      "title": "Using a minor in sexual material: noncommercial-purpose proof not required",
+      "citation": "Cal. Penal Code § 311.4(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.4"
+      ],
+      "catalogSha256": "b6782138bb72dbc7554e67cd66a92e767d8de958b69ba9db74c2ce3938fa5512",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-11-a-1",
+      "title": "Possession of child sexual abuse material: actual-minor material",
+      "citation": "Cal. Penal Code § 311.11(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.11"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.11"
+      ],
+      "catalogSha256": "d6f6f989f3cabbc58a29a992baf49afe7566c97258ce030001bc9bb11ebaebb1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-11-a-2",
+      "title": "Possession of child sexual abuse material: obscene apparent-minor or synthetic material",
+      "citation": "Cal. Penal Code § 311.11(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.11"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.11"
+      ],
+      "catalogSha256": "038f4d9cba4dfa0b36f38c83a1b5bc1612c0f5ceb9b5f60adc5fb2b1c7093777",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-11-b",
+      "title": "Possession of child sexual abuse material with a qualifying prior",
+      "citation": "Cal. Penal Code § 311.11(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.11"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.11"
+      ],
+      "catalogSha256": "f15a9262444afdfcfa3911230eaa32ec0bbad0c8464e361908f7a71373c742af",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-11-c-1",
+      "title": "Possession of child sexual abuse material: specified quantity and young-child images",
+      "citation": "Cal. Penal Code § 311.11(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.11"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.11"
+      ],
+      "catalogSha256": "b12cc43a88a1aa78754ffe78b5f19698c56ca36303b66c4f09709dc6f4d9a9fe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-11-c-2",
+      "title": "Possession of child sexual abuse material: specified sadism or masochism",
+      "citation": "Cal. Penal Code § 311.11(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.11"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.11"
+      ],
+      "catalogSha256": "a30863e49b24bcffc302341e14f87c2fef2ed6b6ad297efcbc79b71c8254f702",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-290-b",
+      "title": "Failure to register after coming into or changing residence",
+      "citation": "Cal. Penal Code § 290(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:290"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:290"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:290"
+      ],
+      "catalogSha256": "2634c2d937eadb8eceebb705b6271403791cb993641201cce93c87d2eb7aaa24",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-290-012-a",
+      "title": "Failure to update annual sex-offender registration",
+      "citation": "Cal. Penal Code § 290.012(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:290.012"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:290.012"
+      ],
+      "catalogSha256": "abeaa2d74008b8260cc74d67135dee26bc49b3596c971037012c45db4dab05e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-290-011-a",
+      "title": "Failure to complete the required 30-day transient registration update",
+      "citation": "Cal. Penal Code § 290.011(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:290.011"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:290.011"
+      ],
+      "catalogSha256": "2894d0a02b2c72f4c3d9a3fa3e2d5eaff3631e35fb44232c7c5f1aa448f8cf6b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-290-012-b",
+      "title": "Failure to verify 90-day registration after sexually violent predator adjudication",
+      "citation": "Cal. Penal Code § 290.012(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:290.012"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:290.012"
+      ],
+      "catalogSha256": "f827417a17dc294c0b986b4609e899eb4b4371e20c5dec7b5050282b035ba269",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-311-6",
+      "title": "Obscene live conduct before an audience",
+      "citation": "Cal. Penal Code § 311.6",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:311.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:311.6"
+      ],
+      "catalogSha256": "b4ddb0927374e227a79bcd8534d9905682bbef4d9211f0ef5f5da3ba319681e1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-285",
+      "title": "Incest",
+      "citation": "Cal. Penal Code § 285",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:285"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:285"
+      ],
+      "catalogSha256": "4a6cd2bd1014bd38528d0bedce8bf4c10e5b23d3b44bf8accf52cc89ed770d29",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-286-5-a",
+      "title": "Sexual abuse of an animal",
+      "citation": "Cal. Penal Code § 286.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:286.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:286.5"
+      ],
+      "catalogSha256": "14ef4aab7d74b7b70c54da4423b92b848db832851905e327e1202c484a2547aa",
       "attorneyReview": "pending"
     },
     {

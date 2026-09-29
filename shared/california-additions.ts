@@ -1,3 +1,4 @@
+import registrationExploitation from "./california-registration-exploitation-additions.json";
 import sexualOffenses from "./california-sexual-offenses-additions.json";
 import violenceDetention from "./california-violence-detention-additions.json";
 import vehicleIdentification from "./california-vehicle-identification-additions.json";
@@ -12,6 +13,7 @@ import drivingVessels from "./california-driving-vessels-additions.json";
 import drugSuccessor from "./california-drug-successor-additions.json";
 import { californiaLawCode } from "./california-law-codes";
 export const CALIFORNIA_ADDITIONS = [
+  ...registrationExploitation.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-registration-exploitation-review.json" })),
   ...sexualOffenses.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-sexual-offenses-review.json" })),
   ...personProperty.map(row => ({ ...row, lawCode: "PEN" as const, reviewArtifact: "california-person-property-review.json" })),
   ...forgeryTheft.map(row => ({ ...row, lawCode: "PEN" as const, reviewArtifact: "california-forgery-theft-review.json" })),

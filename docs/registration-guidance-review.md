@@ -23,3 +23,5 @@ DOJ/CDCR identify SB384 and January 1, 2021 tiering, with petition availability 
 ## Remaining work
 
 The next California registration-offense batch should bind exact reporting duties, exceptions and penalties to retained statutes before adding selectable failures-to-register charges. Charge-specific registration consequences need a separate applicability mapping, including court-ordered registration, offense-date rules, history and juvenile adjudications. Other states' legacy registration summaries need primary-source review before production use. None of these gaps is treated as a minor-charge omission or assigned as attorney data entry.
+
+The successor adds hash-checked retained-text assertions for the three adult tier clauses and corresponding rendered prose. A changed anchor fails review tests. This is a drift alarm, not a semantic verifier or an individual tier determination.

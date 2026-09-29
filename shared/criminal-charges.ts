@@ -95021,7 +95021,7 @@ for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
 }
 
 // Include reviewed sexual branches in both existing topical filters.
-const californiaSexualSections = new Set(['264.1','266h','266i','266j','269','286','287','288','288.2','288.4','288.5','288.7','289']);
+const californiaSexualSections = new Set(['243.4','264.1','266h','266i','266j','269','285','286','286.5','287','288','288.2','288.3','288.4','288.5','288.7','289','290','290.011','290.012','311.1','311.2','311.4','311.6','311.11','647.6']);
 for (const group of ['Sexual Offenses', 'Sexual Crimes']) {
   chargeCategories[group] = Array.from(new Set([
     ...chargeCategories[group],
