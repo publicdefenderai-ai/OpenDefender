@@ -513,7 +513,7 @@ export default {
           "charges": "{{count}} registros de cargos; el orden es delito grave / delito menor / infracción. Los registros de California con alternativas se cuentan en el nivel más grave indicado, incluidas las variantes condicionales; esto no predice el cargo ni la sentencia de un caso individual.",
           "explanations": "{{count}} explicaciones tienen una fuente registrada; las capas jurisdiccionales adicionales no son uniformes.",
           "procedure": "{{count}} jurisdicciones (total / registros de confianza media).",
-          "collateral": "{{count}} jurisdicciones (consecuencias / licencia / inmigración / registro).",
+          "collateral": "{{count}} registros de jurisdicciones almacenados (consecuencias / licencia / inmigración / registro). La cifra de registro cuenta datos de investigación, no cobertura de orientación verificada.",
           "rights": "Resúmenes generales de derechos constitucionales; no se afirma cobertura uniforme por estado.",
           "expungement": "{{count}} registros jurisdiccionales, incluido el federal.",
           "diversion": "{{count}} programas (total / actualmente activos).",
@@ -6659,9 +6659,9 @@ export default {
       },
       "sexOffender": {
         "title": "Riesgo de Registro como Delincuente Sexual",
-        "what": "Una condena por un delito sexual activa el registro obligatorio bajo la ley del registro de delincuentes sexuales de su estado y bajo la Ley Federal de Registro y Notificación de Delincuentes Sexuales (SORNA, 34 U.S.C. § 20901). El registro dura entre 10 y 15 años para delitos de nivel inferior y de por vida para delitos graves o reincidentes en la mayoría de los estados. Requiere presentaciones periódicas en persona, verificación de domicilio y listado público en línea. Muchos estados agregan restricciones de residencia — típicamente de 500 a 2,000 pies de escuelas, parques y guarderías — que limitan severamente dónde puede vivir.",
-        "clock": "El registro se requiere de inmediato al ser condenado, al ser liberado de la prisión o al llegar a cualquier jurisdicción donde viva, trabaje o asista a la escuela. No registrarse o no actualizar su registro constituye por sí mismo un delito grave separado a nivel estatal y federal.",
-        "action": "El nivel y la duración del registro se determinan en la sentencia. Un abogado con experiencia en derecho de delincuentes sexuales debe asesorarle antes de presentar cualquier declaración de culpabilidad, porque las consecuencias del registro suelen ser permanentes y no pueden deshacerse mediante la eliminación de antecedentes. Pregunte específicamente sobre el período mínimo de registro y cualquier petición de eliminación disponible bajo la ley estatal.",
+        "what": "Algunas condenas pueden exigir el registro de delincuentes sexuales. La obligación, su duración, la divulgación pública y las restricciones de residencia dependen del delito exacto, la jurisdicción y las circunstancias personales. Una acusación por sí sola no establece estas consecuencias.",
+        "clock": "Los plazos de registro y actualización varían. Confirme pronto las obligaciones aplicables con su abogado y la agencia de registro. El incumplimiento puede ser un delito separado; su clasificación y cualquier responsabilidad federal dependen de la ley y los hechos.",
+        "action": "Antes de aceptar un acuerdo de culpabilidad, pregunte si debe registrarse, cómo se asigna el nivel, el período mínimo, las obligaciones de informar y si puede solicitar la terminación del registro. Cumplir un período mínimo no siempre termina el registro automáticamente.",
         "linkLabel": "Encontrar ayuda legal"
       }
     },
