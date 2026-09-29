@@ -68,3 +68,13 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Sources:** CALCRIM 2331's title and authority cite HSC 11379.6(a) and (c). The retained [section 11379.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11379.6.) places the offer offense and its 3/4/5-year term in (e); (c) addresses an aggravating proximity fact.
 - **Treatment:** Preserve the literal instruction text. Use the retained statute's subdivision (e) for any future offer entry; do not transfer the manufacturing offense's 3/5/7-year term. The crosswalk's earlier gap description echoed (c) and is corrected before PR25 merges; no offer charge was published by that packet.
 - **Traceability:** `california-controlled-substances-benchmark-source.json`, physical pages 1622-1623; section XML in `california-batch-six-review.json`. The controlled-substances crosswalk retains the unresolved source discrepancy.
+
+## CA-006: Suspended-license exception points to the wrong subdivision for a parking definition
+
+- **Recorded:** September 28, 2026, during the traffic publication review.
+- **Status:** Apparent cross-reference error; intended destination has not been legally certified.
+- **Literal source:** [Vehicle Code §14601.1(c)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=14601.1.) excludes offstreet parking facilities from its limited employer/private-property exception, referring to the definition in §12500(d).
+- **Discrepancy:** The retained [§12500](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=12500.) places the parking-facility definition in (c); (d) addresses vehicle-class licensing. Paragraph (c) appears to be the intended definition, an editorial inference rather than a judicial or attorney determination.
+- **Treatment:** Keep the literal reference and disclose the mismatch in the charge explanation. Do not rewrite either statute or imply that the exception's application has been resolved. Knowledge, actual suspension and the applicable exception still require case-specific assessment.
+- **Traceability:** `california-traffic-review.json` binds §14601.1 and §12500 by version ID and content hash; original XML is retained unchanged in the publication acquisitions. The review decision preserves both subdivision references.
+- **Remaining work:** Check amendment history and interpretive authority if a user's circumstances make this narrow exception material; do not ask an attorney merely to transcribe either source.

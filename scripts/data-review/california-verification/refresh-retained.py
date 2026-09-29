@@ -23,7 +23,7 @@ BASELINE_SHA = 'dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4
 SOURCE_URL = 'https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip'
 RETAINED = [f'california-batch-{n}-review.json' for n in ['one', 'two', 'three', 'four', 'five', 'six']] + [
     'california-catalog-source-expansion.json', 'california-person-property-acquisition.json',
-    'california-forgery-theft-acquisition.json', 'california-protected-person-acquisition.json', 'california-controlled-substances-acquisition.json', 'california-drug-successor-acquisition.json', 'california-driving-publication-acquisition.json']
+    'california-forgery-theft-acquisition.json', 'california-protected-person-acquisition.json', 'california-controlled-substances-acquisition.json', 'california-drug-successor-acquisition.json', 'california-driving-publication-acquisition.json', 'california-traffic-acquisition.json']
 # Member locations, table order and publisher transaction user IDs do not establish
 # statutory identity. Transaction update timestamps are retained separately for
 # audit; text and all legal/version/effective/active metadata remain in the digest.

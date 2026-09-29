@@ -1,3 +1,4 @@
+import traffic from "./california-traffic-additions.json";
 /** Keep each reviewed batch immutable while projecting one runtime catalog. */
 import personProperty from "./california-person-property-additions.json";
 import forgeryTheft from "./california-forgery-theft-additions.json";
@@ -15,4 +16,5 @@ export const CALIFORNIA_ADDITIONS = [
   ...controlledSubstances.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-controlled-substances-review.json" })),
   ...drugSuccessor.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-drug-successor-review.json" })),
   ...drivingVessels.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-driving-publication-review.json" })),
+  ...traffic.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-traffic-review.json" })),
 ];

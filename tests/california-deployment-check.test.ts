@@ -4,8 +4,8 @@ import receipt from "../scripts/data-review/output/california-archive-refresh-re
 import { CALIFORNIA_CANONICAL_RECORDS, getCaliforniaRecordEvidenceStatus } from "../shared/california-authority";
 import { getCaliforniaEvidenceSummary } from "../shared/california-freshness";
 const now = () => new Date(receipt.checkedAt);
-const status = () => ({ success: true, archiveEvidence: getCaliforniaEvidenceSummary(now()), lastRun: { status: "completed" }, linkedChargeCount: 257 });
-const selector = () => ({ success: true, totalAvailable: 256, charges: CALIFORNIA_CANONICAL_RECORDS.filter(row => row.selectable && getCaliforniaRecordEvidenceStatus(row, now()) === "current").map(row => ({ id: row.canonicalId })) });
+const status = () => ({ success: true, archiveEvidence: getCaliforniaEvidenceSummary(now()), lastRun: { status: "completed" }, linkedChargeCount: 281 });
+const selector = () => ({ success: true, totalAvailable: 280, charges: CALIFORNIA_CANONICAL_RECORDS.filter(row => row.selectable && getCaliforniaRecordEvidenceStatus(row, now()) === "current").map(row => ({ id: row.canonicalId })) });
 describe("public California deployment confirmation", () => {
   it("accepts only the exact published receipt and complete configured selector", () => {
     expect(assessCaliforniaDeployment(status(), selector(), now()).ok).toBe(true);

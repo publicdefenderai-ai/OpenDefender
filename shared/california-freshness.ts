@@ -1,7 +1,9 @@
+import {californiaTransitionRequiresReview} from "./california-source-transitions";
 import comparison from "../scripts/data-review/output/california-retained-refresh-comparison.json";
 import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
 import { californiaReceiptStatus } from "./california-freshness-core.mjs";
 export function getCaliforniaEvidenceStatus(now = new Date(), requiredKeys: readonly string[] = []): "current" | "stale" | "invalid" {
+  if (californiaTransitionRequiresReview(requiredKeys, now)) return "invalid";
   return californiaReceiptStatus(receipt, now, comparison, requiredKeys);
 }
 export function isCaliforniaEvidenceFresh(now = new Date()): boolean {

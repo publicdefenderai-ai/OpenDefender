@@ -1,0 +1,1162 @@
+[
+  {
+    "id": "ca-veh-23153-a",
+    "lawCode": "VEH",
+    "code": "23153(a)",
+    "title": "Alcohol DUI causing injury",
+    "summary": "Driving under the influence of alcohol, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2100"
+    ],
+    "searchAliases": [
+      "VC 23153(a)",
+      "DUI with injury a"
+    ]
+  },
+  {
+    "id": "ca-veh-23153-b",
+    "lawCode": "VEH",
+    "code": "23153(b)",
+    "title": "Driving with 0.08 percent blood alcohol causing injury",
+    "summary": "Driving with blood alcohol of 0.08 percent or more, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury. A qualifying chemical test within three hours creates a rebuttable presumption, not an irrebuttable finding of the blood-alcohol level at driving.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2101"
+    ],
+    "searchAliases": [
+      "VC 23153(b)",
+      "DUI with injury b"
+    ]
+  },
+  {
+    "id": "ca-veh-23153-d",
+    "lawCode": "VEH",
+    "code": "23153(d)",
+    "title": "Commercial-vehicle 0.04 percent DUI causing injury",
+    "summary": "Driving with blood alcohol of 0.04 percent or more while driving a commercial motor vehicle as defined in section 15210, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury. A qualifying chemical test within three hours creates a rebuttable presumption, not an irrebuttable finding of the blood-alcohol level at driving.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:15210",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:15210": "2016-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "VC 23153(d)",
+      "DUI with injury d"
+    ]
+  },
+  {
+    "id": "ca-veh-23153-e",
+    "lawCode": "VEH",
+    "code": "23153(e)",
+    "title": "Passenger-for-hire 0.04 percent DUI causing injury",
+    "summary": "Driving with blood alcohol of 0.04 percent or more while a passenger for hire is actually in the vehicle, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury. A qualifying chemical test within three hours creates a rebuttable presumption, not an irrebuttable finding of the blood-alcohol level at driving. A passenger for hire involves consideration contributed or expected as a condition of carriage; merely being available for paid rides is insufficient.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2102"
+    ],
+    "searchAliases": [
+      "VC 23153(e)",
+      "DUI with injury e"
+    ]
+  },
+  {
+    "id": "ca-veh-23153-f",
+    "lawCode": "VEH",
+    "code": "23153(f)",
+    "title": "Drug DUI causing injury",
+    "summary": "Driving under the influence of drugs, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2100"
+    ],
+    "searchAliases": [
+      "VC 23153(f)",
+      "DUI with injury f"
+    ]
+  },
+  {
+    "id": "ca-veh-23153-g",
+    "lawCode": "VEH",
+    "code": "23153(g)",
+    "title": "Combined alcohol/drug DUI causing injury",
+    "summary": "Driving under the combined influence of alcohol and drugs, while concurrently committing an unlawful act or neglecting a legal driving duty that proximately causes bodily injury to someone other than the driver. Impairment or the charged blood-alcohol level alone is insufficient without the additional act/duty breach and causal injury.",
+    "penalty": "Misdemeanor or felony. Ordinary first-offense punishment under section 23554 is 90 days to 364 days in county jail or 16 months, 2 years or 3 years in state prison, AND a $390-$1,000 base fine. First-offense probation under 23556 instead requires at least 5 days in jail, the fine and applicable programs. One qualifying prior offense within 10 years under 23560 raises the ordinary county-jail minimum to 120 days and the fine range to $390-$5,000; 23562 has separate probation/program alternatives, including a 30-day minimum under its specified program route. Two or more qualifying prior offenses within 10 years under 23566 ordinarily require 2, 3 or 4 years in state prison and a $1,015-$5,000 fine; 23568 governs available probation alternatives. Specified prior felony DUI or manslaughter convictions may independently invoke 23550.5. License suspension/revocation and separate injury or multiple-victim enhancements may apply; a generic prior-conviction answer is insufficient to assign a higher tier. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged impairment or blood-alcohol condition, concurrent unlawful conduct or neglected duty, and proximate injury causation.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23550.5",
+      "VEH:23554",
+      "VEH:23556",
+      "VEH:23560",
+      "VEH:23562",
+      "VEH:23566",
+      "VEH:23568",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23554": "2003-01-01",
+      "VEH:23556": "2013-06-27",
+      "VEH:23560": "2005-01-01",
+      "VEH:23562": "2005-01-01",
+      "VEH:23566": "2011-01-01",
+      "VEH:23568": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2100"
+    ],
+    "searchAliases": [
+      "VC 23153(g)",
+      "DUI with injury g"
+    ]
+  },
+  {
+    "id": "ca-veh-23152-d",
+    "lawCode": "VEH",
+    "code": "23152(d)",
+    "title": "Driving a commercial vehicle with blood alcohol of 0.04 percent or more",
+    "summary": "Driving a commercial motor vehicle as defined in section 15210 with blood alcohol of 0.04 percent or more. A qualifying test within three hours creates a rebuttable presumption. The statutory commercial-vehicle definition controls; a vehicle is not commercial solely because driving is work-related.",
+    "penalty": "Ordinarily a misdemeanor. First offense under 23536: 96 hours to 6 months in county jail AND a $390-$1,000 base fine; first-offense probation under 23538 has distinct program and custody conditions. A qualifying prior within 10 years can require 90 days to 364 days in jail under 23540, and two qualifying priors can require 120 days to 364 days under 23546, with the $390-$1,000 fine. Sections 23542 and 23548 govern their separate probation/program alternatives. Three or more qualifying priors within 10 years under 23550 can permit 16 months, 2 years or 3 years in state prison or 180 days to 364 days in county jail, plus the fine. Specified prior felony DUI or manslaughter convictions can independently invoke 23550.5, which permits state prison or up to 364 days in jail plus the fine. Suspension/revocation, treatment and interlock requirements depend on the case; no generic prior-conviction answer establishes a felony branch. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged blood-alcohol level and commercial-vehicle or actual paying-passenger condition.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:15210",
+      "VEH:23103.5",
+      "VEH:23536",
+      "VEH:23538",
+      "VEH:23540",
+      "VEH:23542",
+      "VEH:23546",
+      "VEH:23548",
+      "VEH:23550",
+      "VEH:23550.5",
+      "VEH:23552",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:15210": "2016-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23536": "2007-01-01",
+      "VEH:23538": "2013-06-27",
+      "VEH:23540": "2005-01-01",
+      "VEH:23542": "2005-01-01",
+      "VEH:23546": "2005-01-01",
+      "VEH:23548": "2005-01-01",
+      "VEH:23550": "2011-04-04",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23552": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "commercial DUI"
+    ]
+  },
+  {
+    "id": "ca-veh-23152-e",
+    "lawCode": "VEH",
+    "code": "23152(e)",
+    "title": "Driving a passenger for hire with blood alcohol of 0.04 percent or more",
+    "summary": "Driving a motor vehicle while a passenger for hire is actually in it with blood alcohol of 0.04 percent or more. A qualifying test within three hours creates a rebuttable presumption. A passenger for hire involves consideration contributed or expected as a condition of carriage; simply being available for paid rides is insufficient.",
+    "penalty": "Ordinarily a misdemeanor. First offense under 23536: 96 hours to 6 months in county jail AND a $390-$1,000 base fine; first-offense probation under 23538 has distinct program and custody conditions. A qualifying prior within 10 years can require 90 days to 364 days in jail under 23540, and two qualifying priors can require 120 days to 364 days under 23546, with the $390-$1,000 fine. Sections 23542 and 23548 govern their separate probation/program alternatives. Three or more qualifying priors within 10 years under 23550 can permit 16 months, 2 years or 3 years in state prison or 180 days to 364 days in county jail, plus the fine. Specified prior felony DUI or manslaughter convictions can independently invoke 23550.5, which permits state prison or up to 364 days in jail plus the fine. Suspension/revocation, treatment and interlock requirements depend on the case; no generic prior-conviction answer establishes a felony branch. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Voluntary driving with the charged blood-alcohol level and commercial-vehicle or actual paying-passenger condition.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:191.5",
+      "PEN:192",
+      "PEN:192.5",
+      "VEH:13352",
+      "VEH:23103.5",
+      "VEH:23536",
+      "VEH:23538",
+      "VEH:23540",
+      "VEH:23542",
+      "VEH:23546",
+      "VEH:23548",
+      "VEH:23550",
+      "VEH:23550.5",
+      "VEH:23552",
+      "VEH:23600"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:191.5": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:192.5": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23103.5": "2026-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23536": "2007-01-01",
+      "VEH:23538": "2013-06-27",
+      "VEH:23540": "2005-01-01",
+      "VEH:23542": "2005-01-01",
+      "VEH:23546": "2005-01-01",
+      "VEH:23548": "2005-01-01",
+      "VEH:23550": "2011-04-04",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23552": "2011-01-01",
+      "VEH:23600": "1999-05-26"
+    },
+    "calcrim": [
+      "2114"
+    ],
+    "searchAliases": [
+      "rideshare DUI"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-a",
+    "lawCode": "VEH",
+    "code": "14601(a)",
+    "title": "Driving with a license suspended for reckless or negligent operation",
+    "summary": "Knowingly driving while the driving privilege is suspended or revoked for a reason specifically listed in 14601(a), including reckless driving, listed refusal grounds, or negligent/incompetent operation. Other suspension reasons use different statutes. The limited employer/private-property exception and its offstreet-parking exclusion must be checked.",
+    "penalty": "Misdemeanor: first conviction, 5 days to 6 months in county jail AND a $300-$1,000 fine. If the offense occurs within five years of a qualifying prior offense resulting in conviction under 14601, 14601.1, 14601.2 or 14601.5: 10 days to 364 days AND a $500-$2,000 fine; probation requires at least 10 days. A qualifying plea substitution for 14601.2 can trigger ignition-interlock requirements. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500",
+      "VEH:12806",
+      "VEH:12809",
+      "VEH:12810.5",
+      "VEH:13106",
+      "VEH:14601.1",
+      "VEH:14601.2",
+      "VEH:14601.3",
+      "VEH:14601.5",
+      "VEH:23103",
+      "VEH:23104",
+      "VEH:23105",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:12806": "1995-09-05",
+      "VEH:12809": "1988-09-26",
+      "VEH:12810.5": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23103": "2011-01-01",
+      "VEH:23104": "2011-04-04",
+      "VEH:23105": "2011-04-04",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [
+      "2220"
+    ],
+    "searchAliases": [
+      "suspended license reckless driving"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-1-a",
+    "lawCode": "VEH",
+    "code": "14601.1(a)",
+    "title": "Driving with a license suspended for other reasons",
+    "summary": "Knowingly driving while suspended or revoked for a reason outside 14601, 14601.2 and 14601.5. The limited employer/private-property exception must be checked. The source excludes an offstreet parking facility but cites 12500(d); the retained definition is in 12500(c). This apparent cross-reference discrepancy is preserved and flagged, not silently corrected.",
+    "penalty": "Misdemeanor or infraction under Penal Code sections 17(d) and 19.8. Misdemeanor first conviction: up to 6 months in county jail, a $300-$1,000 fine, or both. If the offense occurs within five years of a qualifying prior offense resulting in conviction under the listed suspension statutes: 5 days to 364 days AND a $500-$2,000 fine. If handled as an infraction, there is no incarceration and the fine is up to $250. A qualifying plea substitution for 14601.2 can trigger interlock requirements; the filing and disposition must be confirmed. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:19.8",
+      "VEH:12500",
+      "VEH:13106",
+      "VEH:14601",
+      "VEH:14601.2",
+      "VEH:14601.3",
+      "VEH:14601.5",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:19.8": "2025-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [
+      "2220"
+    ],
+    "searchAliases": [
+      "driving on suspended license",
+      "other suspension"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-2-a",
+    "lawCode": "VEH",
+    "code": "14601.2(a)",
+    "title": "Driving after a DUI license suspension or revocation",
+    "summary": "Knowingly driving while suspended or revoked for a conviction under 23152 or 23153. The limited employer/private-property rehabilitation exception and applicable off-highway operation must be checked.",
+    "penalty": "Misdemeanor: first conviction, 10 days to 6 months in county jail AND a $300-$1,000 fine; probation requires at least 10 days. A qualifying prior offense within five years raises this to 30 days to 364 days AND a $500-$2,000 fine, with at least 30 days on probation. A qualifying second/subsequent offense over five but within seven years can require at least 10 days as a probation condition. A qualifying habitual-traffic-offender designation can additionally require 180 days and a $2,000 fine under 14601.3(e)(3). Interlock and reinstatement rules apply under the governing 23573/23575 scheme; the correct scheme and eligibility must be checked. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500",
+      "VEH:13106",
+      "VEH:14601",
+      "VEH:14601.1",
+      "VEH:14601.3",
+      "VEH:14601.5",
+      "VEH:23152",
+      "VEH:23153",
+      "VEH:23546",
+      "VEH:23550",
+      "VEH:23550.5",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23546": "2005-01-01",
+      "VEH:23550": "2011-04-04",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [
+      "2220"
+    ],
+    "searchAliases": [
+      "DUI suspended license"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-2-b",
+    "lawCode": "VEH",
+    "code": "14601.2(b)",
+    "title": "Driving in violation of a known license restriction under section 14601.2",
+    "summary": "Knowingly driving without full compliance with a restriction governed by section 14601.2(b). The limited employer/private-property rehabilitation exception and applicable off-highway operation must be checked.",
+    "penalty": "Misdemeanor: first conviction, 10 days to 6 months in county jail AND a $300-$1,000 fine; probation requires at least 10 days. A qualifying prior offense within five years raises this to 30 days to 364 days AND a $500-$2,000 fine, with at least 30 days on probation. A qualifying second/subsequent offense over five but within seven years can require at least 10 days as a probation condition. A qualifying habitual-traffic-offender designation can additionally require 180 days and a $2,000 fine under 14601.3(e)(3). Interlock and reinstatement rules apply under the governing 23573/23575 scheme; the correct scheme and eligibility must be checked. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500",
+      "VEH:13106",
+      "VEH:14601",
+      "VEH:14601.1",
+      "VEH:14601.3",
+      "VEH:14601.5",
+      "VEH:23152",
+      "VEH:23153",
+      "VEH:23546",
+      "VEH:23550",
+      "VEH:23550.5",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01",
+      "VEH:23546": "2005-01-01",
+      "VEH:23550": "2011-04-04",
+      "VEH:23550.5": "2015-01-01",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "restricted license violation"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-5-a",
+    "lawCode": "VEH",
+    "code": "14601.5(a)",
+    "title": "Driving during an administrative alcohol/refusal suspension",
+    "summary": "Knowingly driving while suspended or revoked under 13353, 13353.1 or 13353.2. A court-conviction DUI suspension is a different branch under 14601.2. The limited employer/private-property rehabilitation exception must be checked.",
+    "penalty": "Misdemeanor: first conviction, up to 6 months in county jail, a $300-$1,000 fine, or both. A qualifying prior offense within five years under 14601.5, 14601, 14601.1, 14601.2 or 14601.3 raises punishment to 10 days to 364 days AND a $500-$2,000 fine. The court may reduce the minimum fine for stated interests-of-justice reasons considering ability to pay. Conditional interlock and reinstatement requirements depend on the applicable 23573/23575 scheme and any plea substitution. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500",
+      "VEH:13106",
+      "VEH:13353",
+      "VEH:13353.1",
+      "VEH:13353.2",
+      "VEH:13353.7",
+      "VEH:13353.8",
+      "VEH:14601",
+      "VEH:14601.1",
+      "VEH:14601.2",
+      "VEH:14601.3",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:13353": "2008-01-01",
+      "VEH:13353.1": "2008-01-01",
+      "VEH:13353.2": "2009-01-01",
+      "VEH:13353.7": "2013-01-01",
+      "VEH:13353.8": "2008-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [
+      "2220"
+    ],
+    "searchAliases": [
+      "administrative suspended license"
+    ]
+  },
+  {
+    "id": "ca-veh-14601-5-b",
+    "lawCode": "VEH",
+    "code": "14601.5(b)",
+    "title": "Driving against an administrative license restriction",
+    "summary": "Knowingly driving without full compliance with a restriction under 13353.7 or 13353.8. A court-conviction DUI suspension is a different branch under 14601.2. The limited employer/private-property rehabilitation exception must be checked.",
+    "penalty": "Misdemeanor: first conviction, up to 6 months in county jail, a $300-$1,000 fine, or both. A qualifying prior offense within five years under 14601.5, 14601, 14601.1, 14601.2 or 14601.3 raises punishment to 10 days to 364 days AND a $500-$2,000 fine. The court may reduce the minimum fine for stated interests-of-justice reasons considering ability to pay. Conditional interlock and reinstatement requirements depend on the applicable 23573/23575 scheme and any plea substitution. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the suspension, revocation or restriction and driving in violation of it. Statutory notice provisions do not replace the prosecution's obligation to prove knowledge; the source's conclusive-presumption wording is not presented as automatic guilt.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500",
+      "VEH:13106",
+      "VEH:13353",
+      "VEH:13353.1",
+      "VEH:13353.2",
+      "VEH:13353.7",
+      "VEH:13353.8",
+      "VEH:14601",
+      "VEH:14601.1",
+      "VEH:14601.2",
+      "VEH:14601.3",
+      "VEH:23573",
+      "VEH:23575",
+      "VEH:38001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13106": "2023-01-01",
+      "VEH:13353": "2008-01-01",
+      "VEH:13353.1": "2008-01-01",
+      "VEH:13353.2": "2009-01-01",
+      "VEH:13353.7": "2013-01-01",
+      "VEH:13353.8": "2008-01-01",
+      "VEH:14601": "2008-01-01",
+      "VEH:14601.1": "2005-01-01",
+      "VEH:14601.2": "2015-01-01",
+      "VEH:14601.3": "2005-01-01",
+      "VEH:14601.5": "2009-01-01",
+      "VEH:23573": "2026-01-01",
+      "VEH:23575": "2026-01-01",
+      "VEH:38001": "2003-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "administrative suspended license"
+    ]
+  },
+  {
+    "id": "ca-veh-23104-a",
+    "lawCode": "VEH",
+    "code": "23104(a)",
+    "title": "Reckless driving causing bodily injury",
+    "summary": "Reckless driving that proximately causes bodily injury to someone other than the driver, subject to the separate higher branches in 23104(b) and 23105. An accident or ordinary negligence alone is not reckless driving.",
+    "penalty": "Ordinary misdemeanor under 23104(a): 30 days to 6 months in county jail, a $220-$1,000 fine, or both. The qualifying-prior/great-bodily-injury branch in 23104(b), and the specified-injury branch in 23105, have separate misdemeanor/felony alternatives and must not be assigned this ordinary penalty. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful or wanton disregard for safety plus proximate causation of another person's injury.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:23103",
+      "VEH:23105"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:23103": "2011-01-01",
+      "VEH:23104": "2011-04-04",
+      "VEH:23105": "2011-04-04"
+    },
+    "calcrim": [
+      "2200"
+    ],
+    "searchAliases": [
+      "reckless driving injury"
+    ]
+  },
+  {
+    "id": "ca-veh-23104-b",
+    "lawCode": "VEH",
+    "code": "23104(b)",
+    "title": "Reckless driving causing great bodily injury with a qualifying prior",
+    "summary": "Reckless driving that proximately causes great bodily injury as defined in Penal Code 12022.7 to another person, with a prior conviction under one of the specifically listed reckless-driving, speed-contest or DUI statutes. A generic prior record is insufficient.",
+    "penalty": "Misdemeanor or felony: 30 days to 6 months in county jail or 16 months, 2 years or 3 years under Penal Code 1170(h); a $220-$1,000 fine may be imposed alone or with imprisonment. Section 1170(h) custody is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Recklessness, proximate great bodily injury and the required qualifying prior.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:12022.7",
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:23103",
+      "VEH:23105",
+      "VEH:23109",
+      "VEH:23109.1",
+      "VEH:23152",
+      "VEH:23153"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:12022.7": "2024-12-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:23103": "2011-01-01",
+      "VEH:23104": "2011-04-04",
+      "VEH:23105": "2011-04-04",
+      "VEH:23109": "2025-06-27",
+      "VEH:23109.1": "2011-04-04",
+      "VEH:23152": "2017-01-01",
+      "VEH:23153": "2017-01-01"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "repeat reckless driving great bodily injury"
+    ]
+  },
+  {
+    "id": "ca-veh-23105-a",
+    "lawCode": "VEH",
+    "code": "23105(a)",
+    "title": "Reckless driving causing a specified serious injury",
+    "summary": "Reckless driving under 23103 that proximately causes another person loss of consciousness, concussion, bone fracture, protracted impairment of a bodily member or organ, a wound requiring extensive suturing, serious disfigurement, brain injury or paralysis. This branch does not require a prior conviction; the listed injury must be established.",
+    "penalty": "Misdemeanor or felony: 30 days to 6 months in county jail or 16 months, 2 years or 3 years under Penal Code 1170(h); a $220-$1,000 fine may be imposed alone or with imprisonment. Section 1170(h) custody is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Recklessness and proximate causation of a listed injury to another person.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:23103"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:23103": "2011-01-01",
+      "VEH:23105": "2011-04-04"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "reckless driving specified injury"
+    ]
+  },
+  {
+    "id": "ca-veh-23109-a",
+    "lawCode": "VEH",
+    "code": "23109(a)",
+    "title": "Motor vehicle speed contest",
+    "summary": "Engaging in a motor-vehicle speed contest on a highway or an offstreet parking facility, including racing another vehicle or a timing device. The statutory lawful-speed event over a route longer than 20 miles is excluded. Merely watching an event is not this driving offense.",
+    "penalty": "Ordinary misdemeanor under 23109(e)(1): 24 hours to 90 days in county jail, a $355-$1,000 fine, or both, plus 40 hours of community service. Causing another person bodily injury raises the ordinary range to 30 days to 6 months, a $500-$1,000 fine, or both under (e)(2). A qualifying repeat within five years under (f) carries custody AND fine; its serious-bodily-injury branch permits 16 months, 2 years or 3 years in state prison or 30 days to 364 days in county jail, AND a $500-$1,000 fine. Repeat probation under (g) has a separate minimum of 48 hours. Specified injuries also support the separate 23109.1 choice. License suspension/restriction, community-service and impound consequences depend on the branch. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Willfully engaging in the speed contest; injury/repeat punishment requires its additional facts.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:243",
+      "VEH:12500",
+      "VEH:13352",
+      "VEH:23109.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:13352": "2026-01-01",
+      "VEH:23109": "2025-06-27",
+      "VEH:23109.1": "2011-04-04"
+    },
+    "calcrim": [
+      "2201"
+    ],
+    "searchAliases": [
+      "street racing",
+      "speed contest"
+    ]
+  },
+  {
+    "id": "ca-veh-23109-b",
+    "lawCode": "VEH",
+    "code": "23109(b)",
+    "title": "Aiding a motor vehicle speed contest",
+    "summary": "Intentionally aiding or abetting a motor-vehicle speed contest on a highway or offstreet parking facility. Mere presence or spectatorship is not enough.",
+    "penalty": "Misdemeanor under 23109(i)(1): up to 90 days in county jail, a fine up to $500, or both. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful participation, intentional assistance, or the expressly required purpose of facilitating a contest/exhibition; the charged branch controls.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:23109": "2025-06-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "Aiding a motor vehicle speed contest"
+    ]
+  },
+  {
+    "id": "ca-veh-23109-c",
+    "lawCode": "VEH",
+    "code": "23109(c)",
+    "title": "Motor vehicle exhibition of speed",
+    "summary": "Engaging in, or intentionally aiding or abetting, a motor-vehicle exhibition of speed on a highway or offstreet parking facility. Mere spectatorship is not enough.",
+    "penalty": "Misdemeanor under 23109(i)(1): up to 90 days in county jail, a fine up to $500, or both. Penal Code 17(d)/19.8 also permits an infraction disposition: no incarceration and a fine up to $250. The sideshow-specific discretionary license-suspension provision in 23109(i)(2) states that it commences January 1, 2029; it is not presented as operative on this 2026 snapshot. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Willful participation, intentional assistance, or the expressly required purpose of facilitating a contest/exhibition; the charged branch controls.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:19.8",
+      "VEH:12500"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:19.8": "2025-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:23109": "2025-06-27"
+    },
+    "calcrim": [
+      "2202"
+    ],
+    "searchAliases": [
+      "exhibition of speed"
+    ]
+  },
+  {
+    "id": "ca-veh-23109-d",
+    "lawCode": "VEH",
+    "code": "23109(d)",
+    "title": "Obstructing a roadway or parking facility for racing",
+    "summary": "Placing, helping place, or otherwise creating an obstruction on a highway or offstreet parking facility for the purpose of facilitating or aiding a motor-vehicle speed contest or exhibition.",
+    "penalty": "Misdemeanor under 23109(i)(1): up to 90 days in county jail, a fine up to $500, or both. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful participation, intentional assistance, or the expressly required purpose of facilitating a contest/exhibition; the charged branch controls.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:12500"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12500": "2008-01-01",
+      "VEH:23109": "2025-06-27"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "Obstructing a roadway or parking facility for racing"
+    ]
+  },
+  {
+    "id": "ca-veh-23109-1-a",
+    "lawCode": "VEH",
+    "code": "23109.1(a)",
+    "title": "Speed contest causing a specified serious injury",
+    "summary": "A motor-vehicle speed contest violating 23109(a) that proximately causes another person loss of consciousness, concussion, bone fracture, protracted impairment of a bodily member or organ, a wound requiring extensive suturing, serious disfigurement, brain injury or paralysis. No prior conviction is required for this branch.",
+    "penalty": "Misdemeanor or felony: 30 days to 6 months in county jail or 16 months, 2 years or 3 years under Penal Code 1170(h); a $500-$1,000 fine may be imposed alone or with imprisonment. Section 1170(h) custody is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "mentalState": "Willful participation in the speed contest and proximate causation of a listed injury to another.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:23109"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:23109": "2025-06-27",
+      "VEH:23109.1": "2011-04-04"
+    },
+    "calcrim": [],
+    "searchAliases": [
+      "speed contest injury"
+    ]
+  },
+  {
+    "id": "ca-veh-12951-b",
+    "lawCode": "VEH",
+    "code": "12951(b)",
+    "title": "Failure to present a driver license on lawful demand",
+    "summary": "A driver fails to present the driver license for examination on demand of a peace officer enforcing the Vehicle Code. This is distinct from subdivision (a), which concerns carrying the license and has a production-in-court dismissal rule.",
+    "penalty": "Misdemeanor under section 40000.11, with the default punishment in 42002: up to 6 months in county jail, a fine up to $1,000, or both. Do not apply subdivision (a)'s separate dismissal procedure automatically to this demand-and-presentation branch. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful failure by the driver to present the license on a lawful enforcing-officer demand.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "VEH:40000.11",
+      "VEH:42002"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "VEH:12951": "1994-01-01",
+      "VEH:40000.11": "2024-01-01",
+      "VEH:42002": "1983-09-27"
+    },
+    "calcrim": [
+      "2222"
+    ],
+    "searchAliases": [
+      "refusing to show driver license"
+    ]
+  },
+  {
+    "id": "ca-veh-40508-a",
+    "lawCode": "VEH",
+    "code": "40508(a)",
+    "title": "Failure to appear on a written traffic promise",
+    "summary": "Willfully violating a written promise to appear in court or before an authorized bail-deposit recipient, including a lawfully granted continuance. The original traffic charge need not result in a conviction. Failure to pay and other order-violation branches in (b)/(c) are outside this entry.",
+    "penalty": "Misdemeanor or infraction under Penal Code 17(d)/19.8. Misdemeanor default under 42002: up to 6 months in county jail, a fine up to $1,000, or both. If treated as an infraction, no incarceration and a fine up to $250. Confirm the actual filing and disposition; this is not every type of criminal-court failure to appear. Adult base penalties are shown; enhancements, assessments, restitution, probation and administrative licensing consequences require separate review.",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Willful failure to honor the written promise or its lawfully granted continuance.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:19.8",
+      "VEH:42002"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:19.8": "2025-01-01",
+      "VEH:40508": "2024-01-01",
+      "VEH:42002": "1983-09-27"
+    },
+    "calcrim": [
+      "2240"
+    ],
+    "searchAliases": [
+      "traffic failure to appear",
+      "FTA 40508"
+    ]
+  }
+]

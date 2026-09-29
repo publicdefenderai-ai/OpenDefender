@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 3,
-    "canonicalRecords": 278,
-    "configuredSelectable": 257,
+    "canonicalRecords": 302,
+    "configuredSelectable": 281,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 158,
-    "boundedCorrectionPass": 257,
+    "boundedAdditionPass": 182,
+    "boundedCorrectionPass": 281,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 173,
+    "distinctSelectablePrimarySections": 184,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 173,
-    "selectableRecordsWithAllPrimaryTextAcquired": 257,
-    "totalAcquiredSectionsIncludingDependencies": 421,
-    "totalAcquiredVersionsIncludingDependencies": 425,
+    "acquiredSelectablePrimarySections": 184,
+    "selectableRecordsWithAllPrimaryTextAcquired": 281,
+    "totalAcquiredSectionsIncludingDependencies": 450,
+    "totalAcquiredVersionsIncludingDependencies": 456,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "257 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "281 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -65,8 +65,8 @@
     },
     {
       "lawCode": "VEH",
-      "selectable": 21,
-      "corrected": 21,
+      "selectable": 45,
+      "corrected": 45,
       "awaitingCorrection": 0
     }
   ],
@@ -1786,6 +1786,53 @@
     },
     {
       "lawCode": "VEH",
+      "section": "12951",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12951&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-12951-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "14601",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=14601&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-14601-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "14601.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=14601.1&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-14601-1-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "14601.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=14601.2&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-14601-2-a",
+        "ca-veh-14601-2-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "14601.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=14601.5&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-14601-5-a",
+        "ca-veh-14601-5-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
       "section": "16028",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16028&lawCode=VEH",
       "recordIds": [
@@ -1823,6 +1870,46 @@
     },
     {
       "lawCode": "VEH",
+      "section": "23104",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23104&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-23104-a",
+        "ca-veh-23104-b"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23105",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23105&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-23105-a"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23109",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23109&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-23109-a",
+        "ca-veh-23109-b",
+        "ca-veh-23109-c",
+        "ca-veh-23109-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23109.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23109.1&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-23109-1-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
       "section": "23152",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
       "recordIds": [
@@ -1831,9 +1918,25 @@
         "ca-dui-23152-a",
         "ca-dui-23152-f",
         "ca-dui-23152-g",
-        "ca-dui-23152-b"
+        "ca-dui-23152-b",
+        "ca-veh-23152-d",
+        "ca-veh-23152-e"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23153",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23153&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-23153-a",
+        "ca-veh-23153-b",
+        "ca-veh-23153-d",
+        "ca-veh-23153-e",
+        "ca-veh-23153-f",
+        "ca-veh-23153-g"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "VEH",
@@ -1907,6 +2010,15 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4000&lawCode=VEH",
       "recordIds": [
         "ca-expired-registration"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "40508",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=40508&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-40508-a"
       ],
       "alreadyRetained": false
     }
@@ -6759,6 +6871,424 @@
         "HNC:656.3"
       ],
       "catalogSha256": "ea8af1e484884302d2160198b8ff7f1cc24d82a079f57993a40a9d892a8a7e89",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-a",
+      "title": "Alcohol DUI causing injury",
+      "citation": "Cal. Vehicle Code § 23153(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "b01a667f67b1bb9ddd9e7f473bfd433003a496466919d251304db525441299e6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-b",
+      "title": "Driving with 0.08 percent blood alcohol causing injury",
+      "citation": "Cal. Vehicle Code § 23153(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "0e42502874ce566c6b39601bad1d2d663320ca27e6f07f4b8a798532d006684f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-d",
+      "title": "Commercial-vehicle 0.04 percent DUI causing injury",
+      "citation": "Cal. Vehicle Code § 23153(d)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "ba6455cf9182cf5d75847d7e69c0d9d2316e77baa504594933f429d056d8f3ea",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-e",
+      "title": "Passenger-for-hire 0.04 percent DUI causing injury",
+      "citation": "Cal. Vehicle Code § 23153(e)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "1c1903cff00d835b42b8860f0f0592e3b56e518bc8b2e42a9a0cafd70549be72",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-f",
+      "title": "Drug DUI causing injury",
+      "citation": "Cal. Vehicle Code § 23153(f)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "37f2a71dd62908de7d42ca9f12bc397b24ebf6abc792d61f4123006e0cbd2930",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23153-g",
+      "title": "Combined alcohol/drug DUI causing injury",
+      "citation": "Cal. Vehicle Code § 23153(g)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23153"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23153"
+      ],
+      "catalogSha256": "45a3f2abc441077370c46eafbab2d15fb8d96d6d4d39b712e2d59594a3d071fe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23152-d",
+      "title": "Driving a commercial vehicle with blood alcohol of 0.04 percent or more",
+      "citation": "Cal. Vehicle Code § 23152(d)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "3b3c870672f4c304c26214bbf0ac0b9ba7af2586434c983c6b6787d6ca0af010",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23152-e",
+      "title": "Driving a passenger for hire with blood alcohol of 0.04 percent or more",
+      "citation": "Cal. Vehicle Code § 23152(e)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "a1118ef74a98fcd5dd9144c7340f6d66568b39f77d36b737d96451edd0f567ba",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-a",
+      "title": "Driving with a license suspended for reckless or negligent operation",
+      "citation": "Cal. Vehicle Code § 14601(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601"
+      ],
+      "catalogSha256": "133ace8396a81839648645bcabee6f9bb242a197347b01c26fadfbb763855445",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-1-a",
+      "title": "Driving with a license suspended for other reasons",
+      "citation": "Cal. Vehicle Code § 14601.1(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601.1"
+      ],
+      "catalogSha256": "5383ca8a2f0f2f737aa3494f8f0ca542397cf6f3ac63569282b169d63595d9bb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-2-a",
+      "title": "Driving after a DUI license suspension or revocation",
+      "citation": "Cal. Vehicle Code § 14601.2(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601.2"
+      ],
+      "catalogSha256": "bc47d8ebf18b2c8c26bd03f882165ee45687e0267d8d43359ee453a9e6cb2eb9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-2-b",
+      "title": "Driving in violation of a known license restriction under section 14601.2",
+      "citation": "Cal. Vehicle Code § 14601.2(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601.2"
+      ],
+      "catalogSha256": "e21ed5a8bbce46427fab748b146647cc2c9c214c8b9ea164d4ce96a5b39626fb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-5-a",
+      "title": "Driving during an administrative alcohol/refusal suspension",
+      "citation": "Cal. Vehicle Code § 14601.5(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601.5"
+      ],
+      "catalogSha256": "5de2ec111b2c9470c948392120d35e89077f4a876e708e35aee15879c7de1114",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-14601-5-b",
+      "title": "Driving against an administrative license restriction",
+      "citation": "Cal. Vehicle Code § 14601.5(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:14601.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:14601.5"
+      ],
+      "catalogSha256": "46172b90a49198a969fe06906a2d7212ddca000a7301c98ec9b62a439db69409",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23104-a",
+      "title": "Reckless driving causing bodily injury",
+      "citation": "Cal. Vehicle Code § 23104(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23104"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23104"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23104"
+      ],
+      "catalogSha256": "f635522ebc759e86b95785ccbdbed133a0f3316f893b4ee717c75cdd093f58e4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23104-b",
+      "title": "Reckless driving causing great bodily injury with a qualifying prior",
+      "citation": "Cal. Vehicle Code § 23104(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23104"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23104"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23104"
+      ],
+      "catalogSha256": "b26fb5e93e0691e8e2f0b0edd679c0b7de93b1e7364c6caa6aa7ff50762a5579",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23105-a",
+      "title": "Reckless driving causing a specified serious injury",
+      "citation": "Cal. Vehicle Code § 23105(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23105"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23105"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23105"
+      ],
+      "catalogSha256": "87403d296489f521c56f8d20b759adca68b0fc0dd01d2796e7945ddc1952b799",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23109-a",
+      "title": "Motor vehicle speed contest",
+      "citation": "Cal. Vehicle Code § 23109(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23109"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23109"
+      ],
+      "catalogSha256": "46215e54d5760d3517f19d6c4be6b7202730db0c8da14e6d327292bde1050db7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23109-b",
+      "title": "Aiding a motor vehicle speed contest",
+      "citation": "Cal. Vehicle Code § 23109(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23109"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23109"
+      ],
+      "catalogSha256": "ee2e38e57ee6f20bedabcd3cbfc947c9d9262717b31b506a4d04083ae81edd8c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23109-c",
+      "title": "Motor vehicle exhibition of speed",
+      "citation": "Cal. Vehicle Code § 23109(c)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23109"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23109"
+      ],
+      "catalogSha256": "2f14f973cf9f6ad1cfe8ddef119d5d2e22d73075ecbca866515d7c3e1c0939fc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23109-d",
+      "title": "Obstructing a roadway or parking facility for racing",
+      "citation": "Cal. Vehicle Code § 23109(d)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23109"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23109"
+      ],
+      "catalogSha256": "9ee827931c461962b42b10f4bd7c77b2dd61f9304168c50974a3e99412e060a0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-23109-1-a",
+      "title": "Speed contest causing a specified serious injury",
+      "citation": "Cal. Vehicle Code § 23109.1(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23109.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23109.1"
+      ],
+      "catalogSha256": "f389550834bb6fb02226a6bed1331ddc5350cc73771cbe1a96bcc7398ad120bd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-12951-b",
+      "title": "Failure to present a driver license on lawful demand",
+      "citation": "Cal. Vehicle Code § 12951(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:12951"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:12951"
+      ],
+      "catalogSha256": "f3ae8623efc7a81cacb79ce9ad6c905d8f6c426a9bc660b0cb097dd030583d00",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-40508-a",
+      "title": "Failure to appear on a written traffic promise",
+      "citation": "Cal. Vehicle Code § 40508(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:40508"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:40508"
+      ],
+      "catalogSha256": "c4011c4f22d6ecd81a0996dfe5bf9f83fd7ecfa663b857ff42e45156648c1074",
       "attorneyReview": "pending"
     }
   ]
