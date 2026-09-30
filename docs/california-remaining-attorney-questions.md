@@ -1,9 +1,22 @@
-# California: focused legal-review questions
+# California: attorney decisions and implementation handoff
 
-Updated September 28, 2026. The reviewed catalog and proposed violence/detention
-additions retain the following questions about legal interpretation and
-current enforceability, not data entry. A correction is not full legal approval.
-The platform text explicitly preserves uncertainty for these branches.
+Updated September 30, 2026. All four requested attorney decisions have now been
+provided. No further attorney response is needed for these items. The original
+questions and historical treatments below are retained as an audit trail, with
+superseding decisions dated September 30. Residual research uncertainty is not an
+unanswered request for attorney approval.
+
+| Item | Approved treatment | Implementation remaining |
+| --- | --- | --- |
+| PEN 270 | First-offense misdemeanor under Gregori; possible felony following a prior section 270 conviction with parentage adjudication and notice, expressly subject to individual review. | Update all guidance languages and evidence bindings; retain repeat-offender research limitation. |
+| HSC 12700 | Apparent drafting error at exactly 100 pounds; lesser (b)(2) treatment is the likely interpretation, not conclusively established. | Update guidance and CA-001 anomaly inventory without rewriting statutory bands. |
+| PEN 30605 / 30515 | Restrictions remain enforceable with statutory exemptions; note pending constitutional challenges and possible future rulings. | Bind the reviewed current version, retain the 2029 transition, update comparison/gates and test eligibility before restoring the held charge. |
+| PEN 237(a) / 672 | If sentenced as a felony, discretionary base fine up to $10,000; assessments and restitution separate. | Update penalty prose, dependencies and review bindings; preserve misdemeanor treatment. |
+
+These review decisions have not yet been projected into runtime data. Do not
+remove the PEN 30515 hold merely by editing the receipt, or renew any receipt
+without the normal source comparison. Historical packets remain unchanged;
+a successor review must bind the changed claims and identify superseded findings.
 
 ## 1. Child-support felony branch: §270 and Gregori
 
@@ -30,6 +43,23 @@ statutory state-prison alternative and Gregori limitation, and mark application
 of the felony branch unresolved. Do not claim either automatic felony exposure
 or an unconditional misdemeanor-only ceiling. Existing ID is preserved.
 
+**Attorney decision, September 30, 2026:** Adopt misdemeanor treatment for a
+first section 270 offense under Gregori. A felony may be possible following a
+prior section 270 conviction, with the statutory parentage-adjudication and notice
+conditions, but applicability requires individual review. Use "prior conviction,"
+not merely another missed payment, accusation or second alleged offense. Gregori's
+first-offender protection is its holding; its discussion of a hypothetical prior
+conviction is dicta. A bounded public-source search did not locate a subsequent
+published California decision upholding the repeat-offender felony in those
+circumstances; do not state that no such decision exists.
+
+[People v. Tucker (1992), discussion I and footnote 2](https://caselaw.findlaw.com/court/ca-court-of-appeal/1772026.html)
+treats Gregori as relevant after the 1984 amendment, noting the increased-punishment
+sentence remained in the statute. It addresses parentage proof and instructions,
+not a repeat-offender felony holding. This resolves the publication decision and
+supersedes the open approval request above; the narrow repeat-offender research
+gap remains documented.
+
 ## 2. Dangerous fireworks: exactly 100 pounds under §12700(b)
 
 **Read:** [HSC §12677](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12677.),
@@ -51,6 +81,18 @@ We have not inferred a legislative correction or rewritten either boundary.
 automatic classification or penalty is assigned specifically to the 100-pound
 boundary. Separate altered-fireworks and delivery-to-minors theories remain
 outside the simple possession treatment.
+
+**Attorney decision and approved wording, September 30, 2026:** "The statutory
+weight bands overlap at exactly 100 pounds. The likely interpretation favors the
+lesser penalty under section 12700(b)(2), but no controlling authority resolving
+this boundary was located."
+
+Describe this as an apparent drafting error. The favorable interpretation is the
+reviewing attorney's approved construction, not verified legislative intent or a
+confirmed judicial holding. Preserve the literal bands and source evidence, and
+retain CA-001 in the anomaly inventory. This supersedes the earlier unresolved
+publication decision; do not mechanically classify the boundary as conclusively
+resolved or silently rewrite 100 pounds to another threshold.
 
 ## 3. Assault-weapon possession: definition-specific enforceability
 
@@ -90,6 +132,30 @@ charge declares §30515 as a dependency. The other 303 retained sections renewed
 without changes to text or legal/version metadata. Do not infer that this hold
 means every §30605 charge is legally invalid.
 
+**Attorney review decision, September 30, 2026:** The reviewing attorney reports
+that Miller v. Bonta and Rupp v. Bonta remain pending in the Ninth Circuit and
+that the Miller injunction is stayed. Accept present enforceability for guidance,
+with a dated notice that future court rulings may change the restrictions. This
+resolves the requested attorney decision on current enforceability; pending
+litigation alone is not a reason to withhold the charge. The California DOJ
+[litigation summary](https://www.oag.ca.gov/ogvp/2a-cases) corroborates the Miller
+stay and continued enforcement. This public-source check is not a complete
+independent docket certification.
+
+Approved guidance direction: California's assault-weapon restrictions remain
+enforceable while constitutional challenges are pending. The injunction in Miller
+has been stayed. Future court rulings may change the restrictions; applicable
+statutory exemptions still require consideration.
+
+The statutory timing question is separately resolved by AB 191 itself: section 6
+applies until January 1, 2029, when section 7 becomes operative. The weapon-feature
+and fixed-magazine definitions in subdivisions (a) and (b) are identical; the
+Olympic/Paralympic exemption provisions differ. Version selection is an engineering
+implementation task, not an outstanding attorney question. The historical hold
+and source comparison described above remain the current implementation until
+reviewed evidence bindings and runtime gates are updated and tested. This decision
+does not itself renew the receipt or enable the withheld record.
+
 ## Known future changes to monitor
 
 - **January 1, 2027:** VEH §40610 replaces the current version. Both versions are
@@ -128,3 +194,30 @@ interpretation and this supporting argument separately from verified controlling
 authority. The question and published fine uncertainty remain open pending that
 distinction being resolved. No case narratives or personal records are copied
 into the charge database.
+
+
+**Attorney review decision, September 30, 2026: fine interpretation resolved for
+publication.** The reviewing attorney approves describing a discretionary base
+fine of up to $10,000 under section 672 for false imprisonment sentenced as a
+felony under section 237(a). The adopted interpretation is that section 237(a)'s
+first-sentence $1,000 fine belongs to the ordinary misdemeanor branch; the
+aggravated felony branch specifies custody without a separate fine, making
+section 672 applicable. Do not describe $10,000 as mandatory, as the total
+financial liability including assessments/restitution, or as the fine for an
+offense treated as a misdemeanor.
+
+Authority: [People v. Allen (2001), 88 Cal.App.4th 986, 998-999](https://law.justia.com/cases/california/court-of-appeal/4th/88/986.html)
+recognizes the discretionary $10,000 felony fine under section 672 in a burglary
+case. [People v. Mauch (2008), 163 Cal.App.4th 669, 676-677](https://caselaw.findlaw.com/court/ca-court-of-appeal/1399755.html)
+discusses the additional fine and its distinction from alternative misdemeanor
+punishment. [People v. Rios (1986), 177 Cal.App.3d 445](https://law.justia.com/cases/california/court-of-appeal/3d/177/445.html)
+and [People v. Olivencia (1988), 204 Cal.App.3d 1391](https://law.justia.com/cases/california/court-of-appeal/3d/204/1391.html)
+support the aggravated felony classification. These authorities support the
+reviewer's application of the general fine rule; do not claim that they directly
+adjudicate the section 237 fine-ceiling question.
+
+Approved publication direction: If sentenced as a felony, the court may also
+impose a base fine of up to $10,000 under Penal Code section 672. Additional
+assessments and restitution may apply. This supersedes the earlier unresolved
+fine decision above. Runtime text and evidence bindings still require an
+implementation update; this review note alone does not change live guidance.
