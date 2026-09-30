@@ -6,14 +6,14 @@ questions and historical treatments below are retained as an audit trail, with
 superseding decisions dated September 30. Residual research uncertainty is not an
 unanswered request for attorney approval.
 
-| Item | Approved treatment | Implementation remaining |
+| Item | Approved treatment | Successor implementation |
 | --- | --- | --- |
-| PEN 270 | First-offense misdemeanor under Gregori; possible felony following a prior section 270 conviction with parentage adjudication and notice, expressly subject to individual review. | Update all guidance languages and evidence bindings; retain repeat-offender research limitation. |
-| HSC 12700 | Apparent drafting error at exactly 100 pounds; lesser (b)(2) treatment is the likely interpretation, not conclusively established. | Update guidance and CA-001 anomaly inventory without rewriting statutory bands. |
-| PEN 30605 / 30515 | Restrictions remain enforceable with statutory exemptions; note pending constitutional challenges and possible future rulings. | Bind the reviewed current version, retain the 2029 transition, update comparison/gates and test eligibility before restoring the held charge. |
-| PEN 237(a) / 672 | If sentenced as a felony, discretionary base fine up to $10,000; assessments and restitution separate. | Update penalty prose, dependencies and review bindings; preserve misdemeanor treatment. |
+| PEN 270 | First-offense misdemeanor under Gregori; possible felony following a prior section 270 conviction with parentage adjudication and notice, expressly subject to individual review. | Approved English text bound to evidence; other languages show an explicit fallback notice. Repeat-offender research limitation retained. |
+| HSC 12700 | Apparent drafting error at exactly 100 pounds; lesser (b)(2) treatment is the likely interpretation, not conclusively established. | Guidance and CA-001 updated without rewriting statutory bands. |
+| PEN 30605 / 30515 | Restrictions remain enforceable with statutory exemptions; note pending constitutional challenges and possible future rulings. | Reviewed current version bound; 2029 transition retained; comparison/gates restore evidence eligibility subject to receipt freshness. |
+| PEN 237(a) / 672 | If sentenced as a felony, discretionary base fine up to $10,000; assessments and restitution separate. | Penalty prose, section 672 dependency and successor bindings updated; misdemeanor treatment preserved. |
 
-These review decisions have not yet been projected into runtime data. Do not
+Implementation update: successor runtime penalty text and evidence bindings now project all four decisions. Live deployment parity has not been verified. Do not
 remove the PEN 30515 hold merely by editing the receipt, or renew any receipt
 without the normal source comparison. Historical packets remain unchanged;
 a successor review must bind the changed claims and identify superseded findings.
@@ -152,9 +152,9 @@ applies until January 1, 2029, when section 7 becomes operative. The weapon-feat
 and fixed-magazine definitions in subdivisions (a) and (b) are identical; the
 Olympic/Paralympic exemption provisions differ. Version selection is an engineering
 implementation task, not an outstanding attorney question. The historical hold
-and source comparison described above remain the current implementation until
-reviewed evidence bindings and runtime gates are updated and tested. This decision
-does not itself renew the receipt or enable the withheld record.
+and source comparison described above are superseded by the reviewed successor
+bindings and unchanged-source comparison in the implementation batch. This decision
+does not itself renew the receipt. The successor implementation separately compares the approved versions before enabling the record.
 
 ## Known future changes to monitor
 
@@ -219,5 +219,4 @@ adjudicate the section 237 fine-ceiling question.
 Approved publication direction: If sentenced as a felony, the court may also
 impose a base fine of up to $10,000 under Penal Code section 672. Additional
 assessments and restitution may apply. This supersedes the earlier unresolved
-fine decision above. Runtime text and evidence bindings still require an
-implementation update; this review note alone does not change live guidance.
+fine decision above. Successor runtime text and evidence bindings implement this decision; deployment must still be verified.

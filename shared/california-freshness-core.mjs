@@ -30,6 +30,9 @@ export function californiaReceiptStatus(input, now = new Date(), comparison, req
       expires - checked !== CALIFORNIA_MAX_AGE_MS ||
       !["original_acquisition", "full_archive_comparison", "retained_section_comparison"].includes(receipt.method) ||
       (receipt.method === "original_acquisition" && checked !== Date.parse(CALIFORNIA_ARCHIVE.acquiredAt))) return "invalid";
+  // The original archive predates the approved PEN 30515 successor. A receipt
+  // matching that old ZIP cannot establish currency for the replacement text.
+  if (requiredKeys.includes("PEN:30515") && receipt.method !== "retained_section_comparison") return "invalid";
   if (receipt.method === "retained_section_comparison" && !validRetainedComparison(receipt, comparison)) return "invalid";
   if (requiredKeys.some(key => !Object.hasOwn(retainedPins, key) ||
       (Array.isArray(receipt.heldSourceKeys) && receipt.heldSourceKeys.includes(key)))) return "invalid";

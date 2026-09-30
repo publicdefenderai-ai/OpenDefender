@@ -6,7 +6,7 @@ const additions=JSON.parse(readFileSync('shared/california-weapons-eligibility-a
 test('Firearm eligibility, ammunition and concealed carrying choices reach authority-gated API and rules guidance',async({request})=>{
   const body = await readCaliforniaCatalog(request);expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
   for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
-  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
+  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(true);
   const ids=['ca-pen-29805-g','ca-pen-29825-b','ca-pen-30305-a-1','ca-pen-25400-a-3'];
   const result=await request.post('/api/legal-guidance/rules',{headers:{Origin:process.env.PLAYWRIGHT_BASE_URL??'http://127.0.0.1:5001'},data:{jurisdiction:'CA',charges:ids,caseStage:'arrest',custodyStatus:'in_custody'}});
   expect(result.ok()).toBe(true);

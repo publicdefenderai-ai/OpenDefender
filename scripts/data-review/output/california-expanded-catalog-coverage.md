@@ -10,7 +10,7 @@ Statewide offense coverage: unknown. Live deployment parity: not established by 
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary.
 
-Primary-source acquisition: 282/282 declared sections, covering the primary links of 521/521 configured records. Total retained research sources including dependencies: 724 sections/730 versions.
+Primary-source acquisition: 282/282 declared sections, covering the primary links of 521/521 configured records. Total retained research sources including dependencies: 724 sections/731 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |
@@ -22,10 +22,10 @@ Primary-source acquisition: 282/282 declared sections, covering the primary link
 
 ## Remaining work
 
-- ca-failure-to-pay-child-support: Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?
-- ca-illegal-fireworks-12677: What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?
-- ca-possession-of-prohibited-weapon: Which currently operative court orders affect the weapon definitions relevant to this possession charge?
-- ca-pen-237-a: Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?
+- ca-failure-to-pay-child-support: Attorney decision recorded September 30, 2026; see docs/california-remaining-attorney-questions.md. Original research question: Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?
+- ca-illegal-fireworks-12677: Attorney decision recorded September 30, 2026; see docs/california-remaining-attorney-questions.md. Original research question: What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?
+- ca-possession-of-prohibited-weapon: Attorney decision recorded September 30, 2026; see docs/california-remaining-attorney-questions.md. Original research question: Which currently operative court orders affect the weapon definitions relevant to this possession charge?
+- ca-pen-237-a: Attorney decision recorded September 30, 2026; see docs/california-remaining-attorney-questions.md. Original research question: Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?
 
 See docs/california-remaining-attorney-questions.md for sources and proposed treatment. These focused questions are not an exhaustive list of all legal-review needs.
 

@@ -6,7 +6,7 @@ const additions=JSON.parse(readFileSync('shared/california-traffic-additions.jso
 test('DUI, licensing and racing choices reach authority-gated API and rules guidance',async({request})=>{
   const body = await readCaliforniaCatalog(request);expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
   for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
-  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
+  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(true);
   const ids=['ca-veh-23153-f','ca-veh-14601-1-a','ca-veh-23109-c','ca-veh-40508-a'];
   const result=await request.post('/api/legal-guidance/rules',{headers:{Origin:process.env.PLAYWRIGHT_BASE_URL??'http://127.0.0.1:5001'},data:{jurisdiction:'CA',charges:ids,caseStage:'arrest',custodyStatus:'in_custody'}});
   expect(result.ok()).toBe(true);

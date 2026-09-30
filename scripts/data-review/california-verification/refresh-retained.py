@@ -55,6 +55,22 @@ def retained_documents(output=OUTPUT, names=None):
             if key in documents and version_digest(documents[key]) != digest:
                 raise ValueError('Conflicting retained source: ' + key)
             documents[key] = versions
+    # Historical replay with explicit provider names remains unchanged. The current
+    # monitor compares a separately approved successor to its authenticated archive.
+    if names is None:
+        approval_path = output / 'california-attorney-source-approval.json'
+        approval = json.loads(approval_path.read_text())
+        key = approval['key']
+        if (approval['schemaVersion'] != 1 or key != 'PEN:30515' or
+            approval['previousPin'] != dict(hash=version_digest(documents[key]), versions=len(documents[key])) or
+            set(approval['documents']) != {key}):
+            raise ValueError('Invalid reviewed successor baseline')
+        versions = approval['documents'][key]
+        if (len(versions) != 2 or any(v['lawCode'] + ':' + v['section'].removesuffix('.') != key for v in versions) or
+            not any(v['versionId'] == approval['operativeVersionId'] for v in versions)):
+            raise ValueError('Invalid reviewed successor versions')
+        version_digest(versions)
+        documents[key] = versions
     return documents
 
 

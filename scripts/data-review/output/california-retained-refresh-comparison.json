@@ -6342,13 +6342,14 @@
     },
     {
       "key": "PEN:30515",
-      "expectedHash": "2fe60290db2a8c42e92e66b5adf7d95b80e3c10ed8ace4dea28faa0cc4446bec",
+      "expectedHash": "c74a9c896b126f9e9a1692e22761fb41f969e35754bfe93d49c4660d60f5f7b8",
       "observedHash": "c74a9c896b126f9e9a1692e22761fb41f969e35754bfe93d49c4660d60f5f7b8",
-      "expectedVersions": 1,
+      "expectedVersions": 2,
       "observedVersions": 2,
-      "status": "changed_or_missing",
+      "status": "unchanged",
       "expectedTransactionUpdates": [
-        "2026-07-21 01:00:22"
+        "2026-09-26 01:01:21",
+        "2026-09-26 01:01:21"
       ],
       "observedTransactionUpdates": [
         "2026-09-26 01:01:21",
@@ -10160,8 +10161,6 @@
       ]
     }
   ],
-  "allUnchanged": false,
-  "heldSourceKeys": [
-    "PEN:30515"
-  ]
+  "allUnchanged": true,
+  "heldSourceKeys": []
 }

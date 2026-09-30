@@ -3,7 +3,8 @@
   "schemaVersion": 1,
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
-    "specificOpenLegalQuestions": 4,
+    "specificOpenLegalQuestions": 0,
+    "recordedAttorneyDecisions": 4,
     "canonicalRecords": 542,
     "configuredSelectable": 521,
     "withheldCanonicalLabels": 21,
@@ -26,7 +27,7 @@
     "acquiredSelectablePrimarySections": 282,
     "selectableRecordsWithAllPrimaryTextAcquired": 521,
     "totalAcquiredSectionsIncludingDependencies": 724,
-    "totalAcquiredVersionsIncludingDependencies": 730,
+    "totalAcquiredVersionsIncludingDependencies": 731,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
@@ -227,39 +228,42 @@
     {
       "id": "ca-270-felony-applicability",
       "chargeId": "ca-failure-to-pay-child-support",
-      "status": "unresolved",
+      "status": "attorney_decision_recorded",
       "question": "Which prior-conviction and parentage conditions permit felony treatment after Gregori and subsequent controlling authority?",
       "sourceKeys": [
         "PEN:270"
       ],
-      "reviewDocument": "docs/california-remaining-attorney-questions.md"
+      "reviewDocument": "docs/california-remaining-attorney-questions.md",
+      "decisionDate": "2026-09-30"
     },
     {
       "id": "ca-12700-exactly-100-pounds",
       "chargeId": "ca-illegal-fireworks-12677",
-      "status": "unresolved",
+      "status": "attorney_decision_recorded",
       "question": "What authority resolves the overlapping classification and punishment bands at exactly 100 pounds?",
       "sourceKeys": [
         "HSC:12700"
       ],
-      "reviewDocument": "docs/california-remaining-attorney-questions.md"
+      "reviewDocument": "docs/california-remaining-attorney-questions.md",
+      "decisionDate": "2026-09-30"
     },
     {
       "id": "ca-30605-enforceability",
       "chargeId": "ca-possession-of-prohibited-weapon",
-      "status": "unresolved",
+      "status": "attorney_decision_recorded",
       "question": "Which currently operative court orders affect the weapon definitions relevant to this possession charge?",
       "sourceKeys": [
         "PEN:30510",
         "PEN:30515",
         "PEN:30605"
       ],
-      "reviewDocument": "docs/california-remaining-attorney-questions.md"
+      "reviewDocument": "docs/california-remaining-attorney-questions.md",
+      "decisionDate": "2026-09-30"
     },
     {
       "id": "ca-237-felony-fine",
       "chargeId": "ca-pen-237-a",
-      "status": "unresolved",
+      "status": "attorney_decision_recorded",
       "question": "Does the $1,000 fine in the first sentence of 237(a) also govern the aggravated felony branch, or does section 672 authorize another ceiling?",
       "sourceKeys": [
         "PEN:236",
@@ -267,7 +271,8 @@
         "PEN:672",
         "PEN:1170"
       ],
-      "reviewDocument": "docs/california-remaining-attorney-questions.md"
+      "reviewDocument": "docs/california-remaining-attorney-questions.md",
+      "decisionDate": "2026-09-30"
     }
   ],
   "sourceRequests": [
@@ -3715,7 +3720,7 @@
       "acquiredPrimaryKeys": [
         "PEN:30605"
       ],
-      "catalogSha256": "67efa53c153c5bd853718a972397475a352666781a6ec98e24ae0cd074466f42",
+      "catalogSha256": "e9e5cf4625617ef8659029e91ba0798ebb0b4b3848e374fa1de49ef3ae42899b",
       "attorneyReview": "pending"
     },
     {
@@ -4151,7 +4156,7 @@
       "acquiredPrimaryKeys": [
         "PEN:270"
       ],
-      "catalogSha256": "fdb27f7b9c413d3e9ccf40f9db8001e370047d8bd977eeb6bfd9bc4631aa791b",
+      "catalogSha256": "a42ffd74a7af00c1e7b782803ed058af9c283ae45d4e680b83ad6c74d153229e",
       "attorneyReview": "pending"
     },
     {
@@ -5133,7 +5138,7 @@
       "acquiredPrimaryKeys": [
         "HSC:12677"
       ],
-      "catalogSha256": "0b4eae647728cc32a0c0cfe26743631d3825da9ccb09f3c8715abe9aed27a9b0",
+      "catalogSha256": "82397290d46a9374b9674992a0577b00fa4fb4cba6c33e2526d9027628f8b1ac",
       "attorneyReview": "pending"
     },
     {
@@ -12164,7 +12169,7 @@
       "acquiredPrimaryKeys": [
         "PEN:237"
       ],
-      "catalogSha256": "c79c3515d792e9dd90ab3bf2256aeafb2ed72fccf190d1519aff51d20255d2bf",
+      "catalogSha256": "779efd8d5079fab77f78e377452e601bff1106e2aab3e9268bae8d0a5d51be7a",
       "attorneyReview": "pending"
     },
     {

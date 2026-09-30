@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from '../shared/california-attorney-decisions';
 import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import {describe,expect,it} from 'vitest';
 import additions from '../shared/california-violence-detention-additions.json';
@@ -67,12 +68,12 @@ describe('California combined serious violence, abuse and detention',()=>{
   it('carries reviewed alternatives, penalties and language notices to catalog and guidance',()=>{
     for(const d of additions){
       const c=getCaliforniaCanonicalRecord(d.id)!;
-      expect(getChargeById(d.id)).toMatchObject({categories:d.categories,maxPenalty:d.penalty});
-      expect(classifyChargesForGuidance([d.id])[0]).toMatchObject({categories:d.categories,maxPenalty:d.penalty});
+      expect(getChargeById(d.id)).toMatchObject({categories:d.categories,maxPenalty:reviewedCaliforniaPenalty(d.id,d.penalty)});
+      expect(classifyChargesForGuidance([d.id])[0]).toMatchObject({categories:d.categories,maxPenalty:reviewedCaliforniaPenalty(d.id,d.penalty)});
       expect(chargeCategories['Violent Crimes']).toContain(d.id);
       for(const k of ['PEN:'+d.code.split('(')[0],...d.supportingKeys])expect(pins).toHaveProperty(k);
       expect(getCaliforniaRecordEvidenceStatus(c,new Date(receipt.checkedAt))).toBe('current');
-      for(const lang of ['en','es','zh'])expect(getChargeExplanation('wrong name','CA',lang,d.id)).toMatchObject({plainSummary:d.summary,degreeContext:d.penalty,untranslated:lang!=='en'});
+      for(const lang of ['en','es','zh'])expect(getChargeExplanation('wrong name','CA',lang,d.id)).toMatchObject({plainSummary:d.summary,degreeContext:reviewedCaliforniaPenalty(d.id,d.penalty),untranslated:lang!=='en'});
     }
   });
 });

@@ -1,3 +1,4 @@
+import {californiaAttorneyDecision} from './california-attorney-decisions';
 /**
  * Authoritative California charge contract.
  *
@@ -1821,6 +1822,15 @@ for (const addition of additions) {
     source.effectiveDate = (addition.sourceEffectiveDates as Record<string, string | null | undefined>)[`${url.searchParams.get("lawCode")}:${url.searchParams.get("sectionNum")}`] ?? null;
   }
   CALIFORNIA_CANONICAL_RECORDS.push(metadata);
+}
+
+for (const entry of CALIFORNIA_CANONICAL_RECORDS) {
+  if (californiaAttorneyDecision(entry.canonicalId)) {
+    entry.currentness.evidence += ' Attorney interpretation reviewed September 30, 2026; successor bindings: california-attorney-decision-review.json. This is a bounded decision, not certification of every consequence.';
+    for (const source of entry.sources) {
+      if (source.url.includes('sectionNum=30515')) source.effectiveDate = '2026-09-20';
+    }
+  }
 }
 
 const byCanonicalId = new Map(

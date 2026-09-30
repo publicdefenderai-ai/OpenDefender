@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ca-failure-to-pay-child-support",
+    "reviewedAt": "2026-09-30",
+    "decisionStatus": "attorney_approved_interpretation",
+    "previousPenalty": "Ordinary misdemeanor: up to 364 days in county jail (§18.5), base fine up to $2,000, or both. The text also contains a noticed-parentage-adjudication branch with county jail or a state-prison term of one year and one day. Published case law limits felony treatment based solely on a parentage adjudication (People v. Gregori, 144 Cal.App.3d 353). The felony branch’s application remains unresolved here and requires attorney review; neither automatic felony exposure nor a universal misdemeanor-only ceiling is asserted.",
+    "penalty": "First section 270 offense: misdemeanor, up to 364 days in county jail (§18.5), a base fine up to $2,000, or both. Under People v. Gregori, a parentage adjudication alone does not permit felony punishment for a first offender. Following a prior section 270 conviction, felony treatment may be possible with the statutory parentage-adjudication and notice conditions; the statute states a state-prison term of one year and one day. Gregori's repeat-offender discussion is dicta, and no later published decision upholding that application was located in our bounded review. Applicability requires individual legal review; another missed payment or allegation is not a prior conviction.",
+    "translationStatus": "english_only_pending_translation",
+    "requiredKeys": [
+      "PEN:270",
+      "PEN:18.5"
+    ],
+    "authorities": [
+      "https://law.justia.com/cases/california/court-of-appeal/3d/144/353.html",
+      "https://caselaw.findlaw.com/court/ca-court-of-appeal/1772026.html"
+    ]
+  },
+  {
+    "id": "ca-illegal-fireworks-12677",
+    "reviewedAt": "2026-09-30",
+    "decisionStatus": "attorney_approved_interpretation",
+    "previousPenalty": "For unaltered dangerous fireworks, §12700(b)(1) uses misdemeanor jail up to 364 days (§18.5), a $1,000–$2,000 base fine, or both below 25 pounds, with a distinct repeat rule. Paragraph (b)(2) states a 25–100-pound jail/fine branch ($2,000–$10,000); (b)(3) states a 100–5,000-pound branch ($10,000–$20,000) with a §1170(h) felony option; (b)(4) covers over 5,000 pounds ($20,000–$100,000) with that option. The text overlaps at exactly 100 pounds: classification and penalty at that boundary remain unresolved, not automatically assigned. Altered fireworks, repeat offenses, licensing, and §12702 delivery-to-minors cases require separate review. These base ranges exclude assessments.",
+    "penalty": "For unaltered dangerous fireworks, §12700(b)(1) uses misdemeanor jail up to 364 days (§18.5), a $1,000-$2,000 base fine, or both below 25 pounds, with a distinct repeat rule. Paragraph (b)(2) states a 25-100-pound jail/fine branch ($2,000-$10,000); (b)(3) states a 100-5,000-pound branch ($10,000-$20,000) with a §1170(h) felony option; (b)(4) covers over 5,000 pounds ($20,000-$100,000) with that option. The statutory weight bands overlap at exactly 100 pounds, an apparent drafting error. The likely interpretation favors the lesser penalty under section 12700(b)(2), but no controlling authority resolving this boundary was located. This is an attorney-reviewed interpretation, not a conclusively established classification. Altered fireworks, repeat offenses, licensing, and §12702 delivery-to-minors cases require separate review. These base ranges exclude assessments.",
+    "translationStatus": "english_only_pending_translation",
+    "requiredKeys": [
+      "HSC:12700"
+    ],
+    "authorities": []
+  },
+  {
+    "id": "ca-possession-of-prohibited-weapon",
+    "reviewedAt": "2026-09-30",
+    "decisionStatus": "attorney_approved_interpretation",
+    "previousPenalty": "Under §30605(a), up to 364 days in county jail (§18.5) or §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years. The fine-only first-violation exception in (b), capped at $500, requires every listed condition, including historical registration timing and relinquishment; it is not a general first-offense option. Current court orders, weapon classification, and exemptions require separate enforceability review. This statutory pass does not resolve constitutional litigation.",
+    "penalty": "Under §30605(a), up to 364 days in county jail (§18.5) or §1170(h) imprisonment ordinarily for 16 months, 2 years, or 3 years. The fine-only first-violation exception in (b), capped at $500, requires every listed condition, including historical registration timing and relinquishment; it is not a general first-offense option. As reviewed September 30, 2026, California's assault-weapon restrictions remain enforceable, subject to statutory exemptions. Constitutional challenges in Miller v. Bonta and Rupp v. Bonta remain pending; the Miller injunction is stayed. Future court rulings may change the restrictions. The operative definition and any exemption must be checked for the alleged conduct date.",
+    "translationStatus": "english_only_pending_translation",
+    "requiredKeys": [
+      "PEN:30515",
+      "PEN:30605"
+    ],
+    "authorities": [
+      "https://www.oag.ca.gov/ogvp/2a-cases"
+    ]
+  },
+  {
+    "id": "ca-pen-237-a",
+    "reviewedAt": "2026-09-30",
+    "decisionStatus": "attorney_approved_interpretation",
+    "previousPenalty": "Felony custody: 16 months, 2 years or 3 years under 1170(h). Fine exposure on this felony branch requires separate review; the $1,000 amount expressly stated for ordinary misdemeanor false imprisonment is not a verified felony fine ceiling. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, restitution, assessments, probation eligibility and case-specific sentencing rules require separate review.",
+    "penalty": "Felony custody: 16 months, 2 years or 3 years under 1170(h). If sentenced as a felony, the court may also impose a base fine of up to $10,000 under Penal Code section 672. Additional assessments and restitution may apply. The fine is discretionary, not mandatory or a total financial ceiling. Custody under Penal Code 1170(h) is ordinarily in county jail, subject to its state-prison exclusions. Adult base penalties are shown. Enhancements, probation eligibility and case-specific sentencing rules require separate review.",
+    "translationStatus": "english_only_pending_translation",
+    "requiredKeys": [
+      "PEN:236",
+      "PEN:237",
+      "PEN:672",
+      "PEN:1170"
+    ],
+    "authorities": [
+      "https://law.justia.com/cases/california/court-of-appeal/4th/88/986.html",
+      "https://caselaw.findlaw.com/court/ca-court-of-appeal/1399755.html",
+      "https://law.justia.com/cases/california/court-of-appeal/3d/177/445.html",
+      "https://law.justia.com/cases/california/court-of-appeal/3d/204/1391.html"
+    ]
+  }
+]

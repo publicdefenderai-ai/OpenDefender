@@ -3757,8 +3757,8 @@ export function getChargeExplanation(
           penaltyClass: correction.penalty[lang], source: "California Legislative Information",
           sourceUrl: record.sources[0].url, dataConfidence: "high", lastVerified: "2026-09",
         },
-        jurisdictionDetailMissing: false, translationDraft: !addition && lang !== "en",
-        untranslated: addition?.translationStatus === "english_only_pending_translation" && lang !== "en",
+        jurisdictionDetailMissing: false, translationDraft: !addition && !("translationStatus" in correction && correction.translationStatus === "english_only_pending_translation") && lang !== "en",
+        untranslated: (addition?.translationStatus === "english_only_pending_translation" || ("translationStatus" in correction && correction.translationStatus === "english_only_pending_translation")) && lang !== "en",
         dataConfidence: "high", lastVerified: "2026-09",
       };
     }

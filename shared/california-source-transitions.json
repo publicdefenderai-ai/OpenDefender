@@ -23,5 +23,10 @@
     "key": "VEH:23103.5",
     "reviewBefore": "2033-01-01",
     "reason": "The reviewed operative version repeals and a separately retained version becomes operative."
+  },
+  {
+    "key": "PEN:30515",
+    "reviewBefore": "2029-01-01",
+    "reason": "AB 191 section 6 repeals and section 7 becomes operative; review the Olympic/Paralympic exemption transition before continuing publication."
   }
 ]
