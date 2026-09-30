@@ -1,0 +1,779 @@
+[
+  {
+    "id": "ca-pen-451-a",
+    "lawCode": "PEN",
+    "code": "451(a)",
+    "title": "Arson: causing great bodily injury",
+    "summary": "Willfully and maliciously setting fire to, burning, causing, aiding, counseling or procuring a burning, causing great bodily injury. Inhabited means currently used for dwelling, whether or not occupied at the time.",
+    "penalty": "Felony: 5, 7 or 9 years in state prison. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Section 451(e) requires a consecutive sentence for the specified convicted prisoners; section 451.1 aggravators require separate allegation and proof. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious burning; an accidental fire alone is insufficient.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:451.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:451": "1994-09-07",
+      "PEN:451.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1501"
+    ]
+  },
+  {
+    "id": "ca-pen-451-b",
+    "lawCode": "PEN",
+    "code": "451(b)",
+    "title": "Arson: burning an inhabited structure or inhabited property",
+    "summary": "Willfully and maliciously setting fire to, burning, causing, aiding, counseling or procuring a burning, burning an inhabited structure or inhabited property. Inhabited means currently used for dwelling, whether or not occupied at the time.",
+    "penalty": "Felony: 3, 5 or 8 years in state prison. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Section 451(e) requires a consecutive sentence for the specified convicted prisoners; section 451.1 aggravators require separate allegation and proof. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious burning; an accidental fire alone is insufficient.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:451.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:451": "1994-09-07",
+      "PEN:451.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1502"
+    ]
+  },
+  {
+    "id": "ca-pen-451-c",
+    "lawCode": "PEN",
+    "code": "451(c)",
+    "title": "Arson: burning a structure or forest land",
+    "summary": "Willfully and maliciously setting fire to, burning, causing, aiding, counseling or procuring a burning, burning a structure or forest land. Inhabited means currently used for dwelling, whether or not occupied at the time.",
+    "penalty": "Felony: 2, 4 or 6 years in state prison. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Section 451(e) requires a consecutive sentence for the specified convicted prisoners; section 451.1 aggravators require separate allegation and proof. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious burning; an accidental fire alone is insufficient.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:451.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:451": "1994-09-07",
+      "PEN:451.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1515"
+    ]
+  },
+  {
+    "id": "ca-pen-451-d",
+    "lawCode": "PEN",
+    "code": "451(d)",
+    "title": "Arson: burning property",
+    "summary": "Willfully and maliciously setting fire to, burning, causing, aiding, counseling or procuring a burning, burning property. Inhabited means currently used for dwelling, whether or not occupied at the time. Burning your own personal property is excluded unless there is intent to defraud or injury to another person or another person's structure, forest land or property.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Section 451(e) requires a consecutive sentence for the specified convicted prisoners; section 451.1 aggravators require separate allegation and proof. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious burning; an accidental fire alone is insufficient.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:451.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:451": "1994-09-07",
+      "PEN:451.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1515"
+    ]
+  },
+  {
+    "id": "ca-pen-451-5-a",
+    "lawCode": "PEN",
+    "code": "451.5(a)",
+    "title": "Aggravated arson",
+    "summary": "Willful, malicious, deliberate and premeditated burning with the additional injury or property-damage intent stated in section 451.5(a), plus at least one specified aggravator: an arson conviction within 10 years, losses exceeding $10,100,000 excluding damage to inhabited dwellings but including fire suppression, or damage to five or more inhabited dwellings. This is the version operative before January 1, 2029; dollar-threshold amendments apply prospectively.",
+    "penalty": "Felony: 10 years to life in state prison; no parole eligibility until 10 calendar years have elapsed. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful, malicious, deliberate and premeditated conduct with the statute's additional specific intent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:451.5": "2026-01-01",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1500"
+    ]
+  },
+  {
+    "id": "ca-pen-452-a",
+    "lawCode": "PEN",
+    "code": "452(a)",
+    "title": "Unlawfully causing a fire: causing great bodily injury",
+    "summary": "Recklessly setting fire to, burning or causing a burning, causing great bodily injury. Recklessness means consciously disregarding the substantial, unjustifiable fire risk, including unawareness solely from voluntary intoxication; mere accident is insufficient. Inhabited means used for dwelling whether occupied or not.",
+    "penalty": "Felony or misdemeanor: 2, 4 or 6 years in state prison, or up to one year in county jail, or a fine, or both. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. The misdemeanor fine ceiling requires separate review and is not stated here. Section 452(e) requires consecutive sentencing for specified convicted prisoners; facilitating organized retail theft within a merchant's premises is a sentencing aggravator under (f). Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Recklessness as defined in section 450(f).",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:452.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:490.4"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:452": "2025-01-01",
+      "PEN:452.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:490.4": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1530"
+    ]
+  },
+  {
+    "id": "ca-pen-452-b",
+    "lawCode": "PEN",
+    "code": "452(b)",
+    "title": "Unlawfully causing a fire: burning an inhabited structure or inhabited property",
+    "summary": "Recklessly setting fire to, burning or causing a burning, burning an inhabited structure or inhabited property. Recklessness means consciously disregarding the substantial, unjustifiable fire risk, including unawareness solely from voluntary intoxication; mere accident is insufficient. Inhabited means used for dwelling whether occupied or not.",
+    "penalty": "Felony or misdemeanor: 2, 3 or 4 years in state prison, or up to one year in county jail, or a fine, or both. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. The misdemeanor fine ceiling requires separate review and is not stated here. Section 452(e) requires consecutive sentencing for specified convicted prisoners; facilitating organized retail theft within a merchant's premises is a sentencing aggravator under (f). Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Recklessness as defined in section 450(f).",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:452.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:490.4"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:452": "2025-01-01",
+      "PEN:452.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:490.4": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1531"
+    ]
+  },
+  {
+    "id": "ca-pen-452-c",
+    "lawCode": "PEN",
+    "code": "452(c)",
+    "title": "Unlawfully causing a fire: burning a structure or forest land",
+    "summary": "Recklessly setting fire to, burning or causing a burning, burning a structure or forest land. Recklessness means consciously disregarding the substantial, unjustifiable fire risk, including unawareness solely from voluntary intoxication; mere accident is insufficient. Inhabited means used for dwelling whether occupied or not.",
+    "penalty": "Felony or misdemeanor: 16 months, 2 years or 3 years in state prison, or up to six months in county jail, or a fine, or both. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. The misdemeanor fine ceiling requires separate review and is not stated here. Section 452(e) requires consecutive sentencing for specified convicted prisoners; facilitating organized retail theft within a merchant's premises is a sentencing aggravator under (f). Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Recklessness as defined in section 450(f).",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:452.1",
+      "PEN:454",
+      "PEN:456",
+      "PEN:490.4"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:452": "2025-01-01",
+      "PEN:452.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null,
+      "PEN:490.4": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1532"
+    ]
+  },
+  {
+    "id": "ca-pen-452-d",
+    "lawCode": "PEN",
+    "code": "452(d)",
+    "title": "Unlawfully causing a fire of property",
+    "summary": "Recklessly burning property other than a structure or forest land. Burning your own personal property is excluded unless another person or another person's structure, forest land or property is injured.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Section 456(b) permits a different fine of twice anticipated or actual gross gain for pecuniary-gain offenses; $1,000 is not an overall ceiling. Section 452(e) requires consecutive sentencing for specified convicted prisoners. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Section 454 can replace these ordinary ranges during and within a Governor-proclaimed emergency or insurrection; that special sentencing branch needs separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Recklessness as defined in section 450(f).",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:450",
+      "PEN:452.1",
+      "PEN:454",
+      "PEN:456"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:450": null,
+      "PEN:452": "2025-01-01",
+      "PEN:452.1": "1994-09-07",
+      "PEN:454": "1998-01-01",
+      "PEN:456": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1532"
+    ]
+  },
+  {
+    "id": "ca-pen-453-a",
+    "lawCode": "PEN",
+    "code": "453(a)",
+    "title": "Possessing, making or transferring incendiary material with intent to burn",
+    "summary": "Possessing, manufacturing or disposing of flammable or combustible material or an incendiary device in an arrangement or preparation intended for willful and malicious burning. Authorized official use, scientific or educational use, permitted brush disposal and other lawful burning remain excluded under (c). Ordinary commercially manufactured illumination devices are excluded from the incendiary-device definition.",
+    "penalty": "Felony or misdemeanor: 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail. Section 1170(h) custody is ordinarily county jail, subject to state-prison exclusions. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Misdemeanor fine exposure requires separate review. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to willfully and maliciously use the material or device to burn.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:450",
+      "PEN:456",
+      "PEN:457.1",
+      "PRC:4494"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:453": "2011-04-04",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01",
+      "PRC:4494": "2022-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1550"
+    ]
+  },
+  {
+    "id": "ca-pen-455-a",
+    "lawCode": "PEN",
+    "code": "455(a)",
+    "title": "Attempting arson",
+    "summary": "Willfully and maliciously attempting a burning, aiding, counseling or procuring it, or committing a preliminary or furthering act. Arranging flammable materials with intent eventually to burn qualifies under (b); this is the specific attempted-arson statute, not a generic half-term calculation.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison. For a felony, section 456(a) permits an additional fine up to $50,000 unless a greater amount applies; for pecuniary gain, section 456(b) instead permits twice the anticipated or actual gross gain. These are base fines, not total financial ceilings. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Arson registration under section 457.1 generally applies for life to adult California convictions on or after November 30, 1994, subject to statutory relief; it is distinct from sex-offender registration.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and malicious attempt or preparation with intent to burn.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:450",
+      "PEN:456",
+      "PEN:457.1"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:450": null,
+      "PEN:455": "2011-06-30",
+      "PEN:456": null,
+      "PEN:457.1": "2024-01-01"
+    },
+    "searchAliases": [
+      "PC 455",
+      "attempted arson"
+    ],
+    "calcrim": [
+      "1520"
+    ]
+  },
+  {
+    "id": "ca-pen-213-a-1-A",
+    "lawCode": "PEN",
+    "code": "213(a)(1)(A)",
+    "title": "First degree robbery in concert in an inhabited dwelling",
+    "summary": "Robbery committed voluntarily in concert with at least two other people within one of the inhabited residences listed in section 213(a)(1)(A). Ordinary robbery or simply having one accomplice does not establish this aggravated branch.",
+    "penalty": "Felony: 3, 6 or 9 years in state prison. A discretionary base fine up to $10,000 may apply under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to steal and voluntary concerted participation with the required number of other people.",
+    "supportingKeys": [
+      "HNC:21",
+      "HSC:18075.55",
+      "PEN:17",
+      "PEN:211",
+      "PEN:212",
+      "PEN:212.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HNC:21": null,
+      "HSC:18075.55": "1985-10-02",
+      "PEN:17": "2026-01-01",
+      "PEN:211": null,
+      "PEN:212": null,
+      "PEN:212.5": "1995-01-01",
+      "PEN:213": "1995-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1601"
+    ]
+  },
+  {
+    "id": "ca-pen-465-a",
+    "lawCode": "PEN",
+    "code": "465(a)",
+    "title": "Forcibly entering a vehicle with intent to commit theft or a felony",
+    "summary": "Forcibly entering a vehicle with intent to commit theft or a felony inside. Forcible entry includes specified lock-manipulation tools or electronic devices, or force damaging the exterior. Section 465(d) prohibits conviction under both this section and section 459.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail, or 16 months, 2 years or 3 years under section 1170(h), ordinarily county jail subject to state-prison exclusions. A discretionary section 672 base fine may be up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent at entry to commit theft or another felony inside.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:459",
+      "PEN:672",
+      "VEH:670"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:459": "2026-01-01",
+      "PEN:465": "2025-01-01",
+      "PEN:672": "1983-09-27",
+      "VEH:670": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1705"
+    ]
+  },
+  {
+    "id": "ca-pen-466-a",
+    "lawCode": "PEN",
+    "code": "466(a)",
+    "title": "Possessing burglary tools or making unauthorized keys or instruments",
+    "summary": "Possessing specified tools with intent to feloniously break or enter; knowingly making or altering a key or instrument to open a listed lock without a request from someone entitled to open it; or making, altering or repairing an instrument knowing or having reason to believe it will be used in a misdemeanor or felony. Mere lawful possession of a screwdriver or key device is not enough.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The distinct intent, knowledge or reason-to-believe requirement for the charged statutory route.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:459"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:459": "2026-01-01",
+      "PEN:466": "2026-01-01"
+    },
+    "searchAliases": [
+      "PC 466",
+      "burglary tools"
+    ],
+    "calcrim": [
+      "1704"
+    ]
+  },
+  {
+    "id": "ca-pen-520",
+    "lawCode": "PEN",
+    "code": "520",
+    "title": "Extorting property or consideration by force or threat",
+    "summary": "Obtaining property or other consideration by wrongful force or a section 519 threat, under circumstances not amounting to robbery or carjacking. Threats include exposing a secret, accusing a person or family member of crime, or reporting actual or suspected immigration status. Section 518(c) excludes a person under 18 who obtains the specified sexual or intimate-image consideration.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h), ordinarily in county jail subject to state-prison exclusions. A discretionary base fine up to $10,000 may apply under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to obtain property or consideration through wrongful force or fear.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:519",
+      "PEN:647",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:519": "2015-01-01",
+      "PEN:520": "2018-01-01",
+      "PEN:647": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 518",
+      "PC 519",
+      "extortion",
+      "blackmail"
+    ],
+    "calcrim": [
+      "1830"
+    ]
+  },
+  {
+    "id": "ca-pen-521",
+    "lawCode": "PEN",
+    "code": "521",
+    "title": "Extortion under color of official right",
+    "summary": "Extortion under color of official right where the Penal Code does not prescribe a different punishment. This fallback misdemeanor must not override another applicable offense's punishment.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Obtaining the benefit under color of official right, with the applicable extortion requirements.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:647"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:521": null,
+      "PEN:647": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-522",
+    "lawCode": "PEN",
+    "code": "522",
+    "title": "Obtaining a signature by extortion",
+    "summary": "Using extortionate means to obtain a signature to an instrument that would transfer property or create a debt, demand, charge or right of action if freely signed. Punishment follows the corresponding completed extortion. This entry covers the ordinary force-or-threat branch under section 520.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h), ordinarily in county jail subject to state-prison exclusions. A discretionary base fine up to $10,000 may apply under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to obtain the signature by wrongful force or fear.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:519",
+      "PEN:520",
+      "PEN:647",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:519": "2015-01-01",
+      "PEN:520": "2018-01-01",
+      "PEN:522": null,
+      "PEN:647": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "1832"
+    ]
+  },
+  {
+    "id": "ca-pen-523-a",
+    "lawCode": "PEN",
+    "code": "523(a)",
+    "title": "Sending a threatening writing with intent to extort",
+    "summary": "Sending or delivering a writing expressing or implying a section 519 threat with intent to extort property or consideration. Payment need not actually occur; punishment is as if the threatened extortion had succeeded.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h), ordinarily in county jail subject to state-prison exclusions. A discretionary base fine up to $10,000 may apply under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to extort property or consideration through the threatening writing.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:519",
+      "PEN:520",
+      "PEN:647",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:519": "2015-01-01",
+      "PEN:520": "2018-01-01",
+      "PEN:523": "2018-01-01",
+      "PEN:647": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 523",
+      "threatening letter"
+    ],
+    "calcrim": [
+      "1831"
+    ]
+  },
+  {
+    "id": "ca-pen-523-b-1",
+    "lawCode": "PEN",
+    "code": "523(b)(1)",
+    "title": "Introducing ransomware with intent to extort",
+    "summary": "Introducing unauthorized ransomware into a computer, system or network with intent to extort payment or consideration to remove it or restore access. The definitions include directly placing it or directing or inducing another to do so; other applicable prosecutions are not barred.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h), ordinarily in county jail subject to state-prison exclusions. A discretionary base fine up to $10,000 may apply under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to extort property or consideration through ransomware.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:311.3",
+      "PEN:502",
+      "PEN:518",
+      "PEN:519",
+      "PEN:520",
+      "PEN:647",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:311.3": "2025-01-01",
+      "PEN:502": "2020-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:519": "2015-01-01",
+      "PEN:520": "2018-01-01",
+      "PEN:523": "2018-01-01",
+      "PEN:647": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 523(b)",
+      "ransomware"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-524",
+    "lawCode": "PEN",
+    "code": "524",
+    "title": "Attempting extortion by threat",
+    "summary": "Attempting to obtain property or consideration by a threat listed in section 519. Distinguish completed extortion and the separately punishable threatening-writing route.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail or 16 months, 2 years or 3 years in state prison under section 18, a base fine up to $10,000, or both fine and imprisonment. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to extort through a specified threat.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:519",
+      "PEN:647",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:519": "2015-01-01",
+      "PEN:524": "2018-01-01",
+      "PEN:647": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-526",
+    "lawCode": "PEN",
+    "code": "526",
+    "title": "Delivering false court process to obtain property or consideration",
+    "summary": "Delivering a document purporting or designed to appear to be court process when it is not, with intent to obtain property or consideration. Each separate delivery is a separate offense.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to obtain property or consideration using purported court process.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:311.3",
+      "PEN:518",
+      "PEN:647"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:311.3": "2025-01-01",
+      "PEN:518": "2018-01-01",
+      "PEN:526": "2018-01-01",
+      "PEN:647": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-527",
+    "lawCode": "PEN",
+    "code": "527",
+    "title": "Making or distributing forms falsely presented as court process",
+    "summary": "Selling, offering, printing, publishing or distributing a form designed to make someone believe it is or will be court process when it is not. Each separate act specified by the statute is separately punishable.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. The court may additionally order the offending forms delivered for destruction. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Forms designed or calculated to be mistaken for court process.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:527": null
+    },
+    "searchAliases": [],
+    "calcrim": []
+  }
+]

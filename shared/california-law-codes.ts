@@ -1,5 +1,6 @@
 /** Official code identity is part of a citation; section numbers alone are ambiguous. */
 export const CALIFORNIA_LAW_CODE_LABELS = {
+  PRC: "Cal. Public Resources Code",
   CIV: "Cal. Civil Code", CCP: "Cal. Code of Civil Procedure",
   PEN: "Cal. Penal Code", HSC: "Cal. Health & Safety Code", VEH: "Cal. Vehicle Code",
   BPC: "Cal. Business & Professions Code", RTC: "Cal. Revenue & Taxation Code",
