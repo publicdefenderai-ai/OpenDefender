@@ -1,0 +1,961 @@
+[
+  {
+    "id": "ca-pen-115-a",
+    "lawCode": "PEN",
+    "code": "115(a)",
+    "title": "Procuring or offering a false or forged instrument for public filing",
+    "summary": "Knowingly procuring or offering a false or forged instrument for filing, registration or recording in a California public office when a genuine instrument of that kind could lawfully be filed. The offering itself can complete the offense; actual recording or successful fraud is not required. Each instrument and statutory procurement/offer is separately punishable.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18(a). A discretionary base fine up to $10,000 may apply under section 672. Section 115(c) limits probation for specified repeat or multiple-violation cases, subject to its unusual-case exception. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge that the qualifying instrument is false or forged.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:115": "2015-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 115",
+      "filing a false document"
+    ],
+    "calcrim": [
+      "1945"
+    ]
+  },
+  {
+    "id": "ca-pen-548-a",
+    "lawCode": "PEN",
+    "code": "548(a)",
+    "title": "Injuring, destroying, concealing or disposing of insured property to defraud the insurer",
+    "summary": "Willfully injuring, destroying, secreting, abandoning or disposing of property insured against theft, embezzlement or casualty, intending to defraud or prejudice the insurer. The property may belong to anyone. Fire is expressly excluded from casualty for this section; fire-related insurance fraud requires a different analysis.",
+    "penalty": "Felony: 2, 3 or 5 years under section 1170(h), plus a base fine up to $50,000. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Section 548(b) adds two years for each qualifying prior conviction if alleged and admitted or proved. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful conduct with intent to defraud or prejudice the insurer.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:550"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2004"
+    ]
+  },
+  {
+    "id": "ca-pen-532a-1",
+    "lawCode": "PEN",
+    "code": "532a(1)",
+    "title": "Making a false written financial statement to obtain a benefit",
+    "summary": "Knowingly making or causing a false written statement about financial condition or ability to pay, intending reliance to procure one of the property, cash, loan, credit, guaranty or commercial-paper benefits specified in (1), for yourself or a represented or interested person or business. Actual receipt of the benefit is not required for this making-statement route.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 532a(4). The distinct false-identity branch in (4) has different penalties. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of falsity and intent that the statement be relied on for the specified benefit.",
+    "supportingKeys": [
+      "PEN:17"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:532a": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2020"
+    ]
+  },
+  {
+    "id": "ca-pen-532a-2",
+    "lawCode": "PEN",
+    "code": "532a(2)",
+    "title": "Obtaining a benefit through a false written financial statement",
+    "summary": "Knowing a false written financial statement has been made and procuring one of the benefits specified in (1) on the faith of it, for yourself or the represented or interested person or business. This route requires procurement of the benefit.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 532a(4). The distinct false-identity branch in (4) has different penalties. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the false financial statement and procurement in reliance on it.",
+    "supportingKeys": [
+      "PEN:17"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:532a": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2021"
+    ]
+  },
+  {
+    "id": "ca-pen-532a-3",
+    "lawCode": "PEN",
+    "code": "532a(3)",
+    "title": "Reaffirming a financial statement that is false when reaffirmed",
+    "summary": "Representing in writing on a later day that an earlier financial statement would still be true when it would in fact be false, and procuring a specified benefit in reliance on that reaffirmation.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 532a(4). The distinct false-identity branch in (4) has different penalties. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing reaffirmation of a now-false written financial statement to procure the benefit.",
+    "supportingKeys": [
+      "PEN:17"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:532a": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2022"
+    ]
+  },
+  {
+    "id": "ca-pen-532a-4",
+    "lawCode": "PEN",
+    "code": "532a(4)",
+    "title": "False financial statement using fictitious or impersonated identity",
+    "summary": "Committing an offense under section 532a(1), (2) or (3) using a fictitious name, social security number, business name or address, or falsely presenting yourself as another person or business. This entry is the aggravated false-identity sentence of (4), not the ordinary misdemeanor penalty sentence.",
+    "penalty": "Felony or misdemeanor: 16 months, 2 years or 3 years under section 1170(h), a base fine up to $5,000, or both; alternatively up to one year in county jail, a base fine up to $2,500, or both. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The knowledge/reliance elements of the underlying financial-statement route, with the specified false identity.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:532a": "2011-04-04"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2023"
+    ]
+  },
+  {
+    "id": "ca-pen-529-a-1",
+    "lawCode": "PEN",
+    "code": "529(a)(1)",
+    "title": "False personation: becoming bail or surety",
+    "summary": "Falsely personating another in a private or official capacity and, in that assumed character, becoming bail or surety in a proceeding before a court or officer authorized to take it. The additional statutory act must be proved; merely giving a false name is not automatically this offense.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail or 16 months, 2 years or 3 years under section 1170(h), a base fine up to $10,000, or both fine and imprisonment. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing false personation and the additional act; subdivision (a)(2) also requires intent that the instrument be used as true.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:529": "2011-04-04"
+    },
+    "searchAliases": [
+      "false impersonation"
+    ],
+    "calcrim": [
+      "2044"
+    ]
+  },
+  {
+    "id": "ca-pen-529-a-2",
+    "lawCode": "PEN",
+    "code": "529(a)(2)",
+    "title": "False personation: authenticating a written instrument",
+    "summary": "Falsely personating another in a private or official capacity and, in that assumed character, verifying, publishing, acknowledging or proving a written instrument in another person's name with intent that it be recorded, delivered or used as true. The additional statutory act must be proved; merely giving a false name is not automatically this offense.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail or 16 months, 2 years or 3 years under section 1170(h), a base fine up to $10,000, or both fine and imprisonment. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing false personation and the additional act; subdivision (a)(2) also requires intent that the instrument be used as true.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:529": "2011-04-04"
+    },
+    "searchAliases": [
+      "false impersonation"
+    ],
+    "calcrim": [
+      "2044"
+    ]
+  },
+  {
+    "id": "ca-pen-529-a-3",
+    "lawCode": "PEN",
+    "code": "529(a)(3)",
+    "title": "False personation: an additional act creating potential liability or benefit",
+    "summary": "Falsely personating another in a private or official capacity and, in that assumed character, doing an additional act that could expose the impersonated person to a suit, prosecution, payment, charge, forfeiture or penalty, or could benefit the impersonator or someone else. The additional statutory act must be proved; merely giving a false name is not automatically this offense.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail or 16 months, 2 years or 3 years under section 1170(h), a base fine up to $10,000, or both fine and imprisonment. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing false personation and the additional act; subdivision (a)(2) also requires intent that the instrument be used as true.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:529": "2011-04-04"
+    },
+    "searchAliases": [
+      "false impersonation"
+    ],
+    "calcrim": [
+      "2044"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-1",
+    "lawCode": "PEN",
+    "code": "424(a)(1)",
+    "title": "Misappropriation of public money: unauthorized appropriation",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, appropriating it for your own or another's use without legal authority. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-2",
+    "lawCode": "PEN",
+    "code": "424(a)(2)",
+    "title": "Misappropriation of public money: unauthorized loans, profits or use",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, loaning it, making a profit from it or using it for an unauthorized purpose. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-3",
+    "lawCode": "PEN",
+    "code": "424(a)(3)",
+    "title": "Misappropriation of public money: false accounts or entries",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, knowingly keeping a false account or making a false entry or erasure in an account of the money. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the false account or entry.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the false account or entry.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-4",
+    "lawCode": "PEN",
+    "code": "424(a)(4)",
+    "title": "Misappropriation of public money: fraudulent alteration or destruction of accounts",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, fraudulently altering, falsifying, concealing, destroying or obliterating an account. Incidental and minimal use authorized by Government Code section 8314 is excluded. Fraudulent intent in altering, concealing or destroying the account.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Fraudulent intent in altering, concealing or destroying the account.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-5",
+    "lawCode": "PEN",
+    "code": "424(a)(5)",
+    "title": "Misappropriation of public money: refusing payment on authorized demand",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, willfully refusing or omitting payment on demand upon presentation of a draft, order or warrant drawn by competent authority. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-6",
+    "lawCode": "PEN",
+    "code": "424(a)(6)",
+    "title": "Misappropriation of public money: failing a legally required transfer",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, willfully omitting a transfer required by law. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-pen-424-a-7",
+    "lawCode": "PEN",
+    "code": "424(a)(7)",
+    "title": "Misappropriation of public money: refusing payment to an authorized recipient",
+    "summary": "While an officer or other person responsible for receiving, safekeeping, transferring or disbursing public money, willfully omitting or refusing payment to a person legally authorized to receive money received under a duty to pay it over. Incidental and minimal use authorized by Government Code section 8314 is excluded. Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison and disqualification from holding any office in California. A discretionary base fine up to $10,000 may apply under section 672. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the lack of legal authority or the legal duty, or criminal negligence in failing to ascertain it; ordinary carelessness alone is insufficient.",
+    "supportingKeys": [
+      "GOV:8314",
+      "PEN:17",
+      "PEN:426",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "GOV:8314": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:424": "2004-01-01",
+      "PEN:426": null,
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "misappropriation of public funds"
+    ],
+    "calcrim": [
+      "2765"
+    ]
+  },
+  {
+    "id": "ca-rtc-19701-a",
+    "lawCode": "RTC",
+    "code": "19701(a)",
+    "title": "Repeated failure to file, or false tax filings or information",
+    "summary": "For covered California income/franchise taxes, repeatedly failing to file required returns or supply information, or repeatedly making or supplying knowingly false or fraudulent filings or information, over at least two years and resulting in estimated delinquent tax liability of at least $15,000. CALCRIM 2800 and 2810 retain the repetition requirement for both routes; intent to evade is not required. Corporate-officer and filing presumptions are not conclusive proof. The criminal punishment sentence excludes people who are mentally incompetent or have dementia, Alzheimer's disease or a similar condition.",
+    "penalty": "Misdemeanor: up to one year of imprisonment, a base fine up to $5,000, or both, plus investigation and prosecution costs. Section 19701 also describes a separately recoverable penalty up to $5,000; the criminal fine is not a total liability cap. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to evade is not required. The false-filing/information route requires knowledge of falsity under CALCRIM 2810; the duty, repeated conduct and delinquency threshold must be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:18501",
+      "RTC:18601",
+      "RTC:19702",
+      "RTC:19703",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:18501": "2017-01-01",
+      "RTC:18601": "2017-01-01",
+      "RTC:19701": "2005-07-19",
+      "RTC:19702": "1993-10-06",
+      "RTC:19703": "1993-06-16",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2800",
+      "2810"
+    ]
+  },
+  {
+    "id": "ca-rtc-19701-b",
+    "lawCode": "RTC",
+    "code": "19701(b)",
+    "title": "Aiding evasion through omitted or false tax filings",
+    "summary": "Aiding, abetting, advising, encouraging or counseling evasion of covered income/franchise taxes by failing to file returns or supply information, or by false or fraudulent filings or information. The criminal punishment sentence excludes people who are mentally incompetent or have dementia, Alzheimer's disease or a similar condition.",
+    "penalty": "Misdemeanor: up to one year of imprisonment, a base fine up to $5,000, or both, plus investigation and prosecution costs. Section 19701 also describes a separately recoverable penalty up to $5,000; the criminal fine is not a total liability cap. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Assistance directed at evasion through the listed statutory filing or information conduct.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19701": "2005-07-19",
+      "RTC:19702": "1993-10-06",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-rtc-19701-c",
+    "lawCode": "RTC",
+    "code": "19701(c)",
+    "title": "Willfully failing to pay required estimated tax or tax",
+    "summary": "Being required under the covered California tax provisions to pay estimated tax or tax and willfully failing to pay at the required time. Willfulness means intentional violation of a known legal duty, not simply an unpaid balance. The criminal punishment sentence excludes people who are mentally incompetent or have dementia, Alzheimer's disease or a similar condition.",
+    "penalty": "Misdemeanor: up to one year of imprisonment, a base fine up to $5,000, or both, plus investigation and prosecution costs. Section 19701 also describes a separately recoverable penalty up to $5,000; the criminal fine is not a total liability cap. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of the known duty to pay.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19701": "2005-07-19",
+      "RTC:19702": "1993-10-06",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2826"
+    ]
+  },
+  {
+    "id": "ca-rtc-19706",
+    "lawCode": "RTC",
+    "code": "19706",
+    "title": "Willful nonfiling or false tax information with intent to evade",
+    "summary": "Willfully failing to file a required return or supply information on time, or willfully making false or fraudulent returns, statements or information, with intent to evade covered California income or corporation taxes. A good-faith misunderstanding of the legal duty must not be treated as intentional evasion.",
+    "penalty": "Felony or misdemeanor: up to one year in county jail or 16 months, 2 years or 3 years in state prison under Penal Code section 18(a), a base fine up to $20,000, or both fine and imprisonment, plus investigation and prosecution costs. The statute specifies state prison, not section 1170(h). Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty with intent to evade tax.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:18501",
+      "RTC:18601",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:18501": "2017-01-01",
+      "RTC:18601": "2017-01-01",
+      "RTC:19702": "1993-10-06",
+      "RTC:19706": "1998-01-01",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2801",
+      "2812"
+    ]
+  },
+  {
+    "id": "ca-rtc-19705-a-1",
+    "lawCode": "RTC",
+    "code": "19705(a)(1)",
+    "title": "Signing a materially false tax document under penalty of perjury",
+    "summary": "Willfully making and signing a tax return, statement or document under penalty of perjury without believing it true and correct in every material matter. A material falsehood and intentional violation of a known duty must be proved; proof of additional tax owed is not required. A signature alone is not conclusive proof of who signed.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty and lack of belief in material accuracy.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:18621.5",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:18621.5": "1998-01-01",
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2811"
+    ]
+  },
+  {
+    "id": "ca-rtc-19705-a-2",
+    "lawCode": "RTC",
+    "code": "19705(a)(2)",
+    "title": "Willfully helping prepare or present materially false tax documents",
+    "summary": "Willfully aiding, assisting, procuring, counseling or advising preparation or presentation of a materially fraudulent or false income/corporation-tax document. The taxpayer need not know of or consent to the falsity.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty through the materially false document.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2825"
+    ]
+  },
+  {
+    "id": "ca-rtc-19705-a-3",
+    "lawCode": "RTC",
+    "code": "19705(a)(3)",
+    "title": "Falsely executing tax bonds, permits or required documents",
+    "summary": "Simulating or falsely or fraudulently executing or signing a required income/corporation-tax bond, permit, entry or other document, or procuring, advising, aiding or conniving at that false execution.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "False or fraudulent execution or participation in that execution.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-rtc-19705-a-4",
+    "lawCode": "RTC",
+    "code": "19705(a)(4)",
+    "title": "Concealing property to evade tax assessment or collection",
+    "summary": "Removing, depositing or concealing taxable goods or commodities, or property subject to the levies specified by the statute, with intent to evade or defeat assessment or collection of the covered tax, additions, penalty or interest.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to evade or defeat assessment or collection.",
+    "supportingKeys": [
+      "CCP:688.010",
+      "CCP:706.010",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19201",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "CCP:688.010": "2008-01-01",
+      "CCP:706.010": null,
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19201": "2017-01-01",
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2827"
+    ]
+  },
+  {
+    "id": "ca-rtc-19705-a-5-a",
+    "lawCode": "RTC",
+    "code": "19705(a)(5)(A)",
+    "title": "Concealing taxpayer property during a settlement, agreement or compromise",
+    "summary": "In connection with a settlement, closing agreement, compromise or offer under the specified statutes, willfully concealing from a state officer or employee property belonging to the estate of a taxpayer or other person liable for tax.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty through concealment.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19441",
+      "RTC:19442",
+      "RTC:19443",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19441": "1994-09-22",
+      "RTC:19442": "2008-01-01",
+      "RTC:19443": "2011-01-01",
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-rtc-19705-a-5-b",
+    "lawCode": "RTC",
+    "code": "19705(a)(5)(B)",
+    "title": "Withholding or falsifying financial records during a tax settlement",
+    "summary": "In connection with a settlement, closing agreement, compromise or offer under the specified statutes, willfully receiving, withholding, destroying, mutilating or falsifying a financial book, document or record, or making a false statement, relating to the taxpayer or other liable person's estate or financial condition.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or the stated fine, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. The individual base fine is up to $50,000; for a corporation the statutory ceiling is $200,000. Investigation and prosecution costs are additional. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty through the specified record or statement conduct.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:19441",
+      "RTC:19442",
+      "RTC:19443",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:19441": "1994-09-22",
+      "RTC:19442": "2008-01-01",
+      "RTC:19443": "2011-01-01",
+      "RTC:19702": "1993-10-06",
+      "RTC:19705": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-rtc-19708",
+    "lawCode": "RTC",
+    "code": "19708",
+    "title": "Willfully failing to collect, account for or pay over required tax",
+    "summary": "Being legally required under the covered tax provisions to collect, account for and pay over tax or withholding, and willfully failing to collect or truthfully account for and pay it over. The specific legal duty and intentional violation must be proved.",
+    "penalty": "Felony, with misdemeanor treatment available under Penal Code sections 17(b) and 18(b): 16 months, 2 years or 3 years under section 1170(h), or up to one year in county jail under section 18(b), or a base fine up to $2,000, or both as permitted. Section 1170(h) custody is ordinarily county jail subject to state-prison exclusions. Other statutory penalties may also apply. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of the known collection, accounting or payment duty.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:18662",
+      "RTC:18666",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:18662": "2022-01-01",
+      "RTC:18666": "2026-09-14",
+      "RTC:19702": "1993-10-06",
+      "RTC:19708": "2011-04-04",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2828"
+    ]
+  },
+  {
+    "id": "ca-rtc-19709",
+    "lawCode": "RTC",
+    "code": "19709",
+    "title": "Willfully failing to withhold or pay over required tax",
+    "summary": "Willfully failing to withhold tax as required by section 18662 or 18666, or to pay over tax withheld. Intent to evade is not required, but CALCRIM 2828 and People v. Singer require a voluntary, intentional violation of a known legal duty; mere omission or ordinary mistake is not enough.",
+    "penalty": "Misdemeanor: up to one year of imprisonment, a base fine up to $1,000, or both, at the court's discretion. Adult individual base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review. Any stated one-year misdemeanor term is capped at 364 days under Penal Code section 18.5.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Voluntary, intentional violation of a known legal duty; the statute applies with or without intent to evade.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "RTC:17001",
+      "RTC:18662",
+      "RTC:18666",
+      "RTC:19702",
+      "RTC:23001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "RTC:17001": null,
+      "RTC:18662": "2022-01-01",
+      "RTC:18666": "2026-09-14",
+      "RTC:19702": "1993-10-06",
+      "RTC:19709": "1993-06-16",
+      "RTC:23001": "2002-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2828"
+    ]
+  }
+]

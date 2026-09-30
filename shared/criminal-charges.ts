@@ -95033,6 +95033,18 @@ for (const [group, sections] of [['Weapons', californiaWeaponConductSections], [
   ]));
 }
 
+// Reviewed financial and income/franchise-tax choices use the existing fraud filter.
+const californiaFinancialSections = new Set(['115','424','529','532a','548']);
+const californiaTaxSections = new Set(['19701','19705','19706','19708','19709']);
+chargeCategories['Fraud'] = Array.from(new Set([
+  ...chargeCategories['Fraud'],
+  ...chargeCategories['CA'].filter(id => {
+    const record = getCaliforniaCanonicalRecord(id);
+    return record && ((record.lawCode === 'PEN' && californiaFinancialSections.has(record.code.split('(')[0]))
+      || (record.lawCode === 'RTC' && californiaTaxSections.has(record.code.split('(')[0])));
+  }),
+]));
+
 // Exact property branches remain discoverable in the existing property filters.
 const californiaPropertySections = new Set(['451','451.5','452','453','455','213','465','466','520','521','522','523','524','526','527']);
 for (const group of ['Theft & Property', 'Property Crimes']) {
