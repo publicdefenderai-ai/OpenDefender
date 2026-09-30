@@ -95020,6 +95020,19 @@ for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
   ]));
 }
 
+// Source-reviewed weapon conduct and threats must remain available through topical filters.
+const californiaWeaponConductSections = new Set(['417','417.3','417.4','417.8','17500','18710','18715','18720','18725','18730','18740','18745','18750','18755','25100','25200','25800','26100']);
+const californiaThreatHateSections = new Set(['646.9','422.6','11411','11412','11413']);
+for (const [group, sections] of [['Weapons', californiaWeaponConductSections], ['Weapons Crimes', californiaWeaponConductSections], ['Violent Crimes', californiaThreatHateSections]] as const) {
+  chargeCategories[group] = Array.from(new Set([
+    ...chargeCategories[group],
+    ...chargeCategories['CA'].filter(id => {
+      const record = getCaliforniaCanonicalRecord(id);
+      return record?.lawCode === 'PEN' && sections.has(record.code.split('(')[0]);
+    }),
+  ]));
+}
+
 // Include reviewed sexual branches in both existing topical filters.
 const californiaSexualSections = new Set(['243.4','264.1','266h','266i','266j','269','285','286','286.5','287','288','288.2','288.3','288.4','288.5','288.7','289','290','290.011','290.012','311.1','311.2','311.4','311.6','311.11','647.6']);
 for (const group of ['Sexual Offenses', 'Sexual Crimes']) {

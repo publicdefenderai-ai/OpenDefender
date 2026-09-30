@@ -5,7 +5,7 @@ import {CALIFORNIA_CANONICAL_RECORDS} from '../shared/california-authority';
 describe('California people/weapons combined research',()=>{
   it('accounts for all five families and keeps unresolved branches out of credited coverage',()=>{
     const r=buildPeopleWeaponsReview();
-    expect(r.counts).toEqual({candidateSections:373,reusedSections:77,newSections:296,newVersions:296,instructions:207,pages:659,boundedPriorMatches:43,contextInstructions:29,genericTemplates:1,sameSectionNeedsReview:96,noSameSectionCandidate:38});
+    expect(r.counts).toEqual({candidateSections:373,reusedSections:77,newSections:296,newVersions:296,instructions:207,pages:659,boundedPriorMatches:43,contextInstructions:29,genericTemplates:1,sameSectionNeedsReview:124,noSameSectionCandidate:10});
     expect(r.crosswalk.find(i=>i.id==='821')).toMatchObject({status:'same_section_candidates_require_branch_review',boundedChargeIds:[]});
     expect(r.crosswalk.find(i=>i.id==='937')).toMatchObject({status:'same_section_candidates_require_branch_review',boundedChargeIds:[]});
     expect(r.crosswalk.find(i=>i.id==='935')?.boundedChargeIds).toEqual(['ca-sexual-battery-243-4-a']);

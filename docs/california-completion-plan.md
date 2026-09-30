@@ -4,7 +4,7 @@ Updated September 29, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-PR34 is merged. The registration/exploitation successor proposes 26 choices, bringing the configured catalog to 409: 99 corrected originals and 310 additions. It covers 233 distinct primary sections, with 529 retained publication sections/535 versions including dependencies. PEN 30515 remains held, leaving 408 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
+PR35 is merged. The combined weapons/threats successor proposes 43 choices, bringing the configured catalog to 452: 99 corrected originals and 353 additions. It covers 256 distinct primary sections, with 585 retained publication sections/591 versions including dependencies. PEN 30515 remains held, leaving 451 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -14,13 +14,13 @@ The archive discovery ledger spans 30 codes and records 6,028 sections with crim
 
 ## Rough remaining effort
 
-The people/weapons benchmark now makes the next work concrete: 207 instructions across five families, with 43 bounded prior matches, 29 context/defense/allegation entries, one generic weapon template, 29 same-section comparisons still requiring branch review, and 105 entries with no same-section catalog candidate. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
+The cumulative people/weapons crosswalk now accounts for 207 instructions across five families: 151 have bounded matches, 29 are context/defense/allegation entries, one is a generic weapon template, and 26 still require branch comparison or resolution. Bounded matches do not certify every branch or the statute's completeness. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
 
 | Next work package | Scope |
 | --- | --- |
 | Serious violence, abuse and detention | First 28 branches merged in PR32. Carry forward the fine question, kidnapping siblings and elder financial branches. |
 | Sexual-offense branches | The first 64 choices are merged; the successor adds 26 registration/exploitation and related branches. Commercial image distribution, special registration duties and custody enforceability remain explicit research holds. |
-| Weapons, threats and hate crimes | Combine clear conduct branches where practical; keep prohibited-person predicates, changed-source restrictions and enforceability questions explicit. |
+| Weapons, threats and hate crimes | This batch proposes 43 conduct choices. Next combine the remaining knife/carrying, prohibited-person, ammunition and assault-weapon comparisons, preserving source and enforceability holds. |
 | Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
 | Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
 
@@ -165,3 +165,14 @@ Commercial distribution under 311.2(b) remains a significant classification ques
 The registration overview now has independent retained-text and rendered-prose assertions for each adult tier period. These detect changed anchors; they do not certify exceptions or automate legal interpretation. Run `registration-exploitation-review.ts` for the cumulative source-bound report and `acquire-registration-exploitation.py` for frozen-provider acquisition replay.
 
 Next: the combined weapons, threats and hate-crime group, followed by justice/public-order/property gaps and targeted other-code/homicide/gang benchmark work. The same practical-completion stop conditions apply; these counts are not a statewide coverage percentage.
+
+
+## Weapons, threats and hate crimes: combined conduct publication
+
+Forty-three choices cover 23 primary sections: stalking/order/prior distinctions, civil-rights interference, terrorizing symbols and religious threats, explosive-device conduct, brandishing, discharge/permission from vehicles, armed criminal action, assault-intent possession and first/second/third-degree or off-premises firearm storage. Twenty-eight additional instruction entries gain bounded matches. The 72 dependencies reuse 16 monitored sections and add 56, including 27 research promotions.
+
+The unchanged-source comparison covers 584 of 585 retained sections. PEN 30515 remains held, and the acquisition/expiry dates remain unchanged. The 2026 storage operative dates and defenses, minimum brandishing terms, additional community service, homicide versus injury terms, and differing culpability requirements are preserved. FGC supporting citations now retain the Fish and Game Code label rather than being forced into a Penal Code identity.
+
+CA-008 and CA-009 document older CALCRIM hate-crime grading and symbol-terrorism subdivisions. Exact instruction pages remain unchanged. The statute controls the displayed alternatives, and a bounded match does not certify the old wording as current law. The earlier 311.11 clinical display-label choice is now explicitly recorded in that batch's decisions and regenerated report, preserving charging-paper aliases.
+
+Reproduce with `acquire-weapons-threats.py` and `node --import tsx scripts/data-review/california-verification/weapons-threats-review.ts`. Next combine remaining weapon predicates/carrying/enforceability comparisons, then justice/public-order/property and the targeted other-code/homicide/gang pass. Existing attorney questions remain open; no new manual data-entry assignment is created.
