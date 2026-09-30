@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "ca-pen-67",
+    "lawCode": "PEN",
+    "code": "67",
+    "title": "Giving or offering a bribe to an executive officer",
+    "summary": "Giving or offering something of value with corrupt intent to influence an executive officer in an official act, decision or proceeding. Acceptance or follow-through by the officer is not required. A lawful payment or ordinary disagreement with an official is not itself bribery.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison; disqualification from holding any office in California. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent to influence the officer's official action.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672",
+      "PEN:7"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:67": null,
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2600"
+    ]
+  },
+  {
+    "id": "ca-pen-137-a",
+    "lawCode": "PEN",
+    "code": "137(a)",
+    "title": "Bribing a witness or person providing crime information",
+    "summary": "Giving, offering or promising a bribe to a witness, someone about to be called as a witness, or someone about to give material crime information to a law-enforcement official, with corrupt intent to influence the testimony or information. The target need not accept or act on the bribe.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent that the bribe unlawfully influence testimony or information.",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:672",
+      "PEN:7",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:137": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2610"
+    ]
+  },
+  {
+    "id": "ca-pen-137-b",
+    "lawCode": "PEN",
+    "code": "137(b)",
+    "title": "Using force, threats or fraud to influence testimony or crime information",
+    "summary": "Attempting through force, a credible communicated threat of unlawful injury or property damage, or fraud to induce false testimony, withheld true testimony, or false or withheld material crime information to a law-enforcement official. Success is not required.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intent to induce the specified false or withheld testimony or information.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:137": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2620",
+      "2621"
+    ]
+  },
+  {
+    "id": "ca-pen-137-c",
+    "lawCode": "PEN",
+    "code": "137(c)",
+    "title": "Knowingly inducing false or withheld testimony or crime information",
+    "summary": "Knowingly inducing another to give false testimony, withhold true testimony that is not privileged, or give false or withhold true material crime information from a law-enforcement official. Subdivision (f) excludes an attorney advising a client and a person advising a family member.",
+    "penalty": "Misdemeanor: up to six months in county jail, a fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing inducement; the statutory privilege and adviser exclusions remain applicable.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:137": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [
+      "inducing false testimony"
+    ],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-138-a",
+    "lawCode": "PEN",
+    "code": "138(a)",
+    "title": "Bribing a witness not to attend a proceeding",
+    "summary": "Giving, offering or promising a bribe to a witness or person about to be called as a witness to dissuade attendance at a trial or other judicial proceeding. An unsuccessful corrupt offer may suffice.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent to dissuade attendance.",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:672",
+      "PEN:7"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:138": null,
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2611"
+    ]
+  },
+  {
+    "id": "ca-pen-138-b",
+    "lawCode": "PEN",
+    "code": "138(b)",
+    "title": "Witness receiving or offering to receive a bribe",
+    "summary": "A witness or person about to be called as a witness receives or offers to receive a bribe upon an express or implied understanding that it will unlawfully influence testimony or attendance. Acting on the bribe is not required.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent that the bribe influence testimony or attendance.",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:672",
+      "PEN:7"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:138": null,
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2612"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-a-1",
+    "lawCode": "PEN",
+    "code": "136.1(a)(1)",
+    "title": "Preventing or dissuading witness attendance or testimony",
+    "summary": "Knowingly and maliciously preventing or dissuading a witness or victim from attending or testifying at an authorized trial, proceeding or inquiry. The family-member protective-intervention presumption in (a)(3) concerns malice. No injury or successful intimidation is required. Aggravating circumstances in (c) have a separate felony penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to prevent or dissuade the specified act; malice is additionally required for subdivision (a).",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2622"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-a-2",
+    "lawCode": "PEN",
+    "code": "136.1(a)(2)",
+    "title": "Attempting to prevent witness attendance or testimony",
+    "summary": "Knowingly and maliciously attempting to prevent or dissuade a witness or victim from attending or testifying at an authorized trial, proceeding or inquiry. The family-member protective-intervention presumption in (a)(3) concerns malice. No injury or successful intimidation is required. Aggravating circumstances in (c) have a separate felony penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to prevent or dissuade the specified act; malice is additionally required for subdivision (a).",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2622"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-b-1",
+    "lawCode": "PEN",
+    "code": "136.1(b)(1)",
+    "title": "Attempting to prevent a victim or witness from reporting a crime",
+    "summary": "Knowingly attempting to prevent or dissuade a crime victim or witness from reporting victimization to a qualifying officer, prosecuting agency or judge. The precise intended interference and procedural setting matter; this is not a general prohibition on discussing a case. No injury or successful intimidation is required. Aggravating circumstances in (c) have a separate felony penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to prevent or dissuade the specified act; malice is additionally required for subdivision (a).",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2622"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-b-2",
+    "lawCode": "PEN",
+    "code": "136.1(b)(2)",
+    "title": "Attempting to prevent prosecution or assistance in prosecution",
+    "summary": "Knowingly attempting to prevent or dissuade a crime victim or witness from causing a complaint, indictment, information, or probation or parole violation to be sought and prosecuted, or from assisting that prosecution. The precise intended interference and procedural setting matter; this is not a general prohibition on discussing a case. No injury or successful intimidation is required. Aggravating circumstances in (c) have a separate felony penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to prevent or dissuade the specified act; malice is additionally required for subdivision (a).",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2622"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-b-3",
+    "lawCode": "PEN",
+    "code": "136.1(b)(3)",
+    "title": "Attempting to prevent an arrest connected with victimization",
+    "summary": "Knowingly attempting to prevent or dissuade a crime victim or witness from arresting, causing or seeking the arrest of someone in connection with the victimization. The precise intended interference and procedural setting matter; this is not a general prohibition on discussing a case. No injury or successful intimidation is required. Aggravating circumstances in (c) have a separate felony penalty.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years in state prison under section 18. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to prevent or dissuade the specified act; malice is additionally required for subdivision (a).",
+    "supportingKeys": [
+      "PEN:136",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2622"
+    ]
+  },
+  {
+    "id": "ca-pen-136-1-c",
+    "lawCode": "PEN",
+    "code": "136.1(c)",
+    "title": "Aggravated intimidation of a witness or victim",
+    "summary": "Knowingly and maliciously committing the witness/victim interference described in (a) or (b), accompanied by force or threatened force, in furtherance of a conspiracy, after a qualifying prior conviction, or for pecuniary gain or other consideration at another person's request. The exact (c)(1)-(4) circumstance must be established; an unsuccessful attempt can qualify.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge, malice and intent to dissuade, plus the charged aggravating circumstance.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:136",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:136": null,
+      "PEN:136.1": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 136.1(c)(1)",
+      "PC 136.1(c)(2)",
+      "PC 136.1(c)(3)",
+      "PC 136.1(c)(4)"
+    ],
+    "calcrim": [
+      "2623"
+    ]
+  },
+  {
+    "id": "ca-pen-140-a",
+    "lawCode": "PEN",
+    "code": "140(a)",
+    "title": "Retaliating against a witness, victim or person assisting law enforcement",
+    "summary": "Willfully using or threatening force or violence against a person or property because someone supplied assistance or information to law enforcement or a public prosecutor in a criminal or juvenile proceeding. Section 139 is a separate exception; this entry does not substitute for that branch.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 2, 3 or 4 years under section 1170(h), subject to its prison exclusions. Subdivision (b) forbids an additional custody term here when the same act is punished under another law. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful retaliatory force or threat because assistance or information was provided.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:136",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:136": null,
+      "PEN:139": "2011-04-04",
+      "PEN:140": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2624"
+    ]
+  },
+  {
+    "id": "ca-pen-141-a",
+    "lawCode": "PEN",
+    "code": "141(a)",
+    "title": "Wrongfully altering, planting or concealing evidence",
+    "summary": "Knowingly and intentionally altering, planting, manufacturing, hiding, moving or otherwise wrongfully changing physical matter, a digital image or video, with specific intent to cause a criminal charge or have physical matter falsely presented as genuine in a proceeding. The peace-officer and prosecuting-attorney branches are separate.",
+    "penalty": "Misdemeanor: up to six months in county jail, a fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing, willful and wrongful action with the specified intent to frame a person or fabricate genuine evidence.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:141": "2017-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2630"
+    ]
+  },
+  {
+    "id": "ca-pen-141-b",
+    "lawCode": "PEN",
+    "code": "141(b)",
+    "title": "Evidence tampering by a peace officer",
+    "summary": "A peace officer knowingly and intentionally wrongfully alters, plants, manufactures, conceals or moves physical or specified digital evidence, intending a criminal charge, concealment or destruction, or fraudulent representation as original evidence. Official status alone does not establish the offense.",
+    "penalty": "Felony: 2, 3 or 5 years in state prison. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing and wrongful evidence manipulation with the specific statutory intent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:141": "2017-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2630"
+    ]
+  },
+  {
+    "id": "ca-pen-141-c",
+    "lawCode": "PEN",
+    "code": "141(c)",
+    "title": "Bad-faith evidence alteration or withholding by a prosecuting attorney",
+    "summary": "A prosecuting attorney intentionally and in bad faith alters, modifies or withholds evidence or exculpatory material/information known to be relevant and material to the outcome, intending concealment, destruction or fraudulent presentation as original evidence. An ordinary discovery mistake does not alone establish these requirements.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional bad faith, knowledge of relevance and materiality, and specific intent to conceal, destroy or falsely present evidence.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:141": "2017-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": []
+  },
+  {
+    "id": "ca-pen-118-a",
+    "lawCode": "PEN",
+    "code": "118(a)",
+    "title": "Perjury under oath or penalty of perjury",
+    "summary": "Willfully making a material statement known to be false under a legally authorized oath or declaration under penalty of perjury. For a declaration, deposition or certificate, signing and delivering it with intent that it be circulated or published as true matters. An honestly believed statement is not knowingly false; the corroboration rule and section 125's unqualified-statement rule require review.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). Section 126 supplies the custody range. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing falsity and intentional false statement while aware of the oath or penalty of perjury.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:121",
+      "PEN:124",
+      "PEN:125",
+      "PEN:126",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:118": null,
+      "PEN:121": null,
+      "PEN:124": null,
+      "PEN:125": null,
+      "PEN:126": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2640"
+    ]
+  },
+  {
+    "id": "ca-pen-118a",
+    "lawCode": "PEN",
+    "code": "118a",
+    "title": "Perjury by false affidavit concerning future testimony",
+    "summary": "Making, signing and delivering an affidavit under oath stating that one would give testimony or other evidence in a pending or future matter, while willfully stating material facts known to be false. The affidavit must be intended for use, circulation or publication as true. Later inconsistent testimony permits an inference, not an automatic conviction.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). Section 126 supplies the custody range. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing falsity and intent to state falsely under oath; materiality and delivery must be established.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:118",
+      "PEN:121",
+      "PEN:124",
+      "PEN:125",
+      "PEN:126",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:118": null,
+      "PEN:118a": null,
+      "PEN:121": null,
+      "PEN:124": null,
+      "PEN:125": null,
+      "PEN:126": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2641"
+    ]
+  },
+  {
+    "id": "ca-pen-69-a",
+    "lawCode": "PEN",
+    "code": "69(a)",
+    "title": "Deterring or forcibly resisting an executive officer",
+    "summary": "Attempting by threat or violence to deter an executive officer from a lawful duty, or knowingly using force or violence to resist an officer performing a lawful duty. The two routes have different intent requirements. Lawful recording alone is not an offense, and unlawful arrest or excessive force can defeat the lawful-performance requirement.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years under section 1170(h), subject to its prison exclusions. A fine up to $10,000, or both fine and custody, is specified. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to deter a known executive officer by threat/violence, or knowing forcible resistance while aware of the officer's performance of duty.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:69": "2016-01-01",
+      "PEN:830": null
+    },
+    "searchAliases": [
+      "resisting executive officer"
+    ],
+    "calcrim": [
+      "2651",
+      "2652"
+    ]
+  },
+  {
+    "id": "ca-pen-148-b",
+    "lawCode": "PEN",
+    "code": "148(b)",
+    "title": "Taking a nonfirearm weapon while resisting an officer",
+    "summary": "Taking a weapon other than a firearm from an officer's person or immediate presence during the specified resistance, delay or obstruction. Lawful performance and knowledge of officer status matter. Disarming an officer engaged in a criminal act is excluded under (f). Subdivision (e) restricts an additional (a) conviction involving the same officer.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years under section 1170(h), subject to its prison exclusions. This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful resistance with knowledge or reasonable notice of official status for (b)/(c); specific intent and an enumerated act for (d).",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:489",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:148": "2016-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2653"
+    ]
+  },
+  {
+    "id": "ca-pen-148-c",
+    "lawCode": "PEN",
+    "code": "148(c)",
+    "title": "Taking a firearm while resisting an officer",
+    "summary": "Taking a firearm from an officer's person or immediate presence during the specified resistance, delay or obstruction. Lawful performance and knowledge of officer status matter. Disarming an officer engaged in a criminal act is excluded under (f). Subdivision (e) restricts an additional (a) conviction involving the same officer.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful resistance with knowledge or reasonable notice of official status for (b)/(c); specific intent and an enumerated act for (d).",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:489",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:148": "2016-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2653"
+    ]
+  },
+  {
+    "id": "ca-pen-148-d",
+    "lawCode": "PEN",
+    "code": "148(d)",
+    "title": "Taking or attempting to take an officer's firearm",
+    "summary": "Except for (c), taking a firearm without intent to permanently deprive or attempting to take it from an officer performing lawful duties. Specific intent to take the firearm and at least one of the direct acts listed in (d)(1)-(8) are required. Lawful performance and knowledge of officer status matter. Disarming an officer engaged in a criminal act is excluded under (f). Subdivision (e) restricts an additional (a) conviction involving the same officer.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years under section 1170(h), subject to its prison exclusions. This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful resistance with knowledge or reasonable notice of official status for (b)/(c); specific intent and an enumerated act for (d).",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:489",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:148": "2016-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2654"
+    ]
+  },
+  {
+    "id": "ca-pen-148-10-a",
+    "lawCode": "PEN",
+    "code": "148.10(a)",
+    "title": "Resisting a peace officer causing death or serious bodily injury",
+    "summary": "Willful resistance proximately causing death or serious bodily injury to a peace officer. The factfinder must establish reasonable official action, lawful detention/arrest supported by the required cause, and knowledge or reasonable notice of official status. Labor picketing, demonstrations and disturbing-the-peace conduct are excluded by (c).",
+    "penalty": "Wobbler: felony alternatives include 2, 3 or 4 years under section 1170(h), a $1,000-$10,000 fine, or both; misdemeanor alternatives include up to 364 days in county jail, a fine up to $1,000, or both. Section 1170(h) prison exclusions apply. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful resistance and knowledge or reasonable notice of official status; causation and the separate findings in (b) are required.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:243",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:148.10": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "PEN:830": null
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2655"
+    ]
+  },
+  {
+    "id": "ca-pen-166-a-4",
+    "lawCode": "PEN",
+    "code": "166(a)(4)",
+    "title": "Willfully disobeying a lawful court order",
+    "summary": "Willful disobedience of the written terms of a lawfully issued court order or process, including an out-of-state order. Knowledge of the order and ability to comply matter. This entry concerns a criminal Penal Code charge; civil or summary contempt uses different procedures. Protective-order and other specially punished branches must be checked.",
+    "penalty": "Misdemeanor: up to six months in county jail, a fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful violation with knowledge of the order and ability to comply.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:166": "2022-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2700"
+    ]
+  },
+  {
+    "id": "ca-pen-166-c-1",
+    "lawCode": "PEN",
+    "code": "166(c)(1)",
+    "title": "Knowingly violating a qualifying protective or stay-away order",
+    "summary": "Willfully and knowingly violating one of the protective or stay-away orders listed in (c)(1)/(3), including specified criminal, domestic-violence and elder-abuse orders. Knowledge, lawful issuance and ability to comply matter. Physical injury and qualifying repeat conduct have additional rules.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $1,000, or both. If the violation causes physical injury, (c)(2) requires at least 48 hours in jail even if a fine is imposed or sentence suspended. Probation follows section 1203.097; (e) governs conditional payments, ability to pay and credit for overlapping punishment. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful and knowing violation of a qualifying order.",
+    "supportingKeys": [
+      "FAM:6320",
+      "FAM:6389",
+      "PEN:1201.3",
+      "PEN:1203.097",
+      "PEN:136.2",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:368"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FAM:6320": "2026-01-01",
+      "FAM:6389": "2026-01-01",
+      "PEN:1201.3": "2012-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:136.2": "2025-01-01",
+      "PEN:139": "2011-04-04",
+      "PEN:166": "2022-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:368": "2025-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2701",
+      "2702"
+    ]
+  },
+  {
+    "id": "ca-pen-166-c-4",
+    "lawCode": "PEN",
+    "code": "166(c)(4)",
+    "title": "Repeat protective-order violation involving violence or a credible threat",
+    "summary": "A second or later conviction for violating an order covered by (c)(1), within seven years of a prior qualifying conviction, involving violence or the credible threat defined in section 139(c). An ordinary repeated contact is not automatically this branch.",
+    "penalty": "Wobbler: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison. Probation and overlapping-punishment rules in (e) remain applicable. This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful and knowing order violation with the qualifying prior and violence or credible threat.",
+    "supportingKeys": [
+      "FAM:6320",
+      "FAM:6389",
+      "PEN:1201.3",
+      "PEN:1203.097",
+      "PEN:136.2",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:273.5",
+      "PEN:368",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "FAM:6320": "2026-01-01",
+      "FAM:6389": "2026-01-01",
+      "PEN:1201.3": "2012-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:136.2": "2025-01-01",
+      "PEN:139": "2011-04-04",
+      "PEN:166": "2022-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.5": "2025-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2703"
+    ]
+  },
+  {
+    "id": "ca-pen-273-6-b",
+    "lawCode": "PEN",
+    "code": "273.6(b)",
+    "title": "Protective-order violation causing physical injury",
+    "summary": "Intentional and knowing violation of an order covered by (a)/(c), resulting in physical injury. Validity, notice, exact order coverage and ability to comply require review; this is not every restraining-order dispute.",
+    "penalty": "Misdemeanor: a fine up to $2,000, 30 days to 364 days in county jail, or both. The court may reduce or eliminate the 30-day minimum for stated interests-of-justice reasons only with at least 48 hours of jail. If probation is granted, section 1203.097 and the payment/restitution conditions in (h)/(i) apply. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional and knowing violation; the branch's injury, prior-conviction and timing requirements must be established.",
+    "supportingKeys": [
+      "CCP:527.6",
+      "CCP:527.8",
+      "CCP:527.85",
+      "FAM:6218",
+      "FAM:6320",
+      "FAM:6389",
+      "FAM:6400",
+      "PEN:1203.097",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "WIC:15657.03"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "CCP:527.6": "2026-01-01",
+      "CCP:527.8": "2026-01-01",
+      "CCP:527.85": "2025-01-01",
+      "FAM:6218": "1994-01-01",
+      "FAM:6320": "2026-01-01",
+      "FAM:6389": "2026-01-01",
+      "FAM:6400": "2002-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:139": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.6": "2023-01-01",
+      "WIC:15657.03": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2702"
+    ]
+  },
+  {
+    "id": "ca-pen-273-6-d",
+    "lawCode": "PEN",
+    "code": "273.6(d)",
+    "title": "Repeat protective-order violation with violence or a credible threat",
+    "summary": "A subsequent qualifying order-violation conviction within seven years of a prior qualifying conviction, involving violence or a credible threat as defined in section 139(c). Validity, notice, exact order coverage and ability to comply require review; this is not every restraining-order dispute.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years under section 1170(h), subject to its prison exclusions. This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. If probation is granted, section 1203.097 and the payment/restitution conditions in (h)/(i) apply. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional and knowing violation; the branch's injury, prior-conviction and timing requirements must be established.",
+    "supportingKeys": [
+      "CCP:527.6",
+      "CCP:527.8",
+      "CCP:527.85",
+      "FAM:6218",
+      "FAM:6320",
+      "FAM:6389",
+      "FAM:6400",
+      "PEN:1170",
+      "PEN:1203.097",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "WIC:15657.03"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "CCP:527.6": "2026-01-01",
+      "CCP:527.8": "2026-01-01",
+      "CCP:527.85": "2025-01-01",
+      "FAM:6218": "1994-01-01",
+      "FAM:6320": "2026-01-01",
+      "FAM:6389": "2026-01-01",
+      "FAM:6400": "2002-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:139": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:672": "1983-09-27",
+      "WIC:15657.03": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2703"
+    ]
+  },
+  {
+    "id": "ca-pen-273-6-e",
+    "lawCode": "PEN",
+    "code": "273.6(e)",
+    "title": "Repeat protective-order violation causing physical injury",
+    "summary": "A subsequent qualifying order-violation conviction for an act within one year of a prior qualifying conviction, causing physical injury to the victim. Validity, notice, exact order coverage and ability to comply require review; this is not every restraining-order dispute.",
+    "penalty": "Wobbler: the statute lists a fine up to $2,000, six months to 364 days in county jail, both, or felony custody of 16 months, 2 years or 3 years under section 1170(h), subject to its exclusions. For stated interests-of-justice reasons the court may reduce the six-month jail minimum only with at least 30 days served. If probation is granted, section 1203.097 and the payment/restitution conditions in (h)/(i) apply. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional and knowing violation; the branch's injury, prior-conviction and timing requirements must be established.",
+    "supportingKeys": [
+      "CCP:527.6",
+      "CCP:527.8",
+      "CCP:527.85",
+      "FAM:6218",
+      "FAM:6320",
+      "FAM:6389",
+      "FAM:6400",
+      "PEN:1170",
+      "PEN:1203.097",
+      "PEN:139",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672",
+      "WIC:15657.03"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "CCP:527.6": "2026-01-01",
+      "CCP:527.8": "2026-01-01",
+      "CCP:527.85": "2025-01-01",
+      "FAM:6218": "1994-01-01",
+      "FAM:6320": "2026-01-01",
+      "FAM:6389": "2026-01-01",
+      "FAM:6400": "2002-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:1203.097": "2025-01-01",
+      "PEN:139": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:273.6": "2023-01-01",
+      "PEN:672": "1983-09-27",
+      "WIC:15657.03": "2026-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2702"
+    ]
+  },
+  {
+    "id": "ca-pen-4501-a",
+    "lawCode": "PEN",
+    "code": "4501(a)",
+    "title": "Assault by a state prisoner with a deadly weapon or instrument",
+    "summary": "A person confined in state prison commits an assault with a deadly weapon or instrument. Section 4500's separate life-prisoner/malice branch is excluded. Actual injury is not required for an assault, but the act, ability, knowledge and lawful-defense issues must be established.",
+    "penalty": "Felony: 2, 4 or 6 years in state prison, served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful assaultive act with awareness of facts making application of force a direct, natural and probable result.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:240",
+      "PEN:4500",
+      "PEN:4504",
+      "PEN:5003",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:240": null,
+      "PEN:4500": null,
+      "PEN:4501": "2016-01-01",
+      "PEN:4504": "2016-01-01",
+      "PEN:5003": "2024-07-02",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2721"
+    ]
+  },
+  {
+    "id": "ca-pen-4501-b",
+    "lawCode": "PEN",
+    "code": "4501(b)",
+    "title": "Assault by a state prisoner by force likely to produce great bodily injury",
+    "summary": "A person confined in state prison commits an assault by force likely to produce great bodily injury. Section 4500's separate life-prisoner/malice branch is excluded. Actual injury is not required for an assault, but the act, ability, knowledge and lawful-defense issues must be established.",
+    "penalty": "Felony: 2, 4 or 6 years in state prison, served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful assaultive act with awareness of facts making application of force a direct, natural and probable result.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:240",
+      "PEN:4500",
+      "PEN:4504",
+      "PEN:5003",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:240": null,
+      "PEN:4500": null,
+      "PEN:4501": "2016-01-01",
+      "PEN:4504": "2016-01-01",
+      "PEN:5003": "2024-07-02",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2721"
+    ]
+  },
+  {
+    "id": "ca-pen-4501-5",
+    "lawCode": "PEN",
+    "code": "4501.5",
+    "title": "Battery by a state prisoner on a nonprisoner",
+    "summary": "A person confined in state prison willfully and unlawfully uses force or violence on a person who is not a prisoner there. The victim's status matters; this is not the separate battery-on-another-prisoner branch.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison, served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful and unlawful touching; intent to cause injury is not necessary.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:242",
+      "PEN:4504",
+      "PEN:5003",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:242": null,
+      "PEN:4501.5": null,
+      "PEN:4504": "2016-01-01",
+      "PEN:5003": "2024-07-02",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2723"
+    ]
+  },
+  {
+    "id": "ca-pen-4503",
+    "lawCode": "PEN",
+    "code": "4503",
+    "title": "Holding a hostage or forcibly detaining a person in prison",
+    "summary": "A person serving a state-prison sentence holds someone hostage within a covered correctional facility, or uses force or threatened force to hold someone against their will in defiance of official orders. The required confinement, facility and hostage/defiance facts must be established.",
+    "penalty": "Felony: 3, 5 or 7 years in state prison, served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Intentional hostage taking or forcible detention against the person's will in defiance of official orders.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:4504",
+      "PEN:5003",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:4503": null,
+      "PEN:4504": "2016-01-01",
+      "PEN:5003": "2024-07-02",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2735"
+    ]
+  },
+  {
+    "id": "ca-pen-4502-a",
+    "lawCode": "PEN",
+    "code": "4502(a)",
+    "title": "Possessing a listed weapon or ammunition in penal custody",
+    "summary": "A person in a penal institution, in transit to or from it, or in its officials' custody possesses, carries or controls a listed weapon, sharp instrument, explosive substance, fixed ammunition, firearm, tear gas or tear-gas weapon. The item and custody setting must satisfy the statute; an ordinary object is not automatically a prohibited weapon.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). The term is served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession/control of the listed item, or intentional manufacture/attempt, in the required custody setting. Knowledge of the object's prohibited character or capability is required; intent to use it as a weapon is not.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:17240",
+      "PEN:17250",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:17240": "2011-01-01",
+      "PEN:17250": "2011-01-01",
+      "PEN:4502": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2745"
+    ]
+  },
+  {
+    "id": "ca-pen-4502-b",
+    "lawCode": "PEN",
+    "code": "4502(b)",
+    "title": "Manufacturing a listed weapon or ammunition in penal custody",
+    "summary": "A person in a penal institution, in transit to or from it, or in its officials' custody manufactures or attempts to manufacture a listed weapon, sharp instrument, explosive substance, fixed ammunition, firearm, tear gas or tear-gas weapon. The item and custody setting must satisfy the statute; an ordinary object is not automatically a prohibited weapon.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). The term is served consecutively. A fine up to $10,000 may be added under section 672. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing possession/control of the listed item, or intentional manufacture/attempt, in the required custody setting. Knowledge of the object's prohibited character or capability is required; intent to use it as a weapon is not.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:17240",
+      "PEN:17250",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:17240": "2011-01-01",
+      "PEN:17250": "2011-01-01",
+      "PEN:4502": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2745"
+    ]
+  },
+  {
+    "id": "ca-pen-4574-a",
+    "lawCode": "PEN",
+    "code": "4574(a)",
+    "title": "Bringing weapons into custody facilities or possessing them in jail",
+    "summary": "Knowingly bringing, sending or assisting the entry of a firearm, deadly weapon or explosive into a listed custody facility or its adjoining grounds; or possessing a listed weapon, explosive or tear-gas item while lawfully confined in a jail or county road camp. Statutory or authorized institutional permission is an exception.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing entry or possession and knowledge that the object is the specified weapon, explosive or tear-gas item; knowledge that the law prohibits it is not required.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:17240",
+      "PEN:17250",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:17240": "2011-01-01",
+      "PEN:17250": "2011-01-01",
+      "PEN:4574": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2746",
+      "2747"
+    ]
+  },
+  {
+    "id": "ca-pen-4574-b",
+    "lawCode": "PEN",
+    "code": "4574(b)",
+    "title": "Bringing tear gas into a custody facility resulting in release or use",
+    "summary": "Except for (a), knowingly bringing or sending tear gas or a tear-gas weapon into a covered custody location, resulting in release of the gas or use of the weapon. Authorization and the exact entry/use facts matter.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h); county-jail eligibility depends on section 1170(h)(3). This branch's fine ceiling has not been resolved here; do not assume either that no fine applies or that a neighboring subdivision's ceiling governs. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowing entry or possession and knowledge that the object is the specified weapon, explosive or tear-gas item; knowledge that the law prohibits it is not required.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:17240",
+      "PEN:17250",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:17240": "2011-01-01",
+      "PEN:17250": "2011-01-01",
+      "PEN:4574": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2747"
+    ]
+  },
+  {
+    "id": "ca-pen-4574-c",
+    "lawCode": "PEN",
+    "code": "4574(c)",
+    "title": "Bringing tear gas into a custody facility without the aggravated conditions",
+    "summary": "Except for (a) and the release/use branch in (b), knowingly bringing or sending tear gas or a tear-gas weapon into a covered custody location. Authorization remains relevant.",
+    "penalty": "Misdemeanor: up to six months in county jail, a fine up to $1,000, or both. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing entry or possession and knowledge that the object is the specified weapon, explosive or tear-gas item; knowledge that the law prohibits it is not required.",
+    "supportingKeys": [
+      "HSC:12000",
+      "PEN:1170",
+      "PEN:16520",
+      "PEN:17",
+      "PEN:17240",
+      "PEN:17250",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:12000": "2011-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:16520": "2024-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:17240": "2011-01-01",
+      "PEN:17250": "2011-01-01",
+      "PEN:4574": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2747"
+    ]
+  },
+  {
+    "id": "ca-pen-4532-a-1",
+    "lawCode": "PEN",
+    "code": "4532(a)(1)",
+    "title": "Escape without force or violence from misdemeanor custody",
+    "summary": "A prisoner arrested and booked for, charged with or convicted of the relevant offense unlawfully leaves or attempts to leave a covered custodial setting without force or violence. The precise facility, lawful custody, home-detention or authorized-release conditions matter. A willful failure to return can be an escape under (e). This entry does not resolve the legacy inebriate-commitment wording or imply an adult sentence for a juvenile disposition.",
+    "penalty": "Wobbler despite the statute's felony wording: 1 year and 1 day in state prison, or up to 364 days in county jail. Subdivision (d) requires 90 days to 364 days for a misdemeanor designation unless unusual interests-of-justice probation applies; its sentences are consecutive. Felony probation is restricted for secure-main-jail, courthouse and associated transport escapes. Subdivision (a)(3) limits use of specified convictions as later felony priors. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt; force/violence must be established for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:1170.1",
+      "PEN:1203.016",
+      "PEN:1203.017",
+      "PEN:1203.018",
+      "PEN:1208",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:4011.9",
+      "PEN:4018.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170.1": "2022-01-01",
+      "PEN:1203.016": "2024-01-01",
+      "PEN:1203.017": "2024-01-01",
+      "PEN:1203.018": "2024-01-01",
+      "PEN:1208": "2020-09-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:4011.9": null,
+      "PEN:4018.6": null,
+      "PEN:4532": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2760"
+    ]
+  },
+  {
+    "id": "ca-pen-4532-a-2",
+    "lawCode": "PEN",
+    "code": "4532(a)(2)",
+    "title": "Escape by force or violence from misdemeanor custody",
+    "summary": "A prisoner arrested and booked for, charged with or convicted of the relevant offense unlawfully leaves or attempts to leave a covered custodial setting by force or violence. The precise facility, lawful custody, home-detention or authorized-release conditions matter. A willful failure to return can be an escape under (e). This entry does not resolve the legacy inebriate-commitment wording or imply an adult sentence for a juvenile disposition.",
+    "penalty": "Wobbler despite the statute's felony wording: 2, 4 or 6 years in state prison, served consecutively, or up to 364 days in county jail. Subdivision (d) requires 90 days to 364 days for a misdemeanor designation unless unusual interests-of-justice probation applies; its sentences are consecutive. Felony probation is restricted for secure-main-jail, courthouse and associated transport escapes. Subdivision (a)(3) limits use of specified convictions as later felony priors. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt; force/violence must be established for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:1170.1",
+      "PEN:1203.016",
+      "PEN:1203.017",
+      "PEN:1203.018",
+      "PEN:1208",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:4011.9",
+      "PEN:4018.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170.1": "2022-01-01",
+      "PEN:1203.016": "2024-01-01",
+      "PEN:1203.017": "2024-01-01",
+      "PEN:1203.018": "2024-01-01",
+      "PEN:1208": "2020-09-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:4011.9": null,
+      "PEN:4018.6": null,
+      "PEN:4532": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2761"
+    ]
+  },
+  {
+    "id": "ca-pen-4532-b-1",
+    "lawCode": "PEN",
+    "code": "4532(b)(1)",
+    "title": "Escape without force or violence from felony custody or a qualifying juvenile-court commitment",
+    "summary": "A prisoner arrested and booked for, charged with or convicted of the relevant offense, or committed by a juvenile court, unlawfully leaves or attempts to leave a covered custodial setting without force or violence. The precise facility, lawful custody, home-detention or authorized-release conditions matter. A willful failure to return can be an escape under (e). This entry does not resolve the legacy inebriate-commitment wording or imply an adult sentence for a juvenile disposition.",
+    "penalty": "Wobbler despite the statute's felony wording: 16 months, 2 years or 3 years in state prison, served consecutively, or up to 364 days in county jail. Subdivision (d) requires 90 days to 364 days for a misdemeanor designation unless unusual interests-of-justice probation applies; its sentences are consecutive. Felony probation is restricted for secure-main-jail, courthouse and associated transport escapes. Subdivision (a)(3) limits use of specified convictions as later felony priors. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt; force/violence must be established for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:1170.1",
+      "PEN:1203.016",
+      "PEN:1203.017",
+      "PEN:1203.018",
+      "PEN:1208",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:4011.9",
+      "PEN:4018.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170.1": "2022-01-01",
+      "PEN:1203.016": "2024-01-01",
+      "PEN:1203.017": "2024-01-01",
+      "PEN:1203.018": "2024-01-01",
+      "PEN:1208": "2020-09-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:4011.9": null,
+      "PEN:4018.6": null,
+      "PEN:4532": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2760"
+    ]
+  },
+  {
+    "id": "ca-pen-4532-b-2",
+    "lawCode": "PEN",
+    "code": "4532(b)(2)",
+    "title": "Escape by force or violence from felony custody or a qualifying juvenile-court commitment",
+    "summary": "A prisoner arrested and booked for, charged with or convicted of the relevant offense, or committed by a juvenile court, unlawfully leaves or attempts to leave a covered custodial setting by force or violence. The precise facility, lawful custody, home-detention or authorized-release conditions matter. A willful failure to return can be an escape under (e). This entry does not resolve the legacy inebriate-commitment wording or imply an adult sentence for a juvenile disposition.",
+    "penalty": "Wobbler despite the statute's felony wording: a full consecutive term of 2, 4 or 6 years in state prison, without the one-third reduction under section 1170.1(a), or up to 364 days in county jail. Subdivision (d) requires 90 days to 364 days for a misdemeanor designation unless unusual interests-of-justice probation applies; its sentences are consecutive. Felony probation is restricted for secure-main-jail, courthouse and associated transport escapes. Subdivision (a)(3) limits use of specified convictions as later felony priors. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt; force/violence must be established for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:1170.1",
+      "PEN:1203.016",
+      "PEN:1203.017",
+      "PEN:1203.018",
+      "PEN:1208",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:4011.9",
+      "PEN:4018.6",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170.1": "2022-01-01",
+      "PEN:1203.016": "2024-01-01",
+      "PEN:1203.017": "2024-01-01",
+      "PEN:1203.018": "2024-01-01",
+      "PEN:1208": "2020-09-18",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:4011.9": null,
+      "PEN:4018.6": null,
+      "PEN:4532": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2761"
+    ]
+  },
+  {
+    "id": "ca-pen-836-6-a",
+    "lawCode": "PEN",
+    "code": "836.6(a)",
+    "title": "Escape after judicial remand",
+    "summary": "Escaping or attempting to escape after a California judge or magistrate remands the person into the specified law-enforcement custody. The aggravated branch requires both force or violence and proximate serious bodily injury to a peace officer; force alone is insufficient.",
+    "penalty": "Ordinarily a misdemeanor with up to 364 days in county jail. If both aggravated conditions in (c) are established, the offense is a wobbler with 2, 3 or 4 years in state prison or up to 364 days in county jail. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt with the required remand/arrest knowledge; separate force and injury findings for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:243",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null,
+      "PEN:836.6": "2012-06-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2762",
+      "2763"
+    ]
+  },
+  {
+    "id": "ca-pen-836-6-b",
+    "lawCode": "PEN",
+    "code": "836.6(b)",
+    "title": "Escape following a lawful arrest",
+    "summary": "Escaping or attempting to escape from a peace officer following a lawful arrest that the person knew, or through reasonable care should have known, had occurred. The aggravated branch requires both force or violence and proximate serious bodily injury to a peace officer; force alone is insufficient.",
+    "penalty": "Ordinarily a misdemeanor with up to 364 days in county jail. If both aggravated conditions in (c) are established, the offense is a wobbler with 2, 3 or 4 years in state prison or up to 364 days in county jail. Section 672 permits an additional fine up to $1,000 for a misdemeanor or $10,000 for a felony. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional escape or attempt with the required remand/arrest knowledge; separate force and injury findings for the aggravated branch.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:243",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243": "2025-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null,
+      "PEN:836.6": "2012-06-27"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2762",
+      "2763"
+    ]
+  },
+  {
+    "id": "ca-pen-1320-5",
+    "lawCode": "PEN",
+    "code": "1320.5",
+    "title": "Willful failure to appear while on bail in a felony case",
+    "summary": "A person charged with or convicted of a felony and released on bail willfully fails to appear as required in order to evade the court's process. Missing court accidentally is not enough. Failure to appear within 14 days permits, but does not compel, an inference of that intent. Own-recognizance release is addressed by section 1320 instead.",
+    "penalty": "Wobbler: up to 364 days in county jail, or 16 months, 2 years or 3 years under section 1170(h), subject to its prison exclusions. The statute permits a fine up to $10,000, or both fine and custody. Its felony label does not eliminate the express misdemeanor alternative. Adult base penalties are shown. Restitution, assessments, enhancements, probation and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Willful nonappearance with intent to evade the court's process.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:1320.5": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "3001"
+    ]
+  }
+]

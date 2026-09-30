@@ -1,11 +1,10 @@
+import {readCaliforniaCatalog} from "./helpers/california-catalog";
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
 const corrections = ["shared/california-batch-one-corrections.json", "shared/california-batch-two-corrections.json", "shared/california-batch-three-corrections.json", "shared/california-batch-four-corrections.json", "shared/california-batch-five-corrections.json", "shared/california-batch-six-corrections.json"].flatMap(path => JSON.parse(readFileSync(path, "utf8"))) as Array<{ id: string; categories: string[]; penalty: { en: string } }>;
 
 test("California corrections reach the production catalog and rules guidance", async ({ request }) => {
-  const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
-  expect(response.ok()).toBe(true);
-  const body = await response.json();
+  const body = await readCaliforniaCatalog(request);
   for (const row of corrections) {
     const charge = body.charges.find((item: any) => item.id === row.id);
     // PEN 30515 changed in the retained-source comparison; do not revive its record.
