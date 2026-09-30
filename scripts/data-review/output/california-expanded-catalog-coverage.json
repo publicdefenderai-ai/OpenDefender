@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 615,
-    "configuredSelectable": 594,
+    "canonicalRecords": 625,
+    "configuredSelectable": 604,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 495,
-    "boundedCorrectionPass": 594,
+    "boundedAdditionPass": 505,
+    "boundedCorrectionPass": 604,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 318,
+    "distinctSelectablePrimarySections": 327,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 318,
-    "selectableRecordsWithAllPrimaryTextAcquired": 594,
-    "totalAcquiredSectionsIncludingDependencies": 794,
-    "totalAcquiredVersionsIncludingDependencies": 802,
+    "acquiredSelectablePrimarySections": 327,
+    "selectableRecordsWithAllPrimaryTextAcquired": 604,
+    "totalAcquiredSectionsIncludingDependencies": 814,
+    "totalAcquiredVersionsIncludingDependencies": 822,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "594 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "604 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 461,
-      "corrected": 461,
+      "selectable": 470,
+      "corrected": 470,
       "awaitingCorrection": 0
     },
     {
@@ -72,8 +72,8 @@
     },
     {
       "lawCode": "VEH",
-      "selectable": 55,
-      "corrected": 55,
+      "selectable": 56,
+      "corrected": 56,
       "awaitingCorrection": 0
     }
   ],
@@ -2155,6 +2155,52 @@
     },
     {
       "lawCode": "PEN",
+      "section": "403",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=403&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-403"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "404.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=404.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-404-6-a",
+        "ca-pen-404-6-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "405",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=405&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-405"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "408",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=408&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-408"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "409",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=409&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-409"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "415",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
       "recordIds": [
@@ -2163,6 +2209,15 @@
         "ca-disturbing-the-peace-415-3"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "416",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=416&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-416-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -3032,6 +3087,24 @@
     },
     {
       "lawCode": "PEN",
+      "section": "666",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=666&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-666-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "666.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=666.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-666-1-a-1"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
       "section": "67",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=67&lawCode=PEN",
       "recordIds": [
@@ -3162,6 +3235,15 @@
       "recordIds": [
         "ca-veh-10803-a",
         "ca-veh-10803-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "10851",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10851&lawCode=VEH",
+      "recordIds": [
+        "ca-veh-10851-a"
       ],
       "alreadyRetained": false
     },
@@ -5576,6 +5658,178 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-666-a",
+      "title": "Petty theft with a qualifying prior conviction and custody",
+      "citation": "Cal. Penal Code § 666(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:666"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:666"
+      ],
+      "catalogSha256": "c81f2978f6939b5c19b5b6a045d3169e5520d108e5dbec8bbb0e282383362c05",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-666-1-a-1",
+      "title": "Petty theft or shoplifting with two or more qualifying prior convictions",
+      "citation": "Cal. Penal Code § 666.1(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:666.1"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:666.1"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:666.1"
+      ],
+      "catalogSha256": "35ed4c7e88a7be95907b78a15324ed4eb812286185438a5a6ef727fa02b3a5b9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-veh-10851-a",
+      "title": "Unlawful vehicle taking above $950 or posttheft driving",
+      "citation": "Cal. Vehicle Code § 10851(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:10851"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:10851"
+      ],
+      "catalogSha256": "6e3eba38acd44fd08d999d4113048b0cad0dc4c769bdfc7a8f4658b2ad6213bb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-403",
+      "title": "Willfully disturbing or breaking up a lawful public meeting",
+      "citation": "Cal. Penal Code § 403",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:403"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:403"
+      ],
+      "catalogSha256": "ba84307e88b90b055af920a9c002e9dfa2bbe2f71d0c3e1c0f379f1b0aa4ac01",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-404-6-a",
+      "title": "Incitement to riot",
+      "citation": "Cal. Penal Code § 404.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:404.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:404.6"
+      ],
+      "catalogSha256": "537813343bf608c0f4d43eec49807348b4543f4f83b23643dddd65e411578eda",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-404-6-c",
+      "title": "Inciting a prison or jail riot resulting in serious bodily injury",
+      "citation": "Cal. Penal Code § 404.6(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:404.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:404.6"
+      ],
+      "catalogSha256": "34a18d1e60709798ab3d0cb9a100d2a47e2ccee354b82429fd140585e69c5ecd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-405",
+      "title": "Participating in a riot",
+      "citation": "Cal. Penal Code § 405",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:405"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:405"
+      ],
+      "catalogSha256": "6570856ef933c23c162ef471e2cafbe2ab0753e5799f7827bd76edc0cfc5ba2f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-408",
+      "title": "Participating in a rout or unlawful assembly",
+      "citation": "Cal. Penal Code § 408",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:408"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:408"
+      ],
+      "catalogSha256": "cab82d871450de4aea47db047d105206ffb92f105154407b13bbfd2a00d632fb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-409",
+      "title": "Remaining after a lawful dispersal order at a riot, rout or unlawful assembly",
+      "citation": "Cal. Penal Code § 409",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:409"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:409"
+      ],
+      "catalogSha256": "44676f0a9938becc1b2b6f8acbb6b31ed299b980df96064a489c6fe8bb8c5d70",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-416-a",
+      "title": "Refusal to disperse with intent to disturb the peace or commit a crime",
+      "citation": "Cal. Penal Code § 416(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:416"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:416"
+      ],
+      "catalogSha256": "ea9a3a59a91ac516692f9f07583f4e6a2a4c6b855fa81a26a44793655c24e4e4",
       "attorneyReview": "pending"
     },
     {

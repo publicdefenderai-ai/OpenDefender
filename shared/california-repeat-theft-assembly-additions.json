@@ -1,0 +1,397 @@
+[
+  {
+    "id": "ca-pen-666-a",
+    "lawCode": "PEN",
+    "code": "666(a)",
+    "title": "Petty theft with a qualifying prior conviction and custody",
+    "summary": "Petty theft committed after a listed theft-related conviction for which a term in a penal institution was served, including qualifying custody as a condition of probation. The person must also fall within subdivision (b): required sex-offender registration, a prior offense in the specific section 667(e)(2)(C)(iv) list, or a conviction under section 368(d) or (e). Not every theft prior or every serious felony satisfies these conditions. This is an increased-punishment allegation attached to the current petty theft, not an extra standalone act.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a). The fine ceiling for this increased-punishment theft route remains under review and is not asserted here. Other prior-conviction sentencing laws may separately apply. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The current petty theft must be proved, as must the required prior conviction, custody and subdivision (b) eligibility facts.",
+    "supportingKeys": [
+      "PEN:1170.12",
+      "PEN:1202.5",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:368",
+      "PEN:484",
+      "PEN:488",
+      "PEN:490",
+      "PEN:490.2",
+      "PEN:667",
+      "PEN:668",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170.12": "2022-01-01",
+      "PEN:1202.5": "2014-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:488": null,
+      "PEN:490": null,
+      "PEN:490.2": null,
+      "PEN:666": null,
+      "PEN:667": "2022-01-01",
+      "PEN:668": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "petty theft with a prior",
+      "PC 666"
+    ],
+    "calcrim": [
+      "1850"
+    ]
+  },
+  {
+    "id": "ca-pen-666-1-a-1",
+    "lawCode": "PEN",
+    "code": "666.1(a)(1)",
+    "title": "Petty theft or shoplifting with two or more qualifying prior convictions",
+    "summary": "Petty theft or shoplifting after at least two prior convictions from the list in section 666.1(a)(2), including qualifying theft, burglary, robbery, carjacking, receiving, shoplifting, identity/mail theft or vehicle offenses. Unlike section 666, this section does not require a prior custodial term or sex-registration/specified serious-prior eligibility. It is an increased-punishment allegation attached to the current theft or shoplifting. Older qualifying convictions count; an arrest alone is not a conviction.",
+    "penalty": "Felony or misdemeanor: for a first section 666.1 conviction, up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). For a second or subsequent section 666.1 conviction, the felony route changes to state prison under section 18(a); the misdemeanor alternative remains. The fine ceiling remains under review and is not asserted here. The statute permits referral to a qualifying theft diversion/deferred-entry program and requires individualized judicial review before release following an arrest under this section. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The current petty theft or shoplifting and the qualifying prior convictions must be established.",
+    "supportingKeys": [
+      "PEN:1001.81",
+      "PEN:1170",
+      "PEN:1202.5",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:459.5",
+      "PEN:484",
+      "PEN:488",
+      "PEN:490",
+      "PEN:490.2",
+      "PEN:668",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1001.81": "2024-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:1202.5": "2014-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:459.5": null,
+      "PEN:484": "2001-01-01",
+      "PEN:488": null,
+      "PEN:490": null,
+      "PEN:490.2": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:668": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "petty theft with two priors",
+      "shoplifting with two priors",
+      "PC 666.1"
+    ],
+    "calcrim": [
+      "1851"
+    ]
+  },
+  {
+    "id": "ca-veh-10851-a",
+    "lawCode": "VEH",
+    "code": "10851(a)",
+    "title": "Unlawful vehicle taking above $950 or posttheft driving",
+    "summary": "Taking a vehicle without its owner's consent with intent to deprive the owner temporarily or permanently, where the vehicle is worth more than $950; or unauthorized driving with that intent after a substantial break from the original theft. This choice covers those ordinary section 10851(a) routes. Taking a vehicle worth $950 or less, including temporary taking, ordinarily receives misdemeanor treatment under People v. Bullard; it must not be labeled a felony solely because the deprivation was temporary. Prior consent on another occasion does not establish consent now.",
+    "penalty": "Felony or misdemeanor for the routes described here: up to 364 days in county jail or 16 months, 2 years or 3 years under Penal Code section 1170(h), a base fine up to $5,000, or both. A qualifying alleged and proved felony vehicle prior under section 666.5 can change the felony term to 2, 3 or 4 years and supplies a different $10,000 fine provision; the misdemeanor option is not automatically erased. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Low-value taking and subdivision (b) special-vehicle sentencing require separate review and are not assigned these ordinary ranges. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to deprive the owner temporarily or permanently without consent; taking/value or substantially separated posttheft-driving facts must be proved.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:490.2",
+      "PEN:666.5",
+      "PEN:667",
+      "VEH:460",
+      "VEH:670"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:490.2": null,
+      "PEN:666.5": "2011-04-04",
+      "PEN:667": "2022-01-01",
+      "VEH:10851": "2011-04-04",
+      "VEH:460": null,
+      "VEH:670": null
+    },
+    "searchAliases": [
+      "auto theft",
+      "joyriding",
+      "VC 10851"
+    ],
+    "calcrim": [
+      "1820"
+    ]
+  },
+  {
+    "id": "ca-pen-403",
+    "lawCode": "PEN",
+    "code": "403",
+    "title": "Willfully disturbing or breaking up a lawful public meeting",
+    "summary": "Intentionally acting in violation of the rules or customary practices of a lawful public meeting, knowing or reasonably being expected to know of the violation, and substantially and unlawfully interfering with the meeting. The acts themselves, not their message or expressive content, must cause the interference. Religious-worship meetings covered by section 302 and elector assemblies covered by Elections Code section 18340 are excluded from this provision.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional acts and knowledge or reason to know they violate the meeting's rules or practices; substantial actual interference is required.",
+    "supportingKeys": [
+      "ELEC:18340",
+      "PEN:17",
+      "PEN:19",
+      "PEN:302"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "ELEC:18340": null,
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:302": "1995-01-01",
+      "PEN:403": "1995-01-01"
+    },
+    "searchAliases": [
+      "disturbing a public meeting"
+    ],
+    "calcrim": [
+      "2681"
+    ]
+  },
+  {
+    "id": "ca-pen-404-6-a",
+    "lawCode": "PEN",
+    "code": "404.6(a)",
+    "title": "Incitement to riot",
+    "summary": "With intent to cause a riot, urging a riot, force or violence, or burning or destruction of property under circumstances presenting a clear, present and immediate danger of those acts. Advocacy alone without the required immediate danger is insufficient. An actual riot is not required for this ordinary branch.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $1,000, or both under section 404.6(b). Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to cause a riot, urging others and the required clear, present and immediate danger.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:404"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:404": "1996-01-01",
+      "PEN:404.6": "2011-04-04"
+    },
+    "searchAliases": [
+      "inciting a riot"
+    ],
+    "calcrim": [
+      "2682"
+    ]
+  },
+  {
+    "id": "ca-pen-404-6-c",
+    "lawCode": "PEN",
+    "code": "404.6(c)",
+    "title": "Inciting a prison or jail riot resulting in serious bodily injury",
+    "summary": "With intent to cause a riot, urging a riot, force or violence, or burning or destruction of property under circumstances presenting a clear, present and immediate danger of those acts. Advocacy alone without the required immediate danger is insufficient. For this increased-punishment branch an actual riot in a state prison or county jail must result and cause serious bodily injury. The special facts must be alleged and admitted or proved; mere presence at a jail disturbance is insufficient.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). The applicable fine ceiling requires separate review because the section also contains a specific fine for the ordinary branch; no general $10,000 fine is assumed. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to cause a riot with the required urging, immediate danger, resulting riot and serious injury.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:404",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:404": "1996-01-01",
+      "PEN:404.6": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "inciting a jail riot"
+    ],
+    "calcrim": [
+      "2736"
+    ]
+  },
+  {
+    "id": "ca-pen-405",
+    "lawCode": "PEN",
+    "code": "405",
+    "title": "Participating in a riot",
+    "summary": "Willfully participating with at least one other person in an unauthorized disturbance of the public peace involving force or violence, or threats of force or violence with the immediate ability to carry them out. Mere presence at a protest is not participation in a riot.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $1,000, or both. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful participation in the defined riot.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:404"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:404": "1996-01-01",
+      "PEN:405": null
+    },
+    "searchAliases": [
+      "rioting"
+    ],
+    "calcrim": [
+      "2683"
+    ]
+  },
+  {
+    "id": "ca-pen-408",
+    "lawCode": "PEN",
+    "code": "408",
+    "title": "Participating in a rout or unlawful assembly",
+    "summary": "Willfully participating in a rout: two or more people acting together and attempting or advancing toward a riot; or willfully participating in an unlawful assembly with knowledge that it is unlawful. An assembly for a lawful purpose is not unlawful merely because it is loud or tumultuous: violence or a clear and present danger of immediate violence is required. Peaceful expression is not enough.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful participation; for the unlawful-assembly route, knowledge that the assembly is unlawful.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:404",
+      "PEN:406",
+      "PEN:407"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:404": "1996-01-01",
+      "PEN:406": null,
+      "PEN:407": null,
+      "PEN:408": null
+    },
+    "searchAliases": [
+      "unlawful assembly",
+      "rout"
+    ],
+    "calcrim": [
+      "2684",
+      "2685"
+    ]
+  },
+  {
+    "id": "ca-pen-409",
+    "lawCode": "PEN",
+    "code": "409",
+    "title": "Remaining after a lawful dispersal order at a riot, rout or unlawful assembly",
+    "summary": "Willfully remaining at a riot, rout or unlawful assembly after a public officer lawfully orders dispersal. The order must be reasonably communicated so that it is heard. Participation in the underlying disturbance is not itself required, but the gathering and lawful order must be proved; peaceful expression alone does not make an assembly unlawful. Officers and people assisting them in dispersal are excluded. Section 409.7 protects qualifying news representatives gathering or processing information in the specified protest-related closed areas from failure-to-disperse citations; it does not immunize other unlawful activity.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willfully remaining after a lawfully communicated order at the qualifying gathering.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:404",
+      "PEN:406",
+      "PEN:407",
+      "PEN:409.7",
+      "PEN:726"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:404": "1996-01-01",
+      "PEN:406": null,
+      "PEN:407": null,
+      "PEN:409": null,
+      "PEN:409.7": "2022-01-01",
+      "PEN:726": "1998-09-28"
+    },
+    "searchAliases": [
+      "failure to disperse"
+    ],
+    "calcrim": [
+      "2686"
+    ]
+  },
+  {
+    "id": "ca-pen-416-a",
+    "lawCode": "PEN",
+    "code": "416(a)",
+    "title": "Refusal to disperse with intent to disturb the peace or commit a crime",
+    "summary": "Assembling with at least one other person with intent to commit a crime or violent acts, or acts tending to incite others to violence, then willfully remaining after a lawful public-officer dispersal warning. The officer must have probable cause to believe the assembly's purpose is unlawful, and reasonably communicate the order so it is heard. Unlike section 409, this route requires the defendant's specified intent. Section 409.7 protects qualifying news representatives gathering or processing information in the specified protest-related closed areas from failure-to-disperse citations; it does not immunize other unlawful activity.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Section 416(b) also requires restitution for property damage personally caused by the violation, or appropriate community service if the court finds inability to pay; the prosecution or claimant bears the burden of proving causation. Adult base penalties are shown. Restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to commit the specified unlawful or violent acts and willful refusal after the lawful warning.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:409.7",
+      "PEN:726"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:409.7": "2022-01-01",
+      "PEN:416": null,
+      "PEN:726": "1998-09-28"
+    },
+    "searchAliases": [
+      "refusal to disperse"
+    ],
+    "calcrim": [
+      "2687"
+    ]
+  }
+]

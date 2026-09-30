@@ -221,6 +221,20 @@
       ]
     },
     {
+      "key": "ELEC:18340",
+      "expectedHash": "c199fa6a4e4a8d52db7e59ecaee2fd9e88c217bcd9df9a4dcba8cfed710e9165",
+      "observedHash": "c199fa6a4e4a8d52db7e59ecaee2fd9e88c217bcd9df9a4dcba8cfed710e9165",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-05-29 01:00:06"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:00:44"
+      ]
+    },
+    {
       "key": "FAM:2200",
       "expectedHash": "4de8ce80e3f5f84459afaf04f8c5c4aa574e731292dd94b75c9a346da34f6455",
       "observedHash": "4de8ce80e3f5f84459afaf04f8c5c4aa574e731292dd94b75c9a346da34f6455",
@@ -2253,6 +2267,20 @@
       ]
     },
     {
+      "key": "PEN:1001.81",
+      "expectedHash": "8851eccdd62ed19a36591fec0f44cdf13cc90b8e88ffc3833f1880ef25f5e08b",
+      "observedHash": "8851eccdd62ed19a36591fec0f44cdf13cc90b8e88ffc3833f1880ef25f5e08b",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:17"
+      ]
+    },
+    {
       "key": "PEN:11106",
       "expectedHash": "e5fc41988f2d5619eca747c6ee6360690fafb80641c0b2cde965f78edfd1be18",
       "observedHash": "e5fc41988f2d5619eca747c6ee6360690fafb80641c0b2cde965f78edfd1be18",
@@ -2351,6 +2379,20 @@
       ]
     },
     {
+      "key": "PEN:1170.12",
+      "expectedHash": "c8c011d32f7c0235e713e9b3ba197ec6d865e84b96d6292c71209a95bca5cc47",
+      "observedHash": "c8c011d32f7c0235e713e9b3ba197ec6d865e84b96d6292c71209a95bca5cc47",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:17"
+      ]
+    },
+    {
       "key": "PEN:118",
       "expectedHash": "67ac64b590ff1dc773208111aac68aecd4f9a1ad7eded53cc0531f52527fb067",
       "observedHash": "67ac64b590ff1dc773208111aac68aecd4f9a1ad7eded53cc0531f52527fb067",
@@ -2396,6 +2438,20 @@
       "key": "PEN:1202.4",
       "expectedHash": "77ad9a88b7f453dddbc073091188abd7e924f9711841df54d53997313a9af10c",
       "observedHash": "77ad9a88b7f453dddbc073091188abd7e924f9711841df54d53997313a9af10c",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:17"
+      ]
+    },
+    {
+      "key": "PEN:1202.5",
+      "expectedHash": "0a0c4235eca1d1424c4227001eb1cbc650d92d14d6105c0622f513482b54169c",
+      "observedHash": "0a0c4235eca1d1424c4227001eb1cbc650d92d14d6105c0622f513482b54169c",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -6425,6 +6481,20 @@
       ]
     },
     {
+      "key": "PEN:302",
+      "expectedHash": "048140b3020bb11bb0ca9c4657202bf2ec2cde214701dcfa2aa0e38824fc9575",
+      "observedHash": "048140b3020bb11bb0ca9c4657202bf2ec2cde214701dcfa2aa0e38824fc9575",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:15"
+      ]
+    },
+    {
       "key": "PEN:30305",
       "expectedHash": "ead7567397d695686a30f43f407ff5e287bd8c2512c90475c55c722dfef3882b",
       "observedHash": "ead7567397d695686a30f43f407ff5e287bd8c2512c90475c55c722dfef3882b",
@@ -6945,9 +7015,149 @@
       ]
     },
     {
+      "key": "PEN:403",
+      "expectedHash": "015f26738fbd3c4b6411323969c46ceb60ecd68d0d40b6c8c158969f7ef5602a",
+      "observedHash": "015f26738fbd3c4b6411323969c46ceb60ecd68d0d40b6c8c158969f7ef5602a",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:404",
+      "expectedHash": "f50dd36b57f2986a3ddefbf0a3a30d5f1f8249ba971eadc219ec386ab3947301",
+      "observedHash": "f50dd36b57f2986a3ddefbf0a3a30d5f1f8249ba971eadc219ec386ab3947301",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:404.6",
+      "expectedHash": "2b637e14c48314951f90cbfde5b79b551997d3f7624870e5e19aa6d0862da505",
+      "observedHash": "2b637e14c48314951f90cbfde5b79b551997d3f7624870e5e19aa6d0862da505",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:405",
+      "expectedHash": "c5ed4cc2a28831f0a5e07e3f5421d6789139a2e2ec7fb99677ac594a5884d888",
+      "observedHash": "c5ed4cc2a28831f0a5e07e3f5421d6789139a2e2ec7fb99677ac594a5884d888",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:406",
+      "expectedHash": "216c31c9d531f9124d15b51cda094c256f1b6ac4ef6bdb13e7e8e35300b7f349",
+      "observedHash": "216c31c9d531f9124d15b51cda094c256f1b6ac4ef6bdb13e7e8e35300b7f349",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:407",
+      "expectedHash": "0deb228434adfc36ddc6dbe1872180107b3d14ef7ab38cbc3e8c1353f877d4a5",
+      "observedHash": "0deb228434adfc36ddc6dbe1872180107b3d14ef7ab38cbc3e8c1353f877d4a5",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:408",
+      "expectedHash": "6bf9b2643fd7a18711ad9a2237d92e57b4433f585c830ef1e0ce7af42b455414",
+      "observedHash": "6bf9b2643fd7a18711ad9a2237d92e57b4433f585c830ef1e0ce7af42b455414",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:409",
+      "expectedHash": "3035996458c34e4bb406ef75bba054d7fe689af79aa4129ad2ca9a4c1ac22355",
+      "observedHash": "3035996458c34e4bb406ef75bba054d7fe689af79aa4129ad2ca9a4c1ac22355",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:409.7",
+      "expectedHash": "32a766b6391567f9eccabeeae74f898b5b55cc0dcf6cfd0f654f94db5d20174b",
+      "observedHash": "32a766b6391567f9eccabeeae74f898b5b55cc0dcf6cfd0f654f94db5d20174b",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
       "key": "PEN:415",
       "expectedHash": "ae820f7db270d5344aa61b56089e1b37a557919caff166ca0819fdcc4c683102",
       "observedHash": "ae820f7db270d5344aa61b56089e1b37a557919caff166ca0819fdcc4c683102",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:416",
+      "expectedHash": "a0c6361d9f872f92441ff2601739ded8913341d7ef155f3a224e5860eab64a2c",
+      "observedHash": "a0c6361d9f872f92441ff2601739ded8913341d7ef155f3a224e5860eab64a2c",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -9159,6 +9369,20 @@
       ]
     },
     {
+      "key": "PEN:666",
+      "expectedHash": "3999ab61440eec9d9d2e028abe87257247d5aa9c81458b719918f708f14a5fd9",
+      "observedHash": "3999ab61440eec9d9d2e028abe87257247d5aa9c81458b719918f708f14a5fd9",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:17"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
       "key": "PEN:666.1",
       "expectedHash": "c02a6101a9ce4509e0d35c76d251d45dc3488240e231510de54544110094d9b3",
       "observedHash": "c02a6101a9ce4509e0d35c76d251d45dc3488240e231510de54544110094d9b3",
@@ -9218,6 +9442,20 @@
       "key": "PEN:667.61",
       "expectedHash": "cd763662ca2d0cc760330a2a252e1324d79b165af8e69c666c2308470d892c84",
       "observedHash": "cd763662ca2d0cc760330a2a252e1324d79b165af8e69c666c2308470d892c84",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:17"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
+      "key": "PEN:668",
+      "expectedHash": "ef97af2ad380e341672a2684f76e1aaddc074be67c241998b37d6f3bee1eaf7c",
+      "observedHash": "ef97af2ad380e341672a2684f76e1aaddc074be67c241998b37d6f3bee1eaf7c",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -9296,6 +9534,20 @@
       ],
       "observedTransactionUpdates": [
         "2026-09-26 01:01:14"
+      ]
+    },
+    {
+      "key": "PEN:726",
+      "expectedHash": "6327c1c00403ad7858742d5d0d0a75237d4c4269653d6fc58c6021d5a9317400",
+      "observedHash": "6327c1c00403ad7858742d5d0d0a75237d4c4269653d6fc58c6021d5a9317400",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:17"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
       ]
     },
     {
@@ -9778,6 +10030,20 @@
       "key": "VEH:10804",
       "expectedHash": "cd307d22fcb2b81f13fc3a2ce92b6f87d2d5cf98a948291c664afb1f73f4dd5c",
       "observedHash": "cd307d22fcb2b81f13fc3a2ce92b6f87d2d5cf98a948291c664afb1f73f4dd5c",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:19"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:08"
+      ]
+    },
+    {
+      "key": "VEH:10851",
+      "expectedHash": "b57981a65fa31f88b2aa807656c76abeb0645cca9091fe5da0907b83785708de",
+      "observedHash": "b57981a65fa31f88b2aa807656c76abeb0645cca9091fe5da0907b83785708de",
       "expectedVersions": 1,
       "observedVersions": 1,
       "status": "unchanged",
@@ -10944,6 +11210,20 @@
       ],
       "observedTransactionUpdates": [
         "2026-09-26 01:01:11"
+      ]
+    },
+    {
+      "key": "VEH:460",
+      "expectedHash": "b1a5fb1c304a604034cbd7bda17e8b1aac90f69701c633c21ef14004e4ba0262",
+      "observedHash": "b1a5fb1c304a604034cbd7bda17e8b1aac90f69701c633c21ef14004e4ba0262",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-17 01:04:18"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:07"
       ]
     },
     {
