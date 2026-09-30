@@ -1,0 +1,803 @@
+[
+  {
+    "id": "ca-pen-591",
+    "lawCode": "PEN",
+    "code": "591",
+    "title": "Damaging or obstructing telephone, electrical or other specified lines",
+    "summary": "Unlawfully and maliciously damaging, removing, disconnecting, cutting or obstructing a telegraph, telephone, cable television or electrical line or connected apparatus, including backup power, or making the specified unauthorized electrical connection.",
+    "penalty": "Felony or misdemeanor: the misdemeanor route allows up to 364 days in county jail, a base fine up to $1,000, or both. The felony route is 16 months, 2 years or 3 years under section 1170(h) AND a base fine up to $10,000. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Unlawful and malicious conduct.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:591": "2015-01-01"
+    },
+    "searchAliases": [
+      "cutting telephone lines"
+    ],
+    "calcrim": [
+      "2902"
+    ]
+  },
+  {
+    "id": "ca-pen-601-a-1",
+    "lawCode": "PEN",
+    "code": "601(a)(1)",
+    "title": "Trespass after a credible threat: residence",
+    "summary": "Making a credible threat of serious bodily injury with intent to cause reasonable fear for the target or immediate family, then within 30 days unlawfully entering the threatened person's residence or contiguous real property without lawful purpose and with intent to execute the threat. Entry into your own residence, real property or workplace is excluded. Protected labor activities are excluded.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h), a base fine up to $2,000, or both fine and imprisonment. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to cause reasonable fear and to execute a credible threat; workplace route also requires knowledge of the workplace.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:417.6",
+      "PEN:646.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417.6": "2012-06-27",
+      "PEN:601": "2011-04-04",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "aggravated trespass",
+      "criminal trespass after threat"
+    ],
+    "calcrim": [
+      "2929"
+    ]
+  },
+  {
+    "id": "ca-pen-601-a-2",
+    "lawCode": "PEN",
+    "code": "601(a)(2)",
+    "title": "Trespass after a credible threat: workplace",
+    "summary": "Making a credible threat of serious bodily injury with intent to cause reasonable fear for the target or immediate family, then within 30 days unlawfully entering a place known to be the threatened person's workplace and taking an act to locate that person there without lawful purpose and with intent to execute the threat. Entry into your own residence, real property or workplace is excluded. Protected labor activities are excluded.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h), a base fine up to $2,000, or both fine and imprisonment. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to cause reasonable fear and to execute a credible threat; workplace route also requires knowledge of the workplace.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:417.6",
+      "PEN:646.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:417.6": "2012-06-27",
+      "PEN:601": "2011-04-04",
+      "PEN:646.9": "2026-01-01"
+    },
+    "searchAliases": [
+      "aggravated trespass",
+      "criminal trespass after threat"
+    ],
+    "calcrim": [
+      "2929"
+    ]
+  },
+  {
+    "id": "ca-pen-602-k",
+    "lawCode": "PEN",
+    "code": "602(k)",
+    "title": "Trespass to damage property or interfere with lawful business",
+    "summary": "Willfully entering another's land or building intending to damage property or property rights, or interfere with, obstruct or damage a lawful business or occupation, and actually causing that damage or interference. Intent alone does not establish the completed offense described in CALCRIM 2930.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful entry with the specified purpose, followed by actual damage or interference.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2930"
+    ]
+  },
+  {
+    "id": "ca-pen-602-m",
+    "lawCode": "PEN",
+    "code": "602(m)",
+    "title": "Trespass by entering and occupying property without consent",
+    "summary": "Willfully entering another's land or building without consent and occupying it without consent continuously until removed, as specified in CALCRIM 2931. A brief entry alone is not this occupancy offense; other trespass provisions may apply.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Willful entry and occupation without consent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    },
+    "searchAliases": [
+      "unlawful occupation",
+      "squatting"
+    ],
+    "calcrim": [
+      "2931"
+    ]
+  },
+  {
+    "id": "ca-pen-602-5-a",
+    "lawCode": "PEN",
+    "code": "602.5(a)",
+    "title": "Unauthorized entry of a dwelling",
+    "summary": "Entering or remaining in a noncommercial dwelling house, apartment or other residential place without the consent of its owner, agent or person in lawful possession. Public officers or employees acting within their lawful duties are excluded.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional entry or remaining without consent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:602.5": "2001-01-01"
+    },
+    "searchAliases": [
+      "residential trespass"
+    ],
+    "calcrim": [
+      "2932"
+    ]
+  },
+  {
+    "id": "ca-pen-602-5-b",
+    "lawCode": "PEN",
+    "code": "602.5(b)",
+    "title": "Unauthorized entry of a dwelling: resident or authorized person present",
+    "summary": "Entering or remaining in a noncommercial dwelling house, apartment or other residential place without the consent of its owner, agent or person in lawful possession. Public officers or employees acting within their lawful duties are excluded. A resident or other authorized person must be present at any time during the incident.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $1,000, or both. If probation is granted, the court may order up to three years of supervised probation; counseling as designated by the court is a required probation condition. The court must consider a restraining order lasting up to three years. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional entry or remaining without consent.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:19"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:602.5": "2001-01-01"
+    },
+    "searchAliases": [
+      "residential trespass"
+    ],
+    "calcrim": [
+      "2932",
+      "2933"
+    ]
+  },
+  {
+    "id": "ca-pen-399-a",
+    "lawCode": "PEN",
+    "code": "399(a)",
+    "title": "Failure to control a dangerous animal causing death",
+    "summary": "Owning or controlling a dangerous animal, knowing its dangerous propensities, and willfully allowing it to run free or failing to use ordinary care in keeping it, resulting in death. The injured person must have taken reasonable precautions unless incapable of doing so, including a child under five as explained in CALCRIM 2950. Mere ownership without knowledge of the danger is insufficient.",
+    "penalty": "Felony: 16 months, 2 years or 3 years in state prison under section 18(a), with a discretionary base fine up to $10,000 under section 672. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Actual knowledge of dangerous propensities, plus willfully allowing it to run free or failure to use ordinary care.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:19": "1983-09-27",
+      "PEN:399": "2001-09-05",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "dangerous animal",
+      "mischievous animal"
+    ],
+    "calcrim": [
+      "2950"
+    ]
+  },
+  {
+    "id": "ca-pen-399-b",
+    "lawCode": "PEN",
+    "code": "399(b)",
+    "title": "Failure to control a dangerous animal causing serious bodily injury",
+    "summary": "Owning or controlling a dangerous animal, knowing its dangerous propensities, and willfully allowing it to run free or failing to use ordinary care in keeping it, resulting in serious bodily injury. The injured person must have taken reasonable precautions unless incapable of doing so, including a child under five as explained in CALCRIM 2950. Mere ownership without knowledge of the danger is insufficient.",
+    "penalty": "Felony or misdemeanor: the felony route is 16 months, 2 years or 3 years in state prison under section 18(a), with a discretionary base fine up to $10,000 under section 672. The misdemeanor default under section 19 is up to six months in county jail, a base fine up to $1,000, or both. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Actual knowledge of dangerous propensities, plus willfully allowing it to run free or failure to use ordinary care.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:19",
+      "PEN:672"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:19": "1983-09-27",
+      "PEN:399": "2001-09-05",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "dangerous animal",
+      "mischievous animal"
+    ],
+    "calcrim": [
+      "2950"
+    ]
+  },
+  {
+    "id": "ca-pen-399-5-a",
+    "lawCode": "PEN",
+    "code": "399.5(a)",
+    "title": "Failure to use ordinary care in controlling a trained attack dog",
+    "summary": "Owning or controlling a dog trained to fight, attack or kill, knowing or reasonably being expected to know its dangerous nature, and failing to use ordinary care so that it bites on two separate occasions or on one occasion causes substantial physical injury. The reasonable-precautions requirement has the incapacity exception explained in CALCRIM 2951. Statutory exclusions cover trespassing, provocation or contribution to injury, active police or military work, and specified professionals.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 2, 3 or 4 years under section 1170(h), a base fine up to $10,000, or both. Section 1170(h) ordinarily means county jail subject to its state-prison exclusions. After conviction a hearing is required; the court may order confinement changes, removal or destruction of the dog to prevent recurrence. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge or reason to know of the danger, and failure to use ordinary care.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:830"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:399.5": "2011-04-04",
+      "PEN:830": null
+    },
+    "searchAliases": [
+      "attack dog bites"
+    ],
+    "calcrim": [
+      "2951",
+      "2952"
+    ]
+  },
+  {
+    "id": "ca-bpc-25658-a",
+    "lawCode": "BPC",
+    "code": "25658(a)",
+    "title": "Selling or furnishing alcohol to a person under 21",
+    "summary": "Selling, furnishing, giving or causing alcohol to be supplied to a person under 21, outside the injury/death branch in subdivision (c). Furnishing requires an affirmative act of supply. Knowledge of age is not an element, but reasonable actual belief the person is 21 and applicable good-faith identification defenses require consideration. Qualified educational tasting has a narrow statutory exception.",
+    "penalty": "Misdemeanor: section 25658(e)(1) provides a $250 base fine, 24 to 32 hours of community service, or both, unless a more specific penalty applies. Furnishing to a minor under (e)(2) carries a $1,000 base fine AND at least 24 hours of community service. No part of those fines may be suspended. Injury/death under (c) has a separate penalty. These provisions do not specify a jail term for an ordinary (a) violation. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The supplying act must be proved; knowledge of age is not an element. Age-belief and identification defenses remain available where applicable.",
+    "supportingKeys": [
+      "BPC:23004",
+      "BPC:25660",
+      "BPC:25667",
+      "BPC:25668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:23004": "2017-01-01",
+      "BPC:25658": "2024-01-01",
+      "BPC:25660": "2026-01-01",
+      "BPC:25667": "2011-01-01",
+      "BPC:25668": "2021-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "furnishing alcohol to a minor",
+      "selling alcohol to a minor"
+    ],
+    "calcrim": [
+      "2962"
+    ]
+  },
+  {
+    "id": "ca-bpc-25658-b",
+    "lawCode": "BPC",
+    "code": "25658(b)",
+    "title": "Underage purchase of alcohol or consumption on licensed premises",
+    "summary": "While under 21, purchasing alcohol or consuming it on premises licensed for on-site consumption. Official police-directed decoy purchases are immune. Section 25667 provides conditional immunity for the first underage 911 caller seeking alcohol-related medical aid, with applicable stay-and-cooperate requirements; it does not immunize impaired driving. Qualified educational tasting has separate limits under section 25668.",
+    "penalty": "Misdemeanor: first violation carries a $250 base fine, 24 to 32 hours of community service, or both. A second or later qualifying violation carries a base fine up to $500, 36 to 48 hours of community service, or both. The first-offense fine may not be suspended; service occurs outside work and school hours. Section 25658(e)(1) does not specify a jail term. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Purchase or consumption by a person under 21; statutory immunities must be considered.",
+    "supportingKeys": [
+      "BPC:23004",
+      "BPC:25660",
+      "BPC:25667",
+      "BPC:25668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:23004": "2017-01-01",
+      "BPC:25658": "2024-01-01",
+      "BPC:25660": "2026-01-01",
+      "BPC:25667": "2011-01-01",
+      "BPC:25668": "2021-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "minor purchasing alcohol",
+      "minor consuming alcohol"
+    ],
+    "calcrim": [
+      "2961"
+    ]
+  },
+  {
+    "id": "ca-bpc-25658-c",
+    "lawCode": "BPC",
+    "code": "25658(c)",
+    "title": "Supplying alcohol to a person under 21 who causes great bodily injury or death",
+    "summary": "Purchasing for, furnishing or giving alcohol to a person under 21 in violation of subdivision (a), followed by that person consuming it and proximately causing great bodily injury or death to themselves or someone else. The injury and causal connection must be proved; the death or injury does not automatically make this statutory offense a felony.",
+    "penalty": "Misdemeanor: if jail is imposed, six months to 364 days in county jail; alternatively a $3,000 base fine, or both jail and fine. The statute permits a fine-only sentence, so six months is not an unconditional mandatory jail term. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Unlawful supplying and the required causal connection; applicable age-belief or identification defenses require review.",
+    "supportingKeys": [
+      "BPC:23004",
+      "BPC:25660",
+      "BPC:25667",
+      "BPC:25668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:23004": "2017-01-01",
+      "BPC:25658": "2024-01-01",
+      "BPC:25660": "2026-01-01",
+      "BPC:25667": "2011-01-01",
+      "BPC:25668": "2021-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "furnishing alcohol causing death"
+    ],
+    "calcrim": [
+      "2964"
+    ]
+  },
+  {
+    "id": "ca-bpc-25658-d",
+    "lawCode": "BPC",
+    "code": "25658(d)",
+    "title": "Licensee knowingly permitting underage alcohol consumption",
+    "summary": "An on-sale licensee knowingly permitting a person under 21 to consume alcohol on the licensed premises. Knowledge of the person's age is not required by the statute. Applicable identification defenses under section 25660 must be considered.",
+    "penalty": "Misdemeanor: a $250 base fine, 24 to 32 hours of community service, or both under section 25658(e)(1). No part of that fine may be suspended; service occurs outside work and school hours. This provision does not specify a jail term. Licensing discipline is separate. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing permission to consume; knowledge that the person is under 21 is not required.",
+    "supportingKeys": [
+      "BPC:23004",
+      "BPC:25660",
+      "BPC:25667",
+      "BPC:25668",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:23004": "2017-01-01",
+      "BPC:25658": "2024-01-01",
+      "BPC:25660": "2026-01-01",
+      "BPC:25667": "2011-01-01",
+      "BPC:25668": "2021-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [],
+    "calcrim": [
+      "2963"
+    ]
+  },
+  {
+    "id": "ca-bpc-25658-2-a",
+    "lawCode": "BPC",
+    "code": "25658.2(a)",
+    "title": "Parent permitting underage substance use and driving that causes a collision",
+    "summary": "A parent or legal guardian knowingly allowing their child or a companion, under 18, to consume alcohol or use a controlled substance at home, resulting in a blood-alcohol concentration of at least 0.05 percent or controlled-substance influence; knowingly permitting that person to drive after leaving; and that person causing a traffic collision. All of these conditions are required.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $1,000, or both. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing permission for home substance use and subsequent driving; the specified intoxication and collision conditions must also be proved.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:25658.2": "2004-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "parent allowing underage drinking and driving"
+    ],
+    "calcrim": [
+      "2965"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-1",
+    "lawCode": "PEN",
+    "code": "337a(a)(1)",
+    "title": "Pool selling or bookmaking",
+    "summary": "Knowingly engaging in the following conduct: pool selling or bookmaking, with or without writing. A single instance can qualify; it need not be your occupation. Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing pool selling or bookmaking.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2990",
+      "2991"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-2",
+    "lawCode": "PEN",
+    "code": "337a(a)(2)",
+    "title": "Keeping a place equipped for recording bets",
+    "summary": "Keeping or occupying a place equipped with books, papers or devices for recording bets, wagers or pools on the contests or contingent events specified by the statute. The recording purpose must be proved. Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Keeping or occupying the equipped place for the purpose of recording the specified bets.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2992"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-3",
+    "lawCode": "PEN",
+    "code": "337a(a)(3)",
+    "title": "Receiving, holding or forwarding stakes for bets",
+    "summary": "Receiving, holding, forwarding or purporting to receive, hold or forward money or other value staked or offered for betting on the specified contests or contingent events. Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing receipt, holding or forwarding of the stakes for the betting purpose.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2993"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-4",
+    "lawCode": "PEN",
+    "code": "337a(a)(4)",
+    "title": "Recording or registering bets",
+    "summary": "Knowingly engaging in the following conduct: recording or registering bets or wagers on the specified contests or contingent events, whether for profit or gratuitously. Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing recording or registration of the specified bet or wager.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2994"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-5",
+    "lawCode": "PEN",
+    "code": "337a(a)(5)",
+    "title": "Permitting premises to be used for prohibited betting activities",
+    "summary": "As owner, lessee or occupant, knowingly permitting a place to be used for the pool selling, bookmaking, equipped betting operation, handling stakes or recording bets prohibited by paragraphs (1) through (4). Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing permission for the prohibited use of the premises.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2995"
+    ]
+  },
+  {
+    "id": "ca-pen-337a-a-6",
+    "lawCode": "PEN",
+    "code": "337a(a)(6)",
+    "title": "Making, offering or accepting bets on contests",
+    "summary": "Knowingly engaging in the following conduct: laying, making, offering or accepting a bet on a contest of skill, speed or endurance involving persons, animals or mechanical apparatus. This paragraph does not itself repeat the broader contingent-event wording of paragraphs (2) through (4). Statutory authorization and the limited noncommercial-pool exception require consideration; this label is not a claim that all gambling is criminal.",
+    "penalty": "Felony or misdemeanor: first offense carries up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $5,000, or both. One alleged and proved prior changes the non-prison sentence to county jail up to 364 days AND a $1,000 to $10,000 fine; two or more alleged and proved priors allow county jail up to 364 days, a $1,000 to $15,000 fine, or both. The statute also requires a qualifying fine or county jail as a condition of probation in these repeat cases. The limited section 336.9 infraction exception must be considered. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowing making, offering or acceptance of the specified wager.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:336.9"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "unlawful betting"
+    ],
+    "calcrim": [
+      "2996"
+    ]
+  },
+  {
+    "id": "ca-pen-336-9-a",
+    "lawCode": "PEN",
+    "code": "336.9(a)",
+    "title": "Participation in a qualifying noncommercial betting pool",
+    "summary": "Knowingly participating in the betting activities in section 337a(a)(2) through (6), without compensation other than stakes available on equal conditions to every participant, on a lawful contest. Other participants must also lack separate gain, hire or reward. This infraction treatment excludes online bets and pools with more than $2,500 at stake; it does not cover bookmaking under 337a(a)(1).",
+    "penalty": "Infraction: a base fine up to $250; no incarceration for this infraction. Other wagering outside these conditions requires separate classification. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "infraction"
+    ],
+    "mentalState": "Knowing participation within all of the statutory noncommercial conditions.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19.6",
+      "PEN:337a"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19.6": null,
+      "PEN:336.9": "2011-01-01",
+      "PEN:337a": "2010-01-01"
+    },
+    "searchAliases": [
+      "office betting pool"
+    ],
+    "calcrim": [
+      "2992",
+      "2993",
+      "2994",
+      "2995",
+      "2996"
+    ]
+  },
+  {
+    "id": "ca-pen-632-a",
+    "lawCode": "PEN",
+    "code": "632(a)",
+    "title": "Eavesdropping on or recording a confidential communication without consent",
+    "summary": "Intentionally using an electronic device to listen to or record a confidential communication without all parties' consent, where at least one party intends confidentiality on objectively reasonable grounds. Public proceedings and conversations reasonably expected to be overheard or recorded are excluded. Important exceptions include participant recording to obtain evidence reasonably believed to concern the offenses listed in section 633.5, including domestic violence, and the limited restraining-order circumstances in section 633.6. Authorized law-enforcement activity and other statutory exclusions also require consideration.",
+    "penalty": "Felony or misdemeanor: up to 364 days in county jail or 16 months, 2 years or 3 years in state prison under section 18(a), a base fine up to $2,500 per violation, or both. A qualifying prior under section 632, 631, 632.5, 632.6, 632.7 or 636 increases the base fine ceiling to $10,000 per violation. Civil remedies under section 637.2 are separate. Adult base penalties are shown; restitution, assessments, enhancements and case-specific sentencing require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional listening or recording; the communication must meet the objective confidentiality requirement.",
+    "supportingKeys": [
+      "PEN:13700",
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:236.1",
+      "PEN:633",
+      "PEN:633.02",
+      "PEN:633.5",
+      "PEN:633.6",
+      "PEN:637.2",
+      "PEN:653m"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:13700": "2017-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:236.1": "2025-01-01",
+      "PEN:632": "2017-01-01",
+      "PEN:633": "2019-01-01",
+      "PEN:633.02": "2016-01-01",
+      "PEN:633.5": "2018-01-01",
+      "PEN:633.6": "2018-01-01",
+      "PEN:637.2": "2017-01-01",
+      "PEN:653m": "2009-01-01"
+    },
+    "searchAliases": [
+      "secret recording",
+      "recording without consent",
+      "eavesdropping"
+    ],
+    "calcrim": [
+      "3010"
+    ]
+  }
+]

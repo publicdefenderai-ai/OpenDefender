@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 592,
-    "configuredSelectable": 571,
+    "canonicalRecords": 615,
+    "configuredSelectable": 594,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 472,
-    "boundedCorrectionPass": 571,
+    "boundedAdditionPass": 495,
+    "boundedCorrectionPass": 594,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 307,
+    "distinctSelectablePrimarySections": 318,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 307,
-    "selectableRecordsWithAllPrimaryTextAcquired": 571,
-    "totalAcquiredSectionsIncludingDependencies": 773,
-    "totalAcquiredVersionsIncludingDependencies": 781,
+    "acquiredSelectablePrimarySections": 318,
+    "selectableRecordsWithAllPrimaryTextAcquired": 594,
+    "totalAcquiredSectionsIncludingDependencies": 794,
+    "totalAcquiredVersionsIncludingDependencies": 802,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "571 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "594 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -42,8 +42,8 @@
   "byLawCode": [
     {
       "lawCode": "BPC",
-      "selectable": 1,
-      "corrected": 1,
+      "selectable": 6,
+      "corrected": 6,
       "awaitingCorrection": 0
     },
     {
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 443,
-      "corrected": 443,
+      "selectable": 461,
+      "corrected": 461,
       "awaitingCorrection": 0
     },
     {
@@ -282,6 +282,27 @@
     }
   ],
   "sourceRequests": [
+    {
+      "lawCode": "BPC",
+      "section": "25658",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25658&lawCode=BPC",
+      "recordIds": [
+        "ca-bpc-25658-a",
+        "ca-bpc-25658-b",
+        "ca-bpc-25658-c",
+        "ca-bpc-25658-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "BPC",
+      "section": "25658.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25658.2&lawCode=BPC",
+      "recordIds": [
+        "ca-bpc-25658-2-a"
+      ],
+      "alreadyRetained": false
+    },
     {
       "lawCode": "BPC",
       "section": "25662",
@@ -2072,6 +2093,29 @@
     },
     {
       "lawCode": "PEN",
+      "section": "336.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=336.9&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-336-9-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "337a",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=337a&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-337a-a-1",
+        "ca-pen-337a-a-2",
+        "ca-pen-337a-a-3",
+        "ca-pen-337a-a-4",
+        "ca-pen-337a-a-5",
+        "ca-pen-337a-a-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "368",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=368&lawCode=PEN",
       "recordIds": [
@@ -2087,6 +2131,25 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=374.4&lawCode=PEN",
       "recordIds": [
         "ca-littering"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "399",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=399&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-399-a",
+        "ca-pen-399-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "399.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=399.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-399-5-a"
       ],
       "alreadyRetained": false
     },
@@ -2841,6 +2904,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "591",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=591&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-591"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "594",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=594&lawCode=PEN",
       "recordIds": [
@@ -2854,6 +2926,45 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=597&lawCode=PEN",
       "recordIds": [
         "ca-animal-cruelty-misdemeanor"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "601",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=601&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-601-a-1",
+        "ca-pen-601-a-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "602",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=602&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-602-k",
+        "ca-pen-602-m"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "602.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=602.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-602-5-a",
+        "ca-pen-602-5-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "632",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=632&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-632-a"
       ],
       "alreadyRetained": false
     },
@@ -5465,6 +5576,397 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-591",
+      "title": "Damaging or obstructing telephone, electrical or other specified lines",
+      "citation": "Cal. Penal Code § 591",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:591"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:591"
+      ],
+      "catalogSha256": "4b9555359a5f8b1254651316fbbd3f2cdc14d67fcaf45352d32a77201633f1f4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-601-a-1",
+      "title": "Trespass after a credible threat: residence",
+      "citation": "Cal. Penal Code § 601(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:601"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:601"
+      ],
+      "catalogSha256": "65e270aad3d03e92f0f627e8d5123ebb832223bea3450350c7fe46d4707a4da3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-601-a-2",
+      "title": "Trespass after a credible threat: workplace",
+      "citation": "Cal. Penal Code § 601(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:601"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:601"
+      ],
+      "catalogSha256": "66c91c1f526dbb91698258ea89e8e2e65200dc9b2c6945eb4e60ab685163d07b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-k",
+      "title": "Trespass to damage property or interfere with lawful business",
+      "citation": "Cal. Penal Code § 602(k)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "97407be14ad31c8a4fe10f995f44df0311592d52312efa468f8d6d7e7a534b35",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-m",
+      "title": "Trespass by entering and occupying property without consent",
+      "citation": "Cal. Penal Code § 602(m)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "2fa0da7132cc51358270da895ec8aa4cc49fbbc58a657cc216fd34c4fd7154fb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-5-a",
+      "title": "Unauthorized entry of a dwelling",
+      "citation": "Cal. Penal Code § 602.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602.5"
+      ],
+      "catalogSha256": "d03bada6e6d065c1cc30d04175fbad7c993d6d37c6589c3a0f37a3c85d83b755",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-5-b",
+      "title": "Unauthorized entry of a dwelling: resident or authorized person present",
+      "citation": "Cal. Penal Code § 602.5(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602.5"
+      ],
+      "catalogSha256": "0430756ce0b2b84ec2a36173017e5f71b046cf309d81c3577b6ddf10cc9c1372",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-399-a",
+      "title": "Failure to control a dangerous animal causing death",
+      "citation": "Cal. Penal Code § 399(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:399"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:399"
+      ],
+      "catalogSha256": "892044c759c19911d61c0e7aaff76c00eb1b2c51d24aa72411b8ab51d0d39d4b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-399-b",
+      "title": "Failure to control a dangerous animal causing serious bodily injury",
+      "citation": "Cal. Penal Code § 399(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:399"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:399"
+      ],
+      "catalogSha256": "75eaa99a043e2e4187728d56110cd1c3ad842ba1dbeaa7ca593ffb22b6efc9be",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-399-5-a",
+      "title": "Failure to use ordinary care in controlling a trained attack dog",
+      "citation": "Cal. Penal Code § 399.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:399.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:399.5"
+      ],
+      "catalogSha256": "443d8322a28c0deb5767b18cbdcda0a874dd473b6ddb709760e14461a809837f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-25658-a",
+      "title": "Selling or furnishing alcohol to a person under 21",
+      "citation": "Cal. Business & Professions Code § 25658(a)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:25658"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25658"
+      ],
+      "catalogSha256": "5ff1b77431bdb03ea05f5da3a7f21c4c07dd95eb7738d1dd8e2bbebaec708eb8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-25658-b",
+      "title": "Underage purchase of alcohol or consumption on licensed premises",
+      "citation": "Cal. Business & Professions Code § 25658(b)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:25658"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25658"
+      ],
+      "catalogSha256": "ef2bb32e1b49576e4f3ca9c63a10fd8fe4103e9d77b407e20e50173f0b600662",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-25658-c",
+      "title": "Supplying alcohol to a person under 21 who causes great bodily injury or death",
+      "citation": "Cal. Business & Professions Code § 25658(c)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:25658"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25658"
+      ],
+      "catalogSha256": "7ff40f9e5737ab006f5847e6335a35db1e23cf72b78a13c3c0df6fc32180aaf6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-25658-d",
+      "title": "Licensee knowingly permitting underage alcohol consumption",
+      "citation": "Cal. Business & Professions Code § 25658(d)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:25658"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25658"
+      ],
+      "catalogSha256": "054e149c3c8ba3a26554d795792de690d4eea6bc9cb016b160b14d883115bec7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-25658-2-a",
+      "title": "Parent permitting underage substance use and driving that causes a collision",
+      "citation": "Cal. Business & Professions Code § 25658.2(a)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:25658.2"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25658.2"
+      ],
+      "catalogSha256": "add77e9ef1267b0a0802d90219f46a74a3a0d84b64fa455d89a16d1e292e420b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-1",
+      "title": "Pool selling or bookmaking",
+      "citation": "Cal. Penal Code § 337a(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "4dc843983e171ed69b567f8f6cd5589befb7e3badb04c1e08409f8d16b211447",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-2",
+      "title": "Keeping a place equipped for recording bets",
+      "citation": "Cal. Penal Code § 337a(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "f32bee3c8eed5f3f69f42e54b03863d7278af69990e8dd3420ab2c7bf7c3fceb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-3",
+      "title": "Receiving, holding or forwarding stakes for bets",
+      "citation": "Cal. Penal Code § 337a(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "467b7aed0cc0306c31ca68209d535971192676c696fb68137a0ad1b6f87ab6a6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-4",
+      "title": "Recording or registering bets",
+      "citation": "Cal. Penal Code § 337a(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "e30a6eac20cdd28d24ad3e6903b286baa6f45d9828cbbf0218fa835565b1b87c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-5",
+      "title": "Permitting premises to be used for prohibited betting activities",
+      "citation": "Cal. Penal Code § 337a(a)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "e2d661ce170f8eaec2615de2c95eeced5596e168a5abcc8a244bca3eedc8ffec",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-337a-a-6",
+      "title": "Making, offering or accepting bets on contests",
+      "citation": "Cal. Penal Code § 337a(a)(6)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:337a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:337a"
+      ],
+      "catalogSha256": "fb6b756fc79bc6dda4057c9c1ece2eb33d053d65851a3d81d956f3227fdfc107",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-336-9-a",
+      "title": "Participation in a qualifying noncommercial betting pool",
+      "citation": "Cal. Penal Code § 336.9(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:336.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:336.9"
+      ],
+      "catalogSha256": "44ca545181f05d566261885e7dd841e35280181fb2f571b4efb460819e71d686",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-632-a",
+      "title": "Eavesdropping on or recording a confidential communication without consent",
+      "citation": "Cal. Penal Code § 632(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:632"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:632"
+      ],
+      "catalogSha256": "839864d81b8c0d11b5e33373cc7e9c848025627435e77e64de853c170b681048",
       "attorneyReview": "pending"
     },
     {
