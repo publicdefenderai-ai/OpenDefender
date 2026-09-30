@@ -4,7 +4,7 @@ Updated September 29, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-PR36 is merged. The combined firearm eligibility/ammunition/concealed-carry successor proposes 24 choices, bringing the configured catalog to 476: 99 corrected originals and 377 additions. It covers 263 distinct primary sections, with 686 retained publication sections/692 versions including dependencies. PEN 30515 remains held, leaving 475 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
+PR37 is merged. California has 476 configured choices: 99 corrected originals and 377 additions. It covers 263 distinct primary sections, with 686 retained publication sections/692 versions including dependencies. PEN 30515 remains held, leaving 475 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld. The justice/public-order/property successor is research only and adds no selections or freshness approval.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -14,13 +14,13 @@ The archive discovery ledger spans 30 codes and records 6,028 sections with crim
 
 ## Rough remaining effort
 
-The cumulative people/weapons crosswalk now accounts for 207 instructions across five families: 151 have bounded matches, 29 are context/defense/allegation entries, one is a generic weapon template, and 26 still require branch comparison or resolution. Bounded matches do not certify every branch or the statute's completeness. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
+The cumulative people/weapons crosswalk now accounts for 207 instructions across five families: 160 have bounded matches, 29 are context/defense/allegation entries, one is a generic weapon template, and 17 still require branch comparison or resolution. Bounded matches do not certify every branch or the statute's completeness. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
 
 | Next work package | Scope |
 | --- | --- |
 | Serious violence, abuse and detention | First 28 branches merged in PR32. Carry forward the fine question, kidnapping siblings and elder financial branches. |
 | Sexual-offense branches | The first 64 choices are merged; the successor adds 26 registration/exploitation and related branches. Commercial image distribution, special registration duties and custody enforceability remain explicit research holds. |
-| Weapons, threats and hate crimes | This batch proposes 43 conduct choices. Next combine the remaining knife/carrying, prohibited-person, ammunition and assault-weapon comparisons, preserving source and enforceability holds. |
+| Weapons, threats and hate crimes | The 43 conduct choices and 24 eligibility/ammunition/carrying choices are merged. Knife/open-carry, addiction-only and remaining assault-weapon questions stay held for research. |
 | Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
 | Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
 
@@ -191,3 +191,26 @@ Knife/open-carry enforceability, addiction-only restrictions, remaining assault-
 The unchanged-source comparison covers 685 of 686 retained sections. PEN 30515 stays held. Replay preserves the original September 28 comparison acquisition time and October 5 expiry; it does not renew the receipt.
 
 Reproduce with `acquire-weapons-eligibility.py` and `node --import tsx scripts/data-review/california-verification/weapons-eligibility-review.ts`. Next combine justice/public-order/property research into a shared-source batch while keeping the remaining consequential weapons questions visible. Then complete the targeted other-code/homicide/gang pass and assess release readiness against the documented important-charge benchmark, not an invented statewide offense denominator.
+
+
+## Justice, public order and property: combined missing-branch inventory
+
+This research packet covers eight complete families in the retained 2026 CALCRIM PDF: arson, robbery/carjacking, burglary/receiving, theft/extortion, criminal writings/fraud, crimes against government, tax, and miscellaneous offenses. The 202 instructions span 574 pages, checked against 13 contents pages. The miscellaneous family includes instructions 3001/3002 on failure to appear and 3010 on recorded communications; numeric cutoffs must not omit them. Reserved entry 1809 is accounted for without inventing an instruction.
+
+The frozen catalog after PR37 has associations for 67 substantive instructions; 102 have no primary-source catalog match, and 33 are context/defense/grading. Neither association nor absence is a legal completeness decision. Instructions overlap offenses and shared citations can hide different subdivisions. No statewide percentage is inferred.
+
+A single acquisition covers 912 candidate sections: 232 reuse earlier publication or research evidence, and 680 newly retained sections contain 682 versions. No requested section is missing. PEN 132.5 and 451.5 retain multiple versions requiring explicit resolution before publication. Whole shared-source groups add adjacent discovery leads without turning every clause into a release requirement. Unknown severity remains open; minor deferral requires an actual review.
+
+| Successor group | Instructions | No catalog primary match | Existing associations to compare | Context/grading |
+| --- | ---: | ---: | ---: | ---: |
+| Justice, witnesses, orders and failure to appear | 32 | 19 | 7 | 6 |
+| Custody, contraband and escape | 16 | 15 | 0 | 1 |
+| Property, arson and extortion | 48 | 18 | 18 | 12 |
+| Fraud, financial and tax | 62 | 18 | 32 | 12 |
+| Public order and miscellaneous | 44 | 32 | 10 | 2 |
+
+Next combine the first two groups into one substantive review where practical. Resolve clear branches using shared evidence; preserve order validity, lawful official performance, custody status, force, exceptions, and classification questions. These are engineering queues, not attorney data-entry assignments. Existing attorney and enforceability holds remain in their predecessor reports.
+
+Efficiency changes: the catalog snapshot is frozen to the PR37 merge commit rather than the changing runtime catalog, so future additions cannot silently rewrite this report. Prior artifacts are hash-bound and reused. The new extractor reuses the established PDF heading parser, checks printed contents independently, preserves non-Penal code identities, and excludes subdivision numbers from source keys. The existing Vitest regression entry point now runs all 31 Python extraction/verification tests, passing no application credentials to the subprocess. This closes the missing Python invocation without broadening GitHub workflow permissions. The existing npm installation problem can still block that runner and remains a separate infrastructure issue.
+
+Reproduce with `extract-justice-property-benchmark.py`, `acquire-justice-property.py`, and `node --import tsx scripts/data-review/california-verification/justice-property-review.ts`. This packet does not change publication pins, the existing PEN 30515 hold, or the October 5 receipt deadline. Homicide/gang comparisons, selected other-code gaps and the final deployment/maintenance checks remain after these groups; the old 3-6-batch estimate is not a renewed promise.

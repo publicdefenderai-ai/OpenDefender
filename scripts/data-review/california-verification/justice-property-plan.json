@@ -1,0 +1,2365 @@
+{
+  "schemaVersion": 1,
+  "scope": "eight_justice_property_families_research_not_publication",
+  "families": [
+    {
+      "id": "arson",
+      "firstPage": 1163,
+      "lastPage": 1192,
+      "tocFirstPage": 1161,
+      "tocLastPage": 1161,
+      "instructionIds": [
+        "1500",
+        "1501",
+        "1502",
+        "1515",
+        "1520",
+        "1530",
+        "1531",
+        "1532",
+        "1550",
+        "1551"
+      ]
+    },
+    {
+      "id": "robbery_carjacking",
+      "firstPage": 1195,
+      "lastPage": 1210,
+      "tocFirstPage": 1193,
+      "tocLastPage": 1193,
+      "instructionIds": [
+        "1600",
+        "1601",
+        "1602",
+        "1603",
+        "1650"
+      ]
+    },
+    {
+      "id": "burglary_receiving",
+      "firstPage": 1213,
+      "lastPage": 1246,
+      "tocFirstPage": 1211,
+      "tocLastPage": 1211,
+      "instructionIds": [
+        "1700",
+        "1701",
+        "1702",
+        "1703",
+        "1704",
+        "1705",
+        "1750",
+        "1751",
+        "1752",
+        "1760",
+        "1761"
+      ]
+    },
+    {
+      "id": "theft_extortion",
+      "firstPage": 1249,
+      "lastPage": 1310,
+      "tocFirstPage": 1247,
+      "tocLastPage": 1247,
+      "instructionIds": [
+        "1800",
+        "1801",
+        "1802",
+        "1803",
+        "1804",
+        "1805",
+        "1806",
+        "1807",
+        "1808",
+        "1810",
+        "1820",
+        "1821",
+        "1822",
+        "1830",
+        "1831",
+        "1832",
+        "1850",
+        "1851",
+        "1860",
+        "1861",
+        "1862",
+        "1863"
+      ]
+    },
+    {
+      "id": "fraud",
+      "firstPage": 1363,
+      "lastPage": 1478,
+      "tocFirstPage": 1359,
+      "tocLastPage": 1361,
+      "instructionIds": [
+        "1900",
+        "1901",
+        "1902",
+        "1903",
+        "1904",
+        "1905",
+        "1906",
+        "1920",
+        "1921",
+        "1925",
+        "1926",
+        "1930",
+        "1931",
+        "1932",
+        "1933",
+        "1935",
+        "1945",
+        "1950",
+        "1951",
+        "1952",
+        "1953",
+        "1954",
+        "1955",
+        "1956",
+        "1957",
+        "1970",
+        "1971",
+        "2000",
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2040",
+        "2041",
+        "2042",
+        "2043",
+        "2044",
+        "2045"
+      ]
+    },
+    {
+      "id": "justice_public_order_custody",
+      "firstPage": 1853,
+      "lastPage": 2030,
+      "tocFirstPage": 1849,
+      "tocLastPage": 1851,
+      "instructionIds": [
+        "2600",
+        "2601",
+        "2602",
+        "2603",
+        "2610",
+        "2611",
+        "2612",
+        "2620",
+        "2621",
+        "2622",
+        "2623",
+        "2624",
+        "2630",
+        "2640",
+        "2641",
+        "2650",
+        "2651",
+        "2652",
+        "2653",
+        "2654",
+        "2655",
+        "2656",
+        "2670",
+        "2671",
+        "2672",
+        "2673",
+        "2680",
+        "2681",
+        "2682",
+        "2683",
+        "2684",
+        "2685",
+        "2686",
+        "2687",
+        "2688",
+        "2689",
+        "2690",
+        "2700",
+        "2701",
+        "2702",
+        "2703",
+        "2720",
+        "2721",
+        "2722",
+        "2723",
+        "2735",
+        "2736",
+        "2745",
+        "2746",
+        "2747",
+        "2748",
+        "2749",
+        "2760",
+        "2761",
+        "2762",
+        "2763",
+        "2764",
+        "2765"
+      ]
+    },
+    {
+      "id": "tax",
+      "firstPage": 2033,
+      "lastPage": 2080,
+      "tocFirstPage": 2031,
+      "tocLastPage": 2031,
+      "instructionIds": [
+        "2800",
+        "2801",
+        "2810",
+        "2811",
+        "2812",
+        "2825",
+        "2826",
+        "2827",
+        "2828",
+        "2840",
+        "2841",
+        "2842",
+        "2843",
+        "2844",
+        "2845",
+        "2846",
+        "2860",
+        "2861"
+      ]
+    },
+    {
+      "id": "miscellaneous",
+      "firstPage": 2083,
+      "lastPage": 2172,
+      "tocFirstPage": 2081,
+      "tocLastPage": 2082,
+      "instructionIds": [
+        "2900",
+        "2901",
+        "2902",
+        "2915",
+        "2916",
+        "2917",
+        "2929",
+        "2930",
+        "2931",
+        "2932",
+        "2933",
+        "2950",
+        "2951",
+        "2952",
+        "2953",
+        "2960",
+        "2961",
+        "2962",
+        "2963",
+        "2964",
+        "2965",
+        "2966",
+        "2980",
+        "2981",
+        "2982",
+        "2990",
+        "2991",
+        "2992",
+        "2993",
+        "2994",
+        "2995",
+        "2996",
+        "2997",
+        "3001",
+        "3002",
+        "3010"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "1500",
+      "heading": "1500. Aggravated Arson (Pen. Code, § 451.5)",
+      "firstPage": 1163,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:451.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1501",
+      "heading": "1501. Arson: Great Bodily Injury (Pen. Code, § 451)",
+      "firstPage": 1166,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:451"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1502",
+      "heading": "1502. Arson: Inhabited Structure or Property (Pen. Code, § 451(b))",
+      "firstPage": 1169,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:451"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1515",
+      "heading": "1515. Arson (Pen. Code, § 451(c) & (d))",
+      "firstPage": 1172,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:451"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1520",
+      "heading": "1520. Attempted Arson (Pen. Code, § 455)",
+      "firstPage": 1175,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:455"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1530",
+      "heading": "1530. Unlawfully Causing a Fire: Great Bodily Injury (Pen. Code, § 452)",
+      "firstPage": 1177,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:452"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1531",
+      "heading": "1531. Unlawfully Causing a Fire: Inhabited Structure (Pen. Code, § 452)",
+      "firstPage": 1180,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:452"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1532",
+      "heading": "1532. Unlawfully Causing a Fire (Pen. Code, § 452)",
+      "firstPage": 1183,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:452"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1550",
+      "heading": "1550. Possession of Incendiary Device (Pen. Code, § 453)",
+      "firstPage": 1187,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:453"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1551",
+      "heading": "1551. Arson Enhancements (Pen. Code, §§ 451.1, 456(b))",
+      "firstPage": 1189,
+      "family": "arson",
+      "sourceKeys": [
+        "PEN:451.1",
+        "PEN:456"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1600",
+      "heading": "1600. Robbery (Pen. Code, § 211)",
+      "firstPage": 1195,
+      "family": "robbery_carjacking",
+      "sourceKeys": [
+        "PEN:211"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1601",
+      "heading": "1601. Robbery in Concert (Pen. Code, § 213(a)(1)(A))",
+      "firstPage": 1201,
+      "family": "robbery_carjacking",
+      "sourceKeys": [
+        "PEN:213"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1602",
+      "heading": "1602. Robbery: Degrees (Pen. Code, § 212.5)",
+      "firstPage": 1203,
+      "family": "robbery_carjacking",
+      "sourceKeys": [
+        "PEN:212.5"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1603",
+      "heading": "1603. Robbery: Intent of Aider and Abettor",
+      "firstPage": 1205,
+      "family": "robbery_carjacking",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1650",
+      "heading": "1650. Carjacking (Pen. Code, § 215)",
+      "firstPage": 1207,
+      "family": "robbery_carjacking",
+      "sourceKeys": [
+        "PEN:215"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1700",
+      "heading": "1700. Burglary (Pen. Code, § 459)",
+      "firstPage": 1213,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:459"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1701",
+      "heading": "1701. Burglary: Degrees (Pen. Code, § 460)",
+      "firstPage": 1221,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:460"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1702",
+      "heading": "1702. Burglary: Intent of Aider and Abettor",
+      "firstPage": 1224,
+      "family": "burglary_receiving",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1703",
+      "heading": "1703. Shoplifting (Pen. Code, § 459.5)",
+      "firstPage": 1225,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:459.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1704",
+      "heading": "1704. Possession of Burglary Tools (Pen. Code, § 466)",
+      "firstPage": 1227,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:466"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1705",
+      "heading": "1705. Unlawful Entry of a Vehicle (Pen. Code, § 465(a))",
+      "firstPage": 1230,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:465"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1750",
+      "heading": "1750. Receiving Stolen Property (Pen. Code, § 496(a))",
+      "firstPage": 1233,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:496"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1751",
+      "heading": "1751. Defense to Receiving Stolen Property: Innocent Intent",
+      "firstPage": 1237,
+      "family": "burglary_receiving",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1752",
+      "heading": "1752. Owning or Operating a Chop Shop (Veh. Code, § 10801)",
+      "firstPage": 1239,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "VEH:10801"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1760",
+      "heading": "1760. Automotive Property Theft for Resale (Pen. Code, § 496.5)",
+      "firstPage": 1241,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:496.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1761",
+      "heading": "1761. Unlawful Deprivation of Retail Business Opportunity (Pen. Code, § 496.6(a))",
+      "firstPage": 1244,
+      "family": "burglary_receiving",
+      "sourceKeys": [
+        "PEN:496.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1800",
+      "heading": "1800. Theft by Larceny (Pen. Code, § 484)",
+      "firstPage": 1249,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:484"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1801",
+      "heading": "1801. Grand and Petty Theft (Pen. Code, §§ 486, 487–488, 490.2, 490.3, 491)",
+      "firstPage": 1253,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:486",
+        "PEN:487",
+        "PEN:488",
+        "PEN:490.2",
+        "PEN:490.3",
+        "PEN:491"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1802",
+      "heading": "1802. Theft: As Part of Overall Plan",
+      "firstPage": 1256,
+      "family": "theft_extortion",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1803",
+      "heading": "1803. Theft: By Employee or Agent (Pen. Code, § 487(b)(3))",
+      "firstPage": 1258,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:487"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1804",
+      "heading": "1804. Theft by False Pretense (Pen. Code, § 484)",
+      "firstPage": 1260,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:484"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1805",
+      "heading": "1805. Theft by Trick (Pen. Code, § 484)",
+      "firstPage": 1265,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:484"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1806",
+      "heading": "1806. Theft by Embezzlement (Pen. Code, §§ 484, 503)",
+      "firstPage": 1267,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:484",
+        "PEN:503"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1807",
+      "heading": "1807. Theft From Elder or Dependent Adult (Pen. Code, § 368(d), (e))",
+      "firstPage": 1270,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:368"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1808",
+      "heading": "1808. Organized Retail Theft (Pen. Code, § 490.4)",
+      "firstPage": 1273,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:490.4"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1810",
+      "heading": "1810. Diversion of Construction Funds (Pen. Code, § 484b)",
+      "firstPage": 1276,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:484b"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1820",
+      "heading": "1820. Felony Unlawful Taking or Driving of Vehicle (Veh. Code, § 10851(a), (b))",
+      "firstPage": 1279,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "VEH:10851"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1821",
+      "heading": "1821. Tampering With a Vehicle (Veh. Code, § 10852)",
+      "firstPage": 1283,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "VEH:10852"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1822",
+      "heading": "1822. Unlawful Taking of Bicycle or Vessel (Pen. Code, § 499b)",
+      "firstPage": 1285,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:499b"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1830",
+      "heading": "1830. Extortion by Threat or Force (Pen. Code, §§ 518, 519)",
+      "firstPage": 1289,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:518",
+        "PEN:519"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1831",
+      "heading": "1831. Extortion by Threatening Letter (Pen. Code, § 523)",
+      "firstPage": 1293,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:523"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1832",
+      "heading": "1832. Extortion of Signature (Pen. Code, § 522)",
+      "firstPage": 1296,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:522"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1850",
+      "heading": "1850. Petty Theft With Prior Conviction (Pen. Code, § 666)",
+      "firstPage": 1299,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:666"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1851",
+      "heading": "1851. Petty Theft or Shoplifting With Two or More Prior Convictions (Pen. Code, § 666.1)",
+      "firstPage": 1302,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:666.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1860",
+      "heading": "1860. Owner’s Opinion of Value",
+      "firstPage": 1305,
+      "family": "theft_extortion",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1861",
+      "heading": "1861. Jury Does Not Need to Agree on Form of Theft",
+      "firstPage": 1306,
+      "family": "theft_extortion",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1862",
+      "heading": "1862. Return of Property Not a Defense to Theft (Pen. Code, §§ 512, 513)",
+      "firstPage": 1307,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:512",
+        "PEN:513"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1863",
+      "heading": "1863. Defense to Theft or Robbery: Claim of Right (Pen. Code, § 511)",
+      "firstPage": 1309,
+      "family": "theft_extortion",
+      "sourceKeys": [
+        "PEN:511"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1900",
+      "heading": "1900. Forgery by False Signature (Pen. Code, § 470(a))",
+      "firstPage": 1363,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1901",
+      "heading": "1901. Forgery by Endorsement (Pen. Code, § 470(a))",
+      "firstPage": 1367,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1902",
+      "heading": "1902. Forgery of Handwriting or Seal (Pen. Code, § 470(b))",
+      "firstPage": 1370,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1903",
+      "heading": "1903. Forgery by Altering or Falsifying Will or Other Legal Document (Pen. Code, § 470(c))",
+      "firstPage": 1373,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1904",
+      "heading": "1904. Forgery by Falsifying, Altering, or Counterfeiting Document (Pen. Code, § 470(d))",
+      "firstPage": 1375,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1905",
+      "heading": "1905. Forgery by Passing or Attempting to Use Forged Document (Pen. Code, § 470(d))",
+      "firstPage": 1378,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1906",
+      "heading": "1906. Forging and Passing or Attempting to Pass: Two Theories in One Count",
+      "firstPage": 1382,
+      "family": "fraud",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "1920",
+      "heading": "1920. Falsifying, Altering, or Counterfeiting a Driver’s License (Pen. Code, § 470a)",
+      "firstPage": 1383,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1921",
+      "heading": "1921. Possessing or Displaying False, Altered, or Counterfeit Driver’s License (Pen. Code, § 470b)",
+      "firstPage": 1385,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:470b"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1925",
+      "heading": "1925. Forgery of Government, Public, or Corporate Seal (Pen. Code, § 472)",
+      "firstPage": 1388,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:472"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1926",
+      "heading": "1926. Possession of Counterfeit Government, Public, or Corporate Seal (Pen. Code, § 472)",
+      "firstPage": 1390,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:472"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1930",
+      "heading": "1930. Possession of Forged Document (Pen. Code, § 475(a))",
+      "firstPage": 1392,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:475"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1931",
+      "heading": "1931. Possession of Blank Check: With Intent to Defraud (Pen. Code, § 475(b))",
+      "firstPage": 1395,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:475"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1932",
+      "heading": "1932. Possession of Completed Check: With Intent to Defraud (Pen. Code, § 475(c))",
+      "firstPage": 1397,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:475"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1933",
+      "heading": "1933. Possession of Counterfeiting Equipment (Pen. Code, § 480)",
+      "firstPage": 1400,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:480"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1935",
+      "heading": "1935. Making, Passing, etc., Fictitious Check or Bill (Pen. Code, § 476)",
+      "firstPage": 1402,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:476"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1945",
+      "heading": "1945. Procuring Filing of False Document or Offering False Document for Filing (Pen. Code, § 115)",
+      "firstPage": 1406,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:115"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1950",
+      "heading": "1950. Sale or Transfer of Access Card or Account Number (Pen. Code, § 484e(a))",
+      "firstPage": 1409,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484e"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1951",
+      "heading": "1951. Acquiring or Retaining an Access Card or Account Number (Pen. Code, § 484e(c))",
+      "firstPage": 1412,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484e"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1952",
+      "heading": "1952. Acquiring or Retaining Account Information (Pen. Code, § 484e(d))",
+      "firstPage": 1415,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484e"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1953",
+      "heading": "1953. Making Counterfeit Access Card or Account Number (Pen. Code, § 484f(a))",
+      "firstPage": 1418,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484f"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1954",
+      "heading": "1954. Using or Attempting to Use Counterfeit Access Card (Pen. Code, § 484f(a))",
+      "firstPage": 1421,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484f"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1955",
+      "heading": "1955. False Signature on Access Card or Receipt (Pen. Code, § 484f(b))",
+      "firstPage": 1424,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484f"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1956",
+      "heading": "1956. Use of Forged, etc., Access Card (Pen. Code, § 484g(a))",
+      "firstPage": 1427,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484g"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1957",
+      "heading": "1957. Obtaining Money, etc., by Representing Self as Holder of Access Card (Pen. Code, § 484g(b))",
+      "firstPage": 1431,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:484g"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1970",
+      "heading": "1970. Making, Using, etc., Check Knowing Funds Insufficient (Pen. Code, § 476a)",
+      "firstPage": 1435,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:476a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "1971",
+      "heading": "1971. Making, Using, etc., Check Knowing Funds Insufficient: Total Value of Checks (Pen. Code, § 476a(b))",
+      "firstPage": 1441,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:476a"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2000",
+      "heading": "2000. Insurance Fraud: Fraudulent Claims (Pen. Code, § 550(a)(1), (4)–(7) & (9))",
+      "firstPage": 1443,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:550"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2001",
+      "heading": "2001. Insurance Fraud: Multiple Claims (Pen. Code, § 550(a)(2) & (8))",
+      "firstPage": 1447,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:550"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2002",
+      "heading": "2002. Insurance Fraud: Vehicle Accident (Pen. Code, § 550(a)(3))",
+      "firstPage": 1449,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:550"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2003",
+      "heading": "2003. Insurance Fraud: Health-Care Claims—Total Value (Pen. Code, § 550(c)(2))",
+      "firstPage": 1451,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:550"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2004",
+      "heading": "2004. Insurance Fraud: Destruction of Insured Property (Pen. Code, § 548(a))",
+      "firstPage": 1452,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:548"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2020",
+      "heading": "2020. False Financial Statement: Making False Statement (Pen. Code, § 532a(1))",
+      "firstPage": 1455,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:532a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2021",
+      "heading": "2021. False Financial Statement: Obtaining Beneﬁt (Pen. Code, § 532a(2))",
+      "firstPage": 1458,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:532a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2022",
+      "heading": "2022. False Financial Statement: Reaffirming Statement (Pen. Code, § 532a(3))",
+      "firstPage": 1461,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:532a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2023",
+      "heading": "2023. False Financial Statement: Use of False Identifying Information (Pen. Code, § 532a(4))",
+      "firstPage": 1464,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:532a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2040",
+      "heading": "2040. Unauthorized Use of Personal Identifying Information (Pen. Code, § 530.5(a))",
+      "firstPage": 1467,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:530.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2041",
+      "heading": "2041. Fraudulent Possession of Personal Identifying Information (Pen. Code, § 530.5(c)(1), (2), or (3))",
+      "firstPage": 1469,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:530.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2042",
+      "heading": "2042. Fraudulent Sale, Transfer or Conveyance of Personal Identifying Information (Pen. Code, § 530.5(d)(1))",
+      "firstPage": 1471,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:530.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2043",
+      "heading": "2043. Knowing Sale, Transfer, or Conveyance of Personal Identifying Information to Facilitate Its Unauthorized Use (Pen. Code, § 530.5(d)(2))",
+      "firstPage": 1473,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:530.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2044",
+      "heading": "2044. False Personation (Pen. Code, § 529(a))",
+      "firstPage": 1475,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:529"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2045",
+      "heading": "2045. False Personation (Pen. Code, § 530)",
+      "firstPage": 1477,
+      "family": "fraud",
+      "sourceKeys": [
+        "PEN:530"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2600",
+      "heading": "2600. Giving or Offering a Bribe to an Executive Officer (Pen. Code, § 67)",
+      "firstPage": 1853,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:67"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2601",
+      "heading": "2601. Giving or Offering a Bribe to a Ministerial Officer (Pen. Code, § 67.5)",
+      "firstPage": 1856,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:67.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2602",
+      "heading": "2602. Giving or Offering a Bribe to a Ministerial Officer: Value of Thing Offered (Pen. Code, § 67.5(b))",
+      "firstPage": 1859,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:67.5"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2603",
+      "heading": "2603. Requesting or Taking a Bribe (Pen. Code, §§ 68, 86, 93)",
+      "firstPage": 1860,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:68",
+        "PEN:86",
+        "PEN:93"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2610",
+      "heading": "2610. Giving or Offering a Bribe to a Witness (Pen. Code, § 137(a))",
+      "firstPage": 1863,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:137"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2611",
+      "heading": "2611. Giving or Offering a Bribe to a Witness Not to Testify (Pen. Code, § 138(a))",
+      "firstPage": 1866,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:138"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2612",
+      "heading": "2612. Witness Receiving a Bribe (Pen. Code, § 138(b))",
+      "firstPage": 1869,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:138"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2620",
+      "heading": "2620. Using Force or Threatening a Witness Before Testimony or Information Given (Pen. Code, § 137(b))",
+      "firstPage": 1872,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:137"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2621",
+      "heading": "2621. Inﬂuencing a Witness by Fraud (Pen. Code, § 137(b))",
+      "firstPage": 1874,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:137"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2622",
+      "heading": "2622. Intimidating a Witness (Pen. Code, § 136.1(a) & (b))",
+      "firstPage": 1876,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:136.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2623",
+      "heading": "2623. Intimidating a Witness: Sentencing Factors (Pen. Code, § 136.1(c))",
+      "firstPage": 1880,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:136.1"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2624",
+      "heading": "2624. Threatening a Witness After Testimony or Information Given (Pen. Code, § 140(a))",
+      "firstPage": 1882,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:140"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2630",
+      "heading": "2630. Evidence Tampering by Peace Officer or Other Person (Pen. Code, § 141)",
+      "firstPage": 1885,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:141"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2640",
+      "heading": "2640. Perjury (Pen. Code, § 118)",
+      "firstPage": 1887,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:118"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2641",
+      "heading": "2641. Perjury by False Affidavit (Pen. Code, § 118a)",
+      "firstPage": 1891,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:118a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2650",
+      "heading": "2650. Threatening a Public Official (Pen. Code, § 76)",
+      "firstPage": 1895,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:76"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2651",
+      "heading": "2651. Trying to Prevent an Executive Officer From Performing Duty (Pen. Code, § 69)",
+      "firstPage": 1898,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:69"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2652",
+      "heading": "2652. Resisting an Executive Officer in Performance of Duty (Pen. Code, § 69)",
+      "firstPage": 1902,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:69"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2653",
+      "heading": "2653. Taking Firearm or Weapon While Resisting Peace Officer or Public Officer (Pen. Code, § 148(b) & (c))",
+      "firstPage": 1905,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:148"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2654",
+      "heading": "2654. Intentionally Taking or Attempting to Take Firearm From Peace Officer or Public Officer (Pen. Code, § 148(d))",
+      "firstPage": 1910,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:148"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2655",
+      "heading": "2655. Causing Death or Serious Bodily Injury While Resisting Peace Officer (Pen. Code, § 148.10(a) & (b))",
+      "firstPage": 1914,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:148.10"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2656",
+      "heading": "2656. Resisting Peace Officer, Public Officer, or EMT (Pen. Code, § 148(a))",
+      "firstPage": 1918,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:148"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2670",
+      "heading": "2670. Lawful Performance: Peace Officer",
+      "firstPage": 1923,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2671",
+      "heading": "2671. Lawful Performance: Custodial Officer",
+      "firstPage": 1930,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2672",
+      "heading": "2672. Lawful Performance: Resisting Unlawful Arrest With Force",
+      "firstPage": 1932,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2673",
+      "heading": "2673. Pat-Down Search",
+      "firstPage": 1935,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2680",
+      "heading": "2680. Courthouse Picketing (Pen. Code, § 169)",
+      "firstPage": 1937,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:169"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2681",
+      "heading": "2681. Disturbance of Public Meeting (Pen. Code, § 403)",
+      "firstPage": 1938,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:403"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2682",
+      "heading": "2682. Inciting a Riot (Pen. Code, § 404.6(a))",
+      "firstPage": 1940,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:404.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2683",
+      "heading": "2683. Participating in a Riot (Pen. Code, §§ 404, 405)",
+      "firstPage": 1942,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:404",
+        "PEN:405"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2684",
+      "heading": "2684. Participating in a Rout (Pen. Code, §§ 406, 408)",
+      "firstPage": 1944,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:406",
+        "PEN:408"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2685",
+      "heading": "2685. Participating in an Unlawful Assembly (Pen. Code, §§ 407, 408)",
+      "firstPage": 1945,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:407",
+        "PEN:408"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2686",
+      "heading": "2686. Refusal to Disperse: Riot, Rout, or Unlawful Assembly (Pen. Code, §§ 407, 409)",
+      "firstPage": 1947,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:407",
+        "PEN:409"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2687",
+      "heading": "2687. Refusal to Disperse: Intent to Commit Unlawful Act (Pen. Code, § 416(a))",
+      "firstPage": 1950,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:416"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2688",
+      "heading": "2688. Disturbing the Peace: Fighting or Challenging Someone to Fight (Pen. Code, §§ 415(1), 415.5(a)(1))",
+      "firstPage": 1953,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:415",
+        "PEN:415.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2689",
+      "heading": "2689. Disturbing the Peace: Loud and Unreasonable Noise (Pen. Code, §§ 415(2), 415.5(a)(2))",
+      "firstPage": 1955,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:415",
+        "PEN:415.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2690",
+      "heading": "2690. Disturbing the Peace: Offensive Words (Pen. Code, §§ 415(3), 415.5(a)(3))",
+      "firstPage": 1957,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:415",
+        "PEN:415.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2700",
+      "heading": "2700. Violation of Court Order (Pen. Code, § 166(a)(4) & (b)(1))",
+      "firstPage": 1961,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:166"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2701",
+      "heading": "2701. Violation of Court Order: Protective Order or Stay Away (Pen. Code, §§ 166(c)(1), 273.6)",
+      "firstPage": 1964,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:166",
+        "PEN:273.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2702",
+      "heading": "2702. Violation of Court Order: Protective Order or Stay Away—Physical Injury (Pen. Code, §§ 166(c)(2), 273.6(b))",
+      "firstPage": 1967,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:166",
+        "PEN:273.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2703",
+      "heading": "2703. Violation of Court Order: Protective Order or Stay Away—Act of Violence (Pen. Code, §§ 166(c)(4), 273.6(d))",
+      "firstPage": 1968,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:166",
+        "PEN:273.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2720",
+      "heading": "2720. Assault by Prisoner Serving Life Sentence (Pen. Code, § 4500)",
+      "firstPage": 1971,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4500"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2721",
+      "heading": "2721. Assault by Prisoner (Pen. Code, § 4501)",
+      "firstPage": 1977,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4501"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2722",
+      "heading": "2722. Battery by Gassing (Pen. Code, §§ 243.9, 4501.1)",
+      "firstPage": 1981,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:243.9",
+        "PEN:4501.1"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2723",
+      "heading": "2723. Battery by Prisoner on Nonprisoner (Pen. Code, § 4501.5)",
+      "firstPage": 1983,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4501.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2735",
+      "heading": "2735. Holding a Hostage (Pen. Code, § 4503)",
+      "firstPage": 1986,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4503"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2736",
+      "heading": "2736. Inciting a Riot in a Prison or Jail (Pen. Code, § 404.6(c))",
+      "firstPage": 1988,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:404.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2745",
+      "heading": "2745. Possession or Manufacture of Weapon in Penal Institution (Pen. Code, § 4502)",
+      "firstPage": 1990,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4502"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2746",
+      "heading": "2746. Possession of Firearm, Deadly Weapon, or Explosive in a Jail or County Road Camp (Pen. Code, § 4574(a))",
+      "firstPage": 1995,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4574"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2747",
+      "heading": "2747. Bringing or Sending Firearm, Deadly Weapon, or Explosive Into Penal Institution (Pen. Code, § 4574(a)–(c))",
+      "firstPage": 1999,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4574"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2748",
+      "heading": "2748. Possession of Controlled Substance or Paraphernalia in Penal Institution (Pen. Code, § 4573.6)",
+      "firstPage": 2003,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4573.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2749",
+      "heading": "2749. Bringing or Sending Controlled Substance or Paraphernalia Into Penal Institution (Pen. Code, § 4573(a))",
+      "firstPage": 2008,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4573"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2760",
+      "heading": "2760. Escape (Pen. Code, § 4532(a)(1) & (b)(1))",
+      "firstPage": 2012,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4532"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2761",
+      "heading": "2761. Escape by Force or Violence (Pen. Code, § 4532(a)(2) & (b)(2))",
+      "firstPage": 2017,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:4532"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2762",
+      "heading": "2762. Escape After Remand or Arrest (Pen. Code, § 836.6)",
+      "firstPage": 2022,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:836.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2763",
+      "heading": "2763. Escape After Remand or Arrest: Force or Violence (Pen. Code, § 836.6)",
+      "firstPage": 2024,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:836.6"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2764",
+      "heading": "2764. Escape: Necessity Defense",
+      "firstPage": 2027,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2765",
+      "heading": "2765. Misappropriation of Public Money (Pen. Code § 424(a)(1–7))",
+      "firstPage": 2029,
+      "family": "justice_public_order_custody",
+      "sourceKeys": [
+        "PEN:424"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2800",
+      "heading": "2800. Failure to File Tax Return (Rev. & Tax. Code, § 19701(a))",
+      "firstPage": 2033,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19701"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2801",
+      "heading": "2801. Willful Failure to File Tax Return (Rev. & Tax. Code, § 19706)",
+      "firstPage": 2036,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19706"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2810",
+      "heading": "2810. False Tax Return (Rev. & Tax. Code, § 19701(a))",
+      "firstPage": 2039,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19701"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2811",
+      "heading": "2811. Willfully Filing False Tax Return: Statement Made Under Penalty of Perjury (Rev. & Tax. Code, § 19705(a)(1))",
+      "firstPage": 2042,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19705"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2812",
+      "heading": "2812. Willfully Filing False Tax Return: Intent to Evade Tax (Rev. & Tax. Code, § 19706)",
+      "firstPage": 2045,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19706"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2825",
+      "heading": "2825. Aiding in Preparation of False Tax Return (Rev. & Tax. Code, § 19705(a)(2))",
+      "firstPage": 2049,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19705"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2826",
+      "heading": "2826. Willful Failure to Pay Tax (Rev. & Tax. Code, § 19701(c))",
+      "firstPage": 2052,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19701"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2827",
+      "heading": "2827. Concealing Property With Intent to Evade Tax (Rev. & Tax. Code, § 19705(a)(4))",
+      "firstPage": 2054,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19705"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2828",
+      "heading": "2828. Failure to Withhold Tax (Rev. & Tax. Code, §§ 19708, 19709)",
+      "firstPage": 2057,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:19708",
+        "RTC:19709"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2840",
+      "heading": "2840. Evidence of Uncharged Tax Offense: Failed to File Previous Returns",
+      "firstPage": 2061,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2841",
+      "heading": "2841. No Deductions on Gross Income From Illegal Conduct (Rev. & Tax. Code, § 17282(a))",
+      "firstPage": 2063,
+      "family": "tax",
+      "sourceKeys": [
+        "RTC:17282"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2842",
+      "heading": "2842. Determining Income: Net Worth Method",
+      "firstPage": 2064,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2843",
+      "heading": "2843. Determining Income: Bank Deposits Method",
+      "firstPage": 2067,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2844",
+      "heading": "2844. Determining Income: Cash Expenditures Method",
+      "firstPage": 2070,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2845",
+      "heading": "2845. Determining Income: Speciﬁc Items Method",
+      "firstPage": 2073,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2846",
+      "heading": "2846. Proof of Unreported Taxable Income: Must Still Prove Elements of Offense",
+      "firstPage": 2075,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2860",
+      "heading": "2860. Defense: Good Faith Belief Conduct Legal",
+      "firstPage": 2077,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2861",
+      "heading": "2861. Defense: Reliance on Professional Advice",
+      "firstPage": 2079,
+      "family": "tax",
+      "sourceKeys": [],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2900",
+      "heading": "2900. Vandalism (Pen. Code, § 594)",
+      "firstPage": 2083,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:594"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2901",
+      "heading": "2901. Vandalism: Amount of Damage (Pen. Code, § 594(b)(1))",
+      "firstPage": 2086,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:594"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2902",
+      "heading": "2902. Damaging Phone or Electrical Line (Pen. Code, § 591)",
+      "firstPage": 2087,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:591"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2915",
+      "heading": "2915. Loitering (Pen. Code, § 647(h))",
+      "firstPage": 2089,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2916",
+      "heading": "2916. Loitering: Peeking (Pen. Code, § 647(i))",
+      "firstPage": 2090,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2917",
+      "heading": "2917. Loitering: About School (Pen. Code, § 653b)",
+      "firstPage": 2092,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:653b"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2929",
+      "heading": "2929. Trespass After Making Credible Threat (Pen. Code, § 601(a))",
+      "firstPage": 2095,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:601"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2930",
+      "heading": "2930. Trespass: To Interfere With Business (Pen. Code, § 602(k))",
+      "firstPage": 2098,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:602"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2931",
+      "heading": "2931. Trespass: Unlawfully Occupying Property (Pen. Code, § 602(m))",
+      "firstPage": 2100,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:602"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2932",
+      "heading": "2932. Trespass: Entry Into Dwelling (Pen. Code, § 602.5(a) & (b))",
+      "firstPage": 2102,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:602.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2933",
+      "heading": "2933. Trespass: Person Present (Pen. Code, § 602.5(b))",
+      "firstPage": 2104,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:602.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2950",
+      "heading": "2950. Failing to Maintain Control of a Dangerous Animal (Pen. Code, § 399)",
+      "firstPage": 2105,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:399"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2951",
+      "heading": "2951. Negligent Control of Attack Dog (Pen. Code, § 399.5)",
+      "firstPage": 2107,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:399.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2952",
+      "heading": "2952. Defenses: Negligent Control of Attack Dog (Pen. Code, § 399.5(c))",
+      "firstPage": 2109,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:399.5"
+      ],
+      "kind": "context_defense_or_grading"
+    },
+    {
+      "id": "2953",
+      "heading": "2953. Cruelty to Animals (Pen. Code, § 597(a))",
+      "firstPage": 2111,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:597"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2960",
+      "heading": "2960. Possession of Alcoholic Beverage by Person Under 21 (Bus. & Prof. Code, § 25662(a))",
+      "firstPage": 2113,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25662"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2961",
+      "heading": "2961. Purchase of Alcoholic Beverage by Person Under 21 (Bus. & Prof. Code, § 25658(b))",
+      "firstPage": 2115,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25658"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2962",
+      "heading": "2962. Selling or Furnishing Alcoholic Beverage to Person Under 21 (Bus. & Prof. Code, § 25658(a))",
+      "firstPage": 2116,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25658"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2963",
+      "heading": "2963. Permitting Person Under 21 to Consume Alcoholic Beverage (Bus. & Prof. Code, § 25658(d))",
+      "firstPage": 2119,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25658"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2964",
+      "heading": "2964. Purchasing Alcoholic Beverage for Person Under 21: Resulting in Death or Great Bodily Injury (Bus. & Prof. Code, § 25658(a) & (c))",
+      "firstPage": 2122,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25658"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2965",
+      "heading": "2965. Parent Permitting Child to Consume Alcoholic Beverage: Causing Traffic Collision (Bus. & Prof. Code, § 25658.2)",
+      "firstPage": 2126,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "BPC:25658.2"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2966",
+      "heading": "2966. Disorderly Conduct: Under the Inﬂuence in Public (Pen. Code, § 647(f))",
+      "firstPage": 2130,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:647"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2980",
+      "heading": "2980. Contributing to Delinquency of Minor (Pen. Code, § 272)",
+      "firstPage": 2133,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:272"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2981",
+      "heading": "2981. Failure to Provide (Pen. Code, § 270)",
+      "firstPage": 2141,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:270"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2982",
+      "heading": "2982. Persuading, Luring, or Transporting a Minor Under 14 Years of Age (Pen. Code, § 272(b)(1))",
+      "firstPage": 2145,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:272"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2990",
+      "heading": "2990. Bookmaking (Pen. Code, § 337a(a)(1))",
+      "firstPage": 2149,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2991",
+      "heading": "2991. Pool Selling (Pen. Code, § 337a(a)(1))",
+      "firstPage": 2151,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2992",
+      "heading": "2992. Keeping a Place for Recording Bets (Pen. Code, § 337a(a)(2))",
+      "firstPage": 2152,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2993",
+      "heading": "2993. Receiving or Holding Bets (Pen. Code, § 337a(a)(3))",
+      "firstPage": 2154,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2994",
+      "heading": "2994. Recording Bets (Pen. Code, § 337a(a)(4))",
+      "firstPage": 2156,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2995",
+      "heading": "2995. Permitting Place to Be Used for Betting Activities (Pen. Code, § 337a(a)(5))",
+      "firstPage": 2158,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2996",
+      "heading": "2996. Betting or Wagering (Pen. Code, § 337a(a)(6))",
+      "firstPage": 2160,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:337a"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "2997",
+      "heading": "2997. Money Laundering (Pen. Code, § 186.10)",
+      "firstPage": 2163,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:186.10"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "3001",
+      "heading": "3001. Failure to Appear While on Bail (Pen. Code, § 1320.5)",
+      "firstPage": 2167,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:1320.5"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "3002",
+      "heading": "3002. Failure to Appear While on Own Recognizance Release (Pen. Code, § 1320)",
+      "firstPage": 2169,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:1320"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    },
+    {
+      "id": "3010",
+      "heading": "3010. Eavesdropping or Recording Conﬁdential Communication (Pen. Code, § 632(a))",
+      "firstPage": 2171,
+      "family": "miscellaneous",
+      "sourceKeys": [
+        "PEN:632"
+      ],
+      "kind": "substantive_instruction_requires_branch_comparison"
+    }
+  ],
+  "extraKeys": [
+    "PEN:19",
+    "PEN:17",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:1170",
+    "PEN:672",
+    "PEN:126",
+    "PEN:132",
+    "PEN:134",
+    "PEN:135",
+    "PEN:4530",
+    "PEN:4532",
+    "PEN:166",
+    "PEN:273.6"
+  ],
+  "discoveryGroupIds": [
+    "PEN:division=-/title=14./part=1./chapter=-",
+    "PEN:division=-/title=15./part=1./chapter=2.",
+    "PEN:division=-/title=7./part=1./chapter=7.",
+    "PEN:division=-/title=13./part=1./chapter=5.",
+    "PEN:division=-/title=8./part=1./chapter=9.",
+    "PEN:division=-/title=13./part=1./chapter=8.",
+    "PEN:division=-/title=10./part=1./chapter=-",
+    "PEN:division=-/title=9./part=1./chapter=10.",
+    "PEN:division=-/title=10./part=2./chapter=1.",
+    "PEN:division=-/title=15./part=1./chapter=1.5.",
+    "PEN:division=-/title=11./part=1./chapter=-",
+    "BPC:division=9./title=-/part=-/chapter=16.",
+    "PEN:division=-/title=9./part=1./chapter=2.",
+    "PEN:division=-/title=13./part=1./chapter=15.",
+    "PEN:division=-/title=3./part=2./chapter=5.",
+    "PEN:division=-/title=7./part=1./chapter=6.",
+    "RTC:division=2./title=-/part=10.2./chapter=9.",
+    "PEN:division=-/title=5./part=3./chapter=3.",
+    "PEN:division=-/title=13./part=1./chapter=4.",
+    "PEN:division=-/title=5./part=1./chapter=-",
+    "PEN:division=-/title=7./part=1./chapter=4.",
+    "PEN:division=-/title=13./part=1./chapter=1.",
+    "PEN:division=-/title=7./part=1./chapter=1.",
+    "PEN:division=-/title=5./part=3./chapter=2.",
+    "PEN:division=-/title=13./part=1./chapter=6.",
+    "PEN:division=-/title=5./part=3./chapter=1.",
+    "PEN:division=-/title=13./part=1./chapter=7.",
+    "PEN:division=-/title=13./part=1./chapter=2.",
+    "PEN:division=-/title=7./part=1./chapter=5.",
+    "VEH:division=4./title=-/part=-/chapter=4.",
+    "PEN:division=-/title=13./part=1./chapter=10.",
+    "PEN:division=-/title=13./part=1./chapter=3.",
+    "PEN:division=-/title=12./part=1./chapter=-",
+    "PEN:division=-/title=6./part=1./chapter=-",
+    "VEH:division=4./title=-/part=-/chapter=3.5.",
+    "PEN:division=-/title=8./part=1./chapter=4.",
+    "PEN:division=-/title=9./part=1./chapter=13.",
+    "PEN:division=-/title=7./part=1./chapter=10."
+  ],
+  "retainedArtifacts": [
+    "california-batch-one-review.json",
+    "california-batch-two-review.json",
+    "california-batch-three-review.json",
+    "california-batch-four-review.json",
+    "california-batch-five-review.json",
+    "california-batch-six-review.json",
+    "california-catalog-source-expansion.json",
+    "california-person-property-acquisition.json",
+    "california-forgery-theft-acquisition.json",
+    "california-protected-person-acquisition.json",
+    "california-controlled-substances-acquisition.json",
+    "california-drug-successor-acquisition.json",
+    "california-driving-publication-acquisition.json",
+    "california-traffic-acquisition.json",
+    "california-vehicle-identification-acquisition.json",
+    "california-violence-detention-acquisition.json",
+    "california-sexual-offenses-acquisition.json",
+    "california-registration-exploitation-acquisition.json",
+    "california-weapons-threats-acquisition.json",
+    "california-weapons-eligibility-acquisition.json",
+    "california-people-weapons-acquisition.json"
+  ],
+  "catalogSnapshotSha256": "1cd5fe5877886fa7928e442de15f1127e2bd6130ab61c0e19772698eece9920a"
+}
