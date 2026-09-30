@@ -4,7 +4,7 @@ Updated September 29, 2026. The target is dependable coverage of important charg
 
 ## Present position
 
-PR35 is merged. The combined weapons/threats successor proposes 43 choices, bringing the configured catalog to 452: 99 corrected originals and 353 additions. It covers 256 distinct primary sections, with 585 retained publication sections/591 versions including dependencies. PEN 30515 remains held, leaving 451 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
+PR36 is merged. The combined firearm eligibility/ammunition/concealed-carry successor proposes 24 choices, bringing the configured catalog to 476: 99 corrected originals and 377 additions. It covers 263 distinct primary sections, with 686 retained publication sections/692 versions including dependencies. PEN 30515 remains held, leaving 475 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -176,3 +176,18 @@ The unchanged-source comparison covers 584 of 585 retained sections. PEN 30515 r
 CA-008 and CA-009 document older CALCRIM hate-crime grading and symbol-terrorism subdivisions. Exact instruction pages remain unchanged. The statute controls the displayed alternatives, and a bounded match does not certify the old wording as current law. The earlier 311.11 clinical display-label choice is now explicitly recorded in that batch's decisions and regenerated report, preserving charging-paper aliases.
 
 Reproduce with `acquire-weapons-threats.py` and `node --import tsx scripts/data-review/california-verification/weapons-threats-review.ts`. Next combine remaining weapon predicates/carrying/enforceability comparisons, then justice/public-order/property and the targeted other-code/homicide/gang pass. Existing attorney questions remain open; no new manual data-entry assignment is created.
+
+
+## Firearm eligibility, ammunition and concealed carrying successor
+
+The combined batch adds 24 exact branches from nine primary sections. Its dependency pass reuses 57 sections and adds 101 monitored sections, including 23 already retained for research. This larger dependency set covers actual predicate and exemption provisions; retaining those texts does not certify each as a standalone offense.
+
+The cumulative people/weapons crosswalk now has 160 bounded instruction matches, 29 context entries and one generic weapon template, leaving 17 substantive instruction entries unresolved. Bounded matches are not assertions that every branch in an instruction or family is complete. The historical research packet remains unchanged.
+
+Key distinctions include the misdemeanor-only 29805(g)/(h) branches, conviction-date cutoffs, known warrants versus convictions, wardship before age 30 versus adult-court convictions, purchase/receipt versus ownership under protective orders, two different ammunition definitions, and cumulative concealed-carry grading conditions. Adult ranges are not juvenile dispositions. The 29850 defense is not generalized to 29900 or 29825.
+
+Knife/open-carry enforceability, addiction-only restrictions, remaining assault-weapon branches, hate-crime allegations and storage siblings remain explicit research items. The officer-victim tear-gas branch adds a related prison-or-fine classification question; it is withheld rather than guessed. Court links in the review explain holds only and do not claim complete docket verification. Existing attorney questions remain open, with no new manual data-entry assignment.
+
+The unchanged-source comparison covers 685 of 686 retained sections. PEN 30515 stays held. Replay preserves the original September 28 comparison acquisition time and October 5 expiry; it does not renew the receipt.
+
+Reproduce with `acquire-weapons-eligibility.py` and `node --import tsx scripts/data-review/california-verification/weapons-eligibility-review.ts`. Next combine justice/public-order/property research into a shared-source batch while keeping the remaining consequential weapons questions visible. Then complete the targeted other-code/homicide/gang pass and assess release readiness against the documented important-charge benchmark, not an invented statewide offense denominator.

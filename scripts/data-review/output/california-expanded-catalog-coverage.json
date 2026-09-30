@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 4,
-    "canonicalRecords": 473,
-    "configuredSelectable": 452,
+    "canonicalRecords": 497,
+    "configuredSelectable": 476,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 353,
-    "boundedCorrectionPass": 452,
+    "boundedAdditionPass": 377,
+    "boundedCorrectionPass": 476,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 256,
+    "distinctSelectablePrimarySections": 263,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 256,
-    "selectableRecordsWithAllPrimaryTextAcquired": 452,
-    "totalAcquiredSectionsIncludingDependencies": 585,
-    "totalAcquiredVersionsIncludingDependencies": 591,
+    "acquiredSelectablePrimarySections": 263,
+    "selectableRecordsWithAllPrimaryTextAcquired": 476,
+    "totalAcquiredSectionsIncludingDependencies": 686,
+    "totalAcquiredVersionsIncludingDependencies": 692,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "452 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "476 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 336,
-      "corrected": 336,
+      "selectable": 360,
+      "corrected": 360,
       "awaitingCorrection": 0
     },
     {
@@ -1015,6 +1015,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "22810",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=22810&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-22810-g-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "236",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=236&lawCode=PEN",
       "recordIds": [
@@ -1403,7 +1412,10 @@
       "section": "25400",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25400&lawCode=PEN",
       "recordIds": [
-        "ca-unlawful-carrying-of-weapon"
+        "ca-unlawful-carrying-of-weapon",
+        "ca-pen-25400-a-1",
+        "ca-pen-25400-a-2",
+        "ca-pen-25400-a-3"
       ],
       "alreadyRetained": false
     },
@@ -1760,7 +1772,75 @@
       "section": "29800",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29800&lawCode=PEN",
       "recordIds": [
-        "ca-felon-in-possession-of-firearm"
+        "ca-felon-in-possession-of-firearm",
+        "ca-pen-29800-a-2",
+        "ca-pen-29800-a-3",
+        "ca-pen-29800-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29805",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29805&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-29805-a-1",
+        "ca-pen-29805-a-2",
+        "ca-pen-29805-b",
+        "ca-pen-29805-c",
+        "ca-pen-29805-d",
+        "ca-pen-29805-e",
+        "ca-pen-29805-f",
+        "ca-pen-29805-g",
+        "ca-pen-29805-h"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29815",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29815&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-29815-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29820",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29820&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-29820-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29825",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29825&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-29825-a",
+        "ca-pen-29825-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29900",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29900&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-29900-a-1",
+        "ca-pen-29900-b-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "30305",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=30305&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-30305-a-1",
+        "ca-pen-30305-b-1"
       ],
       "alreadyRetained": false
     },
@@ -4927,6 +5007,414 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-a-1",
+      "title": "Firearm possession after a listed misdemeanor conviction",
+      "citation": "Cal. Penal Code § 29805(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "d3a8a9a77b244672ca9afc80d5825da7956c32c9bb21131695c7ef5f873cf2e2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-a-2",
+      "title": "Firearm possession with a known outstanding listed-misdemeanor warrant",
+      "citation": "Cal. Penal Code § 29805(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "1236626e457d3d15d2212065dc92e12b97dc5fd02d9c87e1ec93365067eadf61",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-b",
+      "title": "Firearm possession after a qualifying domestic-injury misdemeanor",
+      "citation": "Cal. Penal Code § 29805(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "bcc542bfee79487b17d3f3353607eb43caec9241627def043cda1de44b79079c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-c",
+      "title": "Firearm possession after a qualifying firearm-storage misdemeanor",
+      "citation": "Cal. Penal Code § 29805(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "7ea45a48052a7b040c7243834845935328766e7cdae02ee299e5f6d882616298",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-d",
+      "title": "Firearm possession after a qualifying abuse or firearm-identification misdemeanor",
+      "citation": "Cal. Penal Code § 29805(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "962386306d70fc8a6e5f59636c91a2f4410e29e686f8ade31bb08e7563ba36aa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-e",
+      "title": "Firearm possession after a qualifying misdemeanor firearm-prohibition conviction",
+      "citation": "Cal. Penal Code § 29805(e)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "931625db24dc419cd057a216be3f7d2c1adcd70a4fa440b0557393f5328c211b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-f",
+      "title": "Firearm possession after a qualifying carrying misdemeanor",
+      "citation": "Cal. Penal Code § 29805(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "13dc3426076aa60f81c55ac62b4ca7ce542ecaebf17d1cbad03475c8dfcdc69c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-g",
+      "title": "Firearm possession after a qualifying animal-cruelty misdemeanor",
+      "citation": "Cal. Penal Code § 29805(g)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "b25b6ac38c2f763c79c50c32f278ef408bec3f7728753e5a0d20c7befb37a477",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29805-h",
+      "title": "Firearm possession after a qualifying weapon misdemeanor from 2026 onward",
+      "citation": "Cal. Penal Code § 29805(h)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29805"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29805"
+      ],
+      "catalogSha256": "c290b8bb1d6498926c169cf021c5688c1b64bdfe57b202f233a269567f2628e2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29815-a",
+      "title": "Firearm possession contrary to an express probation condition",
+      "citation": "Cal. Penal Code § 29815(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29815"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29815"
+      ],
+      "catalogSha256": "be759b94c6f1cd03aca0c2f15dddda83c343cf89507c04006b1e4362dc9ff4f1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29820-b",
+      "title": "Firearm ownership or possession before age 30 after a qualifying juvenile adjudication",
+      "citation": "Cal. Penal Code § 29820(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29820"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29820"
+      ],
+      "catalogSha256": "9cfd9206d2388b0e9a0dd8e409b08e459e5fb0e51ae8410a14127d8df062482a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29825-a",
+      "title": "Purchasing or receiving a firearm contrary to a known protective order",
+      "citation": "Cal. Penal Code § 29825(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29825"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29825"
+      ],
+      "catalogSha256": "a4952e4aa7b4c86636a45d6ab064fef7953687f90b1e57c4b49be2f368d2b7c4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29825-b",
+      "title": "Owning or possessing a firearm contrary to a known protective order",
+      "citation": "Cal. Penal Code § 29825(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29825"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29825"
+      ],
+      "catalogSha256": "026d40e24b852de7e6c1576fe297a358913a59850ad3b573a6235d12aa2de4a0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29900-a-1",
+      "title": "Firearm possession after a listed violent-offense conviction",
+      "citation": "Cal. Penal Code § 29900(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29900"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29900"
+      ],
+      "catalogSha256": "1e6b79690b901706091df53116658c2f081e45b8ee9b73237b5e746f2bc12a5a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29900-b-1",
+      "title": "Firearm possession after a listed conviction following juvenile transfer to adult court",
+      "citation": "Cal. Penal Code § 29900(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29900"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29900"
+      ],
+      "catalogSha256": "6a13ce6b09e3db91b0189e95bad8a1dda228f22e4ffc5a31d4e4c0f44da40e8e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29800-a-2",
+      "title": "Firearm possession after two qualifying firearm-brandishing convictions",
+      "citation": "Cal. Penal Code § 29800(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29800"
+      ],
+      "catalogSha256": "7535f4e18f54cad9d479264bc21cbcfb9e4f8535c319fe9a0124fcf3d28e318a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29800-a-3",
+      "title": "Firearm possession with a known outstanding qualifying warrant",
+      "citation": "Cal. Penal Code § 29800(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29800"
+      ],
+      "catalogSha256": "f0fb9d837bb5a0bd7bace6dc85b2da80b3ba2b352bd788495f08864557d3387b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-29800-b",
+      "title": "Firearm possession after a qualifying conviction following juvenile transfer",
+      "citation": "Cal. Penal Code § 29800(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:29800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29800"
+      ],
+      "catalogSha256": "7e2ea5a90d734db859eccb4534cd392b5230428dd3df10c458bfc2eac3f1024d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-30305-a-1",
+      "title": "Ammunition possession by a person with a qualifying firearm prohibition",
+      "citation": "Cal. Penal Code § 30305(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:30305"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30305"
+      ],
+      "catalogSha256": "4c86a9523f87b91bc8d49c817a3398de33f0fd280464e10dd9fe58a64199addc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-30305-b-1",
+      "title": "Ammunition possession contrary to a qualifying gang injunction",
+      "citation": "Cal. Penal Code § 30305(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:30305"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30305"
+      ],
+      "catalogSha256": "8b83c4f7700ee28d479d7918ac7fc02a2972c46a617bfd3a7cbec233ea5fe4c1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-22810-g-1",
+      "title": "Using tear gas or a tear-gas weapon other than in self-defense",
+      "citation": "Cal. Penal Code § 22810(g)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:22810"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:22810"
+      ],
+      "catalogSha256": "7196a10d2235e20a31ffc665f1cecb43c1f49f89603bc258d03835f42265018f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25400-a-1",
+      "title": "Carrying a concealed firearm within a controlled vehicle",
+      "citation": "Cal. Penal Code § 25400(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25400"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25400"
+      ],
+      "catalogSha256": "e44e275217e64dd1853828fce7c270093bbbecf9639a2701e8b7b93a962cbd62",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25400-a-2",
+      "title": "Carrying a concealed firearm on the person",
+      "citation": "Cal. Penal Code § 25400(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25400"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25400"
+      ],
+      "catalogSha256": "d622cb51c6367dec052866d018154d8df6a30585fc7a4bdff8756430bf84f66c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25400-a-3",
+      "title": "Causing a concealed firearm to be carried within an occupied vehicle",
+      "citation": "Cal. Penal Code § 25400(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25400"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25400"
+      ],
+      "catalogSha256": "6c48d248850151c1291c0522e520871f453c87537ecf7dae222e2ae31de2cef6",
       "attorneyReview": "pending"
     },
     {
