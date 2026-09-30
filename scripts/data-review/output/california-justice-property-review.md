@@ -16,7 +16,7 @@
 
 - Printed contents and extracted headings must agree, including 3001/3002 failure-to-appear and 3010 recording communications at the end of the miscellaneous family.
 - A single reserved number such as 1809 is explicitly excluded only when its contents label is Reserved for Future Use; substantive entries cannot disappear under a numeric-range shortcut.
-- Code identity is parsed from each heading. Subdivision ranges such as 424(a)(1–7) do not create a fictional PEN:7 dependency.
+- Code identity is parsed from each heading. Subdivision ranges such as 424(a)(1-7) do not create a fictional PEN:7 dependency.
 - Tax instructions are acquired with this group to avoid a separate source-gathering cycle. Context on deductions and proof is retained without becoming a charge.
 - The five successor groups are engineering queues. Start with justice/witness/order and custody sources, then combine property and financial branches that reuse the most evidence.
 - This report retains the edition receipt and exact page text. Instruction headings and older citations are research evidence, not a replacement for operative statutory text.
@@ -217,7 +217,7 @@ PDF pages 1249-1252. Status: catalog overlap requires branch review.
 Sources: [PEN:484](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484.).
 Existing associations: ca-petty-theft.
 
-### 1801: Grand and Petty Theft (Pen. Code, §§ 486, 487–488, 490.2, 490.3, 491)
+### 1801: Grand and Petty Theft (Pen. Code, §§ 486, 487-488, 490.2, 490.3, 491)
 
 PDF pages 1253-1255. Status: context defense or grading.
 Sources: [PEN:486](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=486.), [PEN:487](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=487.), [PEN:488](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=488.), [PEN:490.2](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=490.2.), [PEN:490.3](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=490.3.), [PEN:491](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=491.).
@@ -505,7 +505,7 @@ PDF pages 1441-1442. Status: context defense or grading.
 Sources: [PEN:476a](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=476a.).
 Existing associations: ca-check-fraud.
 
-### 2000: Insurance Fraud: Fraudulent Claims (Pen. Code, § 550(a)(1), (4)–(7) & (9))
+### 2000: Insurance Fraud: Fraudulent Claims (Pen. Code, § 550(a)(1), (4)-(7) & (9))
 
 PDF pages 1443-1446. Status: catalog overlap requires branch review.
 Sources: [PEN:550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=550.).
@@ -523,7 +523,7 @@ PDF pages 1449-1450. Status: catalog overlap requires branch review.
 Sources: [PEN:550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=550.).
 Existing associations: ca-insurance-fraud-550-a1, ca-insurance-fraud-550-b1.
 
-### 2003: Insurance Fraud: Health-Care Claims—Total Value (Pen. Code, § 550(c)(2))
+### 2003: Insurance Fraud: Health-Care Claims: Total Value (Pen. Code, § 550(c)(2))
 
 PDF pages 1451-1451. Status: context defense or grading.
 Sources: [PEN:550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=550.).
@@ -829,13 +829,13 @@ PDF pages 1964-1966. Status: catalog overlap requires branch review.
 Sources: [PEN:166](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=166.), [PEN:273.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=273.6.).
 Existing associations: ca-protective-order-273-6-a.
 
-### 2702: Violation of Court Order: Protective Order or Stay Away—Physical Injury (Pen. Code, §§ 166(c)(2), 273.6(b))
+### 2702: Violation of Court Order: Protective Order or Stay Away: Physical Injury (Pen. Code, §§ 166(c)(2), 273.6(b))
 
 PDF pages 1967-1967. Status: catalog overlap requires branch review.
 Sources: [PEN:166](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=166.), [PEN:273.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=273.6.).
 Existing associations: ca-protective-order-273-6-a.
 
-### 2703: Violation of Court Order: Protective Order or Stay Away—Act of Violence (Pen. Code, §§ 166(c)(4), 273.6(d))
+### 2703: Violation of Court Order: Protective Order or Stay Away: Act of Violence (Pen. Code, §§ 166(c)(4), 273.6(d))
 
 PDF pages 1968-1970. Status: catalog overlap requires branch review.
 Sources: [PEN:166](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=166.), [PEN:273.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=273.6.).
@@ -889,7 +889,7 @@ PDF pages 1995-1998. Status: no catalog primary match.
 Sources: [PEN:4574](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=4574.).
 Existing associations: none.
 
-### 2747: Bringing or Sending Firearm, Deadly Weapon, or Explosive Into Penal Institution (Pen. Code, § 4574(a)–(c))
+### 2747: Bringing or Sending Firearm, Deadly Weapon, or Explosive Into Penal Institution (Pen. Code, § 4574(a)-(c))
 
 PDF pages 1999-2002. Status: no catalog primary match.
 Sources: [PEN:4574](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=4574.).
@@ -937,7 +937,7 @@ PDF pages 2027-2028. Status: context defense or grading.
 Sources: context only.
 Existing associations: none.
 
-### 2765: Misappropriation of Public Money (Pen. Code § 424(a)(1–7))
+### 2765: Misappropriation of Public Money (Pen. Code § 424(a)(1-7))
 
 PDF pages 2029-2030. Status: no catalog primary match.
 Sources: [PEN:424](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=424.).

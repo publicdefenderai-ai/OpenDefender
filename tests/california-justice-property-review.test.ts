@@ -1,6 +1,6 @@
 import {describe,expect,it,vi} from 'vitest';
 import fs from 'node:fs';
-import {buildJusticePropertyReview,validateJusticePropertyPacket,readJusticePropertyAcquisition,readJusticePropertyBenchmark,validateJusticePropertyReview,readJusticePropertyReview,justiceInstructionSourceKeys,justiceContentsInventory} from '../scripts/data-review/california-verification/justice-property-review';
+import {renderJusticePropertyReview,buildJusticePropertyReview,validateJusticePropertyPacket,readJusticePropertyAcquisition,readJusticePropertyBenchmark,validateJusticePropertyReview,readJusticePropertyReview,justiceInstructionSourceKeys,justiceContentsInventory} from '../scripts/data-review/california-verification/justice-property-review';
 describe('California combined justice/public-order/property research',()=>{
   it('accounts for eight entire families and separates catalog overlap from legal approval',()=>{
     const r=readJusticePropertyReview();
@@ -48,4 +48,12 @@ describe('California combined justice/public-order/property research',()=>{
     const group=readJusticePropertyReview();group.groups.pop();expect(()=>validateJusticePropertyReview(group)).toThrow('accounting');
     const limits=readJusticePropertyReview();limits.limits=[];expect(()=>validateJusticePropertyReview(limits)).toThrow('accounting');
   });
+  it('normalizes display punctuation while preserving source headings',()=>{
+    const review=readJusticePropertyReview();
+    const original=JSON.stringify(review.crosswalk);
+    const rendered=renderJusticePropertyReview(review);
+    expect(rendered).not.toMatch(/[—–]/);
+    expect(JSON.stringify(review.crosswalk)).toBe(original);
+  });
+
 });
