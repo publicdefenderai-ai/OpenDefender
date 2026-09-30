@@ -4,4 +4,4 @@
  * catalog under test. Per-batch tests still assert their own exact additions.
  * Runtime count assumes a fresh receipt and the existing PEN:30515 hold.
  */
-export const CA_CATALOG_COUNTS = { configured: 476, eligible: 475 } as const;
+export const CA_CATALOG_COUNTS = { configured: 521, eligible: 520 } as const;

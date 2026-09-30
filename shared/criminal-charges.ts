@@ -95033,6 +95033,16 @@ for (const [group, sections] of [['Weapons', californiaWeaponConductSections], [
   ]));
 }
 
+// Keep reviewed justice/custody branches discoverable through the existing public-order group.
+const californiaJusticeSections = new Set(['67','136.1','137','138','140','141','118','118a','69','148','148.10','166','273.6','4501','4501.5','4503','4502','4574','4532','836.6','1320.5']);
+chargeCategories['Public Order'] = Array.from(new Set([
+  ...chargeCategories['Public Order'],
+  ...chargeCategories['CA'].filter(id => {
+    const record = getCaliforniaCanonicalRecord(id);
+    return record?.lawCode === 'PEN' && californiaJusticeSections.has(record.code.split('(')[0]);
+  }),
+]));
+
 // Include reviewed sexual branches in both existing topical filters.
 const californiaSexualSections = new Set(['243.4','264.1','266h','266i','266j','269','285','286','286.5','287','288','288.2','288.3','288.4','288.5','288.7','289','290','290.011','290.012','311.1','311.2','311.4','311.6','311.11','647.6']);
 for (const group of ['Sexual Offenses', 'Sexual Crimes']) {

@@ -1,11 +1,10 @@
+import {readCaliforniaCatalog} from "./helpers/california-catalog";
 import {CA_CATALOG_COUNTS} from "../fixtures/california-catalog-counts";
 import {expect,test} from '@playwright/test';
 import {readFileSync} from 'node:fs';
 const additions=JSON.parse(readFileSync('shared/california-traffic-additions.json','utf8')) as Array<{id:string;code:string;summary:string;penalty:string;categories:string[]}>;
 test('DUI, licensing and racing choices reach authority-gated API and rules guidance',async({request})=>{
-  const response=await request.get('/api/criminal-charges?jurisdiction=CA&limit=500');
-  expect(response.ok()).toBe(true);
-  const body=await response.json();expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
+  const body = await readCaliforniaCatalog(request);expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
   for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
   expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
   const ids=['ca-veh-23153-f','ca-veh-14601-1-a','ca-veh-23109-c','ca-veh-40508-a'];

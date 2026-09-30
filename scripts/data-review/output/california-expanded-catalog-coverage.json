@@ -4,11 +4,11 @@
   "scope": "catalog_accounting_not_statewide_offense_coverage",
   "accounting": {
     "specificOpenLegalQuestions": 4,
-    "canonicalRecords": 497,
-    "configuredSelectable": 476,
+    "canonicalRecords": 542,
+    "configuredSelectable": 521,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 377,
-    "boundedCorrectionPass": 476,
+    "boundedAdditionPass": 422,
+    "boundedCorrectionPass": 521,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -19,21 +19,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 263,
+    "distinctSelectablePrimarySections": 282,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 263,
-    "selectableRecordsWithAllPrimaryTextAcquired": 476,
-    "totalAcquiredSectionsIncludingDependencies": 686,
-    "totalAcquiredVersionsIncludingDependencies": 692,
+    "acquiredSelectablePrimarySections": 282,
+    "selectableRecordsWithAllPrimaryTextAcquired": 521,
+    "totalAcquiredSectionsIncludingDependencies": 724,
+    "totalAcquiredVersionsIncludingDependencies": 730,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "476 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "521 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -59,8 +59,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 360,
-      "corrected": 360,
+      "selectable": 405,
+      "corrected": 405,
       "awaitingCorrection": 0
     },
     {
@@ -715,6 +715,24 @@
     },
     {
       "lawCode": "PEN",
+      "section": "118",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=118&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-118-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "118a",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=118a&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-118a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "1320",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320&lawCode=PEN",
       "recordIds": [
@@ -725,12 +743,88 @@
     },
     {
       "lawCode": "PEN",
+      "section": "1320.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-1320-5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "136.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=136.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-136-1-a-1",
+        "ca-pen-136-1-a-2",
+        "ca-pen-136-1-b-1",
+        "ca-pen-136-1-b-2",
+        "ca-pen-136-1-b-3",
+        "ca-pen-136-1-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "137",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=137&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-137-a",
+        "ca-pen-137-b",
+        "ca-pen-137-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "138",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=138&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-138-a",
+        "ca-pen-138-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "140",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=140&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-140-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "141",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=141&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-141-a",
+        "ca-pen-141-b",
+        "ca-pen-141-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "148",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148&lawCode=PEN",
       "recordIds": [
-        "ca-resisting-arrest"
+        "ca-resisting-arrest",
+        "ca-pen-148-b",
+        "ca-pen-148-c",
+        "ca-pen-148-d"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148.10",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148.10&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-148-10-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -740,6 +834,17 @@
         "ca-false-info-to-police"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "166",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=166&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-166-a-4",
+        "ca-pen-166-c-1",
+        "ca-pen-166-c-4"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -1540,7 +1645,10 @@
       "section": "273.6",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.6&lawCode=PEN",
       "recordIds": [
-        "ca-protective-order-273-6-a"
+        "ca-protective-order-273-6-a",
+        "ca-pen-273-6-b",
+        "ca-pen-273-6-d",
+        "ca-pen-273-6-e"
       ],
       "alreadyRetained": true
     },
@@ -2021,6 +2129,67 @@
       "recordIds": [
         "ca-pen-422-6-a",
         "ca-pen-422-6-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4501",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4501&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4501-a",
+        "ca-pen-4501-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4501.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4501.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4501-5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4502",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4502&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4502-a",
+        "ca-pen-4502-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4503",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4503&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4503"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4532",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4532&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4532-a-1",
+        "ca-pen-4532-a-2",
+        "ca-pen-4532-b-1",
+        "ca-pen-4532-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4574",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4574&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4574-a",
+        "ca-pen-4574-b",
+        "ca-pen-4574-c"
       ],
       "alreadyRetained": false
     },
@@ -2538,6 +2707,34 @@
       "recordIds": [
         "ca-attempted-murder",
         "ca-attempted-robbery"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "67",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=67&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-67"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "69",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=69&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-69-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "836.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=836.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-836-6-a",
+        "ca-pen-836-6-b"
       ],
       "alreadyRetained": false
     },
@@ -5007,6 +5204,783 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-67",
+      "title": "Giving or offering a bribe to an executive officer",
+      "citation": "Cal. Penal Code § 67",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:67"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:67"
+      ],
+      "catalogSha256": "6da24e4f1002c04505098b7a500da74e4c63f5cc77dc446ae1c56085325f080c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-137-a",
+      "title": "Bribing a witness or person providing crime information",
+      "citation": "Cal. Penal Code § 137(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:137"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:137"
+      ],
+      "catalogSha256": "267748a0942592c8d4b0bc5ee0c481c5964efbc7769280b13d30e75b40a386f4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-137-b",
+      "title": "Using force, threats or fraud to influence testimony or crime information",
+      "citation": "Cal. Penal Code § 137(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:137"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:137"
+      ],
+      "catalogSha256": "b40d5dc72faadbe74073678da78f11541e6199f70268b803d498747a8be6607c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-137-c",
+      "title": "Knowingly inducing false or withheld testimony or crime information",
+      "citation": "Cal. Penal Code § 137(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:137"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:137"
+      ],
+      "catalogSha256": "e638abd63132615d372b0dea74d3c2b6827f0fef0945e7989e032f972d1e9ffa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-138-a",
+      "title": "Bribing a witness not to attend a proceeding",
+      "citation": "Cal. Penal Code § 138(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:138"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:138"
+      ],
+      "catalogSha256": "94045a7725c2be7707a8a7f0627a5cfd1f3e21a34994bf7fb41f0285fb1fcb58",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-138-b",
+      "title": "Witness receiving or offering to receive a bribe",
+      "citation": "Cal. Penal Code § 138(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:138"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:138"
+      ],
+      "catalogSha256": "71ccd668cb7307defba7c8eddcc84a26bba6f84484962d8af4607e803feedfdb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-a-1",
+      "title": "Preventing or dissuading witness attendance or testimony",
+      "citation": "Cal. Penal Code § 136.1(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "2c8e01aae5afd910b82ad430da9ff0960fbe247d52264e1a26fd7601a15ef8db",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-a-2",
+      "title": "Attempting to prevent witness attendance or testimony",
+      "citation": "Cal. Penal Code § 136.1(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "7ea63adcbc23efef506896f3e1f54bb4576649d2b5ce41b7a300b36cbce5d91a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-b-1",
+      "title": "Attempting to prevent a victim or witness from reporting a crime",
+      "citation": "Cal. Penal Code § 136.1(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "7b5a55a5574fe5b4ac516ec231a87c38a25cfdda1735581088c79c6d130a2810",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-b-2",
+      "title": "Attempting to prevent prosecution or assistance in prosecution",
+      "citation": "Cal. Penal Code § 136.1(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "ad24bc59198f5d0f91d4a356713de3a0083922ceda63c75e7803e8560441902a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-b-3",
+      "title": "Attempting to prevent an arrest connected with victimization",
+      "citation": "Cal. Penal Code § 136.1(b)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "ec2f66aae33b237c0e643f8dfd6ecddfb02a6eeac21c3aa7f616530d0994f88e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-136-1-c",
+      "title": "Aggravated intimidation of a witness or victim",
+      "citation": "Cal. Penal Code § 136.1(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:136.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:136.1"
+      ],
+      "catalogSha256": "11f59f0f86248c91a16af2ae26873463a2f5df46fb98ce196e104bc53b6202a6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-140-a",
+      "title": "Retaliating against a witness, victim or person assisting law enforcement",
+      "citation": "Cal. Penal Code § 140(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:140"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:140"
+      ],
+      "catalogSha256": "08071115315626a5578e74e6aabf82469257c2c0d6acde0c52af9e8f6050bf2b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-141-a",
+      "title": "Wrongfully altering, planting or concealing evidence",
+      "citation": "Cal. Penal Code § 141(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:141"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:141"
+      ],
+      "catalogSha256": "96a460e1ce767af6167b75688060ec714084d4ed2357b06486b480fe3632a7d8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-141-b",
+      "title": "Evidence tampering by a peace officer",
+      "citation": "Cal. Penal Code § 141(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:141"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:141"
+      ],
+      "catalogSha256": "70678d4f2dd1e82ed0aa85cafaf724a268b97a07f4be58cc689f154631b36eed",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-141-c",
+      "title": "Bad-faith evidence alteration or withholding by a prosecuting attorney",
+      "citation": "Cal. Penal Code § 141(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:141"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:141"
+      ],
+      "catalogSha256": "f38752b24afee2ddadec10095648ca045dc589c8c7f44db21d9848d329f659e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-118-a",
+      "title": "Perjury under oath or penalty of perjury",
+      "citation": "Cal. Penal Code § 118(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:118"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:118"
+      ],
+      "catalogSha256": "b6dbfcf7df19dd94f4164679e1c1247a6110457cf879d5df3d48080924d19e14",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-118a",
+      "title": "Perjury by false affidavit concerning future testimony",
+      "citation": "Cal. Penal Code § 118a",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:118a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:118a"
+      ],
+      "catalogSha256": "81146808ed44054b0313964be5a332783215cceaacf660f4bb668f4de4dec6fd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-69-a",
+      "title": "Deterring or forcibly resisting an executive officer",
+      "citation": "Cal. Penal Code § 69(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:69"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:69"
+      ],
+      "catalogSha256": "40ace13d01ec055be25331484dfec0429c853afb613bae275b9868ec0e9235fc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-148-b",
+      "title": "Taking a nonfirearm weapon while resisting an officer",
+      "citation": "Cal. Penal Code § 148(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:148"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:148"
+      ],
+      "catalogSha256": "d466f2f8a8acb76519edd9f4bfa82197c7fc9d5ebb5808aeaac288c158805060",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-148-c",
+      "title": "Taking a firearm while resisting an officer",
+      "citation": "Cal. Penal Code § 148(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:148"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:148"
+      ],
+      "catalogSha256": "1519261645a81ac6bf767a8199395a9a288992624e06f505b401bdfb56192cdd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-148-d",
+      "title": "Taking or attempting to take an officer's firearm",
+      "citation": "Cal. Penal Code § 148(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:148"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:148"
+      ],
+      "catalogSha256": "91c5d9355af332e4e8c3a08691bb87452cf9296e5cf8c337f3f44388ba3e5a5e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-148-10-a",
+      "title": "Resisting a peace officer causing death or serious bodily injury",
+      "citation": "Cal. Penal Code § 148.10(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148.10"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:148.10"
+      ],
+      "catalogSha256": "9b24f9a2f25c3ccf50f3ea85dcc9d0bd7653cf6fad7fe37ba98b77eb5bdb019a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-166-a-4",
+      "title": "Willfully disobeying a lawful court order",
+      "citation": "Cal. Penal Code § 166(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:166"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:166"
+      ],
+      "catalogSha256": "0c391387fa08f9d0468ce1fa92b6b96255b08d2c08c673604650193759d6ddfe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-166-c-1",
+      "title": "Knowingly violating a qualifying protective or stay-away order",
+      "citation": "Cal. Penal Code § 166(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:166"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:166"
+      ],
+      "catalogSha256": "60dd56dcf5528a2b2655673350bbfce834a1f4b3d055e40bed4ff1c802301ba9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-166-c-4",
+      "title": "Repeat protective-order violation involving violence or a credible threat",
+      "citation": "Cal. Penal Code § 166(c)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:166"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:166"
+      ],
+      "catalogSha256": "32acac6d730665b4a04140714789c61e1508b313a7554b2c71f69d2f9f7931e5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273-6-b",
+      "title": "Protective-order violation causing physical injury",
+      "citation": "Cal. Penal Code § 273.6(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273.6"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "catalogSha256": "e6cf71eee85002f8100bbaf784ea8bccccd1764f4c046c885d05b2cfb749d6f1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273-6-d",
+      "title": "Repeat protective-order violation with violence or a credible threat",
+      "citation": "Cal. Penal Code § 273.6(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273.6"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "catalogSha256": "0d6894eab63d9ba2ed42e5a92d81ae433b79dc9e7829beca0f0a0717dc95d4a7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-273-6-e",
+      "title": "Repeat protective-order violation causing physical injury",
+      "citation": "Cal. Penal Code § 273.6(e)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273.6"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "catalogSha256": "35b1199533259d7ed3688d082097f07db34ff2feb54ed71511f5c528b6c45f4e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4501-a",
+      "title": "Assault by a state prisoner with a deadly weapon or instrument",
+      "citation": "Cal. Penal Code § 4501(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4501"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4501"
+      ],
+      "catalogSha256": "2d92acfab86e0f523bd3b97c3ca1dd0dbe19f9f54c8325943fe07ea11df4563b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4501-b",
+      "title": "Assault by a state prisoner by force likely to produce great bodily injury",
+      "citation": "Cal. Penal Code § 4501(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4501"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4501"
+      ],
+      "catalogSha256": "26778b52168e91092f5a528eb6126c3ab0ac72067d74792a2c7a6d307bb9a579",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4501-5",
+      "title": "Battery by a state prisoner on a nonprisoner",
+      "citation": "Cal. Penal Code § 4501.5",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4501.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4501.5"
+      ],
+      "catalogSha256": "fac436af6226cf881ad2019bcd9ac90ab7609779f01cc85f57c65fc68f55dc78",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4503",
+      "title": "Holding a hostage or forcibly detaining a person in prison",
+      "citation": "Cal. Penal Code § 4503",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4503"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4503"
+      ],
+      "catalogSha256": "72b022a1022ccce4e5be9be234e48654df0c6e1622b3bde041377e136b39681a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4502-a",
+      "title": "Possessing a listed weapon or ammunition in penal custody",
+      "citation": "Cal. Penal Code § 4502(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4502"
+      ],
+      "catalogSha256": "b88566a9116194300cbd0b49b648a89004804c99274eb193726917cbc622daa9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4502-b",
+      "title": "Manufacturing a listed weapon or ammunition in penal custody",
+      "citation": "Cal. Penal Code § 4502(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4502"
+      ],
+      "catalogSha256": "2b54455541610767fddf31226262179b8cf8f3ae75cb2109fde29ef85e4a2788",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4574-a",
+      "title": "Bringing weapons into custody facilities or possessing them in jail",
+      "citation": "Cal. Penal Code § 4574(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4574"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4574"
+      ],
+      "catalogSha256": "2b7ce7d1e056f18c998db5b9741216946fa5685dec3af0cbf669d4fb35bb5bd6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4574-b",
+      "title": "Bringing tear gas into a custody facility resulting in release or use",
+      "citation": "Cal. Penal Code § 4574(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4574"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4574"
+      ],
+      "catalogSha256": "ba0cc619d796f288f992db0aa2f3856a9452e83f4de86a16a8093e1f5b2b3932",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4574-c",
+      "title": "Bringing tear gas into a custody facility without the aggravated conditions",
+      "citation": "Cal. Penal Code § 4574(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4574"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4574"
+      ],
+      "catalogSha256": "019689a29177cd2661ee386d54e526fa4e49cd7533f3408b824a7ac1415a56e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4532-a-1",
+      "title": "Escape without force or violence from misdemeanor custody",
+      "citation": "Cal. Penal Code § 4532(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4532"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4532"
+      ],
+      "catalogSha256": "0a6cf23d894d8c532bd0cef88eed7baa6e98185e6c2c2dd5d925d0bf03ed50c9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4532-a-2",
+      "title": "Escape by force or violence from misdemeanor custody",
+      "citation": "Cal. Penal Code § 4532(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4532"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4532"
+      ],
+      "catalogSha256": "acffceeb849e9d84d84e481f990808043dd140c7b869b992fcc9887e2e0b6ee9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4532-b-1",
+      "title": "Escape without force or violence from felony custody or a qualifying juvenile-court commitment",
+      "citation": "Cal. Penal Code § 4532(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4532"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4532"
+      ],
+      "catalogSha256": "dd6629f72e39654480be382da95c3a956b8f6cddb9323065eac8554adcd140fe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4532-b-2",
+      "title": "Escape by force or violence from felony custody or a qualifying juvenile-court commitment",
+      "citation": "Cal. Penal Code § 4532(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4532"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4532"
+      ],
+      "catalogSha256": "3ce2294d53fbabf5455e6283ab1d631be96e9bbf19101d0a77dc57d728b8ff71",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-836-6-a",
+      "title": "Escape after judicial remand",
+      "citation": "Cal. Penal Code § 836.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:836.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:836.6"
+      ],
+      "catalogSha256": "72d644c4651e5bfe3cdd0b35e9f4c5b175930f598bed4a8be0aa15915620db70",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-836-6-b",
+      "title": "Escape following a lawful arrest",
+      "citation": "Cal. Penal Code § 836.6(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:836.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:836.6"
+      ],
+      "catalogSha256": "7b54c3a77503e5dcdae4f79afb1c5ac36b0385d62c493e199eb830faa4f7292b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-1320-5",
+      "title": "Willful failure to appear while on bail in a felony case",
+      "citation": "Cal. Penal Code § 1320.5",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:1320.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:1320.5"
+      ],
+      "catalogSha256": "eb70561544f3fdb0a6dcb8d2c5a3148d6b98d89c73055d480b8aba7d4433b132",
       "attorneyReview": "pending"
     },
     {

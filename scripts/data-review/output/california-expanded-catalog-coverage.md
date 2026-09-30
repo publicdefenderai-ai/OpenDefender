@@ -1,23 +1,23 @@
 # California coverage and remaining review queue
 
-Configured selectable: 476. Bounded correction pass: 476. Awaiting that pass: 0. Withheld canonical labels: 21.
+Configured selectable: 521. Bounded correction pass: 521. Awaiting that pass: 0. Withheld canonical labels: 21.
 
 Statewide offense coverage: unknown. Live deployment parity: not established by this offline report.
 
 - A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.
-- 476 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.
+- 521 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.
 - The legacy inventory overlaps the canonical inventory and must not be added to it.
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary.
 
-Primary-source acquisition: 263/263 declared sections, covering the primary links of 476/476 configured records. Total retained research sources including dependencies: 686 sections/692 versions.
+Primary-source acquisition: 282/282 declared sections, covering the primary links of 521/521 configured records. Total retained research sources including dependencies: 724 sections/730 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |
 | BPC | 1 | 1 | 0 |
 | HNC | 8 | 8 | 0 |
 | HSC | 52 | 52 | 0 |
-| PEN | 360 | 360 | 0 |
+| PEN | 405 | 405 | 0 |
 | VEH | 55 | 55 | 0 |
 
 ## Remaining work
