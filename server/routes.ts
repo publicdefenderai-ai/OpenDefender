@@ -1,3 +1,4 @@
+import { parseChargePagination, paginateCharges } from "./charge-pagination";
 import type { Express, Request, Response, NextFunction } from "express";
 import { CLAUDE_MODEL_SONNET_DISPLAY_NAME } from "./config/ai-model";
 import fs from "fs";
@@ -402,7 +403,10 @@ export async function registerRoutes(
   // Criminal Charges API - Get charges by jurisdiction
   app.get("/api/criminal-charges", async (req, res) => {
     try {
-      const { jurisdiction, search, category, group, limit, language } = req.query;
+      const { jurisdiction, search, category, group, language } = req.query;
+      let pageRequest;
+      try { pageRequest = parseChargePagination(req.query); }
+      catch { return res.status(400).json({ success: false, error: "Invalid charge pagination" }); }
       const requestedLanguage = typeof language === "string" && language.toLowerCase().startsWith("zh")
         ? "zh"
         : typeof language === "string" && language.toLowerCase().startsWith("es")
@@ -414,6 +418,7 @@ export async function registerRoutes(
         : getSelectableCharges();
       const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       charges = filterAuthorityBackedCharges(charges, currentAuthoritySelectableIds);
+      const totalAvailable = charges.length;
       
         // Search canonical and available localized text regardless of display locale.
       if (search && typeof search === 'string' && search.length > MAX_QUERY_LENGTH) {
@@ -452,9 +457,9 @@ export async function registerRoutes(
         charges = charges.filter(charge => groupIds.has(charge.id));
       }
       
-      // Limit results
-      const maxResults = Math.min(parseInt(limit as string, 10) || 200, 500);
-      charges = charges.slice(0, maxResults);
+      const page = paginateCharges(charges, totalAvailable, requestedLanguage, pageRequest);
+      if (!page) return res.status(409).json({ success: false, error: "Charge catalog changed; restart the lookup" });
+      charges = page.charges;
       
       // Return simplified charge data for the selector with localized fields
       const simplifiedCharges = charges.map(charge => {
@@ -502,12 +507,8 @@ export async function registerRoutes(
         success: true, 
         charges: simplifiedCharges,
         count: simplifiedCharges.length,
-        totalAvailable: jurisdiction
-          ? filterAuthorityBackedCharges(
-            getChargesByJurisdiction(jurisdiction as string),
-            currentAuthoritySelectableIds,
-          ).length
-          : filterAuthorityBackedCharges(getSelectableCharges(), currentAuthoritySelectableIds).length
+        totalAvailable,
+        pagination: page.pagination
       });
     } catch (error) {
       errLog("Failed to fetch criminal charges", error);

@@ -1,3 +1,4 @@
+import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { useState, useRef, useEffect } from "react";
 import type { ReactNode } from "react";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
@@ -488,13 +489,9 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 
     let cancelled = false;
     setRuntimeAuthorityCharges(null);
-    fetch(`/api/criminal-charges?jurisdiction=${encodeURIComponent(formData.jurisdiction)}&limit=500&language=${encodeURIComponent(i18n.language)}`)
-      .then(async (response) => {
-        if (!response.ok) throw new Error(`${formData.jurisdiction} charge lookup failed (${response.status})`);
-        const payload = await response.json();
-        if (!payload.success || !Array.isArray(payload.charges)) {
-          throw new Error(`${formData.jurisdiction} charge lookup returned an invalid response`);
-        }
+    const controller = new AbortController();
+    fetchChargeCatalog<any>({ jurisdiction: formData.jurisdiction, language: i18n.language }, controller.signal)
+      .then((payload) => {
         if (!cancelled) setRuntimeAuthorityCharges(payload.charges);
       })
       .catch(() => {
@@ -505,6 +502,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 
     return () => {
       cancelled = true;
+      controller.abort();
     };
   }, [isAuthorityBacked, formData.jurisdiction, i18n.language]);
   

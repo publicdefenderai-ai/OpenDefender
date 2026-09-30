@@ -72,8 +72,11 @@ for (const unavailable of [false, true]) {
     await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));
     await page.route("**/api/captcha/config", route => route.fulfill({ json: { required: false, siteKey: null } }));
     const id = "ca-hsc-11379-6-e";
+    let authorityGone = unavailable;
     await page.route("**/api/criminal-charges?**", route => route.fulfill({ json: {
-      success: true, charges: unavailable ? [] : [{ id, name: "Offer to manufacture a controlled substance", code: "11379.6(e)", category: "felony", description: "Reviewed offer branch" }], totalAvailable: unavailable ? 0 : 1,
+      success: true, count: authorityGone ? 0 : 1,
+      pagination: {offset:0,limit:500,totalMatches:authorityGone?0:1,nextOffset:null,snapshot:'a'.repeat(64)},
+      charges: authorityGone ? [] : [{ id, name: "Offer to manufacture a controlled substance", code: "11379.6(e)", category: "felony", description: "Reviewed offer branch" }], totalAvailable: authorityGone ? 0 : 1,
     } }));
     await page.route("**/api/legal-guidance/stream", route => route.fulfill({
       contentType: "text/event-stream",
@@ -109,6 +112,14 @@ for (const unavailable of [false, true]) {
     } else {
       await expect(page.getByRole("button", { name: /Read the Law/i })).toBeVisible();
       await expect(page.getByTestId("charge-reselection-warning-0")).toHaveCount(0);
+      // Recheck all pages at export time, even after a successful dashboard load.
+      authorityGone = true;
+      await page.getByTestId("button-export-pdf").click();
+      const failure = page.waitForEvent("dialog");
+      await page.getByTestId("button-confirm-export").click();
+      const dialog = await failure;
+      expect(dialog.message()).toContain("PDF export failed");
+      await dialog.dismiss();
     }
   });
 }

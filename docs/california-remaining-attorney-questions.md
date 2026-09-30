@@ -114,3 +114,17 @@ checks after independent PR review.
 **Question to answer:** Does the first sentence's $1,000 ceiling also apply to the aggravated felony, or is a different felony fine available under §672? Please identify controlling authority for the fine treatment, or approve retaining the expressly unresolved fine limit.
 
 **Current treatment:** The separate felony choice gives the 16-month/two-/three-year custody alternatives and explicitly says its fine exposure requires review. The misdemeanor entry retains its verified $1,000 ceiling and 364-day custody maximum. No numerical felony fine ceiling is inferred. This narrow question does not prevent review of the other 27 proposed choices.
+
+
+**Attorney-supplied lead, reviewed September 29, 2026:** The reviewer identified a
+$10,000 felony fine based on the [Phillips certiorari petition, printed page 11
+(PDF page 20)](https://www.supremecourt.gov/DocketPDF/24/24-1273/362731/20250610104623753_J_Phillips%20Petition%20June%2010%202025%20EFile.pdf).
+That page does state the $10,000 ceiling, but it is counsel's presentation, not a
+court holding, and it does not cite section 672 for that statement. The separate
+[appendix, opinion at pages 2a-17a](https://www.supremecourt.gov/DocketPDF/24/24-1273/362731/20250610104702547_J_Phillips%20Appendix%20June%2010%202025%20EFile.pdf)
+contains an unpublished opinion addressing reduction under section 17(b); it does
+not establish the asserted $10,000 fine ceiling. Record the attorney's proposed
+interpretation and this supporting argument separately from verified controlling
+authority. The question and published fine uncertainty remain open pending that
+distinction being resolved. No case narratives or personal records are copied
+into the charge database.

@@ -1,5 +1,11 @@
 import { expect, test, type Page } from "@playwright/test";
 
+// The guidance stream below is synthetic; it must not depend on a real AI key.
+test.beforeEach(async ({page}) => {
+  await page.route("**/api/ai/status", route => route.fulfill({json:{available:true}}));
+  await page.route("**/api/captcha/config", route => route.fulfill({json:{required:false,siteKey:null}}));
+});
+
 const MOBILE_VIEWPORT = { width: 320, height: 812 } as const;
 const COMPACT_VIEWPORT = { width: 280, height: 812 } as const;
 const ENGLISH_GUIDANCE_VIEWPORTS = [
@@ -267,6 +273,7 @@ async function mockFloridaAuthorityWithSharedCitation(page: Page) {
         success: true,
         count: 3,
         totalAvailable: 3,
+        pagination: {offset:0,limit:500,totalMatches:3,nextOffset:null,snapshot:'a'.repeat(64)},
         charges: [
           {
             id: "fl-murder-in-the-first-degree",

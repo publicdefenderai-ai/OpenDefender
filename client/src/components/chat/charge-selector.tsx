@@ -1,3 +1,4 @@
+import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import { useState, useEffect } from "react";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
@@ -109,26 +110,19 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
     return () => clearTimeout(timer);
   }, [search]);
 
-  const { data, isLoading } = useQuery<{ charges: Charge[]; count: number; totalAvailable: number }>({
+  const { data, isLoading, isError } = useQuery<{ charges: Charge[]; count: number; totalAvailable: number }>({
     queryKey: ['/api/criminal-charges', jurisdiction, debouncedSearch, selectedCategory, selectedGroup, i18n.language],
-    queryFn: async () => {
-      const params = new URLSearchParams({
-        jurisdiction,
-        limit: '200',
-        language: i18n.language,
-      });
-      if (debouncedSearch) params.append('search', debouncedSearch);
-      if (selectedCategory !== 'All') params.append('category', selectedCategory);
-      if (selectedGroup !== 'All Groups') params.append('group', selectedGroup);
-      
-      const res = await fetch(`/api/criminal-charges?${params}`);
-      if (!res.ok) throw new Error('Failed to fetch charges');
-      return res.json();
-    },
+    queryFn: ({ signal }) => fetchChargeCatalog<Charge>({
+      jurisdiction,
+      language: i18n.language,
+      ...(debouncedSearch ? { search: debouncedSearch } : {}),
+      ...(selectedCategory !== 'All' ? { category: selectedCategory } : {}),
+      ...(selectedGroup !== 'All Groups' ? { group: selectedGroup } : {}),
+    }, signal),
     staleTime: 5 * 60 * 1000,
   });
 
-  const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
+  const charges = (isError ? [] : [...(data?.charges || [])]).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
   const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "OH", "CA", "GA", "IL"].includes(jurisdiction.toUpperCase());
   const isOhio = jurisdiction.toUpperCase() === "OH";

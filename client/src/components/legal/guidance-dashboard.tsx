@@ -1,3 +1,4 @@
+import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import React, { useState, useCallback, useEffect } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -604,15 +605,9 @@ function YourChargesSection({
     normalizedJurisdiction === "OH" ||
     normalizedJurisdiction === "GA" ||
     normalizedJurisdiction === "CA";
-  const { data: currentAuthorityCharges } = useQuery<{ charges?: Array<{ id: string }> }>({
+  const { data: currentAuthorityCharges, isError: authorityError } = useQuery<{ charges?: Array<{ id: string }> }>({
     queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
-    queryFn: async () => {
-      const response = await fetch(
-        `/api/criminal-charges?jurisdiction=${encodeURIComponent(normalizedJurisdiction ?? "")}&limit=500`,
-      );
-      if (!response.ok) throw new Error("Current authority could not be loaded");
-      return response.json();
-    },
+    queryFn: ({ signal }) => fetchChargeCatalog({ jurisdiction: normalizedJurisdiction ?? "" }, signal),
     enabled: isAuthorityBacked,
     staleTime: 0,
     retry: false,
@@ -620,7 +615,7 @@ function YourChargesSection({
     refetchOnReconnect: true,
   });
   const currentAuthorityIds = new Set(
-    currentAuthorityCharges?.charges?.map((charge) => charge.id) ?? [],
+    authorityError ? [] : currentAuthorityCharges?.charges?.map((charge) => charge.id) ?? [],
   );
   
   if (!chargeClassifications || chargeClassifications.length === 0) {
@@ -1063,18 +1058,10 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     try {
       const jurisdiction = guidance.caseData?.jurisdiction?.toUpperCase();
       if (
-        ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"].includes(jurisdiction) &&
+        ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "CA"].includes(jurisdiction) &&
         guidance.chargeClassifications?.length
       ) {
-        const authorityResponse = await fetch(
-          `/api/criminal-charges?jurisdiction=${encodeURIComponent(jurisdiction)}&limit=500`,
-        );
-        if (!authorityResponse.ok) {
-          throw new Error("Current charge authority could not be verified");
-        }
-        const authorityPayload = await authorityResponse.json() as {
-          charges?: Array<{ id: string }>;
-        };
+        const authorityPayload = await fetchChargeCatalog({ jurisdiction });
         const currentIds = new Set(authorityPayload.charges?.map((charge) => charge.id) ?? []);
         if (guidance.chargeClassifications.some((charge) => !currentIds.has(charge.id ?? ""))) {
           throw new Error("One or more saved charges no longer has current authority");
