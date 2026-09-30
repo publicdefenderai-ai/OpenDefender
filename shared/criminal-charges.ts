@@ -95033,6 +95033,15 @@ for (const [group, sections] of [['Weapons', californiaWeaponConductSections], [
   ]));
 }
 
+// These public-order choices share the reviewed catalog; do not infer categories from a statute number alone.
+const californiaPublicOrderSections = new Set(['591','601','602','602.5','399','399.5','337a','336.9','632']);
+chargeCategories['Public Order'] = [...new Set([...chargeCategories['Public Order'], ...criminalCharges.filter(charge => {
+  if (charge.jurisdiction !== 'CA') return false;
+  const record = getCaliforniaCanonicalRecord(charge.id);
+  return record && ((record.lawCode === 'PEN' && californiaPublicOrderSections.has(record.code.split('(')[0]))
+    || (record.lawCode === 'BPC' && ['25658','25658.2'].includes(record.code.split('(')[0])));
+}).map(charge => charge.id)])];
+
 // Reviewed financial and income/franchise-tax choices use the existing fraud filter.
 const californiaFinancialSections = new Set(['115','424','529','532a','548']);
 const californiaTaxSections = new Set(['19701','19705','19706','19708','19709']);
