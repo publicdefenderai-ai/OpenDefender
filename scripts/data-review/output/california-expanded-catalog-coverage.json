@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 564,
-    "configuredSelectable": 543,
+    "canonicalRecords": 592,
+    "configuredSelectable": 571,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 444,
-    "boundedCorrectionPass": 543,
+    "boundedAdditionPass": 472,
+    "boundedCorrectionPass": 571,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 297,
+    "distinctSelectablePrimarySections": 307,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 297,
-    "selectableRecordsWithAllPrimaryTextAcquired": 543,
-    "totalAcquiredSectionsIncludingDependencies": 746,
-    "totalAcquiredVersionsIncludingDependencies": 754,
+    "acquiredSelectablePrimarySections": 307,
+    "selectableRecordsWithAllPrimaryTextAcquired": 571,
+    "totalAcquiredSectionsIncludingDependencies": 773,
+    "totalAcquiredVersionsIncludingDependencies": 781,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "543 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "571 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,14 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 427,
-      "corrected": 427,
+      "selectable": 443,
+      "corrected": 443,
+      "awaitingCorrection": 0
+    },
+    {
+      "lawCode": "RTC",
+      "selectable": 12,
+      "corrected": 12,
       "awaitingCorrection": 0
     },
     {
@@ -715,6 +721,15 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11413&lawCode=PEN",
       "recordIds": [
         "ca-pen-11413-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "115",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=115&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-115-a"
       ],
       "alreadyRetained": false
     },
@@ -2148,6 +2163,21 @@
     },
     {
       "lawCode": "PEN",
+      "section": "424",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=424&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-424-a-1",
+        "ca-pen-424-a-2",
+        "ca-pen-424-a-3",
+        "ca-pen-424-a-4",
+        "ca-pen-424-a-5",
+        "ca-pen-424-a-6",
+        "ca-pen-424-a-7"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "4501",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4501&lawCode=PEN",
       "recordIds": [
@@ -2759,11 +2789,43 @@
     },
     {
       "lawCode": "PEN",
+      "section": "529",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=529&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-529-a-1",
+        "ca-pen-529-a-2",
+        "ca-pen-529-a-3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "530.5",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530.5&lawCode=PEN",
       "recordIds": [
         "ca-identity-theft-530-5-a",
         "ca-identity-theft-530-5-c1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "532a",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=532a&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-532a-1",
+        "ca-pen-532a-2",
+        "ca-pen-532a-3",
+        "ca-pen-532a-4"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "548",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=548&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-548-a"
       ],
       "alreadyRetained": false
     },
@@ -2882,6 +2944,58 @@
       "recordIds": [
         "ca-pen-836-6-a",
         "ca-pen-836-6-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "RTC",
+      "section": "19701",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=19701&lawCode=RTC",
+      "recordIds": [
+        "ca-rtc-19701-a",
+        "ca-rtc-19701-b",
+        "ca-rtc-19701-c"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "RTC",
+      "section": "19705",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=19705&lawCode=RTC",
+      "recordIds": [
+        "ca-rtc-19705-a-1",
+        "ca-rtc-19705-a-2",
+        "ca-rtc-19705-a-3",
+        "ca-rtc-19705-a-4",
+        "ca-rtc-19705-a-5-a",
+        "ca-rtc-19705-a-5-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "RTC",
+      "section": "19706",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=19706&lawCode=RTC",
+      "recordIds": [
+        "ca-rtc-19706"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "RTC",
+      "section": "19708",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=19708&lawCode=RTC",
+      "recordIds": [
+        "ca-rtc-19708"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "RTC",
+      "section": "19709",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=19709&lawCode=RTC",
+      "recordIds": [
+        "ca-rtc-19709"
       ],
       "alreadyRetained": false
     },
@@ -5351,6 +5465,482 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-115-a",
+      "title": "Procuring or offering a false or forged instrument for public filing",
+      "citation": "Cal. Penal Code § 115(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:115"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:115"
+      ],
+      "catalogSha256": "ce35e7c9c764cf8c9fe0b496d56bbca7a7c6fdfd3cac564515929f57ebb6522b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-548-a",
+      "title": "Injuring, destroying, concealing or disposing of insured property to defraud the insurer",
+      "citation": "Cal. Penal Code § 548(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:548"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:548"
+      ],
+      "catalogSha256": "1c3e9bb44f16096d5350b789dc95a5eeb5b5ee2f283c126324de10c7a4f5cffe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-532a-1",
+      "title": "Making a false written financial statement to obtain a benefit",
+      "citation": "Cal. Penal Code § 532a(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:532a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:532a"
+      ],
+      "catalogSha256": "2a77c0530beaa8900407c3e26aabec20906bcd1a6393ddb3bac6f00e549a4045",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-532a-2",
+      "title": "Obtaining a benefit through a false written financial statement",
+      "citation": "Cal. Penal Code § 532a(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:532a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:532a"
+      ],
+      "catalogSha256": "877a187230858195ade67aa513664e8c39896d7b6202412a04b133d2bb81ae5e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-532a-3",
+      "title": "Reaffirming a financial statement that is false when reaffirmed",
+      "citation": "Cal. Penal Code § 532a(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:532a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:532a"
+      ],
+      "catalogSha256": "58a86fae2990e7c41c6b217e601f50a6e1b40a9e940bde9eafb8993bc91bd224",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-532a-4",
+      "title": "False financial statement using fictitious or impersonated identity",
+      "citation": "Cal. Penal Code § 532a(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:532a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:532a"
+      ],
+      "catalogSha256": "316f3f15795fca51984cd0edae42df923af194ae9030bd48ccfd43145b36f9b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-529-a-1",
+      "title": "False personation: becoming bail or surety",
+      "citation": "Cal. Penal Code § 529(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:529"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:529"
+      ],
+      "catalogSha256": "e932a6b46f5ab858b4fd3db3a1f0c9b7fb5a4c2eab5577397d18cd0fbe9727e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-529-a-2",
+      "title": "False personation: authenticating a written instrument",
+      "citation": "Cal. Penal Code § 529(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:529"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:529"
+      ],
+      "catalogSha256": "c657fb27fadb17f1167da778a269e87fa95f3c9035c6c0ddea18ef368fbb7d45",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-529-a-3",
+      "title": "False personation: an additional act creating potential liability or benefit",
+      "citation": "Cal. Penal Code § 529(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:529"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:529"
+      ],
+      "catalogSha256": "62a4b4ba313562848dbd7571e6de2a6746bca36570da81173795dc36ffcaa081",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-1",
+      "title": "Misappropriation of public money: unauthorized appropriation",
+      "citation": "Cal. Penal Code § 424(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "6044aa82d528cdfb311572842312c4a187e5aa40236bbf7b28d4645408701af1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-2",
+      "title": "Misappropriation of public money: unauthorized loans, profits or use",
+      "citation": "Cal. Penal Code § 424(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "f32408de31f83fb8bc7a79cd13159cca624f795065c4695f70021e9f78516cdc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-3",
+      "title": "Misappropriation of public money: false accounts or entries",
+      "citation": "Cal. Penal Code § 424(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "8540020d95dab3a060d5c09ff530ec99a9c464a96c85cf43c90eefbadeb0c6cf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-4",
+      "title": "Misappropriation of public money: fraudulent alteration or destruction of accounts",
+      "citation": "Cal. Penal Code § 424(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "2c20875fd73296ac9b6c915d4e3fa272de92d81942ea7c9186297725512ffdf5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-5",
+      "title": "Misappropriation of public money: refusing payment on authorized demand",
+      "citation": "Cal. Penal Code § 424(a)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "9a28866c797966bd38454f91c4e9ba230114c00d4faa9ac8d25775595b91f68e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-6",
+      "title": "Misappropriation of public money: failing a legally required transfer",
+      "citation": "Cal. Penal Code § 424(a)(6)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "56ece4022b1f9cccd560ecce1db1d84af0ba542ed2bd88cc624634c51c8a1153",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-424-a-7",
+      "title": "Misappropriation of public money: refusing payment to an authorized recipient",
+      "citation": "Cal. Penal Code § 424(a)(7)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:424"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:424"
+      ],
+      "catalogSha256": "6bd31742d220bdda181141b32a76ae796df40073f8bad81ae525d351e66e5fc4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19701-a",
+      "title": "Repeated failure to file, or false tax filings or information",
+      "citation": "Cal. Revenue & Taxation Code § 19701(a)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19701"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19701"
+      ],
+      "catalogSha256": "f5a8a240ebb26efbd99a879d11df41f4bffed13d8e5e739b12af5ab866df9d81",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19701-b",
+      "title": "Aiding evasion through omitted or false tax filings",
+      "citation": "Cal. Revenue & Taxation Code § 19701(b)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19701"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19701"
+      ],
+      "catalogSha256": "1cc6f99e8173510cbc85c65fb4cd253273c52545782052ae20241b752fb6c62f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19701-c",
+      "title": "Willfully failing to pay required estimated tax or tax",
+      "citation": "Cal. Revenue & Taxation Code § 19701(c)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19701"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19701"
+      ],
+      "catalogSha256": "180c5a0def6d74216139187712fe181e49438da91817d72f41bcb16259f84f69",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19706",
+      "title": "Willful nonfiling or false tax information with intent to evade",
+      "citation": "Cal. Revenue & Taxation Code § 19706",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19706"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19706"
+      ],
+      "catalogSha256": "2f457ce4fb14a3c259fad9ea6ae97de5efa0fbc18b964d179c25050d4ac373a6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-1",
+      "title": "Signing a materially false tax document under penalty of perjury",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(1)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "bc0b3f01753ebe749f52aad14a767430d347f7c895d455a61b7c72e0e366ec74",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-2",
+      "title": "Willfully helping prepare or present materially false tax documents",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(2)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "36b182c1de298bf7154c48543d4e6b49ab6e81eec2c59c5f03d0c23bd647d9ef",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-3",
+      "title": "Falsely executing tax bonds, permits or required documents",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(3)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "743695e10fd0486ac6bc667a2d7b055bf0e70f030e9a2be4261bb2ebcc916907",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-4",
+      "title": "Concealing property to evade tax assessment or collection",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(4)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "7ce0ef79c21266b52cc60a282dc0ad10150c4b78ff1bfe6a27c237a462255e53",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-5-a",
+      "title": "Concealing taxpayer property during a settlement, agreement or compromise",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(5)(A)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "891b3fc15ae8900cda1008069b6cf85fa3ad7e43d22016d6f5f830af69422fd9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19705-a-5-b",
+      "title": "Withholding or falsifying financial records during a tax settlement",
+      "citation": "Cal. Revenue & Taxation Code § 19705(a)(5)(B)",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19705"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19705"
+      ],
+      "catalogSha256": "b0df6c663ff2c767c67ebb912658924b4aa4c43ee1c2ed463f4da66e6820232e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19708",
+      "title": "Willfully failing to collect, account for or pay over required tax",
+      "citation": "Cal. Revenue & Taxation Code § 19708",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19708"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19708"
+      ],
+      "catalogSha256": "86901f58b018d0e32d1c70b8f1d0a289c63c95b3bc079a07a036092206f2bdd1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rtc-19709",
+      "title": "Willfully failing to withhold or pay over required tax",
+      "citation": "Cal. Revenue & Taxation Code § 19709",
+      "lawCode": "RTC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "RTC:19709"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "RTC:19709"
+      ],
+      "catalogSha256": "1ceff51c783a3180026d627ce03b5ef9d2a0e514101be316edd899aa661da661",
       "attorneyReview": "pending"
     },
     {
