@@ -236,3 +236,29 @@ Remaining serious research includes the life-prisoner/capital branch, gassing co
 Reproduce with `acquire-justice-custody.py`, `justice-custody-review.ts`, `coverage.ts`, and offline `refresh-retained.py --activate-unchanged` against the retained candidate receipt. The new acquisition excludes itself when assembling predecessors, avoiding circular reuse. The shared browser-test catalog loader follows all pages; older batch release checks no longer assume California fits in one response.
 
 PR39 review observation: full-object page-token hashing has a small measured cost. Replacing it with IDs alone would weaken content consistency across deployments sharing the same IDs. Keep the current check; if profiling warrants optimization, combine a cached content revision with ordered authority-gated IDs rather than silently removing the content guarantee.
+
+
+## Attorney decisions implemented: September 30 successor review
+
+All four requested decisions now have runtime penalty text: section 270's
+first-offender protection and qualified prior-conviction possibility; the likely
+lesser fireworks treatment at exactly 100 pounds with explicit uncertainty;
+currently enforceable assault-weapon restrictions with a dated litigation notice;
+and a discretionary $10,000 base fine for felony false imprisonment under section
+672. Historical review packets are preserved. A successor evidence packet binds
+the approved interpretations and statutory versions. New penalty prose uses an
+explicit English fallback notice in Spanish/Chinese until translated review.
+
+The reviewed section 30515 successor is compared against the authenticated retained
+September 28 publisher archive. All 724 sections match, containing 731 versions.
+Section 6 of AB 191 is operative now; section 7 is separately retained for 2029,
+when a transition gate requires review. Old-ZIP receipts cannot establish currency
+for the successor. Replay retains the October 5 expiration and does not renew it.
+California has 521 configured and 521 evidence-eligible choices while the receipt
+is fresh. No new identities or national tier-count changes occur in this batch.
+
+No further attorney answer is required for the four questions. The approved
+interpretations retain their specific limits; statutory freshness is not court
+case monitoring. Live deployment parity remains to be checked after merge/deploy.
+Next substantive expansion: combine property/arson/extortion branches using the
+existing shared research inventory, then financial/fraud/tax and public order.

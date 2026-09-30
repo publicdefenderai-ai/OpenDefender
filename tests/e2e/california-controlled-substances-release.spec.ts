@@ -8,7 +8,7 @@ test("all controlled-substances additions reach the API and representative rules
   const body = await readCaliforniaCatalog(request);
   // One of 257 configured records depends on the changed PEN:30515 definition.
   expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
-  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
+  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(true);
   for (const a of additions) {
     expect(body.charges.find((r: any) => r.id === a.id), a.id).toMatchObject({ description: a.summary, maxPenalty: a.penalty, categories: a.categories });
   }

@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from '../../../shared/california-attorney-decisions';
 import fs from "node:fs";
 import {createHash} from "node:crypto";
 import {fileURLToPath} from "node:url";
@@ -89,9 +90,9 @@ export function validateViolenceDetentionReview(review=readViolenceDetentionRevi
     const e=r.primaryEvidence,v=docs[r.primaryKey][0];
     if(e.key!==r.primaryKey||e.versionId!==v.versionId||e.start!==0||e.end!==e.text.length||e.text!==sourceText(v.contentXml))throw new Error('Unbound primary evidence');
     const c=getCaliforniaCanonicalRecord(a.id);
-    if(!c?.selectable||c.code!==a.code||c.lawCode!==a.lawCode||c.penalty!==a.penalty||c.officialTitle!==a.title||!same(c.categories,a.categories))throw new Error('Runtime publication drift');
+    if(!c?.selectable||c.code!==a.code||c.lawCode!==a.lawCode||c.penalty!==reviewedCaliforniaPenalty(a.id,a.penalty)||c.officialTitle!==a.title||!same(c.categories,a.categories))throw new Error('Runtime publication drift');
     const runtimeKeys=c.sources.map(s=>{const u=new URL(s.url);return `${u.searchParams.get('lawCode')}:${u.searchParams.get('sectionNum')}`;}).sort();
-    if(!same(runtimeKeys,keys))throw new Error('Runtime dependency drift');
+    if(!same(runtimeKeys,[...new Set([...keys,...(a.id==='ca-pen-237-a'?['PEN:672']:[])])].sort()))throw new Error('Runtime dependency drift');
     for(const instruction of r.instructionEvidence) {
       const previousRow=previous.crosswalk.find(i=>i.id===instruction.id);
       if(!previousRow||!same(instruction,{id:previousRow.id,firstPage:previousRow.firstPage,lastPage:previousRow.lastPage,pageHashes:previousRow.pageHashes})||!previousRow.sourceKeys.includes(primary(a)))throw new Error('Unbound instruction match');

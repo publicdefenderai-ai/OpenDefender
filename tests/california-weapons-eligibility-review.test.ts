@@ -16,7 +16,7 @@ describe('California firearm eligibility, ammunition and concealed carrying',()=
     expect(r.remainingFindings.map(f=>f.id)).toEqual(expect.arrayContaining(['felony-false-imprisonment-fine','weapons-enforceability-and-remaining-branches','tear-gas-sibling-penalties','hate-enhancements-and-storage-siblings']));
     expect(r.remainingFindings.some(f=>f.id==='weapons-predicate-and-enforceability-review')).toBe(false);
     for(const code of ['21310','21510','25850','29800(a)(1)','30605','22810(g)(2)'])expect(additions.some(a=>a.code===code)).toBe(false);
-    expect(receipt.heldSourceKeys).toContain('PEN:30515');
+    expect(receipt.heldSourceKeys).toEqual([]);
   });
   it('distinguishes warrant, conviction dates, ten-year and misdemeanor-only branches',()=>{
     expect(row('29805(a)(2)').summary).toContain('does not require a prior conviction');

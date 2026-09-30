@@ -8,7 +8,7 @@ test("all drug-successor additions reach the API and representative rules guidan
   const body = await readCaliforniaCatalog(request);
   // One of 257 configured records depends on the changed PEN:30515 definition.
   expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
-  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
+  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(true);
   for (const a of additions) {
     expect(body.charges.find((r: any) => r.id === a.id), a.id).toMatchObject({ description: a.summary, maxPenalty: a.penalty, categories: a.categories });
   }
@@ -53,7 +53,7 @@ test("California questionnaire withholds unavailable authority and never falls b
   await expect(page.getByTestId("checkbox-charge-ca-hsc-11379-6-e")).toHaveCount(0);
 });
 
-test("California questionnaire excludes the changed weapon source", async ({ page }) => {
+test("California questionnaire restores the attorney-reviewed weapon source", async ({ page }) => {
   await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));
   await page.goto("/case-guidance");
   await page.getByTestId("button-start-guidance").click();
@@ -61,9 +61,8 @@ test("California questionnaire excludes the changed weapon source", async ({ pag
   await page.getByTestId("select-jurisdiction").click();
   await page.getByRole("option", { name: "California", exact: true }).click();
   await page.getByTestId("button-next-jurisdiction").click();
-  await page.locator("#charge-search").fill("30515");
-  await expect(page.getByText("No charges found. Try a different search term or category.")).toBeVisible();
-  await expect(page.getByTestId("checkbox-charge-ca-possession-of-prohibited-weapon")).toHaveCount(0);
+  await page.locator("#charge-search").fill("PC 30605");
+  await expect(page.getByTestId("checkbox-charge-ca-possession-of-prohibited-weapon")).toBeVisible();
 });
 
 for (const unavailable of [false, true]) {

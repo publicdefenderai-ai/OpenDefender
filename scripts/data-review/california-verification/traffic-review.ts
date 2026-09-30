@@ -46,7 +46,8 @@ export function buildTrafficReview() {
       {key:'VEH:23573',currentVersionId:'id_59eb063e-c630-11f0-975c-e301db986e9c',futureVersionId:'id_5bbf7820-c630-11f0-975c-e301db986e9c',transitionDate:'2033-01-01'},
       {key:'VEH:23575',currentVersionId:'id_5d57cb62-c630-11f0-975c-e301db986e9c',futureVersionId:'id_5efb1b24-c630-11f0-975c-e301db986e9c',transitionDate:'2033-01-01'},
     ],
-    knownTransitions:transitions,
+    // Freeze this historical traffic packet to its own transition identities.
+    knownTransitions:transitions.filter(row=>['VEH:23109','VEH:23573','VEH:23575','VEH:13352','VEH:23103.5'].includes(row.key)),
     decisions:[
       'VEH 23153 requires a concurrent unlawful act or neglected duty that causes injury to someone other than the driver; a DUI label alone does not establish injury DUI.',
       'Mandatory base fines accompany custody under the DUI and specified repeat-license provisions. Probation has separate statutory minimums and program alternatives; ordinary minimums are not represented as unavoidable in every case.',

@@ -1,3 +1,4 @@
+import {californiaAttorneyDecision,reviewedCaliforniaPenalty} from '../shared/california-attorney-decisions';
 import { describe, expect, it } from "vitest";
 import { readCaliforniaRemainingCatalogReview, validateCaliforniaRemainingCatalogReview } from "../scripts/data-review/california-verification/remaining-catalog-review";
 import { getChargeById } from "../shared/criminal-charges";
@@ -57,7 +58,7 @@ describe("remaining California catalog combined review", () => {
     expect(charge("ca-felon-in-possession-of-firearm").maxPenalty).toContain("Section 29800 does not itself direct");
     expect(charge("ca-unlawful-carrying-of-weapon").maxPenalty).toContain("(c)(1)–(4) are felony-only");
     expect(charge("ca-possession-of-prohibited-weapon").maxPenalty).toContain("not a general first-offense option");
-    expect(charge("ca-possession-of-prohibited-weapon").maxPenalty).toContain("does not resolve constitutional litigation");
+    expect(charge("ca-possession-of-prohibited-weapon").maxPenalty).toContain("Miller injunction is stayed");
   });
   it("keeps ordinary misdemeanors separate from civil and juvenile routes", () => {
     expect(charge("ca-public-intoxication").maxPenalty).toContain("cannot later be criminally prosecuted");
@@ -68,10 +69,10 @@ describe("remaining California catalog combined review", () => {
     expect(charge("ca-animal-cruelty-misdemeanor").categories).toEqual(["misdemeanor", "felony"]);
   });
   it("does not silently resolve disputed penalty branches", () => {
-    expect(charge("ca-failure-to-pay-child-support").maxPenalty).toContain("remains unresolved");
+    expect(charge("ca-failure-to-pay-child-support").maxPenalty).toContain("prior section 270 conviction");
     expect(charge("ca-failure-to-pay-child-support").maxPenalty).toContain("Gregori");
-    expect(charge("ca-illegal-fireworks-12677").maxPenalty).toContain("overlaps at exactly 100 pounds");
-    expect(charge("ca-illegal-fireworks-12677").maxPenalty).toContain("not automatically assigned");
+    expect(charge("ca-illegal-fireworks-12677").maxPenalty).toContain("overlap at exactly 100 pounds");
+    expect(charge("ca-illegal-fireworks-12677").maxPenalty).toContain("not a conclusively established classification");
   });
   it("corrects the drug-house alternative and preserves transport and manufacturing branches", () => {
     const house = charge("ca-maintaining-drug-house");
@@ -93,10 +94,10 @@ describe("remaining California catalog combined review", () => {
   });
   it("delivers all 28 exact-ID corrections in all supported languages", () => {
     for (const c of corrections) {
-      const current = charge(c.id); expect(current.categories).toEqual(c.categories); expect(current.maxPenalty).toBe(c.penalty.en);
+      const current = charge(c.id); expect(current.categories).toEqual(c.categories); expect(current.maxPenalty).toBe(reviewedCaliforniaPenalty(c.id,c.penalty.en));
       for (const language of ["en", "es", "zh"] as const) {
         const explanation = getChargeExplanation(current.name, "CA", language, current.id)!;
-        expect(explanation.plainSummary).toBe(c.summary[language]); expect(explanation.degreeContext).toBe(c.penalty[language]);
+        expect(explanation.plainSummary).toBe(c.summary[language]); expect(explanation.degreeContext).toBe(californiaAttorneyDecision(c.id)?.penalty ?? c.penalty[language]);
       }
     }
   });

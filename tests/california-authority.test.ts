@@ -30,12 +30,12 @@ describe("authoritative California charge release", () => {
     expect(getCaliforniaReconciliationInventory()).toHaveLength(115);
   });
 
-  it("retains configured evidence while respecting the changed-source hold", () => {
+  it("retains configured evidence after the reviewed successor comparison", () => {
     vi.useFakeTimers(); vi.setSystemTime(new Date(californiaReceipt.checkedAt));
     expect(CALIFORNIA_CANONICAL_RECORDS.length).toBeGreaterThan(0);
     for (const record of CALIFORNIA_CANONICAL_RECORDS.filter((record) => record.selectable)) {
       expect(record.selectable).toBe(true);
-      expect(record.currentness.status).toBe(record.canonicalId === "ca-possession-of-prohibited-weapon" ? "invalid" : "current");
+      expect(record.currentness.status).toBe("current");
       if (!CALIFORNIA_ADDITION_IDS.has(record.canonicalId)) expect(record.currentness.effectiveDate).toMatch(/^\d{4}-\d{2}$/);
       expect(record.elements.length).toBeGreaterThan(0);
       expect(record.mentalState.length).toBeGreaterThan(0);

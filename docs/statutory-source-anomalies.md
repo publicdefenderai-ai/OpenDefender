@@ -25,11 +25,11 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 ## CA-001: Overlapping 100-pound fireworks penalty bands in HSC §12700(b)
 
 - **Recorded:** September 27, 2026, during the remaining California catalog pass.
-- **Status:** Apparent boundary overlap; interpretation unresolved, no attorney decision yet.
+- **Status:** Apparent drafting error; attorney-approved likely interpretation recorded September 30, 2026; no controlling boundary decision located.
 - **Official source:** [HSC §12700(b)(2)–(3)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=12700.).
 - **Discrepancy:** The 25–100-pound and 100–5,000-pound bands both include exactly 100 pounds of unaltered dangerous fireworks, gross including packaging. Their fine ranges and felony alternatives differ.
-- **Treatment:** Preserve both literal bands. Do not silently change an inclusive endpoint or choose a penalty for the overlap.
-- **Attorney question:** Identify controlling authority for exactly 100 pounds, or leave the boundary unresolved. See the [focused review questions](california-remaining-attorney-questions.md).
+- **Treatment:** Preserve both literal bands. At exactly 100 pounds, describe the lesser (b)(2) treatment as the likely interpretation, not conclusively established. Do not rewrite an endpoint.
+- **Attorney decision:** The likely interpretation favors the lesser penalty under (b)(2); retain the lack of controlling authority and the overlap warning. See the [focused review questions](california-remaining-attorney-questions.md).
 - **Traceability:** `scripts/data-review/output/california-batch-six-review.json`, `documents["HSC:12700"]`, retains official XML, version metadata, content hash, and URL from the September 24 snapshot.
 
 ## CA-002: Lifeguard definition points to the process-server paragraph

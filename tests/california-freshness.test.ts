@@ -71,20 +71,17 @@ describe("California archive currency", () => {
     await expect(service.seedCaliforniaSourceDatabase()).rejects.toThrow("stale or invalid");
     expect(select).not.toHaveBeenCalled();
   });
-  it("withholds only records depending on the changed section, including release fixtures", async () => {
-    vi.useFakeTimers(); vi.setSystemTime(new Date(receipt.checkedAt));
-    expect(receipt.heldSourceKeys).toEqual(["PEN:30515"]);
-    const held = CALIFORNIA_CANONICAL_RECORDS.filter(row => row.selectable && row.currentness.status !== "current");
-    expect(held.map(row => row.canonicalId)).toEqual(["ca-possession-of-prohibited-weapon"]);
-    const service = await import("../server/services/california-source-database");
-    expect(await service.getCaliforniaChargeProvenance(held[0].canonicalId)).toBeNull();
-    expect(select).not.toHaveBeenCalled();
-    vi.stubEnv("RELEASE_CHECK", "true");
-    vi.stubEnv("RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS", JSON.stringify(CALIFORNIA_CANONICAL_RECORDS.filter(row => row.selectable).map(row => row.canonicalId)));
-    const eligibility = await import("../server/services/authority-eligibility");
-    const allowed = await eligibility.getCurrentAuthoritySelectableChargeIds();
-    expect(allowed.has(held[0].canonicalId)).toBe(false);
-    expect(allowed.has("ca-pen-245-a-4")).toBe(true);
+  it("restores the reviewed successor but still withholds a newly changed dependency", () => {
+    const now = new Date(receipt.checkedAt);
+    expect(receipt.heldSourceKeys).toEqual([]);
+    expect(checkReceipt(receipt, now, comparison, ['PEN:30515'])).toBe('current');
+    const changed = structuredClone(comparison);
+    changed.allUnchanged = false; changed.heldSourceKeys = ['PEN:30515'];
+    const row = changed.sections.find(row => row.key === 'PEN:30515')!;
+    row.status = 'changed_or_missing'; row.observedHash = '0'.repeat(64);
+    const heldReceipt = {...receipt, heldSourceKeys: ['PEN:30515']};
+    expect(checkReceipt(heldReceipt, now, changed, ['PEN:30515'])).toBe('invalid');
+    expect(checkReceipt(heldReceipt, now, changed, ['PEN:270'])).toBe('current');
   });
   it("reports the receipt actually loaded by the running server, including after expiry", async () => {
     vi.useFakeTimers(); vi.setSystemTime(new Date(receipt.checkedAt));

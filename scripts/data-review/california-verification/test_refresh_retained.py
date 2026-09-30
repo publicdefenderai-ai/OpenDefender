@@ -5,6 +5,7 @@ import importlib.util
 import json
 from pathlib import Path
 import unittest
+import tempfile
 
 spec = importlib.util.spec_from_file_location('refresh', Path(__file__).with_name('refresh-retained.py'))
 r = importlib.util.module_from_spec(spec)
@@ -38,6 +39,24 @@ class RetainedRefreshTests(unittest.TestCase):
         documents = r.retained_documents()
         expected = {k: dict(hash=r.version_digest(v), versions=len(v)) for k, v in sorted(documents.items())}
         self.assertEqual(json.loads((r.ROOT / 'shared/california-retained-pins.json').read_text()), expected)
+
+    def test_successor_rejects_wrong_baseline_missing_version_and_unbound_text(self):
+        original = json.loads((r.OUTPUT / 'california-attorney-source-approval.json').read_text())
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder)
+            for name in r.RETAINED:
+                (output / name).symlink_to(r.OUTPUT / name)
+            for failure in ('baseline', 'version', 'text'):
+                approval = copy.deepcopy(original)
+                if failure == 'baseline':
+                    approval['previousPin']['hash'] = '0' * 64
+                elif failure == 'version':
+                    approval['operativeVersionId'] = 'absent'
+                else:
+                    approval['documents']['PEN:30515'][0]['contentXml'] += ' altered'
+                (output / 'california-attorney-source-approval.json').write_text(json.dumps(approval))
+                with self.assertRaises(ValueError):
+                    r.retained_documents(output=output)
 
 if __name__ == '__main__':
     unittest.main()

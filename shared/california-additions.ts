@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from './california-attorney-decisions';
 import justiceCustody from "./california-justice-custody-additions.json";
 import weaponsEligibility from "./california-weapons-eligibility-additions.json";
 import weaponsThreats from "./california-weapons-threats-additions.json";
@@ -31,4 +32,9 @@ export const CALIFORNIA_ADDITIONS = [
   ...traffic.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-traffic-review.json" })),
   ...violenceDetention.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-violence-detention-review.json" })),
   ...vehicleIdentification.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-vehicle-identification-review.json" })),
-];
+].map(row => ({
+  ...row,
+  penalty: reviewedCaliforniaPenalty(row.id, row.penalty),
+  sourceEffectiveDates: {...row.sourceEffectiveDates, ...(row.id === 'ca-pen-237-a' ? {'PEN:672': '1983-09-27'} : {})},
+  supportingKeys: [...new Set([...row.supportingKeys, ...(row.id === 'ca-pen-237-a' ? ['PEN:672'] : [])])],
+}));

@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from '../../../shared/california-attorney-decisions';
 /** Reusable checks for bounded batches with single versions or explicitly scoped common-version evidence. */
 import { createHash } from "node:crypto";
 import { getCaliforniaCanonicalRecord, getCaliforniaCorrectionDependencies } from "../../../shared/california-authority";
@@ -43,7 +44,7 @@ export function validateSupplementalCaliforniaReview(input: {
     if (californiaEvidenceHash(original.record) !== original.catalogSha256 || row.baselineSha256 !== original.catalogSha256) throw new Error("Supplemental baseline changed");
     if (row.status !== "bounded_correction_proposed" || californiaEvidenceHash(correction) !== row.correctionSha256 || !row.remainingWork) throw new Error("Supplemental correction changed");
     const current = getCaliforniaCanonicalRecord(row.id);
-    if (!current?.selectable || current.penalty !== correction.penalty.en || JSON.stringify(current.categories) !== JSON.stringify(correction.categories)) throw new Error("Supplemental catalog drift");
+    if (!current?.selectable || current.penalty !== reviewedCaliforniaPenalty(correction.id, correction.penalty.en) || JSON.stringify(current.categories) !== JSON.stringify(correction.categories)) throw new Error("Supplemental catalog drift");
     const primary = original.record.sources.filter(s => s.kind === "statute").map(s => { const u = new URL(s.url); return `${u.searchParams.get("lawCode")}:${u.searchParams.get("sectionNum")?.replace(/\.$/, "")}`; });
     const deps = getCaliforniaCorrectionDependencies(correction);
     const expected = [...new Set([...primary, ...deps.map(d => `${d.lawCode}:${d.section}`)])].sort();

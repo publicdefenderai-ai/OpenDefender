@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from './helpers/california-reviewed-penalty';
 import {readCaliforniaCatalog} from "./helpers/california-catalog";
 import {CA_CATALOG_COUNTS} from "../fixtures/california-catalog-counts";
 import {expect,test} from '@playwright/test';
@@ -5,13 +6,13 @@ import {readFileSync} from 'node:fs';
 const additions=JSON.parse(readFileSync('shared/california-violence-detention-additions.json','utf8')) as Array<{id:string;code:string;summary:string;penalty:string;categories:string[]}>;
 test('Violence, abuse and detention choices reach authority-gated API and rules guidance',async({request})=>{
   const body = await readCaliforniaCatalog(request);expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
-  for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:a.penalty,categories:a.categories});
-  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(false);
+  for(const a of additions)expect(body.charges.find((r:any)=>r.id===a.id),a.id).toMatchObject({description:a.summary,maxPenalty:reviewedCaliforniaPenalty(a.id,a.penalty),categories:a.categories});
+  expect(body.charges.some((r:any)=>r.id==='ca-possession-of-prohibited-weapon')).toBe(true);
   const ids=['ca-pen-273a-a','ca-pen-273ab-a','ca-pen-236-1-c','ca-pen-237-a'];
   const result=await request.post('/api/legal-guidance/rules',{headers:{Origin:process.env.PLAYWRIGHT_BASE_URL??'http://127.0.0.1:5001'},data:{jurisdiction:'CA',charges:ids,caseStage:'arrest',custodyStatus:'in_custody'}});
   expect(result.ok()).toBe(true);
   const guidance=(await result.json()).guidance;
-  for(const id of ids)expect(guidance.chargeClassifications.find((r:any)=>r.id===id)).toMatchObject({maxPenalty:additions.find(a=>a.id===id)!.penalty,categories:additions.find(a=>a.id===id)!.categories});
+  for(const id of ids)expect(guidance.chargeClassifications.find((r:any)=>r.id===id)).toMatchObject({maxPenalty:reviewedCaliforniaPenalty(id,additions.find(a=>a.id===id)!.penalty),categories:additions.find(a=>a.id===id)!.categories});
 });
 for(const [query,id] of [['PC 273ab(a)','ca-pen-273ab-a'],['torture','ca-pen-206'],['custodial interference','ca-pen-278-5-a'],['PC 236/237','ca-pen-237-a']]){
   test(`charging-paper search finds ${id}`,async({page})=>{

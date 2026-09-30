@@ -1,3 +1,4 @@
+import approvedSource from '../output/california-attorney-source-approval.json';
 import {validateJusticeCustodyReview,readJusticeCustodyReviewAcquisition} from "./justice-custody-review";
 import {validateWeaponsEligibilityReview,readWeaponsEligibilityReviewAcquisition} from "./weapons-eligibility-review";
 import {validateWeaponsThreatsReview,readWeaponsThreatsReviewAcquisition} from "./weapons-threats-review";
@@ -133,7 +134,7 @@ export function buildCaliforniaCoverage() {
   });
   for (const id of corrected) if (!records.some(record => record.id === id && record.selectable)) throw new Error(`Corrected record lost: ${id}`);
   for (const item of openLegalQuestions) {
-    if (!records.some(row => row.id === item.chargeId && row.selectable) || item.status !== "unresolved" || !item.question || !item.sourceKeys.every(key => acquiredKeys.has(key))) throw new Error("Invalid open California review item");
+    if (!records.some(row => row.id === item.chargeId && row.selectable) || item.status !== "attorney_decision_recorded" || !item.question || !item.sourceKeys.every(key => acquiredKeys.has(key))) throw new Error("Invalid open California review item");
   }
   if (new Set(openLegalQuestions.map(item => item.id)).size !== openLegalQuestions.length) throw new Error("Duplicate open California review item");
   const pending = records.filter(record => record.status === "awaiting_statutory_correction_pass");
@@ -162,7 +163,8 @@ export function buildCaliforniaCoverage() {
     catalogHashBasis: "configured_record_excluding_runtime_currentness_status",
     schemaVersion: 1, scope: "catalog_accounting_not_statewide_offense_coverage",
     accounting: {
-      specificOpenLegalQuestions: openLegalQuestions.length,
+      specificOpenLegalQuestions: openLegalQuestions.filter(row => row.status === "unresolved").length,
+      recordedAttorneyDecisions: openLegalQuestions.length,
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
       boundedAdditionPass: justiceAccounting.additions + additionAccounting.additions + forgeryAccounting.additions + protectedAccounting.additions + specializedAccounting.additions + drugAccounting.additions + successorAccounting.additions + drivingAccounting.additions + trafficAccounting.additions + vehicleAccounting.additions + eligibilityAccounting.additions + weaponsAccounting.additions + registrationAccounting.additions + sexualAccounting.additions + violenceAccounting.additions,
@@ -177,7 +179,7 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: justiceAccounting.newVersions + eligibilityAccounting.newVersions + weaponsAccounting.newVersions + registrationAccounting.newVersions + sexualAccounting.newVersions + violenceAccounting.newVersions + vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: Object.values(approvedSource.documents).reduce((sum, versions) => sum + versions.length, 0) - approvedSource.previousPin.versions + justiceAccounting.newVersions + eligibilityAccounting.newVersions + weaponsAccounting.newVersions + registrationAccounting.newVersions + sexualAccounting.newVersions + violenceAccounting.newVersions + vehicleAccounting.newVersions + trafficAccounting.newVersions + drivingAccounting.newVersions + successorAccounting.newVersions + drugAccounting.newVersions + protectedAccounting.newVersions + forgeryAccounting.newVersions + Object.values(additionEvidence.documents).reduce((sum, versions) => sum + versions.length, 0) + verifiedAccounting.versions + reuseAccounting.addedVersions + combinedAccounting.addedVersions + ageDrivingAccounting.addedVersions + financialAccounting.addedVersions + remainingAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
@@ -209,7 +211,7 @@ export function renderCaliforniaCoverage(report: ReturnType<typeof buildCaliforn
     "| Code | Selectable | Correction pass | Awaiting correction pass |", "| --- | ---: | ---: | ---: |",
     ...report.byLawCode.map(row => `| ${row.lawCode} | ${row.selectable} | ${row.corrected} | ${row.awaitingCorrection} |`), "",
     "## Remaining work", "",
-    ...report.openLegalQuestions.map(item => `- ${item.chargeId}: ${item.question}`), "",
+    ...report.openLegalQuestions.map(item => `- ${item.chargeId}: Attorney decision recorded September 30, 2026; see docs/california-remaining-attorney-questions.md. Original research question: ${item.question}`), "",
     "See docs/california-remaining-attorney-questions.md for sources and proposed treatment. These focused questions are not an exhaustive list of all legal-review needs.", "",
     ...report.recommendedReuseBatch.map(id => `- ${id}`),
     ...(report.recommendedReuseBatch.length ? [] : [report.groups.length ? "Next largest groups: " + report.groups.slice(0, 3).map(group => `${group.id} (${group.recordIds.length} records)`).join("; ") + "." : "The existing selectable catalog has completed its bounded correction pass. Independent review, known legal questions, deployment parity, and statewide missing-charge discovery remain."]), "",

@@ -1,3 +1,4 @@
+import {reviewedCaliforniaPenalty} from './helpers/california-reviewed-penalty';
 import {readCaliforniaCatalog} from "./helpers/california-catalog";
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
@@ -7,13 +8,8 @@ test("California corrections reach the production catalog and rules guidance", a
   const body = await readCaliforniaCatalog(request);
   for (const row of corrections) {
     const charge = body.charges.find((item: any) => item.id === row.id);
-    // PEN 30515 changed in the retained-source comparison; do not revive its record.
-    if (row.id === "ca-possession-of-prohibited-weapon") {
-      expect(charge).toBeUndefined();
-      continue;
-    }
     expect(charge, row.id).toBeDefined();
-    expect(charge.maxPenalty).toBe(row.penalty.en);
+    expect(charge.maxPenalty).toBe(reviewedCaliforniaPenalty(row.id,row.penalty.en));
     expect(charge.categories).toEqual(row.categories);
   }
   const row = corrections.find(item => item.id === "ca-assault-with-deadly-weapon")!;
@@ -24,7 +20,7 @@ test("California corrections reach the production catalog and rules guidance", a
   expect(responseGuidance.ok()).toBe(true);
   const guidance = (await responseGuidance.json()).guidance;
   expect(guidance.generatedBy).toBe("rule-based");
-  expect(guidance.chargeClassifications[0].maxPenalty).toBe(row.penalty.en);
+  expect(guidance.chargeClassifications[0].maxPenalty).toBe(reviewedCaliforniaPenalty(row.id,row.penalty.en));
   const ids = ["ca-prostitution-solicitation", "ca-animal-cruelty-misdemeanor", "ca-maintaining-drug-house", "ca-failure-to-pay-child-support", "ca-driving-without-insurance", "ca-insurance-fraud-550-b1", "ca-credit-card-fraud", "ca-embezzlement", "ca-petty-theft", "ca-possession-of-controlled-substance", "ca-dui-third-offense", "ca-grand-theft-firearm-487-d2", "ca-attempted-robbery", "ca-rape-261-a2", "ca-vehicular-manslaughter-192-c1", "ca-vehicular-manslaughter-191-5-b", "ca-unlawful-sexual-intercourse-261-5-d"];
   const classified = await request.post("/api/legal-guidance/rules", {
     headers: { Origin: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5001" },
@@ -35,7 +31,7 @@ test("California corrections reach the production catalog and rules guidance", a
   for (const id of ids) {
     const item = classes.find((charge: any) => charge.id === id);
     expect(item.categories).toEqual(corrections.find(correction => correction.id === id)!.categories);
-    expect(item.maxPenalty).toBe(corrections.find(correction => correction.id === id)!.penalty.en);
+    expect(item.maxPenalty).toBe(reviewedCaliforniaPenalty(id, corrections.find(correction => correction.id === id)!.penalty.en));
   }
 });
 

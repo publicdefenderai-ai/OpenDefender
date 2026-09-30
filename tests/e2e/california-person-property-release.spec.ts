@@ -8,7 +8,7 @@ test("all person/property additions reach the production API and rules guidance"
   const body = await readCaliforniaCatalog(request);
   // One of 257 configured records depends on the changed PEN:30515 definition.
   expect(body.charges).toHaveLength(CA_CATALOG_COUNTS.eligible);
-  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(false);
+  expect(body.charges.some((row: any) => row.id === "ca-possession-of-prohibited-weapon")).toBe(true);
   for (const addition of additions) {
     const charge = body.charges.find((r: any) => r.id === addition.id);
     expect(charge, addition.id).toBeDefined();
