@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "scope": "attorney_approved_interpretations_not_claims_mechanically_proven_by_statutory_spans",
   "reviewedAt": "2026-09-30",
-  "decisionsSha256": "2f2a57e4fc79edb04d6073ecfb8722568a4a6693468a560e268791b46250ca37",
+  "decisionsSha256": "7fc5a46e71373a8a8a10c5abdc7368ca17f838316238f94d6dcc9a2e66e4781f",
   "successorSha256": "6597fa7ac65fdcf7c99cf37029a39565ee589f2313bbb655933dd37a530d07fa",
   "documents": {
     "HSC:12700": [
