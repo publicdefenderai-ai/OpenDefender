@@ -1,10 +1,10 @@
 # California practical completion plan
 
-Updated September 29, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
+Updated September 30, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
 
-PR37 is merged. California has 476 configured choices: 99 corrected originals and 377 additions. It covers 263 distinct primary sections, with 686 retained publication sections/692 versions including dependencies. PEN 30515 remains held, leaving 475 eligible while the receipt is valid. These are repository counts, not verified production availability; 21 other canonical labels remain withheld. The justice/public-order/property successor is research only and adds no selections or freshness approval.
+PR42 is merged. The next property/arson/extortion publication proposes 22 additional choices, bringing the repository to 543 configured and evidence-eligible choices while the receipt is fresh: 99 corrected originals and 444 additions. It covers 297 distinct primary sections, with 746 retained publication sections/754 versions including dependencies. These are repository counts, not verified production availability; 21 other canonical labels remain withheld. The four attorney decisions are recorded, including restoration of the reviewed PEN 30515 successor. Historical milestones below describe their own earlier state.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -262,3 +262,14 @@ interpretations retain their specific limits; statutory freshness is not court
 case monitoring. Live deployment parity remains to be checked after merge/deploy.
 Next substantive expansion: combine property/arson/extortion branches using the
 existing shared research inventory, then financial/fraud/tax and public order.
+
+
+## Property, arson and extortion: combined publication
+
+The successor adds 22 choices from 15 primary sections. It reuses 18 published sources and promotes 19 already-researched sources; three additional dependencies complete the 22 newly monitored sections. The shared-source comparison matches all 746 publication sections/754 versions against the authenticated retained candidate. Its September 28 acquisition time and October 5 expiration are unchanged. Acquisition replay excludes its own output, and ordinary validation is offline in a fresh clone.
+
+The batch covers malicious arson, reckless fires, aggravated and attempted arson, incendiary preparation, concerted residential robbery, forcible vehicle entry, burglary tools and extortion including threatening writings/ransomware. The review preserves arson's special fines and registration duties, the six-month county-jail alternative in 452(c), and uncertainty in misdemeanor fine ceilings. Emergency sentencing remains a visible special-branch research item, not an ordinary range. Aggravated arson retains both source versions, explicitly chooses the 2026 version, and receives a January 1, 2029 transition gate. Older enactment/effective dates do not establish operative priority.
+
+Fifteen instruction entries receive bounded matches; the 32 justice/custody matches remain in the cumulative 202-entry crosswalk. Neither number certifies a complete family. Repeat-theft/vehicle-taking branches, existing theft/receiving/elder-financial associations, emergency arson sentencing and remaining fine questions are explicitly retained. No new attorney answer is requested for this publication. Next combine financial/fraud/tax and consequential remaining property branches where the sources overlap, then public order and targeted other-code/homicide/gang comparisons. Deployment parity and maintenance remain release requirements.
+
+Reproduce with `acquire-property-arson.py`, `node --import tsx scripts/data-review/california-verification/property-arson-review.ts`, and `coverage.ts`. Publication pins are explicit; the normal retained-source comparison checks every dependency. Spanish/Chinese readers receive an English fallback notice until translation review. Tests exercise evidence tampering, version selection and transition boundaries, custody alternatives, guidance categories and charging-paper searches.

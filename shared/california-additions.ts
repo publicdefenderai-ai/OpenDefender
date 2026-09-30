@@ -1,4 +1,5 @@
 import {reviewedCaliforniaPenalty} from './california-attorney-decisions';
+import propertyArson from "./california-property-arson-additions.json";
 import justiceCustody from "./california-justice-custody-additions.json";
 import weaponsEligibility from "./california-weapons-eligibility-additions.json";
 import weaponsThreats from "./california-weapons-threats-additions.json";
@@ -17,6 +18,7 @@ import drivingVessels from "./california-driving-vessels-additions.json";
 import drugSuccessor from "./california-drug-successor-additions.json";
 import { californiaLawCode } from "./california-law-codes";
 export const CALIFORNIA_ADDITIONS = [
+  ...propertyArson.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-property-arson-review.json" })),
   ...justiceCustody.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-justice-custody-review.json" })),
   ...weaponsEligibility.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-weapons-eligibility-review.json" })),
   ...weaponsThreats.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-weapons-threats-review.json" })),

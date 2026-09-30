@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 542,
-    "configuredSelectable": 521,
+    "canonicalRecords": 564,
+    "configuredSelectable": 543,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 422,
-    "boundedCorrectionPass": 521,
+    "boundedAdditionPass": 444,
+    "boundedCorrectionPass": 543,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 282,
+    "distinctSelectablePrimarySections": 297,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 282,
-    "selectableRecordsWithAllPrimaryTextAcquired": 521,
-    "totalAcquiredSectionsIncludingDependencies": 724,
-    "totalAcquiredVersionsIncludingDependencies": 731,
+    "acquiredSelectablePrimarySections": 297,
+    "selectableRecordsWithAllPrimaryTextAcquired": 543,
+    "totalAcquiredSectionsIncludingDependencies": 746,
+    "totalAcquiredVersionsIncludingDependencies": 754,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "521 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "543 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 405,
-      "corrected": 405,
+      "selectable": 427,
+      "corrected": 427,
       "awaitingCorrection": 0
     },
     {
@@ -1100,6 +1100,15 @@
       "recordIds": [
         "ca-robbery-in-the-first-degree",
         "ca-robbery-in-the-second-degree"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "213",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=213&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-213-a-1-A"
       ],
       "alreadyRetained": false
     },
@@ -2177,6 +2186,48 @@
     },
     {
       "lawCode": "PEN",
+      "section": "451",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=451&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-451-a",
+        "ca-pen-451-b",
+        "ca-pen-451-c",
+        "ca-pen-451-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "451.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=451.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-451-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "452",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=452&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-452-a",
+        "ca-pen-452-b",
+        "ca-pen-452-c",
+        "ca-pen-452-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "453",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=453&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-453-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "4532",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4532&lawCode=PEN",
       "recordIds": [
@@ -2184,6 +2235,15 @@
         "ca-pen-4532-a-2",
         "ca-pen-4532-b-1",
         "ca-pen-4532-b-2"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "455",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=455&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-455-a"
       ],
       "alreadyRetained": false
     },
@@ -2226,6 +2286,24 @@
         "ca-burglary-in-the-second-degree"
       ],
       "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "465",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=465&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-465-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "466",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=466&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-466-a"
+      ],
+      "alreadyRetained": false
     },
     {
       "lawCode": "PEN",
@@ -2612,6 +2690,70 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=503&lawCode=PEN",
       "recordIds": [
         "ca-embezzlement"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "520",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=520&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-520"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "521",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=521&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-521"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "522",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=522&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-522"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "523",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=523&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-523-a",
+        "ca-pen-523-b-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "524",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=524&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-524"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "526",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=526&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-526"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "527",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=527&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-527"
       ],
       "alreadyRetained": false
     },
@@ -5209,6 +5351,380 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-451-a",
+      "title": "Arson: causing great bodily injury",
+      "citation": "Cal. Penal Code § 451(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:451"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:451"
+      ],
+      "catalogSha256": "6b48adf572ce5bc20f6593881aea7a66efb17298328eb8d5901990aa6509c044",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-451-b",
+      "title": "Arson: burning an inhabited structure or inhabited property",
+      "citation": "Cal. Penal Code § 451(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:451"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:451"
+      ],
+      "catalogSha256": "34e7e685e0b736f1d2397363a637788103a64ec2ec982b1f27b0d68a76e480db",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-451-c",
+      "title": "Arson: burning a structure or forest land",
+      "citation": "Cal. Penal Code § 451(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:451"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:451"
+      ],
+      "catalogSha256": "3eb0a949ed3cb935e9fbc624d2e8347e519da5bc27d08385d92eae3407a7fb8e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-451-d",
+      "title": "Arson: burning property",
+      "citation": "Cal. Penal Code § 451(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:451"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:451"
+      ],
+      "catalogSha256": "dcce0d99272fcf8a2878ed65cb40194175a9d01c7b5b8ef011455199d2c4e9da",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-451-5-a",
+      "title": "Aggravated arson",
+      "citation": "Cal. Penal Code § 451.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:451.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:451.5"
+      ],
+      "catalogSha256": "3723f948f60e499e5335530fd827d5618ef54c2025302de5574b6b3a03f78565",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-452-a",
+      "title": "Unlawfully causing a fire: causing great bodily injury",
+      "citation": "Cal. Penal Code § 452(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:452"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:452"
+      ],
+      "catalogSha256": "d84f0ab84ba3afd444b1eea164b3cd66d42c3b8f62a13763704fd7f3ebfdb394",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-452-b",
+      "title": "Unlawfully causing a fire: burning an inhabited structure or inhabited property",
+      "citation": "Cal. Penal Code § 452(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:452"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:452"
+      ],
+      "catalogSha256": "87b19d9b62ed44daa20cece9a894050c68d6b59bdb83e82fc254966cf1bd63e6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-452-c",
+      "title": "Unlawfully causing a fire: burning a structure or forest land",
+      "citation": "Cal. Penal Code § 452(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:452"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:452"
+      ],
+      "catalogSha256": "e796f19c9711fa3653427ee4e17fe7344d18a6d188b972bd4facb7c67941df0c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-452-d",
+      "title": "Unlawfully causing a fire of property",
+      "citation": "Cal. Penal Code § 452(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:452"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:452"
+      ],
+      "catalogSha256": "b7b34573419f73758063f6e35ed32bcf1799c53680e3bffdd13e1e956e82c407",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-453-a",
+      "title": "Possessing, making or transferring incendiary material with intent to burn",
+      "citation": "Cal. Penal Code § 453(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:453"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:453"
+      ],
+      "catalogSha256": "1446803693f6f9967a8c12387c97913f2db9f147321529d9b450cd8233ea7daa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-455-a",
+      "title": "Attempting arson",
+      "citation": "Cal. Penal Code § 455(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:455"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:455"
+      ],
+      "catalogSha256": "b18e8f1461eee1b2c78a6aa28349ed0c07bd2e629ac1762690e7d52b8176a3d9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-213-a-1-A",
+      "title": "First degree robbery in concert in an inhabited dwelling",
+      "citation": "Cal. Penal Code § 213(a)(1)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:213"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:213"
+      ],
+      "catalogSha256": "e94dd43562542043a9e1933ca95169557d105bcc99e86b0417313e4c92c083cc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-465-a",
+      "title": "Forcibly entering a vehicle with intent to commit theft or a felony",
+      "citation": "Cal. Penal Code § 465(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:465"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:465"
+      ],
+      "catalogSha256": "9d7a8ca9f7086841d698b432d1916d55dfb9bc21dcd45c82671fe31b9710b87d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-466-a",
+      "title": "Possessing burglary tools or making unauthorized keys or instruments",
+      "citation": "Cal. Penal Code § 466(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:466"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:466"
+      ],
+      "catalogSha256": "7705621b70abf7522d0c12506308d87c97625a94382b072530a0e697a9e5161d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-520",
+      "title": "Extorting property or consideration by force or threat",
+      "citation": "Cal. Penal Code § 520",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:520"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:520"
+      ],
+      "catalogSha256": "407944da9eab51bd0065c0aad71591e4c2f26e69131a968d70977f025f5c5181",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-521",
+      "title": "Extortion under color of official right",
+      "citation": "Cal. Penal Code § 521",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:521"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:521"
+      ],
+      "catalogSha256": "95048d450f68f41c8f054c54c9ffc438d9dc7991d9107388546e4df82d70b9ae",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-522",
+      "title": "Obtaining a signature by extortion",
+      "citation": "Cal. Penal Code § 522",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:522"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:522"
+      ],
+      "catalogSha256": "41aa0db2d797315235fad6221d0326b4aaf08f4fc13c609a2d96e2bc523e377a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-523-a",
+      "title": "Sending a threatening writing with intent to extort",
+      "citation": "Cal. Penal Code § 523(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:523"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:523"
+      ],
+      "catalogSha256": "a0ae705b4767d768fd695bd2234c4024774f0f47cba414ea754ce8ce819f986b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-523-b-1",
+      "title": "Introducing ransomware with intent to extort",
+      "citation": "Cal. Penal Code § 523(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:523"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:523"
+      ],
+      "catalogSha256": "dd0647252224bb7bed6b600d8e02a41002988f01513a95fb9a526560154eed78",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-524",
+      "title": "Attempting extortion by threat",
+      "citation": "Cal. Penal Code § 524",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:524"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:524"
+      ],
+      "catalogSha256": "371290be1b5a8bccbe0128f3b70a908e5d9a94f501d85b7fb75105c733fe87e9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-526",
+      "title": "Delivering false court process to obtain property or consideration",
+      "citation": "Cal. Penal Code § 526",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:526"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:526"
+      ],
+      "catalogSha256": "736ffa0717d894122c97a07454065b4333c88c4b2b4f974b9b41a2c8992e3a9d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-527",
+      "title": "Making or distributing forms falsely presented as court process",
+      "citation": "Cal. Penal Code § 527",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:527"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:527"
+      ],
+      "catalogSha256": "f0492313d8686ba34471330bb1702065f83b2815d7cb6ae5ea3187e51a9ad0ab",
       "attorneyReview": "pending"
     },
     {
