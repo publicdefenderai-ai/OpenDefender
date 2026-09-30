@@ -95021,7 +95021,7 @@ for (const group of ['DUI & Traffic', 'DUI/Traffic Crimes']) {
 }
 
 // Source-reviewed weapon conduct and threats must remain available through topical filters.
-const californiaWeaponConductSections = new Set(['417','417.3','417.4','417.8','17500','18710','18715','18720','18725','18730','18740','18745','18750','18755','25100','25200','25800','26100']);
+const californiaWeaponConductSections = new Set(['22810','25400','29800','29805','29815','29820','29825','29900','30305','417','417.3','417.4','417.8','17500','18710','18715','18720','18725','18730','18740','18745','18750','18755','25100','25200','25800','26100']);
 const californiaThreatHateSections = new Set(['646.9','422.6','11411','11412','11413']);
 for (const [group, sections] of [['Weapons', californiaWeaponConductSections], ['Weapons Crimes', californiaWeaponConductSections], ['Violent Crimes', californiaThreatHateSections]] as const) {
   chargeCategories[group] = Array.from(new Set([
