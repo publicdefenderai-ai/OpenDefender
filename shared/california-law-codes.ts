@@ -1,5 +1,6 @@
 /** Official code identity is part of a citation; section numbers alone are ambiguous. */
 export const CALIFORNIA_LAW_CODE_LABELS = {
+  ELEC: "Cal. Elections Code",
   GOV: "Cal. Government Code",
   PRC: "Cal. Public Resources Code",
   CIV: "Cal. Civil Code", CCP: "Cal. Code of Civil Procedure",
