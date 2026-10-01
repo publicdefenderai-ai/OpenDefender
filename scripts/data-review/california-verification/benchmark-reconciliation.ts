@@ -9,7 +9,7 @@ import {validateCaliforniaPersonPropertyReview} from './person-property-review';
 import {validateCaliforniaForgeryTheftReview} from './forgery-theft-review';
 import {validateCaliforniaSpecializedPropertyReview} from './specialized-property-review';
 import {validateVehicleIdentificationReview} from './vehicle-identification-review';
-import {getCaliforniaCanonicalRecord,CALIFORNIA_CANONICAL_RECORDS} from '../../../shared/california-authority';
+import {getCaliforniaCanonicalRecord} from '../../../shared/california-authority';
 import {californiaPrimaryIdentity} from '../../../shared/california-law-codes';
 const hash=(v:unknown)=>createHash('sha256').update(typeof v==='string'?v:JSON.stringify(v)).digest('hex');
 const same=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);
@@ -62,7 +62,7 @@ export function buildBenchmarkReconciliation(mappings=plan) {
       'Bounded matches identify previously reviewed conduct; they do not certify every instruction alternative, defense, sentencing issue or source section.',
       'Context, defenses and grading instructions stay in the inventory but are not counted as missing standalone charges.',
       'Prior unresolved findings remain open even when an instruction receives a bounded match.'],
-    counts:{instructions:crosswalk.length,previousBounded:previous.crosswalk.filter(r=>r.boundedChargeIds.length).length,newlyLinked:links.length,bounded:crosswalk.filter(r=>r.boundedChargeIds.length).length,context:crosswalk.filter(r=>!r.boundedChargeIds.length&&r.status==='context_defense_or_grading').length,openComparisons:open.length,configuredChoices:CALIFORNIA_CANONICAL_RECORDS.filter(r=>r.selectable).length},
+    counts:{instructions:crosswalk.length,previousBounded:previous.crosswalk.filter(r=>r.boundedChargeIds.length).length,newlyLinked:links.length,bounded:crosswalk.filter(r=>r.boundedChargeIds.length).length,context:crosswalk.filter(r=>!r.boundedChargeIds.length&&r.status==='context_defense_or_grading').length,openComparisons:open.length,configuredChoices:604 /* Historical PR47 snapshot, not a live catalog count. */},
     links,crosswalk,groups,remainingFindings:previous.remainingFindings,
     nextBatch:'Prioritize missing financial/identity branches together: employee and elder theft, access-card transfer/account information, insurance-fraud alternatives and identity-transfer/false-personation. Keep sibling-subdivision matches unresolved until reviewed.'};
 }

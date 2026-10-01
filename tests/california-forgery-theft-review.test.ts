@@ -11,7 +11,8 @@ describe("California combined forgery/theft expansion", () => {
   it("reuses evidence and keeps all 79 prior open sections accounted for", () => {
     expect(validateCaliforniaForgeryTheftReview()).toEqual({ additions: 28, candidateSections: 79, reviewedPrimarySections: 20, remainingResearchSections: 59, reusedSections: 98, newSections: 7, newVersions: 7, configuredSelectable: CA_CATALOG_COUNTS.configured });
     expect(readCaliforniaForgeryTheftReview().sections.find(s => s.key === "PEN:484e")?.status).toBe("substantive_research_open");
-    expect(getChargeById("ca-pen-484e-d")).toBeUndefined();
+    // This historical batch did not approve 484e(d); a later reviewed batch may publish it.
+    expect(additions.some(row => row.id === "ca-pen-484e-d")).toBe(false);
   });
   it("rejects changed definitions, unsupported evidence and removed dependencies", () => {
     const changed = structuredClone(additions); changed[0].penalty = "No incarceration";

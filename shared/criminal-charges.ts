@@ -95043,19 +95043,19 @@ chargeCategories['Public Order'] = [...new Set([...chargeCategories['Public Orde
 }).map(charge => charge.id)])];
 
 // Reviewed financial and income/franchise-tax choices use the existing fraud filter.
-const californiaFinancialSections = new Set(['115','424','529','532a','548']);
+const californiaFinancialSections = new Set(['115','424','529','530','530.5','532a','548','550','484e']);
 const californiaTaxSections = new Set(['19701','19705','19706','19708','19709']);
 chargeCategories['Fraud'] = Array.from(new Set([
   ...chargeCategories['Fraud'],
   ...chargeCategories['CA'].filter(id => {
     const record = getCaliforniaCanonicalRecord(id);
-    return record && ((record.lawCode === 'PEN' && californiaFinancialSections.has(record.code.split('(')[0]))
+    return record && ((record.lawCode === 'PEN' && (californiaFinancialSections.has(record.code.split('(')[0]) || /^368\([de]\)/.test(record.code)))
       || (record.lawCode === 'RTC' && californiaTaxSections.has(record.code.split('(')[0])));
   }),
 ]));
 
 // Exact property branches remain discoverable in the existing property filters.
-const californiaPropertySections = new Set(['451','451.5','452','453','455','213','465','466','520','521','522','523','524','526','527','666','666.1']);
+const californiaPropertySections = new Set(['451','451.5','452','453','455','213','465','466','520','521','522','523','524','526','527','666','666.1','487','484e','530']);
 for (const group of ['Theft & Property', 'Property Crimes']) {
   chargeCategories[group] = Array.from(new Set([
     ...(chargeCategories[group] ?? []),
@@ -95097,7 +95097,7 @@ for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], [
     ...chargeCategories[group],
     ...chargeCategories['CA'].filter(id => {
       const record = getCaliforniaCanonicalRecord(id);
-      return record?.lawCode === 'PEN' && sections.has(record.code.split('(')[0]);
+      return record?.lawCode === 'PEN' && sections.has(record.code.split('(')[0]) && !/^368\([de]\)/.test(record.code);
     }),
   ]));
 }
