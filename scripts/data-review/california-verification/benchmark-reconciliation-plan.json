@@ -1,0 +1,166 @@
+[
+  {
+    "instructionId": "1752",
+    "provider": "vehicle-identification",
+    "chargeIds": [
+      "ca-veh-10801"
+    ],
+    "rationale": "Knowing and intentional chop-shop operation; retains the VEH 250 definition rather than treating ordinary repair as criminal."
+  },
+  {
+    "instructionId": "1760",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-496-5-a"
+    ],
+    "rationale": "Automotive stolen property for resale, not personal use; retains knowledge, intent and the greater-than-$950 threshold."
+  },
+  {
+    "instructionId": "1761",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-496-6-a"
+    ],
+    "rationale": "Retail stolen property for resale, exchange or return; retains knowledge, nonpersonal use and valuation limits."
+  },
+  {
+    "instructionId": "1808",
+    "provider": "specialized-property",
+    "chargeIds": [
+      "ca-pen-490-4-a-1",
+      "ca-pen-490-4-a-2",
+      "ca-pen-490-4-a-3",
+      "ca-pen-490-4-a-4"
+    ],
+    "rationale": "Four organized-retail-theft alternatives remain separate; the receiving alternative requires two other persons. The instruction is not a substitute for the statutory punishment or aggregation rules."
+  },
+  {
+    "instructionId": "1810",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-484b"
+    ],
+    "rationale": "Willful failure and wrongful diversion of dedicated construction funds. The retained instruction identifies a causation split; this association does not resolve that split."
+  },
+  {
+    "instructionId": "1821",
+    "provider": "vehicle-identification",
+    "chargeIds": [
+      "ca-veh-10852"
+    ],
+    "rationale": "Willful vehicle tampering or part removal without consent; does not require inventing an intent to steal permanently."
+  },
+  {
+    "instructionId": "1822",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-499b-a",
+      "ca-pen-499b-b"
+    ],
+    "rationale": "Temporary unauthorized bicycle and vessel taking; does not substitute these choices for motor-vehicle taking."
+  },
+  {
+    "instructionId": "1920",
+    "provider": "person-property",
+    "chargeIds": [
+      "ca-pen-470a"
+    ],
+    "rationale": "False government identification created to facilitate forgery, not every false identification document."
+  },
+  {
+    "instructionId": "1921",
+    "provider": "person-property",
+    "chargeIds": [
+      "ca-pen-470b"
+    ],
+    "rationale": "Knowing possession or display of false government identification with intent to facilitate forgery."
+  },
+  {
+    "instructionId": "1925",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-472"
+    ],
+    "rationale": "Counterfeit official or corporate seals with intent to defraud; the single catalog choice also describes a distinct possession route."
+  },
+  {
+    "instructionId": "1926",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-472"
+    ],
+    "rationale": "Possession requires knowledge, willful concealment and intent to defraud. Mere possession does not suffice."
+  },
+  {
+    "instructionId": "1930",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-475-a"
+    ],
+    "rationale": "Knowing possession of a forged document with passage/use and fraud intent; separate from blank and completed instrument branches."
+  },
+  {
+    "instructionId": "1931",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-475-b"
+    ],
+    "rationale": "Blank or unfinished instruments with completion and fraud intent; not the completed-instrument branch."
+  },
+  {
+    "instructionId": "1932",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-475-c"
+    ],
+    "rationale": "Completed instruments with passage/use and fraud intent; retains the published valuation and penalty limits."
+  },
+  {
+    "instructionId": "1933",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-480-a"
+    ],
+    "rationale": "Making or possessing counterfeiting equipment with knowledge of its counterfeiting use; ordinary equipment possession is insufficient."
+  },
+  {
+    "instructionId": "1935",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-476"
+    ],
+    "rationale": "Fictitious or altered payment instruments with fraud intent; does not close the separate insufficient-funds offense."
+  },
+  {
+    "instructionId": "1951",
+    "provider": "specialized-property",
+    "chargeIds": [
+      "ca-pen-484e-c"
+    ],
+    "rationale": "Unauthorized acquisition or retention with fraudulent use/transfer intent; does not close subdivisions (a), (b) or (d)."
+  },
+  {
+    "instructionId": "1953",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-484f-a"
+    ],
+    "rationale": "Making counterfeit access cards with intent to defraud; the same catalog choice includes the separate use alternative."
+  },
+  {
+    "instructionId": "1954",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-484f-a"
+    ],
+    "rationale": "Using or attempting to use counterfeit access cards with intent to defraud; linked separately from making."
+  },
+  {
+    "instructionId": "1955",
+    "provider": "forgery-theft",
+    "chargeIds": [
+      "ca-pen-484f-b"
+    ],
+    "rationale": "Unauthorized false signatures on access cards or payment documents with intent to defraud."
+  }
+]
