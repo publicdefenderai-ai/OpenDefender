@@ -1,0 +1,826 @@
+[
+  {
+    "id": "ca-pen-368-d-1",
+    "lawCode": "PEN",
+    "code": "368(d)(1)",
+    "title": "Financial abuse of an elder or dependent adult: noncaretaker, above $950",
+    "summary": "Violating a theft, embezzlement, forgery, fraud or section 530.5 identity-information law involving an elder or dependent adult's property or identifying information. The accused is not a caretaker and must know or reasonably should know the victim is an elder or dependent adult. This branch concerns value above $950. An elder is at least 65; a dependent adult is 18 through 64 with the specified limitations or qualifying 24-hour inpatient care. The underlying offense must also be proved; loss or a family dispute alone is not enough.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail, a fine up to $2,500, or both. Felony alternative: 2, 3 or 4 years under section 1170(h), a fine up to $10,000, or both. The court must consider a no-contact order lasting up to 10 years; counseling may be a probation condition subject to the statutory ability-to-pay protections. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The mental state of the underlying offense, plus knowledge or reasonable awareness of the victim's protected status.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:470",
+      "PEN:484",
+      "PEN:503",
+      "PEN:530.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "1807"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:470": "2006-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:503": null,
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-368-d-2",
+    "lawCode": "PEN",
+    "code": "368(d)(2)",
+    "title": "Financial abuse of an elder or dependent adult: noncaretaker, $950 or less",
+    "summary": "Violating a theft, embezzlement, forgery, fraud or section 530.5 identity-information law involving an elder or dependent adult's property or identifying information. The accused is not a caretaker and must know or reasonably should know the victim is an elder or dependent adult. This branch concerns value of $950 or less, including exactly $950. An elder is at least 65; a dependent adult is 18 through 64 with the specified limitations or qualifying 24-hour inpatient care. The underlying offense must also be proved; loss or a family dispute alone is not enough.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $1,000, or both. This lower-value branch does not carry the higher-value branch's ordinary felony term. The court must consider a no-contact order lasting up to 10 years; counseling may be a probation condition subject to the statutory ability-to-pay protections. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The mental state of the underlying offense, plus knowledge or reasonable awareness of the victim's protected status.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:470",
+      "PEN:484",
+      "PEN:503",
+      "PEN:530.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "1807"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:470": "2006-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:503": null,
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-368-e-1",
+    "lawCode": "PEN",
+    "code": "368(e)(1)",
+    "title": "Financial abuse of an elder or dependent adult: caretaker, above $950",
+    "summary": "Violating a theft, embezzlement, forgery, fraud or section 530.5 identity-information law involving an elder or dependent adult's property or identifying information. The accused must be a caretaker: a person with care, custody, control or a position of trust. This branch concerns value above $950. An elder is at least 65; a dependent adult is 18 through 64 with the specified limitations or qualifying 24-hour inpatient care. The underlying offense must also be proved; loss or a family dispute alone is not enough.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail, a fine up to $2,500, or both. Felony alternative: 2, 3 or 4 years under section 1170(h), a fine up to $10,000, or both. The court must consider a no-contact order lasting up to 10 years; counseling may be a probation condition subject to the statutory ability-to-pay protections. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The mental state of the underlying offense, plus the caretaker relationship.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:470",
+      "PEN:484",
+      "PEN:503",
+      "PEN:530.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "1807"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:470": "2006-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:503": null,
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-368-e-2",
+    "lawCode": "PEN",
+    "code": "368(e)(2)",
+    "title": "Financial abuse of an elder or dependent adult: caretaker, $950 or less",
+    "summary": "Violating a theft, embezzlement, forgery, fraud or section 530.5 identity-information law involving an elder or dependent adult's property or identifying information. The accused must be a caretaker: a person with care, custody, control or a position of trust. This branch concerns value of $950 or less, including exactly $950. An elder is at least 65; a dependent adult is 18 through 64 with the specified limitations or qualifying 24-hour inpatient care. The underlying offense must also be proved; loss or a family dispute alone is not enough.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $1,000, or both. This lower-value branch does not carry the higher-value branch's ordinary felony term. The court must consider a no-contact order lasting up to 10 years; counseling may be a probation condition subject to the statutory ability-to-pay protections. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "The mental state of the underlying offense, plus the caretaker relationship.",
+    "supportingKeys": [
+      "HSC:1250",
+      "HSC:1250.2",
+      "HSC:1250.3",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:470",
+      "PEN:484",
+      "PEN:503",
+      "PEN:530.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "1807"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:1250": "2015-10-04",
+      "HSC:1250.2": "2025-01-01",
+      "HSC:1250.3": "2025-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:368": "2025-01-01",
+      "PEN:470": "2006-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:503": null,
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-487-b-3",
+    "lawCode": "PEN",
+    "code": "487(b)(3)",
+    "title": "Theft by an employee or agent: aggregate above $950",
+    "summary": "Theft from an employer or principal by a servant, agent or employee, with the value aggregated over 12 consecutive months. This choice is bounded to an aggregate above $950. The literal statute and retained instruction say \"$950 or more,\" but section 490.2 ordinarily gives exactly $950 petty-theft treatment. Do not treat exactly $950 as ordinary grand theft. Employment alone does not prove theft, and the underlying theft elements still apply.",
+    "penalty": "For the ordinary non-firearm grand-theft branch: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "The mental state of the underlying theft; the specified employment/agency relationship and aggregation must be proved.",
+    "supportingKeys": [
+      "CIV:2295",
+      "LAB:2750",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:484",
+      "PEN:489",
+      "PEN:490",
+      "PEN:490.1",
+      "PEN:490.2",
+      "PEN:666",
+      "PEN:666.1",
+      "PEN:667",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "1803"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "CIV:2295": null,
+      "LAB:2750": null,
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:487": "2025-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:490": null,
+      "PEN:490.1": null,
+      "PEN:490.2": null,
+      "PEN:666": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:667": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-484e-a",
+    "lawCode": "PEN",
+    "code": "484e(a)",
+    "title": "Fraudulent sale or transfer of an access card",
+    "summary": "Selling, transferring or conveying an access card without the cardholder's or issuer's consent, with intent to defraud. Access cards include qualifying account numbers and other means of account access under section 484d. Value concerns the card or information itself, not automatically the amount later obtained using it. The separate four-person/multiple-card branch is not resolved by this choice.",
+    "penalty": "Ordinary theft valued at $950 or less receives petty-theft treatment: up to 6 months in county jail, a fine up to $1,000, or both. Section 490.1 permits an infraction with a fine up to $250 when value does not exceed $50 and there is no other theft or theft-related conviction. Specified prior convictions under sections 490.2, 666 or 666.1 can change the result and require separate review; the ordinary ranges are not a ceiling for those allegations. For ordinary non-firearm theft above $950: For the ordinary non-firearm grand-theft branch: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Intent to defraud; sale or transfer alone is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:484",
+      "PEN:484d",
+      "PEN:487",
+      "PEN:489",
+      "PEN:490",
+      "PEN:490.1",
+      "PEN:490.2",
+      "PEN:666",
+      "PEN:666.1",
+      "PEN:667",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "1950"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:484d": null,
+      "PEN:484e": "1999-01-01",
+      "PEN:487": "2025-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:490": null,
+      "PEN:490.1": null,
+      "PEN:490.2": null,
+      "PEN:666": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:667": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-484e-d",
+    "lawCode": "PEN",
+    "code": "484e(d)",
+    "title": "Fraudulent acquisition or retention of access-card account information",
+    "summary": "Acquiring or retaining account information for an access card validly issued to someone else, without the cardholder's or issuer's consent, intending to use the information fraudulently. Access cards include qualifying account numbers and other means of account access under section 484d. Value concerns the card or information itself, not automatically the amount later obtained using it. The separate four-person/multiple-card branch is not resolved by this choice.",
+    "penalty": "Ordinary theft valued at $950 or less receives petty-theft treatment: up to 6 months in county jail, a fine up to $1,000, or both. Section 490.1 permits an infraction with a fine up to $250 when value does not exceed $50 and there is no other theft or theft-related conviction. Specified prior convictions under sections 490.2, 666 or 666.1 can change the result and require separate review; the ordinary ranges are not a ceiling for those allegations. For ordinary non-firearm theft above $950: For the ordinary non-firearm grand-theft branch: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Intent to defraud and intended fraudulent use of the information.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:484",
+      "PEN:484d",
+      "PEN:487",
+      "PEN:489",
+      "PEN:490",
+      "PEN:490.1",
+      "PEN:490.2",
+      "PEN:666",
+      "PEN:666.1",
+      "PEN:667",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "1952"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:484d": null,
+      "PEN:484e": "1999-01-01",
+      "PEN:487": "2025-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:490": null,
+      "PEN:490.1": null,
+      "PEN:490.2": null,
+      "PEN:666": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:667": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-530",
+    "lawCode": "PEN",
+    "code": "530",
+    "title": "Receiving another person's property by false personation",
+    "summary": "Falsely personating another person in a private or official capacity and, in that assumed identity, receiving money or property known to be intended for that person, intending to convert it for oneself or another or deprive the true owner. Merely using a false name is not this offense. The punishment follows larceny of the property received; this choice describes ordinary non-firearm property.",
+    "penalty": "Ordinary theft valued at $950 or less receives petty-theft treatment: up to 6 months in county jail, a fine up to $1,000, or both. Section 490.1 permits an infraction with a fine up to $250 when value does not exceed $50 and there is no other theft or theft-related conviction. Specified prior convictions under sections 490.2, 666 or 666.1 can change the result and require separate review; the ordinary ranges are not a ceiling for those allegations. For ordinary non-firearm theft above $950: For the ordinary non-firearm grand-theft branch: up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h). Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Knowledge that the property was meant for the person impersonated and intent to convert it or deprive the true owner.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:290",
+      "PEN:484",
+      "PEN:487",
+      "PEN:489",
+      "PEN:490",
+      "PEN:490.1",
+      "PEN:490.2",
+      "PEN:666",
+      "PEN:666.1",
+      "PEN:667",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "2045"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:487": "2025-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:490": null,
+      "PEN:490.1": null,
+      "PEN:490.2": null,
+      "PEN:530": null,
+      "PEN:666": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:667": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-530-5-c-2",
+    "lawCode": "PEN",
+    "code": "530.5(c)(2)",
+    "title": "Fraudulent possession of identifying information: prior conviction",
+    "summary": "Acquiring or retaining another person's identifying information with intent to defraud, with a prior conviction under section 530.5. An arrest alone does not establish the required conviction. Personal identifying information is defined by section 530.55. This is distinct from theft of access-card information; a low dollar value alone does not make it petty theft.",
+    "penalty": "Misdemeanor alternative: a fine, up to 364 days in county jail, or both. Felony alternative: 16 months, 2 years or 3 years under section 1170(h). The statute authorizes a fine without stating its amount; the applicable fine ceiling remains under review, and no generic $10,000 ceiling is assumed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to defraud; innocent possession or transfer is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "2041"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-530-5-c-3",
+    "lawCode": "PEN",
+    "code": "530.5(c)(3)",
+    "title": "Fraudulent possession of identifying information: 10 or more people",
+    "summary": "Acquiring or retaining identifying information of 10 or more other persons with intent to defraud. Count people, not the number of cards or documents. Personal identifying information is defined by section 530.55. This is distinct from theft of access-card information; a low dollar value alone does not make it petty theft.",
+    "penalty": "Misdemeanor alternative: a fine, up to 364 days in county jail, or both. Felony alternative: 16 months, 2 years or 3 years under section 1170(h). The statute authorizes a fine without stating its amount; the applicable fine ceiling remains under review, and no generic $10,000 ceiling is assumed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to defraud; innocent possession or transfer is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "2041"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-530-5-d-1",
+    "lawCode": "PEN",
+    "code": "530.5(d)(1)",
+    "title": "Fraudulent sale or transfer of identifying information",
+    "summary": "Selling, transferring or conveying another person's personal identifying information with intent to defraud. Personal identifying information is defined by section 530.55. This is distinct from theft of access-card information; a low dollar value alone does not make it petty theft.",
+    "penalty": "Misdemeanor alternative: a fine, up to 364 days in county jail, or both. Felony alternative: 16 months, 2 years or 3 years under section 1170(h). The statute authorizes a fine without stating its amount; the applicable fine ceiling remains under review, and no generic $10,000 ceiling is assumed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intent to defraud; innocent possession or transfer is insufficient.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "2042"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-530-5-d-2",
+    "lawCode": "PEN",
+    "code": "530.5(d)(2)",
+    "title": "Transfer of identifying information known to be intended for unlawful use",
+    "summary": "Selling, transferring or conveying a specific person's identifying information with actual knowledge that it will be used to violate section 530.5(a). That underlying route requires willful obtaining and use for an unlawful purpose without consent. Mere suspicion is not actual knowledge; an additional intent-to-defraud element is not substituted for the statute's actual-knowledge requirement. Personal identifying information is defined by section 530.55. This is distinct from theft of access-card information; a low dollar value alone does not make it petty theft.",
+    "penalty": "The statute authorizes a fine, 16 months, 2 years or 3 years under section 1170(h), or both. It does not expressly provide the one-year county-jail alternative found in neighboring subdivisions. A fine-only judgment can result in misdemeanor treatment under section 17(b); do not import a neighboring subdivision's jail range. The statute authorizes a fine without stating its amount; the applicable fine ceiling remains under review, and no generic $10,000 ceiling is assumed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Actual knowledge of the planned section 530.5(a) use.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:530.55"
+    ],
+    "calcrim": [
+      "2043"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:530.5": "2011-04-04",
+      "PEN:530.55": "2022-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-2",
+    "lawCode": "PEN",
+    "code": "550(a)(2)",
+    "title": "Multiple claims for the same loss or injury",
+    "summary": "Knowingly presenting multiple claims for the same loss or injury, including to more than one insurer, with intent to defraud.",
+    "penalty": "Felony: 2, 3 or 5 years under section 1170(h), and a fine up to the greater of $50,000 or twice the fraud amount. The $950 health-care threshold does not supply a misdemeanor option for this branch. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-3",
+    "lawCode": "PEN",
+    "code": "550(a)(3)",
+    "title": "Causing or participating in a collision for a fraudulent claim",
+    "summary": "Knowingly causing or participating in a vehicle collision or other vehicle accident for the purpose of presenting a false or fraudulent claim, with intent to defraud. An ordinary accident alone is not enough.",
+    "penalty": "Felony: 2, 3 or 5 years under section 1170(h), and a fine up to the greater of $50,000 or twice the fraud amount. The $950 health-care threshold does not supply a misdemeanor option for this branch. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. Section 550 also provides special enhancements for two prior collision-fraud convictions and for serious bodily injury to a nonaccomplice; these are not included in the base term. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2002"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-4",
+    "lawCode": "PEN",
+    "code": "550(a)(4)",
+    "title": "False claim for vehicle theft, damage or conversion",
+    "summary": "Knowingly presenting a false or fraudulent claim for loss from theft, destruction, damage or conversion of a vehicle, vehicle part or contents, with intent to defraud.",
+    "penalty": "Felony: 2, 3 or 5 years under section 1170(h), and a fine up to the greater of $50,000 or twice the fraud amount. The $950 health-care threshold does not supply a misdemeanor option for this branch. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2000"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-5",
+    "lawCode": "PEN",
+    "code": "550(a)(5)",
+    "title": "Preparing a writing for a fraudulent claim",
+    "summary": "Knowingly preparing, making or subscribing a writing intended to be presented or used, or allowed to be presented, in support of a false or fraudulent claim, with intent to defraud.",
+    "penalty": "Felony: 2, 3 or 5 years under section 1170(h), and a fine up to the greater of $50,000 or twice the fraud amount. The $950 health-care threshold does not supply a misdemeanor option for this branch. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2000"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-6",
+    "lawCode": "PEN",
+    "code": "550(a)(6)",
+    "title": "False claim for a health-care benefit",
+    "summary": "Knowingly making or causing a false or fraudulent claim for payment of a health-care benefit, with intent to defraud. Qualifying workers' compensation health-benefit claims are included. The ordinary non-health-care fraud felony range does not automatically apply to a low-value health-care claim.",
+    "penalty": "If the claim or amount at issue is $950 or less: up to 6 months in county jail, a fine up to $1,000, or both, unless the aggregate exceeds $950 within 12 consecutive months. Above $950, including qualifying aggregation: felony alternative of 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both; misdemeanor alternative of up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2000"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-7",
+    "lawCode": "PEN",
+    "code": "550(a)(7)",
+    "title": "Claim for an unused health-care benefit",
+    "summary": "Knowingly submitting a claim for a health-care benefit not used by or on behalf of the claimant, with intent to defraud. Qualifying workers' compensation health-benefit claims are included. The ordinary non-health-care fraud felony range does not automatically apply to a low-value health-care claim.",
+    "penalty": "If the claim or amount at issue is $950 or less: up to 6 months in county jail, a fine up to $1,000, or both, unless the aggregate exceeds $950 within 12 consecutive months. Above $950, including qualifying aggregation: felony alternative of 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both; misdemeanor alternative of up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2000"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-8",
+    "lawCode": "PEN",
+    "code": "550(a)(8)",
+    "title": "Multiple claims for the same health-care benefit",
+    "summary": "Knowingly presenting multiple claims for payment of the same health-care benefit with intent to defraud. Qualifying workers' compensation health-benefit claims are included. The ordinary non-health-care fraud felony range does not automatically apply to a low-value health-care claim.",
+    "penalty": "If the claim or amount at issue is $950 or less: up to 6 months in county jail, a fine up to $1,000, or both, unless the aggregate exceeds $950 within 12 consecutive months. Above $950, including qualifying aggregation: felony alternative of 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both; misdemeanor alternative of up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2001"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-a-9",
+    "lawCode": "PEN",
+    "code": "550(a)(9)",
+    "title": "Health-care undercharges without reconciling overcharges",
+    "summary": "Knowingly presenting undercharges for a specific claimant without presenting known overcharges for the same claimant for reconciliation at the same time, with intent to defraud. An innocent billing mistake is insufficient. Qualifying workers' compensation health-benefit claims are included. The ordinary non-health-care fraud felony range does not automatically apply to a low-value health-care claim.",
+    "penalty": "If the claim or amount at issue is $950 or less: up to 6 months in county jail, a fine up to $1,000, or both, unless the aggregate exceeds $950 within 12 consecutive months. Above $950, including qualifying aggregation: felony alternative of 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both; misdemeanor alternative of up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge and intent to defraud.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2000"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-b-2",
+    "lawCode": "PEN",
+    "code": "550(b)(2)",
+    "title": "Preparing a materially false insurance statement",
+    "summary": "Preparing or making a written or oral statement intended for an insurer or insurance claimant in connection with, support of or opposition to a claim or benefit, knowing it contains false or misleading information about a material fact.",
+    "penalty": "Felony alternative: 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both. Misdemeanor alternative: up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the falsity or concealment; the charged subdivision and facts matter.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-b-3",
+    "lawCode": "PEN",
+    "code": "550(b)(3)",
+    "title": "Concealing an event affecting insurance benefits",
+    "summary": "Concealing or knowingly failing to disclose an event affecting entitlement to insurance benefits or payments, or their amount. A disputed benefit or innocent omission alone does not establish knowing concealment.",
+    "penalty": "Felony alternative: 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both. Misdemeanor alternative: up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the falsity or concealment; the charged subdivision and facts matter.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-550-b-4",
+    "lawCode": "PEN",
+    "code": "550(b)(4)",
+    "title": "False California residency statement for auto insurance",
+    "summary": "Preparing or making a statement intended for an insurer or producer to obtain auto insurance that the proposed insured resides or is domiciled in California when that person actually resides or is domiciled in another state. The fraud must be knowing, not an innocent address error.",
+    "penalty": "Felony alternative: 2, 3 or 5 years under section 1170(h), a fine up to the greater of $50,000 or twice the fraud amount, or both. Misdemeanor alternative: up to 364 days in county jail, a fine up to $10,000, or both. Section 550 requires restitution. Qualifying prior convictions may add punishment or restrict probation; an auto-insurance claim in a designated fraud-crisis area can double an imposed fine. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the falsity or concealment; the charged subdivision and facts matter.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:550": "2011-04-04"
+    }
+  }
+]

@@ -1,3 +1,4 @@
+import financialIdentity from "./california-financial-identity-additions.json";
 import repeatTheftAssembly from "./california-repeat-theft-assembly-additions.json";
 import publicOrder from "./california-public-order-additions.json";
 import {reviewedCaliforniaPenalty} from './california-attorney-decisions';
@@ -21,6 +22,7 @@ import drivingVessels from "./california-driving-vessels-additions.json";
 import drugSuccessor from "./california-drug-successor-additions.json";
 import { californiaLawCode } from "./california-law-codes";
 export const CALIFORNIA_ADDITIONS = [
+  ...financialIdentity.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-financial-identity-review.json" })),
   ...repeatTheftAssembly.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-repeat-theft-assembly-review.json" })),
   ...publicOrder.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-public-order-review.json" })),
   ...financialTax.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-financial-tax-review.json" })),

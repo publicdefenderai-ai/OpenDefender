@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 625,
-    "configuredSelectable": 604,
+    "canonicalRecords": 648,
+    "configuredSelectable": 627,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 505,
-    "boundedCorrectionPass": 604,
+    "boundedAdditionPass": 528,
+    "boundedCorrectionPass": 627,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 327,
+    "distinctSelectablePrimarySections": 328,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 327,
-    "selectableRecordsWithAllPrimaryTextAcquired": 604,
-    "totalAcquiredSectionsIncludingDependencies": 814,
-    "totalAcquiredVersionsIncludingDependencies": 822,
+    "acquiredSelectablePrimarySections": 328,
+    "selectableRecordsWithAllPrimaryTextAcquired": 627,
+    "totalAcquiredSectionsIncludingDependencies": 817,
+    "totalAcquiredVersionsIncludingDependencies": 825,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "604 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "627 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 470,
-      "corrected": 470,
+      "selectable": 493,
+      "corrected": 493,
       "awaitingCorrection": 0
     },
     {
@@ -2119,6 +2119,10 @@
       "section": "368",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=368&lawCode=PEN",
       "recordIds": [
+        "ca-pen-368-d-1",
+        "ca-pen-368-d-2",
+        "ca-pen-368-e-1",
+        "ca-pen-368-e-2",
         "ca-pen-368-b-1",
         "ca-pen-368-c",
         "ca-pen-368-f"
@@ -2605,6 +2609,8 @@
       "section": "484e",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484e&lawCode=PEN",
       "recordIds": [
+        "ca-pen-484e-a",
+        "ca-pen-484e-d",
         "ca-pen-484e-c"
       ],
       "alreadyRetained": false
@@ -2674,7 +2680,8 @@
       "recordIds": [
         "ca-grand-theft-487-a",
         "ca-grand-theft-agricultural-487-b1a",
-        "ca-grand-theft-firearm-487-d2"
+        "ca-grand-theft-firearm-487-d2",
+        "ca-pen-487-b-3"
       ],
       "alreadyRetained": true
     },
@@ -2918,11 +2925,24 @@
     },
     {
       "lawCode": "PEN",
+      "section": "530",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-530"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "530.5",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530.5&lawCode=PEN",
       "recordIds": [
         "ca-identity-theft-530-5-a",
-        "ca-identity-theft-530-5-c1"
+        "ca-identity-theft-530-5-c1",
+        "ca-pen-530-5-c-2",
+        "ca-pen-530-5-c-3",
+        "ca-pen-530-5-d-1",
+        "ca-pen-530-5-d-2"
       ],
       "alreadyRetained": false
     },
@@ -2953,7 +2973,18 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=550&lawCode=PEN",
       "recordIds": [
         "ca-insurance-fraud-550-a1",
-        "ca-insurance-fraud-550-b1"
+        "ca-insurance-fraud-550-b1",
+        "ca-pen-550-a-2",
+        "ca-pen-550-a-3",
+        "ca-pen-550-a-4",
+        "ca-pen-550-a-5",
+        "ca-pen-550-a-6",
+        "ca-pen-550-a-7",
+        "ca-pen-550-a-8",
+        "ca-pen-550-a-9",
+        "ca-pen-550-b-2",
+        "ca-pen-550-b-3",
+        "ca-pen-550-b-4"
       ],
       "alreadyRetained": false
     },
@@ -5658,6 +5689,399 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-d-1",
+      "title": "Financial abuse of an elder or dependent adult: noncaretaker, above $950",
+      "citation": "Cal. Penal Code § 368(d)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "3eda92427d3273eb089f3620e3f5c9dd2899fce2e790d28a3611626d5076d949",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-d-2",
+      "title": "Financial abuse of an elder or dependent adult: noncaretaker, $950 or less",
+      "citation": "Cal. Penal Code § 368(d)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "eb8f2385596b4b942dae2d9293291ec5214953ce4fd698f37691ccbb133bbebe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-e-1",
+      "title": "Financial abuse of an elder or dependent adult: caretaker, above $950",
+      "citation": "Cal. Penal Code § 368(e)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "12fde752aac9de1331d59955f58b8a6e9576ba6f52875cff7c66d0f710335696",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-368-e-2",
+      "title": "Financial abuse of an elder or dependent adult: caretaker, $950 or less",
+      "citation": "Cal. Penal Code § 368(e)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:368"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:368"
+      ],
+      "catalogSha256": "096bc980cab7d845de341d01f22610953b5084d5893b3fc2b417c57f60b05beb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-487-b-3",
+      "title": "Theft by an employee or agent: aggregate above $950",
+      "citation": "Cal. Penal Code § 487(b)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ],
+      "catalogSha256": "7ec9a3bd7a24533262f6696f20ec80fb0c461ea806e1f135393704d83ebdd188",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-484e-a",
+      "title": "Fraudulent sale or transfer of an access card",
+      "citation": "Cal. Penal Code § 484e(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:484e"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484e"
+      ],
+      "catalogSha256": "004044e033e0dc877dd7dffd36308a1246ac17177112be43a5ead2eb9cfb9c96",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-484e-d",
+      "title": "Fraudulent acquisition or retention of access-card account information",
+      "citation": "Cal. Penal Code § 484e(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:484e"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484e"
+      ],
+      "catalogSha256": "1c7d30f031a1e61c52a67f1324fcac6bf72c997fa32b1003ab2ff67a3b115eec",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-530",
+      "title": "Receiving another person's property by false personation",
+      "citation": "Cal. Penal Code § 530",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:530"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530"
+      ],
+      "catalogSha256": "2abde5c0facc2146ef6b1210a81c4d5e412eeafdae8e31a09db0b9031f017e52",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-530-5-c-2",
+      "title": "Fraudulent possession of identifying information: prior conviction",
+      "citation": "Cal. Penal Code § 530.5(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "c5f3d562033ec31f3b532705b45135c10bd1a55bbb628b6ad1edb508f2ed8ec4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-530-5-c-3",
+      "title": "Fraudulent possession of identifying information: 10 or more people",
+      "citation": "Cal. Penal Code § 530.5(c)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "14e4d4b872ca4dbfd1a9bf56e1e31a8299040cab1b806f82f3d576f069304775",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-530-5-d-1",
+      "title": "Fraudulent sale or transfer of identifying information",
+      "citation": "Cal. Penal Code § 530.5(d)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "7f86cb86ceb5943fa14621fdef4c675a6253f342c0d3fa313a659b1b64cb293e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-530-5-d-2",
+      "title": "Transfer of identifying information known to be intended for unlawful use",
+      "citation": "Cal. Penal Code § 530.5(d)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "d1922c4d905ecb8204655912e26265d3765478ab3222bef6bc9eadc8eb1a45b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-2",
+      "title": "Multiple claims for the same loss or injury",
+      "citation": "Cal. Penal Code § 550(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "834b0e648e11431ae5f574f80e059f98e3d720b91a08820e13d50b69e8617c45",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-3",
+      "title": "Causing or participating in a collision for a fraudulent claim",
+      "citation": "Cal. Penal Code § 550(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "bfbd1c1be684cff661807d0dcb8573c4dd2b9740efeaf078b5f3d9abee6f3894",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-4",
+      "title": "False claim for vehicle theft, damage or conversion",
+      "citation": "Cal. Penal Code § 550(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "b98f419c418a15b5378b4c3b7ee7820f920fc9ff37e85599a3a21e44b6d879e2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-5",
+      "title": "Preparing a writing for a fraudulent claim",
+      "citation": "Cal. Penal Code § 550(a)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "25b4141d044fc97c07691e8c30e90de2fb9525756b51930d66346b66bdef4300",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-6",
+      "title": "False claim for a health-care benefit",
+      "citation": "Cal. Penal Code § 550(a)(6)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "e43325f1f28ab68565e2c54c11c2b4c7de9fa1f9dc4d5dc2ed06e518f5943486",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-7",
+      "title": "Claim for an unused health-care benefit",
+      "citation": "Cal. Penal Code § 550(a)(7)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "a7b19fb4d172df38f481f195e454a0640bf169ead6ef55fa74ed790d96a04bc7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-8",
+      "title": "Multiple claims for the same health-care benefit",
+      "citation": "Cal. Penal Code § 550(a)(8)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "48692f4bdb936e7868e73025687b2bcdef43c316ab58c9d0df3b718e5b744b73",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-a-9",
+      "title": "Health-care undercharges without reconciling overcharges",
+      "citation": "Cal. Penal Code § 550(a)(9)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "ba7e9466ecc2e1c58d400a9cb10575ed63e2b4c383ea1686bafe2997d47db576",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-b-2",
+      "title": "Preparing a materially false insurance statement",
+      "citation": "Cal. Penal Code § 550(b)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "2d9b857d0058492766f89fb7de8272b512c874a1e438168327b7eb757b6a90d6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-b-3",
+      "title": "Concealing an event affecting insurance benefits",
+      "citation": "Cal. Penal Code § 550(b)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "cc5c373eb6204d6352fc37e0cfc6a93f71f58de40fb3ebc37bb6409582090577",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-550-b-4",
+      "title": "False California residency statement for auto insurance",
+      "citation": "Cal. Penal Code § 550(b)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "0f2d3ee2fbcb44b58d157663b4dfc2111009720c815be86c82b53d7cc5c94a46",
       "attorneyReview": "pending"
     },
     {
