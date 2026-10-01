@@ -11,6 +11,8 @@ import {validateCaliforniaSpecializedPropertyReview} from './specialized-propert
 import {validateVehicleIdentificationReview} from './vehicle-identification-review';
 import {getCaliforniaCanonicalRecord} from '../../../shared/california-authority';
 import {californiaPrimaryIdentity} from '../../../shared/california-law-codes';
+// Historical PR47 snapshot, not a live catalog count. Later additions must not rewrite it.
+const PR47_CONFIGURED_CHOICES_SNAPSHOT = 604;
 const hash=(v:unknown)=>createHash('sha256').update(typeof v==='string'?v:JSON.stringify(v)).digest('hex');
 const same=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);
 const plain=(s:string)=>s.replace(/[\u2013\u2014]/g,':').replace(/\s+/g,' ').trim();
@@ -62,7 +64,7 @@ export function buildBenchmarkReconciliation(mappings=plan) {
       'Bounded matches identify previously reviewed conduct; they do not certify every instruction alternative, defense, sentencing issue or source section.',
       'Context, defenses and grading instructions stay in the inventory but are not counted as missing standalone charges.',
       'Prior unresolved findings remain open even when an instruction receives a bounded match.'],
-    counts:{instructions:crosswalk.length,previousBounded:previous.crosswalk.filter(r=>r.boundedChargeIds.length).length,newlyLinked:links.length,bounded:crosswalk.filter(r=>r.boundedChargeIds.length).length,context:crosswalk.filter(r=>!r.boundedChargeIds.length&&r.status==='context_defense_or_grading').length,openComparisons:open.length,configuredChoices:604 /* Historical PR47 snapshot, not a live catalog count. */},
+    counts:{instructions:crosswalk.length,previousBounded:previous.crosswalk.filter(r=>r.boundedChargeIds.length).length,newlyLinked:links.length,bounded:crosswalk.filter(r=>r.boundedChargeIds.length).length,context:crosswalk.filter(r=>!r.boundedChargeIds.length&&r.status==='context_defense_or_grading').length,openComparisons:open.length,configuredChoices:PR47_CONFIGURED_CHOICES_SNAPSHOT},
     links,crosswalk,groups,remainingFindings:previous.remainingFindings,
     nextBatch:'Prioritize missing financial/identity branches together: employee and elder theft, access-card transfer/account information, insurance-fraud alternatives and identity-transfer/false-personation. Keep sibling-subdivision matches unresolved until reviewed.'};
 }

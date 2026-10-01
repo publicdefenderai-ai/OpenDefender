@@ -14,7 +14,8 @@ describe("California protected-person and public-place review", () => {
     expect(validateCaliforniaProtectedPersonReview()).toEqual({ additions: 21, candidateSections: 61, reviewedPrimarySections: 21, remainingResearchSections: 40, reusedSections: 71, newSections: 7, newVersions: 7, configuredSelectable: CA_CATALOG_COUNTS.configured });
     const review = readCaliforniaProtectedPersonReview();
     expect(review.sections.find(s => s.key === "PEN:243.9")?.status).toBe("substantive_research_open");
-    expect(getChargeById("ca-pen-243-9-a")).toBeUndefined();
+    // The frozen batch left this branch open; a later evidence-bound batch may publish it.
+    expect(additions.some(row => row.id === "ca-pen-243-9-a")).toBe(false);
     expect(getChargeById("ca-pen-243-b")).toBeUndefined();
     expect(getChargeById("ca-pen-243-c-1")).toBeUndefined();
   });
