@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "acquisition_comparison_not_approval",
-  "checkedAt": "2026-09-24T21:16:17.153Z",
+  "checkedAt": "2026-10-01T18:03:07.076Z",
   "reportChargeIds": [
     "oh-orc-2903-06-aggravated-vehicular-homicide",
     "oh-orc-2903-06-vehicular-homicide",
@@ -109,10 +109,10 @@
     "oh-orc-959-13-cruelty-to-animals"
   ],
   "metrics": {
-    "requests": 0,
-    "reused": 170,
-    "acquired": 0,
-    "bulkDocumentsCached": 0,
+    "requests": 5,
+    "reused": 167,
+    "acquired": 3,
+    "bulkDocumentsCached": 3,
     "failed": 0,
     "cachedFailures": 0,
     "deferred": 0
@@ -273,10 +273,10 @@
     "4513.02": "reused_fresh_evidence",
     "4513.37": "reused_fresh_evidence",
     "4549.02": "reused_fresh_evidence",
-    "4561.15": "reused_fresh_evidence",
+    "4561.15": "acquired_evidence",
     "4729.01": "reused_fresh_evidence",
-    "4737.012": "reused_fresh_evidence",
-    "4737.04": "reused_fresh_evidence",
+    "4737.012": "acquired_evidence",
+    "4737.04": "acquired_evidence",
     "4749.01": "reused_fresh_evidence",
     "507.13": "reused_fresh_evidence",
     "5122.01": "reused_fresh_evidence",
@@ -290,5 +290,6 @@
     "OAC:3701-12-01": "reused_fresh_evidence"
   },
   "changedPinnedSources": [],
+  "acquisitionFailures": {},
   "blockedDependencies": []
 }
