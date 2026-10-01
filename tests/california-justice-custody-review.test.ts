@@ -18,7 +18,6 @@ describe('California combined justice and custody publication',()=>{
     expect(r.remainingFindings.map(f=>f.id)).toEqual(expect.arrayContaining(['felony-false-imprisonment-fine','weapons-enforceability-and-remaining-branches','custody-capital-and-gassing-branches','custody-controlled-substances','justice-sibling-fine-limits']));
     for(const code of ['4500','243.9','4501.1','4573','4573.6'])expect(additions.some(a=>a.code.split('(')[0]===code)).toBe(false);
     expect(receipt.heldSourceKeys).toEqual([]);
-    expect(receipt.checkedAt).toBe('2026-09-28T04:30:01.918254+00:00');
     expect(renderJusticeCustodyReview()).not.toContain('—');
   });
   it('keeps witness-interference alternatives, specific intent and the adviser exception',()=>{

@@ -1,3 +1,4 @@
+import {californiaEvidenceTestTime} from './helpers/california-evidence-time';
 import {californiaReceiptStatus} from '../shared/california-freshness-core.mjs';
 import {describe,it,expect} from 'vitest';
 import fs from 'node:fs';
@@ -46,19 +47,25 @@ describe('California attorney decisions reach runtime without reopening historic
     expect(fine).toContain('If sentenced as a felony');expect(fine).toContain('discretionary');expect(fine).toContain('$10,000');
     expect(getCaliforniaCanonicalRecord('ca-pen-237-a')!.sources.some(s=>s.url.includes('sectionNum=672'))).toBe(true);
   });
-  it('restores possession without renewing currency, and gates expiry and the 2029 transition',()=>{
-    expect(receipt.checkedAt).toBe('2026-09-28T04:30:01.918254+00:00');
-    expect(receipt.expiresAt).toBe('2026-10-05T04:30:01.918254+00:00');
+  it('keeps historical approval separate from renewable currency, and gates expiry and the 2029 transition',()=>{
+    const currencyBefore = structuredClone(receipt);
+    expect(receipt.archiveSha256).toBe('dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4');
     expect(comparison.heldSourceKeys).toEqual([]);
-    expect(californiaReceiptStatus({...receipt,method:'full_archive_comparison'},new Date('2026-09-30T12:00:00Z'),comparison,['PEN:30515'])).toBe('invalid');
+    // Positive control: the same time and evidence are valid before changing only the method.
+    expect(californiaReceiptStatus(receipt,californiaEvidenceTestTime,comparison,['PEN:30515'])).toBe('current');
+    expect(californiaReceiptStatus({...receipt,method:'full_archive_comparison'},californiaEvidenceTestTime,comparison,['PEN:30515'])).toBe('invalid');
     const row=getCaliforniaCanonicalRecord('ca-possession-of-prohibited-weapon')!;
-    expect(getCaliforniaRecordEvidenceStatus(row,new Date('2026-09-30T12:00:00Z'))).toBe('current');
+    expect(getCaliforniaRecordEvidenceStatus(row,californiaEvidenceTestTime)).toBe('current');
     expect(getCaliforniaRecordEvidenceStatus(row,new Date(receipt.expiresAt))).toBe('stale');
     expect(californiaTransitionRequiresReview(['PEN:30515'],new Date('2029-01-01T07:59:59Z'))).toBe(false);
     expect(californiaTransitionRequiresReview(['PEN:30515'],new Date('2029-01-01T08:00:00Z'))).toBe(true);
     const current=approval.documents['PEN:30515'].find(v=>v.versionId===approval.operativeVersionId)!;
     expect(current.history).toContain('Sec. 6');
-    expect(approval.candidate).toEqual(comparison.candidate);
+    // This acquisition belongs to the historical attorney approval. Later
+    // unchanged-source renewals must not rewrite it or require equal timestamps.
+    expect(approval.candidate.retrievedAt).toBe('2026-09-28T04:30:01.918254+00:00');
+    expect(Date.parse(approval.candidate.retrievedAt)).toBeLessThanOrEqual(Date.parse(receipt.checkedAt));
+    expect(receipt).toEqual(currencyBefore);
     expect(current.effectiveDate.slice(0,10)).toBe('2026-09-20');
     expect(approval.documents['PEN:30515'][1].history).toContain('Operative January 1, 2029');
     expect(current.contentXml).toContain('January 1, 2029');

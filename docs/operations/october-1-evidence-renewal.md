@@ -54,4 +54,8 @@ The scope here excludes bulk deletion of remote branches. Other chats may still 
 
 ## Validation
 
-110 focused TypeScript tests across 13 files, all 32 Python tests, typecheck and the production build passed. The real-clock receipt monitor reports all four receipts current. The consolidated workflow patch passes `git apply --check`. Remote CI repair and production deployment of these new receipts remain owner actions; no production database was changed.
+The initial 110 focused TypeScript tests across 13 files, all 32 Python tests, typecheck and the production build passed. Review subsequently identified two California tests outside that subset which incorrectly pinned renewable timestamps. Both now pass: structural probes derive time from the receipt interval, preserve the reviewed archive identity and historical attorney approval, and positively verify fresh evidence before testing method rejection. Expiry and the 2029 transition remain guarded.
+
+After this correction, all 27 focused California/receipt tests pass and typecheck passes. The full 162-file suite reports 1,996 passed, 105 skipped, two failing tests and three additional suite-loading failures, matching the documented baseline failure set. Those remaining failures are the Florida jury-instruction assertion and missing database configuration in mitigation-polish, ai-body-size, guidance-ownership and guidance-route. The initial sandbox run also hit local subprocess restrictions; rerunning with local subprocess permissions removed those environmental failures. No database or provider credentials were supplied.
+
+The real-clock receipt monitor reports all four receipts current. The consolidated workflow patch passes `git apply --check`. Remote CI repair and production deployment of these new receipts remain owner actions; no production database was changed.
