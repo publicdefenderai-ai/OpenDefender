@@ -1,0 +1,564 @@
+[
+  {
+    "id": "ca-pen-67-5-a",
+    "lawCode": "PEN",
+    "code": "67.5(a)",
+    "title": "Giving or offering a bribe to a ministerial officer: petty-theft value",
+    "summary": "Giving or offering something of present or future value to a covered ministerial officer, public employee or appointee with corrupt intent to unlawfully influence an official act, decision, vote or opinion. The matter must relate to an existing subject that could come before the official in that capacity. The offer need not be accepted or carried out. This branch applies when theft of the thing offered would be petty theft. Personal disagreement with an official or an ordinary lawful payment is not bribery.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Corrupt intent to unlawfully influence official action.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:19",
+      "PEN:487",
+      "PEN:490.2",
+      "PEN:672",
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2601"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:487": "2025-01-01",
+      "PEN:490.2": null,
+      "PEN:67.5": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-67-5-b",
+    "lawCode": "PEN",
+    "code": "67.5(b)",
+    "title": "Giving or offering a bribe to a ministerial officer: grand-theft value",
+    "summary": "Giving or offering something of present or future value to a covered ministerial officer, public employee or appointee with corrupt intent to unlawfully influence an official act, decision, vote or opinion. The matter must relate to an existing subject that could come before the official in that capacity. The offer need not be accepted or carried out. This branch applies when theft of the thing offered would be grand theft; the prosecution must establish that grading, not merely that an offer was made. Personal disagreement with an official or an ordinary lawful payment is not bribery.",
+    "penalty": "Felony: 16 months, 2 years or 3 years under section 1170(h). Section 672 permits a fine up to $10,000 when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent to unlawfully influence official action.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:19",
+      "PEN:487",
+      "PEN:490.2",
+      "PEN:672",
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2601"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:487": "2025-01-01",
+      "PEN:490.2": null,
+      "PEN:67.5": "2011-04-04",
+      "PEN:672": "1983-09-27",
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-68-a",
+    "lawCode": "PEN",
+    "code": "68(a)",
+    "title": "Requesting or taking a bribe: executive or ministerial officer",
+    "summary": "Executive or ministerial officer asking for, receiving or agreeing to receive a bribe with a corrupt understanding that an official vote, opinion, decision or action will be unlawfully influenced. The representation may be express or implied; actual payment or follow-through is not required for a request or agreement.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. If no bribe was actually received, the statutory restitution fine ranges from $2,000 to $10,000. If a bribe was received, the minimum is the greater of the bribe amount or $2,000; the maximum is the greater of twice the bribe amount or $10,000. The court must consider ability to pay. The statute also requires forfeiture of the office, employment or appointment and permanent disqualification from holding an office, employment or appointment in the state. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent that an official duty be unlawfully influenced.",
+    "supportingKeys": [
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2603"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:68": "2003-01-01",
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-86",
+    "lawCode": "PEN",
+    "code": "86",
+    "title": "Requesting or taking a bribe: legislative officer",
+    "summary": "Legislative officer asking for, receiving or agreeing to receive a bribe with a corrupt understanding that an official vote, opinion, decision or action will be unlawfully influenced. The representation may be express or implied; actual payment or follow-through is not required for a request or agreement. This choice covers the bribe-taking route; the separate exchange-of-official-votes language remains outside its reviewed scope.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. If no bribe was actually received, the statutory restitution fine ranges from $4,000 to $20,000. If a bribe was received, the minimum is the greater of the bribe amount or $4,000; the maximum is the greater of twice the bribe amount or $20,000. The court must consider ability to pay. Section 88 also requires forfeiture of office and permanent disqualification from holding state or political-subdivision office. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent that an official duty be unlawfully influenced.",
+    "supportingKeys": [
+      "PEN:7",
+      "PEN:88"
+    ],
+    "calcrim": [
+      "2603"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:7": "2024-07-02",
+      "PEN:86": "2015-01-01",
+      "PEN:88": "2006-09-24"
+    }
+  },
+  {
+    "id": "ca-pen-93-a",
+    "lawCode": "PEN",
+    "code": "93(a)",
+    "title": "Requesting or taking a bribe: judicial officer, juror or other decision maker",
+    "summary": "Judicial officer, juror or other decision maker asking for, receiving or agreeing to receive a bribe with a corrupt understanding that an official vote, opinion, decision or action will be unlawfully influenced. The representation may be express or implied; actual payment or follow-through is not required for a request or agreement. Covered decision makers include a judicial officer, juror, referee, arbitrator, umpire or another person legally authorized to decide a controversy.",
+    "penalty": "Felony: 2, 3 or 4 years in state prison. If no bribe was actually received, the statutory restitution fine ranges from $2,000 to $10,000. If a bribe was received, the minimum is the greater of the bribe amount or $2,000; the maximum is the greater of twice the bribe amount or $10,000. The court must consider ability to pay. Section 98 additionally requires an officer convicted under this chapter to forfeit office and permanently disqualifies that officer from holding office in the state. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Corrupt intent that an official duty be unlawfully influenced.",
+    "supportingKeys": [
+      "PEN:7",
+      "PEN:98"
+    ],
+    "calcrim": [
+      "2603"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:7": "2024-07-02",
+      "PEN:93": "2002-01-01",
+      "PEN:98": null
+    }
+  },
+  {
+    "id": "ca-pen-76-a-1",
+    "lawCode": "PEN",
+    "code": "76(a)(1)",
+    "title": "Threatening a covered public official: first conviction",
+    "summary": "Knowingly and willingly threatening death or serious bodily harm to a person covered by section 76, with intent that the statement be understood as a threat, apparent ability to carry it out, and reasonable fear by the person threatened for personal or immediate-family safety. The accused must know the victim has the covered status. Covered persons include the listed officials, specified staff and immediate family; the statute does not cover every public employee. For an indirect threat, intent to communicate it to the target matters. The required connection to official duties must be proved for staff-related threats and the specified deputy commissioner. Political criticism or offensive speech alone is insufficient; actual intent to carry out the threat is not required.",
+    "penalty": "First conviction: a fine up to $5,000, up to 364 days in county jail or 16 months, 2 years or 3 years under section 1170(h), or both the fine and imprisonment. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Knowledge of the covered status and specific intent that the statement be taken as a threat; actual intent to execute it is not required.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2650"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:76": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-76-a-2",
+    "lawCode": "PEN",
+    "code": "76(a)(2)",
+    "title": "Threatening a covered public official: prior section 76 conviction",
+    "summary": "Knowingly and willingly threatening death or serious bodily harm to a person covered by section 76, with intent that the statement be understood as a threat, apparent ability to carry it out, and reasonable fear by the person threatened for personal or immediate-family safety. The accused must know the victim has the covered status. Covered persons include the listed officials, specified staff and immediate family; the statute does not cover every public employee. For an indirect threat, intent to communicate it to the target matters. The required connection to official duties must be proved for staff-related threats and the specified deputy commissioner. Political criticism or offensive speech alone is insufficient; actual intent to carry out the threat is not required. The prior section 76 conviction must be alleged and admitted or found true.",
+    "penalty": "With the qualifying prior conviction alleged and proved: 16 months, 2 years or 3 years under section 1170(h). The first-conviction misdemeanor alternative is not automatically available. The applicable fine ceiling for this repeat branch remains under review; no first-conviction or generic fine is silently substituted. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of the covered status and specific intent that the statement be taken as a threat; actual intent to execute it is not required.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [
+      "2650"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:76": "2011-04-04"
+    }
+  },
+  {
+    "id": "ca-pen-4500",
+    "lawCode": "PEN",
+    "code": "4500",
+    "title": "Assault with malice by a life prisoner: nonfatal branch",
+    "summary": "While undergoing a life sentence to California state prison, committing an assault with a deadly weapon or force likely to produce great bodily injury, with present ability and malice aforethought. Malice means intent to kill or a deliberate life-endangering act done with knowledge of and conscious disregard for danger to human life; mere anger or ordinary assault intent is insufficient. Applicable self-defense or defense of another must be considered. This choice is limited to the statutory branch where the victim does not die within a year and a day as a proximate result of the assault. The statute can reach qualifying custody outside prison walls, but excludes parole, probation and release on bail pending appeal.",
+    "penalty": "Felony: life in state prison, with no possibility of parole for nine years under this nonfatal branch. Nine years is not a guaranteed release date or a maximum sentence. This range must not be applied to the fatal branch, which has separate capital/life-without-parole provisions and remains outside this review. Section 672 permits a fine up to $10,000 when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Willful assault with present ability and express or implied malice aforethought, not merely general assault intent.",
+    "supportingKeys": [
+      "PEN:187",
+      "PEN:188",
+      "PEN:190.3",
+      "PEN:190.4",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "2720"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:187": "2024-01-01",
+      "PEN:188": "2019-01-01",
+      "PEN:190.3": null,
+      "PEN:190.4": null,
+      "PEN:4500": null,
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-243-9-a",
+    "lawCode": "PEN",
+    "code": "243.9(a)",
+    "title": "Battery by gassing in a local detention facility",
+    "summary": "While confined in a local detention facility, intentionally placing, throwing or causing human excrement, bodily fluids or bodily substances to be placed on a peace officer or facility employee, resulting in actual contact with the person's skin or membranes. Contact only with clothing is not enough for this completed offense. The applicable custody status and the victim's peace-officer or employee status must be established; a nearby spill or unsuccessful attempt is not automatically completed gassing.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail under sections 17, 18(b) and 18.5. Felony alternative: 2, 3 or 4 years in state prison. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional placement or throwing of the bodily substance with actual skin or membrane contact.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "calcrim": [
+      "2722"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:243.9": "2001-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    }
+  },
+  {
+    "id": "ca-pen-4501-1-a",
+    "lawCode": "PEN",
+    "code": "4501.1(a)",
+    "title": "Battery by gassing in a state prison",
+    "summary": "While confined in a state prison, intentionally placing, throwing or causing human excrement, bodily fluids or bodily substances to be placed on a peace officer or facility employee, resulting in actual contact with the person's skin or membranes. Contact only with clothing is not enough for this completed offense. The applicable custody status and the victim's peace-officer or employee status must be established; a nearby spill or unsuccessful attempt is not automatically completed gassing.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail under sections 17, 18(b) and 18.5. Felony alternative: 2, 3 or 4 years in state prison. Section 672 permits a fine up to $1,000 for a misdemeanor or $10,000 for a felony when no other fine is prescribed. A state-prison inmate convicted of the felony must serve the term consecutively as prescribed by section 4501.5. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional placement or throwing of the bodily substance with actual skin or membrane contact.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "PEN:4501.5",
+      "PEN:4504",
+      "PEN:672",
+      "PEN:830"
+    ],
+    "calcrim": [
+      "2722"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "PEN:4501.1": "2011-09-21",
+      "PEN:4501.5": null,
+      "PEN:4504": "2016-01-01",
+      "PEN:672": "1983-09-27",
+      "PEN:830": null
+    }
+  },
+  {
+    "id": "ca-pen-4573-6-a",
+    "lawCode": "PEN",
+    "code": "4573.6(a)",
+    "title": "Possession of controlled substances or paraphernalia in a penal institution",
+    "summary": "Knowingly possessing a prohibited controlled substance or an object intended for unlawful injection or consumption in the covered custody setting or its grounds, without applicable authorization. The accused must know of the item's presence and controlled nature or intended paraphernalia use. A controlled-substance charge requires a usable amount, not useless traces or debris; the prosecution need not prove knowledge of the precise drug name. Authorized medications or supplies are not automatically contraband. Ordinary adult cannabis legalization does not authorize cannabis in prison. Possession can be actual or constructive, but proximity alone does not establish knowing control.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h). Section 672 permits a fine up to $10,000 when no other fine is prescribed. This institutional offense does not inherit the ordinary outside-prison simple-possession penalty. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of presence and controlled nature or intended paraphernalia use; the bringing/sending branch also requires knowing transport into the covered institution.",
+    "supportingKeys": [
+      "HSC:11000",
+      "HSC:11027",
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11150",
+      "HSC:11164",
+      "HSC:11164.5",
+      "HSC:11350",
+      "HSC:11362.45",
+      "HSC:11377",
+      "HSC:11401",
+      "PEN:1170",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "2748"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11000": null,
+      "HSC:11027": "1994-03-30",
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11150": "2015-01-01",
+      "HSC:11164": "2019-03-11",
+      "HSC:11164.5": "2017-01-01",
+      "HSC:11350": "2018-01-01",
+      "HSC:11362.45": "2017-06-27",
+      "HSC:11377": "2018-01-01",
+      "HSC:11401": "2018-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:4573.6": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-4573-a",
+    "lawCode": "PEN",
+    "code": "4573(a)",
+    "title": "Bringing or sending controlled substances or paraphernalia into a penal institution",
+    "summary": "Knowingly bringing, sending or assisting in bringing or sending a prohibited controlled substance or an object intended for unlawful injection or consumption into the covered custody setting or its grounds, without applicable authorization. The accused must know of the item's presence and controlled nature or intended paraphernalia use. A controlled-substance charge requires a usable amount, not useless traces or debris; the prosecution need not prove knowledge of the precise drug name. Authorized medications or supplies are not automatically contraband. Ordinary adult cannabis legalization does not authorize cannabis in prison.Being taken into custody involuntarily does not by itself prevent liability for knowingly bringing concealed drugs into jail; it does not eliminate the knowledge and authorization requirements.",
+    "penalty": "Felony: 2, 3 or 4 years under section 1170(h). Section 672 permits a fine up to $10,000 when no other fine is prescribed. This institutional offense does not inherit the ordinary outside-prison simple-possession penalty. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "felony"
+    ],
+    "mentalState": "Knowledge of presence and controlled nature or intended paraphernalia use; the bringing/sending branch also requires knowing transport into the covered institution.",
+    "supportingKeys": [
+      "HSC:11000",
+      "HSC:11027",
+      "HSC:11054",
+      "HSC:11055",
+      "HSC:11056",
+      "HSC:11057",
+      "HSC:11058",
+      "HSC:11150",
+      "HSC:11164",
+      "HSC:11164.5",
+      "HSC:11350",
+      "HSC:11362.45",
+      "HSC:11377",
+      "HSC:11401",
+      "PEN:1170",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "2749"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:11000": null,
+      "HSC:11027": "1994-03-30",
+      "HSC:11054": "2017-06-27",
+      "HSC:11055": "2019-01-01",
+      "HSC:11056": "2026-01-01",
+      "HSC:11057": "2025-01-01",
+      "HSC:11058": "1986-04-23",
+      "HSC:11150": "2015-01-01",
+      "HSC:11164": "2019-03-11",
+      "HSC:11164.5": "2017-01-01",
+      "HSC:11350": "2018-01-01",
+      "HSC:11362.45": "2017-06-27",
+      "HSC:11377": "2018-01-01",
+      "HSC:11401": "2018-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:4573": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    }
+  },
+  {
+    "id": "ca-pen-272-a-1",
+    "lawCode": "PEN",
+    "code": "272(a)(1)",
+    "title": "Contributing to a minor's dependency or delinquency",
+    "summary": "An act or failure to perform a duty that causes, tends to cause or encourages a person under 18 to come within the specified dependency or juvenile-offense provisions, or inducing or attempting to induce a minor or juvenile-court ward to disobey a lawful court order or follow conduct bringing or keeping the person within those provisions. The applicable underlying Welfare and Institutions Code conditions must be established. General criminal intent or criminal negligence is required; ordinary carelessness or a parenting disagreement alone is insufficient. A parent or legal guardian has the specified duty of reasonable care, supervision, protection and control.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine up to $2,500, or both. Section 272 expressly permits probation for up to five years; eligibility and terms require case-specific review. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "General criminal intent or criminal negligence, not ordinary carelessness.",
+    "supportingKeys": [
+      "PEN:1203a",
+      "PEN:18.5",
+      "WIC:300",
+      "WIC:601",
+      "WIC:602"
+    ],
+    "calcrim": [
+      "2980"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1203a": "2021-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:272": "2006-01-01",
+      "WIC:300": "2023-01-01",
+      "WIC:601": "2021-01-01",
+      "WIC:602": "2019-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-272-b-1",
+    "lawCode": "PEN",
+    "code": "272(b)(1)",
+    "title": "Luring or transporting a child under 14 without parental consent",
+    "summary": "An adult stranger at least 21 knowingly contacting a child under 14, knowing or reasonably expected to know the child's age, to persuade, lure or transport the child away from home or another location known to the parent, guardian or custodian, without express parental or guardian consent and intending to avoid that consent. An adult stranger includes a casual acquaintance without a substantial relationship or someone who cultivated a relationship primarily for victimization. Emergency situations are excluded, as are contacts within the scope of employment or recognized civic or charitable volunteering. Merely speaking to a child does not establish this offense.",
+    "penalty": "Misdemeanor or infraction under section 17(d). Misdemeanor: up to 6 months in county jail, a fine up to $1,000, or both under section 19. Infraction: a fine up to $250 under section 19.8, with no incarceration. The separate subdivision (a) punishment is not imported into this branch. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "mentalState": "Knowing contact, knowledge or reasonable awareness of age, and intent to move the child away while avoiding required consent.",
+    "supportingKeys": [
+      "BPC:17538",
+      "PEN:17",
+      "PEN:19",
+      "PEN:19.6",
+      "PEN:19.8",
+      "WIC:6600"
+    ],
+    "calcrim": [
+      "2982"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:17538": "2003-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:19.6": null,
+      "PEN:19.8": "2025-01-01",
+      "PEN:272": "2006-01-01",
+      "WIC:6600": "2019-01-01"
+    }
+  },
+  {
+    "id": "ca-pen-415-5-a-1",
+    "lawCode": "PEN",
+    "code": "415.5(a)(1)",
+    "title": "Fighting or challenging to fight on campus",
+    "summary": "Unlawfully fighting or challenging another person to fight within a covered school or campus building or grounds. Lawful self-defense or defense of another must be considered. Section 415.5 does not apply to registered students of the school or people engaged in otherwise lawful employee concerted activity. Those exclusions are specific to this charge and do not decide liability under another statute.",
+    "penalty": "Ordinary misdemeanor: up to 90 days in county jail, a fine up to $400, or both. With one qualifying prior under section 415.5 or the school-offense chapter beginning at section 626: 10 days to 6 months, with an optional fine up to $1,000 and at least 10 days served before release. With two or more qualifying priors: 90 days to 6 months, with an optional fine up to $1,000 and at least 90 days served before release. The infraction option for section 415 is not automatically available under section 415.5. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Intentional unlawful fighting or challenge; applicable defensive justification matters.",
+    "supportingKeys": [
+      "PEN:19.8",
+      "PEN:626",
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2688"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19.8": "2025-01-01",
+      "PEN:415.5": null,
+      "PEN:626": "2022-07-19",
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-415-5-a-2",
+    "lawCode": "PEN",
+    "code": "415.5(a)(2)",
+    "title": "Disruptive noise on campus",
+    "summary": "Maliciously and willfully disturbing another person with loud and unreasonable noise in a covered school or campus building or grounds. The noise must create a clear and present danger of immediate violence or be used to disrupt lawful activities rather than communicate a message; loud expression alone is not enough. Section 415.5 does not apply to registered students of the school or people engaged in otherwise lawful employee concerted activity. Those exclusions are specific to this charge and do not decide liability under another statute.",
+    "penalty": "Ordinary misdemeanor: up to 90 days in county jail, a fine up to $400, or both. With one qualifying prior under section 415.5 or the school-offense chapter beginning at section 626: 10 days to 6 months, with an optional fine up to $1,000 and at least 10 days served before release. With two or more qualifying priors: 90 days to 6 months, with an optional fine up to $1,000 and at least 90 days served before release. The infraction option for section 415 is not automatically available under section 415.5. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Malicious and willful disturbance; protected communication alone is insufficient.",
+    "supportingKeys": [
+      "PEN:19.8",
+      "PEN:626",
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2689"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19.8": "2025-01-01",
+      "PEN:415.5": null,
+      "PEN:626": "2022-07-19",
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-415-5-a-3",
+    "lawCode": "PEN",
+    "code": "415.5(a)(3)",
+    "title": "Immediate violence-provoking words on campus",
+    "summary": "Using offensive words on a covered school or campus that are inherently likely to provoke an immediate violent reaction, with a clear and present danger of that reaction in the circumstances. Mere offensiveness is insufficient. A reasonable and actual belief that the words were not likely to provoke an immediate violent reaction must be considered. Section 415.5 does not apply to registered students of the school or people engaged in otherwise lawful employee concerted activity. Those exclusions are specific to this charge and do not decide liability under another statute.",
+    "penalty": "Ordinary misdemeanor: up to 90 days in county jail, a fine up to $400, or both. With one qualifying prior under section 415.5 or the school-offense chapter beginning at section 626: 10 days to 6 months, with an optional fine up to $1,000 and at least 10 days served before release. With two or more qualifying priors: 90 days to 6 months, with an optional fine up to $1,000 and at least 90 days served before release. The infraction option for section 415 is not automatically available under section 415.5. These are adult base penalties; restitution, assessments, enhancements and case-specific sentencing rules require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "mentalState": "Use of the words in circumstances creating the required immediate danger; applicable reasonable good-faith belief must be considered.",
+    "supportingKeys": [
+      "PEN:19.8",
+      "PEN:626",
+      "PEN:7"
+    ],
+    "calcrim": [
+      "2690"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19.8": "2025-01-01",
+      "PEN:415.5": null,
+      "PEN:626": "2022-07-19",
+      "PEN:7": "2024-07-02"
+    }
+  }
+]

@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 648,
-    "configuredSelectable": 627,
+    "canonicalRecords": 665,
+    "configuredSelectable": 644,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 528,
-    "boundedCorrectionPass": 627,
+    "boundedAdditionPass": 545,
+    "boundedCorrectionPass": 644,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 328,
+    "distinctSelectablePrimarySections": 340,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 328,
-    "selectableRecordsWithAllPrimaryTextAcquired": 627,
-    "totalAcquiredSectionsIncludingDependencies": 817,
-    "totalAcquiredVersionsIncludingDependencies": 825,
+    "acquiredSelectablePrimarySections": 340,
+    "selectableRecordsWithAllPrimaryTextAcquired": 644,
+    "totalAcquiredSectionsIncludingDependencies": 839,
+    "totalAcquiredVersionsIncludingDependencies": 847,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "627 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "644 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 493,
-      "corrected": 493,
+      "selectable": 510,
+      "corrected": 510,
       "awaitingCorrection": 0
     },
     {
@@ -1423,6 +1423,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "243.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.9&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-243-9-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "244",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=244&lawCode=PEN",
       "recordIds": [
@@ -1678,6 +1687,16 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=270&lawCode=PEN",
       "recordIds": [
         "ca-failure-to-pay-child-support"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "272",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=272&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-272-a-1",
+        "ca-pen-272-b-1"
       ],
       "alreadyRetained": false
     },
@@ -2216,6 +2235,17 @@
     },
     {
       "lawCode": "PEN",
+      "section": "415.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-415-5-a-1",
+        "ca-pen-415-5-a-2",
+        "ca-pen-415-5-a-3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "416",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=416&lawCode=PEN",
       "recordIds": [
@@ -2300,11 +2330,29 @@
     },
     {
       "lawCode": "PEN",
+      "section": "4500",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4500&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4500"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "4501",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4501&lawCode=PEN",
       "recordIds": [
         "ca-pen-4501-a",
         "ca-pen-4501-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4501.1",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4501.1&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4501-1-a"
       ],
       "alreadyRetained": false
     },
@@ -2396,6 +2444,24 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=455&lawCode=PEN",
       "recordIds": [
         "ca-pen-455-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4573",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4573&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4573-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "4573.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4573.6&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-4573-6-a"
       ],
       "alreadyRetained": false
     },
@@ -3145,10 +3211,39 @@
     },
     {
       "lawCode": "PEN",
+      "section": "67.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=67.5&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-67-5-a",
+        "ca-pen-67-5-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "68",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=68&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-68-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "69",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=69&lawCode=PEN",
       "recordIds": [
         "ca-pen-69-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "76",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=76&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-76-a-1",
+        "ca-pen-76-a-2"
       ],
       "alreadyRetained": false
     },
@@ -3159,6 +3254,24 @@
       "recordIds": [
         "ca-pen-836-6-a",
         "ca-pen-836-6-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "86",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=86&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-86"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "93",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=93&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-93-a"
       ],
       "alreadyRetained": false
     },
@@ -5689,6 +5802,295 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-67-5-a",
+      "title": "Giving or offering a bribe to a ministerial officer: petty-theft value",
+      "citation": "Cal. Penal Code § 67.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:67.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:67.5"
+      ],
+      "catalogSha256": "40a30ef229d01d04132dcea654bef0f9ff990bd67363e559670d55b5dcedf600",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-67-5-b",
+      "title": "Giving or offering a bribe to a ministerial officer: grand-theft value",
+      "citation": "Cal. Penal Code § 67.5(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:67.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:67.5"
+      ],
+      "catalogSha256": "44ea58103412d0fc24b48fd208e45e2d729e9e873932d97dbeff41e650819047",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-68-a",
+      "title": "Requesting or taking a bribe: executive or ministerial officer",
+      "citation": "Cal. Penal Code § 68(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:68"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:68"
+      ],
+      "catalogSha256": "cc31d64760193a2ad4ba4433ade11e93bcce78755a2323bd68c61ee964447beb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-86",
+      "title": "Requesting or taking a bribe: legislative officer",
+      "citation": "Cal. Penal Code § 86",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:86"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:86"
+      ],
+      "catalogSha256": "1bbca5834bff92939923eb704fb9fb4c4168d1e776ee4ef9f5885a9af36f9924",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-93-a",
+      "title": "Requesting or taking a bribe: judicial officer, juror or other decision maker",
+      "citation": "Cal. Penal Code § 93(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:93"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:93"
+      ],
+      "catalogSha256": "c1e9dda06856047cb9d6b59a9c8aafafaa057e16257a6b8a05cabcdc0df459bb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-76-a-1",
+      "title": "Threatening a covered public official: first conviction",
+      "citation": "Cal. Penal Code § 76(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:76"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:76"
+      ],
+      "catalogSha256": "652335efc7f9584a28dbb7b83bad7d3a01f2cadff1fca357ebabaea6eb83cf27",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-76-a-2",
+      "title": "Threatening a covered public official: prior section 76 conviction",
+      "citation": "Cal. Penal Code § 76(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:76"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:76"
+      ],
+      "catalogSha256": "7aa22aa1300023d705f2219b5e262dac668a3d9e4d259d29e7e0b8d72c9f7b50",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4500",
+      "title": "Assault with malice by a life prisoner: nonfatal branch",
+      "citation": "Cal. Penal Code § 4500",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4500"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4500"
+      ],
+      "catalogSha256": "609b2011cd2e83673a5001bc1bede8868d31b79bbfddf5b5abbe63b39643aeb5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-9-a",
+      "title": "Battery by gassing in a local detention facility",
+      "citation": "Cal. Penal Code § 243.9(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243.9"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.9"
+      ],
+      "catalogSha256": "b35dbad5342d7a1d75b8e3d6c7d4e7b732697cbb056809d37758c74263ab1cdf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4501-1-a",
+      "title": "Battery by gassing in a state prison",
+      "citation": "Cal. Penal Code § 4501.1(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4501.1"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4501.1"
+      ],
+      "catalogSha256": "d301794f1be01c30789cf8aa2e0a03a90c2279df0e58c08ee5eb61b175c4a131",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4573-6-a",
+      "title": "Possession of controlled substances or paraphernalia in a penal institution",
+      "citation": "Cal. Penal Code § 4573.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4573.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4573.6"
+      ],
+      "catalogSha256": "a19490d63bee447c47364f401f9ac95fc9bb290328d2701757c80b4a4a8fa082",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-4573-a",
+      "title": "Bringing or sending controlled substances or paraphernalia into a penal institution",
+      "citation": "Cal. Penal Code § 4573(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:4573"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:4573"
+      ],
+      "catalogSha256": "6fc007a11d56c6ad11247002a4c4d1e4302cd7e7d41a3c2f3753f795fcb3e8b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-272-a-1",
+      "title": "Contributing to a minor's dependency or delinquency",
+      "citation": "Cal. Penal Code § 272(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:272"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:272"
+      ],
+      "catalogSha256": "f4b9fe21167c26f4885c5bb280483ec8b208386da44b4f81d66df7bfb861a7cb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-272-b-1",
+      "title": "Luring or transporting a child under 14 without parental consent",
+      "citation": "Cal. Penal Code § 272(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:272"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:272"
+      ],
+      "catalogSha256": "ad4d5ee4097846ab6c91262400e1745c7b6c7030e0d32d3d174a3e88b72f4bf9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-415-5-a-1",
+      "title": "Fighting or challenging to fight on campus",
+      "citation": "Cal. Penal Code § 415.5(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:415.5"
+      ],
+      "catalogSha256": "6edf8420b1de684abd08fa891ffbbd6434b7aa59a53d8e9bd3bef757a39dfc8f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-415-5-a-2",
+      "title": "Disruptive noise on campus",
+      "citation": "Cal. Penal Code § 415.5(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:415.5"
+      ],
+      "catalogSha256": "1248bb1a7fb24f8170d4ed6b59596a9b95d30752b0c9e9873d7bc5107e527ad4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-415-5-a-3",
+      "title": "Immediate violence-provoking words on campus",
+      "citation": "Cal. Penal Code § 415.5(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:415.5"
+      ],
+      "catalogSha256": "1c3648a131f0db84cd368653ef52efbd1e38d9e03f77780e6c1fc6ccd22228fa",
       "attorneyReview": "pending"
     },
     {

@@ -95002,6 +95002,7 @@ chargeCategories['Drug Offenses'] = Array.from(new Set([
   ...chargeCategories['Drug Offenses'],
   ...chargeCategories['CA'].filter(id => {
     const record = getCaliforniaCanonicalRecord(id);
+    if (record?.lawCode === 'PEN' && ['4573','4573.6'].includes(record.code.split('(')[0])) return true;
     if (record?.lawCode !== 'HSC') return false;
     const section = Number(record.code.split('(')[0]);
     return (section >= 11350 && section < 11396) || section === 11550;
@@ -95068,7 +95069,7 @@ for (const group of ['Theft & Property', 'Property Crimes']) {
 }
 
 // Keep reviewed justice/custody branches discoverable through the existing public-order group.
-const californiaJusticeSections = new Set(['67','136.1','137','138','140','141','118','118a','69','148','148.10','166','273.6','4501','4501.5','4503','4502','4574','4532','836.6','1320.5']);
+const californiaJusticeSections = new Set(['67','136.1','137','138','140','141','118','118a','69','148','148.10','166','273.6','4501','4501.5','4503','4502','4574','4532','836.6','1320.5','67.5','68','86','93','76','4500','243.9','4501.1','4573','4573.6','272','415.5']);
 chargeCategories['Public Order'] = Array.from(new Set([
   ...chargeCategories['Public Order'],
   ...chargeCategories['CA'].filter(id => {
@@ -95090,8 +95091,8 @@ for (const group of ['Sexual Offenses', 'Sexual Crimes']) {
 }
 
 // Reviewed people/detention choices must also be discoverable in topical filters.
-const californiaPeopleSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368','207','209','209.5','210.5','236','236.1','237','278','278.5']);
-const californiaAssaultSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368']);
+const californiaPeopleSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368','4500','243.9','4501.1','207','209','209.5','210.5','236','236.1','237','278','278.5']);
+const californiaAssaultSections = new Set(['203','205','206','220','273a','273ab','273d','273.5','368','4500','243.9','4501.1']);
 for (const [group, sections] of [['Violent Crimes', californiaPeopleSections], ['Assault Crimes', californiaAssaultSections]] as const) {
   chargeCategories[group] = Array.from(new Set([
     ...chargeCategories[group],
