@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "scope": "existing_choice_conduct_supplement_not_new_charge",
+  "sourceAsOf": "2026-09-24",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "previousReviewSha256": "e55b407d815b124db3669d88e228a3dbc9ec19fc0bec376327ef36736c9b666a",
+  "researchSha256": "4d672f810ec8ec296c25b5f43dbc3205a4ac8dcb198fe19dfae9889f1aef9d20",
+  "benchmarkSha256": "87f4317f1128a22ec1250e057b88b4fc9f36677e058497b426df958a764e67c2",
+  "documents": {
+    "PEN:532": [
+      {
+        "id": "PEN532.198989722",
+        "lawCode": "PEN",
+        "section": "532.",
+        "opStatutes": "1989",
+        "opChapter": "897",
+        "opSection": "22",
+        "effectiveDate": null,
+        "versionId": "id_681cf214-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "13.",
+        "part": "1.",
+        "chapter": "8.",
+        "article": null,
+        "history": "Amended by Stats. 1989, Ch. 897, Sec. 22.",
+        "contentMember": "LAW_SECTION_TBL_94387.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:16",
+        "tableRow": 94387,
+        "tableRowSha256": "0fc4050321bd45dca5c3aba59411249073280e188cce2f04e5a95c26a4c89502",
+        "contentSha256": "09a6418038a611ae758878ecf677e971cb8a6671711bec6c70bfcc7c90bbd493",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Every person who knowingly and designedly, by any false or fraudulent representation or pretense, defrauds any other person of money, labor, or property, whether real or personal, or who causes or procures others to report falsely of his or her wealth or mercantile character, and by thus imposing upon any person obtains credit, and thereby fraudulently gets possession of money or property, or obtains the labor or service of another, is punishable in the same manner and to the same extent as for larceny of the money or property so obtained.</p><p>(b)<span class=\"EnSpace\"/>Upon a trial for having,\n\t\t\t\twith an intent to cheat or defraud another designedly, by any false pretense, obtained the signature of any person to a written instrument, or having obtained from any person any labor, money, or property, whether real or personal, or valuable thing, the defendant cannot be convicted if the false pretense was expressed in language unaccompanied by a false token or writing, unless the pretense, or some note or memorandum thereof is in writing, subscribed by or in the handwriting of the defendant, or unless the pretense is proven by the testimony of two witnesses, or that of one witness and corroborating circumstances. This section does not apply to a prosecution for falsely representing or personating another, and, in that assumed character, marrying, or receiving any money or property.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=532."
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "ca-petty-theft",
+      "supplementSha256": "2b855fa6b997331b2520bd93c659bb8b9971c4eb9edb5f3d064f7d3e68f13d8d",
+      "originalCorrectionSha256": "3455f979b033914d1ff04ddce1fe543acbb5b307572080fae59d5384f1b7580d",
+      "sources": [
+        {
+          "key": "PEN:484",
+          "versionId": "id_67b508c6-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "fc9c0f9bb3c2f28a98a6b0b55b068b8a3b2fdf0ffba16d7a6d9c9d3bea6e0920",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484.",
+          "start": 0,
+          "end": 3845,
+          "text": "(a) Every person who shall feloniously steal, take, carry, lead, or drive away the personal property of another, or who shall fraudulently appropriate property which has been entrusted to him or her, or who shall knowingly and designedly, by any false or fraudulent representation or pretense, defraud any other person of money, labor or real or personal property, or who causes or procures others to report falsely of his or her wealth or mercantile character and by thus imposing upon any person, obtains credit and thereby fraudulently gets or obtains possession of money, or property or obtains the labor or service of another, is guilty of theft. In determining the value of the property obtained, for the purposes of this section, the reasonable and fair market value shall be the test, and in determining the value of services received the contract price shall be the test. If there be no contract price, the reasonable and going wage for the service rendered shall govern. For the purposes of this section, any false or fraudulent representation or pretense made shall be treated as continuing, so as to cover any money, property or service received as a result thereof, and the complaint, information or indictment may charge that the crime was committed on any date during the particular period in question. The hiring of any additional employee or employees without advising each of them of every labor claim due and unpaid and every judgment that the employer has been unable to meet shall be prima facie evidence of intent to defraud. (b) (1) Except as provided in Section 10855 of the Vehicle Code, where a person has leased or rented the personal property of another person pursuant to a written contract, and that property has a value greater than one thousand dollars ($1,000) and is not a commonly used household item, intent to commit theft by fraud shall be rebuttably presumed if the person fails to return the personal property to its owner within 10 days after the owner has made written demand by certified or registered mail following the expiration of the lease or rental agreement for return of the property so leased or rented. (2) Except as provided in Section 10855 of the Vehicle Code, where a person has leased or rented the personal property of another person pursuant to a written contract, and where the property has a value no greater than one thousand dollars ($1,000), or where the property is a commonly used household item, intent to commit theft by fraud shall be rebuttably presumed if the person fails to return the personal property to its owner within 20 days after the owner has made written demand by certified or registered mail following the expiration of the lease or rental agreement for return of the property so leased or rented. (c) Notwithstanding the provisions of subdivision (b), if one presents with criminal intent identification which bears a false or fictitious name or address for the purpose of obtaining the lease or rental of the personal property of another, the presumption created herein shall apply upon the failure of the lessee to return the rental property at the expiration of the lease or rental agreement, and no written demand for the return of the leased or rented property shall be required. (d) The presumptions created by subdivisions (b) and (c) are presumptions affecting the burden of producing evidence. (e) Within 30 days after the lease or rental agreement has expired, the owner shall make written demand for return of the property so leased or rented. Notice addressed and mailed to the lessee or renter at the address given at the time of the making of the lease or rental agreement and to any other known address shall constitute proper demand. Where the owner fails to make such written demand the presumption created by subdivision (b) shall not apply."
+        },
+        {
+          "key": "PEN:532",
+          "versionId": "id_681cf214-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "09a6418038a611ae758878ecf677e971cb8a6671711bec6c70bfcc7c90bbd493",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=532.",
+          "start": 0,
+          "end": 1375,
+          "text": "(a) Every person who knowingly and designedly, by any false or fraudulent representation or pretense, defrauds any other person of money, labor, or property, whether real or personal, or who causes or procures others to report falsely of his or her wealth or mercantile character, and by thus imposing upon any person obtains credit, and thereby fraudulently gets possession of money or property, or obtains the labor or service of another, is punishable in the same manner and to the same extent as for larceny of the money or property so obtained. (b) Upon a trial for having, with an intent to cheat or defraud another designedly, by any false pretense, obtained the signature of any person to a written instrument, or having obtained from any person any labor, money, or property, whether real or personal, or valuable thing, the defendant cannot be convicted if the false pretense was expressed in language unaccompanied by a false token or writing, unless the pretense, or some note or memorandum thereof is in writing, subscribed by or in the handwriting of the defendant, or unless the pretense is proven by the testimony of two witnesses, or that of one witness and corroborating circumstances. This section does not apply to a prosecution for falsely representing or personating another, and, in that assumed character, marrying, or receiving any money or property."
+        }
+      ],
+      "instructions": [
+        {
+          "id": "1800",
+          "heading": "1800. Theft by Larceny (Pen. Code, § 484)",
+          "firstPage": 1249,
+          "family": "theft_extortion",
+          "lastPage": 1252,
+          "pageHashes": [
+            {
+              "page": 1249,
+              "sha256": "1941e9310e6ab3309d4a49de18303409c9dfc39f47209c0472ef1cd2aa86420c"
+            },
+            {
+              "page": 1250,
+              "sha256": "8d28e796ffe630ca326249a83d53536f5a27d71c3853d7a65fed205d0d5f1f26"
+            },
+            {
+              "page": 1251,
+              "sha256": "f6cd8a0d45c58e6ed01e5634698874443bcd30e1fc8bd89e422a22f29e5e347d"
+            },
+            {
+              "page": 1252,
+              "sha256": "e8c1fb72638388311a6806b9afa8f7806089c3e9aed9e4ec0296dab2bde894b0"
+            }
+          ],
+          "pages": [
+            {
+              "page": 1249,
+              "sha256": "1941e9310e6ab3309d4a49de18303409c9dfc39f47209c0472ef1cd2aa86420c",
+              "text": "A. \nTHEFT\n1800. Theft by Larceny (Pen. Code, § 484)\nThe defendant is charged [in Count \n] with [grand/petty] theft [by \nlarceny] [in violation of Penal Code section 484].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant took possession of property owned by someone \nelse;\n2. The defendant took the property without the owner’s [or owner’s \nagent’s] consent;\n3. When the defendant took the property (he/she) intended (to \ndeprive the owner of it permanently/ [or] to remove it from the \nowner’s [or owner’s agent’s] possession for so extended a period \nof time that the owner would be deprived of a major portion of \nthe value or enjoyment of the property);\nAND\n4. The defendant moved the property, even a small distance, and \nkept it for any period of time, however brief.\n[The taking of property can include its consumption or the use of \nutilities.]\n[An agent is someone to whom the owner has given complete or partial \nauthority and control over the owner’s property.]\n[For petty theft, the property taken can be of any value, no matter how \nslight.]\nNew January 2006; Revised August 2016, March 2024, October 2025 * \n* Denotes changes only to bench notes and other commentaries.\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give an instruction deﬁning the elements of the \ncrime.\nTo have the requisite intent for theft, the defendant must either intend to deprive the \nowner permanently or to deprive the owner of a major portion of the property’s \n1173\n"
+            },
+            {
+              "page": 1250,
+              "sha256": "8d28e796ffe630ca326249a83d53536f5a27d71c3853d7a65fed205d0d5f1f26",
+              "text": "value or enjoyment. (See People v. Avery (2002) 27 Cal.4th 49, 57–58 [115 \nCal.Rptr.2d 403, 38 P.3d 1].) Select the appropriate language in element 3.\nRelated Instructions\nIf the defendant is also charged with grand theft, give CALCRIM No. 1801, Theft: \nDegrees. If the defendant is charged with petty theft, no other instruction is \nrequired, and the jury should receive a petty theft verdict form.\nIf the defendant is charged with Penal Code section 666, give CALCRIM No. 1850, \nPetty Theft With Prior Conviction.\nIf the defendant is charged with Penal Code section 666.1, give CALCRIM No. \n1851, Petty Theft or Shoplifting With Prior Convictions.\nIf a different theory of theft is presented, see CALCRIM No. 1804, Theft by False \nPretense, CALCRIM No. 1805, Theft by Trick, CALCRIM No. 1806, Theft by \nEmbezzlement. See also CALCRIM No. 1861, Jury Does Not Need to Agree on \nForm of Theft. The court may also wish to instruct with the bracketed “[by \nlarceny]” in the ﬁrst sentence to distinguish this theory of theft from the others.\nFor theft of real property, use CALCRIM No. 1804, Theft by False Pretense. (See \nPeople v. Sanders (1998) 67 Cal.App.4th 1403, 1413–1417 [79 Cal.Rptr.2d 806].)\nAUTHORITY\n• \nElements. Pen. Code, § 484; People v. Williams (1946) 73 Cal.App.2d 154, 157 \n[166 P.2d 63]; People v. Edwards (1925) 72 Cal.App. 102, 112–117 [236 P. 944], \ndisapproved on other grounds in In re Estrada (1965) 63 Cal.2d 740, 748 [48 \nCal.Rptr. 172, 408 P.2d 948].\n• \nIntent to Deprive Owner of Main Value. People v. Avery, supra, 27 Cal.4th at pp. \n57–59; People v. Zangari (2001) 89 Cal.App.4th 1436, 1447 [108 Cal.Rptr.2d \n250].\n• \nUnauthorized Use of Utilities. People v. Myles (2023) 89 Cal.App.5th 711, 731 \n[306 Cal.Rptr.3d 288].\nCOMMENTARY\nAsportation\nTo constitute a completed theft, the property must be asported or carried away. \n(People v. Shannon (1998) 66 Cal.App.4th 649, 654 [78 Cal.Rptr.2d 177].) \nAsportation requires three things: (1) the goods are severed from the possession or \ncustody of the owner, (2) the goods are in the complete possession of the thief or \nthieves, and (3) the property is moved, however slightly. (Ibid.; People v. Edwards\n(1925) 72 Cal.App. 102, 114–115 [236 P. 944], disapproved on other grounds in In \nre Estrada (1965) 63 Cal.2d 740 [48 Cal.Rptr. 172, 408 P.2d 948]; People v. Collins \n(1959) 172 Cal.App.2d 295, 299 [342 P.2d 370] [joint possession of property by \nmore than one thief].) Asportation is fulﬁlled by wrongful removal of property from \nthe owner or possessor, against his or her will with the intent to steal it, even \nthough the property is retained by the thief but a moment. (People v. Quiel (1945) \nCALCRIM No. 1800 \nTHEFT AND EXTORTION\n1174\n"
+            },
+            {
+              "page": 1251,
+              "sha256": "f6cd8a0d45c58e6ed01e5634698874443bcd30e1fc8bd89e422a22f29e5e347d",
+              "text": "68 Cal.App.2d 674, 679 [157 P.2d 446].) Paragraph 4 sets forth the asportation \nelement.\nValue\nThe property taken must have some intrinsic value, however slight. (People v. \nFranco (1970) 4 Cal.App.3d 535, 542 [84 Cal.Rptr. 513]; People v. Martinez (2002) \n95 Cal.App.4th 581, 585 [115 Cal.Rptr.2d 574].) The ﬁnal bracketed paragraph may \nbe given on request if the property in question was of slight value.\nLESSER INCLUDED OFFENSES\n• \nPetty Theft. Pen. Code, § 486.\n• \nAttempted Theft. Pen. Code, §§ 664, 484.\n• \nTaking an Automobile Without Consent. Veh. Code, § 10851; People v. Pater \n(1968) 267 Cal.App.2d 921, 926 [73 Cal.Rptr. 823].\n• \nAuto Tampering. Veh. Code, § 10852; People v. Anderson (1975) 15 Cal.3d 806, \n810–811 [126 Cal.Rptr. 235, 543 P.2d 603].\n• \nMisdemeanor Joyriding. Pen. Code, § 499b [of bicycle, motorboat, or vessel].\nPetty theft is a not lesser-included offense of grand theft when the charge of grand \ntheft is based on the type of property taken. (People v. Thomas (1974) 43 \nCal.App.3d 862, 870 [118 Cal.Rptr. 226].)\nRELATED ISSUES\nClaim of Right\nIf a person actually believes that he or she has a right to the property even if that \nbelief is mistaken or unreasonable, such belief is a defense to theft. (People v. Romo\n(1990) 220 Cal.App.3d 514, 518 [269 Cal.Rptr. 440]; see also People v. Devine \n(1892) 95 Cal. 227, 229 [30 P. 378] [“[i]t is clear that a charge of larceny, which \nrequires an intent to steal, could not be founded on a mere careless taking away of \nanother’s goods”]; In re Bayles (1920) 47 Cal.App. 517, 519–521 [190 P. 1034] \n[larceny conviction reversed where landlady actually believed she was entitled to \ntake tenant’s property for cleaning fees incurred even if her belief was \nunreasonable]; People v. Navarro (1979) 99 Cal.App.3d Supp. 1, 4–6, 10–11 [160 \nCal.Rptr. 692]; see CALCRIM No. 1863, Defense to Theft or Robbery: Claim of \nRight.)\nCommunity Property\nA person may be found guilty of theft of community property, but only if he or she \nhas the intent to deprive the other owner of the property permanently. (People v. \nLlamas (1997) 51 Cal.App.4th 1729, 1738–1740 [60 Cal.Rptr.2d 357].)\nFraudulent Refunds\nA person who takes property while in a store and presents it for a refund is guilty of \ntheft. (People v. Davis (1998) 19 Cal.4th 301 [79 Cal.Rptr.2d 295, 965 P.2d 1165].) \nThe Supreme Court held that taking with the intent to fraudulently obtain a refund \nconstitutes both an intent to permanently deprive the store of property and a \nTHEFT AND EXTORTION\nCALCRIM No. 1800\n1175\n"
+            },
+            {
+              "page": 1252,
+              "sha256": "e8c1fb72638388311a6806b9afa8f7806089c3e9aed9e4ec0296dab2bde894b0",
+              "text": "trespassory taking within the meaning of larceny. (Id. at pp. 317–318; see also \nPeople v. Shannon (1998) 66 Cal.App.4th 649 [78 Cal.Rptr.2d 177].)\nMultiple or Single Conviction of Theft-Overall Plan or Scheme\nIf multiple items are stolen over a period of time and the takings are part of one \nintention, one general impulse, and one plan, see CALCRIM No. 1802, Theft: As \nPart of Overall Plan.\nNo Need to Use or Beneﬁt From the Property Taken\nIt does not matter that the person taking the property does not intend to use the \nproperty or beneﬁt from it; he or she is guilty of theft if there is intent to \npermanently deprive the other person of the property. (People v. Kunkin (1973) 9 \nCal.3d 245, 251 [107 Cal.Rptr. 184, 507 P.2d 1392]; People v. Green (1980) 27 \nCal.3d 1, 57–58 [164 Cal.Rptr. 1, 609 P.2d 468] [defendant intended to destroy the \nproperty], disapproved on other grounds in People v. Hall (1986) 41 Cal.3d 826, \n834, fn. 3 [226 Cal.Rptr. 112, 718 P.2d 99]; People v. Pierce (1952) 110 Cal.App.2d \n598, 609 [243 P.2d 585] [irrelevant that defendant did not personally beneﬁt from \nembezzled funds]; see also People v. Avery (2002) 27 Cal.4th 49, 57–58 [115 \nCal.Rptr.2d 403, 38 P.3d 1] [intent to deprive owner of major value or enjoyment].)\nPossession\nThe victim of a theft does not have to be the owner of property, only in possession \nof it. (  People v. Edwards (1925) 72 Cal.App. 102, 116 [236 P. 944], disapproved on \nother grounds in In re Estrada (1965) 63 Cal.2d 740, 748 [48 Cal.Rptr. 172, 408 \nP.2d 948].) “Considered as an element of larceny, ‘ownership’ and ‘possession’ may \nbe regarded as synonymous terms; for one who has the right of possession as \nagainst the thief is, so far as the latter is concerned, the owner.” (Ibid; see also \nPeople v. Davis (1893) 97 Cal. 194, 195 [31 P. 1109] [fact that property in \npossession of victim sufficient to show ownership].)\nUnanimity of Theft Theory Not Required\nIf multiple theories of theft have been presented, the jury does not need to agree on \nwhich form of theft was committed. All the jury must agree on is that an unlawful \ntaking of property occurred. (People v. Counts (1995) 31 Cal.App.4th 785, 792–793 \n[37 Cal.Rptr.2d 425]; People v. Failla (1966) 64 Cal.2d 560, 567–569 [51 Cal.Rptr. \n103, 414 P.2d 39] [burglary case]; People v. Nor Woods (1951) 37 Cal.2d 584, 586 \n[233 P.2d 897] [addressing the issue for theft].) See CALCRIM No. 1861, Jury \nDoes Not Need to Agree on Form of Theft.\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (5th ed. 2024) Crimes Against \nProperty, §§ 15–21.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 143, Crimes \nAgainst Property, § 143.01 (Matthew Bender).\nCALCRIM No. 1800 \nTHEFT AND EXTORTION\n1176\n"
+            }
+          ]
+        },
+        {
+          "id": "1804",
+          "heading": "1804. Theft by False Pretense (Pen. Code, § 484)",
+          "firstPage": 1260,
+          "family": "theft_extortion",
+          "lastPage": 1264,
+          "pageHashes": [
+            {
+              "page": 1260,
+              "sha256": "923a98bf877e453aca499130742384021c51e595d88896206cc5fa26462d2733"
+            },
+            {
+              "page": 1261,
+              "sha256": "1b4570c564be5e66e2f48d9965fbed24d45118aa4ada0d1b97747fa4b5efc6c6"
+            },
+            {
+              "page": 1262,
+              "sha256": "f2b34c87b2d40828228b7be33f4cabe14ace14fd0d1e7ca84c1d123e3f1f0eb2"
+            },
+            {
+              "page": 1263,
+              "sha256": "d2d57b3112630b1e5a9ae1a3a1f8bbf6240ee6021d881363baa47bd1cb9da5fc"
+            },
+            {
+              "page": 1264,
+              "sha256": "6d71a7a85e9e15745f125c75e768af84aa20258558ec2cfad4977a0fdd2de86f"
+            }
+          ],
+          "pages": [
+            {
+              "page": 1260,
+              "sha256": "923a98bf877e453aca499130742384021c51e595d88896206cc5fa26462d2733",
+              "text": "1804. Theft by False Pretense (Pen. Code, § 484)\nThe defendant is charged [in Count \n] with [grand/petty] theft by \nfalse pretense [in violation of Penal Code section 484].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant knowingly and intentionally deceived a property \nowner [or the owner’s agent] by false or fraudulent \nrepresentation or pretense;\n2. The defendant did so intending to persuade the owner [or the \nowner’s agent] to let the defendant [or another person] take \npossession and ownership of the property;\nAND\n3. The owner [or the owner’s agent] let the defendant [or another \nperson] take possession and ownership of the property because \nthe owner [or the owner’s agent] relied on the representation or \npretense.\nYou may not ﬁnd the defendant guilty of this crime unless the People \nhave proved that:\n[A. The false pretense was accompanied by either a false writing or \nfalse token(;/.)]\n[OR]\n[(A/B). There was a note or memorandum of the pretense signed or \nhandwritten by the defendant(;/.)]\n[OR]\n[(A/B/C). Testimony from two witnesses or testimony from a single \nwitness along with other evidence supports the conclusion that the \ndefendant made the pretense.]\n[Property includes money, labor, and real or personal property.]\nA false pretense is any act, word, symbol, or token the purpose of which \nis to deceive.\n[Someone makes a false pretense if, intending to deceive, he or she does \n[one or more of] the following:\n[1. Gives information he or she knows is false(./;)] \n[OR\n2. Makes a misrepresentation recklessly without information that\n1184\n"
+            },
+            {
+              "page": 1261,
+              "sha256": "1b4570c564be5e66e2f48d9965fbed24d45118aa4ada0d1b97747fa4b5efc6c6",
+              "text": "justiﬁes a reasonable belief in its truth(./;)] \n[OR\n3. Does not give information when he or she has an obligation to do \nso(./;)]\n[OR\n4. Makes a promise not intending to do what he or she promises.]]\n[Proof that the representation or pretense was false is not enough by \nitself to prove that the defendant intended to deceive.]\n[Proof that the defendant did not perform as promised is not enough by \nitself to prove that the defendant did not intend to perform as promised.]\n[A false token is a document or object that is not authentic, but appears \nto be, and is used to deceive.]\n[For petty theft, the property taken can be of any value, no matter how \nslight.]\n[An owner [or an owner’s agent] relies on false pretense, if the falsehood \nis an important part of the reason the owner [or agent] decides to give \nup the property. The false pretense must be an important factor, but it \ndoes not have to be the only factor the owner [or agent] considers in \nmaking the decision. [If the owner [or agent] gives up property some \ntime after the pretense is made, the owner [or agent] must do so because \nhe or she relies on the pretense.]]\n[An agent is someone to whom the owner has given complete or partial \nauthority and control over the owner’s property.]\nNew January 2006; Revised August 2006, December 2008, April 2010\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to instruct on the elements of this crime, including \nthe corroboration requirements stated in Penal Code section 532(b). (People v. \nMason (1973) 34 Cal.App.3d 281, 286 [109 Cal.Rptr. 867] [error not to instruct on \ncorroboration requirements].)\nRelated Instructions\nIf the defendant is also charged with grand theft, give CALCRIM No. 1801, Theft: \nDegrees. If the defendant is charged with petty theft, no other instruction is \nrequired, and the jury should receive a petty theft verdict form.\nIf the defendant is charged with petty theft with a prior conviction, give CALCRIM \nNo. 1850, Petty Theft With Prior Conviction. \nTHEFT AND EXTORTION\nCALCRIM No. 1804\n1185\n"
+            },
+            {
+              "page": 1262,
+              "sha256": "f2b34c87b2d40828228b7be33f4cabe14ace14fd0d1e7ca84c1d123e3f1f0eb2",
+              "text": "AUTHORITY\n• \nElements. Pen. Code § 484; People v. Wooten (1996) 44 Cal.App.4th 1834, 1842 \n[52 Cal.Rptr.2d 765]; see People v. Webb (1999) 74 Cal.App.4th 688, 693–694 \n[88 Cal.Rptr.2d 259, 64 Cal. Comp. Cases 1040] [false statement of opinion].\n• \nCorroboration Requirements. Pen. Code § 532(b); People v. Gentry (1991) 234 \nCal.App.3d 131, 139 [285 Cal.Rptr. 591]; People v. Fujita (1974) 43 Cal.App.3d \n454, 470–471 [117 Cal.Rptr. 757].\n• \nAgent. People v. Britz (1971) 17 Cal.App.3d 743, 753 [95 Cal.Rptr. 303].\n• \nReckless Misrepresentation. People v. Schmitt (1957) 155 Cal.App.2d 87, 110 \n[317 P.2d 673]; People v. Ryan (1951) 103 Cal.App.2d 904, 908–909 [230 P.2d \n359].\n• \nDefendant Need Not Be Beneﬁciary of Theft. People v. Cheeley (1951) 106 \nCal.App.2d 748, 753 [236 P.2d 22].\n• \nReliance. People v. Wooten (1996) 44 Cal.App.4th 1834, 1842–1843 [52 \nCal.Rptr.2d 765] [deﬁning reliance]; People v. Sanders (1998) 67 Cal.App.4th \n1403, 1413 [79 Cal.Rptr.2d 806] [reversible error to fail to instruct on reliance]; \nPeople v. Whight (1995) 36 Cal.App.4th 1143, 1152–1153 [43 Cal.Rptr.2d 163] \n[no reliance if victim relies solely on own investigation].\n• \nTheft of Real Property by False Pretenses. People v. Sanders (1998) 67 \nCal.App.4th 1403, 1413–1417 [79 Cal.Rptr.2d 806].\n• \nTheft by False Pretenses Includes Obtaining Loan by False Pretenses. Perry v. \nSuperior Court of Los Angeles County (1962) 57 Cal.2d 276, 282–283 [19 \nCal.Rptr.1, 368 P.2d 529].\n• \nEither Token or Writing Must Be False. People v. Henning (2009) 173 \nCal.App.4th 632, 641–642 [92 Cal.Rptr.3d 775].\nLESSER INCLUDED OFFENSES\n• \nPetty Theft. Pen. Code, § 486.\n• \nAttempted Theft. Pen. Code, §§ 664, 484.\nRELATED ISSUES\nAttempted Theft by False Pretense\nReliance on the false pretense need not be proved for a person to be guilty of \nattempted theft by false pretense. (People v. Fujita (1974) 43 Cal.App.3d 454, 467 \n[117 Cal.Rptr. 757].)\nContinuing Nature of False Pretense\nPenal Code section 484 recognizes that theft by false pretense is a crime of a \ncontinuing nature and covers any “property or service received as a result thereof, \nand the complaint, information or indictment may charge that the crime was \nCALCRIM No. 1804 \nTHEFT AND EXTORTION\n1186\n"
+            },
+            {
+              "page": 1263,
+              "sha256": "d2d57b3112630b1e5a9ae1a3a1f8bbf6240ee6021d881363baa47bd1cb9da5fc",
+              "text": "committed on any date during the particular period in question.” (Pen. Code, \n§ 484(a).)\nCorroboration—Deﬁned/Multiple Witnesses\n“Corroborating evidence is sufficient if it tends to connect the defendant with the \ncommission of the crime in such a way so as to reasonably satisfy the jury that the \ncomplaining witness is telling the truth.” (People v. Fujita (1974) 43 Cal.App.3d \n454, 470 [117 Cal.Rptr. 757].) When considering if the pretense is corroborated the \njury may consider “the entire conduct of the defendant, and his declarations to other \npersons.” (  People v. Wymer (1921) 53 Cal.App. 204, 206 [199 P. 815].) The test for \ncorroboration of false pretense is the same as the test for corroborating the \ntestimony of an accomplice in Penal Code section 1111. (Ibid.; see also People v. \nMacEwing (1955) 45 Cal.2d 218, 224 [288 P.2d 257].) To establish corroboration by \nmultiple witnesses, the witnesses do not have to testify to the same false pretense. \nThe requirement is satisﬁed as long as they testify to the same scheme or type of \nfalse pretense. (People v. Gentry (1991) 234 Cal.App.3d 131, 139 [285 Cal.Rptr. \n591]; People v. Ashley (1954) 42 Cal.2d 246, 268 [267 P.2d 271].)\nDistinguished from Theft by Trick\nAlthough fraud is used to obtain the property in both theft by trick and theft by \nfalse pretense, in theft by false pretense, the thief obtains both possession and title \nto the property. For theft by trick, the thief gains only possession of the property. \n(People v. Ashley (1954) 42 Cal.2d 246, 258 [267 P.2d 271]; People v. Randono\n(1973) 32 Cal.App.3d 164, 172 [108 Cal.Rptr. 326].) False pretenses does not \nrequire that the title pass perfectly and the victim may even retain a security interest \nin the property transferred to the defendant. (People v. Counts (1995) 31 \nCal.App.4th 785, 789–792 [37 Cal.Rptr.2d 425].)\nFraudulent Checks\nIf a check is the basis for the theft by false pretense, it cannot also supply the \nwritten corroboration required by statute. (People v. Mason (1973) 34 Cal.App.3d \n281, 288 [109 Cal.Rptr. 867].)\nGenuine Writings\nA genuine writing that is falsely used is not a false token. (People v. Beilfuss (1943) \n59 Cal.App.2d 83, 91 [138 P.2d 332] [valid check obtained by fraud not object of \ntheft by false pretense].)\nImplicit Misrepresentations\nThe misrepresentation does not have to be made in an express statement; it may be \nimplied from behavior or other circumstances. (People v. Mace (1925) 71 Cal.App. \n10, 21 [234 P. 841]; People v. Randono (1973) 32 Cal.App.3d 164, 174–175 [108 \nCal.Rptr. 326] [analogizing to the law of implied contracts].)\nNon-Performance of a Promise Is Insufficient to Prove a False Pretense\nThe pretense may be made about a past or present fact or about a promise to do \nsomething in the future. (People v. Ashley (1954) 42 Cal.2d 246, 259–265 [267 P.2d \n271].) If the pretense relates to future actions, evidence of non-performance of the \nTHEFT AND EXTORTION\nCALCRIM No. 1804\n1187\n"
+            },
+            {
+              "page": 1264,
+              "sha256": "6d71a7a85e9e15745f125c75e768af84aa20258558ec2cfad4977a0fdd2de86f",
+              "text": "promise is not enough to establish the falsity of a promise. (People v. Fujita (1974) \n43 Cal.App.3d 454, 469 [117 Cal.Rptr. 757].) The intent to defraud at the time the \npromise is made must be demonstrated. As the court in Ashley stated, “[w]hether the \npretense is a false promise or a misrepresentation of fact, the defendant’s intent must \nbe proved in both instances by something more than mere proof of non-performance \nor actual falsity.” (People v. Ashley, supra, 42 Cal.2d at p. 264 [court also stated that \ndefendant is entitled to instruction on this point but did not characterize duty as sua \nsponte].)\nSee the Related Issues section under CALCRIM No. 1800, Theft by Larceny.\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against \nProperty, §§ 13, 70.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 143, Crimes \nAgainst Property, § 143.01 (Matthew Bender).\nCALCRIM No. 1804 \nTHEFT AND EXTORTION\n1188\n"
+            }
+          ]
+        },
+        {
+          "id": "1805",
+          "heading": "1805. Theft by Trick (Pen. Code, § 484)",
+          "firstPage": 1265,
+          "family": "theft_extortion",
+          "lastPage": 1266,
+          "pageHashes": [
+            {
+              "page": 1265,
+              "sha256": "53534c68ff7d8575642af7d6f1d674e6f8ec881130f2e60f4a48f778dc79e762"
+            },
+            {
+              "page": 1266,
+              "sha256": "a689a3f27e997da7155db256cd4efbbb5e039eda5240b51f6d8ce189931b3fb7"
+            }
+          ],
+          "pages": [
+            {
+              "page": 1265,
+              "sha256": "53534c68ff7d8575642af7d6f1d674e6f8ec881130f2e60f4a48f778dc79e762",
+              "text": "1805. Theft by Trick (Pen. Code, § 484)\nThe defendant is charged [in Count \n] with [grand/petty] theft by \ntrick [in violation of Penal Code section 484].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant obtained property that (he/she) knew was owned \nby someone else;\n2. The property owner [or the owner’s agent] consented to the \ndefendant’s possession of the property because the defendant used \nfraud or deceit;\n3. When the defendant obtained the property, (he/she) intended (to \ndeprive the owner of it permanently/ [or] to remove it from the \nowner’s [or owner’s agent’s] possession for so extended a period \nof time that the owner would be deprived of a major portion of \nthe value or enjoyment of the property);\n4. The defendant kept the property for any length of time; \nAND\n5. The owner [or the owner’s agent] did not intend to transfer \nownership of the property.\n[Obtaining the owner’s [or the owner’s agent’s] consent to use the \nproperty for a speciﬁed purpose while intending to use it in a different \nway constitutes fraud or deceit.]\n[An agent is someone to whom the owner has given complete or partial \nauthority and control over the owner’s property.]\n[For petty theft, the property taken can be of any value, no matter how \nslight.]\nNew January 2006\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give an instruction deﬁning the elements of the \ncrime.\nTo have the requisite intent for theft, the thief must either intend to deprive the \nowner permanently or to deprive the owner of a major portion of the property’s\n1189\n"
+            },
+            {
+              "page": 1266,
+              "sha256": "a689a3f27e997da7155db256cd4efbbb5e039eda5240b51f6d8ce189931b3fb7",
+              "text": "value or enjoyment. (See People v. Avery (2002) 27 Cal.4th 49, 57–58 [115 \nCal.Rptr.2d 403].) Select the appropriate language in element 3.\nRelated Instructions\nIf the defendant is also charged with grand theft, give CALCRIM No. 1801, Theft: \nDegrees. If the defendant is charged with petty theft, no other instruction is \nrequired, and the jury should receive a petty theft verdict form.\nIf the defendant is charged with petty theft with a prior conviction, give CALCRIM \nNo. 1850, Petty Theft With Prior Conviction.\nAUTHORITY\n• \nElements of Theft. Pen. Code, § 484.\n• \nIntent to Deprive Owner of Main Value. People v. Avery (2002) 27 Cal.4th 49, \n57–59 [115 Cal.Rptr.2d 403, 38 P.3d 1], disapproving, to extent it is inconsistent, \nPeople v. Marquez (1993) 16 Cal.App.4th 115, 123 [20 Cal.Rptr.2d 365].\nLESSER INCLUDED OFFENSES\n• \nPetty Theft. Pen. Code, § 486.\n• \nAttempted Theft. Pen. Code, §§ 664, 484.\nRELATED ISSUES\nDistinguished From Theft by False Pretense\nAlthough fraud is used to obtain the property in both theft by trick and theft by \nfalse pretense, in theft by false pretense, the thief obtains both possession and title \nto the property. For theft by trick, the thief gains only possession of the property. \n(People v. Ashley (1954) 42 Cal.2d 246, 258 [267 P.2d 271]; People v. Randono\n(1973) 32 Cal.App.3d 164, 172 [108 Cal.Rptr. 326]; People v. Traster (2003) 111 \nCal.App.4th 1377, 1387 [4 Cal.Rptr.3d 680].)\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against \nProperty, § 15.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 143, Crimes \nAgainst Property, § 143.01 (Matthew Bender).\nCALCRIM No. 1805 \nTHEFT AND EXTORTION\n1190\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "accounting": {
+    "newChoices": 0,
+    "updatedChoices": 1,
+    "configuredChoicesSnapshot": 657,
+    "newlyMonitoredSections": 1,
+    "newlyMonitoredVersions": 1
+  },
+  "dispositions": [
+    {
+      "instructionId": "1800",
+      "chargeId": "ca-petty-theft",
+      "status": "bounded_conduct_summary_published_other_issues_open"
+    },
+    {
+      "instructionId": "1804",
+      "chargeId": "ca-petty-theft",
+      "status": "bounded_conduct_summary_published_other_issues_open"
+    },
+    {
+      "instructionId": "1805",
+      "chargeId": "ca-petty-theft",
+      "status": "bounded_conduct_summary_published_other_issues_open"
+    }
+  ],
+  "limits": [
+    "One existing charge gains three alternative conduct explanations; no new charge ID, penalty change or case reassignment.",
+    "The original correction and historical reconciliation remain unchanged. This supplement binds its own added text, instructions and dependency.",
+    "This is an introductory conduct summary, not exhaustive elements, defenses, evidentiary exceptions or jury-instruction certification.",
+    "Section 532 is promoted from retained research to monitored publication evidence. Receipt acquisition and expiry must not be advanced by offline replay.",
+    "Spanish and Chinese requests show English for this updated summary with the existing explicit untranslated-content notice. No invented translation.",
+    "Vehicle-taking and other previous unresolved findings remain open; this packet does not increase the earlier 141 bounded publication matches to imply full instruction coverage."
+  ],
+  "decisions": [
+    "Keep the existing petty-theft identity and grading/penalty text. Do not create three duplicate generic theft choices.",
+    "Replace the overbroad permanent-deprivation-only element list with theory-specific alternatives, including the major-value-or-enjoyment alternative for larceny and trick.",
+    "False pretense involves intended transfer of ownership as well as possession; trick does not. Reliance and section 532(b) proof requirements must not disappear in simplification.",
+    "Runtime descriptions, explanations and canonical elements share the reviewed supplement. Other jurisdictions and unrelated California theft entries remain unchanged."
+  ]
+}

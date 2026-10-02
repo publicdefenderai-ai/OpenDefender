@@ -1,3 +1,4 @@
+import supplements from "../shared/california-conduct-supplements.json";
 import { describe, expect, it } from "vitest";
 import { criminalCharges, getChargeById } from "../shared/criminal-charges";
 import { getChargeExplanation } from "../shared/charge-explanations";
@@ -108,7 +109,10 @@ describe("California bounded correction delivery", () => {
       for (const language of ["en", "es", "zh"] as const) {
         const explanation = getChargeExplanation(charge.name, "CA", language, charge.id)!;
         expect(explanation.canonicalChargeId).toBe(charge.id);
-        expect(explanation.plainSummary).toBe(row.summary[language]);
+        // Later reviewed conduct supplements preserve the original penalty contract.
+        const supplement = supplements.find(s => s.id === row.id);
+        expect(explanation.plainSummary).toBe(supplement ? `${row.summary.en} ${supplement.summary}` : row.summary[language]);
+        if (supplement) expect(explanation.untranslated).toBe(language !== "en");
         expect(explanation.degreeContext).toBe(row.penalty[language]);
         expect(explanation.jurisdictionDetail?.penaltyClass).toBe(row.penalty[language]);
       }

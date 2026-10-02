@@ -10,7 +10,7 @@ Statewide offense coverage: unknown. Live deployment parity: not established by 
 - Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.
 - Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary.
 
-Primary-source acquisition: 340/340 declared sections, covering the primary links of 657/657 configured records. Total retained research sources including dependencies: 839 sections/847 versions.
+Primary-source acquisition: 340/340 declared sections, covering the primary links of 657/657 configured records. Total retained research sources including dependencies: 840 sections/848 versions.
 
 | Code | Selectable | Correction pass | Awaiting correction pass |
 | --- | ---: | ---: | ---: |

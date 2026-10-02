@@ -26,8 +26,8 @@
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 340,
     "selectableRecordsWithAllPrimaryTextAcquired": 657,
-    "totalAcquiredSectionsIncludingDependencies": 839,
-    "totalAcquiredVersionsIncludingDependencies": 847,
+    "totalAcquiredSectionsIncludingDependencies": 840,
+    "totalAcquiredVersionsIncludingDependencies": 848,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
@@ -3964,7 +3964,7 @@
         "PEN:484",
         "PEN:490.2"
       ],
-      "catalogSha256": "3f1ebd4bb824bb5122ca481c714276459283b4ad094d1fb8e8ac43577aa0dd4c",
+      "catalogSha256": "16bf2ce559a439472f74f5ab0bbd779241ce16f059ad37ce13258da7afcbcb9c",
       "attorneyReview": "pending"
     },
     {
