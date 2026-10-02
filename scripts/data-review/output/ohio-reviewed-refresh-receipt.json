@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "reportHash": "2a444c126225073cc70c36592cf7738324e61f5edb4c3a02cdca4ec9bf68dcc6",
-  "checkedAt": "2026-09-24T21:16:17.153Z",
-  "expiresAt": "2026-10-01T21:11:44.566Z",
+  "checkedAt": "2026-10-01T18:03:07.076Z",
+  "expiresAt": "2026-10-08T18:01:30.540Z",
   "documents": [
     {
       "section": "109.57",
@@ -1196,10 +1196,10 @@
     }
   ],
   "metrics": {
-    "requests": 0,
-    "reused": 170,
-    "acquired": 0,
-    "bulkDocumentsCached": 0,
+    "requests": 5,
+    "reused": 167,
+    "acquired": 3,
+    "bulkDocumentsCached": 3,
     "failed": 0,
     "cachedFailures": 0,
     "deferred": 0

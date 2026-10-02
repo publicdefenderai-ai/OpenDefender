@@ -1,0 +1,79 @@
+--- a/.github/workflows/regression-tests.yml
++++ b/.github/workflows/regression-tests.yml
+@@ -14,14 +14,25 @@
+     steps:
+       - uses: actions/checkout@v4
+
++      - name: Set up Python
++        uses: actions/setup-python@v5
++        with:
++          python-version: '3.12'
++
++      - name: Run California source-verification Python tests
++        run: python -m unittest discover -s scripts/data-review/california-verification -p 'test_*.py'
++
+       - name: Set up Node.js
+         uses: actions/setup-node@v4
+         with:
+-          node-version: '20'
++          node-version: '24'
+           cache: 'npm'
+
+       - name: Install dependencies
+-        run: npm ci
++        run: |
++          npm ci --include=dev --no-audit
++          test -x node_modules/.bin/vitest
++          test -x node_modules/.bin/playwright
+
+       - name: Run regression tests
+         run: npx vitest run tests/
+@@ -39,11 +50,14 @@
+       - name: Set up Node.js
+         uses: actions/setup-node@v4
+         with:
+-          node-version: '20'
++          node-version: '24'
+           cache: 'npm'
+
+       - name: Install dependencies
+-        run: npm ci
++        run: |
++          npm ci --include=dev --no-audit
++          test -x node_modules/.bin/vitest
++          test -x node_modules/.bin/playwright
+
+       - name: Install Chromium for browser checks
+         run: npx playwright install --with-deps chromium
+--- /dev/null
++++ b/.github/workflows/statutory-evidence-freshness.yml
+@@ -0,0 +1,29 @@
++# Install at .github/workflows/statutory-evidence-freshness.yml on main.
++name: Statutory evidence receipt deadlines
++on:
++  schedule:
++    - cron: '17 13 * * *'
++  workflow_dispatch:
++  pull_request:
++    paths:
++      - 'scripts/check-statutory-receipt-freshness.mjs'
++      - 'shared/california-freshness-core.mjs'
++      - 'shared/california-retained-pins.json'
++      - 'scripts/data-review/output/california-retained-refresh-comparison.json'
++      - 'scripts/data-review/output/*-refresh-receipt.json'
++      - '.github/workflows/statutory-evidence-freshness.yml'
++permissions:
++  contents: read
++jobs:
++  check:
++    runs-on: ubuntu-latest
++    timeout-minutes: 5
++    steps:
++      - uses: actions/checkout@v4
++        with:
++          persist-credentials: false
++      - uses: actions/setup-node@v4
++        with:
++          node-version: '22'
++      - name: Fail for invalid, expired, or due-within-48-hours receipts
++        run: node scripts/check-statutory-receipt-freshness.mjs

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "scope": "unchanged_evidence_renewal_not_new_legal_approval",
+  "checkedAt": "2026-10-01T18:07:38.384485+00:00",
+  "baseCommit": "bd5a668e88237b8ec26427f63f89999ec9ad04c9",
+  "ohio": [
+    {
+      "receipt": "ohio-chapter-2903-refresh-receipt.json",
+      "documents": 61,
+      "sameReviewedDocuments": true,
+      "documentsSha256": "d6930ab91cba139c9453c71a07c071f27862064bc23c5dd702b83d52a480a718",
+      "previousExpiresAt": "2026-10-01T19:33:28.453Z",
+      "expiresAt": "2026-10-08T17:58:30.297Z"
+    },
+    {
+      "receipt": "ohio-reviewed-refresh-receipt.json",
+      "documents": 170,
+      "sameReviewedDocuments": true,
+      "documentsSha256": "f660dcdfc8c915d050b1278b8ecb069e5419492d9de64146521c91fbd9f85888",
+      "previousExpiresAt": "2026-10-01T21:11:44.566Z",
+      "expiresAt": "2026-10-08T18:01:30.540Z"
+    }
+  ],
+  "florida": {
+    "sections": 92,
+    "sameSourceBodiesAndMetadata": true,
+    "sameReviewedReportExceptAcquisitionTimes": true,
+    "reportContentSha256": "a63233e87b0435fbe9409634e3e4d9bcfe407d03c7b0df6b994509e1d7120efc",
+    "expiresAt": "2026-10-08T18:00:34.792Z"
+  },
+  "california": {
+    "sections": 839,
+    "versions": 847,
+    "allUnchanged": true,
+    "heldSourceKeys": [],
+    "comparisonFile": "california-retained-refresh-comparison.json",
+    "comparisonSha256": "356aabb27abd97c80e1246e7171e05f457e93ff47f631a8619b5dd1412f75565",
+    "expiresAt": "2026-10-08T18:00:08.220542+00:00"
+  },
+  "production": {
+    "floridaPublicChoices": 126,
+    "floridaSourceFirstChoices": 101,
+    "checkedAt": "2026-10-01",
+    "deploymentCommitNotEstablished": true
+  }
+}
