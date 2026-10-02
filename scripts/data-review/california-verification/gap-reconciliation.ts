@@ -31,18 +31,22 @@ export function buildGapReconciliation(mappings=plan) {
     const correctionPath=`shared/california-batch-${batch}-corrections.json`;
     const reviewPath=`scripts/data-review/output/california-batch-${batch}-review.json`;
     const correctionsText=fs.readFileSync(correctionPath,'utf8'),reviewText=fs.readFileSync(reviewPath,'utf8');
-    return {correctionPath,reviewPath,correctionsText,reviewText,corrections:JSON.parse(correctionsText) as Array<{id:string}>,review:JSON.parse(reviewText) as {records:Array<{id:string;correctionSha256:string|null}>}};
+    return {correctionPath,reviewPath,correctionsText,reviewText,corrections:JSON.parse(correctionsText) as Array<{id:string}>,review:JSON.parse(reviewText) as {records:Array<{id:string;correctionSha256:string|null;correctionSources?:string[];sources?:Array<{key:string}>}>}};
   });
   const choices=[...new Set(mappings.flatMap(m=>m.chargeIds))].sort().map(id=>{
     const provider=providers.find(p=>p.corrections.some(c=>c.id===id));
     const definition=provider?.corrections.find(c=>c.id===id),original=provider?.review.records.find(r=>r.id===id);
     const correction=CALIFORNIA_CHARGE_CORRECTIONS.find(c=>c.id===id),canonical=getCaliforniaCanonicalRecord(id);
     if(!provider||!definition||!original||original.correctionSha256!==hash(definition)||!correction||!canonical?.selectable)throw new Error('Missing reviewed selectable correction: '+id);
+    // This is a historical reconciliation of the original reviewed correction.
+    // Later supplemental dependencies have their own review and must not rewrite it.
+    const originalKeys=new Set(original.correctionSources ?? original.sources?.map(s=>s.key));
     const keys=[...new Set(canonical.sources.flatMap(s=>{
       if(!s.url.startsWith('https://leginfo.legislature.ca.gov/'))return [];
       const u=new URL(s.url),code=u.searchParams.get('lawCode'),section=u.searchParams.get('sectionNum');
       if(!code||!section)throw new Error('Unparseable official source');
-      return [`${code}:${section.replace(/\.$/,'')}`];
+      const key=`${code}:${section.replace(/\.$/,'')}`;
+      return originalKeys.has(key)?[key]:[];
     }))].sort();
     const sources=keys.map(key=>{
       if(!docs[key]?.length)throw new Error('Missing retained source: '+key);

@@ -4,7 +4,7 @@ Updated October 1, 2026. The target is dependable coverage of important charges,
 
 ## Present position
 
-PR52 is merged. This publication batch brings California to 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 839 retained publication sections / 847 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
+PR53 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
 
 The latest consolidated reconciliation accounts for all 31 outstanding justice/property instruction comparisons: 23 relate to existing reviewed choices, three have a broad theft choice needing more detailed conduct work, three have no matching published branch, and two remain explicitly deferred. These are comparison counts, not new charges. The 23 reused summaries are partial coverage and do not increase the prior 140 bounded matches or certify complete instruction coverage. The full 202-entry prior crosswalk and every remaining finding are preserved.
 
@@ -13,6 +13,8 @@ This avoids recreating general forgery, insufficient-funds and ordinary access-c
 The theft/animal follow-up adds the distinct 597(a) malicious-cruelty and 484e(b) four-person access-card branches using 16 already monitored sections. It increases bounded justice/property instruction matches to 141. The three general theft conduct comparisons remain research-only; the four-person branch retains valuation and grand-theft fine questions. No earlier partial comparison is silently counted as complete.
 
 The combined trespass batch adds 11 choices from six subdivisions, reusing seven monitored sections. It preserves infraction/misdemeanor alternatives, posted-notice requirements, lawful-access exceptions and special penalties. Its review stores each source once with subdivision spans. The earlier 141 bounded instruction matches and unresolved theft/vehicle findings remain unchanged; no new instruction match is claimed.
+
+The petty-theft conduct supplement now explains larceny, trick and false pretense under the existing charge ID. It adds monitored section 532 proof requirements and explicit English-fallback warnings, without changing penalties or adding choices. The former broad-theft comparisons now have bounded introductory conduct summaries; they are not promoted to exhaustive instruction certification. Vehicle sentencing remains open.
 
 ## Current closeout work
 

@@ -1,3 +1,4 @@
+import conductSupplements from "./california-conduct-supplements.json";
 import reviewedSearchAliases from "./california-reviewed-search-aliases.json";
 import {californiaAttorneyDecision} from './california-attorney-decisions';
 /**
@@ -144,7 +145,13 @@ type RecordSeed = Omit<
 };
 
 export function getCaliforniaBatchCorrection(id: string) {
-  return corrections.find(row => row.id === id);
+  const correction = corrections.find(row => row.id === id);
+  const supplement = conductSupplements.find(row => row.id === id);
+  if (!correction || !supplement) return correction;
+  const summary = `${correction.summary.en} ${supplement.summary}`;
+  return {...correction, summary: {en: summary, es: summary, zh: summary},
+    supportingSections: [...new Set([...correction.supportingSections, ...supplement.supportingSections])],
+    translationStatus: supplement.translationStatus};
 }
 
 export function getCaliforniaCorrectionDependencies(correction: {
@@ -163,6 +170,7 @@ export function getCaliforniaCorrectionDependencies(correction: {
 
 function record(seed: RecordSeed): CaliforniaCanonicalRecord {
   const correction = getCaliforniaBatchCorrection(seed.canonicalId);
+  const conduct = conductSupplements.find(row => row.id === seed.canonicalId);
   const sections = [...seed.code.matchAll(/(?:^|[;,]\s*)(\d+(?:\.\d+)*[a-z]*)/g)].map(
     (match) => match[1],
   );
@@ -178,6 +186,7 @@ function record(seed: RecordSeed): CaliforniaCanonicalRecord {
     : undefined;
   return {
     ...seed,
+    ...(conduct ? {elements: conduct.elements, mentalState: conduct.mentalState} : {}),
     ...(correction ? {
       categories: correction.categories as NonNullable<CriminalCharge["categories"]>,
       penalty: correction.penalty.en,
@@ -187,6 +196,7 @@ function record(seed: RecordSeed): CaliforniaCanonicalRecord {
     legacyIds: seed.legacyIds ?? [seed.canonicalId],
     sources: [
       ...(jury ? [...statuteSources, jury] : statuteSources),
+      ...(conduct?.instructions.filter(id => `CALCRIM ${id}` !== seed.juryInstruction?.ref).map(id => CALCRIM_SOURCE(`CALCRIM ${id}`)) ?? []),
       ...(correction ? getCaliforniaCorrectionDependencies(correction) : []).map(({ lawCode, section }) => ({
         ...STATUTE_SOURCE(lawCode, `${LAW_CODE_LABELS[lawCode]} § ${section}`, section),
         kind: "classification" as const,

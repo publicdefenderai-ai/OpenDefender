@@ -9187,6 +9187,20 @@
       ]
     },
     {
+      "key": "PEN:532",
+      "expectedHash": "e497b34c920dc08d81fefbd25513e87d912c9804c93b55cf9b975c83dff9b71d",
+      "observedHash": "e497b34c920dc08d81fefbd25513e87d912c9804c93b55cf9b975c83dff9b71d",
+      "expectedVersions": 1,
+      "observedVersions": 1,
+      "status": "unchanged",
+      "expectedTransactionUpdates": [
+        "2026-07-21 01:00:16"
+      ],
+      "observedTransactionUpdates": [
+        "2026-09-26 01:01:16"
+      ]
+    },
+    {
       "key": "PEN:532a",
       "expectedHash": "0d61d2a56740c77c7362ecbf745c78c32716176f28437498f741c3d4f6c7aad4",
       "observedHash": "0d61d2a56740c77c7362ecbf745c78c32716176f28437498f741c3d4f6c7aad4",

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ca-petty-theft",
+    "summary": "The alleged form of theft matters. Larceny involves taking another person's property without consent, intending at the time to deprive the owner permanently or for long enough to lose a major part of its value or enjoyment, and moving and keeping it even briefly. Theft by trick involves knowing the property belongs to someone else, obtaining possession through fraud or deceit with that deprivation intent, and keeping it for some time; the owner did not intend to transfer ownership. Theft by false pretense instead involves knowing and intentional deception to induce transfer of both possession and ownership, with the owner's actual reliance on the deception. False pretense also has special proof requirements: a false writing or token, a signed or handwritten memorandum, or two witnesses or one witness with corroborating evidence, as specified in section 532(b). A broken promise alone does not prove an original intent to deceive. These are alternative theories, not a combined checklist that must all be proved; the charging papers and facts determine which theory is alleged. Other theft theories, defenses and special proof rules may require separate review.",
+    "elements": [
+      "The prosecution must establish the applicable theft theory, not merely that property is worth $950 or less.",
+      "Larceny: nonconsensual taking with the required intent to deprive, movement and possession even briefly.",
+      "Trick: knowing another owns the property, fraud-induced possession without transfer of ownership, intent to deprive permanently or of a major portion of value or enjoyment, and keeping it for some time.",
+      "False pretense: intentional deception inducing possession and ownership through reliance, with the applicable section 532(b) proof requirements.",
+      "The value, type of property and prior-conviction allegations must also fit the applicable petty-theft grading rules."
+    ],
+    "mentalState": "Theory-specific: the required intent to deprive for larceny or trick; knowing, intentional deception to induce transfer of possession and ownership for false pretense. Mere nonperformance is not enough.",
+    "supportingSections": ["532"],
+    "instructions": ["1800", "1804", "1805"],
+    "translationStatus": "english_only_pending_translation"
+  }
+]
