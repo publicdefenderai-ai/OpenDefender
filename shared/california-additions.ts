@@ -1,3 +1,4 @@
+import trespass from "./california-trespass-additions.json";
 import theftAnimal from "./california-theft-animal-additions.json";
 import officialsCustody from "./california-officials-custody-additions.json";
 import financialIdentity from "./california-financial-identity-additions.json";
@@ -24,6 +25,7 @@ import drivingVessels from "./california-driving-vessels-additions.json";
 import drugSuccessor from "./california-drug-successor-additions.json";
 import { californiaLawCode } from "./california-law-codes";
 export const CALIFORNIA_ADDITIONS = [
+  ...trespass.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-trespass-review.json" })),
   ...theftAnimal.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-theft-animal-review.json" })),
   ...officialsCustody.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-officials-custody-review.json" })),
   ...financialIdentity.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-financial-identity-review.json" })),

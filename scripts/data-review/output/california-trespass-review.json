@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_trespass_publication_not_section_completeness",
+  "sourceAsOf": "2026-09-24",
+  "previousReviewSha256": "aab477daa71ff98ffda35eae1538e73f52dd003523ac3f8b925bbc295267167b",
+  "limits": [
+    "Eleven choices from six section 602 subdivisions. This is not complete section 602 or statewide coverage.",
+    "All seven statutory sources were already retained and monitored. No new acquisition, source approval, receipt renewal or attorney decision.",
+    "The previous crosswalk, theft research and all unresolved findings remain bound by the predecessor hash. No new CALCRIM match is claimed.",
+    "Descriptions preserve statutory exclusions; they do not decide disputed constitutional access, employment or housing facts."
+  ],
+  "sources": [
+    {
+      "key": "PEN:17",
+      "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+      "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.",
+      "start": 0,
+      "end": 3697,
+      "text": "(a) A felony is a crime that is punishable with death, by imprisonment in the state prison, or, notwithstanding any other law, by imprisonment in a county jail under the provisions of subdivision (h) of Section 1170. Every other crime or public offense is a misdemeanor except those offenses that are classified as infractions. (b) When a crime is punishable, in the discretion of the court, either by imprisonment in the state prison or imprisonment in a county jail under the provisions of subdivision (h) of Section 1170, or by fine or imprisonment in the county jail, it is a misdemeanor for all purposes under the following circumstances: (1) After a judgment imposing a punishment other than imprisonment in the state prison or imprisonment in a county jail under the provisions of subdivision (h) of Section 1170. (2) When the court, upon committing the defendant to a secure youth treatment facility, designates the offense to be a misdemeanor. (3) When the court grants probation to a defendant and at the time of granting probation, or on application of the defendant or probation officer thereafter, the court declares the offense to be a misdemeanor. (4) When the prosecuting attorney files in a court having jurisdiction over misdemeanor offenses a complaint specifying that the offense is a misdemeanor, unless the defendant at the time of arraignment or plea objects to the offense being made a misdemeanor, in which event the complaint shall be amended to charge the felony and the case shall proceed on the felony complaint. (5) (A) When the court determines, prior to trial, either on its own motion or the motion of a party, that the offense is a misdemeanor, in which event the case shall proceed as if the defendant had been arraigned on a misdemeanor complaint. (B) Following a denial of a motion pursuant to subparagraph (A), a subsequent motion pursuant to subparagraph (A) may only be made upon a showing of changed circumstances, which includes, but is not limited to, newly available facts relevant to the charge or defendant’s personal circumstances, or change in the applicable law. (c) When a defendant is committed to a secure youth treatment facility for a crime punishable, in the discretion of the court, either by imprisonment in the state prison or imprisonment in a county jail under the provisions of subdivision (h) of Section 1170, or by fine or imprisonment in the county jail not exceeding one year, the offense shall, upon the discharge of the defendant from the secure youth treatment facility, thereafter be deemed a misdemeanor for all purposes. (d) A violation of any code section listed in Section 19.8 is an infraction subject to the procedures described in Sections 19.6 and 19.7 in either of the following cases: (1) The prosecutor files a complaint charging the offense as an infraction unless the defendant, at the time they are arraigned, after being informed of their rights, elects to have the case proceed as a misdemeanor. (2) The court, with the consent of the defendant, determines that the offense is an infraction, in which event the case shall proceed as if the defendant had been arraigned on an infraction complaint. (e) This section does not authorize a judge to relieve a defendant of the duty to register as a sex offender pursuant to Section 290 if the defendant is charged with an offense for which registration as a sex offender is required pursuant to Section 290, and for which the trier of fact has found the defendant guilty. (f) When the court exercises its discretion under this section, an unfulfilled order of restitution or a restitution fine shall not be grounds for denial of a request or application for reduction."
+    },
+    {
+      "key": "PEN:18.5",
+      "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+      "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.",
+      "start": 0,
+      "end": 617,
+      "text": "(a) Every offense which is prescribed by any law of the state to be punishable by imprisonment in a county jail up to or not exceeding one year shall be punishable by imprisonment in a county jail for a period not to exceed 364 days. This section shall apply retroactively, whether or not the case was final as of January 1, 2015. (b) A person who was sentenced to a term of one year in county jail prior to January 1, 2015, may submit an application before the trial court that entered the judgment of conviction in the case to have the term of the sentence modified to the maximum term specified in subdivision (a)."
+    },
+    {
+      "key": "PEN:19",
+      "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+      "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.",
+      "start": 0,
+      "end": 270,
+      "text": "Except in cases where a different punishment is prescribed by any law of this state, every offense declared to be a misdemeanor is punishable by imprisonment in the county jail not exceeding six months, or by fine not exceeding one thousand dollars ($1,000), or by both."
+    },
+    {
+      "key": "PEN:19.6",
+      "versionId": "id_65026bbf-2920-11d9-9844-b32bb8dfae52",
+      "contentSha256": "630d854041240bb18adee9cc045914b3a5cabdf55d715ca59689daf3e84d1dc6",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.6.",
+      "start": 0,
+      "end": 419,
+      "text": "An infraction is not punishable by imprisonment. A person charged with an infraction shall not be entitled to a trial by jury. A person charged with an infraction shall not be entitled to have the public defender or other counsel appointed at public expense to represent him or her unless he or she is arrested and not released on his or her written promise to appear, his or her own recognizance, or a deposit of bail."
+    },
+    {
+      "key": "PEN:19.8",
+      "versionId": "id_ef8d4b13-ac20-11ef-b77a-e14b39306f8a",
+      "contentSha256": "36ee8c82a48bfaa1b199122b3a012502ca928b4ecea9cf1e6d49c2e5d044f72c",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.8.",
+      "start": 0,
+      "end": 1343,
+      "text": "(a) (1) The following offenses are subject to subdivision (d) of Section 17: (A) Sections 193.8, 330, 415, 485, 490.7, 555, 602.13, and 853.7. (B) Subdivision (c) of Section 532b and subdivision (o) of Section 602. (C) Subdivision (b) of Section 25658 and Sections 21672, 25661, and 25662 of the Business and Professions Code. (D) Section 27204 of the Government Code. (E) Subdivision (c) of Section 23109 and Sections 5201.1, 12500, 14601.1, 27150.1, and 40508 of the Vehicle Code. (F) Any other offense that the Legislature makes subject to subdivision (d) of Section 17. (2) Except where a lesser maximum fine is expressly provided for a violation of those sections, a violation that is an infraction is punishable by a fine not exceeding two hundred fifty dollars ($250). (b) Except in cases where a different punishment is prescribed, an offense declared to be an infraction is punishable by a fine not exceeding two hundred fifty dollars ($250). (c) Except for the violations enumerated in subdivision (d) of Section 13202.5 of the Vehicle Code and Section 14601.1 of the Vehicle Code based upon failure to appear, a conviction for an offense made an infraction under subdivision (d) of Section 17 is not grounds for the suspension, revocation, or denial of a license or for the revocation of probation or parole of the person convicted."
+    },
+    {
+      "key": "PEN:602",
+      "versionId": "id_dd88ce03-8257-11ee-bcfe-9f16e66157a6",
+      "contentSha256": "cafeb42be43beda99754b2b1a6c73f6a5e31219b52b76b36603828f936864aef",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=602.",
+      "start": 0,
+      "end": 19749,
+      "text": "Except as provided in subdivisions (u), (v), and (x), and Section 602.8, a person who willfully commits a trespass by any of the following acts is guilty of a misdemeanor: (a) Cutting down, destroying, or injuring any kind of wood or timber standing or growing upon the lands of another. (b) Carrying away any kind of wood or timber lying on those lands. (c) Maliciously injuring or severing from the freehold of another anything attached to it, or its produce. (d) Digging, taking, or carrying away from a lot situated within the limits of an incorporated city, without the license of the owner or legal occupant, any earth, soil, or stone. (e) Digging, taking, or carrying away from land in a city or town laid down on the map or plan of the city, or otherwise recognized or established as a street, alley, avenue, or park, without the license of the proper authorities, any earth, soil, or stone. (f) Maliciously tearing down, damaging, mutilating, or destroying a sign, signboard, or notice placed upon, or affixed to, a property belonging to the state, or to a city, county, city and county, town, or village, or upon the property of a person, by the state or by an automobile association, which sign, signboard, or notice is intended to indicate or designate a road or a highway, or is intended to direct travelers from one point to another, or relates to fires, fire control, or any other matter involving the protection of the property, or putting up, affixing, fastening, printing, or painting upon any property belonging to the state, or to any city, county, town, or village, or dedicated to the public, or upon the property of a person, without license from the owner, a notice, advertisement, or designation of, or a name for a commodity, whether for sale or otherwise, or a picture, sign, or device intended to call attention to it. (g) Entering upon lands owned by another person whereon oysters or other shellfish are planted or growing; or injuring, gathering, or carrying away oysters or other shellfish planted, growing, or on any of those lands, whether covered by water or not, without the license of the owner or legal occupant; or damaging, destroying, or removing, or causing to be removed, damaged, or destroyed, any stakes, marks, fences, or signs intended to designate the boundaries and limits of those lands. (h) (1) Entering upon lands or buildings owned by another person without the license of the owner or legal occupant, where signs forbidding trespass are displayed, and whereon cattle, goats, pigs, sheep, fowl, or any other animal is being raised, bred, fed, or held for the purpose of food for human consumption; or injuring, gathering, or carrying away any animal being housed on any of those lands, without the license of the owner or legal occupant; or damaging, destroying, or removing, or causing to be removed, damaged, or destroyed, any stakes, marks, fences, or signs intended to designate the boundaries and limits of those lands. (2) In order for there to be a violation of this subdivision, the trespass signs under paragraph (1) shall be displayed at intervals not less than three per mile along all exterior boundaries and at all roads and trails entering the land. (3) This subdivision does not preclude prosecution or punishment under any other law, including, but not limited to, grand theft or any provision that provides for a greater penalty or longer term of imprisonment. (i) Willfully opening, tearing down, or otherwise destroying a fence on the enclosed land of another, or opening a gate, bar, or fence of another and willfully leaving it open without the written permission of the owner, or maliciously tearing down, mutilating, or destroying a sign, signboard, or other notice forbidding shooting on private property. (j) Building fires upon lands owned by another where signs forbidding trespass are displayed at intervals not greater than one mile along the exterior boundaries and at all roads and trails entering the lands, without first having obtained written permission from the owner of the lands or the owner’s agent, or the person in lawful possession. (k) Entering lands, whether unenclosed or enclosed by fence, for the purpose of injuring property or property rights or with the intention of interfering with, obstructing, or injuring a lawful business or occupation carried on by the owner of the land, the owner’s agent, or the person in lawful possession. ( l ) Entering lands under cultivation or enclosed by fence, belonging to, or occupied by, another, or entering upon uncultivated or unenclosed lands where signs forbidding trespass are displayed at intervals not less than three to the mile along all exterior boundaries and at all roads and trails entering the lands without the written permission of the owner of the land, the owner’s agent, or the person in lawful possession, and any of the following: (1) Refusing or failing to leave the lands immediately upon being requested by the owner of the land, the owner’s agent, or by the person in lawful possession to leave the lands. (2) Tearing down, mutilating, or destroying a sign, signboard, or notice forbidding trespass or hunting on the lands. (3) Removing, injuring, unlocking, or tampering with a lock on a gate on or leading into the lands. (4) Discharging a firearm. (m) Entering and occupying real property or structures of any kind without the consent of the owner, the owner’s agent, or the person in lawful possession. (n) Driving a vehicle, as defined in Section 670 of the Vehicle Code, upon real property belonging to, or lawfully occupied by, another and known not to be open to the general public, without the consent of the owner, the owner’s agent, or the person in lawful possession. This subdivision does not apply to a person described in Section 22350 of the Business and Professions Code who is making a lawful service of process, provided that upon exiting the vehicle, the person proceeds immediately to attempt the service of process, and leaves immediately upon completing the service of process or upon the request of the owner, the owner’s agent, or the person in lawful possession. (o) (1) Refusing or failing to leave land, real property, or structures belonging to, or lawfully occupied by, another and not open to the general public, upon being requested to leave by (1) a peace officer at the request of the owner, the owner’s agent, or the person in lawful possession, and upon being informed by the peace officer that they are acting at the request of the owner, the owner’s agent, or the person in lawful possession, or (2) the owner, the owner’s agent, or the person in lawful possession. The owner, the owner’s agent, or the person in lawful possession shall make a separate request to the peace officer on each occasion when the peace officer’s assistance in dealing with a trespass is requested. However, a single request for a peace officer’s assistance, made in a notarized writing on a form provided by the law enforcement agency, may be made to cover a limited period of time not to exceed a time period determined by local ordinance or 12 months, whichever is shorter, and identified by specific dates, during which there is a fire hazard or the owner, owner’s agent, or person in lawful possession is absent from the premises or property. In addition, a single request for a peace officer’s assistance, made in a notarized writing on a form provided by the law enforcement agency, may be made for a period not to exceed 12 months when the premises or property is closed to the public and posted as being closed. The requestor shall inform the law enforcement agency to which the request was made, in writing, when the assistance is no longer desired, before the period not exceeding 12 months expires. However, this subdivision does not apply to persons engaged in lawful labor union activities that are permitted to be carried out on the property by the Alatorre-Zenovich-Dunlap-Berman Agricultural Labor Relations Act of 1975 (Part 3.5 (commencing with Section 1140) of Division 2 of the Labor Code) or by the federal National Labor Relations Act. For purposes of this section, land, real property, or structures owned or operated by a housing authority for tenants, as defined in Section 34213.5 of the Health and Safety Code, constitutes property not open to the general public; however, this subdivision does not apply to persons on the premises who are engaging in activities protected by the California or United States Constitution, or to persons who are on the premises at the request of a resident or management and who are not loitering or otherwise suspected of violating or actually violating a law or ordinance. (2) A request for a peace officer’s assistance shall expire upon transfer of ownership of the property or upon a change in the person in lawful possession. (3) A request for a peace officer’s assistance in dealing with a trespass may be submitted electronically. A local government may accept electronic submissions of requests pursuant to this subdivision. (p) Entering upon lands declared closed to entry, as provided in Section 4256 of the Public Resources Code, if the closed areas have been posted with notices declaring the closure, at intervals not greater than one mile along the exterior boundaries or along roads and trails passing through the lands. (q) Refusing or failing to leave a public building of a public agency during those hours of the day or night when the building is regularly closed to the public upon being requested to do so by a regularly employed guard, watchperson, or custodian of the public agency owning or maintaining the building or property, if the surrounding circumstances would indicate to a reasonable person that the person has no apparent lawful business to pursue. (r) Knowingly skiing in an area or on a ski trail that is closed to the public and that has signs posted indicating the closure. (s) Refusing or failing to leave a hotel or motel, where the person has obtained accommodations and has refused to pay for those accommodations, upon request of the proprietor or manager and the occupancy is exempt, pursuant to subdivision (b) of Section 1940 of the Civil Code, from Chapter 2 (commencing with Section 1940) of Title 5 of Part 4 of Division 3 of the Civil Code. For purposes of this subdivision, occupancy at a hotel or motel for a continuous period of 30 days or less shall, in the absence of a written agreement to the contrary, or other written evidence of a periodic tenancy of indefinite duration, be exempt from Chapter 2 (commencing with Section 1940) of Title 5 of Part 4 of Division 3 of the Civil Code. (t) (1) Entering upon private property, including contiguous land, real property, or structures thereon belonging to the same owner, whether or not generally open to the public, after having been informed by a peace officer at the request of the owner, the owner’s agent, or the person in lawful possession, and upon being informed by the peace officer that the peace officer is acting at the request of the owner, the owner’s agent, or the person in lawful possession, that the property is not open to the particular person; or refusing or failing to leave the property upon being asked to leave the property in the manner provided in this subdivision. (2) This subdivision applies only to a person who has been convicted of a crime committed upon the particular private property. (3) A single notification or request to the person as set forth above shall be valid and enforceable under this subdivision unless and until rescinded by the owner, the owner’s agent, or the person in lawful possession of the property. (4) Where the person has been convicted of a violent felony, as described in subdivision (c) of Section 667.5, this subdivision applies without time limitation. Where the person has been convicted of any other felony, this subdivision applies for no more than five years from the date of conviction. Where the person has been convicted of a misdemeanor, this subdivision applies for no more than two years from the date of conviction. Where the person was convicted for an infraction pursuant to Section 490.1, this subdivision applies for no more than one year from the date of conviction. This subdivision does not apply to convictions for any other infraction. (u) (1) Knowingly entering, by an unauthorized person, upon an airport operations area, passenger vessel terminal, or public transit facility if the area has been posted with notices restricting access to authorized personnel only and the postings occur not greater than every 150 feet along the exterior boundary, to the extent, in the case of a passenger vessel terminal, as defined in subparagraph (B) of paragraph (3), that the exterior boundary extends shoreside. To the extent that the exterior boundary of a passenger vessel terminal operations area extends waterside, this prohibition applies if notices have been posted in a manner consistent with the requirements for the shoreside exterior boundary, or in any other manner approved by the captain of the port. (2) A person convicted of a violation of paragraph (1) shall be punished as follows: (A) By a fine not exceeding one hundred dollars ($100). (B) By imprisonment in a county jail not exceeding six months, or by a fine not exceeding one thousand dollars ($1,000), or by both that fine and imprisonment, if the person refuses to leave the airport or passenger vessel terminal after being requested to leave by a peace officer or authorized personnel. (C) By imprisonment in a county jail not exceeding six months, or by a fine not exceeding one thousand dollars ($1,000), or by both that fine and imprisonment, for a second or subsequent offense. (3) As used in this subdivision, the following definitions shall control: (A) “Airport operations area” means that part of the airport used by aircraft for landing, taking off, surface maneuvering, loading and unloading, refueling, parking, or maintenance, where aircraft support vehicles and facilities exist, and which is not for public use or public vehicular traffic. (B) “Passenger vessel terminal” means only that portion of a harbor or port facility, as described in Section 105.105(a)(2) of Title 33 of the Code of Federal Regulations, with a secured area that regularly serves scheduled commuter or passenger operations. For the purposes of this section, “passenger vessel terminal” does not include any area designated a public access area pursuant to Section 105.106 of Title 33 of the Code of Federal Regulations. (C) “Public transit facility” has the same meaning as specified in Section 171.7. (D) (i) “Authorized personnel” means a person who has a valid airport identification card issued by the airport operator or has a valid airline identification card recognized by the airport operator, or any person not in possession of an airport or airline identification card who is being escorted for legitimate purposes by a person with an airport or airline identification card. (ii) “Authorized personnel” also means a person who has a valid port identification card issued by the harbor operator, or who has a valid company identification card issued by a commercial maritime enterprise recognized by the harbor operator, or any other person who is being escorted for legitimate purposes by a person with a valid port or qualifying company identification card. (iii) “Authorized personnel” also means a person who has a valid public transit employee identification card. (E) “Airport” means a facility whose function is to support commercial aviation. (v) (1) Except as permitted by federal law, intentionally avoiding submission to the screening and inspection of one’s person and accessible property in accordance with the procedures being applied to control access when entering or reentering a sterile area of an airport, passenger vessel terminal, as defined in subdivision (u), or public transit facility, as defined in Section 171.7, if the sterile area is posted with a statement providing reasonable notice that prosecution may result from a trespass described in this subdivision, is a violation of this subdivision, punishable by a fine of not more than five hundred dollars ($500) for the first offense. A second and subsequent violation is a misdemeanor, punishable by imprisonment in a county jail for a period of not more than one year, or by a fine not to exceed one thousand dollars ($1,000), or by both that fine and imprisonment. (2) Notwithstanding paragraph (1), if a first violation of this subdivision is responsible for the evacuation of an airport terminal, passenger vessel terminal, or public transit facility and is responsible in any part for delays or cancellations of scheduled flights or departures, it is punishable by imprisonment of not more than one year in a county jail. (w) Refusing or failing to leave the location of a domestic violence shelter-based program at any time after being requested to leave by a managing authority of the shelter. (1) A person who is convicted of violating this subdivision shall be punished by imprisonment in a county jail for not more than one year. (2) The court may order a defendant who is convicted of violating this subdivision to make restitution to a victim of domestic violence in an amount equal to the relocation expenses of the victim of domestic violence and the victim’s children if those expenses are incurred as a result of trespass by the defendant at the location of a domestic violence shelter-based program. (x) (1) Knowingly entering or remaining in a neonatal unit, maternity ward, or birthing center located in a hospital or clinic without lawful business to pursue therein, if the area has been posted so as to give reasonable notice restricting access to those with lawful business to pursue therein and the surrounding circumstances would indicate to a reasonable person that the person has no lawful business to pursue therein. Reasonable notice is that which would give actual notice to a reasonable person, and is posted, at a minimum, at each entrance into the area. (2) A person convicted of a violation of paragraph (1) shall be punished as follows: (A) As an infraction, by a fine not exceeding one hundred dollars ($100). (B) By imprisonment in a county jail not exceeding one year, or by a fine not exceeding one thousand dollars ($1,000), or by both that fine and imprisonment, if the person refuses to leave the posted area after being requested to leave by a peace officer or other authorized person. (C) By imprisonment in a county jail not exceeding one year, or by a fine not exceeding two thousand dollars ($2,000), or by both that fine and imprisonment, for a second or subsequent offense. (D) If probation is granted or the execution or imposition of sentencing is suspended for a person convicted under this subdivision, it shall be a condition of probation that the person participate in counseling, as designated by the court, unless the court finds good cause not to impose this requirement. The court shall require the person to pay for this counseling, if ordered, unless good cause not to pay is shown. (y) Except as permitted by federal law, intentionally avoiding submission to the screening and inspection of one’s person and accessible property in accordance with the procedures being applied to control access when entering or reentering a courthouse or a city, county, city and county, or state building if entrances to the courthouse or the city, county, city and county, or state building have been posted with a statement providing reasonable notice that prosecution may result from a trespass described in this subdivision."
+    },
+    {
+      "key": "PEN:602.8",
+      "versionId": "id_6861c39a-2920-11d9-9844-b32bb8dfae52",
+      "contentSha256": "a0454a777f79ebe408ac441c08b81ced214371d51310954c258b19b23237ab53",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=602.8.",
+      "start": 0,
+      "end": 2302,
+      "text": "(a) Any person who without the written permission of the landowner, the owner’s agent, or the person in lawful possession of the land, willfully enters any lands under cultivation or enclosed by fence, belonging to, or occupied by, another, or who willfully enters upon uncultivated or unenclosed lands where signs forbidding trespass are displayed at intervals not less than three to the mile along all exterior boundaries and at all roads and trails entering the lands, is guilty of a public offense. (b) Any person convicted of a violation of subdivision (a) shall be punished as follows: (1) A first offense is an infraction punishable by a fine of seventy-five dollars ($75). (2) A second offense on the same land or any contiguous land of the same landowner, without the permission of the landowner, the landowner’s agent, or the person in lawful possession of the land, is an infraction punishable by a fine of two hundred fifty dollars ($250). (3) A third or subsequent offense on the same land or any contiguous land of the same landowner, without the permission of the landowner, the landowner’s agent, or the person in lawful possession of the land, is a misdemeanor. (c) Subdivision (a) shall not apply to any of the following: (1) Any person engaged in lawful labor union activities which are permitted to be carried out on property by the California Agricultural Labor Relations Act, Part 3.5 (commencing with Section 1140) of Division 2 of the Labor Code, or by the National Labor Relations Act. (2) Any person on the premises who is engaging in activities protected by the California or United States Constitution. (3) Any person described in Section 22350 of the Business and Professions Code who is making a lawful service of process. (4) Any person licensed pursuant to Chapter 15 (commencing with Section 8700) of Division 3 of the Business and Professions Code who is engaged in the lawful practice of land surveying as authorized by Section 846.5 of the Civil Code. (d) For any infraction charged pursuant to this section, the defendant shall have the option to forfeit bail in lieu of making a court appearance. Notwithstanding subdivision (e) of Section 853.6, if the offender elects to forfeit bail pursuant to this subdivision, no further proceedings shall be had in the case."
+    }
+  ],
+  "branchSpans": [
+    {
+      "branch": "l",
+      "key": "PEN:602",
+      "start": 4437,
+      "end": 5317,
+      "text": "( l ) Entering lands under cultivation or enclosed by fence, belonging to, or occupied by, another, or entering upon uncultivated or unenclosed lands where signs forbidding trespass are displayed at intervals not less than three to the mile along all exterior boundaries and at all roads and trails entering the lands without the written permission of the owner of the land, the owner’s agent, or the person in lawful possession, and any of the following: (1) Refusing or failing to leave the lands immediately upon being requested by the owner of the land, the owner’s agent, or by the person in lawful possession to leave the lands. (2) Tearing down, mutilating, or destroying a sign, signboard, or notice forbidding trespass or hunting on the lands. (3) Removing, injuring, unlocking, or tampering with a lock on a gate on or leading into the lands. (4) Discharging a firearm. "
+    },
+    {
+      "branch": "o",
+      "key": "PEN:602",
+      "start": 6155,
+      "end": 9074,
+      "text": "(o) (1) Refusing or failing to leave land, real property, or structures belonging to, or lawfully occupied by, another and not open to the general public, upon being requested to leave by (1) a peace officer at the request of the owner, the owner’s agent, or the person in lawful possession, and upon being informed by the peace officer that they are acting at the request of the owner, the owner’s agent, or the person in lawful possession, or (2) the owner, the owner’s agent, or the person in lawful possession. The owner, the owner’s agent, or the person in lawful possession shall make a separate request to the peace officer on each occasion when the peace officer’s assistance in dealing with a trespass is requested. However, a single request for a peace officer’s assistance, made in a notarized writing on a form provided by the law enforcement agency, may be made to cover a limited period of time not to exceed a time period determined by local ordinance or 12 months, whichever is shorter, and identified by specific dates, during which there is a fire hazard or the owner, owner’s agent, or person in lawful possession is absent from the premises or property. In addition, a single request for a peace officer’s assistance, made in a notarized writing on a form provided by the law enforcement agency, may be made for a period not to exceed 12 months when the premises or property is closed to the public and posted as being closed. The requestor shall inform the law enforcement agency to which the request was made, in writing, when the assistance is no longer desired, before the period not exceeding 12 months expires. However, this subdivision does not apply to persons engaged in lawful labor union activities that are permitted to be carried out on the property by the Alatorre-Zenovich-Dunlap-Berman Agricultural Labor Relations Act of 1975 (Part 3.5 (commencing with Section 1140) of Division 2 of the Labor Code) or by the federal National Labor Relations Act. For purposes of this section, land, real property, or structures owned or operated by a housing authority for tenants, as defined in Section 34213.5 of the Health and Safety Code, constitutes property not open to the general public; however, this subdivision does not apply to persons on the premises who are engaging in activities protected by the California or United States Constitution, or to persons who are on the premises at the request of a resident or management and who are not loitering or otherwise suspected of violating or actually violating a law or ordinance. (2) A request for a peace officer’s assistance shall expire upon transfer of ownership of the property or upon a change in the person in lawful possession. (3) A request for a peace officer’s assistance in dealing with a trespass may be submitted electronically. A local government may accept electronic submissions of requests pursuant to this subdivision. "
+    },
+    {
+      "branch": "q",
+      "key": "PEN:602",
+      "start": 9377,
+      "end": 9824,
+      "text": "(q) Refusing or failing to leave a public building of a public agency during those hours of the day or night when the building is regularly closed to the public upon being requested to do so by a regularly employed guard, watchperson, or custodian of the public agency owning or maintaining the building or property, if the surrounding circumstances would indicate to a reasonable person that the person has no apparent lawful business to pursue. "
+    },
+    {
+      "branch": "w",
+      "key": "PEN:602",
+      "start": 16903,
+      "end": 17593,
+      "text": "(w) Refusing or failing to leave the location of a domestic violence shelter-based program at any time after being requested to leave by a managing authority of the shelter. (1) A person who is convicted of violating this subdivision shall be punished by imprisonment in a county jail for not more than one year. (2) The court may order a defendant who is convicted of violating this subdivision to make restitution to a victim of domestic violence in an amount equal to the relocation expenses of the victim of domestic violence and the victim’s children if those expenses are incurred as a result of trespass by the defendant at the location of a domestic violence shelter-based program. "
+    },
+    {
+      "branch": "x",
+      "key": "PEN:602",
+      "start": 17593,
+      "end": 19219,
+      "text": "(x) (1) Knowingly entering or remaining in a neonatal unit, maternity ward, or birthing center located in a hospital or clinic without lawful business to pursue therein, if the area has been posted so as to give reasonable notice restricting access to those with lawful business to pursue therein and the surrounding circumstances would indicate to a reasonable person that the person has no lawful business to pursue therein. Reasonable notice is that which would give actual notice to a reasonable person, and is posted, at a minimum, at each entrance into the area. (2) A person convicted of a violation of paragraph (1) shall be punished as follows: (A) As an infraction, by a fine not exceeding one hundred dollars ($100). (B) By imprisonment in a county jail not exceeding one year, or by a fine not exceeding one thousand dollars ($1,000), or by both that fine and imprisonment, if the person refuses to leave the posted area after being requested to leave by a peace officer or other authorized person. (C) By imprisonment in a county jail not exceeding one year, or by a fine not exceeding two thousand dollars ($2,000), or by both that fine and imprisonment, for a second or subsequent offense. (D) If probation is granted or the execution or imposition of sentencing is suspended for a person convicted under this subdivision, it shall be a condition of probation that the person participate in counseling, as designated by the court, unless the court finds good cause not to impose this requirement. The court shall require the person to pay for this counseling, if ordered, unless good cause not to pay is shown. "
+    },
+    {
+      "branch": "y",
+      "key": "PEN:602",
+      "start": 19219,
+      "end": 19749,
+      "text": "(y) Except as permitted by federal law, intentionally avoiding submission to the screening and inspection of one’s person and accessible property in accordance with the procedures being applied to control access when entering or reentering a courthouse or a city, county, city and county, or state building if entrances to the courthouse or the city, county, city and county, or state building have been posted with a statement providing reasonable notice that prosecution may result from a trespass described in this subdivision."
+    }
+  ],
+  "records": [
+    {
+      "id": "ca-pen-602-l-1",
+      "code": "602(l)(1)",
+      "definitionSha256": "5421b2120ef4247a918ed8ab61e885525435af7185e244f1abe63e2e5233aa2b",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "l"
+    },
+    {
+      "id": "ca-pen-602-l-2",
+      "code": "602(l)(2)",
+      "definitionSha256": "8f1076fd9258693eb0eddf0b9f4d10fcf134fd48a0ed3297d4ebe48f2c70f3c8",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "l"
+    },
+    {
+      "id": "ca-pen-602-l-3",
+      "code": "602(l)(3)",
+      "definitionSha256": "f43e81c0ebf00d60afeaf3cf6d167a7c07a965328bcfeb049515efd4f090e100",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "l"
+    },
+    {
+      "id": "ca-pen-602-l-4",
+      "code": "602(l)(4)",
+      "definitionSha256": "aceb35652e8c02238269534a56631685f7d68db7238a5ca12b8d606db3ac93b6",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "l"
+    },
+    {
+      "id": "ca-pen-602-o",
+      "code": "602(o)",
+      "definitionSha256": "d98489a56bd8c6165571782b732bd27798eed4f48156fa64348d946a280cfdc8",
+      "sourceKeys": [
+        "PEN:17",
+        "PEN:19",
+        "PEN:19.6",
+        "PEN:19.8",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "o"
+    },
+    {
+      "id": "ca-pen-602-q",
+      "code": "602(q)",
+      "definitionSha256": "bc660da4164237dd4f7b504f39ba2c58072a877439c2a39667c55bd084d076c7",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "q"
+    },
+    {
+      "id": "ca-pen-602-w",
+      "code": "602(w)",
+      "definitionSha256": "df919aaf4d612e9fcab18015b9659d60eb34c701d705c101d11fd9d6b3bba210",
+      "sourceKeys": [
+        "PEN:18.5",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "w"
+    },
+    {
+      "id": "ca-pen-602-x-2-a",
+      "code": "602(x)(2)(A)",
+      "definitionSha256": "f24d752f719b8191d101dc6fbd8f1b0753170de1ff87ffeeb7f5b458892cdfcc",
+      "sourceKeys": [
+        "PEN:18.5",
+        "PEN:19.6",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "x"
+    },
+    {
+      "id": "ca-pen-602-x-2-b",
+      "code": "602(x)(2)(B)",
+      "definitionSha256": "3f80589e4419a842ac3a5eb9548b042160b85514743e9836747be29b5c232231",
+      "sourceKeys": [
+        "PEN:18.5",
+        "PEN:19.6",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "x"
+    },
+    {
+      "id": "ca-pen-602-x-2-c",
+      "code": "602(x)(2)(C)",
+      "definitionSha256": "b2b8dc9548a4cdf138f550895035b3dba3e750c8739e2f0669c5493e58b92cd6",
+      "sourceKeys": [
+        "PEN:18.5",
+        "PEN:19.6",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "x"
+    },
+    {
+      "id": "ca-pen-602-y",
+      "code": "602(y)",
+      "definitionSha256": "8b7a79af54f61a0135ab49ff31a1731b1bb2d233ddfca953ec24cad4f23b5799",
+      "sourceKeys": [
+        "PEN:19",
+        "PEN:602",
+        "PEN:602.8"
+      ],
+      "primaryBranch": "y"
+    }
+  ],
+  "priorAccounting": {
+    "benchmarkInstructions": 202,
+    "boundedMatches": 141,
+    "reconciliationSha256": "b59ce76af022339a845fc81bad4833532533c9405c78ee21b1a8db707d392241",
+    "remainingFindingsSha256": "d13286a90510f98aae992e7a05faefcfb4bd086036be44f7f364b644a48fdfa6",
+    "findingProgressSha256": "2f83cfba355ff9365c8c49c52e1acc7866d653e7f393cfb41e09ee2a1eda81a2",
+    "theftConductResearchSha256": "8a55cd71466131e61304b9ba61c3392dd8704cdb8fc74d9e605df0dd0bc7669c"
+  },
+  "remaining": [
+    {
+      "id": "remaining-trespass-branches",
+      "status": "partial_publication_other_branches_open",
+      "publishedCodes": [
+        "602(l)(1)",
+        "602(l)(2)",
+        "602(l)(3)",
+        "602(l)(4)",
+        "602(o)",
+        "602(q)",
+        "602(w)",
+        "602(x)(2)(A)",
+        "602(x)(2)(B)",
+        "602(x)(2)(C)",
+        "602(y)"
+      ],
+      "next": "Other section 602 conduct, airport/transit variants, section 602.8 repeat-entry routes and business-entry provisions remain outside this batch. This is not an assertion that all unreviewed branches are minor."
+    },
+    {
+      "id": "shelter-trespass-fine",
+      "status": "fine_ceiling_unresolved",
+      "keys": [
+        "PEN:602",
+        "PEN:672"
+      ],
+      "next": "Section 602(w) supplies custody and relocation restitution. A separate base-fine authority and ceiling remain unresolved; no zero-fine or generic-fine assertion."
+    }
+  ],
+  "decisions": [
+    "Titles describe the statutory conduct; they are not represented as verbatim short statutory names.",
+    "602(l) requires the land, notice and lack-of-written-permission conditions plus one of four additional acts. Mere entry is not silently converted into these misdemeanor routes.",
+    "602(o) retains the 17(d)/19.8 infraction alternative, policing-request limits, labor exception and housing-authority protections. The underlying labor and constitutional disputes are not resolved by this summary.",
+    "602(q) requires regular closure, a qualifying agency employee request and circumstances showing no apparent lawful business.",
+    "602(w) uses the express one-year custody provision reduced to 364 days by 18.5; section 19 is not used to replace that punishment. Relocation restitution is separate from a base fine.",
+    "602(x)(2)(A), (B) and (C) distinguish ordinary infraction, refusal-to-leave misdemeanor and repeat misdemeanor. All retain the underlying 602(x)(1) conduct and conditional counseling rule.",
+    "602(y) preserves posted notice and the federal-law exception. Declining entry is distinguished from bypassing screening.",
+    "Seven retained source bodies are stored once, with exact subdivision spans and per-record references, to avoid repeating the long statute in every record."
+  ]
+}
