@@ -1,0 +1,4752 @@
+{
+  "catalogCommit": "5bba0a627ced5989d9e74e5a1fa80eedcd353796",
+  "configuredChoices": 657,
+  "records": [
+    {
+      "canonicalId": "ca-murder-in-the-first-degree",
+      "officialTitle": "Murder: First Degree",
+      "lawCode": "PEN",
+      "code": "187(a), 189",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-murder-in-the-second-degree",
+      "officialTitle": "Murder: Second Degree",
+      "lawCode": "PEN",
+      "code": "187(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-voluntary-manslaughter",
+      "officialTitle": "Voluntary Manslaughter",
+      "lawCode": "PEN",
+      "code": "192(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-involuntary-manslaughter",
+      "officialTitle": "Involuntary Manslaughter",
+      "lawCode": "PEN",
+      "code": "192(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-assault-in-the-second-degree",
+      "officialTitle": "Battery",
+      "lawCode": "PEN",
+      "code": "242, 243(a)",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-assault-in-the-third-degree",
+      "officialTitle": "Assault",
+      "lawCode": "PEN",
+      "code": "240",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-assault-with-deadly-weapon",
+      "officialTitle": "Assault with a Deadly Weapon",
+      "lawCode": "PEN",
+      "code": "245(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-assault-on-peace-officer",
+      "officialTitle": "Assault on a Peace Officer",
+      "lawCode": "PEN",
+      "code": "241(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-menacing",
+      "officialTitle": "Criminal Threats",
+      "lawCode": "PEN",
+      "code": "422",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-in-the-first-degree",
+      "officialTitle": "Rape",
+      "lawCode": "PEN",
+      "code": "261",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-sexual-assault-in-the-second-degree",
+      "officialTitle": "Sexual Penetration by a Foreign Object",
+      "lawCode": "PEN",
+      "code": "289",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-sexual-assault-in-the-third-degree",
+      "officialTitle": "Sexual Battery",
+      "lawCode": "PEN",
+      "code": "243.4",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-statutory-rape",
+      "officialTitle": "Unlawful Sexual Intercourse with a Minor",
+      "lawCode": "PEN",
+      "code": "261.5",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-child-sexual-abuse",
+      "officialTitle": "Lewd or Lascivious Act with a Child",
+      "lawCode": "PEN",
+      "code": "288",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-grand-theft-in-the-first-degree",
+      "officialTitle": "Grand Theft",
+      "lawCode": "PEN",
+      "code": "487",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-petty-theft",
+      "officialTitle": "Petty Theft",
+      "lawCode": "PEN",
+      "code": "484, 490.2",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-theft-by-receiving",
+      "officialTitle": "Receiving Stolen Property",
+      "lawCode": "PEN",
+      "code": "496",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-identity-theft",
+      "officialTitle": "Identity Theft",
+      "lawCode": "PEN",
+      "code": "530.5",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-credit-card-fraud",
+      "officialTitle": "Fraudulent Use of an Access Card",
+      "lawCode": "PEN",
+      "code": "484g",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-embezzlement",
+      "officialTitle": "Embezzlement",
+      "lawCode": "PEN",
+      "code": "503",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-shoplifting",
+      "officialTitle": "Shoplifting",
+      "lawCode": "PEN",
+      "code": "459.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-burglary-in-the-first-degree",
+      "officialTitle": "First-Degree Burglary",
+      "lawCode": "PEN",
+      "code": "459, 460(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-burglary-in-the-second-degree",
+      "officialTitle": "Second-Degree Burglary",
+      "lawCode": "PEN",
+      "code": "459, 460(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-robbery-in-the-first-degree",
+      "officialTitle": "First-Degree Robbery",
+      "lawCode": "PEN",
+      "code": "211, 212.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-robbery-in-the-second-degree",
+      "officialTitle": "Second-Degree Robbery",
+      "lawCode": "PEN",
+      "code": "211, 212.5(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-carjacking",
+      "officialTitle": "Carjacking",
+      "lawCode": "PEN",
+      "code": "215",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-possession-of-controlled-substance",
+      "officialTitle": "Possession of a Controlled Substance",
+      "lawCode": "HSC",
+      "code": "11350",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-possession-with-intent-to-distribute",
+      "officialTitle": "Possession for Sale of a Controlled Substance",
+      "lawCode": "HSC",
+      "code": "11351",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-distribution-of-controlled-substance",
+      "officialTitle": "Sale or Transportation of a Controlled Substance",
+      "lawCode": "HSC",
+      "code": "11352",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-manufacturing-controlled-substance",
+      "officialTitle": "Manufacturing a Controlled Substance",
+      "lawCode": "HSC",
+      "code": "11379.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-possession-of-drug-paraphernalia",
+      "officialTitle": "Possession of Drug Paraphernalia",
+      "lawCode": "HSC",
+      "code": "11364",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-maintaining-drug-house",
+      "officialTitle": "Maintaining a Place for Selling or Using Controlled Substances",
+      "lawCode": "HSC",
+      "code": "11366",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-unlawful-carrying-of-weapon",
+      "officialTitle": "Carrying a Concealed Firearm",
+      "lawCode": "PEN",
+      "code": "25400",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-felon-in-possession-of-firearm",
+      "officialTitle": "Possession of a Firearm by a Person Prohibited by Prior Conviction",
+      "lawCode": "PEN",
+      "code": "29800",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-discharge-of-firearm-in-city",
+      "officialTitle": "Negligent Discharge of a Firearm",
+      "lawCode": "PEN",
+      "code": "246.3",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-possession-of-prohibited-weapon",
+      "officialTitle": "Possession of an Assault Weapon",
+      "lawCode": "PEN",
+      "code": "30605",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-check-fraud",
+      "officialTitle": "Making, Drawing, or Uttering a Check with Insufficient Funds",
+      "lawCode": "PEN",
+      "code": "476a",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-insurance-fraud",
+      "officialTitle": "Insurance Fraud",
+      "lawCode": "PEN",
+      "code": "550",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-forgery",
+      "officialTitle": "Forgery",
+      "lawCode": "PEN",
+      "code": "470",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-computer-fraud",
+      "officialTitle": "Unauthorized Computer Access",
+      "lawCode": "PEN",
+      "code": "502",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-public-intoxication",
+      "officialTitle": "Public Intoxication",
+      "lawCode": "PEN",
+      "code": "647(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-disturbing-the-peace",
+      "officialTitle": "Disturbing the Peace",
+      "lawCode": "PEN",
+      "code": "415",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-vandalism",
+      "officialTitle": "Vandalism",
+      "lawCode": "PEN",
+      "code": "594",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-first-offense",
+      "officialTitle": "Driving Under the Influence: First Offense",
+      "lawCode": "VEH",
+      "code": "23152",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-dui-second-offense",
+      "officialTitle": "Driving Under the Influence: Second Offense",
+      "lawCode": "VEH",
+      "code": "23152; 23540",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-third-offense",
+      "officialTitle": "Driving Under the Influence: Third Offense",
+      "lawCode": "VEH",
+      "code": "23152; 23546",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-reckless-driving",
+      "officialTitle": "Reckless Driving",
+      "lawCode": "VEH",
+      "code": "23103",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-driving-without-license",
+      "officialTitle": "Driving Without a Valid License",
+      "lawCode": "VEH",
+      "code": "12500(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-domestic-battery",
+      "officialTitle": "Battery Against a Spouse, Cohabitant, or Dating Partner",
+      "lawCode": "PEN",
+      "code": "243(e)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-fare-evasion",
+      "officialTitle": "Evasion of Payment on Public Transit",
+      "lawCode": "PEN",
+      "code": "640(c)(1), 640(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-prostitution-solicitation",
+      "officialTitle": "Soliciting or Agreeing to Engage in Prostitution",
+      "lawCode": "PEN",
+      "code": "647(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-failure-to-appear",
+      "officialTitle": "Failure to Appear After Release",
+      "lawCode": "PEN",
+      "code": "1320",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-resisting-arrest",
+      "officialTitle": "Resisting, Delaying, or Obstructing an Officer",
+      "lawCode": "PEN",
+      "code": "148(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-protective-order-violation",
+      "officialTitle": "Violation of a Protective Order",
+      "lawCode": "PEN",
+      "code": "273.6",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-open-container",
+      "officialTitle": "Possession of an Open Container in a Motor Vehicle",
+      "lawCode": "VEH",
+      "code": "23222",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-minor-in-possession",
+      "officialTitle": "Minor in Possession of Alcohol",
+      "lawCode": "BPC",
+      "code": "25662",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-false-info-to-police",
+      "officialTitle": "False Identification to a Peace Officer",
+      "lawCode": "PEN",
+      "code": "148.9",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-driving-without-insurance",
+      "officialTitle": "Failure to Maintain Evidence of Financial Responsibility",
+      "lawCode": "VEH",
+      "code": "16028",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-expired-registration",
+      "officialTitle": "Operating an Unregistered Vehicle",
+      "lawCode": "VEH",
+      "code": "4000(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-failure-to-pay-child-support",
+      "officialTitle": "Failure to Provide Child Support",
+      "lawCode": "PEN",
+      "code": "270",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-indecent-exposure",
+      "officialTitle": "Indecent Exposure",
+      "lawCode": "PEN",
+      "code": "314",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-animal-cruelty-misdemeanor",
+      "officialTitle": "Animal Cruelty",
+      "lawCode": "PEN",
+      "code": "597(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-littering",
+      "officialTitle": "Littering",
+      "lawCode": "PEN",
+      "code": "374.4",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-illegal-fireworks",
+      "officialTitle": "Unlawful Fireworks Possession or Discharge",
+      "lawCode": "HSC",
+      "code": "12677",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-conspiracy",
+      "officialTitle": "Criminal Conspiracy",
+      "lawCode": "PEN",
+      "code": "182",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-accessory-after-the-fact",
+      "officialTitle": "Accessory After the Fact",
+      "lawCode": "PEN",
+      "code": "32",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-attempted-murder",
+      "officialTitle": "Attempted Murder",
+      "lawCode": "PEN",
+      "code": "664, 187",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-attempted-robbery",
+      "officialTitle": "Attempted Robbery",
+      "lawCode": "PEN",
+      "code": "664, 211",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-criminal-solicitation",
+      "officialTitle": "Solicitation to Commit a Crime",
+      "lawCode": "PEN",
+      "code": "653f",
+      "selectable": false
+    },
+    {
+      "canonicalId": "ca-money-laundering",
+      "officialTitle": "Money Laundering",
+      "lawCode": "PEN",
+      "code": "186.10",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-vehicular-manslaughter-192-c1",
+      "officialTitle": "Vehicular Manslaughter With Gross Negligence",
+      "lawCode": "PEN",
+      "code": "192(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-vehicular-manslaughter-192-c2",
+      "officialTitle": "Vehicular Manslaughter Without Gross Negligence",
+      "lawCode": "PEN",
+      "code": "192(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-vehicular-manslaughter-192-c3",
+      "officialTitle": "Vehicular Manslaughter for Financial Gain",
+      "lawCode": "PEN",
+      "code": "192(c)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-gross-vehicular-manslaughter-191-5-a",
+      "officialTitle": "Gross Vehicular Manslaughter While Intoxicated",
+      "lawCode": "PEN",
+      "code": "191.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-vehicular-manslaughter-191-5-b",
+      "officialTitle": "Vehicular Manslaughter While Intoxicated",
+      "lawCode": "PEN",
+      "code": "191.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-assault-240",
+      "officialTitle": "Assault",
+      "lawCode": "PEN",
+      "code": "240",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-battery-243-a",
+      "officialTitle": "Battery",
+      "lawCode": "PEN",
+      "code": "243(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a2",
+      "officialTitle": "Rape by Force, Violence, Duress, or Threat",
+      "lawCode": "PEN",
+      "code": "261(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a1",
+      "officialTitle": "Rape of a Person Unable to Consent Due to a Disability",
+      "lawCode": "PEN",
+      "code": "261(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a3",
+      "officialTitle": "Rape of a Person Unable to Resist Due to Intoxication",
+      "lawCode": "PEN",
+      "code": "261(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a4",
+      "officialTitle": "Rape of a Person Unconscious of the Nature of the Act",
+      "lawCode": "PEN",
+      "code": "261(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a5",
+      "officialTitle": "Rape by Mistaken Identity",
+      "lawCode": "PEN",
+      "code": "261(a)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a6",
+      "officialTitle": "Rape by Threat of Future Retaliation",
+      "lawCode": "PEN",
+      "code": "261(a)(6)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rape-261-a7",
+      "officialTitle": "Rape by Threat of Official Authority",
+      "lawCode": "PEN",
+      "code": "261(a)(7)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-sexual-penetration-289-a1a",
+      "officialTitle": "Sexual Penetration by Force or Fear",
+      "lawCode": "PEN",
+      "code": "289(a)(1)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-sexual-penetration-289-a1b",
+      "officialTitle": "Sexual Penetration of a Child Under 14 by Force or Fear",
+      "lawCode": "PEN",
+      "code": "289(a)(1)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-sexual-battery-243-4-a",
+      "officialTitle": "Sexual Battery by Restraint",
+      "lawCode": "PEN",
+      "code": "243.4(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-sexual-battery-243-4-e1",
+      "officialTitle": "Misdemeanor Sexual Battery",
+      "lawCode": "PEN",
+      "code": "243.4(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-unlawful-sexual-intercourse-261-5-b",
+      "officialTitle": "Unlawful Sexual Intercourse With a Minor",
+      "lawCode": "PEN",
+      "code": "261.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-unlawful-sexual-intercourse-261-5-c",
+      "officialTitle": "Unlawful Sexual Intercourse With a Minor, Age-Difference Variant",
+      "lawCode": "PEN",
+      "code": "261.5(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-unlawful-sexual-intercourse-261-5-d",
+      "officialTitle": "Unlawful Sexual Intercourse With a Minor, Felony Variant",
+      "lawCode": "PEN",
+      "code": "261.5(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-lewd-act-child-288-a",
+      "officialTitle": "Lewd or Lascivious Act on a Child Under 14",
+      "lawCode": "PEN",
+      "code": "288(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-lewd-act-child-288-c1",
+      "officialTitle": "Lewd or Lascivious Act on a Child Age 14 or 15",
+      "lawCode": "PEN",
+      "code": "288(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-grand-theft-487-a",
+      "officialTitle": "Grand Theft by Value",
+      "lawCode": "PEN",
+      "code": "487(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-grand-theft-agricultural-487-b1a",
+      "officialTitle": "Grand Theft of Specified Agricultural Crops",
+      "lawCode": "PEN",
+      "code": "487(b)(1)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-grand-theft-firearm-487-d2",
+      "officialTitle": "Grand Theft of a Firearm",
+      "lawCode": "PEN",
+      "code": "487(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-identity-theft-530-5-a",
+      "officialTitle": "Identity Theft",
+      "lawCode": "PEN",
+      "code": "530.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-identity-theft-530-5-c1",
+      "officialTitle": "Acquiring Personal Identifying Information With Intent to Defraud",
+      "lawCode": "PEN",
+      "code": "530.5(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-insurance-fraud-550-a1",
+      "officialTitle": "Insurance Fraud by False Claim",
+      "lawCode": "PEN",
+      "code": "550(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-insurance-fraud-550-b1",
+      "officialTitle": "Insurance Fraud by False Statement",
+      "lawCode": "PEN",
+      "code": "550(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-computer-crime-502-c1",
+      "officialTitle": "Unauthorized Computer Access to Defraud or Obtain Property",
+      "lawCode": "PEN",
+      "code": "502(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-computer-crime-502-c5",
+      "officialTitle": "Unauthorized Computer Damage or Disruption",
+      "lawCode": "PEN",
+      "code": "502(c)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-disturbing-the-peace-415-1",
+      "officialTitle": "Disturbing the Peace by Fighting",
+      "lawCode": "PEN",
+      "code": "415(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-disturbing-the-peace-415-2",
+      "officialTitle": "Disturbing the Peace by Loud or Unreasonable Noise",
+      "lawCode": "PEN",
+      "code": "415(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-disturbing-the-peace-415-3",
+      "officialTitle": "Disturbing the Peace by Offensive Words",
+      "lawCode": "PEN",
+      "code": "415(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-23152-a",
+      "officialTitle": "Driving Under the Influence of Alcohol",
+      "lawCode": "VEH",
+      "code": "23152(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-23152-f",
+      "officialTitle": "Driving Under the Influence of a Drug",
+      "lawCode": "VEH",
+      "code": "23152(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-23152-g",
+      "officialTitle": "Driving Under the Combined Influence of Alcohol and a Drug",
+      "lawCode": "VEH",
+      "code": "23152(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-dui-23152-b",
+      "officialTitle": "Driving With an Alcohol Concentration of 0.08 Percent or More",
+      "lawCode": "VEH",
+      "code": "23152(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-failure-to-appear-1320-a",
+      "officialTitle": "Failure to Appear After Release on Misdemeanor Charge",
+      "lawCode": "PEN",
+      "code": "1320(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-failure-to-appear-1320-b",
+      "officialTitle": "Failure to Appear After Release on Felony Charge",
+      "lawCode": "PEN",
+      "code": "1320(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-protective-order-273-6-a",
+      "officialTitle": "Violation of a Protective Order",
+      "lawCode": "PEN",
+      "code": "273.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-open-container-23222-a",
+      "officialTitle": "Driving With an Open Alcoholic Beverage",
+      "lawCode": "VEH",
+      "code": "23222(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-open-container-23222-b",
+      "officialTitle": "Driving With an Open Cannabis Receptacle",
+      "lawCode": "VEH",
+      "code": "23222(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-indecent-exposure-314-1",
+      "officialTitle": "Indecent Exposure",
+      "lawCode": "PEN",
+      "code": "314(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-illegal-fireworks-12677",
+      "officialTitle": "Unlawful Possession of Dangerous Fireworks Without a Permit",
+      "lawCode": "HSC",
+      "code": "12677",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-conspiracy-182-a1",
+      "officialTitle": "Conspiracy to Commit a Crime",
+      "lawCode": "PEN",
+      "code": "182(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-accessory-after-the-fact-32",
+      "officialTitle": "Accessory After the Fact",
+      "lawCode": "PEN",
+      "code": "32, 33",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-criminal-solicitation-653f-a",
+      "officialTitle": "Solicitation to Commit a Specified Crime",
+      "lawCode": "PEN",
+      "code": "653f(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-criminal-solicitation-653f-b",
+      "officialTitle": "Solicitation to Commit Murder",
+      "lawCode": "PEN",
+      "code": "653f(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-l-1",
+      "officialTitle": "Trespass on cultivated, fenced or posted land: refusing to leave",
+      "lawCode": "PEN",
+      "code": "602(l)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-l-2",
+      "officialTitle": "Trespass on cultivated, fenced or posted land: destroying a posted warning",
+      "lawCode": "PEN",
+      "code": "602(l)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-l-3",
+      "officialTitle": "Trespass on cultivated, fenced or posted land: tampering with a gate lock",
+      "lawCode": "PEN",
+      "code": "602(l)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-l-4",
+      "officialTitle": "Trespass on cultivated, fenced or posted land: discharging a firearm",
+      "lawCode": "PEN",
+      "code": "602(l)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-o",
+      "officialTitle": "Refusing to leave private property not open to the public",
+      "lawCode": "PEN",
+      "code": "602(o)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-q",
+      "officialTitle": "Refusing to leave a public building during closed hours",
+      "lawCode": "PEN",
+      "code": "602(q)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-w",
+      "officialTitle": "Refusing to leave a domestic violence shelter",
+      "lawCode": "PEN",
+      "code": "602(w)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-x-2-a",
+      "officialTitle": "Trespass in a neonatal unit, maternity ward or birthing center: ordinary entry or remaining",
+      "lawCode": "PEN",
+      "code": "602(x)(2)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-x-2-b",
+      "officialTitle": "Trespass in a neonatal unit, maternity ward or birthing center: refusal to leave",
+      "lawCode": "PEN",
+      "code": "602(x)(2)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-x-2-c",
+      "officialTitle": "Trespass in a neonatal unit, maternity ward or birthing center: second or subsequent offense",
+      "lawCode": "PEN",
+      "code": "602(x)(2)(C)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-y",
+      "officialTitle": "Avoiding security screening at a courthouse or government building",
+      "lawCode": "PEN",
+      "code": "602(y)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-597-a",
+      "officialTitle": "Malicious and intentional maiming, torture, wounding or killing of an animal",
+      "lawCode": "PEN",
+      "code": "597(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484e-b",
+      "officialTitle": "Acquiring access cards issued to four or more people within twelve months",
+      "lawCode": "PEN",
+      "code": "484e(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-67-5-a",
+      "officialTitle": "Giving or offering a bribe to a ministerial officer: petty-theft value",
+      "lawCode": "PEN",
+      "code": "67.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-67-5-b",
+      "officialTitle": "Giving or offering a bribe to a ministerial officer: grand-theft value",
+      "lawCode": "PEN",
+      "code": "67.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-68-a",
+      "officialTitle": "Requesting or taking a bribe: executive or ministerial officer",
+      "lawCode": "PEN",
+      "code": "68(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-86",
+      "officialTitle": "Requesting or taking a bribe: legislative officer",
+      "lawCode": "PEN",
+      "code": "86",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-93-a",
+      "officialTitle": "Requesting or taking a bribe: judicial officer, juror or other decision maker",
+      "lawCode": "PEN",
+      "code": "93(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-76-a-1",
+      "officialTitle": "Threatening a covered public official: first conviction",
+      "lawCode": "PEN",
+      "code": "76(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-76-a-2",
+      "officialTitle": "Threatening a covered public official: prior section 76 conviction",
+      "lawCode": "PEN",
+      "code": "76(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4500",
+      "officialTitle": "Assault with malice by a life prisoner: nonfatal branch",
+      "lawCode": "PEN",
+      "code": "4500",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-9-a",
+      "officialTitle": "Battery by gassing in a local detention facility",
+      "lawCode": "PEN",
+      "code": "243.9(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4501-1-a",
+      "officialTitle": "Battery by gassing in a state prison",
+      "lawCode": "PEN",
+      "code": "4501.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4573-6-a",
+      "officialTitle": "Possession of controlled substances or paraphernalia in a penal institution",
+      "lawCode": "PEN",
+      "code": "4573.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4573-a",
+      "officialTitle": "Bringing or sending controlled substances or paraphernalia into a penal institution",
+      "lawCode": "PEN",
+      "code": "4573(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-272-a-1",
+      "officialTitle": "Contributing to a minor's dependency or delinquency",
+      "lawCode": "PEN",
+      "code": "272(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-272-b-1",
+      "officialTitle": "Luring or transporting a child under 14 without parental consent",
+      "lawCode": "PEN",
+      "code": "272(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-415-5-a-1",
+      "officialTitle": "Fighting or challenging to fight on campus",
+      "lawCode": "PEN",
+      "code": "415.5(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-415-5-a-2",
+      "officialTitle": "Disruptive noise on campus",
+      "lawCode": "PEN",
+      "code": "415.5(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-415-5-a-3",
+      "officialTitle": "Immediate violence-provoking words on campus",
+      "lawCode": "PEN",
+      "code": "415.5(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-d-1",
+      "officialTitle": "Financial abuse of an elder or dependent adult: noncaretaker, above $950",
+      "lawCode": "PEN",
+      "code": "368(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-d-2",
+      "officialTitle": "Financial abuse of an elder or dependent adult: noncaretaker, $950 or less",
+      "lawCode": "PEN",
+      "code": "368(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-e-1",
+      "officialTitle": "Financial abuse of an elder or dependent adult: caretaker, above $950",
+      "lawCode": "PEN",
+      "code": "368(e)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-e-2",
+      "officialTitle": "Financial abuse of an elder or dependent adult: caretaker, $950 or less",
+      "lawCode": "PEN",
+      "code": "368(e)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-487-b-3",
+      "officialTitle": "Theft by an employee or agent: aggregate above $950",
+      "lawCode": "PEN",
+      "code": "487(b)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484e-a",
+      "officialTitle": "Fraudulent sale or transfer of an access card",
+      "lawCode": "PEN",
+      "code": "484e(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484e-d",
+      "officialTitle": "Fraudulent acquisition or retention of access-card account information",
+      "lawCode": "PEN",
+      "code": "484e(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-530",
+      "officialTitle": "Receiving another person's property by false personation",
+      "lawCode": "PEN",
+      "code": "530",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-530-5-c-2",
+      "officialTitle": "Fraudulent possession of identifying information: prior conviction",
+      "lawCode": "PEN",
+      "code": "530.5(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-530-5-c-3",
+      "officialTitle": "Fraudulent possession of identifying information: 10 or more people",
+      "lawCode": "PEN",
+      "code": "530.5(c)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-530-5-d-1",
+      "officialTitle": "Fraudulent sale or transfer of identifying information",
+      "lawCode": "PEN",
+      "code": "530.5(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-530-5-d-2",
+      "officialTitle": "Transfer of identifying information known to be intended for unlawful use",
+      "lawCode": "PEN",
+      "code": "530.5(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-2",
+      "officialTitle": "Multiple claims for the same loss or injury",
+      "lawCode": "PEN",
+      "code": "550(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-3",
+      "officialTitle": "Causing or participating in a collision for a fraudulent claim",
+      "lawCode": "PEN",
+      "code": "550(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-4",
+      "officialTitle": "False claim for vehicle theft, damage or conversion",
+      "lawCode": "PEN",
+      "code": "550(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-5",
+      "officialTitle": "Preparing a writing for a fraudulent claim",
+      "lawCode": "PEN",
+      "code": "550(a)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-6",
+      "officialTitle": "False claim for a health-care benefit",
+      "lawCode": "PEN",
+      "code": "550(a)(6)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-7",
+      "officialTitle": "Claim for an unused health-care benefit",
+      "lawCode": "PEN",
+      "code": "550(a)(7)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-8",
+      "officialTitle": "Multiple claims for the same health-care benefit",
+      "lawCode": "PEN",
+      "code": "550(a)(8)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-a-9",
+      "officialTitle": "Health-care undercharges without reconciling overcharges",
+      "lawCode": "PEN",
+      "code": "550(a)(9)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-b-2",
+      "officialTitle": "Preparing a materially false insurance statement",
+      "lawCode": "PEN",
+      "code": "550(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-b-3",
+      "officialTitle": "Concealing an event affecting insurance benefits",
+      "lawCode": "PEN",
+      "code": "550(b)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-550-b-4",
+      "officialTitle": "False California residency statement for auto insurance",
+      "lawCode": "PEN",
+      "code": "550(b)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-666-a",
+      "officialTitle": "Petty theft with a qualifying prior conviction and custody",
+      "lawCode": "PEN",
+      "code": "666(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-666-1-a-1",
+      "officialTitle": "Petty theft or shoplifting with two or more qualifying prior convictions",
+      "lawCode": "PEN",
+      "code": "666.1(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10851-a",
+      "officialTitle": "Unlawful vehicle taking above $950 or posttheft driving",
+      "lawCode": "VEH",
+      "code": "10851(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-403",
+      "officialTitle": "Willfully disturbing or breaking up a lawful public meeting",
+      "lawCode": "PEN",
+      "code": "403",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-404-6-a",
+      "officialTitle": "Incitement to riot",
+      "lawCode": "PEN",
+      "code": "404.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-404-6-c",
+      "officialTitle": "Inciting a prison or jail riot resulting in serious bodily injury",
+      "lawCode": "PEN",
+      "code": "404.6(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-405",
+      "officialTitle": "Participating in a riot",
+      "lawCode": "PEN",
+      "code": "405",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-408",
+      "officialTitle": "Participating in a rout or unlawful assembly",
+      "lawCode": "PEN",
+      "code": "408",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-409",
+      "officialTitle": "Remaining after a lawful dispersal order at a riot, rout or unlawful assembly",
+      "lawCode": "PEN",
+      "code": "409",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-416-a",
+      "officialTitle": "Refusal to disperse with intent to disturb the peace or commit a crime",
+      "lawCode": "PEN",
+      "code": "416(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-591",
+      "officialTitle": "Damaging or obstructing telephone, electrical or other specified lines",
+      "lawCode": "PEN",
+      "code": "591",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-601-a-1",
+      "officialTitle": "Trespass after a credible threat: residence",
+      "lawCode": "PEN",
+      "code": "601(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-601-a-2",
+      "officialTitle": "Trespass after a credible threat: workplace",
+      "lawCode": "PEN",
+      "code": "601(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-k",
+      "officialTitle": "Trespass to damage property or interfere with lawful business",
+      "lawCode": "PEN",
+      "code": "602(k)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-m",
+      "officialTitle": "Trespass by entering and occupying property without consent",
+      "lawCode": "PEN",
+      "code": "602(m)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-5-a",
+      "officialTitle": "Unauthorized entry of a dwelling",
+      "lawCode": "PEN",
+      "code": "602.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-602-5-b",
+      "officialTitle": "Unauthorized entry of a dwelling: resident or authorized person present",
+      "lawCode": "PEN",
+      "code": "602.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-399-a",
+      "officialTitle": "Failure to control a dangerous animal causing death",
+      "lawCode": "PEN",
+      "code": "399(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-399-b",
+      "officialTitle": "Failure to control a dangerous animal causing serious bodily injury",
+      "lawCode": "PEN",
+      "code": "399(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-399-5-a",
+      "officialTitle": "Failure to use ordinary care in controlling a trained attack dog",
+      "lawCode": "PEN",
+      "code": "399.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-bpc-25658-a",
+      "officialTitle": "Selling or furnishing alcohol to a person under 21",
+      "lawCode": "BPC",
+      "code": "25658(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-bpc-25658-b",
+      "officialTitle": "Underage purchase of alcohol or consumption on licensed premises",
+      "lawCode": "BPC",
+      "code": "25658(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-bpc-25658-c",
+      "officialTitle": "Supplying alcohol to a person under 21 who causes great bodily injury or death",
+      "lawCode": "BPC",
+      "code": "25658(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-bpc-25658-d",
+      "officialTitle": "Licensee knowingly permitting underage alcohol consumption",
+      "lawCode": "BPC",
+      "code": "25658(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-bpc-25658-2-a",
+      "officialTitle": "Parent permitting underage substance use and driving that causes a collision",
+      "lawCode": "BPC",
+      "code": "25658.2(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-1",
+      "officialTitle": "Pool selling or bookmaking",
+      "lawCode": "PEN",
+      "code": "337a(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-2",
+      "officialTitle": "Keeping a place equipped for recording bets",
+      "lawCode": "PEN",
+      "code": "337a(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-3",
+      "officialTitle": "Receiving, holding or forwarding stakes for bets",
+      "lawCode": "PEN",
+      "code": "337a(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-4",
+      "officialTitle": "Recording or registering bets",
+      "lawCode": "PEN",
+      "code": "337a(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-5",
+      "officialTitle": "Permitting premises to be used for prohibited betting activities",
+      "lawCode": "PEN",
+      "code": "337a(a)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-337a-a-6",
+      "officialTitle": "Making, offering or accepting bets on contests",
+      "lawCode": "PEN",
+      "code": "337a(a)(6)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-336-9-a",
+      "officialTitle": "Participation in a qualifying noncommercial betting pool",
+      "lawCode": "PEN",
+      "code": "336.9(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-632-a",
+      "officialTitle": "Eavesdropping on or recording a confidential communication without consent",
+      "lawCode": "PEN",
+      "code": "632(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-115-a",
+      "officialTitle": "Procuring or offering a false or forged instrument for public filing",
+      "lawCode": "PEN",
+      "code": "115(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-548-a",
+      "officialTitle": "Injuring, destroying, concealing or disposing of insured property to defraud the insurer",
+      "lawCode": "PEN",
+      "code": "548(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-532a-1",
+      "officialTitle": "Making a false written financial statement to obtain a benefit",
+      "lawCode": "PEN",
+      "code": "532a(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-532a-2",
+      "officialTitle": "Obtaining a benefit through a false written financial statement",
+      "lawCode": "PEN",
+      "code": "532a(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-532a-3",
+      "officialTitle": "Reaffirming a financial statement that is false when reaffirmed",
+      "lawCode": "PEN",
+      "code": "532a(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-532a-4",
+      "officialTitle": "False financial statement using fictitious or impersonated identity",
+      "lawCode": "PEN",
+      "code": "532a(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-529-a-1",
+      "officialTitle": "False personation: becoming bail or surety",
+      "lawCode": "PEN",
+      "code": "529(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-529-a-2",
+      "officialTitle": "False personation: authenticating a written instrument",
+      "lawCode": "PEN",
+      "code": "529(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-529-a-3",
+      "officialTitle": "False personation: an additional act creating potential liability or benefit",
+      "lawCode": "PEN",
+      "code": "529(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-1",
+      "officialTitle": "Misappropriation of public money: unauthorized appropriation",
+      "lawCode": "PEN",
+      "code": "424(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-2",
+      "officialTitle": "Misappropriation of public money: unauthorized loans, profits or use",
+      "lawCode": "PEN",
+      "code": "424(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-3",
+      "officialTitle": "Misappropriation of public money: false accounts or entries",
+      "lawCode": "PEN",
+      "code": "424(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-4",
+      "officialTitle": "Misappropriation of public money: fraudulent alteration or destruction of accounts",
+      "lawCode": "PEN",
+      "code": "424(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-5",
+      "officialTitle": "Misappropriation of public money: refusing payment on authorized demand",
+      "lawCode": "PEN",
+      "code": "424(a)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-6",
+      "officialTitle": "Misappropriation of public money: failing a legally required transfer",
+      "lawCode": "PEN",
+      "code": "424(a)(6)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-424-a-7",
+      "officialTitle": "Misappropriation of public money: refusing payment to an authorized recipient",
+      "lawCode": "PEN",
+      "code": "424(a)(7)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19701-a",
+      "officialTitle": "Repeated failure to file, or false tax filings or information",
+      "lawCode": "RTC",
+      "code": "19701(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19701-b",
+      "officialTitle": "Aiding evasion through omitted or false tax filings",
+      "lawCode": "RTC",
+      "code": "19701(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19701-c",
+      "officialTitle": "Willfully failing to pay required estimated tax or tax",
+      "lawCode": "RTC",
+      "code": "19701(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19706",
+      "officialTitle": "Willful nonfiling or false tax information with intent to evade",
+      "lawCode": "RTC",
+      "code": "19706",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-1",
+      "officialTitle": "Signing a materially false tax document under penalty of perjury",
+      "lawCode": "RTC",
+      "code": "19705(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-2",
+      "officialTitle": "Willfully helping prepare or present materially false tax documents",
+      "lawCode": "RTC",
+      "code": "19705(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-3",
+      "officialTitle": "Falsely executing tax bonds, permits or required documents",
+      "lawCode": "RTC",
+      "code": "19705(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-4",
+      "officialTitle": "Concealing property to evade tax assessment or collection",
+      "lawCode": "RTC",
+      "code": "19705(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-5-a",
+      "officialTitle": "Concealing taxpayer property during a settlement, agreement or compromise",
+      "lawCode": "RTC",
+      "code": "19705(a)(5)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19705-a-5-b",
+      "officialTitle": "Withholding or falsifying financial records during a tax settlement",
+      "lawCode": "RTC",
+      "code": "19705(a)(5)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19708",
+      "officialTitle": "Willfully failing to collect, account for or pay over required tax",
+      "lawCode": "RTC",
+      "code": "19708",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-rtc-19709",
+      "officialTitle": "Willfully failing to withhold or pay over required tax",
+      "lawCode": "RTC",
+      "code": "19709",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-451-a",
+      "officialTitle": "Arson: causing great bodily injury",
+      "lawCode": "PEN",
+      "code": "451(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-451-b",
+      "officialTitle": "Arson: burning an inhabited structure or inhabited property",
+      "lawCode": "PEN",
+      "code": "451(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-451-c",
+      "officialTitle": "Arson: burning a structure or forest land",
+      "lawCode": "PEN",
+      "code": "451(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-451-d",
+      "officialTitle": "Arson: burning property",
+      "lawCode": "PEN",
+      "code": "451(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-451-5-a",
+      "officialTitle": "Aggravated arson",
+      "lawCode": "PEN",
+      "code": "451.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-452-a",
+      "officialTitle": "Unlawfully causing a fire: causing great bodily injury",
+      "lawCode": "PEN",
+      "code": "452(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-452-b",
+      "officialTitle": "Unlawfully causing a fire: burning an inhabited structure or inhabited property",
+      "lawCode": "PEN",
+      "code": "452(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-452-c",
+      "officialTitle": "Unlawfully causing a fire: burning a structure or forest land",
+      "lawCode": "PEN",
+      "code": "452(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-452-d",
+      "officialTitle": "Unlawfully causing a fire of property",
+      "lawCode": "PEN",
+      "code": "452(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-453-a",
+      "officialTitle": "Possessing, making or transferring incendiary material with intent to burn",
+      "lawCode": "PEN",
+      "code": "453(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-455-a",
+      "officialTitle": "Attempting arson",
+      "lawCode": "PEN",
+      "code": "455(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-213-a-1-A",
+      "officialTitle": "First degree robbery in concert in an inhabited dwelling",
+      "lawCode": "PEN",
+      "code": "213(a)(1)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-465-a",
+      "officialTitle": "Forcibly entering a vehicle with intent to commit theft or a felony",
+      "lawCode": "PEN",
+      "code": "465(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-466-a",
+      "officialTitle": "Possessing burglary tools or making unauthorized keys or instruments",
+      "lawCode": "PEN",
+      "code": "466(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-520",
+      "officialTitle": "Extorting property or consideration by force or threat",
+      "lawCode": "PEN",
+      "code": "520",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-521",
+      "officialTitle": "Extortion under color of official right",
+      "lawCode": "PEN",
+      "code": "521",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-522",
+      "officialTitle": "Obtaining a signature by extortion",
+      "lawCode": "PEN",
+      "code": "522",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-523-a",
+      "officialTitle": "Sending a threatening writing with intent to extort",
+      "lawCode": "PEN",
+      "code": "523(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-523-b-1",
+      "officialTitle": "Introducing ransomware with intent to extort",
+      "lawCode": "PEN",
+      "code": "523(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-524",
+      "officialTitle": "Attempting extortion by threat",
+      "lawCode": "PEN",
+      "code": "524",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-526",
+      "officialTitle": "Delivering false court process to obtain property or consideration",
+      "lawCode": "PEN",
+      "code": "526",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-527",
+      "officialTitle": "Making or distributing forms falsely presented as court process",
+      "lawCode": "PEN",
+      "code": "527",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-67",
+      "officialTitle": "Giving or offering a bribe to an executive officer",
+      "lawCode": "PEN",
+      "code": "67",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-137-a",
+      "officialTitle": "Bribing a witness or person providing crime information",
+      "lawCode": "PEN",
+      "code": "137(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-137-b",
+      "officialTitle": "Using force, threats or fraud to influence testimony or crime information",
+      "lawCode": "PEN",
+      "code": "137(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-137-c",
+      "officialTitle": "Knowingly inducing false or withheld testimony or crime information",
+      "lawCode": "PEN",
+      "code": "137(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-138-a",
+      "officialTitle": "Bribing a witness not to attend a proceeding",
+      "lawCode": "PEN",
+      "code": "138(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-138-b",
+      "officialTitle": "Witness receiving or offering to receive a bribe",
+      "lawCode": "PEN",
+      "code": "138(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-a-1",
+      "officialTitle": "Preventing or dissuading witness attendance or testimony",
+      "lawCode": "PEN",
+      "code": "136.1(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-a-2",
+      "officialTitle": "Attempting to prevent witness attendance or testimony",
+      "lawCode": "PEN",
+      "code": "136.1(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-b-1",
+      "officialTitle": "Attempting to prevent a victim or witness from reporting a crime",
+      "lawCode": "PEN",
+      "code": "136.1(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-b-2",
+      "officialTitle": "Attempting to prevent prosecution or assistance in prosecution",
+      "lawCode": "PEN",
+      "code": "136.1(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-b-3",
+      "officialTitle": "Attempting to prevent an arrest connected with victimization",
+      "lawCode": "PEN",
+      "code": "136.1(b)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-136-1-c",
+      "officialTitle": "Aggravated intimidation of a witness or victim",
+      "lawCode": "PEN",
+      "code": "136.1(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-140-a",
+      "officialTitle": "Retaliating against a witness, victim or person assisting law enforcement",
+      "lawCode": "PEN",
+      "code": "140(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-141-a",
+      "officialTitle": "Wrongfully altering, planting or concealing evidence",
+      "lawCode": "PEN",
+      "code": "141(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-141-b",
+      "officialTitle": "Evidence tampering by a peace officer",
+      "lawCode": "PEN",
+      "code": "141(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-141-c",
+      "officialTitle": "Bad-faith evidence alteration or withholding by a prosecuting attorney",
+      "lawCode": "PEN",
+      "code": "141(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-118-a",
+      "officialTitle": "Perjury under oath or penalty of perjury",
+      "lawCode": "PEN",
+      "code": "118(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-118a",
+      "officialTitle": "Perjury by false affidavit concerning future testimony",
+      "lawCode": "PEN",
+      "code": "118a",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-69-a",
+      "officialTitle": "Deterring or forcibly resisting an executive officer",
+      "lawCode": "PEN",
+      "code": "69(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-148-b",
+      "officialTitle": "Taking a nonfirearm weapon while resisting an officer",
+      "lawCode": "PEN",
+      "code": "148(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-148-c",
+      "officialTitle": "Taking a firearm while resisting an officer",
+      "lawCode": "PEN",
+      "code": "148(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-148-d",
+      "officialTitle": "Taking or attempting to take an officer's firearm",
+      "lawCode": "PEN",
+      "code": "148(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-148-10-a",
+      "officialTitle": "Resisting a peace officer causing death or serious bodily injury",
+      "lawCode": "PEN",
+      "code": "148.10(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-166-a-4",
+      "officialTitle": "Willfully disobeying a lawful court order",
+      "lawCode": "PEN",
+      "code": "166(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-166-c-1",
+      "officialTitle": "Knowingly violating a qualifying protective or stay-away order",
+      "lawCode": "PEN",
+      "code": "166(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-166-c-4",
+      "officialTitle": "Repeat protective-order violation involving violence or a credible threat",
+      "lawCode": "PEN",
+      "code": "166(c)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273-6-b",
+      "officialTitle": "Protective-order violation causing physical injury",
+      "lawCode": "PEN",
+      "code": "273.6(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273-6-d",
+      "officialTitle": "Repeat protective-order violation with violence or a credible threat",
+      "lawCode": "PEN",
+      "code": "273.6(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273-6-e",
+      "officialTitle": "Repeat protective-order violation causing physical injury",
+      "lawCode": "PEN",
+      "code": "273.6(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4501-a",
+      "officialTitle": "Assault by a state prisoner with a deadly weapon or instrument",
+      "lawCode": "PEN",
+      "code": "4501(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4501-b",
+      "officialTitle": "Assault by a state prisoner by force likely to produce great bodily injury",
+      "lawCode": "PEN",
+      "code": "4501(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4501-5",
+      "officialTitle": "Battery by a state prisoner on a nonprisoner",
+      "lawCode": "PEN",
+      "code": "4501.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4503",
+      "officialTitle": "Holding a hostage or forcibly detaining a person in prison",
+      "lawCode": "PEN",
+      "code": "4503",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4502-a",
+      "officialTitle": "Possessing a listed weapon or ammunition in penal custody",
+      "lawCode": "PEN",
+      "code": "4502(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4502-b",
+      "officialTitle": "Manufacturing a listed weapon or ammunition in penal custody",
+      "lawCode": "PEN",
+      "code": "4502(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4574-a",
+      "officialTitle": "Bringing weapons into custody facilities or possessing them in jail",
+      "lawCode": "PEN",
+      "code": "4574(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4574-b",
+      "officialTitle": "Bringing tear gas into a custody facility resulting in release or use",
+      "lawCode": "PEN",
+      "code": "4574(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4574-c",
+      "officialTitle": "Bringing tear gas into a custody facility without the aggravated conditions",
+      "lawCode": "PEN",
+      "code": "4574(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4532-a-1",
+      "officialTitle": "Escape without force or violence from misdemeanor custody",
+      "lawCode": "PEN",
+      "code": "4532(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4532-a-2",
+      "officialTitle": "Escape by force or violence from misdemeanor custody",
+      "lawCode": "PEN",
+      "code": "4532(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4532-b-1",
+      "officialTitle": "Escape without force or violence from felony custody or a qualifying juvenile-court commitment",
+      "lawCode": "PEN",
+      "code": "4532(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-4532-b-2",
+      "officialTitle": "Escape by force or violence from felony custody or a qualifying juvenile-court commitment",
+      "lawCode": "PEN",
+      "code": "4532(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-836-6-a",
+      "officialTitle": "Escape after judicial remand",
+      "lawCode": "PEN",
+      "code": "836.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-836-6-b",
+      "officialTitle": "Escape following a lawful arrest",
+      "lawCode": "PEN",
+      "code": "836.6(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-1320-5",
+      "officialTitle": "Willful failure to appear while on bail in a felony case",
+      "lawCode": "PEN",
+      "code": "1320.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-a-1",
+      "officialTitle": "Firearm possession after a listed misdemeanor conviction",
+      "lawCode": "PEN",
+      "code": "29805(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-a-2",
+      "officialTitle": "Firearm possession with a known outstanding listed-misdemeanor warrant",
+      "lawCode": "PEN",
+      "code": "29805(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-b",
+      "officialTitle": "Firearm possession after a qualifying domestic-injury misdemeanor",
+      "lawCode": "PEN",
+      "code": "29805(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-c",
+      "officialTitle": "Firearm possession after a qualifying firearm-storage misdemeanor",
+      "lawCode": "PEN",
+      "code": "29805(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-d",
+      "officialTitle": "Firearm possession after a qualifying abuse or firearm-identification misdemeanor",
+      "lawCode": "PEN",
+      "code": "29805(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-e",
+      "officialTitle": "Firearm possession after a qualifying misdemeanor firearm-prohibition conviction",
+      "lawCode": "PEN",
+      "code": "29805(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-f",
+      "officialTitle": "Firearm possession after a qualifying carrying misdemeanor",
+      "lawCode": "PEN",
+      "code": "29805(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-g",
+      "officialTitle": "Firearm possession after a qualifying animal-cruelty misdemeanor",
+      "lawCode": "PEN",
+      "code": "29805(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29805-h",
+      "officialTitle": "Firearm possession after a qualifying weapon misdemeanor from 2026 onward",
+      "lawCode": "PEN",
+      "code": "29805(h)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29815-a",
+      "officialTitle": "Firearm possession contrary to an express probation condition",
+      "lawCode": "PEN",
+      "code": "29815(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29820-b",
+      "officialTitle": "Firearm ownership or possession before age 30 after a qualifying juvenile adjudication",
+      "lawCode": "PEN",
+      "code": "29820(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29825-a",
+      "officialTitle": "Purchasing or receiving a firearm contrary to a known protective order",
+      "lawCode": "PEN",
+      "code": "29825(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29825-b",
+      "officialTitle": "Owning or possessing a firearm contrary to a known protective order",
+      "lawCode": "PEN",
+      "code": "29825(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29900-a-1",
+      "officialTitle": "Firearm possession after a listed violent-offense conviction",
+      "lawCode": "PEN",
+      "code": "29900(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29900-b-1",
+      "officialTitle": "Firearm possession after a listed conviction following juvenile transfer to adult court",
+      "lawCode": "PEN",
+      "code": "29900(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29800-a-2",
+      "officialTitle": "Firearm possession after two qualifying firearm-brandishing convictions",
+      "lawCode": "PEN",
+      "code": "29800(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29800-a-3",
+      "officialTitle": "Firearm possession with a known outstanding qualifying warrant",
+      "lawCode": "PEN",
+      "code": "29800(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-29800-b",
+      "officialTitle": "Firearm possession after a qualifying conviction following juvenile transfer",
+      "lawCode": "PEN",
+      "code": "29800(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-30305-a-1",
+      "officialTitle": "Ammunition possession by a person with a qualifying firearm prohibition",
+      "lawCode": "PEN",
+      "code": "30305(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-30305-b-1",
+      "officialTitle": "Ammunition possession contrary to a qualifying gang injunction",
+      "lawCode": "PEN",
+      "code": "30305(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-22810-g-1",
+      "officialTitle": "Using tear gas or a tear-gas weapon other than in self-defense",
+      "lawCode": "PEN",
+      "code": "22810(g)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25400-a-1",
+      "officialTitle": "Carrying a concealed firearm within a controlled vehicle",
+      "lawCode": "PEN",
+      "code": "25400(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25400-a-2",
+      "officialTitle": "Carrying a concealed firearm on the person",
+      "lawCode": "PEN",
+      "code": "25400(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25400-a-3",
+      "officialTitle": "Causing a concealed firearm to be carried within an occupied vehicle",
+      "lawCode": "PEN",
+      "code": "25400(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-646-9-a",
+      "officialTitle": "Stalking",
+      "lawCode": "PEN",
+      "code": "646.9(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-646-9-b",
+      "officialTitle": "Stalking while a protective order is in effect",
+      "lawCode": "PEN",
+      "code": "646.9(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-646-9-c-1",
+      "officialTitle": "Stalking after a specified felony conviction",
+      "lawCode": "PEN",
+      "code": "646.9(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-646-9-c-2",
+      "officialTitle": "Stalking after a felony stalking conviction",
+      "lawCode": "PEN",
+      "code": "646.9(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-422-6-a",
+      "officialTitle": "Interfering with civil rights by force or threat",
+      "lawCode": "PEN",
+      "code": "422.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-422-6-b",
+      "officialTitle": "Interfering with civil rights by damaging property",
+      "lawCode": "PEN",
+      "code": "422.6(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-11411-b",
+      "officialTitle": "Hanging a noose to terrorize",
+      "lawCode": "PEN",
+      "code": "11411(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-11411-c",
+      "officialTitle": "Displaying a symbol to terrorize",
+      "lawCode": "PEN",
+      "code": "11411(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-11411-d",
+      "officialTitle": "Burning or desecrating a religious symbol to terrorize",
+      "lawCode": "PEN",
+      "code": "11411(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-11412",
+      "officialTitle": "Interfering with religious exercise by a direct threat",
+      "lawCode": "PEN",
+      "code": "11412",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-11413-a",
+      "officialTitle": "Terrorizing by explosive device or arson at a specified place",
+      "lawCode": "PEN",
+      "code": "11413(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18710-a",
+      "officialTitle": "Possession of a destructive device",
+      "lawCode": "PEN",
+      "code": "18710(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18715-a",
+      "officialTitle": "Possessing an explosive or destructive device at a specified place",
+      "lawCode": "PEN",
+      "code": "18715(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18720",
+      "officialTitle": "Possession of materials with intent to make a destructive device or explosive",
+      "lawCode": "PEN",
+      "code": "18720",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18725-a",
+      "officialTitle": "Carrying an explosive on passenger transport",
+      "lawCode": "PEN",
+      "code": "18725(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18725-b",
+      "officialTitle": "Carrying or placing an explosive in baggage aboard passenger transport",
+      "lawCode": "PEN",
+      "code": "18725(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18725-c",
+      "officialTitle": "Placing an explosive in baggage checked with a common carrier",
+      "lawCode": "PEN",
+      "code": "18725(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18730",
+      "officialTitle": "Sale, offer for sale or transport of a destructive device",
+      "lawCode": "PEN",
+      "code": "18730",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18740",
+      "officialTitle": "Destructive device or explosive with intent to injure, intimidate or damage",
+      "lawCode": "PEN",
+      "code": "18740",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18745",
+      "officialTitle": "Exploding or attempting to explode a device with intent to murder",
+      "lawCode": "PEN",
+      "code": "18745",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18750",
+      "officialTitle": "Exploding a device causing bodily injury",
+      "lawCode": "PEN",
+      "code": "18750",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18755-a",
+      "officialTitle": "Exploding a device causing death",
+      "lawCode": "PEN",
+      "code": "18755(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-18755-b",
+      "officialTitle": "Exploding a device causing mayhem or great bodily injury",
+      "lawCode": "PEN",
+      "code": "18755(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-a-1",
+      "officialTitle": "Drawing or exhibiting a deadly weapon other than a firearm",
+      "lawCode": "PEN",
+      "code": "417(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-a-2-a",
+      "officialTitle": "Drawing or exhibiting a concealable firearm in public",
+      "lawCode": "PEN",
+      "code": "417(a)(2)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-a-2-b",
+      "officialTitle": "Drawing or exhibiting a firearm: other cases",
+      "lawCode": "PEN",
+      "code": "417(a)(2)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-b",
+      "officialTitle": "Drawing or exhibiting a loaded firearm at a child-care or youth facility",
+      "lawCode": "PEN",
+      "code": "417(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-c",
+      "officialTitle": "Drawing or exhibiting a firearm in the immediate presence of a peace officer",
+      "lawCode": "PEN",
+      "code": "417(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-d",
+      "officialTitle": "Drawing or exhibiting a weapon while another person cleans graffiti",
+      "lawCode": "PEN",
+      "code": "417(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-3",
+      "officialTitle": "Threatening display of a firearm to a motor-vehicle occupant",
+      "lawCode": "PEN",
+      "code": "417.3",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-4",
+      "officialTitle": "Threatening display of an imitation firearm",
+      "lawCode": "PEN",
+      "code": "417.4",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-417-8",
+      "officialTitle": "Drawing or exhibiting a weapon to resist arrest or detention",
+      "lawCode": "PEN",
+      "code": "417.8",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-26100-a",
+      "officialTitle": "Knowingly allowing an unlawful firearm in a vehicle",
+      "lawCode": "PEN",
+      "code": "26100(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-26100-b",
+      "officialTitle": "Knowingly allowing discharge of a firearm from a vehicle",
+      "lawCode": "PEN",
+      "code": "26100(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-26100-c",
+      "officialTitle": "Discharging a firearm from a vehicle at a person outside a vehicle",
+      "lawCode": "PEN",
+      "code": "26100(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-26100-d",
+      "officialTitle": "Discharging a firearm from a motor vehicle",
+      "lawCode": "PEN",
+      "code": "26100(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-17500",
+      "officialTitle": "Having a deadly weapon with intent to assault",
+      "lawCode": "PEN",
+      "code": "17500",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25800-a",
+      "officialTitle": "Armed criminal action",
+      "lawCode": "PEN",
+      "code": "25800(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25100-a",
+      "officialTitle": "Criminal storage of a firearm in the first degree",
+      "lawCode": "PEN",
+      "code": "25100(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25100-b",
+      "officialTitle": "Criminal storage of a firearm in the second degree",
+      "lawCode": "PEN",
+      "code": "25100(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25100-c",
+      "officialTitle": "Criminal storage of a firearm in the third degree",
+      "lawCode": "PEN",
+      "code": "25100(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25200-a",
+      "officialTitle": "Storage allowing a child or prohibited person to carry a firearm off premises",
+      "lawCode": "PEN",
+      "code": "25200(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-25200-b",
+      "officialTitle": "Storage allowing a child or prohibited person to carry a firearm to school",
+      "lawCode": "PEN",
+      "code": "25200(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-4-b",
+      "officialTitle": "Sexual battery: institutionalized person",
+      "lawCode": "PEN",
+      "code": "243.4(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-4-c",
+      "officialTitle": "Sexual battery: fraudulent professional purpose",
+      "lawCode": "PEN",
+      "code": "243.4(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-4-d",
+      "officialTitle": "Sexual battery: compelled touching or masturbation",
+      "lawCode": "PEN",
+      "code": "243.4(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-3-a",
+      "officialTitle": "Contacting or attempting to contact a minor with intent to commit a listed offense",
+      "lawCode": "PEN",
+      "code": "288.3(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-647-6-a-1",
+      "officialTitle": "Annoying or molesting a child",
+      "lawCode": "PEN",
+      "code": "647.6(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-647-6-a-2",
+      "officialTitle": "Sexually motivated conduct toward an adult believed to be a child",
+      "lawCode": "PEN",
+      "code": "647.6(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-647-6-b",
+      "officialTitle": "Annoying or molesting a child after unauthorized dwelling entry",
+      "lawCode": "PEN",
+      "code": "647.6(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-1-a",
+      "officialTitle": "Distribution of obscene sexual matter depicting minors",
+      "lawCode": "PEN",
+      "code": "311.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-2-a",
+      "officialTitle": "Distribution of obscene matter",
+      "lawCode": "PEN",
+      "code": "311.2(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-2-c-1",
+      "officialTitle": "Distribution of sexual matter depicting minors to an adult",
+      "lawCode": "PEN",
+      "code": "311.2(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-2-d-1",
+      "officialTitle": "Distribution of sexual matter depicting minors to a minor",
+      "lawCode": "PEN",
+      "code": "311.2(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-4-a",
+      "officialTitle": "Using a minor to assist with obscene-matter activity",
+      "lawCode": "PEN",
+      "code": "311.4(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-4-b",
+      "officialTitle": "Using a minor in sexual material for commercial purposes",
+      "lawCode": "PEN",
+      "code": "311.4(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-4-c",
+      "officialTitle": "Using a minor in sexual material: noncommercial-purpose proof not required",
+      "lawCode": "PEN",
+      "code": "311.4(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-11-a-1",
+      "officialTitle": "Possession of child sexual abuse material: actual-minor material",
+      "lawCode": "PEN",
+      "code": "311.11(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-11-a-2",
+      "officialTitle": "Possession of child sexual abuse material: obscene apparent-minor or synthetic material",
+      "lawCode": "PEN",
+      "code": "311.11(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-11-b",
+      "officialTitle": "Possession of child sexual abuse material with a qualifying prior",
+      "lawCode": "PEN",
+      "code": "311.11(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-11-c-1",
+      "officialTitle": "Possession of child sexual abuse material: specified quantity and young-child images",
+      "lawCode": "PEN",
+      "code": "311.11(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-11-c-2",
+      "officialTitle": "Possession of child sexual abuse material: specified sadism or masochism",
+      "lawCode": "PEN",
+      "code": "311.11(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-290-b",
+      "officialTitle": "Failure to register after coming into or changing residence",
+      "lawCode": "PEN",
+      "code": "290(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-290-012-a",
+      "officialTitle": "Failure to update annual sex-offender registration",
+      "lawCode": "PEN",
+      "code": "290.012(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-290-011-a",
+      "officialTitle": "Failure to complete the required 30-day transient registration update",
+      "lawCode": "PEN",
+      "code": "290.011(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-290-012-b",
+      "officialTitle": "Failure to verify 90-day registration after sexually violent predator adjudication",
+      "lawCode": "PEN",
+      "code": "290.012(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-311-6",
+      "officialTitle": "Obscene live conduct before an audience",
+      "lawCode": "PEN",
+      "code": "311.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-285",
+      "officialTitle": "Incest",
+      "lawCode": "PEN",
+      "code": "285",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-5-a",
+      "officialTitle": "Sexual abuse of an animal",
+      "lawCode": "PEN",
+      "code": "286.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-b-1",
+      "officialTitle": "Sodomy: person under 18",
+      "lawCode": "PEN",
+      "code": "286(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-b-2",
+      "officialTitle": "Sodomy: defendant over 21 and person under 16",
+      "lawCode": "PEN",
+      "code": "286(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-c-1",
+      "officialTitle": "Sodomy: child under 14 and age gap over ten years",
+      "lawCode": "PEN",
+      "code": "286(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-c-2-a",
+      "officialTitle": "Sodomy: force or fear",
+      "lawCode": "PEN",
+      "code": "286(c)(2)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-c-2-b",
+      "officialTitle": "Sodomy: force or fear, child under 14",
+      "lawCode": "PEN",
+      "code": "286(c)(2)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-c-2-c",
+      "officialTitle": "Sodomy: force or fear, minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "286(c)(2)(C)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-c-3",
+      "officialTitle": "Sodomy: threat of future retaliation",
+      "lawCode": "PEN",
+      "code": "286(c)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-d-1",
+      "officialTitle": "Sodomy: acting in concert",
+      "lawCode": "PEN",
+      "code": "286(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-d-2",
+      "officialTitle": "Sodomy: acting in concert, child under 14",
+      "lawCode": "PEN",
+      "code": "286(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-d-3",
+      "officialTitle": "Sodomy: acting in concert, minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "286(d)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-f",
+      "officialTitle": "Sodomy: person unconscious of the act",
+      "lawCode": "PEN",
+      "code": "286(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-g",
+      "officialTitle": "Sodomy: person incapable of legal consent",
+      "lawCode": "PEN",
+      "code": "286(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-h",
+      "officialTitle": "Sodomy: incapacity with both people confined in a treatment facility",
+      "lawCode": "PEN",
+      "code": "286(h)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-i",
+      "officialTitle": "Sodomy: person prevented from resisting by intoxication",
+      "lawCode": "PEN",
+      "code": "286(i)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-j",
+      "officialTitle": "Sodomy: fraudulent impersonation of a known person",
+      "lawCode": "PEN",
+      "code": "286(j)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-286-k",
+      "officialTitle": "Sodomy: threatened official arrest, incarceration or deportation",
+      "lawCode": "PEN",
+      "code": "286(k)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-b-1",
+      "officialTitle": "Oral copulation: person under 18",
+      "lawCode": "PEN",
+      "code": "287(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-b-2",
+      "officialTitle": "Oral copulation: defendant over 21 and person under 16",
+      "lawCode": "PEN",
+      "code": "287(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-c-1",
+      "officialTitle": "Oral copulation: child under 14 and age gap over ten years",
+      "lawCode": "PEN",
+      "code": "287(c)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-c-2-a",
+      "officialTitle": "Oral copulation: force or fear",
+      "lawCode": "PEN",
+      "code": "287(c)(2)(A)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-c-2-b",
+      "officialTitle": "Oral copulation: force or fear, child under 14",
+      "lawCode": "PEN",
+      "code": "287(c)(2)(B)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-c-2-c",
+      "officialTitle": "Oral copulation: force or fear, minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "287(c)(2)(C)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-c-3",
+      "officialTitle": "Oral copulation: threat of future retaliation",
+      "lawCode": "PEN",
+      "code": "287(c)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-d-1",
+      "officialTitle": "Oral copulation: acting in concert",
+      "lawCode": "PEN",
+      "code": "287(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-d-2",
+      "officialTitle": "Oral copulation: acting in concert, child under 14",
+      "lawCode": "PEN",
+      "code": "287(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-d-3",
+      "officialTitle": "Oral copulation: acting in concert, minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "287(d)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-f",
+      "officialTitle": "Oral copulation: person unconscious of the act",
+      "lawCode": "PEN",
+      "code": "287(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-g",
+      "officialTitle": "Oral copulation: person incapable of legal consent",
+      "lawCode": "PEN",
+      "code": "287(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-h",
+      "officialTitle": "Oral copulation: incapacity with both people confined in a treatment facility",
+      "lawCode": "PEN",
+      "code": "287(h)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-i",
+      "officialTitle": "Oral copulation: person prevented from resisting by intoxication",
+      "lawCode": "PEN",
+      "code": "287(i)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-j",
+      "officialTitle": "Oral copulation: fraudulent impersonation of a known person",
+      "lawCode": "PEN",
+      "code": "287(j)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-287-k",
+      "officialTitle": "Oral copulation: threatened official arrest, incarceration or deportation",
+      "lawCode": "PEN",
+      "code": "287(k)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-a-1-c",
+      "officialTitle": "Sexual penetration: force or fear, minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "289(a)(1)(C)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-a-2",
+      "officialTitle": "Sexual penetration: threat of future retaliation",
+      "lawCode": "PEN",
+      "code": "289(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-b",
+      "officialTitle": "Sexual penetration: person incapable of legal consent",
+      "lawCode": "PEN",
+      "code": "289(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-c",
+      "officialTitle": "Sexual penetration: incapacity with both people confined in a treatment facility",
+      "lawCode": "PEN",
+      "code": "289(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-d",
+      "officialTitle": "Sexual penetration: person unconscious of the act",
+      "lawCode": "PEN",
+      "code": "289(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-e",
+      "officialTitle": "Sexual penetration: person prevented from resisting by intoxication",
+      "lawCode": "PEN",
+      "code": "289(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-f",
+      "officialTitle": "Sexual penetration: fraudulent impersonation of a known person",
+      "lawCode": "PEN",
+      "code": "289(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-g",
+      "officialTitle": "Sexual penetration: threatened official arrest, incarceration or deportation",
+      "lawCode": "PEN",
+      "code": "289(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-h",
+      "officialTitle": "Sexual penetration: person under 18",
+      "lawCode": "PEN",
+      "code": "289(h)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-i",
+      "officialTitle": "Sexual penetration: defendant over 21 and person under 16",
+      "lawCode": "PEN",
+      "code": "289(i)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-289-j",
+      "officialTitle": "Sexual penetration: child under 14 and age gap over ten years",
+      "lawCode": "PEN",
+      "code": "289(j)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-264-1-a",
+      "officialTitle": "Rape or sexual penetration in concert: ordinary branch",
+      "lawCode": "PEN",
+      "code": "264.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-264-1-b-1",
+      "officialTitle": "Rape or sexual penetration in concert: child under 14",
+      "lawCode": "PEN",
+      "code": "264.1(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-264-1-b-2",
+      "officialTitle": "Rape or sexual penetration in concert: minor age 14 or older",
+      "lawCode": "PEN",
+      "code": "264.1(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-269-a",
+      "officialTitle": "Aggravated sexual assault of a child under 14",
+      "lawCode": "PEN",
+      "code": "269(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-b-1",
+      "officialTitle": "Lewd act with child under 14 by force or fear",
+      "lawCode": "PEN",
+      "code": "288(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-b-2",
+      "officialTitle": "Caretaker lewd act with a dependent person by force or fear",
+      "lawCode": "PEN",
+      "code": "288(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-c-2",
+      "officialTitle": "Caretaker lewd act with a dependent person",
+      "lawCode": "PEN",
+      "code": "288(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-2-a-1",
+      "officialTitle": "Sending harmful matter to a minor: depicting minors in sexual conduct",
+      "lawCode": "PEN",
+      "code": "288.2(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-2-a-2",
+      "officialTitle": "Sending harmful matter to a minor: other harmful matter",
+      "lawCode": "PEN",
+      "code": "288.2(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-4-a-1",
+      "officialTitle": "Arranging a meeting with a minor for lewd purposes",
+      "lawCode": "PEN",
+      "code": "288.4(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-4-b",
+      "officialTitle": "Going to an arranged meeting with a minor for lewd purposes",
+      "lawCode": "PEN",
+      "code": "288.4(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-5-a",
+      "officialTitle": "Continuous sexual abuse of a child",
+      "lawCode": "PEN",
+      "code": "288.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-7-a",
+      "officialTitle": "Adult sexual conduct with a child age ten or younger: sexual intercourse or sodomy",
+      "lawCode": "PEN",
+      "code": "288.7(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-288-7-b",
+      "officialTitle": "Adult sexual conduct with a child age ten or younger: oral copulation or sexual penetration",
+      "lawCode": "PEN",
+      "code": "288.7(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266h-a",
+      "officialTitle": "Pimping: ordinary branch",
+      "lawCode": "PEN",
+      "code": "266h(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266h-b-1",
+      "officialTitle": "Pimping: minor age 16 or 17",
+      "lawCode": "PEN",
+      "code": "266h(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266h-b-2",
+      "officialTitle": "Pimping: minor under 16",
+      "lawCode": "PEN",
+      "code": "266h(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266i-a",
+      "officialTitle": "Pandering: ordinary branch",
+      "lawCode": "PEN",
+      "code": "266i(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266i-b-1",
+      "officialTitle": "Pandering: minor age 16 or 17",
+      "lawCode": "PEN",
+      "code": "266i(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266i-b-2",
+      "officialTitle": "Pandering: minor under 16",
+      "lawCode": "PEN",
+      "code": "266i(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-266j",
+      "officialTitle": "Providing a child under 16 for a lewd act",
+      "lawCode": "PEN",
+      "code": "266j",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-244",
+      "officialTitle": "Assault with corrosive chemicals or flammable substances",
+      "lawCode": "PEN",
+      "code": "244",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-244-5-b",
+      "officialTitle": "Assault with a stun gun or less lethal weapon",
+      "lawCode": "PEN",
+      "code": "244.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-244-5-c",
+      "officialTitle": "Stun-gun assault on a peace officer or firefighter",
+      "lawCode": "PEN",
+      "code": "244.5(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-2",
+      "officialTitle": "Aggravated assault on a transit operator or passenger",
+      "lawCode": "PEN",
+      "code": "245.2",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-3",
+      "officialTitle": "Aggravated assault on a custodial officer",
+      "lawCode": "PEN",
+      "code": "245.3",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-5-a",
+      "officialTitle": "Aggravated assault on a school employee",
+      "lawCode": "PEN",
+      "code": "245.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-5-b",
+      "officialTitle": "Firearm assault on a school employee",
+      "lawCode": "PEN",
+      "code": "245.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-5-c",
+      "officialTitle": "Stun-gun or taser assault on a school employee",
+      "lawCode": "PEN",
+      "code": "245.5(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-6-c",
+      "officialTitle": "Hazing without resulting serious bodily injury",
+      "lawCode": "PEN",
+      "code": "245.6(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-6-d",
+      "officialTitle": "Hazing resulting in serious bodily injury or death",
+      "lawCode": "PEN",
+      "code": "245.6(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-246",
+      "officialTitle": "Shooting at an inhabited dwelling or occupied vehicle",
+      "lawCode": "PEN",
+      "code": "246",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-246-3-b",
+      "officialTitle": "Grossly negligent discharge of a BB device",
+      "lawCode": "PEN",
+      "code": "246.3(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-247-a",
+      "officialTitle": "Shooting at an unoccupied aircraft",
+      "lawCode": "PEN",
+      "code": "247(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-247-b",
+      "officialTitle": "Shooting at an unoccupied vehicle or uninhabited building",
+      "lawCode": "PEN",
+      "code": "247(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-247-5",
+      "officialTitle": "Malicious laser discharge at an occupied aircraft",
+      "lawCode": "PEN",
+      "code": "247.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-248",
+      "officialTitle": "Shining a bright light to interfere with an aircraft",
+      "lawCode": "PEN",
+      "code": "248",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-470a",
+      "officialTitle": "Making a forged driver’s license or identification card",
+      "lawCode": "PEN",
+      "code": "470a",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-470b",
+      "officialTitle": "Possessing or displaying identification to facilitate forgery",
+      "lawCode": "PEN",
+      "code": "470b",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-471-5",
+      "officialTitle": "Fraudulent alteration or creation of a medical record",
+      "lawCode": "PEN",
+      "code": "471.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-d",
+      "officialTitle": "Battery causing serious bodily injury",
+      "lawCode": "PEN",
+      "code": "243(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-a-2",
+      "officialTitle": "Assault with a firearm",
+      "lawCode": "PEN",
+      "code": "245(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-a-4",
+      "officialTitle": "Assault by force likely to cause great bodily injury",
+      "lawCode": "PEN",
+      "code": "245(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-b",
+      "officialTitle": "Assault with a semiautomatic firearm",
+      "lawCode": "PEN",
+      "code": "245(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-c",
+      "officialTitle": "Aggravated assault on a peace officer or firefighter",
+      "lawCode": "PEN",
+      "code": "245(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-d-1",
+      "officialTitle": "Firearm assault on a peace officer or firefighter",
+      "lawCode": "PEN",
+      "code": "245(d)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-245-d-2",
+      "officialTitle": "Semiautomatic-firearm assault on a peace officer or firefighter",
+      "lawCode": "PEN",
+      "code": "245(d)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-471",
+      "officialTitle": "Forgery of record entries or record instruments",
+      "lawCode": "PEN",
+      "code": "471",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-472",
+      "officialTitle": "Forgery or fraudulent concealment of an official or corporate seal",
+      "lawCode": "PEN",
+      "code": "472",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-474",
+      "officialTitle": "Sending or delivering a false or forged telephone or telegraph message",
+      "lawCode": "PEN",
+      "code": "474",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-475-a",
+      "officialTitle": "Possessing or receiving a forged document to pass it",
+      "lawCode": "PEN",
+      "code": "475(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-475-b",
+      "officialTitle": "Possessing a blank or unfinished check to defraud",
+      "lawCode": "PEN",
+      "code": "475(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-475-c",
+      "officialTitle": "Possessing a completed payment instrument to defraud",
+      "lawCode": "PEN",
+      "code": "475(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-476",
+      "officialTitle": "Making, passing, or possessing a fictitious or altered payment instrument",
+      "lawCode": "PEN",
+      "code": "476",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-479",
+      "officialTitle": "Possessing or receiving counterfeit coin or bullion to pass",
+      "lawCode": "PEN",
+      "code": "479",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-480-a",
+      "officialTitle": "Making or possessing counterfeiting equipment",
+      "lawCode": "PEN",
+      "code": "480(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-481",
+      "officialTitle": "Counterfeiting railroad or steamship fare documents",
+      "lawCode": "PEN",
+      "code": "481",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-483-5-a",
+      "officialTitle": "Supplying an unmarked deceptive identification document for fraudulent use",
+      "lawCode": "PEN",
+      "code": "483.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-483-5-b",
+      "officialTitle": "Possessing a device to make deceptive identification documents",
+      "lawCode": "PEN",
+      "code": "483.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484b",
+      "officialTitle": "Wrongful diversion of construction funds",
+      "lawCode": "PEN",
+      "code": "484b",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484f-a",
+      "officialTitle": "Making or using a counterfeit access card",
+      "lawCode": "PEN",
+      "code": "484f(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484f-b",
+      "officialTitle": "Signing another or fictitious name in an access-card transaction",
+      "lawCode": "PEN",
+      "code": "484f(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484h-a",
+      "officialTitle": "Retailer access-card fraud: unlawful card",
+      "lawCode": "PEN",
+      "code": "484h(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484h-b",
+      "officialTitle": "Retailer access-card fraud: payment without equal value",
+      "lawCode": "PEN",
+      "code": "484h(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484i-a",
+      "officialTitle": "Possessing an incomplete access card to complete without consent",
+      "lawCode": "PEN",
+      "code": "484i(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484i-b",
+      "officialTitle": "Altering access-card information to bill another person",
+      "lawCode": "PEN",
+      "code": "484i(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484i-c",
+      "officialTitle": "Making or possessing access-card counterfeiting equipment",
+      "lawCode": "PEN",
+      "code": "484i(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484j",
+      "officialTitle": "Publishing account or access information for fraud or unlawful charge avoidance",
+      "lawCode": "PEN",
+      "code": "484j",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-485",
+      "officialTitle": "Theft by keeping lost property without reasonable efforts to return it",
+      "lawCode": "PEN",
+      "code": "485",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-496-5-a",
+      "officialTitle": "Automotive property theft for resale",
+      "lawCode": "PEN",
+      "code": "496.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-496-6-a",
+      "officialTitle": "Unlawful deprivation of a retail business opportunity",
+      "lawCode": "PEN",
+      "code": "496.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-496d-a",
+      "officialTitle": "Receiving or concealing a stolen vehicle, trailer, equipment, or vessel",
+      "lawCode": "PEN",
+      "code": "496d(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-499b-a",
+      "officialTitle": "Taking a bicycle temporarily without permission",
+      "lawCode": "PEN",
+      "code": "499b(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-499b-b",
+      "officialTitle": "Taking a vessel temporarily without permission",
+      "lawCode": "PEN",
+      "code": "499b(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-499d",
+      "officialTitle": "Taking or operating an aircraft without consent",
+      "lawCode": "PEN",
+      "code": "499d",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-1",
+      "officialTitle": "Assault on a custodial officer",
+      "lawCode": "PEN",
+      "code": "241.1",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-2-a-1",
+      "officialTitle": "Assault on school or park property",
+      "lawCode": "PEN",
+      "code": "241.2(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-3-a",
+      "officialTitle": "Assault on public-transportation property or a vehicle",
+      "lawCode": "PEN",
+      "code": "241.3(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-4",
+      "officialTitle": "Assault on a school-district police officer",
+      "lawCode": "PEN",
+      "code": "241.4",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-5-a",
+      "officialTitle": "Assault on a highway worker",
+      "lawCode": "PEN",
+      "code": "241.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-6",
+      "officialTitle": "Assault on a school employee",
+      "lawCode": "PEN",
+      "code": "241.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-7",
+      "officialTitle": "Assault on a juror by a party to the case",
+      "lawCode": "PEN",
+      "code": "241.7",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-8-a",
+      "officialTitle": "Assault motivated by military service",
+      "lawCode": "PEN",
+      "code": "241.8(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-1",
+      "officialTitle": "Battery on a custodial officer",
+      "lawCode": "PEN",
+      "code": "243.1",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-10-a",
+      "officialTitle": "Battery motivated by military service",
+      "lawCode": "PEN",
+      "code": "243.10(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-15",
+      "officialTitle": "Battery by a local-jail prisoner on a nonprisoner",
+      "lawCode": "PEN",
+      "code": "243.15",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-2-a-1",
+      "officialTitle": "Battery on school, park, or hospital grounds",
+      "lawCode": "PEN",
+      "code": "243.2(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-25",
+      "officialTitle": "Battery on an elder or dependent adult",
+      "lawCode": "PEN",
+      "code": "243.25",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-3",
+      "officialTitle": "Battery on transit personnel or a passenger",
+      "lawCode": "PEN",
+      "code": "243.3",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-35-a",
+      "officialTitle": "Battery on public-transportation property or a vehicle",
+      "lawCode": "PEN",
+      "code": "243.35(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-6",
+      "officialTitle": "Battery on a school employee",
+      "lawCode": "PEN",
+      "code": "243.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-65-a",
+      "officialTitle": "Battery on a highway worker",
+      "lawCode": "PEN",
+      "code": "243.65(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-7",
+      "officialTitle": "Battery on a juror by a party to the case",
+      "lawCode": "PEN",
+      "code": "243.7",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-8-a",
+      "officialTitle": "Battery on a sports official",
+      "lawCode": "PEN",
+      "code": "243.8(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-241-b",
+      "officialTitle": "Assault on a parking control officer",
+      "lawCode": "PEN",
+      "code": "241(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-243-c-2",
+      "officialTitle": "Battery causing injury to a peace officer",
+      "lawCode": "PEN",
+      "code": "243(c)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-484e-c",
+      "officialTitle": "Fraudulent possession of an access card",
+      "lawCode": "PEN",
+      "code": "484e(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-487g",
+      "officialTitle": "Taking or obtaining an animal for commercial use",
+      "lawCode": "PEN",
+      "code": "487g",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-487h-a",
+      "officialTitle": "Grand theft of cargo worth more than $950",
+      "lawCode": "PEN",
+      "code": "487h(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-487j",
+      "officialTitle": "Grand theft of copper worth more than $950",
+      "lawCode": "PEN",
+      "code": "487j",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-487k",
+      "officialTitle": "Grand theft of agricultural equipment worth more than $950",
+      "lawCode": "PEN",
+      "code": "487k",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-490-4-a-1",
+      "officialTitle": "Organized retail theft: stealing merchandise for resale",
+      "lawCode": "PEN",
+      "code": "490.4(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-490-4-a-2",
+      "officialTitle": "Organized retail theft: receiving organized-retail-theft merchandise",
+      "lawCode": "PEN",
+      "code": "490.4(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-490-4-a-3",
+      "officialTitle": "Organized retail theft: stealing as an agent of an organized plan",
+      "lawCode": "PEN",
+      "code": "490.4(a)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-490-4-a-4",
+      "officialTitle": "Organized retail theft: organizing or financing retail theft",
+      "lawCode": "PEN",
+      "code": "490.4(a)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-498-b-1",
+      "officialTitle": "Utility theft: diverting utility services",
+      "lawCode": "PEN",
+      "code": "498(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-498-b-2",
+      "officialTitle": "Utility theft: preventing accurate utility metering",
+      "lawCode": "PEN",
+      "code": "498(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-498-b-3",
+      "officialTitle": "Utility theft: tampering with utility property",
+      "lawCode": "PEN",
+      "code": "498(b)(3)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-498-b-4",
+      "officialTitle": "Utility theft: unauthorized utility connection or reconnection",
+      "lawCode": "PEN",
+      "code": "498(b)(4)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-498-b-5",
+      "officialTitle": "Utility theft: knowingly benefiting from unauthorized utility services",
+      "lawCode": "PEN",
+      "code": "498(b)(5)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-499c-c",
+      "officialTitle": "Trade-secret bribery",
+      "lawCode": "PEN",
+      "code": "499c(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-502-6-a",
+      "officialTitle": "Fraudulent possession or use of a payment-card scanning device",
+      "lawCode": "PEN",
+      "code": "502.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-502-6-b",
+      "officialTitle": "Fraudulent possession or use of a payment-card reencoder",
+      "lawCode": "PEN",
+      "code": "502.6(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11351-5",
+      "officialTitle": "Possession or purchase of cocaine base for sale",
+      "lawCode": "HSC",
+      "code": "11351.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11353-a",
+      "officialTitle": "Inducing a minor to violate specified drug laws",
+      "lawCode": "HSC",
+      "code": "11353(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11353-b",
+      "officialTitle": "Employing or using a minor in specified drug activity",
+      "lawCode": "HSC",
+      "code": "11353(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11353-c",
+      "officialTitle": "Selling or furnishing specified controlled substances to a minor",
+      "lawCode": "HSC",
+      "code": "11353(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11355",
+      "officialTitle": "Providing or offering a substitute for a promised controlled substance: 11355",
+      "lawCode": "HSC",
+      "code": "11355",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11382",
+      "officialTitle": "Providing or offering a substitute for a promised controlled substance: 11382",
+      "lawCode": "HSC",
+      "code": "11382",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11357-b-2",
+      "officialTitle": "Adult possession of cannabis above the statutory quantity limits",
+      "lawCode": "HSC",
+      "code": "11357(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11357-c",
+      "officialTitle": "Adult cannabis possession on school grounds",
+      "lawCode": "HSC",
+      "code": "11357(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11361-a",
+      "officialTitle": "Adult cannabis activity involving a minor: sale, employment, inducement or provision to a child under 14",
+      "lawCode": "HSC",
+      "code": "11361(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11361-b",
+      "officialTitle": "Adult non-sale furnishing of cannabis to a minor age 14 through 17",
+      "lawCode": "HSC",
+      "code": "11361(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11365-a",
+      "officialTitle": "Aiding unlawful drug use while present at the location",
+      "lawCode": "HSC",
+      "code": "11365(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-5-a",
+      "officialTitle": "Knowingly making premises available for drug manufacture, storage or distribution",
+      "lawCode": "HSC",
+      "code": "11366.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-5-b",
+      "officialTitle": "Allowing fortified drug premises for excessive profit",
+      "lawCode": "HSC",
+      "code": "11366.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11368",
+      "officialTitle": "Forged narcotic prescription or narcotics obtained through one",
+      "lawCode": "HSC",
+      "code": "11368",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-1-a",
+      "officialTitle": "Possessing specified controlled substances while armed with a loaded firearm",
+      "lawCode": "HSC",
+      "code": "11370.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11377-a",
+      "officialTitle": "Possession of methamphetamine or other substances covered by section 11377",
+      "lawCode": "HSC",
+      "code": "11377(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11378",
+      "officialTitle": "Possession for sale of methamphetamine or other specified substances",
+      "lawCode": "HSC",
+      "code": "11378",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11378-5",
+      "officialTitle": "Possession for sale of PCP, specified analogs or precursors",
+      "lawCode": "HSC",
+      "code": "11378.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-a",
+      "officialTitle": "Sale or transport for sale of methamphetamine or other substances covered by section 11379",
+      "lawCode": "HSC",
+      "code": "11379(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-b",
+      "officialTitle": "Transport for sale between noncontiguous counties: methamphetamine or other substances covered by section 11379",
+      "lawCode": "HSC",
+      "code": "11379(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-5-a",
+      "officialTitle": "Sale or transport for sale of PCP or specified analogs or precursors",
+      "lawCode": "HSC",
+      "code": "11379.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-5-b",
+      "officialTitle": "Transport for sale between noncontiguous counties: PCP or specified analogs or precursors",
+      "lawCode": "HSC",
+      "code": "11379.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-2",
+      "officialTitle": "Sale or possession for sale of specified anabolic steroids",
+      "lawCode": "HSC",
+      "code": "11379.2",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11380-a",
+      "officialTitle": "Adult use of a minor in specified nonnarcotic drug offenses or furnishing drugs to a minor",
+      "lawCode": "HSC",
+      "code": "11380(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11550-a",
+      "officialTitle": "Unlawful use of or being under the influence of a specified controlled substance",
+      "lawCode": "HSC",
+      "code": "11550(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11350-5-a",
+      "officialTitle": "Possession of a specified controlled substance with intent to commit sexual assault: 11350.5",
+      "lawCode": "HSC",
+      "code": "11350.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11377-5-a",
+      "officialTitle": "Possession of a specified controlled substance with intent to commit sexual assault: 11377.5",
+      "lawCode": "HSC",
+      "code": "11377.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11358",
+      "officialTitle": "Adult unlawful cultivation of more than six cannabis plants",
+      "lawCode": "HSC",
+      "code": "11358",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11359",
+      "officialTitle": "Adult unlawful possession of cannabis for sale",
+      "lawCode": "HSC",
+      "code": "11359",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11360-a",
+      "officialTitle": "Adult unlawful cannabis sale, distribution, import or transport for sale",
+      "lawCode": "HSC",
+      "code": "11360(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11383",
+      "officialTitle": "Possession of specified PCP precursors with intent to manufacture",
+      "lawCode": "HSC",
+      "code": "11383",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11383-5",
+      "officialTitle": "Possession of specified methamphetamine precursors with intent to manufacture",
+      "lawCode": "HSC",
+      "code": "11383.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11383-6",
+      "officialTitle": "Possession of specified PCP precursors for transfer to a manufacturer",
+      "lawCode": "HSC",
+      "code": "11383.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11383-7",
+      "officialTitle": "Possession of specified methamphetamine precursors for transfer to a manufacturer",
+      "lawCode": "HSC",
+      "code": "11383.7",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-8-a",
+      "officialTitle": "Possessing or using a vehicle false compartment for controlled substances",
+      "lawCode": "HSC",
+      "code": "11366.8(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-8-b",
+      "officialTitle": "Constructing or installing a vehicle false compartment for controlled substances",
+      "lawCode": "HSC",
+      "code": "11366.8(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-6-a",
+      "officialTitle": "Possession of more than $100,000 in drug proceeds or money for an unlawful drug purchase",
+      "lawCode": "HSC",
+      "code": "11370.6(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11379-6-e",
+      "officialTitle": "Offering to manufacture a controlled substance",
+      "lawCode": "HSC",
+      "code": "11379.6(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11550-e-1",
+      "officialTitle": "Being under the influence of specified drugs while possessing a loaded firearm",
+      "lawCode": "HSC",
+      "code": "11550(e)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-6",
+      "officialTitle": "Using fortified premises for specified unlawful drug activity",
+      "lawCode": "HSC",
+      "code": "11366.6",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11366-7-b",
+      "officialTitle": "Retail or wholesale sale of supplies for unlawful drug manufacture",
+      "lawCode": "HSC",
+      "code": "11366.7(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-9-a",
+      "officialTitle": "Receiving or transacting in unlawful drug proceeds",
+      "lawCode": "HSC",
+      "code": "11370.9(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-9-b",
+      "officialTitle": "Providing property to further an unlawful drug offense",
+      "lawCode": "HSC",
+      "code": "11370.9(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-9-c",
+      "officialTitle": "Organizing transport or transfer of unlawful drug proceeds",
+      "lawCode": "HSC",
+      "code": "11370.9(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hsc-11370-9-d",
+      "officialTitle": "Conducting a transaction designed to conceal unlawful drug proceeds",
+      "lawCode": "HSC",
+      "code": "11370.9(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-1-a",
+      "officialTitle": "Evading a peace officer in a motor vehicle",
+      "lawCode": "VEH",
+      "code": "2800.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-1-b",
+      "officialTitle": "Evading a peace officer on a bicycle",
+      "lawCode": "VEH",
+      "code": "2800.1(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-2",
+      "officialTitle": "Evading a peace officer with willful or wanton disregard",
+      "lawCode": "VEH",
+      "code": "2800.2",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-3-a",
+      "officialTitle": "Evading a peace officer causing serious bodily injury",
+      "lawCode": "VEH",
+      "code": "2800.3(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-3-b",
+      "officialTitle": "Evading a peace officer causing death",
+      "lawCode": "VEH",
+      "code": "2800.3(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-2800-4",
+      "officialTitle": "Evading a peace officer while driving against traffic",
+      "lawCode": "VEH",
+      "code": "2800.4",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-20001-b-1",
+      "officialTitle": "Hit-and-run involving injury",
+      "lawCode": "VEH",
+      "code": "20001(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-20001-b-2",
+      "officialTitle": "Hit-and-run involving death or permanent serious injury",
+      "lawCode": "VEH",
+      "code": "20001(b)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-20002-a",
+      "officialTitle": "Hit-and-run involving property damage",
+      "lawCode": "VEH",
+      "code": "20002(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-192-5-a",
+      "officialTitle": "Vessel manslaughter: intoxication and gross negligence",
+      "lawCode": "PEN",
+      "code": "192.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-192-5-b",
+      "officialTitle": "Vessel manslaughter: intoxication without gross negligence",
+      "lawCode": "PEN",
+      "code": "192.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-192-5-c",
+      "officialTitle": "Vessel manslaughter: gross negligence",
+      "lawCode": "PEN",
+      "code": "192.5(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-192-5-d",
+      "officialTitle": "Vessel manslaughter: ordinary negligence",
+      "lawCode": "PEN",
+      "code": "192.5(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-b",
+      "officialTitle": "Operating a vessel or water-sport device under the influence",
+      "lawCode": "HNC",
+      "code": "655(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-c",
+      "officialTitle": "Operating a recreational vessel with blood alcohol of 0.08 percent or more",
+      "lawCode": "HNC",
+      "code": "655(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-d",
+      "officialTitle": "Operating a nonrecreational vessel with blood alcohol of 0.04 percent or more",
+      "lawCode": "HNC",
+      "code": "655(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-f",
+      "officialTitle": "Operating a vessel under the influence causing injury",
+      "lawCode": "HNC",
+      "code": "655(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-4-a",
+      "officialTitle": "Serving as impaired charter-boat crew",
+      "lawCode": "HNC",
+      "code": "655.4(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-655-4-b",
+      "officialTitle": "Serving as impaired charter-boat crew causing injury",
+      "lawCode": "HNC",
+      "code": "655.4(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-656-2",
+      "officialTitle": "Failure to perform vessel accident duties involving injury",
+      "lawCode": "HNC",
+      "code": "656.2",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-hnc-656-3",
+      "officialTitle": "Failure to perform vessel accident duties involving death or disappearance",
+      "lawCode": "HNC",
+      "code": "656.3",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-a",
+      "officialTitle": "Alcohol DUI causing injury",
+      "lawCode": "VEH",
+      "code": "23153(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-b",
+      "officialTitle": "Driving with 0.08 percent blood alcohol causing injury",
+      "lawCode": "VEH",
+      "code": "23153(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-d",
+      "officialTitle": "Commercial-vehicle 0.04 percent DUI causing injury",
+      "lawCode": "VEH",
+      "code": "23153(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-e",
+      "officialTitle": "Passenger-for-hire 0.04 percent DUI causing injury",
+      "lawCode": "VEH",
+      "code": "23153(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-f",
+      "officialTitle": "Drug DUI causing injury",
+      "lawCode": "VEH",
+      "code": "23153(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23153-g",
+      "officialTitle": "Combined alcohol/drug DUI causing injury",
+      "lawCode": "VEH",
+      "code": "23153(g)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23152-d",
+      "officialTitle": "Driving a commercial vehicle with blood alcohol of 0.04 percent or more",
+      "lawCode": "VEH",
+      "code": "23152(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23152-e",
+      "officialTitle": "Driving a passenger for hire with blood alcohol of 0.04 percent or more",
+      "lawCode": "VEH",
+      "code": "23152(e)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-a",
+      "officialTitle": "Driving with a license suspended for reckless or negligent operation",
+      "lawCode": "VEH",
+      "code": "14601(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-1-a",
+      "officialTitle": "Driving with a license suspended for other reasons",
+      "lawCode": "VEH",
+      "code": "14601.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-2-a",
+      "officialTitle": "Driving after a DUI license suspension or revocation",
+      "lawCode": "VEH",
+      "code": "14601.2(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-2-b",
+      "officialTitle": "Driving in violation of a known license restriction under section 14601.2",
+      "lawCode": "VEH",
+      "code": "14601.2(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-5-a",
+      "officialTitle": "Driving during an administrative alcohol/refusal suspension",
+      "lawCode": "VEH",
+      "code": "14601.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-14601-5-b",
+      "officialTitle": "Driving against an administrative license restriction",
+      "lawCode": "VEH",
+      "code": "14601.5(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23104-a",
+      "officialTitle": "Reckless driving causing bodily injury",
+      "lawCode": "VEH",
+      "code": "23104(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23104-b",
+      "officialTitle": "Reckless driving causing great bodily injury with a qualifying prior",
+      "lawCode": "VEH",
+      "code": "23104(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23105-a",
+      "officialTitle": "Reckless driving causing a specified serious injury",
+      "lawCode": "VEH",
+      "code": "23105(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23109-a",
+      "officialTitle": "Motor vehicle speed contest",
+      "lawCode": "VEH",
+      "code": "23109(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23109-b",
+      "officialTitle": "Aiding a motor vehicle speed contest",
+      "lawCode": "VEH",
+      "code": "23109(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23109-c",
+      "officialTitle": "Motor vehicle exhibition of speed",
+      "lawCode": "VEH",
+      "code": "23109(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23109-d",
+      "officialTitle": "Obstructing a roadway or parking facility for racing",
+      "lawCode": "VEH",
+      "code": "23109(d)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-23109-1-a",
+      "officialTitle": "Speed contest causing a specified serious injury",
+      "lawCode": "VEH",
+      "code": "23109.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-12951-b",
+      "officialTitle": "Failure to present a driver license on lawful demand",
+      "lawCode": "VEH",
+      "code": "12951(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-40508-a",
+      "officialTitle": "Failure to appear on a written traffic promise",
+      "lawCode": "VEH",
+      "code": "40508(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-203",
+      "officialTitle": "Mayhem",
+      "lawCode": "PEN",
+      "code": "203",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-205",
+      "officialTitle": "Aggravated mayhem",
+      "lawCode": "PEN",
+      "code": "205",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-206",
+      "officialTitle": "Torture",
+      "lawCode": "PEN",
+      "code": "206",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-220-a-1",
+      "officialTitle": "Assault with intent to commit mayhem or a specified sexual offense",
+      "lawCode": "PEN",
+      "code": "220(a)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-220-a-2",
+      "officialTitle": "Assault on a minor with intent to commit a specified sexual offense",
+      "lawCode": "PEN",
+      "code": "220(a)(2)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-220-b",
+      "officialTitle": "Assault during first-degree burglary with sexual-offense intent",
+      "lawCode": "PEN",
+      "code": "220(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273a-a",
+      "officialTitle": "Child abuse or endangerment likely to cause great bodily harm or death",
+      "lawCode": "PEN",
+      "code": "273a(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273a-b",
+      "officialTitle": "Child abuse or endangerment: misdemeanor circumstances",
+      "lawCode": "PEN",
+      "code": "273a(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273ab-a",
+      "officialTitle": "Assault by a caregiver causing death of a child under eight",
+      "lawCode": "PEN",
+      "code": "273ab(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273ab-b",
+      "officialTitle": "Assault by a caregiver causing coma or permanent paralysis of a child under eight",
+      "lawCode": "PEN",
+      "code": "273ab(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273d-a",
+      "officialTitle": "Inflicting corporal injury or cruel punishment on a child",
+      "lawCode": "PEN",
+      "code": "273d(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-273-5-a",
+      "officialTitle": "Corporal injury to a spouse, partner or co-parent",
+      "lawCode": "PEN",
+      "code": "273.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-b-1",
+      "officialTitle": "Elder or dependent-adult abuse likely to cause great bodily harm or death",
+      "lawCode": "PEN",
+      "code": "368(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-c",
+      "officialTitle": "Elder or dependent-adult abuse: misdemeanor circumstances",
+      "lawCode": "PEN",
+      "code": "368(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-368-f",
+      "officialTitle": "False imprisonment of an elder or dependent adult by violence or deceit",
+      "lawCode": "PEN",
+      "code": "368(f)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-207-a",
+      "officialTitle": "Kidnapping by force or fear",
+      "lawCode": "PEN",
+      "code": "207(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-207-b",
+      "officialTitle": "Kidnapping a child under fourteen for a lewd-act purpose",
+      "lawCode": "PEN",
+      "code": "207(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-209-a",
+      "officialTitle": "Kidnapping or detention for ransom, reward or extortion",
+      "lawCode": "PEN",
+      "code": "209(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-209-b-1",
+      "officialTitle": "Kidnapping to commit robbery or a specified sexual offense",
+      "lawCode": "PEN",
+      "code": "209(b)(1)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-209-5-a",
+      "officialTitle": "Kidnapping during a carjacking",
+      "lawCode": "PEN",
+      "code": "209.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-210-5",
+      "officialTitle": "False imprisonment for protection from arrest or use as a shield",
+      "lawCode": "PEN",
+      "code": "210.5",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-236",
+      "officialTitle": "False imprisonment: misdemeanor branch",
+      "lawCode": "PEN",
+      "code": "236",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-237-a",
+      "officialTitle": "False imprisonment by violence, menace, fraud or deceit",
+      "lawCode": "PEN",
+      "code": "237(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-236-1-a",
+      "officialTitle": "Human trafficking for forced labor or services",
+      "lawCode": "PEN",
+      "code": "236.1(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-236-1-b",
+      "officialTitle": "Human trafficking to further specified exploitation offenses",
+      "lawCode": "PEN",
+      "code": "236.1(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-236-1-c",
+      "officialTitle": "Human trafficking of a minor for a commercial sex act",
+      "lawCode": "PEN",
+      "code": "236.1(c)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-278",
+      "officialTitle": "Child abduction without a right to custody",
+      "lawCode": "PEN",
+      "code": "278",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-pen-278-5-a",
+      "officialTitle": "Child abduction by depriving custody or visitation",
+      "lawCode": "PEN",
+      "code": "278.5(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10801",
+      "officialTitle": "Knowingly owning or operating a chop shop",
+      "lawCode": "VEH",
+      "code": "10801",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10802",
+      "officialTitle": "Altering vehicle identification numbers for sale or transfer",
+      "lawCode": "VEH",
+      "code": "10802",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10803-a",
+      "officialTitle": "Dealing in multiple vehicles or parts with altered identifiers",
+      "lawCode": "VEH",
+      "code": "10803(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10803-b",
+      "officialTitle": "Possessing multiple vehicles or parts with altered identifiers for distribution",
+      "lawCode": "VEH",
+      "code": "10803(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10750-a",
+      "officialTitle": "Unauthorized alteration or stamping of vehicle identification marks",
+      "lawCode": "VEH",
+      "code": "10750(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10751-a",
+      "officialTitle": "Dealing in or possessing a vehicle or part with a removed identifier",
+      "lawCode": "VEH",
+      "code": "10751(a)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-20002-b",
+      "officialTitle": "Failure to report property damage caused by a runaway parked vehicle",
+      "lawCode": "VEH",
+      "code": "20002(b)",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10852",
+      "officialTitle": "Vehicle tampering or damage without owner consent",
+      "lawCode": "VEH",
+      "code": "10852",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10854",
+      "officialTitle": "Unauthorized use or removal of parts by a vehicle custodian",
+      "lawCode": "VEH",
+      "code": "10854",
+      "selectable": true
+    },
+    {
+      "canonicalId": "ca-veh-10501-a",
+      "officialTitle": "False or fraudulent vehicle-theft report",
+      "lawCode": "VEH",
+      "code": "10501(a)",
+      "selectable": true
+    }
+  ]
+}
