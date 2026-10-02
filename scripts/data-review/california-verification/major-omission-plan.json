@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 1,
+  "scope": "major_omission_benchmark_not_publication",
+  "families": [
+    {
+      "id": "homicide",
+      "firstPage": 297,
+      "lastPage": 598,
+      "tocFirstPage": 291,
+      "tocLastPage": 295,
+      "instructionIds": [
+        "500",
+        "505",
+        "506",
+        "507",
+        "508",
+        "509",
+        "510",
+        "511",
+        "512",
+        "520",
+        "521",
+        "522",
+        "523",
+        "524",
+        "525",
+        "526",
+        "540A",
+        "540B",
+        "540C",
+        "548",
+        "560",
+        "561",
+        "562",
+        "563",
+        "570",
+        "571",
+        "572",
+        "580",
+        "581",
+        "582",
+        "590",
+        "591",
+        "592",
+        "593",
+        "594",
+        "595",
+        "600",
+        "601",
+        "602",
+        "603",
+        "604",
+        "620",
+        "625",
+        "626",
+        "627",
+        "640",
+        "641",
+        "642",
+        "643",
+        "700",
+        "701",
+        "702",
+        "703",
+        "704",
+        "705",
+        "706",
+        "707",
+        "708",
+        "720",
+        "721",
+        "722",
+        "723",
+        "724",
+        "725",
+        "726",
+        "727",
+        "728",
+        "729",
+        "730",
+        "731",
+        "732",
+        "733",
+        "734",
+        "735",
+        "736",
+        "737",
+        "750",
+        "751",
+        "760",
+        "761",
+        "763",
+        "764",
+        "765",
+        "766",
+        "767",
+        "768",
+        "775"
+      ]
+    },
+    {
+      "id": "gangs",
+      "firstPage": 1140,
+      "lastPage": 1159,
+      "tocFirstPage": 1139,
+      "tocLastPage": 1139,
+      "instructionIds": [
+        "1400",
+        "1401",
+        "1402",
+        "1403"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "500",
+      "heading": "500. Homicide: General Principles",
+      "firstPage": 297,
+      "family": "homicide"
+    },
+    {
+      "id": "505",
+      "heading": "505. Justiﬁable Homicide: Self-Defense or Defense of Another",
+      "firstPage": 299,
+      "family": "homicide"
+    },
+    {
+      "id": "506",
+      "heading": "506. Justiﬁable Homicide: Defending Against Harm to Person Within Home or on Property",
+      "firstPage": 305,
+      "family": "homicide"
+    },
+    {
+      "id": "507",
+      "heading": "507. Justiﬁable Homicide: By Peace Officer",
+      "firstPage": 308,
+      "family": "homicide"
+    },
+    {
+      "id": "508",
+      "heading": "508. Justiﬁable Homicide: Citizen Arrest (Non-Peace Officer)",
+      "firstPage": 312,
+      "family": "homicide"
+    },
+    {
+      "id": "509",
+      "heading": "509. Justiﬁable Homicide: Non-Peace Officer Preserving the Peace",
+      "firstPage": 315,
+      "family": "homicide"
+    },
+    {
+      "id": "510",
+      "heading": "510. Excusable Homicide: Accident",
+      "firstPage": 317,
+      "family": "homicide"
+    },
+    {
+      "id": "511",
+      "heading": "511. Excusable Homicide: Accident in the Heat of Passion",
+      "firstPage": 319,
+      "family": "homicide"
+    },
+    {
+      "id": "512",
+      "heading": "512. Presumption That Killing Not Criminal (Pen. Code, § 194)",
+      "firstPage": 323,
+      "family": "homicide"
+    },
+    {
+      "id": "520",
+      "heading": "520. First or Second Degree Murder With Malice Aforethought (Pen. Code, § 187)",
+      "firstPage": 325,
+      "family": "homicide"
+    },
+    {
+      "id": "521",
+      "heading": "521. First Degree Murder (Pen. Code, § 189)",
+      "firstPage": 331,
+      "family": "homicide"
+    },
+    {
+      "id": "522",
+      "heading": "522. Provocation: Effect on Degree of Murder",
+      "firstPage": 338,
+      "family": "homicide"
+    },
+    {
+      "id": "523",
+      "heading": "523. First Degree Murder: Hate Crime (Pen. Code, § 190.03)",
+      "firstPage": 340,
+      "family": "homicide"
+    },
+    {
+      "id": "524",
+      "heading": "524. Second Degree Murder: Peace Officer (Pen. Code, § 190(b), (c))",
+      "firstPage": 343,
+      "family": "homicide"
+    },
+    {
+      "id": "525",
+      "heading": "525. Second Degree Murder: Discharge From Motor Vehicle (Pen. Code, § 190(d))",
+      "firstPage": 347,
+      "family": "homicide"
+    },
+    {
+      "id": "526",
+      "heading": "526. Implied Malice Murder: Aiding and Abetting",
+      "firstPage": 349,
+      "family": "homicide"
+    },
+    {
+      "id": "540A",
+      "heading": "540A. Felony Murder: First Degree—Defendant Allegedly Committed Fatal Act (Pen. Code, § 189)",
+      "firstPage": 355,
+      "family": "homicide"
+    },
+    {
+      "id": "540B",
+      "heading": "540B. Felony Murder: First Degree—Coparticipant Allegedly Committed Fatal Act (Pen. Code, § 189)",
+      "firstPage": 360,
+      "family": "homicide"
+    },
+    {
+      "id": "540C",
+      "heading": "540C. Felony Murder: First Degree—Other Acts Allegedly Caused Death (Pen. Code, § 189)",
+      "firstPage": 368,
+      "family": "homicide"
+    },
+    {
+      "id": "548",
+      "heading": "548. Murder: Alternative Theories",
+      "firstPage": 376,
+      "family": "homicide"
+    },
+    {
+      "id": "560",
+      "heading": "560. Homicide: Provocative Act by Defendant",
+      "firstPage": 377,
+      "family": "homicide"
+    },
+    {
+      "id": "561",
+      "heading": "561. Homicide: Provocative Act by Accomplice",
+      "firstPage": 383,
+      "family": "homicide"
+    },
+    {
+      "id": "562",
+      "heading": "562. Transferred Intent",
+      "firstPage": 388,
+      "family": "homicide"
+    },
+    {
+      "id": "563",
+      "heading": "563. Conspiracy to Commit Murder (Pen. Code, § 182)",
+      "firstPage": 390,
+      "family": "homicide"
+    },
+    {
+      "id": "570",
+      "heading": "570. Voluntary Manslaughter: Heat of Passion—Lesser Included Offense (Pen. Code, § 192(a))",
+      "firstPage": 395,
+      "family": "homicide"
+    },
+    {
+      "id": "571",
+      "heading": "571. Voluntary Manslaughter: Imperfect Self-Defense or Imperfect Defense of Another—Lesser Included Offense (Pen. Code, § 192)",
+      "firstPage": 399,
+      "family": "homicide"
+    },
+    {
+      "id": "572",
+      "heading": "572. Voluntary Manslaughter: Murder Not Charged (Pen. Code, § 192(a))",
+      "firstPage": 404,
+      "family": "homicide"
+    },
+    {
+      "id": "580",
+      "heading": "580. Involuntary Manslaughter: Lesser Included Offense (Pen. Code, § 192(b))",
+      "firstPage": 407,
+      "family": "homicide"
+    },
+    {
+      "id": "581",
+      "heading": "581. Involuntary Manslaughter: Murder Not Charged (Pen. Code, § 192(b))",
+      "firstPage": 412,
+      "family": "homicide"
+    },
+    {
+      "id": "582",
+      "heading": "582. Involuntary Manslaughter: Failure to Perform Legal Duty—Murder Not Charged (Pen. Code, § 192(b))",
+      "firstPage": 416,
+      "family": "homicide"
+    },
+    {
+      "id": "590",
+      "heading": "590. Gross Vehicular Manslaughter While Intoxicated (Pen. Code, § 191.5(a))",
+      "firstPage": 420,
+      "family": "homicide"
+    },
+    {
+      "id": "591",
+      "heading": "591. Vehicular Manslaughter While Intoxicated—Ordinary Negligence (Pen. Code, § 191.5(b))",
+      "firstPage": 425,
+      "family": "homicide"
+    },
+    {
+      "id": "592",
+      "heading": "592. Gross Vehicular Manslaughter (Pen. Code, § 192(c)(1))",
+      "firstPage": 430,
+      "family": "homicide"
+    },
+    {
+      "id": "593",
+      "heading": "593. Misdemeanor Vehicular Manslaughter (Pen. Code, § 192(c)(2))",
+      "firstPage": 435,
+      "family": "homicide"
+    },
+    {
+      "id": "594",
+      "heading": "594. Vehicular Manslaughter: Collision for Financial Gain (Pen. Code, § 192(c)(3))",
+      "firstPage": 439,
+      "family": "homicide"
+    },
+    {
+      "id": "595",
+      "heading": "595. Vehicular Manslaughter: Speeding Laws Deﬁned",
+      "firstPage": 441,
+      "family": "homicide"
+    },
+    {
+      "id": "600",
+      "heading": "600. Attempted Murder (Pen. Code, §§ 21a, 663, 664)",
+      "firstPage": 445,
+      "family": "homicide"
+    },
+    {
+      "id": "601",
+      "heading": "601. Attempted Murder: Deliberation and Premeditation (Pen. Code, §§ 21a, 189, 664(a))",
+      "firstPage": 450,
+      "family": "homicide"
+    },
+    {
+      "id": "602",
+      "heading": "602. Attempted Murder: Peace Officer, Fireﬁghter, Custodial Officer, or Custody Assistant (Pen. Code, §§ 21a, 664(e))",
+      "firstPage": 452,
+      "family": "homicide"
+    },
+    {
+      "id": "603",
+      "heading": "603. Attempted Voluntary Manslaughter: Heat of Passion—Lesser Included Offense (Pen. Code, §§ 21a, 192, 664)",
+      "firstPage": 456,
+      "family": "homicide"
+    },
+    {
+      "id": "604",
+      "heading": "604. Attempted Voluntary Manslaughter: Imperfect Self - Defense—Lesser Included Offense (Pen. Code, §§ 21a, 192, 664)",
+      "firstPage": 459,
+      "family": "homicide"
+    },
+    {
+      "id": "620",
+      "heading": "620. Causation: Special Issues",
+      "firstPage": 463,
+      "family": "homicide"
+    },
+    {
+      "id": "625",
+      "heading": "625. Voluntary Intoxication: Effects on Homicide Crimes (Pen. Code, § 29.4)",
+      "firstPage": 465,
+      "family": "homicide"
+    },
+    {
+      "id": "626",
+      "heading": "626. Voluntary Intoxication Causing Unconsciousness: Effects on Homicide Crimes (Pen. Code, § 29.4)",
+      "firstPage": 468,
+      "family": "homicide"
+    },
+    {
+      "id": "627",
+      "heading": "627. Hallucination: Effect on Premeditation",
+      "firstPage": 471,
+      "family": "homicide"
+    },
+    {
+      "id": "640",
+      "heading": "640. Deliberations and Completion of Verdict Forms: For Use When Defendant Is Charged With First Degree Murder and Jury Is Given Not Guilty Forms for Each Level of Homicide",
+      "firstPage": 473,
+      "family": "homicide"
+    },
+    {
+      "id": "641",
+      "heading": "641. Deliberations and Completion of Verdict Forms: For Use When Defendant Is Charged With First Degree Murder and Jury Is Given Only One Not Guilty Verdict Form for Each Count; Not to Be Used When Both Voluntary and Involuntary Manslaughter Are Lesser Included Offenses",
+      "firstPage": 479,
+      "family": "homicide"
+    },
+    {
+      "id": "642",
+      "heading": "642. Deliberations and Completion of Verdict Forms: For Use When Defendant Is Charged With Second Degree Murder and Jury Is Given Not Guilty Forms for Each Level of Homicide",
+      "firstPage": 484,
+      "family": "homicide"
+    },
+    {
+      "id": "643",
+      "heading": "643. Deliberations and Completion of Verdict Forms: For Use When Defendant Is Charged With Second Degree Murder and Jury Is Given Only One Not Guilty Verdict Form for Each Count; Not to Be Used When Both Voluntary and Involuntary Manslaughter Are Lesser Included Offenses",
+      "firstPage": 488,
+      "family": "homicide"
+    },
+    {
+      "id": "700",
+      "heading": "700. Special Circumstances: Introduction (Pen. Code, § 190.2)",
+      "firstPage": 493,
+      "family": "homicide"
+    },
+    {
+      "id": "701",
+      "heading": "701. Special Circumstances: Intent Requirement for Accomplice Before June 6, 1990",
+      "firstPage": 495,
+      "family": "homicide"
+    },
+    {
+      "id": "702",
+      "heading": "702. Special Circumstances: Intent Requirement for Accomplice After June 5, 1990—Other Than Felony Murder (Pen. Code, § 190.2(c))",
+      "firstPage": 498,
+      "family": "homicide"
+    },
+    {
+      "id": "703",
+      "heading": "703. Special Circumstances: Intent Requirement for Accomplice After June 5, 1990—Felony Murder (Pen. Code, § 190.2(d))",
+      "firstPage": 501,
+      "family": "homicide"
+    },
+    {
+      "id": "704",
+      "heading": "704. Special Circumstances: Circumstantial Evidence—Sufficiency",
+      "firstPage": 506,
+      "family": "homicide"
+    },
+    {
+      "id": "705",
+      "heading": "705. Special Circumstances: Circumstantial Evidence—Intent or Mental State",
+      "firstPage": 508,
+      "family": "homicide"
+    },
+    {
+      "id": "706",
+      "heading": "706. Special Circumstances: Jury May Not Consider Punishment",
+      "firstPage": 510,
+      "family": "homicide"
+    },
+    {
+      "id": "707",
+      "heading": "707. Special Circumstances: Accomplice Testimony Must Be Corroborated—Dispute Whether Witness Is Accomplice (Pen. Code, § 1111)",
+      "firstPage": 511,
+      "family": "homicide"
+    },
+    {
+      "id": "708",
+      "heading": "708. Special Circumstances: Accomplice Testimony Must Be Corroborated—No Dispute Whether Witness Is Accomplice (Pen. Code, § 1111)",
+      "firstPage": 516,
+      "family": "homicide"
+    },
+    {
+      "id": "720",
+      "heading": "720. Special Circumstances: Financial Gain (Pen. Code, § 190.2(a)(1))",
+      "firstPage": 519,
+      "family": "homicide"
+    },
+    {
+      "id": "721",
+      "heading": "721. Special Circumstances: Multiple Murder Convictions (Same Case) (Pen. Code, § 190.2(a)(3))",
+      "firstPage": 522,
+      "family": "homicide"
+    },
+    {
+      "id": "722",
+      "heading": "722. Special Circumstances: By Means of Destructive Device (Pen. Code, § 190.2(a)(4) & (6))",
+      "firstPage": 524,
+      "family": "homicide"
+    },
+    {
+      "id": "723",
+      "heading": "723. Special Circumstances: Murder to Prevent Arrest or Complete Escape (Pen. Code, § 190.2(a)(5))",
+      "firstPage": 527,
+      "family": "homicide"
+    },
+    {
+      "id": "724",
+      "heading": "724. Special Circumstances: Murder of Peace Officer, Federal Officer, or Fireﬁghter (Pen. Code, § 190.2(a)(7), (8) & (9))",
+      "firstPage": 529,
+      "family": "homicide"
+    },
+    {
+      "id": "725",
+      "heading": "725. Special Circumstances: Murder of Witness (Pen. Code, § 190.2(a)(10))",
+      "firstPage": 533,
+      "family": "homicide"
+    },
+    {
+      "id": "726",
+      "heading": "726. Special Circumstances: Murder of Judge, Prosecutor, Government Official, or Juror (Pen. Code, § 190.2(a)(11), (12), (13) & (20))",
+      "firstPage": 535,
+      "family": "homicide"
+    },
+    {
+      "id": "727",
+      "heading": "727. Special Circumstances: Lying in Wait—Before March 8, 2000 (Former Pen. Code, § 190.2(a)(15))",
+      "firstPage": 537,
+      "family": "homicide"
+    },
+    {
+      "id": "728",
+      "heading": "728. Special Circumstances: Lying in Wait—After March 7, 2000 (Pen. Code, § 190.2(a)(15))",
+      "firstPage": 540,
+      "family": "homicide"
+    },
+    {
+      "id": "729",
+      "heading": "729. Special Circumstances: Murder Because of Race, Religion, or Nationality (Pen. Code, § 190.2(a)(16))",
+      "firstPage": 542,
+      "family": "homicide"
+    },
+    {
+      "id": "730",
+      "heading": "730. Special Circumstances: Murder in Commission of Felony (Pen. Code, § 190.2(a)(17))",
+      "firstPage": 544,
+      "family": "homicide"
+    },
+    {
+      "id": "731",
+      "heading": "731. Special Circumstances: Murder in Commission of Felony—Kidnapping With Intent to Kill After March 8, 2000 (Pen. Code, § 190.2(a)(17))",
+      "firstPage": 549,
+      "family": "homicide"
+    },
+    {
+      "id": "732",
+      "heading": "732. Special Circumstances: Murder in Commission of Felony—Arson With Intent to Kill (Pen. Code, § 190.2(a)(17))",
+      "firstPage": 552,
+      "family": "homicide"
+    },
+    {
+      "id": "733",
+      "heading": "733. Special Circumstances: Murder With Torture (Pen. Code, § 190.2(a)(18))",
+      "firstPage": 556,
+      "family": "homicide"
+    },
+    {
+      "id": "734",
+      "heading": "734. Special Circumstances: Murder by Poison (Pen. Code, § 190.2(a)(19))",
+      "firstPage": 559,
+      "family": "homicide"
+    },
+    {
+      "id": "735",
+      "heading": "735. Special Circumstances: Discharge From Vehicle (Pen. Code, § 190.2(a)(21))",
+      "firstPage": 561,
+      "family": "homicide"
+    },
+    {
+      "id": "736",
+      "heading": "736. Special Circumstances: Killing by Street Gang Member (Pen. Code, § 190.2(a)(22))",
+      "firstPage": 563,
+      "family": "homicide"
+    },
+    {
+      "id": "737",
+      "heading": "737. Special Circumstances: Murder of Transportation Worker (Pen. Code, § 190.25)",
+      "firstPage": 567,
+      "family": "homicide"
+    },
+    {
+      "id": "750",
+      "heading": "750. Special Circumstances: Prior Murder Conviction (Pen. Code, § 190.2(a)(2))—Trial on Prior Murder (Pen. Code, § 190.1(a) & (b))",
+      "firstPage": 569,
+      "family": "homicide"
+    },
+    {
+      "id": "751",
+      "heading": "751. Second Degree Murder With Prior Prison for Murder (Pen. Code, § 190.05)",
+      "firstPage": 571,
+      "family": "homicide"
+    },
+    {
+      "id": "760",
+      "heading": "760. Death Penalty: Introduction to Penalty Phase",
+      "firstPage": 573,
+      "family": "homicide"
+    },
+    {
+      "id": "761",
+      "heading": "761. Death Penalty: Duty of Jury",
+      "firstPage": 575,
+      "family": "homicide"
+    },
+    {
+      "id": "763",
+      "heading": "763. Death Penalty: Factors to Consider—Not Identiﬁed as Aggravating or Mitigating (Pen. Code, § 190.3)",
+      "firstPage": 578,
+      "family": "homicide"
+    },
+    {
+      "id": "764",
+      "heading": "764. Death Penalty: Evidence of Other Violent Crimes",
+      "firstPage": 583,
+      "family": "homicide"
+    },
+    {
+      "id": "765",
+      "heading": "765. Death Penalty: Conviction for Other Felony Crimes",
+      "firstPage": 586,
+      "family": "homicide"
+    },
+    {
+      "id": "766",
+      "heading": "766. Death Penalty: Weighing Process",
+      "firstPage": 589,
+      "family": "homicide"
+    },
+    {
+      "id": "767",
+      "heading": "767. Jurors’ Responsibility During Deliberation in Death Penalty Case",
+      "firstPage": 592,
+      "family": "homicide"
+    },
+    {
+      "id": "768",
+      "heading": "768. Penalty Trial: Pre-Deliberation Instructions",
+      "firstPage": 593,
+      "family": "homicide"
+    },
+    {
+      "id": "775",
+      "heading": "775. Death Penalty: Intellectual Disability (Pen. Code, § 1376)",
+      "firstPage": 596,
+      "family": "homicide"
+    },
+    {
+      "id": "1400",
+      "heading": "1400. Active Participation in Criminal Street Gang (Pen. Code, § 186.22(a))",
+      "firstPage": 1140,
+      "family": "gangs"
+    },
+    {
+      "id": "1401",
+      "heading": "1401. Felony or Misdemeanor Committed for Beneﬁt of Criminal Street Gang (Pen. Code, § 186.22(b)(1) (Felony) and § 186.22(d) (Felony or Misdemeanor))",
+      "firstPage": 1148,
+      "family": "gangs"
+    },
+    {
+      "id": "1402",
+      "heading": "1402. Gang-Related Firearm Enhancement (Pen. Code, § 12022.53)",
+      "firstPage": 1154,
+      "family": "gangs"
+    },
+    {
+      "id": "1403",
+      "heading": "1403. Limited Purpose of Evidence of Gang Activity",
+      "firstPage": 1158,
+      "family": "gangs"
+    }
+  ],
+  "comparisonContentsPages": [
+    35
+  ]
+}
