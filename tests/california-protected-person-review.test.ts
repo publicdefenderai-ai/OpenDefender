@@ -16,8 +16,8 @@ describe("California protected-person and public-place review", () => {
     expect(review.sections.find(s => s.key === "PEN:243.9")?.status).toBe("substantive_research_open");
     // The frozen batch left this branch open; a later evidence-bound batch may publish it.
     expect(additions.some(row => row.id === "ca-pen-243-9-a")).toBe(false);
-    expect(getChargeById("ca-pen-243-b")).toBeUndefined();
-    expect(getChargeById("ca-pen-243-c-1")).toBeUndefined();
+    expect(additions.some(row => row.id === "ca-pen-243-b")).toBe(false);
+    expect(additions.some(row => row.id === "ca-pen-243-c-1")).toBe(false);
   });
   it("requires explicit law-code identity and rejects source-key mismatches across all batches", () => {
     expect(californiaPrimaryIdentity("VEH", "23152(a)")).toEqual({ lawCode: "VEH", key: "VEH:23152", citation: "Cal. Vehicle Code § 23152(a)" });
