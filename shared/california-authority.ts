@@ -1,4 +1,4 @@
-import conductSupplements from "./california-conduct-supplements.json";
+import {CALIFORNIA_CONDUCT_SUPPLEMENTS as conductSupplements} from "./california-conduct-supplements";
 import reviewedSearchAliases from "./california-reviewed-search-aliases.json";
 import {californiaAttorneyDecision} from './california-attorney-decisions';
 /**

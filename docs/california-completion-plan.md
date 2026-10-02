@@ -1,10 +1,10 @@
 # California practical completion plan
 
-Updated October 1, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
+Updated October 2, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
 
-PR53 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
+PR54 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
 
 The latest consolidated reconciliation accounts for all 31 outstanding justice/property instruction comparisons: 23 relate to existing reviewed choices, three have a broad theft choice needing more detailed conduct work, three have no matching published branch, and two remain explicitly deferred. These are comparison counts, not new charges. The 23 reused summaries are partial coverage and do not increase the prior 140 bounded matches or certify complete instruction coverage. The full 202-entry prior crosswalk and every remaining finding are preserved.
 
@@ -20,7 +20,7 @@ The petty-theft conduct supplement now explains larceny, trick and false pretens
 
 The reconciliation completes the accounting portion of the first closeout package. It does not reset the remaining-work estimate or create another full family review.
 
-1. Consolidate the actual consequential branch work: theft conduct distinctions, malicious animal cruelty, the separate four-person access-card acquisition branch, and remaining important vehicle/trespass gaps. Existing general forgery and bad-check summaries are reused, with their limits preserved.
+1. The consolidated theft, animal, access-card and trespass work is recorded above. The [vehicle closeout packet](../scripts/data-review/output/california-vehicle-closeout.md) now isolates two attorney decisions: the numerical penalty for the qualifying low-value taking route, and special-vehicle classification/low-value interaction. It retains ten source sections and CALCRIM 1820 without adding charges or renewing evidence. Existing general forgery and bad-check summaries are reused, with their limits preserved. Proceed to item 2 while those decisions are pending; do not reopen the settled Bullard temporary-taking question.
 2. Complete the targeted major-omission check across homicide, gangs, people/weapons and important other-code candidates. Add only significant missing coverage; unresolved severity is not assumed to be minor.
 3. Close out with a unified omission inventory, representative charging-paper searches/guidance and deployment parity. Marginal or legally unsettled branches remain identified gaps rather than open-ended blockers. A separate fourth publication batch is justified only by a confirmed consequential omission.
 
