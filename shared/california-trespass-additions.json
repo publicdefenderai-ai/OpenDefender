@@ -1,0 +1,279 @@
+[
+  {
+    "code": "602(l)(1)",
+    "title": "Trespass on cultivated, fenced or posted land: refusing to leave",
+    "summary": "Willfully entering another's cultivated or fenced land, or uncultivated or unenclosed land with no-trespass signs at least three per mile along all exterior boundaries and at every entering road and trail, without written permission from the owner, agent or lawful possessor, and refusing or failing to leave immediately when requested by the owner, agent or lawful possessor. Entry alone is not this branch: the additional listed conduct must be established. Section 602.8 separately addresses qualifying entry and has its own exceptions and repeat-offense rules.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful trespass with the specified additional conduct; the permission, land and notice conditions matter.",
+    "id": "ca-pen-602-l-1",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(l)(2)",
+    "title": "Trespass on cultivated, fenced or posted land: destroying a posted warning",
+    "summary": "Willfully entering another's cultivated or fenced land, or uncultivated or unenclosed land with no-trespass signs at least three per mile along all exterior boundaries and at every entering road and trail, without written permission from the owner, agent or lawful possessor, and tearing down, mutilating or destroying a sign forbidding trespass or hunting. Entry alone is not this branch: the additional listed conduct must be established. Section 602.8 separately addresses qualifying entry and has its own exceptions and repeat-offense rules.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful trespass with the specified additional conduct; the permission, land and notice conditions matter.",
+    "id": "ca-pen-602-l-2",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(l)(3)",
+    "title": "Trespass on cultivated, fenced or posted land: tampering with a gate lock",
+    "summary": "Willfully entering another's cultivated or fenced land, or uncultivated or unenclosed land with no-trespass signs at least three per mile along all exterior boundaries and at every entering road and trail, without written permission from the owner, agent or lawful possessor, and removing, injuring, unlocking or tampering with a lock on a gate on or leading into the land. Entry alone is not this branch: the additional listed conduct must be established. Section 602.8 separately addresses qualifying entry and has its own exceptions and repeat-offense rules.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful trespass with the specified additional conduct; the permission, land and notice conditions matter.",
+    "id": "ca-pen-602-l-3",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(l)(4)",
+    "title": "Trespass on cultivated, fenced or posted land: discharging a firearm",
+    "summary": "Willfully entering another's cultivated or fenced land, or uncultivated or unenclosed land with no-trespass signs at least three per mile along all exterior boundaries and at every entering road and trail, without written permission from the owner, agent or lawful possessor, and discharging a firearm. Entry alone is not this branch: the additional listed conduct must be established. Section 602.8 separately addresses qualifying entry and has its own exceptions and repeat-offense rules.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful trespass with the specified additional conduct; the permission, land and notice conditions matter.",
+    "id": "ca-pen-602-l-4",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(o)",
+    "title": "Refusing to leave private property not open to the public",
+    "summary": "Willfully refusing or failing to leave another's land, property or structures not open to the general public after a qualifying request by its owner, agent or lawful possessor, or a peace officer acting at that person's request and identifying that authority. Police-assistance requests have statutory duration, form, revocation and ownership-change limits; a standing request is not automatically valid forever. Lawful labor activity has an express exception. Housing-authority tenant property has specific rules preserving constitutionally protected activity and qualifying resident or management invitations. A request alone does not resolve lawful access or constitutional protections.",
+    "penalty": "Misdemeanor route: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Sections 17(d) and 19.8 also permit an infraction route, with no jail and a base fine up to $250; infraction treatment is not automatic. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:19",
+      "PEN:19.6",
+      "PEN:19.8",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful refusal or failure to leave following the qualifying request; protected activity and lawful access remain material.",
+    "id": "ca-pen-602-o",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:19": "1983-09-27",
+      "PEN:19.6": null,
+      "PEN:19.8": "2025-01-01",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(q)",
+    "title": "Refusing to leave a public building during closed hours",
+    "summary": "Willfully refusing or failing to leave a public-agency building during hours when it is regularly closed to the public, after a request by a regularly employed guard, watchperson or custodian of the agency owning or maintaining it. Circumstances must indicate to a reasonable person that there is no apparent lawful business to pursue. Mere presence in a public building during open hours is not this branch; lawful business and constitutional protections require attention.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful refusal or failure to leave, with the specified closure, request and apparent-lawful-business conditions.",
+    "id": "ca-pen-602-q",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(w)",
+    "title": "Refusing to leave a domestic violence shelter",
+    "summary": "Willfully refusing or failing to leave the location of a domestic violence shelter-based program after a request from a managing authority of the shelter. The request must come from the specified authority; this entry does not treat every disagreement at a shelter as criminal trespass.",
+    "penalty": "Misdemeanor: up to 364 days in county jail under sections 602(w)(1) and 18.5. The court may order restitution for a domestic violence victim's and children's relocation expenses caused by the trespass. A separate base-fine authority and ceiling are not resolved in this entry; do not assume there can be no fine. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:18.5",
+      "PEN:602.8"
+    ],
+    "mentalState": "Willful refusal or failure to leave after a request by a managing authority of the shelter.",
+    "id": "ca-pen-602-w",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:18.5": "2017-01-01",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(x)(2)(A)",
+    "title": "Trespass in a neonatal unit, maternity ward or birthing center: ordinary entry or remaining",
+    "summary": "Knowingly entering or remaining in a neonatal unit, maternity ward or birthing center in a hospital or clinic without lawful business there. Signs must give reasonable notice restricting access to those with lawful business, at least at each entrance, and the circumstances must indicate to a reasonable person that the person has no lawful business there. This is the ordinary infraction route, without the refusal-to-leave or repeat-offense conditions below. The underlying conduct is section 602(x)(1); the selected paragraph identifies the penalty route.",
+    "penalty": "Infraction: a base fine up to $100, with no incarceration. Under section 602(x)(2)(D), when probation is granted or sentence imposition or execution is suspended, counseling is required unless the court finds good cause not to impose it; payment is required unless good cause not to pay is shown. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "infraction"
+    ],
+    "supportingKeys": [
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:602.8"
+    ],
+    "mentalState": "Knowing entry or remaining, with the specified notice and absence-of-lawful-business conditions.",
+    "id": "ca-pen-602-x-2-a",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(x)(2)(B)",
+    "title": "Trespass in a neonatal unit, maternity ward or birthing center: refusal to leave",
+    "summary": "Knowingly entering or remaining in a neonatal unit, maternity ward or birthing center in a hospital or clinic without lawful business there. Signs must give reasonable notice restricting access to those with lawful business, at least at each entrance, and the circumstances must indicate to a reasonable person that the person has no lawful business there. The person also refuses to leave the posted area after a request by a peace officer or other authorized person. The underlying conduct is section 602(x)(1); the selected paragraph identifies the penalty route.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $1,000, or both. Under section 602(x)(2)(D), when probation is granted or sentence imposition or execution is suspended, counseling is required unless the court finds good cause not to impose it; payment is required unless good cause not to pay is shown. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:602.8"
+    ],
+    "mentalState": "Knowing entry or remaining, with the specified notice and absence-of-lawful-business conditions.",
+    "id": "ca-pen-602-x-2-b",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(x)(2)(C)",
+    "title": "Trespass in a neonatal unit, maternity ward or birthing center: second or subsequent offense",
+    "summary": "Knowingly entering or remaining in a neonatal unit, maternity ward or birthing center in a hospital or clinic without lawful business there. Signs must give reasonable notice restricting access to those with lawful business, at least at each entrance, and the circumstances must indicate to a reasonable person that the person has no lawful business there. This is a second or subsequent offense under this subdivision. The underlying conduct is section 602(x)(1); the selected paragraph identifies the penalty route.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a base fine up to $2,000, or both. Under section 602(x)(2)(D), when probation is granted or sentence imposition or execution is suspended, counseling is required unless the court finds good cause not to impose it; payment is required unless good cause not to pay is shown. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:18.5",
+      "PEN:19.6",
+      "PEN:602.8"
+    ],
+    "mentalState": "Knowing entry or remaining, with the specified notice and absence-of-lawful-business conditions.",
+    "id": "ca-pen-602-x-2-c",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:18.5": "2017-01-01",
+      "PEN:19.6": null,
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  },
+  {
+    "code": "602(y)",
+    "title": "Avoiding security screening at a courthouse or government building",
+    "summary": "Intentionally avoiding submission of oneself and accessible property to the screening and inspection procedures controlling entry or reentry to a courthouse or a city, county, city-and-county or state building. Entrances must be posted with reasonable notice that this conduct may be prosecuted as trespass. Conduct permitted by federal law is excepted. Merely declining to enter rather than bypassing screening is not described as this offense.",
+    "penalty": "Misdemeanor: up to 6 months in county jail, a base fine up to $1,000, or both under section 19. Adult base penalties only; restitution, assessments, other charges and case-specific sentencing require separate review.",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingKeys": [
+      "PEN:19",
+      "PEN:602.8"
+    ],
+    "mentalState": "Intentional avoidance of the applicable screening and inspection procedures.",
+    "id": "ca-pen-602-y",
+    "lawCode": "PEN",
+    "calcrim": [],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:19": "1983-09-27",
+      "PEN:602": "2024-01-01",
+      "PEN:602.8": "2004-01-01"
+    }
+  }
+]

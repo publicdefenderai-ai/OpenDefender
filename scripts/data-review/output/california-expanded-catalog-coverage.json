@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 667,
-    "configuredSelectable": 646,
+    "canonicalRecords": 678,
+    "configuredSelectable": 657,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 547,
-    "boundedCorrectionPass": 646,
+    "boundedAdditionPass": 558,
+    "boundedCorrectionPass": 657,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -25,7 +25,7 @@
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 340,
-    "selectableRecordsWithAllPrimaryTextAcquired": 646,
+    "selectableRecordsWithAllPrimaryTextAcquired": 657,
     "totalAcquiredSectionsIncludingDependencies": 839,
     "totalAcquiredVersionsIncludingDependencies": 847,
     "statewideOffenseDenominator": null,
@@ -34,7 +34,7 @@
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "646 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "657 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 512,
-      "corrected": 512,
+      "selectable": 523,
+      "corrected": 523,
       "awaitingCorrection": 0
     },
     {
@@ -3098,6 +3098,17 @@
       "section": "602",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=602&lawCode=PEN",
       "recordIds": [
+        "ca-pen-602-l-1",
+        "ca-pen-602-l-2",
+        "ca-pen-602-l-3",
+        "ca-pen-602-l-4",
+        "ca-pen-602-o",
+        "ca-pen-602-q",
+        "ca-pen-602-w",
+        "ca-pen-602-x-2-a",
+        "ca-pen-602-x-2-b",
+        "ca-pen-602-x-2-c",
+        "ca-pen-602-y",
         "ca-pen-602-k",
         "ca-pen-602-m"
       ],
@@ -5804,6 +5815,193 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-l-1",
+      "title": "Trespass on cultivated, fenced or posted land: refusing to leave",
+      "citation": "Cal. Penal Code § 602(l)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "7af93126567f964f01606d8e7c1f7a0321cdf2091f8a87e32b1148c99d5522b4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-l-2",
+      "title": "Trespass on cultivated, fenced or posted land: destroying a posted warning",
+      "citation": "Cal. Penal Code § 602(l)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "d5ff77656f9997e23c412d4a58047d7f65525e78d055045a981fed314f1e4f07",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-l-3",
+      "title": "Trespass on cultivated, fenced or posted land: tampering with a gate lock",
+      "citation": "Cal. Penal Code § 602(l)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "6e0f0c1066e06a75fbf5fc387e5ac5674e74356911076701a4048c46d41a7745",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-l-4",
+      "title": "Trespass on cultivated, fenced or posted land: discharging a firearm",
+      "citation": "Cal. Penal Code § 602(l)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "8a59a9c59937d8e850ae61ada9ee5edcedaa81505aa23ded951405657e1ed847",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-o",
+      "title": "Refusing to leave private property not open to the public",
+      "citation": "Cal. Penal Code § 602(o)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "de7a7b70a1d273f99f554b66dbf0908c3509b397148e916f5cef8fdc3ad82849",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-q",
+      "title": "Refusing to leave a public building during closed hours",
+      "citation": "Cal. Penal Code § 602(q)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "09b379b1348549c5c98ba1ed568d9386d1f3f7893fc3bf590294bdf4a36a6a18",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-w",
+      "title": "Refusing to leave a domestic violence shelter",
+      "citation": "Cal. Penal Code § 602(w)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "67d3ca67a1507391a4c6ad56a8a1e9cee70c907024165eb7e5a3531dd3c56456",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-x-2-a",
+      "title": "Trespass in a neonatal unit, maternity ward or birthing center: ordinary entry or remaining",
+      "citation": "Cal. Penal Code § 602(x)(2)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "68e408345dde657a05a9a7f21c67357acf6a1a3c7b67f05c545ed4c596528efc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-x-2-b",
+      "title": "Trespass in a neonatal unit, maternity ward or birthing center: refusal to leave",
+      "citation": "Cal. Penal Code § 602(x)(2)(B)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "bedecf06f9498baec904899c80244aabcb39ed51a477d18b2e20b14c24ebbe32",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-x-2-c",
+      "title": "Trespass in a neonatal unit, maternity ward or birthing center: second or subsequent offense",
+      "citation": "Cal. Penal Code § 602(x)(2)(C)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "0ab8e0cf9694167081b8a6a607777e99c23c07d4a616235b7fd57581bc398264",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-602-y",
+      "title": "Avoiding security screening at a courthouse or government building",
+      "citation": "Cal. Penal Code § 602(y)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:602"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:602"
+      ],
+      "catalogSha256": "f60243b8042536c337c11d833fff40cd2388221f5d9390be75ca16e3740658d4",
       "attorneyReview": "pending"
     },
     {
