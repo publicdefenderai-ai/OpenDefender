@@ -1,10 +1,24 @@
 # California practical completion plan
 
-Updated September 30, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
+Updated October 1, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
 
-PR45 is merged. The repeat-theft/vehicle and assembly successor proposes ten choices, bringing the repository to 604 configured and evidence-eligible choices while the receipt is fresh: 99 corrected originals and 505 additions. They cover 327 primary sections, with 814 retained publication sections/822 versions including dependencies. These are repository counts, not verified production availability; 21 canonical labels remain withheld. The four attorney decisions remain recorded. Historical milestones below describe their earlier state.
+PR50 is merged. California has 644 configured choices (99 corrected originals and 545 additions) across 340 primary sections, supported by 839 retained publication sections / 847 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
+
+The latest consolidated reconciliation accounts for all 31 outstanding justice/property instruction comparisons: 23 relate to existing reviewed choices, three have a broad theft choice needing more detailed conduct work, three have no matching published branch, and two remain explicitly deferred. These are comparison counts, not new charges. The 23 reused summaries are partial coverage and do not increase the prior 140 bounded matches or certify complete instruction coverage. The full 202-entry prior crosswalk and every remaining finding are preserved.
+
+This avoids recreating general forgery, insufficient-funds and ordinary access-card-use records already reviewed in the original catalog pass. Explicit subdivision search aliases now route charging-paper citations to those same reviewed choices. A shared section number does not clear sibling offenses: 647(f) is not 647(h)/(i), and 597(b) is not 597(a).
+
+## Current closeout work
+
+The reconciliation completes the accounting portion of the first closeout package. It does not reset the remaining-work estimate or create another full family review.
+
+1. Consolidate the actual consequential branch work: theft conduct distinctions, malicious animal cruelty, the separate four-person access-card acquisition branch, and remaining important vehicle/trespass gaps. Existing general forgery and bad-check summaries are reused, with their limits preserved.
+2. Complete the targeted major-omission check across homicide, gangs, people/weapons and important other-code candidates. Add only significant missing coverage; unresolved severity is not assumed to be minor.
+3. Close out with a unified omission inventory, representative charging-paper searches/guidance and deployment parity. Marginal or legally unsettled branches remain identified gaps rather than open-ended blockers. A separate fourth publication batch is justified only by a confirmed consequential omission.
+
+Reusable maintenance, source comparison and test infrastructure remain worthwhile investments, but are reported separately from additional California coverage. Historical milestones below describe their earlier state.
 
 The new drug packet accounts for 104 candidate identities: 102 Chapter 6 sections plus two independent benchmark probes. Twenty primary sections supply additions, six have earlier catalog entries, 77 remain shared-context or substantive research, and BPC 4326 is absent from the archive. This is an honest research queue, not 77 confirmed missing offenses. No unknown-severity provision is classified as a minor omission.
 
@@ -12,7 +26,7 @@ The latest successor packet accounts for all 40 sections left in the first perso
 
 The archive discovery ledger spans 30 codes and records 6,028 sections with criminal-language signals, 3,530 possible penalty targets, and other unresolved/no-signal sections. These overlap legal concepts, definitions, procedure, historical text, and noncriminal rules. They are not missing-charge counts and cannot support a coverage percentage.
 
-## Rough remaining effort
+## Historical planning snapshot before the later publication batches
 
 The cumulative people/weapons crosswalk now accounts for 207 instructions across five families: 160 have bounded matches, 29 are context/defense/allegation entries, one is a generic weapon template, and 17 still require branch comparison or resolution. Bounded matches do not certify every branch or the statute's completeness. These entries overlap and are not a count of new charges. There is no defensible statewide percentage yet.
 
@@ -24,7 +38,7 @@ The cumulative people/weapons crosswalk now accounts for 207 instructions across
 | Justice, public order, property and financial gaps | Missing-charge pass for obstruction, court orders, custody/escape, public order and consequential property/fraud branches. |
 | Targeted other-code and final benchmark pass | Check important other-code candidates and complete missing major-family comparisons, including homicide and gangs. Reconcile deployment, maintenance and explicit omissions. |
 
-The earlier 3-6 substantive-batch estimate remains a provisional work-package range, not a deadline. This expanded comparison shows that people/weapons alone merits several substantial publication groups; trying to force every branch into one PR would make legal review harder. Combine shared sources within each group and do not repeatedly reopen low-priority traffic clauses. No new charge or currentness approval results from acquiring this packet.
+At that earlier milestone, 3-6 substantive batches was a provisional work-package estimate, not a deadline. The current closeout work above supersedes that estimate. This expanded comparison shows that people/weapons alone merits several substantial publication groups; trying to force every branch into one PR would make legal review harder. Combine shared sources within each group and do not repeatedly reopen low-priority traffic clauses. No new charge or currentness approval results from acquiring this packet.
 
 Earlier consequential holds carry forward: HSC 11395 identity, minor-actor drug branches, BPC 4326 history, unresolved traffic/entrustment questions and PEN 30515. Moving to a new family does not resolve or demote those gaps.
 
@@ -354,3 +368,16 @@ The fatal section 4500 branch, section 169 courthouse picketing and section 86's
 Reproduce with `acquire-officials-custody.py`, `node --import tsx scripts/data-review/california-verification/officials-custody-review.ts`, and `coverage.ts`. Tests bind source and instruction evidence, distinguish the legal branches, reject tampering, and exercise runtime categories, English-only notices, expiry, API/guidance output and exact citation searches. PR47's historical count is now a named module constant, with no change to its frozen report.
 
 Next consolidate remaining already-published benchmark associations and the consequential general-forgery/access-card/bad-check gaps, followed by targeted other-code/homicide/gang comparisons. Do not spend disproportionate time on marginal uncertain misdemeanors; preserve them in the gap inventory. Maintenance and deployment verification remain release requirements.
+
+
+## Existing-choice reconciliation after PR50
+
+The report `scripts/data-review/output/california-gap-reconciliation.md` links 31 remaining comparisons to exact reviewed corrections, original review hashes, retained statutory versions and instruction-page hashes. It distinguishes 23 partial existing-choice comparisons, three generic-theft conduct comparisons, three unpublished branches and two explicit deferrals. Twenty-one distinct existing choices are referenced; no new catalog record, penalty change, source approval or attorney decision is introduced.
+
+The three unpublished branches are 647(h), 647(i) and 597(a); the expression-sensitive 169 and 653b comparisons remain deferred. This benchmark does not enumerate the entire statewide backlog. All twelve remaining findings in the preceding packet survive unchanged, including the four-person access-card and unresolved fine questions.
+
+Charging-paper aliases for 470(a)-(d), 484g(a)/(b) and 476a(a) reach the existing reviewed choices. They do not substitute a sibling statute, determine a user's charged subdivision or change saved identities. Tests reject a public-intoxication mapping to loitering, incomplete accounting, altered source spans, missing dependencies and silently removed findings.
+
+Reproduce with `node --import tsx scripts/data-review/california-verification/gap-reconciliation.ts`. The original corrections and historical crosswalk remain intact. No renewal is performed by this report.
+
+Validation for this reconciliation: seven focused tests, four production-browser/API checks, all 32 Python tests, typecheck and build passed. The full 163-file suite reports 2,001 passed and 105 skipped, with the unchanged two failing tests and three database-dependent suite-loading failures. No production database or paid AI service was used.

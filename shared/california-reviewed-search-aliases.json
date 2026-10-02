@@ -1,0 +1,5 @@
+{
+  "ca-forgery": ["PC 470(a)", "PEN 470(a)", "Penal Code 470(a)", "PC 470(b)", "PEN 470(b)", "Penal Code 470(b)", "PC 470(c)", "PEN 470(c)", "Penal Code 470(c)", "PC 470(d)", "PEN 470(d)", "Penal Code 470(d)"],
+  "ca-credit-card-fraud": ["PC 484g(a)", "PEN 484g(a)", "Penal Code 484g(a)", "PC 484g(b)", "PEN 484g(b)", "Penal Code 484g(b)"],
+  "ca-check-fraud": ["PC 476a(a)", "PEN 476a(a)", "Penal Code 476a(a)"]
+}
