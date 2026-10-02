@@ -1,0 +1,243 @@
+[
+  {
+    "instructionId": "1600",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-robbery-in-the-first-degree",
+      "ca-robbery-in-the-second-degree"
+    ],
+    "rationale": "Existing force-or-fear robbery choices preserve degree distinctions. Attempted robbery is not a substitute for the completed offense."
+  },
+  {
+    "instructionId": "1650",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-carjacking"
+    ],
+    "rationale": "Existing vehicle taking from possession or immediate presence by force or fear; temporary or permanent deprivation is preserved."
+  },
+  {
+    "instructionId": "1700",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-burglary-in-the-first-degree",
+      "ca-burglary-in-the-second-degree"
+    ],
+    "rationale": "Existing burglary choices distinguish inhabited-location first degree from other burglary and the separate shoplifting rule."
+  },
+  {
+    "instructionId": "1703",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-shoplifting"
+    ],
+    "rationale": "Existing open-business-hours entry and $950 threshold; specified priors and repeat-theft allegations remain conditional."
+  },
+  {
+    "instructionId": "1750",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-theft-by-receiving"
+    ],
+    "rationale": "Existing 496(a) receiving/concealing/withholding choice requires knowledge; dealer-inquiry duties are not silently substituted."
+  },
+  {
+    "instructionId": "1800",
+    "status": "existing_broad_choice_needs_branch_work",
+    "chargeIds": [
+      "ca-petty-theft"
+    ],
+    "rationale": "Existing petty-theft summary establishes value/grading limits, but does not itself complete the taking, movement, consent and deprivation alternatives. Reuse it; review the conduct wording before claiming detailed larceny coverage."
+  },
+  {
+    "instructionId": "1804",
+    "status": "existing_broad_choice_needs_branch_work",
+    "chargeIds": [
+      "ca-petty-theft"
+    ],
+    "rationale": "Section overlap does not establish reliance, transfer of ownership or corroboration for false-pretense theft. Improve the existing broad choice or supply bounded guidance without duplicating generic petty theft."
+  },
+  {
+    "instructionId": "1805",
+    "status": "existing_broad_choice_needs_branch_work",
+    "chargeIds": [
+      "ca-petty-theft"
+    ],
+    "rationale": "Section overlap does not establish the fraud-induced possession versus ownership distinction for theft by trick. Preserve this as substantive branch work."
+  },
+  {
+    "instructionId": "1806",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-embezzlement"
+    ],
+    "rationale": "Existing fraudulent appropriation of entrusted property under 503; punishment and public-funds exceptions remain bounded."
+  },
+  {
+    "instructionId": "1900",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "The existing 470 summary includes unauthorized signatures and intent to defraud; signing authority and the charged instrument still require branch-specific consideration."
+  },
+  {
+    "instructionId": "1901",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "Endorsement is an unauthorized-signature application of 470(a); reuse the existing summary without treating all signatures as unauthorized."
+  },
+  {
+    "instructionId": "1902",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "Existing summary expressly includes counterfeiting handwriting or seals, with intent to defraud."
+  },
+  {
+    "instructionId": "1903",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "Existing falsified-record summary supplies a broad choice; wills, court records and other specified legal writings must retain their document-specific limits."
+  },
+  {
+    "instructionId": "1904",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "Existing making/altering false-instrument summary applies only to qualifying writings; the seven-instrument $950 rule is not universal."
+  },
+  {
+    "instructionId": "1905",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-forgery"
+    ],
+    "rationale": "Existing passing-instrument summary preserves knowledge and intent to defraud; this is not a finding that possession alone proves passing or attempted use."
+  },
+  {
+    "instructionId": "1956",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-credit-card-fraud"
+    ],
+    "rationale": "Existing 484g summary covers unauthorized/fraudulent use with intent to defraud; knowledge, card/account status and six-month aggregation remain relevant."
+  },
+  {
+    "instructionId": "1957",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-credit-card-fraud"
+    ],
+    "rationale": "Existing 484g summary includes fraudulent holder representation. This does not silently substitute card possession or another 484e offense."
+  },
+  {
+    "instructionId": "1970",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-check-fraud"
+    ],
+    "rationale": "Existing insufficient-funds choice preserves willfulness, knowledge, fraudulent intent and outstanding instruments. Prior-conviction exceptions remain distinct; a bounced check alone is insufficient."
+  },
+  {
+    "instructionId": "2040",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-identity-theft-530-5-a"
+    ],
+    "rationale": "Existing unlawful-use choice under 530.5(a), not the separately reviewed possession-with-fraud-intent branch."
+  },
+  {
+    "instructionId": "2656",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-resisting-arrest"
+    ],
+    "rationale": "Existing 148(a)(1) choice preserves lawful performance and lawful-recording protection; weapon-taking subdivisions remain separate."
+  },
+  {
+    "instructionId": "2680",
+    "status": "deferred_expression_sensitive",
+    "chargeIds": [],
+    "rationale": "Courthouse picketing remains withheld pending constitutional/application research; this is a deliberate deferral, not cleared coverage."
+  },
+  {
+    "instructionId": "2900",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-vandalism"
+    ],
+    "rationale": "Existing malicious damage/defacement choice preserves property ownership, value and prior-conviction conditions."
+  },
+  {
+    "instructionId": "2915",
+    "status": "unpublished_branch",
+    "chargeIds": [],
+    "rationale": "The 647(f) public-intoxication and 647(b) prostitution choices do not cover 647(h) loitering. Do not accept a shared section number as a match."
+  },
+  {
+    "instructionId": "2916",
+    "status": "unpublished_branch",
+    "chargeIds": [],
+    "rationale": "The existing 647(f)/(b) choices do not cover 647(i) peeking; verify the distinct conduct and exceptions before publication."
+  },
+  {
+    "instructionId": "2917",
+    "status": "deferred_expression_sensitive",
+    "chargeIds": [],
+    "rationale": "School loitering remains unpublished while the conduct-construction issue is unresolved. Retain the existing finding and avoid treating mere presence as sufficient."
+  },
+  {
+    "instructionId": "2953",
+    "status": "unpublished_branch",
+    "chargeIds": [],
+    "rationale": "Existing animal cruelty is 597(b). It does not establish the distinct malicious maiming/torture/wounding/killing branch in 597(a); prioritize that meaningful gap."
+  },
+  {
+    "instructionId": "2960",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-minor-in-possession"
+    ],
+    "rationale": "Existing under-21 public possession choice includes statutory exceptions and medical-assistance immunity; supplying alcohol is a different charge."
+  },
+  {
+    "instructionId": "2966",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-public-intoxication"
+    ],
+    "rationale": "Existing 647(f) summary requires inability to care for safety or obstruction of a public way; neither ordinary intoxication nor other 647 subdivisions suffice."
+  },
+  {
+    "instructionId": "2981",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-failure-to-pay-child-support"
+    ],
+    "rationale": "Existing 270 summary and recorded attorney decision are reused; first/subsequent-offense uncertainty remains explicit, not reopened or treated as resolved."
+  },
+  {
+    "instructionId": "2997",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-money-laundering"
+    ],
+    "rationale": "Existing 186.10 choice preserves financial-institution transactions, seven/thirty-day thresholds and required knowledge or intent."
+  },
+  {
+    "instructionId": "3002",
+    "status": "existing_reviewed_choice_partial",
+    "chargeIds": [
+      "ca-failure-to-appear-1320-a",
+      "ca-failure-to-appear-1320-b"
+    ],
+    "rationale": "Existing own-recognizance misdemeanor/felony choices remain distinct from bail-related failure to appear; the 14-day presumption is not a grace period."
+  }
+]

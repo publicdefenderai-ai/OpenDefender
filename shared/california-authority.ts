@@ -1,3 +1,4 @@
+import reviewedSearchAliases from "./california-reviewed-search-aliases.json";
 import {californiaAttorneyDecision} from './california-attorney-decisions';
 /**
  * Authoritative California charge contract.
@@ -2140,7 +2141,7 @@ export function getCaliforniaCanonicalCharge(
     id: metadata.canonicalId,
     name: metadata.officialTitle,
     code: metadata.code,
-    searchAliases: [...new Set([...(legacyCharge.searchAliases ?? []), ...californiaCitationSearchAliases(metadata.lawCode, metadata.code)])],
+    searchAliases: [...new Set([...(legacyCharge.searchAliases ?? []), ...((reviewedSearchAliases as Record<string, string[]>)[metadata.canonicalId] ?? []), ...californiaCitationSearchAliases(metadata.lawCode, metadata.code)])],
     description: `${metadata.officialTitle} under ${metadata.citation}. The prosecution generally must prove: ${metadata.elements.join("; ")}.`,
     categories: metadata.categories,
     category: getCaliforniaPrimaryCategory(metadata.categories, metadata.grading),
