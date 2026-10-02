@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ca-pen-597-a",
+    "code": "597(a)",
+    "title": "Malicious and intentional maiming, torture, wounding or killing of an animal",
+    "summary": "Maliciously and intentionally maiming, mutilating, torturing or wounding a living animal, or maliciously and intentionally killing an animal. Accidental injury alone does not establish this offense. The protected-species branch in section 597(c) and the statutory exceptions in section 599c require separate attention; an animal being a food species is not an automatic defense to cruelty. This is the intentional-conduct branch, distinct from the existing section 597(b) care and cruel-treatment entry.",
+    "penalty": "Under section 597(d), the misdemeanor alternative permits up to 364 days in county jail (section 18.5); the felony alternative permits imprisonment under section 1170(h), ordinarily 16 months, 2 years or 3 years. Either alternative permits a base fine up to $20,000, or both fine and imprisonment. Section 597(g) requires forfeiture of qualifying seized animals and liability for impoundment costs. Animal-possession restrictions, treatment orders, restitution, assessments, enhancements and individual sentencing require separate review.",
+    "mentalState": "Malicious and intentional conduct, not accidental injury; general criminal intent rather than a separate intent to achieve an additional result.",
+    "supportingKeys": [
+      "PEN:7",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:1170",
+      "PEN:599b",
+      "PEN:599c"
+    ],
+    "calcrim": [
+      "2953"
+    ],
+    "lawCode": "PEN",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:597": "2024-01-01",
+      "PEN:599b": "2003-01-01",
+      "PEN:599c": null,
+      "PEN:7": "2024-07-02"
+    }
+  },
+  {
+    "id": "ca-pen-484e-b",
+    "code": "484e(b)",
+    "title": "Acquiring access cards issued to four or more people within twelve months",
+    "summary": "A person other than the issuer acquires access cards issued in the names of four or more people within any consecutive twelve-month period, with reason to know the cards were taken or retained in circumstances violating section 484e(a), (c) or (d). Four cards in one person's name do not satisfy the four-person requirement. This is a separate acquisition offense, not ordinary unauthorized card use under section 484g or mere account-information possession under section 484e(d). The statute calls it grand theft, but the section 490.2 lower-value rule must also be considered.",
+    "penalty": "For grand theft governed by section 489(c), the misdemeanor alternative is up to 364 days in county jail and the felony alternative is ordinarily 16 months, 2 years or 3 years under section 1170(h). If section 490.2 reduces the theft to petty theft because the property taken is worth $950 or less, the ordinary section 490 penalty is up to 6 months in county jail, a base fine up to $1,000, or both. Specified serious or registration-related priors and separately charged repeat-theft provisions such as section 666.1 can change that treatment. Card credit limits or linked account balances should not be assumed to establish the value of the stolen cards. The valuation and aggregation applicable to this four-person acquisition branch need case-specific review; Romanowski directly decided account-information theft under subdivision (d), not subdivision (b). The grand-theft fine ceiling remains unresolved here. Restitution, assessments, enhancements and individual sentencing require separate review.",
+    "mentalState": "Reason to know the cards were taken or retained in circumstances violating section 484e(a), (c) or (d); the issuer is excluded.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:1170",
+      "PEN:484",
+      "PEN:484d",
+      "PEN:489",
+      "PEN:490",
+      "PEN:490.2",
+      "PEN:667",
+      "PEN:290",
+      "PEN:666.1"
+    ],
+    "calcrim": [],
+    "lawCode": "PEN",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:290": "2026-01-01",
+      "PEN:484": "2001-01-01",
+      "PEN:484d": null,
+      "PEN:484e": "1999-01-01",
+      "PEN:489": "2020-09-28",
+      "PEN:490": null,
+      "PEN:490.2": null,
+      "PEN:666.1": "2024-12-18",
+      "PEN:667": "2022-01-01"
+    }
+  }
+]

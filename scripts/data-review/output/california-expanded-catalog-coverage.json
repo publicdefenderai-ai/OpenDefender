@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 665,
-    "configuredSelectable": 644,
+    "canonicalRecords": 667,
+    "configuredSelectable": 646,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 545,
-    "boundedCorrectionPass": 644,
+    "boundedAdditionPass": 547,
+    "boundedCorrectionPass": 646,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -25,7 +25,7 @@
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 340,
-    "selectableRecordsWithAllPrimaryTextAcquired": 644,
+    "selectableRecordsWithAllPrimaryTextAcquired": 646,
     "totalAcquiredSectionsIncludingDependencies": 839,
     "totalAcquiredVersionsIncludingDependencies": 847,
     "statewideOffenseDenominator": null,
@@ -34,7 +34,7 @@
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "644 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "646 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 510,
-      "corrected": 510,
+      "selectable": 512,
+      "corrected": 512,
       "awaitingCorrection": 0
     },
     {
@@ -2675,6 +2675,7 @@
       "section": "484e",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484e&lawCode=PEN",
       "recordIds": [
+        "ca-pen-484e-b",
         "ca-pen-484e-a",
         "ca-pen-484e-d",
         "ca-pen-484e-c"
@@ -3077,7 +3078,8 @@
       "section": "597",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=597&lawCode=PEN",
       "recordIds": [
-        "ca-animal-cruelty-misdemeanor"
+        "ca-animal-cruelty-misdemeanor",
+        "ca-pen-597-a"
       ],
       "alreadyRetained": false
     },
@@ -5802,6 +5804,40 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-597-a",
+      "title": "Malicious and intentional maiming, torture, wounding or killing of an animal",
+      "citation": "Cal. Penal Code § 597(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:597"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:597"
+      ],
+      "catalogSha256": "0ad4bdbf0fafef7591ae348d75843ef661ea679c1e4b390c5d90d2ed10be06a9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-484e-b",
+      "title": "Acquiring access cards issued to four or more people within twelve months",
+      "citation": "Cal. Penal Code § 484e(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:484e"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484e"
+      ],
+      "catalogSha256": "311c221f6cae6dcbe7a7cdfa1a6f52d523949e9c1c116d6a2526fe26a5b00bc6",
       "attorneyReview": "pending"
     },
     {

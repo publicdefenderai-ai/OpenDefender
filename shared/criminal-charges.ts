@@ -95035,7 +95035,7 @@ for (const [group, sections] of [['Weapons', californiaWeaponConductSections], [
 }
 
 // These public-order choices share the reviewed catalog; do not infer categories from a statute number alone.
-const californiaPublicOrderSections = new Set(['591','601','602','602.5','399','399.5','337a','336.9','632','403','404.6','405','408','409','416']);
+const californiaPublicOrderSections = new Set(['597','591','601','602','602.5','399','399.5','337a','336.9','632','403','404.6','405','408','409','416']);
 chargeCategories['Public Order'] = [...new Set([...chargeCategories['Public Order'], ...criminalCharges.filter(charge => {
   if (charge.jurisdiction !== 'CA') return false;
   const record = getCaliforniaCanonicalRecord(charge.id);
