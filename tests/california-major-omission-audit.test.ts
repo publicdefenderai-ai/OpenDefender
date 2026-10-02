@@ -56,4 +56,10 @@ describe('California major omission audit',()=>{
   expect(p.limits.join(' ')).toContain('not a statistically representative sample');
   expect(renderMajorOmissionAudit()).not.toMatch(/[—–]/);
  });
+ it('isolates returned discovery evidence from the verified parse cache',()=>{
+  const first=buildMajorOmissionAudit();
+  first.otherCodeProbes[0].versions[0].key='PEN:wrong';
+  const second=buildMajorOmissionAudit();
+  expect(second.otherCodeProbes[0].versions[0].key).toBe(second.otherCodeProbes[0].key);
+ });
 });

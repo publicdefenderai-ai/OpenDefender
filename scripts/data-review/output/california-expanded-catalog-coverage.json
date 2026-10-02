@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 678,
-    "configuredSelectable": 657,
+    "canonicalRecords": 683,
+    "configuredSelectable": 662,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 558,
-    "boundedCorrectionPass": 657,
+    "boundedAdditionPass": 563,
+    "boundedCorrectionPass": 662,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 340,
+    "distinctSelectablePrimarySections": 342,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 340,
-    "selectableRecordsWithAllPrimaryTextAcquired": 657,
-    "totalAcquiredSectionsIncludingDependencies": 840,
-    "totalAcquiredVersionsIncludingDependencies": 848,
+    "acquiredSelectablePrimarySections": 342,
+    "selectableRecordsWithAllPrimaryTextAcquired": 662,
+    "totalAcquiredSectionsIncludingDependencies": 841,
+    "totalAcquiredVersionsIncludingDependencies": 849,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "657 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "662 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 523,
-      "corrected": 523,
+      "selectable": 528,
+      "corrected": 528,
       "awaitingCorrection": 0
     },
     {
@@ -878,6 +878,15 @@
     },
     {
       "lawCode": "PEN",
+      "section": "149",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=149&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-149"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "166",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=166&lawCode=PEN",
       "recordIds": [
@@ -911,6 +920,15 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=186.10&lawCode=PEN",
       "recordIds": [
         "ca-money-laundering"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "186.22",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=186.22&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-186-22-a"
       ],
       "alreadyRetained": false
     },
@@ -1037,7 +1055,8 @@
         "ca-involuntary-manslaughter",
         "ca-vehicular-manslaughter-192-c1",
         "ca-vehicular-manslaughter-192-c2",
-        "ca-vehicular-manslaughter-192-c3"
+        "ca-vehicular-manslaughter-192-c3",
+        "ca-attempted-voluntary-manslaughter"
       ],
       "alreadyRetained": false
     },
@@ -1304,6 +1323,8 @@
       "recordIds": [
         "ca-domestic-battery",
         "ca-battery-243-a",
+        "ca-pen-243-b",
+        "ca-pen-243-c-1",
         "ca-pen-243-d",
         "ca-pen-243-c-2"
       ],
@@ -3191,7 +3212,8 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=664&lawCode=PEN",
       "recordIds": [
         "ca-attempted-murder",
-        "ca-attempted-robbery"
+        "ca-attempted-robbery",
+        "ca-attempted-voluntary-manslaughter"
       ],
       "alreadyRetained": false
     },
@@ -5815,6 +5837,97 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-186-22-a",
+      "title": "Active participation in a criminal street gang",
+      "citation": "Cal. Penal Code § 186.22(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:186.22"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:186.22"
+      ],
+      "catalogSha256": "f763251e55fc54e93e1dbd18bf97dd51c4fdc8f93d440897cb37dbab43c9872b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-149",
+      "title": "Assault or beating by a public officer under color of authority",
+      "citation": "Cal. Penal Code § 149",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:149"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:149"
+      ],
+      "catalogSha256": "c5b32c426676f81b134355c74c3e3d698ae0bf193ca89e092a04b8b5a62589aa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-b",
+      "title": "Battery on a specified officer, responder or emergency-care worker",
+      "citation": "Cal. Penal Code § 243(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:243"
+      ],
+      "catalogSha256": "affaba94b1fd883772bddd7fdd976ea5bbef726a7dc37c6b0078cc7a8030485c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-243-c-1",
+      "title": "Battery causing injury to a specified non-peace-officer victim",
+      "citation": "Cal. Penal Code § 243(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:243"
+      ],
+      "catalogSha256": "6c75d392ec6e72d0756fa09df38383142b720a2ad7dffed4abe3a3ae996c8c2f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-attempted-voluntary-manslaughter",
+      "title": "Attempted voluntary manslaughter",
+      "citation": "Cal. Penal Code § 664(a); 192(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:192",
+        "PEN:664"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192",
+        "PEN:664"
+      ],
+      "catalogSha256": "07f7e165cacc1200dfe817ebac0ae2660eb2946d20c50df45eae91306d1fcced",
       "attorneyReview": "pending"
     },
     {
