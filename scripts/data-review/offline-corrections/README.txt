@@ -30,3 +30,11 @@ python3 -m unittest discover -s scripts/data-review/offline-corrections -p 'test
 
 tests/offline-corrections.test.ts runs these checks through the existing Vitest CI
 entry point. No workflow permissions or new dependencies are required.
+
+Source effectiveDateStart is required for candidate and retained documents and must
+be a real YYYY-MM-DD calendar date. This validates metadata shape, not legal currency.
+Quote-rebinding candidates are input integrity checks only; they are not emitted or
+applied by this preparer. Review their old/new bindings in the original local packet.
+Output evidenceSpans contain the separately validated record-bound passages.
+prepare() rejects input lacking validate_packet's required evidence context; this is
+an ordering guard for trusted local callers, not an unforgeable approval boundary.

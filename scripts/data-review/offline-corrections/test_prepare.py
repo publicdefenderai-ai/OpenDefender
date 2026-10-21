@@ -28,7 +28,7 @@ class OfflineCorrectionTests(unittest.TestCase):
     def packet(self, mutate=None):
         s = {'section': '1', 'sourceHash': self.sources['1']['contentHash'], 'start': 0, 'end': 6, 'text': 'Public'}
         data = {'proposed-record-changes.json': {'records': [self.row]}, 'candidate-source-documents.json': self.sources,
-                'retained-source-documents.json': self.sources,
+                'retained-source-documents.json': copy.deepcopy(self.sources),
                 'span-evidence.json': [{'id': 'e', 'candidate': s, 'retained': s, 'unchangedText': True}],
                 'quote-rebinding-candidates.json': [{'section': '1', 'oldSpan': s, 'candidateSpan': s}]}
         data = copy.deepcopy(data)
@@ -57,9 +57,10 @@ class OfflineCorrectionTests(unittest.TestCase):
             m.validate_packet(self.packet(lambda d:d['span-evidence.json'][0]['candidate'].update(text='Other!')))
 
     def test_rejects_baseline_drift(self):
-        row=copy.deepcopy(self.row);row['currentEnglish']['plainSummary']='Old stale wording'
+        self.row['currentEnglish']['plainSummary']='Old stale wording'
+        p,s=m.validate_packet(self.packet())
         with self.assertRaisesRegex(ValueError,'Baseline guidance drift'):
-            m.prepare({'records':[row]},self.sources,self.root)
+            m.prepare(p,s,self.root)
 
     def test_rejects_duplicate_records(self):
         with self.assertRaisesRegex(ValueError,'Duplicate record'):
@@ -90,9 +91,10 @@ class OfflineCorrectionTests(unittest.TestCase):
             m.validate_packet(self.packet(lambda d:d['proposed-record-changes.json']['records'][0].update(evidenceIds=[])))
 
     def test_rejects_unknown_source_only_record(self):
-        row=copy.deepcopy(self.row);row.update(currentEnglish='source only', classification='dependency_evidence_only', proposedEnglish=None)
+        self.row.update(currentEnglish='source only', classification='dependency_evidence_only', proposedEnglish=None)
+        p,s=m.validate_packet(self.packet())
         with self.assertRaisesRegex(ValueError,'Unknown source-only'):
-            m.prepare({'records':[row]},self.sources,self.root)
+            m.prepare(p,s,self.root)
 
     def test_preserves_unedited_fields_and_separates_context(self):
         self.row['proposedEnglish']={'relatedOffenseContext':'Fictional context'}
@@ -111,6 +113,44 @@ class OfflineCorrectionTests(unittest.TestCase):
                 q.update(start=2,end=8,sourceHash=m.digest(text.encode()))
         p,s=m.validate_packet(self.packet(edit));r=m.prepare(p,s,self.root)['records'][0]
         self.assertEqual((r['evidenceSpans'][0]['start'],r['evidenceSpans'][0]['end']),(3,9))
+
+    def test_rejects_missing_effective_dates_with_source_identity(self):
+        for label in ['candidate', 'retained']:
+            with self.subTest(label=label):
+                def edit(d):
+                    del d[label+'-source-documents.json']['1']['effectiveDateStart']
+                with self.assertRaisesRegex(ValueError, label+' source 1: effectiveDateStart'):
+                    m.validate_packet(self.packet(edit))
+
+    def test_rejects_malformed_and_impossible_effective_dates(self):
+        for value in [None, '', 20200101, '20200101', '2020-1-01', '2025-02-29', '2020-13-01']:
+            with self.subTest(value=value):
+                with self.assertRaisesRegex(ValueError, 'candidate source 1: .*effectiveDateStart'):
+                    m.validate_packet(self.packet(lambda d: d['candidate-source-documents.json']['1'].update(effectiveDateStart=value)))
+
+    def test_accepts_valid_leap_date_without_inferring_currentness(self):
+        p,s=m.validate_packet(self.packet(lambda d: d['candidate-source-documents.json']['1'].update(effectiveDateStart='2024-02-29')))
+        result=m.prepare(p,s,self.root)
+        self.assertEqual(result['records'][0]['sourceBindings'][0]['effectiveFrom'], '2024-02-29')
+        self.assertFalse(result['activationAllowed'])
+
+    def test_rejects_unvalidated_input(self):
+        with self.assertRaisesRegex(ValueError, 'Call validate_packet'):
+            m.prepare({'records': [self.row]}, self.sources, self.root)
+
+    def test_distinguishes_missing_and_wrong_baseline_directories(self):
+        p,s=m.validate_packet(self.packet())
+        with self.assertRaisesRegex(ValueError, 'Baseline directory'):
+            m.prepare(p,s,self.root/'absent')
+        with self.assertRaisesRegex(ValueError, 'Baseline lacks'):
+            m.prepare(p,s,self.root/'shared')
+
+    def test_rebinding_checks_remain_required_without_export(self):
+        p,s=m.validate_packet(self.packet())
+        self.assertNotIn('_validatedQuoteCandidates', p)
+        self.assertNotIn('quoteRebindingCandidates', m.prepare(p,s,self.root))
+        with self.assertRaisesRegex(ValueError, 'passage'):
+            m.validate_packet(self.packet(lambda d: d['quote-rebinding-candidates.json'][0]['candidateSpan'].update(text='Other!')))
 
 
 if __name__ == '__main__':

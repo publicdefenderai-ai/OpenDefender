@@ -2,6 +2,7 @@
 Standard library only. No network, application imports, activation or receipt writes.
 """
 import argparse
+from datetime import date
 import re
 import hashlib
 import json
@@ -32,8 +33,15 @@ def validate_packet(path):
         retained = read('retained-source-documents.json')
         claims = read('span-evidence.json')
         quotes = read('quote-rebinding-candidates.json')
-    for docs in (sources, retained):
+    for label, docs in (('candidate', sources), ('retained', retained)):
         for key, doc in docs.items():
+            effective = doc.get('effectiveDateStart')
+            if not isinstance(effective, str) or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', effective):
+                raise ValueError(f'{label} source {key}: effectiveDateStart must be a YYYY-MM-DD date')
+            try:
+                date.fromisoformat(effective)
+            except ValueError as error:
+                raise ValueError(f'{label} source {key}: invalid effectiveDateStart calendar date') from error
             if key != doc['section'] or digest(doc['text'].encode()) != doc['contentHash']:
                 raise ValueError('Unbound source document')
     def check(span, docs, section=None):
@@ -70,19 +78,25 @@ def validate_packet(path):
         if not row['mustRemainWithheld'] or not row['runtimeStatus'].startswith('WITHHELD:'):
             raise ValueError('Proposal lacks withholding boundary')
     proposal['_validatedEvidence'] = {c['id']: c for c in claims}
-    proposal['_validatedQuoteCandidates'] = quotes
     proposal['_retainedSources'] = retained
     return proposal, sources
 
 
 def prepare(proposal, sources, baseline):
+    if '_validatedEvidence' not in proposal or '_retainedSources' not in proposal:
+        raise ValueError('Call validate_packet before preparing corrections')
+    if not baseline.is_dir():
+        raise ValueError('Baseline directory does not exist or is not a directory')
+    baseline_files = sorted((baseline / 'shared/ohio-reviewed-data').glob('*.json'))
+    if not baseline_files:
+        raise ValueError('Baseline lacks shared/ohio-reviewed-data JSON files')
     definitions = {}
-    for path in sorted((baseline / 'shared/ohio-reviewed-data').glob('*.json')):
+    for path in baseline_files:
         for definition in json.loads(path.read_text()):
             if definition['id'] in definitions:
                 raise ValueError('Duplicate baseline definition')
             definitions[definition['id']] = definition
-    evidence = proposal.get('_validatedEvidence', {})
+    evidence = proposal['_validatedEvidence']
     # Local proposal data is never an application authority or publication decision.
     output = []
     for row in proposal['records']:
@@ -97,7 +111,7 @@ def prepare(proposal, sources, baseline):
             provider_text = provider.read_text() if provider.exists() else ''
             if not re.search(r'chargeId:\s*"' + re.escape(row['id']) + r'"', provider_text):
                 raise ValueError('Unknown source-only baseline record')
-            retained = proposal.get('_retainedSources', {})
+            retained = proposal['_retainedSources']
             for key in row['changedSources']:
                 if key not in retained or retained[key]['contentHash'] not in provider_text:
                     raise ValueError('Source-only baseline pin drift')
