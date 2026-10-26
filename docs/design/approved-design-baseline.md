@@ -51,3 +51,7 @@ Known deliberate production differences from the simplified homepage mockup: exi
 6. Update the draft PR and working preview. External review and owner merge approval precede rollout; Replit integration and deployment remain separate.
 
 Do not use design acceptance to approve legal claims, privacy promises, source freshness, model output, or database changes. Private attorney-review materials must remain outside tracked artifacts.
+
+## Homepage disclosure refinement
+
+Following the owner's request for a wider notice, the design task recommended adapting the approved unboxed, muted disclaimer pattern to the longer production text: full available width up to 960px, 24px top margin, 16px top padding, a one-pixel editorial rule, transparent background, and 13px type at 1.65 line height. The width and rule are a new implementation recommendation, not an exact specification from an older preview. Text is unchanged and wraps naturally across locales and screen sizes.
