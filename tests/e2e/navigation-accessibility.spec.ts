@@ -38,14 +38,14 @@ async function expectNoHorizontalOverflow(page: Page, width: number) {
 test.describe("intent navigation and accessibility", () => {
   test("home path cards have no nested interactive controls", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { name: /where do you want to start/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /what brings you here/i })).toBeVisible();
 
     const nestedInteractive = page.locator(
       '#paths a a, #paths a button, #paths button a, #paths button button, #paths [role="link"] a, #paths [role="link"] button'
     );
     await expect(nestedInteractive).toHaveCount(0);
 
-    const startLink = page.getByRole("link", { name: "Start Here" });
+    const startLink = page.getByRole("link", { name: /Someone was arrested/ });
     await startLink.focus();
     await expect(startLink).toBeFocused();
     await page.keyboard.press("Enter");
@@ -60,9 +60,8 @@ test.describe("intent navigation and accessibility", () => {
       await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toHaveCount(0);
       await page.getByTestId("button-menu").click();
       await expect(page.getByTestId("select-language-mobile")).toBeVisible();
-      await expect(page.getByRole("button", { name: "First 24 Hours", exact: true })).toBeVisible();
-      await page.getByRole("button", { name: "Immigration", exact: true }).click();
-      await expect(page.getByRole("dialog")).toContainText("Immigration");
+      await expect(page.getByRole("navigation", { name: "Site menu" }).getByRole("link", { name: "First 24 Hours", exact: true })).toBeVisible();
+      await expect(page.getByRole("navigation", { name: "Site menu" }).getByRole("link", { name: "Immigration", exact: true })).toBeVisible();
       await page.keyboard.press("Escape");
       await expect(page.getByTestId("button-menu")).toBeFocused();
     }

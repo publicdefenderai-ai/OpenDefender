@@ -10,8 +10,8 @@ const WHITE = "#FFFFFF";
 
 export function BrandLogo({ variant = "default", size = "sm" }: BrandLogoProps) {
   const color = variant === "light" ? WHITE : TEAL;
-  const textSize = size === "sm" ? "text-lg" : "text-lg";
-  const dim = size === "sm" ? 28 : 36;
+  const textSize = size === "sm" ? "text-xl" : "text-[22px]";
+  const dim = size === "sm" ? 27 : 30;
 
   return (
     <div className="flex items-center gap-2" style={{ lineHeight: 1 }}>
@@ -22,10 +22,10 @@ export function BrandLogo({ variant = "default", size = "sm" }: BrandLogoProps) 
           WebkitMask: `url(${logoShieldPng}) center / contain no-repeat` }}
       />
       <span
-        className={`brand-wordmark font-semibold ${textSize} tracking-tight`}
-        style={{ color, letterSpacing: "-0.01em" }}
+        className={`brand-wordmark font-bold ${textSize} tracking-tight`}
+        style={{ color, letterSpacing: "-1px" }}
       >
-        OpenDefender
+        OpenDefender.
       </span>
     </div>
   );

@@ -2,14 +2,11 @@ import { motion } from "framer-motion";
 import {
   AlertTriangle,
   ArrowRight,
-  Search,
   Scale,
   Users,
   Globe2,
   MessageSquare,
   Phone,
-  Heart,
-  Sunrise,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,7 +19,6 @@ import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export default function Home() {
@@ -36,358 +32,37 @@ export default function Home() {
     setUrgentHelpOpen(true);
   };
 
-  const doors = [
-    {
-      badge: t("home.doors.door1.badge"),
-      headline: t("home.doors.door1.headline"),
-      desc: t("home.doors.door1.desc"),
-      cta: t("home.doors.door1.cta"),
-      link: "/first-24-hours",
-      links: [
-        { label: t("home.doors.door1.link1"), href: "/first-24-hours#inmate-locator" },
-        { label: t("home.doors.door1.link2"), href: "/support/court-logistics/bail-preparation" },
-        { label: t("home.doors.door1.link3"), href: "/collateral-consequences" },
-      ],
-      tone: "urgent",
-      pulsing: true,
-    },
-    {
-      badge: t("home.doors.door2.badge"),
-      headline: t("home.doors.door2.headline"),
-      desc: t("home.doors.door2.desc"),
-      cta: t("home.doors.door2.cta"),
-      link: "/case-guidance",
-      links: [
-        { label: t("home.doors.door2.link1"), href: "/rights-info" },
-        { label: t("home.doors.door2.link2"), href: "/case-timeline" },
-        { label: t("home.doors.door2.link3"), href: "/collateral-consequences" },
-      ],
-      tone: "case",
-      pulsing: false,
-    },
-    {
-      badge: t("home.doors.door3.badge"),
-      headline: t("home.doors.door3.headline"),
-      desc: t("home.doors.door3.desc"),
-      cta: t("home.doors.door3.cta"),
-      link: "/support",
-      links: [
-        { label: t("home.doors.door3.link1"), href: "/support/housing" },
-        { label: t("home.doors.door3.link2"), href: "/support/employment" },
-        { label: t("home.doors.door3.link3"), href: "/support/childcare" },
-      ],
-      tone: "support",
-      pulsing: false,
-    },
-  ];
-
-  const secondaryPaths = [
-    {
-      Icon: Globe2,
-      title: t("home.secondary.immigration.title"),
-      desc: t("home.secondary.immigration.desc"),
-      cta: t("home.secondary.immigration.cta"),
-      href: "/immigration-guidance",
-      accent: "#b45309",
-      bg: "bg-amber-50/60 dark:bg-amber-900/10",
-      border: "border-amber-200 dark:border-amber-800/50",
-      color: "text-amber-700 dark:text-amber-400",
-    },
-    {
-      Icon: Sunrise,
-      title: t("home.secondary.reentry.title"),
-      desc: t("home.secondary.reentry.desc"),
-      cta: t("home.secondary.reentry.cta"),
-      href: "/support/reentry",
-      accent: "#4338ca",
-      bg: "bg-indigo-50/60 dark:bg-indigo-900/10",
-      border: "border-indigo-200 dark:border-indigo-800/50",
-      color: "text-indigo-700 dark:text-indigo-400",
-    },
-    {
-      Icon: Users,
-      title: t("home.secondary.findHelp.title"),
-      desc: t("home.secondary.findHelp.desc"),
-      cta: t("home.secondary.findHelp.cta"),
-      href: "/legal-aid",
-      accent: "#0d9488",
-      bg: "bg-teal-50/60 dark:bg-teal-900/10",
-      border: "border-teal-200 dark:border-teal-800/50",
-      color: "text-teal-700 dark:text-teal-400",
-    },
-  ];
-
-  const quickStarts = [
-    {
-      badge: doors[0].badge,
-      headline: doors[0].headline,
-      desc: doors[0].desc,
-      cta: doors[0].cta,
-      link: doors[0].link,
-      links: doors[0].links,
-      tone: doors[0].tone,
-    },
-    {
-      badge: doors[1].badge,
-      headline: doors[1].headline,
-      desc: doors[1].desc,
-      cta: doors[1].cta,
-      link: doors[1].link,
-      links: doors[1].links,
-      tone: doors[1].tone,
-    },
-    {
-      badge: t("home.secondary.immigration.title"),
-      headline: t("home.secondary.immigration.title"),
-      desc: t("home.secondary.immigration.desc"),
-      cta: t("home.secondary.immigration.cta"),
-      link: "/immigration-guidance",
-      links: [],
-      tone: "immigration",
-    },
-    {
-      badge: doors[2].badge,
-      headline: doors[2].headline,
-      desc: doors[2].desc,
-      cta: doors[2].cta,
-      link: doors[2].link,
-      links: doors[2].links,
-      tone: doors[2].tone,
-    },
-    {
-      badge: t("home.secondary.lifeSupport.title"),
-      headline: t("home.secondary.lifeSupport.title"),
-      desc: t("home.secondary.lifeSupport.desc"),
-      cta: t("home.secondary.lifeSupport.cta"),
-      link: "/for-advocates",
-      links: [],
-      tone: "advocate",
-    },
-  ];
-
   return (
     <div className="design-home min-h-screen bg-background">
       <Header />
 
-      {/* Hero — orientation first, with a quieter editorial opening */}
-      <section className="editorial-home-hero relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
-        <div className="design-hero-grid relative max-w-6xl mx-auto px-4 sm:px-6">
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="font-display text-[2.15rem] sm:text-[3rem] md:text-[4.25rem] font-normal mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
-              {t("home.hero.headlinePart1")}
-              <br />
-              <strong className="font-bold">{t("home.hero.headlinePart3")}</strong>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-8 text-muted-foreground max-w-2xl leading-relaxed">
-              {t("home.hero.subtitle")}
-            </p>
-            <div className="flex flex-wrap items-center gap-5">
-              <button
-                onClick={handleUrgentHelp}
-                className="editorial-primary-action focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-              >
-                {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
-              </button>
-              <Link href="/how-to" className="inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline underline-offset-4">{t("header.dropdown.explore.howTo", "How It Works")} <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
-            </div>
-          </motion.div>
-          <div className="design-open-door" aria-hidden="true" />
-        </div>
-      </section>
-
-      {/* Starting points */}
-      <section className="pt-10 pb-6 md:pt-14 md:pb-8 bg-white dark:bg-background border-t border-border/20" id="paths">
-        <div className="max-w-6xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground tracking-tight mb-7">
-              {t("home.doors.sectionLabel")}
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
-            {quickStarts.map((point, i) => (
-              <motion.div
-                key={point.link}
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="group h-full"
-              >
-                <div className={`editorial-start-card editorial-start-card-${point.tone} h-full flex flex-col p-5 md:p-6`}>
-                  <div className="flex items-center justify-between gap-3 mb-4">
-                    <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase leading-tight">
-                      {point.badge}
-                    </span>
-                    <span className="text-xs font-mono text-muted-foreground/60" aria-hidden="true">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 leading-snug">
-                    {point.headline}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5 max-w-xl">
-                    {point.desc}
-                  </p>
-
-                  <Link
-                    href={point.link}
-                    className="editorial-path-action inline-flex items-center gap-2 px-0 py-2 text-sm font-semibold transition-colors w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                  >
-                    {point.cta}
-                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                  </Link>
-
-                  {point.links.length > 0 && (
-                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 border-t border-border pt-3 mt-3">
-                      {point.links.map((link) => (
-                        <Link
-                          key={link.href}
-                          href={link.href}
-                          className="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                        >
-                          <ArrowRight className="h-2.5 w-2.5 opacity-60 flex-shrink-0" aria-hidden="true" />
-                          {link.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+      <section className="design-home-hero design-container">
+        <p className="design-eyebrow">{t("design.eyebrow")}</p>
+        <h1><span>{t("design.headline")}</span><em>{t("design.start")}</em></h1>
+        <div className="design-open-door" aria-hidden="true" />
+        <p className="design-intro">{t("design.intro")}</p>
+        <div className="design-hero-actions">
+          <div>
+            <button onClick={handleUrgentHelp} className="design-urgent-button" aria-describedby="urgent-context">
+              <AlertTriangle aria-hidden="true" />{t("design.urgent")}
+            </button>
+            <p id="urgent-context">{t("design.urgentContext")}</p>
           </div>
-
-          <ScrollReveal delay={0.15}>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-10 mb-4">
-              {t("home.secondary.title")}
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {secondaryPaths.filter((path) => path.href !== "/immigration-guidance").map(({ Icon, title, desc, cta, href }) => (
-              <Link key={href} href={href} className="flex">
-                <div className="editorial-secondary-path flex items-start gap-3.5 p-4 cursor-pointer h-full w-full">
-                  <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-[var(--editorial-signal)]" strokeWidth={1.75} aria-hidden="true" />
-                  <div className="min-w-0">
-                    <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
-                    <p className="text-xs font-semibold text-[var(--editorial-signal)] flex items-center gap-1 mt-2">
-                      {cta} <ArrowRight className="h-2.5 w-2.5" aria-hidden="true" />
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Search bar */}
-          <ScrollReveal delay={0.2}>
-            <div className="mt-7 mb-2 max-w-xl mx-auto">
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="w-full flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-md border border-border bg-background text-sm text-muted-foreground hover:border-[var(--editorial-signal)] hover:bg-muted/40 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--editorial-signal)]"
-                aria-label={t("home.paths.searchPlaceholder")}
-              >
-                <Search className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                {t("home.paths.searchPlaceholder")}
-              </button>
-            </div>
-          </ScrollReveal>
-          <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
-          <div className="mt-2 mb-1 text-center">
-            <Link href="/directory" className="text-xs text-muted-foreground hover:text-foreground font-medium inline-flex items-center gap-1 transition-colors">
-              {t("navigation.browseAll", "Browse all resources")} <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
+          <Link href="/how-to" className="design-how-button">{t("design.how")}</Link>
         </div>
+        <DisclosureNotice compact className="design-disclosure" />
       </section>
-
-      {/* Why OpenDefender section */}
-      <section className="py-10 md:py-12 bg-white dark:bg-background border-t border-border/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <p className="text-center text-[15px] font-medium text-foreground mb-7 max-w-2xl mx-auto leading-relaxed">
-              {t("home.features.heading")}
-            </p>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {[
-                { Icon: AlertTriangle, title: t("home.features.card1Title"), desc: t("home.features.card1Desc") },
-                { Icon: Heart, title: t("home.features.card2Title"), desc: t("home.features.card2Desc") },
-                { Icon: Globe2, title: t("home.features.card3Title"), desc: t("home.features.card3Desc") },
-              ].map(({ Icon, title, desc }) => (
-              <ScrollReveal key={title}>
-                <div className="p-4 rounded-xl border border-border bg-muted/20 h-full">
-                  <Icon className="h-4 w-4 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} aria-hidden="true" />
-                  <p className="font-semibold text-sm text-foreground mb-1.5">{title}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
+      <section id="paths" className="design-container design-paths">
+        <h2>{t("design.paths")}</h2>
+        {[["arrest", "/first-24-hours"], ["case", "/case-guidance"], ["immigration", "/immigration-guidance"], ["support", "/support"]].map(([key, href], i) =>
+          <Link key={key} href={href} className="design-path">
+            <span className="design-path-number" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+            <span><strong>{t(`design.${key}`)}</strong><small>{t(`design.${key}Desc`)}</small></span>
+            <span aria-hidden="true">›</span>
+          </Link>)}
+        <Link href="/directory" className="design-browse">{t("design.browse")}</Link>
       </section>
-
-      {/* Animated stats + condensed trust strip */}
-      <section className="py-10 md:py-12 bg-slate-50 dark:bg-background border-t border-border/30">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          {/* Animated triple stat */}
-          <ScrollReveal>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-8">
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-black text-foreground tabular-nums">
-                  3
-                </span>
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
-                  {t("home.stats.label1")}
-                </span>
-              </div>
-              <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-black text-foreground tabular-nums">
-                  51
-                </span>
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
-                  {t("home.stats.label2")}
-                </span>
-              </div>
-              <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-black text-foreground tabular-nums">
-                  $0
-                </span>
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
-                  {t("home.stats.label3")}
-                </span>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          {/* Condensed trust badges */}
-          <ScrollReveal delay={0.1}>
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {[
-                t("home.stats.badge1"),
-                t("home.stats.badge2"),
-                t("home.stats.badge3"),
-              ].map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-background border border-border text-muted-foreground"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <DisclosureNotice className="mx-4 mb-6 rounded-xl border border-border/60 bg-muted/20 md:mx-auto md:max-w-6xl" />
+      <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
       <Footer />
 
       <Dialog open={urgentHelpOpen} onOpenChange={(open) => { setUrgentHelpOpen(open); if (!open) setUrgentSituation(null); }}>
