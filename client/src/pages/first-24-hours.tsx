@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Link } from "wouter";
 import { Check, X, Phone, MapPin, MapPinned, Users, ShieldAlert, ClipboardList, Banknote, Landmark, CalendarCheck, ChevronDown as ChevronDownIcon, FileText, ExternalLink, AlertTriangle, Info, type LucideIcon } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -14,18 +14,6 @@ import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FacilityLookupWidget } from "@/components/legal/facility-lookup-widget";
-
-// Step color palettes keyed by step number
-const STEP_COLORS: Record<number, { border: string; iconBg: string; iconText: string; activeBg: string }> = {
-  0: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-muted-foreground", activeBg: "bg-muted/40" },
-  1: { border: "border-red-200 dark:border-red-800/60", iconBg: "bg-red-50 dark:bg-red-950/30", iconText: "text-red-700 dark:text-red-300", activeBg: "bg-red-50/40 dark:bg-red-950/20" },
-  2: { border: "border-[var(--editorial-rule)]", iconBg: "bg-[var(--editorial-signal-soft)]", iconText: "text-[var(--editorial-signal)]", activeBg: "bg-[var(--editorial-signal-soft)]/50" },
-  3: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
-  4: { border: "border-[var(--editorial-rule)]", iconBg: "bg-[var(--editorial-signal-soft)]", iconText: "text-[var(--editorial-signal)]", activeBg: "bg-[var(--editorial-signal-soft)]/50" },
-  5: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
-  6: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
-  7: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
-};
 
 interface StepProps {
   number: number;
@@ -46,40 +34,28 @@ interface StepProps {
 }
 
 function Step({ number, title, timeframe, context, dos = [], donts = [], considerations = [], isLast, id, highlighted, priorityLabel, icon: Icon, children, isOpen, onToggle }: StepProps) {
-  const colors = STEP_COLORS[number] ?? STEP_COLORS[7];
+  const reducedMotion = useReducedMotion();
   const isAccordion = isOpen !== undefined && onToggle !== undefined;
 
   const headerContent = (
-    <div className="flex items-center gap-4 w-full text-left">
-      <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center border ${colors.iconBg} ${colors.border}`}>
-        {Icon ? (
-          <Icon className={`w-5 h-5 ${colors.iconText}`} />
-        ) : (
-          <span className="text-sm font-bold text-foreground">{number}</span>
-        )}
+    <div className="first24-stage-heading">
+      <span className="first24-number" aria-hidden="true">{String(number).padStart(2, "0")}</span>
+      <div>
+        <h2>{title}</h2>
+        <span className="first24-time">{timeframe}</span>
       </div>
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest whitespace-nowrap">Step {number}</span>
-          <span className="text-xs text-muted-foreground/60">·</span>
-          <span className="text-xs text-muted-foreground">{timeframe}</span>
-        </div>
-        <h2 className="text-base font-bold text-foreground leading-snug">{title}</h2>
-      </div>
-      {isAccordion && (
-        <ChevronDownIcon className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
-      )}
+      {isAccordion && <span className="first24-toggle" aria-hidden="true">{isOpen ? "−" : "+"}</span>}
     </div>
   );
 
   const bodyContent = (
-    <div className={isAccordion ? "px-5 pb-6 pt-1 border-t border-border/50" : ""}>
+    <div className={isAccordion ? "first24-stage-body" : ""}>
       <p className="text-muted-foreground mb-5 leading-relaxed text-sm mt-4">{context}</p>
 
       {considerations.length > 0 && (
         <ul className="space-y-2.5">
           {considerations.map((item, i) => (
-            <li key={i} className="rounded-lg border border-border bg-background p-4">
+            <li key={i} className="first24-consideration">
               <p className="text-sm font-semibold text-foreground mb-1.5">{item.heading}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
             </li>
@@ -129,11 +105,13 @@ function Step({ number, title, timeframe, context, dos = [], donts = [], conside
 
   if (isAccordion) {
     return (
-      <div id={id} className={`editorial-card overflow-hidden transition-colors duration-200 ${isOpen ? "bg-muted/20" : "bg-background"}`}>
+      <div id={id} className="first24-stage">
         <button
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="w-full p-5 hover:opacity-90 transition-opacity"
+          aria-controls={`${id}-content`}
+          id={`${id}-trigger`}
+          className="first24-stage-trigger"
         >
           {headerContent}
         </button>
@@ -141,10 +119,11 @@ function Step({ number, title, timeframe, context, dos = [], donts = [], conside
           {isOpen && (
             <motion.div
               key="content"
-              initial={{ height: 0 }}
+              id={`${id}-content`}
+              initial={{ height: reducedMotion ? "auto" : 0 }}
               animate={{ height: "auto" }}
-              exit={{ height: 0 }}
-              transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
+              exit={{ height: reducedMotion ? "auto" : 0 }}
+              transition={{ duration: reducedMotion ? 0 : 0.28, ease: [0.4, 0, 0.2, 1] }}
               style={{ overflow: "hidden" }}
             >
               {bodyContent}
@@ -412,7 +391,7 @@ function PageSidebar({
             <span>Family Toolkit</span>
           </Link>
           <button
-            onClick={() => document.getElementById("phone-call")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            onClick={() => onOpenStep(3)}
             className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left"
           >
             <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
@@ -441,20 +420,45 @@ export default function FirstTwentyFourHours() {
   const { t } = useTranslation();
   const [jurisdiction, setJurisdiction] = useState<string>("");
   const [openStepId, setOpenStepId] = useState<number>(1);
+  const [openSteps, setOpenSteps] = useState<number[]>([1]);
   const [juvenileOpen, setJuvenileOpen] = useState(false);
 
-  const toggleStep = (n: number) => setOpenStepId((prev) => (prev === n ? -1 : n));
-  const openStep = (n: number) => setOpenStepId(n);
+  const toggleStep = (n: number) => {
+    setOpenStepId(n);
+    setOpenSteps(previous => previous.includes(n) ? previous.filter(step => step !== n) : [...previous, n]);
+  };
+  const openStep = (n: number) => {
+    setOpenStepId(n);
+    setOpenSteps(previous => previous.includes(n) ? previous : [...previous, n]);
+  };
+  const jumpToStep = (n: number, id: string) => {
+    openStep(n);
+    requestAnimationFrame(() => {
+      document.getElementById(`${id}-trigger`)?.focus({ preventScroll: true });
+      document.getElementById(id)?.scrollIntoView({ block: "start" });
+    });
+  };
+  useEffect(() => {
+    const revealHash = () => {
+      const id = window.location.hash.slice(1);
+      const target = STEP_TOC.find(step => step.id === id || (id === "inmate-locator" && step.n === 3));
+      if (target) jumpToStep(target.n, target.id);
+      if (id === "juvenile-note") setJuvenileOpen(true);
+    };
+    revealHash();
+    window.addEventListener("hashchange", revealHash);
+    return () => window.removeEventListener("hashchange", revealHash);
+  }, []);
   const openJuvenile = () => {
     setJuvenileOpen(true);
   };
 
   return (
-    <div className="design-urgent min-h-screen bg-background">
+    <div className="design-first24 min-h-screen bg-background">
       <Header />
 
-      <section className="editorial-page-intro py-12 md:py-16">
-        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
+      <section className="first24-intro">
+        <div className="first24-intro-inner">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             {t('first24Hours.title')}
           </h1>
@@ -468,7 +472,7 @@ export default function FirstTwentyFourHours() {
             {t('first24Hours.subtitle')}
           </p>
           <Button asChild className="mt-6 gap-2">
-            <a href="#step-before-arrest">
+            <a href="#step-before-arrest" onClick={() => openStep(0)}>
               {t('first24Hours.nextStep', 'Start with the first step')}
               <ChevronDownIcon className="h-4 w-4" />
             </a>
@@ -476,58 +480,39 @@ export default function FirstTwentyFourHours() {
         </div>
       </section>
 
-      <main className="editorial-reading max-w-5xl mx-auto px-4 py-12 md:py-16">
+      <main className="first24-reading">
         <div className="flex gap-12 items-start">
           <PageSidebar
             jurisdiction={jurisdiction}
             onJurisdictionChange={setJurisdiction}
             openStepId={openStepId}
-            onOpenStep={openStep}
+            onOpenStep={(n) => { const step = STEP_TOC.find(item => item.n === n); if (step) jumpToStep(n, step.id); }}
             onOpenJuvenile={openJuvenile}
           />
           <div className="flex-1 min-w-0">
 
 
 
-        {/* Step quick-jump navigator — mobile only; sidebar handles desktop */}
-        <div className="lg:hidden">
-        <ScrollReveal delay={0.019}>
-          <div className="mb-8">
-            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">Jump to any step</p>
-            <div className="grid grid-cols-4 sm:grid-cols-8 gap-1.5">
-              {([
-                { n: 0, id: 'step-before-arrest', label: 'Pre-Arrest', Icon: AlertTriangle },
-                { n: 1, id: 'step-arrest',      label: 'Arrest',       Icon: ShieldAlert },
-                { n: 2, id: 'step-booking',     label: 'Booking',      Icon: ClipboardList },
-                { n: 3, id: 'phone-call',       label: 'Phone Call',   Icon: Phone },
-                { n: 4, id: 'step-bail',        label: 'Bail',         Icon: Banknote },
-                { n: 5, id: 'step-lawyer',      label: 'Lawyer',       Icon: Scale },
-                { n: 6, id: 'step-arraignment', label: 'Arraignment',  Icon: Landmark },
-                { n: 7, id: 'step-ongoing',     label: 'Next Steps',   Icon: CalendarCheck },
-              ]).map(({ n, id, label, Icon }) => (
-                <button
-                  key={n}
-                  onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                  aria-label={`Jump to ${label}`}
-                  className="flex min-h-[52px] flex-col items-center justify-center gap-1 py-2 px-1 rounded-lg border border-border/60 bg-muted/20 hover:border-primary/40 hover:bg-muted/60 transition-all text-center group"
-                >
-                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-foreground leading-tight">{label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </ScrollReveal>
-        </div>{/* end lg:hidden step nav */}
-
-
+        <details className="first24-mobile-contents lg:hidden">
+          <summary>{t('design.guideContents', 'In this guide')}</summary>
+          <label htmlFor="mobile-state-select">{t('design.yourState', 'Your state')}</label>
+          <select id="mobile-state-select" value={jurisdiction} onChange={event => setJurisdiction(event.target.value)}>
+            <option value="">{t('design.allStates', 'All states (general)')}</option>
+            {US_STATES_SIDEBAR.map(({code, label}) => <option key={code} value={code}>{label}</option>)}
+          </select>
+          {STEP_TOC.map(({n, id, label}) => <button key={id} onClick={() => jumpToStep(n, id)}>
+            <span aria-hidden="true">{String(n).padStart(2, "0")}</span>
+            {n === 0 ? t('first24Hours.beforeArrest.title', label) : t(`first24Hours.steps.step${n}.title`, label)}
+          </button>)}
+          <button onClick={() => { setJuvenileOpen(true); requestAnimationFrame(() => document.getElementById('juvenile-note')?.scrollIntoView({block:'start'})); }}>{t('first24Hours.juvenile.title')}</button>
+        </details>
 
         {/* STEP 0 — Before Arrest */}
         <Step
           number={0}
           id="step-before-arrest"
           icon={AlertTriangle}
-          isOpen={openStepId === 0}
+          isOpen={openSteps.includes(0)}
           onToggle={() => toggleStep(0)}
           title={t('first24Hours.beforeArrest.heading')}
           timeframe="Optional, if you haven't been arrested yet"
@@ -616,7 +601,7 @@ export default function FirstTwentyFourHours() {
               number={1}
               id="step-arrest"
               icon={ShieldAlert}
-              isOpen={openStepId === 1}
+              isOpen={openSteps.includes(1)}
               onToggle={() => toggleStep(1)}
               title={t('first24Hours.steps.step1.title')}
               timeframe={t('first24Hours.steps.step1.timeframe')}
@@ -650,7 +635,7 @@ export default function FirstTwentyFourHours() {
               number={2}
               id="step-booking"
               icon={ClipboardList}
-              isOpen={openStepId === 2}
+              isOpen={openSteps.includes(2)}
               onToggle={() => toggleStep(2)}
               title={t('first24Hours.steps.step2.title')}
               timeframe={t('first24Hours.steps.step2.timeframe')}
@@ -692,7 +677,7 @@ export default function FirstTwentyFourHours() {
               number={3}
               id="phone-call"
               icon={Phone}
-              isOpen={openStepId === 3}
+              isOpen={openSteps.includes(3)}
               onToggle={() => toggleStep(3)}
               title={t('first24Hours.steps.step3.title')}
               timeframe={t('first24Hours.steps.step3.timeframe')}
@@ -761,7 +746,7 @@ export default function FirstTwentyFourHours() {
               number={4}
               id="step-bail"
               icon={Banknote}
-              isOpen={openStepId === 4}
+              isOpen={openSteps.includes(4)}
               onToggle={() => toggleStep(4)}
               title={t('first24Hours.steps.step4.title')}
               timeframe={t('first24Hours.steps.step4.timeframe')}
@@ -800,7 +785,7 @@ export default function FirstTwentyFourHours() {
               number={5}
               id="step-lawyer"
               icon={Scale}
-              isOpen={openStepId === 5}
+              isOpen={openSteps.includes(5)}
               onToggle={() => toggleStep(5)}
               title={t('first24Hours.steps.step5.title')}
               timeframe={t('first24Hours.steps.step5.timeframe')}
@@ -852,7 +837,7 @@ export default function FirstTwentyFourHours() {
               number={6}
               id="step-arraignment"
               icon={Landmark}
-              isOpen={openStepId === 6}
+              isOpen={openSteps.includes(6)}
               onToggle={() => toggleStep(6)}
               title={t('first24Hours.steps.step6.title')}
               timeframe={t('first24Hours.steps.step6.timeframe')}
@@ -904,7 +889,7 @@ export default function FirstTwentyFourHours() {
               number={7}
               id="step-ongoing"
               icon={CalendarCheck}
-              isOpen={openStepId === 7}
+              isOpen={openSteps.includes(7)}
               onToggle={() => toggleStep(7)}
               title={t('first24Hours.steps.step7.title')}
               timeframe={t('first24Hours.steps.step7.timeframe')}

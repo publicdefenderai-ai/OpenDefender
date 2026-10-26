@@ -1,6 +1,10 @@
 export default {
   translation: {
   design: {
+      immigrationStart: 'Puntos de partida de inmigración',
+      guideContents: 'En esta guía',
+      yourState: 'Tu estado',
+      allStates: 'Todos los estados (general)',
   "timelineNav": "Cronología del caso",
   "documentsNav": "Biblioteca de documentos",
   "summarizerNav": "Resumidor de documentos",

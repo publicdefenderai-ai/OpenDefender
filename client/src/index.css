@@ -2108,3 +2108,81 @@ a:focus-visible,
 .design-urgent-button { grid-column: 1; grid-row: 1; }
 .design-how-button { grid-column: 2; grid-row: 1; }
 #urgent-context { grid-column: 1; grid-row: 2; }
+
+/* First 24 Hours: approved editorial layout, retaining the full guide. */
+.first24-intro { max-width: 1120px; margin: auto; padding: 38px 24px 24px; }
+.first24-intro h1 { font-size: clamp(32px, 4vw, 48px); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; }
+.first24-intro p { color: var(--muted-foreground); max-width: 720px; font-size: 16px; line-height: 1.7; }
+.first24-intro a { background: transparent; color: var(--primary); padding-left: 0; box-shadow: none; }
+.first24-reading { max-width: 1120px; margin: auto; padding: 20px 24px 48px; }
+.first24-stage { border-bottom: 1px solid var(--editorial-rule); scroll-margin-top: 100px; }
+.first24-stage-trigger { width: 100%; padding: 18px 0; text-align: left; }
+.first24-stage-trigger:focus-visible, .first24-mobile-contents button:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.first24-stage-heading { display: grid; grid-template-columns: 30px 1fr 18px; gap: 10px; align-items: center; min-height: 40px; }
+.first24-stage-heading h2 { font-size: 20px; font-weight: 500; letter-spacing: -.025em; line-height: 1.3; }
+.first24-stage-trigger[aria-expanded="true"] h2 { color: var(--primary); }
+.first24-number, .first24-time { font-size: 12px; color: var(--muted-foreground); }
+.first24-time { display: block; margin-top: 4px; line-height: 1.5; }
+.first24-toggle { font-size: 18px; color: var(--primary); }
+.first24-stage-body { padding: 0 0 24px 40px; }
+.first24-stage-body > p, .first24-consideration p { font-size: 15px; line-height: 1.7; }
+.first24-consideration { padding: 14px 0; }
+.first24-consideration:first-child { border-left: 3px solid var(--primary); padding: 8px 0 8px 18px; margin: 12px 0 10px; }
+.first24-mobile-contents { margin-bottom: 20px; border-bottom: 1px solid var(--editorial-rule); }
+.first24-mobile-contents summary { min-height: 48px; padding: 12px 0; font-weight: 600; color: var(--primary); cursor: pointer; }
+.first24-mobile-contents label { display: block; margin: 12px 0 6px; font-size: 14px; }
+.first24-mobile-contents select { width: 100%; background: var(--background); border: 1px solid var(--border); border-radius: 4px; padding: 10px; margin-bottom: 12px; }
+.first24-mobile-contents button { display: flex; gap: 14px; width: 100%; min-height: 44px; padding: 10px 0; text-align: left; font-size: 14px; }
+.first24-mobile-contents button span { color: var(--muted-foreground); }
+@media (max-width: 760px) {
+  .first24-intro { padding: 24px 6% 12px; }
+  .first24-reading { padding: 16px 6% 32px; }
+  .first24-stage-heading { grid-template-columns: 24px 1fr 16px; }
+  .first24-stage-heading h2 { font-size: 19px; }
+  .first24-stage-body { padding-left: 0; }
+}
+
+/* Immigration landing: layered arch and stationary, reader-controlled lists. */
+.immigration-intro { max-width: 1120px; margin: auto; padding: 40px 24px 32px; }
+.immigration-intro-grid { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); align-items: center; gap: 28px; }
+.immigration-intro h1 { font-size: clamp(28px,3.7vw,42px); font-weight: 500; line-height: 1.08; letter-spacing: -.04em; }
+.immigration-heading-line { display: block; }
+.immigration-heading-line:lang(en) { white-space: nowrap; }
+.immigration-intro p { font-size: 17px; color: var(--muted-foreground); line-height: 1.6; max-width: 500px; }
+.immigration-intro a { background: transparent; color: var(--primary); padding-left: 0; box-shadow: none; }
+.immigration-arch-art { position: relative; height: 280px; width: 100%; max-width: 310px; justify-self: end; isolation: isolate; overflow: hidden; }
+.immigration-arch { position: absolute; border-radius: 150px 150px 0 0; inset: 0 0 0 6%; background: #edc4a4; }
+.immigration-arch::before { content: ''; position: absolute; inset: 38px 34px 0; background: #c4a4bb; border-radius: 130px 130px 0 0; }
+.immigration-arch::after { content: ''; position: absolute; inset: 77px 65px 0; background: var(--background); border-radius: 110px 110px 0 0; }
+.immigration-plane { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 52px; background: var(--primary); clip-path: polygon(0 65%,100% 0,100% 100%,0 100%); }
+.dark .immigration-arch { background: #73513e; }
+.dark .immigration-arch::before { background: #956f8b; }
+.immigration-start { max-width: 1120px; margin: auto; padding: 0 24px 30px; }
+.immigration-route { display: grid; grid-template-columns: 36px 1fr 20px; gap: 14px; align-items: center; padding: 19px 0; min-height: 80px; border-top: 1px solid var(--editorial-rule); }
+.immigration-route strong { display: block; font-size: 18px; font-weight: 500; }
+.immigration-route small { display: block; font-size: 14px; color: var(--muted-foreground); line-height: 1.5; margin-top: 4px; }
+.immigration-number { font-size: 12px; color: var(--muted-foreground); }
+.immigration-route:hover { background: var(--muted); }
+.immigration-route:focus-visible, .immigration-phase summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.immigration-phase { border-bottom: 1px solid var(--editorial-rule); }
+.immigration-phase summary { display: grid; grid-template-columns: 36px 1fr 20px; gap: 14px; align-items: center; min-height: 76px; padding: 16px 0; list-style: none; cursor: pointer; }
+.immigration-phase summary::-webkit-details-marker { display: none; }
+.immigration-phase h3 { font-size: 20px; font-weight: 500; }
+.immigration-expand::after { content: '+'; font-size: 18px; color: var(--primary); }
+.immigration-phase[open] .immigration-expand::after { content: '−'; }
+.immigration-phase-body { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 4px 0 28px 50px; }
+.immigration-phase-body h4 { font-weight: 600; margin-bottom: 12px; }
+.immigration-phase-body ul { padding-left: 18px; list-style: disc; font-size: 15px; line-height: 1.7; }
+.immigration-phase-body li { margin-bottom: 8px; }
+.design-immigration #detailed-guides > div > .grid { display: block; }
+.design-immigration #detailed-guides .editorial-card { border: 0; border-top: 1px solid var(--editorial-rule); border-radius: 0; background: transparent; box-shadow: none; }
+.design-immigration #detailed-guides .editorial-card:hover { transform: none; background: var(--muted); }
+@media (max-width: 700px) {
+  .immigration-intro { padding: 24px 6% 20px; }
+  .immigration-intro-grid { display: block; }
+  .immigration-intro h1 { font-size: clamp(22px,5.9vw,36px); }
+  .immigration-arch-art { display: none; }
+  .immigration-start { padding: 0 6% 24px; }
+  .immigration-route { grid-template-columns: 24px 1fr 16px; }
+  .immigration-phase-body { grid-template-columns: 1fr; padding-left: 0; gap: 20px; }
+}

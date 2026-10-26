@@ -1,6 +1,5 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { 
   AlertTriangle, 
   Phone, 
@@ -35,8 +34,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
 import { RapidResponseSection } from "@/components/immigration/rapid-response-section";
 
-function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+function DeportationPhasesList({ t }: { t: (key: string) => string }) {
   
   const phases = [
     {
@@ -126,99 +124,21 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
     },
   ];
 
-  // Legal information advances only when the reader requests it.
-  const advance = () => setActiveIndex((prev) => (prev + 1) % phases.length);
-
-  const getColorClasses = (color: string) => {
-    const colors: Record<string, string> = {
-      blue: 'text-blue-600 dark:text-blue-400',
-      orange: 'text-orange-600 dark:text-orange-400',
-      purple: 'text-purple-600 dark:text-purple-400',
-      red: 'text-red-600 dark:text-red-400',
-    };
-    return colors[color] || colors.blue;
-  };
-
-  const activePhase = phases[activeIndex];
-  const activeColors = getColorClasses(activePhase.color);
-
   return (
-    <div className="relative">
-      <div className="relative min-h-[420px] md:min-h-[350px]">
-        <motion.div
-          key={activePhase.id}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <Card
-            onClick={advance}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => (e.key === "Enter" || e.key === " ") ? advance() : undefined}
-            aria-label={`Phase ${activeIndex + 1} of ${phases.length}: ${activePhase.title}. Tap to advance.`}
-            className="editorial-card editorial-card-interactive h-full cursor-pointer select-none group active:scale-[0.995]"
-          >
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${activePhase.id}-title`}>
-                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
-                  <span className={activeColors}>{activePhase.icon}</span>
-                </div>
-                <div>
-                  <Badge variant="outline" className="mb-1">Phase {activeIndex + 1} of {phases.length}</Badge>
-                  <div className="text-xl">{activePhase.title}</div>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-3 text-foreground">{activePhase.rightsTitle}</h4>
-                  <ul className="space-y-2 text-sm">
-                    {activePhase.rights.map((right, i) => (
-                      <li key={i} className="flex items-start">
-                        <CheckCircle className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                        {right}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-3 text-foreground">{activePhase.expectTitle}</h4>
-                  <ul className="space-y-2 text-sm">
-                    {activePhase.expectations.map((exp, i) => (
-                      <li key={i}>• {exp}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <p className="text-xs text-muted-foreground/50 text-right mt-4 group-hover:text-muted-foreground/70 transition-colors">
-                Tap to advance →
-              </p>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </div>
-
-      <div className="flex justify-center gap-0 mt-8">
-        {phases.map((phase, index) => (
-          <button
-            key={phase.id}
-            onClick={(e) => { e.stopPropagation(); setActiveIndex(index); }}
-            className="flex items-center justify-center w-11 h-11"
-            aria-label={`Go to phase ${index + 1}`}
-            aria-pressed={index === activeIndex}
-            data-testid={`dot-phase-${index + 1}`}
-          >
-            <span className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
-              index === activeIndex
-                ? 'bg-primary border-primary ring-2 ring-primary/30 ring-offset-2 ring-offset-background'
-                : 'bg-transparent border-muted-foreground/50 hover:border-primary/50'
-            }`} />
-          </button>
-        ))}
-      </div>
+    <div className="immigration-phases">
+      {phases.map((phase, index) => (
+        <details key={phase.id} className="immigration-phase" open={index === 0}>
+          <summary>
+            <span className="immigration-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3 data-testid={`text-${phase.id}-title`}>{phase.title}</h3>
+            <span className="immigration-expand" aria-hidden="true" />
+          </summary>
+          <div className="immigration-phase-body">
+            <div><h4>{phase.rightsTitle}</h4><ul>{phase.rights.map((right, i) => <li key={i}>{right}</li>)}</ul></div>
+            <div><h4>{phase.expectTitle}</h4><ul>{phase.expectations.map((expectation, i) => <li key={i}>{expectation}</li>)}</ul></div>
+          </div>
+        </details>
+      ))}
     </div>
   );
 }
@@ -231,16 +151,16 @@ export default function ImmigrationGuidance() {
     <div className="design-immigration min-h-screen bg-background">
       <Header />
 
-      <section className="editorial-page-intro py-12 lg:py-20">
-        <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4">
+      <section className="immigration-intro">
+        <div className="immigration-intro-grid">
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight" data-testid="text-immigration-hero-title">
-              {t('immigration.hero.title1')}<br />
-              <span className="text-[var(--editorial-signal)]">{t('immigration.hero.title2')}</span>
+              <span className="immigration-heading-line">{t('immigration.hero.title1')}</span>
+              <span className="immigration-heading-line text-[var(--editorial-signal)]">{t('immigration.hero.title2')}</span>
             </h1>
             <p className="text-lg md:text-xl max-w-4xl leading-relaxed" data-testid="text-immigration-hero-subtitle">
               {t('immigration.hero.subtitle')}
@@ -252,8 +172,20 @@ export default function ImmigrationGuidance() {
               </a>
             </Button>
           </motion.div>
+          <div className="immigration-arch-art" aria-hidden="true"><span className="immigration-arch" /><span className="immigration-plane" /></div>
         </div>
       </section>
+      <nav className="immigration-start" aria-label={t('design.immigrationStart', 'Immigration starting points')}>
+        {[
+          ['know-your-rights', 'kyrCard'],
+          ['find-detained', 'findDetainedCard'],
+          ['find-attorney', 'attorneyCard'],
+        ].map(([route, key], index) => <Link key={route} href={`/immigration-guidance/${route}`} className="immigration-route">
+          <span className="immigration-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <span><strong>{t(`immigration.hub.detailedGuides.${key}.title`)}</strong><small>{t(`immigration.hub.detailedGuides.${key}.description`)}</small></span>
+          <span aria-hidden="true">›</span>
+        </Link>)}
+      </nav>
 
       {/* Critical Alert - Below Hero */}
       <div className="max-w-4xl mx-auto px-4 mt-6 mb-4">
@@ -636,7 +568,7 @@ export default function ImmigrationGuidance() {
             </div>
           </ScrollReveal>
 
-          <DeportationPhasesCarousel t={t} />
+          <DeportationPhasesList t={t} />
         </div>
       </section>
 

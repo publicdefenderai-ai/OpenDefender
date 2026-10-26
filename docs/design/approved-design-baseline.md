@@ -34,8 +34,8 @@ This is a presentation specification, not legal-content approval or release auth
 | Homepage opening, graphic, four paths and paired actions | Implemented against final desktop and mobile references |
 | Shared header, mobile menu, theme control and footer B | Implemented; search and navigation guard retained |
 | Existing urgent-help dialog | Preserved byte-for-byte; approved full-page urgent subflows are not implemented yet |
-| First 24 Hours full layout | Pending; existing substantive page retained. Shared typography and shell apply, but this is not a completed page conversion |
-| Immigration full layout | Pending; existing substantive page retained. Shared typography/shell and removal of automatic phase rotation do not constitute the approved full layout |
+| First 24 Hours | Numbered, independently expandable stages and mobile contents/state selection implemented. Full existing introduction, substantive content and ancillary sections retained; some ancillary layouts still use the previous styling |
+| Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
 | Case Guidance, consent, questions, recovery and results | Separate integration batch; do not substitute static preview questions for production questions or change consent defaults |
 | How to use this site and other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
@@ -55,3 +55,11 @@ Do not use design acceptance to approve legal claims, privacy promises, source f
 ## Homepage disclosure refinement
 
 Following the owner's request for a wider notice, the design task recommended adapting the approved unboxed, muted disclaimer pattern to the longer production text: full available width up to 960px, 24px top margin, 16px top padding, a one-pixel editorial rule, transparent background, and 13px type at 1.65 line height. The width and rule are a new implementation recommendation, not an exact specification from an older preview. Text is unchanged and wraps naturally across locales and screen sizes.
+
+## Implementation batch: 2026-10-26
+
+Owner accepted the widened homepage disclosure. First 24 Hours now supports several open stages, mobile jurisdiction selection, keyboard focus on contents navigation, initial/hash-change deep links and reduced motion. Immigration retains every existing phase and guide while replacing carousel navigation with native independent disclosures. Both pages retain existing translation keys, source links and legal copy; new translations cover interface labels only. Full production copy intentionally differs from the shorter mockups.
+
+Validation: TypeScript check and production build passed. The focused locale, navigation and translation suite passed 218 tests. Ten browser tests passed for the homepage/shared menu and First 24 Hours (English, Spanish and Chinese, light/dark, mobile state selection, multiple open stages and deep links). Immigration mobile dark layout was visually inspected with the English heading on two lines and no horizontal overflow. Broader visual comparisons and remaining ancillary layout refinements are still pending.
+
+No production publish or merge is authorized by these results. Urgent-help full-page flows and Case Guidance remain subsequent batches. Legal review and AI/output/backend checks remain separate release work.

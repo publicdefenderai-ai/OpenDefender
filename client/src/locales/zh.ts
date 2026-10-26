@@ -1,6 +1,10 @@
 export default {
   translation: {
   design: {
+      immigrationStart: '移民信息入口',
+      guideContents: '本指南内容',
+      yourState: '所在州',
+      allStates: '所有州（一般信息）',
   "timelineNav": "案件时间线",
   "documentsNav": "文书资料库",
   "summarizerNav": "文书摘要工具",
