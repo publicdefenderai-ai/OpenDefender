@@ -63,3 +63,19 @@ Owner accepted the widened homepage disclosure. First 24 Hours now supports seve
 Validation: TypeScript check and production build passed. The focused locale, navigation and translation suite passed 218 tests. Ten browser tests passed for the homepage/shared menu and First 24 Hours (English, Spanish and Chinese, light/dark, mobile state selection, multiple open stages and deep links). Immigration mobile dark layout was visually inspected with the English heading on two lines and no horizontal overflow. Broader visual comparisons and remaining ancillary layout refinements are still pending.
 
 No production publish or merge is authorized by these results. Urgent-help full-page flows and Case Guidance remain subsequent batches. Legal review and AI/output/backend checks remain separate release work.
+
+## External review follow-up: 2026-10-26
+
+Addressed the confirmed language/heading and font-utility findings: document language now follows i18next initialization and changes; immigration heading phrases can wrap in translations while English remains two lines at 320px. Tailwind font utilities now use shared font variables. Consolidated the two theme token blocks without changing their effective values, made footer hover/focus feedback visible with underlining, removed duplicate print/action declarations, and renamed the old TEAL logo constant. Converted the existing variable font to WOFF2 (240,164 to 88,668 bytes); its TTF remains as source, but CSS requests only WOFF2.
+
+Validation: typecheck and production build passed; all 16 browser tests passed. New tests measure text bounds (not just document scroll width, which overflow hiding can mask), verify live document-language changes, and exercise independent phase disclosures at 320px in English/Spanish/Chinese and both themes. Token-value comparison confirmed the palette consolidation preserves every effective root/dark variable.
+
+Remaining review decisions/work:
+- Compare restrained serif headings with the accepted DM Sans treatment before making a global typographic change; the accepted font choice has not been silently replaced.
+- Restyle the urgent-help dialog while retaining its content and behavior; this remains the most conspicuous old/new visual seam.
+- Review actual italic font support along with typography; current italic synthesis remains unchanged.
+- Consolidate remaining illustration/button/footer color and radius literals without inadvertently changing approved artwork or contrast.
+- The doorway background cutout assumes the page background. Keep this constraint explicit if reusing the motif on another surface.
+- Normalize interface-translation formatting during the next locale edit.
+
+The external review reported ten pre-existing unit failures on both the PR and base. That full-suite result was not independently rerun for this follow-up; it is not a claim of a clean full test suite.

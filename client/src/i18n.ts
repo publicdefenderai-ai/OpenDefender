@@ -5,6 +5,15 @@ import en from './locales/en';
 import es from './locales/es';
 import zh from './locales/zh';
 
+// Keep assistive technology and CSS :lang() in sync with the rendered locale.
+function syncDocumentLanguage() {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = i18n.resolvedLanguage || i18n.language || 'en';
+  }
+}
+i18n.on('languageChanged', syncDocumentLanguage);
+i18n.on('initialized', syncDocumentLanguage);
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)

@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Editorial civic palette — paper, ink, one signal color, reserved urgency */
-  --background: hsl(40 20% 99%);
-  --foreground: hsl(222 35% 15%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(222 35% 15%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(222 35% 15%);
-  --primary: hsl(222 47% 28%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(40 15% 95%);
-  --secondary-foreground: hsl(222 35% 15%);
-  --muted: hsl(40 10% 94%);
-  --muted-foreground: hsl(222 15% 45%);
-  --accent: hsl(190 45% 92%);
-  --accent-foreground: hsl(222 35% 15%);
+  /* Shared warm-paper and plum tokens. Legacy legal/chart tokens remain for unmigrated pages. */
+  --background: #faf7f2;
+  --foreground: #302333;
+  --card: #fffcf8;
+  --card-foreground: #302333;
+  --popover: #fffcf8;
+  --popover-foreground: #302333;
+  --primary: #533750;
+  --primary-foreground: #fff9f3;
+  --secondary: #eee6e0;
+  --secondary-foreground: #302333;
+  --muted: #eee6e0;
+  --muted-foreground: #665b65;
+  --accent: #eee3eb;
+  --accent-foreground: #302333;
   --destructive: hsl(0 65% 45%);
   --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(222 15% 88%);
-  --input: hsl(222 15% 88%);
-  --ring: hsl(222 47% 28%);
+  --border: #d6cdc8;
+  --input: #d6cdc8;
+  --ring: #533750;
   --chart-1: hsl(222 47% 28%);
   --chart-2: hsl(160 45% 35%);
   --chart-3: hsl(38 60% 50%);
@@ -46,44 +46,45 @@
   --neutral-light: hsl(40 15% 97%);
   --warm-gray: hsl(30 10% 50%);
   
-  --radius: 0.25rem;
+  --radius: .5rem;
   
   /* Font families */
-  --font-serif: 'Lora', 'Georgia', serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Lora', 'Georgia', serif;
+  --font-serif: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'DM Sans', system-ui, -apple-system, sans-serif;
 
-  --editorial-paper: hsl(40 25% 98%);
-  --editorial-paper-deep: hsl(40 18% 94%);
-  --editorial-ink: hsl(222 35% 15%);
-  --editorial-ink-soft: hsl(222 18% 32%);
-  --editorial-signal: hsl(190 57% 41%);
-  --editorial-signal-soft: hsl(190 45% 92%);
-  --editorial-rule: hsl(222 18% 80%);
+  --editorial-paper: #faf7f2;
+  --editorial-paper-deep: #eee6e0;
+  --editorial-ink: #302333;
+  --editorial-ink-soft: #665b65;
+  --editorial-signal: #533750;
+  --editorial-signal-soft: #eee3eb;
+  --editorial-rule: #d6cdc8;
   --editorial-urgency: hsl(0 65% 45%);
+  --design-art: #edc4a4;
 }
 
 .dark {
-  /* Editorial civic palette — dark ink with warm paper text */
-  --background: hsl(222 25% 8%);
-  --foreground: hsl(40 15% 95%);
-  --card: hsl(222 25% 11%);
-  --card-foreground: hsl(40 15% 95%);
-  --popover: hsl(222 25% 11%);
-  --popover-foreground: hsl(40 15% 95%);
-  --primary: hsl(222 45% 55%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(222 20% 16%);
-  --secondary-foreground: hsl(40 15% 95%);
-  --muted: hsl(222 20% 16%);
-  --muted-foreground: hsl(222 15% 60%);
-  --accent: hsl(190 30% 20%);
-  --accent-foreground: hsl(40 15% 95%);
+  /* Shared dark theme */
+  --background: #211c23;
+  --foreground: #faf3ec;
+  --card: #302832;
+  --card-foreground: #faf3ec;
+  --popover: #302832;
+  --popover-foreground: #faf3ec;
+  --primary: #e8c6dd;
+  --primary-foreground: #302333;
+  --secondary: #403342;
+  --secondary-foreground: #faf3ec;
+  --muted: #302832;
+  --muted-foreground: #c9bdc8;
+  --accent: #403342;
+  --accent-foreground: #faf3ec;
   --destructive: hsl(0 55% 45%);
   --destructive-foreground: hsl(40 15% 95%);
-  --border: hsl(222 20% 18%);
-  --input: hsl(222 20% 18%);
-  --ring: hsl(222 45% 55%);
+  --border: #534752;
+  --input: #534752;
+  --ring: #e8c6dd;
   
   /* Dark mode legal colors - sophisticated */
   --legal-navy: hsl(222 45% 55%);
@@ -97,14 +98,15 @@
   --neutral-medium: hsl(222 15% 60%);
   --neutral-light: hsl(222 20% 16%);
 
-  --editorial-paper: hsl(222 25% 8%);
-  --editorial-paper-deep: hsl(222 25% 12%);
-  --editorial-ink: hsl(40 15% 95%);
-  --editorial-ink-soft: hsl(40 10% 76%);
-  --editorial-signal: hsl(190 55% 58%);
-  --editorial-signal-soft: hsl(190 30% 20%);
-  --editorial-rule: hsl(222 18% 28%);
+  --editorial-paper: #211c23;
+  --editorial-paper-deep: #302832;
+  --editorial-ink: #faf3ec;
+  --editorial-ink-soft: #c9bdc8;
+  --editorial-signal: #e8c6dd;
+  --editorial-signal-soft: #403342;
+  --editorial-rule: #534752;
   --editorial-urgency: hsl(0 62% 58%);
+  --design-art: #604738;
 }
 
 @layer base {
@@ -1917,73 +1919,17 @@ a:focus-visible,
 /* Open door visual foundation. Fonts stay on the application's own origin. */
 @font-face {
   font-family: 'DM Sans';
-  src: url('/fonts/dm-sans/DM-Sans.ttf') format('truetype');
+  src: url('/fonts/dm-sans/DM-Sans.woff2') format('woff2');
   font-weight: 100 1000;
   font-style: normal;
   font-display: swap;
 }
-:root {
-  --background: #faf7f2;
-  --foreground: #302333;
-  --card: #fffcf8;
-  --card-foreground: #302333;
-  --popover: #fffcf8;
-  --popover-foreground: #302333;
-  --primary: #533750;
-  --primary-foreground: #fff9f3;
-  --secondary: #eee6e0;
-  --secondary-foreground: #302333;
-  --muted: #eee6e0;
-  --muted-foreground: #665b65;
-  --accent: #eee3eb;
-  --accent-foreground: #302333;
-  --border: #d6cdc8;
-  --input: #d6cdc8;
-  --ring: #533750;
-  --radius: .5rem;
-  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-display: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-serif: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --editorial-paper: #faf7f2;
-  --editorial-paper-deep: #eee6e0;
-  --editorial-ink: #302333;
-  --editorial-ink-soft: #665b65;
-  --editorial-signal: #533750;
-  --editorial-signal-soft: #eee3eb;
-  --editorial-rule: #d6cdc8;
-  --design-art: #edc4a4;
-}
-.dark {
-  --background: #211c23;
-  --foreground: #faf3ec;
-  --card: #302832;
-  --card-foreground: #faf3ec;
-  --popover: #302832;
-  --popover-foreground: #faf3ec;
-  --primary: #e8c6dd;
-  --primary-foreground: #302333;
-  --secondary: #403342;
-  --secondary-foreground: #faf3ec;
-  --muted: #302832;
-  --muted-foreground: #c9bdc8;
-  --accent: #403342;
-  --accent-foreground: #faf3ec;
-  --border: #534752;
-  --input: #534752;
-  --ring: #e8c6dd;
-  --editorial-paper: #211c23;
-  --editorial-paper-deep: #302832;
-  --editorial-ink: #faf3ec;
-  --editorial-ink-soft: #c9bdc8;
-  --editorial-signal: #e8c6dd;
-  --editorial-signal-soft: #403342;
-  --editorial-rule: #534752;
-  --design-art: #604738;
-}
+
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
-@media print { .design-open-door { display: none; } }
+
 
 @media (max-width: 359px) {
   .editorial-header .brand-wordmark { font-size: 1rem; }
@@ -2002,7 +1948,7 @@ a:focus-visible,
 .design-open-door { grid-column: 2; grid-row: 1 / 7; align-self: center; height: 310px; position: relative; overflow: hidden; background: var(--design-art); border-radius: 150px 150px 4px 4px; isolation: isolate; }
 .design-open-door::before { content: ''; position: absolute; left: 22%; right: 22%; top: 18%; bottom: 0; border-radius: 120px 120px 0 0; background: var(--primary); }
 .design-open-door::after { content: ''; position: absolute; width: 62%; height: 80%; left: 49%; top: 22%; background: var(--background); transform: skewY(-16deg); transform-origin: top left; }
-.design-hero-actions { display: grid; grid-template-columns: repeat(2,minmax(0,210px)); gap: 14px; align-items: start; }
+.design-hero-actions { display: grid; grid-template-columns: repeat(2,minmax(0,210px)); gap: 14px; align-items: stretch; row-gap: 0; }
 .design-urgent-button, .design-how-button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 54px; padding: 14px 16px; border-radius: 5px; font-size: 15px; line-height: 1.4; font-weight: 600; text-align: center; }
 .design-urgent-button { gap: 10px; background: #a0382d; color: #fff9f3; }
 .design-urgent-button svg { width: 20px; height: 20px; flex-shrink: 0; stroke-width: 1.7; }
@@ -2050,7 +1996,7 @@ a:focus-visible,
 .design-footer-identity { gap: 26px; }
 .design-footer nav { gap: 18px; }
 .design-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--footer-link); font-size: 14px; font-weight: 700; }
-.design-footer a:hover { background: var(--muted); }
+.design-footer a:hover, .design-footer a:focus-visible { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
 .design-footer-languages, .design-footer p, .design-footer-bottom > span { font-size: 12px; color: var(--muted-foreground); }
 .design-footer p { margin: 14px 0 20px; max-width: 620px; line-height: 1.6; }
 .design-footer-bottom { border-top: 1px solid var(--border); padding-top: 12px; justify-content: space-between; gap: 12px 24px; }
@@ -2103,7 +2049,6 @@ a:focus-visible,
 }
 @media print { .design-open-door { display: none; } }
 /* Both actions share a grid row, so translated labels keep equal button heights. */
-.design-hero-actions { align-items: stretch; row-gap: 0; }
 .design-hero-actions > div { display: contents; }
 .design-urgent-button { grid-column: 1; grid-row: 1; }
 .design-how-button { grid-column: 2; grid-row: 1; }
@@ -2147,7 +2092,8 @@ a:focus-visible,
 .immigration-intro-grid { display: grid; grid-template-columns: minmax(0,2fr) minmax(0,1fr); align-items: center; gap: 28px; }
 .immigration-intro h1 { font-size: clamp(28px,3.7vw,42px); font-weight: 500; line-height: 1.08; letter-spacing: -.04em; }
 .immigration-heading-line { display: block; }
-.immigration-heading-line:lang(en) { white-space: nowrap; }
+/* Each English phrase fits on one line at 320px; translations may wrap. */
+.immigration-heading-line { overflow-wrap: anywhere; }
 .immigration-intro p { font-size: 17px; color: var(--muted-foreground); line-height: 1.6; max-width: 500px; }
 .immigration-intro a { background: transparent; color: var(--primary); padding-left: 0; box-shadow: none; }
 .immigration-arch-art { position: relative; height: 280px; width: 100%; max-width: 310px; justify-self: end; isolation: isolate; overflow: hidden; }

@@ -5,11 +5,11 @@ interface BrandLogoProps {
   size?: "sm" | "md";
 }
 
-const TEAL = "var(--editorial-signal)";
+const BRAND_SIGNAL = "var(--editorial-signal)";
 const WHITE = "#FFFFFF";
 
 export function BrandLogo({ variant = "default", size = "sm" }: BrandLogoProps) {
-  const color = variant === "light" ? WHITE : TEAL;
+  const color = variant === "light" ? WHITE : BRAND_SIGNAL;
   const textSize = size === "sm" ? "text-xl" : "text-[22px]";
   const dim = size === "sm" ? 27 : 30;
 

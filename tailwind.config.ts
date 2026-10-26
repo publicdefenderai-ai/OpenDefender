@@ -70,8 +70,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
-        serif: ["Source Serif 4", "Georgia", "serif"],
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif)"],
+        display: ["var(--font-display)"],
       },
       keyframes: {
         "accordion-down": {
