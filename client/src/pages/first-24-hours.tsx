@@ -450,7 +450,7 @@ export default function FirstTwentyFourHours() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="design-urgent min-h-screen bg-background">
       <Header />
 
       <section className="editorial-page-intro py-12 md:py-16">

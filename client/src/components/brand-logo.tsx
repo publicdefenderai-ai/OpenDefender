@@ -5,31 +5,24 @@ interface BrandLogoProps {
   size?: "sm" | "md";
 }
 
-const TEAL = "#2D8EA5";
+const TEAL = "var(--editorial-signal)";
 const WHITE = "#FFFFFF";
 
 export function BrandLogo({ variant = "default", size = "sm" }: BrandLogoProps) {
   const color = variant === "light" ? WHITE : TEAL;
-  const textSize = size === "sm" ? "text-base" : "text-lg";
+  const textSize = size === "sm" ? "text-lg" : "text-lg";
   const dim = size === "sm" ? 28 : 36;
-  const isLight = variant === "light";
 
   return (
     <div className="flex items-center gap-2" style={{ lineHeight: 1 }}>
-      <img
-        src={logoShieldPng}
-        width={dim}
-        height={dim}
-        alt=""
+      <span
         aria-hidden="true"
-        style={{
-          flexShrink: 0,
-          display: "block",
-          filter: isLight ? "brightness(0) invert(1)" : "none",
-        }}
+        style={{ width: dim, height: dim, flexShrink: 0, backgroundColor: color,
+          mask: `url(${logoShieldPng}) center / contain no-repeat`,
+          WebkitMask: `url(${logoShieldPng}) center / contain no-repeat` }}
       />
       <span
-        className={`font-semibold ${textSize} tracking-tight`}
+        className={`brand-wordmark font-semibold ${textSize} tracking-tight`}
         style={{ color, letterSpacing: "-0.01em" }}
       >
         OpenDefender

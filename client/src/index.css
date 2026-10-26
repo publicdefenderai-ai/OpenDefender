@@ -1913,3 +1913,107 @@ a:focus-visible,
     backdrop-filter: none;
   }
 }
+
+/* Open door visual foundation. Fonts stay on the application's own origin. */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/dm-sans/DM-Sans.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --background: #faf7f2;
+  --foreground: #302333;
+  --card: #fffcf8;
+  --card-foreground: #302333;
+  --popover: #fffcf8;
+  --popover-foreground: #302333;
+  --primary: #533750;
+  --primary-foreground: #fff9f3;
+  --secondary: #eee6e0;
+  --secondary-foreground: #302333;
+  --muted: #eee6e0;
+  --muted-foreground: #665b65;
+  --accent: #eee3eb;
+  --accent-foreground: #302333;
+  --border: #d6cdc8;
+  --input: #d6cdc8;
+  --ring: #533750;
+  --radius: .5rem;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --editorial-paper: #faf7f2;
+  --editorial-paper-deep: #eee6e0;
+  --editorial-ink: #302333;
+  --editorial-ink-soft: #665b65;
+  --editorial-signal: #533750;
+  --editorial-signal-soft: #eee3eb;
+  --editorial-rule: #d6cdc8;
+  --design-art: #edc4a4;
+}
+.dark {
+  --background: #211c23;
+  --foreground: #faf3ec;
+  --card: #302832;
+  --card-foreground: #faf3ec;
+  --popover: #302832;
+  --popover-foreground: #faf3ec;
+  --primary: #e8c6dd;
+  --primary-foreground: #302333;
+  --secondary: #403342;
+  --secondary-foreground: #faf3ec;
+  --muted: #302832;
+  --muted-foreground: #c9bdc8;
+  --accent: #403342;
+  --accent-foreground: #faf3ec;
+  --border: #534752;
+  --input: #534752;
+  --ring: #e8c6dd;
+  --editorial-paper: #211c23;
+  --editorial-paper-deep: #302832;
+  --editorial-ink: #faf3ec;
+  --editorial-ink-soft: #c9bdc8;
+  --editorial-signal: #e8c6dd;
+  --editorial-signal-soft: #403342;
+  --editorial-rule: #534752;
+  --design-art: #604738;
+}
+.editorial-header { background: var(--editorial-paper); }
+.editorial-footer { background: #302333; border-color: #665b65; }
+.editorial-footer-bar { background: #211c23; }
+.design-home .editorial-home-hero { background: var(--background); padding-block: 3rem 2rem; }
+.design-home .editorial-home-hero::after { display: none; }
+.design-hero-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 3rem; align-items: center; }
+.design-home .editorial-home-hero h1 { font-family: var(--font-display); font-size: clamp(2rem,4.5vw,3.4rem); font-weight: 500; letter-spacing: -.045em; }
+.design-home .editorial-home-hero strong { color: var(--editorial-signal); font-weight: 600; }
+.design-home .editorial-primary-action { background: #713e50; color: #fff9f3; border-radius: .5rem; }
+.design-home .editorial-primary-action:hover { background: #53303f; }
+.design-open-door { height: 310px; position: relative; overflow: hidden; background: var(--design-art); border-radius: 160px 160px 4px 4px; isolation: isolate; }
+.design-open-door::before { content: ''; position: absolute; inset: 18% 22% 0; border-radius: 120px 120px 0 0; background: var(--editorial-signal); }
+.design-open-door::after { content: ''; position: absolute; width: 62%; height: 90%; left: 49%; top: 22%; background: var(--background); transform: skewY(-16deg); }
+.design-home #paths { background: var(--background); padding-top: 1.5rem; }
+.design-home #paths h2 { text-align: left; font-weight: 500; }
+.design-home .editorial-start-card { border: 0; border-top: 1px solid var(--editorial-rule); border-radius: 0; background: transparent; box-shadow: none; padding-inline: 0; }
+.design-home .editorial-start-card::before { display: none; }
+.design-home .editorial-start-card h3 { font-weight: 500; }
+.design-home .editorial-secondary-path { background: var(--editorial-paper-deep); border: 0; border-radius: .5rem; }
+.design-urgent .editorial-page-intro, .design-immigration .editorial-page-intro { background: var(--editorial-paper-deep); padding-block: 2.5rem; }
+.design-urgent .editorial-page-intro h1, .design-immigration .editorial-page-intro h1 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem); font-weight: 500; letter-spacing: -.035em; }
+.design-urgent .editorial-reading { padding-top: 2rem; }
+.design-immigration .editorial-card { border-radius: .5rem; box-shadow: none; }
+@media (max-width: 767px) {
+  .design-hero-grid { grid-template-columns: 1fr; gap: 0; }
+  .design-open-door { display: none; }
+  .design-home .editorial-home-hero { padding-block: 1.75rem 1.25rem; }
+  .design-urgent .editorial-page-intro, .design-immigration .editorial-page-intro { padding-block: 1.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media print { .design-open-door { display: none; } }
+
+@media (max-width: 359px) {
+  .editorial-header .brand-wordmark { font-size: 1rem; }
+}

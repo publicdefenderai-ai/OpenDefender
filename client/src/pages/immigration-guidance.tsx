@@ -1,6 +1,6 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState } from "react";
 import { 
   AlertTriangle, 
   Phone, 
@@ -37,7 +37,6 @@ import { RapidResponseSection } from "@/components/immigration/rapid-response-se
 
 function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   
   const phases = [
     {
@@ -127,22 +126,8 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
     },
   ];
 
-  const startTimer = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % phases.length);
-    }, 6000);
-  }, [phases.length]);
-
-  useEffect(() => {
-    startTimer();
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [startTimer]);
-
-  const advance = () => {
-    setActiveIndex((prev) => (prev + 1) % phases.length);
-    startTimer();
-  };
+  // Legal information advances only when the reader requests it.
+  const advance = () => setActiveIndex((prev) => (prev + 1) % phases.length);
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, string> = {
@@ -220,9 +205,10 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
         {phases.map((phase, index) => (
           <button
             key={phase.id}
-            onClick={(e) => { e.stopPropagation(); setActiveIndex(index); startTimer(); }}
+            onClick={(e) => { e.stopPropagation(); setActiveIndex(index); }}
             className="flex items-center justify-center w-11 h-11"
             aria-label={`Go to phase ${index + 1}`}
+            aria-pressed={index === activeIndex}
             data-testid={`dot-phase-${index + 1}`}
           >
             <span className={`w-3 h-3 rounded-full transition-all duration-300 border-2 ${
@@ -242,13 +228,13 @@ export default function ImmigrationGuidance() {
   const { t } = useTranslation();
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="design-immigration min-h-screen bg-background">
       <Header />
 
       <section className="editorial-page-intro py-12 lg:py-20">
         <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >

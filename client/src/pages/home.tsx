@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   AlertTriangle,
   ArrowRight,
@@ -15,7 +15,7 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SiteSearch } from "@/components/search/site-search";
 import { DisclosureNotice } from "@/components/legal/disclosure-notice";
@@ -24,35 +24,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-
-function CountUp({ target, duration = 1400 }: { target: number; duration?: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!inView) return;
-    if (target === 0) {
-      setCount(0);
-      return;
-    }
-    let animId: number;
-    const start = Date.now();
-    const tick = () => {
-      const elapsed = Date.now() - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(eased * target));
-      if (progress < 1) {
-        animId = requestAnimationFrame(tick);
-      }
-    };
-    animId = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(animId);
-  }, [inView, target, duration]);
-
-  return <span ref={ref}>{count}</span>;
-}
 
 export default function Home() {
   useScrollToTop();
@@ -166,6 +137,15 @@ export default function Home() {
       tone: doors[1].tone,
     },
     {
+      badge: t("home.secondary.immigration.title"),
+      headline: t("home.secondary.immigration.title"),
+      desc: t("home.secondary.immigration.desc"),
+      cta: t("home.secondary.immigration.cta"),
+      link: "/immigration-guidance",
+      links: [],
+      tone: "immigration",
+    },
+    {
       badge: doors[2].badge,
       headline: doors[2].headline,
       desc: doors[2].desc,
@@ -186,14 +166,14 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="design-home min-h-screen bg-background">
       <Header />
 
       {/* Hero — orientation first, with a quieter editorial opening */}
       <section className="editorial-home-hero relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="design-hero-grid relative max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
@@ -205,15 +185,17 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl mb-8 text-muted-foreground max-w-2xl leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex flex-col items-start justify-center">
+            <div className="flex flex-wrap items-center gap-5">
               <button
                 onClick={handleUrgentHelp}
                 className="editorial-primary-action focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
+              <Link href="/how-to" className="inline-flex min-h-11 items-center gap-2 font-semibold text-primary underline underline-offset-4">{t("header.dropdown.explore.howTo", "How It Works")} <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
             </div>
           </motion.div>
+          <div className="design-open-door" aria-hidden="true" />
         </div>
       </section>
 
@@ -230,7 +212,7 @@ export default function Home() {
             {quickStarts.map((point, i) => (
               <motion.div
                 key={point.link}
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 className="group h-full"
@@ -285,8 +267,8 @@ export default function Home() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {secondaryPaths.map(({ Icon, title, desc, cta, href }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {secondaryPaths.filter((path) => path.href !== "/immigration-guidance").map(({ Icon, title, desc, cta, href }) => (
               <Link key={href} href={href} className="flex">
                 <div className="editorial-secondary-path flex items-start gap-3.5 p-4 cursor-pointer h-full w-full">
                   <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-[var(--editorial-signal)]" strokeWidth={1.75} aria-hidden="true" />
@@ -358,7 +340,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-8">
               <div className="flex flex-col items-center">
                 <span className="text-4xl font-black text-foreground tabular-nums">
-                  <CountUp target={3} />
+                  3
                 </span>
                 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
                   {t("home.stats.label1")}
@@ -367,7 +349,7 @@ export default function Home() {
               <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
               <div className="flex flex-col items-center">
                 <span className="text-4xl font-black text-foreground tabular-nums">
-                  <CountUp target={51} />
+                  51
                 </span>
                 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
                   {t("home.stats.label2")}
@@ -376,7 +358,7 @@ export default function Home() {
               <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
               <div className="flex flex-col items-center">
                 <span className="text-4xl font-black text-foreground tabular-nums">
-                  $<CountUp target={0} />
+                  $0
                 </span>
                 <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
                   {t("home.stats.label3")}

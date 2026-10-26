@@ -198,7 +198,7 @@ export function Header() {
             )}
 
             {/* Desktop nav */}
-            <nav className="hidden md:flex items-center gap-0 ml-3" aria-label="Section navigation">
+            <nav className="hidden xl:flex items-center gap-0 ml-3" aria-label="Section navigation">
               {navLinks.map((link, idx) => {
                 const isActive = location === link.href || location.startsWith(link.href + "/");
                 const isOpen = openDropdown === link.href;
@@ -352,8 +352,8 @@ export function Header() {
           <div className="flex items-center space-x-2">
             <SearchButton />
 
-            <div className="hidden md:block">
-              <Select value={i18n.language} onValueChange={changeLanguage}>
+            <div className="hidden xl:block">
+              <Select value={(i18n.resolvedLanguage || i18n.language).split("-")[0]} onValueChange={changeLanguage}>
                 <SelectTrigger className="w-[140px] h-9 border-0 bg-transparent hover:bg-accent" data-testid="select-language">
                   <div className="flex items-center gap-2">
                     <Languages className="h-4 w-4" />
@@ -368,15 +368,15 @@ export function Header() {
               </Select>
             </div>
 
-            <Button variant="ghost" size="sm" onClick={toggleTheme} className="text-muted-foreground hover:text-foreground hidden md:flex" data-testid="button-theme-toggle" aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
+            <Button variant="ghost" size="sm" onClick={toggleTheme} className="text-muted-foreground hover:text-foreground hidden xl:flex" data-testid="button-theme-toggle" aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}>
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
 
             {/* Mobile hamburger */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-11 w-11 text-muted-foreground hover:text-foreground md:hidden" data-testid="button-menu" aria-label="Open navigation menu">
-                  <Menu className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="h-11 w-auto min-w-11 px-2 gap-2 text-muted-foreground hover:text-foreground xl:hidden" data-testid="button-menu" aria-label="Open navigation menu">
+                  <Menu className="h-5 w-5" /><span className="text-sm">{t("header.mobileMenu", "Menu")}</span>
                 </Button>
               </SheetTrigger>
 
@@ -384,6 +384,28 @@ export function Header() {
                 <SheetHeader>
                   <SheetTitle>{t('header.mobileMenu', 'Menu')}</SheetTitle>
                 </SheetHeader>
+                <div className="mt-4 pb-4 border-b border-border/60 space-y-3">
+                  <div>
+                    <label className="text-xs font-semibold text-muted-foreground uppercase tracking-widest block mb-2">{t('header.language', 'Language')}</label>
+                    <Select value={(i18n.resolvedLanguage || i18n.language).split("-")[0]} onValueChange={changeLanguage}>
+                      <SelectTrigger className="w-full" data-testid="select-language-mobile">
+                        <div className="flex items-center gap-2">
+                          <Languages className="h-4 w-4" />
+                          <SelectValue />
+                        </div>
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="en" data-testid="option-english-mobile">English</SelectItem>
+                        <SelectItem value="es" data-testid="option-spanish-mobile">Español</SelectItem>
+                        <SelectItem value="zh" data-testid="option-chinese-mobile">中文</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <Button variant="outline" onClick={toggleTheme} className="w-full justify-start" data-testid="button-theme-toggle-mobile">
+                    {theme === "dark" ? <><Sun className="h-4 w-4 mr-2" />{t('header.lightMode', 'Light Mode')}</> : <><Moon className="h-4 w-4 mr-2" />{t('header.darkMode', 'Dark Mode')}</>}
+                  </Button>
+                </div>
+
 
                 <div className="mt-5 mb-2">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-1 mb-2">{t('header.mobile.navigate', 'Navigate')}</p>
@@ -487,27 +509,6 @@ export function Header() {
                   </div>
                 </div>
 
-                <div className="mt-auto pt-4 border-t border-border/60 space-y-3">
-                  <div>
-                    <label className="text-xs font-semibold text-muted-foreground uppercase tracking-widest block mb-2">{t('header.language', 'Language')}</label>
-                    <Select value={i18n.language} onValueChange={changeLanguage}>
-                      <SelectTrigger className="w-full" data-testid="select-language-mobile">
-                        <div className="flex items-center gap-2">
-                          <Languages className="h-4 w-4" />
-                          <SelectValue />
-                        </div>
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="en" data-testid="option-english-mobile">English</SelectItem>
-                        <SelectItem value="es" data-testid="option-spanish-mobile">Español</SelectItem>
-                        <SelectItem value="zh" data-testid="option-chinese-mobile">中文</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <Button variant="outline" onClick={toggleTheme} className="w-full justify-start" data-testid="button-theme-toggle-mobile">
-                    {theme === "dark" ? <><Sun className="h-4 w-4 mr-2" />{t('header.lightMode', 'Light Mode')}</> : <><Moon className="h-4 w-4 mr-2" />{t('header.darkMode', 'Dark Mode')}</>}
-                  </Button>
-                </div>
               </SheetContent>
             </Sheet>
           </div>
