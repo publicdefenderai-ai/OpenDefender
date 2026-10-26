@@ -50,7 +50,6 @@ export default function Home() {
           </div>
           <Link href="/how-to" className="design-how-button">{t("design.how")}</Link>
         </div>
-        <DisclosureNotice compact className="design-disclosure" />
       </section>
       <section id="paths" className="design-container design-paths">
         <h2>{t("design.paths")}</h2>
@@ -61,6 +60,7 @@ export default function Home() {
             <span aria-hidden="true">›</span>
           </Link>)}
         <Link href="/directory" className="design-browse">{t("design.browse")}</Link>
+        <DisclosureNotice compact className="design-disclosure" />
       </section>
       <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
       <Footer />

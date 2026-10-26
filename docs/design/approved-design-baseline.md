@@ -37,9 +37,9 @@ This is a presentation specification, not legal-content approval or release auth
 | First 24 Hours full layout | Pending; existing substantive page retained. Shared typography and shell apply, but this is not a completed page conversion |
 | Immigration full layout | Pending; existing substantive page retained. Shared typography/shell and removal of automatic phase rotation do not constitute the approved full layout |
 | Case Guidance, consent, questions, recovery and results | Separate integration batch; do not substitute static preview questions for production questions or change consent defaults |
-| Other approved resource-page layouts | Pending page-by-page conversion, using final corresponding reference |
+| How to use this site and other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
-Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
+Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
 
 ## Required procedure for every next batch
 
