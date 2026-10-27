@@ -1,6 +1,13 @@
 export default {
   translation: {
   design: {
+    urgentHome: "返回首页",
+    urgentOpenPage: "在完整页面中打开本指南",
+    urgentAll: "所有紧急情况",
+    urgentArrestTitle: "被逮捕或拘留了吗？",
+    urgentChargedTitle: "被指控后获释？为出庭做好准备。",
+    urgentFamilyTitle: "您认识的人被逮捕了吗？",
+
       immigrationStart: '移民信息入口',
       guideContents: '本指南内容',
       yourState: '所在州',

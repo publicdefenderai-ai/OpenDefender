@@ -1,6 +1,13 @@
 export default {
   translation: {
   design: {
+    urgentHome: "Volver a la página principal",
+    urgentOpenPage: "Abrir esta guía como página completa",
+    urgentAll: "Todas las situaciones urgentes",
+    urgentArrestTitle: "¿Le arrestaron o está bajo custodia?",
+    urgentChargedTitle: "¿Le acusaron y quedó en libertad? Prepárese para ir a la corte.",
+    urgentFamilyTitle: "¿Arrestaron a alguien que conoce?",
+
       immigrationStart: 'Puntos de partida de inmigración',
       guideContents: 'En esta guía',
       yourState: 'Tu estado',

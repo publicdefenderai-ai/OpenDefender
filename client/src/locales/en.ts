@@ -1,6 +1,13 @@
 export default {
   translation: {
   design: {
+    urgentHome: "Back to homepage",
+    urgentOpenPage: "Open this guidance as a full page",
+    urgentAll: "All urgent situations",
+    urgentArrestTitle: "Arrested or in custody?",
+    urgentChargedTitle: "Charged and released? Get ready for court.",
+    urgentFamilyTitle: "Someone you know was arrested?",
+
       immigrationStart: 'Immigration starting points',
       guideContents: 'In this guide',
       yourState: 'Your state',
