@@ -23,7 +23,7 @@ export default function Home() {
   const urgentPanel = useRef<HTMLDivElement>(null);
   const previousSituation = useRef<typeof urgentSituation>(null);
   useEffect(() => {
-    if (!urgentHelpOpen) return;
+    if (!urgentHelpOpen) { previousSituation.current = null; return; }
     if (urgentSituation) urgentPanel.current?.querySelector<HTMLElement>('h3')?.focus();
     else if (previousSituation.current) urgentPanel.current?.querySelector<HTMLElement>(`[data-situation="${previousSituation.current}"]`)?.focus();
     previousSituation.current = urgentSituation;

@@ -27,6 +27,17 @@ for (const language of ['en', 'es', 'zh']) {
       await expect(trigger).toBeFocused();
       await trigger.click();
       await expect(dialog.locator('.urgent-choices > *')).toHaveCount(5);
+      // Close directly from a non-first detail view: Back must not mask stale focus.
+      for (const closeMethod of ['escape', 'button']) {
+        await dialog.locator('[data-situation="family"]').click();
+        await expect(dialog.locator('h3')).toBeFocused();
+        if (closeMethod === 'escape') await page.keyboard.press('Escape');
+        else await dialog.getByRole('button', { name: 'Close', exact: true }).click();
+        await expect(dialog).toHaveCount(0);
+        await expect(trigger).toBeFocused();
+        await trigger.click();
+        await expect(dialog.locator('[data-situation="arrested"]')).toBeFocused();
+      }
       await dialog.locator('a[href="/first-24-hours#step-before-arrest"]').click();
       await expect(page.locator('#step-before-arrest-trigger')).toHaveAttribute('aria-expanded', 'true');
     });
