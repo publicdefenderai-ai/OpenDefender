@@ -1,6 +1,10 @@
 export default {
   translation: {
   design: {
+    caseHeading: "了解您的案件。为下一步做好准备。",
+    caseChooseOne: "请选择一个选项以继续。",
+    caseOption: "选项 {{number}}",
+
     urgentHome: "返回首页",
     urgentOpenPage: "在完整页面中打开本指南",
     urgentAll: "所有紧急情况",
@@ -2501,10 +2505,10 @@ export default {
       "consent": {
         "title": "您希望如何获取指导？",
         "bullet1Head": "法律信息，非法律建议。",
-        "bullet1Body": "我们解释您的权利和预期流程——我们不告诉您该怎么做。如需针对您案件的建议，公设辩护人或法律援助律师是您最好的资源。",
+        "bullet1Body": "我们解释您的权利和预期流程——我们不告诉您该怎么做。如需针对您案件的建议，律师（例如公设辩护人或法律援助律师）是您最好的资源。",
         "bullet2Head": "从设计之初就保护隐私。",
         "bullet2Body": "您的回答暂存在服务器内存中，而非永久案件数据库。记录通常会在24小时内删除，或在服务重启时清除。",
-        "cardATitle": "AI个性化指导",
+        "cardATitle": "量身定制的AI指导",
         "cardARecommended": "推荐",
         "cardABody": "根据您的具体指控、所在州和案件阶段，生成量身定制的案件路线图。",
         "cardATime": "约需30至60秒。",

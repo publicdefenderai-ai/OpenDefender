@@ -1,5 +1,11 @@
 import { expect, test, type Page } from "@playwright/test";
 
+// Recovery tests stub guidance responses; keep service availability deterministic too.
+test.beforeEach(async ({ page }) => {
+  await page.route('**/api/ai/status', route => route.fulfill({ json: { available: true } }));
+});
+
+
 const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
 const supportedCanonicalId = "ca-gross-vehicular-manslaughter-191-5-a";
@@ -159,7 +165,7 @@ async function openRecoveryWithSavedCharges(
   await page.goto("/case-guidance");
   await page.getByTestId("button-start-guidance").click();
   await page
-    .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+    .getByRole("button", { name: /Tailored AI Guidance.*Continue with AI Guidance/i })
     .click();
 
   await page.getByTestId("select-jurisdiction").click();
@@ -192,15 +198,15 @@ async function openRecoveryWithSavedCharges(
   // Review starts on the final civil-emergencies step. Use each step's
   // stable back control after the first unlabelled civil-emergencies button;
   // a broad role locator can race the animated step transition.
-  await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-circle-7")).toHaveAttribute("aria-current", "step");
   await page.getByRole("button", { name: /^Back/ }).click();
-  await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-circle-6")).toHaveAttribute("aria-current", "step");
   await page.getByRole("button", { name: /^Back/ }).click();
-  await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-circle-5")).toHaveAttribute("aria-current", "step");
   await page.getByTestId("button-prev-background").click();
-  await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-circle-4")).toHaveAttribute("aria-current", "step");
   await page.getByTestId("button-prev-status").click();
-  await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-circle-3")).toHaveAttribute("aria-current", "step");
   await expect(page.getByTestId("button-next-case-details")).toBeVisible();
 
   return {
@@ -318,15 +324,15 @@ test.describe("saved California legacy charge recovery", () => {
     // A full reload is a separate persistence boundary from moving between
     // QAFlow steps. Recovery should reopen with the edited canonical charges.
     await page.reload();
-    await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-7")).toHaveAttribute("aria-current", "step");
     await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-6")).toHaveAttribute("aria-current", "step");
     await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-5")).toHaveAttribute("aria-current", "step");
     await page.getByTestId("button-prev-background").click();
-    await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-4")).toHaveAttribute("aria-current", "step");
     await page.getByTestId("button-prev-status").click();
-    await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-3")).toHaveAttribute("aria-current", "step");
     for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
       await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
       await expect(
@@ -453,9 +459,9 @@ test.describe("saved California legacy charge recovery", () => {
     await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
     await expect(page.getByRole("alert")).toHaveCount(0);
     await page.getByTestId("button-start-guidance").click();
-    await expect(page.getByTestId("qa-step-circle-1")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-circle-1")).toHaveAttribute("aria-current", "step");
     await page
-      .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+      .getByRole("button", { name: /Tailored AI Guidance.*Continue with AI Guidance/i })
       .click();
     await expect(page.getByTestId("select-jurisdiction")).toBeVisible();
   });
