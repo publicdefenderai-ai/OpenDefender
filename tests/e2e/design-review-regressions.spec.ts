@@ -7,9 +7,10 @@ for (const language of ['en', 'es', 'zh']) {
       await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: theme });
       await page.addInitScript(({ language, theme }) => {
         localStorage.setItem('i18nextLng', language);
-        localStorage.setItem('vite-ui-theme', theme);
+        localStorage.setItem('public-defender-theme', theme);
       }, { language, theme });
       await page.goto('/immigration-guidance');
+      await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
       await expect(page.locator('html')).toHaveAttribute('lang', language);
       await page.evaluate(() => document.fonts.ready);
       // Measure actual text, not document width: overflow-x:hidden can hide clipping.

@@ -2152,7 +2152,7 @@ a:focus-visible,
 .urgent-back { min-height: 44px; color: var(--primary); font-weight: 600; margin-bottom: 12px; text-align: left; }
 .urgent-section { border: 0; background: transparent; box-shadow: none; }
 .urgent-section h3 { font-size: 23px; line-height: 1.35; font-weight: 500; margin: 18px 0; }
-.urgent-section li { border-top: 1px solid var(--border); padding: 16px 0; margin: 0 !important; }
+.urgent-section li { border-top: 1px solid var(--border); padding: 16px 0; margin: 0; }
 .urgent-step-number { flex-shrink: 0; width: 24px; font-size: 13px; color: var(--urgent-ink); padding-top: 3px; }
 .urgent-section li h4 { font-size: 18px; font-weight: 500; line-height: 1.4; }
 .urgent-section li p { font-size: 15px; line-height: 1.65; }
@@ -2166,3 +2166,25 @@ a:focus-visible,
 .urgent-next a:hover p:first-child { text-decoration: underline; text-underline-offset: 4px; }
 @media(max-width: 480px) { .urgent-heading { padding-left: 20px; } .urgent-heading h2 { font-size: 23px; } .urgent-body { padding: 16px 20px 24px; } .urgent-choices strong { font-size: 18px; } }
 .urgent-dialog.glass-overlay { background: var(--background); backdrop-filter: none; border-color: var(--border); border-top-color: var(--urgent-ink); box-shadow: 0 16px 48px #0003; }
+
+/* Shareable urgent guides use the same guidance as the homepage dialog. */
+.urgent-guide { --urgent-ink: #92372d; --urgent-soft: #f5e7e2; width: 88%; max-width: 880px; margin: 32px auto 64px; }
+.dark .urgent-guide { --urgent-ink: #f0a092; --urgent-soft: #38272a; }
+.urgent-guide-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 3px solid var(--urgent-ink); padding-top: 16px; margin-bottom: 28px; }
+.urgent-guide-top span { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--muted-foreground); }
+.urgent-guide-top svg { width: 20px; color: var(--urgent-ink); }
+.urgent-guide-top a, .urgent-full-page { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-size: 15px; font-weight: 600; }
+.urgent-full-page { margin-top: 16px; }
+.urgent-guide a:focus-visible { outline: 2px solid var(--urgent-ink); outline-offset: 4px; }
+.urgent-guide-top a:hover, .urgent-full-page:hover { text-decoration: underline; text-underline-offset: 4px; }
+.urgent-guide h1 { font-size: clamp(30px,4vw,44px); line-height: 1.15; font-weight: 500; letter-spacing: -.8px; margin-bottom: 16px; }
+.urgent-guide-intro { font-size: 17px; line-height: 1.65; color: var(--muted-foreground); margin-bottom: 28px; }
+.urgent-guide .urgent-section h2 { font-size: 23px; font-weight: 500; margin: 24px 0 12px; }
+.urgent-guide .urgent-section li h3 { font-size: 20px; font-weight: 500; margin: 0 0 7px; line-height: 1.4; }
+.urgent-guide .urgent-section li p { font-size: 16px; }
+.urgent-guide .urgent-section li { padding: 22px 0; }
+.urgent-guide .urgent-warning { padding: 24px 24px 24px 52px; }
+.urgent-guide .urgent-warning > svg { top: 26px; left: 22px; }
+.urgent-guide-disclosure { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
+@media(max-width: 480px) { .urgent-guide { margin-top: 20px; } .urgent-guide-top { margin-bottom: 22px; } }
+.urgent-guide .urgent-section li.urgent-step-emphasis { padding: 24px; background: var(--urgent-soft); border: 0; margin-bottom: 12px; }

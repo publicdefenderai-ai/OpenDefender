@@ -30,6 +30,7 @@ const AttorneyPlaybooks = lazy(() => import("@/pages/attorney/playbooks"));
 const PlaybookDetail = lazy(() => import("@/pages/attorney/playbook-detail"));
 
 const NotFound = lazy(() => import("@/pages/not-found"));
+const UrgentHelp = lazy(() => import("@/pages/urgent-help"));
 const Home = lazy(() => import("@/pages/home"));
 const RightsInfo = lazy(() => import("@/pages/rights-info"));
 const CaseGuidance = lazy(() => import("@/pages/case-guidance"));
@@ -127,6 +128,10 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/urgent-help">{() => <UrgentHelp />}</Route>
+      <Route path="/urgent-help/arrested">{() => <UrgentHelp situation="arrested" />}</Route>
+      <Route path="/urgent-help/charged">{() => <UrgentHelp situation="charged" />}</Route>
+      <Route path="/urgent-help/family">{() => <UrgentHelp situation="family" />}</Route>
       <Route path="/rights-info" component={RightsInfo} />
       <Route path="/case-guidance" component={CaseGuidance} />
       <Route path="/court-locator" component={CourtLocator} />

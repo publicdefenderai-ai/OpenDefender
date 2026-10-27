@@ -7,9 +7,10 @@ for (const language of ['en', 'es', 'zh']) {
       await page.emulateMedia({ reducedMotion: 'reduce', colorScheme: theme as 'light' | 'dark' });
       await page.addInitScript(({ language, theme }) => {
         localStorage.setItem('i18nextLng', language);
-        localStorage.setItem('vite-ui-theme', theme);
+        localStorage.setItem('public-defender-theme', theme);
       }, { language, theme });
       await page.goto('/first-24-hours');
+      await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
       await expect(page.locator('#step-arrest-trigger')).toHaveAttribute('aria-expanded', 'true');
       await page.locator('#step-booking-trigger').click();
       await expect(page.locator('#step-arrest-trigger')).toHaveAttribute('aria-expanded', 'true');

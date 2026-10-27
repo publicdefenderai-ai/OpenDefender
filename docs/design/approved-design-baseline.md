@@ -33,7 +33,7 @@ This is a presentation specification, not legal-content approval or release auth
 | --- | --- |
 | Homepage opening, graphic, four paths and paired actions | Implemented against final desktop and mobile references |
 | Shared header, mobile menu, theme control and footer B | Implemented; search and navigation guard retained |
-| Existing urgent-help dialog | Restyled with brick accent, solid background, plain scenario rows and numbered steps; original guidance and scenario order retained. Approved standalone urgent subflows remain pending |
+| Existing urgent-help dialog | Restyled with brick accent, solid background, plain scenario rows and numbered steps; original guidance and scenario order retained. Standalone index and three guides now reuse the same guidance |
 | First 24 Hours | Numbered, independently expandable stages and mobile contents/state selection implemented. Full existing introduction, substantive content and ancillary sections retained; some ancillary layouts still use the previous styling |
 | Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
 | Case Guidance, consent, questions, recovery and results | Separate integration batch; do not substitute static preview questions for production questions or change consent defaults |
@@ -99,3 +99,19 @@ Reference identities:
 Validation: typecheck and production build passed. Ten focused homepage/urgent browser tests passed after restarting the stopped preview server. The six new urgent tests also passed under the isolated release configuration; they cover all three flows, content counts, Back/close/reopen focus, pre-arrest navigation and 320px overflow across English/Spanish/Chinese and both themes. The new spec is included in the release runner. Desktop light/dark visual inspection completed. Existing untranslated bail-checklist copy and generic dialog Close label remain follow-ups; no legal copy was revised. No full CI or production deployment is claimed.
 
 Urgent-help review correction: clear the remembered scenario when the dialog closes. Expanded the six release-config tests to close directly from the family detail flow using both Escape and the close button, then verify homepage trigger focus and first-choice focus on reopening. All six passed; typecheck and production build passed. The PR description now leads with the broken pre-arrest emergency-path link repair.
+
+## Standalone urgent guides
+
+Added `/urgent-help` plus `/urgent-help/arrested`, `/urgent-help/charged` and `/urgent-help/family`. Each existing dialog detail view links to its full page; the homepage dialog interaction stays intact. Extracted the original guidance into one shared component so both presentations use identical steps and onward links. Full pages use a heading hierarchy appropriate to an article and retain the shared header, theme/language controls, footer and disclosure. Removed duplicated numeric prefixes at render time where translated step headings already included a number.
+
+The approved family/court/arrest previews inform the page width, large headings, numbered rows and first-step emphasis. Existing production legal copy takes precedence over the mockups: the arrest page keeps the existing warning instead of introducing a new standalone quotation; the court guide keeps the existing first step rather than reordering its advice. Full substantive review remains separate.
+
+Theme-test correction: prior design tests wrote `vite-ui-theme`, but App configures `public-defender-theme`. Their previous light/dark labels did not prove dark coverage. Updated all three affected specs to use the application key and assert the root theme class. All 24 affected release-config tests then passed across English/Spanish/Chinese and both actual themes, including direct reloads, content/link parity, dialog navigation and focus, and 320px layout. Typecheck and production build passed. No full CI/deployment claim.
+
+Reference identities:
+- `opendefender-urgent-family-preview.html`: SHA-256 `4585f14748d2249e0bfc787b3e2886ccd8408d51a2dab6846bab6af1045953ef`
+- `opendefender-urgent-court-preview.html`: SHA-256 `bb4c860db29de3cfbcdad5d8151cd0703b51c9fd06f5c61c17317023f789dad8`
+
+### PR 63 review corrections
+
+Localized the bail checklist link on both urgent-help surfaces in English, Spanish, and Chinese. Removed the twelve numeric title prefixes at their locale source and removed render-time stripping. Emphasis is attached explicitly to the lawyer/locating-family steps; link wrappers and competing list spacing utilities were removed. Focused browser checks cover translated link labels and descriptions on both surfaces.

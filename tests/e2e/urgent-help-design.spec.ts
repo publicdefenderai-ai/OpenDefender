@@ -5,9 +5,10 @@ for (const language of ['en', 'es', 'zh']) {
       await page.setViewportSize({ width: 320, height: 844 });
       await page.addInitScript(({ language, theme }) => {
         localStorage.setItem('i18nextLng', language);
-        localStorage.setItem('vite-ui-theme', theme);
+        localStorage.setItem('public-defender-theme', theme);
       }, { language, theme });
       await page.goto('/');
+      await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
       const trigger = page.locator('.design-urgent-button');
       await trigger.click();
       const dialog = page.getByRole('dialog');
