@@ -20,10 +20,11 @@ describe("Quick Reference route", () => {
     expect(appSource).toContain(
       '<Route path="/quick-reference"><Redirect to="/rights-info" /></Route>',
     );
-    expect(headerSource).toContain(
-      'href: "/rights-info#quick-reference-cards", icon: FileText',
-    );
-    expect(headerSource).toContain('testId: "menu-quick-reference"');
+    // The approved compact menu links to the rights page; its printable-card
+    // entry remains reachable there rather than adding a second header shortcut.
+    expect(headerSource).toContain('["/rights-info",');
+    expect(read("client/src/pages/rights-info.tsx")).toContain('id="quick-reference-cards"');
+    expect(read("client/src/pages/rights-info.tsx")).toContain('href="/quick-reference-cards"');
     expect(getStartedSource).toContain(
       "handleNavigate('/rights-info#quick-reference-cards')",
     );
