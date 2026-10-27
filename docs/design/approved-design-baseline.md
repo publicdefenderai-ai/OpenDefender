@@ -79,3 +79,11 @@ Remaining review decisions/work:
 - Normalize interface-translation formatting during the next locale edit.
 
 The external review reported ten pre-existing unit failures on both the PR and base. That full-suite result was not independently rerun for this follow-up; it is not a claim of a clean full test suite.
+
+## Release-runner coverage correction
+
+The three design specs were previously run manually and omitted from the release runner's explicit allowlist. Added `design-fidelity.spec.ts`, `first24-design.spec.ts`, and `design-review-regressions.spec.ts` to `scripts/release-check/run-browser-tests.mjs`. The CI workflow invokes `release:verify`, which reaches this runner through `test:e2e:release` after earlier gates pass.
+
+All 16 tests passed using `playwright.release.config.ts` against its isolated release-check server. This was a focused release-configuration run, not a full `release:verify` or a completed GitHub CI run. Local dependency resolution initially prevented test startup; aligning the worktree dependency link with the installed Playwright used by imports resolved it without tracked dependency changes.
+
+Separate follow-up: audit the 14 other specs still absent from the allowlist, including timeout recovery, progress overflow, jury display, five California specs and remaining responsive/navigation/print tests. Establish each test's prerequisites and whether it belongs in the release gate or another CI job; do not silently add environment-specific or snapshot checks without that assessment.
