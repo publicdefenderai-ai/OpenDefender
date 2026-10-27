@@ -33,7 +33,7 @@ This is a presentation specification, not legal-content approval or release auth
 | --- | --- |
 | Homepage opening, graphic, four paths and paired actions | Implemented against final desktop and mobile references |
 | Shared header, mobile menu, theme control and footer B | Implemented; search and navigation guard retained |
-| Existing urgent-help dialog | Preserved byte-for-byte; approved full-page urgent subflows are not implemented yet |
+| Existing urgent-help dialog | Restyled with brick accent, solid background, plain scenario rows and numbered steps; original guidance and scenario order retained. Approved standalone urgent subflows remain pending |
 | First 24 Hours | Numbered, independently expandable stages and mobile contents/state selection implemented. Full existing introduction, substantive content and ancillary sections retained; some ancillary layouts still use the previous styling |
 | Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
 | Case Guidance, consent, questions, recovery and results | Separate integration batch; do not substitute static preview questions for production questions or change consent defaults |
@@ -87,3 +87,15 @@ The three design specs were previously run manually and omitted from the release
 All 16 tests passed using `playwright.release.config.ts` against its isolated release-check server. This was a focused release-configuration run, not a full `release:verify` or a completed GitHub CI run. Local dependency resolution initially prevented test startup; aligning the worktree dependency link with the installed Playwright used by imports resolved it without tracked dependency changes.
 
 Separate follow-up: audit the 14 other specs still absent from the allowlist, including timeout recovery, progress overflow, jury display, five California specs and remaining responsive/navigation/print tests. Establish each test's prerequisites and whether it belongs in the release gate or another CI job; do not silently add environment-specific or snapshot checks without that assessment.
+
+## Urgent-help dialog batch
+
+Adapted the compact urgent-help preview’s brick accent, hairline-separated choices and plain numbered steps to the existing production dialog. This is deliberately a dialog restyle, not a claim that the standalone urgent-guide previews are fully implemented. Preserved all five scenario choices, existing guidance strings, three four-step flows and onward links. Removed staggered scenario animations and colored card/icon treatments. Corrected the pre-arrest link to the existing `step-before-arrest` section ID. Focus moves to each selected flow heading, returns to the selected choice on Back, and returns to the homepage trigger on close.
+
+Reference identities:
+- `opendefender-urgent-compact-preview.html`: SHA-256 `b6b90c7751cb062907837373141a5e4558a039b85f082c84df398f029668c4ef`
+- `opendefender-urgent-arrest-preview.html`: SHA-256 `46d95e4a9c281e8674f9a906dd560bb115662e3e32295fe6088d5c9aefec630b`
+
+Validation: typecheck and production build passed. Ten focused homepage/urgent browser tests passed after restarting the stopped preview server. The six new urgent tests also passed under the isolated release configuration; they cover all three flows, content counts, Back/close/reopen focus, pre-arrest navigation and 320px overflow across English/Spanish/Chinese and both themes. The new spec is included in the release runner. Desktop light/dark visual inspection completed. Existing untranslated bail-checklist copy and generic dialog Close label remain follow-ups; no legal copy was revised. No full CI or production deployment is claimed.
+
+Urgent-help review correction: clear the remembered scenario when the dialog closes. Expanded the six release-config tests to close directly from the family detail flow using both Escape and the close button, then verify homepage trigger focus and first-choice focus on reopening. All six passed; typecheck and production build passed. The PR description now leads with the broken pre-arrest emergency-path link repair.
