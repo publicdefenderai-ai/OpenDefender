@@ -12,6 +12,17 @@ for (const language of ['en', 'es', 'zh']) {
         await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
         await page.locator('.design-urgent-button').click();
         await page.locator(`[data-situation="${situation}"]`).click();
+        const bailCopy = {
+          en: ['Bail Preparation Checklist', 'Gather documentation before the bail hearing'],
+          es: ['Lista de preparación para la fianza', 'Reúna la documentación antes de la audiencia de fianza'],
+          zh: ['保释准备清单', '在保释听证会前收集相关文件'],
+        }[language]!;
+        if (situation === 'charged') {
+          for (const text of bailCopy) await expect(page.locator('.urgent-next')).toContainText(text);
+        }
+        for (const title of await page.locator('.urgent-detail li h4').allTextContents()) {
+          expect(title).not.toMatch(/^\d+[.)]?\s/);
+        }
         const dialogSteps = await page.locator('.urgent-detail ol li').allTextContents();
         const dialogLinks = await page.locator('.urgent-next a').evaluateAll(es => es.map(e => e.getAttribute('href')));
         await page.locator('.urgent-full-page').click();
@@ -20,6 +31,10 @@ for (const language of ['en', 'es', 'zh']) {
         await expect(page.locator('.urgent-guide h1')).toBeVisible();
         expect(await page.locator('.urgent-guide ol li').allTextContents()).toEqual(dialogSteps);
         expect(await page.locator('.urgent-next a').evaluateAll(es => es.map(e => e.getAttribute('href')))).toEqual(dialogLinks);
+        if (situation === 'charged') {
+          for (const text of bailCopy) await expect(page.locator('.urgent-next')).toContainText(text);
+        }
+        await expect(page.locator('.urgent-step-emphasis')).toHaveCount(situation === 'arrested' ? 0 : 1);
         await page.reload();
         await expect(page.locator('.urgent-guide ol li')).toHaveCount(4);
         expect(await page.locator('.urgent-guide').evaluate(e => e.scrollWidth <= e.clientWidth)).toBe(true);

@@ -111,3 +111,7 @@ Theme-test correction: prior design tests wrote `vite-ui-theme`, but App configu
 Reference identities:
 - `opendefender-urgent-family-preview.html`: SHA-256 `4585f14748d2249e0bfc787b3e2886ccd8408d51a2dab6846bab6af1045953ef`
 - `opendefender-urgent-court-preview.html`: SHA-256 `bb4c860db29de3cfbcdad5d8151cd0703b51c9fd06f5c61c17317023f789dad8`
+
+### PR 63 review corrections
+
+Localized the bail checklist link on both urgent-help surfaces in English, Spanish, and Chinese. Removed the twelve numeric title prefixes at their locale source and removed render-time stripping. Emphasis is attached explicitly to the lawyer/locating-family steps; link wrappers and competing list spacing utilities were removed. Focused browser checks cover translated link labels and descriptions on both surfaces.

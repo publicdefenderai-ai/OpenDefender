@@ -2152,7 +2152,7 @@ a:focus-visible,
 .urgent-back { min-height: 44px; color: var(--primary); font-weight: 600; margin-bottom: 12px; text-align: left; }
 .urgent-section { border: 0; background: transparent; box-shadow: none; }
 .urgent-section h3 { font-size: 23px; line-height: 1.35; font-weight: 500; margin: 18px 0; }
-.urgent-section li { border-top: 1px solid var(--border); padding: 16px 0; margin: 0 !important; }
+.urgent-section li { border-top: 1px solid var(--border); padding: 16px 0; margin: 0; }
 .urgent-step-number { flex-shrink: 0; width: 24px; font-size: 13px; color: var(--urgent-ink); padding-top: 3px; }
 .urgent-section li h4 { font-size: 18px; font-weight: 500; line-height: 1.4; }
 .urgent-section li p { font-size: 15px; line-height: 1.65; }
@@ -2187,4 +2187,4 @@ a:focus-visible,
 .urgent-guide .urgent-warning > svg { top: 26px; left: 22px; }
 .urgent-guide-disclosure { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
 @media(max-width: 480px) { .urgent-guide { margin-top: 20px; } .urgent-guide-top { margin-bottom: 22px; } }
-.urgent-guide-family .urgent-section li:first-child, .urgent-guide-charged .urgent-section li:first-child { padding: 24px; background: var(--urgent-soft); border: 0; margin-bottom: 12px !important; }
+.urgent-guide .urgent-section li.urgent-step-emphasis { padding: 24px; background: var(--urgent-soft); border: 0; margin-bottom: 12px; }
