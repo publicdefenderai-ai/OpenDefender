@@ -162,7 +162,6 @@ export function QAFlow({
             <div
               key={index}
               data-testid={`qa-step-circle-${index + 1}`}
-              aria-current={index === currentStep ? "step" : undefined}
               className={`case-step-mark${index <= currentStep ? " is-reached" : ""}`}
             >
               {index + 1}
@@ -1583,7 +1582,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
       )}
 
       <div className="flex flex-col-reverse sm:flex-row gap-3">
-        <Button variant="outline" onClick={onPrev}>
+        <Button variant="outline" onClick={onPrev} data-testid="button-prev-additional-details">
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.additionalDetails.back')}
         </Button>
         <Button
@@ -1712,7 +1711,7 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
       )}
 
       <div className="flex flex-col-reverse sm:flex-row gap-3">
-        <Button variant="outline" onClick={onPrev}>
+        <Button variant="outline" onClick={onPrev} data-testid="button-prev-civil-emergencies">
           <ArrowLeft className="mr-2 h-4 w-4" />
           {t('legalGuidance.qaFlow.civilEmergencies.back')}
         </Button>

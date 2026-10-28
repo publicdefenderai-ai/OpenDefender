@@ -1,8 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
 async function checkStep(page: Page, step: number) {
-  await expect(page.getByTestId(`qa-step-circle-${step}`)).toHaveAttribute('aria-current', 'step');
-  await expect(page.getByTestId('qa-step-label')).toContainText(String(step));
+  await expect(page.getByTestId('qa-step-label')).toContainText(new RegExp(`(?:Step |Paso |第)${step}(?: of 7| de 7|步，共7步)`));
   await expect(page.getByTestId('qa-step-label')).toBeFocused();
   await expect(page.locator('.case-intake')).not.toContainText('design.case');
   const overflow = await page.locator('.case-intake :is(button,p,h3,label,[role=combobox])').evaluateAll(nodes => nodes.filter(n => {
@@ -50,9 +49,9 @@ for (const language of ['en', 'es', 'zh']) {
         await checkStep(page, 6);
         await page.locator('.case-intake .case-continue').click();
         await checkStep(page, 7);
-        await page.locator('.case-intake button:has(svg.lucide-arrow-left)').click();
+        await page.getByTestId('button-prev-civil-emergencies').click();
         await checkStep(page, 6);
-        await page.locator('.case-intake button:has(svg.lucide-arrow-left)').click();
+        await page.getByTestId('button-prev-additional-details').click();
         await page.getByTestId('button-prev-background').click();
         await page.getByTestId('button-prev-status').click();
         await checkStep(page, 3);

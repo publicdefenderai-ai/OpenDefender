@@ -129,3 +129,13 @@ References:
 - `opendefender-mobile-case-guidance-preview.html`: SHA-256 `dce5a900e32122f9df144b3c544523224afe8e85fab77719c8d165ad75d545ef`
 
 Validation: typecheck/build and 15 unit tests for stage guards, reselection and retry passed. All 11 focused release-config browser tests passed: six locale/theme checks traverse all seven stages with both modes at 320px, and five verify timeout recovery. Desktop entry/consent and narrow mobile consent were visually inspected in the shared palette. The new locale/theme intake spec is wired into the release runner. The California legacy browser suite could not complete against this isolated catalog: its first two scenarios require ca-robbery-in-the-first-degree, which was unavailable; a third scenario also failed before the run was stopped. Do not claim that suite or full CI passed. Existing untranslated production questions are retained and remain a separate localization follow-up.
+
+### PR 64 review follow-up
+
+Added both edited recovery suites to the release browser allowlist. The California catalog investigation confirmed that the checked-in evidence receipt expired on 2026-10-08; the isolated server correctly returned no eligible California charges. The legacy-reselection suite now supplies a test-only, paginated catalog response derived from the canonical records used by its scenarios. It tests saved-answer recovery, canonical replacement and preservation across reloads, not live source eligibility. Production freshness/eligibility rules and the evidence receipt are unchanged; current-source validation remains separate.
+
+Removed aria-current from the decorative, aria-hidden progress track. Regression assertions now use the visible localized Step N of 7 label, which receives focus and is exposed to assistive technology. Added dedicated Back selectors for Additional Details and Active Situations and used them in the design and legacy recovery tests.
+
+The owner's explicit attorney-reference sentence and Tailored AI Guidance label remain. This records the requested copy correction, not independent attorney sign-off or a completed review of provider/privacy/legal statements. The possible emphasis on free counsel can be considered during substantive content review. Minor wording repetition and Spanish capitalization are deferred to consistent editorial review.
+
+Review-fix validation: typecheck and production build passed; all 19 release-config browser tests passed (8 California legacy recovery, 6 locale/theme intake, 5 timeout recovery). Both previously orphaned recovery specs are now included in the explicit release allowlist. Full CI and live source freshness are not claimed.
