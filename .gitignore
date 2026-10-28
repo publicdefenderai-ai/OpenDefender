@@ -71,3 +71,16 @@ EDITORIAL_REVIEW_LOG.md
 
 # Regulatory monitor outputs
 scripts/reg-monitor/output/
+
+# Data review output policy: retained source evidence, frozen review packets,
+# and reproducible publication/hold accounting are durable, tracked artifacts.
+# Do not ignore this directory wholesale: new evidence must remain visible.
+# The following legacy scratch reports are disposable research-run output.
+scripts/data-review/output/charge-citations-batch-*-report.json
+scripts/data-review/output/needs-manual-review-batch-*.json
+scripts/data-review/output/commission-import-fed-report.json
+scripts/data-review/output/commission-import-federal-report.json
+scripts/data-review/output/commission-import-fl-report.json
+scripts/data-review/output/generate-urls-unmapped.json
+# New disposable runs belong here; private attorney material belongs outside Git.
+scripts/data-review/output/scratch/
