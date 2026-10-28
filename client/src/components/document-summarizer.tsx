@@ -49,7 +49,7 @@ import {
   Bot,
   User,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig, useReducedMotion } from "framer-motion";
 import { BrandShieldIcon } from "@/components/brand-logo";
 
 interface DocumentSummary {
@@ -85,6 +85,7 @@ interface QAMessage {
 const MAX_QA_TURNS = 8;
 
 interface DocumentSummarizerProps {
+  presentation?: "embedded" | "page";
   /** Whether this is being used in the attorney tools section */
   isAttorneyMode?: boolean;
   /** Callback when user wants to close/cancel */
@@ -109,8 +110,9 @@ const DOCUMENT_TYPES = [
   { value: 'police_report', labelKey: 'policeReport' },
 ];
 
-export function DocumentSummarizer({ isAttorneyMode = false, onClose }: DocumentSummarizerProps) {
+export function DocumentSummarizer({ isAttorneyMode = false, onClose, presentation = "embedded" }: DocumentSummarizerProps) {
   const { t, i18n } = useTranslation();
+  const reducedMotion = useReducedMotion();
   const selectedLanguage: 'en' | 'es' | 'zh' = i18n.language.startsWith('es')
     ? 'es'
     : i18n.language.startsWith('zh')
@@ -435,11 +437,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto">
-      <CardHeader>
+    <MotionConfig reducedMotion="user">
+    <Card className={`document-summarizer w-full max-w-3xl mx-auto${presentation === "page" ? " document-summarizer-page" : ""}`} data-step={step}>
+      {presentation !== "page" && <CardHeader>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="min-w-0 flex items-start gap-3">
-            <FileText className="h-6 w-6 text-blue-600" />
+            <FileText className="h-6 w-6 text-primary" />
             <div>
               <CardTitle>{t('privacyPolicy.documentSummarizer.tool.title')}</CardTitle>
               <CardDescription>
@@ -453,9 +456,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
             </Button>
           )}
         </div>
-      </CardHeader>
+      </CardHeader>}
 
-      <CardContent>
+      <CardContent className={presentation === "page" ? "p-0" : undefined}>
         {/* AI Unavailable Banner */}
         {aiUnavailable && (
           <Alert className="mb-4 border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50">
@@ -471,12 +474,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
           {step === 'disclosure' && (
             <motion.div
               key="disclosure"
-              initial={{ opacity: 0, y: 10 }}
+              initial={reducedMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="space-y-6"
             >
-              <Alert>
+              <Alert className="summary-disclosure">
                 <AlertDescription className="space-y-3">
                   <div className="flex items-center gap-3">
                     <BrandShieldIcon size={16} className="flex-shrink-0" />
@@ -512,7 +515,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 </AlertDescription>
               </Alert>
 
-              <div className="flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
+              <div className="summary-consent flex items-start gap-3 p-4 bg-muted rounded-lg border border-border">
                 <Checkbox
                   id="consent"
                   checked={consentGiven}
@@ -524,6 +527,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               </div>
 
               <Button
+                data-testid="summary-consent-continue"
                 onClick={handleConsentContinue}
                 disabled={!consentGiven}
                 className="w-full min-h-[44px]"
@@ -537,7 +541,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
           {step === 'upload' && (
             <motion.div
               key="upload"
-              initial={{ opacity: 0, y: 10 }}
+              initial={reducedMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="space-y-6"
@@ -552,36 +556,30 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
               {/* File Drop Zone */}
               <div
-                onClick={() => fileInputRef.current?.click()}
+                onClick={(event) => {
+                  if (!(event.target as HTMLElement).closest('button,input,label')) fileInputRef.current?.click();
+                }}
                 onDrop={handleDrop}
                 onDragOver={handleDragOver}
                 onDragEnter={handleDragEnter}
                 onDragLeave={handleDragLeave}
-                className={`
-                  border-2 border-dashed rounded-lg p-8 text-center cursor-pointer
-                  transition-all duration-200
-                  ${selectedFile
-                    ? 'border-green-500 bg-green-50'
-                    : isDragging
-                      ? 'border-blue-500 bg-blue-100 scale-[1.02] shadow-lg'
-                      : 'border-gray-300 hover:border-blue-500 hover:bg-blue-50'
-                  }
-                `}
+                className={`summary-upload border-2 border-dashed rounded-lg p-8 text-center transition-colors ${selectedFile || isDragging ? 'border-primary bg-muted' : 'border-border hover:border-primary'}`}
               >
                 <input
+                  id="summary-document-file"
                   ref={fileInputRef}
                   type="file"
                   accept=".pdf,.docx,.txt,.png,.jpg,.jpeg,.webp"
                   onChange={handleFileSelect}
-                  className="hidden"
-                  aria-label="Upload legal document for summarization"
+                  className="sr-only"
+                  aria-label={t('privacyPolicy.documentSummarizer.tool.clickOrDrag')}
                 />
 
                 {selectedFile ? (
                   <div className="space-y-2">
-                    <CheckCircle className="h-12 w-12 text-green-500 mx-auto" />
-                    <p className="font-medium text-green-700">{selectedFile.name}</p>
-                    <p className="text-sm text-green-600">
+                    <CheckCircle className="h-12 w-12 text-primary mx-auto" />
+                    <p className="font-medium text-primary">{selectedFile.name}</p>
+                    <p className="text-sm text-primary">
                       {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                     </p>
                     <Button
@@ -597,19 +595,19 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   </div>
                 ) : isDragging ? (
                   <div className="space-y-3">
-                    <Upload className="h-12 w-12 text-blue-500 mx-auto animate-bounce" />
+                    <Upload className="h-12 w-12 text-primary mx-auto animate-bounce" />
                     <div>
-                      <p className="font-medium text-blue-600">{t('privacyPolicy.documentSummarizer.tool.dropHere')}</p>
-                      <p className="text-sm text-blue-500 mt-1">
+                      <p className="font-medium text-primary">{t('privacyPolicy.documentSummarizer.tool.dropHere')}</p>
+                      <p className="text-sm text-primary mt-1">
                         {t('privacyPolicy.documentSummarizer.tool.release')}
                       </p>
                     </div>
                   </div>
                 ) : (
                   <div className="space-y-3">
-                    <Upload className="h-12 w-12 text-gray-400 mx-auto" />
+                    <Upload className="h-12 w-12 text-muted-foreground mx-auto" />
                     <div>
-                      <p className="font-medium">{t('privacyPolicy.documentSummarizer.tool.clickOrDrag')}</p>
+                      <label htmlFor="summary-document-file" className="font-medium cursor-pointer">{t('privacyPolicy.documentSummarizer.tool.clickOrDrag')}</label>
                       <p className="text-sm text-muted-foreground mt-1">
                         {t('privacyPolicy.documentSummarizer.tool.fileTypes')}
                       </p>
@@ -622,7 +620,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               <div className="space-y-2">
                 <Label>{t('privacyPolicy.documentSummarizer.tool.documentType')}</Label>
                 <Select value={documentType} onValueChange={setDocumentType}>
-                  <SelectTrigger>
+                  <SelectTrigger data-testid="summary-document-type">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
@@ -650,11 +648,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 {!isAttorneyMode && (
-                  <Button variant="outline" onClick={handleReset} className="min-h-[44px] flex-1">
+                  <Button variant="outline" data-testid="summary-reset" onClick={handleReset} className="min-h-[44px] flex-1">
                     {t('privacyPolicy.documentSummarizer.tool.back')}
                   </Button>
                 )}
                 <Button
+                  data-testid="summary-submit"
                   onClick={handleSubmit}
                   disabled={!selectedFile || (captchaRequired && !captchaToken) || !!aiUnavailable}
                   className="min-h-[44px] flex-1"
@@ -669,12 +668,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
           {step === 'processing' && (
             <motion.div
               key="processing"
-              initial={{ opacity: 0 }}
+              initial={reducedMotion ? false : { opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="py-12 text-center space-y-4"
             >
-              <Loader2 className="h-12 w-12 text-blue-600 mx-auto animate-spin" />
+              <Loader2 className="h-12 w-12 text-primary mx-auto animate-spin" />
               <div>
                 <p className="font-medium text-lg">{t('privacyPolicy.documentSummarizer.tool.analyzing')}</p>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -682,8 +681,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 </p>
               </div>
               <div className="max-w-xs mx-auto">
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-blue-600 rounded-full animate-pulse" style={{ width: '60%' }} />
+                <div className="h-2 bg-muted rounded-full overflow-hidden">
+                  <div className="h-full bg-primary rounded-full animate-pulse" style={{ width: '60%' }} />
                 </div>
               </div>
             </motion.div>
@@ -693,7 +692,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
           {step === 'result' && summary && (
             <motion.div
               key="result"
-              initial={{ opacity: 0, y: 10 }}
+              initial={reducedMotion ? false : { opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               className="space-y-6"
@@ -722,7 +721,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <FileText className="h-4 w-4" />
                   Summary
                 </h3>
-                <p className="text-sm leading-relaxed bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 p-4 rounded-lg text-foreground">
+                <p className="text-sm leading-relaxed bg-muted border border-border p-4 rounded-lg text-foreground">
                   {summary.summary}
                 </p>
               </div>
@@ -739,7 +738,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <ul className="space-y-2">
                     {summary.keyPoints.map((point, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
-                        <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">
+                        <span className="bg-muted text-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">
                           {i + 1}
                         </span>
                         <span>{point}</span>
@@ -765,7 +764,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                           className={`p-3 rounded-lg text-sm ${
                             date.isDeadline
                               ? 'bg-red-50 dark:bg-red-950/50 border border-red-200 dark:border-red-800'
-                              : 'bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800'
+                              : 'bg-muted border border-border'
                           }`}
                         >
                           <div className="flex items-center gap-2">
@@ -795,9 +794,9 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                     </h3>
                     <div className="grid gap-3">
                       {summary.legalTermsExplained.map((term, i) => (
-                        <div key={i} className="p-3 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
-                          <p className="font-medium text-blue-900 dark:text-blue-200">{term.term}</p>
-                          <p className="mt-1 text-blue-800 dark:text-blue-300">{term.explanation}</p>
+                        <div key={i} className="p-3 bg-muted border border-border rounded-lg text-sm">
+                          <p className="font-medium text-foreground">{term.term}</p>
+                          <p className="mt-1 text-muted-foreground">{term.explanation}</p>
                         </div>
                       ))}
                     </div>
@@ -853,7 +852,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <Separator />
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
-                      <MessageSquare className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                      <MessageSquare className="h-4 w-4 text-primary" />
                       <h3 className="font-semibold">{t('privacyPolicy.documentSummarizer.tool.qnaTitle')}</h3>
                       {chatMessages.filter(m => m.role === 'user').length >= MAX_QA_TURNS && (
                         <span className="text-xs text-muted-foreground ml-auto">Limit reached</span>
@@ -869,15 +868,15 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                         {chatMessages.map((msg, i) => (
                           <div key={i} className={`flex gap-3 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                             {msg.role === 'assistant' && (
-                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
-                                <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-muted flex items-center justify-center">
+                                <Bot className="h-4 w-4 text-primary" />
                               </div>
                             )}
                             <div className={`max-w-[85%] space-y-2 ${msg.role === 'user' ? 'items-end' : 'items-start'} flex flex-col`}>
                               <div className={`rounded-lg px-4 py-3 text-sm leading-relaxed ${
                                 msg.role === 'user'
-                                  ? 'bg-blue-600 text-white rounded-tr-none'
-                                  : 'bg-slate-100 dark:bg-slate-800 text-foreground rounded-tl-none'
+                                  ? 'bg-primary text-primary-foreground rounded-tr-none'
+                                  : 'bg-muted text-foreground rounded-tl-none'
                               }`}>
                                 {msg.content}
                               </div>
@@ -898,22 +897,22 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                               )}
                             </div>
                             {msg.role === 'user' && (
-                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
-                                <User className="h-4 w-4 text-slate-600 dark:text-slate-300" />
+                              <div className="flex-shrink-0 w-7 h-7 rounded-full bg-muted flex items-center justify-center">
+                                <User className="h-4 w-4 text-muted-foreground" />
                               </div>
                             )}
                           </div>
                         ))}
                         {isChatLoading && (
                           <div className="flex gap-3 justify-start">
-                            <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
-                              <Bot className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                            <div className="flex-shrink-0 w-7 h-7 rounded-full bg-muted flex items-center justify-center">
+                              <Bot className="h-4 w-4 text-primary" />
                             </div>
-                            <div className="bg-slate-100 dark:bg-slate-800 rounded-lg rounded-tl-none px-4 py-3">
+                            <div className="bg-muted rounded-lg rounded-tl-none px-4 py-3">
                               <div className="flex gap-1 items-center h-5">
-                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                                <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                                <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
                               </div>
                             </div>
                           </div>
@@ -984,7 +983,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               </Alert>
 
               {/* Privacy Confirmation */}
-              <div className="p-4 bg-blue-50 dark:bg-blue-950/50 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
+              <div className="p-4 bg-muted border border-border rounded-lg text-sm">
                 <div className="flex items-center gap-2 mb-2 text-foreground">
                   <BrandShieldIcon size={16} />
                   <span className="font-medium">{t('privacyPolicy.documentSummarizer.tool.privacyTitle')}</span>
@@ -1000,7 +999,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                   <Download className="h-4 w-4 mr-2" />
                   {t('privacyPolicy.documentSummarizer.tool.downloadSummary')}
                 </Button>
-                <Button onClick={handleReset} className="min-h-[44px] flex-1">
+                <Button data-testid="summary-reset" onClick={handleReset} className="min-h-[44px] flex-1">
                   {t('privacyPolicy.documentSummarizer.tool.another')}
                 </Button>
               </div>
@@ -1010,6 +1009,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
       </CardContent>
 
     </Card>
+    </MotionConfig>
   );
 }
 

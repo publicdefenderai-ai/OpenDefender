@@ -274,7 +274,7 @@ test.describe("intent navigation and accessibility", () => {
     await expect(page.getByPlaceholder(/search legal terms/i)).toBeVisible();
 
     await page.goto("/document-summarizer");
-    await expect(page.getByRole("heading", { name: "Document Summarizer" }).first()).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Understand what’s in front of you." }).first()).toBeVisible();
     await expect(page.getByRole("checkbox")).toBeVisible();
     await expect(page.getByRole("button", { name: /continue/i })).toBeDisabled();
 
