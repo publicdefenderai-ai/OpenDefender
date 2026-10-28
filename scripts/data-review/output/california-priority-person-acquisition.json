@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "scope": "priority_person_publication_dependency_acquisition",
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "requiredKeys": [
+    "PEN:1170",
+    "PEN:149",
+    "PEN:17",
+    "PEN:18.5",
+    "PEN:186.22",
+    "PEN:192",
+    "PEN:193",
+    "PEN:21a",
+    "PEN:240",
+    "PEN:242",
+    "PEN:243",
+    "PEN:664",
+    "PEN:672",
+    "PEN:830",
+    "PEN:831",
+    "PEN:831.5"
+  ],
+  "reusedKeys": [
+    "PEN:1170",
+    "PEN:17",
+    "PEN:18.5",
+    "PEN:186.22",
+    "PEN:192",
+    "PEN:193",
+    "PEN:21a",
+    "PEN:240",
+    "PEN:242",
+    "PEN:243",
+    "PEN:664",
+    "PEN:672",
+    "PEN:830",
+    "PEN:831",
+    "PEN:831.5"
+  ],
+  "promotedResearchKeys": [
+    "PEN:149"
+  ],
+  "documents": {
+    "PEN:149": [
+      {
+        "id": "PEN149.201115263",
+        "lawCode": "PEN",
+        "section": "149.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "263",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_f1186339-660d-11e0-8fc7-8d05c2a88098",
+        "division": null,
+        "title": "7.",
+        "part": "1.",
+        "chapter": "7.",
+        "article": null,
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 263.   (AB 109)   Effective April 4, 2011.   Operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.",
+        "contentMember": "LAW_SECTION_TBL_89282.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:15",
+        "tableRow": 89282,
+        "tableRowSha256": "e9cca0b79fe87128107ee4194a634a6ae832c281cf79d1f8949e8e01ca1f5527",
+        "contentSha256": "a338f4b3ec7c9218cdcbefc566585c00010ed055e76e74121077f6b365a4f977",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every public officer who, under color of authority, without lawful necessity, assaults or beats any person, is punishable by a fine not exceeding ten thousand dollars ($10,000), or by imprisonment in a county jail not exceeding one year, or pursuant to subdivision (h) of Section 1170, or by both that fine and imprisonment.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=149."
+      }
+    ]
+  }
+}

@@ -1,0 +1,175 @@
+[
+  {
+    "id": "ca-pen-186-22-a",
+    "lawCode": "PEN",
+    "code": "186.22(a)",
+    "title": "Active participation in a criminal street gang",
+    "summary": "Active participation must be more than passive or nominal. The person must know of the gang members' pattern of criminal gang activity and willfully promote, further or assist felonious conduct by members of that gang. At least two members of the same gang must participate in that felony; the defendant can count if a member, but membership alone is not enough and actual membership is not required. The statutory gang and predicate-pattern definitions must be proved, including collective engagement and a common benefit beyond reputation; the currently charged offense cannot itself establish the predicate pattern. This is the substantive participation offense, distinct from a gang enhancement attached to another crime.",
+    "penalty": "The misdemeanor alternative permits up to 364 days in county jail (section 18.5). The felony alternative is 16 months, 2 years or 3 years in state prison, not the section 1170(h) county-jail default. Section 672 permits an additional base fine up to $1,000 for a misdemeanor or $10,000 for a felony where no other fine is prescribed. Section 186.22(c) generally requires at least 180 days in county jail as a probation or suspended-execution condition; subdivision (h) allows the specified unusual-case exception to the misdemeanor minimum. Other convictions and separately proved enhancements can change the total sentence.",
+    "mentalState": "Knowing active participation and willful promotion, furtherance or assistance of qualifying felonious conduct; mere association is insufficient.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "1400"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:186.22": "2022-01-01",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": []
+  },
+  {
+    "id": "ca-pen-149",
+    "lawCode": "PEN",
+    "code": "149",
+    "title": "Assault or beating by a public officer under color of authority",
+    "summary": "A public officer, acting under color of authority and without lawful necessity, assaults or beats a person. Public employment alone does not establish the required officer status, and lawful force is not criminalized by this entry. The officer must willfully commit the assault or beating without lawful necessity; the prosecution must establish the statutory conduct and circumstances.",
+    "penalty": "The misdemeanor alternative permits up to 364 days in county jail (section 18.5). The felony alternative permits imprisonment under section 1170(h), ordinarily 16 months, 2 years or 3 years. Section 149 also permits a base fine up to $10,000, or both the fine and imprisonment. Restitution, assessments, enhancements and case-specific sentencing remain separate.",
+    "mentalState": "Willful assault or beating under color of authority without lawful necessity.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:1170",
+      "PEN:240",
+      "PEN:242"
+    ],
+    "calcrim": [
+      "908"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:149": "2011-04-04",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:240": null,
+      "PEN:242": null
+    },
+    "searchAliases": []
+  },
+  {
+    "id": "ca-pen-243-b",
+    "lawCode": "PEN",
+    "code": "243(b)",
+    "title": "Battery on a specified officer, responder or emergency-care worker",
+    "summary": "Willful unlawful harmful or offensive touching of a person in one of section 243(b)'s specified roles, with actual or reasonable knowledge of the required role and duty circumstances. The list includes peace and custodial officers, firefighters, emergency medical technicians, lifeguards, security officers, custody assistants, process servers, traffic and code-enforcement officers, animal-control officers, search-and-rescue members, and nonsworn probation employees performing their duties. It also covers specified physicians and nurses providing emergency care outside a health-care facility, and hospital emergency-department health-care workers providing services. The exact statutory role, definition and duty or care setting must be established; not every public employee or medical worker qualifies. This branch does not require the injury element of subdivision (c).",
+    "penalty": "Under section 243(b), up to 364 days in county jail (section 18.5), a base fine up to $2,000, or both. Injury-dependent branches in section 243(c) have different punishment and are not assigned this misdemeanor ceiling. Restitution and assessments are separate.",
+    "mentalState": "Willful unlawful touching; knows or reasonably should know the required protected status and circumstances.",
+    "supportingKeys": [
+      "PEN:18.5",
+      "PEN:242",
+      "PEN:830",
+      "PEN:831",
+      "PEN:831.5"
+    ],
+    "calcrim": [
+      "926",
+      "945"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243": "2025-01-01",
+      "PEN:830": null,
+      "PEN:831": "2018-01-01",
+      "PEN:831.5": "2020-01-01"
+    },
+    "searchAliases": []
+  },
+  {
+    "id": "ca-pen-243-c-1",
+    "lawCode": "PEN",
+    "code": "243(c)(1)",
+    "title": "Battery causing injury to a specified non-peace-officer victim",
+    "summary": "Battery causing injury to a custodial officer, firefighter, emergency medical technician, lifeguard, process server, traffic officer, animal-control officer or nonsworn probation employee performing duties, or a physician or nurse rendering emergency care outside a hospital, clinic or other health-care facility. The defendant must know or reasonably be expected to know the qualifying status and circumstances. Injury means a physical injury requiring professional medical treatment under section 243(f)(5), not merely any offensive contact. The protected-victim list is narrower than section 243(b). Peace-officer injury is the separate section 243(c)(2) branch.",
+    "penalty": "The misdemeanor alternative permits up to 364 days in county jail (section 18.5), a base fine up to $2,000, or both. The felony alternative permits 16 months, 2 years or 3 years under section 1170(h). This entry does not assign a separate felony fine ceiling. Restitution, assessments, enhancements and individual sentencing remain separate.",
+    "mentalState": "Willful unlawful touching with actual or reasonable knowledge of the required protected status and circumstances; the specified injury must result.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:1170",
+      "PEN:242",
+      "PEN:831",
+      "PEN:831.5"
+    ],
+    "calcrim": [
+      "926"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:242": null,
+      "PEN:243": "2025-01-01",
+      "PEN:831": "2018-01-01",
+      "PEN:831.5": "2020-01-01"
+    },
+    "searchAliases": []
+  },
+  {
+    "id": "ca-attempted-voluntary-manslaughter",
+    "lawCode": "PEN",
+    "code": "664(a); 192(a)",
+    "title": "Attempted voluntary manslaughter",
+    "summary": "An intent to kill and a direct but ineffective step toward killing, with legally sufficient heat of passion or imperfect self-defense or defense of another reducing what would otherwise be attempted murder. Mere anger is not enough for heat of passion; the provocation and timing requirements apply. Imperfect self-defense requires an actual belief in imminent deadly danger and the immediate need for deadly force, with at least one belief unreasonable. These are alternative theories, not requirements that must both be proved. Complete lawful self-defense is different and can mean no crime. This offense requires intent to kill; ordinary negligence or implied malice alone does not establish it.",
+    "penalty": "Ordinary state-prison terms are 18 months, 3 years or 5 years 6 months: one-half of the 3-, 6- or 11-year voluntary-manslaughter terms in section 193(a), under section 664(a). Any applicable fine must account for section 664(c)'s half-fine rule; no numerical base-fine ceiling is assigned here. Separately proved enhancements, prior-conviction rules, restitution and assessments can affect the sentence.",
+    "mentalState": "Intent to kill and a direct but ineffective act, with the legally required mitigating circumstances.",
+    "supportingKeys": [
+      "PEN:21a",
+      "PEN:192",
+      "PEN:193",
+      "PEN:17",
+      "PEN:672"
+    ],
+    "calcrim": [
+      "603",
+      "604"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:192": "2024-01-01",
+      "PEN:193": "2011-04-04",
+      "PEN:21a": null,
+      "PEN:664": "2011-04-04",
+      "PEN:672": "1983-09-27"
+    },
+    "searchAliases": [
+      "PC 664/192(a)",
+      "PC 664/192",
+      "664 192",
+      "Attempted manslaughter"
+    ]
+  }
+]

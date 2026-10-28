@@ -39,10 +39,21 @@ export function validateMajorBenchmark(b=structuredClone(benchmark)){
  }
  return b;
 }
-function readDiscovery(name:string){
+type DiscoveryRow={key:string;[key:string]:unknown};
+const discoveryCache=new Map<string,{digest:string;rows:DiscoveryRow[]}>();
+function readDiscovery(name:string,selectedKeys:string[]){
  const data=fs.readFileSync(root+'output/california-statewide/'+name);
- if(hash(data)!==discovery.artifacts.find(a=>a.file===name)?.sha256)throw new Error('Discovery hash mismatch');
- return gunzipSync(data).toString('utf8').trim().split('\n').map(line=>JSON.parse(line)) as Array<{key:string;[key:string]:unknown}>;
+ const digest=hash(data);
+ // Recheck bytes on every call; reuse parsing only for the identical verified ledger.
+ if(digest!==discovery.artifacts.find(a=>a.file===name)?.sha256)throw new Error('Discovery hash mismatch');
+ let cached=discoveryCache.get(name);
+ if(cached?.digest!==digest){
+  cached={digest,rows:gunzipSync(data).toString('utf8').trim().split('\n').map(line=>JSON.parse(line)) as DiscoveryRow[]};
+  discoveryCache.set(name,cached);
+ }
+ // Return copies of the requested evidence only, so callers cannot mutate cached data.
+ const wanted=new Set(selectedKeys);
+ return structuredClone(cached.rows.filter(row=>wanted.has(row.key)));
 }
 export function buildMajorOmissionAudit(config=dispositions){
  const b=validateMajorBenchmark();
@@ -58,7 +69,8 @@ export function buildMajorOmissionAudit(config=dispositions){
   for(const id of row.chargeIds)if(!snapshot.records.find(c=>c.canonicalId===id)?.selectable)throw new Error('Unknown or withheld catalog identity');
  }
  if(snapshot.configuredChoices!==snapshot.records.filter(r=>r.selectable).length)throw new Error('Catalog snapshot count mismatch');
- const accounting=readDiscovery('section-accounting.jsonl.gz'),versions=readDiscovery('source-versions.jsonl.gz');
+ const probeKeys=config.otherCodeProbes.map(r=>r.key);
+ const accounting=readDiscovery('section-accounting.jsonl.gz',probeKeys),versions=readDiscovery('source-versions.jsonl.gz',probeKeys);
  const otherCodeProbes=config.otherCodeProbes.map(r=>{
   const accounts=accounting.filter(a=>a.key===r.key),sourceVersions=versions.filter(v=>v.key===r.key);
   if(accounts.length!==1||!sourceVersions.length)throw new Error('Missing discovery evidence: '+r.key);
