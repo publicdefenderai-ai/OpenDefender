@@ -95039,6 +95039,10 @@ chargeCategories["Violent Crimes"] = [...new Set([...chargeCategories["Violent C
   "ca-pen-186-22-a", "ca-pen-149", "ca-pen-243-b", "ca-pen-243-c-1", "ca-attempted-voluntary-manslaughter",
 ])];
 
+// Explicit conduct identities avoid assigning every branch of section 647 to one group.
+chargeCategories["Public Order"] = [...new Set([...chargeCategories["Public Order"], "ca-pen-647-a-conduct", "ca-pen-647-a-solicitation", "ca-pen-647-h", "ca-pen-647-i"])];
+chargeCategories["Weapons"] = [...new Set([...chargeCategories["Weapons"], "ca-pen-21310", "ca-pen-21510-a", "ca-pen-21510-b", "ca-pen-21510-c"])];
+
 // These public-order choices share the reviewed catalog; do not infer categories from a statute number alone.
 const californiaPublicOrderSections = new Set(['597','591','601','602','602.5','399','399.5','337a','336.9','632','403','404.6','405','408','409','416']);
 chargeCategories['Public Order'] = [...new Set([...chargeCategories['Public Order'], ...criminalCharges.filter(charge => {
