@@ -1,9 +1,10 @@
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useRef, useCallback, useState, lazy, Suspense } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { X, Download, ArrowLeft, AlertTriangle, FileText, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import i18nInstance from "@/i18n";
-import { useLocation } from "wouter";
+import { useLocation, useSearch } from "wouter";
+const ConversationalCaseGuidance = lazy(() => import("./case-guidance").then(module => ({ default: module.CaseGuidanceExperience })));
 import { useProgressiveReveal } from "@/hooks/use-progressive-reveal";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -91,6 +92,15 @@ function getNextMenuOptions(_excludeFlow?: CompletedFlow, _completedFlows?: Comp
 }
 
 export default function ChatPage() {
+  const { t } = useTranslation();
+  const search = useSearch();
+  const [, setLocation] = useLocation();
+  return new URLSearchParams(search).get('flow') === 'case-roadmap'
+    ? <Suspense fallback={<p role="status" className="p-6">{t('chat.header.title')}</p>}><ConversationalCaseGuidance presentation="conversation" onExit={() => setLocation('/chat')} /></Suspense>
+    : <ChatConversation />;
+}
+
+function ChatConversation() {
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { state, actions } = useChat();
@@ -274,6 +284,10 @@ export default function ChatPage() {
   }, [actions]);
 
   const handleQuickReply = useCallback(async (reply: QuickReply) => {
+    if (['menu_personalized', 'menu_case_roadmap', 'personalized_guidance', 'navigate:/case-guidance'].includes(reply.value)) {
+      setLocation('/chat?flow=case-roadmap');
+      return;
+    }
     switch (state.currentStep) {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {

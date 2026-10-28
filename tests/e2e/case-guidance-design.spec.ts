@@ -10,9 +10,10 @@ async function checkStep(page: Page, step: number) {
   }).map(n => n.textContent));
   expect(overflow).toEqual([]);
 }
+for (const surface of ['form', 'conversation']) {
 for (const language of ['en', 'es', 'zh']) {
   for (const theme of ['light', 'dark']) {
-    test(`seven-step intake and both choices at 320px: ${language}/${theme}`, async ({ page }) => {
+    test(`seven-step intake and both choices at 320px: ${surface}/${language}/${theme}`, async ({ page }) => {
       await page.setViewportSize({ width: 320, height: 844 });
       await page.emulateMedia({ reducedMotion: 'reduce' });
       await page.addInitScript(({ language, theme }) => {
@@ -22,10 +23,12 @@ for (const language of ['en', 'es', 'zh']) {
       await page.route('**/api/ai/status', route => route.fulfill({ json: { available: true } }));
       await page.route('**/api/captcha/config', route => route.fulfill({ json: { required: false } }));
       for (const mode of ['ai', 'rules']) {
-        await page.goto('/case-guidance');
+        await page.goto(surface === 'form' ? '/case-guidance' : '/chat?flow=case-roadmap');
         await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
-        await expect(page.getByTestId('heading-case-title')).not.toContainText('design.case');
-        await page.getByTestId('button-start-guidance').click();
+        if (surface === 'form') {
+          await expect(page.getByTestId('heading-case-title')).not.toContainText('design.case');
+          await page.getByTestId('button-start-guidance').click();
+        }
         await checkStep(page, 1);
         await expect(page.locator('.case-option-label')).toHaveCount(2);
         await page.getByTestId(`button-choose-${mode}`).focus();
@@ -61,8 +64,10 @@ for (const language of ['en', 'es', 'zh']) {
         await page.getByTestId('button-prev-jurisdiction').click();
         await checkStep(page, 1);
         await page.getByTestId('button-cancel-qa').click();
-        await expect(page.getByTestId('button-start-guidance')).toBeVisible();
+        await expect(page.getByTestId(surface === 'form' ? 'button-start-guidance' : 'quick-reply-urgent-no')).toBeVisible();
       }
     });
   }
+}
+
 }

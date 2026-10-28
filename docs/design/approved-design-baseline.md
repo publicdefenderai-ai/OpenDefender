@@ -190,3 +190,20 @@ References:
 The new chat browser spec is included in the release allowlist. Its scope is presentation, existing entry/state selection, keyboard summary expansion, mobile exit, theme switching and retained typing pause. It does not call the generator or establish full intake parity. Existing full-CI/source-readiness failures remain separate. Legal review remains separate, including PR 66.
 
 Chat presentation validation: typecheck and production build passed; all 8 release-config browser checks passed, along with all 16 existing guidance-parity unit tests (output preservation, not questionnaire parity). Desktop and mobile light/dark screenshots were visually inspected. No full-CI, live-generation or completed intake-parity claim.
+
+
+## Chat questionnaire parity
+
+PR 67's remaining intake gap is addressed by routing every chat Case Roadmap / personalized-guidance entry to `/chat?flow=case-roadmap`. The conversational presentation uses the same `QAFlow` step components, form model, validation, charge catalog and authority/reselection logic as `/case-guidance`. It also uses the same `CaseGuidanceExperience` generation, cancellation, timeout/error recovery, clear-session, result, print and export controller. No second copy of the seven questions or submission payload builder is introduced.
+
+The transcript records completed stages with readable answer summaries. The current shared question group appears beneath the transcript, followed by a one-second typing pause on advancement. Back retains answers and removes superseded transcript entries. Cancel unmounts the pending timer; recovery recreates the transcript from saved answers. A summary is only a display of supplied answers, not a legal conclusion or generated advice. The existing English-only background question labels remain English in the corresponding summaries; this is not a full localization pass.
+
+The first stage includes both Tailored AI Guidance and Immediate Guidance with the canonical consent/disclosure copy. Jurisdiction/territory notices, charge search and unknown-charge choice, status, optional background (including New York school-zone branching), concerns, active/emergency urgency and CAPTCHA remain the existing controls. AI uses the streaming endpoint and rules uses the rules endpoint. The older free-text incident-description route is no longer the entry path for a new chat roadmap. Unrelated chat resource navigation remains available.
+
+Reference: `opendefender-mobile-chat-roadmap-preview.html`, SHA-256 `f64a35ebefda43cd72d60598952ea0fbe593f64b3708da6194ee4f864b23d375`. The live canonical questions take precedence over simplified preview fixtures. Legal/privacy text and backend generation logic are not revised in this batch.
+
+The new request-parity spec is included in the release allowlist. It compares the actual submitted payloads from both presentations for both modes, known New York charges with optional details/urgent concerns and unknown charges in a territory. The shared locale/theme test now traverses both presentations. Browser fixtures replace generation and catalog responses for deterministic UI tests; they do not establish live source eligibility or AI response quality.
+
+On completion, the conversational intake opens the existing Case Guidance results dashboard rather than the legacy chat's inline summary. This visible transition preserves the canonical result warnings and print/export controls and needs design review with this PR.
+
+Validation: typecheck and production build passed. All 7 new payload/recovery/CAPTCHA/clear-session checks passed; the 12 shared questionnaire locale/theme checks, 8 chat presentation checks and 5 existing timeout-recovery checks also passed during this batch. All 31 targeted unit tests passed. Desktop final-step and mobile conversation screenshots were visually inspected. This is focused validation, not a clean full-CI or live-generation claim.

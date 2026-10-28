@@ -13,6 +13,12 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    chatAnswers: "您的回答",
+    chatReplying: "正在准备下一个问题",
+    chatOptionalSkipped: "未添加可选信息",
+    chatChargesUnknown: "我不知道自己面临什么指控",
+    chatSelectedCharge: "已选指控",
+
     guidanceUrgencyUrgent: "紧急",
     guidanceUrgencyHigh: "高优先级",
     guidanceUrgencyMedium: "中优先级",
