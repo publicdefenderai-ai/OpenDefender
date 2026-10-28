@@ -74,7 +74,7 @@
       "file": "client/src/locales/en.ts",
       "key": "translation.process.guides.bail.missCourt.consequences.0",
       "before": "A warrant will be issued for your arrest",
-      "after": "The court can issue a warrant for your arrest; this is a serious risk, but it is not automatic in every case"
+      "after": "The court will typically issue a warrant for your arrest if you miss a required court appearance"
     },
     {
       "file": "client/src/locales/en.ts",
@@ -176,7 +176,7 @@
       "file": "client/src/locales/en.ts",
       "key": "translation.first24Hours.steps.step6.dont3",
       "before": "Don't miss this court date. A warrant will be issued for your arrest.",
-      "after": "Missing court can lead to an arrest warrant and other consequences. If you cannot attend or missed a date, contact your attorney or the court promptly."
+      "after": "If you miss a required court appearance, the court will typically issue a warrant for your arrest. Other consequences may also apply. If you cannot attend or missed a date, contact your attorney or the court promptly."
     },
     {
       "file": "client/src/locales/en.ts",
@@ -233,7 +233,7 @@
       "file": "client/src/locales/es.ts",
       "key": "translation.process.guides.bail.missCourt.consequences.0",
       "before": "Se emitirá una orden de arresto en su contra",
-      "after": "El tribunal puede emitir una orden de arresto; es un riesgo serio, pero no es automático en todos los casos"
+      "after": "El tribunal normalmente emitirá una orden de arresto si falta a una comparecencia obligatoria"
     },
     {
       "file": "client/src/locales/es.ts",
@@ -335,7 +335,7 @@
       "file": "client/src/locales/es.ts",
       "key": "translation.first24Hours.steps.step6.dont3",
       "before": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted.",
-      "after": "Faltar al tribunal puede provocar una orden de arresto y otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal."
+      "after": "Si falta a una comparecencia obligatoria, el tribunal normalmente emitirá una orden de arresto. También puede haber otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal."
     },
     {
       "file": "client/src/locales/es.ts",
@@ -392,7 +392,7 @@
       "file": "client/src/locales/zh.ts",
       "key": "translation.process.guides.bail.missCourt.consequences.0",
       "before": "法院将发出逮捕令",
-      "after": "法院可能签发逮捕令；这是严重风险，但并非每次都会自动发生"
+      "after": "如果您缺席必须参加的庭审，法院通常会签发逮捕令"
     },
     {
       "file": "client/src/locales/zh.ts",
@@ -494,7 +494,7 @@
       "file": "client/src/locales/zh.ts",
       "key": "translation.first24Hours.steps.step6.dont3",
       "before": "不要错过这个法庭日期。将会对您发出逮捕令。",
-      "after": "缺席庭审可能导致逮捕令及其他后果。如果无法出席或已经错过日期，请尽快联系律师或法院。"
+      "after": "如果您缺席必须参加的庭审，法院通常会签发逮捕令，也可能产生其他后果。如果无法出席或已经错过日期，请尽快联系律师或法院。"
     },
     {
       "file": "client/src/locales/zh.ts",
@@ -664,5 +664,10 @@
       "before": "Door conversation option was only in the unrendered whatToDo array",
       "after": "You can speak through the closed door. If you choose to step outside, do so calmly and close the door behind you. This does not prevent entry when officers have lawful authority."
     }
-  ]
+  ],
+  "ownerFollowup": {
+    "topic": "L04.1 missed court",
+    "instruction": "can issue a warrant for missing court is not strong enough. Say they will typically issue a warrant.",
+    "implementation": "Updated bail and First 24 Hours wording in English, Spanish and Chinese."
+  }
 }

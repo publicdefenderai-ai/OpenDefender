@@ -4155,7 +4155,7 @@ export default {
           "title": "¿Qué pasa si falta a la corte?",
           "description": "Faltar a una fecha de corte es serio. Esto es lo que puede pasar:",
           "consequences": [
-            "El tribunal puede emitir una orden de arresto; es un riesgo serio, pero no es automático en todos los casos",
+            "El tribunal normalmente emitirá una orden de arresto si falta a una comparecencia obligatoria",
             "Perderá su dinero de fianza (o el fiador lo buscará)",
             "Podría enfrentar cargos criminales adicionales por no comparecer",
             "Será mucho más difícil obtener fianza nuevamente",
@@ -6530,7 +6530,7 @@ export default {
         "do3": "Vista ropa limpia y apropiada si ha sido puesto en libertad bajo fianza.",
         "dont1": "Introducir cualquier declaración sin haber hablado primero con un abogado significa tomar una decisión con efectos legales permanentes, sin conocer todas sus opciones.",
         "dont2": "No hable con el juez sobre los hechos de su caso.",
-        "dont3": "Faltar al tribunal puede provocar una orden de arresto y otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal.",
+        "dont3": "Si falta a una comparecencia obligatoria, el tribunal normalmente emitirá una orden de arresto. También puede haber otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal.",
         "c1Title": "Introducir una Declaración",
         "c1": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
         "c2Title": "Sin Representación",

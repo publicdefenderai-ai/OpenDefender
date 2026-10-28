@@ -4153,7 +4153,7 @@ export default {
           "title": "What happens if you miss court?",
           "description": "Missing a court date is serious. Here's what can happen:",
           "consequences": [
-            "The court can issue a warrant for your arrest; this is a serious risk, but it is not automatic in every case",
+            "The court will typically issue a warrant for your arrest if you miss a required court appearance",
             "You'll lose your bail money (or the bondsman will look for you)",
             "You could face additional criminal charges for failure to appear",
             "It will be much harder to get bail again",
@@ -6524,7 +6524,7 @@ export default {
         "do3": "Appear in clean, appropriate clothing if you have been released on bail.",
         "dont1": "Entering any plea without first speaking with an attorney means making a decision with permanent legal effects, without knowing all of your options.",
         "dont2": "Don't speak to the judge about the facts of your case.",
-        "dont3": "Missing court can lead to an arrest warrant and other consequences. If you cannot attend or missed a date, contact your attorney or the court promptly.",
+        "dont3": "If you miss a required court appearance, the court will typically issue a warrant for your arrest. Other consequences may also apply. If you cannot attend or missed a date, contact your attorney or the court promptly.",
         "whoCharges": {
           "heading": "Who is actually charging you?",
           "intro": "Police arrest. A separate office decides what charges to file and presses the case in court. This office is called the prosecutor. It is not the police department, and knowing which office it is affects your defense from day one.",
