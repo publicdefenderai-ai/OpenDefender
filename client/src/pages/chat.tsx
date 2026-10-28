@@ -1,9 +1,10 @@
-import { useEffect, useRef, useCallback, useState } from "react";
+import { useEffect, useRef, useCallback, useState, lazy, Suspense } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { X, Download, ArrowLeft, AlertTriangle, FileText, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import i18nInstance from "@/i18n";
-import { useLocation } from "wouter";
+import { useLocation, useSearch } from "wouter";
+const ConversationalCaseGuidance = lazy(() => import("./case-guidance").then(module => ({ default: module.CaseGuidanceExperience })));
 import { useProgressiveReveal } from "@/hooks/use-progressive-reveal";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -91,6 +92,17 @@ function getNextMenuOptions(_excludeFlow?: CompletedFlow, _completedFlows?: Comp
 }
 
 export default function ChatPage() {
+  const { t } = useTranslation();
+  const { actions } = useChat();
+  const onGuidanceComplete = useCallback(() => actions.markFlowCompleted('personalized_guidance'), [actions.markFlowCompleted]);
+  const search = useSearch();
+  const [, setLocation] = useLocation();
+  return new URLSearchParams(search).get('flow') === 'case-roadmap'
+    ? <Suspense fallback={<p role="status" className="p-6">{t('chat.header.title')}</p>}><ConversationalCaseGuidance presentation="conversation" onGuidanceComplete={onGuidanceComplete} onExit={() => setLocation('/chat')} /></Suspense>
+    : <ChatConversation />;
+}
+
+function ChatConversation() {
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { state, actions } = useChat();
@@ -103,7 +115,6 @@ export default function ChatPage() {
   const [showChargeSelector, setShowChargeSelector] = useState(false);
   const [stillWorkingShown, setStillWorkingShown] = useState(false);
   const [showExportWarning, setShowExportWarning] = useState(false);
-  const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
   const [selectedConcerns, setSelectedConcerns] = useState<string[]>([]);
 
   // CAPTCHA gate for /api/legal-guidance — three separate points in this
@@ -274,6 +285,10 @@ export default function ChatPage() {
   }, [actions]);
 
   const handleQuickReply = useCallback(async (reply: QuickReply) => {
+    if (['menu_personalized', 'menu_case_roadmap', 'personalized_guidance', 'navigate:/case-guidance'].includes(reply.value)) {
+      setLocation('/chat?flow=case-roadmap');
+      return;
+    }
     switch (state.currentStep) {
       case 'emergency_check':
         if (reply.value === 'urgent_yes') {
@@ -291,7 +306,6 @@ export default function ChatPage() {
 
       case 'main_menu':
         if (reply.value === 'menu_personalized') {
-          setPrivilegeWarningAcknowledged(false);
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_immigration') {
@@ -355,7 +369,6 @@ export default function ChatPage() {
           ]);
           actions.setCurrentStep('first_24_hours_info');
         } else if (reply.value === 'menu_case_roadmap') {
-          setPrivilegeWarningAcknowledged(false);
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'menu_life_family') {
@@ -464,7 +477,6 @@ export default function ChatPage() {
 
       case 'emergency_options':
         if (reply.value === 'personalized_guidance') {
-          setPrivilegeWarningAcknowledged(false);
           addBotMessageWithKey('chat.messages.stateQuestion');
           actions.setCurrentStep('state_selection');
         } else if (reply.value === 'learn_rights') {
@@ -721,11 +733,9 @@ export default function ChatPage() {
 
       case 'privilege_warning':
         if (reply.value === 'privilege_continue') {
-          setPrivilegeWarningAcknowledged(true);
           addBotMessageWithKey('chat.messages.privilegeAcknowledged');
           actions.setCurrentStep('incident_description');
         } else if (reply.value === 'privilege_skip') {
-          setPrivilegeWarningAcknowledged(true);
           handlePrivilegeSkip();
         }
         break;

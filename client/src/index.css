@@ -2336,3 +2336,18 @@ a:focus-visible,
 }
 
 .design-chat header button { min-height: 44px; min-width: 44px; }
+
+/* Same canonical intake, presented as a conversation rather than a modal card. */
+.conversation-workspace { width: 100%; max-width: 1440px; }
+.conversation-intake { border: 0; background: transparent; box-shadow: none; }
+.conversation-intake .case-step-track { display: none; }
+.intake-exchange { margin-bottom: 28px; }
+.intake-prompt { width: fit-content; max-width: 90%; padding: 16px 20px; border-radius: 4px 18px 18px; background: var(--muted); color: var(--foreground); }
+.intake-answer { width: fit-content; max-width: min(88%, 780px); margin: 16px 0 0 auto; padding: 16px 20px; background: var(--primary); color: var(--primary-foreground); border-radius: 18px 4px 18px 18px; overflow-wrap: anywhere; }
+.intake-answer ul { display: grid; gap: 6px; }
+.intake-response { padding: 20px 0; }
+.conversation-intake .case-step-label { scroll-margin-top: 100px; }
+@media (max-width: 480px) {
+  .conversation-workspace { padding-inline: 0; }
+  .intake-prompt, .intake-answer { max-width: 96%; padding: 14px 16px; }
+}

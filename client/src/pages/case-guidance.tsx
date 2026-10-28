@@ -282,12 +282,16 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 }
 
 export default function CaseGuidance() {
+  return <CaseGuidanceExperience />;
+}
+
+export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidanceComplete }: { presentation?: "form" | "conversation"; onExit?: () => void; onGuidanceComplete?: () => void } = {}) {
   useScrollToTop();
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
   const [storedGuidanceRecovery] = useState(readStoredGuidanceRecovery);
   const [showQAFlow, setShowQAFlow] = useState(
-    () => storedGuidanceRecovery?.reviewingTimedOutAnswers === true,
+    () => presentation === "conversation" || storedGuidanceRecovery?.reviewingTimedOutAnswers === true,
   );
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const [guidanceMode, setGuidanceMode] = useState<'ai' | 'rules'>('ai');
@@ -647,6 +651,7 @@ export default function CaseGuidance() {
         // Then set the complete guidance result in one atomic update
         // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
+        onGuidanceComplete?.();
         // A successful retry has completed recovery; do not let a later reload
         // reopen the obsolete timeout state with the old answers.
         clearStoredGuidanceRecovery();
@@ -721,6 +726,7 @@ export default function CaseGuidance() {
 
     setShowQAFlow(false);
     setReviewingTimedOutAnswers(false);
+    onExit?.();
 
     if (wasReviewingTimedOutAnswers) {
       setPendingGuidanceData(null);
@@ -795,6 +801,7 @@ export default function CaseGuidance() {
       setShowQAFlow(false);
       setHasExported(false);
       setShowClearConfirm(false);
+      onExit?.();
       // Show success toast
       toast({
         title: t('case.clearSession.successTitle'),
@@ -1044,8 +1051,9 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="case-intake-workspace mx-auto px-4 py-8">
+        <main className={`case-intake-workspace mx-auto px-4 py-8${presentation === "conversation" ? " conversation-workspace" : ""}`}>
           <QAFlow
+            presentation={presentation}
             onComplete={handleQAComplete}
             onCancel={handleCancelQAFlow}
             onFindLawyer={() => {
@@ -1108,7 +1116,7 @@ export default function CaseGuidance() {
         <main className="case-results-workspace px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
-            onClose={() => handleAttemptClose()}
+            onClose={() => handleAttemptClose(onExit)}
             onNewSession={handleNewSession}
             onShowPublicDefender={() => setShowPublicDefenderModal(true)}
             onShowLegalAid={() => setShowLegalAidModal(true)}

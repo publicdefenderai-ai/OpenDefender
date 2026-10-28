@@ -18,7 +18,7 @@ async function bounds(page: Page) {
   expect(clipped).toEqual([]);
 }
 for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']) {
-  test(`chat choices, state search and summary at 320px: ${language}/${theme}`, async ({ page }, testInfo) => {
+  test(`chat choices, canonical intake and summary at 320px: ${language}/${theme}`, async ({ page }, testInfo) => {
     await page.setViewportSize({ width: 320, height: 844 });
     await setup(page, language, theme);
     await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
@@ -28,23 +28,17 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await page.getByTestId('quick-reply-urgent-no').click();
     await expect(page.getByTestId('chat-typing')).toBeVisible();
     await page.getByTestId('quick-reply-menu-case-roadmap').click();
-    await expect(page.getByTestId('input-state-search')).toBeVisible();
-    await page.getByTestId('input-state-search').fill('District');
-    await expect(page.getByTestId('state-option-DC')).toBeVisible();
-    await bounds(page);
-    await page.getByTestId('input-state-search').fill('Oregon');
-    await page.getByTestId('state-option-OR').click();
-    await expect(page.getByTestId('chat-typing')).toHaveCount(0);
-    const summary = page.locator('.chat-case-summary summary');
-    await summary.scrollIntoViewIfNeeded();
-    await summary.focus();
-    await page.keyboard.press('Enter');
-    await expect(page.locator('.chat-case-summary')).toHaveAttribute('open', '');
-    await expect(page.locator('.chat-case-summary')).toContainText('Oregon');
-    await bounds(page);
+    await expect(page.getByTestId('button-choose-ai')).toBeVisible();
+    await page.getByTestId('button-choose-rules').click();
+    await page.getByTestId('select-jurisdiction').click();
+    await page.getByRole('option').filter({ hasText: /Oregon|Oregón|俄勒冈/ }).click();
+    await page.getByTestId('button-next-jurisdiction').click();
+    await expect(page.getByTestId('qa-step-label')).toContainText(/(?:Step |Paso |第)3/);
+    await expect(page.locator('.intake-transcript')).toContainText(/Oregon|Oregón|俄勒冈/);
     await page.screenshot({ path: testInfo.outputPath('chat-mobile.png') });
-    await page.getByTestId('button-theme-toggle').click();
+    await page.getByTestId('button-theme').click();
     await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme === 'light' ? 'dark' : 'light'}\\b`));
+    await page.getByTestId('button-cancel-qa').click();
     await page.getByTestId('button-close-chat').click();
     await expect(page).not.toHaveURL(/\/chat$/);
   });

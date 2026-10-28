@@ -13,6 +13,12 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    chatAnswers: "Your answers",
+    chatReplying: "Preparing the next question",
+    chatOptionalSkipped: "No optional information added",
+    chatChargesUnknown: "I don’t know what charges I’m facing",
+    chatSelectedCharge: "Selected charge",
+
     guidanceUrgencyUrgent: "Urgent",
     guidanceUrgencyHigh: "High priority",
     guidanceUrgencyMedium: "Medium priority",

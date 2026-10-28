@@ -1,3 +1,5 @@
+import { TypingIndicator } from "@/components/chat/message-bubble";
+import { summarizeIntakeStep } from "./qa-flow-summary";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { useState, useRef, useEffect } from "react";
 import type { ReactNode } from "react";
@@ -22,6 +24,7 @@ import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow
 import { replaceLegacyChargeWithCanonical } from "./qa-flow-reselection";
 
 interface QAFlowProps {
+  presentation?: "form" | "conversation";
   onComplete: (data: any) => void;
   onCancel: () => void;
   onFindLawyer?: () => void;
@@ -32,7 +35,7 @@ interface QAFlowProps {
   onFormDataChange?: (data: QAFormData) => void;
 }
 
-interface QAFormData {
+export interface QAFormData {
   jurisdiction: string;
   charges: string[];
   chargesUnknown: boolean;
@@ -52,6 +55,7 @@ interface QAFormData {
   schoolZoneStatus: string;
 }
 export function QAFlow({
+  presentation = "form",
   onComplete,
   onCancel,
   onFindLawyer,
@@ -65,6 +69,12 @@ export function QAFlow({
   const reducedMotion = useReducedMotion();
   const progressRef = useRef<HTMLParagraphElement>(null);
   const [currentStep, setCurrentStep] = useState(0);
+  const conversational = presentation === "conversation";
+  const [replying, setReplying] = useState(false);
+  const replyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const transitionPending = useRef(false);
+  const [answerHistory, setAnswerHistory] = useState<Array<{ step: number; data: QAFormData }>>([]);
+  useEffect(() => () => { if (replyTimer.current) clearTimeout(replyTimer.current); }, []);
   const [showCaseStageWarning, setShowCaseStageWarning] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
   const [formData, setFormData] = useState<QAFormData>(() => ({
@@ -72,6 +82,9 @@ export function QAFlow({
     ...initialData,
     charges: normalizeChargeIds(initialData?.charges ?? EMPTY_FORM_DATA.charges),
   }));
+
+  const formDataRef = useRef(formData);
+  formDataRef.current = formData;
 
   useEffect(() => {
     onFormDataChange?.(formData);
@@ -96,16 +109,31 @@ export function QAFlow({
   useEffect(() => {
     if (reviewAnswers) {
       setCurrentStep(steps.length - 1);
+      if (conversational) setAnswerHistory(Array.from({ length: steps.length - 1 }, (_, step) => ({ step, data: { ...formDataRef.current } })));
     }
-  }, [reviewAnswers, steps.length]);
+  }, [reviewAnswers, steps.length, conversational]);
 
   useEffect(() => {
-    progressRef.current?.focus();
-  }, [currentStep]);
+    if (!replying) {
+      progressRef.current?.focus();
+      if (conversational) progressRef.current?.scrollIntoView({ block: "start", behavior: "auto" });
+    }
+  }, [currentStep, replying, conversational]);
 
   const nextStep = () => {
+    if (transitionPending.current) return;
     if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
+      if (conversational) {
+        setAnswerHistory(previous => [...previous.filter(entry => entry.step < currentStep), { step: currentStep, data: { ...formDataRef.current } }]);
+        transitionPending.current = true;
+        setReplying(true);
+        replyTimer.current = setTimeout(() => {
+          setCurrentStep(currentStep + 1);
+          setReplying(false);
+          transitionPending.current = false;
+          replyTimer.current = null;
+        }, 1000);
+      } else setCurrentStep(currentStep + 1);
     } else {
       // Guard: warn if no case stage selected before submitting
       if (shouldShowCaseStageWarning(formData.caseStage)) {
@@ -125,27 +153,34 @@ export function QAFlow({
     setShowCaseStageWarning(false);
     // Navigate back to the StatusStep so the user can fill in the stage.
     // QA_FLOW_STATUS_STEP_INDEX is the authoritative constant for this index.
+    setAnswerHistory(previous => previous.filter(entry => entry.step < QA_FLOW_STATUS_STEP_INDEX));
     setCurrentStep(QA_FLOW_STATUS_STEP_INDEX);
   };
 
   const prevStep = () => {
     if (currentStep > 0) {
+      if (replyTimer.current) clearTimeout(replyTimer.current);
+      setReplying(false);
+      transitionPending.current = false;
+      setAnswerHistory(previous => previous.filter(entry => entry.step < currentStep - 1));
       setCurrentStep(currentStep - 1);
     }
   };
 
   const updateFormData = (field: string, value: any) => {
+    formDataRef.current = { ...formDataRef.current, [field]: value };
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const CurrentStepComponent = steps[currentStep].component;
+  const IntakeShell = conversational ? "section" : Card;
 
   return (
     <>
-    <Card className="case-intake w-full mx-auto">
+    <IntakeShell className={`case-intake w-full mx-auto${conversational ? " conversation-intake" : ""}`} data-testid={conversational ? "conversation-intake" : "form-intake"}>
       <CardHeader className="p-4 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-          <CardTitle className="min-w-0 text-xl sm:text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>
+          {conversational ? <h1 className="min-w-0 text-xl sm:text-2xl font-semibold">{t('chat.header.title')}</h1> : <CardTitle className="min-w-0 text-xl sm:text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>}
           <Button
             variant="ghost"
             onClick={onCancel}
@@ -168,12 +203,27 @@ export function QAFlow({
             </div>
           ))}
         </div>
+        {!conversational && <>
         <p ref={progressRef} tabIndex={-1} className="case-step-label" data-testid="qa-step-label">
           {t('legalGuidance.qaFlow.stepProgress', { current: currentStep + 1, total: steps.length, title: steps[currentStep].title })}
         </p>
+        </>}
       </CardHeader>
 
       <CardContent className="p-4 sm:p-6">
+        {conversational && <>
+          <div className="intake-transcript" role="log" aria-label={t('design.chatAnswers')}>
+            {answerHistory.map(entry => <div key={entry.step} className="intake-exchange">
+              <p className="intake-prompt">{steps[entry.step].title}</p>
+              <div className="intake-answer"><ul>{summarizeIntakeStep(entry.step, entry.data, t).map((answer, index) => <li key={index}>{answer}</li>)}</ul></div>
+            </div>)}
+          </div>
+          {replying ? <div role="status" aria-label={t('design.chatReplying')}><TypingIndicator /></div> :
+            <p ref={progressRef} tabIndex={-1} className="case-step-label intake-prompt" data-testid="qa-step-label">
+              {t('legalGuidance.qaFlow.stepProgress', { current: currentStep + 1, total: steps.length, title: steps[currentStep].title })}
+            </p>}
+        </>}
+        {!replying && <div className={conversational ? "intake-response" : undefined}>
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep}
@@ -195,6 +245,7 @@ export function QAFlow({
             />
           </motion.div>
         </AnimatePresence>
+        </div>}
 
         {/* Privacy Notice */}
         <div className="case-intake-privacy flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
@@ -208,6 +259,7 @@ export function QAFlow({
             variant="ghost"
             size="sm"
             onClick={onClearSession}
+            data-testid="button-open-clear-session"
             className="min-h-[44px] self-start text-xs text-primary hover:underline"
           >
             {t('legalGuidance.qaFlow.clearSession.button')}
@@ -215,7 +267,7 @@ export function QAFlow({
         </div>
       </CardContent>
 
-    </Card>
+    </IntakeShell>
 
       {clearSessionDialog}
 
@@ -1279,9 +1331,9 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="none">No</SelectItem>
-                <SelectItem value="probation">Yes — probation</SelectItem>
-                <SelectItem value="parole">Yes — parole</SelectItem>
-                <SelectItem value="both">Yes — both</SelectItem>
+                <SelectItem value="probation">Yes, probation</SelectItem>
+                <SelectItem value="parole">Yes, parole</SelectItem>
+                <SelectItem value="both">Yes, both</SelectItem>
                 <SelectItem value="unsure">Not sure</SelectItem>
               </SelectContent>
             </Select>
@@ -1524,6 +1576,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
           <button
             type="button"
             onClick={() => setConcernsOpen(!concernsOpen)}
+            data-testid="button-select-concerns"
             className="w-full flex items-center justify-between px-3 py-2.5 rounded-md border border-input bg-background text-sm hover:bg-muted/50 transition-colors"
           >
             <span className="flex items-center gap-2 text-muted-foreground">
@@ -1545,6 +1598,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
                 unselectedConcerns.map(({ id, icon: Icon }) => (
                   <button
                     key={id}
+                    data-testid={`concern-option-${id}`}
                     type="button"
                     onClick={() => {
                       handleConcernToggle(id);
@@ -1692,6 +1746,8 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
                   key={level}
                   type="button"
                   onClick={() => setUrgency(field, level)}
+                  data-testid={`urgency-${field}-${level}`}
+                  aria-pressed={selected === level}
                   className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-all ${
                     urgencyStyles[level]
                   } ${selected === level ? selectedStyles[level] : 'hover:opacity-80'}`}
@@ -1718,6 +1774,7 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
         <Button
           onClick={onNext}
           disabled={!allAnswered || (captchaRequired && !captchaToken)}
+          data-testid="button-generate-guidance"
           className="flex-1 case-continue"
         >
           {t('legalGuidance.qaFlow.civilEmergencies.generate')}
