@@ -1,6 +1,11 @@
 export default {
   translation: {
   design: {
+    guidanceSections: "Secciones de la guía",
+    guidanceOverview: "Resumen",
+    guidanceRights: "Sus derechos",
+    guidanceResources: "Recursos",
+
     caseHeading: "Comprenda su caso. Prepárese para lo que sigue.",
     caseChooseOne: "Elija una opción para continuar.",
     caseOption: "Opción {{number}}",

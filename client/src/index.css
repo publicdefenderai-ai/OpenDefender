@@ -2249,3 +2249,64 @@ a:focus-visible,
   .case-intake-workspace { padding-left: 4px; padding-right: 4px; }
   .case-intake h3 { font-size: 22px; }
 }
+
+/* Case results and recovery: retain content while opening up the reading surface. */
+.case-state-workspace { width: 88%; max-width: 760px; margin: 56px auto 72px; min-height: 55vh; }
+.case-state-surface { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.case-state-surface > div { padding: 0; }
+.case-state-title { font-size: clamp(28px,4vw,40px); line-height: 1.2; font-weight: 500; letter-spacing: -.8px; }
+.case-state-surface p { line-height: 1.75; }
+.case-loading-content { max-width: 640px; }
+.case-loading-symbol { margin-bottom: 24px; }
+.case-loading-ring { height: 32px; width: 32px; border: 2px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin 1.2s linear infinite; }
+.case-loading-progress { height: 3px; width: 100%; background: var(--border); overflow: hidden; }
+.case-loading-progress-fill { height: 100%; background: var(--primary); transition: width .2s ease-out; }
+.case-state-cancel { min-height: 44px; padding: 10px 0; color: var(--primary); font-size: 14px; font-weight: 600; }
+.case-state-cancel:hover { text-decoration: underline; text-underline-offset: 4px; }
+.case-recovery-notice { border: 0; border-radius: 0; background: transparent; padding: 0 0 28px; border-bottom: 1px solid var(--border); color: var(--foreground); }
+.case-state-workspace .case-recovery-notice > svg { position: static; width: 32px; height: 32px; margin-bottom: 22px; color: var(--primary); stroke-width: 1.6; }
+.case-state-workspace .case-recovery-notice > :is(h1,div) { padding-left: 0; }
+.case-recovery-notice > div { font-size: 16px; line-height: 1.75; }
+.case-recovery-actions { max-width: 640px; }
+.case-recovery-actions button { height: auto; min-height: 48px; white-space: normal; text-align: left; border-radius: 4px; }
+.case-recovery-actions button > svg { flex-shrink: 0; }
+.case-recovery-verification { padding: 16px 0; border-top: 1px solid var(--border); }
+.case-expired-symbol { margin-bottom: 24px; }
+.case-expired-content button { height: auto; min-height: 48px; white-space: normal; }
+.case-results-workspace { max-width: 1120px; margin: auto; }
+.guidance-results .guidance-summary { border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.guidance-summary > div { padding: 8px 0 28px; }
+.guidance-summary-top { display: flex; flex-direction: column; gap: 20px; }
+.guidance-result-title { font-size: clamp(28px,3.5vw,40px); font-weight: 500; line-height: 1.2; letter-spacing: -.8px; overflow-wrap: anywhere; }
+.guidance-result-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.guidance-result-actions button { flex: 0 1 auto; min-height: 44px; height: auto; white-space: normal; border-radius: 4px; }
+.guidance-summary-facts { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 24px; border-top: 1px solid var(--border); padding-top: 22px; margin-top: 24px; }
+.guidance-summary-facts > div { text-align: left; min-width: 0; }
+.guidance-summary-facts .justify-center { justify-content: flex-start; }
+.guidance-summary-facts .font-medium { overflow-wrap: anywhere; }
+.guidance-results .guidance-section { border: 0; border-top: 1px solid var(--border); border-radius: 0; background: transparent; box-shadow: none; }
+.guidance-results .guidance-section > div { padding-left: 0; padding-right: 0; }
+.guidance-results .guidance-section > div:first-child { padding-top: 26px; }
+.guidance-results .guidance-section .text-2xl { font-size: 23px; line-height: 1.35; font-weight: 500; }
+.guidance-results .guidance-start-note { border: 0; border-left: 3px solid var(--primary); border-radius: 0; box-shadow: none; background: var(--muted); }
+.guidance-start-note button { height: auto; min-height: 48px; white-space: normal; }
+.guidance-section-nav { display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.guidance-section-nav button { min-height: 44px; text-align: left; font-size: 14px; font-weight: 600; color: var(--primary); }
+.guidance-section-nav button:hover { text-decoration: underline; text-underline-offset: 5px; }
+.guidance-results :is(button,a):focus-visible, .case-state-workspace button:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.guidance-results [tabindex="-1"] { scroll-margin-top: 110px; }
+.guidance-results [tabindex="-1"]:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
+.case-trusted-resources { border-top: 1px solid var(--border); padding-top: 24px; margin: 32px auto; }
+@media(max-width: 640px) {
+  .case-state-workspace { margin-top: 32px; }
+  .guidance-summary-facts { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .guidance-summary-facts > div:first-child { grid-column: 1 / -1; }
+  .guidance-summary-facts > div:last-child { grid-column: 1 / -1; }
+  .guidance-result-actions button { flex: 1 1 42%; }
+  .guidance-section-nav { gap: 4px 18px; }
+  .guidance-results .guidance-practical-plan > div:first-child > div { flex-wrap: wrap; gap: 12px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .case-loading-ring { animation: none; }
+  .case-loading-progress-fill { transition: none; }
+}

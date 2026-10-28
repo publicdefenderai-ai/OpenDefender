@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { 
   AlertTriangle,
+  AlertCircle,
   Clock,
   Phone,
   Scale,
@@ -863,36 +864,35 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-8 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-md">
+        <main className="case-state-workspace" data-testid="guidance-loading">
+          <Card className="case-state-surface case-loading-surface">
             <CardContent className="pt-6 pb-5">
-              <div className="flex flex-col items-center justify-center space-y-5 text-center">
-                <div className="relative">
-                  <div className="h-16 w-16 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
-                  <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              <div className="case-loading-content space-y-5">
+                <div className="case-loading-symbol">
+                  <div className="case-loading-ring" aria-hidden="true" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-xl font-semibold">
+                  <h1 className="case-state-title">
                     {t('case.loading.title', 'Generating Your Case Roadmap')}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{stage}</p>
+                  </h1>
+                  <p className="text-sm text-muted-foreground" role="status" aria-live="polite">{stage}</p>
                 </div>
                 {guidanceMode === 'ai' && (
                   <div className="w-full space-y-2 text-left" aria-label={t('case.loading.phaseLabel', 'Guidance generation phases')}>
-                    <div className={`flex items-center gap-2 text-sm ${!isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                    <div className={`flex items-center gap-2 text-sm ${!isSourceCheckPhase ? 'font-semibold text-primary' : 'text-muted-foreground'}`}>
                       <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">1</span>
                       {t('case.loading.generationPhase', 'Building your case roadmap')}
                     </div>
-                    <div className={`flex items-center gap-2 text-sm ${isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                    <div className={`flex items-center gap-2 text-sm ${isSourceCheckPhase ? 'font-semibold text-primary' : 'text-muted-foreground'}`}>
                       <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">2</span>
                       {t('case.loading.sourceCheckPhase', 'Checking legal sources')}
                     </div>
                   </div>
                 )}
                 <div className="w-full space-y-1">
-                  <div className="h-2 w-full bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
+                  <div className="case-loading-progress">
                     <div
-                      className="h-full bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ease-out"
+                      className="case-loading-progress-fill"
                       style={{ width: `${Math.max(2, streamProgress)}%` }}
                       role="progressbar"
                       aria-valuemin={0}
@@ -902,10 +902,10 @@ export default function CaseGuidance() {
                     />
                   </div>
                 </div>
-                {/* De-emphasized cancel — small and low-contrast so it won't be tapped accidentally */}
+                {/* Keep cancellation readable and keyboard accessible. */}
                 <button
                   onClick={handleCancel}
-                  className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors underline-offset-2 hover:underline mt-1"
+                  className="case-state-cancel" data-testid="button-cancel-guidance-request"
                 >
                   {t('case.loading.cancel', 'Cancel')}
                 </button>
@@ -922,24 +922,24 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-lg">
+        <main className="case-state-workspace">
+          <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
               <div className="space-y-6">
                 <Alert
                   role="alert"
                   aria-live="assertive"
-                  className="border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100"
+                  className="case-recovery-notice" data-testid="guidance-recovery-notice"
                 >
-                  <Clock className="h-5 w-5" />
-                  <AlertTitle>
+                  {guidanceRecoveryError || guidanceRecoveryOffline ? <AlertCircle className="h-5 w-5" aria-hidden="true" /> : <Clock className="h-5 w-5" aria-hidden="true" />}
+                  <h1 className="case-state-title">
                     {guidanceRecoveryOffline
                       ? t('case.loading.offlineRecoveryTitle', 'You appear to be offline')
                       : guidanceRecoveryError
                       ? t('case.loading.retryFailedTitle', 'That retry could not be completed')
                       : t('case.loading.timedOutTitle', 'Taking longer than usual')}
-                  </AlertTitle>
-                  <AlertDescription className="mt-2 text-amber-900 dark:text-amber-100">
+                  </h1>
+                  <AlertDescription className="mt-4 text-muted-foreground">
                     {guidanceRecoveryOffline
                       ? t('case.loading.offlineRecovery', "We couldn't complete that recovery because your device is offline. Reconnect to the internet, then try again. Your answers are still here.")
                       : guidanceRecoveryError
@@ -957,8 +957,8 @@ export default function CaseGuidance() {
                   </p>
                 </div>
 
-                <div className="grid gap-3">
-                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                <div className="case-recovery-actions grid gap-3">
+                  <div className="case-recovery-verification">
                     <TurnstileCaptcha
                       key={retryCaptchaAttempt}
                       onVerify={setRetryCaptchaToken}
@@ -1002,17 +1002,17 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-lg">
+        <main className="case-state-workspace">
+          <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
-              <div className="flex flex-col items-center text-center space-y-5">
-                <div className="h-14 w-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-                  <Clock className="h-7 w-7 text-amber-600 dark:text-amber-400" />
+              <div className="case-expired-content space-y-5">
+                <div className="case-expired-symbol">
+                  <Clock className="h-8 w-8 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <h2 className="text-xl font-semibold">
+                  <h1 className="case-state-title">
                     {t('case.sessionExpired.title', 'Your session has expired')}
-                  </h2>
+                  </h1>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {t('case.sessionExpired.message', 'This guidance is no longer accessible because your browser session has ended. This is a privacy protection — your case details are never stored permanently.')}
                   </p>
@@ -1105,7 +1105,7 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-8">
+        <main className="case-results-workspace px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => handleAttemptClose()}
@@ -1116,7 +1116,7 @@ export default function CaseGuidance() {
             guidanceMode={guidanceMode}
           />
           <aside
-            className="editorial-card max-w-5xl mx-auto mt-6 p-4"
+            className="case-trusted-resources"
             aria-labelledby="trusted-resources-heading"
           >
             <h2 id="trusted-resources-heading" className="font-semibold text-foreground">

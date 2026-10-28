@@ -1,6 +1,11 @@
 export default {
   translation: {
   design: {
+    guidanceSections: "指南章节",
+    guidanceOverview: "概述",
+    guidanceRights: "您的权利",
+    guidanceResources: "资源",
+
     caseHeading: "了解您的案件。为下一步做好准备。",
     caseChooseOne: "请选择一个选项以继续。",
     caseOption: "选项 {{number}}",

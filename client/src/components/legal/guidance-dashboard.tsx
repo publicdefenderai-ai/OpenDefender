@@ -247,7 +247,7 @@ function PrecedentCasesSection({
   const displayedPrecedents = isExpanded ? precedents : precedents.slice(0, 3);
 
   return (
-    <Card className="border-border">
+    <Card className="guidance-section">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-foreground">
           <BookOpen className="h-5 w-5 text-muted-foreground" />
@@ -672,7 +672,7 @@ function YourChargesSection({
   };
 
   return (
-    <Card className="border-border">
+    <Card className="guidance-section">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-foreground">
           <Gavel className="h-5 w-5 text-muted-foreground" />
@@ -902,7 +902,7 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
   };
   
   return (
-    <Card className="border-border">
+    <Card className="guidance-section">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-foreground">
           <FileText className="h-5 w-5 text-muted-foreground" />
@@ -1081,25 +1081,31 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     }
   };
 
+  const jumpToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section?.focus({ preventScroll: true });
+    section?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+  };
+
   return (
     <>
       <GuidancePrintPlan guidance={guidance} language={i18n.language} />
       <div
-        className="w-full min-w-0 max-w-6xl mx-auto overflow-x-hidden p-6 space-y-6 print:hidden"
+        className="guidance-results w-full min-w-0 mx-auto space-y-6 print:hidden"
         data-testid="guidance-dashboard"
       >
       {/* Case Summary Header */}
-      <Card className="border-l-4 border-l-primary">
+      <Card className="guidance-summary">
         <CardHeader>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="guidance-summary-top">
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 flex-wrap">
                 <Scale className="h-5 w-5 text-muted-foreground" />
-                <CardTitle className="text-xl text-foreground">
+                <h1 className="guidance-result-title">
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0
                     ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`
                     : `Case Roadmap: ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`}
-                </CardTitle>
+                </h1>
                 <Badge
                   variant="outline"
                   className="text-[11px] px-2 py-0 text-muted-foreground border-muted-foreground/30"
@@ -1123,7 +1129,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                 </div>
               )}
             </div>
-            <div className="flex gap-2 flex-wrap md:flex-nowrap">
+            <div className="guidance-result-actions">
               {onNewSession && (
                 <Button
                   variant="outline"
@@ -1153,7 +1159,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </div>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-4 mt-4">
+          <div className="guidance-summary-facts">
             <div className="text-center">
               <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.charges')}</div>
               <div className="font-medium">
@@ -1200,7 +1206,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </CardHeader>
       </Card>
 
-      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="guidance-next-step">
+      <Card className="guidance-start-note" data-testid="guidance-next-step">
         <CardContent className="p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary mb-1">
@@ -1214,7 +1220,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </p>
           </div>
           <Button
-            onClick={() => document.getElementById('practical-action-plan')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            onClick={() => jumpToSection('practical-action-plan')}
             className="w-full sm:w-auto shrink-0"
             data-testid="button-guidance-next-step"
           >
@@ -1223,6 +1229,14 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
           </Button>
         </CardContent>
       </Card>
+
+      <nav className="guidance-section-nav" aria-label={t('design.guidanceSections')}>
+        {guidance.overview && <button onClick={() => jumpToSection('guidance-overview')}>{t('design.guidanceOverview')}</button>}
+        <button onClick={() => jumpToSection('practical-action-plan')}>{t('legalGuidance.dashboard.practicalPlan.title')}</button>
+        <button onClick={() => jumpToSection('guidance-timeline')}>{t('legalGuidance.dashboard.caseTimeline.title')}</button>
+        {guidance.rights.length > 0 && <button onClick={() => jumpToSection('guidance-rights')}>{t('design.guidanceRights')}</button>}
+        {guidance.resources.length > 0 && <button onClick={() => jumpToSection('guidance-resources')}>{t('design.guidanceResources')}</button>}
+      </nav>
 
       {/* (Attorney notice folded into Urgent Takeaways below) */}
 
@@ -1266,7 +1280,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* Overview Section */}
       {guidance.overview && (
-        <Card className="border-border" data-guidance-section="overview">
+        <Card id="guidance-overview" tabIndex={-1} className="guidance-section" data-guidance-section="overview">
           <CardHeader className="pb-3">
             <div className="flex items-start justify-between gap-4">
               <CardTitle className="flex items-center gap-2 text-foreground">
@@ -1471,7 +1485,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Practical support is intentionally separate from case-specific legal information. */}
-      <Card id="practical-action-plan" className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
+      <Card id="practical-action-plan" tabIndex={-1} className="guidance-section guidance-practical-plan" data-testid="practical-action-plan">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">
@@ -1551,7 +1565,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* These records contain general case information, not a personalized task list. */}
       {legalInformationActions.length > 0 && (
-       <Card className="editorial-card" data-guidance-section="immediateActions" data-testid="legal-information-actions">
+       <Card className="guidance-section" data-guidance-section="immediateActions" data-testid="legal-information-actions">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <BookOpen className="h-5 w-5 text-muted-foreground" />
@@ -1585,7 +1599,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       )}
 
       {/* Enhanced Case Timeline */}
-      <Card className="editorial-card" data-guidance-section="timeline">
+      <Card id="guidance-timeline" tabIndex={-1} className="guidance-section" data-guidance-section="timeline">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <Calendar className="h-5 w-5 text-muted-foreground" />
@@ -1688,7 +1702,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* Important Dates: same normalized deadlines used by chat and PDF. */}
       {guidance.deadlines.length > 0 && (
-        <Card className="editorial-card" data-guidance-section="deadlines" data-testid="section-deadlines">
+        <Card className="guidance-section" data-guidance-section="deadlines" data-testid="section-deadlines">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <Clock className="h-5 w-5 text-muted-foreground" />
@@ -1719,7 +1733,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* Your Rights */}
       {guidance.rights.length > 0 && (
-        <Card className="editorial-card" data-guidance-section="rights">
+        <Card id="guidance-rights" tabIndex={-1} className="guidance-section" data-guidance-section="rights">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <BrandShieldIcon size={20} />
@@ -1741,7 +1755,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* Next Steps */}
       {guidance.nextSteps.length > 0 && (
-        <Card className="editorial-card" data-guidance-section="nextSteps">
+        <Card className="guidance-section" data-guidance-section="nextSteps">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <ArrowRight className="h-5 w-5 text-muted-foreground" />
@@ -2051,7 +2065,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
       {/* Generated legal contacts: the same resource records shown in chat and PDF. */}
       {guidance.resources.length > 0 && (
-        <Card className="border-border" data-guidance-section="resources" data-testid="section-guidance-resources">
+        <Card id="guidance-resources" tabIndex={-1} className="guidance-section" data-guidance-section="resources" data-testid="section-guidance-resources">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <Users className="h-5 w-5 text-muted-foreground" />
@@ -2150,23 +2164,23 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       )}
 
       {/* Privacy Notice */}
-      <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
+      <Card className="guidance-section guidance-privacy-notice">
         <CardContent className="pt-6">
           <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 mb-3">
                 <BrandShieldIcon size={20} />
-                <h3 className="font-semibold text-blue-800 dark:text-blue-200">
+                <h3 className="font-semibold text-foreground">
                   {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
                 </h3>
               </div>
-              <div className="flex flex-wrap gap-4 text-sm text-blue-800 dark:text-blue-200">
+              <div className="flex flex-wrap gap-4 text-sm text-foreground">
                 <div className="flex items-center gap-2">
-                  <Lock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <Lock className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>{t('legalGuidance.dashboard.privacyNotice.encrypted', 'Data encrypted')}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <Clock className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>{t('legalGuidance.dashboard.privacyNotice.autoDelete', 'Auto-deletes in 24 hours')}</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -2174,14 +2188,14 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
                 </div>
               </div>
-              <p className="text-xs text-blue-700 dark:text-blue-300 mt-3 pt-3 border-t border-blue-200 dark:border-blue-700">
+              <p className="text-xs text-muted-foreground mt-3 pt-3 border-t border-border">
                 {t('legalGuidance.dashboard.privacyNotice.legalNotice', 'This guidance is general legal information, not legal advice. No attorney-client relationship is formed. Information shared here is not protected by attorney-client privilege.')}
               </p>
             </div>
             <Button
               variant="ghost"
               size="sm"
-              className="w-full shrink-0 self-start text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 sm:w-auto"
+              className="w-full shrink-0 self-start text-xs text-primary sm:w-auto"
               onClick={() => { setFlagSubmitted(false); setFlagReason(''); setShowFlagDialog(true); }}
               data-testid="btn-flag-response"
             >

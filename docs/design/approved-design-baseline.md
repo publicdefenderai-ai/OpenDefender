@@ -139,3 +139,17 @@ Removed aria-current from the decorative, aria-hidden progress track. Regression
 The owner's explicit attorney-reference sentence and Tailored AI Guidance label remain. This records the requested copy correction, not independent attorney sign-off or a completed review of provider/privacy/legal statements. The possible emphasis on free counsel can be considered during substantive content review. Minor wording repetition and Spanish capitalization are deferred to consistent editorial review.
 
 Review-fix validation: typecheck and production build passed; all 19 release-config browser tests passed (8 California legacy recovery, 6 locale/theme intake, 5 timeout recovery). Both previously orphaned recovery specs are now included in the explicit release allowlist. Full CI and live source freshness are not claimed.
+
+## Case Guidance results and recovery batch
+
+After PR 64 merged at `10d8f6c5771b010146366261aa913b40d4d62657`, carried the shared design through the generated dashboard, generation progress, timeout/error recovery and expired-session screens. Results use an open reading surface, responsive summary/actions, and five conditional section destinations with keyboard focus and reduced-motion scrolling. Neutral sections use hairlines; critical alerts, deadline notices, uncertainty sections and authority warnings retain their existing semantic treatments. Recovery uses a clearly separated symbol and heading, readable cancellation and full-width narrow-screen choices.
+
+The questionnaire, generation payloads, guidance normalization, legal/privacy copy, source checks, saved-answer retry logic, report action, PDF confirmation/export and independent print plan are retained. No existing translation key or static destination was removed; new interface navigation labels are translated in English, Spanish and Chinese. Printing still includes content when its screen section is collapsed. Existing untranslated dashboard text and remaining ancillary support/verification accents are separate follow-ups. Design acceptance does not approve existing legal/privacy statements or complete the substantive review.
+
+References:
+- `opendefender-case-guidance-preview.html`: SHA-256 `03d59b4283b2507d72aacfccc850354478ab55e0e3e563819b83ab882fde66df`
+- `opendefender-ai-recovery-preview.html`: SHA-256 `6a3d92975630a22770203750d73b97573ed8a0582b32f8c5ba683c086a1d71dc`
+
+Validation: typecheck, production build and 16 guidance-parity unit tests passed. Browser coverage uses test-only generated records and existing saved-answer recovery, not live AI generation or live source eligibility. The new `case-results-design.spec.ts` is in the release runner allowlist. Full CI/release readiness is not claimed; the previous source-coverage and unrelated unit-suite failures remain separate, and PR 64's PIA audit automation reported a credential failure while creating its audit issue.
+
+Final focused browser results: 14 results/recovery design checks passed, plus all 5 existing timeout-recovery checks. Coverage includes English/Spanish/Chinese at 320px in actual light/dark themes, section focus, checklist interaction, warning visibility, collapsed-content printing, PDF confirmation/download, session expiration, recovery icon placement, reduced-motion loading and cancellation. Desktop results and mobile light/dark results/recovery screenshots were visually inspected. These focused checks do not establish a green full release pipeline.
