@@ -2,6 +2,10 @@
 
 This is a presentation specification, not legal-content approval or release authorization. The source previews remain local owner artifacts; this document records their identity and implementation requirements without copying review deliberations. Earlier concepts do not override later accepted refinements.
 
+## Legal content corrections
+
+L03/L04 corrections from the October 28 saved workbook are recorded in [the implementation record](../legal-review/l03-l04-implementation.md). Preserve these live-content edits when migrating the Rights, counsel, First 24 Hours, quick-reference and bail designs. Older preview copy is historical and must not restore the superseded statements. Reviewer wording differences and translation signoff remain explicit in that record.
+
 ## Reference identity
 
 | Local preview filename | SHA-256 |
@@ -161,3 +165,28 @@ The privilege/legal notice was incorrectly neutralized with the other results se
 Screenshots now use Playwright's per-test outputPath instead of /private/tmp. Added checks for both heading branches, the advisory border/background and text emphasis, and the removal of uppercase labels. Typecheck and production build passed; all 22 focused release-config browser tests passed (17 results/recovery design tests and 5 existing timeout-recovery tests). The light/dark mobile notice screenshots were visually inspected. Legal copy, questionnaire, generation and recovery behavior remain unchanged. This is not a full-CI claim.
 
 Final PR 65 polish: urgency badges now map known enum values to translated English/Spanish/Chinese labels, with a translated fallback. Browser fixtures exercise all four legal-information urgency values in all locales and both themes. Typecheck, production build and all 22 focused browser checks passed. Full release CI remains failing on the separately recorded database/source-readiness issues.
+
+## Chat presentation batch (partial; intake parity remains required)
+
+After PR 65 merged at `a2122867291ddbc58b018a60b4d7ad3dcc85e4dd`, updated the chat presentation to the accepted wider conversation direction. The transcript and choices use the available width, while individual messages retain readable line lengths. Normal choices use shared neutral/plum colors; the urgent choice retains a distinct warm warning treatment. The side panel becomes an expandable case summary available on mobile as well as desktop. State names wrap rather than truncate. Mobile users now have the existing Close action in the header. Header touch targets are at least 44px. User messages use the theme's primary foreground to preserve dark-mode contrast. Reduced-motion preferences suppress movement and repeating typing-dot animation; the existing one-second response pause is unchanged.
+
+This batch does not change the conversation state machine, questions/options, generation payloads, CAPTCHA, privacy/privilege copy, guidance normalization, export confirmation or language-reset behavior. It does not claim that the current production chat meets the approved questionnaire design.
+
+### Required chat follow-up before declaring the chat refresh complete
+
+Inspection found a pre-existing mismatch with the accepted preview: `menu_case_roadmap` goes directly to state selection, and the chat case model has no AI/non-AI guidance mode. It also lacks several fields from the seven-step modal. The user explicitly required both choices and matching questions/options. This remains required implementation work, not an optional enhancement or completed design feature.
+
+- Compare the modal's seven production step components, branching rules and payload fields against the chat state machine.
+- Share the canonical question/choice definitions or adapters so the two interfaces cannot drift.
+- Implement the explicit AI/non-AI choice in conversation form, preserving mode-specific consent and generation endpoints.
+- Preserve Back, selected answers, validation, authority notices, territory/school-zone branches, optional background/concerns, urgency requirements, CAPTCHA and retry behavior.
+- Add parity tests that exercise both modes end to end and compare submitted answers/payloads with the modal. Do not substitute static preview questions or describe these presentation tests as intake-parity coverage.
+
+References:
+- `opendefender-ai-chat-preview.html`: SHA-256 `a8926699d0836b9a360e54685e66497efd5231a7025d78481113020a53b457c8`
+- `chat-wide-style.html`: SHA-256 `9e0f325dd43937eb00723a8571b02089520e63bc13f9e2b4df78420d13eda706`
+- `chat-typing-style.html`: SHA-256 `c8cd52170311fb4ae90e6f4b5bf01a2b2e7b518d20fb64289bf7fb15bf69ffc7`
+
+The new chat browser spec is included in the release allowlist. Its scope is presentation, existing entry/state selection, keyboard summary expansion, mobile exit, theme switching and retained typing pause. It does not call the generator or establish full intake parity. Existing full-CI/source-readiness failures remain separate. Legal review remains separate, including PR 66.
+
+Chat presentation validation: typecheck and production build passed; all 8 release-config browser checks passed, along with all 16 existing guidance-parity unit tests (output preservation, not questionnaire parity). Desktop and mobile light/dark screenshots were visually inspected. No full-CI, live-generation or completed intake-parity claim.

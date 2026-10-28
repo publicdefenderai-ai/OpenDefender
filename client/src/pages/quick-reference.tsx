@@ -309,9 +309,9 @@ function PoliceEncounterCard({ testId }: { testId?: string }) {
             headingIcon: <AlertTriangle className="h-4 w-4 text-amber-600" />,
             items: [
               t("quickRef.police.arrested1", "Say clearly: \"I want a lawyer\" — then stop talking"),
-              t("quickRef.police.arrested2", "You get at least one phone call — use it to call a lawyer or family"),
+              t("quickRef.police.arrested2"),
               t("quickRef.police.arrested3", "Do not discuss your case with anyone except your attorney"),
-              t("quickRef.police.arrested4", "You must be brought before a judge within 48-72 hours"),
+              t("quickRef.police.arrested4"),
             ],
             type: "info",
           },
@@ -336,7 +336,7 @@ function ArraignmentCard({ testId }: { testId?: string }) {
           heading: t("quickRef.arraignment.expect", "What to Expect"),
           items: [
             t("quickRef.arraignment.expect1", "The judge reads the charges against you"),
-            t("quickRef.arraignment.expect2", "You enter a plea: guilty, not guilty, or no contest"),
+            t("quickRef.arraignment.expect2"),
             t("quickRef.arraignment.expect3", "Bail amount may be set or modified"),
             t("quickRef.arraignment.expect4", "Your attorney can request a public defender if needed"),
           ],
@@ -346,7 +346,7 @@ function ArraignmentCard({ testId }: { testId?: string }) {
           heading: t("quickRef.arraignment.say", "What to Say"),
           headingIcon: <CheckCircle className="h-4 w-4 text-green-600" />,
           items: [
-            t("quickRef.arraignment.say1", "\"Not guilty\" — this is almost always the best initial plea"),
+            t("quickRef.arraignment.say1"),
             t("quickRef.arraignment.say2", "\"I would like a court-appointed attorney\" — if you can't afford one"),
             t("quickRef.arraignment.say3", "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge"),
           ],

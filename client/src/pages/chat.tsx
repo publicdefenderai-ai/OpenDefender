@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { X, Download, ArrowLeft, AlertTriangle, FileText, Globe, Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import i18nInstance from "@/i18n";
@@ -1189,15 +1189,16 @@ export default function ChatPage() {
   const hasQuickReplies = latestMessage?.quickReplies && latestMessage.quickReplies.length > 0;
 
   return (
-    <div className="fixed inset-0 z-50 bg-background flex">
+    <MotionConfig reducedMotion="user">
+    <div className="design-chat fixed inset-0 z-50 bg-background flex">
       <motion.div
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: "100%" }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="flex-1 flex flex-col md:flex-row"
+        className="flex-1 flex flex-col min-h-0 min-w-0"
       >
-        <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex-1 flex flex-col min-w-0 min-h-0">
           <header className="flex items-center justify-between px-4 py-3 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="flex items-center gap-3">
               {actions.canGoBack() && (
@@ -1212,8 +1213,8 @@ export default function ChatPage() {
                   <span className="text-xs">{t('chat.header.back', 'Back')}</span>
                 </Button>
               )}
-              <h1 className="text-sm font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
-              <span className="text-[10px] font-semibold tracking-wide uppercase bg-muted text-muted-foreground px-1.5 py-0.5 rounded select-none">AI</span>
+              <h1 className="text-base font-semibold text-foreground">{t('chat.header.title', 'PD Chat')}</h1>
+              <span className="text-xs font-medium bg-muted text-muted-foreground px-1.5 py-0.5 rounded select-none">AI</span>
             </div>
             
             <div className="flex items-center gap-1">
@@ -1281,7 +1282,7 @@ export default function ChatPage() {
                 variant="ghost"
                 size="icon"
                 onClick={handleClose}
-                className="hidden md:flex"
+                className="flex"
                 data-testid="button-close-chat"
                 aria-label="Close chat"
               >
@@ -1296,7 +1297,13 @@ export default function ChatPage() {
             className="min-h-0 flex-1 px-4 sm:px-6 py-6 overflow-y-auto"
             style={{ minHeight: 0 }}
           >
-            <div className="max-w-2xl mx-auto space-y-3" role="log" aria-live="polite" aria-label="Chat messages">
+            <div className="chat-conversation w-full mx-auto space-y-5" role="log" aria-live="polite" aria-label="Chat messages">
+              {(state.caseInfo.state || state.caseInfo.charges?.length || state.caseInfo.courtStage) && (
+                <details className="chat-case-summary">
+                  <summary>{t('chat.casePanel.title', 'Your Case Info')}</summary>
+                  <CaseStatusPanel embedded caseInfo={state.caseInfo} className="w-full mt-3" />
+                </details>
+              )}
               {state.messages.length === 0 && !isTyping && (
                 <div className="rounded-xl border border-border bg-muted/30 px-4 py-4 text-sm text-muted-foreground" role="status">
                   {t('chat.loadingConversation', 'Starting your conversation…')}
@@ -1403,7 +1410,7 @@ export default function ChatPage() {
           </ScrollArea>
 
           <div className="chat-composer shrink-0 p-4 sm:p-6 border-t border-border bg-background">
-            <div className="max-w-2xl mx-auto">
+            <div className="w-full mx-auto">
               {captchaRequired && !state.isGenerating && (
                 <div className="flex justify-center mb-3">
                   <TurnstileCaptcha key={captchaAttempt} onVerify={setCaptchaToken} size="normal" />
@@ -1430,13 +1437,6 @@ export default function ChatPage() {
             </div>
           </div>
         </div>
-
-        <aside className="hidden lg:flex w-72 border-l border-border bg-muted/30 p-4">
-          <CaseStatusPanel 
-            caseInfo={state.caseInfo} 
-            className="w-full h-fit max-h-[calc(100vh-8rem)]"
-          />
-        </aside>
       </motion.div>
 
       {/* Export Warning Dialog */}
@@ -1480,5 +1480,6 @@ export default function ChatPage() {
       </AlertDialog>
 
     </div>
+    </MotionConfig>
   );
 }

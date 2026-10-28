@@ -1,3 +1,15 @@
+// Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
+const reviewedRightsCopy = {
+  "phoneDetail": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+  "callsDetail": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+  "pleaDetail": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+  "phoneShort": "Ask how to contact your lawyer confidentially; phone rules vary.",
+  "callsShort": "Ordinary calls may be recorded. Ask how to arrange a confidential attorney call.",
+  "pleaShort": "Plea options vary. Ask an attorney to explain them before entering a plea.",
+  "timingShort": "Ask when you will see a judge; timing varies by state and custody status.",
+  "californiaDetail": "California Penal Code § 851.5 provides for at least three completed calls immediately upon booking and, unless physically impossible, within three hours after arrest. Other states and facilities have different rules. Ask staff how to contact your lawyer confidentially."
+};
+
 export default {
   translation: {
   design: {
@@ -3087,14 +3099,14 @@ export default {
         "detailedExplanation": "The law guarantees your right to have a lawyer for criminal cases. If you cannot afford a lawyer, the court must appoint a public defender at no cost — this applies to any criminal case where you could go to jail. Invoke your right to counsel as soon as you are arrested and before answering any questions. At your first court appearance, tell the judge you need a court-appointed attorney."
       },
       "phoneCall": {
-        "title": "Right to a Phone Call",
-        "description": "Contact family, attorney, or bail bondsman after arrest",
-        "detailedExplanation": "After being arrested and booked, you have the right to make a reasonable number of phone calls to contact an attorney, family member, or bail bondsman. Police cannot listen to calls with your attorney due to attorney-client privilege, but they may monitor other calls. It's important to use this right wisely - contact your lawyer first if possible, and avoid discussing details of your case on any call that might be recorded."
+        "title": "Contacting an Attorney",
+        "description": "Access to counsel; phone rules vary by state and facility",
+        "detailedExplanation": `${reviewedRightsCopy.phoneDetail} ${reviewedRightsCopy.callsDetail}`
       },
       "knowCharges": {
         "title": "Right to Know Charges",
         "description": "Must be informed of accusations against you",
-        "detailedExplanation": "The law requires that you be formally told about the criminal charges against you, usually at your first court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, which laws they say you broke, and what punishments you could face. This information lets you and your lawyer prepare your defense and makes sure you can't be tried for crimes you weren't properly told about."
+        "detailedExplanation": "You have the right to be informed of the charges against you. An initial appearance often occurs within 24–72 hours, depending on the state and custody status; arraignment may occur later. This is not a universal deadline. Court paperwork and your attorney can confirm the schedule and applicable rules."
       }
     },
     "printableCards": {
@@ -4001,7 +4013,7 @@ export default {
         "rights": [
           "Right to remain silent",
           "Right to an attorney",
-          "Right to a phone call",
+          reviewedRightsCopy.phoneShort,
           "Right to be informed of charges"
         ]
       },
@@ -4132,6 +4144,10 @@ export default {
             {
               "name": "Release on Recognizance (ROR)",
               "description": "You're released with just a promise to return - no money required. This is for lower-risk defendants with strong community ties."
+            },
+            {
+              "name": "Unsecured Bond (Signature Bond)",
+              "description": "You sign a promise to pay a set amount if you fail to appear. No money is paid upfront. Unlike release on recognizance (ROR), an unsecured bond has a monetary amount attached. Availability and conditions vary by jurisdiction."
             }
           ]
         },
@@ -4163,7 +4179,7 @@ export default {
           "title": "What happens if you miss court?",
           "description": "Missing a court date is serious. Here's what can happen:",
           "consequences": [
-            "A warrant will be issued for your arrest",
+            "The court will typically issue a warrant for your arrest if you miss a required court appearance",
             "You'll lose your bail money (or the bondsman will look for you)",
             "You could face additional criminal charges for failure to appear",
             "It will be much harder to get bail again",
@@ -4354,13 +4370,13 @@ export default {
         "description": "After arrest, you are taken to a jail or police station for booking. This is the administrative process of recording your information. Your personal belongings will be taken and stored.",
         "rights": [
           "You still have the right to remain silent",
-          "You have the right to a phone call (usually within a few hours)",
+          reviewedRightsCopy.phoneShort,
           "You can request medical attention if needed",
           "Your belongings must be returned when you are released"
         ],
         "tips": [
           "You will be fingerprinted, photographed, and have personal property inventoried",
-          "The phone call is typically used to reach a family member or attorney. All jail calls except to attorneys are recorded",
+          reviewedRightsCopy.callsShort,
           "Conversations in the holding area are not protected by any privilege. Other detainees or staff may repeat what they hear",
           "Demeanor during booking is documented and can affect how subsequent proceedings unfold",
           "Ask when you will see a judge so you understand the timeline"
@@ -4493,19 +4509,19 @@ export default {
       "dont5": "Don't sign anything without reading it and consulting an attorney",
       "ifArrested": "If You Are Arrested",
       "arrested1": "Say clearly: \"I want a lawyer\" — then stop talking",
-      "arrested2": "You get at least one phone call — use it to call a lawyer or family",
+      "arrested2": reviewedRightsCopy.phoneShort,
       "arrested3": "Do not discuss your case with anyone except your attorney",
-      "arrested4": "You must be brought before a judge within 48-72 hours"
+      "arrested4": reviewedRightsCopy.timingShort
     },
     "arraignment": {
       "title": "Arraignment",
       "expect": "What to Expect",
       "expect1": "The judge reads the charges against you",
-      "expect2": "You enter a plea: guilty, not guilty, or no contest",
+      "expect2": "You enter a plea; available options vary by jurisdiction",
       "expect3": "Bail amount may be set or modified",
       "expect4": "If unrepresented, tell the judge you cannot afford an attorney — the court will appoint one",
       "say": "What to Say",
-      "say1": "Your three plea options are: Guilty, Not Guilty, or No Contest. Your attorney advises which to enter based on your case.",
+      "say1": reviewedRightsCopy.pleaShort,
       "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
       "say3": "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge",
       "dontSay": "Things to be aware of",
@@ -4813,7 +4829,7 @@ export default {
     "warnings": {
       "title": "Important Reminders",
       "jailCallsTitle": "Jail calls are recorded:",
-      "jailCallsText": "All calls from jail are recorded and can be used as evidence. The only protected calls are to an attorney through officially designated channels.",
+      "jailCallsText": reviewedRightsCopy.callsDetail,
       "interferenceTitle": "Witness contact and interference:",
       "interferenceText": "Contacting witnesses, tampering with evidence, or interfering with an active investigation can result in obstruction charges — for you as well as your loved one. Avoid any action that could be seen as attempting to influence the case."
     },
@@ -6232,8 +6248,8 @@ export default {
       "firstAppearanceStateFed": "Initial appearance before a federal magistrate judge 'without unnecessary delay.' Courts interpret this as within 48 hours."
     },
     "phoneCall": {
-      "warningTitle": "Every call is monitored and recorded, without exception.",
-      "warningBody": "Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members. The only protected calls are to your attorney, and only if that line is properly designated.",
+      "warningTitle": "Ordinary jail calls may be recorded.",
+      "warningBody": reviewedRightsCopy.callsDetail,
       "scriptTitle": "Sample script for your first call:",
       "neverSayTitle": "What never to say on any jail call",
       "neverSay": {
@@ -6269,7 +6285,7 @@ export default {
     "juvenile": {
       "title": "If the person arrested is under 18",
       "intro": "The juvenile justice system works differently in important ways:",
-      "bullet1": "Police must notify parents or guardians before questioning a juvenile. If you are a minor, ask for your parent immediately.",
+      "bullet1": "Some states require police to notify a parent or guardian when a juvenile is taken into custody, but this is not required everywhere. If you are a minor, you can ask for your parent immediately. Their presence can help, but whether police must wait for them depends on the law and circumstances. Asking for a parent is not the same as asking for a lawyer.",
       "bullet2": "You may be held in a juvenile facility rather than an adult jail, depending on the charges and your age.",
       "bullet3": "Juvenile court is separate from adult criminal court. The process, rights, and outcomes differ significantly.",
       "bullet4": "Do not waive your rights. Juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.",
@@ -6430,7 +6446,7 @@ export default {
         "do2": "Note the name of the facility, your booking number, and the charges. You'll need this information.",
         "do3": "Ask how family can find out where you are being held and how to contact you.",
         "do4": "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication. Document every request.",
-        "do5": "You have the right to at least one phone call. Timing varies by state. California sets a 3-hour limit; most other states require 'reasonable time.' Ask booking staff when you can make your call.",
+        "do5": reviewedRightsCopy.phoneShort,
         "do6": "If you don't speak English fluently, clearly say \"I need an interpreter.\" You have the right to one at no cost.",
         "do7": "Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions (\"where were you tonight?\") are interrogation.",
         "dont1": "Don't discuss your case with anyone: other detainees, intake officers, or jail staff.",
@@ -6441,7 +6457,7 @@ export default {
         "c1Title": "The Booking Process",
         "c1": "Booking involves fingerprints, photographs, property inventory, and the formal entry of charges. Cooperating with the booking process is a legal requirement.",
         "c2Title": "Phone Call",
-        "c2": "You typically have the right to at least one phone call after booking, though timing varies by state. All jail calls except to your attorney are recorded.",
+        "c2": reviewedRightsCopy.californiaDetail,
         "c3Title": "Medical Needs",
         "c3": "If you take medication or have a medical condition, tell booking staff in writing immediately. Jails are legally required to provide essential medication. Document every request.",
         "c4Title": "The Charging Paperwork",
@@ -6454,8 +6470,8 @@ export default {
       "step3": {
         "title": "Your First Phone Call",
         "timeframe": "During or shortly after booking",
-        "context": "You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Every subsequent call is recorded too. Use them wisely.",
-        "do1": "Call a family member or trusted friend, not your attorney (they likely won't answer an unfamiliar collect call).",
+        "context": reviewedRightsCopy.phoneDetail,
+        "do1": "Ask how to contact your attorney. A trusted family member or friend can also help locate counsel if the attorney cannot be reached directly.",
         "do2": "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a private attorney, or if cost is a concern, contact the public defender's office in the county where you were arrested to ask about the court-appointment process.",
         "do3": "Keep the call short and practical. Longer calls mean more recorded material.",
         "do4": "Ask family to write everything down and start finding legal help immediately.",
@@ -6467,7 +6483,7 @@ export default {
         "dont4": "Don't call the alleged victim, even to apologize or explain.",
         "dont5": "Don't speak in code. Law enforcement is trained to interpret coded language, and a jury can draw adverse inferences from evasive speech.",
         "c1Title": "Calls Are Recorded",
-        "c1": "All jail calls except to your attorney are recorded and monitored. Prosecutors can access and use anything said on a jail call as evidence. Keep this call short and practical.",
+        "c1": reviewedRightsCopy.callsDetail,
         "c2Title": "What to Share",
         "c2": "The most important things to share: the facility name, your booking number, the charges as written, and any court date given. The person you call needs this to find an attorney and track your case.",
         "c3Title": "Legal Representation",
@@ -6527,14 +6543,14 @@ export default {
       },
       "step6": {
         "title": "Arraignment: Your First Court Appearance",
-        "timeframe": "Within 48–72 hours (some states longer)",
+        "timeframe": "Often 24–72 hours; timing depends on the state and custody status",
         "context": "At arraignment, the charges are formally read and you are asked to enter a plea. This is a critical decision. Your attorney must guide you on this. The judge will also address bail at this hearing.",
-        "do1": "At arraignment, you will be asked to enter a plea. Three options exist: guilty, not guilty, and no contest. Each has different legal effects on your case. Your attorney must advise you on which to choose based on the facts of your situation.",
+        "do1": reviewedRightsCopy.pleaShort,
         "do2": "If you do not yet have an attorney, tell the judge. You can ask for more time to get one, or request a court-appointed attorney if you cannot afford one.",
         "do3": "Appear in clean, appropriate clothing if you have been released on bail.",
         "dont1": "Entering any plea without first speaking with an attorney means making a decision with permanent legal effects, without knowing all of your options.",
         "dont2": "Don't speak to the judge about the facts of your case.",
-        "dont3": "Don't miss this court date. A warrant will be issued for your arrest.",
+        "dont3": "If you miss a required court appearance, the court will typically issue a warrant for your arrest. Other consequences may also apply. If you cannot attend or missed a date, contact your attorney or the court promptly.",
         "whoCharges": {
           "heading": "Who is actually charging you?",
           "intro": "Police arrest. A separate office decides what charges to file and presses the case in court. This office is called the prosecutor. It is not the police department, and knowing which office it is affects your defense from day one.",
@@ -6549,7 +6565,7 @@ export default {
           "action": "Tell your attorney the exact name of the prosecuting office from your paperwork. If you don't have paperwork yet, they can look it up once they have your case number."
         },
         "c1Title": "Entering a Plea",
-        "c1": "At arraignment, the charges are formally read and you are asked to enter a plea. Three options are available: guilty, not guilty, and no contest. Each has different legal effects on your case. Your attorney must advise you on which to choose based on the facts of your situation.",
+        "c1": reviewedRightsCopy.pleaDetail,
         "c2Title": "If Unrepresented",
         "c2": "If you appear without an attorney, tell the judge. You can ask for more time to get one, or request court-appointed counsel at this hearing.",
         "c3Title": "What Arraignment Is",
@@ -7471,7 +7487,7 @@ export default {
         "subhead": "The decisions made in the first day set the course of the entire case. This guide walks you through every step from the moment of arrest to your first court appearance.",
         "bullet1": "7-step guide: arrest, booking, phone calls, bail, counsel, arraignment",
         "bullet2": "State-by-state inmate locator — all 50 states plus federal facilities",
-        "bullet3": "Scripts for your one phone call from jail",
+        "bullet3": "Scripts for calls from jail",
         "bullet4": "When your right to a lawyer actually begins, by state",
         "cta": "Open First 24 Hours"
       },

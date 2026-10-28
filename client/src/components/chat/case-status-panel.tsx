@@ -8,9 +8,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 interface CaseStatusPanelProps {
   caseInfo: CaseInfo;
   className?: string;
+  embedded?: boolean;
 }
 
-export function CaseStatusPanel({ caseInfo, className }: CaseStatusPanelProps) {
+export function CaseStatusPanel({ caseInfo, className, embedded = false }: CaseStatusPanelProps) {
   const { t } = useTranslation();
   
   const getStageLabel = (stage: string) => {
@@ -31,16 +32,16 @@ export function CaseStatusPanel({ caseInfo, className }: CaseStatusPanelProps) {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       className={cn(
-        "bg-gradient-to-b from-primary/5 to-transparent rounded-xl border border-border/50 overflow-hidden",
+        !embedded && "bg-gradient-to-b from-primary/5 to-transparent rounded-xl border border-border/50 overflow-hidden",
         className
       )}
     >
-      <div className="p-4 border-b border-border/50">
+      {!embedded && <div className="p-4 border-b border-border/50">
         <h3 className="font-semibold text-sm text-foreground">{t('chat.casePanel.title', 'Your Case Info')}</h3>
-      </div>
+      </div>}
 
       <ScrollArea className="h-[calc(100%-52px)]">
-        <div className="p-4 space-y-4">
+        <div className={embedded ? "grid gap-4 sm:grid-cols-2 lg:grid-cols-3" : "p-4 space-y-4"}>
           {caseInfo.stateName && (
             <InfoRow 
               icon={MapPin} 

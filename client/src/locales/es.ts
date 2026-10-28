@@ -1,3 +1,15 @@
+// Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
+const reviewedRightsCopy = {
+  "phoneDetail": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+  "callsDetail": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+  "pleaDetail": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+  "phoneShort": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían.",
+  "callsShort": "Las llamadas ordinarias pueden grabarse. Pregunte cómo organizar una llamada confidencial con su abogado.",
+  "pleaShort": "Las opciones de declaración varían. Pida a un abogado que se las explique antes de declarar.",
+  "timingShort": "Pregunte cuándo verá a un juez; el plazo varía según el estado y su situación de custodia.",
+  "californiaDetail": "El Código Penal de California § 851.5 establece al menos tres llamadas completadas inmediatamente después del registro y, salvo que sea físicamente imposible, dentro de las tres horas posteriores al arresto. Otros estados y centros tienen reglas diferentes. Pregunte cómo contactar confidencialmente a su abogado."
+};
+
 export default {
   translation: {
   design: {
@@ -3089,14 +3101,14 @@ export default {
         "detailedExplanation": "La Sexta Enmienda garantiza su derecho a asesoría legal en procedimientos criminales. Si no puede pagar un abogado, el tribunal debe asignarle un defensor público sin costo — esto aplica a cualquier caso criminal donde la cárcel sea una pena posible. Invoque su derecho a un abogado inmediatamente al ser arrestado y antes de responder cualquier pregunta. En su primera comparecencia, dígale al juez que necesita un abogado de oficio."
       },
       "phoneCall": {
-        "title": "Derecho a una Llamada Telefónica",
-        "description": "Contactar a familia, abogado o fianza después del arresto",
-        "detailedExplanation": "Después de ser arrestado y procesado, tiene derecho a hacer un número razonable de llamadas telefónicas para contactar a un abogado, familiar o agente de fianzas. La policía no puede escuchar llamadas con su abogado debido al privilegio abogado-cliente, pero pueden monitorear otras llamadas. Es importante usar este derecho sabiamente - contacte a su abogado primero si es posible, y evite discutir detalles de su caso en cualquier llamada que pueda ser grabada."
+        "title": "Contacto con un abogado",
+        "description": "Acceso a un abogado; las reglas telefónicas varían según el estado y el centro",
+        "detailedExplanation": `${reviewedRightsCopy.phoneDetail} ${reviewedRightsCopy.callsDetail}`
       },
       "knowCharges": {
         "title": "Derecho a Conocer los Cargos",
         "description": "Debe ser informado de las acusaciones en su contra",
-        "detailedExplanation": "La Sexta Enmienda requiere que sea informado formalmente de los cargos criminales en su contra, típicamente en su lectura de cargos o comparecencia inicial dentro de 48-72 horas del arresto. Tiene derecho a saber exactamente de qué crímenes se le acusa, las leyes específicas que supuestamente violó, y las penas potenciales que enfrenta. Esta información le permite a usted y a su abogado preparar una estrategia de defensa apropiada y asegura que no pueda ser juzgado por crímenes de los que no fue debidamente notificado."
+        "detailedExplanation": "Tiene derecho a conocer los cargos en su contra. La primera comparecencia suele ocurrir entre 24 y 72 horas, según el estado y si está bajo custodia; la lectura de cargos puede ocurrir después. No es un plazo universal. Los documentos del tribunal y su abogado pueden confirmar el calendario y las reglas aplicables."
       }
     },
     "printableCards": {
@@ -4003,7 +4015,7 @@ export default {
         "rights": [
           "Derecho a permanecer en silencio",
           "Derecho a un abogado",
-          "Derecho a una llamada telefónica",
+          reviewedRightsCopy.phoneShort,
           "Derecho a ser informado de los cargos"
         ]
       },
@@ -4134,6 +4146,10 @@ export default {
             {
               "name": "Liberación Bajo Palabra (ROR)",
               "description": "Es liberado solo con una promesa de regresar - no se requiere dinero. Esto es para acusados de bajo riesgo con fuertes lazos comunitarios."
+            },
+            {
+              "name": "Fianza no garantizada (por firma)",
+              "description": "Firma una promesa de pagar una cantidad determinada si no comparece. No paga dinero por adelantado. A diferencia de la libertad bajo palabra (ROR), esta fianza tiene un importe monetario asignado. La disponibilidad y las condiciones varían según la jurisdicción."
             }
           ]
         },
@@ -4165,7 +4181,7 @@ export default {
           "title": "¿Qué pasa si falta a la corte?",
           "description": "Faltar a una fecha de corte es serio. Esto es lo que puede pasar:",
           "consequences": [
-            "Se emitirá una orden de arresto en su contra",
+            "El tribunal normalmente emitirá una orden de arresto si falta a una comparecencia obligatoria",
             "Perderá su dinero de fianza (o el fiador lo buscará)",
             "Podría enfrentar cargos criminales adicionales por no comparecer",
             "Será mucho más difícil obtener fianza nuevamente",
@@ -4356,13 +4372,13 @@ export default {
         "description": "Después del arresto, lo llevan a una cárcel o estación de policía para el registro. Este es el proceso administrativo de registrar su información. Sus pertenencias personales serán tomadas y almacenadas.",
         "rights": [
           "Todavía tiene derecho a guardar silencio",
-          "Tiene derecho a una llamada telefónica (generalmente dentro de unas horas)",
+          reviewedRightsCopy.phoneShort,
           "Puede solicitar atención médica si la necesita",
           "Sus pertenencias deben ser devueltas cuando sea liberado"
         ],
         "tips": [
           "Le tomarán huellas dactilares y fotografías",
-          "Use su llamada telefónica para contactar a un abogado o familiar",
+          reviewedRightsCopy.callsShort,
           "No discuta su caso con nadie en el área de detención",
           "Sea cortés con los oficiales de registro — no perjudica su caso",
           "Pregunte cuándo verá a un juez"
@@ -4495,19 +4511,19 @@ export default {
       "dont5": "No firme nada sin leerlo y consultar a un abogado",
       "ifArrested": "Si lo Arrestan",
       "arrested1": "Diga claramente: \"Quiero un abogado\" — luego deje de hablar",
-      "arrested2": "Tiene al menos una llamada telefónica — úsela para llamar a un abogado o familiar",
+      "arrested2": reviewedRightsCopy.phoneShort,
       "arrested3": "No discuta su caso con nadie excepto su abogado",
-      "arrested4": "Deben llevarlo ante un juez dentro de 48-72 horas"
+      "arrested4": reviewedRightsCopy.timingShort
     },
     "arraignment": {
       "title": "Lectura de Cargos",
       "expect": "Qué Esperar",
       "expect1": "El juez lee los cargos en su contra",
-      "expect2": "Usted declara: culpable, no culpable o nolo contendere",
+      "expect2": "Presenta una declaración; las opciones varían según la jurisdicción",
       "expect3": "Se puede establecer o modificar el monto de la fianza",
       "expect4": "Si no tiene abogado, dígale al juez que no puede pagar uno — el tribunal le asignará uno",
       "say": "Qué Decir",
-      "say1": "Sus tres opciones de declaración son: Culpable, No Culpable o Nolo Contendere. Su abogado le aconseja cuál introducir según su caso.",
+      "say1": reviewedRightsCopy.pleaShort,
       "say2": "\"Me gustaría un abogado designado por la corte\" — si no puede pagar uno",
       "say3": "\"Sí, Su Señoría\" / \"No, Su Señoría\" — al dirigirse al juez",
       "dontSay": "No Diga",
@@ -4815,7 +4831,7 @@ export default {
     "warnings": {
       "title": "Recordatorios Importantes",
       "jailCallsTitle": "Las llamadas desde la cárcel son grabadas:",
-      "jailCallsText": "Todas las llamadas desde la cárcel se graban y pueden usarse como evidencia. Las únicas llamadas protegidas son las realizadas al abogado a través de canales oficialmente designados.",
+      "jailCallsText": reviewedRightsCopy.callsDetail,
       "interferenceTitle": "Contacto con testigos e interferencia:",
       "interferenceText": "Contactar testigos, manipular evidencia o interferir con una investigación activa puede resultar en cargos de obstrucción — tanto para usted como para su ser querido. Evite cualquier acción que pueda interpretarse como un intento de influir en el caso."
     },
@@ -6238,8 +6254,8 @@ export default {
       "firstAppearanceStateFed": "Comparecencia inicial ante un juez magistrado federal 'sin demoras innecesarias' — los tribunales lo interpretan como dentro de las 48 horas."
     },
     "phoneCall": {
-      "warningTitle": "Todas las llamadas son monitoreadas y grabadas — sin excepción.",
-      "warningBody": "Los fiscales han usado llamadas de cárcel como evidencia clave en innumerables casos, incluyendo declaraciones hechas a familiares. Las únicas llamadas protegidas son las que hace a su abogado — y solo si esa línea está debidamente registrada.",
+      "warningTitle": "Las llamadas ordinarias desde la cárcel pueden grabarse.",
+      "warningBody": reviewedRightsCopy.callsDetail,
       "scriptTitle": "Guión de ejemplo para su primera llamada:",
       "neverSayTitle": "Lo que nunca debe decir — en ninguna llamada de cárcel",
       "neverSay": {
@@ -6275,7 +6291,7 @@ export default {
     "juvenile": {
       "title": "Si la persona arrestada tiene menos de 18 años",
       "intro": "El sistema de justicia juvenil funciona de manera diferente en aspectos importantes:",
-      "bullet1": "La policía debe notificar a los padres o tutores antes de interrogar a un menor. Si usted es menor de edad, pida a sus padres de inmediato.",
+      "bullet1": "Algunos estados exigen que la policía notifique a un padre o tutor cuando detiene a un menor, pero no es obligatorio en todas partes. Si es menor de edad, puede pedir de inmediato que contacten a su padre, madre o tutor. Su presencia puede ayudar, pero la obligación de esperar depende de la ley y las circunstancias. Pedir a un familiar no equivale a pedir un abogado.",
       "bullet2": "Puede ser detenido en un centro juvenil en lugar de una cárcel de adultos, según los cargos y su edad.",
       "bullet3": "El tribunal juvenil es independiente del tribunal penal para adultos. El proceso, los derechos y los resultados difieren significativamente.",
       "bullet4": "No renuncie a sus derechos. Los menores son especialmente vulnerables durante los interrogatorios. Invoque su derecho a guardar silencio y pida a sus padres y un abogado antes de responder cualquier pregunta.",
@@ -6436,7 +6452,7 @@ export default {
         "do2": "Anote el nombre del centro, su número de fichaje y los cargos. Necesitará esta información.",
         "do3": "Pregunte cómo puede enterarse su familia de dónde está detenido y cómo pueden contactarle.",
         "do4": "Si toma medicación o tiene algún problema de salud, informe al personal de fichaje POR ESCRITO de inmediato y pida hablar con el personal médico. Los centros de detención están legalmente obligados a proporcionar medicación esencial. Documente cada solicitud.",
-        "do5": "Tiene derecho a al menos una llamada telefónica. El plazo varía según el estado: California establece un límite de 3 horas; la mayoría de los demás estados exigen un «tiempo razonable». Pregunte al personal cuándo puede hacer su llamada.",
+        "do5": reviewedRightsCopy.phoneShort,
         "do6": "Si no habla inglés con fluidez, diga claramente «Necesito un intérprete». Tiene derecho a uno sin costo alguno.",
         "do7": "Invoque su derecho a guardar silencio para cualquier cosa que vaya más allá de su nombre y fecha de nacimiento. Las preguntas de ingreso («¿dónde estaba anoche?») son interrogación.",
         "dont1": "No hable de su caso con nadie: otros detenidos, funcionarios de admisión o personal carcelario.",
@@ -6447,7 +6463,7 @@ export default {
         "c1Title": "El Proceso de Fichaje",
         "c1": "El fichaje incluye huellas dactilares, fotografías, inventario de pertenencias y el registro formal de los cargos. Cooperar con el proceso de fichaje es un requisito legal.",
         "c2Title": "Llamada Telefónica",
-        "c2": "Generalmente tiene derecho a al menos una llamada telefónica después del fichaje, aunque el momento varía según el estado. Todas las llamadas desde la cárcel excepto las realizadas a su abogado son grabadas.",
+        "c2": reviewedRightsCopy.californiaDetail,
         "c3Title": "Necesidades Médicas",
         "c3": "Si toma medicación o tiene una condición médica, informe al personal de fichaje por escrito de inmediato. Las cárceles están legalmente obligadas a proporcionar medicación esencial — documente cada solicitud.",
         "c4Title": "El Papeleo de la Acusación",
@@ -6460,8 +6476,8 @@ export default {
       "step3": {
         "title": "Su Primera Llamada Telefónica",
         "timeframe": "Durante o poco después del fichaje",
-        "context": "Normalmente se le permitirá al menos una llamada telefónica. Es casi seguro que esta llamada está siendo grabada. Todas las llamadas posteriores también se graban. Úselas con prudencia.",
-        "do1": "Llame a un familiar o amigo de confianza, no a su abogado (probablemente no contestará una llamada de cobro revertido desconocida).",
+        "context": reviewedRightsCopy.phoneDetail,
+        "do1": "Pregunte cómo contactar a su abogado. Un familiar o amigo de confianza también puede ayudarle a localizar un abogado si no logra comunicarse directamente.",
         "do2": "Dígales: (1) el nombre del centro, (2) su número de fichaje, (3) los cargos si los conoce, (4) pídales que busquen un abogado privado, o si el costo es un problema, que llamen a la oficina del defensor público del condado donde fue arrestado para preguntar sobre el proceso de nombramiento.",
         "do3": "Mantenga la llamada corta y práctica. Las llamadas más largas suponen más material grabado.",
         "do4": "Pida a su familia que anote todo y comience a buscar ayuda legal de inmediato.",
@@ -6473,7 +6489,7 @@ export default {
         "dont4": "No llame a la supuesta víctima, ni siquiera para disculparse o explicarse.",
         "dont5": "No hable en clave. Las fuerzas del orden están entrenadas para interpretar el lenguaje codificado, y un jurado puede extraer inferencias desfavorables de un discurso evasivo.",
         "c1Title": "Las Llamadas Son Grabadas",
-        "c1": "Todas las llamadas desde la cárcel excepto las realizadas a su abogado son grabadas y monitoreadas. Los fiscales pueden acceder y usar lo dicho en una llamada como prueba. Mantenga esta llamada breve y práctica.",
+        "c1": reviewedRightsCopy.callsDetail,
         "c2Title": "Qué Compartir",
         "c2": "Lo más importante que debe compartir: el nombre del centro, su número de fichaje, los cargos tal como están escritos y cualquier fecha de tribunal asignada. La persona a quien llame necesita esto para encontrar un abogado y dar seguimiento a su caso.",
         "c3Title": "Representación Legal",
@@ -6533,16 +6549,16 @@ export default {
       },
       "step6": {
         "title": "Lectura de Cargos: Su Primera Comparecencia ante el Tribunal",
-        "timeframe": "Dentro de las 48–72 horas (algunos estados más tiempo)",
+        "timeframe": "A menudo entre 24 y 72 horas; depende del estado y de si está bajo custodia",
         "context": "En la lectura de cargos, se le leen formalmente los cargos y se le pide que introduzca una declaración. Esta es una decisión crítica que su abogado debe guiarle. El juez también abordará la fianza en esta audiencia.",
-        "do1": "En la lectura de cargos, se le pedirá que introduzca una declaración. Existen tres opciones: culpable, no culpable y nolo contendere. Cada una tiene efectos legales diferentes en su caso. Su abogado debe aconsejarle cuál elegir según los hechos de su situación.",
+        "do1": reviewedRightsCopy.pleaShort,
         "do2": "Si aún no tiene abogado, informe al juez. Puede pedir más tiempo para conseguir uno, o solicitar un abogado de oficio si no puede permitírselo.",
         "do3": "Vista ropa limpia y apropiada si ha sido puesto en libertad bajo fianza.",
         "dont1": "Introducir cualquier declaración sin haber hablado primero con un abogado significa tomar una decisión con efectos legales permanentes, sin conocer todas sus opciones.",
         "dont2": "No hable con el juez sobre los hechos de su caso.",
-        "dont3": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted.",
+        "dont3": "Si falta a una comparecencia obligatoria, el tribunal normalmente emitirá una orden de arresto. También puede haber otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal.",
         "c1Title": "Introducir una Declaración",
-        "c1": "En la lectura de cargos, los cargos se leen formalmente y se le pide que introduzca una declaración. Tres opciones están disponibles: culpable, no culpable y nolo contendere. Cada una tiene efectos legales diferentes en su caso. Su abogado debe aconsejarle cuál elegir según los hechos de su situación.",
+        "c1": reviewedRightsCopy.pleaDetail,
         "c2Title": "Sin Representación",
         "c2": "Si comparece sin abogado, informe al juez. Puede pedir más tiempo para conseguir uno, o solicitar abogado de oficio en esta audiencia.",
         "c3Title": "Qué Es la Lectura de Cargos",
@@ -7477,7 +7493,7 @@ export default {
         "subhead": "Las decisiones tomadas en el primer día marcan el curso de todo el caso. Esta guía lo lleva por cada paso desde el momento del arresto hasta su primera comparecencia en el tribunal.",
         "bullet1": "Guía de 7 pasos: arresto, procesamiento, llamadas, fianza, abogado, audiencia",
         "bullet2": "Localizador de reclusos por estado — los 50 estados más instalaciones federales",
-        "bullet3": "Guiones para su única llamada telefónica desde la cárcel",
+        "bullet3": "Guiones para llamadas desde la cárcel",
         "bullet4": "Cuándo comienza realmente su derecho a un abogado, según el estado",
         "cta": "Abrir Primeras 24 Horas"
       },
