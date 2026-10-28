@@ -1586,7 +1586,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   className="text-xs shrink-0"
                   data-testid={`badge-legal-information-${index}`}
                 >
-                  {actionItem.urgency}
+                  {t(({ urgent: 'design.guidanceUrgencyUrgent', high: 'design.guidanceUrgencyHigh', medium: 'design.guidanceUrgencyMedium', low: 'design.guidanceUrgencyLow' } as Record<string, string>)[actionItem.urgency] ?? 'design.guidanceUrgencyGeneral')}
                 </Badge>
               </li>
             ))}

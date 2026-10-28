@@ -5,7 +5,7 @@ const guidance = {
   overview: 'Design fixture: a complete roadmap for testing presentation.',
   caseData: { jurisdiction: 'OR', caseStage: 'pretrial', custodyStatus: 'released', hasAttorney: false, charges: '' },
   generatedAt: '2026-10-27T12:00:00Z',
-  immediateActions: [{ action: 'Fixture practical step', priority: 'high', treatment: 'practical' }],
+  immediateActions: [{ action: 'Fixture practical step', urgency: 'high', treatment: 'practical' }, ...['urgent', 'high', 'medium', 'low'].map(urgency => ({ action: `Fixture legal information ${urgency}`, urgency, treatment: 'legal-information' }))],
   criticalAlerts: ['Fixture critical warning'], warnings: ['Fixture caution'],
   rights: ['Fixture rights reminder'],
   resources: [{ type: 'Fixture resource', description: 'Fixture resource description', contact: 'https://example.org' }],
@@ -48,6 +48,8 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await expect(dashboard).toBeVisible();
     await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
     await expect(dashboard).not.toContainText('design.guidance');
+    const urgencyLabels = { en: ['Urgent', 'High priority', 'Medium priority', 'Low priority'], es: ['Urgente', 'Prioridad alta', 'Prioridad media', 'Prioridad baja'], zh: ['紧急', '高优先级', '中优先级', '低优先级'] };
+    for (const [index, label] of urgencyLabels[language as keyof typeof urgencyLabels].entries()) await expect(page.getByTestId(`badge-legal-information-${index}`)).toHaveText(label);
     const titles = { en: 'Case Roadmap: OR', es: 'Hoja de ruta del caso: OR', zh: '案件路线图：OR' };
     await expect(dashboard.getByRole('heading', { level: 1 })).toHaveText(titles[language as keyof typeof titles]);
     const notice = page.getByTestId('guidance-privacy-notice');

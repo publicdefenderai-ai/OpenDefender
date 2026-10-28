@@ -1,6 +1,12 @@
 export default {
   translation: {
   design: {
+    guidanceUrgencyUrgent: "Urgent",
+    guidanceUrgencyHigh: "High priority",
+    guidanceUrgencyMedium: "Medium priority",
+    guidanceUrgencyLow: "Low priority",
+    guidanceUrgencyGeneral: "Priority",
+
     guidanceRoadmapTitle: "Case Roadmap: {{jurisdiction}}",
     guidanceChargeTitle: "Guidance: {{name}} in {{jurisdiction}}",
 

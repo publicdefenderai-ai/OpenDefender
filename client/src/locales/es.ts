@@ -1,6 +1,12 @@
 export default {
   translation: {
   design: {
+    guidanceUrgencyUrgent: "Urgente",
+    guidanceUrgencyHigh: "Prioridad alta",
+    guidanceUrgencyMedium: "Prioridad media",
+    guidanceUrgencyLow: "Prioridad baja",
+    guidanceUrgencyGeneral: "Prioridad",
+
     guidanceRoadmapTitle: "Hoja de ruta del caso: {{jurisdiction}}",
     guidanceChargeTitle: "Orientación: {{name}} en {{jurisdiction}}",
 

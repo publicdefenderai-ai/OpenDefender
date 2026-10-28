@@ -1,6 +1,12 @@
 export default {
   translation: {
   design: {
+    guidanceUrgencyUrgent: "紧急",
+    guidanceUrgencyHigh: "高优先级",
+    guidanceUrgencyMedium: "中优先级",
+    guidanceUrgencyLow: "低优先级",
+    guidanceUrgencyGeneral: "优先级",
+
     guidanceRoadmapTitle: "案件路线图：{{jurisdiction}}",
     guidanceChargeTitle: "案件指引：{{name}}（{{jurisdiction}}）",
 
