@@ -1,0 +1,50 @@
+# L03/L04 review implementation
+
+Source: Shahab Asghar's saved `opendefender-legal-review-2026-10-28.html`, review dated October 27, 2026. The exact notes and before/after changes are preserved in `l03-l04-review-record.json`. This branch started from merged PR 64 and has been synchronized with main after PR 65.
+
+## Incorporated
+
+- **L03.1:** Update both the live Know Your Rights search tab and the legacy Search & Seizure source (the old URL redirects). Explain the automobile exception without implying a reduced probable-cause standard; distinguish a search incident to arrest from a general vehicle search. Qualify warrant inspection and make speaking through the door an option. Explain that strip-search rules depend on jurisdiction and setting. Separate authority to search a phone from compelled biometric/passcode unlocking, including testimonial acts, the circuit split and foregone-conclusion doctrine. Remove contradictory blanket unlocking instructions.
+- **L03.2:** Replace universal parental-notification language on First 24 Hours and in the juvenile counsel scenario. Distinguish requesting a parent from invoking counsel.
+- **L03.3:** Qualify phone access and remove assurances that every attorney call is unrecorded. Propagate the corrections through Rights, First 24 Hours, timeline, quick-reference cards and the overlapping Friends & Family warning. Replace the universal 48–72-hour assertion with a qualified 24–72-hour overview that distinguishes initial appearance from arraignment. Add jurisdiction-specific insanity pleas without presenting them as a universal option. Keep the bail-entitlement and discovery material the reviewer accepted.
+- **L04.1:** Add unsecured/signature bonds as a fifth type, distinguished from ROR; remove automatic-warrant wording in the bail guide and First 24 Hours.
+- **L04.2–3:** Preserve the plea statistics, immigration consequences and plea-agreement material approved as written. Approval remains limited to the captured English text and reviewed scope.
+- Propagate edited locale entries into Spanish and Chinese. The existing search-and-seizure/counsel pages remain English-only; this batch does not claim full multilingual coverage.
+
+## Wording differences returned for review
+
+1. **Missed court (owner follow-up incorporated):** The owner requested stronger wording after reviewing “can issue.” The bail guide now says “The court will typically issue a warrant for your arrest if you miss a required court appearance,” with matching First 24 Hours and Spanish/Chinese updates. This replaces the initial implementation wording while avoiding an absolute guarantee.
+2. **Attorney calls:** Did not say authorities are always allowed to record them or that every statement is categorically inadmissible. Privilege, monitoring rules, waiver and remedies are distinct. The copy directs users to a designated confidential channel; [28 CFR 540.102](https://www.law.cornell.edu/cfr/text/28/540.102) expressly prohibits monitoring properly placed attorney calls in federal facilities.
+3. **Juveniles:** Preserve the ability to ask for a parent, while avoiding a promise that police must stop or wait. Requesting a parent is not necessarily a request for counsel. See [DOJ juvenile-interrogation guidance](https://www.justice.gov/archives/jm/criminal-resource-manual-44-questioning-juvenile-custody) and [Fare v. Michael C.](https://www.law.cornell.edu/supremecourt/text/442/707).
+4. **Vehicles:** Fewer warrant protections does not mean that the automobile exception lowers probable cause. Search incident to arrest has its own limits. [Arizona v. Gant](https://www.law.cornell.edu/supremecourt/text/07-542).
+5. **Warrant inspection:** A warrant need not invariably be presented before the search, independently of sealing or no-knock issues. [United States v. Grubbs](https://www.govinfo.gov/app/details/USREPORTS-547/USREPORTS-547-90).
+6. **Strip searches:** The cited Third Circuit decision addresses searches incident to arrest outside jails/prisons, not every custodial strip search. The new language preserves that boundary. [Beatty v. Gardner, No. 25-2860](https://www2.ca3.uscourts.gov/opinarch/252860p.pdf).
+7. **Unlocking:** The distinction is between testimonial communication and physical acts in context, not merely whether police have a warrant. [United States v. Payne](https://cdn.ca9.uscourts.gov/datastore/opinions/2024/04/17/22-50262.pdf) and the [Ninth Circuit digital-search guide discussing Brown](https://cdn.ca9.uscourts.gov/datastore/district/MJEB_guide.pdf) illustrate the split. The copy describes the foregone-conclusion doctrine as disputed, not automatic admissibility.
+8. **Timing/pleas:** 24–72 hours is a qualified overview, not a universal arraignment deadline or a replacement for the separate prompt probable-cause determination rule. [California court overview](https://selfhelp.courts.ca.gov/criminal-court/overview/arraignment) and [Colorado Rule 11](https://www.coloradojudicial.gov/sites/default/files/2024-06/Supp%20RULE%2011%20PLEAS.pdf) illustrate timing and plea variation.
+9. **Unsecured bonds:** No upfront deposit; a specified potential payment distinguishes this from recognizance. [18 USC 3142(b)](https://www.law.cornell.edu/uscode/text/18/3142). Local conditions still control.
+
+## Review status and remaining work
+
+The updated workbook contains the original saved decisions plus an implementation appendix with exact replacement text, translations and the differences above. Original captured material remains labeled historical; the appendix is the current proposed copy. Nothing is marked attorney-approved merely because it was implemented.
+
+- [ ] Reviewer accepts or adjusts the implementation wording differences above.
+- [ ] Independent legal/translation review of Spanish and Chinese propagation, if required before multilingual signoff.
+- [ ] Carry these content overrides into future bail, quick-reference, counsel and search design migrations. Original design HTML snapshots are not amended legal authority.
+- [ ] L01/L02 follow-ups remain separate, including the broader First 24 Hours tone/state-timing review. This targeted pass is not a content overhaul or full-page signoff.
+
+No changes to AI questionnaires, prompts, generated output logic, provider terms, or source-eligibility gates. No merge or production deployment is included in this task.
+
+## Validation completed
+
+Typecheck and production build passed. All five focused release-config browser checks passed: translated print cards/bail/arraignment in English, Spanish and Chinese; the live Rights search scenarios; and the expandable juvenile counsel scenario. The new spec is included in the release allowlist. The approved plea-guide subtrees are unchanged across all three locales. The self-contained workbook opened without script errors, rendered the new supplements, and retained the saved L03 notes and L04 approval decisions. All 45 saved fields were preserved byte-for-value through JSON comparison. Full CI and a nationwide legal audit are not claimed.
+
+
+## Final review corrections (October 28)
+
+Short cards and timeline lists now use concise phone-access, call-privacy, hearing-timing and plea summaries. The full qualifications remain in Rights and First 24 Hours detailed sections. Each locale has one maintained set of shared short/detail strings, eliminating repeated paragraph copies. The quick-reference phone, timing and plea entries no longer contain superseded inline fallback assertions. The overlooked absolute phone-monitoring warning heading is also corrected in all three locales.
+
+The detailed booking explanation retains California's specific rule: at least three completed calls immediately upon booking and, unless physically impossible, within three hours after arrest. Other jurisdictions differ. Sources: [California Penal Code § 851.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=851.5.&lawCode=PEN), [chaptered statutory text](https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_2001-2050/ab_2015_bill_20120930_chaptered.html), and [California City Police policy manual](https://www.californiacity-ca.gov/CC/images/Policy_Manual_2024.pdf). The current legislature endpoint returned 403 during verification; the chaptered text and agency manual corroborate the timing and exception. This does not endorse a universal three-hour rule or the unsupported claim that most other states use one particular standard.
+
+The owner authorized merging PRs 66 and 67 after these corrections. This is merge authorization, not a new nationwide legal audit or independent translation signoff. Earlier before/after records are historical; the final-review supplement records the current changed values.
+
+Final validation: typecheck and production build passed after synchronizing with main. All five focused release-config browser checks passed, including compact print summaries in all three locales, generated print PDFs, the California booking detail, preserved detailed plea qualifications, bail options and counsel/search scenarios. Full CI is not claimed.

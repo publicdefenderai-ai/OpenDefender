@@ -59,6 +59,7 @@ const testProcess = spawn(
     "--config",
     "playwright.release.config.ts",
     "tests/e2e/navigation-accessibility.spec.ts",
+    "tests/e2e/legal-review-l03-l04.spec.ts",
     "tests/e2e/design-fidelity.spec.ts",
     "tests/e2e/urgent-help-design.spec.ts",
     "tests/e2e/urgent-guides.spec.ts",
