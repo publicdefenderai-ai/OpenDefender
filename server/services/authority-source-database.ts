@@ -13,6 +13,7 @@ import { errLog, opsLog } from "../utils/dev-logger";
 import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
 import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
 import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
+import { isFloridaReviewedSourceFresh, FLORIDA_REVIEWED_SOURCE_RECORDS } from "../data/florida-reviewed-source-records";
 import sourceChangeHolds from "@shared/ohio-source-change-holds.json";
 import commonUpdates from "@shared/ohio-common-charge-updates.json";
 import type {
@@ -235,6 +236,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "OH" && !isOhioReviewedSourceFresh()) {
     for (const source of OHIO_REVIEWED_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaReviewedSourceFresh()) {
+    for (const source of FLORIDA_REVIEWED_SOURCE_RECORDS) selectable.delete(source.chargeId);
   }
   if (selectable.size === 0) return selectable;
 

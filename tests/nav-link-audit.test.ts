@@ -44,6 +44,7 @@ function extractPaths(src: string): string[] {
   // Patterns we care about (all must be literal strings, not template literals):
   //   href="/…"     link="/…"     href: "/…"     link: "/…"
   const patterns = [
+    /(?:\[|,)\s*"(\/[^"#?]*)(?:[#?][^"]*)?"\s*[,\]]/, // route/label tuple navigation
     /\bhref="(\/[^"#?]*)(?:[#?][^"]*)?"/, // href="…" (strip hash/query)
     /\blink="(\/[^"#?]*)(?:[#?][^"]*)?"/, // link="…"
     /\bhref:\s*"(\/[^"#?]*)(?:[#?][^"]*)?"/,

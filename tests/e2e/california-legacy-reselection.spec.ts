@@ -1,4 +1,40 @@
 import { expect, test, type Page } from "@playwright/test";
+import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
+
+// Recovery tests stub guidance responses; keep service availability deterministic too.
+test.beforeEach(async ({ page }) => {
+  await page.route('**/api/ai/status', route => route.fulfill({ json: { available: true } }));
+  // This suite tests saved-answer recovery, not live authority activation.
+  // Production correctly withholds stale California evidence. Provide only the
+  // current canonical records these UI scenarios need, without bypassing any
+  // production eligibility checks or making legacy IDs selectable.
+  const ids = [...new Set([
+    validChargeId,
+    ...multiSupportedLegacyCases.flatMap(entry => [...entry.canonicalIds]),
+    ...additionalSupportedLegacyCases.flatMap(entry => [...entry.canonicalIds]),
+  ])];
+  // tsx handles the catalog's JSON imports; Playwright's ESM loader does not.
+  const charges = JSON.parse(execFileSync(process.execPath, [
+    '--import', 'tsx', '--input-type=module', '-e',
+    'import { getChargeById } from "./shared/criminal-charges.ts"; console.log(JSON.stringify(JSON.parse(process.argv[1]).map(id => getChargeById(id))))',
+    JSON.stringify(ids),
+  ], { encoding: 'utf8' })) as Array<{ id: string }>;
+  expect(charges.every(Boolean), 'Every recovery fixture must have a canonical record').toBe(true);
+  expect(charges.map(charge => charge.id)).toEqual(ids);
+  const snapshot = createHash('sha256').update(JSON.stringify(charges)).digest('hex');
+  await page.route('**/api/criminal-charges?**', async route => {
+    const params = new URL(route.request().url()).searchParams;
+    if (params.get('jurisdiction') !== 'CA') return route.continue();
+    expect(params.get('offset')).toBe('0');
+    expect(params.get('limit')).toBe('500');
+    await route.fulfill({ json: {
+      success: true, charges, count: charges.length, totalAvailable: charges.length,
+      pagination: { offset: 0, limit: 500, totalMatches: charges.length, nextOffset: null, snapshot },
+    } });
+  });
+});
+
 
 const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
@@ -159,7 +195,7 @@ async function openRecoveryWithSavedCharges(
   await page.goto("/case-guidance");
   await page.getByTestId("button-start-guidance").click();
   await page
-    .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+    .getByRole("button", { name: /Tailored AI Guidance.*Continue with AI Guidance/i })
     .click();
 
   await page.getByTestId("select-jurisdiction").click();
@@ -192,15 +228,15 @@ async function openRecoveryWithSavedCharges(
   // Review starts on the final civil-emergencies step. Use each step's
   // stable back control after the first unlabelled civil-emergencies button;
   // a broad role locator can race the animated step transition.
-  await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
-  await page.getByRole("button", { name: /^Back/ }).click();
-  await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
-  await page.getByRole("button", { name: /^Back/ }).click();
-  await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 7 of 7:");
+  await page.getByTestId("button-prev-civil-emergencies").click();
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 6 of 7:");
+  await page.getByTestId("button-prev-additional-details").click();
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 5 of 7:");
   await page.getByTestId("button-prev-background").click();
-  await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 4 of 7:");
   await page.getByTestId("button-prev-status").click();
-  await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 3 of 7:");
   await expect(page.getByTestId("button-next-case-details")).toBeVisible();
 
   return {
@@ -318,15 +354,15 @@ test.describe("saved California legacy charge recovery", () => {
     // A full reload is a separate persistence boundary from moving between
     // QAFlow steps. Recovery should reopen with the edited canonical charges.
     await page.reload();
-    await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
-    await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
-    await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 7 of 7:");
+    await page.getByTestId("button-prev-civil-emergencies").click();
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 6 of 7:");
+    await page.getByTestId("button-prev-additional-details").click();
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 5 of 7:");
     await page.getByTestId("button-prev-background").click();
-    await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 4 of 7:");
     await page.getByTestId("button-prev-status").click();
-    await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 3 of 7:");
     for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
       await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
       await expect(
@@ -453,9 +489,9 @@ test.describe("saved California legacy charge recovery", () => {
     await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
     await expect(page.getByRole("alert")).toHaveCount(0);
     await page.getByTestId("button-start-guidance").click();
-    await expect(page.getByTestId("qa-step-circle-1")).toHaveClass(/bg-gray-700/);
+    await expect(page.getByTestId("qa-step-label")).toContainText("Step 1 of 7:");
     await page
-      .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+      .getByRole("button", { name: /Tailored AI Guidance.*Continue with AI Guidance/i })
       .click();
     await expect(page.getByTestId("select-jurisdiction")).toBeVisible();
   });

@@ -1,5 +1,11 @@
 import { expect, test } from "@playwright/test";
 
+// Recovery tests stub guidance responses; keep service availability deterministic too.
+test.beforeEach(async ({ page }) => {
+  await page.route('**/api/ai/status', route => route.fulfill({ json: { available: true } }));
+});
+
+
 const guidance = {
   overview: "Timeout recovery interaction test result.",
   criticalAlerts: [],
@@ -19,7 +25,7 @@ const guidance = {
 async function completeScreener(page: import("@playwright/test").Page) {
   await page.getByTestId("button-start-guidance").click();
   await page
-    .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+    .getByRole("button", { name: /Tailored AI Guidance.*Continue with AI Guidance/i })
     .click();
 
   await page.getByTestId("select-jurisdiction").click();

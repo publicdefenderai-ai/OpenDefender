@@ -1,9 +1,9 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
 import { 
   AlertTriangle,
+  AlertCircle,
   Clock,
   Phone,
   Scale,
@@ -15,9 +15,6 @@ import {
   Navigation,
   Search,
   Mail,
-  HardDrive as HardDriveIcon,
-  Trash2,
-  EyeOff,
   ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,7 +28,6 @@ import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-a
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
@@ -868,36 +864,35 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-8 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-md">
+        <main className="case-state-workspace" data-testid="guidance-loading">
+          <Card className="case-state-surface">
             <CardContent className="pt-6 pb-5">
-              <div className="flex flex-col items-center justify-center space-y-5 text-center">
-                <div className="relative">
-                  <div className="h-16 w-16 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
-                  <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              <div className="case-loading-content space-y-5">
+                <div className="case-loading-symbol">
+                  <div className="case-loading-ring" aria-hidden="true" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-xl font-semibold">
+                  <h1 className="case-state-title">
                     {t('case.loading.title', 'Generating Your Case Roadmap')}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{stage}</p>
+                  </h1>
+                  <p className="text-sm text-muted-foreground" role="status" aria-live="polite">{stage}</p>
                 </div>
                 {guidanceMode === 'ai' && (
                   <div className="w-full space-y-2 text-left" aria-label={t('case.loading.phaseLabel', 'Guidance generation phases')}>
-                    <div className={`flex items-center gap-2 text-sm ${!isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                    <div className={`flex items-center gap-2 text-sm ${!isSourceCheckPhase ? 'font-semibold text-primary' : 'text-muted-foreground'}`}>
                       <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">1</span>
                       {t('case.loading.generationPhase', 'Building your case roadmap')}
                     </div>
-                    <div className={`flex items-center gap-2 text-sm ${isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                    <div className={`flex items-center gap-2 text-sm ${isSourceCheckPhase ? 'font-semibold text-primary' : 'text-muted-foreground'}`}>
                       <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">2</span>
                       {t('case.loading.sourceCheckPhase', 'Checking legal sources')}
                     </div>
                   </div>
                 )}
                 <div className="w-full space-y-1">
-                  <div className="h-2 w-full bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
+                  <div className="case-loading-progress">
                     <div
-                      className="h-full bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ease-out"
+                      className="case-loading-progress-fill"
                       style={{ width: `${Math.max(2, streamProgress)}%` }}
                       role="progressbar"
                       aria-valuemin={0}
@@ -907,10 +902,10 @@ export default function CaseGuidance() {
                     />
                   </div>
                 </div>
-                {/* De-emphasized cancel — small and low-contrast so it won't be tapped accidentally */}
+                {/* Keep cancellation readable and keyboard accessible. */}
                 <button
                   onClick={handleCancel}
-                  className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors underline-offset-2 hover:underline mt-1"
+                  className="case-state-cancel" data-testid="button-cancel-guidance-request"
                 >
                   {t('case.loading.cancel', 'Cancel')}
                 </button>
@@ -927,24 +922,24 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-lg">
+        <main className="case-state-workspace">
+          <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
               <div className="space-y-6">
                 <Alert
                   role="alert"
                   aria-live="assertive"
-                  className="border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100"
+                  className="case-recovery-notice" data-testid="guidance-recovery-notice"
                 >
-                  <Clock className="h-5 w-5" />
-                  <AlertTitle>
+                  {guidanceRecoveryError || guidanceRecoveryOffline ? <AlertCircle className="h-5 w-5" aria-hidden="true" /> : <Clock className="h-5 w-5" aria-hidden="true" />}
+                  <h1 className="case-state-title">
                     {guidanceRecoveryOffline
                       ? t('case.loading.offlineRecoveryTitle', 'You appear to be offline')
                       : guidanceRecoveryError
                       ? t('case.loading.retryFailedTitle', 'That retry could not be completed')
                       : t('case.loading.timedOutTitle', 'Taking longer than usual')}
-                  </AlertTitle>
-                  <AlertDescription className="mt-2 text-amber-900 dark:text-amber-100">
+                  </h1>
+                  <AlertDescription className="mt-4 text-muted-foreground">
                     {guidanceRecoveryOffline
                       ? t('case.loading.offlineRecovery', "We couldn't complete that recovery because your device is offline. Reconnect to the internet, then try again. Your answers are still here.")
                       : guidanceRecoveryError
@@ -962,8 +957,8 @@ export default function CaseGuidance() {
                   </p>
                 </div>
 
-                <div className="grid gap-3">
-                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                <div className="case-recovery-actions grid gap-3">
+                  <div className="case-recovery-verification">
                     <TurnstileCaptcha
                       key={retryCaptchaAttempt}
                       onVerify={setRetryCaptchaToken}
@@ -1007,17 +1002,17 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
-          <Card className="editorial-card w-full max-w-lg">
+        <main className="case-state-workspace">
+          <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
-              <div className="flex flex-col items-center text-center space-y-5">
-                <div className="h-14 w-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
-                  <Clock className="h-7 w-7 text-amber-600 dark:text-amber-400" />
+              <div className="case-expired-content space-y-5">
+                <div className="case-expired-symbol">
+                  <Clock className="h-8 w-8 text-primary" />
                 </div>
                 <div className="space-y-2">
-                  <h2 className="text-xl font-semibold">
+                  <h1 className="case-state-title">
                     {t('case.sessionExpired.title', 'Your session has expired')}
-                  </h2>
+                  </h1>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {t('case.sessionExpired.message', 'This guidance is no longer accessible because your browser session has ended. This is a privacy protection — your case details are never stored permanently.')}
                   </p>
@@ -1049,7 +1044,7 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace max-w-7xl mx-auto px-4 py-8">
+        <main className="case-intake-workspace mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
             onCancel={handleCancelQAFlow}
@@ -1110,7 +1105,7 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="editorial-workspace px-4 py-8">
+        <main className="case-results-workspace px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => handleAttemptClose()}
@@ -1121,7 +1116,7 @@ export default function CaseGuidance() {
             guidanceMode={guidanceMode}
           />
           <aside
-            className="editorial-card max-w-5xl mx-auto mt-6 p-4"
+            className="case-trusted-resources"
             aria-labelledby="trusted-resources-heading"
           >
             <h2 id="trusted-resources-heading" className="font-semibold text-foreground">
@@ -1341,123 +1336,37 @@ export default function CaseGuidance() {
         </div>
       )}
 
-      {/* Hero Section */}
-      <section id="understand-charges" className="vivid-header editorial-guidance-hero py-16 md:py-20 lg:py-24 scroll-mt-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
-          <ScrollReveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] opacity-75 mb-4">
-              {t('case.hero.startHere', 'Start here')}
-            </p>
-            <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-5 md:mb-6" data-testid="heading-case-title">
-              {t('case.hero.title')}
-            </h1>
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-10" data-testid="text-case-description">
-              {t('case.hero.description')}
-            </p>
-
-            <Button
-              onClick={handleStartQA}
-              size="lg"
-              disabled={!!aiUnavailable}
-              className="max-w-full h-auto min-h-11 flex-wrap justify-center whitespace-normal break-words text-center leading-snug bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-sm shadow-none"
-              data-testid="button-start-guidance"
-            >
-              {t('case.hero.startButton')}
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-            <p className="mt-4 text-sm opacity-70">
-              {t('case.hero.alternativeStartPrefix', 'Or start with the')}{" "}
-              <Link href="/first-24-hours" className="underline underline-offset-2 hover:opacity-90">
-                {t('case.hero.alternativeStartLabel', 'First 24 Hours guide')}
-              </Link>.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-16 md:py-20 lg:py-24 bg-muted/30">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <h2 className="text-2xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-how-it-works">
-              {t('case.howItWorks.title')}
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-4 gap-6 md:gap-8">
-            <ScrollReveal delay={0.1}>
-              <StepCard
-                number={1}
-                title={t('case.howItWorks.step1Title')}
-                description={t('case.howItWorks.step1Desc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <StepCard
-                number={2}
-                title={t('case.howItWorks.step2Title')}
-                description={t('case.howItWorks.step2Desc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <StepCard
-                number={3}
-                title={t('case.howItWorks.step3Title')}
-                description={t('case.howItWorks.step3Desc')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <StepCard
-                number={4}
-                title={t('case.howItWorks.step4Title')}
-                description={t('case.howItWorks.step4Desc')}
-              />
-            </ScrollReveal>
+      <main className="case-entry">
+        <section id="understand-charges" className="case-entry-hero scroll-mt-24">
+          <div>
+            <p className="case-kicker">{t('case.hero.title')}</p>
+            <h1 data-testid="heading-case-title">{t('design.caseHeading')}</h1>
+            <p className="case-entry-description" data-testid="text-case-description">{t('case.hero.description')}</p>
           </div>
+          <div className="case-document-art" aria-hidden="true" />
+        </section>
+        <div className="case-entry-actions">
+          <Button onClick={handleStartQA} disabled={!!aiUnavailable} data-testid="button-start-guidance">
+            {t('case.hero.startButton')}
+          </Button>
+          <p>{t('case.hero.alternativeStartPrefix')}{" "}<Link href="/first-24-hours">{t('case.hero.alternativeStartLabel')}</Link>.</p>
         </div>
-      </section>
-
-      {/* Privacy & Security */}
-      <section className="py-14 md:py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <div className="editorial-surface rounded-xl p-6 md:p-8">
-              <div className="flex flex-col items-center text-center mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 ring-1 ring-primary/20">
-                  <BrandShieldIcon size={24} />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground" data-testid="heading-privacy">
-                  {t('case.privacy.title')}
-                </h2>
-              </div>
-
-              <PrivacyGrid />
-
-              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-                <Button
-                  onClick={handleStartQA}
-                  disabled={!!aiUnavailable}
-                  data-testid="button-start-guidance-bottom"
-                >
-                  {t('case.privacy.getStartedButton')}
-                </Button>
-                <Link href="/rights-info">
-                  <Button 
-                    variant="outline" 
-                    className="w-full sm:w-auto"
-                    data-testid="button-learn-rights"
-                  >
-                    {t('case.privacy.learnRightsButton')}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+        <section className="case-entry-section" aria-labelledby="case-how-heading">
+          <h2 id="case-how-heading" data-testid="heading-how-it-works">{t('case.howItWorks.title')}</h2>
+          <div className="case-process">
+            {[1, 2, 3, 4].map(number => <StepCard key={number} number={number}
+              title={t(`case.howItWorks.step${number}Title`)} description={t(`case.howItWorks.step${number}Desc`)} />)}
+          </div>
+        </section>
+        <section className="case-entry-section" aria-labelledby="case-privacy-heading">
+          <h2 id="case-privacy-heading" data-testid="heading-privacy">{t('case.privacy.title')}</h2>
+          <PrivacyGrid />
+          <div className="case-entry-actions">
+            <Button onClick={handleStartQA} disabled={!!aiUnavailable} data-testid="button-start-guidance-bottom">{t('case.privacy.getStartedButton')}</Button>
+            <Link href="/rights-info" data-testid="button-learn-rights">{t('case.privacy.learnRightsButton')}</Link>
+          </div>
+        </section>
+      </main>
 
       <Footer />
     </div>
@@ -1470,12 +1379,10 @@ function StepCard({ number, title, description }: {
   description: string;
 }) {
   return (
-    <div className="text-center">
-      <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-3 text-sm font-semibold">
-        {number}
-      </div>
-      <h3 className="font-medium text-foreground mb-2">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+    <div className="case-process-step">
+      <span aria-hidden="true">{String(number).padStart(2, '0')}</span>
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 }
@@ -1487,68 +1394,29 @@ function PrivacyGrid() {
     {
       title: t('case.privacy.noStorageTitle'),
       description: t('case.privacy.noStorageDesc'),
-      icon: HardDriveIcon,
-      gradient: 'from-blue-600/20 to-blue-400/20',
-      iconBg: 'from-blue-600 to-blue-500',
     },
     {
       title: t('case.privacy.sessionOnlyTitle'),
       description: t('case.privacy.sessionOnlyDesc'),
-      icon: Clock,
-      gradient: 'from-sky-600/20 to-sky-400/20',
-      iconBg: 'from-sky-600 to-sky-500',
     },
     {
       title: t('case.privacy.autoDeleteTitle'),
       description: t('case.privacy.autoDeleteDesc'),
-      icon: Trash2,
-      gradient: 'from-indigo-600/20 to-indigo-400/20',
-      iconBg: 'from-indigo-600 to-indigo-500',
     },
     {
       title: t('case.privacy.anonymousTitle'),
       description: t('case.privacy.anonymousDesc'),
-      icon: EyeOff,
-      gradient: 'from-slate-600/20 to-slate-400/20',
-      iconBg: 'from-slate-600 to-slate-500',
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" data-testid="privacy-grid">
-      {items.map((item, index) => {
-        const Icon = item.icon;
-        return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="editorial-card editorial-card-interactive relative group overflow-hidden p-4"
-            data-testid={`privacy-card-${index}`}
-          >
-            <div className="relative h-full">
-              <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                  <Icon className="h-5 w-5 text-primary" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-foreground text-sm mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        );
-      })}
+    <div className="case-privacy-list" data-testid="privacy-grid">
+      {items.map((item, index) => (
+        <div key={index} data-testid={`privacy-card-${index}`}>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </div>
+      ))}
     </div>
   );
 }
-
-
-

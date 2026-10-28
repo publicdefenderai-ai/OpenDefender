@@ -54,6 +54,9 @@ export function MobileBottomNav() {
     return location.startsWith(href);
   };
 
+  // Refreshed information pages use the shared menu instead of competing navigation.
+  if (["/", "/first-24-hours", "/immigration-guidance"].includes(location)) return null;
+
   return (
     <nav
       className="editorial-mobile-nav fixed bottom-0 left-0 right-0 z-40 border-t md:hidden safe-area-bottom"

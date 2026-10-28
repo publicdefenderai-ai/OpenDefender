@@ -38,35 +38,38 @@ async function expectNoHorizontalOverflow(page: Page, width: number) {
 test.describe("intent navigation and accessibility", () => {
   test("home path cards have no nested interactive controls", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { name: /where do you want to start/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /what brings you here/i })).toBeVisible();
 
     const nestedInteractive = page.locator(
       '#paths a a, #paths a button, #paths button a, #paths button button, #paths [role="link"] a, #paths [role="link"] button'
     );
     await expect(nestedInteractive).toHaveCount(0);
 
-    const startLink = page.getByRole("link", { name: "Start Here" });
+    const startLink = page.getByRole("link", { name: /Someone was arrested/ });
     await startLink.focus();
     await expect(startLink).toBeFocused();
     await page.keyboard.press("Enter");
     await expect(page).toHaveURL(/\/first-24-hours$/);
   });
 
-  test("mobile navigation exposes the shared urgent-help paths", async ({ page }) => {
+  test("refreshed pages use the shared menu without competing bottom navigation", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/");
-
-    const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
-    await expect(mobileNav).toBeVisible();
-    await expect(mobileNav.getByRole("link", { name: "First 24 Hours" })).toHaveAttribute("href", "/first-24-hours");
-    await expect(mobileNav.getByRole("link", { name: "Case Roadmap" })).toHaveAttribute("href", "/case-guidance");
-    await expect(mobileNav.getByRole("link", { name: "Understand a case stage" })).toHaveAttribute("href", "/case-timeline");
-    await expect(mobileNav.getByRole("link", { name: "Legal help" })).toHaveAttribute("href", "/legal-aid");
+    for (const route of ["/", "/first-24-hours", "/immigration-guidance"]) {
+      await page.goto(route);
+      await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+      await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toHaveCount(0);
+      await page.getByTestId("button-menu").click();
+      await expect(page.getByTestId("select-language-mobile")).toBeVisible();
+      await expect(page.getByRole("navigation", { name: "Site menu" }).getByRole("link", { name: "First 24 Hours", exact: true })).toBeVisible();
+      await expect(page.getByRole("navigation", { name: "Site menu" }).getByRole("link", { name: "Immigration", exact: true })).toBeVisible();
+      await page.keyboard.press("Escape");
+      await expect(page.getByTestId("button-menu")).toBeFocused();
+    }
   });
 
   test("mobile navigation keeps full accessible names while fitting compact labels", async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 800 });
-    await page.goto("/");
+    await page.goto("/case-timeline");
 
     const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
     const stageLink = mobileNav.getByRole("link", { name: "Understand a case stage" });
@@ -85,7 +88,7 @@ test.describe("intent navigation and accessibility", () => {
 
   test("mobile page reserves space for the fixed navigation", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/");
+    await page.goto("/case-timeline");
 
     const main = page.locator("#main-content");
     await expect(main).toHaveClass(/mobile-nav-page-offset/);
