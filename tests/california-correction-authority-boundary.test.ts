@@ -1,4 +1,9 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
+const evidenceTime = new Date(receipt.checkedAt);
+// Dependency checks use the retained evidence interval, not today's expiry status.
+beforeEach(() => { vi.useFakeTimers(); vi.setSystemTime(evidenceTime); });
+afterEach(() => { vi.useRealTimers(); });
 const state = vi.hoisted(() => ({ rows: [] as any[], ids: [] as string[] }));
 vi.mock("../server/db", () => ({ db: { select: () => ({ from: () => {
   const chain: any = { innerJoin: () => chain, where: () => Object.assign(Promise.resolve(state.rows), {
@@ -9,7 +14,7 @@ import { getCurrentCaliforniaSelectableChargeIds } from "../server/services/cali
 import { buildCaliforniaSourceDatabaseSeed } from "../server/data/california-source-database-seed";
 
 describe("California corrections require seeded supporting references", () => {
-  const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-24T00:00:00Z"));
+  const seed = buildCaliforniaSourceDatabaseSeed(evidenceTime);
   const affected = "ca-menacing";
   const unaffected = "ca-prostitution-solicitation";
   const links = seed.links.filter(link => [affected, unaffected].includes(link.chargeId)).map(link => {
@@ -82,4 +87,10 @@ describe("California corrections require seeded supporting references", () => {
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
   });
 
+  it("still withholds fully linked records when the receipt expires", async () => {
+    state.ids = [affected, unaffected];
+    state.rows = links;
+    vi.setSystemTime(new Date(receipt.expiresAt));
+    expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set());
+  });
 });
