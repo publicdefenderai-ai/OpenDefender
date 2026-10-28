@@ -1,10 +1,32 @@
 # California practical completion plan
 
+## Resumed closeout after PR 57: October 28, 2026
+
+The merged catalog contains 662 configured choices. This is not a live availability count. The new `scripts/data-review/output/california-closeout-inventory.md` and companion JSON consolidate the retained comparison packets without re-reviewing the state or renewing receipts. Earlier sections below remain historical milestones.
+
+The inventory accounts for 576 benchmark entries: 207 people/weapons, 91 homicide/gang, 202 justice/property, 46 drug and 30 driving/vessel entries. These are overlapping comparison identities, including defenses and sentencing allegations, not missing-charge counts or a statewide denominator. Nine other-code probes remain separately accounted for, seven of them candidates for further work.
+
+The next grouped work covers remaining specific weapons/public-conduct comparisons and seven other-code candidates: BPC 2052/7028, LAB 3700.5/6425, INS 1871.4, WIC 10980 and UIC 2101. Check exact branches and shared dependencies once; clear branches can advance while unresolved siblings stay held. No severity is inferred from a discovery label. Drug, vehicle and other partial comparisons remain visible in the consolidated register rather than disappearing behind this next-batch priority.
+
+Historical finding counts are not the current unresolved workload. The register preserves 40 historical identities, links nine to later bounded publications, and marks the published false-imprisonment fine decision so it is not reopened. Other existing private decisions must be reconciled before assigning new legal research. Links to a later publication do not silently certify every sibling branch.
+
+Five representative configured citation lookups and ID-based explanation checks cover Penal, Health and Safety, and Vehicle Code forms. They complement the PR 57 intake/browser checks; they do not establish production availability, PDF parity or exhaustive search coverage. Deployment and receipt-policy work remain separate. Existing evidence expiry behavior is unchanged by this inventory.
+
+Reproduce: `node --import tsx scripts/data-review/california-verification/closeout-inventory.ts`. The generator copies only neutral identities, statuses and references, never attorney questions or deliberative prose. Its retained input bindings and successor histories are checked in `tests/california-closeout-inventory.test.ts`.
+
+### Contributor flow for retained accounting
+
+Before changing a retained packet, prefer a successor packet so historical evidence stays reproducible. If an intentional correction changes an input bound by the closeout inventory, run `node --import tsx scripts/data-review/california-verification/closeout-inventory.ts`, inspect the generated status/history diff, and run `npx vitest run tests/california-closeout-inventory.test.ts`. Commit the corrected source and regenerated accounting together. Regeneration is not legal approval and must not erase holds or prior decisions. Ordinary new catalog additions do not alter this frozen PR 57 count; publish a successor inventory when that baseline should advance.
+
+The published false-imprisonment marker binds only its identified decision record, not the position or entire decision file. Unrelated decision additions do not invalidate it. The root `.gitignore` already distinguishes known disposable reports and the ignored `scripts/data-review/output/scratch/` directory from durable evidence; new evidence remains visible to Git rather than hidden by a directory-wide ignore.
+
+## Historical completion milestones
+
 Updated October 2, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
 
-PR55 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
+PR55 is merged. This publication batch brings California to 662 configured choices (99 corrected originals and 563 additions) across 342 primary sections, supported by 841 retained publication sections / 849 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
 
 The latest consolidated reconciliation accounts for all 31 outstanding justice/property instruction comparisons: 23 relate to existing reviewed choices, three have a broad theft choice needing more detailed conduct work, three have no matching published branch, and two remain explicitly deferred. These are comparison counts, not new charges. The 23 reused summaries are partial coverage and do not increase the prior 140 bounded matches or certify complete instruction coverage. The full 202-entry prior crosswalk and every remaining finding are preserved.
 
@@ -17,6 +39,8 @@ The combined trespass batch adds 11 choices from six subdivisions, reusing seven
 The petty-theft conduct supplement now explains larceny, trick and false pretense under the existing charge ID. It adds monitored section 532 proof requirements and explicit English-fallback warnings, without changing penalties or adding choices. The former broad-theft comparisons now have bounded introductory conduct summaries; they are not promoted to exhaustive instruction certification. Vehicle sentencing remains open.
 
 The [major-omission audit](../scripts/data-review/output/california-major-omission-audit.md) accounts for 91 homicide/gang instructions, rechecks all 18 unresolved people/weapons entries, and probes nine important other-code identities. Seventeen instruction entries have existing charge choices, eight have related murder-theory coverage, 29 are context/defense/procedure, 34 are separately tracked allegations or sentencing material, and three are unpublished priority entries. These are instruction counts, not offense counts or a statewide coverage percentage. The two attempted-manslaughter instructions concern the same offense family. No new choice, penalty or currency approval results from the audit.
+
+The priority-person batch adds five choices: active gang participation, assault under color of authority, the two distinct section 243(b)/(c)(1) victim branches, and attempted voluntary manslaughter. It reuses 15 monitored sections and promotes only section 149 from retained research. The historical audit stays frozen; a successor records the five resolved instruction comparisons while preserving the other-code probes and remaining holds. Attempted voluntary manslaughter uses the half-term rule with an explicit unresolved numerical fine limit. The narrower non-peace-officer injury branch does not inherit the neighboring peace-officer fine.
 
 ## Current closeout work
 
