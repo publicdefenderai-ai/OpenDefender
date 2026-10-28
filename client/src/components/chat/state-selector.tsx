@@ -59,7 +59,7 @@ export function StateSelector({ onSelect }: StateSelectorProps) {
       </div>
 
       <ScrollArea className="h-64">
-        <div className="p-2 grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+        <div className="p-2 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-1.5">
           {filteredStates.map((state, index) => (
             <motion.button
               key={state.code}
@@ -75,7 +75,7 @@ export function StateSelector({ onSelect }: StateSelectorProps) {
               data-testid={`state-option-${state.code}`}
             >
               <MapPin className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" />
-              <span className="truncate">{state.name}</span>
+              <span className="min-w-0 break-words">{state.name}</span>
             </motion.button>
           ))}
           {filteredStates.length === 0 && (

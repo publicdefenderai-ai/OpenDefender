@@ -111,7 +111,7 @@ export function ProgressBreadcrumbs({ currentStep }: ProgressIndicatorProps) {
 
   return (
     <div className="border-b border-border bg-muted/30 px-3 py-2.5" role="navigation" aria-label={t('chat.progress.ariaLabel', 'Guidance progress')}>
-      <div className="max-w-2xl mx-auto">
+      <div className="w-full mx-auto">
         <div className="relative mb-2" role="progressbar" aria-valuenow={activeIdx + 1} aria-valuemin={1} aria-valuemax={BREADCRUMB_STEPS.length} aria-label={t('chat.progress.step', { current: activeIdx + 1, total: BREADCRUMB_STEPS.length })}>
           <div className="h-1 bg-muted rounded-full overflow-hidden">
             <motion.div

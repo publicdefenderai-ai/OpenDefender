@@ -2316,3 +2316,23 @@ a:focus-visible,
 .guidance-privacy-notice > div { padding: 24px; }
 .guidance-privilege-warning { line-height: 1.65; }
 @media(max-width: 640px) { .guidance-privacy-notice > div { padding: 18px; } }
+
+/* Conversation presentation: wide workspace, bounded reading lines. */
+.design-chat { --urgent-ink: #92372d; --urgent-soft: #f5e7e2; }
+.dark .design-chat { --urgent-ink: #f0a092; --urgent-soft: #38272a; }
+.design-chat header { flex-wrap: wrap; gap: 12px; padding: 16px clamp(16px, 4vw, 64px); }
+.design-chat .chat-conversation { padding: 8px clamp(0px, 2vw, 32px) 24px; }
+.design-chat .chat-composer { padding-inline: clamp(16px, 4vw, 64px); }
+.design-chat .chat-bubble-bot { max-width: min(88%, 780px); }
+.design-chat .chat-bubble-user { max-width: min(78%, 680px); }
+.design-chat .chat-case-summary { border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+.design-chat .chat-case-summary summary { cursor: pointer; font-weight: 600; width: fit-content; }
+.design-chat .chat-case-summary summary:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.design-chat .chat-urgent-choice { border-color: var(--urgent-ink); background: var(--urgent-soft); color: var(--urgent-ink); }
+@media (max-width: 480px) {
+  .design-chat .chat-bubble-bot, .design-chat .chat-bubble-user { max-width: 94%; }
+  .design-chat .chat-bubble { padding: 14px 16px; }
+  .design-chat .chat-conversation { padding-inline: 0; }
+}
+
+.design-chat header button { min-height: 44px; min-width: 44px; }

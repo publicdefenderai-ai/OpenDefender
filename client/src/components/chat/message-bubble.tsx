@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
@@ -120,10 +120,11 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
     >
       <div
         className={cn(
-          "rounded-2xl px-4 py-3 max-w-[85%]",
+          "chat-bubble rounded-2xl px-5 py-4 min-w-0 break-words",
+          isBot ? "chat-bubble-bot" : "chat-bubble-user",
           isBot
-            ? "bg-muted text-foreground rounded-tl-md border border-border/50"
-            : "bg-primary/90 dark:bg-primary/80 text-white rounded-tr-md"
+            ? "bg-muted text-foreground rounded-tl-md"
+            : "bg-primary text-primary-foreground rounded-tr-md"
         )}
       >
         <div className="text-[15px] leading-relaxed">
@@ -155,11 +156,13 @@ export function MessageBubble({ message, isLatest = false }: MessageBubbleProps)
 }
 
 export function TypingIndicator() {
+  const reduceMotion = useReducedMotion();
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
+      data-testid="chat-typing"
       className="flex gap-3 mb-4 justify-start"
     >
       <div className="bg-muted rounded-2xl rounded-tl-md px-5 py-3 border border-border/50">
@@ -168,10 +171,10 @@ export function TypingIndicator() {
             <motion.span
               key={i}
               className="w-2 h-2 rounded-full bg-muted-foreground/50"
-              animate={{ y: [0, -6, 0], opacity: [0.4, 1, 0.4] }}
+              animate={reduceMotion ? { opacity: 0.7 } : { y: [0, -3, 0], opacity: [0.4, 1, 0.4] }}
               transition={{
                 duration: 0.8,
-                repeat: Infinity,
+                repeat: reduceMotion ? 0 : Infinity,
                 delay: i * 0.15,
                 ease: "easeInOut",
               }}
