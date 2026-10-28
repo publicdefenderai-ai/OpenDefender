@@ -2,6 +2,10 @@
 
 This is a presentation specification, not legal-content approval or release authorization. The source previews remain local owner artifacts; this document records their identity and implementation requirements without copying review deliberations. Earlier concepts do not override later accepted refinements.
 
+## Legal content corrections
+
+L03/L04 corrections from the October 28 saved workbook are recorded in [the implementation record](../legal-review/l03-l04-implementation.md). Preserve these live-content edits when migrating the Rights, counsel, First 24 Hours, quick-reference and bail designs. Older preview copy is historical and must not restore the superseded statements. Reviewer wording differences and translation signoff remain explicit in that record.
+
 ## Reference identity
 
 | Local preview filename | SHA-256 |

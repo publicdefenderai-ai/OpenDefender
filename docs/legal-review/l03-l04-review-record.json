@@ -1,0 +1,668 @@
+{
+  "sourceWorkbook": "opendefender-legal-review-2026-10-28.html",
+  "sourceReviewDate": "2026-10-27",
+  "scope": "Targeted English review only; propagated translations are not independently attorney-approved. Original reviewer decisions are preserved, not promoted to completed signoff.",
+  "reviewerNotes": {
+    "L03.q0.notes": "Generally good,  guidance is high level and includes caveats rather than absolutes. Going through each to spot any issues:\nID requests - Good,\nFrisk Scope - Good\nVehicle Search - Good, but should emphasize the lower standard and the automobile exception. We call out probable cause already. \nHome Search - Good\nWarrant Inspection - qualify this by saying that you \"typically\" or \"usually\" have an officer produce a search warrant if you request it, though there are cases where the warrant is sealed/classified or if it is a no knock warrant. \nStepping Outside - I would update this to say you can speak through the door, but if you choose to step outside, do so calmly and close the door behind you. \nBiometrics - Update this to emphasize that biometrics (requiring affirmative actions) also can implicate the fifth amendment as they can be testimonial actions. Circuits are split on this currently. On passcodes, there is still some split but courts are more likely to conclude passcodes are testimonial and thus protected by the 5th amendment, though the \"forgone conclusion\" doctrine may still allow admissible evidence based on a forced entry of a passcode. \nStrip Searches - our statement that strip searches require a warrant is wrong. Strip searches are governed by the fourth amendment reasonableness standard. They do not always require a warrant - circuits are split on this - 3rd cir says they are required (https://www2.ca3.uscourts.gov/opinarch/252860p.pdf) but others say individualized reasonable suspicion is sufficient - \n",
+    "L03.q2.notes": "Right to call(s) - varies, and is based on statute. The core right is the right to contact an attorney, though the method does not have to be a call. Some states explicitly allow multiple calls, some say a \"reasonable\" number of calls, some say 1, some don't say anything. So the guidance should be updated to consistently reflect this \"it depends\" reality, yet all defendants are allowed a reasonable mechanism (typically understood to be a call) to contract their attorney\nAttorney Calls Privileged - the actual rule is that the content of these calls is not admissible. It does not mean authorities can't record them and/or listen to them. Those are two different things, and thus people should still be careful what they say on calls with attorneys. \nBail entitlement guidance - accurate, we provide general ranges and what \"most\" jurisdictions will do with appropriate qualifiers\nDiscovery duties - we don't say much about it at all on the first 24 hours page, and what we say is fine. \nPlea Instructions - the within 48-72 hours is not quite correct. A few states require 24 hours, most are in the 48-72 range. So more accurate to say \"\"24–72 hours depending on the state and custody status\". Note that many jurisdiction also recognize \"not guilty by reason of insanity\" as a separate plea option. \n",
+    "L03.q2.decision": "Changes required",
+    "L03.q0.authority": "Riley v. California, 573 U.S. 373 (2014); Georgia v. Randolph, 547 U.S. 103 (2006); California v. Acevedo, 500 U.S. 565 (1991); United States v. Brown, 125 F.4th 1186; United States v. Payne, 99 F.4th 495; https://www.nacdl.org/Content/Compelled-Decryption-Primer;  https://www2.ca3.uscourts.gov/opinarch/252860p.pdf; Shuttlesworth v. City of Birmingham, 441 F.2d 592 (11th Cir. 1971); Flanagan v. City of North Port, 401 F.3d 1220 (11th Cir. 2005); Savino v. City of New York, 88 F.3d 74 (2d Cir. 1996); Watt v. City of Richardson, 849 F.2d 195 (5th Cir. 1988)",
+    "L03.q0.decision": "Changes required",
+    "L03.q2.authority": "https://www.nolo.com/legal-encyclopedia/how-bail-set.html; https://www.nolo.com/legal-encyclopedia/arraignment-getting-court.html; ",
+    "L03.q1.notes": "Juvenille requirements - our first bullet about parental notification should be changed since it is not universally required. Rather, we should say: \"Some states require police to notify a parent or guardian once a juvenile is taken into custody, but this is not required everywhere. If you are a minor, ask for your parent immediately. You have the right to do so regardless of state law, and having a parent present can help protect you during questioning.\n",
+    "L03.q1.authority": "https://observed.org/juveniles-and-miranda-interrogation-rights/",
+    "L03.q1.decision": "Changes required",
+    "L03.overall": "Changes required",
+    "L03.scope": "See notes above. I reviewed in English and focused on the items called out above. This is not a complete content overhaul, it is a targeted review of the items called out. ",
+    "L03.reviewer": "Shahab Asghar",
+    "L03.date": "10/27/2026",
+    "L03.followup": "see above",
+    "L04.q0.authority": "https://uslawexplained.com/own_recognizance; 18 U.S.C. § 3142(b); https://www.justgreatlawyers.com/legal-guides/missed-a-court-date-what-happens-next-how-to-fix-it-legally",
+    "L04.q0.notes": "Bail Type - We should add unsecured bonds as a common bond type. Unsecured bond (signature bond): The defendant signs an agreement promising to pay a set amount only if they fail to appear. No money is paid upfront. This is distinct from ROR — ROR has no monetary figure attached, while an unsecured bond does. It's a common middle ground courts use when they want a financial incentive without requiring cash upfront.\nMissing Court - we currently say that \"A warrant will be issued\" if you miss court, but it's not quite that automatic. We should instead say \"A warrant will almost certainly be issues\" if you miss court. \n",
+    "L04.q0.decision": "Changes required",
+    "L04.q1.notes": "Plea stats are correct - https://www.ussc.gov/about/annual-report-2024",
+    "L04.q1.authority": "https://www.ussc.gov/about/annual-report-2024",
+    "L04.q1.decision": "Approved as written",
+    "L04.q2.decision": "Approved as written",
+    "L04.q2.authority": "Padilla v. Kentucky; Santobello v. New York (1971)",
+    "L04.overall": "Changes required",
+    "L04.scope": "See notes above",
+    "L04.reviewer": "Shahab Asghar",
+    "L04.date": "10/27/2026"
+  },
+  "changes": [
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.rights.quickRights.phoneCall.title",
+      "before": "Right to a Phone Call",
+      "after": "Contacting an Attorney"
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.rights.quickRights.phoneCall.description",
+      "before": "Contact family, attorney, or bail bondsman after arrest",
+      "after": "Access to counsel; phone rules vary by state and facility"
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.rights.quickRights.phoneCall.detailedExplanation",
+      "before": "After being arrested and booked, you have the right to make a reasonable number of phone calls to contact an attorney, family member, or bail bondsman. Police cannot listen to calls with your attorney due to attorney-client privilege, but they may monitor other calls. It's important to use this right wisely - contact your lawyer first if possible, and avoid discussing details of your case on any call that might be recorded.",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call. Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.rights.quickRights.knowCharges.detailedExplanation",
+      "before": "The law requires that you be formally told about the criminal charges against you, usually at your first court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, which laws they say you broke, and what punishments you could face. This information lets you and your lawyer prepare your defense and makes sure you can't be tried for crimes you weren't properly told about.",
+      "after": "You have the right to be informed of the charges against you. An initial appearance often occurs within 24–72 hours, depending on the state and custody status; arraignment may occur later. This is not a universal deadline. Court paperwork and your attorney can confirm the schedule and applicable rules."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.process.steps.step1.rights.2",
+      "before": "Right to a phone call",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.process.guides.bail.options.types.4",
+      "before": "Not present",
+      "after": {
+        "name": "Unsecured Bond (Signature Bond)",
+        "description": "You sign a promise to pay a set amount if you fail to appear. No money is paid upfront. Unlike release on recognizance (ROR), an unsecured bond has a monetary amount attached. Availability and conditions vary by jurisdiction."
+      }
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.process.guides.bail.missCourt.consequences.0",
+      "before": "A warrant will be issued for your arrest",
+      "after": "The court can issue a warrant for your arrest; this is a serious risk, but it is not automatic in every case"
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.caseTimeline.stages.booking.rights.1",
+      "before": "You have the right to a phone call (usually within a few hours)",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.caseTimeline.stages.booking.tips.1",
+      "before": "The phone call is typically used to reach a family member or attorney. All jail calls except to attorneys are recorded",
+      "after": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.quickRef.police.arrested2",
+      "before": "You get at least one phone call — use it to call a lawyer or family",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.quickRef.police.arrested4",
+      "before": "You must be brought before a judge within 48-72 hours",
+      "after": "An initial appearance often occurs within 24–72 hours, depending on the state and custody status. This is not a universal deadline; arraignment may be later."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.quickRef.arraignment.expect2",
+      "before": "You enter a plea: guilty, not guilty, or no contest",
+      "after": "You enter a plea; available options vary by jurisdiction"
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.quickRef.arraignment.say1",
+      "before": "Your three plea options are: Guilty, Not Guilty, or No Contest. Your attorney advises which to enter based on your case.",
+      "after": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.friendsFamily.warnings.jailCallsText",
+      "before": "All calls from jail are recorded and can be used as evidence. The only protected calls are to an attorney through officially designated channels.",
+      "after": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.phoneCall.warningBody",
+      "before": "Prosecutors have used jail calls as key evidence in countless cases, including statements made to family members. The only protected calls are to your attorney, and only if that line is properly designated.",
+      "after": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.juvenile.bullet1",
+      "before": "Police must notify parents or guardians before questioning a juvenile. If you are a minor, ask for your parent immediately.",
+      "after": "Some states require police to notify a parent or guardian when a juvenile is taken into custody, but this is not required everywhere. If you are a minor, you can ask for your parent immediately. Their presence can help, but whether police must wait for them depends on the law and circumstances. Asking for a parent is not the same as asking for a lawyer."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step2.do5",
+      "before": "You have the right to at least one phone call. Timing varies by state. California sets a 3-hour limit; most other states require 'reasonable time.' Ask booking staff when you can make your call.",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step2.c2",
+      "before": "You typically have the right to at least one phone call after booking, though timing varies by state. All jail calls except to your attorney are recorded.",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step3.context",
+      "before": "You'll typically be allowed at least one phone call. This call is almost certainly being recorded. Every subsequent call is recorded too. Use them wisely.",
+      "after": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step3.do1",
+      "before": "Call a family member or trusted friend, not your attorney (they likely won't answer an unfamiliar collect call).",
+      "after": "Ask how to contact your attorney. A trusted family member or friend can also help locate counsel if the attorney cannot be reached directly."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step3.c1",
+      "before": "All jail calls except to your attorney are recorded and monitored. Prosecutors can access and use anything said on a jail call as evidence. Keep this call short and practical.",
+      "after": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step6.timeframe",
+      "before": "Within 48–72 hours (some states longer)",
+      "after": "Often 24–72 hours; timing depends on the state and custody status"
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step6.do1",
+      "before": "At arraignment, you will be asked to enter a plea. Three options exist: guilty, not guilty, and no contest. Each has different legal effects on your case. Your attorney must advise you on which to choose based on the facts of your situation.",
+      "after": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step6.dont3",
+      "before": "Don't miss this court date. A warrant will be issued for your arrest.",
+      "after": "Missing court can lead to an arrest warrant and other consequences. If you cannot attend or missed a date, contact your attorney or the court promptly."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.first24Hours.steps.step6.c1",
+      "before": "At arraignment, the charges are formally read and you are asked to enter a plea. Three options are available: guilty, not guilty, and no contest. Each has different legal effects on your case. Your attorney must advise you on which to choose based on the facts of your situation.",
+      "after": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea."
+    },
+    {
+      "file": "client/src/locales/en.ts",
+      "key": "translation.howTo.paths.path1.bullet3",
+      "before": "Scripts for your one phone call from jail",
+      "after": "Scripts for calls from jail"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.rights.quickRights.phoneCall.title",
+      "before": "Derecho a una Llamada Telefónica",
+      "after": "Contacto con un abogado"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.rights.quickRights.phoneCall.description",
+      "before": "Contactar a familia, abogado o fianza después del arresto",
+      "after": "Acceso a un abogado; las reglas telefónicas varían según el estado y el centro"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.rights.quickRights.phoneCall.detailedExplanation",
+      "before": "Después de ser arrestado y procesado, tiene derecho a hacer un número razonable de llamadas telefónicas para contactar a un abogado, familiar o agente de fianzas. La policía no puede escuchar llamadas con su abogado debido al privilegio abogado-cliente, pero pueden monitorear otras llamadas. Es importante usar este derecho sabiamente - contacte a su abogado primero si es posible, y evite discutir detalles de su caso en cualquier llamada que pueda ser grabada.",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial. Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.rights.quickRights.knowCharges.detailedExplanation",
+      "before": "La Sexta Enmienda requiere que sea informado formalmente de los cargos criminales en su contra, típicamente en su lectura de cargos o comparecencia inicial dentro de 48-72 horas del arresto. Tiene derecho a saber exactamente de qué crímenes se le acusa, las leyes específicas que supuestamente violó, y las penas potenciales que enfrenta. Esta información le permite a usted y a su abogado preparar una estrategia de defensa apropiada y asegura que no pueda ser juzgado por crímenes de los que no fue debidamente notificado.",
+      "after": "Tiene derecho a conocer los cargos en su contra. La primera comparecencia suele ocurrir entre 24 y 72 horas, según el estado y si está bajo custodia; la lectura de cargos puede ocurrir después. No es un plazo universal. Los documentos del tribunal y su abogado pueden confirmar el calendario y las reglas aplicables."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.process.steps.step1.rights.2",
+      "before": "Derecho a una llamada telefónica",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.process.guides.bail.options.types.4",
+      "before": "Not present",
+      "after": {
+        "name": "Fianza no garantizada (por firma)",
+        "description": "Firma una promesa de pagar una cantidad determinada si no comparece. No paga dinero por adelantado. A diferencia de la libertad bajo palabra (ROR), esta fianza tiene un importe monetario asignado. La disponibilidad y las condiciones varían según la jurisdicción."
+      }
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.process.guides.bail.missCourt.consequences.0",
+      "before": "Se emitirá una orden de arresto en su contra",
+      "after": "El tribunal puede emitir una orden de arresto; es un riesgo serio, pero no es automático en todos los casos"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.caseTimeline.stages.booking.rights.1",
+      "before": "Tiene derecho a una llamada telefónica (generalmente dentro de unas horas)",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.caseTimeline.stages.booking.tips.1",
+      "before": "Use su llamada telefónica para contactar a un abogado o familiar",
+      "after": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.quickRef.police.arrested2",
+      "before": "Tiene al menos una llamada telefónica — úsela para llamar a un abogado o familiar",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.quickRef.police.arrested4",
+      "before": "Deben llevarlo ante un juez dentro de 48-72 horas",
+      "after": "La primera comparecencia suele ocurrir entre 24 y 72 horas, según el estado y si está bajo custodia. No es un plazo universal; la lectura de cargos puede ser posterior."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.quickRef.arraignment.expect2",
+      "before": "Usted declara: culpable, no culpable o nolo contendere",
+      "after": "Presenta una declaración; las opciones varían según la jurisdicción"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.quickRef.arraignment.say1",
+      "before": "Sus tres opciones de declaración son: Culpable, No Culpable o Nolo Contendere. Su abogado le aconseja cuál introducir según su caso.",
+      "after": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.friendsFamily.warnings.jailCallsText",
+      "before": "Todas las llamadas desde la cárcel se graban y pueden usarse como evidencia. Las únicas llamadas protegidas son las realizadas al abogado a través de canales oficialmente designados.",
+      "after": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.phoneCall.warningBody",
+      "before": "Los fiscales han usado llamadas de cárcel como evidencia clave en innumerables casos, incluyendo declaraciones hechas a familiares. Las únicas llamadas protegidas son las que hace a su abogado — y solo si esa línea está debidamente registrada.",
+      "after": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.juvenile.bullet1",
+      "before": "La policía debe notificar a los padres o tutores antes de interrogar a un menor. Si usted es menor de edad, pida a sus padres de inmediato.",
+      "after": "Algunos estados exigen que la policía notifique a un padre o tutor cuando detiene a un menor, pero no es obligatorio en todas partes. Si es menor de edad, puede pedir de inmediato que contacten a su padre, madre o tutor. Su presencia puede ayudar, pero la obligación de esperar depende de la ley y las circunstancias. Pedir a un familiar no equivale a pedir un abogado."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step2.do5",
+      "before": "Tiene derecho a al menos una llamada telefónica. El plazo varía según el estado: California establece un límite de 3 horas; la mayoría de los demás estados exigen un «tiempo razonable». Pregunte al personal cuándo puede hacer su llamada.",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step2.c2",
+      "before": "Generalmente tiene derecho a al menos una llamada telefónica después del fichaje, aunque el momento varía según el estado. Todas las llamadas desde la cárcel excepto las realizadas a su abogado son grabadas.",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step3.context",
+      "before": "Normalmente se le permitirá al menos una llamada telefónica. Es casi seguro que esta llamada está siendo grabada. Todas las llamadas posteriores también se graban. Úselas con prudencia.",
+      "after": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step3.do1",
+      "before": "Llame a un familiar o amigo de confianza, no a su abogado (probablemente no contestará una llamada de cobro revertido desconocida).",
+      "after": "Pregunte cómo contactar a su abogado. Un familiar o amigo de confianza también puede ayudarle a localizar un abogado si no logra comunicarse directamente."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step3.c1",
+      "before": "Todas las llamadas desde la cárcel excepto las realizadas a su abogado son grabadas y monitoreadas. Los fiscales pueden acceder y usar lo dicho en una llamada como prueba. Mantenga esta llamada breve y práctica.",
+      "after": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step6.timeframe",
+      "before": "Dentro de las 48–72 horas (algunos estados más tiempo)",
+      "after": "A menudo entre 24 y 72 horas; depende del estado y de si está bajo custodia"
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step6.do1",
+      "before": "En la lectura de cargos, se le pedirá que introduzca una declaración. Existen tres opciones: culpable, no culpable y nolo contendere. Cada una tiene efectos legales diferentes en su caso. Su abogado debe aconsejarle cuál elegir según los hechos de su situación.",
+      "after": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step6.dont3",
+      "before": "No falte a esta fecha judicial. Se emitirá una orden de arresto contra usted.",
+      "after": "Faltar al tribunal puede provocar una orden de arresto y otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.first24Hours.steps.step6.c1",
+      "before": "En la lectura de cargos, los cargos se leen formalmente y se le pide que introduzca una declaración. Tres opciones están disponibles: culpable, no culpable y nolo contendere. Cada una tiene efectos legales diferentes en su caso. Su abogado debe aconsejarle cuál elegir según los hechos de su situación.",
+      "after": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración."
+    },
+    {
+      "file": "client/src/locales/es.ts",
+      "key": "translation.howTo.paths.path1.bullet3",
+      "before": "Guiones para su única llamada telefónica desde la cárcel",
+      "after": "Guiones para llamadas desde la cárcel"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.rights.quickRights.phoneCall.title",
+      "before": "打电话的权利",
+      "after": "联系律师"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.rights.quickRights.phoneCall.description",
+      "before": "被捕后可以联系家人、律师或保释担保人",
+      "after": "获得律师帮助；通话规定因州和拘押设施而异"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.rights.quickRights.phoneCall.detailedExplanation",
+      "before": "在被逮捕和登记后，你有权打合理数量的电话联系律师、家人或保释担保人。由于律师-客户特权，警察不能监听你与律师的通话，但他们可能会监听其他通话。明智地使用这项权利很重要——如果可能的话，先联系你的律师，并避免在可能被录音的电话中讨论你案件的细节。",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。 普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.rights.quickRights.knowCharges.detailedExplanation",
+      "before": "法律要求你被正式告知对你的刑事指控，通常是在被捕后48-72小时内的第一次出庭时。你有权知道你被指控的具体罪行、他们说你违反了哪些法律，以及你可能面临的处罚。这些信息让你和你的律师能够准备辩护，并确保你不会因为未被正式告知的罪行而受审。",
+      "after": "您有权获知对您的指控。首次出庭通常在24至72小时内进行，取决于州和羁押状态；提审可能在之后进行。这并非全国统一期限。法院文书和律师可以帮助确认时间安排及适用规则。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.process.steps.step1.rights.2",
+      "before": "打电话的权利",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.process.guides.bail.options.types.4",
+      "before": "Not present",
+      "after": {
+        "name": "无担保保释保证（签名保证）",
+        "description": "您签署承诺，如果未按要求出庭，将支付规定金额。无需预先缴款。与仅凭出庭承诺释放（ROR）不同，无担保保证规定了具体金额。是否可用及其条件因司法管辖区而异。"
+      }
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.process.guides.bail.missCourt.consequences.0",
+      "before": "法院将发出逮捕令",
+      "after": "法院可能签发逮捕令；这是严重风险，但并非每次都会自动发生"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.caseTimeline.stages.booking.rights.1",
+      "before": "您有权打电话（通常在几小时内）",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.caseTimeline.stages.booking.tips.1",
+      "before": "利用您的电话机会联系律师或家人",
+      "after": "普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.quickRef.police.arrested2",
+      "before": "您至少有一次打电话的机会——用来联系律师或家人",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.quickRef.police.arrested4",
+      "before": "您必须在48-72小时内被带到法官面前",
+      "after": "首次出庭通常在24至72小时内进行，取决于州和羁押状态。这并非全国统一期限；提审可能在之后进行。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.quickRef.arraignment.expect2",
+      "before": "您做出答辩：有罪、无罪或不争辩",
+      "after": "您作出答辩；可用选项因司法管辖区而异"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.quickRef.arraignment.say1",
+      "before": "您的三种答辩选项是：认罪、无罪或不争辩。您的律师会根据您的案件建议选择哪种。",
+      "after": "常见答辩包括认罪和不认罪；部分法院允许不抗辩。一些司法管辖区还将因精神障碍而不负刑事责任的不认罪答辩列为单独选项，并有特殊要求。可用选项及其后果取决于当地法律和案件。律师可以在您答辩前解释这些选项。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.friendsFamily.warnings.jailCallsText",
+      "before": "看守所的所有电话都会被录音，并可作为证据使用。唯一受保护的通话是通过官方指定渠道与律师的通话。",
+      "after": "普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.phoneCall.warningBody",
+      "before": "检察官在无数案件中将监狱电话作为关键证据，包括对家人说的话。唯一受保护的通话是与您律师的通话——且仅当该线路被正确登记为律师-委托人通话时。",
+      "after": "普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.juvenile.bullet1",
+      "before": "警察在询问未成年人之前必须通知其父母或监护人。如果您是未成年人，请立即要求见父母。",
+      "after": "一些州要求警方在拘留未成年人时通知父母或监护人，但并非各地都有此规定。如果您未成年，可以立即请求联系父母。他们在场可能有帮助，但警方是否必须等待取决于法律和具体情况。要求父母到场不等于要求律师。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step2.do5",
+      "before": "您有权至少打一个电话。时间因州而异——加利福尼亚规定3小时限制；大多数其他州要求「合理时间」。请询问登记人员您何时可以打电话。",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step2.c2",
+      "before": "您通常有权在登记后至少打一个电话，但时间因州而异。除致电律师外，所有监狱电话均被录音。",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step3.context",
+      "before": "通常您会被允许至少打一个电话。这个电话几乎肯定正在被录音。之后的每一个电话也都会被录音。请谨慎使用。",
+      "after": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step3.do1",
+      "before": "给家人或可信赖的朋友打电话——而不是您的律师（他们很可能不会接听陌生的对方付费电话）。",
+      "after": "可询问如何联系律师。如果无法直接联系，可信赖的亲友也可以帮助寻找律师。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step3.c1",
+      "before": "除致电律师外，所有监狱电话均被录音和监控。检察官可以获取并使用通话中所说的任何内容作为证据。保持通话简短且具有实际意义。",
+      "after": "普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step6.timeframe",
+      "before": "48至72小时内（某些州时间更长）",
+      "after": "通常为24至72小时；具体取决于州和羁押状态"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step6.do1",
+      "before": "在起诉时，您将被要求作出答辩。共有三个选项：认罪、不认罪和不争辩。每个选项对您的案件有不同的法律影响。您的律师必须根据您案件的具体情况建议您选择哪个。",
+      "after": "常见答辩包括认罪和不认罪；部分法院允许不抗辩。一些司法管辖区还将因精神障碍而不负刑事责任的不认罪答辩列为单独选项，并有特殊要求。可用选项及其后果取决于当地法律和案件。律师可以在您答辩前解释这些选项。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step6.dont3",
+      "before": "不要错过这个法庭日期。将会对您发出逮捕令。",
+      "after": "缺席庭审可能导致逮捕令及其他后果。如果无法出席或已经错过日期，请尽快联系律师或法院。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.first24Hours.steps.step6.c1",
+      "before": "在起诉时，正式宣读指控并要求您作出答辩。三种选项可供选择：认罪、无罪和不争辩。每种选项对您的案件有不同的法律影响。您的律师必须根据您案件的具体情况建议选择哪种。",
+      "after": "常见答辩包括认罪和不认罪；部分法院允许不抗辩。一些司法管辖区还将因精神障碍而不负刑事责任的不认罪答辩列为单独选项，并有特殊要求。可用选项及其后果取决于当地法律和案件。律师可以在您答辩前解释这些选项。"
+    },
+    {
+      "file": "client/src/locales/zh.ts",
+      "key": "translation.howTo.paths.path1.bullet3",
+      "before": "从监狱打第一个电话的脚本",
+      "after": "监所通话示例"
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Police need a good reason or your permission to search",
+      "after": "Vehicles have fewer warrant protections than homes. Under the automobile exception, probable cause to believe a vehicle contains evidence or contraband can permit a search without a warrant or consent. This does not lower the probable-cause standard."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "If arrested, your car can be searched without permission",
+      "after": "Arrest alone does not authorize every vehicle search. A search incident to arrest is limited to situations where you can reach the passenger compartment or officers reasonably believe it contains evidence of the offense of arrest. Other exceptions may apply."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "You have the right to see the warrant before letting them in",
+      "after": "You can ask to see the warrant, and officers typically provide a copy. They are not always required to show it before entry or the search. Supporting papers may be sealed, and lawful no-knock entry can occur."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Step outside and close door behind you to speak with officers",
+      "after": "You can speak through the closed door. If you choose to step outside, do so calmly and close the door behind you. This does not prevent entry when officers have lawful authority."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Don't let officers in without seeing a warrant",
+      "after": "Do not physically block entry or a search because officers have not yet shown you a warrant"
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Strip searches require a warrant or serious emergency",
+      "after": "Strip searches must satisfy the Fourth Amendment reasonableness standard; a warrant is not always required. Rules depend on the jurisdiction and setting. In the Third Circuit, strip searches incident to arrest outside jails or prisons generally require a warrant or exigent circumstances supported by probable cause. Other courts apply different standards."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "You can refuse to unlock your phone",
+      "after": "You can decline to consent to unlocking your phone. Whether you can be compelled to unlock it depends on the law and circumstances; a lawyer can assess any warrant or order."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Courts are divided on biometrics: many have held police cannot force fingerprint/Face ID unlock without a warrant, but this is unsettled law that varies by jurisdiction",
+      "after": "Compelled fingerprint or facial unlocking can implicate the Fifth Amendment when the act communicates knowledge of or control over the device. Courts are split on when this is testimonial; having a search warrant does not by itself resolve that question."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Passcodes are more protected — courts generally hold you cannot be compelled to reveal a passcode (5th Amendment)",
+      "after": "Disclosing a memorized passcode is more likely to be treated as testimonial. Courts disagree about compelled unlocking and the foregone-conclusion doctrine, which may allow compulsion when the government already knows the facts the act would communicate. Protection is not absolute."
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Don't unlock your phone for police",
+      "after": "A warrant to search a phone and authority to compel you to unlock it are separate legal questions"
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Don't provide your passcode",
+      "after": "A lawyer can explain the consequences of disclosing a passcode or responding to a court order"
+    },
+    {
+      "file": "client/src/pages/search-seizure.tsx",
+      "key": "Search scenario",
+      "before": "Don't let them use your biometrics to unlock",
+      "after": "Do not physically resist an attempted biometric unlock; tell your attorney what occurred"
+    },
+    {
+      "file": "client/src/pages/right-to-counsel.tsx",
+      "key": "Juvenile questioning scenario",
+      "before": "Courts look more closely at whether a young person was truly free to leave. Many states require police to notify parents before questioning someone under 18. A minor's age is an important factor in deciding whether they felt free to go. In most states, juvenile courts give heightened scrutiny to statements made without a parent or attorney present. Minors can invoke by clearly asking for both a parent and a lawyer before answering questions.",
+      "after": "A minor's age matters when courts assess custody and whether a waiver was voluntary. Some states require parental notification or consultation with an attorney, but the rules differ. You can ask for a parent or guardian immediately; whether police must wait for them depends on the law and circumstances. Asking for a parent does not necessarily invoke the right to counsel. A clear request such as 'I want a lawyer' addresses that separate right."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Police need a good reason or your permission to search",
+      "after": "Vehicles have fewer warrant protections than homes. Under the automobile exception, probable cause to believe a vehicle contains evidence or contraband can permit a search without a warrant or consent. This does not lower the probable-cause standard."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "If arrested, your car can be searched without permission",
+      "after": "Arrest alone does not authorize every vehicle search. A search incident to arrest is limited to situations where you can reach the passenger compartment or officers reasonably believe it contains evidence of the offense of arrest. Other exceptions may apply."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "You have the right to see the warrant before letting them in",
+      "after": "You can ask to see the warrant, and officers typically provide a copy. They are not always required to show it before entry or the search. Supporting papers may be sealed, and lawful no-knock entry can occur."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Step outside and close the door behind you to speak with officers",
+      "after": "You can speak through the closed door. If you choose to step outside, do so calmly and close the door behind you. This does not prevent entry when officers have lawful authority."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Don't let officers in without seeing a warrant",
+      "after": "Do not physically block entry or a search because officers have not yet shown you a warrant"
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Strip searches require a warrant or serious emergency",
+      "after": "Strip searches must satisfy the Fourth Amendment reasonableness standard; a warrant is not always required. Rules depend on the jurisdiction and setting. In the Third Circuit, strip searches incident to arrest outside jails or prisons generally require a warrant or exigent circumstances supported by probable cause. Other courts apply different standards."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "You can refuse to unlock your phone",
+      "after": "You can decline to consent to unlocking your phone. Whether you can be compelled to unlock it depends on the law and circumstances; a lawyer can assess any warrant or order."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Courts are divided on biometrics — many have held police cannot force fingerprint or Face ID unlock without a warrant, but this varies by jurisdiction",
+      "after": "Compelled fingerprint or facial unlocking can implicate the Fifth Amendment when the act communicates knowledge of or control over the device. Courts are split on when this is testimonial; having a search warrant does not by itself resolve that question."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Passcodes are more protected. Courts generally hold you cannot be compelled to reveal a passcode (5th Amendment)",
+      "after": "Disclosing a memorized passcode is more likely to be treated as testimonial. Courts disagree about compelled unlocking and the foregone-conclusion doctrine, which may allow compulsion when the government already knows the facts the act would communicate. Protection is not absolute."
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Don't unlock your phone for police",
+      "after": "A warrant to search a phone and authority to compel you to unlock it are separate legal questions"
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Don't provide your passcode",
+      "after": "A lawyer can explain the consequences of disclosing a passcode or responding to a court order"
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Rights tab · Search scenario",
+      "before": "Don't let them use your biometrics to unlock",
+      "after": "Do not physically resist an attempted biometric unlock; tell your attorney what occurred"
+    },
+    {
+      "file": "client/src/pages/rights-info.tsx",
+      "key": "Live Home Search rights list",
+      "before": "Door conversation option was only in the unrendered whatToDo array",
+      "after": "You can speak through the closed door. If you choose to step outside, do so calmly and close the door behind you. This does not prevent entry when officers have lawful authority."
+    }
+  ]
+}

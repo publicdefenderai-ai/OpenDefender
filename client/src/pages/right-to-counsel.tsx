@@ -75,7 +75,7 @@ const greyAreas: GreyAreaItem[] = [
   {
     title: "You're a juvenile being questioned",
     description: "You are under 18 and police question you, with or without your parents present.",
-    answer: "Courts look more closely at whether a young person was truly free to leave. Many states require police to notify parents before questioning someone under 18. A minor's age is an important factor in deciding whether they felt free to go. In most states, juvenile courts give heightened scrutiny to statements made without a parent or attorney present. Minors can invoke by clearly asking for both a parent and a lawyer before answering questions."
+    answer: "A minor's age matters when courts assess custody and whether a waiver was voluntary. Some states require parental notification or consultation with an attorney, but the rules differ. You can ask for a parent or guardian immediately; whether police must wait for them depends on the law and circumstances. Asking for a parent does not necessarily invoke the right to counsel. A clear request such as 'I want a lawyer' addresses that separate right."
   }
 ];
 
