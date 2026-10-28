@@ -4,7 +4,7 @@ Updated October 2, 2026. The target is dependable coverage of important charges,
 
 ## Present position
 
-PR54 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
+PR55 is merged. California remains at 657 configured choices (99 corrected originals and 558 additions) across 340 primary sections, supported by 840 retained publication sections / 848 versions. The October 1 renewal matched every retained version and expires October 8; deployment remains a separate requirement. Twenty-one canonical labels remain withheld. Existing attorney decisions remain recorded and are not reopened by reconciliation.
 
 The latest consolidated reconciliation accounts for all 31 outstanding justice/property instruction comparisons: 23 relate to existing reviewed choices, three have a broad theft choice needing more detailed conduct work, three have no matching published branch, and two remain explicitly deferred. These are comparison counts, not new charges. The 23 reused summaries are partial coverage and do not increase the prior 140 bounded matches or certify complete instruction coverage. The full 202-entry prior crosswalk and every remaining finding are preserved.
 
@@ -16,12 +16,14 @@ The combined trespass batch adds 11 choices from six subdivisions, reusing seven
 
 The petty-theft conduct supplement now explains larceny, trick and false pretense under the existing charge ID. It adds monitored section 532 proof requirements and explicit English-fallback warnings, without changing penalties or adding choices. The former broad-theft comparisons now have bounded introductory conduct summaries; they are not promoted to exhaustive instruction certification. Vehicle sentencing remains open.
 
+The [major-omission audit](../scripts/data-review/output/california-major-omission-audit.md) accounts for 91 homicide/gang instructions, rechecks all 18 unresolved people/weapons entries, and probes nine important other-code identities. Seventeen instruction entries have existing charge choices, eight have related murder-theory coverage, 29 are context/defense/procedure, 34 are separately tracked allegations or sentencing material, and three are unpublished priority entries. These are instruction counts, not offense counts or a statewide coverage percentage. The two attempted-manslaughter instructions concern the same offense family. No new choice, penalty or currency approval results from the audit.
+
 ## Current closeout work
 
 The reconciliation completes the accounting portion of the first closeout package. It does not reset the remaining-work estimate or create another full family review.
 
 1. The consolidated theft, animal, access-card and trespass work is recorded above. Remaining vehicle branches stay unpublished pending review. Existing general forgery and bad-check summaries are reused, with their limits preserved. Proceed to item 2 while those holds remain open. Attorney questions and deliberative review materials are maintained outside the public repository; public accounting records only publication status and evidence needed to support released content.
-2. Complete the targeted major-omission check across homicide, gangs, people/weapons and important other-code candidates. Add only significant missing coverage; unresolved severity is not assumed to be minor.
+2. Use the completed bounded audit to combine significant missing person/weapons branches into one shared-source verification group, followed by the targeted other-code group. The other-code probes identify seven unpublished candidates, one existing tax choice and one preserved source-identity hold. They do not establish full coverage of those codes. Unresolved severity is not assumed to be minor. Allegation/sentencing coverage remains a separate explicit limitation.
 3. Close out with a unified omission inventory, representative charging-paper searches/guidance and deployment parity. Marginal or legally unsettled branches remain identified gaps rather than open-ended blockers. A separate fourth publication batch is justified only by a confirmed consequential omission.
 
 Reusable maintenance, source comparison and test infrastructure remain worthwhile investments, but are reported separately from additional California coverage. Historical milestones below describe their earlier state.
@@ -387,3 +389,7 @@ Charging-paper aliases for 470(a)-(d), 484g(a)/(b) and 476a(a) reach the existin
 Reproduce with `node --import tsx scripts/data-review/california-verification/gap-reconciliation.ts`. The original corrections and historical crosswalk remain intact. No renewal is performed by this report.
 
 Validation for this reconciliation: seven focused tests, four production-browser/API checks, all 32 Python tests, typecheck and build passed. The full 163-file suite reports 2,001 passed and 105 skipped, with the unchanged two failing tests and three database-dependent suite-loading failures. No production database or paid AI service was used.
+
+## Reproducing the major-omission audit
+
+Run `node --import tsx scripts/data-review/california-verification/major-omission-audit.ts` for offline validation and report generation. It verifies the retained benchmark page inventory, chapter contents, disposition inventory, frozen catalog identities and statewide discovery hashes. The optional `extract-major-omission-benchmark.py` replays the original hash-bound PDF; it does not download a new edition or renew statutory freshness. Its Python tests run through the existing Vitest Python-test bridge. The frozen catalog snapshot identifies the main commit used so later additions do not rewrite this historical accounting.

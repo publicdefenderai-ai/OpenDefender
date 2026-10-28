@@ -104,3 +104,9 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Sources:** CALCRIM 1303 cites 11411(a)/(b) and includes a two-occasion alternative; 1304 cites (c). Current [PEN 11411](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=11411.) places nooses in (b), signs/symbols in (c), religious-symbol conduct in (d), and repeat-conviction penalties in (e). It also names broader listed sites than the instruction. The official page identifies AB 2282, effective January 1, 2023.
 - **Treatment:** Use current statutory subdivisions, knowledge and purpose/recklessness distinctions; never copy the two-occasion element into the new branches. Retain bounded comparisons for sign/religious-symbol conduct, with an explicit discrepancy marker. Do not claim the older sign instruction verifies the current noose branch.
 - **Traceability:** `california-weapons-threats-review.json`, `sourceAnomalies`, binds exact section evidence and the retained 1303/1304 page identities/hashes. Underlying sources remain unchanged.
+
+## CA-010: CALCRIM general contents omit instruction 526
+
+The retained February-approved 2026 edition's general contents (PDF page 35) lists 526-540 as reserved. Its homicide chapter contents (PDF page 291) lists instruction 526, and the instruction appears at PDF page 349. The audit uses the chapter inventory and actual body headings, preserving the discrepancy rather than omitting the instruction. This is a publisher index discrepancy, not a statutory error or a new legal interpretation.
+
+Source: [Judicial Council CALCRIM 2026](https://courts.ca.gov/system/files/file/calcrim-2026.pdf), retained PDF SHA-256 `32cde18ace46a4a6fc4dd2ea27c9e30f923dc1d28dd554500119787f957a3d6e`. The major-omission benchmark retains the chapter contents and instruction pages; the previously retained PDF receipt identifies the complete source.

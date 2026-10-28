@@ -1,0 +1,807 @@
+{
+  "schemaVersion": 1,
+  "scope": "public_catalog_coverage_accounting_not_attorney_deliberation",
+  "benchmarkDispositions": [
+    {
+      "instructionId": "500",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "505",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "506",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "507",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "508",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "509",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "510",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "511",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "512",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "520",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "521",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "522",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "523",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "524",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "525",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "526",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "540A",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "540B",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "540C",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "548",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "560",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "561",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "562",
+      "status": "existing_offense_theory_partial",
+      "chargeIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree"
+      ],
+      "limitation": "Related murder choices exist; this liability theory is not independently certified by this audit."
+    },
+    {
+      "instructionId": "563",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-conspiracy-182-a1"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "570",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-voluntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "571",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-voluntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "572",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-voluntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "580",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-involuntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "581",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-involuntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "582",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-involuntary-manslaughter"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "590",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-gross-vehicular-manslaughter-191-5-a"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "591",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-vehicular-manslaughter-191-5-b"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "592",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-vehicular-manslaughter-192-c1"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "593",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-vehicular-manslaughter-192-c2"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "594",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-vehicular-manslaughter-192-c3"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "595",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "600",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-attempted-murder"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "601",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-attempted-murder"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "602",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-attempted-murder"
+      ],
+      "limitation": "Existing charge identity; no claim of complete instruction alternatives or sentencing coverage."
+    },
+    {
+      "instructionId": "603",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "No corresponding selectable charge identity in the frozen catalog."
+    },
+    {
+      "instructionId": "604",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "No corresponding selectable charge identity in the frozen catalog."
+    },
+    {
+      "instructionId": "620",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "625",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "626",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "627",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "640",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "641",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "642",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "643",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "700",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "701",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "702",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "703",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "704",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "705",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "706",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "707",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "708",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "720",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "721",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "722",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "723",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "724",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "725",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "726",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "727",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "728",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "729",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "730",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "731",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "732",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "733",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "734",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "735",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "736",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "737",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "750",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "751",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "760",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "761",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "763",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "764",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "765",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "766",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "767",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "768",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "775",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    },
+    {
+      "instructionId": "1400",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "No corresponding selectable charge identity in the frozen catalog."
+    },
+    {
+      "instructionId": "1401",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "1402",
+      "status": "allegation_or_sentencing_open",
+      "chargeIds": [],
+      "limitation": "Track separately from standalone charges; detailed allegation coverage is not established by a general murder or gang-related label."
+    },
+    {
+      "instructionId": "1403",
+      "status": "context_defense_or_procedure",
+      "chargeIds": [],
+      "limitation": "Instruction is context, defense, or trial/penalty procedure; not counted as a missing standalone charge."
+    }
+  ],
+  "peopleWeaponsDispositions": [
+    {
+      "instructionId": "900",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-assault-on-peace-officer",
+        "ca-pen-241-b"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "908",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "926",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "960",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-battery-243-a"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1022",
+      "status": "existing_hold_preserved",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1037",
+      "status": "existing_hold_preserved",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1153",
+      "status": "existing_choice_requires_conduct_comparison",
+      "chargeIds": [
+        "ca-prostitution-solicitation"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1154",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-prostitution-solicitation"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1155",
+      "status": "existing_choice_partial",
+      "chargeIds": [
+        "ca-prostitution-solicitation"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1161",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "1162",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2500",
+      "status": "weapon_specific_template_open",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2501",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2502",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2513",
+      "status": "existing_hold_preserved",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2530",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2560",
+      "status": "existing_choice_missing_sibling",
+      "chargeIds": [
+        "ca-possession-of-prohibited-weapon"
+      ],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    },
+    {
+      "instructionId": "2561",
+      "status": "unpublished_priority",
+      "chargeIds": [],
+      "limitation": "Existing IDs are navigation and partial coverage only; sibling conduct and protected-victim conditions are not cleared by sharing a section."
+    }
+  ],
+  "otherCodeProbes": [
+    {
+      "key": "BPC:2052",
+      "label": "Unlicensed practice of medicine",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "BPC:7028",
+      "label": "Unlicensed contracting",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "LAB:3700.5",
+      "label": "Failure to secure workers compensation",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "LAB:6425",
+      "label": "Workplace safety violation causing death or prolonged impairment",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "INS:1871.4",
+      "label": "Workers compensation insurance fraud",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "WIC:10980",
+      "label": "Public assistance fraud",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "UIC:2101",
+      "label": "Unemployment or disability benefit statements",
+      "chargeIds": [],
+      "status": "unpublished_priority",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "RTC:19706",
+      "label": "Income tax evasion",
+      "chargeIds": [
+        "ca-rtc-19706"
+      ],
+      "status": "existing_choice_partial",
+      "limitation": "Targeted discovery probe, not a complete inventory of this code or verified punishment."
+    },
+    {
+      "key": "HSC:11395",
+      "label": "Treatment-mandated drug offense source identity",
+      "chargeIds": [],
+      "status": "existing_hold_preserved",
+      "limitation": "Preserve the existing source-identity hold. Discovery presence does not resolve the retained source/version discrepancy or authorize publication."
+    }
+  ],
+  "limits": [
+    "No new charge, legal approval, currentness renewal, or statewide completeness claim.",
+    "An instruction is not necessarily a separate charge. Same-section associations do not establish coverage of a statutory branch.",
+    "Other-code probes are purposive gap checks, not a statistically representative sample or proof of filing frequency.",
+    "Attorney questions and deliberative review materials are excluded. Public records retain neutral publication status only."
+  ]
+}
