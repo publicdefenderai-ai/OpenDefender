@@ -1,5 +1,21 @@
 # California practical completion plan
 
+## Resumed closeout after PR 57: October 28, 2026
+
+The merged catalog contains 662 configured choices. This is not a live availability count. The new `scripts/data-review/output/california-closeout-inventory.md` and companion JSON consolidate the retained comparison packets without re-reviewing the state or renewing receipts. Earlier sections below remain historical milestones.
+
+The inventory accounts for 576 benchmark entries: 207 people/weapons, 91 homicide/gang, 202 justice/property, 46 drug and 30 driving/vessel entries. These are overlapping comparison identities, including defenses and sentencing allegations, not missing-charge counts or a statewide denominator. Nine other-code probes remain separately accounted for, seven of them candidates for further work.
+
+The next grouped work covers remaining specific weapons/public-conduct comparisons and seven other-code candidates: BPC 2052/7028, LAB 3700.5/6425, INS 1871.4, WIC 10980 and UIC 2101. Check exact branches and shared dependencies once; clear branches can advance while unresolved siblings stay held. No severity is inferred from a discovery label. Drug, vehicle and other partial comparisons remain visible in the consolidated register rather than disappearing behind this next-batch priority.
+
+Historical finding counts are not the current unresolved workload. The register preserves 40 historical identities, links nine to later bounded publications, and marks the published false-imprisonment fine decision so it is not reopened. Other existing private decisions must be reconciled before assigning new legal research. Links to a later publication do not silently certify every sibling branch.
+
+Five representative configured citation lookups and ID-based explanation checks cover Penal, Health and Safety, and Vehicle Code forms. They complement the PR 57 intake/browser checks; they do not establish production availability, PDF parity or exhaustive search coverage. Deployment and receipt-policy work remain separate. Existing evidence expiry behavior is unchanged by this inventory.
+
+Reproduce: `node --import tsx scripts/data-review/california-verification/closeout-inventory.ts`. The generator copies only neutral identities, statuses and references, never attorney questions or deliberative prose. Its retained input bindings and successor histories are checked in `tests/california-closeout-inventory.test.ts`.
+
+## Historical completion milestones
+
 Updated October 2, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.
 
 ## Present position
