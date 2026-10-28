@@ -130,13 +130,14 @@ export function buildCloseoutInventory() {
   const decisionFile = "shared/california-attorney-decisions.json";
   const decisionText = fs.readFileSync(decisionFile, "utf8");
   const publishedDecisions = JSON.parse(decisionText) as Row[];
-  const resolvedIndex = publishedDecisions.findIndex(row => row.id === "ca-pen-237-a");
-  if (resolvedIndex < 0) throw new Error("Missing published false-imprisonment successor");
+  const resolved = publishedDecisions.filter(row => row.id === "ca-pen-237-a");
+  if (resolved.length !== 1) throw new Error("Missing or duplicate published false-imprisonment successor");
   const recordedResolution = {
     findingId: "felony-false-imprisonment-fine",
     status: "published_decision_recorded_do_not_reopen",
-    chargeId: "ca-pen-237-a", file: decisionFile, index: resolvedIndex,
-    fileSha256: hash(decisionText),
+    chargeId: "ca-pen-237-a", file: decisionFile,
+    // Bind the relevant record, not unrelated decisions or its position in a list.
+    recordSha256: hash(JSON.stringify(resolved[0])),
   };
   const priority = load("priority-person-review");
   const snapshot = load("major-omission-catalog-snapshot");

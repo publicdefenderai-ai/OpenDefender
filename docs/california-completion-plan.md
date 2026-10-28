@@ -14,6 +14,12 @@ Five representative configured citation lookups and ID-based explanation checks 
 
 Reproduce: `node --import tsx scripts/data-review/california-verification/closeout-inventory.ts`. The generator copies only neutral identities, statuses and references, never attorney questions or deliberative prose. Its retained input bindings and successor histories are checked in `tests/california-closeout-inventory.test.ts`.
 
+### Contributor flow for retained accounting
+
+Before changing a retained packet, prefer a successor packet so historical evidence stays reproducible. If an intentional correction changes an input bound by the closeout inventory, run `node --import tsx scripts/data-review/california-verification/closeout-inventory.ts`, inspect the generated status/history diff, and run `npx vitest run tests/california-closeout-inventory.test.ts`. Commit the corrected source and regenerated accounting together. Regeneration is not legal approval and must not erase holds or prior decisions. Ordinary new catalog additions do not alter this frozen PR 57 count; publish a successor inventory when that baseline should advance.
+
+The published false-imprisonment marker binds only its identified decision record, not the position or entire decision file. Unrelated decision additions do not invalidate it. The root `.gitignore` already distinguishes known disposable reports and the ignored `scripts/data-review/output/scratch/` directory from durable evidence; new evidence remains visible to Git rather than hidden by a directory-wide ignore.
+
 ## Historical completion milestones
 
 Updated October 2, 2026. The target is dependable coverage of important charges, with an honest omission inventory. It is not a claim that every criminally enforceable California provision has been published.

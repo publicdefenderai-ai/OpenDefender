@@ -15689,8 +15689,7 @@
       "status": "published_decision_recorded_do_not_reopen",
       "chargeId": "ca-pen-237-a",
       "file": "shared/california-attorney-decisions.json",
-      "index": 3,
-      "fileSha256": "7fc5a46e71373a8a8a10c5abdc7368ca17f838316238f94d6dcc9a2e66e4781f"
+      "recordSha256": "76b6f8db4df5c6d5ef4e8503f26096be9ed8d212538a1a253989f207bb6f3686"
     }
   ],
   "otherCodeProbes": [
