@@ -21,6 +21,9 @@ L03/L04 corrections from the October 28 saved workbook are recorded in [the impl
 
 ## Fixed presentation decisions
 
+Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, excessive boxes and decorative labels. Keep an em dash only where it materially improves clarity; do not mechanically alter quotations or legally reviewed text.
+
+
 - Shared identity: DM Sans, warm paper, plum accents, existing shield reduced in scale and recolored warm plum, bold OpenDefender. wordmark. Self-host the font.
 - Homepage: architectural open-door graphic; desktop outer height 310px, 150px top radii, inner arch inset 18%/22%, cutout height 80%, skew -16deg, transform origin top left. Do not substitute a differently proportioned drawing.
 - Mobile homepage: doorway beside the headline, 92 by 125px; at widths below 360px, 65 by 100px. Four numbered single-column pathways in this order: arrest, criminal case, immigration, life outside the case. Resource inventory follows.
@@ -207,3 +210,11 @@ The new request-parity spec is included in the release allowlist. It compares th
 On completion, the conversational intake opens the existing Case Guidance results dashboard rather than the legacy chat's inline summary. This visible transition preserves the canonical result warnings and print/export controls and needs design review with this PR.
 
 Validation: typecheck and production build passed. All 7 new payload/recovery/CAPTCHA/clear-session checks passed; the 12 shared questionnaire locale/theme checks, 8 chat presentation checks and 5 existing timeout-recovery checks also passed during this batch. All 31 targeted unit tests passed. Desktop final-step and mobile conversation screenshots were visually inspected. This is focused validation, not a clean full-CI or live-generation claim.
+
+### PR 69 review corrections
+
+Updated against current main. Removed the unused privilege acknowledgment state and setters; no new consent gate is inferred from dead state. Existing consent and privilege disclosures remain in the shared intake. Successful generation now records personalized-guidance completion in ChatContext; cancel, failed requests and merely opening the intake do not. The current pathway menu deliberately remains available for repeat use and already ignores completion history.
+
+Replaced the three supervision-option em dashes with commas in both the canonical controls and transcript summaries. The English-only background labels, values and territory names remain a coordinated localization follow-up for the shared questionnaire and summaries, with Spanish/Chinese known-answer transcript checks required when addressed.
+
+Post-review validation on the updated main baseline: typecheck and production build passed. Full Vitest run: 2,058 passed, 4 failed, 105 skipped. Failures concern Florida jury-source coverage, two Ohio source checks, and database configuration in the mitigation suite; three additional suites fail setup without a database URL. This is not a clean full-suite result.

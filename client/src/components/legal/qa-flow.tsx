@@ -1331,9 +1331,9 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="none">No</SelectItem>
-                <SelectItem value="probation">Yes — probation</SelectItem>
-                <SelectItem value="parole">Yes — parole</SelectItem>
-                <SelectItem value="both">Yes — both</SelectItem>
+                <SelectItem value="probation">Yes, probation</SelectItem>
+                <SelectItem value="parole">Yes, parole</SelectItem>
+                <SelectItem value="both">Yes, both</SelectItem>
                 <SelectItem value="unsure">Not sure</SelectItem>
               </SelectContent>
             </Select>

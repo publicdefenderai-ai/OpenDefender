@@ -25,7 +25,7 @@ export function summarizeIntakeStep(step: number, data: QAFormData, t: TFunction
   }
   if (step === 4) {
     const answers: string[] = [];
-    const supervision: Record<string, string> = { none: 'No', probation: 'Yes — probation', parole: 'Yes — parole', both: 'Yes — both', unsure: 'Not sure' };
+    const supervision: Record<string, string> = { none: 'No', probation: 'Yes, probation', parole: 'Yes, parole', both: 'Yes, both', unsure: 'Not sure' };
     const citizenship: Record<string, string> = { citizen: 'U.S. citizen', non_citizen: 'Non-citizen (green card, visa, DACA, etc.)', prefer_not: 'Prefer not to say' };
     if (data.supervisionStatus) answers.push(`Probation or parole: ${supervision[data.supervisionStatus]}`);
     if (data.schoolZoneStatus) answers.push(`${t(`${prefix}.background.schoolZoneQuestion`)}: ${t(`${prefix}.background.schoolZoneOptions.${data.schoolZoneStatus}`)}`);

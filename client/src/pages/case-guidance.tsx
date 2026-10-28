@@ -285,7 +285,7 @@ export default function CaseGuidance() {
   return <CaseGuidanceExperience />;
 }
 
-export function CaseGuidanceExperience({ presentation = "form", onExit }: { presentation?: "form" | "conversation"; onExit?: () => void } = {}) {
+export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidanceComplete }: { presentation?: "form" | "conversation"; onExit?: () => void; onGuidanceComplete?: () => void } = {}) {
   useScrollToTop();
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
@@ -651,6 +651,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit }: { pres
         // Then set the complete guidance result in one atomic update
         // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
+        onGuidanceComplete?.();
         // A successful retry has completed recovery; do not let a later reload
         // reopen the obsolete timeout state with the old answers.
         clearStoredGuidanceRecovery();

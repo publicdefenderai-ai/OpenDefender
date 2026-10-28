@@ -36,7 +36,7 @@ async function intake(page: Page, mode: string, known: boolean) {
   await page.getByTestId('button-continue-status').click();
   if (known) {
     await choose(page, 'select-school-zone-status', /Yes/);
-    await choose(page, 'select-supervision-status', 'Yes — probation');
+    await choose(page, 'select-supervision-status', 'Yes, probation');
     await choose(page, 'select-prior-convictions', 'Yes');
     await choose(page, 'select-citizenship-status', /Non-citizen/);
     for (const id of ['select-minor-children', 'select-professional-license', 'select-housing-assistance']) await choose(page, id, 'Yes');
