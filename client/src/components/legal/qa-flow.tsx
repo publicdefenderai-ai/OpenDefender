@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { getChargeById as getCatalogChargeById, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall, isChargeIdRequiringReselection } from "@shared/criminal-charges";
 import { getCaliforniaLegacyDisposition, getCaliforniaReselectionOptions } from "@shared/california-authority";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
@@ -62,6 +62,8 @@ export function QAFlow({
   onFormDataChange,
 }: QAFlowProps) {
   const { t } = useTranslation();
+  const reducedMotion = useReducedMotion();
+  const progressRef = useRef<HTMLParagraphElement>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [showCaseStageWarning, setShowCaseStageWarning] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
@@ -96,6 +98,10 @@ export function QAFlow({
       setCurrentStep(steps.length - 1);
     }
   }, [reviewAnswers, steps.length]);
+
+  useEffect(() => {
+    progressRef.current?.focus();
+  }, [currentStep]);
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
@@ -136,7 +142,7 @@ export function QAFlow({
 
   return (
     <>
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="case-intake w-full mx-auto">
       <CardHeader className="p-4 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
           <CardTitle className="min-w-0 text-xl sm:text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>
@@ -151,22 +157,18 @@ export function QAFlow({
         </div>
         
         {/* Progress Indicator */}
-        <div className="flex flex-wrap items-center gap-2" data-testid="qa-step-indicator">
+        <div className="case-step-track" data-testid="qa-step-indicator" aria-hidden="true">
           {steps.map((_, index) => (
             <div
               key={index}
               data-testid={`qa-step-circle-${index + 1}`}
-              className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                index === currentStep 
-                  ? "bg-gray-700 text-white" 
-                  : "bg-gray-200 text-gray-400"
-              }`}
+              className={`case-step-mark${index <= currentStep ? " is-reached" : ""}`}
             >
               {index + 1}
             </div>
           ))}
         </div>
-        <p className="text-sm text-muted-foreground mt-2">
+        <p ref={progressRef} tabIndex={-1} className="case-step-label" data-testid="qa-step-label">
           {t('legalGuidance.qaFlow.stepProgress', { current: currentStep + 1, total: steps.length, title: steps[currentStep].title })}
         </p>
       </CardHeader>
@@ -175,10 +177,10 @@ export function QAFlow({
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: reducedMotion ? 1 : 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: reducedMotion ? 1 : 0 }}
+            transition={{ duration: reducedMotion ? 0 : 0.15 }}
           >
             <CurrentStepComponent
               formData={formData}
@@ -195,7 +197,7 @@ export function QAFlow({
         </AnimatePresence>
 
         {/* Privacy Notice */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-6 p-4 bg-muted rounded-lg">
+        <div className="case-intake-privacy flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div className="flex items-start gap-2">
             <Lock className="h-4 w-4 text-muted-foreground" />
             <p className="text-xs text-muted-foreground">
@@ -206,7 +208,7 @@ export function QAFlow({
             variant="ghost"
             size="sm"
             onClick={onClearSession}
-            className="min-h-[44px] self-start text-xs text-red-600 hover:text-red-700"
+            className="min-h-[44px] self-start text-xs text-primary hover:underline"
           >
             {t('legalGuidance.qaFlow.clearSession.button')}
           </Button>
@@ -257,16 +259,16 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
       <div>
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.consent.title')}</h3>
 
-        <ul className="space-y-4 text-sm mb-5">
+        <ul className="case-consent-explanation space-y-4 text-sm mb-5">
           <li className="flex items-start gap-3">
-            <Scale className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+            <Scale className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
             <span className="text-muted-foreground">
               <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet1Head')}</strong>{' '}
               {t('legalGuidance.qaFlow.consent.bullet1Body')}
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <Lock className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+            <Lock className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
             <span className="text-muted-foreground">
               <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet2Head')}</strong>{' '}
               {t('legalGuidance.qaFlow.consent.bullet2Body')}
@@ -274,18 +276,20 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           </li>
         </ul>
 
-        <div className="grid sm:grid-cols-2 gap-3">
+        <p className="case-choice-instruction">{t("design.caseChooseOne")}</p>
+        <div className="case-guidance-choices">
           {/* Card A — AI Guidance */}
           <button
             onClick={() => handleChooseMode('ai')}
             data-testid="button-choose-ai"
-            className="text-left border-2 border-blue-200 hover:border-blue-500 rounded-lg p-4 space-y-2 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-background"
+            className="case-guidance-choice"
           >
+            <span className="case-option-label">{t("design.caseOption", { number: 1 })}</span>
             <div className="flex items-center gap-2 flex-wrap">
               <span className="font-semibold text-sm text-foreground">
                 {t('legalGuidance.qaFlow.consent.cardATitle')}
               </span>
-              <Badge className="bg-blue-600 text-white text-xs px-2 py-0">
+              <Badge className="bg-muted text-foreground text-xs px-2 py-0">
                 {t('legalGuidance.qaFlow.consent.cardARecommended')}
               </Badge>
             </div>
@@ -295,11 +299,11 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
             <p className="text-xs text-muted-foreground italic">
               {t('legalGuidance.qaFlow.consent.cardATime')}
             </p>
-            <p className="text-[11px] text-muted-foreground/70 leading-relaxed border-t pt-2 mt-1">
+            <p className="text-xs text-muted-foreground leading-relaxed border-t pt-2 mt-1">
               {t('legalGuidance.qaFlow.consent.cardADisclosure')}
             </p>
             <div className="pt-1">
-              <span className="text-xs font-medium text-blue-600">
+              <span className="case-choice-action">
                 {t('legalGuidance.qaFlow.consent.cardAButton')}
               </span>
             </div>
@@ -309,8 +313,9 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           <button
             onClick={() => handleChooseMode('rules')}
             data-testid="button-choose-rules"
-            className="text-left border-2 border-border hover:border-green-500 rounded-lg p-4 space-y-2 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-background"
+            className="case-guidance-choice"
           >
+            <span className="case-option-label">{t("design.caseOption", { number: 2 })}</span>
             <div className="flex items-center gap-2">
               <span className="font-semibold text-sm text-foreground">
                 {t('legalGuidance.qaFlow.consent.cardBTitle')}
@@ -323,7 +328,7 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
               {t('legalGuidance.qaFlow.consent.cardBTime')}
             </p>
             <div className="pt-1">
-              <span className="text-xs font-medium text-green-600">
+              <span className="case-choice-action">
                 {t('legalGuidance.qaFlow.consent.cardBButton')}
               </span>
             </div>
@@ -342,7 +347,7 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           </p>
           <a
             href="/first-24-hours"
-            className="text-xs font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 whitespace-nowrap flex items-center gap-1 transition-colors"
+            className="text-sm font-medium text-primary flex items-center gap-1"
           >
             {t('legalGuidance.qaFlow.consent.escapeHatchLink')} <ArrowRight className="h-3 w-3" />
           </a>
@@ -456,7 +461,7 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.jurisdiction}
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="flex-1 case-continue"
           data-testid="button-next-jurisdiction"
         >
           {t('legalGuidance.qaFlow.jurisdiction.continue')} <ArrowRight className="ml-2 h-4 w-4" />
@@ -1144,7 +1149,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               (formData.charges.length === 0 && !formData.chargesUnknown) ||
               (isAuthorityBacked && runtimeAuthorityCharges === null)
             }
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="flex-1 case-continue"
           data-testid="button-next-case-details"
         >
           {t('legalGuidance.qaFlow.caseDetails.continue')} <ArrowRight className="ml-2 h-4 w-4" />
@@ -1232,7 +1237,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         <Button
           onClick={onNext}
           disabled={!formData.caseStage || !formData.custodyStatus}
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="flex-1 case-continue"
           data-testid="button-continue-status"
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />
@@ -1422,7 +1427,7 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
         </Button>
         <Button
           onClick={onNext}
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="flex-1 case-continue"
           data-testid="button-continue-background"
         >
           Continue <ArrowRight className="ml-2 h-4 w-4" />
@@ -1577,13 +1582,13 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
       )}
 
       <div className="flex flex-col-reverse sm:flex-row gap-3">
-        <Button variant="outline" onClick={onPrev}>
+        <Button variant="outline" onClick={onPrev} data-testid="button-prev-additional-details">
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.additionalDetails.back')}
         </Button>
         <Button
           onClick={onNext}
           disabled={isLast && captchaRequired && !captchaToken}
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
+          className="flex-1 case-continue"
         >
           {isLast
             ? t('legalGuidance.qaFlow.additionalDetails.submit')
@@ -1706,14 +1711,14 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
       )}
 
       <div className="flex flex-col-reverse sm:flex-row gap-3">
-        <Button variant="outline" onClick={onPrev}>
+        <Button variant="outline" onClick={onPrev} data-testid="button-prev-civil-emergencies">
           <ArrowLeft className="mr-2 h-4 w-4" />
           {t('legalGuidance.qaFlow.civilEmergencies.back')}
         </Button>
         <Button
           onClick={onNext}
           disabled={!allAnswered || (captchaRequired && !captchaToken)}
-          className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
+          className="flex-1 case-continue"
         >
           {t('legalGuidance.qaFlow.civilEmergencies.generate')}
           <ArrowRight className="ml-2 h-4 w-4" />

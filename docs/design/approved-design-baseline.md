@@ -115,3 +115,27 @@ Reference identities:
 ### PR 63 review corrections
 
 Localized the bail checklist link on both urgent-help surfaces in English, Spanish, and Chinese. Removed the twelve numeric title prefixes at their locale source and removed render-time stripping. Emphasis is attached explicitly to the lawyer/locating-family steps; link wrappers and competing list spacing utilities were removed. Focused browser checks cover translated link labels and descriptions on both surfaces.
+
+## Case Guidance entry and intake batch
+
+Implemented the accepted document motif, open landing-page sections and a wider seven-step questionnaire. The shared header/footer, four existing process explanations, privacy statements, entry actions and alternate guide links remain. The intake retains the seven production components, all questions and choices, catalog search and authority notices, jurisdiction/territory and school-zone branches, optional background/concern inputs, urgency requirements, CAPTCHA, clear-session and exit controls. The question/answer data model, defaults, validation and generation payload are unchanged. A focused step label now receives focus on navigation; reduced-motion users do not get the fade transition.
+
+The two guidance choices are labeled Option 1/Option 2 with the accepted instruction and bold actions. Applied the owner's explicit attorney-reference sentence and “Tailored AI Guidance” correction across English, Spanish and Chinese. No additional legal/privacy claims were added or reapproved. The landing heading uses the approved preview wording; existing description and substantive sections take precedence over simplified mockup text.
+
+This is the entry/intake portion only. Results, loading/recovery presentation, chatbot presentation, and remaining catalog/urgency ancillary accents are subsequent work. Existing recovery behavior is retained. The old tests' gray-circle assertions now use aria-current; their availability mocks are explicit because their generated responses were already mocked.
+
+References:
+- `opendefender-case-guidance-preview.html`: SHA-256 `03d59b4283b2507d72aacfccc850354478ab55e0e3e563819b83ab882fde66df`
+- `opendefender-mobile-case-guidance-preview.html`: SHA-256 `dce5a900e32122f9df144b3c544523224afe8e85fab77719c8d165ad75d545ef`
+
+Validation: typecheck/build and 15 unit tests for stage guards, reselection and retry passed. All 11 focused release-config browser tests passed: six locale/theme checks traverse all seven stages with both modes at 320px, and five verify timeout recovery. Desktop entry/consent and narrow mobile consent were visually inspected in the shared palette. The new locale/theme intake spec is wired into the release runner. The California legacy browser suite could not complete against this isolated catalog: its first two scenarios require ca-robbery-in-the-first-degree, which was unavailable; a third scenario also failed before the run was stopped. Do not claim that suite or full CI passed. Existing untranslated production questions are retained and remain a separate localization follow-up.
+
+### PR 64 review follow-up
+
+Added both edited recovery suites to the release browser allowlist. The California catalog investigation confirmed that the checked-in evidence receipt expired on 2026-10-08; the isolated server correctly returned no eligible California charges. The legacy-reselection suite now supplies a test-only, paginated catalog response derived from the canonical records used by its scenarios. It tests saved-answer recovery, canonical replacement and preservation across reloads, not live source eligibility. Production freshness/eligibility rules and the evidence receipt are unchanged; current-source validation remains separate.
+
+Removed aria-current from the decorative, aria-hidden progress track. Regression assertions now use the visible localized Step N of 7 label, which receives focus and is exposed to assistive technology. Added dedicated Back selectors for Additional Details and Active Situations and used them in the design and legacy recovery tests.
+
+The owner's explicit attorney-reference sentence and Tailored AI Guidance label remain. This records the requested copy correction, not independent attorney sign-off or a completed review of provider/privacy/legal statements. The possible emphasis on free counsel can be considered during substantive content review. Minor wording repetition and Spanish capitalization are deferred to consistent editorial review.
+
+Review-fix validation: typecheck and production build passed; all 19 release-config browser tests passed (8 California legacy recovery, 6 locale/theme intake, 5 timeout recovery). Both previously orphaned recovery specs are now included in the explicit release allowlist. Full CI and live source freshness are not claimed.

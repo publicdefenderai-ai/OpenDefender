@@ -1,6 +1,10 @@
 export default {
   translation: {
   design: {
+    caseHeading: "Comprenda su caso. Prepárese para lo que sigue.",
+    caseChooseOne: "Elija una opción para continuar.",
+    caseOption: "Opción {{number}}",
+
     urgentHome: "Volver a la página principal",
     urgentOpenPage: "Abrir esta guía como página completa",
     urgentAll: "Todas las situaciones urgentes",
@@ -2501,10 +2505,10 @@ export default {
       "consent": {
         "title": "¿Cómo prefiere recibir su orientación?",
         "bullet1Head": "Información legal, no asesoramiento legal.",
-        "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
+        "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un abogado (por ejemplo, un defensor público o un abogado de ayuda legal) es su mejor recurso.",
         "bullet2Head": "Diseñado para proteger su privacidad.",
         "bullet2Body": "Sus respuestas se mantienen temporalmente en la memoria del servidor, no en una base de datos permanente de casos. Los datos generalmente se eliminan en 24 horas o cuando se reinicia el servicio.",
-        "cardATitle": "Orientación Personalizada con IA",
+        "cardATitle": "Orientación adaptada con IA",
         "cardARecommended": "Recomendado",
         "cardABody": "Analiza sus cargos específicos, estado y etapa del caso para crear una hoja de ruta a su medida.",
         "cardATime": "Tarda entre 30 y 60 segundos.",

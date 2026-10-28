@@ -1,6 +1,10 @@
 export default {
   translation: {
   design: {
+    caseHeading: "Understand your case. Prepare for what’s next.",
+    caseChooseOne: "Choose one option to continue.",
+    caseOption: "Option {{number}}",
+
     urgentHome: "Back to homepage",
     urgentOpenPage: "Open this guidance as a full page",
     urgentAll: "All urgent situations",
@@ -2499,10 +2503,10 @@ export default {
       "consent": {
         "title": "How would you like your guidance?",
         "bullet1Head": "Legal information, not legal advice.",
-        "bullet1Body": "We explain your rights and what to expect — we don't tell you what to do. For advice on your specific case, a public defender or legal aid attorney is your best resource.",
+        "bullet1Body": "We explain your rights and what to expect — we don't tell you what to do. For advice on your specific case, an attorney (e.g. a public defender or legal aid attorney) is your best resource.",
         "bullet2Head": "Private by design.",
         "bullet2Body": "Your answers are held temporarily in server memory rather than a permanent case database. Case records generally expire within 24 hours or are cleared when the service restarts.",
-        "cardATitle": "Personalized AI Guidance",
+        "cardATitle": "Tailored AI Guidance",
         "cardARecommended": "Recommended",
         "cardABody": "Analyzes your specific charges, state, and case stage to build a tailored roadmap.",
         "cardATime": "Takes about 30–60 seconds.",

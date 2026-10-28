@@ -2188,3 +2188,64 @@ a:focus-visible,
 .urgent-guide-disclosure { margin-top: 32px; border-top: 1px solid var(--border); padding-top: 20px; }
 @media(max-width: 480px) { .urgent-guide { margin-top: 20px; } .urgent-guide-top { margin-bottom: 22px; } }
 .urgent-guide .urgent-section li.urgent-step-emphasis { padding: 24px; background: var(--urgent-soft); border: 0; margin-bottom: 12px; }
+
+/* Case Guidance: approved document motif and seven-step intake. */
+.case-entry { width: 88%; max-width: 960px; margin: 48px auto 64px; }
+.case-entry-hero { display: grid; grid-template-columns: minmax(0,1fr) 160px; align-items: center; gap: 48px; }
+.case-kicker { font-size: 13px; color: var(--muted-foreground); margin-bottom: 18px; }
+.case-entry h1 { font-size: clamp(34px,4.5vw,48px); line-height: 1.13; letter-spacing: -1.4px; font-weight: 500; max-width: 650px; }
+.case-entry-description { font-size: 18px; line-height: 1.7; color: var(--muted-foreground); margin-top: 22px; max-width: 650px; }
+.case-entry-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 28px; margin: 28px 0; }
+.case-entry-actions button { min-height: 48px; height: auto; white-space: normal; padding: 12px 24px; border-radius: 5px; box-shadow: none; }
+.case-entry-actions p { color: var(--muted-foreground); font-size: 14px; }
+.case-entry-actions a { color: var(--primary); font-weight: 600; padding: 12px 0; }
+.case-entry-actions a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.case-entry-section { border-top: 1px solid var(--border); padding: 28px 0 0; margin-top: 36px; }
+.case-entry h2 { font-size: 24px; line-height: 1.35; font-weight: 500; margin-bottom: 24px; }
+.case-process { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
+.case-process-step > span { display: block; color: var(--primary); font-size: 13px; margin-bottom: 14px; }
+.case-entry h3 { font-size: 17px; font-weight: 500; line-height: 1.4; margin-bottom: 10px; }
+.case-process-step p, .case-privacy-list p { font-size: 14px; color: var(--muted-foreground); line-height: 1.7; }
+.case-privacy-list { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; }
+.case-document-art { height: 200px; width: 135px; position: relative; isolation: isolate; --doc-sheet: #f2e7dd; --doc-back: #74536b; --doc-line: #a18b99; --doc-highlight: #e6b6cc; }
+.dark .case-document-art { --doc-sheet: #e8ded4; --doc-back: #8d6c83; --doc-line: #9a8292; --doc-highlight: #e0adc5; }
+.case-document-art:before { content: ''; position: absolute; width: 105px; height: 146px; left: 5px; top: 31px; background: var(--doc-back); border-radius: 3px; transform: rotate(-12deg); }
+.case-document-art:after { content: ''; position: absolute; width: 108px; height: 148px; right: 1px; top: 17px; border-radius: 3px; transform: rotate(5deg); background: linear-gradient(var(--doc-back),var(--doc-back)) 17px 22px / 46px 6px no-repeat,linear-gradient(var(--doc-line),var(--doc-line)) 17px 42px / 73px 2px no-repeat,linear-gradient(var(--doc-line),var(--doc-line)) 17px 51px / 62px 2px no-repeat,linear-gradient(var(--doc-back),var(--doc-back)) 17px 75px / 65px 3px no-repeat,linear-gradient(var(--doc-back),var(--doc-back)) 17px 84px / 47px 3px no-repeat,linear-gradient(var(--doc-highlight),var(--doc-highlight)) 10px 66px / 88px 31px no-repeat,linear-gradient(var(--doc-line),var(--doc-line)) 17px 111px / 68px 2px no-repeat,linear-gradient(var(--doc-line),var(--doc-line)) 17px 120px / 52px 2px no-repeat,var(--doc-sheet); }
+.case-intake-workspace { max-width: 960px; }
+.case-intake { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.case-step-track { display: flex; gap: 6px; }
+.case-step-mark { flex: 1; min-width: 0; height: 3px; overflow: hidden; font-size: 0; background: var(--border); }
+.case-step-mark.is-reached { background: var(--primary); }
+.case-step-label { font-size: 14px; color: var(--muted-foreground); line-height: 1.6; margin-top: 14px; }
+.case-step-label:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.case-intake h3 { font-size: 24px; line-height: 1.35; font-weight: 500; }
+.case-intake :is(input,[role=combobox]) { min-height: 48px; }
+.case-intake [role=combobox] { height: auto; white-space: normal; text-align: left; }
+.case-intake [role=combobox] > span { min-width: 0; overflow-wrap: anywhere; }
+.case-intake .case-continue { min-height: 48px; height: auto; white-space: normal; background: var(--primary); color: var(--primary-foreground); font-weight: 600; box-shadow: none; }
+.case-intake .case-continue:hover { background: var(--primary); opacity: .9; }
+.case-intake-privacy { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px; }
+.case-consent-explanation { max-width: 760px; }
+.case-consent-explanation li > svg { display: none; }
+.case-consent-explanation li { line-height: 1.75; }
+.case-choice-instruction { margin: 28px 0 12px; font-size: 15px; font-weight: 600; }
+.case-guidance-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.case-guidance-choice { display: flex; flex-direction: column; align-items: stretch; gap: 12px; text-align: left; border-top: 1px solid var(--border); padding: 22px 0; background: transparent; min-width: 0; }
+.case-guidance-choice:focus-visible { outline: 2px solid var(--primary); outline-offset: 6px; }
+.case-guidance-choice:hover .case-choice-action { text-decoration: underline; text-underline-offset: 4px; }
+.case-option-label { color: var(--muted-foreground); font-size: 13px; }
+.case-guidance-choice > div > span:first-child { font-size: 19px; font-weight: 500; }
+.case-guidance-choice > p { font-size: 14px; line-height: 1.7; }
+.case-guidance-choice > div:last-child { margin-top: auto; padding-top: 14px; }
+.case-guidance-choice .case-choice-action { font-size: 16px; font-weight: 700; color: var(--primary); }
+@media(max-width: 640px) {
+  .case-entry { margin-top: 28px; }
+  .case-entry-hero { grid-template-columns: 1fr; gap: 0; }
+  .case-document-art { display: none; }
+  .case-entry h1 { font-size: 34px; letter-spacing: -1px; }
+  .case-entry-description { font-size: 16px; }
+  .case-process, .case-privacy-list, .case-guidance-choices { grid-template-columns: 1fr; gap: 0; }
+  .case-process-step, .case-privacy-list > div { padding: 18px 0; border-top: 1px solid var(--border); }
+  .case-intake-workspace { padding-left: 4px; padding-right: 4px; }
+  .case-intake h3 { font-size: 22px; }
+}
