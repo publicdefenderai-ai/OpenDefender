@@ -1,6 +1,20 @@
 export default {
   translation: {
   design: {
+    guidanceUrgencyUrgent: "紧急",
+    guidanceUrgencyHigh: "高优先级",
+    guidanceUrgencyMedium: "中优先级",
+    guidanceUrgencyLow: "低优先级",
+    guidanceUrgencyGeneral: "优先级",
+
+    guidanceRoadmapTitle: "案件路线图：{{jurisdiction}}",
+    guidanceChargeTitle: "案件指引：{{name}}（{{jurisdiction}}）",
+
+    guidanceSections: "指南章节",
+    guidanceOverview: "概述",
+    guidanceRights: "您的权利",
+    guidanceResources: "资源",
+
     caseHeading: "了解您的案件。为下一步做好准备。",
     caseChooseOne: "请选择一个选项以继续。",
     caseOption: "选项 {{number}}",
