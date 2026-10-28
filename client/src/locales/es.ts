@@ -1,6 +1,9 @@
 export default {
   translation: {
   design: {
+    guidanceRoadmapTitle: "Hoja de ruta del caso: {{jurisdiction}}",
+    guidanceChargeTitle: "Orientación: {{name}} en {{jurisdiction}}",
+
     guidanceSections: "Secciones de la guía",
     guidanceOverview: "Resumen",
     guidanceRights: "Sus derechos",

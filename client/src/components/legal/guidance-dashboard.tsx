@@ -1103,8 +1103,8 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                 <Scale className="h-5 w-5 text-muted-foreground" />
                 <h1 className="guidance-result-title">
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0
-                    ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`
-                    : `Case Roadmap: ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`}
+                    ? t('design.guidanceChargeTitle', { name: formatChargeName(guidance.chargeClassifications[0].name), jurisdiction: (guidance.caseData?.jurisdiction ?? '').toUpperCase() })
+                    : t('design.guidanceRoadmapTitle', { jurisdiction: (guidance.caseData?.jurisdiction ?? '').toUpperCase() })}
                 </h1>
                 <Badge
                   variant="outline"
@@ -1209,7 +1209,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       <Card className="guidance-start-note" data-testid="guidance-next-step">
         <CardContent className="p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary mb-1">
+            <p className="text-xs font-semibold text-primary mb-1">
               {t('legalGuidance.dashboard.nextStep.label', 'Start here')}
             </p>
             <h2 className="font-semibold text-foreground">
@@ -1583,7 +1583,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                 <span className="flex-1 text-sm">{renderGuidanceRichText(actionItem.action, guardedNavigate)}</span>
                 <Badge
                   variant={getUrgencyBadgeVariant(actionItem.urgency)}
-                  className="text-xs uppercase shrink-0"
+                  className="text-xs shrink-0"
                   data-testid={`badge-legal-information-${index}`}
                 >
                   {actionItem.urgency}
@@ -1941,7 +1941,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   {guidance.warnings.length > 0 && (
                     <div data-guidance-section="warnings">
                       {guidance.courtPreparation.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">{t('legalGuidance.dashboard.warningsAndPrep.thingsToReview')}</p>
+                        <p className="text-xs font-semibold text-muted-foreground mb-2">{t('legalGuidance.dashboard.warningsAndPrep.thingsToReview')}</p>
                       )}
                       <ul className="space-y-2">
                         {guidance.warnings.map((warning, index) => (
@@ -1956,7 +1956,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   {guidance.courtPreparation.length > 0 && (
                     <div data-guidance-section="courtPreparation">
                       {guidance.warnings.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 pt-2 border-t border-border">{t('legalGuidance.dashboard.warningsAndPrep.courtInformation')}</p>
+                        <p className="text-xs font-semibold text-muted-foreground mb-2 pt-2 border-t border-border">{t('legalGuidance.dashboard.warningsAndPrep.courtInformation')}</p>
                       )}
                       <ul className="space-y-2">
                         {guidance.courtPreparation.map((preparation, index) => (
@@ -2164,13 +2164,13 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       )}
 
       {/* Privacy Notice */}
-      <Card className="guidance-section guidance-privacy-notice">
+      <Card className="guidance-privacy-notice" role="note" aria-labelledby="guidance-privacy-title" data-testid="guidance-privacy-notice">
         <CardContent className="pt-6">
           <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 mb-3">
                 <BrandShieldIcon size={20} />
-                <h3 className="font-semibold text-foreground">
+                <h3 id="guidance-privacy-title" className="font-semibold text-foreground">
                   {t('legalGuidance.dashboard.privacyNotice.title', 'Your Privacy is Protected')}
                 </h3>
               </div>
@@ -2188,7 +2188,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   <span>{t('legalGuidance.dashboard.privacyNotice.piiRedacted', 'Personal info redacted')}</span>
                 </div>
               </div>
-              <p className="text-xs text-muted-foreground mt-3 pt-3 border-t border-border">
+              <p className="guidance-privilege-warning text-sm font-semibold text-foreground mt-4 pt-4 border-t border-border" data-testid="guidance-privilege-warning">
                 {t('legalGuidance.dashboard.privacyNotice.legalNotice', 'This guidance is general legal information, not legal advice. No attorney-client relationship is formed. Information shared here is not protected by attorney-client privilege.')}
               </p>
             </div>
@@ -2210,7 +2210,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       <div className="border-t border-border/50 pt-6 mt-2">
         <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
           <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Fundamental Rights</p>
+            <p className="text-xs font-semibold text-muted-foreground mb-2">Fundamental Rights</p>
             <ul className="space-y-1.5">
               {[
                 "You have the right to remain silent. You do not have to answer questions from police or prosecutors.",
@@ -2225,7 +2225,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Key Reminders</p>
+            <p className="text-xs font-semibold text-muted-foreground mb-2">Key Reminders</p>
             <ul className="space-y-1.5">
               {[
                 "Conversations about your case outside of attorney-client privilege are not protected. Friends and family can be required to testify about what you told them.",

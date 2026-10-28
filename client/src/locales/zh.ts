@@ -1,6 +1,9 @@
 export default {
   translation: {
   design: {
+    guidanceRoadmapTitle: "案件路线图：{{jurisdiction}}",
+    guidanceChargeTitle: "案件指引：{{name}}（{{jurisdiction}}）",
+
     guidanceSections: "指南章节",
     guidanceOverview: "概述",
     guidanceRights: "您的权利",

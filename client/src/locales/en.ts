@@ -1,6 +1,9 @@
 export default {
   translation: {
   design: {
+    guidanceRoadmapTitle: "Case Roadmap: {{jurisdiction}}",
+    guidanceChargeTitle: "Guidance: {{name}} in {{jurisdiction}}",
+
     guidanceSections: "Guide sections",
     guidanceOverview: "Overview",
     guidanceRights: "Your rights",

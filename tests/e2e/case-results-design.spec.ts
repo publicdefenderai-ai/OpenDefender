@@ -40,7 +40,7 @@ async function checkBounds(page: Page, selector: string) {
   expect(clipped).toEqual([]);
 }
 for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']) {
-  test(`results navigation, content and printing at 320px: ${language}/${theme}`, async ({ page }) => {
+  test(`results navigation, content and printing at 320px: ${language}/${theme}`, async ({ page }, testInfo) => {
     await setup(page, language, theme);
     await page.setViewportSize({ width: 320, height: 844 });
     await page.goto('/case-guidance?session=design-results');
@@ -48,6 +48,16 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await expect(dashboard).toBeVisible();
     await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
     await expect(dashboard).not.toContainText('design.guidance');
+    const titles = { en: 'Case Roadmap: OR', es: 'Hoja de ruta del caso: OR', zh: '案件路线图：OR' };
+    await expect(dashboard.getByRole('heading', { level: 1 })).toHaveText(titles[language as keyof typeof titles]);
+    const notice = page.getByTestId('guidance-privacy-notice');
+    await expect(notice).toHaveAttribute('role', 'note');
+    await expect(notice).toHaveCSS('border-left-width', '4px');
+    await expect(notice).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+    await expect(page.getByTestId('guidance-privilege-warning')).toHaveCSS('font-size', '14px');
+    await expect(page.getByTestId('guidance-privilege-warning')).toHaveCSS('font-weight', '600');
+    expect(await dashboard.locator('[class*="uppercase"]').count()).toBe(0);
+
     await expect(page.getByTestId('critical-alert-0')).toHaveText('Fixture critical warning');
     await expect(page.getByTestId('text-guidance-overview')).toHaveText(guidance.overview);
     const destinations = ['guidance-overview', 'practical-action-plan', 'guidance-timeline', 'guidance-rights', 'guidance-resources'];
@@ -64,9 +74,10 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await expect(dashboard).toContainText('Fixture uncertainty details');
     await page.getByTestId('collapsible-uncertainties').click();
     await expect(dashboard).not.toContainText('Fixture uncertainty details');
+    if (language === 'en') await notice.screenshot({ path: testInfo.outputPath(`privilege-notice-${theme}.png`) });
     await page.evaluate(() => scrollTo(0, 0));
     await settlePage(page);
-    if (language === 'en') await page.screenshot({ path: `/private/tmp/case-results-${theme}-mobile.png` });
+    if (language === 'en') await page.screenshot({ path: testInfo.outputPath(`case-results-${theme}-mobile.png`) });
     await page.emulateMedia({ media: 'print' });
     await expect(dashboard).toBeHidden();
     const plan = page.getByTestId('print-guidance-plan');
@@ -74,13 +85,13 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     for (const text of [guidance.overview, 'Fixture critical warning', 'Fixture rights reminder', 'Fixture resource description', 'Fixture uncertainty details']) await expect(plan).toContainText(text);
   });
 }
-test('desktop export retains confirmation and produces PDF', async ({ page }) => {
+test('desktop export retains confirmation and produces PDF', async ({ page }, testInfo) => {
   await setup(page);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto('/case-guidance?session=design-results');
   await expect(page.getByTestId('guidance-dashboard')).toBeVisible();
   await settlePage(page);
-  await page.screenshot({ path: '/private/tmp/case-results-desktop.png' });
+  await page.screenshot({ path: testInfo.outputPath('case-results-desktop.png') });
   await page.getByTestId('button-export-pdf').click();
   await expect(page.getByRole('alertdialog')).toBeVisible();
   const downloadPromise = page.waitForEvent('download');
@@ -92,7 +103,7 @@ test('desktop export retains confirmation and produces PDF', async ({ page }) =>
   for await (const chunk of stream!) chunks.push(Buffer.from(chunk));
   expect(Buffer.concat(chunks).subarray(0, 5).toString()).toBe('%PDF-');
 });
-test('expired session remains recoverable', async ({ page }) => {
+test('expired session remains recoverable', async ({ page }, testInfo) => {
   await setup(page);
   await page.route('**/api/legal-guidance/expired', route => route.fulfill({ status: 403, json: { code: 'SESSION_EXPIRED', error: 'Session expired' } }));
   await page.goto('/case-guidance?session=expired');
@@ -101,7 +112,7 @@ test('expired session remains recoverable', async ({ page }) => {
   await expect(page.getByTestId('qa-step-label')).toContainText('Step 1');
 });
 for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']) {
-  test(`recovery and loading controls at 320px: ${language}/${theme}`, async ({ page }) => {
+  test(`recovery and loading controls at 320px: ${language}/${theme}`, async ({ page }, testInfo) => {
     await setup(page, language, theme);
     await page.setViewportSize({ width: 320, height: 844 });
     await page.addInitScript(() => sessionStorage.setItem('open-defender:case-guidance-recovery', JSON.stringify({
@@ -121,7 +132,7 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     const symbol = await page.locator('.case-recovery-notice > svg').boundingBox();
     const title = await page.locator('.case-recovery-notice h1').boundingBox();
     expect(symbol!.y + symbol!.height).toBeLessThanOrEqual(title!.y);
-    if (language === 'en') await page.screenshot({ path: `/private/tmp/case-recovery-${theme}-mobile.png` });
+    if (language === 'en') await page.screenshot({ path: testInfo.outputPath(`case-recovery-${theme}-mobile.png`) });
     await page.getByTestId('button-retry-ai-guidance').click();
     await expect(page.getByTestId('guidance-loading')).toBeVisible();
     await expect(page.getByRole('status').filter({ hasText: /./ }).first()).toBeVisible();
@@ -130,5 +141,14 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await page.getByTestId('button-cancel-guidance-request').click();
     await expect(page.getByTestId('guidance-loading')).toBeHidden();
     releaseRequest?.();
+  });
+}
+
+for (const [language, title] of Object.entries({ en: 'Guidance: Example charge in OR', es: 'Orientación: Example charge en OR', zh: '案件指引：Example charge（OR）' })) {
+  test(`charge-specific heading uses the selected language: ${language}`, async ({ page }) => {
+    await setup(page, language);
+    await page.route('**/api/legal-guidance/design-results', route => route.fulfill({ json: { success: true, guidance: { ...guidance, chargeClassifications: [{ name: 'Example charge', classification: 'Example', code: '' }] } } }));
+    await page.goto('/case-guidance?session=design-results');
+    await expect(page.getByTestId('guidance-dashboard').getByRole('heading', { level: 1 })).toHaveText(title);
   });
 }

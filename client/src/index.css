@@ -2310,3 +2310,9 @@ a:focus-visible,
   .case-loading-ring { animation: none; }
   .case-loading-progress-fill { transition: none; }
 }
+
+/* The privilege advisory remains distinct from neutral result sections. */
+.guidance-results .guidance-privacy-notice { background: var(--muted); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 4px; box-shadow: none; }
+.guidance-privacy-notice > div { padding: 24px; }
+.guidance-privilege-warning { line-height: 1.65; }
+@media(max-width: 640px) { .guidance-privacy-notice > div { padding: 18px; } }

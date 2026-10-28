@@ -865,7 +865,7 @@ export default function CaseGuidance() {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="case-state-workspace" data-testid="guidance-loading">
-          <Card className="case-state-surface case-loading-surface">
+          <Card className="case-state-surface">
             <CardContent className="pt-6 pb-5">
               <div className="case-loading-content space-y-5">
                 <div className="case-loading-symbol">
