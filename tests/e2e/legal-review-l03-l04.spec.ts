@@ -4,7 +4,7 @@ import es from '../../client/src/locales/es';
 import zh from '../../client/src/locales/zh';
 
 for (const [language, locale] of Object.entries({ en, es, zh })) {
-  test(`reviewed phone/plea text reaches printed cards and unsecured bond renders: ${language}`, async ({ page }) => {
+  test(`reviewed phone/plea text reaches printed cards and unsecured bond renders: ${language}`, async ({ page }, testInfo) => {
     await page.addInitScript(language => localStorage.setItem('i18nextLng', language), language);
     await page.emulateMedia({ reducedMotion: 'reduce' });
     const t = locale.translation;
@@ -15,6 +15,13 @@ for (const [language, locale] of Object.entries({ en, es, zh })) {
     await expect(print).toContainText(t.quickRef.police.arrested2);
     await expect(print).toContainText(t.quickRef.police.arrested4);
     await expect(print).toContainText(t.quickRef.arraignment.say1);
+    await expect(print).not.toContainText(t.first24Hours.steps.step3.context);
+    await expect(print).not.toContainText(t.first24Hours.steps.step6.c1);
+    for (const text of [t.quickRef.police.arrested2, t.quickRef.police.arrested4, t.quickRef.arraignment.say1]) {
+      expect(text.length).toBeLessThan(150);
+      if (language !== 'zh') expect(text.split(/\s+/).length).toBeLessThanOrEqual(22);
+    }
+    await page.pdf({ path: testInfo.outputPath(`quick-cards-${language}.pdf`), format: 'Letter', printBackground: true });
     await page.emulateMedia({ media: 'screen' });
     await page.goto('/case-timeline#bail-guide');
     await page.getByRole('button', { name: t.process.guides.bail.options.title, exact: true }).click();
@@ -23,6 +30,9 @@ for (const [language, locale] of Object.entries({ en, es, zh })) {
     for (const option of options) await expect(page.getByText(option.description, { exact: true })).toBeVisible();
     await page.getByRole('button', { name: t.process.guides.bail.missCourt.title, exact: true }).click();
     await expect(page.getByText(t.process.guides.bail.missCourt.consequences[0], { exact: true })).toBeVisible();
+    await page.goto('/first-24-hours#step-booking');
+    await expect(page.getByText(t.first24Hours.steps.step2.c2, { exact: true })).toBeVisible();
+    expect(t.first24Hours.steps.step2.c2).toContain('851.5');
     await page.goto('/first-24-hours#step-arraignment');
     // The displayed context cards and printed quick-reference cards must agree.
     await expect(page.getByText(t.first24Hours.steps.step6.c1, { exact: true }).first()).toBeVisible();

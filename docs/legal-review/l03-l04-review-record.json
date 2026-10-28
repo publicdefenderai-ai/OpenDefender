@@ -669,5 +669,191 @@
     "topic": "L04.1 missed court",
     "instruction": "can issue a warrant for missing court is not strong enough. Say they will typically issue a warrant.",
     "implementation": "Updated bail and First 24 Hours wording in English, Spanish and Chinese."
+  },
+  "finalReviewCorrections": {
+    "date": "2026-10-28",
+    "status": "Owner authorized merge after fixes; independent translation signoff not claimed",
+    "changes": [
+      {
+        "locale": "en",
+        "key": "translation.process.steps.step1.rights.2",
+        "before": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "after": "Ask how to contact your lawyer confidentially; phone rules vary."
+      },
+      {
+        "locale": "en",
+        "key": "translation.caseTimeline.stages.booking.rights.1",
+        "before": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "after": "Ask how to contact your lawyer confidentially; phone rules vary."
+      },
+      {
+        "locale": "en",
+        "key": "translation.caseTimeline.stages.booking.tips.1",
+        "before": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+        "after": "Ordinary calls may be recorded. Ask how to arrange a confidential attorney call."
+      },
+      {
+        "locale": "en",
+        "key": "translation.quickRef.police.arrested2",
+        "before": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "after": "Ask how to contact your lawyer confidentially; phone rules vary."
+      },
+      {
+        "locale": "en",
+        "key": "translation.quickRef.police.arrested4",
+        "before": "An initial appearance often occurs within 24–72 hours, depending on the state and custody status. This is not a universal deadline; arraignment may be later.",
+        "after": "Ask when you will see a judge; timing varies by state and custody status."
+      },
+      {
+        "locale": "en",
+        "key": "translation.quickRef.arraignment.say1",
+        "before": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+        "after": "Plea options vary. Ask an attorney to explain them before entering a plea."
+      },
+      {
+        "locale": "en",
+        "key": "translation.first24Hours.phoneCall.warningTitle",
+        "before": "Every call is monitored and recorded, without exception.",
+        "after": "Ordinary jail calls may be recorded."
+      },
+      {
+        "locale": "en",
+        "key": "translation.first24Hours.steps.step2.do5",
+        "before": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "after": "Ask how to contact your lawyer confidentially; phone rules vary."
+      },
+      {
+        "locale": "en",
+        "key": "translation.first24Hours.steps.step2.c2",
+        "before": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "after": "California Penal Code § 851.5 provides for at least three completed calls immediately upon booking and, unless physically impossible, within three hours after arrest. Other states and facilities have different rules. Ask staff how to contact your lawyer confidentially."
+      },
+      {
+        "locale": "en",
+        "key": "translation.first24Hours.steps.step6.do1",
+        "before": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+        "after": "Plea options vary. Ask an attorney to explain them before entering a plea."
+      },
+      {
+        "locale": "es",
+        "key": "translation.process.steps.step1.rights.2",
+        "before": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "after": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían."
+      },
+      {
+        "locale": "es",
+        "key": "translation.caseTimeline.stages.booking.rights.1",
+        "before": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "after": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían."
+      },
+      {
+        "locale": "es",
+        "key": "translation.caseTimeline.stages.booking.tips.1",
+        "before": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+        "after": "Las llamadas ordinarias pueden grabarse. Pregunte cómo organizar una llamada confidencial con su abogado."
+      },
+      {
+        "locale": "es",
+        "key": "translation.quickRef.police.arrested2",
+        "before": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "after": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían."
+      },
+      {
+        "locale": "es",
+        "key": "translation.quickRef.police.arrested4",
+        "before": "La primera comparecencia suele ocurrir entre 24 y 72 horas, según el estado y si está bajo custodia. No es un plazo universal; la lectura de cargos puede ser posterior.",
+        "after": "Pregunte cuándo verá a un juez; el plazo varía según el estado y su situación de custodia."
+      },
+      {
+        "locale": "es",
+        "key": "translation.quickRef.arraignment.say1",
+        "before": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+        "after": "Las opciones de declaración varían. Pida a un abogado que se las explique antes de declarar."
+      },
+      {
+        "locale": "es",
+        "key": "translation.first24Hours.phoneCall.warningTitle",
+        "before": "Todas las llamadas son monitoreadas y grabadas — sin excepción.",
+        "after": "Las llamadas ordinarias desde la cárcel pueden grabarse."
+      },
+      {
+        "locale": "es",
+        "key": "translation.first24Hours.steps.step2.do5",
+        "before": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "after": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían."
+      },
+      {
+        "locale": "es",
+        "key": "translation.first24Hours.steps.step2.c2",
+        "before": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "after": "El Código Penal de California § 851.5 establece al menos tres llamadas completadas inmediatamente después del registro y, salvo que sea físicamente imposible, dentro de las tres horas posteriores al arresto. Otros estados y centros tienen reglas diferentes. Pregunte cómo contactar confidencialmente a su abogado."
+      },
+      {
+        "locale": "es",
+        "key": "translation.first24Hours.steps.step6.do1",
+        "before": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+        "after": "Las opciones de declaración varían. Pida a un abogado que se las explique antes de declarar."
+      },
+      {
+        "locale": "zh",
+        "key": "translation.process.steps.step1.rights.2",
+        "before": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
+        "after": "询问如何与律师保密联系；电话使用规则因地而异。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.caseTimeline.stages.booking.rights.1",
+        "before": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
+        "after": "询问如何与律师保密联系；电话使用规则因地而异。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.caseTimeline.stages.booking.tips.1",
+        "before": "普通监所电话可能被录音或监听，并被用作证据。与律师的保密沟通可能受到律师与当事人保密特权的保护，但拨打律师电话本身并不意味着线路保密。讨论案情前，可向律师和拘押设施确认如何使用指定的保密渠道。",
+        "after": "普通电话可能被录音。询问如何安排与律师的保密通话。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.quickRef.police.arrested2",
+        "before": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
+        "after": "询问如何与律师保密联系；电话使用规则因地而异。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.quickRef.police.arrested4",
+        "before": "首次出庭通常在24至72小时内进行，取决于州和羁押状态。这并非全国统一期限；提审可能在之后进行。",
+        "after": "询问何时见法官；时间取决于所在州和羁押状况。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.quickRef.arraignment.say1",
+        "before": "常见答辩包括认罪和不认罪；部分法院允许不抗辩。一些司法管辖区还将因精神障碍而不负刑事责任的不认罪答辩列为单独选项，并有特殊要求。可用选项及其后果取决于当地法律和案件。律师可以在您答辩前解释这些选项。",
+        "after": "答辩选项因地而异。作出答辩前，可请律师解释各项选择。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.first24Hours.phoneCall.warningTitle",
+        "before": "所有电话均被监听和录音——无一例外。",
+        "after": "普通监所电话可能被录音。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.first24Hours.steps.step2.do5",
+        "before": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
+        "after": "询问如何与律师保密联系；电话使用规则因地而异。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.first24Hours.steps.step2.c2",
+        "before": "能否打电话、通话时间和次数因州和拘押设施而异。联系律师受到法律保护，但不一定通过电话进行。可询问工作人员如何联系律师并安排保密的法律通话。",
+        "after": "《加利福尼亚州刑法》第851.5条规定，被捕者在完成登记后应立即获准完成至少三次通话，且除非客观上无法做到，最迟不得超过被捕后三小时。其他州和拘留设施的规则不同。请询问工作人员如何与律师保密联系。"
+      },
+      {
+        "locale": "zh",
+        "key": "translation.first24Hours.steps.step6.do1",
+        "before": "常见答辩包括认罪和不认罪；部分法院允许不抗辩。一些司法管辖区还将因精神障碍而不负刑事责任的不认罪答辩列为单独选项，并有特殊要求。可用选项及其后果取决于当地法律和案件。律师可以在您答辩前解释这些选项。",
+        "after": "答辩选项因地而异。作出答辩前，可请律师解释各项选择。"
+      }
+    ]
   }
 }

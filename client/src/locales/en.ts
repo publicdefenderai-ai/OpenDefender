@@ -1,3 +1,15 @@
+// Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
+const reviewedRightsCopy = {
+  "phoneDetail": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+  "callsDetail": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+  "pleaDetail": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+  "phoneShort": "Ask how to contact your lawyer confidentially; phone rules vary.",
+  "callsShort": "Ordinary calls may be recorded. Ask how to arrange a confidential attorney call.",
+  "pleaShort": "Plea options vary. Ask an attorney to explain them before entering a plea.",
+  "timingShort": "Ask when you will see a judge; timing varies by state and custody status.",
+  "californiaDetail": "California Penal Code § 851.5 provides for at least three completed calls immediately upon booking and, unless physically impossible, within three hours after arrest. Other states and facilities have different rules. Ask staff how to contact your lawyer confidentially."
+};
+
 export default {
   translation: {
   design: {
@@ -3089,7 +3101,7 @@ export default {
       "phoneCall": {
         "title": "Contacting an Attorney",
         "description": "Access to counsel; phone rules vary by state and facility",
-        "detailedExplanation": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call. Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case."
+        "detailedExplanation": `${reviewedRightsCopy.phoneDetail} ${reviewedRightsCopy.callsDetail}`
       },
       "knowCharges": {
         "title": "Right to Know Charges",
@@ -4001,7 +4013,7 @@ export default {
         "rights": [
           "Right to remain silent",
           "Right to an attorney",
-          "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+          reviewedRightsCopy.phoneShort,
           "Right to be informed of charges"
         ]
       },
@@ -4358,13 +4370,13 @@ export default {
         "description": "After arrest, you are taken to a jail or police station for booking. This is the administrative process of recording your information. Your personal belongings will be taken and stored.",
         "rights": [
           "You still have the right to remain silent",
-          "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+          reviewedRightsCopy.phoneShort,
           "You can request medical attention if needed",
           "Your belongings must be returned when you are released"
         ],
         "tips": [
           "You will be fingerprinted, photographed, and have personal property inventoried",
-          "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+          reviewedRightsCopy.callsShort,
           "Conversations in the holding area are not protected by any privilege. Other detainees or staff may repeat what they hear",
           "Demeanor during booking is documented and can affect how subsequent proceedings unfold",
           "Ask when you will see a judge so you understand the timeline"
@@ -4497,9 +4509,9 @@ export default {
       "dont5": "Don't sign anything without reading it and consulting an attorney",
       "ifArrested": "If You Are Arrested",
       "arrested1": "Say clearly: \"I want a lawyer\" — then stop talking",
-      "arrested2": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+      "arrested2": reviewedRightsCopy.phoneShort,
       "arrested3": "Do not discuss your case with anyone except your attorney",
-      "arrested4": "An initial appearance often occurs within 24–72 hours, depending on the state and custody status. This is not a universal deadline; arraignment may be later."
+      "arrested4": reviewedRightsCopy.timingShort
     },
     "arraignment": {
       "title": "Arraignment",
@@ -4509,7 +4521,7 @@ export default {
       "expect3": "Bail amount may be set or modified",
       "expect4": "If unrepresented, tell the judge you cannot afford an attorney — the court will appoint one",
       "say": "What to Say",
-      "say1": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+      "say1": reviewedRightsCopy.pleaShort,
       "say2": "\"I would like a court-appointed attorney\" — if you can't afford one",
       "say3": "\"Yes, Your Honor\" / \"No, Your Honor\" — when addressing the judge",
       "dontSay": "Things to be aware of",
@@ -4817,7 +4829,7 @@ export default {
     "warnings": {
       "title": "Important Reminders",
       "jailCallsTitle": "Jail calls are recorded:",
-      "jailCallsText": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+      "jailCallsText": reviewedRightsCopy.callsDetail,
       "interferenceTitle": "Witness contact and interference:",
       "interferenceText": "Contacting witnesses, tampering with evidence, or interfering with an active investigation can result in obstruction charges — for you as well as your loved one. Avoid any action that could be seen as attempting to influence the case."
     },
@@ -6236,8 +6248,8 @@ export default {
       "firstAppearanceStateFed": "Initial appearance before a federal magistrate judge 'without unnecessary delay.' Courts interpret this as within 48 hours."
     },
     "phoneCall": {
-      "warningTitle": "Every call is monitored and recorded, without exception.",
-      "warningBody": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+      "warningTitle": "Ordinary jail calls may be recorded.",
+      "warningBody": reviewedRightsCopy.callsDetail,
       "scriptTitle": "Sample script for your first call:",
       "neverSayTitle": "What never to say on any jail call",
       "neverSay": {
@@ -6434,7 +6446,7 @@ export default {
         "do2": "Note the name of the facility, your booking number, and the charges. You'll need this information.",
         "do3": "Ask how family can find out where you are being held and how to contact you.",
         "do4": "If you take medication or have a medical condition, tell booking staff IN WRITING right away and ask to speak to medical staff. Jails are legally required to provide essential medication. Document every request.",
-        "do5": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "do5": reviewedRightsCopy.phoneShort,
         "do6": "If you don't speak English fluently, clearly say \"I need an interpreter.\" You have the right to one at no cost.",
         "do7": "Invoke your right to remain silent for anything beyond your name and date of birth. Booking intake questions (\"where were you tonight?\") are interrogation.",
         "dont1": "Don't discuss your case with anyone: other detainees, intake officers, or jail staff.",
@@ -6445,7 +6457,7 @@ export default {
         "c1Title": "The Booking Process",
         "c1": "Booking involves fingerprints, photographs, property inventory, and the formal entry of charges. Cooperating with the booking process is a legal requirement.",
         "c2Title": "Phone Call",
-        "c2": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "c2": reviewedRightsCopy.californiaDetail,
         "c3Title": "Medical Needs",
         "c3": "If you take medication or have a medical condition, tell booking staff in writing immediately. Jails are legally required to provide essential medication. Document every request.",
         "c4Title": "The Charging Paperwork",
@@ -6458,7 +6470,7 @@ export default {
       "step3": {
         "title": "Your First Phone Call",
         "timeframe": "During or shortly after booking",
-        "context": "Phone access, timing, and the number of calls vary by state and facility. Access to an attorney is protected, but it does not always take the form of a phone call. Ask staff how to contact your lawyer and arrange a confidential legal call.",
+        "context": reviewedRightsCopy.phoneDetail,
         "do1": "Ask how to contact your attorney. A trusted family member or friend can also help locate counsel if the attorney cannot be reached directly.",
         "do2": "Give them: (1) the facility name, (2) your booking number, (3) the charges if known, (4) ask them to find a private attorney, or if cost is a concern, contact the public defender's office in the county where you were arrested to ask about the court-appointment process.",
         "do3": "Keep the call short and practical. Longer calls mean more recorded material.",
@@ -6471,7 +6483,7 @@ export default {
         "dont4": "Don't call the alleged victim, even to apologize or explain.",
         "dont5": "Don't speak in code. Law enforcement is trained to interpret coded language, and a jury can draw adverse inferences from evasive speech.",
         "c1Title": "Calls Are Recorded",
-        "c1": "Ordinary jail calls may be recorded or monitored and used as evidence. Confidential attorney communications may be privileged, but calling a lawyer does not by itself make a line private. Ask your lawyer and the facility how to use the designated confidential channel before discussing the case.",
+        "c1": reviewedRightsCopy.callsDetail,
         "c2Title": "What to Share",
         "c2": "The most important things to share: the facility name, your booking number, the charges as written, and any court date given. The person you call needs this to find an attorney and track your case.",
         "c3Title": "Legal Representation",
@@ -6533,7 +6545,7 @@ export default {
         "title": "Arraignment: Your First Court Appearance",
         "timeframe": "Often 24–72 hours; timing depends on the state and custody status",
         "context": "At arraignment, the charges are formally read and you are asked to enter a plea. This is a critical decision. Your attorney must guide you on this. The judge will also address bail at this hearing.",
-        "do1": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+        "do1": reviewedRightsCopy.pleaShort,
         "do2": "If you do not yet have an attorney, tell the judge. You can ask for more time to get one, or request a court-appointed attorney if you cannot afford one.",
         "do3": "Appear in clean, appropriate clothing if you have been released on bail.",
         "dont1": "Entering any plea without first speaking with an attorney means making a decision with permanent legal effects, without knowing all of your options.",
@@ -6553,7 +6565,7 @@ export default {
           "action": "Tell your attorney the exact name of the prosecuting office from your paperwork. If you don't have paperwork yet, they can look it up once they have your case number."
         },
         "c1Title": "Entering a Plea",
-        "c1": "Common pleas include guilty and not guilty; no contest is available in some courts. Some jurisdictions also recognize not guilty by reason of insanity as a separate plea, with special requirements. Available pleas and their consequences depend on the jurisdiction and case. An attorney can explain the options before you enter a plea.",
+        "c1": reviewedRightsCopy.pleaDetail,
         "c2Title": "If Unrepresented",
         "c2": "If you appear without an attorney, tell the judge. You can ask for more time to get one, or request court-appointed counsel at this hearing.",
         "c3Title": "What Arraignment Is",

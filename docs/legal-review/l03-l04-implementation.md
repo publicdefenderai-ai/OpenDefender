@@ -1,6 +1,6 @@
 # L03/L04 review implementation
 
-Source: Shahab Asghar's saved `opendefender-legal-review-2026-10-28.html`, review dated October 27, 2026. The exact notes and before/after changes are preserved in `l03-l04-review-record.json`. This branch is based on merged PR 64 and does not modify PR 65.
+Source: Shahab Asghar's saved `opendefender-legal-review-2026-10-28.html`, review dated October 27, 2026. The exact notes and before/after changes are preserved in `l03-l04-review-record.json`. This branch started from merged PR 64 and has been synchronized with main after PR 65.
 
 ## Incorporated
 
@@ -37,3 +37,14 @@ No changes to AI questionnaires, prompts, generated output logic, provider terms
 ## Validation completed
 
 Typecheck and production build passed. All five focused release-config browser checks passed: translated print cards/bail/arraignment in English, Spanish and Chinese; the live Rights search scenarios; and the expandable juvenile counsel scenario. The new spec is included in the release allowlist. The approved plea-guide subtrees are unchanged across all three locales. The self-contained workbook opened without script errors, rendered the new supplements, and retained the saved L03 notes and L04 approval decisions. All 45 saved fields were preserved byte-for-value through JSON comparison. Full CI and a nationwide legal audit are not claimed.
+
+
+## Final review corrections (October 28)
+
+Short cards and timeline lists now use concise phone-access, call-privacy, hearing-timing and plea summaries. The full qualifications remain in Rights and First 24 Hours detailed sections. Each locale has one maintained set of shared short/detail strings, eliminating repeated paragraph copies. The quick-reference phone, timing and plea entries no longer contain superseded inline fallback assertions. The overlooked absolute phone-monitoring warning heading is also corrected in all three locales.
+
+The detailed booking explanation retains California's specific rule: at least three completed calls immediately upon booking and, unless physically impossible, within three hours after arrest. Other jurisdictions differ. Sources: [California Penal Code § 851.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=851.5.&lawCode=PEN), [chaptered statutory text](https://www.leginfo.ca.gov/pub/11-12/bill/asm/ab_2001-2050/ab_2015_bill_20120930_chaptered.html), and [California City Police policy manual](https://www.californiacity-ca.gov/CC/images/Policy_Manual_2024.pdf). The current legislature endpoint returned 403 during verification; the chaptered text and agency manual corroborate the timing and exception. This does not endorse a universal three-hour rule or the unsupported claim that most other states use one particular standard.
+
+The owner authorized merging PRs 66 and 67 after these corrections. This is merge authorization, not a new nationwide legal audit or independent translation signoff. Earlier before/after records are historical; the final-review supplement records the current changed values.
+
+Final validation: typecheck and production build passed after synchronizing with main. All five focused release-config browser checks passed, including compact print summaries in all three locales, generated print PDFs, the California booking detail, preserved detailed plea qualifications, bail options and counsel/search scenarios. Full CI is not claimed.

@@ -1,3 +1,15 @@
+// Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
+const reviewedRightsCopy = {
+  "phoneDetail": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+  "callsDetail": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+  "pleaDetail": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+  "phoneShort": "Pregunte cómo contactar confidencialmente a su abogado; las reglas telefónicas varían.",
+  "callsShort": "Las llamadas ordinarias pueden grabarse. Pregunte cómo organizar una llamada confidencial con su abogado.",
+  "pleaShort": "Las opciones de declaración varían. Pida a un abogado que se las explique antes de declarar.",
+  "timingShort": "Pregunte cuándo verá a un juez; el plazo varía según el estado y su situación de custodia.",
+  "californiaDetail": "El Código Penal de California § 851.5 establece al menos tres llamadas completadas inmediatamente después del registro y, salvo que sea físicamente imposible, dentro de las tres horas posteriores al arresto. Otros estados y centros tienen reglas diferentes. Pregunte cómo contactar confidencialmente a su abogado."
+};
+
 export default {
   translation: {
   design: {
@@ -3091,7 +3103,7 @@ export default {
       "phoneCall": {
         "title": "Contacto con un abogado",
         "description": "Acceso a un abogado; las reglas telefónicas varían según el estado y el centro",
-        "detailedExplanation": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial. Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso."
+        "detailedExplanation": `${reviewedRightsCopy.phoneDetail} ${reviewedRightsCopy.callsDetail}`
       },
       "knowCharges": {
         "title": "Derecho a Conocer los Cargos",
@@ -4003,7 +4015,7 @@ export default {
         "rights": [
           "Derecho a permanecer en silencio",
           "Derecho a un abogado",
-          "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+          reviewedRightsCopy.phoneShort,
           "Derecho a ser informado de los cargos"
         ]
       },
@@ -4360,13 +4372,13 @@ export default {
         "description": "Después del arresto, lo llevan a una cárcel o estación de policía para el registro. Este es el proceso administrativo de registrar su información. Sus pertenencias personales serán tomadas y almacenadas.",
         "rights": [
           "Todavía tiene derecho a guardar silencio",
-          "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+          reviewedRightsCopy.phoneShort,
           "Puede solicitar atención médica si la necesita",
           "Sus pertenencias deben ser devueltas cuando sea liberado"
         ],
         "tips": [
           "Le tomarán huellas dactilares y fotografías",
-          "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+          reviewedRightsCopy.callsShort,
           "No discuta su caso con nadie en el área de detención",
           "Sea cortés con los oficiales de registro — no perjudica su caso",
           "Pregunte cuándo verá a un juez"
@@ -4499,9 +4511,9 @@ export default {
       "dont5": "No firme nada sin leerlo y consultar a un abogado",
       "ifArrested": "Si lo Arrestan",
       "arrested1": "Diga claramente: \"Quiero un abogado\" — luego deje de hablar",
-      "arrested2": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+      "arrested2": reviewedRightsCopy.phoneShort,
       "arrested3": "No discuta su caso con nadie excepto su abogado",
-      "arrested4": "La primera comparecencia suele ocurrir entre 24 y 72 horas, según el estado y si está bajo custodia. No es un plazo universal; la lectura de cargos puede ser posterior."
+      "arrested4": reviewedRightsCopy.timingShort
     },
     "arraignment": {
       "title": "Lectura de Cargos",
@@ -4511,7 +4523,7 @@ export default {
       "expect3": "Se puede establecer o modificar el monto de la fianza",
       "expect4": "Si no tiene abogado, dígale al juez que no puede pagar uno — el tribunal le asignará uno",
       "say": "Qué Decir",
-      "say1": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+      "say1": reviewedRightsCopy.pleaShort,
       "say2": "\"Me gustaría un abogado designado por la corte\" — si no puede pagar uno",
       "say3": "\"Sí, Su Señoría\" / \"No, Su Señoría\" — al dirigirse al juez",
       "dontSay": "No Diga",
@@ -4819,7 +4831,7 @@ export default {
     "warnings": {
       "title": "Recordatorios Importantes",
       "jailCallsTitle": "Las llamadas desde la cárcel son grabadas:",
-      "jailCallsText": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+      "jailCallsText": reviewedRightsCopy.callsDetail,
       "interferenceTitle": "Contacto con testigos e interferencia:",
       "interferenceText": "Contactar testigos, manipular evidencia o interferir con una investigación activa puede resultar en cargos de obstrucción — tanto para usted como para su ser querido. Evite cualquier acción que pueda interpretarse como un intento de influir en el caso."
     },
@@ -6242,8 +6254,8 @@ export default {
       "firstAppearanceStateFed": "Comparecencia inicial ante un juez magistrado federal 'sin demoras innecesarias' — los tribunales lo interpretan como dentro de las 48 horas."
     },
     "phoneCall": {
-      "warningTitle": "Todas las llamadas son monitoreadas y grabadas — sin excepción.",
-      "warningBody": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+      "warningTitle": "Las llamadas ordinarias desde la cárcel pueden grabarse.",
+      "warningBody": reviewedRightsCopy.callsDetail,
       "scriptTitle": "Guión de ejemplo para su primera llamada:",
       "neverSayTitle": "Lo que nunca debe decir — en ninguna llamada de cárcel",
       "neverSay": {
@@ -6440,7 +6452,7 @@ export default {
         "do2": "Anote el nombre del centro, su número de fichaje y los cargos. Necesitará esta información.",
         "do3": "Pregunte cómo puede enterarse su familia de dónde está detenido y cómo pueden contactarle.",
         "do4": "Si toma medicación o tiene algún problema de salud, informe al personal de fichaje POR ESCRITO de inmediato y pida hablar con el personal médico. Los centros de detención están legalmente obligados a proporcionar medicación esencial. Documente cada solicitud.",
-        "do5": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "do5": reviewedRightsCopy.phoneShort,
         "do6": "Si no habla inglés con fluidez, diga claramente «Necesito un intérprete». Tiene derecho a uno sin costo alguno.",
         "do7": "Invoque su derecho a guardar silencio para cualquier cosa que vaya más allá de su nombre y fecha de nacimiento. Las preguntas de ingreso («¿dónde estaba anoche?») son interrogación.",
         "dont1": "No hable de su caso con nadie: otros detenidos, funcionarios de admisión o personal carcelario.",
@@ -6451,7 +6463,7 @@ export default {
         "c1Title": "El Proceso de Fichaje",
         "c1": "El fichaje incluye huellas dactilares, fotografías, inventario de pertenencias y el registro formal de los cargos. Cooperar con el proceso de fichaje es un requisito legal.",
         "c2Title": "Llamada Telefónica",
-        "c2": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "c2": reviewedRightsCopy.californiaDetail,
         "c3Title": "Necesidades Médicas",
         "c3": "Si toma medicación o tiene una condición médica, informe al personal de fichaje por escrito de inmediato. Las cárceles están legalmente obligadas a proporcionar medicación esencial — documente cada solicitud.",
         "c4Title": "El Papeleo de la Acusación",
@@ -6464,7 +6476,7 @@ export default {
       "step3": {
         "title": "Su Primera Llamada Telefónica",
         "timeframe": "Durante o poco después del fichaje",
-        "context": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
+        "context": reviewedRightsCopy.phoneDetail,
         "do1": "Pregunte cómo contactar a su abogado. Un familiar o amigo de confianza también puede ayudarle a localizar un abogado si no logra comunicarse directamente.",
         "do2": "Dígales: (1) el nombre del centro, (2) su número de fichaje, (3) los cargos si los conoce, (4) pídales que busquen un abogado privado, o si el costo es un problema, que llamen a la oficina del defensor público del condado donde fue arrestado para preguntar sobre el proceso de nombramiento.",
         "do3": "Mantenga la llamada corta y práctica. Las llamadas más largas suponen más material grabado.",
@@ -6477,7 +6489,7 @@ export default {
         "dont4": "No llame a la supuesta víctima, ni siquiera para disculparse o explicarse.",
         "dont5": "No hable en clave. Las fuerzas del orden están entrenadas para interpretar el lenguaje codificado, y un jurado puede extraer inferencias desfavorables de un discurso evasivo.",
         "c1Title": "Las Llamadas Son Grabadas",
-        "c1": "Las llamadas ordinarias desde la cárcel pueden grabarse o supervisarse y usarse como prueba. Las comunicaciones confidenciales con un abogado pueden estar protegidas por el secreto profesional, pero llamar a un abogado no convierte por sí solo una línea en privada. Pregunte a su abogado y al centro cómo usar el canal confidencial designado antes de hablar del caso.",
+        "c1": reviewedRightsCopy.callsDetail,
         "c2Title": "Qué Compartir",
         "c2": "Lo más importante que debe compartir: el nombre del centro, su número de fichaje, los cargos tal como están escritos y cualquier fecha de tribunal asignada. La persona a quien llame necesita esto para encontrar un abogado y dar seguimiento a su caso.",
         "c3Title": "Representación Legal",
@@ -6539,14 +6551,14 @@ export default {
         "title": "Lectura de Cargos: Su Primera Comparecencia ante el Tribunal",
         "timeframe": "A menudo entre 24 y 72 horas; depende del estado y de si está bajo custodia",
         "context": "En la lectura de cargos, se le leen formalmente los cargos y se le pide que introduzca una declaración. Esta es una decisión crítica que su abogado debe guiarle. El juez también abordará la fianza en esta audiencia.",
-        "do1": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+        "do1": reviewedRightsCopy.pleaShort,
         "do2": "Si aún no tiene abogado, informe al juez. Puede pedir más tiempo para conseguir uno, o solicitar un abogado de oficio si no puede permitírselo.",
         "do3": "Vista ropa limpia y apropiada si ha sido puesto en libertad bajo fianza.",
         "dont1": "Introducir cualquier declaración sin haber hablado primero con un abogado significa tomar una decisión con efectos legales permanentes, sin conocer todas sus opciones.",
         "dont2": "No hable con el juez sobre los hechos de su caso.",
         "dont3": "Si falta a una comparecencia obligatoria, el tribunal normalmente emitirá una orden de arresto. También puede haber otras consecuencias. Si no puede asistir o faltó a una fecha, contacte cuanto antes a su abogado o al tribunal.",
         "c1Title": "Introducir una Declaración",
-        "c1": "Las declaraciones habituales incluyen culpable y no culpable; algunos tribunales permiten no disputar los cargos. Algunas jurisdicciones también reconocen no culpable por razón de inimputabilidad por trastorno mental como declaración separada, con requisitos especiales. Las opciones y sus consecuencias dependen de la jurisdicción y del caso. Un abogado puede explicarlas antes de que presente una declaración.",
+        "c1": reviewedRightsCopy.pleaDetail,
         "c2Title": "Sin Representación",
         "c2": "Si comparece sin abogado, informe al juez. Puede pedir más tiempo para conseguir uno, o solicitar abogado de oficio en esta audiencia.",
         "c3Title": "Qué Es la Lectura de Cargos",
