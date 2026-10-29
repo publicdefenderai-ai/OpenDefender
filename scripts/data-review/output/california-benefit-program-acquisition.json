@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "scope": "benefit_program_publication_dependency_acquisition",
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "retainedComparison": {
+    "receipt": {
+      "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+      "retrievedAt": "2026-10-01T18:00:08.220542+00:00",
+      "lastModified": "Mon, 28 Sep 2026 04:26:06 GMT",
+      "bytes": 1281829537,
+      "sha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6"
+    },
+    "sections": [
+      {
+        "key": "WIC:18901",
+        "expectedHash": "63445e4299fc08059dcc2e847c2f9ee2f6768476899f069cb323a5cf113289de",
+        "observedHash": "63445e4299fc08059dcc2e847c2f9ee2f6768476899f069cb323a5cf113289de",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:36"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:02:17"
+        ]
+      },
+      {
+        "key": "WIC:18902",
+        "expectedHash": "c6c358b09efa0f90f2959c35f39f5e1a646c9cc669e65b14a36b550081fe8ade",
+        "observedHash": "c6c358b09efa0f90f2959c35f39f5e1a646c9cc669e65b14a36b550081fe8ade",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:36"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:02:17"
+        ]
+      },
+      {
+        "key": "WIC:18904",
+        "expectedHash": "cf5801a7dc0854fa61ddca1aefedbdc8f19a543e03100835a5dc8fb56740ba14",
+        "observedHash": "cf5801a7dc0854fa61ddca1aefedbdc8f19a543e03100835a5dc8fb56740ba14",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:36"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:02:17"
+        ]
+      }
+    ],
+    "scope": "historical_comparison_not_freshness_renewal"
+  },
+  "requiredKeys": [
+    "PEN:1170",
+    "PEN:17",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:290",
+    "PEN:473",
+    "PEN:514",
+    "PEN:530.5",
+    "PEN:667",
+    "PEN:672",
+    "WIC:10980",
+    "WIC:18900",
+    "WIC:18901",
+    "WIC:18902",
+    "WIC:18904"
+  ],
+  "reusedKeys": [
+    "PEN:1170",
+    "PEN:17",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:290",
+    "PEN:473",
+    "PEN:514",
+    "PEN:530.5",
+    "PEN:667",
+    "PEN:672",
+    "WIC:10980",
+    "WIC:18900"
+  ],
+  "promotedResearchKeys": [],
+  "documents": {
+    "WIC:18901": [
+      {
+        "id": "WIC18901.20201184",
+        "lawCode": "WIC",
+        "section": "18901.",
+        "opStatutes": "2020",
+        "opChapter": "11",
+        "opSection": "84",
+        "effectiveDate": "2020-06-29 00:00:00",
+        "versionId": "id_135e8651-c169-11ea-aeb4-db1ca18666e5",
+        "division": "9.",
+        "title": null,
+        "part": "6.",
+        "chapter": "10.",
+        "article": null,
+        "history": "Amended by Stats. 2020, Ch. 11, Sec. 84.   (AB 79)   Effective June 29, 2020.",
+        "contentMember": "LAW_SECTION_TBL_122239.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:36",
+        "tableRow": 122239,
+        "tableRowSha256": "9e76aaf3807698256c2a55aede4d0f6aea377ef5c1f568c53fccd69475bce8be",
+        "contentSha256": "4370e510903a277cbbb1ef1f09f485707bdbb1ac4ca6a3b2471db1e4c586ea73",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The eligibility of households shall be determined to the extent permitted by federal law.</p><p>(b)<span class=\"EnSpace\"/>In determining eligibility for CalFresh, minimum age requirements other than those that exist under federal law shall not be imposed.</p><p>(c)<span class=\"EnSpace\"/>The department shall establish verification policies and procedures for CalFresh applicants and beneficiaries in the event that necessary verification is not provided by the applicant or beneficiary to accompany the application, semiannual report, annual recertification, or any other form or submission that requests verification be provided at the time of submission. These policies and procedures, to the extent permitted by federal law, regulation, guidance, or a waiver thereof, shall require counties to first seek verification from available electronic sources or self-attestation before requesting documentary evidence from the applicant or beneficiary to complete\n\t\t\t\t  required verification or pursuing secondary evidence to verify the necessary information. Notwithstanding the rulemaking provisions of the Administrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code), the department shall issue an all-county letter or similar instructions no later than January 1, 2021.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18901."
+      }
+    ],
+    "WIC:18902": [
+      {
+        "id": "WIC18902.19731216",
+        "lawCode": "WIC",
+        "section": "18902.",
+        "opStatutes": "1973",
+        "opChapter": "1216",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_5da4ef29-2921-11d9-b41f-d7e7ceae3281",
+        "division": "9.",
+        "title": null,
+        "part": "6.",
+        "chapter": "10.",
+        "article": null,
+        "history": "Repealed and added by Stats. 1973, Ch. 1216.",
+        "contentMember": "LAW_SECTION_TBL_127077.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:36",
+        "tableRow": 127077,
+        "tableRowSha256": "9a88746c4efb060c402da76428c9c00566fc07e36135c80dd8ba1a470bcd17db",
+        "contentSha256": "c750d75657b72e96cf964d5e0742ebccf1c0b9b0eaf672a8ae90293473944d19",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Each county welfare department shall carry out the local administrative responsibilities of this chapter, subject to the supervision of the department and to rules and regulations adopted by the department.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18902."
+      }
+    ],
+    "WIC:18904": [
+      {
+        "id": "WIC18904.199890261",
+        "lawCode": "WIC",
+        "section": "18904.",
+        "opStatutes": "1998",
+        "opChapter": "902",
+        "opSection": "61",
+        "effectiveDate": "1999-01-01 00:00:00",
+        "versionId": "id_5da4ef2f-2921-11d9-b41f-d7e7ceae3281",
+        "division": "9.",
+        "title": null,
+        "part": "6.",
+        "chapter": "10.",
+        "article": null,
+        "history": "Amended by Stats. 1998, Ch. 902, Sec. 61.   Effective January 1, 1999.",
+        "contentMember": "LAW_SECTION_TBL_121962.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:36",
+        "tableRow": 121962,
+        "tableRowSha256": "6dc8377215dabde5575d310af8ed2db7f139b2004157a4230039c6e729cfc55f",
+        "contentSha256": "9648fa6b36ffec26451e361bc25ec9233b8c6e5ca3199b7f4424c6ea6025943f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Regulations, orders or standards of general application to implement, interpret or make specific the law relating to this chapter shall be adopted, amended, or repealed only in accordance with Section 10554.  The director shall also provide for the two methods as described in Section 18904.1.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18904."
+      }
+    ]
+  }
+}
