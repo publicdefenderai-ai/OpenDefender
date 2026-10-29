@@ -83,9 +83,9 @@ export default function CaseTimeline() {
           </details>
           {selectedStage === "sentencing" && <div className="timeline-fees">
             <DollarSign className="h-4 w-4 shrink-0 mt-1" aria-hidden="true" /><div>
-              <p className="font-medium">Court fines and fees are set at sentencing</p>
-              <p>Fines, probation fees, restitution, and surcharges are typically ordered here. Many courts offer fee waivers and payment plans for those who qualify.</p>
-              <Link href="/support/finances" className="timeline-link">Learn about managing court costs</Link>
+              <p className="font-medium">{t("caseTimeline.design.feesTitle")}</p>
+              <p>{t("caseTimeline.design.feesDescription")}</p>
+              <Link href="/support/finances" className="timeline-link">{t("caseTimeline.design.feesLink")}</Link>
             </div>
           </div>}
           {(selectedStage === "booking" || selectedStage === "firstAppearance") && <JurisdictionCallout jurisdiction={jurisdiction} topic={selectedStage === "booking" ? "bail" : "arraignment"} />}
@@ -170,13 +170,13 @@ export default function CaseTimeline() {
             <div className="mt-6 rounded-xl border border-orange-200 dark:border-orange-800/60 bg-orange-50/60 dark:bg-orange-950/20 p-4 flex items-start gap-3">
               <BookOpen className="h-4 w-4 text-orange-600 dark:text-orange-400 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-medium text-foreground mb-1">Planning for what comes after sentencing?</p>
+                <p className="text-sm font-medium text-foreground mb-1">{t("caseTimeline.design.reentryTitle")}</p>
                 <p className="text-sm text-muted-foreground mb-2">
-                  The Re-entry Resources hub covers ID restoration, housing, employment with a record, and voting rights — with direct action steps and verified resources.
+                  {t("caseTimeline.design.reentryDescription")}
                 </p>
                 <Link href="/support/reentry">
                   <Button variant="link" size="sm" className="p-0 h-auto text-orange-700 dark:text-orange-400 font-medium">
-                    Go to Re-entry Resources →
+                    {t("caseTimeline.design.reentryLink")}
                   </Button>
                 </Link>
               </div>

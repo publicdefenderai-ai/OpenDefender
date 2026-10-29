@@ -4412,6 +4412,13 @@ export default {
   },
   "caseTimeline": {
     "design": {
+      "feesTitle": "Court fines and fees are set at sentencing",
+      "feesDescription": "Fines, probation fees, restitution, and surcharges are typically ordered here. Many courts offer fee waivers and payment plans for those who qualify.",
+      "feesLink": "Learn about managing court costs",
+      "reentryTitle": "Planning for what comes after sentencing?",
+      "reentryDescription": "The Re-entry Resources hub covers ID restoration, housing, employment with a record, and voting rights, with direct action steps and verified resources.",
+      "reentryLink": "Go to Re-entry Resources",
+
       "heading": "Understand the process. One stage at a time.",
       "count": "Stage {{step}} of {{total}}",
       "previous": "Previous stage",

@@ -4413,6 +4413,13 @@ export default {
   },
   "caseTimeline": {
     "design": {
+      "feesTitle": "法院罚款和费用在量刑时确定",
+      "feesDescription": "罚款、缓刑费用、赔偿和附加费通常在此阶段确定。许多法院为符合条件的人提供费用减免和分期付款计划。",
+      "feesLink": "了解如何管理法院费用",
+      "reentryTitle": "正在规划量刑之后的生活吗？",
+      "reentryDescription": "重返社会资源中心涵盖身份证件补办、住房、有犯罪记录者的就业和投票权，并提供具体行动步骤和经过核实的资源。",
+      "reentryLink": "前往重返社会资源",
+
       "heading": "了解诉讼流程，一次了解一个阶段。",
       "count": "第 {{step}} 阶段，共 {{total}} 个阶段",
       "previous": "上一阶段",

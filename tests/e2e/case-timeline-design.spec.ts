@@ -32,7 +32,10 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
         }
         if (stage === 'arrest') await expect(page.getByTestId('timeline-previous')).toBeDisabled();
         else await expect(page.getByTestId('timeline-previous')).toBeEnabled();
-        if (stage === 'sentencing') await expect(page.getByTestId('timeline-next')).toBeDisabled();
+        if (stage === 'sentencing') {
+          await expect(page.getByTestId('timeline-next')).toBeDisabled();
+          for (const text of [copy.design.feesTitle, copy.design.feesDescription, copy.design.feesLink]) await expect(panel.locator('.timeline-fees')).toContainText(text);
+        }
         else await expect(page.getByTestId('timeline-next')).toBeEnabled();
         const overflow = await panel.evaluate(root => [...root.querySelectorAll('p,h2,h3,li,a,button,summary')].filter(el => {
           const r = el.getBoundingClientRect(); return r.width > 0 && (r.left < -1 || r.right > innerWidth + 1);
@@ -58,6 +61,7 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await panel.locator('[role=combobox]').click();
     await page.getByRole('option', { name: 'All states', exact: true }).click();
     await expect(panel).not.toContainText('Rules for');
+    for (const text of [copy.design.reentryTitle, copy.design.reentryDescription, copy.design.reentryLink]) await expect(page.locator('.timeline-guides')).toContainText(text);
     await expect(page.locator('.timeline-caveat')).toContainText(copy.disclaimer.text);
     await expect(page.locator('.timeline-caveat')).toContainText(copy.disclaimer.deadlines);
     await expect(page.locator('.timeline-caveat a')).toHaveAttribute('href', '/data-sources');

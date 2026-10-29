@@ -4414,6 +4414,13 @@ export default {
   },
   "caseTimeline": {
     "design": {
+      "feesTitle": "Las multas y los costos judiciales se fijan al dictar la sentencia",
+      "feesDescription": "Aquí se suelen ordenar multas, cuotas de libertad condicional, restitución y recargos. Muchos tribunales ofrecen exenciones de cuotas y planes de pago para quienes reúnen los requisitos.",
+      "feesLink": "Aprenda a gestionar los costos judiciales",
+      "reentryTitle": "¿Está planificando lo que viene después de la sentencia?",
+      "reentryDescription": "El centro de recursos de reinserción abarca la recuperación de documentos de identidad, la vivienda, el empleo con antecedentes penales y los derechos de voto, con pasos concretos y recursos verificados.",
+      "reentryLink": "Ir a recursos de reinserción",
+
       "heading": "Comprenda el proceso. Una etapa a la vez.",
       "count": "Etapa {{step}} de {{total}}",
       "previous": "Etapa anterior",
