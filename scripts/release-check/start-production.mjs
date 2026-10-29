@@ -22,6 +22,7 @@ const releaseCheckAuthorityManifestFiles = [
 // shared/california-authority.ts; authority-eligibility.ts fails closed when
 // a current record is missing here.
 const releaseCheckCaliforniaSelectableChargeIds = [
+  "ca-bpc-2052-a", "ca-bpc-2052-b", "ca-bpc-7028-a-1", "ca-bpc-7028-a-2", "ca-lab-3700-5-a", "ca-lab-6425-a", "ca-lab-6425-b", "ca-lab-6425-c", "ca-ins-1871-4-a-1", "ca-ins-1871-4-a-2", "ca-ins-1871-4-a-3", "ca-ins-1871-4-a-4", "ca-ins-1871-4-a-5", "ca-ins-1871-4-a-6", "ca-wic-10980-a", "ca-wic-10980-b", "ca-wic-10980-c-1", "ca-wic-10980-c-2", "ca-uic-2101-a",
   "ca-pen-647-a-conduct", "ca-pen-647-a-solicitation", "ca-pen-647-h", "ca-pen-647-i", "ca-pen-21310", "ca-pen-21510-a", "ca-pen-21510-b", "ca-pen-21510-c",
   "ca-pen-186-22-a", "ca-pen-149", "ca-pen-243-b", "ca-pen-243-c-1", "ca-attempted-voluntary-manslaughter",
   "ca-murder-in-the-first-degree",
