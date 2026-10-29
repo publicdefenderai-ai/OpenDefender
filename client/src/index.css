@@ -2351,3 +2351,24 @@ a:focus-visible,
   .conversation-workspace { padding-inline: 0; }
   .intake-prompt, .intake-answer { max-width: 96%; padding: 14px 16px; }
 }
+
+/* Document tools: open reading space, with the advisory close to the introduction. */
+.document-tool-width { width: min(100% - 3rem, 960px); margin-inline: auto; }
+.document-tool-intro { padding-block: clamp(2.5rem, 6vw, 5rem) 2rem; }
+.document-tool-label { font-size: 1rem; font-weight: 600; color: var(--primary); margin-bottom: 1.25rem; }
+.document-tool-intro h1 { max-width: 900px; font-size: clamp(2.25rem, 4.5vw, 3.5rem); line-height: 1.08; letter-spacing: -.035em; font-weight: 600; }
+.document-tool-description { max-width: 720px; font-size: 1.125rem; line-height: 1.7; margin-top: 1.5rem; }
+.document-tool-advisory { max-width: 780px; margin-top: 1.75rem; padding-left: 1rem; border-left: 3px solid var(--primary); font-size: .9375rem; line-height: 1.65; }
+.document-tool-advisory strong { display: block; margin-bottom: .25rem; }
+.document-tool-workspace { padding-block: 1.5rem 3rem; }
+.document-summarizer-page { max-width: none; background: transparent; box-shadow: none; border: 0; border-radius: 0; }
+.document-summarizer-page .summary-disclosure { border: 0; background: transparent; padding: 0; }
+.document-summarizer-page .summary-disclosure strong { font-size: 1.25rem; line-height: 1.4; }
+.document-summarizer { overflow-wrap: anywhere; }
+.document-summarizer .summary-upload:focus-within { outline: 2px solid var(--ring); outline-offset: 4px; }
+.document-summarizer-page .summary-upload { padding-block: 3.5rem; }
+.document-tool-related { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem 2.5rem; border-top: 1px solid var(--border); padding-block: 1.5rem 3rem; }
+.document-tool-related a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: var(--primary); text-decoration: none; }
+.document-tool-related a:hover, .document-tool-related a:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
+@media (max-width: 480px) { .document-tool-width { width: calc(100% - 2rem); } .document-summarizer-page .summary-upload { padding: 2rem 1rem; } }
+@media (prefers-reduced-motion: reduce) { .document-summarizer .animate-spin, .document-summarizer .animate-pulse, .document-summarizer .animate-bounce { animation: none; } }

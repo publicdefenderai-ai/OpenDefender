@@ -13,6 +13,15 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    summaryHeadline: "Comprenda el documento que tiene delante.",
+    summaryDescription: "Convierta un documento en un resumen en lenguaje sencillo, con detalles importantes que debe comprobar en el original.",
+    beforeSharing: "Antes de compartir",
+    aiSharingNotice: "Esta es una herramienta de IA, no un abogado. La información que comparta no está protegida por el privilegio abogado-cliente.",
+    summaryRelated: "Recursos relacionados",
+    summaryLegalHelp: "Buscar ayuda legal",
+    summaryExplainers: "Explorar explicaciones de documentos",
+    summaryAllResources: "Todos los recursos",
+
     chatAnswers: "Sus respuestas",
     chatReplying: "Preparando la siguiente pregunta",
     chatOptionalSkipped: "No se agregó información opcional",

@@ -13,6 +13,15 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    summaryHeadline: "Understand what’s in front of you.",
+    summaryDescription: "Turn a document into a plain-language overview, with important details to check against the original.",
+    beforeSharing: "Before you share",
+    aiSharingNotice: "This is an AI tool, not a lawyer. Information you share is not protected by attorney-client privilege.",
+    summaryRelated: "Related resources",
+    summaryLegalHelp: "Find legal help",
+    summaryExplainers: "Browse document explainers",
+    summaryAllResources: "All resources",
+
     chatAnswers: "Your answers",
     chatReplying: "Preparing the next question",
     chatOptionalSkipped: "No optional information added",

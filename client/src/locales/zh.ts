@@ -13,6 +13,15 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    summaryHeadline: "读懂您面前的文件。",
+    summaryDescription: "将文件转为通俗易懂的概述，并对照原文核实重要细节。",
+    beforeSharing: "分享之前",
+    aiSharingNotice: "这是人工智能工具，不是律师。您分享的信息不受律师与当事人之间的保密特权保护。",
+    summaryRelated: "相关资源",
+    summaryLegalHelp: "寻找法律帮助",
+    summaryExplainers: "浏览文件说明",
+    summaryAllResources: "所有资源",
+
     chatAnswers: "您的回答",
     chatReplying: "正在准备下一个问题",
     chatOptionalSkipped: "未添加可选信息",

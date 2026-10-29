@@ -43,7 +43,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Existing urgent-help dialog | Restyled with brick accent, solid background, plain scenario rows and numbered steps; original guidance and scenario order retained. Standalone index and three guides now reuse the same guidance |
 | First 24 Hours | Numbered, independently expandable stages and mobile contents/state selection implemented. Full existing introduction, substantive content and ancillary sections retained; some ancillary layouts still use the previous styling |
 | Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
-| Case Guidance, consent, questions, recovery and results | Separate integration batch; do not substitute static preview questions for production questions or change consent defaults |
+| Case Guidance, consent, questions, recovery and results | Implemented in PRs 64/65 and shared with conversational intake in PR 69; canonical questions and consent defaults retained |
+| Document Summarizer | Draft refresh prepared; canonical consent, file processing, questions and export retained |
 | How to use this site and other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -218,3 +219,19 @@ Updated against current main. Removed the unused privilege acknowledgment state 
 Replaced the three supervision-option em dashes with commas in both the canonical controls and transcript summaries. The English-only background labels, values and territory names remain a coordinated localization follow-up for the shared questionnaire and summaries, with Spanish/Chinese known-answer transcript checks required when addressed.
 
 Post-review validation on the updated main baseline: typecheck and production build passed. Full Vitest run: 2,058 passed, 4 failed, 105 skipped. Failures concern Florida jury-source coverage, two Ohio source checks, and database configuration in the mitigation suite; three additional suites fail setup without a database URL. This is not a clean full-suite result.
+
+## Document Summarizer design batch
+
+Following PR 69, carried the approved single-column tool layout into the public summarizer. The page uses the accepted heading and description, the short AI/privilege advisory immediately below, one open workspace, and three related links above the footer (legal help, document explainers, resource directory). Removed the duplicated tool title inside the public workspace. The embedded attorney tool retains its heading and close control. Shared neutral colors now follow the plum theme, including dark-mode message contrast; deadline, error and concern treatments remain distinct. The actual file picker is keyboard accessible, and stage transitions respect reduced motion.
+
+Preserved the complete production consent list and unchecked checkbox, detailed privacy links within consent, file types/limits, document-type choices, CAPTCHA and AI availability behavior, request payloads/endpoints, analysis, all returned sections, document questions/citations/limits, reset and text download. The handler block from consent through export remains byte-for-byte identical to the prior version. Added no sample outputs to production and no new AI/backend logic. The preview's fictional excerpt comparison is not fabricated for real results; existing generated sections remain visible. Existing English-only result headings and question controls remain a coordinated localization follow-up.
+
+References:
+- `opendefender-document-summarizer-preview.html`: SHA-256 `77110fcade6677b9381b62bbfd7f36472a39a61e74c455ca17581d208412f4a5`
+- `opendefender-mobile-document-summarizer-preview.html`: SHA-256 `5fb6e2accb85237655ae7e2ad914ff777f67a81eae3bfc021eb66e9eebf88b99`
+
+Validation: typecheck and production build passed. Seven focused browser checks passed, covering consent/reset, file selection and gating in English/Spanish/Chinese at 320px in both themes, upload fields, result warnings, document questions and download. Desktop and mobile screenshots were visually inspected in both themes against the accepted reference. Added the new spec to the release allowlist and updated the existing navigation heading assertion. Browser AI responses are fictional test fixtures, not live-generation verification. Legacy Linux pixel baselines for research-tool shells were not regenerated in this macOS environment; full-suite/release readiness is not claimed.
+
+### PR 71 review correction
+
+Removed five invalid `hsl()` wrappers around full-value theme tokens in the document-tool CSS. Upload focus now has a visible 2px outline; the advisory border, related-resource separator, link colors and page label resolve correctly. Browser checks now assert computed outline/border widths, styles and colors in all three locales and both themes. Production build and all seven focused browser checks passed. Legacy stylesheet wrappers and the existing unused terms-link translation remain separate follow-ups.
