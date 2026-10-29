@@ -26,6 +26,11 @@ export function californiaCitationSearchAliases(lawCode: CaliforniaLawCode, code
   const abbreviations: Partial<Record<CaliforniaLawCode, string>> = {
     INS: "IC", UIC: "UI", LAB: "LC", WIC: "W&I", PEN: "PC", VEH: "VC", HSC: "H&S", BPC: "B&P", HNC: "H&N", RTC: "R&T",
   };
+  const citationForms: Partial<Record<CaliforniaLawCode, string>> = {
+    INS: "Ins. Code", UIC: "Unemp. Ins. Code", LAB: "Lab. Code",
+    WIC: "Welf. & Inst. Code", BPC: "Bus. & Prof. Code",
+  };
   return [...new Set([abbreviations[lawCode] ?? lawCode, lawCode,
+    ...(citationForms[lawCode] ? [citationForms[lawCode]!] : []),
     CALIFORNIA_LAW_CODE_LABELS[lawCode].replace(/^Cal\. /, "")])].map(label => `${label} ${code}`);
 }
