@@ -1,19 +1,16 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef, useId } from "react";
+import { useTranslation } from "react-i18next";
 import {
-  Scale, AlertTriangle, ChevronDown, CheckCircle, XCircle,
-  Info, Gavel, MessageSquare, Shield,
+  Scale, AlertTriangle, CheckCircle, XCircle,
+  Gavel, MessageSquare, Shield,
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
-import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useJurisdiction } from "@/hooks/use-jurisdiction";
 import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
@@ -83,185 +80,62 @@ const greyAreas: GreyAreaItem[] = [
 
 function GreyAreaCard({ item }: { item: GreyAreaItem }) {
   const [isOpen, setIsOpen] = useState(false);
-  return (
-    <div>
-      <button className="w-full text-left" onClick={() => setIsOpen(p => !p)}>
-        <Card className="hover:shadow-md transition-all duration-200 hover:border-amber-300 cursor-pointer">
-          <CardContent className="p-5">
-            <div className="flex items-start justify-between gap-3">
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
-                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-              <div className="flex-shrink-0 mt-1">
-                <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            key="grey-content"
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-            style={{ overflow: "hidden" }}
-          >
-            <div className="mx-1 mb-2 rounded-b-lg border border-t-0 border-amber-200 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-900/10 p-4">
-              <p className="text-sm text-foreground/85 leading-relaxed">{item.answer}</p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
+  const id = useId();
+  return <div className="counsel-scenario">
+    <h3><button type="button" id={`${id}-trigger`} aria-expanded={isOpen} aria-controls={`${id}-answer`} onClick={() => setIsOpen(value => !value)}>
+      {item.title}<span className="counsel-toggle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+    </button></h3>
+    <p>{item.description}</p>
+    <div id={`${id}-answer`} hidden={!isOpen} aria-labelledby={`${id}-trigger`} className="counsel-scenario-answer"><p>{item.answer}</p></div>
+  </div>;
 }
-
-/* ── SectionPanel ──────────────────────────────────────────────── */
 
 interface SectionPanelProps {
   id: string;
   title: string;
-  icon: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
 }
-
-function SectionPanel({ id, title, icon, isOpen, onToggle, children }: SectionPanelProps) {
-  return (
-    <div
-      id={id}
-      className={`rounded-xl border overflow-hidden scroll-mt-20 transition-colors duration-200 ${
-        isOpen ? "border-primary/25 dark:border-primary/20" : "border-border"
-      }`}
-    >
-      <button
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        className={`w-full text-left flex items-center justify-between px-5 py-4 gap-3 transition-colors ${
-          isOpen ? "bg-primary/5 dark:bg-primary/10" : "bg-background hover:bg-muted/30"
-        }`}
-      >
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-primary/10 dark:bg-primary/15 text-primary flex items-center justify-center flex-shrink-0">
-            {icon}
-          </div>
-          <h2 className="text-base font-bold text-foreground leading-snug">{title}</h2>
-        </div>
-        <ChevronDown
-          className={`h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-        />
-      </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            key="content"
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-            style={{ overflow: "hidden" }}
-          >
-            <div className="px-5 pb-6 pt-4 border-t border-border/50 space-y-4">
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-}
-
-/* ── Sidebar ───────────────────────────────────────────────────── */
-
-function PageSidebar({
-  openIds,
-  onOpen,
-  jurisdiction,
-}: {
-  openIds: Set<string>;
-  onOpen: (id: string) => void;
-  jurisdiction: string;
-}) {
-  return (
-    <nav aria-label="Page sections">
-      {/* Jurisdiction selector */}
-      <div className="mb-5 pb-5 border-b border-border/50">
-        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">
-          Your State
-        </p>
-        <JurisdictionSelector label="" />
-      </div>
-
-      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-2">
-        On this page
-      </p>
-      <div className="space-y-0.5">
-        {SECTIONS.map(({ id, shortLabel, Icon }) => {
-          const active = openIds.has(id);
-          return (
-            <button
-              key={id}
-              onClick={() => onOpen(id)}
-              className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-left transition-colors text-sm ${
-                active
-                  ? "bg-primary/8 text-primary dark:text-primary font-semibold"
-                  : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
-              }`}
-            >
-              <Icon className={`h-3.5 w-3.5 flex-shrink-0 ${active ? "text-primary" : ""}`} />
-              <span className="leading-snug text-xs">{shortLabel}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="mt-5 pt-4 border-t border-border/50">
-        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-2">
-          Related
-        </p>
-        <div className="space-y-0.5">
-          {QUICK_LINKS.map(({ href, title }) => (
-            <Link key={href} href={href}>
-              <span className="block px-2.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors leading-snug">
-                {title}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </nav>
-  );
+function SectionPanel({ id, title, isOpen, onToggle, children }: SectionPanelProps) {
+  const overview = id === "constitutional-sources";
+  return <section id={id} className="counsel-section">
+    <h2>{overview ? <span tabIndex={-1} id={`${id}-trigger`}>{title}</span> : <button type="button" id={`${id}-trigger`} onClick={onToggle} aria-expanded={isOpen} aria-controls={`${id}-content`}>
+      {title}<span className="counsel-toggle" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+    </button>}</h2>
+    <div id={`${id}-content`} hidden={!overview && !isOpen} className="counsel-section-content">{children}</div>
+  </section>;
 }
 
 /* ── Page ──────────────────────────────────────────────────────── */
 
 export default function RightToCounsel() {
-  useScrollToTop();
-  const { jurisdiction } = useJurisdiction();
+  const { t } = useTranslation();
+  const { jurisdiction, setJurisdiction } = useJurisdiction();
   const [openIds, setOpenIds] = useState<Set<string>>(new Set(["constitutional-sources"]));
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 88;
-      window.scrollTo({ top: Math.max(0, top) });
-    }
-  };
-
+  const pendingSection = useRef<string | null>(null);
   const openAndScroll = (id: string) => {
-    scrollToSection(id);
+    pendingSection.current = id;
     setOpenIds(prev => new Set([...prev, id]));
   };
+  useEffect(() => {
+    const followHash = () => {
+      const id = window.location.hash.slice(1);
+      if (SECTIONS.some(section => section.id === id)) openAndScroll(id);
+    };
+    if (window.location.hash) followHash();
+    else window.scrollTo({ top: 0, behavior: "instant" });
+    window.addEventListener("hashchange", followHash);
+    return () => window.removeEventListener("hashchange", followHash);
+  }, []);
+  useEffect(() => {
+    const id = pendingSection.current;
+    if (!id) return;
+    pendingSection.current = null;
+    document.getElementById(`${id}-trigger`)?.focus({ preventScroll: true });
+    document.getElementById(id)?.scrollIntoView({ behavior: "instant", block: "start" });
+  }, [openIds]);
 
   const toggleSection = (id: string) => {
     setOpenIds(prev => {
@@ -277,72 +151,18 @@ export default function RightToCounsel() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ScanFirstPageFrame mainClassName="counsel-page">
       <PageBreadcrumb items={breadcrumbItems} currentPage="Right to an Attorney" />
-
-      {/* Hero */}
-      <section className="vivid-header py-16 md:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
-          <ScrollReveal>
-            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-6">
-              <Scale className="h-7 w-7 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-5 text-white">
-              Right to an Attorney
-            </h1>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Learn when your right to an attorney begins, what it covers, and how to protect it — including the key difference between having a lawyer during questioning versus at trial.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Mobile pill nav */}
-      <div className="lg:hidden sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm">
-        <div className="px-4">
-          <div className="flex gap-2 overflow-x-auto py-2.5 no-scrollbar">
-            {SECTIONS.map(({ id, shortLabel }) => (
-              <button
-                key={id}
-                onClick={() => openAndScroll(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
-                  openIds.has(id)
-                    ? "border-primary/50 bg-primary/10 text-primary"
-                    : "border-border hover:bg-muted hover:border-foreground/20 text-muted-foreground"
-                }`}
-              >
-                {shortLabel}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Layout: sidebar + content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-        <div className="flex gap-10">
-
-          {/* Sidebar — desktop only */}
-          <aside className="hidden lg:block w-52 flex-shrink-0">
-            <div className="sticky top-24">
-              <PageSidebar openIds={openIds} onOpen={openAndScroll} jurisdiction={jurisdiction} />
-            </div>
-          </aside>
-
-          {/* Main content */}
-          <div className="flex-1 min-w-0 space-y-3">
-
-            {/* Mobile jurisdiction selector */}
-            <div className="lg:hidden">
-              <JurisdictionSelector label="See rules for your state (optional)" />
-            </div>
-
+      <header className="counsel-width counsel-hero">
+        <div><p className="counsel-label">{t("counselDesign.label")}</p><h1>{t("counselDesign.heading")}<span>{t("counselDesign.accent")}</span></h1>
+        <p>{t("counselDesign.subtitle")}</p></div>
+        <Scale className="counsel-art" strokeWidth={1.1} aria-hidden="true" />
+      </header>
+      <div className="counsel-width counsel-comparison" lang="en">
             {/* ── CONSTITUTIONAL SOURCES ──────────────────────────── */}
             <SectionPanel
               id="constitutional-sources"
               title="Two Constitutional Sources, Two Different Triggers"
-              icon={<Scale className="h-4 w-4" />}
               isOpen={openIds.has("constitutional-sources")}
               onToggle={() => toggleSection("constitutional-sources")}
             >
@@ -352,15 +172,15 @@ export default function RightToCounsel() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 {/* 5th Amendment */}
-                <Card className="border-blue-200 dark:border-blue-800/50">
+                <Card className="counsel-amendment counsel-fifth">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                      <div className="hidden">
                         <Shield className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
-                        <Badge variant="outline" className="text-xs mb-1 border-blue-300 text-blue-700 dark:border-blue-700 dark:text-blue-300">5th Amendment</Badge>
-                        <CardTitle className="text-base">Right Against Self-Incrimination</CardTitle>
+                        <Badge variant="outline" className="counsel-amendment-label">5th Amendment</Badge>
+                        <h3>Right Against Self-Incrimination</h3>
                       </div>
                     </div>
                   </CardHeader>
@@ -385,15 +205,15 @@ export default function RightToCounsel() {
                 </Card>
 
                 {/* 6th Amendment */}
-                <Card className="border-green-200 dark:border-green-800/50">
+                <Card className="counsel-amendment counsel-sixth">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                      <div className="hidden">
                         <Gavel className="h-5 w-5 text-green-600 dark:text-green-400" />
                       </div>
                       <div>
-                        <Badge variant="outline" className="text-xs mb-1 border-green-300 text-green-700 dark:border-green-700 dark:text-green-300">6th Amendment</Badge>
-                        <CardTitle className="text-base">Right to Counsel at Trial</CardTitle>
+                        <Badge variant="outline" className="counsel-amendment-label">6th Amendment</Badge>
+                        <h3>Right to Counsel at Trial</h3>
                       </div>
                     </div>
                   </CardHeader>
@@ -426,11 +246,24 @@ export default function RightToCounsel() {
               </Alert>
             </SectionPanel>
 
+
+      </div>
+      <div className="counsel-width counsel-layout">
+        <aside className="counsel-contents">
+          <h2>{t("counselDesign.explore")}</h2>
+          <JurisdictionSelector label={t("caseTimeline.design.state")} value={jurisdiction} onChange={setJurisdiction} />
+          <nav lang="en" aria-label={t("counselDesign.sectionsLabel")}>
+            {SECTIONS.map(({ id, shortLabel }) => <button type="button" key={id} onClick={() => openAndScroll(id)} aria-controls={id}>{shortLabel}</button>)}
+          </nav>
+          <nav lang="en" className="counsel-quick-links" aria-label={t("counselDesign.related")}>
+            {QUICK_LINKS.map(({ href, title }) => <Link href={href} key={href}>{title}</Link>)}
+          </nav>
+        </aside>
+        <div className="counsel-reading" lang="en">
             {/* ── CUSTODY LEVELS ──────────────────────────────────── */}
             <SectionPanel
               id="custody-levels"
               title="Detention, Custody, and Arrest — They're Not the Same"
-              icon={<Shield className="h-4 w-4" />}
               isOpen={openIds.has("custody-levels")}
               onToggle={() => toggleSection("custody-levels")}
             >
@@ -439,7 +272,7 @@ export default function RightToCounsel() {
               </p>
 
               <div className="space-y-4">
-                <Card>
+                <Card className="counsel-reading-row">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
                       <div className="w-3 h-3 rounded-full bg-green-500 flex-shrink-0 mt-1.5" />
@@ -455,7 +288,7 @@ export default function RightToCounsel() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="counsel-reading-row">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
                       <div className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0 mt-1.5" />
@@ -471,7 +304,7 @@ export default function RightToCounsel() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="counsel-reading-row">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
                       <div className="w-3 h-3 rounded-full bg-amber-500 flex-shrink-0 mt-1.5" />
@@ -487,7 +320,7 @@ export default function RightToCounsel() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="counsel-reading-row">
                   <CardContent className="p-5">
                     <div className="flex items-start gap-4">
                       <div className="w-3 h-3 rounded-full bg-red-500 flex-shrink-0 mt-1.5" />
@@ -511,7 +344,6 @@ export default function RightToCounsel() {
             <SectionPanel
               id="interrogation-vs-trial"
               title="Interrogation Counsel vs. Trial Counsel"
-              icon={<MessageSquare className="h-4 w-4" />}
               isOpen={openIds.has("interrogation-vs-trial")}
               onToggle={() => toggleSection("interrogation-vs-trial")}
             >
@@ -520,13 +352,13 @@ export default function RightToCounsel() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="border-blue-200 dark:border-blue-800/50">
+                <Card className="counsel-amendment counsel-fifth">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-2">
                       <MessageSquare className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                      <CardTitle className="text-base">During Interrogation</CardTitle>
+                      <h3>During Interrogation</h3>
                     </div>
-                    <Badge variant="outline" className="w-fit text-xs border-blue-300 text-blue-700 dark:border-blue-700 dark:text-blue-300">5th Amendment</Badge>
+                    <Badge variant="outline" className="counsel-amendment-label">5th Amendment</Badge>
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm">
                     <div className="flex items-start gap-2">
@@ -552,13 +384,13 @@ export default function RightToCounsel() {
                   </CardContent>
                 </Card>
 
-                <Card className="border-green-200 dark:border-green-800/50">
+                <Card className="counsel-amendment counsel-sixth">
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-2">
                       <Gavel className="h-5 w-5 text-green-600 dark:text-green-400" />
-                      <CardTitle className="text-base">At Trial & Critical Stages</CardTitle>
+                      <h3>At Trial & Critical Stages</h3>
                     </div>
-                    <Badge variant="outline" className="w-fit text-xs border-green-300 text-green-700 dark:border-green-700 dark:text-green-300">6th Amendment</Badge>
+                    <Badge variant="outline" className="counsel-amendment-label">6th Amendment</Badge>
                   </CardHeader>
                   <CardContent className="space-y-3 text-sm">
                     <div className="flex items-start gap-2">
@@ -590,7 +422,6 @@ export default function RightToCounsel() {
             <SectionPanel
               id="when-not-apply"
               title="When the Right to Counsel May Not Apply"
-              icon={<XCircle className="h-4 w-4" />}
               isOpen={openIds.has("when-not-apply")}
               onToggle={() => toggleSection("when-not-apply")}
             >
@@ -625,7 +456,7 @@ export default function RightToCounsel() {
                     body: "You do not have the right to have your attorney present inside the grand jury room during questioning, though you can step outside to consult with counsel between questions. You retain your 5th Amendment right to remain silent."
                   }
                 ].map((item, i) => (
-                  <Card key={i} className="border-slate-200 dark:border-slate-700">
+                  <Card key={i} className="counsel-reading-row">
                     <CardContent className="p-4">
                       <div className="flex items-start gap-3">
                         <div className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -646,7 +477,6 @@ export default function RightToCounsel() {
             <SectionPanel
               id="unclear-situations"
               title="Unclear Situations — When It's Hard to Tell"
-              icon={<AlertTriangle className="h-4 w-4" />}
               isOpen={openIds.has("unclear-situations")}
               onToggle={() => toggleSection("unclear-situations")}
             >
@@ -664,7 +494,6 @@ export default function RightToCounsel() {
             <SectionPanel
               id="what-happens"
               title="What Happens When You Ask for a Lawyer"
-              icon={<CheckCircle className="h-4 w-4" />}
               isOpen={openIds.has("what-happens")}
               onToggle={() => toggleSection("what-happens")}
             >
@@ -700,13 +529,12 @@ export default function RightToCounsel() {
             <SectionPanel
               id="quick-reference"
               title="Quick Reference: Which Right Applies?"
-              icon={<Gavel className="h-4 w-4" />}
               isOpen={openIds.has("quick-reference")}
               onToggle={() => toggleSection("quick-reference")}
             >
-              <div className="rounded-xl border border-border bg-muted/30 p-5">
+              <div className="counsel-table">
                 <div className="overflow-x-auto">
-                  <table className="w-full text-sm border-collapse">
+                  <table className="w-full text-sm border-collapse"><caption className="sr-only">Quick Reference: Which Right Applies?</caption>
                     <thead>
                       <tr className="border-b border-border">
                         <th className="text-left py-2 pr-4 font-semibold text-foreground text-xs">Situation</th>
@@ -741,7 +569,7 @@ export default function RightToCounsel() {
             </SectionPanel>
 
             {/* ── RELATED GUIDES ──────────────────────────────────── */}
-            <div className="border-t border-border pt-8 mt-4">
+            <div className="counsel-related">
               <h2 className="text-lg font-semibold mb-4 text-foreground">Related Guides</h2>
               <div className="grid sm:grid-cols-2 gap-2">
                 {[
@@ -751,8 +579,7 @@ export default function RightToCounsel() {
                   { href: "/case-guidance",  Icon: MessageSquare, title: "Get Guidance for Your Situation" },
                 ].map((item) => (
                   <Link key={item.href} href={item.href}>
-                    <div className="flex items-center gap-2.5 px-3 py-2.5 rounded-md border border-border/60 hover:border-border hover:bg-muted/30 transition-colors cursor-pointer">
-                      <item.Icon className="h-4 w-4 text-muted-foreground shrink-0" />
+                    <div className="counsel-related-link">
                       <span className="text-sm font-medium">{item.title}</span>
                     </div>
                   </Link>
@@ -767,11 +594,9 @@ export default function RightToCounsel() {
               </AlertDescription>
             </Alert>
 
-          </div>
         </div>
       </div>
-
-      <Footer />
-    </div>
+      <div className="counsel-width counsel-help"><h2>{t("counselDesign.help")}</h2><Link href="/legal-aid">{t("counselDesign.findHelp")}</Link><Link href="/data-sources">{t("standaloneGuides.sources")}</Link></div>
+    </ScanFirstPageFrame>
   );
 }

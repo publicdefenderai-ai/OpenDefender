@@ -4386,6 +4386,17 @@ export default {
       "text": "This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation."
     }
   },
+  "counselDesign": {
+    "label": "Right to Counsel",
+    "heading": "A lawyer’s role.",
+    "accent": "Your right to one.",
+    "subtitle": "Understand when the right to counsel applies, what it covers, and why questioning and criminal proceedings involve different protections.",
+    "explore": "Start with your question.",
+    "sectionsLabel": "Page sections",
+    "related": "Related guides",
+    "help": "Find legal help.",
+    "findHelp": "Public defenders & legal aid"
+  },
   "standaloneGuides": {
     "bail": {
       "heading": "Bail &",

@@ -55,7 +55,7 @@ test('search scenarios expose the qualifications instead of absolute warrant/unl
 
 test('juvenile counsel scenario distinguishes requesting a parent from a lawyer', async ({ page }) => {
   await page.goto('/right-to-counsel');
-  await page.locator('#unclear-situations > button').click();
+  await page.locator('#unclear-situations-trigger').click();
   await page.getByRole('button').filter({ hasText: "You're a juvenile being questioned" }).click();
   await expect(page.getByText(/Asking for a parent does not necessarily invoke the right to counsel/)).toBeVisible();
 });
