@@ -1,3 +1,4 @@
+import supplements from '../shared/california-conduct-supplements.json';
 import {californiaAttorneyDecision,reviewedCaliforniaPenalty} from '../shared/california-attorney-decisions';
 import { describe, expect, it } from "vitest";
 import { readCaliforniaRemainingCatalogReview, validateCaliforniaRemainingCatalogReview } from "../scripts/data-review/california-verification/remaining-catalog-review";
@@ -97,7 +98,11 @@ describe("remaining California catalog combined review", () => {
       const current = charge(c.id); expect(current.categories).toEqual(c.categories); expect(current.maxPenalty).toBe(reviewedCaliforniaPenalty(c.id,c.penalty.en));
       for (const language of ["en", "es", "zh"] as const) {
         const explanation = getChargeExplanation(current.name, "CA", language, current.id)!;
-        expect(explanation.plainSummary).toBe(c.summary[language]); expect(explanation.degreeContext).toBe(californiaAttorneyDecision(c.id)?.penalty ?? c.penalty[language]);
+        // Later evidence-bound supplements extend the English summary and explicitly mark fallback.
+        const supplement=supplements.find(row=>row.id===c.id);
+        expect(explanation.plainSummary).toBe(supplement && language==="en" ? `${c.summary.en} ${supplement.summary}` : c.summary[language]);
+        if(supplement)expect(explanation.untranslated).toBe(false);
+        expect(explanation.degreeContext).toBe(californiaAttorneyDecision(c.id)?.penalty ?? c.penalty[language]);
       }
     }
   });

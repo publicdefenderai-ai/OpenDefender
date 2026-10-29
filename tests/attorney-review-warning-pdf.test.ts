@@ -308,3 +308,24 @@ describe('unavailable translation notice in PDF', () => {
     expect(allRenderedText()).not.toContain('Showing English.');
   });
 });
+
+describe('partially translated charge explanation in PDF', () => {
+  it.each([
+    ['es', 'Resumen conservado en español.', 'Información adicional disponible solo en inglés.'],
+    ['zh', '保留的中文摘要。', '补充说明目前仅提供英文版本。'],
+  ])('keeps the %s base before a separately labeled English supplement', async (language, base, notice) => {
+    clearCaptured();
+    mockGetChargeExplanation.mockReturnValue({
+      plainSummary: base, untranslated: false, translationDraft: true,
+      untranslatedSupplement: {text: 'Distinct English supplementary detail.', language: 'en'},
+    });
+    await generateGuidancePDF(makeGuidance() as any, language);
+    const text = allRenderedText();
+    expect(text).toContain(base);
+    expect(text).toContain(notice);
+    expect(text.indexOf(base)).toBeLessThan(text.indexOf(notice));
+    expect(text.indexOf(notice)).toBeLessThan(text.indexOf('Distinct English supplementary detail.'));
+    expect(text).not.toContain('Esta explicación aún no está disponible');
+    expect(text).not.toContain('此说明尚无中文版本');
+  });
+});

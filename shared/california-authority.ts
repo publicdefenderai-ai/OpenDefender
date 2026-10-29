@@ -144,14 +144,19 @@ type RecordSeed = Omit<
   juryInstruction?: { ref: string; url: string };
 };
 
+export function getCaliforniaConductSupplement(id: string) {
+  return conductSupplements.find(row => row.id === id);
+}
+
 export function getCaliforniaBatchCorrection(id: string) {
   const correction = corrections.find(row => row.id === id);
   const supplement = conductSupplements.find(row => row.id === id);
   if (!correction || !supplement) return correction;
   const summary = `${correction.summary.en} ${supplement.summary}`;
-  return {...correction, summary: {en: summary, es: summary, zh: summary},
+  return {...correction, summary: {en: summary, es: correction.summary.es, zh: correction.summary.zh},
+    untranslatedSupplement: {text: supplement.summary, language: "en" as const},
     supportingSections: [...new Set([...correction.supportingSections, ...supplement.supportingSections])],
-    translationStatus: supplement.translationStatus};
+    translationStatus: "partial_translation_english_supplement"};
 }
 
 export function getCaliforniaCorrectionDependencies(correction: {
@@ -877,7 +882,7 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
   }),
   record({
     canonicalId: "ca-prostitution-solicitation",
-    officialTitle: "Soliciting or Agreeing to Engage in Prostitution",
+    officialTitle: "Prostitution: Soliciting, Agreeing, or Engaging",
     code: "647(b)",
     lawCode: "PEN",
     citation: "Cal. Penal Code § 647(b)",
@@ -2146,12 +2151,13 @@ export function getCaliforniaCanonicalCharge(
   if (!metadata) return undefined;
   const correction = getCaliforniaBatchCorrection(metadata.canonicalId);
   const addition = getCaliforniaAddition(metadata.canonicalId);
+  const supplement = conductSupplements.find(row => row.id === metadata.canonicalId);
   return {
     ...legacyCharge,
     id: metadata.canonicalId,
     name: metadata.officialTitle,
     code: metadata.code,
-    searchAliases: [...new Set([...(legacyCharge.searchAliases ?? []), ...((reviewedSearchAliases as Record<string, string[]>)[metadata.canonicalId] ?? []), ...californiaCitationSearchAliases(metadata.lawCode, metadata.code)])],
+    searchAliases: [...new Set([...(legacyCharge.searchAliases ?? []), ...(supplement?.searchAliases ?? []), ...((reviewedSearchAliases as Record<string, string[]>)[metadata.canonicalId] ?? []), ...californiaCitationSearchAliases(metadata.lawCode, metadata.code)])],
     description: `${metadata.officialTitle} under ${metadata.citation}. The prosecution generally must prove: ${metadata.elements.join("; ")}.`,
     categories: metadata.categories,
     category: getCaliforniaPrimaryCategory(metadata.categories, metadata.grading),

@@ -1,7 +1,7 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
-import { getCaliforniaExplanationSlug, getCaliforniaAddition, getCaliforniaBatchCorrection, getCaliforniaCanonicalRecord } from "./california-authority";
+import { getCaliforniaConductSupplement, getCaliforniaExplanationSlug, getCaliforniaAddition, getCaliforniaBatchCorrection, getCaliforniaCanonicalRecord } from "./california-authority";
 import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
 import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
@@ -3716,6 +3716,8 @@ export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
   translationDraft?: boolean;
   /** Requested translation is unavailable; the returned legal content is English. */
   untranslated?: boolean;
+  /** Translated base remains available; only this separate addition is English. */
+  untranslatedSupplement?: {text: string; language: "en"};
 }
 
 /**
@@ -3735,6 +3737,7 @@ export function getChargeExplanation(
   // domestic-violence, or failure-to-identify explanation with different scope.
   if (canonicalChargeId && normalizeJurisdictionCode(jurisdiction ?? "") === "ca") {
     const addition = getCaliforniaAddition(canonicalChargeId);
+    const supplement = getCaliforniaConductSupplement(canonicalChargeId);
     // No generic name match or fabricated translation for a new exact identity.
     // Until translations are reviewed, all locales explicitly use the English fallback.
     const correction = getCaliforniaBatchCorrection(canonicalChargeId) ?? (addition ? {
@@ -3759,6 +3762,7 @@ export function getChargeExplanation(
         },
         jurisdictionDetailMissing: false, translationDraft: !addition && !("translationStatus" in correction && correction.translationStatus === "english_only_pending_translation") && lang !== "en",
         untranslated: (addition?.translationStatus === "english_only_pending_translation" || ("translationStatus" in correction && correction.translationStatus === "english_only_pending_translation")) && lang !== "en",
+        untranslatedSupplement: lang !== "en" && supplement ? {text: supplement.summary, language: "en"} : undefined,
         dataConfidence: "high", lastVerified: "2026-09",
       };
     }

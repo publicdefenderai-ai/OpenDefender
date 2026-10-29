@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "scope": "existing_choice_conduct_supplement_not_new_charge",
+  "id": "ca-prostitution-solicitation",
+  "sourceAsOf": "2026-09-24",
+  "originalCorrectionSha256": "84233a4edbcdb57b98f49469708a193705085c9268c0d388c215fc27c0c9eb96",
+  "supplementSha256": "8d497c6ca7306dca5504f9e7d21e1169f2a3c00ecfa41ebdc0a0bb1b74480ab9",
+  "source": {
+    "key": "PEN:647",
+    "versionId": "id_842ac06a-c956-11f0-aea3-3b460998bfb4",
+    "contentSha256": "641b833976fab37e559cd387920ceba92250da6c1486977396fcaddcf51abcad",
+    "effectiveDate": "2026-01-01 00:00:00",
+    "history": "Amended by Stats. 2025, Ch. 82, Sec. 4.   (AB 379)   Effective January 1, 2026.",
+    "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647.",
+    "pin": {
+      "hash": "347898f551514086fb0e941c3beedb88265500e439b1ce977fa5fd859441403e",
+      "versions": 1
+    },
+    "start": 356,
+    "end": 3269,
+    "text": "(b) (1) An individual who solicits, or who agrees to engage in, or who engages in, an act of prostitution with the intent to receive compensation, money, or anything of value from another person. An individual agrees to engage in an act of prostitution when, with specific intent to so engage, the individual manifests an acceptance of an offer or solicitation by another person to so engage, regardless of whether the offer or solicitation was made by a person who also possessed the specific intent to engage in an act of prostitution. (2) An individual who solicits, or who agrees to engage in, or who engages in, an act of prostitution with another person who is 18 years of age or older in exchange for the individual providing compensation, money, or anything of value to the other person. An individual agrees to engage in an act of prostitution when, with specific intent to so engage, the individual manifests an acceptance of an offer or solicitation by another person who is 18 years of age or older to so engage, regardless of whether the offer or solicitation was made by a person who also possessed the specific intent to engage in an act of prostitution. (3) An individual who solicits, or who agrees to engage in, or who engages in, an act of prostitution with another person who is a minor in exchange for the individual providing compensation, money, or anything of value to the minor. An individual agrees to engage in an act of prostitution when, with specific intent to so engage, the individual manifests an acceptance of an offer or solicitation by someone who is a minor to so engage, regardless of whether the offer or solicitation was made by a minor who also possessed the specific intent to engage in an act of prostitution. (4) A manifestation of acceptance of an offer or solicitation to engage in an act of prostitution does not constitute a violation of this subdivision unless some act, in addition to the manifestation of acceptance, is done within this state in furtherance of the commission of the act of prostitution by the person manifesting an acceptance of an offer or solicitation to engage in that act. As used in this subdivision, “prostitution” includes any lewd act between persons for money or other consideration. (5) Notwithstanding paragraphs (1) to (3), inclusive, this subdivision does not apply to a child under 18 years of age who is alleged to have engaged in conduct to receive money or other consideration that would, if committed by an adult, violate this subdivision. A commercially exploited child under this paragraph may be adjudged a dependent child of the court pursuant to paragraph (2) of subdivision (b) of Section 300 of the Welfare and Institutions Code and may be taken into temporary custody pursuant to subdivision (a) of Section 305 of the Welfare and Institutions Code, if the conditions allowing temporary custody without warrant are met. "
+  },
+  "instruction": {
+    "id": "1153",
+    "heading": "1153. Prostitution: Engaging in Act (Pen. Code, § 647(b))",
+    "firstPage": 1005,
+    "family": "sexual_offenses",
+    "lastPage": 1006,
+    "pageHashes": [
+      {
+        "page": 1005,
+        "sha256": "85102fda9cdbc3bf7782ce0b84d2554db19df4115b42e20eadcbb4bc412840f7"
+      },
+      {
+        "page": 1006,
+        "sha256": "e6bb61eeea39ef470f9153660fad73f9f3514cdf9d09b68b4e28bb045c549409"
+      }
+    ],
+    "receipt": {
+      "sourceUrl": "https://courts.ca.gov/system/files/file/calcrim-2026.pdf",
+      "landingUrl": "https://courts.ca.gov/advisory-body/criminal-jury-instructions-advisory-committee",
+      "edition": "2026 approved February edition; later supplements not assumed incorporated",
+      "retrievedAt": "2026-09-28T05:28:52.309479+00:00",
+      "bytes": 84489227,
+      "sha256": "32cde18ace46a4a6fc4dd2ea27c9e30f923dc1d28dd554500119787f957a3d6e",
+      "pdfPages": 2680
+    },
+    "pages": [
+      {
+        "page": 1005,
+        "sha256": "85102fda9cdbc3bf7782ce0b84d2554db19df4115b42e20eadcbb4bc412840f7",
+        "text": "1153. Prostitution: Engaging in Act (Pen. Code, § 647(b))\nThe defendant is charged [in Count \n] with engaging in an act of \nprostitution [in violation of Penal Code section 647(b)].\nTo prove that the defendant is guilty of this crime, the People must \nprove that the defendant willfully engaged in sexual intercourse or a \nlewd act with someone else in exchange for money [or other \ncompensation].\nA lewd act means touching the genitals, buttocks, or female breast of \neither the prostitute or customer with some part of the other person’s \nbody for the purpose of sexual arousal or gratiﬁcation of either person.\nSomeone commits an act willfully when he or she does it willingly or on \npurpose.\nNew January 2006\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \ncrime.\nIf the defendant is charged with one or more prior convictions, give CALCRIM No. \n3100, Prior Conviction: Nonbifurcated Trial, unless the defendant has stipulated to \nthe conviction. If the court has granted a bifurcated trial on the prior conviction, use \nCALCRIM No. 3101, Prior Conviction: Bifurcated Trial.\nAUTHORITY\n• \nElements. Pen. Code, § 647(b).\n• \nWillfully Deﬁned. Pen. Code, § 7(1); People v. Lara (1996) 44 Cal.App.4th 102, \n107 [51 Cal.Rptr.2d 402].\n• \nProstitution Deﬁned. Pen. Code, § 647(b); People v. Hill (1980) 103 Cal.App.3d \n525, 534–535 [163 Cal.Rptr. 99]; Wooten v. Superior Court (2001) 93 \nCal.App.4th 422, 431–433 [113 Cal.Rptr.2d 195] [lewd act requires touching \nbetween prostitute and customer].\n• \nLewd Conduct Deﬁned. Pryor v. Municipal Court (1979) 25 Cal.3d 238, 256 \n[158 Cal.Rptr. 330, 599 P.2d 636].\nRELATED ISSUES\nPayment Does Not Need to Be Made Directly to Person Doing Act\n“[W]e know of no statutory or case law requiring that payment be made to the \nperson actually providing sexual favors.” (People v. Bell (1988) 201 Cal.App.3d \n1396, 1400 [248 Cal.Rptr. 57].)\n929\n"
+      },
+      {
+        "page": 1006,
+        "sha256": "e6bb61eeea39ef470f9153660fad73f9f3514cdf9d09b68b4e28bb045c549409",
+        "text": "SECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Sex Offenses and \nCrimes Against Decency, §§ 76–78, 178.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.11[1] (Matthew Bender).\nCouzens & Bigelow, Sex Crimes: California Law and Procedure §§ 12:16, 12:17 \n(The Rutter Group).\nCALCRIM No. 1153 \nSEX OFFENSES\n930\n"
+      }
+    ]
+  },
+  "product": {
+    "title": "Prostitution: Soliciting, Agreeing, or Engaging",
+    "supplement": {
+      "id": "ca-prostitution-solicitation",
+      "searchAliases": [
+        "Soliciting or Agreeing to Engage in Prostitution"
+      ],
+      "summary": "The alleged conduct matters: engaging in an act, soliciting, and agreeing are alternative theories, not one combined checklist. For the engaging theory, CALCRIM 1153 describes willingly engaging in sexual intercourse or a lewd act with another person in exchange for money or other compensation. A lewd act for this purpose involves touching the genitals, buttocks, or female breast of either participant with part of the other participant's body for sexual arousal or gratification of either person. These engaging-act requirements should not be treated as a requirement that the sexual act was completed in a solicitation or agreement case. An agreement requires specific intent, acceptance of an offer or solicitation, and an additional act in California in furtherance by the person accepting. The receiving-compensation, paying-an-adult, and paying-a-minor branches must be distinguished. Section 647(b) does not apply to a child under 18 alleged to have engaged in conduct to receive money or other consideration. The exact subdivision and the separate age, knowledge, payment, and prior-conviction conditions still control the applicable punishment.",
+      "elements": [
+        "Identify whether the allegation is solicitation, agreement, or engaging in an act, and whether it concerns receiving compensation, paying an adult, or paying a minor.",
+        "Engaging theory: willingly engaging in sexual intercourse or a lewd act with another person in exchange for money or other compensation; lewd touching requires the specified sexual purpose.",
+        "Agreement theory: acceptance with specific intent to engage, plus an additional act in California in furtherance by the person accepting; acceptance alone is insufficient.",
+        "Section 647(b)(5) excludes children under 18 alleged to have engaged in conduct to receive money or other consideration.",
+        "The engaging-act explanation does not supply an exhaustive elements checklist for solicitation or the separate sentencing branches."
+      ],
+      "mentalState": "Theory-specific: willingly or on purpose for engaging, with sexual arousal or gratification as the purpose of lewd touching; specific intent to engage for agreement. Receiving compensation requires the intent specified in section 647(b)(1). Do not substitute this bounded explanation for the elements of the exact charged subdivision.",
+      "supportingSections": [],
+      "instructions": [
+        "1153"
+      ],
+      "translationStatus": "english_only_pending_translation"
+    }
+  },
+  "accounting": {
+    "updatedChoices": 1,
+    "newChoices": 0,
+    "newSections": 0,
+    "newVersions": 0
+  },
+  "comparisonUpdate": {
+    "instructionId": "1153",
+    "previousStatus": "existing_choice_requires_conduct_comparison",
+    "status": "bounded_engaging_conduct_summary_not_exhaustive_instruction_coverage"
+  },
+  "limits": [
+    "One existing identity receives a conduct clarification and inclusive title. No new offense, penalty, category, source pin or receipt change.",
+    "CALCRIM 1153 supports the engaging-act explanation only. It is not a complete checklist for solicitation, agreement, defenses or the separate sentencing branches.",
+    "Section 647(b)(1)-(5) supplies the receiving/paying distinctions, agreement requirements and child-recipient exclusion. The older generic instruction does not override those statutory limits.",
+    "The retained 2026 instruction edition and statutory version are reused; this offline review does not establish new source currentness or live availability.",
+    "Spanish and Chinese base summaries remain translated. Additional English detail is separate and labeled as untranslated; the base retains its provisional-translation notice.",
+    "The earlier benchmark and closeout inventory remain historical records. Remaining weapons and benefit-program comparisons are not resolved by this supplement."
+  ]
+}

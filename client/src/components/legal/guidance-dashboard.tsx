@@ -1,3 +1,4 @@
+import { ChargeTranslationSupplement } from "./charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import React, { useState, useCallback, useEffect } from "react";
@@ -792,6 +793,8 @@ function YourChargesSection({
                    : getFallbackDescription(charge)
                )}
             </p>
+
+            <ChargeTranslationSupplement text={charge.explanation?.untranslatedSupplement?.text} language={i18n.language} />
 
             {/* Jurisdiction-specific detail takes priority over the generic degree context
                 when a shared/charge-explanation-jurisdiction-overlay.ts entry exists for

@@ -1,3 +1,5 @@
+import { ChargeTranslationSupplement } from "./charge-translation-supplement";
+import { getChargeExplanation } from "@shared/charge-explanations";
 import { TypingIndicator } from "@/components/chat/message-bubble";
 import { summarizeIntakeStep } from "./qa-flow-summary";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
@@ -1028,6 +1030,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
                             </p>
+                            <ChargeTranslationSupplement text={getChargeExplanation(charge.name, charge.jurisdiction ?? formData.jurisdiction, i18n.language, charge.id)?.untranslatedSupplement?.text} language={i18n.language} />
                           </div>
                         </div>
                       );
@@ -1119,6 +1122,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
                             </p>
+                            <ChargeTranslationSupplement text={getChargeExplanation(charge.name, charge.jurisdiction ?? formData.jurisdiction, i18n.language, charge.id)?.untranslatedSupplement?.text} language={i18n.language} />
                           </div>
                         </div>
                       );

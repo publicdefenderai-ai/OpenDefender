@@ -1,3 +1,4 @@
+import { ChargeTranslationSupplement } from "../legal/charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
 import { useState, useEffect } from "react";
@@ -443,6 +444,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                             </span>{" "}
                             {charge.maxPenalty}
                           </p>
+                          <ChargeTranslationSupplement text={localizedExplanation?.untranslatedSupplement?.text} language={explanationLanguage} />
                           {localizedExplanation?.pendingAttorneyReview && (
                             <p className="text-xs text-amber-700 dark:text-amber-300 mt-1 break-words">
                               {explanationLanguage === "es"
