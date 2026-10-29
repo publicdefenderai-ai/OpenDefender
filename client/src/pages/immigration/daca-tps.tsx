@@ -1,3 +1,4 @@
+import { immigrationUpdates } from "@/locales/immigration-updates";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { motion } from "framer-motion";
 import { 
@@ -14,7 +15,8 @@ import { ImmigrationDetailLayout } from "@/components/immigration/immigration-de
 
 export default function DacaTps() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const copy = immigrationUpdates[i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en'];
   
   const breadcrumbItems = [
     { label: t('breadcrumb.home', 'Home'), href: '/' },
@@ -70,13 +72,11 @@ export default function DacaTps() {
                   <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
                     <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
                       <AlertTriangle className="h-4 w-4" />
-                      Legal Framework — What DACA Is and Is Not
+                      {copy.frameworkTitle}
                     </h4>
                     <ul className="text-sm text-amber-800 dark:text-amber-300 space-y-1.5 list-disc list-inside">
-                      <li>DACA is a <strong>DHS enforcement policy</strong> established by a June 2012 memorandum — it is not a law passed by Congress and does not provide a path to citizenship or permanent legal status.</li>
-                      <li>The Supreme Court ruled in <em>DHS v. Regents of the Univ. of Cal.</em> (2020) that the 2017 attempt to rescind DACA was procedurally flawed — the Court did not rule that DHS must permanently maintain the program.</li>
-                      <li><strong>New DACA applications remain blocked</strong> by a federal court order (5th Circuit, <em>Texas v. U.S.</em>). Only current recipients can renew.</li>
-                      <li>Renewals have continued but the program's legal status is subject to ongoing litigation. Verify current status with an immigration attorney or <a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer" className="underline font-semibold">USCIS</a>.</li>
+                      {copy.framework.map(text => <li key={text}>{text}</li>)}
+                      <li><a href="https://www.uscis.gov/DACA" target="_blank" rel="noopener noreferrer" className="underline">USCIS DACA</a></li>
                     </ul>
                   </div>
 
@@ -109,7 +109,7 @@ export default function DacaTps() {
                     <h4 className="font-semibold mb-3 text-foreground">{t('immigration.daca.tpsSection.countries')}</h4>
                     <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
                       <p className="text-sm text-amber-800 dark:text-amber-300 mb-3">
-                        <strong>TPS country designations change frequently.</strong> Countries may be added, removed, or have their TPS extended or terminated at any time based on current conditions. A static list here would become inaccurate.
+                        {copy.currentTps}
                       </p>
                       <a
                         href="https://www.uscis.gov/humanitarian/temporary-protected-status"
@@ -117,7 +117,7 @@ export default function DacaTps() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-3 py-2 bg-amber-700 dark:bg-amber-800 text-white rounded-lg text-sm font-medium hover:bg-amber-800 dark:hover:bg-amber-700 transition-colors"
                       >
-                        View Current TPS Country List on USCIS
+                        {copy.countryLink}
                         <ExternalLink className="h-3.5 w-3.5" />
                       </a>
                     </div>

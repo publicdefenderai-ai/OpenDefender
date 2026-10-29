@@ -190,24 +190,24 @@ export const kyrScripts: KYRScript[] = [
     tips: {
       en: [
         'Keep your hands visible on the steering wheel',
-        'You must provide: license, registration, and proof of insurance',
+        'Drivers must provide license, registration, and proof of insurance as required by state law',
         'You do NOT have to answer questions about citizenship or immigration status',
         'Running can be used against you in immigration court and may result in additional criminal charges',
-        'If you are a passenger, you have the same rights to remain silent',
-        'In some states, you must identify yourself (give your name) - but nothing more'
+        'Passengers generally need not show ID solely because of a routine traffic stop. Separate lawful detention and identification laws may apply.',
+        'During a lawful detention, some states require your name or limited identifying information. Noncitizens must show immigration papers they have with them when an immigration agent requests them; adults must carry issued registration documents.'
       ],
       es: [
         'Mantenga sus manos visibles en el volante',
-        'Debe proporcionar: licencia, registro y prueba de seguro',
+        'Los conductores deben mostrar licencia, registro y comprobante de seguro según la ley estatal',
         'NO tiene que contestar preguntas sobre ciudadanía o estatus migratorio',
         'Correr puede ser usado en su contra en la corte de inmigración y puede resultar en cargos criminales adicionales',
-        'Si es pasajero, tiene los mismos derechos de guardar silencio',
-        'En algunos estados, debe identificarse (dar su nombre) - pero nada más'
+        'Los pasajeros generalmente no tienen que mostrar identificación solo por una parada de tráfico rutinaria. Pueden aplicarse reglas distintas sobre detención legal e identificación.',
+        'Durante una detención legal, algunos estados exigen el nombre u otros datos limitados. Los no ciudadanos deben mostrar los documentos migratorios que lleven si un agente de inmigración los pide; los adultos deben portar los documentos de registro emitidos.'
       ]
     },
     legalBasis: {
-      en: 'Fifth Amendment: Right to remain silent. You cannot be compelled to answer questions that might incriminate you, including questions about immigration status.',
-      es: 'Quinta Enmienda: Derecho a guardar silencio. No pueden obligarlo a contestar preguntas que puedan incriminarlo, incluyendo preguntas sobre estatus migratorio.'
+      en: 'Fourth Amendment: Protection against unreasonable stops and searches. Fifth Amendment: Protection against compelled self-incrimination. Identification and immigration-document duties can still apply.',
+      es: 'Cuarta Enmienda: Protección contra detenciones y registros irrazonables. Quinta Enmienda: Protección contra la autoincriminación forzada. Pueden seguir aplicándose obligaciones de identificación y documentos migratorios.'
     }
   },
   {
@@ -249,7 +249,8 @@ export const kyrScripts: KYRScript[] = [
         'Stay calm - running can be used against you',
         'You have the right to remain silent',
         'If you are in a public area of the workplace, agents may be able to question you',
-        'If you are in a non-public area (like a warehouse or private office), ICE needs consent or a warrant',
+        'For non-public workplace areas, ICE generally needs consent or a judicial warrant signed by a judge, unless another legal exception applies. An administrative ICE warrant alone does not authorize entry.',
+        'Employees may decline voluntary requests for papers, but immigration-document duties still apply: noncitizens must show immigration papers they have when an immigration agent requests them.',
         'Have an emergency plan prepared with trusted contacts',
         'Know your A-Number if you have one'
       ],
@@ -257,7 +258,8 @@ export const kyrScripts: KYRScript[] = [
         'Mantenga la calma - correr puede ser usado en su contra',
         'Tiene el derecho de guardar silencio',
         'Si está en un área pública del trabajo, los agentes pueden interrogarlo',
-        'Si está en un área no pública (como un almacén u oficina privada), ICE necesita consentimiento o una orden',
+        'Para áreas no públicas del trabajo, ICE generalmente necesita consentimiento u orden judicial firmada por un juez, salvo otra excepción legal. Una orden administrativa de ICE por sí sola no autoriza la entrada.',
+        'Los empleados pueden rechazar solicitudes voluntarias de papeles, pero siguen aplicándose deberes migratorios: los no ciudadanos deben mostrar los documentos migratorios que lleven si un agente de inmigración los solicita.',
         'Tenga un plan de emergencia preparado con contactos de confianza',
         'Sepa su número A si tiene uno'
       ]
@@ -307,6 +309,7 @@ export const kyrScripts: KYRScript[] = [
         'If you are not being detained, you are free to walk away',
         'Officers need "reasonable suspicion" to detain you',
         'You have the right to ask why you are being stopped',
+        'During a lawful detention, state law may require your name or limited identifying information. Immigration-document duties also apply to noncitizens.',
         'Physically resisting, even if your rights are being violated, can result in additional criminal charges. Challenge unlawful stops through the courts afterward.',
         'Try to remember details: badge numbers, car numbers, witnesses'
       ],
@@ -315,6 +318,7 @@ export const kyrScripts: KYRScript[] = [
         'Si no está detenido, es libre de irse',
         'Los oficiales necesitan "sospecha razonable" para detenerlo',
         'Tiene derecho a preguntar por qué lo están deteniendo',
+        'Durante una detención legal, la ley estatal puede exigir su nombre u otros datos limitados. Los no ciudadanos también tienen obligaciones de documentación migratoria.',
         'No se resista físicamente aunque crea que están violando sus derechos',
         'Trate de recordar detalles: números de placa, números de carro, testigos'
       ]
@@ -520,28 +524,28 @@ export const warrantInfo: WarrantInfo[] = [
   {
     type: 'judicial',
     title: {
-      en: 'Judicial Warrant (VALID for entry)',
-      es: 'Orden Judicial (VÁLIDA para entrar)'
+      en: 'Judicial Warrant',
+      es: 'Orden Judicial'
     },
     description: {
-      en: 'A judicial warrant is issued by a judge or magistrate and authorizes law enforcement to enter your home.',
-      es: 'Una orden judicial es emitida por un juez o magistrado y autoriza a las fuerzas del orden a entrar a su casa.'
+      en: 'A judicial warrant is issued by a judge or magistrate. Entry authority depends on the type of warrant, its scope, and the circumstances; an arrest warrant and a search warrant are not interchangeable.',
+      es: 'Una orden judicial es emitida por un juez o magistrado. La autoridad para entrar depende del tipo de orden, su alcance y las circunstancias; una orden de arresto no equivale a una orden de registro.'
     },
     characteristics: {
       en: [
         'Signed by a JUDGE or magistrate',
-        'Has a court address and seal',
-        'Lists the specific address to be searched',
+        'Identifies the issuing court; formatting varies',
+        'A search warrant identifies the place or person to be searched',
         'States what officers are looking for',
-        'Has an expiration date',
+        'May specify an execution deadline; date rules vary by warrant type',
         'Issued by a COURT (not by ICE or DHS)'
       ],
       es: [
         'Firmada por un JUEZ o magistrado',
-        'Tiene una dirección y sello del tribunal',
-        'Lista la dirección específica a ser registrada',
+        'Identifica al tribunal emisor; el formato varía',
+        'Una orden de registro identifica el lugar o persona que se registrará',
         'Indica lo que los oficiales están buscando',
-        'Tiene fecha de vencimiento',
+        'Puede indicar un plazo de ejecución; las reglas varían según el tipo de orden',
         'Emitida por un TRIBUNAL (no por ICE o DHS)'
       ]
     },
@@ -550,29 +554,29 @@ export const warrantInfo: WarrantInfo[] = [
         'Ask to see the warrant through a window or under the door',
         'Verify it has a judge\'s signature',
         'Check that your name and address are correct on the warrant',
-        'If valid, you must allow entry (but can still remain silent)',
+        'Ask a lawyer about its scope. You can state that you do not consent and remain silent; do not obstruct officers.',
         'Do NOT physically resist'
       ],
       es: [
         'Pida ver la orden a través de una ventana o por debajo de la puerta',
         'Verifique que tenga la firma de un juez',
         'Compruebe que su nombre y dirección sean correctos en la orden',
-        'Si es válida, debe permitir la entrada (pero aún puede guardar silencio)',
+        'Consulte su alcance con un abogado. Puede expresar que no consiente y guardar silencio; no obstruya a los agentes.',
         'NO se resista físicamente'
       ]
     },
     lookFor: {
       en: [
         'Judge\'s signature (not just an ICE officer)',
-        'Court letterhead and seal',
-        'Your correct name and address',
-        'Date (must not be expired)'
+        'Issuing court, letterhead, and any seal',
+        'Person or place identified and any limits on the search',
+        'Issue date and any execution deadline; not necessarily today’s date'
       ],
       es: [
         'Firma del juez (no solo un oficial de ICE)',
-        'Membrete y sello del tribunal',
-        'Su nombre y dirección correctos',
-        'Fecha (no debe estar vencida)'
+        'Tribunal emisor, membrete y cualquier sello',
+        'Persona o lugar identificado y cualquier límite del registro',
+        'Fecha de emisión y cualquier plazo de ejecución; no necesariamente la fecha de hoy'
       ]
     }
   },
@@ -655,7 +659,7 @@ export const commonMistakes = {
     {
       mistake: 'Showing a foreign passport or ID',
       consequence: 'This reveals information about your nationality',
-      instead: 'You do not have to show documents. Stay silent.'
+      instead: 'You can decline voluntary document requests, but identification and immigration-document duties may apply. Noncitizens must show immigration papers they have when an immigration agent requests them.'
     },
     {
       mistake: 'Running away or hiding',
@@ -687,7 +691,7 @@ export const commonMistakes = {
     {
       mistake: 'Mostrar un pasaporte o identificación extranjera',
       consequence: 'Esto revela información sobre su nacionalidad',
-      instead: 'No tiene que mostrar documentos. Guarde silencio.'
+      instead: 'Puede rechazar solicitudes voluntarias de documentos, pero pueden existir obligaciones de identificación y documentación migratoria. Los no ciudadanos deben mostrar los documentos migratorios que lleven cuando un agente de inmigración los solicite.'
     },
     {
       mistake: 'Correr o esconderse',

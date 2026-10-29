@@ -54,12 +54,12 @@ export default function FindDetained() {
         es: 'Ingrese Su Información'
       },
       description: {
-        en: 'You\'ll need either their A-Number (Alien Registration Number) OR their name, country of birth, and date of birth.',
-        es: 'Necesitará su Número A (Número de Registro de Extranjero) O su nombre, país de nacimiento y fecha de nacimiento.'
+        en: 'Use their A-Number AND country of birth, or their first and last name, country of birth, and date of birth.',
+        es: 'Use su Número A Y país de nacimiento, o su nombre y apellido, país de nacimiento y fecha de nacimiento.'
       },
       tips: {
-        en: 'The A-Number is a 9-digit number that starts with "A". It may be on previous immigration documents.',
-        es: 'El Número A es un número de 9 dígitos que comienza con "A". Puede estar en documentos de inmigración anteriores.'
+        en: 'A-Numbers have 7, 8, or 9 digits. Enter nine digits in the locator, adding zeros at the beginning if needed; omit the letter A.',
+        es: 'Los Números A tienen 7, 8 o 9 dígitos. Ingrese nueve dígitos en el localizador, agregando ceros al principio si es necesario; omita la letra A.'
       }
     },
     {
@@ -73,8 +73,8 @@ export default function FindDetained() {
         es: 'Si se encuentra, el sistema mostrará su centro de detención actual, la oficina de campo de ICE y cuándo llegaron.'
       },
       tips: {
-        en: 'Results may take 24-48 hours to appear after an arrest. If not found, check back later.',
-        es: 'Los resultados pueden tardar 24-48 horas en aparecer después de un arresto. Si no se encuentra, vuelva a verificar más tarde.'
+        en: 'People under 18 are not listed. People in CBP custody for less than 48 hours may not appear. A missing result does not prove that someone is not detained; contact ICE ERO directly for help.',
+        es: 'Los menores de 18 años no aparecen. Quienes llevan menos de 48 horas bajo custodia de CBP pueden no aparecer. No encontrar un resultado no prueba que la persona no esté detenida; contacte directamente a ICE ERO.'
       }
     },
     {
@@ -97,9 +97,9 @@ export default function FindDetained() {
   const aNumberInfo = {
     en: {
       title: 'What is an A-Number?',
-      description: 'An Alien Registration Number (A-Number) is a unique 9-digit identifier that ICE assigns to individuals in immigration proceedings. It looks like: A123-456-789',
+      description: 'An Alien Registration Number (A-Number) is a 7-, 8-, or 9-digit immigration identifier. For example, A1234567 is entered as 001234567 in the locator.',
       whereToFind: [
-        'Previous immigration documents (visas, work permits, green cards)',
+        'Previous immigration documents (immigrant visas, work permits, green cards); not every visa or passport stamp has an A-Number',
         'Immigration court notices',
         'Previous deportation orders',
         'Employment authorization cards'
@@ -108,9 +108,9 @@ export default function FindDetained() {
     },
     es: {
       title: '¿Qué es un Número A?',
-      description: 'Un Número de Registro de Extranjero (Número A) es un identificador único de 9 dígitos que ICE asigna a las personas en procedimientos de inmigración. Se ve así: A123-456-789',
+      description: 'Un Número de Registro de Extranjero (Número A) es un identificador migratorio de 7, 8 o 9 dígitos. Por ejemplo, A1234567 se ingresa como 001234567 en el localizador.',
       whereToFind: [
-        'Documentos de inmigración anteriores (visas, permisos de trabajo, tarjetas de residencia)',
+        'Documentos migratorios anteriores (visas de inmigrante, permisos de trabajo, tarjetas de residencia); no toda visa o sello de pasaporte contiene un Número A',
         'Notificaciones del tribunal de inmigración',
         'Órdenes de deportación anteriores',
         'Tarjetas de autorización de empleo'
@@ -121,18 +121,18 @@ export default function FindDetained() {
 
   const notFoundSteps = {
     en: [
-      'Wait 24-48 hours and search again - the system may not be updated immediately',
-      'Call the ICE detention reporting line: 1-888-351-4024',
+      'Check spelling and search again as records update. Do not wait for an online result to seek help; minors are excluded from this locator.',
+      'Call ICE at 1-888-351-4024. Live operators: Monday–Friday, 8 a.m.–8 p.m. Eastern Time, excluding federal holidays.',
       'Contact an immigration attorney who can make inquiries on your behalf',
       'File a missing person report with local police if you believe the person is missing',
-      'Contact your local ICE field office directly'
+      'Contact the ICE Enforcement and Removal Operations (ERO) field office directly, especially when searching for someone under 18'
     ],
     es: [
-      'Espere 24-48 horas y busque de nuevo - el sistema puede no estar actualizado inmediatamente',
-      'Llame a la línea de reportes de detención de ICE: 1-888-351-4024',
+      'Revise la ortografía y vuelva a buscar mientras se actualizan los registros. No espere un resultado para buscar ayuda; el localizador excluye a menores.',
+      'Llame a ICE al 1-888-351-4024. Operadores: lunes a viernes, de 8 a. m. a 8 p. m., hora del Este, excepto feriados federales.',
       'Contacte a un abogado de inmigración que pueda hacer consultas en su nombre',
       'Presente un reporte de persona desaparecida con la policía local si cree que la persona está desaparecida',
-      'Contacte su oficina de campo local de ICE directamente'
+      'Contacte directamente a la oficina de Operaciones de Ejecución y Deportación (ERO) de ICE, especialmente para buscar a un menor de 18 años'
     ]
   };
 
@@ -418,6 +418,9 @@ export default function FindDetained() {
                     >
                       1-888-351-4024
                     </a>
+                    <p className="text-sm text-muted-foreground mt-2">{lang === 'es'
+                      ? 'Lunes a viernes, 8 a. m. a 8 p. m., hora del Este; excepto feriados federales.'
+                      : 'Monday–Friday, 8 a.m.–8 p.m. Eastern Time; excluding federal holidays.'}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>

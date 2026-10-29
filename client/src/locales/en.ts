@@ -3553,7 +3553,7 @@ export default {
         "req5": "Currently in school, graduated, or have GED",
         "req6": "No felony, significant misdemeanor, or 3+ misdemeanors",
         "renewal": "Renewal Timeline",
-        "renewalText": "Submit renewal applications 120-150 days before your current DACA expires. Processing times vary and change frequently — check current wait times at uscis.gov/i-821d-processing-times before submitting."
+        "renewalText": "DACA is generally granted for two years and renewal is not automatic. USCIS recommends filing 120–150 days before expiration. Processing delays can create gaps in protection and work authorization. A pending DACA renewal does not automatically extend an expired work permit. Check current USCIS instructions and speak with an immigration attorney before expiration."
       },
       "tpsSection": {
         "title": "TPS (Temporary Protected Status)",
@@ -3590,7 +3590,7 @@ export default {
         "silent": "Right to Remain Silent",
         "silentText": "You don't have to answer questions about where you were born, your immigration status, or how you entered the U.S.",
         "refuse": "Right to Refuse Consent",
-        "refuseText": "You can refuse to show documents beyond what's required for employment verification.",
+        "refuseText": "You may decline voluntary requests for documents. Immigration-document duties still apply: noncitizens must show immigration papers they have with them when an immigration agent requests them. Adults must carry issued registration documents. Employment verification is a separate process.",
         "attorney": "Right to an Attorney",
         "attorneyText": "You can request to speak with an attorney before answering any questions.",
         "basis": "Right to Know Basis for Detention",
@@ -3612,7 +3612,7 @@ export default {
         "mustProvide": "What Employers Must Provide",
         "must1": "Access to non-public areas only with a judicial warrant (not administrative warrant)",
         "must2": "Reasonable time for employees to consult with counsel if available",
-        "must3": "I-9 forms within 3 days notice (72 hours) if requested for audit",
+        "must3": "For an I-9 inspection, employers generally receive at least three business days’ notice to produce forms. A warrant or subpoena can permit inspection without that notice.",
         "canDo": "What Employers Can Do",
         "can1": "Request to see the warrant and verify it's signed by a judge",
         "can2": "Contact their attorney before allowing access to non-public areas",
@@ -3757,12 +3757,12 @@ export default {
         "eligible3": "Individuals with strong community ties",
         "eligible4": "People with U.S. citizen family members",
         "eligible5": "Those with steady employment history",
-        "mandatoryDetention": "Mandatory Detention (No Bond)",
+        "mandatoryDetention": "Mandatory detention under § 1226(c) and related statutes",
         "mandatory1": "Aggravated felony convictions",
         "mandatory2": "Certain drug offenses",
         "mandatory3": "Firearms offenses",
         "mandatory4": "Terrorism-related charges",
-        "mandatory5": "Prior deportation orders (in some cases)"
+        "mandatory5": "The 2025 Laken Riley Act adds § 1226(c)(1)(E): specified inadmissibility grounds under § 1182(a)(6)(A), (6)(C), or (7), together with arrest, charge, conviction, or qualifying admission for burglary, theft, larceny, shoplifting, assault on law enforcement, or a crime causing death or serious bodily injury. A conviction is not always required."
       },
       "process": {
         "title": "The Bond Hearing Process",
@@ -3792,7 +3792,7 @@ export default {
         "bailFund": "National Bail Fund Network",
         "bailFundText": "Directory of local bond funds that help families pay immigration bonds.",
         "raices": "RAICES Bond Fund",
-        "raicesText": "Provides bond assistance for immigrants detained in Texas and beyond."
+        "raicesText": "RAICES, based in Texas, currently reserves its bond fund for its own detained clients who are granted bond. Contact RAICES directly about representation, service area, eligibility, and available funds; assistance is not guaranteed."
       }
     },
     "attorney": {
