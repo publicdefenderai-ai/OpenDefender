@@ -231,3 +231,7 @@ References:
 - `opendefender-mobile-document-summarizer-preview.html`: SHA-256 `5fb6e2accb85237655ae7e2ad914ff777f67a81eae3bfc021eb66e9eebf88b99`
 
 Validation: typecheck and production build passed. Seven focused browser checks passed, covering consent/reset, file selection and gating in English/Spanish/Chinese at 320px in both themes, upload fields, result warnings, document questions and download. Desktop and mobile screenshots were visually inspected in both themes against the accepted reference. Added the new spec to the release allowlist and updated the existing navigation heading assertion. Browser AI responses are fictional test fixtures, not live-generation verification. Legacy Linux pixel baselines for research-tool shells were not regenerated in this macOS environment; full-suite/release readiness is not claimed.
+
+### PR 71 review correction
+
+Removed five invalid `hsl()` wrappers around full-value theme tokens in the document-tool CSS. Upload focus now has a visible 2px outline; the advisory border, related-resource separator, link colors and page label resolve correctly. Browser checks now assert computed outline/border widths, styles and colors in all three locales and both themes. Production build and all seven focused browser checks passed. Legacy stylesheet wrappers and the existing unused terms-link translation remain separate follow-ups.

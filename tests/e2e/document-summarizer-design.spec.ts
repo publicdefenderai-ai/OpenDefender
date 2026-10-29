@@ -18,6 +18,24 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     await expect(page.locator('html')).toHaveClass(theme === 'dark' ? /dark/ : /light/);
     await expect(page.locator('main h1')).toBeVisible();
     await expect(page.locator('.document-tool-advisory')).toBeVisible();
+    const colors = await page.evaluate(() => {
+      const probe = document.createElement('span');
+      probe.style.transition = 'none';
+      document.body.append(probe);
+      const result: Record<string, string> = {};
+      for (const token of ['primary', 'ring', 'border']) {
+        probe.style.color = `var(--${token})`;
+        result[token] = getComputedStyle(probe).color;
+      }
+      probe.remove();
+      return result;
+    });
+    await expect(page.locator('.document-tool-advisory')).toHaveCSS('border-left-width', '3px');
+    await expect(page.locator('.document-tool-advisory')).toHaveCSS('border-left-color', colors.primary);
+    await expect(page.locator('.document-tool-label')).toHaveCSS('color', colors.primary);
+    await expect(page.locator('.document-tool-related')).toHaveCSS('border-top-width', '1px');
+    await expect(page.locator('.document-tool-related')).toHaveCSS('border-top-color', colors.border);
+    await expect(page.locator('.document-tool-related a').first()).toHaveCSS('color', colors.primary);
     await expect(page.getByTestId('summary-consent-continue')).toBeDisabled();
     await expect(page.locator('input[type=file]')).toHaveCount(0);
     await page.screenshot({ path: testInfo.outputPath('consent-mobile.png'), fullPage: true });
@@ -27,6 +45,9 @@ for (const language of ['en', 'es', 'zh']) for (const theme of ['light', 'dark']
     const input = page.locator('input[type=file]');
     await input.focus();
     await expect(input).toBeFocused();
+    await expect(page.locator('.summary-upload')).toHaveCSS('outline-width', '2px');
+    await expect(page.locator('.summary-upload')).toHaveCSS('outline-style', 'solid');
+    await expect(page.locator('.summary-upload')).toHaveCSS('outline-color', colors.ring);
     await input.setInputFiles({ name: 'fictional-meeting.txt', mimeType: 'text/plain', buffer: Buffer.from('Fictional meeting note for a design test.') });
     await expect(page.getByTestId('summary-submit')).toBeEnabled();
     await expect(page.locator('.summary-upload')).toContainText('fictional-meeting.txt');
