@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 691,
-    "configuredSelectable": 670,
+    "canonicalRecords": 710,
+    "configuredSelectable": 689,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 571,
-    "boundedCorrectionPass": 670,
+    "boundedAdditionPass": 590,
+    "boundedCorrectionPass": 689,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 344,
+    "distinctSelectablePrimarySections": 351,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 344,
-    "selectableRecordsWithAllPrimaryTextAcquired": 670,
-    "totalAcquiredSectionsIncludingDependencies": 858,
-    "totalAcquiredVersionsIncludingDependencies": 866,
+    "acquiredSelectablePrimarySections": 351,
+    "selectableRecordsWithAllPrimaryTextAcquired": 689,
+    "totalAcquiredSectionsIncludingDependencies": 904,
+    "totalAcquiredVersionsIncludingDependencies": 912,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "670 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "689 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -42,8 +42,8 @@
   "byLawCode": [
     {
       "lawCode": "BPC",
-      "selectable": 6,
-      "corrected": 6,
+      "selectable": 10,
+      "corrected": 10,
       "awaitingCorrection": 0
     },
     {
@@ -59,6 +59,18 @@
       "awaitingCorrection": 0
     },
     {
+      "lawCode": "INS",
+      "selectable": 6,
+      "corrected": 6,
+      "awaitingCorrection": 0
+    },
+    {
+      "lawCode": "LAB",
+      "selectable": 4,
+      "corrected": 4,
+      "awaitingCorrection": 0
+    },
+    {
       "lawCode": "PEN",
       "selectable": 536,
       "corrected": 536,
@@ -71,9 +83,21 @@
       "awaitingCorrection": 0
     },
     {
+      "lawCode": "UIC",
+      "selectable": 1,
+      "corrected": 1,
+      "awaitingCorrection": 0
+    },
+    {
       "lawCode": "VEH",
       "selectable": 56,
       "corrected": 56,
+      "awaitingCorrection": 0
+    },
+    {
+      "lawCode": "WIC",
+      "selectable": 4,
+      "corrected": 4,
       "awaitingCorrection": 0
     }
   ],
@@ -284,6 +308,16 @@
   "sourceRequests": [
     {
       "lawCode": "BPC",
+      "section": "2052",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2052&lawCode=BPC",
+      "recordIds": [
+        "ca-bpc-2052-a",
+        "ca-bpc-2052-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "BPC",
       "section": "25658",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25658&lawCode=BPC",
       "recordIds": [
@@ -309,6 +343,16 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25662&lawCode=BPC",
       "recordIds": [
         "ca-minor-in-possession"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "BPC",
+      "section": "7028",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=7028&lawCode=BPC",
+      "recordIds": [
+        "ca-bpc-7028-a-1",
+        "ca-bpc-7028-a-2"
       ],
       "alreadyRetained": false
     },
@@ -713,6 +757,40 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12677&lawCode=HSC",
       "recordIds": [
         "ca-illegal-fireworks-12677"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "INS",
+      "section": "1871.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1871.4&lawCode=INS",
+      "recordIds": [
+        "ca-ins-1871-4-a-1",
+        "ca-ins-1871-4-a-2",
+        "ca-ins-1871-4-a-3",
+        "ca-ins-1871-4-a-4",
+        "ca-ins-1871-4-a-5",
+        "ca-ins-1871-4-a-6"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "LAB",
+      "section": "3700.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=3700.5&lawCode=LAB",
+      "recordIds": [
+        "ca-lab-3700-5-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "LAB",
+      "section": "6425",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=6425&lawCode=LAB",
+      "recordIds": [
+        "ca-lab-6425-a",
+        "ca-lab-6425-b",
+        "ca-lab-6425-c"
       ],
       "alreadyRetained": false
     },
@@ -3387,6 +3465,15 @@
       "alreadyRetained": false
     },
     {
+      "lawCode": "UIC",
+      "section": "2101",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=2101&lawCode=UIC",
+      "recordIds": [
+        "ca-uic-2101-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
       "lawCode": "VEH",
       "section": "10501",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10501&lawCode=VEH",
@@ -3713,6 +3800,18 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=40508&lawCode=VEH",
       "recordIds": [
         "ca-veh-40508-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "WIC",
+      "section": "10980",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10980&lawCode=WIC",
+      "recordIds": [
+        "ca-wic-10980-a",
+        "ca-wic-10980-b",
+        "ca-wic-10980-c-1",
+        "ca-wic-10980-c-2"
       ],
       "alreadyRetained": false
     }
@@ -5861,6 +5960,329 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-2052-a",
+      "title": "Practicing or holding out as practicing medicine without lawful authority",
+      "citation": "Cal. Business & Professions Code § 2052(a)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:2052"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:2052"
+      ],
+      "catalogSha256": "a2de844d27af7e9c32b2536a080061e6d2491c830e7c21589591d6d20c2515ca",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-2052-b",
+      "title": "Conspiring in or aiding unlicensed medical practice",
+      "citation": "Cal. Business & Professions Code § 2052(b)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:2052"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:2052"
+      ],
+      "catalogSha256": "6b541d32454d23c5bba429323799aebd6bfbc4bf688b69885783ea30c1f5056d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-7028-a-1",
+      "title": "Acting as a contractor without a required license",
+      "citation": "Cal. Business & Professions Code § 7028(a)(1)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:7028"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:7028"
+      ],
+      "catalogSha256": "50edfaf76c606bb3b0d8b3459d0814e0300b0e940bdb729f447b75fba1b31535",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-bpc-7028-a-2",
+      "title": "Contracting under a license suspended for specified noncompliance",
+      "citation": "Cal. Business & Professions Code § 7028(a)(2)",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "BPC:7028"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:7028"
+      ],
+      "catalogSha256": "1379b37be8e036d0db28296369791ca55607662f806bb90fb842b9fdd413ccbe",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lab-3700-5-a",
+      "title": "Failing to secure required workers compensation",
+      "citation": "Cal. Labor Code § 3700.5(a)",
+      "lawCode": "LAB",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "LAB:3700.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "LAB:3700.5"
+      ],
+      "catalogSha256": "699aa655de0f23ec134c194d9b0434ef67b2576f3c7155bda778ed670532e8d2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lab-6425-a",
+      "title": "Willful workplace safety violation causing death or prolonged impairment",
+      "citation": "Cal. Labor Code § 6425(a)",
+      "lawCode": "LAB",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "LAB:6425"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "LAB:6425"
+      ],
+      "catalogSha256": "faadaa85467c57e294f9e5dd2a7c1776c5aa9672ca9083c9f6c79a13a921f013",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lab-6425-b",
+      "title": "Workplace safety harm offense after specified prior safety conviction",
+      "citation": "Cal. Labor Code § 6425(b)",
+      "lawCode": "LAB",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "LAB:6425"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "LAB:6425"
+      ],
+      "catalogSha256": "df07e2e411753851b1fe93df887b15e7d6f99de61eb140396b2e780686f1884f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lab-6425-c",
+      "title": "Repeat workplace safety violation causing death or prolonged impairment",
+      "citation": "Cal. Labor Code § 6425(c)",
+      "lawCode": "LAB",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "LAB:6425"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "LAB:6425"
+      ],
+      "catalogSha256": "cc3ffc4b3f75f57dbed3b9752143aca5bd4f5a14e89f1e2fdaa7e373afaa65d4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-1",
+      "title": "Making a false material statement to obtain or deny workers compensation",
+      "citation": "Cal. Insurance Code § 1871.4(a)(1)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "3a787f50b6424a261daa007ec3cf2e0eb98bcca5696a8b533c268f29f7727de5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-2",
+      "title": "Presenting a false material statement in a workers compensation claim",
+      "citation": "Cal. Insurance Code § 1871.4(a)(2)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "c61c4accddffa7adcb2d82d3b51413da0bda0fadd980b032e1bd2e2c2577fbe8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-3",
+      "title": "Knowingly assisting or soliciting workers compensation fraud",
+      "citation": "Cal. Insurance Code § 1871.4(a)(3)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "cd16cdbb8f7352f5d23ad8d1e6b1b5d09d8315a7050726234458b01d49972c42",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-4",
+      "title": "False benefit-entitlement statement to discourage an injured worker",
+      "citation": "Cal. Insurance Code § 1871.4(a)(4)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "715f78d37c871f61e77e7ee9167c4bdd6199c74edac500a207053817c90cc93e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-5",
+      "title": "False material statement to obtain or deny return-to-work benefits",
+      "citation": "Cal. Insurance Code § 1871.4(a)(5)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "4bc416aba593e0170b285231f669071037dff5c88f614baee05f33b4f1a6e0ef",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-ins-1871-4-a-6",
+      "title": "False material statement to discourage an employer from seeking return-to-work benefits",
+      "citation": "Cal. Insurance Code § 1871.4(a)(6)",
+      "lawCode": "INS",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "INS:1871.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "INS:1871.4"
+      ],
+      "catalogSha256": "24f4c8e9d4b2164580b0e84e70046fd05bbe6daa8f0063495d5f9a9ad1098931",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-a",
+      "title": "False statements or attempts to obtain public assistance",
+      "citation": "Cal. Welfare & Institutions Code § 10980(a)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "c2a49c671babd3bca83ecd958185af0f641485eff52206c81c96a75ebf267ba7",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-b",
+      "title": "Multiple or false-identity public assistance applications",
+      "citation": "Cal. Welfare & Institutions Code § 10980(b)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "ccf2119bcca2e9c5f0b7dec2150bc5231a38423659e9d8da1e55a31495d856ad",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-c-1",
+      "title": "Fraudulently obtaining or retaining public aid: $950 or less",
+      "citation": "Cal. Welfare & Institutions Code § 10980(c)(1)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "6146473954d481eecced03feb05a99669ba9b8184e2c315522cc28c4ec9f1a75",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-c-2",
+      "title": "Fraudulently obtaining or retaining public aid: more than $950",
+      "citation": "Cal. Welfare & Institutions Code § 10980(c)(2)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "0f7c1312a24b265242bc70b830aea32a08ceac7d4757a86ebb87069caf29a959",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-uic-2101-a",
+      "title": "False statements or identification affecting unemployment or other covered benefits",
+      "citation": "Cal. Unemployment Insurance Code § 2101(a)",
+      "lawCode": "UIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "UIC:2101"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "UIC:2101"
+      ],
+      "catalogSha256": "5a9fbe08505e8f9e88720135eee987c0c6ce19a76f03a526799f5e3a7dfbee52",
       "attorneyReview": "pending"
     },
     {

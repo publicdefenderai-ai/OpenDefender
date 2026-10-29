@@ -1,0 +1,788 @@
+[
+  {
+    "id": "ca-bpc-2052-a",
+    "lawCode": "BPC",
+    "code": "2052(a)",
+    "title": "Practicing or holding out as practicing medicine without lawful authority",
+    "summary": "Practicing or attempting to practice a system of treating the sick, advertising or holding oneself out as doing so, or diagnosing, treating, operating or prescribing for a physical or mental condition without the required valid authorization. A missing California physician certificate alone does not decide every case: other professional authorization, qualifying complementary services with required disclosures, emergencies and specified consultation or training exceptions can matter. The exact activity and conditions must be checked.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. Felony alternative: ordinarily 16 months, 2 years or 3 years under Penal Code section 1170(h), subject to its state-prison exclusions. Section 2052 permits a base fine up to $10,000, alone or with either custody alternative. Section 2052 expressly applies notwithstanding section 146; this entry does not substitute that section\u2019s general infraction treatment. Assessments, restitution and separate charges remain additional considerations.",
+    "mentalState": "The charged conduct and absence of applicable authorization must be established; this summary does not resolve every mistake-of-fact or scope-of-practice defense.",
+    "supportingKeys": [
+      "BPC:146",
+      "BPC:2051",
+      "BPC:2053.5",
+      "BPC:2053.6",
+      "BPC:2058",
+      "BPC:2060",
+      "BPC:2064",
+      "BPC:2064.5",
+      "BPC:2065",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:146": "2025-01-01",
+      "BPC:2051": null,
+      "BPC:2052": "2011-04-04",
+      "BPC:2053.5": "2006-01-01",
+      "BPC:2053.6": "2006-01-01",
+      "BPC:2058": "1998-01-01",
+      "BPC:2060": "2004-01-01",
+      "BPC:2064": "2018-01-01",
+      "BPC:2064.5": "2025-09-17",
+      "BPC:2065": "2024-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "Unlicensed practice of medicine"
+    ]
+  },
+  {
+    "id": "ca-bpc-2052-b",
+    "lawCode": "BPC",
+    "code": "2052(b)",
+    "title": "Conspiring in or aiding unlicensed medical practice",
+    "summary": "Conspiring with, or aiding or abetting, another person in the unlicensed medical acts described in section 2052(a). Mere presence or an innocent association is not itself an agreement or intentional assistance. The applicable conspiracy or aiding theory must be established. A missing California physician certificate alone does not decide every case: other professional authorization, qualifying complementary services with required disclosures, emergencies and specified consultation or training exceptions can matter. The exact activity and conditions must be checked.",
+    "penalty": "Misdemeanor alternative: up to 364 days in county jail. Felony alternative: ordinarily 16 months, 2 years or 3 years under Penal Code section 1170(h), subject to its state-prison exclusions. Section 2052 permits a base fine up to $10,000, alone or with either custody alternative. Section 2052 expressly applies notwithstanding section 146; this entry does not substitute that section\u2019s general infraction treatment. Assessments, restitution and separate charges remain additional considerations.",
+    "mentalState": "The agreement or knowing, intentional assistance required by the charged participation theory matters; association alone is insufficient.",
+    "supportingKeys": [
+      "BPC:146",
+      "BPC:2051",
+      "BPC:2053.5",
+      "BPC:2053.6",
+      "BPC:2058",
+      "BPC:2060",
+      "BPC:2064",
+      "BPC:2064.5",
+      "BPC:2065",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:182",
+      "PEN:31"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:146": "2025-01-01",
+      "BPC:2051": null,
+      "BPC:2052": "2011-04-04",
+      "BPC:2053.5": "2006-01-01",
+      "BPC:2053.6": "2006-01-01",
+      "BPC:2058": "1998-01-01",
+      "BPC:2060": "2004-01-01",
+      "BPC:2064": "2018-01-01",
+      "BPC:2064.5": "2025-09-17",
+      "BPC:2065": "2024-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:182": "2011-04-04",
+      "PEN:31": "2008-01-01"
+    },
+    "searchAliases": [
+      "Aiding unlicensed medical practice"
+    ]
+  },
+  {
+    "id": "ca-bpc-7028-a-1",
+    "lawCode": "BPC",
+    "code": "7028(a)(1)",
+    "title": "Acting as a contractor without a required license",
+    "summary": "Engaging in business or acting as a contractor without the license required by the Contractors State License Law. The definition includes offering, bidding or undertaking covered construction work, as well as performing it. Licensing exemptions must be checked. The small-project exemption requires an aggregate price below $1,000, no required building permit, no employees assisting the work, and no disqualifying contractor advertising; splitting a larger project does not qualify. Separate owner-builder, employee and other statutory exemptions have their own conditions.",
+    "penalty": "First conviction: up to six months in county jail, a base fine up to $5,000, or both. For a repeat conviction under section 7028(c), the fine is the greatest of $5,000, 20% of the contract price or 20% of aggregate payments, with at least 90 days in jail unless the court states an unusual-case reason for less; this summary does not supply an unstated upper custody limit for that branch. A third or subsequent conviction under (d), or a qualifying prior license revocation under (e), carries 90 to 364 days and a fine from $5,000 up to the greatest of $10,000 or the two 20% measures. Restitution for economic losses can apply even if the customer knew the contractor was unlicensed. Assessments and other charges are separate.",
+    "mentalState": "This statutory entry concerns covered contracting activity without required licensure; it does not add an intent-to-defraud element.",
+    "supportingKeys": [
+      "BPC:7026",
+      "BPC:7040",
+      "BPC:7041",
+      "BPC:7042",
+      "BPC:7043",
+      "BPC:7044",
+      "BPC:7045",
+      "BPC:7046",
+      "BPC:7048",
+      "BPC:7049",
+      "BPC:7050",
+      "BPC:7051",
+      "BPC:7052",
+      "BPC:7053",
+      "BPC:7054",
+      "BPC:7090.1",
+      "BPC:7145.5",
+      "PEN:1202.4",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:7026": "2002-01-01",
+      "BPC:7028": "2015-01-01",
+      "BPC:7040": "2025-01-01",
+      "BPC:7041": null,
+      "BPC:7042": null,
+      "BPC:7043": null,
+      "BPC:7044": "2017-01-01",
+      "BPC:7045": "1994-01-01",
+      "BPC:7046": null,
+      "BPC:7048": "2026-01-01",
+      "BPC:7049": null,
+      "BPC:7050": "2026-01-01",
+      "BPC:7051": "1994-03-30",
+      "BPC:7052": null,
+      "BPC:7053": null,
+      "BPC:7054": "2019-01-01",
+      "BPC:7090.1": "2011-01-01",
+      "BPC:7145.5": "2021-01-01",
+      "PEN:1202.4": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "Contracting without a license"
+    ]
+  },
+  {
+    "id": "ca-bpc-7028-a-2",
+    "lawCode": "BPC",
+    "code": "7028(a)(2)",
+    "title": "Contracting under a license suspended for specified noncompliance",
+    "summary": "Performing covered contracting acts under a license suspended for the civil-penalty, correction-order or final-liability failures identified in sections 7090.1 and 7145.5. This is the specified suspension branch, not a statement that every licensing dispute has the same legal effect. Licensing exemptions must be checked. The small-project exemption requires an aggregate price below $1,000, no required building permit, no employees assisting the work, and no disqualifying contractor advertising; splitting a larger project does not qualify. Separate owner-builder, employee and other statutory exemptions have their own conditions.",
+    "penalty": "First conviction: up to six months in county jail, a base fine up to $5,000, or both. For a repeat conviction under section 7028(c), the fine is the greatest of $5,000, 20% of the contract price or 20% of aggregate payments, with at least 90 days in jail unless the court states an unusual-case reason for less; this summary does not supply an unstated upper custody limit for that branch. A third or subsequent conviction under (d), or a qualifying prior license revocation under (e), carries 90 to 364 days and a fine from $5,000 up to the greatest of $10,000 or the two 20% measures. Restitution for economic losses can apply even if the customer knew the contractor was unlicensed. Assessments and other charges are separate.",
+    "mentalState": "The specified suspension and covered acts matter; this summary does not treat every unresolved liability as an effective suspension.",
+    "supportingKeys": [
+      "BPC:7026",
+      "BPC:7040",
+      "BPC:7041",
+      "BPC:7042",
+      "BPC:7043",
+      "BPC:7044",
+      "BPC:7045",
+      "BPC:7046",
+      "BPC:7048",
+      "BPC:7049",
+      "BPC:7050",
+      "BPC:7051",
+      "BPC:7052",
+      "BPC:7053",
+      "BPC:7054",
+      "BPC:7090.1",
+      "BPC:7145.5",
+      "PEN:1202.4",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "BPC:7026": "2002-01-01",
+      "BPC:7028": "2015-01-01",
+      "BPC:7040": "2025-01-01",
+      "BPC:7041": null,
+      "BPC:7042": null,
+      "BPC:7043": null,
+      "BPC:7044": "2017-01-01",
+      "BPC:7045": "1994-01-01",
+      "BPC:7046": null,
+      "BPC:7048": "2026-01-01",
+      "BPC:7049": null,
+      "BPC:7050": "2026-01-01",
+      "BPC:7051": "1994-03-30",
+      "BPC:7052": null,
+      "BPC:7053": null,
+      "BPC:7054": "2019-01-01",
+      "BPC:7090.1": "2011-01-01",
+      "BPC:7145.5": "2021-01-01",
+      "PEN:1202.4": "2026-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "Contracting with suspended license"
+    ]
+  },
+  {
+    "id": "ca-lab-3700-5-a",
+    "lawCode": "LAB",
+    "code": "3700.5(a)",
+    "title": "Failing to secure required workers compensation",
+    "summary": "Failing to secure payment of workers compensation while knowing, or reasonably being expected to know from one\u2019s knowledge or experience, of that obligation. Authorized insurance and qualifying consent to self-insure are statutory alternatives; absence of a commercial policy alone does not prove the offense. Employer status and the applicable duty must be established.",
+    "penalty": "Misdemeanor: up to 364 days in county jail, a fine measured at up to twice the unpaid premium but not less than $10,000, or both. For a second or subsequent conviction, section 3700.5(b) provides up to 364 days, a fine of triple the unpaid premium but not less than $50,000, or both. The court determines the premium measure; these provisions do not supply a flat $10,000 or $50,000 maximum. Investigation costs may be charged on a first conviction and must be charged on a subsequent conviction; benefits, reimbursement and assessments remain separate.",
+    "mentalState": "Actual knowledge or knowledge reasonably expected from the person\u2019s knowledge or experience of the duty to secure compensation.",
+    "supportingKeys": [
+      "LAB:3700",
+      "LAB:3717",
+      "PEN:18.5"
+    ],
+    "calcrim": [],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "LAB:3700": "2003-01-01",
+      "LAB:3700.5": "2005-03-06",
+      "LAB:3717": "1995-01-01",
+      "PEN:18.5": "2017-01-01"
+    },
+    "searchAliases": [
+      "Workers compensation insurance failure",
+      "Labor Code 3700.5"
+    ]
+  },
+  {
+    "id": "ca-lab-6425-a",
+    "lawCode": "LAB",
+    "code": "6425(a)",
+    "title": "Willful workplace safety violation causing death or prolonged impairment",
+    "summary": "An employer or an employee with direction, management, control or custody of employment, the workplace or another employee willfully violates an applicable occupational safety or health standard, order or special order, or Health and Safety Code section 25910, and that violation causes an employee\u2019s death or permanent or prolonged bodily impairment. An accident or a workplace injury alone does not establish this offense. Section 6425(e) uses Penal Code section 7\u2019s definition of willfully; the precise underlying rule and causation must be proved.",
+    "penalty": "For an individual, the misdemeanor alternative is up to 364 days in county jail, a base fine up to $100,000, or both; the felony alternative is 16 months, 2 years or 3 years in state prison, a fine up to $250,000, or both. A corporation or limited liability company has a separate maximum fine of $1.5 million under (a). Qualifying prior convictions trigger the different branches in (b) or (c); they are not included in this ordinary-branch range. Other charges and assessments remain separate.",
+    "mentalState": "Willful violation plus the required causal harm; section 7 does not require an intent to violate law or injure.",
+    "supportingKeys": [
+      "HSC:25910",
+      "LAB:6423",
+      "LAB:6430",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:7"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:25910": null,
+      "LAB:6423": "2003-01-01",
+      "LAB:6425": "2011-04-04",
+      "LAB:6430": "2000-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [
+      "Cal OSHA violation causing death"
+    ]
+  },
+  {
+    "id": "ca-lab-6425-b",
+    "lawCode": "LAB",
+    "code": "6425(b)",
+    "title": "Workplace safety harm offense after specified prior safety conviction",
+    "summary": "An employer or an employee with direction, management, control or custody of employment, the workplace or another employee willfully violates an applicable occupational safety or health standard, order or special order, or Health and Safety Code section 25910, and that violation causes an employee\u2019s death or permanent or prolonged bodily impairment. An accident or a workplace injury alone does not establish this offense. Section 6425(e) uses Penal Code section 7\u2019s definition of willfully; the precise underlying rule and causation must be proved. This branch requires commission within seven years after a conviction under Labor Code section 6423(b), (c) or (d), or 6430(c).",
+    "penalty": "Felony custody alternative: 16 months, 2 years or 3 years in state prison, a base fine up to $250,000, or both for an individual. For a corporation or limited liability company, the fine range is $500,000 to $2.5 million. Section 6425(c) supplies a different branch for a prior conviction involving 6425(a); the ranges must not be interchanged. Other charges and assessments remain separate. The express fine-only alternative can permit misdemeanor treatment under Penal Code section 17; it does not create a new ordinary county-jail term in this subdivision.",
+    "mentalState": "The willful violation, causal harm and specified prior-conviction/time conditions must be established.",
+    "supportingKeys": [
+      "HSC:25910",
+      "LAB:6423",
+      "LAB:6430",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:7"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:25910": null,
+      "LAB:6423": "2003-01-01",
+      "LAB:6425": "2011-04-04",
+      "LAB:6430": "2000-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [
+      "Repeat Cal OSHA safety offense"
+    ]
+  },
+  {
+    "id": "ca-lab-6425-c",
+    "lawCode": "LAB",
+    "code": "6425(c)",
+    "title": "Repeat workplace safety violation causing death or prolonged impairment",
+    "summary": "An employer or an employee with direction, management, control or custody of employment, the workplace or another employee willfully violates an applicable occupational safety or health standard, order or special order, or Health and Safety Code section 25910, and that violation causes an employee\u2019s death or permanent or prolonged bodily impairment. An accident or a workplace injury alone does not establish this offense. Section 6425(e) uses Penal Code section 7\u2019s definition of willfully; the precise underlying rule and causation must be proved. This branch requires commission within seven years after a first conviction for a crime involving a violation of section 6425(a).",
+    "penalty": "Felony custody alternative: 2, 3 or 4 years under Penal Code section 1170(h), subject to its state-prison exclusions, a base fine up to $250,000, or both for an individual. For a corporation or limited liability company, the fine range is $1 million to $3.5 million. These are different terms and custody language from section 6425(b). Other charges and assessments remain separate. The express fine-only alternative can permit misdemeanor treatment under Penal Code section 17; it does not create a new ordinary county-jail term in this subdivision.",
+    "mentalState": "The willful violation, causal harm and qualifying prior conviction within the statutory period must be established.",
+    "supportingKeys": [
+      "HSC:25910",
+      "LAB:6423",
+      "LAB:6430",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:7"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "HSC:25910": null,
+      "LAB:6423": "2003-01-01",
+      "LAB:6425": "2011-04-04",
+      "LAB:6430": "2000-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:7": "2024-07-02"
+    },
+    "searchAliases": [
+      "Repeat workplace fatality safety offense"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-1",
+    "lawCode": "INS",
+    "code": "1871.4(a)(1)",
+    "title": "Making a false material statement to obtain or deny workers compensation",
+    "summary": "Making or causing a knowingly false or fraudulent material statement or representation to obtain or deny workers compensation. Compensation includes benefits and payments for an injured worker and qualifying dependents, not just wage replacement.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowledge of falsity or fraud, materiality and the purpose of obtaining or denying compensation.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(1)"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-2",
+    "lawCode": "INS",
+    "code": "1871.4(a)(2)",
+    "title": "Presenting a false material statement in a workers compensation claim",
+    "summary": "Presenting or causing presentation of a knowingly false or fraudulent written or oral material statement supporting or opposing a workers compensation claim to obtain or deny compensation.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowledge of falsity or fraud, materiality and the purpose of obtaining or denying compensation.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(2)"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-3",
+    "lawCode": "INS",
+    "code": "1871.4(a)(3)",
+    "title": "Knowingly assisting or soliciting workers compensation fraud",
+    "summary": "Knowingly assisting, abetting, conspiring with or soliciting another person in an unlawful act under Insurance Code section 1871.4. Mere association alone does not establish the charged participation.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowing participation in the specified unlawful act; the applicable assistance, agreement or solicitation theory must be established.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(3)"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-4",
+    "lawCode": "INS",
+    "code": "1871.4(a)(4)",
+    "title": "False benefit-entitlement statement to discourage an injured worker",
+    "summary": "Making or causing a knowingly false or fraudulent statement about benefit entitlement with intent to discourage an injured worker from claiming benefits or pursuing a claim. This branch addresses discouragement, not only claims seeking payment.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowing falsity or fraud with intent to discourage the worker from claiming benefits or pursuing a claim.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(4)"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-5",
+    "lawCode": "INS",
+    "code": "1871.4(a)(5)",
+    "title": "False material statement to obtain or deny return-to-work benefits",
+    "summary": "Making or causing a knowingly false or fraudulent material statement or representation to obtain or deny benefits or reimbursement under the return-to-work program in Labor Code section 139.48. The program\u2019s own eligibility rules apply.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowing falsity or fraud, materiality and purpose of obtaining or denying the specified program benefits or reimbursement.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(5)"
+    ]
+  },
+  {
+    "id": "ca-ins-1871-4-a-6",
+    "lawCode": "INS",
+    "code": "1871.4(a)(6)",
+    "title": "False material statement to discourage an employer from seeking return-to-work benefits",
+    "summary": "Making or causing a knowingly false or fraudulent material statement or representation to discourage an employer from claiming benefits or reimbursement under the return-to-work program identified in Labor Code section 139.48. The statutory employer wording is preserved; this entry does not expand program eligibility.",
+    "penalty": "Misdemeanor alternative: 364 days in county jail under Penal Code section 18.5. Felony alternative: 2, 3 or 5 years under section 1170(h), subject to its state-prison exclusions. The base fine may reach $150,000 or twice the value of the fraud, whichever is greater, and may accompany imprisonment. Restitution is mandatory; investigation costs may be imposed. Section 1871.4(c) provides a two-year enhancement for each qualifying prior felony conviction when alleged and admitted or proved; the qualifying prior and procedure require separate assessment. Assessments and other applicable charges remain separate.",
+    "mentalState": "Knowing falsity or fraud, materiality and purpose of discouraging the employer from claiming the identified benefits or reimbursement.",
+    "supportingKeys": [
+      "LAB:139.48",
+      "LAB:3207",
+      "LAB:4620",
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "PEN:548",
+      "PEN:550"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "INS:1871.4": "2011-04-04",
+      "LAB:139.48": "2013-06-27",
+      "LAB:3207": "2004-04-19",
+      "LAB:4620": "2013-01-01",
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "PEN:548": "2011-04-04",
+      "PEN:550": "2011-04-04"
+    },
+    "searchAliases": [
+      "Workers compensation insurance fraud",
+      "IC 1871.4(a)(6)"
+    ]
+  },
+  {
+    "id": "ca-wic-10980-a",
+    "lawCode": "WIC",
+    "code": "10980(a)",
+    "title": "False statements or attempts to obtain public assistance",
+    "summary": "Willfully and knowingly making a false statement with intent to deceive, or knowingly concealing a material fact, to obtain aid under the covered public social services provisions; also knowingly attempting to obtain or continue aid, or a larger amount, without entitlement. This branch is distinct from actually obtaining or retaining aid under subdivision (c). Section 10980(j) can bar prosecution for specified CalWORKs or CalFresh overpayments when the county had qualifying eligibility-match information and failed to provide timely, adequate notice; its 45-day rule includes authorized-delay exceptions. An overpayment alone is not proof of fraud.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $500, or both. Restitution, benefit consequences, assessments and separate charges require individual assessment.",
+    "mentalState": "The applicable knowing or willful conduct and deceptive or ineligible-benefit purpose must be proved.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "WIC:11200",
+      "WIC:18900"
+    ],
+    "calcrim": [],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "WIC:10980": "2018-01-01",
+      "WIC:11200": "1997-08-11",
+      "WIC:18900": "2012-01-01"
+    },
+    "searchAliases": [
+      "Welfare fraud attempt",
+      "W&I 10980(a)"
+    ]
+  },
+  {
+    "id": "ca-wic-10980-b",
+    "lawCode": "WIC",
+    "code": "10980(b)",
+    "title": "Multiple or false-identity public assistance applications",
+    "summary": "Knowingly making multiple aid applications to establish multiple entitlements for the same person and period, or applying for a fictitious or nonexistent person or using a false identity. This separate application offense is not assigned subdivision (c)\u2019s $950 valuation threshold. Section 10980(j) can bar prosecution for specified CalWORKs or CalFresh overpayments when the county had qualifying eligibility-match information and failed to provide timely, adequate notice; its 45-day rule includes authorized-delay exceptions. An overpayment alone is not proof of fraud.",
+    "penalty": "Felony alternative: 16 months, 2 years or 3 years under Penal Code section 1170(h), subject to its state-prison exclusions, a base fine up to $5,000, or both. Misdemeanor alternative: up to 364 days in county jail, a base fine up to $1,000, or both. The felony fine does not become the misdemeanor fine. Restitution, benefit consequences, assessments and separate charges remain additional considerations.",
+    "mentalState": "Knowing multiple applications with intent to create multiple entitlements, or the charged fictitious-person or false-identity application theory.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "WIC:11200",
+      "WIC:18900"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "WIC:10980": "2018-01-01",
+      "WIC:11200": "1997-08-11",
+      "WIC:18900": "2012-01-01"
+    },
+    "searchAliases": [
+      "Multiple welfare applications",
+      "W&I 10980(b)"
+    ]
+  },
+  {
+    "id": "ca-wic-10980-c-1",
+    "lawCode": "WIC",
+    "code": "10980(c)(1)",
+    "title": "Fraudulently obtaining or retaining public aid: $950 or less",
+    "summary": "Willfully and knowingly, with intent to deceive, obtaining or retaining covered aid for oneself or a child not entitled to it through false statements, material nondisclosure, impersonation or another fraudulent device. This branch concerns total aid $950 or less; exactly $950 belongs to the lower branch. Section 10980(j) can bar prosecution for specified CalWORKs or CalFresh overpayments when the county had qualifying eligibility-match information and failed to provide timely, adequate notice; its 45-day rule includes authorized-delay exceptions. An overpayment alone is not proof of fraud.",
+    "penalty": "Misdemeanor: up to six months in county jail, a base fine up to $500, or both. Restitution, benefit consequences, assessments and separate charges require individual assessment.",
+    "mentalState": "Willful and knowing conduct with intent to deceive, actual receipt or retention and the applicable total amount.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "WIC:11200",
+      "WIC:18900"
+    ],
+    "calcrim": [],
+    "categories": [
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "WIC:10980": "2018-01-01",
+      "WIC:11200": "1997-08-11",
+      "WIC:18900": "2012-01-01"
+    },
+    "searchAliases": [
+      "Welfare fraud",
+      "W&I 10980(c)(1)"
+    ]
+  },
+  {
+    "id": "ca-wic-10980-c-2",
+    "lawCode": "WIC",
+    "code": "10980(c)(2)",
+    "title": "Fraudulently obtaining or retaining public aid: more than $950",
+    "summary": "Willfully and knowingly, with intent to deceive, obtaining or retaining covered aid for oneself or a child not entitled to it through false statements, material nondisclosure, impersonation or another fraudulent device. This branch concerns total aid more than $950; exactly $950 belongs to the lower branch. Section 10980(j) can bar prosecution for specified CalWORKs or CalFresh overpayments when the county had qualifying eligibility-match information and failed to provide timely, adequate notice; its 45-day rule includes authorized-delay exceptions. An overpayment alone is not proof of fraud.",
+    "penalty": "Felony alternative: 16 months, 2 years or 3 years under Penal Code section 1170(h), subject to its state-prison exclusions, a base fine up to $5,000, or both. Misdemeanor alternative: up to 364 days in county jail, a base fine up to $1,000, or both. The felony fine does not become the misdemeanor fine. Restitution, benefit consequences, assessments and separate charges remain additional considerations.",
+    "mentalState": "Willful and knowing conduct with intent to deceive, actual receipt or retention and the applicable total amount.",
+    "supportingKeys": [
+      "PEN:1170",
+      "PEN:17",
+      "PEN:18.5",
+      "WIC:11200",
+      "WIC:18900"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:1170": "2026-01-01",
+      "PEN:17": "2026-01-01",
+      "PEN:18.5": "2017-01-01",
+      "WIC:10980": "2018-01-01",
+      "WIC:11200": "1997-08-11",
+      "WIC:18900": "2012-01-01"
+    },
+    "searchAliases": [
+      "Welfare fraud",
+      "W&I 10980(c)(2)"
+    ]
+  },
+  {
+    "id": "ca-uic-2101-a",
+    "lawCode": "UIC",
+    "code": "2101(a)",
+    "title": "False statements or identification affecting unemployment or other covered benefits",
+    "summary": "Willfully making a false statement, knowingly failing to disclose a material fact, or using false identification to obtain, increase, reduce or defeat a benefit or payment for oneself or another under the state division or the federal unemployment, training, trade-readjustment or other allowance laws administered by the department. A simple payment error alone does not establish the specified conduct. The applicable program and material facts matter.",
+    "penalty": "Under Unemployment Insurance Code section 2122, the misdemeanor alternative is up to 364 days in county jail; the felony alternative is ordinarily 16 months, 2 years or 3 years in state prison under Penal Code section 18. A base fine up to $20,000 may be imposed alone or with imprisonment. Section 2117\u2019s separate misdemeanor-only penalty is not substituted for this offense. Restitution, administrative benefit consequences and other charges remain separate.",
+    "mentalState": "Willful false statements, knowing material nondisclosure or the charged false-identification conduct for the specified benefit or payment purpose.",
+    "supportingKeys": [
+      "PEN:17",
+      "PEN:18",
+      "PEN:18.5",
+      "UIC:2117",
+      "UIC:2122"
+    ],
+    "calcrim": [],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "sourceAsOf": "2026-09-24",
+    "translationStatus": "english_only_pending_translation",
+    "sourceEffectiveDates": {
+      "PEN:17": "2026-01-01",
+      "PEN:18": "2011-09-21",
+      "PEN:18.5": "2017-01-01",
+      "UIC:2101": "1996-01-01",
+      "UIC:2117": "1995-01-01",
+      "UIC:2122": null
+    },
+    "searchAliases": [
+      "EDD fraud",
+      "Unemployment insurance fraud",
+      "UI 2101(a)"
+    ]
+  }
+]

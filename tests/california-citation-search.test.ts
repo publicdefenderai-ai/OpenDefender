@@ -4,7 +4,7 @@ import {getChargesByJurisdiction} from '../shared/criminal-charges';
 import {getCaliforniaCanonicalRecord} from '../shared/california-authority';
 describe('California charging-paper citation search',()=>{
   it('adds common abbreviations while preserving archive keys and full names',()=>{
-    for(const [code,alias] of [['PEN','PC'],['VEH','VC'],['HSC','H&S'],['BPC','B&P'],['HNC','H&N']] as const){
+    for(const [code,alias] of [['PEN','PC'],['VEH','VC'],['HSC','H&S'],['BPC','B&P'],['HNC','H&N'],['INS','IC'],['UIC','UI'],['LAB','LC'],['WIC','W&I']] as const){
       const list=californiaCitationSearchAliases(code,'123(a)');
       expect(list).toContain(`${alias} 123(a)`);expect(list).toContain(`${code} 123(a)`);
     }

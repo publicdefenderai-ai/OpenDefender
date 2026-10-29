@@ -1,5 +1,17 @@
 # California practical completion plan
 
+## Other-code priority successor: October 28, 2026
+
+This proposed combined batch adds 19 configured choices across the seven priority primary sections: BPC 2052/7028, LAB 3700.5/6425, INS 1871.4, WIC 10980 and UIC 2101. It raises configured choices from 670 to 689, across 351 primary sections, with 21 canonical labels still withheld. Live availability is not established by this count.
+
+Nine dependencies are reused and 46 join monitoring, bringing retained publication evidence to 904 sections / 912 versions. The new dependencies match the authentic existing comparison archive. No receipt dates change. Insurance and Unemployment Insurance Code identities and common IC/UI/LC/W&I search aliases are now supported explicitly.
+
+The packet keeps licensing exemptions, graduated contracting penalties, premium-based insurance fines, individual versus corporate workplace-safety penalties, fine-only alternatives, welfare valuation branches and the section 10980(j) prosecution restriction distinct. The remaining WIC 10980(d)-(i) program-instrument and enhancement branches are not silently covered by the new (a)-(c) entries. Their severity is not assumed minor. The repeat-contracting upper custody limit is not quantified where the retained branch does not state it. No additional CALCRIM coverage is claimed.
+
+Next combined work: reconcile those remaining benefit-program branches and the remaining priority weapons/public-conduct comparisons against the frozen closeout inventory, preserving existing decisions and holds. This is completion of the first pass, not a new statewide currency review. Publication readiness and the expired runtime receipt remain separate work.
+
+Reproduce the public packet with `node --import tsx scripts/data-review/california-verification/other-code-priority-review.ts`, then current accounting with `node --import tsx scripts/data-review/california-verification/coverage.ts`. Run the batch, coverage, citation-search and retained-pin tests. The acquisition script replays the official archive and does not renew currency. Coverage shape tests reuse one verified report instead of rebuilding the entire history for each assertion; the expiry comparison retains independent builds.
+
 ## Public conduct and knives successor: October 28, 2026
 
 The proposed next publication adds eight configured choices: two section 647(a) conduct theories, sections 647(h)/(i), concealed dirk/dagger under 21310, and the three switchblade branches under 21510. This raises the configured catalog from 662 to 670 (691 canonical identities including 21 withheld labels), across 344 primary sections. It does not establish live availability or statewide completeness.
