@@ -223,8 +223,8 @@ export default function KnowYourRights() {
             </h2>
             <p className="text-muted-foreground mb-6">
               {lang === 'es'
-                ? 'Aprenda a distinguir entre una orden judicial (que permite la entrada) y una orden administrativa de ICE (que NO permite la entrada).'
-                : 'Learn to distinguish between a judicial warrant (which allows entry) and an ICE administrative warrant (which does NOT allow entry).'}
+                ? 'Compare órdenes judiciales y administrativas de ICE. La autoridad para entrar depende del documento y las circunstancias; estas descripciones no determinan su validez.'
+                : 'Compare judicial and ICE administrative warrants. Entry authority depends on the document and circumstances; these descriptions are not a validity test.'}
             </p>
           </ScrollReveal>
 

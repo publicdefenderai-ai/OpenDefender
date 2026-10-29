@@ -1,3 +1,4 @@
+import { immigrationUpdates } from "@/locales/immigration-updates";
 import { motion } from "framer-motion";
 import { 
   Gavel, 
@@ -14,7 +15,8 @@ import { ImmigrationDetailLayout } from "@/components/immigration/immigration-de
 
 export default function BondHearings() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const copy = immigrationUpdates[i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en'];
   
   const breadcrumbItems = [
     { label: t('breadcrumb.home', 'Home'), href: '/' },
@@ -105,7 +107,11 @@ export default function BondHearings() {
           </ScrollReveal>
           
           <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700 p-4 text-sm text-amber-800 dark:text-amber-200">
-            <strong>These are general indicators, not a determination.</strong> Mandatory detention is defined by statute (<a href="https://uscode.house.gov/view.xhtml?req=(title:8+section:1226+edition:prelim)" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">8 U.S.C. § 1226(c)</a>), but courts apply it inconsistently and enforcement can be broader than these categories suggest. Whether you qualify for bond depends on how the law is applied to your specific conviction. An immigration attorney must evaluate your situation before any bond hearing.
+            <p>{copy.bondNotice}</p>
+            <p className="mt-3">{copy.postOrder}</p>
+            <a href="https://www.law.cornell.edu/uscode/text/8/1226" target="_blank" rel="noopener noreferrer" className="underline">8 U.S.C. § 1226</a>{" · "}
+            <a href="https://www.law.cornell.edu/uscode/text/8/1231" target="_blank" rel="noopener noreferrer" className="underline">8 U.S.C. § 1231</a>
+
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
