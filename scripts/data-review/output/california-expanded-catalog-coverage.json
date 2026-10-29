@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 683,
-    "configuredSelectable": 662,
+    "canonicalRecords": 691,
+    "configuredSelectable": 670,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 563,
-    "boundedCorrectionPass": 662,
+    "boundedAdditionPass": 571,
+    "boundedCorrectionPass": 670,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 342,
+    "distinctSelectablePrimarySections": 344,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 342,
-    "selectableRecordsWithAllPrimaryTextAcquired": 662,
-    "totalAcquiredSectionsIncludingDependencies": 841,
-    "totalAcquiredVersionsIncludingDependencies": 849,
+    "acquiredSelectablePrimarySections": 344,
+    "selectableRecordsWithAllPrimaryTextAcquired": 670,
+    "totalAcquiredSectionsIncludingDependencies": 858,
+    "totalAcquiredVersionsIncludingDependencies": 866,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "662 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "670 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -60,8 +60,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 528,
-      "corrected": 528,
+      "selectable": 536,
+      "corrected": 536,
       "awaitingCorrection": 0
     },
     {
@@ -1169,10 +1169,30 @@
     },
     {
       "lawCode": "PEN",
+      "section": "21310",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21310&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-21310"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
       "section": "215",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=215&lawCode=PEN",
       "recordIds": [
         "ca-carjacking"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "21510",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=21510&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-21510-a",
+        "ca-pen-21510-b",
+        "ca-pen-21510-c"
       ],
       "alreadyRetained": false
     },
@@ -3181,7 +3201,11 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=647&lawCode=PEN",
       "recordIds": [
         "ca-public-intoxication",
-        "ca-prostitution-solicitation"
+        "ca-prostitution-solicitation",
+        "ca-pen-647-a-conduct",
+        "ca-pen-647-a-solicitation",
+        "ca-pen-647-h",
+        "ca-pen-647-i"
       ],
       "alreadyRetained": false
     },
@@ -5837,6 +5861,142 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-a-conduct",
+      "title": "Engaging in lewd conduct in public",
+      "citation": "Cal. Penal Code § 647(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "5a60ca739a794bbbb0500937d5a13ad85bebe83a24f06e1d64c070f8078b8470",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-a-solicitation",
+      "title": "Soliciting lewd conduct in public",
+      "citation": "Cal. Penal Code § 647(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "b95e0b90382ba22f2950b34ea7f24a99b7b5eaa6b692fbb2d56baf19cfe45872",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-h",
+      "title": "Loitering or prowling on private property with criminal purpose",
+      "citation": "Cal. Penal Code § 647(h)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "544b992f2c6ca9213b3f7a7ba2daa462a25e96ea0b66bef273bc55bf226ff999",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-647-i",
+      "title": "Peeking into an inhabited building while prowling on private property",
+      "citation": "Cal. Penal Code § 647(i)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "4e271d9585d8b302d710ad96c1e5ffb93ee54182b35ee674411e8522974a2f8f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-21310",
+      "title": "Carrying a concealed dirk or dagger",
+      "citation": "Cal. Penal Code § 21310",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:21310"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:21310"
+      ],
+      "catalogSha256": "d4e8bae56b12785bbc9a8c8ed07d9b0067ccc3d160970cd9bdd3117051156d92",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-21510-a",
+      "title": "Possessing a switchblade in the driver or passenger area of a vehicle",
+      "citation": "Cal. Penal Code § 21510(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:21510"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:21510"
+      ],
+      "catalogSha256": "0ae56b41acc29e8c364ff80e83c8d7ed022e51255abbc437b8e90a8512a8bfb9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-21510-b",
+      "title": "Carrying a switchblade on the person",
+      "citation": "Cal. Penal Code § 21510(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:21510"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:21510"
+      ],
+      "catalogSha256": "5795d9589e6f560b1a0fe6ea7117d03d4daf6fc3d3170c08fe81a6a1e982b4b5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-21510-c",
+      "title": "Selling, offering, lending or transferring a switchblade",
+      "citation": "Cal. Penal Code § 21510(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:21510"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:21510"
+      ],
+      "catalogSha256": "f98dd406542c09531ef6b10371e0e6d35bda465675d8a1e10ed2da6c1cc8a122",
       "attorneyReview": "pending"
     },
     {

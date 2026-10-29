@@ -1,3 +1,4 @@
+import publicConductKnives from "./california-public-conduct-knives-additions.json";
 import priorityPerson from "./california-priority-person-additions.json";
 import trespass from "./california-trespass-additions.json";
 import theftAnimal from "./california-theft-animal-additions.json";
@@ -26,6 +27,7 @@ import drivingVessels from "./california-driving-vessels-additions.json";
 import drugSuccessor from "./california-drug-successor-additions.json";
 import { californiaLawCode } from "./california-law-codes";
 export const CALIFORNIA_ADDITIONS = [
+  ...publicConductKnives.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-public-conduct-knives-review.json" })),
   ...priorityPerson.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-priority-person-review.json" })),
   ...trespass.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-trespass-review.json" })),
   ...theftAnimal.map(row => ({ ...row, lawCode: californiaLawCode(row.lawCode), reviewArtifact: "california-theft-animal-review.json" })),

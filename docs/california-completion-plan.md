@@ -1,5 +1,15 @@
 # California practical completion plan
 
+## Public conduct and knives successor: October 28, 2026
+
+The proposed next publication adds eight configured choices: two section 647(a) conduct theories, sections 647(h)/(i), concealed dirk/dagger under 21310, and the three switchblade branches under 21510. This raises the configured catalog from 662 to 670 (691 canonical identities including 21 withheld labels), across 344 primary sections. It does not establish live availability or statewide completeness.
+
+The batch reuses seven dependencies and adds 17 monitored sections, for 858 retained sections / 866 versions. The original official archive and the existing comparison candidate agree on those new dependencies. Neither receipt issuance nor expiry changes. Six instruction comparisons receive bounded successor matches; explosive branches and other firearm/public-conduct comparisons remain open. The PR 68 inventory remains a frozen historical artifact rather than being regenerated for new choices.
+
+Reproduce the successor with `node --import tsx scripts/data-review/california-verification/public-conduct-knives-review.ts`, then regenerate current catalog accounting with `node --import tsx scripts/data-review/california-verification/coverage.ts`. Run the new batch test, closeout-inventory test and coverage test together. The acquisition script replays retained archives; it is not a freshness renewal. No database work is required.
+
+Next: combine the seven other-code candidates below, while preserving unresolved weapons branches and existing holds. Public packets contain only source evidence, published product text and neutral accounting; attorney deliberations stay outside the repository.
+
 ## Resumed closeout after PR 57: October 28, 2026
 
 The merged catalog contains 662 configured choices. This is not a live availability count. The new `scripts/data-review/output/california-closeout-inventory.md` and companion JSON consolidate the retained comparison packets without re-reviewing the state or renewing receipts. Earlier sections below remain historical milestones.

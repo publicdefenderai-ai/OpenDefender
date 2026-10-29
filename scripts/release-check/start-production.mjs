@@ -22,6 +22,7 @@ const releaseCheckAuthorityManifestFiles = [
 // shared/california-authority.ts; authority-eligibility.ts fails closed when
 // a current record is missing here.
 const releaseCheckCaliforniaSelectableChargeIds = [
+  "ca-pen-647-a-conduct", "ca-pen-647-a-solicitation", "ca-pen-647-h", "ca-pen-647-i", "ca-pen-21310", "ca-pen-21510-a", "ca-pen-21510-b", "ca-pen-21510-c",
   "ca-pen-186-22-a", "ca-pen-149", "ca-pen-243-b", "ca-pen-243-c-1", "ca-attempted-voluntary-manslaughter",
   "ca-murder-in-the-first-degree",
   "ca-murder-in-the-second-degree",
