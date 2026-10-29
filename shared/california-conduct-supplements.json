@@ -13,5 +13,23 @@
     "supportingSections": ["532"],
     "instructions": ["1800", "1804", "1805"],
     "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "ca-prostitution-solicitation",
+    "searchAliases": ["Soliciting or Agreeing to Engage in Prostitution"],
+    "summary": "The alleged conduct matters: engaging in an act, soliciting, and agreeing are alternative theories, not one combined checklist. For the engaging theory, CALCRIM 1153 describes willingly engaging in sexual intercourse or a lewd act with another person in exchange for money or other compensation. A lewd act for this purpose involves touching the genitals, buttocks, or female breast of either participant with part of the other participant's body for sexual arousal or gratification of either person. These engaging-act requirements should not be treated as a requirement that the sexual act was completed in a solicitation or agreement case. An agreement requires specific intent, acceptance of an offer or solicitation, and an additional act in California in furtherance by the person accepting. The receiving-compensation, paying-an-adult, and paying-a-minor branches must be distinguished. Section 647(b) does not apply to a child under 18 alleged to have engaged in conduct to receive money or other consideration. The exact subdivision and the separate age, knowledge, payment, and prior-conviction conditions still control the applicable punishment.",
+    "elements": [
+      "Identify whether the allegation is solicitation, agreement, or engaging in an act, and whether it concerns receiving compensation, paying an adult, or paying a minor.",
+      "Engaging theory: willingly engaging in sexual intercourse or a lewd act with another person in exchange for money or other compensation; lewd touching requires the specified sexual purpose.",
+      "Agreement theory: acceptance with specific intent to engage, plus an additional act in California in furtherance by the person accepting; acceptance alone is insufficient.",
+      "Section 647(b)(5) excludes children under 18 alleged to have engaged in conduct to receive money or other consideration.",
+      "The engaging-act explanation does not supply an exhaustive elements checklist for solicitation or the separate sentencing branches."
+    ],
+    "mentalState": "Theory-specific: willingly or on purpose for engaging, with sexual arousal or gratification as the purpose of lewd touching; specific intent to engage for agreement. Receiving compensation requires the intent specified in section 647(b)(1). Do not substitute this bounded explanation for the elements of the exact charged subdivision.",
+    "supportingSections": [],
+    "instructions": [
+      "1153"
+    ],
+    "translationStatus": "english_only_pending_translation"
   }
 ]
