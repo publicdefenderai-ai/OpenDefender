@@ -3555,7 +3555,7 @@ export default {
         "req5": "Actualmente en la escuela, graduado, o tiene GED",
         "req6": "Sin delitos graves, delitos menores significativos, o 3+ delitos menores",
         "renewal": "Cronograma de Renovación",
-        "renewalText": "Presente solicitudes de renovación 120-150 días antes de que expire su DACA actual. Los tiempos de procesamiento varían y cambian con frecuencia — consulte los tiempos de espera actuales en uscis.gov/i-821d-processing-times antes de presentar."
+        "renewalText": "DACA generalmente se concede por dos años y no se renueva automáticamente. USCIS recomienda presentar la renovación entre 120 y 150 días antes del vencimiento. Las demoras pueden dejar períodos sin protección ni autorización de empleo. Una renovación DACA pendiente no extiende automáticamente un permiso de trabajo vencido. Consulte las instrucciones actuales de USCIS y a un abogado antes del vencimiento."
       },
       "tpsSection": {
         "title": "TPS (Estatus de Protección Temporal)",
@@ -3592,7 +3592,7 @@ export default {
         "silent": "Derecho a Permanecer en Silencio",
         "silentText": "No tiene que responder preguntas sobre dónde nació, su estatus migratorio, o cómo entró a EE.UU.",
         "refuse": "Derecho a Rechazar Consentimiento",
-        "refuseText": "Puede negarse a mostrar documentos más allá de lo requerido para verificación de empleo.",
+        "refuseText": "Puede rechazar solicitudes voluntarias de documentos. Siguen aplicándose deberes migratorios: los no ciudadanos deben mostrar los documentos migratorios que lleven si un agente de inmigración los pide. Los adultos deben portar los documentos de registro emitidos. La verificación de empleo es un proceso distinto.",
         "attorney": "Derecho a un Abogado",
         "attorneyText": "Puede solicitar hablar con un abogado antes de responder cualquier pregunta.",
         "basis": "Derecho a Conocer la Base de Detención",
@@ -3614,7 +3614,7 @@ export default {
         "mustProvide": "Lo Que los Empleadores Deben Proporcionar",
         "must1": "Acceso a áreas no públicas solo con orden judicial (no orden administrativa)",
         "must2": "Tiempo razonable para que los empleados consulten con abogados si están disponibles",
-        "must3": "Formularios I-9 dentro de 3 días de aviso (72 horas) si se solicita para auditoría",
+        "must3": "Para una inspección I-9, el empleador generalmente recibe al menos tres días hábiles de aviso para presentar los formularios. Una orden o citación puede permitir una inspección sin ese aviso.",
         "canDo": "Lo Que los Empleadores Pueden Hacer",
         "can1": "Solicitar ver la orden y verificar que esté firmada por un juez",
         "can2": "Contactar a su abogado antes de permitir acceso a áreas no públicas",
@@ -3759,12 +3759,12 @@ export default {
         "eligible3": "Individuos con fuertes lazos comunitarios",
         "eligible4": "Personas con familiares ciudadanos estadounidenses",
         "eligible5": "Aquellos con historial de empleo estable",
-        "mandatoryDetention": "Detención Obligatoria (Sin Fianza)",
+        "mandatoryDetention": "Detención obligatoria bajo § 1226(c) y leyes relacionadas",
         "mandatory1": "Condenas por delitos graves agravados",
         "mandatory2": "Ciertos delitos de drogas",
         "mandatory3": "Delitos con armas de fuego",
         "mandatory4": "Cargos relacionados con terrorismo",
-        "mandatory5": "Órdenes de deportación previas (en algunos casos)"
+        "mandatory5": "La Ley Laken Riley de 2025 añade § 1226(c)(1)(E): ciertas causas de inadmisibilidad bajo § 1182(a)(6)(A), (6)(C) o (7), junto con arresto, acusación, condena o admisión legalmente suficiente por allanamiento con fines delictivos, robo, hurto, hurto en tiendas, agresión a agentes del orden o un delito que cause muerte o lesiones corporales graves. No siempre se requiere condena."
       },
       "process": {
         "title": "El Proceso de Audiencia de Fianza",
@@ -3794,7 +3794,7 @@ export default {
         "bailFund": "Red Nacional de Fondos de Fianza",
         "bailFundText": "Directorio de fondos de fianza locales que ayudan a familias a pagar fianzas de inmigración.",
         "raices": "Fondo de Fianza RAICES",
-        "raicesText": "Proporciona asistencia de fianza para inmigrantes detenidos en Texas y más allá."
+        "raicesText": "RAICES, con sede en Texas, actualmente reserva su fondo de fianzas para sus propios clientes detenidos a quienes se concede fianza. Consulte directamente sobre representación, área de servicio, elegibilidad y fondos; la ayuda no está garantizada."
       }
     },
     "attorney": {
