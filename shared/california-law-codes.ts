@@ -1,5 +1,6 @@
 /** Official code identity is part of a citation; section numbers alone are ambiguous. */
 export const CALIFORNIA_LAW_CODE_LABELS = {
+  INS: "Cal. Insurance Code", UIC: "Cal. Unemployment Insurance Code",
   ELEC: "Cal. Elections Code",
   GOV: "Cal. Government Code",
   PRC: "Cal. Public Resources Code",
@@ -23,7 +24,7 @@ export function californiaPrimaryIdentity(lawCode: CaliforniaLawCode, code: stri
 /** Common charging-paper spellings supplement, rather than replace, archive codes. */
 export function californiaCitationSearchAliases(lawCode: CaliforniaLawCode, code: string): string[] {
   const abbreviations: Partial<Record<CaliforniaLawCode, string>> = {
-    PEN: "PC", VEH: "VC", HSC: "H&S", BPC: "B&P", HNC: "H&N", RTC: "R&T",
+    INS: "IC", UIC: "UI", LAB: "LC", WIC: "W&I", PEN: "PC", VEH: "VC", HSC: "H&S", BPC: "B&P", HNC: "H&N", RTC: "R&T",
   };
   return [...new Set([abbreviations[lawCode] ?? lawCode, lawCode,
     CALIFORNIA_LAW_CODE_LABELS[lawCode].replace(/^Cal\. /, "")])].map(label => `${label} ${code}`);

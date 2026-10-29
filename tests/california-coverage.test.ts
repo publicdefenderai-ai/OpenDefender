@@ -1,21 +1,24 @@
 import {CA_CATALOG_COUNTS} from "./fixtures/california-catalog-counts";
 import receipt from "../scripts/data-review/output/california-archive-refresh-receipt.json";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import fs from "node:fs";
 import { buildCaliforniaCoverage, renderCaliforniaCoverage, validateCaliforniaSourceExpansion } from "../scripts/data-review/california-verification/coverage";
 const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-source-expansion.json", "utf8"));
 
 describe("California catalog coverage boundaries", () => {
   afterEach(() => vi.useRealTimers());
+  let configuredReport: ReturnType<typeof buildCaliforniaCoverage>;
+  beforeAll(() => { configuredReport = buildCaliforniaCoverage(); }, 30_000);
+  // Reuse verified accounting for shape checks; expiry still performs two independent builds.
   it("keeps configured accounting reproducible across runtime receipt expiry", () => {
     vi.useFakeTimers(); vi.setSystemTime(new Date(receipt.checkedAt));
     const fresh = buildCaliforniaCoverage();
     vi.setSystemTime(new Date(receipt.expiresAt));
     expect(buildCaliforniaCoverage()).toEqual(fresh);
-  }, 15_000); // Revalidates every retained publication twice; allow parallel-suite contention.
+  }, 30_000); // Revalidates every retained publication twice; allow parallel-suite contention.
   it("accounts for every catalog record without equating acquisition with correction", () => {
-    const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 691, configuredSelectable: CA_CATALOG_COUNTS.configured, withheldCanonicalLabels: 21, boundedCorrectionPass: CA_CATALOG_COUNTS.configured, boundedAdditionPass: 571, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 344, selectableRecordsWithAllPrimaryTextAcquired: CA_CATALOG_COUNTS.configured, totalAcquiredSectionsIncludingDependencies: 858, totalAcquiredVersionsIncludingDependencies: 866 });
+    const report = structuredClone(configuredReport);
+    expect(report.accounting).toMatchObject({ canonicalRecords: 710, configuredSelectable: CA_CATALOG_COUNTS.configured, withheldCanonicalLabels: 21, boundedCorrectionPass: CA_CATALOG_COUNTS.configured, boundedAdditionPass: 590, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 351, selectableRecordsWithAllPrimaryTextAcquired: CA_CATALOG_COUNTS.configured, totalAcquiredSectionsIncludingDependencies: 904, totalAcquiredVersionsIncludingDependencies: 912 });
     expect(report.accounting.specificOpenLegalQuestions).toBe(0);
     expect(report.openLegalQuestions.map(row => row.status)).toEqual(["attorney_decision_recorded", "attorney_decision_recorded", "attorney_decision_recorded", "attorney_decision_recorded"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");
@@ -25,7 +28,7 @@ describe("California catalog coverage boundaries", () => {
     expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-expanded-catalog-coverage.json", "utf8"))).toEqual(report);
   });
   it("groups all 0 remaining records exactly once and does not split shared primary sources", () => {
-    const report = buildCaliforniaCoverage();
+    const report = structuredClone(configuredReport);
     const ids = report.groups.flatMap(group => group.recordIds);
     expect(ids).toHaveLength(0);
     expect(new Set(ids).size).toBe(0);
@@ -38,7 +41,7 @@ describe("California catalog coverage boundaries", () => {
     }
   });
   it("does not convert the code-section universe into an offense denominator or live availability claim", () => {
-    const report = buildCaliforniaCoverage();
+    const report = structuredClone(configuredReport);
     expect(report.statutoryUniverse).toHaveLength(30);
     expect(report.accounting.statewideOffenseDenominator).toBeNull();
     expect(report.accounting.statewideCoveragePercent).toBeNull();
