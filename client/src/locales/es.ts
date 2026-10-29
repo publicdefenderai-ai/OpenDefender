@@ -4388,6 +4388,30 @@ export default {
       "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción federal. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación."
     }
   },
+  "standaloneGuides": {
+    "bail": {
+      "heading": "Fianza y",
+      "subtitle": "Conozca las opciones de libertad, los costos, las condiciones y las preguntas para su abogado.",
+      "support": "Apoyo con las finanzas y los costos judiciales",
+      "accent": "libertad antes del juicio."
+    },
+    "plea": {
+      "heading": "Acuerdos de culpabilidad.",
+      "subtitle": "Explore lo que puede significar un acuerdo, los derechos involucrados y sus posibles efectos en su vida.",
+      "support": "Información y apoyo de inmigración",
+      "accent": "Comprenda lo que está considerando."
+    },
+    "orientation": "Comprenda la fianza y la libertad.",
+    "immediate": "Costos, condiciones y fechas de corte.",
+    "rules": "Cómo se aplican las reglas.",
+    "agreement": "Lo que puede implicar un acuerdo.",
+    "effects": "Los efectos más amplios de una decisión.",
+    "context": "Acerca de esta guía.",
+    "related": "Recursos relacionados",
+    "help": "¿Necesita ayuda para comprender sus opciones?",
+    "findHelp": "Encuentre ayuda legal",
+    "sources": "Fuentes"
+  },
   "caseTimeline": {
     "design": {
       "heading": "Comprenda el proceso. Una etapa a la vez.",

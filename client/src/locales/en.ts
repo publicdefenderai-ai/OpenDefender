@@ -4386,6 +4386,30 @@ export default {
       "text": "This information is for educational purposes only and does not constitute legal advice. Laws and procedures vary by state and federal jurisdiction. Always consult with a qualified attorney for advice specific to your situation."
     }
   },
+  "standaloneGuides": {
+    "bail": {
+      "heading": "Bail &",
+      "subtitle": "Understand release options, costs, conditions, and the questions to raise with your attorney.",
+      "support": "Support with finances and court costs",
+      "accent": "pretrial release."
+    },
+    "plea": {
+      "heading": "Plea agreements.",
+      "subtitle": "Explore what an agreement can mean, the rights involved, and its possible effects on your life.",
+      "support": "Immigration information and support",
+      "accent": "Know what you’re considering."
+    },
+    "orientation": "Understand bail & release.",
+    "immediate": "Cost, conditions, and court dates.",
+    "rules": "How the rules are applied.",
+    "agreement": "What a plea can involve.",
+    "effects": "The wider effects of a decision.",
+    "context": "About this guide.",
+    "related": "Related resources",
+    "help": "Need help understanding your options?",
+    "findHelp": "Find legal help",
+    "sources": "Sources"
+  },
   "caseTimeline": {
     "design": {
       "heading": "Understand the process. One stage at a time.",

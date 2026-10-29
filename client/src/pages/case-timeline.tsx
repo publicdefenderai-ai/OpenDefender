@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Clock, AlertTriangle, Scale, BookOpen, DollarSign, Users } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -20,6 +19,16 @@ type Stage = typeof stages[number];
 
 export default function CaseTimeline() {
   useScrollToTop();
+  const [, navigate] = useLocation();
+  useEffect(() => {
+    const forwardGuideAnchor = () => {
+      const route = window.location.hash === "#bail-guide" ? "/bail" : window.location.hash === "#plea-guide" ? "/plea-agreements" : null;
+      if (route) navigate(route, { replace: true });
+    };
+    forwardGuideAnchor();
+    window.addEventListener("hashchange", forwardGuideAnchor);
+    return () => window.removeEventListener("hashchange", forwardGuideAnchor);
+  }, [navigate]);
   const { t } = useTranslation();
   const { jurisdiction, setJurisdiction } = useJurisdiction();
   const [selectedStage, setSelectedStage] = useState<Stage>("arrest");
@@ -85,7 +94,7 @@ export default function CaseTimeline() {
             <button type="button" disabled={stageIndex === stages.length - 1} onClick={() => handleStageSelect(stages[stageIndex + 1], true)} data-testid="timeline-next">{t("caseTimeline.design.next")}</button>
             <Link href="/quick-reference" className="timeline-link">{t("caseTimeline.viewQuickRef", "Quick-Reference Card")}</Link>
           </div>
-          {selectedStage === "booking" && <a href="#bail-guide" className="timeline-link">{t("caseTimeline.design.bailLink")}</a>}
+          {selectedStage === "booking" && <a href="/bail" className="timeline-link">{t("caseTimeline.design.bailLink")}</a>}
         </section>
       </section>
       <aside className="timeline-width timeline-caveat">
@@ -95,8 +104,8 @@ export default function CaseTimeline() {
         <Link href="/data-sources" className="timeline-link">{t("disclosure.sources", "Sources")}</Link>
       </aside>
       <nav className="timeline-width timeline-guide-links" aria-label={t("process.guides.title")}>
-        <a className="timeline-link" href="#bail-guide">{t("process.guides.bail.title")}</a>
-        <a className="timeline-link" href="#plea-guide">{t("process.guides.plea.title")}</a>
+        <a className="timeline-link" href="/bail">{t("process.guides.bail.title")}</a>
+        <a className="timeline-link" href="/plea-agreements">{t("process.guides.plea.title")}</a>
         <Link className="timeline-link" href="/case-guidance">{t("rights.disclaimer.caseGuidance")}</Link>
       </nav>
       {/* Detailed Guides */}
@@ -123,203 +132,6 @@ export default function CaseTimeline() {
           </ScrollReveal>
 
           <div className="space-y-8">
-            {/* Bail Guide */}
-            <ScrollReveal delay={0.1}>
-              <div id="bail-guide" className="scroll-mt-20">
-              <Card className="timeline-guide-sheet">
-                  <CardHeader className="bg-muted/30">
-                    <CardTitle className="text-green-800 dark:text-green-200">
-                      {t('process.guides.bail.title')}
-                    </CardTitle>
-                    <p className="text-sm text-green-700 dark:text-green-300 mt-2">
-                      {t('process.guides.bail.intro')}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="pt-6">
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value="bail-what">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.whatIs.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.whatIs.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.whatIs.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-set">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.howSet.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.howSet.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.howSet.factors', { returnObjects: true }) as string[]).map((factor, idx) => <li key={idx}>{factor}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-options">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.options.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-4 pl-6">
-                          {(t('process.guides.bail.options.types', { returnObjects: true }) as { name: string; description: string }[]).map((option, idx) => (
-                            <div key={idx} className="border-l-2 border-green-300 pl-3">
-                              <strong className="text-foreground">{option.name}</strong>
-                              <p className="text-sm mt-1">{option.description}</p>
-                            </div>
-                          ))}
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-afford">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.cantAfford.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.cantAfford.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.cantAfford.options', { returnObjects: true }) as string[]).map((opt, idx) => <li key={idx}>{opt}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-conditions">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.conditions.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.conditions.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.conditions.examples', { returnObjects: true }) as string[]).map((ex, idx) => <li key={idx}>{ex}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-miss">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.missCourt.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.missCourt.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.missCourt.consequences', { returnObjects: true }) as string[]).map((con, idx) => <li key={idx}>{con}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-deny">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.preventiveDetention.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.preventiveDetention.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.preventiveDetention.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-schedule">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.schedule.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.schedule.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.schedule.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-landscape">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.landscape.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.landscape.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.landscape.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem value="bail-risk">
-                        <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.bail.riskAssessment.title')}</AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                          <p>{t('process.guides.bail.riskAssessment.description')}</p>
-                          <ul className="list-disc pl-4 space-y-1">
-                            {(t('process.guides.bail.riskAssessment.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-                  </CardContent>
-                </Card>
-              </div>
-            </ScrollReveal>
-
-            {/* Plea Bargain Guide */}
-            <ScrollReveal delay={0.2}>
-              <Card className="timeline-guide-sheet" id="plea-guide">
-                  <CardHeader className="bg-muted/30">
-                  <CardTitle className="text-blue-800 dark:text-blue-200">
-                    {t('process.guides.plea.title')}
-                  </CardTitle>
-                  <p className="text-sm text-blue-700 dark:text-blue-300 mt-2">
-                    {t('process.guides.plea.intro')}
-                  </p>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="plea-what">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.whatIs.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                        <p>{t('process.guides.plea.whatIs.description')}</p>
-                        <ul className="list-disc pl-4 space-y-1">
-                          {(t('process.guides.plea.whatIs.points', { returnObjects: true }) as string[]).map((point, idx) => <li key={idx}>{point}</li>)}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="plea-types">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.types.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-4 pl-6">
-                        {(t('process.guides.plea.types.deals', { returnObjects: true }) as { name: string; description: string }[]).map((deal, idx) => (
-                          <div key={idx} className="border-l-2 border-blue-300 pl-3">
-                            <strong className="text-foreground">{deal.name}</strong>
-                            <p className="text-sm mt-1">{deal.description}</p>
-                          </div>
-                        ))}
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="plea-rights">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.rights.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                        <p>{t('process.guides.plea.rights.description')}</p>
-                        <ul className="list-disc pl-4 space-y-1">
-                          {(t('process.guides.plea.rights.list', { returnObjects: true }) as string[]).map((right, idx) => <li key={idx}>{right}</li>)}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="plea-questions">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.questions.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                        <p>{t('process.guides.plea.questions.description')}</p>
-                        <ul className="list-disc pl-4 space-y-1">
-                          {(t('process.guides.plea.questions.list', { returnObjects: true }) as string[]).map((q, idx) => <li key={idx}>{q}</li>)}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="plea-collateral">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.collateral.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                        <p>{t('process.guides.plea.collateral.description')}</p>
-                        <ul className="list-disc pl-4 space-y-1">
-                          {(t('process.guides.plea.collateral.consequences', { returnObjects: true }) as string[]).map((con, idx) => <li key={idx}>{con}</li>)}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                    <AccordionItem value="plea-decide">
-                      <AccordionTrigger className="text-left hover:no-underline">{t('process.guides.plea.decide.title')}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground space-y-3 pl-6">
-                        <p>{t('process.guides.plea.decide.description')}</p>
-                        <div className="grid md:grid-cols-2 gap-4 mt-3">
-                          <div className="bg-green-50 dark:bg-green-950/30 p-3 rounded-lg">
-                            <strong className="text-green-700 dark:text-green-300 text-sm">{t('process.guides.plea.decide.acceptTitle')}</strong>
-                            <ul className="list-disc pl-4 mt-2 space-y-1 text-sm">
-                              {(t('process.guides.plea.decide.acceptReasons', { returnObjects: true }) as string[]).map((r, idx) => <li key={idx}>{r}</li>)}
-                            </ul>
-                          </div>
-                          <div className="bg-blue-50 dark:bg-blue-950/30 p-3 rounded-lg">
-                            <strong className="text-blue-700 dark:text-blue-300 text-sm">{t('process.guides.plea.decide.trialTitle')}</strong>
-                            <ul className="list-disc pl-4 mt-2 space-y-1 text-sm">
-                              {(t('process.guides.plea.decide.trialReasons', { returnObjects: true }) as string[]).map((r, idx) => <li key={idx}>{r}</li>)}
-                            </ul>
-                          </div>
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
-
             {/* Speedy Trial + Public Defender */}
             <ScrollReveal delay={0.3}>
               <div className="grid md:grid-cols-2 gap-6">

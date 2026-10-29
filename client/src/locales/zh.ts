@@ -4387,6 +4387,30 @@ export default {
       "text": "本信息仅供教育目的，不构成法律建议。各州和联邦管辖区的法律和程序各有不同。请务必咨询合格的律师以获取针对您具体情况的建议。"
     }
   },
+  "standaloneGuides": {
+    "bail": {
+      "heading": "保释与",
+      "subtitle": "了解释放选项、费用、条件以及可以向律师提出的问题。",
+      "support": "财务与法院费用支持",
+      "accent": "审前释放。"
+    },
+    "plea": {
+      "heading": "认罪协议。",
+      "subtitle": "了解协议可能意味着什么、涉及的权利以及对您生活的潜在影响。",
+      "support": "移民信息与支持",
+      "accent": "了解您正在考虑的选择。"
+    },
+    "orientation": "了解保释与释放。",
+    "immediate": "费用、条件与出庭日期。",
+    "rules": "规则如何适用。",
+    "agreement": "认罪协议可能涉及什么。",
+    "effects": "决定的更广泛影响。",
+    "context": "关于本指南。",
+    "related": "相关资源",
+    "help": "需要帮助了解您的选项吗？",
+    "findHelp": "寻找法律援助",
+    "sources": "资料来源"
+  },
   "caseTimeline": {
     "design": {
       "heading": "了解诉讼流程，一次了解一个阶段。",

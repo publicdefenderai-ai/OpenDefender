@@ -72,6 +72,8 @@ const DataSources = lazy(() => import("@/pages/data-sources"));
 const EmbedSearch = lazy(() => import("@/pages/embed/search"));
 const EmbedRights = lazy(() => import("@/pages/embed/rights"));
 const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
+const Bail = lazy(() => import("@/pages/bail"));
+const PleaAgreements = lazy(() => import("@/pages/plea-agreements"));
 const CaseTimeline = lazy(() => import("@/pages/case-timeline"));
 const QuickReference = lazy(() => import("@/pages/quick-reference"));
 const SupportHub = lazy(() => import("@/pages/support/index"));
@@ -153,6 +155,8 @@ function Router() {
       <Route path="/recap-extensions" component={RecapExtensions} />
       <Route path="/process"><Redirect to="/case-timeline" /></Route>
       <Route path="/case-timeline" component={CaseTimeline} />
+      <Route path="/bail" component={Bail} />
+      <Route path="/plea-agreements" component={PleaAgreements} />
       <Route path="/quick-reference-cards" component={QuickReference} />
       {/* Keep the legacy URL pointed at the canonical rights experience. */}
       <Route path="/quick-reference"><Redirect to="/rights-info" /></Route>
