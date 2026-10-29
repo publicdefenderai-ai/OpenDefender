@@ -18,7 +18,7 @@ describe("California catalog coverage boundaries", () => {
   }, 30_000); // Revalidates every retained publication twice; allow parallel-suite contention.
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = structuredClone(configuredReport);
-    expect(report.accounting).toMatchObject({ canonicalRecords: 710, configuredSelectable: CA_CATALOG_COUNTS.configured, withheldCanonicalLabels: 21, boundedCorrectionPass: CA_CATALOG_COUNTS.configured, boundedAdditionPass: 590, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 351, selectableRecordsWithAllPrimaryTextAcquired: CA_CATALOG_COUNTS.configured, totalAcquiredSectionsIncludingDependencies: 904, totalAcquiredVersionsIncludingDependencies: 912 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 715, configuredSelectable: CA_CATALOG_COUNTS.configured, withheldCanonicalLabels: 21, boundedCorrectionPass: CA_CATALOG_COUNTS.configured, boundedAdditionPass: 595, awaitingCorrectionPass: 0, acquiredSelectablePrimarySections: 351, selectableRecordsWithAllPrimaryTextAcquired: CA_CATALOG_COUNTS.configured, totalAcquiredSectionsIncludingDependencies: 907, totalAcquiredVersionsIncludingDependencies: 915 });
     expect(report.accounting.specificOpenLegalQuestions).toBe(0);
     expect(report.openLegalQuestions.map(row => row.status)).toEqual(["attorney_decision_recorded", "attorney_decision_recorded", "attorney_decision_recorded", "attorney_decision_recorded"]);
     expect(renderCaliforniaCoverage(report)).toContain("known legal questions");
