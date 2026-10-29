@@ -69,6 +69,7 @@ const testProcess = spawn(
     "tests/e2e/chat-intake-parity.spec.ts",
     "tests/e2e/document-summarizer-design.spec.ts",
     "tests/e2e/letter-generator-design.spec.ts",
+    "tests/e2e/how-to-design.spec.ts",
     "tests/e2e/case-guidance-timeout-recovery.spec.ts",
     "tests/e2e/california-legacy-reselection.spec.ts",
     "tests/e2e/first24-design.spec.ts",
