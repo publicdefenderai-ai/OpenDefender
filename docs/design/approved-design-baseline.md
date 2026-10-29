@@ -50,7 +50,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Know Your Rights | Merged in PR 77; full existing explanations retained in independent disclosures; paced Miranda illustration added |
 | Case Timeline | Merged in PR 78; all seven stages and embedded guide content retained |
 | Legal Resources | Merged in PR 80; both real search services and complete appointed-counsel content retained |
-| Bail and Plea guides | Standalone routes prepared for review; full current translated guide content retained |
+| Bail and Plea guides | Merged in PR 82; full current translated guide content retained |
+| Right to Counsel | Design refresh prepared for review; full published article and scenarios retained |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -353,3 +354,20 @@ References:
 Validation: typecheck and production build passed. Seventeen focused browser checks passed: seven guide checks, seven timeline checks and three existing multilingual printed-copy/bail checks. The guide checks verify every current body string, notices, five bail options, keyboard toggling, simultaneous open sections, initial and in-app legacy links, state changes/reload/clearing, related links and real element bounds at 1280px/320px in all languages and both themes. The guide spec is release-allowlisted, and the timeline spec now tests the intentional extraction rather than expecting embedded content. All seven guide checks passed again after the final headline/source-label refinements. Desktop and phone screenshots in both themes were compared with the accepted reference layouts. No full-suite or production-deployment claim.
 
 Timeline translation follow-up: localized both sentencing-finance and re-entry callouts in English, Spanish and Chinese, including their explanatory paragraphs and links. Existing English meaning is retained, with the re-entry sentence punctuation simplified. The six locale/theme timeline checks assert the translated strings.
+
+
+## Right to Counsel design batch
+
+Implements the accepted scale illustration, two-part headline, plum/warm-neutral comparison and quiet reading index. The latest scale revision is used at 230px desktop and 140px mobile; the older browser wrapper still contains the rejected chairs and is not the controlling graphic reference. The complete current constitutional comparison remains visible above the reading layout. All six other sections, all six unclear-situation scenarios, the seven-row reference table, case citations, warnings, disclaimer and existing related destinations remain. The shorter prototype summaries do not replace published content.
+
+The current article is English-only. New hero and navigation framing are translated in English, Spanish and Chinese, while preserved article text, section labels, breadcrumbs and existing state labels/callouts remain a translation follow-up. The existing English article and navigation lists carry `lang="en"` for assistive technology. Original substantive wording is unchanged; this is not a new legal-content approval. No new em dashes are added in interface copy.
+
+Interaction improvements: section/scenario controls now have associated expanded-state and content IDs, use real headings, and retain independent open state without height animations. Initial and subsequent section hashes open the correct section. Jump controls open, scroll to and focus its heading/control. State selection now passes the parent's jurisdiction and setter to the selector so its callout updates immediately and the existing preference still survives reload. This fixes the prior separate-hook synchronization gap. The same state control is available on desktop and mobile.
+
+The semantic status colors in restriction labels, reference cells and warnings remain. Ordinary containers use rules and shared theme colors. Sources and legal-help entry points supplement the preserved related links. No backend, questionnaire or AI behavior changes. The broader article translation and legal-content review remain separate follow-ups.
+
+References:
+- `opendefender-right-to-counsel-preview.html`: SHA-256 `a698aadceb5867480c34d85db67c01e0fbbee944e71f2f44cc361aadfbbed7c2`
+- `counsel-content.html`: SHA-256 `ad53e62ba0c13546a1f705b19eeaf0968eefccfdc7f013fc9f9267cfcdce4b2a`
+
+Validation: typecheck and production build passed. Six dedicated browser cases cover the new interface in all three locales and both themes at 1280px/320px, all disclosure controls and scenarios, 79 independent published-source text fragments, all seven reference rows, related links, live/cleared/persisted jurisdiction, initial and changed hashes, focus and actual bounds. The existing juvenile scenario regression also passed. The spec is release-allowlisted. Visual review compares the final scale reference and implementation in both themes and sizes. No full-suite or production-deployment claim.
