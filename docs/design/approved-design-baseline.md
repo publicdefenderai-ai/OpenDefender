@@ -389,4 +389,4 @@ Reference files:
 - `immigration-situations-content.html`: SHA-256 `7789eba8ced51a3dcbc2ade5a291ae4111c1b508c0f4c8105747fab21dc931ec`
 - `counsel-immigration-graphics.css`: SHA-256 `335f3cfc324d5f9dc436f928616a3db4aef658f7f29b047c8fff74fee35748b7`
 
-Validation: typecheck and production build passed. All six dedicated locale/theme browser cases passed. Desktop and phone views were compared with the local accepted reference. The broader site translation gaps and existing full-suite failures are not resolved or reclassified by this design batch. No deployment or legal approval is claimed.
+Validation: typecheck and production build passed. All six dedicated locale/theme browser cases passed. After integrating main and PR 86, all 13 combined collection and immigration-content browser checks passed. Desktop and phone views were compared with the local accepted reference. The broader site translation gaps and existing full-suite failures are not resolved or reclassified by this design batch. No deployment or legal approval is claimed.
