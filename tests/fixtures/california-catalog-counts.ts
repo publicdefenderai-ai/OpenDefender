@@ -7,4 +7,4 @@
  * california-archive-refresh-receipt.json is valid at the test clock and the
  * approved PEN:30515 successor. An expired receipt withholds runtime choices.
  */
-export const CA_CATALOG_COUNTS = { configured: 689, eligible: 689 } as const;
+export const CA_CATALOG_COUNTS = { configured: 694, eligible: 694 } as const;

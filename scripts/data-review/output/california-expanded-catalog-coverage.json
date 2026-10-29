@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 710,
-    "configuredSelectable": 689,
+    "canonicalRecords": 715,
+    "configuredSelectable": 694,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 590,
-    "boundedCorrectionPass": 689,
+    "boundedAdditionPass": 595,
+    "boundedCorrectionPass": 694,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -25,16 +25,16 @@
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 351,
-    "selectableRecordsWithAllPrimaryTextAcquired": 689,
-    "totalAcquiredSectionsIncludingDependencies": 904,
-    "totalAcquiredVersionsIncludingDependencies": 912,
+    "selectableRecordsWithAllPrimaryTextAcquired": 694,
+    "totalAcquiredSectionsIncludingDependencies": 907,
+    "totalAcquiredVersionsIncludingDependencies": 915,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "689 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "694 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -96,8 +96,8 @@
     },
     {
       "lawCode": "WIC",
-      "selectable": 4,
-      "corrected": 4,
+      "selectable": 9,
+      "corrected": 9,
       "awaitingCorrection": 0
     }
   ],
@@ -3808,6 +3808,11 @@
       "section": "10980",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=10980&lawCode=WIC",
       "recordIds": [
+        "ca-wic-10980-d",
+        "ca-wic-10980-e",
+        "ca-wic-10980-f",
+        "ca-wic-10980-g-1",
+        "ca-wic-10980-g-2",
         "ca-wic-10980-a",
         "ca-wic-10980-b",
         "ca-wic-10980-c-1",
@@ -5960,6 +5965,91 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-d",
+      "title": "Unauthorized blank SNAP authorizations with intent to defraud",
+      "citation": "Cal. Welfare & Institutions Code § 10980(d)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "ea1c15c0f595b952d9d90a169441207ab3dee83bf922f0a4ac02759fcb871483",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-e",
+      "title": "Forgery involving SNAP authorizations or CalFresh benefits",
+      "citation": "Cal. Welfare & Institutions Code § 10980(e)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "e6b84cb55b54c490fe21e2a54e87686ebd05ec97567a38e6435ef1a26a58f1e2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-f",
+      "title": "Public employee embezzlement of entrusted CalFresh benefits",
+      "citation": "Cal. Welfare & Institutions Code § 10980(f)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "92aecf85bf996916e48463557c46bb8340ecfbd1f9f825cb892ac1e5705e7fa6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-g-1",
+      "title": "Unauthorized CalFresh benefits or authorizations: $950 or less",
+      "citation": "Cal. Welfare & Institutions Code § 10980(g)(1)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "e8852557513f19ba48f981ea679b858ba4268cfce1378061ed90d96f50b5e5b9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-wic-10980-g-2",
+      "title": "Unauthorized CalFresh benefits or authorizations: more than $950",
+      "citation": "Cal. Welfare & Institutions Code § 10980(g)(2)",
+      "lawCode": "WIC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "WIC:10980"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "WIC:10980"
+      ],
+      "catalogSha256": "8f588cb0f8f7e6c952dca0fa81a640e6da4a3f2055a56e9cde5f2ce84325991e",
       "attorneyReview": "pending"
     },
     {
