@@ -20,7 +20,7 @@ function catalogFixture() {
 test('new other-code offenses expose reviewed content only while evidence is current', async ({ request }) => {
     const fixture = catalogFixture();
     expect(fixture.charges).toHaveLength(19);
-    for (const [search, id] of [['B&P 2052(a)', 'ca-bpc-2052-a'], ['IC 1871.4(a)(1)', 'ca-ins-1871-4-a-1'], ['W&I 10980(c)(1)', 'ca-wic-10980-c-1'], ['UI 2101(a)', 'ca-uic-2101-a']]) {
+    for (const [search, id] of [['Bus. & Prof. Code 2052(a)', 'ca-bpc-2052-a'], ['Ins. Code 1871.4(a)(1)', 'ca-ins-1871-4-a-1'], ['Welf. & Inst. Code 10980(c)(1)', 'ca-wic-10980-c-1'], ['Unemp. Ins. Code 2101(a)', 'ca-uic-2101-a']]) {
         const response = await request.get('/api/criminal-charges', { params: { jurisdiction: 'CA', search, limit: 500 } });
         expect(response.ok()).toBe(true);
         const body = await response.json();
@@ -54,7 +54,7 @@ test('configured cross-code citations work in the intake UI with isolated catalo
     await page.getByTestId('select-jurisdiction').click();
     await page.getByRole('option', { name: 'California', exact: true }).click();
     await page.getByTestId('button-next-jurisdiction').click();
-    for (const [search, id] of [['IC 1871.4(a)(1)', 'ca-ins-1871-4-a-1'], ['LC 3700.5(a)', 'ca-lab-3700-5-a'], ['W&I 10980(c)(1)', 'ca-wic-10980-c-1'], ['UI 2101(a)', 'ca-uic-2101-a']]) {
+    for (const [search, id] of [['Ins. Code 1871.4(a)(1)', 'ca-ins-1871-4-a-1'], ['Lab. Code 3700.5(a)', 'ca-lab-3700-5-a'], ['Welf. & Inst. Code 10980(c)(1)', 'ca-wic-10980-c-1'], ['Unemp. Ins. Code 2101(a)', 'ca-uic-2101-a']]) {
         await page.locator('#charge-search').fill(search);
         const choice = page.getByTestId('checkbox-charge-' + id);
         await expect(choice).toBeVisible();
