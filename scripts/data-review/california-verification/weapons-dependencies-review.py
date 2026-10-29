@@ -94,7 +94,7 @@ def render(p):
     c=p['counts']
     lines=['# California combined weapons dependency evidence','',
         f"Two pending work groups now share {c['requiredSections']} retained sections: {c['reusedSections']} reused and {c['newResearchSections']} newly retained for research. {c['instructions']} official jury instructions are bound to their retained PDF pages.",'',
-        'No new choices, publication pins or receipt renewals. California remains at 694 configured choices; this is not a live-availability count.','',
+        'No new choices, publication pins or receipt renewals. This research packet does not establish live availability.','',
         '## Scope and limits','',*['- '+s for s in p['limitations']],'',
         '## Instruction evidence','', '| Instruction | Retained PDF pages |','| --- | --- |',
         *[f"| {i['id']} | {i['firstPage']} to {i['lastPage']} |" for i in p['instructions']], '',

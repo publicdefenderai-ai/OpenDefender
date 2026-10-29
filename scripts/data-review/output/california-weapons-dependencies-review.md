@@ -2,7 +2,7 @@
 
 Two pending work groups now share 79 retained sections: 22 reused and 57 newly retained for research. 11 official jury instructions are bound to their retained PDF pages.
 
-No new choices, publication pins or receipt renewals. California remains at 694 configured choices; this is not a live-availability count.
+No new choices, publication pins or receipt renewals. This research packet does not establish live availability.
 
 ## Scope and limits
 
