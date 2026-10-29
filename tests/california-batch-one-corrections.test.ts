@@ -111,8 +111,11 @@ describe("California bounded correction delivery", () => {
         expect(explanation.canonicalChargeId).toBe(charge.id);
         // Later reviewed conduct supplements preserve the original penalty contract.
         const supplement = supplements.find(s => s.id === row.id);
-        expect(explanation.plainSummary).toBe(supplement ? `${row.summary.en} ${supplement.summary}` : row.summary[language]);
-        if (supplement) expect(explanation.untranslated).toBe(language !== "en");
+        expect(explanation.plainSummary).toBe(supplement && language === "en" ? `${row.summary.en} ${supplement.summary}` : row.summary[language]);
+        if (supplement) {
+          expect(explanation.untranslated).toBe(false);
+          expect(explanation.untranslatedSupplement?.text).toBe(language === "en" ? undefined : supplement.summary);
+        }
         expect(explanation.degreeContext).toBe(row.penalty[language]);
         expect(explanation.jurisdictionDetail?.penaltyClass).toBe(row.penalty[language]);
       }

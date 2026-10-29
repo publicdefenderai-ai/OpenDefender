@@ -43,7 +43,7 @@ export function buildEngagingConductReview() {
             'CALCRIM 1153 supports the engaging-act explanation only. It is not a complete checklist for solicitation, agreement, defenses or the separate sentencing branches.',
             'Section 647(b)(1)-(5) supplies the receiving/paying distinctions, agreement requirements and child-recipient exclusion. The older generic instruction does not override those statutory limits.',
             'The retained 2026 instruction edition and statutory version are reused; this offline review does not establish new source currentness or live availability.',
-            'Non-English requests show the English supplement with the existing untranslated-content notice.',
+            'Spanish and Chinese base summaries remain translated. Additional English detail is separate and labeled as untranslated; the base retains its provisional-translation notice.',
             'The earlier benchmark and closeout inventory remain historical records. Remaining weapons and benefit-program comparisons are not resolved by this supplement.',
         ],
     };
@@ -57,7 +57,7 @@ export function validateEngagingConductReview(packet = readEngagingConductReview
     const record = getCaliforniaCanonicalRecord(ID), correction = getCaliforniaBatchCorrection(ID);
     if (!record?.selectable || record.officialTitle !== packet.product.title || record.penalty !== original.penalty.en || !same(record.categories, original.categories) || !same(record.elements, supplement.elements) || record.mentalState !== supplement.mentalState)
         throw new Error('Conduct identity, title or punishment drift');
-    if (correction?.summary.en !== `${original.summary.en} ${supplement.summary}` || correction.summary.es !== correction.summary.en || correction.summary.zh !== correction.summary.en || correction.translationStatus !== 'english_only_pending_translation')
+    if (correction?.summary.en !== `${original.summary.en} ${supplement.summary}` || correction.summary.es !== original.summary.es || correction.summary.zh !== original.summary.zh || correction.translationStatus !== 'partial_translation_english_supplement' || correction.untranslatedSupplement.text !== supplement.summary)
         throw new Error('Unmarked language fallback');
     if (!record.sources.some(s => s.kind === 'jury-instruction' && s.citation === 'CALCRIM 1153'))
         throw new Error('Missing instruction citation');

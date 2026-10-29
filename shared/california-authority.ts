@@ -144,14 +144,19 @@ type RecordSeed = Omit<
   juryInstruction?: { ref: string; url: string };
 };
 
+export function getCaliforniaConductSupplement(id: string) {
+  return conductSupplements.find(row => row.id === id);
+}
+
 export function getCaliforniaBatchCorrection(id: string) {
   const correction = corrections.find(row => row.id === id);
   const supplement = conductSupplements.find(row => row.id === id);
   if (!correction || !supplement) return correction;
   const summary = `${correction.summary.en} ${supplement.summary}`;
-  return {...correction, summary: {en: summary, es: summary, zh: summary},
+  return {...correction, summary: {en: summary, es: correction.summary.es, zh: correction.summary.zh},
+    untranslatedSupplement: {text: supplement.summary, language: "en" as const},
     supportingSections: [...new Set([...correction.supportingSections, ...supplement.supportingSections])],
-    translationStatus: supplement.translationStatus};
+    translationStatus: "partial_translation_english_supplement"};
 }
 
 export function getCaliforniaCorrectionDependencies(correction: {

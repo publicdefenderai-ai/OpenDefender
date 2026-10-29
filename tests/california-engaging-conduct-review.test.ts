@@ -31,9 +31,11 @@ describe('California engaging conduct supplement', () => {
         expect(getChargeById(id)?.description).toContain('For the engaging theory');
         for (const language of ['en', 'es', 'zh'] as const) {
             const explanation = getChargeExplanation('Prostitution', 'CA', language, id)!;
-            expect(explanation.plainSummary).toContain('For the engaging theory');
-            expect(explanation.untranslated).toBe(language !== 'en');
-            expect(explanation.translationDraft).toBe(false);
+            if(language==='en')expect(explanation.plainSummary).toContain('For the engaging theory');
+            else expect(explanation.plainSummary).toBe(original.summary[language]);
+            expect(explanation.untranslatedSupplement?.text).toBe(language==='en'?undefined:readEngagingConductReview().product.supplement.summary);
+            expect(explanation.untranslated).toBe(false);
+            expect(explanation.translationDraft).toBe(language !== 'en');
             expect(explanation.degreeContext).toBe(original.penalty[language]);
         }
     });

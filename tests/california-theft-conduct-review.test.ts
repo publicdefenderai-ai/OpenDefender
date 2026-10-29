@@ -32,11 +32,13 @@ describe('California theft conduct supplement',()=>{
  });
  it('provides the supplement through catalog, explanations and explicit language fallback',()=>{
   expect(getChargeById(original.id)?.description).toContain('Theft by trick');
-  for(const lang of ['en','es','zh']){
+  for(const lang of ['en','es','zh'] as const){
    const e=getChargeExplanation('Petty Theft','CA',lang,original.id)!;
-   expect(e.plainSummary).toContain('Theft by false pretense');
+   if(lang==='en')expect(e.plainSummary).toContain('Theft by false pretense');
+   else expect(e.plainSummary).toBe(original.summary[lang]);
+   expect(e.untranslatedSupplement?.text).toBe(lang==='en'?undefined:supplements[0].summary);
    expect(e.sources?.some(s=>s.url?.includes('sectionNum=532'))).toBe(true);
-   expect(e.untranslated).toBe(lang!=='en');expect(e.translationDraft).toBe(false);
+   expect(e.untranslated).toBe(false);expect(e.translationDraft).toBe(lang!=='en');
   }
   expect(getChargeExplanation('Petty Theft','CA','en',original.id)?.degreeContext).toBe(original.penalty.en);
  });

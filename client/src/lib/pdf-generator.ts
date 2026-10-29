@@ -1,4 +1,4 @@
-import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
+import { translationUnavailableNotice, translationSupplementNotice } from "@shared/translation-unavailable-notice";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
@@ -665,6 +665,15 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
       if (explanation?.plainSummary) {
         yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
+        if (explanation.untranslatedSupplement) {
+          yPosition += 4;
+          checkPageBreak(20);
+          doc.setFont(FONT_NAME, 'bold');
+          yPosition = addText(translationSupplementNotice(language), margin + 5, yPosition);
+          doc.setFont(FONT_NAME, 'normal');
+          yPosition += 3;
+          yPosition = addText(explanation.untranslatedSupplement.text, margin + 5, yPosition);
+        }
         yPosition += 6;
       } else {
         // Fallback description based on classification

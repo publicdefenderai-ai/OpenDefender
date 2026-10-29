@@ -61,3 +61,31 @@ test('the engaging title and old title find the same supplemented intake choice'
     }
     await expect(page.getByText(/For the engaging theory/)).toBeVisible();
 });
+
+for (const locale of ['es','zh']) {
+test(`preserves the ${locale} summary with a separate English supplement`, async ({ page }) => {
+    const { charges: originals } = catalogFixture();
+    const charges=originals.map((charge: any)=>({...charge, description: locale==='es'?charge.descriptionEs:charge.descriptionZh}));
+    await page.addInitScript(language=>localStorage.setItem('i18nextLng',language),locale);
+    const snapshot = createHash('sha256').update(JSON.stringify(charges)).digest('hex');
+    await page.route('**/api/criminal-charges?**', route => {
+        const params = new URL(route.request().url()).searchParams;
+        if (params.get('jurisdiction') !== 'CA')
+            return route.continue();
+        return route.fulfill({ json: { success: true, charges, count: charges.length, totalAvailable: charges.length, pagination: { offset: 0, limit: 500, totalMatches: charges.length, nextOffset: null, snapshot } } });
+    });
+    await page.route('**/api/ai/status', route => route.fulfill({ json: { available: true } }));
+    await page.goto('/case-guidance');
+    await page.getByTestId('button-start-guidance').click();
+    await page.getByTestId('button-choose-ai').click();
+    await page.getByTestId('select-jurisdiction').click();
+    await page.getByRole('option', { name: /California|加利福尼亚/ }).click();
+    await page.getByTestId('button-next-jurisdiction').click();
+    await page.locator('#charge-search').fill('647(b)');
+    await expect(page.getByText(charges[0].description, {exact:true})).toBeVisible();
+    const supplement=page.getByTestId('charge-translation-supplement');
+    await expect(supplement).toBeVisible();
+    await expect(supplement.locator('[lang="en"]')).toContainText('For the engaging theory');
+    await expect(supplement.getByRole('status')).toContainText(locale==='es'?'Información adicional disponible solo en inglés':'补充说明目前仅提供英文版本');
+});
+}

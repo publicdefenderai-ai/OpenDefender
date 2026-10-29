@@ -45,7 +45,7 @@ export function validateTheftConductReview(review=readTheftConductReview()) {
     const supplement=supplements.find(s=>s.id===r.id)!,base=corrections.find(c=>c.id===r.id)!;
     const c=getCaliforniaCanonicalRecord(r.id),correction=getCaliforniaBatchCorrection(r.id);
     if(!c?.selectable||c.penalty!==base.penalty.en||!same(c.categories,base.categories)||!same(c.elements,supplement.elements)||c.mentalState!==supplement.mentalState)throw new Error('Runtime conduct or penalty drift');
-    if(correction?.summary.en!==`${base.summary.en} ${supplement.summary}`||correction.summary.es!==correction.summary.en||correction.summary.zh!==correction.summary.en||correction.translationStatus!=='english_only_pending_translation')throw new Error('Unmarked language fallback');
+    if(correction?.summary.en!==`${base.summary.en} ${supplement.summary}`||correction.summary.es!==base.summary.es||correction.summary.zh!==base.summary.zh||correction.translationStatus!=='partial_translation_english_supplement' || correction.untranslatedSupplement.text!==supplement.summary)throw new Error('Unmarked language fallback');
     for(const source of r.sources){
       if(!c.sources.some(s=>{const u=new URL(s.url);return `${u.searchParams.get('lawCode')}:${u.searchParams.get('sectionNum')}`===source.key;}))throw new Error('Missing runtime source');
     }

@@ -100,8 +100,8 @@ describe("remaining California catalog combined review", () => {
         const explanation = getChargeExplanation(current.name, "CA", language, current.id)!;
         // Later evidence-bound supplements extend the English summary and explicitly mark fallback.
         const supplement=supplements.find(row=>row.id===c.id);
-        expect(explanation.plainSummary).toBe(supplement ? `${c.summary.en} ${supplement.summary}` : c.summary[language]);
-        if(supplement)expect(explanation.untranslated).toBe(language!=="en");
+        expect(explanation.plainSummary).toBe(supplement && language==="en" ? `${c.summary.en} ${supplement.summary}` : c.summary[language]);
+        if(supplement)expect(explanation.untranslated).toBe(false);
         expect(explanation.degreeContext).toBe(californiaAttorneyDecision(c.id)?.penalty ?? c.penalty[language]);
       }
     }
