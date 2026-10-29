@@ -286,25 +286,16 @@ test.describe("intent navigation and accessibility", () => {
     expect(dimensions.bodyWidth).toBe(dimensions.documentWidth);
   });
 
-  test("mobile legal-help ZIP dialogs stack controls and validate short ZIPs locally", async ({ page }) => {
+  test("mobile legal-help inline finder stacks controls and validates short ZIPs locally", async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 800 });
     await page.goto("/legal-aid");
-
-    await page.getByTestId("card-public-defender").click();
-    const dialog = page.getByRole("dialog");
-    await expect(dialog).toBeVisible();
-
-    await page.keyboard.press("Escape");
-    await expect(dialog).toBeHidden();
-    await expect(page.getByTestId("card-public-defender")).toBeFocused();
-    await page.getByTestId("card-public-defender").click();
-    await expect(dialog).toBeVisible();
-
+    await expect(page.getByTestId("card-public-defender")).toBeChecked();
+    await expect(page.getByRole("dialog")).toHaveCount(0);
     const zipInput = page.getByTestId("input-pd-zip-code-resources");
     await zipInput.fill("12");
     await page.getByTestId("button-search-pd-resources").click();
-    await expect(dialog).toContainText(/five digit|5-digit|zip/i);
-
+    await expect(page.getByRole("alert")).toContainText(/five digit|5-digit|zip/i);
+    await expect(zipInput).toHaveAttribute("aria-invalid", "true");
     await expectNoHorizontalOverflow(page, 360);
   });
 

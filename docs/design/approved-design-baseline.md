@@ -48,7 +48,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Letter Generator | Implemented and merged in PR 73; all six letter types and canonical questions retained |
 | How to use this site | Merged in PR 75; five paths, both example journeys and screenshot reservations retained |
 | Know Your Rights | Merged in PR 77; full existing explanations retained in independent disclosures; paced Miranda illustration added |
-| Case Timeline | Draft stage-layout refresh prepared; all seven stages and embedded guide content retained |
+| Case Timeline | Merged in PR 78; all seven stages and embedded guide content retained |
+| Legal Resources | Draft inline-finder refresh prepared; both real search services and complete appointed-counsel content retained |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -311,3 +312,22 @@ References:
 Follow-up: implement the accepted standalone Bail and Plea guide designs with compatibility for existing timeline anchors. Preserve all guide sections, state-selection behavior and warnings through that extraction. The How-to screenshot dependency remains open.
 
 Validation: typecheck and production build passed. All seven dedicated checks passed (six locale/theme stage checks, then the embedded-guide check after adding a lazy-route readiness assertion). Each stage check covers all seven stages at 1280px and 320px, exact current translated text, element bounds, keyboard selection, previous/next focus, immediate state callouts, clearing/reloading the state preference, and existing/new guide anchors. The guide check opens all 10 bail and 6 plea accordions. All three existing L03/L04 multilingual phone/plea/bail browser regressions also passed. Direct source comparison confirmed 63 guide translation references and 16 accordion items in the original order. Desktop and translated mobile dark views were visually inspected. The dedicated spec is release-allowlisted; no full-suite claim.
+
+
+## Legal Resources design batch
+
+Implements the approved inline type/ZIP finder and adjacent guidance column, replacing the two modal entry points. Uses real public-defender and legal-aid service adapters, not preview/example providers. Keeps separate ZIP/result/error/loading state for each type; choosing a type does not send a request. Five-digit sanitization/validation, Enter submission, loading-disabled controls, result counts, no-results and error feedback remain available. Editing a ZIP clears stale results; switching types restores that type's own results. The ZIP is not written to local storage or to the URL by this page.
+
+All existing displayed office fields remain: name, county, distance when available, address, phone/email links, hours, services, organization type for aid listings, and map directions. Existing endpoints, ZIP parameter names, legal-aid 50-mile radius, immigration/civil-aid filter and ten-result caps are unchanged. Missing numeric distance is now explicitly marked by the adapters and omitted on this page instead of displaying the prior default zero/NaN. No provider eligibility or availability is invented.
+
+Search-state correction: the adapters previously swallowed network/server failures as empty arrays. They now offer an opt-in `propagateErrors` option used here; existing callers keep the prior empty-array-on-error behavior. Valid empty responses still return an empty array in either mode. The inline finder can therefore distinguish unavailable service from a successful search with no matches. No backend endpoint or dataset changes.
+
+All six practical-tool destinations, the full appointed-counsel explanation/list, both national organizations and their descriptions, and the existing 211 text remain. Direct source comparison confirms the entire appointed-counsel section is unchanged except for CSS classes. The mockup's shortened counsel prose was not substituted for the full content. New labels, heading, tool labels and intake confirmation text are translated in English, Spanish and Chinese. Existing English-only counsel/211 material and source-returned labels remain a separate translation follow-up. Existing substantive content is retained without a new accuracy certification.
+
+References:
+- `opendefender-legal-resources-preview.html`: SHA-256 `ed8ab4673e6f67d675e861b4aa21bbf63effd81c26334501034da9537a9d80b1`
+- `legal-resources-content.html`: SHA-256 `edad6a554863f58f9fbb515acb229963b99e68855a185554e9ffa47dd442311a`
+
+The prior modal-specific navigation test was updated for the intentional inline workflow. Running that broader spec currently fails during collection because its import of `shared/california-authority` resolves `california-conduct-supplements` to JSON without a required JSON import attribute. This occurs before browser tests run and predates this design branch; it is not reported as a passing check. Dedicated finder coverage runs independently. Full release-suite status is not claimed.
+
+Validation: typecheck and production build passed; eight dedicated browser checks passed across English/Spanish/Chinese and light/dark themes, plus four service-compatibility unit tests. Browser coverage verifies both request contracts, local validation, Enter submission, aid-type filtering, source-backed contact/direction fields, type switching, clearing stale results, loading, valid empty results, unavailable service, retry and omission of missing distances. Desktop and narrow translated dark-mode layouts were visually inspected. The dedicated spec is wired into the release allowlist. Results are fictional fixtures in tests only; live provider coverage and production database availability were not certified.

@@ -7883,6 +7883,21 @@ export default {
     }
   },
   "resources": {
+    "design": {
+      "heading": "Find legal help. Start close to home.",
+      "kind": "What kind of help are you looking for?",
+      "zip": "ZIP code",
+      "beforeTitle": "Find the right kind of support.",
+      "beforeText": "Each office has its own service area and intake process. Contact the organization to confirm eligibility, the matters it handles, and availability.",
+      "immigration": "Immigration concerns?",
+      "tools": "Practical tools",
+      "court": "Court Locator",
+      "glossary": "Legal Glossary",
+      "records": "Court Records",
+      "diversion": "Diversion Programs",
+      "recordRelief": "Record Expungement",
+      "summarizer": "Document Summarizer"
+    },
     "hero": {
       "title": "Legal Resources",
       "subtitle": "Tools and information to help you navigate the legal system",
