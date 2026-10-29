@@ -29,6 +29,8 @@ export function californiaCitationSearchAliases(lawCode: CaliforniaLawCode, code
   const citationForms: Partial<Record<CaliforniaLawCode, string>> = {
     INS: "Ins. Code", UIC: "Unemp. Ins. Code", LAB: "Lab. Code",
     WIC: "Welf. & Inst. Code", BPC: "Bus. & Prof. Code",
+    PEN: "Pen. Code", VEH: "Veh. Code", HSC: "Health & Saf. Code",
+    RTC: "Rev. & Tax. Code", HNC: "Harb. & Nav. Code",
   };
   return [...new Set([abbreviations[lawCode] ?? lawCode, lawCode,
     ...(citationForms[lawCode] ? [citationForms[lawCode]!] : []),

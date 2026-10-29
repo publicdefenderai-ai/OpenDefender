@@ -25,6 +25,9 @@ describe('California charging-paper citation search',()=>{
       expect(list).toContain(`${alias} 123(a)`);expect(list).toContain(`${code} 123(a)`);
     }
     expect(californiaCitationSearchAliases('LAB','200')).toContain('LAB 200');
+    for(const [code,label] of [['PEN','Pen. Code'],['VEH','Veh. Code'],['HSC','Health & Saf. Code'],['RTC','Rev. & Tax. Code'],['HNC','Harb. & Nav. Code']] as const) {
+      expect(californiaCitationSearchAliases(code,'123(a)')).toContain(`${label} 123(a)`);
+    }
   });
   it('covers additions and corrected legacy records without erasing deliberate conduct aliases',()=>{
     const charges=getChargesByJurisdiction('CA');
