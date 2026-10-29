@@ -1,0 +1,2901 @@
+{
+  "schemaVersion": 1,
+  "scope": "combined_weapons_dependency_research_not_publication",
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "planSha256": "3317ddc4466dd8350384c96565509190050a1264785c684ed0d2de87703c42ef",
+  "approvedSuccessorSha256": "6597fa7ac65fdcf7c99cf37029a39565ee589f2313bbb655933dd37a530d07fa",
+  "retainedArtifactHashes": {
+    "california-batch-one-review.json": "614648065192eaa9494ce15aba1897f22c46a3129c5e00c94d8fb0341287f2bf",
+    "california-batch-two-review.json": "eca4872557637a305cd3c5a76a5b5750cb732478a93237d5a36b9c841319873f",
+    "california-batch-three-review.json": "1900372f95738268fb197149d1e6e87d82dba2fac7c228111acceb040ca3b6eb",
+    "california-batch-four-review.json": "c9b6db8758608c6350e6596cbcf2fa23af3b4bbc165b456e0739ac9ab35bbbf7",
+    "california-batch-five-review.json": "34dd03d681d554c09cdc83afa3a14bcd5a50811b5136592f1693d3e3f9f33000",
+    "california-batch-six-review.json": "1e85ed572bd7421fbb83c67d42f0bedd583347bde340826a3ba1f92772b35070",
+    "california-catalog-source-expansion.json": "3d9ae7193f9bd7918ce0835f4f266a68ba82a0b42c056c4168559f43c4d1cd87",
+    "california-person-property-acquisition.json": "aa12d432c6f9d662cc7cdd72954dfb6acc53bf311132df32139321b2ba09aa33",
+    "california-forgery-theft-acquisition.json": "26a47b280a53184d12f429788cb2386456b5b683e9135b07cabd16e12db115e7",
+    "california-protected-person-acquisition.json": "1945fbd3fd42175e954344b367dac6109aea6434c42fd91118fa40d456666133",
+    "california-controlled-substances-acquisition.json": "6c8720bd5b6e7d2a64f2ece674096401ed070856fe8ff17fb76fe5f0734ebe8d",
+    "california-drug-successor-acquisition.json": "17c4c319f398ac9657d0a9fa7ded76bfec0b74349a5dd6d5047a319776c98a72",
+    "california-driving-publication-acquisition.json": "4a5c3f5f5cc55026672457ff46e35f2c4340b896f859eb6b9500a3cf40a4ba80",
+    "california-traffic-acquisition.json": "a840dac28aa332800ae8d1f697476389c82f67d1af12cee312e1088615ffd672",
+    "california-vehicle-identification-acquisition.json": "c942b6bf930238216fd2a29e5dd3b1a94ad61e006d073b5c8708e633b5352de7",
+    "california-violence-detention-acquisition.json": "c9d230dc6654de9488338a58c2986c64ab397933260ee48c5386c3f304aadc89",
+    "california-sexual-offenses-acquisition.json": "c11fc737509a13fe6e44b580f9c3233d4690a10087ced5885a200aa7fc880f22",
+    "california-registration-exploitation-acquisition.json": "53edb86fb9f24025db88fef3c396980cb5f39f7c4fac3a0d11e35e62fcb7a4c8",
+    "california-weapons-threats-acquisition.json": "183e6e01b2cc927a2a314822993fbfe70668f45c14b058a2c17167badcdf88c0",
+    "california-weapons-eligibility-acquisition.json": "b152c1a3b0266becf56d726ffaac46f71e9524b62b638e2c556b5b913952aeba",
+    "california-justice-custody-acquisition.json": "425f16bc0db2bb39cb14d3f92ebda383c4563b728314af6f86355c647b56b2b4",
+    "california-property-arson-acquisition.json": "1a5684879195d37e9eaec1203f70409e1c9ee16ec63e5b9561eed6cdcd2ca1e2",
+    "california-financial-tax-acquisition.json": "b6e5ecc5369c5fda0fc7d41c1422abfbf8d86bde2833d4abfe6e587d9cb8e5cb",
+    "california-public-order-acquisition.json": "fbcd849a3639dd44c87ff283c8c5bcecdd7a54bffd9d7b947c80388fefacd25f",
+    "california-repeat-theft-assembly-acquisition.json": "079a654548c10701ffadaf199b6ce35b4c312776250bf20cc83de2f6f47695a1",
+    "california-financial-identity-acquisition.json": "dd51ae1c1e2317037daeaf628a1c96c7a8914d27faf6ed53dfa5abf90cf3d54b",
+    "california-officials-custody-acquisition.json": "0da0130d51c444c4bb5e8e3eb6d44ef5bdc0fa9f2c1d7ccd56e6d043b9f19b7e",
+    "california-theft-conduct-review.json": "f199a7c6bffe874dbbea395b1efe17cb2a7aff8e38ea7d9b24b447c2af235edd",
+    "california-priority-person-acquisition.json": "dad3aefb7017cba27c8807a655a59c46125f0af31e79725bd1d4ba1f19fdb7d8",
+    "california-public-conduct-knives-acquisition.json": "d632c4b001c6f70186eb49682809a2aba2fa4e023c32f4185503e22717319982",
+    "california-other-code-priority-acquisition.json": "27502eb28aacd1a9cbb3c067d9faad93d42e5f377465ab135ddffc2351afd247",
+    "california-benefit-program-acquisition.json": "07d4a302409eff1e0a34c57077a39f728b71b3866a9a7c32d44541e2401304aa"
+  },
+  "baselineRangeKeys": [
+    "PEN:25900",
+    "PEN:25905",
+    "PEN:25910",
+    "PEN:25915",
+    "PEN:25920",
+    "PEN:25925",
+    "PEN:26000",
+    "PEN:26005",
+    "PEN:26010",
+    "PEN:26015",
+    "PEN:26020",
+    "PEN:26025",
+    "PEN:26030",
+    "PEN:26035",
+    "PEN:26040",
+    "PEN:26045",
+    "PEN:26050",
+    "PEN:26055",
+    "PEN:26060",
+    "PEN:30625",
+    "PEN:30630",
+    "PEN:30631",
+    "PEN:30635",
+    "PEN:30640",
+    "PEN:30645",
+    "PEN:30650",
+    "PEN:30655",
+    "PEN:30660",
+    "PEN:30665",
+    "PEN:30670",
+    "PEN:30675",
+    "PEN:30680",
+    "PEN:30685",
+    "PEN:30710",
+    "PEN:30715",
+    "PEN:30720",
+    "PEN:30725",
+    "PEN:30730",
+    "PEN:30735",
+    "PEN:30800",
+    "PEN:30900",
+    "PEN:30905",
+    "PEN:30910",
+    "PEN:30915",
+    "PEN:30920",
+    "PEN:30925",
+    "PEN:30930",
+    "PEN:30935",
+    "PEN:30940",
+    "PEN:30945",
+    "PEN:30950",
+    "PEN:30955",
+    "PEN:30960",
+    "PEN:30965",
+    "PEN:31000",
+    "PEN:31005"
+  ],
+  "candidateRangeKeys": [
+    "PEN:25900",
+    "PEN:25905",
+    "PEN:25910",
+    "PEN:25915",
+    "PEN:25920",
+    "PEN:25925",
+    "PEN:26000",
+    "PEN:26005",
+    "PEN:26010",
+    "PEN:26015",
+    "PEN:26020",
+    "PEN:26025",
+    "PEN:26030",
+    "PEN:26035",
+    "PEN:26040",
+    "PEN:26045",
+    "PEN:26050",
+    "PEN:26055",
+    "PEN:26060",
+    "PEN:30625",
+    "PEN:30630",
+    "PEN:30631",
+    "PEN:30635",
+    "PEN:30640",
+    "PEN:30645",
+    "PEN:30650",
+    "PEN:30655",
+    "PEN:30660",
+    "PEN:30665",
+    "PEN:30670",
+    "PEN:30675",
+    "PEN:30680",
+    "PEN:30685",
+    "PEN:30710",
+    "PEN:30715",
+    "PEN:30720",
+    "PEN:30725",
+    "PEN:30730",
+    "PEN:30735",
+    "PEN:30800",
+    "PEN:30900",
+    "PEN:30905",
+    "PEN:30910",
+    "PEN:30915",
+    "PEN:30920",
+    "PEN:30925",
+    "PEN:30930",
+    "PEN:30935",
+    "PEN:30940",
+    "PEN:30945",
+    "PEN:30950",
+    "PEN:30955",
+    "PEN:30960",
+    "PEN:30965",
+    "PEN:31000",
+    "PEN:31005"
+  ],
+  "requiredKeys": [
+    "PEN:1170",
+    "PEN:16520",
+    "PEN:16580",
+    "PEN:16840",
+    "PEN:17",
+    "PEN:17030",
+    "PEN:18",
+    "PEN:186.22",
+    "PEN:19",
+    "PEN:23515",
+    "PEN:25850",
+    "PEN:25900",
+    "PEN:25905",
+    "PEN:25910",
+    "PEN:25915",
+    "PEN:25920",
+    "PEN:25925",
+    "PEN:26000",
+    "PEN:26005",
+    "PEN:26010",
+    "PEN:26015",
+    "PEN:26020",
+    "PEN:26025",
+    "PEN:26030",
+    "PEN:26035",
+    "PEN:26040",
+    "PEN:26045",
+    "PEN:26050",
+    "PEN:26055",
+    "PEN:26060",
+    "PEN:29800",
+    "PEN:29900",
+    "PEN:30510",
+    "PEN:30515",
+    "PEN:30530",
+    "PEN:30600",
+    "PEN:30605",
+    "PEN:30610",
+    "PEN:30615",
+    "PEN:30625",
+    "PEN:30630",
+    "PEN:30631",
+    "PEN:30635",
+    "PEN:30640",
+    "PEN:30645",
+    "PEN:30650",
+    "PEN:30655",
+    "PEN:30660",
+    "PEN:30665",
+    "PEN:30670",
+    "PEN:30675",
+    "PEN:30680",
+    "PEN:30685",
+    "PEN:30710",
+    "PEN:30715",
+    "PEN:30720",
+    "PEN:30725",
+    "PEN:30730",
+    "PEN:30735",
+    "PEN:30800",
+    "PEN:30900",
+    "PEN:30905",
+    "PEN:30910",
+    "PEN:30915",
+    "PEN:30920",
+    "PEN:30925",
+    "PEN:30930",
+    "PEN:30935",
+    "PEN:30940",
+    "PEN:30945",
+    "PEN:30950",
+    "PEN:30955",
+    "PEN:30960",
+    "PEN:30965",
+    "PEN:31000",
+    "PEN:31005",
+    "PEN:672",
+    "WIC:8100",
+    "WIC:8103"
+  ],
+  "reusedKeys": [
+    "PEN:1170",
+    "PEN:16520",
+    "PEN:16580",
+    "PEN:16840",
+    "PEN:17",
+    "PEN:18",
+    "PEN:186.22",
+    "PEN:19",
+    "PEN:23515",
+    "PEN:25850",
+    "PEN:29800",
+    "PEN:29900",
+    "PEN:30510",
+    "PEN:30515",
+    "PEN:30605",
+    "PEN:30610",
+    "PEN:30675",
+    "PEN:30900",
+    "PEN:30945",
+    "PEN:672",
+    "WIC:8100",
+    "WIC:8103"
+  ],
+  "missingKeys": [],
+  "candidateMissingKeys": [],
+  "documents": {
+    "PEN:17030": [
+      {
+        "id": "PEN17030.20107116",
+        "lawCode": "PEN",
+        "section": "17030.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dbbd9509-0ebc-11e0-9b76-a227e281d99a",
+        "division": "2.",
+        "title": "1.",
+        "part": "6.",
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91107.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91107,
+        "tableRowSha256": "0dd38b16ec680cdebb25804aadd4c63fba904f483fbccea73b6e6a88e559810d",
+        "contentSha256": "3f940b37b97a0c417e8016656873563ff1c4b80e79b27d4a1cdb18a1975192b2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As used in this part, “prohibited area” means any place where it is unlawful to discharge a weapon.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17030."
+      }
+    ],
+    "PEN:25900": [
+      {
+        "id": "PEN25900.20132672",
+        "lawCode": "PEN",
+        "section": "25900.",
+        "opStatutes": "2013",
+        "opChapter": "267",
+        "opSection": "2",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6b542000-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 267, Sec. 2.   (AB 703)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83750.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83750,
+        "tableRowSha256": "323b52d4437507739d9563a634513e44d3279c815da505da131cddfe20071e4a",
+        "contentSha256": "82e7e8c2d18dd7e44e299315a03de3e6fc1c6ca4680bd3d1100579c6bcbafbd6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As provided in this article, Section 25850 does not apply to any of the following:</p><p>(a)<span class=\"EnSpace\"/>Any peace officer, listed in Section 830.1 or 830.2, or subdivision (a) of Section 830.33, whether active or honorably retired.</p><p>(b)<span class=\"EnSpace\"/>Any other duly appointed peace officer.</p><p>(c)<span class=\"EnSpace\"/>Any honorably retired peace officer listed in subdivision (c) of Section 830.5.</p><p>(d)<span class=\"EnSpace\"/>Any other honorably retired peace officer who during the course and scope of his or her appointment as a peace officer was authorized to, and did, carry a firearm.</p><p>(e)<span class=\"EnSpace\"/>Any full-time paid peace officer of another state or the federal government who is carrying out official duties while in California.</p><p>(f)<span class=\"EnSpace\"/>Any person summoned by any of these officers to assist in making arrests or preserving the peace while the person is actually engaged in assisting that officer.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25900."
+      }
+    ],
+    "PEN:25905": [
+      {
+        "id": "PEN25905.20131491",
+        "lawCode": "PEN",
+        "section": "25905.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "1",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6d1c83f2-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 1.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_91006.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91006,
+        "tableRowSha256": "127e095b0e60b6bdc600ef5b2bd3b5c0a869c1abbf64fe96ef05f2e4dff5f50f",
+        "contentSha256": "93ebc763054eb3e55aad4aad9e48b9f490be5471d17fc4fbf2cfe2311014c802",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any peace officer described in Section 25900 who has been honorably retired shall be issued an identification certificate by the law enforcement agency from which the officer has retired.</p><p>(2)<span class=\"EnSpace\"/>If the agency from which the officer has retired\n\t\t\t\t\t\tis no longer providing law enforcement services or the relevant governmental body is dissolved, the agency that subsequently provides law enforcement services for that jurisdiction shall issue the identification certificate to that peace officer. This paragraph shall apply only if the following conditions are met:</p><p>(A)<span class=\"EnSpace\"/>The successor agency is in possession of the retired officer’s complete personnel records or can otherwise verify the retired officer’s honorably retired status.</p><p>(B)<span class=\"EnSpace\"/>The retired officer is in compliance with all the requirements of the successor agency for the issuance of a retirement identification card and concealed weapon endorsement.</p><p>(b)<span class=\"EnSpace\"/>The issuing agency may charge a fee necessary to cover any reasonable expenses incurred by the agency in issuing certificates pursuant to Sections 25900, 25910, 25925, and this section.</p><p>(c)<span class=\"EnSpace\"/>Any officer, except an officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall have an endorsement on the identification certificate stating that the issuing agency\n\t\t\t\t\t\tapproves the officer’s carrying of a loaded firearm.</p><p>(d)<span class=\"EnSpace\"/>An honorably retired peace officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall not be required to obtain an endorsement from the issuing agency to carry a loaded firearm.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25905."
+      }
+    ],
+    "PEN:25910": [
+      {
+        "id": "PEN25910.20107116",
+        "lawCode": "PEN",
+        "section": "25910.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0265b3-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83751.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83751,
+        "tableRowSha256": "53146306093475227875bc1639decdc7338f6a5adb4eeb374d5875f46b3d6f28",
+        "contentSha256": "8da3cd0775f80840c1eb4d194239e845b9f2bd21f92930bd9e22307129d4293f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (b), no endorsement or renewal endorsement issued pursuant to Section 25915 shall be effective unless it is in the format set forth in subdivision (c) of Section 25460.</p><p>(b)<span class=\"EnSpace\"/>Any peace officer listed in subdivision (f) of Section 830.2 or in subdivision (c) of Section 830.5, who is retired between January 2, 1981, and on or before December 31, 1988, and who is authorized to carry a loaded firearm pursuant to this article, shall not be required to have an endorsement in the format set forth in subdivision (c) of Section 25460 until the time of the issuance, on or after January 1, 1989, of a renewal endorsement pursuant to Section 25915.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25910."
+      }
+    ],
+    "PEN:25915": [
+      {
+        "id": "PEN25915.20131492",
+        "lawCode": "PEN",
+        "section": "25915.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "2",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6ee276e4-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 2.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_91007.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91007,
+        "tableRowSha256": "b93eb07ffce71a7399d73a43b39f92c5b15935f60288b259cddf7bd1b9ae2993",
+        "contentSha256": "396b7684de10c99da2dc05bb393bf694b2b4e34592e55c95387fe3b574d49176",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every five years, a retired peace officer, except an officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall petition the issuing agency, or a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, for renewal of the privilege to carry a loaded firearm.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25915."
+      }
+    ],
+    "PEN:25920": [
+      {
+        "id": "PEN25920.20131493",
+        "lawCode": "PEN",
+        "section": "25920.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "3",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_70aa65a6-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 3.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83752.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83752,
+        "tableRowSha256": "6f98d393537b92747275f0de5771a640ed5868b7c959e91afcf9607baf14287e",
+        "contentSha256": "2fb759912bd184fc41ac5e26405d105b8e097f7a816cd5da6dc12fce4952e89c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The agency from which a peace officer is honorably retired, or a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, may, upon initial retirement of the peace officer, or at any time subsequent thereto, deny or revoke for good cause the retired officer’s privilege to carry a loaded firearm.</p><p>(b)<span class=\"EnSpace\"/>A peace officer who is listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who is retired prior to January 1, 1981, shall have the privilege to carry a loaded firearm denied or revoked by having the agency from which the officer retired,\n\t\t\t\t\t\tor a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, stamp on the officer’s identification certificate “No CCW privilege.”</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25920."
+      }
+    ],
+    "PEN:25925": [
+      {
+        "id": "PEN25925.20131494",
+        "lawCode": "PEN",
+        "section": "25925.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "4",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_7266bba8-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 4.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83869.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83869,
+        "tableRowSha256": "65b67598e33a38d9c9ba4ad84fbcd1283934e61775f97d1f01fb716ee8d1c458",
+        "contentSha256": "aba9ec3c92f7128ccef9a7954aa64e7a13868af0e1ef8ded41131a690d9f56e6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>An honorably retired peace officer who is listed in subdivision (c) of Section 830.5 and authorized to carry a loaded firearm by this article shall meet the training requirements of Section 832 and shall qualify with the firearm at least annually.</p><p>(b)<span class=\"EnSpace\"/>The individual retired peace officer shall be responsible for maintaining eligibility to carry a loaded firearm.</p><p>(c)<span class=\"EnSpace\"/>The Department of Justice shall provide subsequent arrest notification pursuant to Section 11105.2 regarding honorably retired peace officers listed in subdivision (c) of Section 830.5 to the agency from which the officer has retired, or a successor\n\t\t\t\t\t\tagency pursuant to paragraph (2) of subdivision (a) of Section 25905.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25925."
+      }
+    ],
+    "PEN:26000": [
+      {
+        "id": "PEN26000.20107116",
+        "lawCode": "PEN",
+        "section": "26000.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03501d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91008.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91008,
+        "tableRowSha256": "24afa8adcea448a8aba729938b4e57f74a9eb4cec141a43d1a0724b69a52b022",
+        "contentSha256": "4aadb4c755b35918d01207ee6147d59289023526856a6892134c608dc3496618",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to members of the military forces of this state or of the United States engaged in the performance of their duties.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26000."
+      }
+    ],
+    "PEN:26005": [
+      {
+        "id": "PEN26005.20107116",
+        "lawCode": "PEN",
+        "section": "26005.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03772f-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83870.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83870,
+        "tableRowSha256": "ea947fdcd99807d5e56302d28f8fe2cb258d6ed428fc145631794ee2549d7e83",
+        "contentSha256": "f476aa64ea98e0fd89b11310a2ee8d207b62649248a81006f7b1d946fecabcbc",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to either of the following:</p><p>(a)<span class=\"EnSpace\"/>Persons who are using target ranges for the purpose of practice shooting with a firearm.</p><p>(b)<span class=\"EnSpace\"/>Members of shooting clubs while hunting on the premises of those clubs. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26005."
+      }
+    ],
+    "PEN:26010": [
+      {
+        "id": "PEN26010.20107116",
+        "lawCode": "PEN",
+        "section": "26010.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc039e41-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91009.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91009,
+        "tableRowSha256": "486bb83b23383bcf948fa9a1faa89096fc05e15523b0347c3427d7dc2d20389b",
+        "contentSha256": "74b1b42ac3d47a6eeda738721f99b80bca609ac0a0cd3123b7384d0549888ae9",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to the carrying of any handgun by any person as authorized pursuant to Chapter 4 (commencing with Section 26150) of Division 5.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26010."
+      }
+    ],
+    "PEN:26015": [
+      {
+        "id": "PEN26015.20107116",
+        "lawCode": "PEN",
+        "section": "26015.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03c553-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83871.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83871,
+        "tableRowSha256": "4515225ab3f2f70409ba5cb65d60da8bffd49697d7cd53366fa782432b9a4275",
+        "contentSha256": "9258cd45740556b44cf743a1e5012469a5118ba30fc0de66f0fd1485c07b302f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to any armored vehicle guard, as defined in Section 7582.1 of the Business and Professions Code, if either of the following conditions is satisfied:</p><p>(a)<span class=\"EnSpace\"/>The guard was hired prior to January 1, 1977, and is acting within the course and scope of employment. </p><p>(b)<span class=\"EnSpace\"/>The guard was hired on or after January 1, 1977, has received a firearms qualification card from the Department of Consumer Affairs, and is acting within the course and scope of employment.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26015."
+      }
+    ],
+    "PEN:26020": [
+      {
+        "id": "PEN26020.2011296231",
+        "lawCode": "PEN",
+        "section": "26020.",
+        "opStatutes": "2011",
+        "opChapter": "296",
+        "opSection": "231",
+        "effectiveDate": "2012-01-01 00:00:00",
+        "versionId": "id_4c881733-30d5-11e1-a5d5-ab3cb917b6aa",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Amended by Stats. 2011, Ch. 296, Sec. 231.   (AB 1023)   Effective January 1, 2012.",
+        "contentMember": "LAW_SECTION_TBL_77522.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 77522,
+        "tableRowSha256": "db7edba605f77d07109c162352a10f311973dce5bf6be180612fa5de9a36080f",
+        "contentSha256": "e4cf0a1e51df9f82f9704d051276e188d6b1c6ef7350c1c216ff03a35de365f1",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Upon approval of the sheriff of the county in which the retiree resides, Section 25850 does not apply to any honorably retired federal officer or agent of any federal law enforcement agency, including, but not limited to, the Federal Bureau of Investigation, the United States Secret Service, the United States Customs Service, the federal Bureau of Alcohol, Tobacco, Firearms and Explosives, the Federal Bureau of Narcotics, the United States Drug Enforcement Administration, the United States Border Patrol, and any officer or agent of the Internal Revenue Service who was authorized to carry weapons while on duty, who was assigned to duty within the state for a period of not less than one year, or who retired from active service in the state.</p><p>(b)<span class=\"EnSpace\"/>A retired federal officer or agent shall provide the sheriff with certification from the agency from which the officer or agent retired certifying that person’s service in the state, stating the nature of that person’s retirement, and indicating the agency’s concurrence that the retired federal officer or agent should be accorded the privilege of carrying a loaded firearm.</p><p>(c)<span class=\"EnSpace\"/>Upon approval, the sheriff shall issue a permit to the retired federal officer or agent indicating that the retiree may carry a loaded firearm in accordance with this section. The permit shall be valid for a period not exceeding five years, shall be carried by the retiree while carrying a loaded firearm, and may be revoked for good cause.</p><p>(d)<span class=\"EnSpace\"/>The sheriff of the county in which the retired federal officer or agent resides may require\n\t\t\t\t  recertification prior to a permit renewal, and may suspend the privilege for cause. The sheriff may charge a fee necessary to cover any reasonable expenses incurred by the county.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26020."
+      }
+    ],
+    "PEN:26025": [
+      {
+        "id": "PEN26025.20107116",
+        "lawCode": "PEN",
+        "section": "26025.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc043a87-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83977.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83977,
+        "tableRowSha256": "2f3a1036659e8d17043c6ef6eecc08a8bdceb9128a6147bb2ab6464f6de0f5f9",
+        "contentSha256": "2a671bd308da9f696fe63a0e01c270ffc02b2861e7da8527383cec43d7314171",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to any of the following who have completed a regular course in firearms training approved by the Commission on Peace Officer Standards and Training:</p><p>(a)<span class=\"EnSpace\"/>Patrol special police officers appointed by the police commission of any city, county, or city and county under the express terms of its charter who also, under the express terms of the charter, satisfy all of the following requirements: </p><p>(1)<span class=\"EnSpace\"/>They are subject to suspension or dismissal after a hearing on charges duly filed with the commission after a fair and impartial trial.</p><p>(2)<span class=\"EnSpace\"/>They are not less than 18\n\t\t\t\t\t\t\t\tyears of age or more than 40 years of age.</p><p>(3)<span class=\"EnSpace\"/>They possess physical qualifications prescribed by the commission.</p><p>(4)<span class=\"EnSpace\"/>They are designated by the police commission as the owners of a certain beat or territory as may be fixed from time to time by the police commission.</p><p>(b)<span class=\"EnSpace\"/>Animal control officers or zookeepers, regularly compensated in that capacity by a governmental agency, when carrying weapons while acting in the course and scope of their employment and when designated by a local ordinance or, if the governmental agency is not authorized to act by ordinance, by a resolution, either individually or by class, to carry the weapons.</p><p>(c)<span class=\"EnSpace\"/>Persons who are authorized to carry the weapons pursuant to Section 14502 of the Corporations Code, while actually\n\t\t\t\t\t\t\t\tengaged in the performance of their duties pursuant to that section.</p><p>(d)<span class=\"EnSpace\"/>Harbor police officers designated pursuant to Section 663.5 of the Harbors and Navigation Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26025."
+      }
+    ],
+    "PEN:26030": [
+      {
+        "id": "PEN26030.20107116",
+        "lawCode": "PEN",
+        "section": "26030.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0488a9-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91111.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91111,
+        "tableRowSha256": "c87775167936e47a367a7134e6f34a0bb30ab57c9fbcb50a2645ae597096d214",
+        "contentSha256": "79940c364e66c2b3dd179cf6d675ccc114f3d86413a2cdf51d38256b39db6c14",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Section 25850 does not apply to any of the following who have been issued a certificate pursuant to subdivision (d):</p><p>(1)<span class=\"EnSpace\"/>Guards or messengers of common carriers, banks, and other financial institutions, while actually employed in and about the shipment, transportation, or delivery of any money, treasure, bullion, bonds, or other thing of value within this state.</p><p>(2)<span class=\"EnSpace\"/>Guards of contract carriers operating armored vehicles pursuant to California Highway Patrol and Public Utilities Commission authority, if they were hired prior to January 1, 1977.</p><p>(3)<span class=\"EnSpace\"/>Guards of\n\t\t\t\t\t\t\t\tcontract carriers operating armored vehicles pursuant to California Highway Patrol and Public Utilities Commission authority, if they were hired on or after January 1, 1977, and they have completed a course in the carrying and use of firearms that meets the standards prescribed by the Department of Consumer Affairs.</p><p>(4)<span class=\"EnSpace\"/>Private investigators licensed pursuant to Chapter 11.3 (commencing with Section 7512) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(5)<span class=\"EnSpace\"/>Uniformed employees of private investigators licensed pursuant to Chapter 11.3 (commencing with Section 7512) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(6)<span class=\"EnSpace\"/>Private patrol operators licensed pursuant to Chapter 11.5 (commencing\n\t\t\t\t\t\t\t\twith Section 7580) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(7)<span class=\"EnSpace\"/>Uniformed employees of private patrol operators licensed pursuant to Chapter 11.5 (commencing with Section 7580) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(8)<span class=\"EnSpace\"/>Alarm company operators licensed pursuant to Chapter 11.6 (commencing with Section 7590) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(9)<span class=\"EnSpace\"/>Uniformed security guards or night watch persons employed by any public agency, while acting within the scope and course of their employment.</p><p>(10)<span class=\"EnSpace\"/>Uniformed security guards, regularly\n\t\t\t\t\t\t\t\temployed and compensated in that capacity by persons engaged in any lawful business, and uniformed alarm agents employed by an alarm company operator, while actually engaged in protecting and preserving the property of their employers, or on duty or en route to or from their residences or their places of employment, and security guards and alarm agents en route to or from their residences or employer-required range training.</p><p>(b)<span class=\"EnSpace\"/>Nothing in paragraph (10) of subdivision (a) shall be construed to prohibit cities and counties from enacting ordinances requiring alarm agents to register their names.</p><p>(c)<span class=\"EnSpace\"/>A certificate under this section shall not be required of any person who is a peace officer, who has completed all training required by law for the exercise of the person’s power as a peace officer, and who is employed while not on duty as a peace officer.</p><p>(d)<span class=\"EnSpace\"/>The Department of Consumer Affairs may issue a certificate to any person referred to in this section, upon notification by the school where the course was completed, that the person has successfully completed a course in the carrying and use of firearms and a course of training in the exercise of the powers of arrest, which meet the standards prescribed by the department pursuant to Section 7583.5 of the Business and Professions Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26030."
+      }
+    ],
+    "PEN:26035": [
+      {
+        "id": "PEN26035.20107116",
+        "lawCode": "PEN",
+        "section": "26035.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0524eb-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91110.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91110,
+        "tableRowSha256": "9a978d4cd227a842d97685d8397450db020b27cb3a49a9341fd4fb6bf06f999f",
+        "contentSha256": "1bda5abc01c0951314899a6d69d8d0f7365f70ccd9ff4287c2ce8d843a213848",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person engaged in any lawful business, including a nonprofit organization, or any officer, employee, or agent authorized by that person for lawful purposes connected with that business, from having a loaded firearm within the person’s place of business, or any person in lawful possession of private property from having a loaded firearm on that property.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26035."
+      }
+    ],
+    "PEN:26040": [
+      {
+        "id": "PEN26040.20107116",
+        "lawCode": "PEN",
+        "section": "26040.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc054bfd-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83978.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83978,
+        "tableRowSha256": "3df70808b1768e3cc2ec460eb11cc0d1c2780aa85f9e44158590f2e519ec6a61",
+        "contentSha256": "628eae8a5335d8d8e0fd98771273e110695a3849847186a665007124482662b6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from carrying a loaded firearm in an area within an incorporated city while engaged in hunting, provided that the hunting at that place and time is not prohibited by the city council.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26040."
+      }
+    ],
+    "PEN:26045": [
+      {
+        "id": "PEN26045.20181857",
+        "lawCode": "PEN",
+        "section": "26045.",
+        "opStatutes": "2018",
+        "opChapter": "185",
+        "opSection": "7",
+        "effectiveDate": "2019-01-01 00:00:00",
+        "versionId": "id_507aa098-f97a-11e8-bd10-077ff3712fb6",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Amended by Stats. 2018, Ch. 185, Sec. 7.   (AB 2176)   Effective January 1, 2019.",
+        "contentMember": "LAW_SECTION_TBL_84077.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 84077,
+        "tableRowSha256": "ef16947b20cd7e9a15e816795d0ae0d22643093bd7c366649f673057c540b0dd",
+        "contentSha256": "7ca1e7e24530295ad46b49886507e23f9a897e4e8e20a21c65dfb67df97b6e4e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Nothing in Section 25850 is intended to preclude the carrying of any loaded firearm, under circumstances where it would otherwise be lawful, by a person who reasonably believes that any person or the property of any person is in immediate, grave danger and that the carrying of the weapon is necessary for the preservation of that person or property.</p><p>(b)<span class=\"EnSpace\"/>A violation of Section 25850 is justifiable when a person who possesses a firearm reasonably believes that person is in grave danger because of circumstances forming the basis of a current restraining order issued by a court against another person who has been found to pose a threat to the life or safety of the person who possesses the firearm. This subdivision may not apply when the circumstances involve a mutual\n\t\t\t\t  restraining order issued pursuant to Division 10 (commencing with Section 6200) of the Family Code absent a factual finding of a specific threat to the person’s life or safety. It is not the intent of the Legislature to limit, restrict, or narrow the application of current statutory or judicial authority to apply this or other justifications to a defendant charged with violating Section 25850 or committing another similar offense. Upon trial for violating Section 25850, the trier of fact shall determine whether the defendant was acting out of a reasonable belief that the defendant was in grave danger.</p><p>(c)<span class=\"EnSpace\"/>As used in this section, “immediate” means the brief interval before and after the local law enforcement agency, when reasonably possible, has been notified of the danger and before the arrival of its assistance.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26045."
+      }
+    ],
+    "PEN:26050": [
+      {
+        "id": "PEN26050.20107116",
+        "lawCode": "PEN",
+        "section": "26050.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc059a21-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91112.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91112,
+        "tableRowSha256": "334adfeaf3f95ad7050061effdfb9fb309cd7e234b2d35954daa7a66da5aaf2a",
+        "contentSha256": "ddd2096bfb59afb310a4a509c05e275867c60f6a2212cf003d2e20359ef48683",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 is intended to preclude the carrying of a loaded firearm by any person while engaged in the act of making or attempting to make a lawful arrest.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26050."
+      }
+    ],
+    "PEN:26055": [
+      {
+        "id": "PEN26055.20107116",
+        "lawCode": "PEN",
+        "section": "26055.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc05c133-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91113.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91113,
+        "tableRowSha256": "32ee741850dd9ac0c00038139fe579cf3c5ae3cc2ac1fc42b9092b7e27d9f14a",
+        "contentSha256": "21dd990e2f0ab79f3d92aab947df599b12020f6dadbbc2534a436fc846433b09",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from having a loaded weapon, if it is otherwise lawful, at the person’s place of residence, including any temporary residence or campsite.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26055."
+      }
+    ],
+    "PEN:26060": [
+      {
+        "id": "PEN26060.20107116",
+        "lawCode": "PEN",
+        "section": "26060.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc05e845-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_84078.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 84078,
+        "tableRowSha256": "4915e3a6416eef9b5e4337dd528378b2312f9a504a66fb75bfec0ea98cef0341",
+        "contentSha256": "0991a6cb01f3c66ac9667f34fe78c7d1252a7a24ef4dc3c894c25185ebb15a53",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from storing aboard any vessel or aircraft any loaded or unloaded rocket, rocket propelled projectile launcher, or similar device designed primarily for emergency or distress signaling purposes, or from possessing that type of a device while in a permitted hunting area or traveling to or from a permitted hunting area and carrying a valid California permit or license to hunt.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26060."
+      }
+    ],
+    "PEN:30530": [
+      {
+        "id": "PEN30530.20107116",
+        "lawCode": "PEN",
+        "section": "30530.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6aeba3-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "1.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92328.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92328,
+        "tableRowSha256": "1d4deffb15aa4a7e23358f3fcde9e76b20fb3a6dcb46f5e992c3207c2bbfb6da",
+        "contentSha256": "d53a0924a12ca269e06fd6450da2fbfb42c93c22f15bea3033048944d6aff5ae",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>As used in this part, “.50 BMG rifle” means a center fire rifle that can fire a .50 BMG cartridge and is not already an assault weapon or a machinegun.</p><p>(b)<span class=\"EnSpace\"/>A “.50 BMG rifle” does not include any antique firearm, nor any curio or relic as defined in Section 478.11 of Title 27 of the Code of Federal Regulations. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30530."
+      }
+    ],
+    "PEN:30600": [
+      {
+        "id": "PEN30600.201115549",
+        "lawCode": "PEN",
+        "section": "30600.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "549",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_bd9d7465-660f-11e0-8fc7-8d05c2a88098",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 549.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+        "contentMember": "LAW_SECTION_TBL_83321.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83321,
+        "tableRowSha256": "1453dced6260a558047a4619faa7cc3d5f751eee3c1815edfcf38c87ad3ae10b",
+        "contentSha256": "acab5b93310e48ead1cd2ba603dabbb5783ac833c3c4c5562c8eddf2796aba29",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years.</p><p>(b)<span class=\"EnSpace\"/>In addition and consecutive to the punishment imposed under subdivision (a), any person who transfers, lends, sells, or gives any assault weapon or any .50 BMG rifle to a minor in violation of subdivision (a) shall receive an enhancement of imprisonment pursuant to subdivision (h) of Section 1170\n\t\t\t\t  of one year.</p><p>(c)<span class=\"EnSpace\"/>Except in the case of a first violation involving not more than two firearms as provided in Sections 30605 and 30610, for purposes of this article, if more than one assault weapon or .50 BMG rifle is involved in any violation of this article, there shall be a distinct and separate offense for each.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600."
+      }
+    ],
+    "PEN:30615": [
+      {
+        "id": "PEN30615.20107116",
+        "lawCode": "PEN",
+        "section": "30615.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6c242d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92329.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92329,
+        "tableRowSha256": "ddfff21b48a890f455efe7d329fb98bfb6c2e166d0e23fe162a774305659f8bb",
+        "contentSha256": "4d33c1f025640e307856d4db87c1d2a0218a624c8cdc9177e6f33f426313a8e0",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Notwithstanding Section 654 or any other provision of law, any person who commits another crime while violating this article may receive an additional, consecutive punishment of one year for violating this article, in addition and consecutive to the punishment, including enhancements, which is prescribed for the other crime. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30615."
+      }
+    ],
+    "PEN:30625": [
+      {
+        "id": "PEN30625.202170108",
+        "lawCode": "PEN",
+        "section": "30625.",
+        "opStatutes": "2021",
+        "opChapter": "70",
+        "opSection": "108",
+        "effectiveDate": "2021-07-12 00:00:00",
+        "versionId": "id_e2c7dfd1-e63f-11eb-ad04-a7886069fc3b",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended by Stats. 2021, Ch. 70, Sec. 108.   (AB 141)   Effective July 12, 2021.",
+        "contentMember": "LAW_SECTION_TBL_83380.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83380,
+        "tableRowSha256": "ce47433689ffd8e21d1d2c5b61cfe2f118ff089f98c466b276c847112eb31e67",
+        "contentSha256": "814aae06b53a5d2ac67c1b425ac6501fc249a9dd7a68c15c324b97b404944615",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Sections 30600, 30605, and 30610 do not apply to the sale of an assault weapon or .50 BMG rifle to, or the purchase, importation, or possession of an assault weapon or a .50 BMG rifle by, the Department of Justice, police departments, sheriffs’ offices, marshals’ offices, the Department of Corrections and Rehabilitation, the Department of the California Highway Patrol, district attorneys’ offices, the Department of Fish and Wildlife, the Department of Parks and Recreation, the Department of Cannabis Control, or the military or naval forces of this state or of the United States, or any federal law enforcement agency for use in the discharge of their official duties.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30625."
+      }
+    ],
+    "PEN:30630": [
+      {
+        "id": "PEN30630.20107116",
+        "lawCode": "PEN",
+        "section": "30630.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6c9963-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92330.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92330,
+        "tableRowSha256": "74a7c1a6b2a46174d5414c49bf910ad9414fc8fe7ea0451603b1970487634289",
+        "contentSha256": "19cadfdf8c6735bfce7d6b36f557857611a8ff8b04236a7a7455f8ba0b6d3761",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Sections 30605 and 30610 shall not prohibit the possession or use of assault weapons or a .50 BMG rifle by sworn peace officer members of those agencies specified in Section 30625 for law enforcement purposes, whether on or off duty.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Sections 30600, 30605, and 30610 shall not prohibit the sale, delivery, or transfer of an assault weapon or a .50 BMG rifle to, or the possession of an assault weapon or a .50 BMG rifle by, a sworn peace officer member of an agency specified in Section 30625 if the peace officer is authorized by the officer’s employer to possess or receive the assault weapon or the .50 BMG rifle. Required authorization is defined as verifiable\n\t\t\t\t\t\t\t\twritten certification from the head of the agency, identifying the recipient or possessor of the assault weapon as a peace officer and authorizing that person to receive or possess the specific assault weapon.</p><p>(2)<span class=\"EnSpace\"/>For this exemption to apply, in the case of a peace officer who possesses or receives the assault weapon prior to January 1, 2002, the officer shall register the assault weapon on or before April 1, 2002, pursuant to former Section 12285, as it read at any time from when it was enacted by Section 3 of Chapter 19 of the Statutes of 1989, to and including when it was amended by Section 9 of Chapter 129 of the Statutes of 1999. In the case of a peace officer who possesses or receives the assault weapon on or after January 1, 2002, the officer shall, not later than 90 days after possession or receipt, register the assault weapon pursuant to Article 5 (commencing with Section 30900), or pursuant to former Section 12285, as it read at any\n\t\t\t\t\t\t\t\ttime from when it was amended by Section 9 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010. In the case of a peace officer who possesses or receives a .50 BMG rifle on or before January 1, 2005, the officer shall register the .50 BMG rifle on or before April 30, 2006. In the case of a peace officer who possesses or receives a .50 BMG rifle after January 1, 2005, the officer shall register the .50 BMG rifle not later than one year after possession or receipt.</p><p>(3)<span class=\"EnSpace\"/>With the registration, the peace officer shall include a copy of the authorization required pursuant to this subdivision.</p><p>(c)<span class=\"EnSpace\"/>Nothing in this article shall be construed to limit or prohibit the sale, delivery, or transfer of an assault weapon or a .50 BMG rifle to, or the possession of an assault weapon or a .50 BMG rifle by, a member of a federal law\n\t\t\t\t\t\t\t\tenforcement agency provided that person is authorized by the employing agency to possess the assault weapon or .50 BMG rifle. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30630."
+      }
+    ],
+    "PEN:30631": [
+      {
+        "id": "PEN30631.20232351",
+        "lawCode": "PEN",
+        "section": "30631.",
+        "opStatutes": "2023",
+        "opChapter": "235",
+        "opSection": "1",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_b6469a47-8257-11ee-bcfe-9f16e66157a6",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2023, Ch. 235, Sec. 1.   (AB 355)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_83381.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83381,
+        "tableRowSha256": "fdfe07ef8ba7c3fab05d3052cfdc7df18e4fb14f8bf186388d6d861e04e42107",
+        "contentSha256": "54a97cb6d65be4e78bbe0a096c4551ab414a154023364920c78ad4fce7b44c08",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Sections 30600 and 30605 do not apply to the loan of an assault weapon to, nor the possession of an assault weapon by, a person enrolled in the course of basic training prescribed by the Commission on Peace Officer Standards and Training, or any other course certified by the commission, while engaged in firearms training and being supervised by a firearms instructor, if the following requirements are met:</p><p>(a)<span class=\"EnSpace\"/>The loaned assault weapon does not leave the\n\t\t\t\t\t\ttraining facility.</p><p>(b)<span class=\"EnSpace\"/>The enrollee has met the minimum peace officer hiring standards as stated in Sections 1029, 1030, and 1031 of the Government Code prior to entry to the course and is currently employed by any of the following:</p><p>(1)<span class=\"EnSpace\"/>A police department or sheriff’s office.</p><p>(2)<span class=\"EnSpace\"/>A marshal’s office.</p><p>(3)<span class=\"EnSpace\"/>The Department of\n\t\t\t\t\t\tJustice.</p><p>(4)<span class=\"EnSpace\"/>The Department of the California Highway Patrol.</p><p>(5)<span class=\"EnSpace\"/>The Department of Fish and Wildlife.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30631."
+      }
+    ],
+    "PEN:30635": [
+      {
+        "id": "PEN30635.20107116",
+        "lawCode": "PEN",
+        "section": "30635.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6cc075-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82899.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82899,
+        "tableRowSha256": "f375ef34d0056fbd557ceef84ebd819bf442e07fe3023ed6da3ab5b21d667d82",
+        "contentSha256": "fd04480277137523b01d5efdf026a438f4cb5ccdf2516c8c970f7ebad7d2b782",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 30605 shall not apply to the possession of an assault weapon during the 90-day period immediately after the date it was specified as an assault weapon pursuant to former Section 12276.5, as that section read in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, or during the one-year period after the date it was defined as an assault weapon pursuant to former Section 12276.1, as that section read at any time from when it was enacted by Section 7 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010, if all of the following are applicable:</p><p>(a)<span class=\"EnSpace\"/>At the\n\t\t\t\t\t\t\t\ttime of the possession in question, the person was eligible under the then-applicable version of former Chapter 2.3 (commencing with Section 12275) of Title 2 of Part 4 to register the particular assault weapon.</p><p>(b)<span class=\"EnSpace\"/>The person lawfully possessed the particular assault weapon prior to the date it was specified as an assault weapon pursuant to former Section 12276.5, or prior to the date it was defined as an assault weapon pursuant to former Section 12276.1.</p><p>(c)<span class=\"EnSpace\"/>At the time of the possession in question, the person was otherwise in compliance with the then-applicable version of former Chapter 2.3 (commencing with Section 12275) of Title 2 of Part 4. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30635."
+      }
+    ],
+    "PEN:30640": [
+      {
+        "id": "PEN30640.20107116",
+        "lawCode": "PEN",
+        "section": "30640.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6d0e97-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92331.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92331,
+        "tableRowSha256": "bd23d19addc2aad6f243deacb386b1685d9e2d11a03a1c7832b76f939ffa581e",
+        "contentSha256": "69607a15d2b634e786671480e6804662c344da21c80806b215dd6c4eba26568f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 30610 shall not apply to the possession of a .50 BMG rifle, which was not defined or specified as an assault weapon pursuant to the then-applicable version of the former Chapter 2.3 (commencing with Section 12275) of Title 2 of Part 4 that was added to this code by Section 3 of Chapter 19 of the Statutes of 1989, by any person prior to May 1, 2006, if all of the following are applicable:</p><p>(a)<span class=\"EnSpace\"/>At the time of the possession in question, the person was eligible under the then-applicable version of former Chapter 2.3 (commencing with Section 12275) of Title 2 of Part 4 to register that .50 BMG rifle.</p><p>(b)<span class=\"EnSpace\"/>The person lawfully possessed the .50 BMG\n\t\t\t\t\t\t\t\trifle prior to January 1, 2005.</p><p>(c)<span class=\"EnSpace\"/>At the time of the possession in question, the person was otherwise in compliance with the then-applicable version of former Chapter 2.3 (commencing with Section 12275) of Title 2 of Part 4. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30640."
+      }
+    ],
+    "PEN:30645": [
+      {
+        "id": "PEN30645.20107116",
+        "lawCode": "PEN",
+        "section": "30645.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6d35a9-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82900.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82900,
+        "tableRowSha256": "6487be4a627c7cddb9e7298c8d2bfe3a0392e7a4d15fae08c92cc87e1663d1a4",
+        "contentSha256": "15235c644ad65e4513d8ecb97ed8003182cf712ff5b3169b868e38becfff33e3",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Sections 30600, 30605, and 30610 shall not apply to the manufacture by any person who is issued a permit pursuant to Section 31005 of assault weapons or .50 BMG rifles for sale to the following:</p><p>(a)<span class=\"EnSpace\"/>Exempt entities listed in Section 30625.</p><p>(b)<span class=\"EnSpace\"/>Entities and persons who have been issued permits pursuant to Section 31000 or 31005.</p><p>(c)<span class=\"EnSpace\"/>Federal military and law enforcement agencies.</p><p>(d)<span class=\"EnSpace\"/>Law enforcement and military agencies of other states.</p><p>(e)<span class=\"EnSpace\"/>Foreign governments\n\t\t\t\t\t\t\t\tand agencies approved by the United States State Department.</p><p>(f)<span class=\"EnSpace\"/>Entities outside the state who have, in effect, a federal firearms dealer’s license solely for the purpose of distribution to an entity listed in subdivisions (c) to (e), inclusive. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30645."
+      }
+    ],
+    "PEN:30650": [
+      {
+        "id": "PEN30650.20107116",
+        "lawCode": "PEN",
+        "section": "30650.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6d5cbb-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82935.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82935,
+        "tableRowSha256": "864a832ab3182327969b333e59b4b0553465b3939dee6b750d1baafc296cfb19",
+        "contentSha256": "1c0248566b6fe0792a2e1e5483be84f09f5041f86ab27baf7f83812107096156",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Sections 30600, 30605, and 30610 shall not apply to the sale of assault weapons or .50 BMG rifles by persons who are issued permits pursuant to Section 31005 to any of the following:</p><p>(a)<span class=\"EnSpace\"/>Exempt entities listed in Section 30625.</p><p>(b)<span class=\"EnSpace\"/>Entities and persons who have been issued permits pursuant to Section 31000 or 31005.</p><p>(c)<span class=\"EnSpace\"/>Federal military and law enforcement agencies.</p><p>(d)<span class=\"EnSpace\"/>Law enforcement and military agencies of other states.</p><p>(e)<span class=\"EnSpace\"/>Foreign governments and agencies\n\t\t\t\t\t\t\t\tapproved by the United States State Department.</p><p>(f)<span class=\"EnSpace\"/>Officers described in Section 30630 who are authorized to possess assault weapons or .50 BMG rifles pursuant to Section 30630.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30650."
+      }
+    ],
+    "PEN:30655": [
+      {
+        "id": "PEN30655.20107116",
+        "lawCode": "PEN",
+        "section": "30655.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6d83cd-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82936.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82936,
+        "tableRowSha256": "147e1955525ea4be5c4af335ffb02c84f8789c23b33f9ed2e3c24e252748b2d5",
+        "contentSha256": "047253b8f7dd5f284ea38b5e7d431730eda88d92ec33cc39797cf376fa5c778f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Section 30600 shall not apply to a person who is the executor or administrator of an estate that includes an assault weapon or a .50 BMG rifle registered under Article 5 (commencing with Section 30900) or that was possessed pursuant to subdivision (a) of Section 30630 that is disposed of as authorized by the probate court, if the disposition is otherwise permitted by this chapter.</p><p>(b)<span class=\"EnSpace\"/>Sections 30605 and 30610 shall not apply to a person who is the executor or administrator of an estate that includes an assault weapon or a .50 BMG rifle registered under Article 5 (commencing with Section 30900) or that was possessed pursuant to subdivision (a) of Section 30630, if the assault weapon or .50\n\t\t\t\t\t\t\t\tBMG rifle is possessed at a place set forth in subdivision (a) of Section 30945 or as authorized by the probate court.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30655."
+      }
+    ],
+    "PEN:30660": [
+      {
+        "id": "PEN30660.20107116",
+        "lawCode": "PEN",
+        "section": "30660.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6daadf-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92332.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92332,
+        "tableRowSha256": "eaa579a920dcbdab4180e70d49139b1f7383b83a623a0c1d90d2b043bd800595",
+        "contentSha256": "9fe370b2072f66e1ac2286b3bb56d77040e2defcd2c5eb92fc16f01c91266063",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Section 30600 shall not apply to a person who lawfully possesses and has registered an assault weapon or .50 BMG rifle pursuant to this chapter who lends that assault weapon or .50 BMG rifle to another person, if all the following requirements are satisfied:</p><p>(1)<span class=\"EnSpace\"/>The person to whom the assault weapon or .50 BMG rifle is lent is 18 years of age or over and is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm.</p><p>(2)<span class=\"EnSpace\"/>The person to whom the assault weapon or .50 BMG rifle is lent remains in the presence of the registered possessor of the assault weapon or .50 BMG rifle.</p><p>(3)<span class=\"EnSpace\"/>The assault weapon or .50 BMG rifle is possessed at any of the following locations:</p><p>(A)<span class=\"EnSpace\"/>While on a target range that holds a regulatory or business license for the purpose of practicing shooting at that target range.</p><p>(B)<span class=\"EnSpace\"/>While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets.</p><p>(C)<span class=\"EnSpace\"/>While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms.</p><p>(b)<span class=\"EnSpace\"/>Section 30600 shall not\n\t\t\t\t\t\t\t\tapply to the return of an assault weapon or .50 BMG rifle to the registered possessor, or the lawful possessor, which is lent by that registered or lawful possessor pursuant to subdivision (a).</p><p>(c)<span class=\"EnSpace\"/>Sections 30605 and 30610 shall not apply to the possession of an assault weapon or .50 BMG rifle by a person to whom an assault weapon or .50 BMG rifle is lent pursuant to subdivision (a).</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30660."
+      }
+    ],
+    "PEN:30665": [
+      {
+        "id": "PEN30665.20107116",
+        "lawCode": "PEN",
+        "section": "30665.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6df901-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82961.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82961,
+        "tableRowSha256": "598478631999a27de35d485e646cbd9c3910f0fa916c65e1ad6cf7258dcd854c",
+        "contentSha256": "adc229004c50cba94acfa2975e807b96ac0edc5af7017a6c7ffa6d990fcdc741",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Sections 30600, 30605, and 30610 shall not apply to the possession and importation of an assault weapon or a .50 BMG rifle into this state by a nonresident if all of the following conditions are met:</p><p>(a)<span class=\"EnSpace\"/>The person is attending or going directly to or coming directly from an organized competitive match or league competition that involves the use of an assault weapon or a .50 BMG rifle.</p><p>(b)<span class=\"EnSpace\"/>The competition or match is conducted on the premises of one of the following:</p><p>(1)<span class=\"EnSpace\"/>A target range that holds a regulatory or business license for the purpose of practicing shooting at that target\n\t\t\t\t\t\t\t\trange.</p><p>(2)<span class=\"EnSpace\"/>A target range of a public or private club or organization that is organized for the purpose of practicing shooting at targets.</p><p>(c)<span class=\"EnSpace\"/>The match or competition is sponsored by, conducted under the auspices of, or approved by, a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms.</p><p>(d)<span class=\"EnSpace\"/>The assault weapon or .50 BMG rifle is transported in accordance with Section 25610 or Article 3 (commencing with Section 25505) of Chapter 2 of Division 5.</p><p>(e)<span class=\"EnSpace\"/>The person is 18 years of age or over and is not in a class of persons prohibited from possessing firearms by virtue of Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this\n\t\t\t\t\t\t\t\tcode or Section 8100 or 8103 of the Welfare and Institutions Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30665."
+      }
+    ],
+    "PEN:30670": [
+      {
+        "id": "PEN30670.20107116",
+        "lawCode": "PEN",
+        "section": "30670.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6e2013-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92333.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92333,
+        "tableRowSha256": "cf3d3022306c24bcf67b1440f90d15dcbdd0c4ad6b0a6b69e602f630774b390b",
+        "contentSha256": "01782990057d735678b1b6d2732f8fe2d7c1a24c001d66d9c7698fc82d5f00d4",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Section 30600 shall not apply to the importation into this state of an assault weapon or a .50 BMG rifle by the registered owner of that assault weapon or a .50 BMG rifle if it is in accordance with the provisions of Section 30945.</p><p>(b)<span class=\"EnSpace\"/>Section 30600 shall not apply during the first 180 days of the 2005 calendar year to the importation into this state of a .50 BMG rifle by a person who lawfully possessed that .50 BMG rifle in this state prior to January 1, 2005. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30670."
+      }
+    ],
+    "PEN:30680": [
+      {
+        "id": "PEN30680.20171747",
+        "lawCode": "PEN",
+        "section": "30680.",
+        "opStatutes": "2017",
+        "opChapter": "17",
+        "opSection": "47",
+        "effectiveDate": "2017-06-27 00:00:00",
+        "versionId": "id_b3f82d49-6022-11e7-ba05-857c2c4aa19b",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended (as added by Stats. 2016, Ch. 40, Sec. 2) by Stats. 2017, Ch. 17, Sec. 47.   (AB 103)   Effective June 27, 2017.   See similar section (added by Stats. 2016, Ch. 48), as amended by Stats. 2017, Ch. 17, Sec. 48.",
+        "contentMember": "LAW_SECTION_TBL_82991.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82991,
+        "tableRowSha256": "089c9e0a1525dd0f2913fb4b9dbb39383c25f5f4dea6c82a7084579a7ae3dc42",
+        "contentSha256": "292ac6d2f48f805dd5a0d371bbd295020eeae243bb048ccecac938a8187eeaa6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 30605 does not apply to the possession of an assault weapon by a person who has possessed the assault weapon prior to January 1, 2017, if all of the following are applicable:</p><p>(a)<span class=\"EnSpace\"/>Prior to January 1, 2017, the person would have been eligible to register that assault weapon pursuant to subdivision (b) of Section 30900.</p><p>(b)<span class=\"EnSpace\"/>The person lawfully possessed that assault weapon prior to January 1, 2017.</p><p>(c)<span class=\"EnSpace\"/>The person registers the assault weapon by July 1, 2018, in accordance with subdivision (b) of Section 30900.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30680."
+      },
+      {
+        "id": "PEN30680.20171748",
+        "lawCode": "PEN",
+        "section": "30680.",
+        "opStatutes": "2017",
+        "opChapter": "17",
+        "opSection": "48",
+        "effectiveDate": "2017-06-27 00:00:00",
+        "versionId": "id_b8d969fb-6022-11e7-ba05-857c2c4aa19b",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Amended (as added by Stats. 2016, Ch. 48, Sec. 2) by Stats. 2017, Ch. 17, Sec. 48.   (AB 103)   Effective June 27, 2017.",
+        "contentMember": "LAW_SECTION_TBL_92430.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92430,
+        "tableRowSha256": "a7799d25f3f2fe6abee1f4ef8eb54557887fa06a0001de0f62be4899b2d647ba",
+        "contentSha256": "950862bc71b3eff0a101010aab3f91c1be8120a83fcbe3466cded87fc55d359e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 30605 does not apply to the possession of an assault weapon by a person who has possessed the assault weapon prior to January 1, 2017, if all of the following are applicable:</p><p>(a)<span class=\"EnSpace\"/>Prior to January 1, 2017, the person was eligible to register that assault weapon pursuant to subdivision (b) of Section 30900.</p><p>(b)<span class=\"EnSpace\"/>The person lawfully possessed that assault weapon prior to January 1, 2017.</p><p>(c)<span class=\"EnSpace\"/>The person registers the assault weapon by July 1, 2018, in accordance with subdivision (b) of Section 30900.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30680."
+      }
+    ],
+    "PEN:30685": [
+      {
+        "id": "PEN30685.20202939",
+        "lawCode": "PEN",
+        "section": "30685.",
+        "opStatutes": "2020",
+        "opChapter": "29",
+        "opSection": "39",
+        "effectiveDate": "2020-08-06 00:00:00",
+        "versionId": "id_400cdb0b-d8f6-11ea-9efd-3da19d7eb114",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "2.",
+        "history": "Added by Stats. 2020, Ch. 29, Sec. 39.   (SB 118)   Effective August 6, 2020.",
+        "contentMember": "LAW_SECTION_TBL_82992.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82992,
+        "tableRowSha256": "8531c84d22e8783e1d503627a522c17216a34ac5675ec10f9b9217065ee488d3",
+        "contentSha256": "b8d60ff45c8d74d34691d62d0852e2ca322773000073c5a310daa192ef2decf2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 30605 does not apply to the possession of an assault weapon as defined by paragraph (9), (10), or (11) of subdivision (a) of Section 30515 by a person who has possessed the assault weapon prior to September 1, 2020, if all of the following are applicable:</p><p>(a)<span class=\"EnSpace\"/>Prior to September 1, 2020, the person would have been eligible to\n\t\t\t\t\t\tregister that assault weapon pursuant to subdivision (c) of Section 30900.</p><p>(b)<span class=\"EnSpace\"/>The person lawfully possessed that assault weapon prior to September 1, 2020.</p><p>(c)<span class=\"EnSpace\"/>The person registers the assault weapon by January 1, 2022, in accordance with subdivision (c) of Section 30900.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30685."
+      }
+    ],
+    "PEN:30710": [
+      {
+        "id": "PEN30710.20107116",
+        "lawCode": "PEN",
+        "section": "30710.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6ebc59-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_82993.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 82993,
+        "tableRowSha256": "cc87da97a2bbaf8c1eb01977cc0e34a2a6119e6275e7a20c4f75cb8ea7e84df3",
+        "contentSha256": "001d011f5ffaff718c010f36cbc8d81dbc3b7c0ac09fb788470d3d05792649a4",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Notwithstanding paragraph (11) of subdivision (a) of Section 30510, an “SKS rifle” under this article means all SKS rifles commonly referred to as “SKS Sporter” versions, manufactured to accept a detachable AK-47 magazine and imported into this state and sold by a licensed gun dealer, or otherwise lawfully possessed in this state by a resident of this state who is not a licensed gun dealer, between January 1, 1992, and December 19, 1997.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30710."
+      }
+    ],
+    "PEN:30715": [
+      {
+        "id": "PEN30715.20107116",
+        "lawCode": "PEN",
+        "section": "30715.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6ee36b-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92431.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92431,
+        "tableRowSha256": "48009a2867b4d4b61c636adc459dc0827415c0f02979f0da7695b6ecdd55f6da",
+        "contentSha256": "d58a334aeb79e48447ce2b0550b97b247e0f9e875dd6c15329d380c28338df12",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who, or firm, company, or corporation that operated a retail or other commercial firm, company, or corporation, and manufactured, distributed, transported, imported, possessed, possessed for sale, offered for sale, or transferred, for commercial purpose, an SKS rifle in California between January 1, 1992, and December 19, 1997, shall be immune from criminal prosecution under Article 2 (commencing with Section 30600) or former Section 12280.</p><p>(2)<span class=\"EnSpace\"/>The immunity provided in this subdivision shall apply retroactively to any person who, or firm, company, or corporation that, is or was charged by complaint or indictment with a violation of former Section 12280\n\t\t\t\t\t\t\t\tfor conduct related to an SKS rifle, whether or not the case of that person, firm, company, or corporation is final.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who possessed, gave, loaned, or transferred an SKS rifle in California between January 1, 1992, and December 19, 1997, shall be immune from criminal prosecution under Article 2 (commencing with Section 30600) or former Section 12280.<p>(2)<span class=\"EnSpace\"/>The immunity provided in this subdivision shall apply retroactively to any person who was charged by complaint or indictment with a violation of former Section 12280 for conduct related to an SKS rifle, whether or not the case of that person is final.</p><p>(c)<span class=\"EnSpace\"/>Any SKS rifle in the possession of any person who, or firm, company, or corporation that, is described in subdivision (a) or (b), shall not be subject to seizure by law enforcement for violation of Article 2 (commencing with Section 30600) or former\n\t\t\t\t\t\t\t\tSection 12280 prior to January 1, 2000.</p><p>(d)<span class=\"EnSpace\"/>Any person, firm, company, or corporation, convicted under former Section 12280 for conduct relating to an SKS rifle, shall be permitted to withdraw a plea of guilty or nolo contendere, or to reopen the case and assert the immunities provided in this article, if the court determines that the allowance of the immunity is in the interests of justice. The court shall interpret this article liberally to the benefit of the defendant.</p><p>(e)<span class=\"EnSpace\"/>For purposes of this section, “former Section 12280” refers to former Section 12280, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as subsequently amended.</p></p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30715."
+      }
+    ],
+    "PEN:30720": [
+      {
+        "id": "PEN30720.20107116",
+        "lawCode": "PEN",
+        "section": "30720.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6f0a7d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83014.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83014,
+        "tableRowSha256": "9ca236349cd197d0ee7e61f29ec15719107ab087ce5bcb96cb621108955dd4f2",
+        "contentSha256": "4f2935f6a1a78f387efb4134fb11d756542430e6962c2365beb276a2e3fb6c2b",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person, firm, company, or corporation that is in possession of an SKS rifle shall do one of the following on or before January 1, 2000:</p><p>(1)<span class=\"EnSpace\"/>Relinquish the SKS rifle to the Department of Justice pursuant to subdivision (h) of former Section 12281.</p><p>(2)<span class=\"EnSpace\"/>Relinquish the SKS rifle to a law enforcement agency pursuant to former Section 12288, as added by Section 3 of Chapter 19 of the Statutes of 1989.</p><p>(3)<span class=\"EnSpace\"/>Dispose of the SKS rifle as permitted by former Section 12285, as it read in Section 20 of Chapter 23 of the Statutes of 1994.</p><p>(b)<span class=\"EnSpace\"/>Any person who has obtained title to an SKS rifle by bequest or intestate succession shall be required to comply with paragraph (1) or (2) of subdivision (a) unless that person otherwise complies with paragraph (1) of subdivision (b) of former Section 12285, as it read in Section 20 of Chapter 23 of the Statutes of 1994, or as subsequently amended.</p><p>(c)<span class=\"EnSpace\"/>Any SKS rifle relinquished to the department pursuant to this section shall be in a manner prescribed by the department.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30720."
+      }
+    ],
+    "PEN:30725": [
+      {
+        "id": "PEN30725.201115551",
+        "lawCode": "PEN",
+        "section": "30725.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "551",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_c1419d39-660f-11e0-8fc7-8d05c2a88098",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 551.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+        "contentMember": "LAW_SECTION_TBL_83015.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83015,
+        "tableRowSha256": "1aded7e9b40e079ea81135c6ac4f5c53254ac788690a55ac51bc3d5fcd12364a",
+        "contentSha256": "c39081524985559c9bfda669fff7a1de92caa77613601ebe16e93969ab0d1462",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who complies with Section 30720 shall be exempt from the prohibitions set forth in Section 30600 or 30605 for those acts by that person associated with complying with the requirements of Section 30720.</p><p>(b)<span class=\"EnSpace\"/>Failure to comply with Section 30720 is a public offense punishable by imprisonment pursuant to subdivision (h) of Section 1170, or in a county jail, not exceeding one year.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30725."
+      }
+    ],
+    "PEN:30730": [
+      {
+        "id": "PEN30730.20107116",
+        "lawCode": "PEN",
+        "section": "30730.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6f58a1-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83042.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83042,
+        "tableRowSha256": "b6036d161a780df549c4ed929aa8cab281cf5f7244f98b324935c715694014af",
+        "contentSha256": "cbf6f563076e09dc63891c770cc556a568547561702598622842248a83cc69ec",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>The department shall purchase any SKS rifle relinquished pursuant to Section 30720 from funds appropriated for this purpose by the act amending former Section 12281 in the 1997–98 Regular Session of the Legislature or by subsequent budget acts or other legislation.</p><p>(2)<span class=\"EnSpace\"/>The department shall adopt regulations for this purchase program that include, but are not limited to, the manner of delivery, the reimbursement to be paid, and the manner in which persons shall be informed of the state purchase program.</p><p>(3)<span class=\"EnSpace\"/>Any person who relinquished possession of an SKS rifle to a law enforcement agency pursuant to\n\t\t\t\t\t\t\t\tany version of former Section 12288 prior to the effective date of the purchase program set forth in paragraph (1) shall be eligible to be reimbursed from the purchase program. The procedures for reimbursement pursuant to this paragraph shall be part of the regulations adopted by the department pursuant to paragraph (2).</p><p>(b)<span class=\"EnSpace\"/>In addition to the regulations required pursuant to subdivision (a), emergency regulations for the purchase program described in subdivision (a) shall be adopted pursuant to Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30730."
+      }
+    ],
+    "PEN:30735": [
+      {
+        "id": "PEN30735.20107116",
+        "lawCode": "PEN",
+        "section": "30735.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc6f7fb3-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83043.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83043,
+        "tableRowSha256": "8a2210433e526ea77e2185cb49ae3747cadda1787abd9be2459ee854e41f96f0",
+        "contentSha256": "017ccc0509249fd7dc4730bd3a8333f09570af45bcd99602c4a3f597e23f28ef",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The Department of Justice shall notify all district attorneys on or before January 31, 1999, of the provisions of former Section 12281.</p><p>(b)<span class=\"EnSpace\"/>The department shall identify all criminal prosecutions in the state for conduct related to SKS rifles on or before April 1, 1999. In all cases so identified by the Attorney General, the district attorneys shall inform defense counsel, or the defendant if the defendant is in propria persona, in writing, of the provisions of former Section 12281 on or before May 1, 1999.</p><p>(c)<span class=\"EnSpace\"/>Commencing no later than January 1, 1999, the department shall conduct a public education and notification program as\n\t\t\t\t\t\t\t\tdescribed in Section 31115 or in former Section 12289, as added by Section 6 of Chapter 954 of the Statutes of 1991 or as subsequently amended.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30735."
+      }
+    ],
+    "PEN:30800": [
+      {
+        "id": "PEN30800.20197307",
+        "lawCode": "PEN",
+        "section": "30800.",
+        "opStatutes": "2019",
+        "opChapter": "730",
+        "opSection": "7",
+        "effectiveDate": "2020-01-01 00:00:00",
+        "versionId": "id_e3350ab5-0be2-11ea-912d-915c88c10a14",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "4.",
+        "history": "Amended by Stats. 2019, Ch. 730, Sec. 7.   (AB 879)   Effective January 1, 2020.",
+        "contentMember": "LAW_SECTION_TBL_92432.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92432,
+        "tableRowSha256": "4d9f3e0540124415d70184f2a2aed76b7a46a4b6260d92da20562358e1df957a",
+        "contentSha256": "069f6ed070cafea820407853029e36b1f005c6e8ac272696d758b6c48a24dcf8",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Except as provided in Article 2 (commencing with Section 30600), possession of any assault weapon or of any .50 BMG rifle in violation of this chapter is a public nuisance, solely for purposes of this section and subdivision (c) of Section 18005.</p><p>(2)<span class=\"EnSpace\"/>The Attorney General, any district attorney, or any city attorney, may, in lieu of criminal prosecution, bring a civil action or reach a civil compromise in any superior court to enjoin the manufacture of, importation of, keeping for sale of, offering or exposing for sale, giving, lending, or possession of an assault weapon or .50 BMG rifle that is a public nuisance.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Upon motion of the Attorney General, district attorney, or city attorney, a superior court may impose a civil fine not to exceed five hundred dollars ($500) for the manufacture of, importation of, keeping for sale of, offering or exposing for sale, giving, or lending of an assault weapon or .50 BMG rifle that is a public nuisance pursuant to subdivision (a) and up to two hundred dollars ($200) for each additional assault weapon or .50 BMG that is a public nuisance pursuant to subdivision (a).</p><p>(2)<span class=\"EnSpace\"/>Upon motion of the Attorney General, district attorney, or city attorney, a superior court may impose a civil fine not to exceed three hundred dollars ($300) for the possession of an assault weapon or .50 BMG rifle that is a public nuisance pursuant to subdivision (a) and up to one hundred dollars ($100) for each additional\n\t\t\t\t\t\tassault weapon or .50 BMG rifle possessed, that is a public nuisance pursuant to subdivision (a).</p><p>(c)<span class=\"EnSpace\"/>Any assault weapon or .50 BMG rifle deemed a public nuisance under subdivision (a) shall be destroyed in a manner so that it may no longer be used, except upon a finding by a court, or a declaration from the Department of Justice, district attorney, or city attorney stating that the preservation of the assault weapon or .50 BMG rifle is in the interest of justice.</p><p>(d)<span class=\"EnSpace\"/>Upon conviction of any misdemeanor or felony involving the illegal possession or use of an assault weapon, the assault weapon shall be deemed a public nuisance and disposed of pursuant to subdivision (c) of Section 18005.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30800."
+      }
+    ],
+    "PEN:30905": [
+      {
+        "id": "PEN30905.20107116",
+        "lawCode": "PEN",
+        "section": "30905.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc706a1d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83089.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83089,
+        "tableRowSha256": "73276b864fc53993181670e4ecec93faf93ee15c1941159cd862c8d5631af45e",
+        "contentSha256": "c446f0d06f87d5d72aba3d5f3c5a9eee92f604ce6f3f56b101924084881778c5",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in Section 30600, any person who lawfully possesses any .50 BMG rifle prior to January 1, 2005, that is not specified as an assault weapon under former Section 12276, as it reads in Section 19 of Chapter 606 of the Statutes of 1993, or former Section 12276.5, as it reads in Section 3 of Chapter 954 of the Statutes of 1991, or defined as an assault weapon pursuant to former Section 12276.1, as it reads in Section 3 of Chapter 911 of the Statutes of 2002, shall register the .50 BMG rifle with the department no later than April 30, 2006, pursuant to those procedures that the department may establish.<p>(b)<span class=\"EnSpace\"/>The registration shall contain a description of the firearm that identifies it uniquely, including all\n\t\t\t\t\t\t\t\tidentification marks, the full name, address, date of birth, and thumbprint of the owner, and any other information that the department may deem appropriate.</p><p>(c)<span class=\"EnSpace\"/>The department may charge a fee for registration of twenty-five dollars ($25) per person to cover the actual processing and public education campaign costs of the department. The fees shall be deposited into the Dealers’ Record of Sale Special Account. Data-processing costs associated with modifying the department’s data system to accommodate .50 caliber BMG rifles shall not be paid from the Dealers’ Record of Sale Special Account.</p></p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30905."
+      }
+    ],
+    "PEN:30910": [
+      {
+        "id": "PEN30910.20107116",
+        "lawCode": "PEN",
+        "section": "30910.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc70912f-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92434.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92434,
+        "tableRowSha256": "728da88d7bd696f821bbe7132247b6612ba2fc44d77ee8063d877518552b9fae",
+        "contentSha256": "87b980104d3d7651d05a6bc3684758ca09e2390eefdf770d875761a52dd9c00d",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Except as provided in Section 30925, no assault weapon possessed pursuant to this article may be sold or transferred on or after January 1, 1990, to anyone within this state other than to a licensed gun dealer or as provided in Section 31100.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30910."
+      }
+    ],
+    "PEN:30915": [
+      {
+        "id": "PEN30915.20107116",
+        "lawCode": "PEN",
+        "section": "30915.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc70b841-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92435.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92435,
+        "tableRowSha256": "354917b60da0b1a5c503a26d1bd7efcd38fe179c707471c347995f91752efadc",
+        "contentSha256": "42caa686497742ded83196663ef47e7a6e2b1ade4e9c161f3218a004a48effc8",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Any person who obtains title to an assault weapon registered under this article or that was possessed pursuant to subdivision (a) of Section 30630 by bequest or intestate succession shall, within 90 days, do one or more of the following:</p><p>(a)<span class=\"EnSpace\"/>Render the weapon permanently inoperable.</p><p>(b)<span class=\"EnSpace\"/>Sell the weapon to a licensed gun dealer.</p><p>(c)<span class=\"EnSpace\"/>Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(d)<span class=\"EnSpace\"/>Remove the weapon from this state.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30915."
+      }
+    ],
+    "PEN:30920": [
+      {
+        "id": "PEN30920.20107116",
+        "lawCode": "PEN",
+        "section": "30920.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc70df53-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83090.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83090,
+        "tableRowSha256": "f6993bb73643b823bd97727fef0ac2e9362fc283607b26237698933ca192506e",
+        "contentSha256": "fbaefa3d18e120a580c9ee0daf46e58d057dff5491b1859e5b692b9ec014db4f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who lawfully possessed a firearm subsequently declared to be an assault weapon pursuant to former Section 12276.5, as it reads in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, or subsequently defined as an assault weapon pursuant to former Section 12276.1, as that section read at any time from when it was enacted by Section 7 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010, shall, within 90 days, do one or more of the following:</p><p>(1)<span class=\"EnSpace\"/>Render the weapon permanently inoperable.</p><p>(2)<span class=\"EnSpace\"/>Sell the weapon to a licensed gun dealer.</p><p>(3)<span class=\"EnSpace\"/>Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(4)<span class=\"EnSpace\"/>Remove the weapon from this state.</p><p>(b)<span class=\"EnSpace\"/>Notwithstanding subdivision (a), a person who lawfully possessed a firearm that was subsequently declared to be an assault weapon pursuant to former Section 12276.5 may alternatively register the firearm within 90 days of the declaration issued pursuant to subdivision (f) of former Section 12276.5, as it reads in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30920."
+      }
+    ],
+    "PEN:30925": [
+      {
+        "id": "PEN30925.20107116",
+        "lawCode": "PEN",
+        "section": "30925.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc710665-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83126.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83126,
+        "tableRowSha256": "6c5f89efc7ef8171427e40c38d08dc0f1715545ce6c0c80dc580668844a26f7e",
+        "contentSha256": "e4862af14b0ebe101b2ca4e4d8463e040a645fd6115f13893751c494ba03d483",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>A person moving into this state, otherwise in lawful possession of an assault weapon, shall do one of the following:</p><p>(a)<span class=\"EnSpace\"/>Prior to bringing the assault weapon into this state, that person shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(b)<span class=\"EnSpace\"/>The person shall cause the assault weapon to be delivered to a licensed gun dealer in this state in accordance with Chapter 44 (commencing with Section 921) of Title 18 of the United States Code and the regulations issued pursuant thereto. If the person obtains a permit from the Department of Justice in the same\n\t\t\t\t\t\t\t\tmanner as specified in Article 3 (commencing with Section 32650) of Chapter 6, the dealer shall redeliver that assault weapon to the person. If the licensed gun dealer is prohibited from delivering the assault weapon to a person pursuant to this section, the dealer shall possess or dispose of the assault weapon as allowed by this chapter.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30925."
+      }
+    ],
+    "PEN:30930": [
+      {
+        "id": "PEN30930.20107116",
+        "lawCode": "PEN",
+        "section": "30930.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc715487-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92436.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92436,
+        "tableRowSha256": "7a07a9c1477515735e712abd9b3e7ee0886930f4d88984fc096108f2d81e6453",
+        "contentSha256": "3087d6ad4537fe075e954553f0b825558c3d233758e38633143c99d229eef872",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Except as provided in Section 30940, no .50 BMG rifle possessed pursuant to this article may be sold or transferred on or after January 1, 2005, to anyone within this state other than to a licensed gun dealer or as provided in Section 31100.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30930."
+      }
+    ],
+    "PEN:30935": [
+      {
+        "id": "PEN30935.20107116",
+        "lawCode": "PEN",
+        "section": "30935.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc715489-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83127.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83127,
+        "tableRowSha256": "a695fadf139eea1e935b3868990a49646b7aa9d180b608a6166b8363a8fb81c3",
+        "contentSha256": "0f5b5dfe78dc7739e5a3cac064313be4e6488bfa40dcd120ed99dfaff80e9ac2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Any person who obtains title to a .50 BMG rifle registered under this article or that was possessed pursuant to subdivision (a) of Section 30630 by bequest or intestate succession shall, within 180 days of receipt, do one or more of the following:<p>(a)<span class=\"EnSpace\"/>Render the weapon permanently inoperable.</p><p>(b)<span class=\"EnSpace\"/>Sell the weapon to a licensed gun dealer.</p><p>(c)<span class=\"EnSpace\"/>Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(d)<span class=\"EnSpace\"/>Remove the weapon from this state.</p></p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30935."
+      }
+    ],
+    "PEN:30940": [
+      {
+        "id": "PEN30940.20107116",
+        "lawCode": "PEN",
+        "section": "30940.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc717b9b-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83167.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83167,
+        "tableRowSha256": "4607c70ebcb2a974468921590ba46abe901e106b307f7cf6b8c4017a2896135d",
+        "contentSha256": "0e8bd71996b04d03936817e507dc1da2a5a4b66caa55e03a244f611bc632e179",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>A person moving into this state, otherwise in lawful possession of a .50 BMG rifle, shall do one of the following:</p><p>(a)<span class=\"EnSpace\"/>Prior to bringing the .50 BMG rifle into this state, that person shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(b)<span class=\"EnSpace\"/>The person shall cause the .50 BMG rifle to be delivered to a licensed gun dealer in this state in accordance with Chapter 44 (commencing with Section 921) of Title 18 of the United States Code and the regulations issued pursuant thereto. If the person obtains a permit from the Department of Justice in the same manner as\n\t\t\t\t\t\t\t\tspecified in Article 3 (commencing with Section 32650) of Chapter 6, the dealer shall redeliver that .50 BMG rifle to the person. If the licensed gun dealer is prohibited from delivering the .50 caliber BMG rifle to a person pursuant to this section, the dealer shall dispose of the .50 BMG rifle as allowed by this chapter.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30940."
+      }
+    ],
+    "PEN:30950": [
+      {
+        "id": "PEN30950.20107116",
+        "lawCode": "PEN",
+        "section": "30950.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc71f0cf-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_92541.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 92541,
+        "tableRowSha256": "e8d6c4aabbf833292a4309da854409c4118ed92eaa1b3589854e4d85ed25d150",
+        "contentSha256": "2b66a41a2fb03be755065094a697936cf86d2ad21f8829e3e596bcfe1c4f7b7e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>No person who is under the age of 18 years, and no person who is prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm, may register or possess an assault weapon or .50 BMG rifle.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30950."
+      }
+    ],
+    "PEN:30955": [
+      {
+        "id": "PEN30955.20202941",
+        "lawCode": "PEN",
+        "section": "30955.",
+        "opStatutes": "2020",
+        "opChapter": "29",
+        "opSection": "41",
+        "effectiveDate": "2020-08-06 00:00:00",
+        "versionId": "id_37ce4c51-d8f7-11ea-9efd-3da19d7eb114",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Amended by Stats. 2020, Ch. 29, Sec. 41.   (SB 118)   Effective August 6, 2020.",
+        "contentMember": "LAW_SECTION_TBL_83197.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83197,
+        "tableRowSha256": "1f1a05b782aa8d1e1f8407da16ee41e4943d18041909b58fe1fa1b1cfb918991",
+        "contentSha256": "ee56258da7ac33e9af2b7bc64c2e63b8efc418f89b72a92f8a2a5f7ab1d8a7de",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The department’s registration procedures shall provide the option of joint registration for any assault weapon or .50 BMG rifle owned by family members residing in the same household.</p><p>(b)<span class=\"EnSpace\"/>Notwithstanding subdivision (a), for registration of assault weapons in accordance with subdivision (c) of Section 30900, joint registration is not permitted.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30955."
+      }
+    ],
+    "PEN:30960": [
+      {
+        "id": "PEN30960.20107116",
+        "lawCode": "PEN",
+        "section": "30960.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc7217e3-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83198.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83198,
+        "tableRowSha256": "a3f1db64318a4b4572c278cfe39a603c55058ac8bcac6005acf6c00706efe788",
+        "contentSha256": "e5b167f5dbddb96316b63f141407c943785a27dcd0c744b57cd467bef225466c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>For 90 days following January 1, 1992, a forgiveness period shall exist to allow any person specified in subdivision (b) of former Section 12280, as it reads in Section 4.5 of Chapter 954 of the Statutes of 1991, to register with the Department of Justice any assault weapon that the person lawfully possessed prior to June 1, 1989.</p><p>(b)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any person who registers an assault weapon during the 90-day forgiveness period described in subdivision (a), and any person whose registration form was received by the Department of Justice after January 1, 1991, and who was issued a temporary registration prior to the end of the forgiveness period, shall not be charged with a\n\t\t\t\t\t\t\t\tviolation of subdivision (b) of former Section 12280, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as subsequently amended, if law enforcement becomes aware of that violation only as a result of the registration of the assault weapon.</p><p>(2)<span class=\"EnSpace\"/>This section shall have no effect upon any person charged prior to January 1, 1992, with a violation of subdivision (b) of former Section 12280 as added by Section 3 of Chapter 19 of the Statutes of 1989 or as subsequently amended, provided that law enforcement was aware of the violation before the weapon was registered.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30960."
+      }
+    ],
+    "PEN:30965": [
+      {
+        "id": "PEN30965.20107116",
+        "lawCode": "PEN",
+        "section": "30965.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc723ef5-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "5.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83243.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83243,
+        "tableRowSha256": "72ed48f1ac9ad86d01f550c8992e824e5da04b00ed69e40c23b20f3bed59bdbf",
+        "contentSha256": "58135e17dafa75319830a279b9ac1286959eaf55b1efe97d38fecfc0af3808d0",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who registered a firearm as an assault weapon pursuant to the provisions of law in effect prior to January 1, 2000, where the assault weapon is thereafter defined as an assault weapon pursuant to Section 30515 or former Section 12276.1, as that section read at any time from when it was enacted by Section 7 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010, shall be deemed to have registered the weapon for purposes of this chapter and shall not be required to reregister the weapon pursuant to this article.</p><p>(b)<span class=\"EnSpace\"/>Any person who legally registered a firearm as an assault weapon pursuant to the\n\t\t\t\t\t\t\t\tprovisions of law in effect prior to January 1, 2005, where the assault weapon is thereafter defined as a .50 caliber BMG rifle pursuant to Section 30530 or former Section 12278, shall be deemed to have registered the weapon for purposes of this chapter and shall not be required to reregister the weapon pursuant to this article.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30965."
+      }
+    ],
+    "PEN:31000": [
+      {
+        "id": "PEN31000.20145416",
+        "lawCode": "PEN",
+        "section": "31000.",
+        "opStatutes": "2014",
+        "opChapter": "54",
+        "opSection": "16",
+        "effectiveDate": "2015-01-01 00:00:00",
+        "versionId": "id_bdf42e61-8666-11e4-9fd7-cecd375806d8",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "6.",
+        "history": "Amended by Stats. 2014, Ch. 54, Sec. 16.   (SB 1461)   Effective January 1, 2015.",
+        "contentMember": "LAW_SECTION_TBL_83244.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83244,
+        "tableRowSha256": "a72313a547d0fadc99fad5cc9895ff54d3277c479eea603af51b47742094e59b",
+        "contentSha256": "c769ffed574dc849393ced4fec5f1bf65d45dfb3c1595ed229c7fa3857f31baf",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Any person who lawfully acquired an assault weapon before June 1, 1989, or a .50 BMG rifle before January 1, 2005, and wishes to use it in a manner different than specified in Section 30945 shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(b)<span class=\"EnSpace\"/>Any person who lawfully acquired an assault weapon between June 1, 1989, and January 1, 1990, and wishes to keep it after January 1, 1990, shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(c)<span class=\"EnSpace\"/>Any person who wishes to\n\t\t\t\t  acquire an assault weapon after January 1, 1990, or a .50 BMG rifle after January 1, 2005, shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p><p>(d)<span class=\"EnSpace\"/>On and after January 1, 2014, no partnership, corporation, limited liability company, association, or any other group or entity, regardless of how the entity was created, may be issued a permit to possess an assault weapon or a .50 BMG rifle.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31000."
+      }
+    ],
+    "PEN:31005": [
+      {
+        "id": "PEN31005.20107116",
+        "lawCode": "PEN",
+        "section": "31005.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc72b42b-0ebc-11e0-9b76-a227e281d99a",
+        "division": "10.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "2.",
+        "article": "6.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83266.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:22",
+        "tableRow": 83266,
+        "tableRowSha256": "bc1d86ff55741e362e4b1a82c660ea14fe23942ee46cca55be251f8bb206b831",
+        "contentSha256": "dab9454dd439e702017cd0e0b125abd827612a228e8f9a4b43696c3564c662fa",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The Department of Justice may, upon a finding of good cause, issue permits for the manufacture or sale of assault weapons or .50 BMG rifles for the sale to, purchase by, or possession of assault weapons or .50 BMG rifles by, any of the following:</p><p>(1)<span class=\"EnSpace\"/>The agencies listed in Section 30625, and the officers described in Section 30630.</p><p>(2)<span class=\"EnSpace\"/>Entities and persons who have been issued permits pursuant to this section or Section 31000.</p><p>(3)<span class=\"EnSpace\"/>Federal law enforcement and military agencies.</p><p>(4)<span class=\"EnSpace\"/>Law enforcement\n\t\t\t\t\t\t\t\tand military agencies of other states.</p><p>(5)<span class=\"EnSpace\"/>Foreign governments and agencies approved by the United States State Department.</p><p>(6)<span class=\"EnSpace\"/>Entities outside the state who have, in effect, a federal firearms dealer’s license solely for the purpose of distribution to an entity listed in paragraphs (3) to (5), inclusive.</p><p>(b)<span class=\"EnSpace\"/>Application for the permits, the keeping and inspection thereof, and the revocation of permits shall be undertaken in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31005."
+      }
+    ]
+  },
+  "retainedComparison": {
+    "receipt": {
+      "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+      "retrievedAt": "2026-10-01T18:00:08.220542+00:00",
+      "lastModified": "Mon, 28 Sep 2026 04:26:06 GMT",
+      "bytes": 1281829537,
+      "sha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6"
+    },
+    "sections": [
+      {
+        "key": "PEN:1170",
+        "expectedHash": "f072ae9cc386a411bc235a158a75140b5f7a0954fbf1f1ad84f309b29b71902f",
+        "observedHash": "f072ae9cc386a411bc235a158a75140b5f7a0954fbf1f1ad84f309b29b71902f",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:18"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:17"
+        ]
+      },
+      {
+        "key": "PEN:16520",
+        "expectedHash": "966eb78f8ae2b9ebe665c9f33e1c7bdd98b4f363c8e3265fb1a6b099cfdcdc70",
+        "observedHash": "966eb78f8ae2b9ebe665c9f33e1c7bdd98b4f363c8e3265fb1a6b099cfdcdc70",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:20"
+        ]
+      },
+      {
+        "key": "PEN:16580",
+        "expectedHash": "b12aebea9c5d5a2187a2e75da660395896e04c02044c4d359911b91a5fbe6a5f",
+        "observedHash": "b12aebea9c5d5a2187a2e75da660395896e04c02044c4d359911b91a5fbe6a5f",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:20"
+        ]
+      },
+      {
+        "key": "PEN:16840",
+        "expectedHash": "b6bf3bc9b698bc86eb36d2fb699559ca420d9c509bd1d6f5bbebfc4d0a186690",
+        "observedHash": "b6bf3bc9b698bc86eb36d2fb699559ca420d9c509bd1d6f5bbebfc4d0a186690",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:20"
+        ]
+      },
+      {
+        "key": "PEN:17",
+        "expectedHash": "6d8e425cb48b1c839755593742e8e7bfc73c4a406e4faeb4fe0c444b01ee41fa",
+        "observedHash": "6d8e425cb48b1c839755593742e8e7bfc73c4a406e4faeb4fe0c444b01ee41fa",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:15"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:14"
+        ]
+      },
+      {
+        "key": "PEN:17030",
+        "expectedHash": "38ce851361d1803905b05bbfd47deffbe2d366fbbb5c0338664889339061eda5",
+        "observedHash": "38ce851361d1803905b05bbfd47deffbe2d366fbbb5c0338664889339061eda5",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:20"
+        ]
+      },
+      {
+        "key": "PEN:18",
+        "expectedHash": "e6ad2f4a1a7df174d35f63d6a09e0f395726b84072b0008eeccc774f62e252ad",
+        "observedHash": "e6ad2f4a1a7df174d35f63d6a09e0f395726b84072b0008eeccc774f62e252ad",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:15"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:14"
+        ]
+      },
+      {
+        "key": "PEN:186.22",
+        "expectedHash": "3eeacf8f04b8fea11acf96560cb7920ab7f6d8b127baffe10feaf40987809c56",
+        "observedHash": "3eeacf8f04b8fea11acf96560cb7920ab7f6d8b127baffe10feaf40987809c56",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:15"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:15"
+        ]
+      },
+      {
+        "key": "PEN:19",
+        "expectedHash": "d6b3d7007c5b8ead5a13c3361a28e2444bc2e0c252d788ba0ea9aec167685863",
+        "observedHash": "d6b3d7007c5b8ead5a13c3361a28e2444bc2e0c252d788ba0ea9aec167685863",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:15"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:14"
+        ]
+      },
+      {
+        "key": "PEN:23515",
+        "expectedHash": "f835ea98f933ceba48137091fa5ff1a4b783a5042ada3834a300104f4cd85efb",
+        "observedHash": "f835ea98f933ceba48137091fa5ff1a4b783a5042ada3834a300104f4cd85efb",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25850",
+        "expectedHash": "0ec9d22200f02f4b61c15b523c975ea092d1857b18eb3ab5f77839c13757cb7d",
+        "observedHash": "0ec9d22200f02f4b61c15b523c975ea092d1857b18eb3ab5f77839c13757cb7d",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25900",
+        "expectedHash": "3aa1f65072bb64a5cb83e25cba9d3a563e40088444787db3edf76c9338ef618c",
+        "observedHash": "3aa1f65072bb64a5cb83e25cba9d3a563e40088444787db3edf76c9338ef618c",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25905",
+        "expectedHash": "dfcb59b6b7dbd2cc480caf12463002bb1b50e08551d967c52bb247e83c3c3400",
+        "observedHash": "dfcb59b6b7dbd2cc480caf12463002bb1b50e08551d967c52bb247e83c3c3400",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25910",
+        "expectedHash": "f5d0daf7616859f9db88f9b802c50c93e139570b6c6b57c0b01a4d8ac2ff0985",
+        "observedHash": "f5d0daf7616859f9db88f9b802c50c93e139570b6c6b57c0b01a4d8ac2ff0985",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25915",
+        "expectedHash": "eee0a54d18f0da0d59588bbaa44af96a560b5fffc2891973b9da86ed977fda8c",
+        "observedHash": "eee0a54d18f0da0d59588bbaa44af96a560b5fffc2891973b9da86ed977fda8c",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25920",
+        "expectedHash": "d908ff6a5516463df13719c15f0e4e09d06c2fc6a47ed6d2be5965604d6158f3",
+        "observedHash": "d908ff6a5516463df13719c15f0e4e09d06c2fc6a47ed6d2be5965604d6158f3",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25925",
+        "expectedHash": "8bfa2e5d19baac1bbfd22d7f6303b45d0b66d46cd7d34d3e4926b016b33bf0bd",
+        "observedHash": "8bfa2e5d19baac1bbfd22d7f6303b45d0b66d46cd7d34d3e4926b016b33bf0bd",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26000",
+        "expectedHash": "4dd502c0a99aa5eed2ce20074cc869853457d36248363e84c5427f9ba75214ff",
+        "observedHash": "4dd502c0a99aa5eed2ce20074cc869853457d36248363e84c5427f9ba75214ff",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26005",
+        "expectedHash": "3a094a23a19e6692c4d4862b933a2bacb188da6eea1735d210c00a44fedebc80",
+        "observedHash": "3a094a23a19e6692c4d4862b933a2bacb188da6eea1735d210c00a44fedebc80",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26010",
+        "expectedHash": "76c8bdcda2906d9b3236a8aaacadac5faef8f88952d884706906d11044d36872",
+        "observedHash": "76c8bdcda2906d9b3236a8aaacadac5faef8f88952d884706906d11044d36872",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26015",
+        "expectedHash": "821ccade5ae220d3440153a72d865a5166d477fe10ebce2b8dc238561454d0b1",
+        "observedHash": "821ccade5ae220d3440153a72d865a5166d477fe10ebce2b8dc238561454d0b1",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26020",
+        "expectedHash": "d284e97d1633fa0b5d53da1f8018d70d5048f89fcaa40e661f09ce8172ff2235",
+        "observedHash": "d284e97d1633fa0b5d53da1f8018d70d5048f89fcaa40e661f09ce8172ff2235",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26025",
+        "expectedHash": "dc1db8757518c45a69142cbe0653ed80f66a19864eac3bfc87ba42976f834343",
+        "observedHash": "dc1db8757518c45a69142cbe0653ed80f66a19864eac3bfc87ba42976f834343",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26030",
+        "expectedHash": "33f9d6828ad0c8d9bb01920e98d0f2e21aff031d5a2ac9e6565ada50c25a9505",
+        "observedHash": "33f9d6828ad0c8d9bb01920e98d0f2e21aff031d5a2ac9e6565ada50c25a9505",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26035",
+        "expectedHash": "bcc53e8dba0d193b5d8edc050ac1a270e95ec1b6c9537bf7b6602328ef226fa7",
+        "observedHash": "bcc53e8dba0d193b5d8edc050ac1a270e95ec1b6c9537bf7b6602328ef226fa7",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26040",
+        "expectedHash": "9ef759b1e77fe010653d2773731e073dd10936d2c1e7cf0dbadef77afe762eca",
+        "observedHash": "9ef759b1e77fe010653d2773731e073dd10936d2c1e7cf0dbadef77afe762eca",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26045",
+        "expectedHash": "0114d4ab604aa5b9b089b4318b3aca531e4d495ddf2b29c65552f57902a0e389",
+        "observedHash": "0114d4ab604aa5b9b089b4318b3aca531e4d495ddf2b29c65552f57902a0e389",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26050",
+        "expectedHash": "cf5d173bffcf636856f31d85b5095914e90b9e91064b2b61093d6c78c6672df0",
+        "observedHash": "cf5d173bffcf636856f31d85b5095914e90b9e91064b2b61093d6c78c6672df0",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26055",
+        "expectedHash": "ba01c149619e29ebaad76d048646e42fb83bbaf560eb060152c3a0777f706a82",
+        "observedHash": "ba01c149619e29ebaad76d048646e42fb83bbaf560eb060152c3a0777f706a82",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26060",
+        "expectedHash": "85ecba826bc3b5a4a52e2bd2df73d814cb829860fb492de0302b08e5e3475255",
+        "observedHash": "85ecba826bc3b5a4a52e2bd2df73d814cb829860fb492de0302b08e5e3475255",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:29800",
+        "expectedHash": "6ec622632e2565720623493fe73dc80b68a4cdacfda8c5f3347a46ab88c082ca",
+        "observedHash": "6ec622632e2565720623493fe73dc80b68a4cdacfda8c5f3347a46ab88c082ca",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:29900",
+        "expectedHash": "e8f8e3a3c406ec6cc2dd542b6eaf9d04b8a359717a46b239c431ecb2dbd1b479",
+        "observedHash": "e8f8e3a3c406ec6cc2dd542b6eaf9d04b8a359717a46b239c431ecb2dbd1b479",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30510",
+        "expectedHash": "4fac070cc640dbaf1b27103b8bf9f5aaa8f9dd4533578ef65155e0be6262979d",
+        "observedHash": "4fac070cc640dbaf1b27103b8bf9f5aaa8f9dd4533578ef65155e0be6262979d",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30515",
+        "expectedHash": "c74a9c896b126f9e9a1692e22761fb41f969e35754bfe93d49c4660d60f5f7b8",
+        "observedHash": "c74a9c896b126f9e9a1692e22761fb41f969e35754bfe93d49c4660d60f5f7b8",
+        "expectedVersions": 2,
+        "observedVersions": 2,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-09-26 01:01:21",
+          "2026-09-26 01:01:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21",
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30530",
+        "expectedHash": "f2278b142e6421c6558ddb61e3509837cd33f988da645c048d808f98c3644997",
+        "observedHash": "f2278b142e6421c6558ddb61e3509837cd33f988da645c048d808f98c3644997",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30600",
+        "expectedHash": "94b2f163be957e0cd5ceb1c7fb591db5bd9bae2329689a19938e5e200f193dad",
+        "observedHash": "94b2f163be957e0cd5ceb1c7fb591db5bd9bae2329689a19938e5e200f193dad",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30605",
+        "expectedHash": "35d21d5939b9d2a841a12754265b1641b954ee9798730a0483cd02f793bc4f60",
+        "observedHash": "35d21d5939b9d2a841a12754265b1641b954ee9798730a0483cd02f793bc4f60",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30610",
+        "expectedHash": "d33ede44e4b11cf01e84ea91a20ac88cb44b6db92bf79d97188a4f8428b3ddb1",
+        "observedHash": "d33ede44e4b11cf01e84ea91a20ac88cb44b6db92bf79d97188a4f8428b3ddb1",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30615",
+        "expectedHash": "89a9d0de30dc059c9c2d27ac88cbf6b14e5dc3cf1c7f5dfa2c509f65e46b6674",
+        "observedHash": "89a9d0de30dc059c9c2d27ac88cbf6b14e5dc3cf1c7f5dfa2c509f65e46b6674",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30625",
+        "expectedHash": "9cf80a27016cd6b254af020183ddd7b543d467584db335bb3fcbe43e0086fd3a",
+        "observedHash": "9cf80a27016cd6b254af020183ddd7b543d467584db335bb3fcbe43e0086fd3a",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30630",
+        "expectedHash": "517f3db2621b3182e4de01a3a7cf0697ffd153cc2b70240d0a202acee52958ae",
+        "observedHash": "517f3db2621b3182e4de01a3a7cf0697ffd153cc2b70240d0a202acee52958ae",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30631",
+        "expectedHash": "255cd018132352c9fc7e94ffd0e6298d5dc11e1fa90a8071e0a0b45bdcc84cff",
+        "observedHash": "255cd018132352c9fc7e94ffd0e6298d5dc11e1fa90a8071e0a0b45bdcc84cff",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30635",
+        "expectedHash": "20aa98cbca94a638bdd03f2f6b37aeba3d862063a5680cb8da812dabb713a889",
+        "observedHash": "20aa98cbca94a638bdd03f2f6b37aeba3d862063a5680cb8da812dabb713a889",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30640",
+        "expectedHash": "cce6cc16ecbedd221134b43ab0a30a7cfc292973b3f093dbdc5ae2a42d7f752a",
+        "observedHash": "cce6cc16ecbedd221134b43ab0a30a7cfc292973b3f093dbdc5ae2a42d7f752a",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30645",
+        "expectedHash": "09e98d0a1c44f07d52914d3262ca167a0290c1fe554b0d6d1f5521c1c922602e",
+        "observedHash": "09e98d0a1c44f07d52914d3262ca167a0290c1fe554b0d6d1f5521c1c922602e",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30650",
+        "expectedHash": "ab67437ad3166babf345106ec59302f990affe40da7f2380e2613cd54d892f38",
+        "observedHash": "ab67437ad3166babf345106ec59302f990affe40da7f2380e2613cd54d892f38",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30655",
+        "expectedHash": "eb3437e2d0bbc5f1af3577825ce0115e98a8a37735d45cc14858544e3d90dc12",
+        "observedHash": "eb3437e2d0bbc5f1af3577825ce0115e98a8a37735d45cc14858544e3d90dc12",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30660",
+        "expectedHash": "e19b1ce919026b3404d2eb50fe43bf65428c3d0913e706bed9956064cd92965a",
+        "observedHash": "e19b1ce919026b3404d2eb50fe43bf65428c3d0913e706bed9956064cd92965a",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:30665",
+        "expectedHash": "8ec6dc3e488100948ccfe5488cde27b8a9aeb9ff1002981ee24bfd530cca3f52",
+        "observedHash": "8ec6dc3e488100948ccfe5488cde27b8a9aeb9ff1002981ee24bfd530cca3f52",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30670",
+        "expectedHash": "3c27143bf8c896bc03b81d5ca0a567b98d2bc880620c73306e13b767c20aaf78",
+        "observedHash": "3c27143bf8c896bc03b81d5ca0a567b98d2bc880620c73306e13b767c20aaf78",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30675",
+        "expectedHash": "068ed6e29133488735c0528be8bfe901cb1029bee62916440f118c0b4ab9aca4",
+        "observedHash": "068ed6e29133488735c0528be8bfe901cb1029bee62916440f118c0b4ab9aca4",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30680",
+        "expectedHash": "3a7223b02f0b66f8366f455c0367245b65138d648fa61a67801be1e04f56cc04",
+        "observedHash": "3a7223b02f0b66f8366f455c0367245b65138d648fa61a67801be1e04f56cc04",
+        "expectedVersions": 2,
+        "observedVersions": 2,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22",
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22",
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30685",
+        "expectedHash": "5157fcd6a4bdc2c827042d2a02d917e3ff1c2748ccfe68627b050581039bd7ca",
+        "observedHash": "5157fcd6a4bdc2c827042d2a02d917e3ff1c2748ccfe68627b050581039bd7ca",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30710",
+        "expectedHash": "22227e59dd5c10c06a5ade1b072b7800276aaa4b6238e511609ad9ee7a09237b",
+        "observedHash": "22227e59dd5c10c06a5ade1b072b7800276aaa4b6238e511609ad9ee7a09237b",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30715",
+        "expectedHash": "0250a461adc48011c968bd3c174d8ec8b039ecabba4f563329c949751174a4df",
+        "observedHash": "0250a461adc48011c968bd3c174d8ec8b039ecabba4f563329c949751174a4df",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30720",
+        "expectedHash": "237a38c9f39e97eec04d97dcd83aadf387f08fb1643f161f83150a5cba41b908",
+        "observedHash": "237a38c9f39e97eec04d97dcd83aadf387f08fb1643f161f83150a5cba41b908",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30725",
+        "expectedHash": "e002dfa28feaca0dc35a0cb3ea71bf4adc628e474d84eb476f54cc2a27cdeda8",
+        "observedHash": "e002dfa28feaca0dc35a0cb3ea71bf4adc628e474d84eb476f54cc2a27cdeda8",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30730",
+        "expectedHash": "621ef72253d6a6d97cb217471a03a00f4ecc4373c137ae19e691f7932c204523",
+        "observedHash": "621ef72253d6a6d97cb217471a03a00f4ecc4373c137ae19e691f7932c204523",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30735",
+        "expectedHash": "9b0382842bbd4bdbb851e8e45d8034b6fd0d2e7cccc061828f93aa72b5e9fc6a",
+        "observedHash": "9b0382842bbd4bdbb851e8e45d8034b6fd0d2e7cccc061828f93aa72b5e9fc6a",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30800",
+        "expectedHash": "06294745aa45f54087d0c0a5c0ee68c9e431125fe6621e49c400970d57502eda",
+        "observedHash": "06294745aa45f54087d0c0a5c0ee68c9e431125fe6621e49c400970d57502eda",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30900",
+        "expectedHash": "6fba526958a90f58249fff09fd6a512e97801392b182660d1de51a173c0e77d5",
+        "observedHash": "6fba526958a90f58249fff09fd6a512e97801392b182660d1de51a173c0e77d5",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30905",
+        "expectedHash": "930ab214ffa813b65584016def40a0265d15c7391848241f571f143029068c99",
+        "observedHash": "930ab214ffa813b65584016def40a0265d15c7391848241f571f143029068c99",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30910",
+        "expectedHash": "121c6ae97ea2b49f0ff11b2f2d39a0481bf984cc55b0587c2bc8c7e61c5a7bd8",
+        "observedHash": "121c6ae97ea2b49f0ff11b2f2d39a0481bf984cc55b0587c2bc8c7e61c5a7bd8",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30915",
+        "expectedHash": "39f90202856b004a823053aa95fd60085464b10c05539999b2fbe852caaace86",
+        "observedHash": "39f90202856b004a823053aa95fd60085464b10c05539999b2fbe852caaace86",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30920",
+        "expectedHash": "8396d61e60cfffc4748760dc8cd2a7f682314e89447c28959368a7ea1651f710",
+        "observedHash": "8396d61e60cfffc4748760dc8cd2a7f682314e89447c28959368a7ea1651f710",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30925",
+        "expectedHash": "2aef3ce0e4bb6abd2d8356649fb5639417ad4a7ecbdf584cceae4ba090879ad1",
+        "observedHash": "2aef3ce0e4bb6abd2d8356649fb5639417ad4a7ecbdf584cceae4ba090879ad1",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30930",
+        "expectedHash": "6e0dec2ab0c65499a62ad6a998078cede8ff9fa799c121944e3e7fe8551274e4",
+        "observedHash": "6e0dec2ab0c65499a62ad6a998078cede8ff9fa799c121944e3e7fe8551274e4",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30935",
+        "expectedHash": "2d8213d91221c09c95d8030b0af12b2f62573765ee4d92b5a5b97437565dcf2e",
+        "observedHash": "2d8213d91221c09c95d8030b0af12b2f62573765ee4d92b5a5b97437565dcf2e",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30940",
+        "expectedHash": "5a54b237f1b7c2d0e92fc563fbc3b0340970b89901c99714faa12e42071de5e1",
+        "observedHash": "5a54b237f1b7c2d0e92fc563fbc3b0340970b89901c99714faa12e42071de5e1",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30945",
+        "expectedHash": "5d3858a2af41e5b431fbfcf4d393f26d7fd36c7b57d216083215de27ef3ad61c",
+        "observedHash": "5d3858a2af41e5b431fbfcf4d393f26d7fd36c7b57d216083215de27ef3ad61c",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30950",
+        "expectedHash": "af12721210ac530ece98358eb883ea6d08a0c7c5550f9c9d5abce80a48652b66",
+        "observedHash": "af12721210ac530ece98358eb883ea6d08a0c7c5550f9c9d5abce80a48652b66",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30955",
+        "expectedHash": "48868a05fd6087071794e98e0eb1470e8012f13260e003b8073d0d6afa4566b4",
+        "observedHash": "48868a05fd6087071794e98e0eb1470e8012f13260e003b8073d0d6afa4566b4",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30960",
+        "expectedHash": "e049f4c3636198a684ec3326cb4e1fb91acb5462491993025ea75d74da18a40d",
+        "observedHash": "e049f4c3636198a684ec3326cb4e1fb91acb5462491993025ea75d74da18a40d",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:30965",
+        "expectedHash": "b45bcb306edc31f778eed8f57594314b61ddeaa19f993207ce90cc649715707d",
+        "observedHash": "b45bcb306edc31f778eed8f57594314b61ddeaa19f993207ce90cc649715707d",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:31000",
+        "expectedHash": "4d9fe5628fbd736acc10aae202b8f3212647301af56007ea107de0015ecbee82",
+        "observedHash": "4d9fe5628fbd736acc10aae202b8f3212647301af56007ea107de0015ecbee82",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:31005",
+        "expectedHash": "0634fc0e41ae4cddc06b31913b5a48ce13ab3e95c1fc516781d4d9c724509753",
+        "observedHash": "0634fc0e41ae4cddc06b31913b5a48ce13ab3e95c1fc516781d4d9c724509753",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:22"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:22"
+        ]
+      },
+      {
+        "key": "PEN:672",
+        "expectedHash": "c3fc613257db20a662f372c9f298a66f0f3e68105e18beaba95a1ffb5d6b35de",
+        "observedHash": "c3fc613257db20a662f372c9f298a66f0f3e68105e18beaba95a1ffb5d6b35de",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:17"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:16"
+        ]
+      },
+      {
+        "key": "WIC:8100",
+        "expectedHash": "ae1b1e589b2e2f44bcbb54137392e32c339d7ec78c56079574503fd903c63bdf",
+        "observedHash": "ae1b1e589b2e2f44bcbb54137392e32c339d7ec78c56079574503fd903c63bdf",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:31"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:02:12"
+        ]
+      },
+      {
+        "key": "WIC:8103",
+        "expectedHash": "91030936c5366f1a5a880415e1232711f0d19c137f0b7641a2e16728d27246b8",
+        "observedHash": "91030936c5366f1a5a880415e1232711f0d19c137f0b7641a2e16728d27246b8",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:31"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:02:12"
+        ]
+      }
+    ],
+    "scope": "historical_comparison_not_currentness_or_approval"
+  }
+}

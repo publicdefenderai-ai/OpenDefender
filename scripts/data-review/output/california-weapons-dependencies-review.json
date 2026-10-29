@@ -1,0 +1,1686 @@
+{
+  "schemaVersion": 1,
+  "scope": "combined_weapons_dependency_research_not_publication",
+  "acquisitionSha256": "571315a2e608f0cf15f744037d320a9334a0f4d1596a4fb688eaaf402ba32c85",
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "historicalComparison": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-10-01T18:00:08.220542+00:00",
+    "lastModified": "Mon, 28 Sep 2026 04:26:06 GMT",
+    "bytes": 1281829537,
+    "sha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6"
+  },
+  "instructionReceipt": {
+    "sourceUrl": "https://courts.ca.gov/system/files/file/calcrim-2026.pdf",
+    "landingUrl": "https://courts.ca.gov/advisory-body/criminal-jury-instructions-advisory-committee",
+    "edition": "2026 approved February edition; later supplements not assumed incorporated",
+    "retrievedAt": "2026-09-28T05:28:52.309479+00:00",
+    "bytes": 84489227,
+    "sha256": "32cde18ace46a4a6fc4dd2ea27c9e30f923dc1d28dd554500119787f957a3d6e",
+    "pdfPages": 2680
+  },
+  "instructions": [
+    {
+      "id": "2530",
+      "heading": "2530. Carrying Loaded Firearm (Pen. Code, § 25850(a))",
+      "firstPage": 1770,
+      "family": "weapons",
+      "lastPage": 1773,
+      "pageHashes": [
+        {
+          "page": 1770,
+          "sha256": "aaa287ebc4d329ba2ae295f7d5c97fc980320f4b914291d2a26ad569df926994"
+        },
+        {
+          "page": 1771,
+          "sha256": "84703f20f4c15741dd818ce77d1d709956fbbd811468eacad0746e9d3314db27"
+        },
+        {
+          "page": 1772,
+          "sha256": "622da77c0475426d1cf51790baf1486384c509209437f3de8284ea092e153e05"
+        },
+        {
+          "page": 1773,
+          "sha256": "0fe005a769baccde03d7f2bca9da39a25ad5c9398f3f21ca7e1505de7745a449"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1770,
+          "text": "(ii) \nLoaded\n2530. Carrying Loaded Firearm (Pen. Code, § 25850(a))\nThe defendant is charged [in Count \n] with unlawfully carrying a \nloaded ﬁrearm (on (his/her) person/in a vehicle) [in violation of Penal \nCode section 25850(a)].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant carried a loaded ﬁrearm (on (his/her) person/in a \nvehicle);\n2. The defendant knew that (he/she) was carrying a ﬁrearm; \nAND\n3. At that time, the defendant was in a public place or on a public \nstreet in (an incorporated city/in an unincorporated area where it \nwas unlawful to discharge a ﬁrearm).\n[A public place is a place that is open and accessible to anyone who \nwishes to go there.]\n[A ﬁrearm is any device designed to be used as a weapon, from which a \nprojectile is expelled or discharged through a barrel by the force of any \nexplosion or other form of combustion. [A ﬁrearm also includes any \nrocket, rocket-propelled projectile launcher, or similar device containing \nany explosive or incendiary material, whether or not the device is \ndesigned for emergency or distress signaling purposes.]]\n[The term ﬁrearm is deﬁned in another instruction.]\nAs used here, a ﬁrearm is loaded if there is an unexpended cartridge or \nshell in the ﬁring chamber or in either a magazine or clip attached to the \nﬁrearm. An unexpended cartridge or shell consists of a case that holds a \ncharge of powder and a bullet or shot. [A muzzle-loader ﬁrearm is loaded \nwhen it is capped or primed and has a powder charge and ball or shot \nin the barrel or cylinder.]\n[A ﬁrearm does not need to be in working order if it was designed to \nshoot and appears capable of shooting.]\n[ \n<insert location> is (an incorporated city/in an \nunincorporated area where it is unlawful to discharge a ﬁrearm).]\n<Defense: Statutory Exemption>\n[The defendant did not unlawfully carry a loaded ﬁrearm if \n<insert defense from Pen Code, §§ 25900, 26000 et seq.>. The People have\n1646\n",
+          "sha256": "aaa287ebc4d329ba2ae295f7d5c97fc980320f4b914291d2a26ad569df926994"
+        },
+        {
+          "page": 1771,
+          "text": "the burden of proving beyond a reasonable doubt that the defendant \nunlawfully carried a loaded ﬁrearm. If the People have not met this \nburden, you must ﬁnd the defendant not guilty of this crime.]\nNew January 2006; Revised February 2012, March 2019\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \ncrime. If the defendant is charged with any of the sentencing factors in Penal Code \nsection 25850, the court must also give the appropriate instruction from CALCRIM \nNos. 2540–2546. (See People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 \nCal.Rptr.2d 690].)\nThe court should give the bracketed deﬁnition of “ﬁrearm” unless the court has \nalready given the deﬁnition in other instructions. In such cases, the court may give \nthe bracketed sentence stating that the term is deﬁned elsewhere.\nDefenses—Instructional Duty\nIf the defense presents sufficient evidence to raise a reasonable doubt about the\nexistence of a legal basis for the defendant’s actions, the court has a sua sponte\nduty to give the bracketed instruction on the defense. (See People v. Mower (2002)\n28 Cal.4th 457, 478–481 [122 Cal.Rptr.2d 326, 49 P.3d 1067] [discussing affirmative\ndefenses generally and the burden of proof].) Insert the appropriate language in the\nbracketed paragraph that begins, “The defendant did not unlawfully . . . .”\nRelated Instructions \nCALCRIM No. 2540, Carrying Firearm: Speciﬁed Convictions. \nCALCRIM No. 2541, Carrying Firearm: Stolen Firearm.\nCALCRIM No. 2542, Carrying Firearm: Active Participant in Criminal Street \nGang.\nCALCRIM No. 2543, Carrying Firearm: Not in Lawful Possession.\nCALCRIM No. 2544, Carrying Firearm: Possession of Firearm Prohibited Due to \nConviction, Court Order, or Mental Illness.\nCALCRIM No. 2545, Carrying Firearm: Not Registered Owner.\nCALCRIM No. 2546, Carrying Concealed Firearm: Not Registered Owner and \nWeapon Loaded.\nAUTHORITY\n• \nElements. Pen. Code, § 25850(a).\n• \nFirearm Deﬁned. Pen. Code, § 16520.\n• \nKnowledge of Presence of Weapon Required. See People v. Rubalcava (2000) 23 \nCal.4th 322, 331–332 [96 Cal.Rptr.2d 735, 1 P.3d 52]; People v. Dillard (1984) \nWEAPONS\nCALCRIM No. 2530\n1647\n",
+          "sha256": "84703f20f4c15741dd818ce77d1d709956fbbd811468eacad0746e9d3314db27"
+        },
+        {
+          "page": 1772,
+          "text": "154 Cal.App.3d 261, 267 [201 Cal.Rptr. 136].\n• \nKnowledge Firearm Loaded Not Required. People v. Dillard (1984) 154 \nCal.App.3d 261, 266 [201 Cal.Rptr. 136]; People v. Harrison (1969) 1 \nCal.App.3d 115, 120 [81 Cal.Rptr. 396].\n• \nFactors in Pen. Code, § 25400(c) Sentencing Factors, Not Elements. People v. \nHall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\n• \nJustiﬁcations and Exemptions. Pen. Code, § 25900, 26000 et seq.\n• \nNeed Not Be Operable. People v. Taylor (1984) 151 Cal.App.3d 432, 437 [199 \nCal.Rptr. 6].\n• \n“Loaded” Firearm. People v. Clark (1996) 45 Cal.App.4th 1147, 1153 [53 \nCal.Rptr.2d 99].\n• \nMust Be in Incorporated City or Prohibited Area of Unincorporated Territory. \nPeople v. Knight (2004) 121 Cal.App.4th 1568, 1575 [18 Cal.Rptr.3d 384].\n• \nPublic Place Deﬁned. In re Zorn (1963) 59 Cal.2d 650, 652 [30 Cal.Rptr. 811, \n381 P.2d 635]; People v. Strider (2009) 177 Cal.App.4th 1393, 1401 [100 \nCal.Rptr. 3d 66].\n• \nLoaded Firearm in Backpack is “On the Person.” People v. Wade (2016) 63 \nCal.4th 137, 140 [201 Cal.Rptr.3d 876].\nLESSER INCLUDED OFFENSES\nIf the defendant is charged with one of the sentencing factors that makes this \noffense a felony, then the misdemeanor offense is a lesser included offense. The \nstatute deﬁnes as a misdemeanor all violations of the statute not covered by the \nspeciﬁed sentencing factors. (Pen. Code, § 25850(c)(7).) The court must provide the \njury with a verdict form on which the jury will indicate if the sentencing factor has \nbeen proved. If the jury ﬁnds that the sentencing factor has not been proved, then \nthe offense should be set at a misdemeanor.\nRELATED ISSUES\nLoaded Firearm\n“Under the commonly understood meaning of the term ‘loaded,’ a ﬁrearm is \n‘loaded’ when a shell or cartridge has been placed into a position from which it can \nbe ﬁred; the shotgun is not ‘loaded’ if the shell or cartridge is stored elsewhere and \nnot yet placed in a ﬁring position.” (People v. Clark (1996) 45 Cal.App.4th 1147, \n1153 [53 Cal.Rptr.2d 99].)\nLocation—Court May Take Judicial Notice\n“The location of local streets within city boundaries is properly a matter of judicial \nnotice [citation omitted], as is the fact that a particular jurisdiction is an \nincorporated city.” (People v. Vega (1971) 18 Cal.App.3d 954, 958 [96 Cal.Rptr. \n391] [footnote and citation omitted].)\nCALCRIM No. 2530 \nWEAPONS\n1648\n",
+          "sha256": "622da77c0475426d1cf51790baf1486384c509209437f3de8284ea092e153e05"
+        },
+        {
+          "page": 1773,
+          "text": "SECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 249–251.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d], [f] (Matthew Bender).\n2531–2539. \nReserved for Future Use\nWEAPONS\nCALCRIM No. 2530\n1649\n",
+          "sha256": "0fe005a769baccde03d7f2bca9da39a25ad5c9398f3f21ca7e1505de7745a449"
+        }
+      ]
+    },
+    {
+      "id": "2540",
+      "heading": "2540. Carrying Firearm: Speciﬁed Convictions (Pen. Code, §§ 25400(a), 25850(c))",
+      "firstPage": 1774,
+      "family": "weapons",
+      "lastPage": 1775,
+      "pageHashes": [
+        {
+          "page": 1774,
+          "sha256": "81801eefaec8eb5579c3013d74470281c693470edcdf98ba084f6d79b89cbaa0"
+        },
+        {
+          "page": 1775,
+          "sha256": "51987180fa4407812ec519bfd1c34cacd76e075816ea04241ede4fff2dbf7d3c"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1774,
+          "text": "(iii) \nSentencing Factors \n2540. Carrying Firearm: Speciﬁed Convictions (Pen. Code, \n§§ 25400(a), 25850(c))\nIf you ﬁnd the defendant guilty of unlawfully (carrying a concealed \nﬁrearm (on (his/her) person/within a vehicle)[,]/ causing a ﬁrearm to be \ncarried concealed within a vehicle[,]/ [or] carrying a loaded ﬁrearm) \n[under Count[s] \n], you must then decide whether the People have \nproved the additional allegation that (he/she) was previously convicted of \n(a felony/the crime[s] of \n<insert one or more weapons \noffenses punishable as a felony, crimes against the person or property, or \nnarcotics and dangerous drug violations>). It has already been determined \nthat the defendant is the person named in exhibits \n<insert \nnumbers or descriptions of exhibits>. You must decide whether the \nevidence proves that the defendant was convicted of the alleged crime[s]. \nThe People allege that the defendant has been convicted of: \n[1.] A violation of \n<insert code section alleged>, on \n<insert date of conviction>, in the \n<insert name of court>, in Case Number \n<insert docket or \ncase number>(;/.) \n[AND <Repeat for each prior conviction alleged>.] \n[A conviction of \n<insert name of offense from other state or \nfederal offense> is the same as a conviction for a felony.] \n[Consider the evidence presented on this allegation only when deciding \nwhether the defendant was previously convicted of the crime[s] alleged \n[or for the limited purpose of \n<insert other permitted \npurpose, e.g., assessing credibility of the defendant>]. Do not consider this \nevidence for any other purpose.] \n[You must consider each alleged conviction separately.] The People have \nthe burden of proving this allegation beyond a reasonable doubt. If the \nPeople have not met this burden [for any alleged conviction], you must \nﬁnd that the alleged conviction has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d \n690].)\n1650\n",
+          "sha256": "81801eefaec8eb5579c3013d74470281c693470edcdf98ba084f6d79b89cbaa0"
+        },
+        {
+          "page": 1775,
+          "text": "Give this instruction if the defendant is charged under Penal Code section \n25400(c)(1), (5), 25850(c)(1), (5), unless the court has granted a bifurcated trial on \nthe prior conviction or the defendant stipulates to the prior conviction. (People v. \nHall, supra, 67 Cal.App.4th at p. 135.) This instruction must be given with the \nappropriate instruction deﬁning the elements of carrying a concealed ﬁrearm, \nCALCRIM No. 2520, 2521, or 2522, or carrying a loaded ﬁrearm, CALCRIM No.\n2530. The court must provide the jury with a verdict form on which the jury will \nindicate if the sentencing factor has been proved.\nIf the court grants bifurcation, do not give this instruction. Give CALCRIM No. \n3101, Prior Conviction: Bifurcated Trial.\nIf the defendant does stipulate to the prior conviction, this instruction should not be \ngiven and the prior conviction should not be disclosed to the jury unless the court \nadmits it as otherwise relevant. (People v. Hall, supra, 67 Cal.App.4th at p. 135.)\nOn request, the court should give the limiting instruction regarding the evidence of \nthe prior conviction that begins, “Consider the evidence presented . . . .” (People v. \nValentine (1986) 42 Cal.3d 170, 182, fn. 7 [228 Cal.Rptr. 25, 720 P.2d 913].) There \nis no sua sponte duty to give the limiting instruction, and the defense may prefer \nthat no limiting instruction be given. (People v. Griggs (2003) 110 Cal.App.4th \n1137, 1139 [2 Cal.Rptr.3d 380].)\nAUTHORITY\n• \nFactors in Pen. Code, §§ 25400(c), 25850(c) Sentencing Factors, Not Elements. \nPeople v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\n• \nLimiting Instruction on Prior Conviction. People v. Valentine (1986) 42 Cal.3d \n170, 182, fn. 7 [228 Cal.Rptr. 25, 720 P.2d 913]; People v. Griggs (2003) 110 \nCal.App.4th 1137, 1139 [2 Cal.Rptr.3d 380].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203, 204, 249, 250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\nWEAPONS\nCALCRIM No. 2540\n1651\n",
+          "sha256": "51987180fa4407812ec519bfd1c34cacd76e075816ea04241ede4fff2dbf7d3c"
+        }
+      ]
+    },
+    {
+      "id": "2541",
+      "heading": "2541. Carrying Firearm: Stolen Firearm (Pen. Code, §§ 25400(c)(2), 25850(c)(2))",
+      "firstPage": 1776,
+      "family": "weapons",
+      "lastPage": 1777,
+      "pageHashes": [
+        {
+          "page": 1776,
+          "sha256": "b778d74174aeaffde92269e627c2693f0cf44eea127f9984ed5cfe151feb56e2"
+        },
+        {
+          "page": 1777,
+          "sha256": "c36fdaf8f9b7579ef4d371b7b529b5167bcd8ade29e8a97925a6743d2fdc3cb5"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1776,
+          "text": "2541. Carrying Firearm: Stolen Firearm (Pen. Code, §§ 25400(c)(2), \n25850(c)(2))\nIf you ﬁnd the defendant guilty of unlawfully (carrying a concealed \nﬁrearm (on (his/her) person/within a vehicle)[,]/ causing a ﬁrearm to be \ncarried concealed within a vehicle[,]/ [or] carrying a loaded ﬁrearm) \n[under Count[s] \n], you must then decide whether the People have \nproved the additional allegation that the ﬁrearm was stolen.\nTo prove this allegation, the People must prove that:\n1. The ﬁrearm the defendant (carried/ [or] caused to be carried \nconcealed in a vehicle) was stolen;\nAND\n2. The defendant knew or had reasonable cause to believe the \nﬁrearm was stolen.\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 \n[120 S.Ct. 2348, 147 L.Ed.2d 435].) \nGive this instruction if the defendant is charged under Penal Code section \n25400(c)(2) or 25850(c)(2) and the defendant does not stipulate to the ﬁrearm being \nstolen. (People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].) This \ninstruction must be given with the appropriate instruction deﬁning the elements of \ncarrying a concealed ﬁrearm, CALCRIM No. 2520, 2521, or 2522, or carrying a \nloaded ﬁrearm, CALCRIM No. 2530. The court must provide the jury with a verdict \nform on which the jury will indicate if the sentencing factor has been proved. \nIf the defendant does stipulate that the ﬁrearm was stolen, this instruction should not \nbe given and that information should not be disclosed to the jury. (See People v. \nHall, supra, 67 Cal.App.4th at p. 135.)\nAUTHORITY\n• \nFactors. Pen. Code, §§ 25400(c)(2), 25850(c)(2). Sentencing Factors, Not \nElements People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690]. \n1652\n",
+          "sha256": "b778d74174aeaffde92269e627c2693f0cf44eea127f9984ed5cfe151feb56e2"
+        },
+        {
+          "page": 1777,
+          "text": "SECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203–204, 249–250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\nWEAPONS\nCALCRIM No. 2541\n1653\n",
+          "sha256": "c36fdaf8f9b7579ef4d371b7b529b5167bcd8ade29e8a97925a6743d2fdc3cb5"
+        }
+      ]
+    },
+    {
+      "id": "2542",
+      "heading": "2542. Carrying Firearm: Active Participant in Criminal Street Gang (Pen. Code, §§ 25400(c)(3), 25850(c)(3))",
+      "firstPage": 1778,
+      "family": "weapons",
+      "lastPage": 1784,
+      "pageHashes": [
+        {
+          "page": 1778,
+          "sha256": "8ca13059ca83e436b5dbd43f6a7878dc1df14f367594393bfa88863e9e25044d"
+        },
+        {
+          "page": 1779,
+          "sha256": "f903d3de332d12e1987d1112de9eaf901054281d69a0c23885c669c15e6bb8db"
+        },
+        {
+          "page": 1780,
+          "sha256": "3d1fcd6385f458ce021a7a33aea6574ac6c34f4c14e1e46aa30c22fe0d278102"
+        },
+        {
+          "page": 1781,
+          "sha256": "b1fef2f4b0264452f5a82385dc90ffd167f21408d8f61600cd531ce9cb9de6df"
+        },
+        {
+          "page": 1782,
+          "sha256": "500df544a7243e30209d7d23eda9e06421f597f76d0f42d2e95baa978f1c3a74"
+        },
+        {
+          "page": 1783,
+          "sha256": "e3e34c3f1078eac6677121c6161303a6fb5f74daced229b80b3a9b773e643285"
+        },
+        {
+          "page": 1784,
+          "sha256": "68a86ef76cec9381c7de88cee77d584ae239316639e0a6518bc3738500f3a48e"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1778,
+          "text": "2542. Carrying Firearm: Active Participant in Criminal Street Gang \n(Pen. Code, §§ 25400(c)(3), 25850(c)(3))\nIf you ﬁnd the defendant guilty of unlawfully (carrying a concealed \nﬁrearm (on (his/her) person/within a vehicle)[,]/ causing a ﬁrearm to be \ncarried concealed within a vehicle[,]/ [or] carrying a loaded ﬁrearm) \n[under Count[s] \n], you must then decide whether the People have \nproved the additional allegation that the defendant was an active \nparticipant in a criminal street gang.\nTo prove this allegation, the People must prove that:\n1. When the defendant (carried the ﬁrearm/ [or] caused the ﬁrearm \nto be carried concealed in a vehicle), the defendant was an active \nparticipant in a criminal street gang;\n2. When the defendant participated in the gang, (he/she) knew that \nmembers of the gang engage in or have engaged in a pattern of \ncriminal gang activity;\nAND\n3. The defendant willfully assisted, furthered, or promoted felonious \ncriminal conduct by members of the gang either by: \na. Directly and actively committing a felony offense; \na. OR \nb. aiding and abetting a felony offense.\nAt least two members of that same gang must have participated in \ncommitting the felony offense. The defendant may count as one of those \nmembers if you ﬁnd that the defendant was a member of the gang.\nActive participation means involvement with a criminal street gang in a \nway that is more than passive or in name only.\n[The People do not have to prove that the defendant devoted all or a \nsubstantial part of (his/her) time or efforts to the gang, or that (he/she) \nwas an actual member of the gang.]\nA criminal street gang is an ongoing organized association or group of \nthree or more persons, whether formal or informal:\n1. That has a common name or common identifying sign or symbol;\n2. That has, as one or more of its primary activities, the commission \nof \n<insert one or more crimes listed in Pen. Code,\n§ 186.22(e)(1)>; \nAND\n1654\n",
+          "sha256": "8ca13059ca83e436b5dbd43f6a7878dc1df14f367594393bfa88863e9e25044d"
+        },
+        {
+          "page": 1779,
+          "text": "3. Whose members collectively engage in or have engaged in a \npattern of criminal gang activity.\nIn order to qualify as a primary activity, the crime must be one of the \ngroup’s chief or principal activities rather than an occasional act \ncommitted by one or more persons who happen to be members of the \ngroup.\n<Give this paragraph only when the conduct that establishes the primary \nactivity, i.e., predicate offenses, has not resulted in a conviction or sustained \njuvenile petition.>\n[To decide whether the organization, association, or group has, as one of \nits primary activities, the commission of \n<insert felony or \nfelonies from Pen. Code, § 186.22(e)(1)>, please refer to the separate \ninstructions that I (will give/have given) you on (that/those) crime[s].]\nA pattern of criminal gang activity, as used here, means:\n1. [The] (commission of[,]/ [or] attempted commission of[,]/ [or] \nconspiracy to commit[,]/ [or] solicitation to commit[,]/ [or] \nconviction of[,]/ [or] (Having/having) a juvenile petition sustained \nfor commission of) (any combination of two or more of the \nfollowing crimes/[,] [or] two or more occurrences of [one or more \nof the following crimes]:) \n<insert one or more crimes \nlisted in Pen. Code, § 186.22(e)(1);\n2. At least one of those crimes was committed after September 26, \n1988;\n3. The most recent crime occurred within three years of one of the \nearlier crimes and within three years of the date of the currently \ncharged offense;\n4. The crimes were committed on separate occasions or were \npersonally committed by two or more members;\n5. The crimes commonly beneﬁtted a criminal street gang; \nAND\n6. The common beneﬁt from the crimes was more than reputational.\nExamples of a common beneﬁt that are more than reputational may \ninclude, but are not limited to, ﬁnancial gain or motivation, retaliation, \ntargeting a perceived or actual gang rival, or intimidation or silencing of \na potential current or previous witness or informant.\nAs used here, members collectively engage in or have engaged in a \npattern of criminal gang activity when the crimes that make up the \npattern of criminal gang activity can be connected to the gang as a \nwhole. Collective engagement requires a connection between the crimes\nWEAPONS\nCALCRIM No. 2542\n1655\n",
+          "sha256": "f903d3de332d12e1987d1112de9eaf901054281d69a0c23885c669c15e6bb8db"
+        },
+        {
+          "page": 1780,
+          "text": "and the gang’s organizational structure or manner of governance, its \nprimary activities, or its common goals and principles.\n<Give this paragraph only when the conduct that establishes the pattern of \nprimary activity, i.e., predicate offenses, has not resulted in a conviction or \nsustained juvenile petition>\n[To decide whether a member of the gang [or the defendant] committed\n<insert felony or felonies from Pen. Code, § 186.22(e)(1)>, \nplease refer to the separate instructions that I (will give/have given) you \non (that/those) crime[s].]\n[If you ﬁnd the defendant guilty of a crime in this case, you may \nconsider that crime in deciding whether one of the group’s primary \nactivities was commission of that crime.]\n[You may not consider evidence of the charged offense[s] in deciding \nwhether a pattern of criminal gang activity has been established.]\n[You may not ﬁnd that there was a pattern of criminal gang activity \nunless all of you agree that two or more crimes that satisfy these \nrequirements were committed, but you do not have to all agree on which \ncrimes were committed.]\nAs the term is used here, a willful act is one done willingly or on \npurpose.\nFelonious criminal conduct means committing or attempting to commit \n[any of] the following crime[s]: \n<insert felony or felonies by \ngang members that the defendant is alleged to have furthered, assisted, or \npromoted>.\nTo decide whether a member of the gang [or the defendant] committed\n<insert felony or felonies listed immediately above and crimes \nfrom Pen. Code, § 186.22(e)(1) inserted in deﬁnition of pattern of criminal \ngang activity>, please refer to the separate instructions that I (will give/ \nhave given) you on (that/those) crime[s].\nTo prove that the defendant aided and abetted felonious criminal \nconduct by a member of the gang, the People must prove that:\n1. A member of the gang committed the crime;\n2. The defendant knew that the gang member intended to commit \nthe crime;\n3. Before or during the commission of the crime, the defendant \nintended to aid and abet the gang member in committing the \ncrime;\nAND\n4. The defendant’s words or conduct did in fact aid and abet the \ncommission of the crime.\nCALCRIM No. 2542 \nWEAPONS\n1656\n",
+          "sha256": "3d1fcd6385f458ce021a7a33aea6574ac6c34f4c14e1e46aa30c22fe0d278102"
+        },
+        {
+          "page": 1781,
+          "text": "Someone aids and abets a crime if he or she knows of the perpetrator’s \nunlawful purpose and he or she speciﬁcally intends to, and does in fact, \naid, facilitate, promote, encourage, or instigate the perpetrator’s \ncommission of that crime.\n[If all of these requirements are proved, the defendant does not need to \nactually have been present when the crime was committed to be guilty as \nan aider and abettor.]\n[If you conclude that defendant was present at the scene of the crime or \nfailed to prevent the crime, you may consider that fact in determining \nwhether the defendant was an aider and abettor. However, the fact that a \nperson is present at the scene of a crime or fails to prevent the crime \ndoes not, by itself, make him or her an aider and abettor.]\n[A person who aids and abets a crime is not guilty of that crime if he or \nshe withdraws before the crime is committed. To withdraw, a person \nmust do two things:\n1. He or she must notify everyone else he or she knows is involved \nin the commission of the crime that he or she is no longer \nparticipating. The notiﬁcation must be made early enough to \nprevent the commission of the crime;\nAND\n2. He or she must do everything reasonably within his or her power \nto prevent the crime from being committed. He or she does not \nhave to actually prevent the crime.\nThe People have the burden of proving beyond a reasonable doubt that \nthe defendant did not withdraw. If the People have not met this burden, \nyou may not ﬁnd the defendant guilty under an aiding and abetting \ntheory.]\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised August 2006, June 2007, December 2008, February \n2012, August 2013, February 2014, February 2016, March 2022, March 2023, \nSeptember 2024\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (People v. Sengpadychith (2001) 26 Cal.4th 316, 327 [109 \nCal.Rptr.2d 851, 27 P.3d 739]; People v. Robles (2000) 23 Cal.4th 1106, 1115 [99 \nWEAPONS\nCALCRIM No. 2542\n1657\n",
+          "sha256": "b1fef2f4b0264452f5a82385dc90ffd167f21408d8f61600cd531ce9cb9de6df"
+        },
+        {
+          "page": 1782,
+          "text": "Cal.Rptr.2d 120, 5 P.3d 176] [now-repealed Pen. Code, § 12031(a)(2)(C) \nincorporates entire substantive gang offense deﬁned in section 186.22(a)]; see \nApprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 [120 S.Ct. 2348, 147 \nL.Ed.2d 435].)\nGive this instruction if the defendant is charged under Penal Code section \n25400(c)(3) or 25850(c)(3) and the defendant does not stipulate to being an active \ngang participant. (People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d \n690].) This instruction must be given with the appropriate instruction deﬁning the \nelements of carrying a concealed ﬁrearm, CALCRIM No. 2520, 2521, or 2522, or \ncarrying a loaded ﬁrearm, CALCRIM No. 2530. The court must provide the jury \nwith a verdict form on which the jury will indicate if the sentencing factor has been \nproved.\nIf the defendant does stipulate that he or she is an active gang participant, this \ninstruction should not be given and that information should not be disclosed to the \njury. (See People v. Hall, supra, 67 Cal.App.4th at p. 135.)\nThe court should also give the appropriate instructions deﬁning the elements of all \ncrimes inserted in the deﬁnition of “criminal street gang,” “pattern of criminal gang \nactivity,” or “felonious criminal conduct.”\nNote that a defendant’s misdemeanor conduct in the charged case, which is elevated \nto a felony by operation of Penal Code section 186.22(a), is not sufficient to satisfy \nthe felonious criminal conduct requirement of an active gang participation offense \ncharged under subdivision (a) of section 186.22 or of active gang participation \ncharged as an element of felony ﬁrearm charges under sections 25400(c)(3) or \n25850(c)(3). People v. Lamas (2007) 42 Cal.4th 516, 524 [67 Cal.Rptr.3d 179, 169 \nP.3d 102].\nOn request, give the bracketed paragraph that begins with “The People do not need \nto prove that the defendant devoted all or a substantial part of . . . .” (See Pen. \nCode, § 186.22(j).)\nOn request, give the bracketed paragraph that begins with “If you ﬁnd the defendant \nguilty of a crime in this case.” (People v. Sengpadychith, supra, 26 Cal.4th at pp. \n322–323; People v. Duran (2002) 97 Cal.App.4th 1448, 1464–1465 [119 Cal.Rptr.2d \n272].)\nOn request, give the bracketed paragraph that begins with “You may not ﬁnd that \nthere was a pattern of criminal gang activity.” (People v. Funes (1994) 23 \nCal.App.4th 1506, 1527–1528 [28 Cal.Rptr.2d 758]; see also Related Issues section \nto CALCRIM No. 1400, Active Participation in Criminal Street Gang.)\nOn request, the court must give a limiting instruction on the gang evidence. (People\nv. Hernandez (2004) 33 Cal.4th 1040, 1051–1052 [16 Cal.Rptr.3d 880, 94 P.3d\nCALCRIM No. 2542 \nWEAPONS\n1658\n",
+          "sha256": "500df544a7243e30209d7d23eda9e06421f597f76d0f42d2e95baa978f1c3a74"
+        },
+        {
+          "page": 1783,
+          "text": "1080].) If requested, give CALCRIM No. 1403, Limited Purpose of Evidence of \nGang Activity.\nDefenses—Instructional Duty\nIf there is evidence that the defendant was merely present at the scene or only had \nknowledge that a crime was being committed, the court has a sua sponte duty to \ngive the bracketed paragraph that begins with “If you conclude that defendant was \npresent.” (People v. Boyd (1990) 222 Cal.App.3d 541, 557, fn. 14 [271 Cal.Rptr. \n738]; In re Michael T. (1978) 84 Cal.App.3d 907, 911 [149 Cal.Rptr. 87].)\nIf there is sufficient evidence that the defendant withdrew, the court has a sua \nsponte duty to give the ﬁnal bracketed section on the defense of withdrawal.\nRelated Instructions \nCALCRIM No. 1400, Active Participation in Criminal Street Gang.\nCALCRIM No. 1401, Felony or Misdemeanor Committed for Beneﬁt of Criminal \nStreet Gang (Pen. Code, § 186.22(b)(1) (Felony) and § 186.22(d) (Felony or \nMisdemeanor)).\nFor additional instructions relating to liability as an aider and abettor, see series 400, \nAiding and Abetting.\nAUTHORITY\n• \nFactors. Pen. Code, §§ 25400(c)(3), 25850(c)(3)\n• \nSentencing Factors, Not Elements. People v. Hall, supra, 67 Cal.App.4th at p. \n135.\n• \nElements of Gang Factor. Pen. Code, § 186.22(a); People v. Robles, supra, 23 \nCal.4th at p. 1115.\n• \n“Active Participation” Deﬁned. People v. Salcido (2007) 149 Cal.App.4th 356 \n[56 Cal.Rptr.3d 912]; People v. Castenada (2000) 23 Cal.4th 743, 747 [97 \nCal.Rptr.2d 906, 3 P.3d 278].\n• \n“Criminal Street Gang” Deﬁned. Pen. Code, § 186.22(f).\n• \n“Collectively Engage” Deﬁned. People v. Clark (2024) 15 Cal.5th 743, 755–756 \n[318 Cal.Rptr.3d 152, 542 P.3d 1085].\n• \n“Organized” Deﬁned. People v. Superior Court (Farley) (2024) 100 Cal.App.5th \n315, 326–333 [319 Cal.Rptr.3d 100]; People v. Campbell (2023) 98 Cal.App.5th \n350, 380–381 [316 Cal.Rptr.3d 638].\n• \n“Pattern of Criminal Gang Activity” Deﬁned. Pen. Code, §§ 186.22(e), (g).\n• \nExamples of Common Beneﬁt. Pen. Code, § 186.22(g).\n• \nWillfully Assisted, Furthered, or Promoted Felonious Criminal Conduct. People \nv. Rodriguez (2012) 55 Cal.4th 1125, 1132–1138 [150 Cal.Rptr.3d 533, 290 P.3d \n1143].\n• \nCrimes Committed After Charged Offense Not Predicates. People v. Duran, \nsupra, 97 Cal.App.4th at p. 1458.\nWEAPONS\nCALCRIM No. 2542\n1659\n",
+          "sha256": "e3e34c3f1078eac6677121c6161303a6fb5f74daced229b80b3a9b773e643285"
+        },
+        {
+          "page": 1784,
+          "text": "• \nProof of Sufficient Connection Among Gang “Subsets” and Umbrella Gang \nRequired. People v. Prunty (2015) 62 Cal.4th 59, 81–85 [192 Cal.Rptr.3d 309, \n355 P.3d 480].\nRELATED ISSUES\nGang Expert Cannot Testify to Defendant’s Knowledge or Intent\nIn People v. Killebrew (2002) 103 Cal.App.4th 644, 658 [126 Cal.Rptr.2d 876], the \ncourt held it was error to permit a gang expert to testify that the defendant knew \nthere was a loaded ﬁrearm in the vehicle:\n[The gang expert] testiﬁed to the subjective knowledge and intent of each \noccupant in each vehicle. Such testimony is much different from the \nexpectations of gang members in general when confronted with a speciﬁc \naction . . . . ¶ . . . [The gang expert] simply informed the jury of his belief of \nthe suspects’ knowledge and intent on the night in question, issues properly \nreserved to the trier of fact. [The expert’s] beliefs were irrelevant.\n(Ibid. [emphasis in original].)\nSee also the Commentary and Related Issues sections of the Bench Notes for \nCALCRIM No. 1400, Active Participation in Criminal Street Gang.\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 31–46, 204, 249–250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, §§ 144.01[1], 144.03 (Matthew Bender).\nCALCRIM No. 2542 \nWEAPONS\n1660\n",
+          "sha256": "68a86ef76cec9381c7de88cee77d584ae239316639e0a6518bc3738500f3a48e"
+        }
+      ]
+    },
+    {
+      "id": "2543",
+      "heading": "2543. Carrying Firearm: Not in Lawful Possession (Pen. Code, §§ 25400(c)(4), 25850(c)(4))",
+      "firstPage": 1785,
+      "family": "weapons",
+      "lastPage": 1786,
+      "pageHashes": [
+        {
+          "page": 1785,
+          "sha256": "c1868d0b181ae255d2129c4b87f47054a125fc0c11fb1a7354a059e6e2d4c536"
+        },
+        {
+          "page": 1786,
+          "sha256": "de6d7df18e793848985a2be7373fc36492cfa57110a1923aef57044121295cfb"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1785,
+          "text": "2543. Carrying Firearm: Not in Lawful Possession (Pen. Code, \n§§ 25400(c)(4), 25850(c)(4))\nThe People have also alleged that the defendant did not lawfully possess \nthe ﬁrearm at issue in this case. If you ﬁnd the defendant guilty of \nunlawfully (carrying a concealed ﬁrearm (on (his/her) person/within a \nvehicle)[,]/ causing a ﬁrearm to be carried concealed within a vehicle[,]/ \n[or] carrying a loaded ﬁrearm) [under Count[s] \n], you must then \ndecide whether the People have proved this additional allegation. \nTo prove this allegation, the People must prove that the defendant did \nnot lawfully possess the ﬁrearm. \nA person lawfully possesses a ﬁrearm if he or she either lawfully owns the \nﬁrearm or has the permission of (the lawful owner/ [or] a person who \notherwise has apparent authority over the ﬁrearm). A person does not \nhave lawful possession of a ﬁrearm if he or she takes it without the \npermission of the lawful owner or custodian of the ﬁrearm. \nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 \n[120 S.Ct. 2348, 147 L.Ed.2d 435].) \nGive this instruction if the defendant is charged under Penal Code section \n25400(c)(4) or 25850(c)(4) and the defendant does not stipulate to unlawful \npossession. (People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].) \nThis instruction must be given with the appropriate instruction deﬁning the elements \nof carrying a concealed ﬁrearm, CALCRIM No. 2520, 2521, or 2522, or carrying a \nloaded ﬁrearm, CALCRIM No. 2530. The court must provide the jury with a verdict \nform on which the jury will indicate if the sentencing factor has been proved. \nIf the defendant does stipulate to unlawful possession, this instruction should not be \ngiven and that information should not be disclosed to the jury. (See People v. Hall, \nsupra, 67 Cal.App.4th at p. 135.)\nAUTHORITY\n• \nFactors. Pen. Code, §§ 25400(c)(4), 25850(c)(4).\n• \nFactors in Now Repealed Pen. Code, § 12025(b) Sentencing Factors, Not \n1661\n",
+          "sha256": "c1868d0b181ae255d2129c4b87f47054a125fc0c11fb1a7354a059e6e2d4c536"
+        },
+        {
+          "page": 1786,
+          "text": "Elements. People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203, 204, 249, 250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\nCALCRIM No. 2543 \nWEAPONS\n1662\n",
+          "sha256": "de6d7df18e793848985a2be7373fc36492cfa57110a1923aef57044121295cfb"
+        }
+      ]
+    },
+    {
+      "id": "2544",
+      "heading": "2544. Carrying Firearm: Possession of Firearm Prohibited Due to Conviction, Court Order, or Mental Illness (Pen. Code, §§ 25400(c)(4), 25850(c)(4))",
+      "firstPage": 1787,
+      "family": "weapons",
+      "lastPage": 1789,
+      "pageHashes": [
+        {
+          "page": 1787,
+          "sha256": "c8f2347dc73935c0fcc68576fba85b20ae6f579a31fd6ff2658fa6d1de4f3019"
+        },
+        {
+          "page": 1788,
+          "sha256": "50ffe3e66bef66d7c4df1688450006d1d10115d13a9bdb98be34f7fc5224f91f"
+        },
+        {
+          "page": 1789,
+          "sha256": "991ee34d79f2534e3e7a76f72430cf6d5bde3e9c34ccccf1de5e5aa8521cdffd"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1787,
+          "text": "2544. Carrying Firearm: Possession of Firearm Prohibited Due to \nConviction, Court Order, or Mental Illness (Pen. Code, \n§§ 25400(c)(4), 25850(c)(4))\nIf you ﬁnd the defendant guilty of unlawfully (carrying a concealed \nﬁrearm (on (his/her) person/within a vehicle)[,]/ causing a ﬁrearm to be \ncarried concealed within a vehicle[,]/ [or] carrying a loaded ﬁrearm) \n[under Count[s] \n], you must then decide whether the People have \nproved the additional allegation that the defendant was prohibited by \nlaw from possessing a ﬁrearm.\nTo prove this allegation, the People must prove that: \n<Alternative 1A—prohibited due to mental illness or SVP status>\n[The defendant \n<insert description from Welf. & Inst.\nCode, § 8100 or 8103>.]\n<Alternatives 1B & 2B—prohibited by court order. Give both elements 1B \nand 2B in cases involving restraining orders. For probation orders, give \nonly 1B.>\n[1. A court had ordered that the defendant not (own/ purchase/ \nreceive/possess) a ﬁrearm(;/.)]\n[AND\n2. The defendant knew about the court’s order.]\n<Alternatives 1C & 2C—prohibited due to conviction. Give both elements \n1C and 2C in cases involving misdemeanor convictions or juvenile \nﬁndings. For all other cases involving prior convictions, give 1C only.>\n[1. The defendant had previously been convicted of (a felony/two \noffenses of brandishing a ﬁrearm/the crime of \n<insert misdemeanor offense from Pen. Code, § 29805 or 23515, or a \njuvenile ﬁnding from Pen. Code, § 29820(a)(2)>)(;/.)]\n[AND\n2. (The previous conviction was within 10 years of the date the \ndefendant (carried the ﬁrearm/caused the ﬁrearm to be carried \nconcealed in a vehicle)./The defendant was less than 30 years old \nat the time (he/she) (carried the ﬁrearm/caused the ﬁrearm to be \ncarried concealed in a vehicle).)]\n[A juvenile court ﬁnding is the same as a conviction.]\n[A conviction of \n<insert name of offense from other state or \nfederal offense> is the same as a conviction for a felony.]\n[You may consider evidence, if any, that (the defendant was previously\n1663\n",
+          "sha256": "c8f2347dc73935c0fcc68576fba85b20ae6f579a31fd6ff2658fa6d1de4f3019"
+        },
+        {
+          "page": 1788,
+          "text": "convicted of a crime/a court ordered the defendant not to (own[,]/ \npurchase[,]/ receive[,]/ [or] possess) a ﬁrearm) only in deciding whether \nthe People have proved this allegation [or for the limited purpose of \n<insert other permitted purpose, e.g., assessing defendant’s \ncredibility>]. Do not consider such evidence for any other purpose.]\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised June 2007, February 2012\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 \n[120 S.Ct. 2348, 147 L.Ed.2d 435].)\nGive this instruction if the defendant is charged under Penal Code section \n25400(c)(4) or 25850(c)(4) and the defendant does not stipulate that he or she is \nprohibited from possessing a ﬁrearm. (People v. Hall (1998) 67 Cal.App.4th 128, \n135 [79 Cal.Rptr.2d 690].) This instruction must be given with the appropriate \ninstruction deﬁning the elements of carrying a concealed ﬁrearm, CALCRIM No. \n2521, 2522, or carrying a loaded ﬁrearm, CALCRIM No. 2530. The court must \nprovide the jury with a verdict form on which the jury will indicate if the \nsentencing factor has been proved.\nIf the defendant does stipulate that he or she is prohibited from possessing a ﬁrearm, \nthis instruction should not be given and that information should not be disclosed to \nthe jury unless the court admits the information as otherwise relevant. (See People\nv. Hall, supra, 67 Cal.App.4th at p. 135.)\nWhen giving alternative 1B, only give element 2B if the prosecution alleges that the \ndefendant was prohibited from possessing a ﬁrearm under Penal Code section \n29825(a), (b).\nWhen giving alternative 1C, only give element 2C if the prosecution alleges that the \ndefendant was prohibited from possessing a ﬁrearm under Penal Code section \n29805, possession within ten years of a speciﬁed misdemeanor conviction, or Penal \nCode section 29820(a), (b), possession by someone under 30 years old with a \nspeciﬁed juvenile ﬁnding.\nOn request, the court should give the limiting instruction regarding the evidence of \nthe prior conviction that begins, “You may consider . . . .” (People v. Valentine\n(1986) 42 Cal.3d 170, 182, fn. 7 [228 Cal.Rptr. 25, 720 P.2d 913].) There is no sua \nsponte duty to give the limiting instruction, and the defense may prefer that no \nlimiting instruction be given. (People v. Griggs (2003) 110 Cal.App.4th 1137, 1139 \n[2 Cal.Rptr.3d 380].)\nCALCRIM No. 2544 \nWEAPONS\n1664\n",
+          "sha256": "50ffe3e66bef66d7c4df1688450006d1d10115d13a9bdb98be34f7fc5224f91f"
+        },
+        {
+          "page": 1789,
+          "text": "AUTHORITY\n• \nFactors. Pen. Code, §§ 25400(c)(4), 25850(c)(4) Sentencing Factors, Not \nElements. People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\n• \nLimiting Instruction on Prior Conviction. People v. Valentine (1986) 42 Cal.3d \n170, 182, fn. 7 [228 Cal.Rptr. 25, 720 P.2d 913]; People v. Griggs (2003) 110 \nCal.App.4th 1137, 1139 [2 Cal.Rptr.3d 380].\nRELATED ISSUES\nSee Related Issues section of Bench Notes for CALCRIM No. 2510, Possession of \nFirearm by Person Prohibited Due to Conviction—No Stipulation to Conviction.\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203, 204, 249, 250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\nWEAPONS\nCALCRIM No. 2544\n1665\n",
+          "sha256": "991ee34d79f2534e3e7a76f72430cf6d5bde3e9c34ccccf1de5e5aa8521cdffd"
+        }
+      ]
+    },
+    {
+      "id": "2545",
+      "heading": "2545. Carrying Loaded Firearm: Not Registered Owner (Pen. Code, § 25850(c)(6))",
+      "firstPage": 1790,
+      "family": "weapons",
+      "lastPage": 1790,
+      "pageHashes": [
+        {
+          "page": 1790,
+          "sha256": "8f12f0f5d0974e4f4fe58e50199813f03a4db8a7ea55d59da0faf475deed951f"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1790,
+          "text": "2545. Carrying Loaded Firearm: Not Registered Owner (Pen. \nCode, § 25850(c)(6))\nIf you ﬁnd the defendant guilty of unlawfully carrying a loaded ﬁrearm \n[under Count \n], you must then decide whether the People have \nproved the additional allegation that the defendant was not the \nregistered owner of the ﬁrearm. \nTo prove this allegation, the People must prove that the defendant is not \nlisted with the Department of Justice as the registered owner of the \nﬁrearm. \nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 \n[120 S.Ct. 2348, 147 L.Ed.2d 435].) \nGive this instruction if the defendant is charged under Penal Code section \n25850(c)(6) and the defendant does not stipulate that he or she was not the \nregistered owner. (People v. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d \n690].) This instruction must be given with the appropriate instruction deﬁning the \nelements of carrying a loaded ﬁrearm, CALCRIM No. 2530. The court must provide \nthe jury with a verdict form on which the jury will indicate if the sentencing factor \nhas been proved. \nIf the defendant does stipulate that he or she was not the registered owner, this \ninstruction should not be given and that information should not be disclosed to the \njury. (See People v. Hall, supra, 67 Cal.App.4th at p. 135.)\nAUTHORITY\n• \nFactors. Pen. Code, § 25850(c)(6) Sentencing Factors, Not Elements. People v. \nHall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203, 204, 249, 250. \n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\n1666\n",
+          "sha256": "8f12f0f5d0974e4f4fe58e50199813f03a4db8a7ea55d59da0faf475deed951f"
+        }
+      ]
+    },
+    {
+      "id": "2546",
+      "heading": "2546. Carrying Concealed Firearm: Not Registered Owner and Weapon Loaded (Pen. Code, § 25400(c)(6))",
+      "firstPage": 1791,
+      "family": "weapons",
+      "lastPage": 1792,
+      "pageHashes": [
+        {
+          "page": 1791,
+          "sha256": "a9b706780e99368b8be5e3df4c6bb3cb78f5ab88f2a49ef96d45dd3d698b207e"
+        },
+        {
+          "page": 1792,
+          "sha256": "df268168d43a754ee7d8db57f2b0dc1076ff50d085876aa2dcda24823338ae13"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1791,
+          "text": "2546. Carrying Concealed Firearm: Not Registered Owner and \nWeapon Loaded (Pen. Code, § 25400(c)(6))\nIf you ﬁnd the defendant guilty of unlawfully (carrying a concealed \nﬁrearm (on (his/her) person/within a vehicle)/causing a ﬁrearm to be \ncarried concealed within a vehicle) [under Count[s] \n], you must \nthen decide whether the People have proved the additional allegation \nthat the defendant was not the registered owner of the ﬁrearm and (the \nﬁrearm was loaded/the defendant possessed the ﬁrearm with \nammunition). \nTo prove this allegation, the People must prove that:\n1. The defendant is not listed with the Department of Justice as the \nregistered owner of the ﬁrearm; \nAND \n<Alternative 2A—ﬁrearm loaded> \n[2. The ﬁrearm was loaded.] \n<Alternative 2B—ammunition nearby> \n[2. The ﬁrearm and unexpended ammunition capable of being \ndischarged from that ﬁrearm were either in the defendant’s \nimmediate possession or readily accessible to (him/her).] \nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nsentencing factor. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 \n[120 S.Ct. 2348, 147 L.Ed.2d 435].) \nGive this instruction if the defendant is charged under Penal Code section \n25400(c)(6) and the defendant does not stipulate that the ﬁrearm was loaded or \npossessed with ammunition and that he or she was not the registered owner. (People\nv. Hall (1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].) This instruction must \nbe given with the appropriate instruction deﬁning the elements of carrying a \nconcealed ﬁrearm, CALCRIM No. 2520, 2521, or 2522. The court must provide the \njury with a verdict form on which the jury will indicate if the sentencing factor has \nbeen proved.\n1667\n",
+          "sha256": "a9b706780e99368b8be5e3df4c6bb3cb78f5ab88f2a49ef96d45dd3d698b207e"
+        },
+        {
+          "page": 1792,
+          "text": "If the defendant does stipulate to this sentencing factor, this instruction should not \nbe given and that information should not be disclosed to the jury. (See People v. \nHall, supra, 67 Cal.App.4th at p. 135.)\nAUTHORITY\n• \nFactors. Pen. Code, § 25400(c) Sentencing Factors, Not Elements. People v. Hall \n(1998) 67 Cal.App.4th 128, 135 [79 Cal.Rptr.2d 690].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 203, 204, 249, 250.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][d] (Matthew Bender).\n2547–2559. \nReserved for Future Use\nCALCRIM No. 2546 \nWEAPONS\n1668\n",
+          "sha256": "df268168d43a754ee7d8db57f2b0dc1076ff50d085876aa2dcda24823338ae13"
+        }
+      ]
+    },
+    {
+      "id": "2560",
+      "heading": "2560. Possession, etc., of Assault Weapon or .50 BMG Riﬂe (Pen. Code, §§ 30605, 30600)",
+      "firstPage": 1793,
+      "family": "weapons",
+      "lastPage": 1796,
+      "pageHashes": [
+        {
+          "page": 1793,
+          "sha256": "b88772f438eb060bc4e044844f6a9c61aec5144e83f6634749828a7ec1ed69af"
+        },
+        {
+          "page": 1794,
+          "sha256": "8e0f216fe3cb85246b918680cbffec0f604537131df4031a555604539469c842"
+        },
+        {
+          "page": 1795,
+          "sha256": "81aca41960a99e778c85a4b4526522dd6d32b15bf34b9e4bdc6bfbc95983a708"
+        },
+        {
+          "page": 1796,
+          "sha256": "dbb68f56352874879754b0b7683f0a721ae9832816f267fe0f5852ed54d37412"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1793,
+          "text": "D. \nASSAULT WEAPONS\n2560. Possession, etc., of Assault Weapon or .50 BMG Riﬂe (Pen. \nCode, §§ 30605, 30600)\nThe defendant is charged [in Count \n] with unlawfully (possessing/\nmanufacturing/causing to be manufactured/distributing/transporting/ \nimporting/keeping for sale/offering or exposing for sale/giving/lending)\n(an assault weapon, speciﬁcally [a/an] \n<insert type of \nweapon from Pen. Code, § 30510 or description from § 30515>/a .50 BMG\nriﬂe) [in violation of Penal Code section\n<insert relevant\nPenal Code section>].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) (an assault weapon, \nspeciﬁcally [a/an] \n<insert type of weapon from Pen. \nCode, § 30510 or description from § 30515>/a .50 BMG riﬂe);\n2. The defendant knew that (he/she) (possessed/manufactured/caused \nto be manufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) it;\nAND\n3. The defendant knew or reasonably should have known that it had \ncharacteristics that made it (an assault weapon/a .50 BMG riﬂe).\n[(A/An) \n<insert type of weapon from Pen. Code, § 30510 or \ndescription from § 30515> is an assault weapon.]\n[A .50 BMG riﬂe is a center ﬁre riﬂe that can ﬁre a .50 BMG cartridge \n[and that is not an assault weapon or a machine gun]. A .50 BMG \ncartridge is a cartridge that is designed and intended to be ﬁred from a \ncenter ﬁre riﬂe and that has all three of the following characteristics:\n1. The overall length is 5.54 inches from the base of the cartridge to \nthe tip of the bullet;\n2. The bullet diameter for the cartridge is from .510 to, and \nincluding, .511 inch;\nAND\n3. The case base diameter for the cartridge is from .800 inch to, and \nincluding, .804 inch.]\n1669\n",
+          "sha256": "b88772f438eb060bc4e044844f6a9c61aec5144e83f6634749828a7ec1ed69af"
+        },
+        {
+          "page": 1794,
+          "text": "[Two or more people may possess something at the same time.]\n[A person does not have to actually hold or touch something to possess \nit. It is enough if the person has (control over it/ [or] the right to control \nit), either personally or through another person.]\n[The People allege that the defendant (possessed/manufactured/caused to \nbe manufactured/distributed/transported/imported/kept for sale/offered \nor exposed for sale/gave/lent) the following weapons: \n<insert description of each weapon when multiple items alleged>. You may \nnot ﬁnd the defendant guilty unless all of you agree that the People have \nproved that the defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for sale/offered or \nexposed for sale/gave/lent) at least one of these weapons, and you all \nagree on which weapon (he/she) (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for sale/offered or \nexposed for sale/gave/lent).]\n<Defense: Permit, Registration, or Exemption From Statute>\n[The defendant did not unlawfully (possess/manufacture/cause to be \nmanufactured/distribute/transport/import/keep for sale/offer or expose \nfor sale/give/lend) (an assault weapon/a .50 BMG riﬂe) if (he/she) (had \nregistered the weapon/had a valid permit to (possess/manufacture/sell) \nthe weapon/ \n<insert exemption from Pen. Code, §§ 30625, \n30630(a)–(c), 30635, 30640, 30645, 30655(a), (b), 30660(a)–(c), 30665, \n30670(a), (b), 30675(a)–(c)>). The People have the burden of proving \nbeyond a reasonable doubt that the defendant did not (register the \nweapon/have a valid permit to (possess/manufacture/sell) the weapon/ \n<insert exemption from Pen. Code, §§ 30625, 30630(a)–(c), \n30635, 30640, 30645, 30655(a), (b), 30660(a)–(c), 30665, 30670(a), (b), \n30675(a)–(c)>). If the People have not met this burden, you must ﬁnd the \ndefendant not guilty of this crime.]\nNew January 2006; Revised August 2006, February 2012\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \ncrime.\nIf the prosecution alleges under a single count that the defendant possessed multiple \nweapons and the possession was “fragmented as to time . . . [or] space,” the court \nhas a sua sponte duty to instruct on unanimity. (See People v. Wolfe (2003) 114 \nCal.App.4th 177, 184–185 [7 Cal.Rptr.3d 483].) Give the bracketed paragraph that \nbegins, “The People allege that the defendant possessed the following weapons,” \ninserting the items alleged. But see Pen. Code, § 30600(c), which states that except \nCALCRIM No. 2560 \nWEAPONS\n1670\n",
+          "sha256": "8e0f216fe3cb85246b918680cbffec0f604537131df4031a555604539469c842"
+        },
+        {
+          "page": 1795,
+          "text": "in case of a ﬁrst violation involving not more than two ﬁrearms, if more than one \nassault weapon or .50 BMG riﬂe is involved in any violation of this section, there \nshall be a distinct and separate offense for each.\nThe jury must decide if the weapon possessed was an assault weapon or a .50 BMG \nriﬂe. (See People v. Flood (1998) 18 Cal.4th 470, 482 [76 Cal.Rptr.2d 180, 957 P.2d \n869].) When instructing on the deﬁnition of assault weapon or .50 BMG riﬂe, the \ncourt should not state that the weapon possessed by the defendant was an assault \nweapon or was a .50 BMG riﬂe. In the case of an assault weapon, where indicated \nin the instruction, the court may insert a weapon listed in Penal Code section 30510 \nor a description of a weapon from section 30515. In the case of a .50 BMG riﬂe, \ngive the bracketed deﬁnition of that term.\nIf the defendant is charged with both a separate count and an enhancement for \nviolating Penal Code section 30615 while committing another crime, give this \ninstruction and CALCRIM No. 2561, Possession, etc., of Assault or .50 BMG Riﬂe \nWeapon While Committing Other Offense: Pen. Code, § 30615—Enhancement of \nPunishment for Another Crime (Pen. Code, § 30615; People v. Jimenez (1992) 8 \nCal.App.4th 391, 398 [10 Cal.Rptr.2d 281].) If the defendant is only charged with \nan enhancement under Penal Code section 30615 and not with a separate count for \nviolating Penal Code section(s) 30605 or 30610, give only CALCRIM No. 2562, \nPossession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other \nOffense: Pen. Code, § 30615—Charged Only as Enhancement.\nDefenses—Instructional Duty\nRegistration and permitting procedures are contained in Penal Code sections 30900 \nto 31005. Exemptions to the statute are stated in Penal Code section 30625 et seq. \nThe existence of a statutory exemption is an affirmative defense. (People v. Jimenez, \nsupra, 8 Cal.App.4th at pp. 395–397.) If the defense presents sufficient evidence to \nraise a reasonable doubt about the existence of a legal basis for his or her actions, \nthe court has a sua sponte duty to give the bracketed instruction on the defense. \n(See People v. Mower (2002) 28 Cal.4th 457, 478–481 [122 Cal.Rptr.2d 326, 49 \nP.3d 1067] [discussing affirmative defenses generally and the burden of proof].) \nInsert the appropriate language in the bracketed paragraph that begins, “The \ndefendant did not unlawfully . . . .”\nAUTHORITY\n• \nElements. Pen. Code, § 30605, 30600.\n• \nAssault Weapon Deﬁned. Pen. Code §§ 30510, 30515; see also Harrott v. County \nof Kings (2001) 25 Cal.4th 1138, 1142–1145 [108 Cal.Rptr.2d 445, 25 P.3d 649] \n[discussing statutory deﬁnition of assault weapon, amendments to statute and \npetition procedure by which the Attorney General may have weapon listed].\n• \n.50 BMG Riﬂe Deﬁned. Pen. Code, § 30530.\n• \nPermits and Registration. Pen. Code, §§ 30900–31005.\n• \nExemptions. Pen. Code, § 30625 et seq. \nWEAPONS\nCALCRIM No. 2560\n1671\n",
+          "sha256": "81aca41960a99e778c85a4b4526522dd6d32b15bf34b9e4bdc6bfbc95983a708"
+        },
+        {
+          "page": 1796,
+          "text": "• \nKnowledge Required. In re Jorge M. (2000) 23 Cal.4th 866, 887 [98 Cal.Rptr.2d \n466, 4 P.3d 297].\n• \nPermits, Registration, and Exemptions Are Affirmative Defenses. People v. \nJimenez (1992) 8 Cal.App.4th 391, 395–397 [10 Cal.Rptr.2d 281].\n• \nConstructive vs. Actual Possession. People v. Azevedo (1984) 161 Cal.App.3d \n235, 242–243 [207 Cal.Rptr. 270], questioned on other grounds in In re Jorge M. \n(2000) 23 Cal.4th 866, 876, fn. 6 [98 Cal.Rptr.2d 466, 4 P.3d 297].\n• \nStatute Constitutional. Silveira v. Lockyer (2002) 312 F.3d 1052, 1056; Kasler v. \nLockyer (2000) 23 Cal.4th 472, 478 [97 Cal.Rptr.2d 334, 2 P.3d 581].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 216–219, 220–222.\n4 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 85, \nSubmission to Jury and Verdict, § 85.02[2][a][i] (Matthew Bender).\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][b], [d] (Matthew Bender).\nCALCRIM No. 2560 \nWEAPONS\n1672\n",
+          "sha256": "dbb68f56352874879754b0b7683f0a721ae9832816f267fe0f5852ed54d37412"
+        }
+      ]
+    },
+    {
+      "id": "2561",
+      "heading": "2561. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other Offense—Charged as Separate Count and as Enhancement (Pen. Code, § 30615)",
+      "firstPage": 1797,
+      "family": "weapons",
+      "lastPage": 1798,
+      "pageHashes": [
+        {
+          "page": 1797,
+          "sha256": "54e4f1dfa5b644be2b1a7d4af8f39aac37d214e2ae92af5c6907ff91f20c3d80"
+        },
+        {
+          "page": 1798,
+          "sha256": "2d1ce26f5e2d3309cab60f63c99ee2382067ac70a9b715dd5a77b1e33f2addb2"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1797,
+          "text": "2561. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While \nCommitting Other Offense—Charged as Separate Count and as \nEnhancement (Pen. Code, § 30615)\nIf you ﬁnd the defendant guilty of both (possessing/manufacturing/ \ncausing to be manufactured/distributing/transporting/importing/keeping \nfor sale/offering or exposing for sale/giving/lending) (an assault weapon/a \n.50 BMG riﬂe) under Count \nand the crime of\n<insert other offense alleged> under Count \n, you must then decide \nwhether the People have proved the additional allegation that (he/she) \ncommitted the ﬁrst crime while committing the second one.\nTo prove this allegation, the People must prove that the defendant \n(possessed/ manufactured/ caused to be manufactured/distributed/ \ntransported/imported/kept for sale/offered or exposed for sale/gave/lent) \n(an assault weapon/a .50 BMG riﬂe) while committing the crime of \n<insert other offense alleged>.\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nenhancement. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 [120 \nS.Ct. 2348, 147 L.Ed.2d 435]; People v. Jimenez (1992) 8 Cal.App.4th 391, 398 [10 \nCal.Rptr.2d 281] [enhancement under Pen. Code, § 30600(b) must be pleaded and \nproved].) \nGive this instruction if the defendant is charged with a separate count for violating \nPenal Code section 30615 and an enhancement for violating Penal Code section \n30600 while committing another crime. (Pen. Code, § 30615; People v. Jimenez, \nsupra, 8 Cal.App.4th at p. 398.) This instruction must be given with CALCRIM \nNo. 2560, Possession, etc., of Assault Weapon or .50 BMG Riﬂe, and the appropriate \ninstruction deﬁning the elements of the other offense charged. \nThe court must provide the jury with a verdict form on which the jury will indicate \nif the sentencing enhancement has been proved. \nIf the defendant is not charged with a separate count for violating Penal Code \nsection 30600 but is charged only with the enhancement, do not give this \ninstruction. Give CALCRIM No. 2562, Possession, etc., of Assault Weapon or .50 \n1673\n",
+          "sha256": "54e4f1dfa5b644be2b1a7d4af8f39aac37d214e2ae92af5c6907ff91f20c3d80"
+        },
+        {
+          "page": 1798,
+          "text": "BMG Riﬂe While Committing Other Offense: Pen. Code, § 30600—Charged Only as \nEnhancement.\nAUTHORITY\n• \nEnhancement. Pen. Code, § 30615; People v. Jimenez (1992) 8 Cal.App.4th 391, \n398 [10 Cal.Rptr.2d 281].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 216–219, 220–222.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][b] (Matthew Bender).\nCALCRIM No. 2561 \nWEAPONS\n1674\n",
+          "sha256": "2d1ce26f5e2d3309cab60f63c99ee2382067ac70a9b715dd5a77b1e33f2addb2"
+        }
+      ]
+    },
+    {
+      "id": "2562",
+      "heading": "2562. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other Offense—Charged Only as Enhancement (Pen. Code, § 30615)",
+      "firstPage": 1799,
+      "family": "weapons",
+      "lastPage": 1802,
+      "pageHashes": [
+        {
+          "page": 1799,
+          "sha256": "b8bdcc17f974d5300a8743c96dd371d3f895a96790fe48831993fb4d8a4ede9c"
+        },
+        {
+          "page": 1800,
+          "sha256": "a6181d747558ca342ae28b22332fd4a3c226ef6c6759eba3b9924b841cbd80ef"
+        },
+        {
+          "page": 1801,
+          "sha256": "fea8b627956a9cdaed21f4672698290a562a5c3072d5f1e36f638b20056eee95"
+        },
+        {
+          "page": 1802,
+          "sha256": "7c1c83a65ae3ced35ccef41fab7cf6cf79443fdf3667546230567e9aac7fd5f6"
+        }
+      ],
+      "pages": [
+        {
+          "page": 1799,
+          "text": "2562. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While \nCommitting Other Offense—Charged Only as Enhancement (Pen. \nCode, § 30615)\nIf you ﬁnd the defendant guilty of the crime of \n<insert other \noffense alleged> [under Count \n], you must then decide whether the \nPeople have proved the additional allegation that (he/she) committed that \noffense while unlawfully (possessing/manufacturing/causing to be \nmanufactured/distributing/ transporting/importing/keeping for \nsale/offering or exposing for sale/giving/lending) (an assault weapon, \nspeciﬁcally [a/an] \n<insert type of weapon from Pen. Code, \n§ 30510 or description from § 30515>/a .50 BMG riﬂe).\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) (an assault weapon, \nspeciﬁcally [a/an] \n<insert type of weapon from Pen. \nCode, § 30510 or description from § 30515>/a .50 BMG riﬂe);\n2. The defendant knew that (he/she) (possessed/manufactured/caused \nto be manufactured/distributed/transported/ imported/kept for \nsale/offered or exposed for sale/gave/lent) it;\n3. The defendant knew or reasonably should have known that it had \ncharacteristics that made it (an assault weapon/a .50 BMG riﬂe);\nAND\n4. The defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) the weapon while \ncommitting the crime of \n<insert other offense \nalleged>.\n[(A/An) \n<insert type of weapon from Pen. Code, § 30510 or \ndescription from § 30515> is an assault weapon.]\n[A .50 BMG riﬂe is a center ﬁre riﬂe that can ﬁre a .50 BMG cartridge \n[and that is not an assault weapon or a machine gun]. A .50 BMG \ncartridge is a cartridge that is designed and intended to be ﬁred from a \ncenter ﬁre riﬂe and that has all three of the following characteristics:\n1. The overall length is 5.54 inches from the base to the tip of the \nbullet;\n2. The bullet diameter for the cartridge is from .510 to, and \nincluding, .511 inch;\n1675\n",
+          "sha256": "b8bdcc17f974d5300a8743c96dd371d3f895a96790fe48831993fb4d8a4ede9c"
+        },
+        {
+          "page": 1800,
+          "text": "AND\n3. The case base diameter for the cartridge is from .800 inch to, and \nincluding, .804 inch.]\n[Two or more people may possess something at the same time.]\n[A person does not have to actually hold or touch something to possess \nit. It is enough if the person has (control over it/ [or] the right to control \nit), either personally or through another person.]\n[The People allege that the defendant (possessed/manufactured/caused to \nbe manufactured/distributed/transported/imported/kept for sale/offered \nor exposed for sale/gave/lent) the following weapons: \n<insert description of each weapon when multiple items alleged>. You may \nnot ﬁnd this additional allegation true unless all of you agree that the \nPeople have proved that the defendant (possessed/manufactured/caused \nto be manufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) at least one of these weapons, \nand you all agree on which weapon (he/she) (possessed/manufactured/ \ncaused to be manufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent).]\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\n<Defense: Permit, Registration, or Exemption From Statute>\n[The defendant did not unlawfully (possess/manufacture/cause to be \nmanufactured/distribute/transport/import/keep for sale/offer or expose \nfor sale/give/lend) (an assault weapon/a .50 BMG riﬂe) if (he/she) (had \nregistered the weapon/had a valid permit to (possess/manufacture/sell) \nthe weapon/ \n<insert exemption from Pen. Code, \n§ 12280(e)–(s)>). The People have the burden of proving beyond a \nreasonable doubt that the defendant did not (register the weapon/have a \nvalid permit to (possess/manufacture/sell) the weapon/ \n<insert exemption from Pen. Code, §§ 30625, 30630(a)–(c), 30635, 30640, \n30645, 30655(a), (b), 30660(a)–(c), 30665, 30670(a), (b), 30675(a)–(c)>). If \nthe People have not met this burden, you must ﬁnd the defendant not \nguilty of this allegation.]\nNew January 2006; Revised August 2006, February 2012\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nenhancement. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 [120 \nCALCRIM No. 2562 \nWEAPONS\n1676\n",
+          "sha256": "a6181d747558ca342ae28b22332fd4a3c226ef6c6759eba3b9924b841cbd80ef"
+        },
+        {
+          "page": 1801,
+          "text": "S.Ct. 2348, 147 L.Ed.2d 435] [any fact, other than prior conviction, that increases \nthe maximum penalty for a crime must be charged, submitted to a jury, and proved \nbeyond a reasonable doubt]; People v. Jimenez (1992) 8 Cal.App.4th 391, 398 [10 \nCal.Rptr.2d 281] [enhancement under Pen. Code, § 30600(b) must be pleaded and \nproved].)\nGive this instruction if the defendant is charged with an enhancement for violating \nPenal Code section 12280 while committing another crime but is not charged with a \nseparate count for violating Penal Code section 30600. (Pen. Code, § 30615; People\nv. Jimenez, supra, 8 Cal.App.4th at p. 398.) The court must provide the jury with a \nverdict form on which the jury will indicate if the sentencing enhancement has or \nhas not been proved.\nIf the defendant has been charged with a separate count for violating Penal Code \nsection 30600 and with the enhancement, do not give this instruction. Give \nCALCRIM No. 2561, Possession, etc., of Assault Weapon or .50 BMG Riﬂe While \nCommitting Other Offense: Pen. Code, § 30615—Charged as Separate Count and as \nEnhancement.\nIf the prosecution alleges under a single enhancement that the defendant possessed \nmultiple weapons and the possession was “fragmented as to time . . . [or] space,” \nthe court has a sua sponte duty to instruct on unanimity. (See People v. Wolfe\n(2003) 114 Cal.App.4th 177, 184–185 [7 Cal.Rptr.3d 483].) Give the bracketed \nparagraph that begins, “The People allege that the defendant possessed the following \nweapons,” inserting the items alleged. But see Pen. Code, § 30600(c), which states \nthat except in case of a ﬁrst violation involving not more than two ﬁrearms, if more \nthan one assault weapon or .50 BMG riﬂe is involved in any violation of this \nsection, there shall be a distinct and separate offense for each.\nThe jury must decide if the weapon possessed was an assault weapon or .50 BMG \nriﬂe. (See People v. Flood (1998) 18 Cal.4th 470, 482 [76 Cal.Rptr.2d 180, 957 P.2d \n869].) When instructing on the deﬁnition of assault weapon or .50 BMG riﬂe, the \ncourt should not state that the weapon possessed by the defendant was an assault \nweapon or was a .50 BMG riﬂe. In the case of an assault weapon, where indicated \nin the instruction, the court may insert a weapon listed in Penal Code section 30510 \nor a description of a weapon from section 30515. In the case of a .50 BMG riﬂe, \ngive the bracketed deﬁnition of that term.\nDefenses—Instructional Duty\nRegistration and permitting procedures are contained in Penal Code sections 30900 \nto 31005. Exemptions to the statute are stated in Penal Code section 30625 et seq. \nThe existence of a statutory exemption is an affirmative defense. (People v. Jimenez, \nsupra, 8 Cal.App.4th at pp. 395–397.) If the defense presents sufficient evidence to \nraise a reasonable doubt about the existence of a legal basis for the defendant’s \nactions, the court has a sua sponte duty to give the bracketed instruction on the \ndefense. (See People v. Mower (2002) 28 Cal.4th 457, 478–481 [122 Cal.Rptr.2d \n326, 49 P.3d 1067] [discussing affirmative defenses generally and the burden of \nWEAPONS\nCALCRIM No. 2562\n1677\n",
+          "sha256": "fea8b627956a9cdaed21f4672698290a562a5c3072d5f1e36f638b20056eee95"
+        },
+        {
+          "page": 1802,
+          "text": "proof].) Insert the appropriate language in the bracketed paragraph beginning, “The \ndefendant did not unlawfully . . . .”\nAUTHORITY\n• \nEnhancement. Pen. Code, § 30615; People v. Jimenez (1992) 8 Cal.App.4th 391, \n398 [10 Cal.Rptr.2d 281].\n• \nAssault Weapon Deﬁned. Pen. Code, §§ 30510, 30515; see also Harrott v. \nCounty of Kings (2001) 25 Cal.4th 1138, 1142–1145 [108 Cal.Rptr.2d 445, 25 \nP.3d 649] [discussing statutory deﬁnition of assault weapon, amendments to \nstatute and petition procedure by which the Attorney General may have weapon \nlisted].\n• \n.50 BMG Riﬂe Deﬁned. Pen. Code, § 30530.\n• \nPermits and Registration. Pen. Code, §§ 30900–31005.\n• \nExemptions. Pen. Code, § 30625 et seq.\n• \nKnowledge Required. In re Jorge M. (2000) 23 Cal.4th 866, 887 [98 Cal.Rptr.2d \n466, 4 P.3d 297].\n• \nPermits, Registration, and Exemptions Are Affirmative Defenses. People v. \nJimenez (1992) 8 Cal.App.4th 391, 395–397 [10 Cal.Rptr.2d 281].\n• \nConstructive vs. Actual Possession. People v. Azevedo (1984) 161 Cal.App.3d \n235, 242–243 [207 Cal.Rptr. 270], questioned on other grounds in In re Jorge M. \n(2000) 23 Cal.4th 866, 876, fn. 6 [98 Cal.Rptr.2d 466, 4 P.3d 297].\n• \nStatute Constitutional. Silveira v. Lockyer (2002) 312 F.3d 1052, 1056; Kasler v. \nLockyer (2000) 23 Cal.4th 472, 478 [97 Cal.Rptr.2d 334, 2 P.3d 581].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 216–219, 220–222.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][b] (Matthew Bender).\n2563–2569. \nReserved for Future Use\nCALCRIM No. 2562 \nWEAPONS\n1678\n",
+          "sha256": "7c1c83a65ae3ced35ccef41fab7cf6cf79443fdf3667546230567e9aac7fd5f6"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "key": "PEN:1170",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "f072ae9cc386a411bc235a158a75140b5f7a0954fbf1f1ad84f309b29b71902f",
+      "versions": [
+        {
+          "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2025, Ch. 225, Sec. 2.   (SB 551)   Effective January 1, 2026.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170."
+        }
+      ]
+    },
+    {
+      "key": "PEN:16520",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "966eb78f8ae2b9ebe665c9f33e1c7bdd98b4f363c8e3265fb1a6b099cfdcdc70",
+      "versions": [
+        {
+          "versionId": "id_8ee4dc35-8258-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "b83274642c8368c27c75d572096d1676b902ed3dc7c6cc64f7219cc3af28f6d6",
+          "effectiveDate": "2024-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2023, Ch. 239, Sec. 1.   (AB 725)   Effective January 1, 2024.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16520."
+        }
+      ]
+    },
+    {
+      "key": "PEN:16580",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "b12aebea9c5d5a2187a2e75da660395896e04c02044c4d359911b91a5fbe6a5f",
+      "versions": [
+        {
+          "versionId": "id_dbb0ea7b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "f76eb8b71749aaf64a6c612acbd6d18f091086486b5bd82cc8f1278d29bf1b4b",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16580."
+        }
+      ]
+    },
+    {
+      "key": "PEN:16840",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "b6bf3bc9b698bc86eb36d2fb699559ca420d9c509bd1d6f5bbebfc4d0a186690",
+      "versions": [
+        {
+          "versionId": "id_dbb99d45-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "a3fa5accb8ad1e7f7376aec7c97939d21fae414c4e292a6582e5816277b31f3c",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16840."
+        }
+      ]
+    },
+    {
+      "key": "PEN:17",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "6d8e425cb48b1c839755593742e8e7bfc73c4a406e4faeb4fe0c444b01ee41fa",
+      "versions": [
+        {
+          "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2025, Ch. 611, Sec. 1.   (AB 321)   Effective January 1, 2026.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17."
+        }
+      ]
+    },
+    {
+      "key": "PEN:17030",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "38ce851361d1803905b05bbfd47deffbe2d366fbbb5c0338664889339061eda5",
+      "versions": [
+        {
+          "versionId": "id_dbbd9509-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "3f940b37b97a0c417e8016656873563ff1c4b80e79b27d4a1cdb18a1975192b2",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17030."
+        }
+      ]
+    },
+    {
+      "key": "PEN:18",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "e6ad2f4a1a7df174d35f63d6a09e0f395726b84072b0008eeccc774f62e252ad",
+      "versions": [
+        {
+          "versionId": "id_bcd56838-ef1c-11e0-8401-8c60c15e6024",
+          "contentSha256": "14674ccf42b47557c845987df60646946dea79cdcb719b635e8daef9061e437d",
+          "effectiveDate": "2011-09-21 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended (as amended by Stats. 2011, Ch. 15, Sec. 230) by Stats. 2011, 1st Ex. Sess., Ch. 12, Sec. 7.   (AB 17 1x)   Effective September 21, 2011.   Operative October 1, 2011, by Sec. 46 of Ch. 12.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18."
+        }
+      ]
+    },
+    {
+      "key": "PEN:186.22",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "3eeacf8f04b8fea11acf96560cb7920ab7f6d8b127baffe10feaf40987809c56",
+      "versions": [
+        {
+          "versionId": "id_cbfd965f-5c47-11ec-9d2f-c3e210bbbdff",
+          "contentSha256": "3f005495f86aa75392068d867541025b8cbdc58ae9ad9d2aaa98475796545647",
+          "effectiveDate": "2022-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended (as amended by Stats. 2017, Ch. 561, Sec. 179) by Stats. 2021, Ch. 699, Sec. 4.   (AB 333)   Effective January 1, 2022.   Section operative January 1, 2023, by its own provisions.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=186.22."
+        }
+      ]
+    },
+    {
+      "key": "PEN:19",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "d6b3d7007c5b8ead5a13c3361a28e2444bc2e0c252d788ba0ea9aec167685863",
+      "versions": [
+        {
+          "versionId": "id_6500e519-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "a8baeb2f615c4920c040b0506a0f5272e46e23770208b6465fa155a86b8cd518",
+          "effectiveDate": "1983-09-27 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 1983, Ch. 1092, Sec. 231.   Effective September 27, 1983.   Operative January 1, 1984, by Sec. 427 of Ch. 1092.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19."
+        }
+      ]
+    },
+    {
+      "key": "PEN:23515",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "f835ea98f933ceba48137091fa5ff1a4b783a5042ada3834a300104f4cd85efb",
+      "versions": [
+        {
+          "versionId": "id_dbe8270b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "24facaa4be7c2499910ddc6eafe04064822ec7d520872da64b9f7d78cbf012f4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=23515."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25850",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "0ec9d22200f02f4b61c15b523c975ea092d1857b18eb3ab5f77839c13757cb7d",
+      "versions": [
+        {
+          "versionId": "id_96bac7dd-8258-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "751284549e5ef1ec95b9baaefede2511bbfe96d6802ba627abf1f5fb0c9a1b45",
+          "effectiveDate": "2024-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2023, Ch. 249, Sec. 9.   (SB 2)   Effective January 1, 2024.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25850."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25900",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "3aa1f65072bb64a5cb83e25cba9d3a563e40088444787db3edf76c9338ef618c",
+      "versions": [
+        {
+          "versionId": "id_6b542000-6e93-11e3-8818-ebf46b809fe7",
+          "contentSha256": "82e7e8c2d18dd7e44e299315a03de3e6fc1c6ca4680bd3d1100579c6bcbafbd6",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 267, Sec. 2.   (AB 703)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25900."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25905",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "dfcb59b6b7dbd2cc480caf12463002bb1b50e08551d967c52bb247e83c3c3400",
+      "versions": [
+        {
+          "versionId": "id_6d1c83f2-6e93-11e3-8818-ebf46b809fe7",
+          "contentSha256": "93ebc763054eb3e55aad4aad9e48b9f490be5471d17fc4fbf2cfe2311014c802",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 149, Sec. 1.   (SB 303)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25905."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25910",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "f5d0daf7616859f9db88f9b802c50c93e139570b6c6b57c0b01a4d8ac2ff0985",
+      "versions": [
+        {
+          "versionId": "id_dc0265b3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "8da3cd0775f80840c1eb4d194239e845b9f2bd21f92930bd9e22307129d4293f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25910."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25915",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "eee0a54d18f0da0d59588bbaa44af96a560b5fffc2891973b9da86ed977fda8c",
+      "versions": [
+        {
+          "versionId": "id_6ee276e4-6e93-11e3-8818-ebf46b809fe7",
+          "contentSha256": "396b7684de10c99da2dc05bb393bf694b2b4e34592e55c95387fe3b574d49176",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 149, Sec. 2.   (SB 303)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25915."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25920",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "d908ff6a5516463df13719c15f0e4e09d06c2fc6a47ed6d2be5965604d6158f3",
+      "versions": [
+        {
+          "versionId": "id_70aa65a6-6e93-11e3-8818-ebf46b809fe7",
+          "contentSha256": "2fb759912bd184fc41ac5e26405d105b8e097f7a816cd5da6dc12fce4952e89c",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 149, Sec. 3.   (SB 303)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25920."
+        }
+      ]
+    },
+    {
+      "key": "PEN:25925",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "8bfa2e5d19baac1bbfd22d7f6303b45d0b66d46cd7d34d3e4926b016b33bf0bd",
+      "versions": [
+        {
+          "versionId": "id_7266bba8-6e93-11e3-8818-ebf46b809fe7",
+          "contentSha256": "aba9ec3c92f7128ccef9a7954aa64e7a13868af0e1ef8ded41131a690d9f56e6",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 149, Sec. 4.   (SB 303)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25925."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26000",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "4dd502c0a99aa5eed2ce20074cc869853457d36248363e84c5427f9ba75214ff",
+      "versions": [
+        {
+          "versionId": "id_dc03501d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "4aadb4c755b35918d01207ee6147d59289023526856a6892134c608dc3496618",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26000."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26005",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "3a094a23a19e6692c4d4862b933a2bacb188da6eea1735d210c00a44fedebc80",
+      "versions": [
+        {
+          "versionId": "id_dc03772f-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "f476aa64ea98e0fd89b11310a2ee8d207b62649248a81006f7b1d946fecabcbc",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26005."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26010",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "76c8bdcda2906d9b3236a8aaacadac5faef8f88952d884706906d11044d36872",
+      "versions": [
+        {
+          "versionId": "id_dc039e41-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "74b1b42ac3d47a6eeda738721f99b80bca609ac0a0cd3123b7384d0549888ae9",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26010."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26015",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "821ccade5ae220d3440153a72d865a5166d477fe10ebce2b8dc238561454d0b1",
+      "versions": [
+        {
+          "versionId": "id_dc03c553-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "9258cd45740556b44cf743a1e5012469a5118ba30fc0de66f0fd1485c07b302f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26015."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26020",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "d284e97d1633fa0b5d53da1f8018d70d5048f89fcaa40e661f09ce8172ff2235",
+      "versions": [
+        {
+          "versionId": "id_4c881733-30d5-11e1-a5d5-ab3cb917b6aa",
+          "contentSha256": "e4cf0a1e51df9f82f9704d051276e188d6b1c6ef7350c1c216ff03a35de365f1",
+          "effectiveDate": "2012-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2011, Ch. 296, Sec. 231.   (AB 1023)   Effective January 1, 2012.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26020."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26025",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "dc1db8757518c45a69142cbe0653ed80f66a19864eac3bfc87ba42976f834343",
+      "versions": [
+        {
+          "versionId": "id_dc043a87-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "2a671bd308da9f696fe63a0e01c270ffc02b2861e7da8527383cec43d7314171",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26025."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26030",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "33f9d6828ad0c8d9bb01920e98d0f2e21aff031d5a2ac9e6565ada50c25a9505",
+      "versions": [
+        {
+          "versionId": "id_dc0488a9-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "79940c364e66c2b3dd179cf6d675ccc114f3d86413a2cdf51d38256b39db6c14",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26030."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26035",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "bcc53e8dba0d193b5d8edc050ac1a270e95ec1b6c9537bf7b6602328ef226fa7",
+      "versions": [
+        {
+          "versionId": "id_dc0524eb-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "1bda5abc01c0951314899a6d69d8d0f7365f70ccd9ff4287c2ce8d843a213848",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26035."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26040",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "9ef759b1e77fe010653d2773731e073dd10936d2c1e7cf0dbadef77afe762eca",
+      "versions": [
+        {
+          "versionId": "id_dc054bfd-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "628eae8a5335d8d8e0fd98771273e110695a3849847186a665007124482662b6",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26040."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26045",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "0114d4ab604aa5b9b089b4318b3aca531e4d495ddf2b29c65552f57902a0e389",
+      "versions": [
+        {
+          "versionId": "id_507aa098-f97a-11e8-bd10-077ff3712fb6",
+          "contentSha256": "7ca1e7e24530295ad46b49886507e23f9a897e4e8e20a21c65dfb67df97b6e4e",
+          "effectiveDate": "2019-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2018, Ch. 185, Sec. 7.   (AB 2176)   Effective January 1, 2019.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26045."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26050",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "cf5d173bffcf636856f31d85b5095914e90b9e91064b2b61093d6c78c6672df0",
+      "versions": [
+        {
+          "versionId": "id_dc059a21-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "ddd2096bfb59afb310a4a509c05e275867c60f6a2212cf003d2e20359ef48683",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26050."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26055",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "ba01c149619e29ebaad76d048646e42fb83bbaf560eb060152c3a0777f706a82",
+      "versions": [
+        {
+          "versionId": "id_dc05c133-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "21dd990e2f0ab79f3d92aab947df599b12020f6dadbbc2534a436fc846433b09",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26055."
+        }
+      ]
+    },
+    {
+      "key": "PEN:26060",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "85ecba826bc3b5a4a52e2bd2df73d814cb829860fb492de0302b08e5e3475255",
+      "versions": [
+        {
+          "versionId": "id_dc05e845-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0991a6cb01f3c66ac9667f34fe78c7d1252a7a24ef4dc3c894c25185ebb15a53",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26060."
+        }
+      ]
+    },
+    {
+      "key": "PEN:29800",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "6ec622632e2565720623493fe73dc80b68a4cdacfda8c5f3347a46ab88c082ca",
+      "versions": [
+        {
+          "versionId": "id_32bd7478-c957-11f0-aea3-3b460998bfb4",
+          "contentSha256": "75825aa1d58858efec71c5727d6614ab0f19ee47014aecbaa9572890804d7a8d",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2025, Ch. 570, Sec. 19.   (AB 1078)   Effective January 1, 2026.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=29800."
+        }
+      ]
+    },
+    {
+      "key": "PEN:29900",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "e8f8e3a3c406ec6cc2dd542b6eaf9d04b8a359717a46b239c431ecb2dbd1b479",
+      "versions": [
+        {
+          "versionId": "id_dc608bff-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "113a7a152cdfa9438809d040454d0fa9d96c150123f5be843c3cffe56f62247f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=29900."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30510",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "4fac070cc640dbaf1b27103b8bf9f5aaa8f9dd4533578ef65155e0be6262979d",
+      "versions": [
+        {
+          "versionId": "id_e4f7fbff-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "5611cd72ae223fb14a09d04aced17f5893a9bf8aa739eee34e63b81e1d5579b7",
+          "effectiveDate": "2025-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2024, Ch. 540, Sec. 15.   (AB 3064)   Effective January 1, 2025.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30510."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30515",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "c74a9c896b126f9e9a1692e22761fb41f969e35754bfe93d49c4660d60f5f7b8",
+      "versions": [
+        {
+          "versionId": "id_e67ce615-b78e-11f1-83a9-f5ad4dab951a",
+          "contentSha256": "7b8e084792460b8122c6356de3b568a65f66291827c53bd29afa697790f68b34",
+          "effectiveDate": "2026-09-20 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2026, Ch. 354, Sec. 6.   (AB 191)   Effective September 20, 2026.   Repealed as of January 1, 2029, by its own provisions.   See later operative version added by Sec. 7 of Stats. 2026, Ch. 354.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30515."
+        },
+        {
+          "versionId": "id_dbea2461-b78e-11f1-83a9-f5ad4dab951a",
+          "contentSha256": "f39f072716b5b42c9a94687339bdf13d09eb3ee13b2b32f828b460680f9ba858",
+          "effectiveDate": "2026-09-20 00:00:00",
+          "activeFlag": "Y",
+          "history": "Repealed (in Sec. 6) and added by Stats. 2026, Ch. 354, Sec. 7.   (AB 191)   Effective September 20, 2026.   Operative January 1, 2029, by its own provisions.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30515."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30530",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "f2278b142e6421c6558ddb61e3509837cd33f988da645c048d808f98c3644997",
+      "versions": [
+        {
+          "versionId": "id_dc6aeba3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "d53a0924a12ca269e06fd6450da2fbfb42c93c22f15bea3033048944d6aff5ae",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30530."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30600",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "94b2f163be957e0cd5ceb1c7fb591db5bd9bae2329689a19938e5e200f193dad",
+      "versions": [
+        {
+          "versionId": "id_bd9d7465-660f-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "acab5b93310e48ead1cd2ba603dabbb5783ac833c3c4c5562c8eddf2796aba29",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2011, Ch. 15, Sec. 549.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30605",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "35d21d5939b9d2a841a12754265b1641b954ee9798730a0483cd02f793bc4f60",
+      "versions": [
+        {
+          "versionId": "id_bf69cff7-660f-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "146974989df769275245ed2a8b09205ec0ed26b64120fed0d47c8be5036b9b29",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2011, Ch. 15, Sec. 550.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30605."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30610",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "d33ede44e4b11cf01e84ea91a20ac88cb44b6db92bf79d97188a4f8428b3ddb1",
+      "versions": [
+        {
+          "versionId": "id_dc6bfd1b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "8a23ad7ed92d4ec2653e5ddc02f66eade6b605820559f3ce9cf6d530e30b9c86",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30610."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30615",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "89a9d0de30dc059c9c2d27ac88cbf6b14e5dc3cf1c7f5dfa2c509f65e46b6674",
+      "versions": [
+        {
+          "versionId": "id_dc6c242d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "4d33c1f025640e307856d4db87c1d2a0218a624c8cdc9177e6f33f426313a8e0",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30615."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30625",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "9cf80a27016cd6b254af020183ddd7b543d467584db335bb3fcbe43e0086fd3a",
+      "versions": [
+        {
+          "versionId": "id_e2c7dfd1-e63f-11eb-ad04-a7886069fc3b",
+          "contentSha256": "814aae06b53a5d2ac67c1b425ac6501fc249a9dd7a68c15c324b97b404944615",
+          "effectiveDate": "2021-07-12 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2021, Ch. 70, Sec. 108.   (AB 141)   Effective July 12, 2021.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30625."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30630",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "517f3db2621b3182e4de01a3a7cf0697ffd153cc2b70240d0a202acee52958ae",
+      "versions": [
+        {
+          "versionId": "id_dc6c9963-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "19cadfdf8c6735bfce7d6b36f557857611a8ff8b04236a7a7455f8ba0b6d3761",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30630."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30631",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "255cd018132352c9fc7e94ffd0e6298d5dc11e1fa90a8071e0a0b45bdcc84cff",
+      "versions": [
+        {
+          "versionId": "id_b6469a47-8257-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "54a97cb6d65be4e78bbe0a096c4551ab414a154023364920c78ad4fce7b44c08",
+          "effectiveDate": "2024-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2023, Ch. 235, Sec. 1.   (AB 355)   Effective January 1, 2024.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30631."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30635",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "20aa98cbca94a638bdd03f2f6b37aeba3d862063a5680cb8da812dabb713a889",
+      "versions": [
+        {
+          "versionId": "id_dc6cc075-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "fd04480277137523b01d5efdf026a438f4cb5ccdf2516c8c970f7ebad7d2b782",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30635."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30640",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "cce6cc16ecbedd221134b43ab0a30a7cfc292973b3f093dbdc5ae2a42d7f752a",
+      "versions": [
+        {
+          "versionId": "id_dc6d0e97-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "69607a15d2b634e786671480e6804662c344da21c80806b215dd6c4eba26568f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30640."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30645",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "09e98d0a1c44f07d52914d3262ca167a0290c1fe554b0d6d1f5521c1c922602e",
+      "versions": [
+        {
+          "versionId": "id_dc6d35a9-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "15235c644ad65e4513d8ecb97ed8003182cf712ff5b3169b868e38becfff33e3",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30645."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30650",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "ab67437ad3166babf345106ec59302f990affe40da7f2380e2613cd54d892f38",
+      "versions": [
+        {
+          "versionId": "id_dc6d5cbb-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "1c0248566b6fe0792a2e1e5483be84f09f5041f86ab27baf7f83812107096156",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30650."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30655",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "eb3437e2d0bbc5f1af3577825ce0115e98a8a37735d45cc14858544e3d90dc12",
+      "versions": [
+        {
+          "versionId": "id_dc6d83cd-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "047253b8f7dd5f284ea38b5e7d431730eda88d92ec33cc39797cf376fa5c778f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30655."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30660",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "e19b1ce919026b3404d2eb50fe43bf65428c3d0913e706bed9956064cd92965a",
+      "versions": [
+        {
+          "versionId": "id_dc6daadf-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "9fe370b2072f66e1ac2286b3bb56d77040e2defcd2c5eb92fc16f01c91266063",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30660."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30665",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "8ec6dc3e488100948ccfe5488cde27b8a9aeb9ff1002981ee24bfd530cca3f52",
+      "versions": [
+        {
+          "versionId": "id_dc6df901-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "adc229004c50cba94acfa2975e807b96ac0edc5af7017a6c7ffa6d990fcdc741",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30665."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30670",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "3c27143bf8c896bc03b81d5ca0a567b98d2bc880620c73306e13b767c20aaf78",
+      "versions": [
+        {
+          "versionId": "id_dc6e2013-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "01782990057d735678b1b6d2732f8fe2d7c1a24c001d66d9c7698fc82d5f00d4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30670."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30675",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "068ed6e29133488735c0528be8bfe901cb1029bee62916440f118c0b4ab9aca4",
+      "versions": [
+        {
+          "versionId": "id_dc6e4725-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "64d2dcb3eefad7be9c05dd92002440c9e40a4150bff1e26ecf92041b5a8bcdd7",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30675."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30680",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "3a7223b02f0b66f8366f455c0367245b65138d648fa61a67801be1e04f56cc04",
+      "versions": [
+        {
+          "versionId": "id_b3f82d49-6022-11e7-ba05-857c2c4aa19b",
+          "contentSha256": "292ac6d2f48f805dd5a0d371bbd295020eeae243bb048ccecac938a8187eeaa6",
+          "effectiveDate": "2017-06-27 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended (as added by Stats. 2016, Ch. 40, Sec. 2) by Stats. 2017, Ch. 17, Sec. 47.   (AB 103)   Effective June 27, 2017.   See similar section (added by Stats. 2016, Ch. 48), as amended by Stats. 2017, Ch. 17, Sec. 48.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30680."
+        },
+        {
+          "versionId": "id_b8d969fb-6022-11e7-ba05-857c2c4aa19b",
+          "contentSha256": "950862bc71b3eff0a101010aab3f91c1be8120a83fcbe3466cded87fc55d359e",
+          "effectiveDate": "2017-06-27 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended (as added by Stats. 2016, Ch. 48, Sec. 2) by Stats. 2017, Ch. 17, Sec. 48.   (AB 103)   Effective June 27, 2017.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30680."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30685",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "5157fcd6a4bdc2c827042d2a02d917e3ff1c2748ccfe68627b050581039bd7ca",
+      "versions": [
+        {
+          "versionId": "id_400cdb0b-d8f6-11ea-9efd-3da19d7eb114",
+          "contentSha256": "b8d60ff45c8d74d34691d62d0852e2ca322773000073c5a310daa192ef2decf2",
+          "effectiveDate": "2020-08-06 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2020, Ch. 29, Sec. 39.   (SB 118)   Effective August 6, 2020.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30685."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30710",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "22227e59dd5c10c06a5ade1b072b7800276aaa4b6238e511609ad9ee7a09237b",
+      "versions": [
+        {
+          "versionId": "id_dc6ebc59-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "001d011f5ffaff718c010f36cbc8d81dbc3b7c0ac09fb788470d3d05792649a4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30710."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30715",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "0250a461adc48011c968bd3c174d8ec8b039ecabba4f563329c949751174a4df",
+      "versions": [
+        {
+          "versionId": "id_dc6ee36b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "d58a334aeb79e48447ce2b0550b97b247e0f9e875dd6c15329d380c28338df12",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30715."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30720",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "237a38c9f39e97eec04d97dcd83aadf387f08fb1643f161f83150a5cba41b908",
+      "versions": [
+        {
+          "versionId": "id_dc6f0a7d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "4f2935f6a1a78f387efb4134fb11d756542430e6962c2365beb276a2e3fb6c2b",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30720."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30725",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "e002dfa28feaca0dc35a0cb3ea71bf4adc628e474d84eb476f54cc2a27cdeda8",
+      "versions": [
+        {
+          "versionId": "id_c1419d39-660f-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "c39081524985559c9bfda669fff7a1de92caa77613601ebe16e93969ab0d1462",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2011, Ch. 15, Sec. 551.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30725."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30730",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "621ef72253d6a6d97cb217471a03a00f4ecc4373c137ae19e691f7932c204523",
+      "versions": [
+        {
+          "versionId": "id_dc6f58a1-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "cbf6f563076e09dc63891c770cc556a568547561702598622842248a83cc69ec",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30730."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30735",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "9b0382842bbd4bdbb851e8e45d8034b6fd0d2e7cccc061828f93aa72b5e9fc6a",
+      "versions": [
+        {
+          "versionId": "id_dc6f7fb3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "017ccc0509249fd7dc4730bd3a8333f09570af45bcd99602c4a3f597e23f28ef",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30735."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30800",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "06294745aa45f54087d0c0a5c0ee68c9e431125fe6621e49c400970d57502eda",
+      "versions": [
+        {
+          "versionId": "id_e3350ab5-0be2-11ea-912d-915c88c10a14",
+          "contentSha256": "069f6ed070cafea820407853029e36b1f005c6e8ac272696d758b6c48a24dcf8",
+          "effectiveDate": "2020-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2019, Ch. 730, Sec. 7.   (AB 879)   Effective January 1, 2020.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30800."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30900",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "6fba526958a90f58249fff09fd6a512e97801392b182660d1de51a173c0e77d5",
+      "versions": [
+        {
+          "versionId": "id_2c124ddf-d8f7-11ea-9efd-3da19d7eb114",
+          "contentSha256": "f1a071d1e17386709d94a57afa28403c74abb66fa866314f6d3f85e356983b60",
+          "effectiveDate": "2020-08-06 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2020, Ch. 29, Sec. 40.   (SB 118)   Effective August 6, 2020.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30900."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30905",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "930ab214ffa813b65584016def40a0265d15c7391848241f571f143029068c99",
+      "versions": [
+        {
+          "versionId": "id_dc706a1d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "c446f0d06f87d5d72aba3d5f3c5a9eee92f604ce6f3f56b101924084881778c5",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30905."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30910",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "121c6ae97ea2b49f0ff11b2f2d39a0481bf984cc55b0587c2bc8c7e61c5a7bd8",
+      "versions": [
+        {
+          "versionId": "id_dc70912f-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "87b980104d3d7651d05a6bc3684758ca09e2390eefdf770d875761a52dd9c00d",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30910."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30915",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "39f90202856b004a823053aa95fd60085464b10c05539999b2fbe852caaace86",
+      "versions": [
+        {
+          "versionId": "id_dc70b841-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "42caa686497742ded83196663ef47e7a6e2b1ade4e9c161f3218a004a48effc8",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30915."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30920",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "8396d61e60cfffc4748760dc8cd2a7f682314e89447c28959368a7ea1651f710",
+      "versions": [
+        {
+          "versionId": "id_dc70df53-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "fbaefa3d18e120a580c9ee0daf46e58d057dff5491b1859e5b692b9ec014db4f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30920."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30925",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "2aef3ce0e4bb6abd2d8356649fb5639417ad4a7ecbdf584cceae4ba090879ad1",
+      "versions": [
+        {
+          "versionId": "id_dc710665-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "e4862af14b0ebe101b2ca4e4d8463e040a645fd6115f13893751c494ba03d483",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30925."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30930",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "6e0dec2ab0c65499a62ad6a998078cede8ff9fa799c121944e3e7fe8551274e4",
+      "versions": [
+        {
+          "versionId": "id_dc715487-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "3087d6ad4537fe075e954553f0b825558c3d233758e38633143c99d229eef872",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30930."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30935",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "2d8213d91221c09c95d8030b0af12b2f62573765ee4d92b5a5b97437565dcf2e",
+      "versions": [
+        {
+          "versionId": "id_dc715489-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0f5b5dfe78dc7739e5a3cac064313be4e6488bfa40dcd120ed99dfaff80e9ac2",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30935."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30940",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "5a54b237f1b7c2d0e92fc563fbc3b0340970b89901c99714faa12e42071de5e1",
+      "versions": [
+        {
+          "versionId": "id_dc717b9b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0e8bd71996b04d03936817e507dc1da2a5a4b66caa55e03a244f611bc632e179",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30940."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30945",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "5d3858a2af41e5b431fbfcf4d393f26d7fd36c7b57d216083215de27ef3ad61c",
+      "versions": [
+        {
+          "versionId": "id_dc71a2ad-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "f8119e7506edc94e65ed05b7b49e7696d5036a4c78cf99a4cdc92f525f347bc4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30945."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30950",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "af12721210ac530ece98358eb883ea6d08a0c7c5550f9c9d5abce80a48652b66",
+      "versions": [
+        {
+          "versionId": "id_dc71f0cf-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "2b66a41a2fb03be755065094a697936cf86d2ad21f8829e3e596bcfe1c4f7b7e",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30950."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30955",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "48868a05fd6087071794e98e0eb1470e8012f13260e003b8073d0d6afa4566b4",
+      "versions": [
+        {
+          "versionId": "id_37ce4c51-d8f7-11ea-9efd-3da19d7eb114",
+          "contentSha256": "ee56258da7ac33e9af2b7bc64c2e63b8efc418f89b72a92f8a2a5f7ab1d8a7de",
+          "effectiveDate": "2020-08-06 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2020, Ch. 29, Sec. 41.   (SB 118)   Effective August 6, 2020.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30955."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30960",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "e049f4c3636198a684ec3326cb4e1fb91acb5462491993025ea75d74da18a40d",
+      "versions": [
+        {
+          "versionId": "id_dc7217e3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "e5b167f5dbddb96316b63f141407c943785a27dcd0c744b57cd467bef225466c",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30960."
+        }
+      ]
+    },
+    {
+      "key": "PEN:30965",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "b45bcb306edc31f778eed8f57594314b61ddeaa19f993207ce90cc649715707d",
+      "versions": [
+        {
+          "versionId": "id_dc723ef5-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "58135e17dafa75319830a279b9ac1286959eaf55b1efe97d38fecfc0af3808d0",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30965."
+        }
+      ]
+    },
+    {
+      "key": "PEN:31000",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "4d9fe5628fbd736acc10aae202b8f3212647301af56007ea107de0015ecbee82",
+      "versions": [
+        {
+          "versionId": "id_bdf42e61-8666-11e4-9fd7-cecd375806d8",
+          "contentSha256": "c769ffed574dc849393ced4fec5f1bf65d45dfb3c1595ed229c7fa3857f31baf",
+          "effectiveDate": "2015-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2014, Ch. 54, Sec. 16.   (SB 1461)   Effective January 1, 2015.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31000."
+        }
+      ]
+    },
+    {
+      "key": "PEN:31005",
+      "retention": "research_only_not_pinned",
+      "versionDigest": "0634fc0e41ae4cddc06b31913b5a48ce13ab3e95c1fc516781d4d9c724509753",
+      "versions": [
+        {
+          "versionId": "id_dc72b42b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "dab9454dd439e702017cd0e0b125abd827612a228e8f9a4b43696c3564c662fa",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31005."
+        }
+      ]
+    },
+    {
+      "key": "PEN:672",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "c3fc613257db20a662f372c9f298a66f0f3e68105e18beaba95a1ffb5d6b35de",
+      "versions": [
+        {
+          "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09",
+          "effectiveDate": "1983-09-27 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 1983, Ch. 1092, Sec. 320.   Effective September 27, 1983.   Operative January 1, 1984, by Sec. 427 of Ch. 1092.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=672."
+        }
+      ]
+    },
+    {
+      "key": "WIC:8100",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "ae1b1e589b2e2f44bcbb54137392e32c339d7ec78c56079574503fd903c63bdf",
+      "versions": [
+        {
+          "versionId": "id_bce3235a-6e9d-11e3-8818-ebf46b809fe7",
+          "contentSha256": "cafc52cecf298ab45916931f0ad74968e300b8139b77aef1fb63b196c4e48d6c",
+          "effectiveDate": "2014-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Amended by Stats. 2013, Ch. 747, Sec. 1.   (AB 1131)   Effective January 1, 2014.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=8100."
+        }
+      ]
+    },
+    {
+      "key": "WIC:8103",
+      "retention": "existing_publication_dependency",
+      "versionDigest": "91030936c5366f1a5a880415e1232711f0d19c137f0b7641a2e16728d27246b8",
+      "versions": [
+        {
+          "versionId": "id_3213bcba-b1a1-11ef-8ee0-67d76dc08b34",
+          "contentSha256": "cef75b1479a4c8c8fda062bd027dc1f3f7f51f24ef4cf8d0a448b13f131aed90",
+          "effectiveDate": "2025-01-01 00:00:00",
+          "activeFlag": "Y",
+          "history": "Repealed (in Sec. 2.4) and added by Stats. 2024, Ch. 924, Sec. 2.5.   (SB 1025)   Effective January 1, 2025.   Operative September 1, 2025, by its own provisions.",
+          "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=8103."
+        }
+      ]
+    }
+  ],
+  "ranges": [
+    {
+      "lawCode": "PEN",
+      "first": "25900",
+      "last": "26060",
+      "purpose": "loaded_firearm_exceptions"
+    },
+    {
+      "lawCode": "PEN",
+      "first": "30625",
+      "last": "31005",
+      "purpose": "assault_weapon_exemptions_registration_permits"
+    }
+  ],
+  "approvedSuccessorSha256": "6597fa7ac65fdcf7c99cf37029a39565ee589f2313bbb655933dd37a530d07fa",
+  "counts": {
+    "requiredSections": 79,
+    "reusedSections": 22,
+    "newResearchSections": 57,
+    "retainedVersions": 81,
+    "instructions": 11,
+    "newChoices": 0,
+    "newPins": 0,
+    "receiptRenewals": 0
+  },
+  "limitations": [
+    "This packet collects the two remaining priority weapons groups together. It does not approve conduct summaries, grading branches, defenses or enforceability.",
+    "The ranges include exceptions, registration and permit provisions, not a list of new criminal charges. Cross-references outside these ranges still require assessment before publication.",
+    "All matching source versions are retained. Active flags and effective metadata are not independent determinations of operative law; the existing PEN:30515 successor approval is preserved.",
+    "The comparison uses the retained October 1 archive. It is not a fresh acquisition, a receipt renewal or a determination of current enforceability.",
+    "CALCRIM 2540 through 2546 are retained for grading context; inclusion does not mean each instruction applies to every loaded-firearm branch.",
+    "The CALCRIM 2560 possession context does not automatically authorize the distinct 30600 conduct choices. Sections 30600(b)-(c) and 30615 remain separate punishment and offense-unit dependencies.",
+    "No attorney deliberations, source holds, publication pins, runtime receipts, product choices or existing translations are changed."
+  ]
+}
