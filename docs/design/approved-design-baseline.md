@@ -51,7 +51,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Case Timeline | Merged in PR 78; all seven stages and embedded guide content retained |
 | Legal Resources | Merged in PR 80; both real search services and complete appointed-counsel content retained |
 | Bail and Plea guides | Merged in PR 82; full current translated guide content retained |
-| Right to Counsel | Design refresh prepared for review; full published article and scenarios retained |
+| Right to Counsel | Merged in PR 84; full published article and scenarios retained |
+| Immigration Situational Guides collection | Prepared for review; nine existing destinations retained in grouped choices with a selected-guide overview |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -371,3 +372,21 @@ References:
 - `counsel-content.html`: SHA-256 `ad53e62ba0c13546a1f705b19eeaf0968eefccfdc7f013fc9f9267cfcdce4b2a`
 
 Validation: typecheck and production build passed. Six dedicated browser cases cover the new interface in all three locales and both themes at 1280px/320px, all disclosure controls and scenarios, 79 independent published-source text fragments, all seven reference rows, related links, live/cleared/persisted jurisdiction, initial and changed hashes, focus and actual bounds. The existing juvenile scenario regression also passed. The spec is release-allowlisted. Visual review compares the final scale reference and implementation in both themes and sizes. No full-suite or production-deployment claim.
+
+
+## Immigration Situational Guides collection
+
+Replaces the small card grid at the existing `/immigration-guidance#detailed-guides` anchor with the accepted bookmarked-sheet graphic, larger choices and three situation groups. The immigration homepage heading, urgent resources, policy notices, four process stages and remaining hub sections are unchanged. All nine existing guide titles, descriptions and destinations remain, including After Deportation, which was added after the eight-guide preview. This batch changes the collection only; full detail articles and their tools remain at their existing routes.
+
+Selecting a choice now shows a short contents overview below the collection. The choice uses `aria-pressed` and `aria-controls`; deliberate selection moves focus to the overview heading so mobile and keyboard users can find the result. A return control restores focus to the selected choice. The full-guide action remains a native link. These are contents labels, not substitute legal guidance, simulated tools, or generated recommendations. The overview is not intended to reproduce the complete legal article. Existing descriptions are preserved instead of replacing them with shorter mockup copy. The introductory heading and grouping labels are new translated interface copy; uppercase tracked eyebrows are omitted in keeping with later global direction. All new framing/contents labels support English, Spanish and Chinese.
+
+The decorative graphic preserves the accepted three-sheet geometry and bookmark. Theme tokens tone it down in dark mode. At narrow widths the graphic scales down and groups stack in DOM order. There is no new animation, storage, API call or eligibility logic. Existing guide articles, including separately reviewed immigration corrections, are untouched. The next individual-page designs remain separate batches.
+
+Independent fixture: `tests/fixtures/immigration-guide-choices.ts` captures every existing title/description and destination from main `083f0ead` before the refresh. The release-allowlisted browser spec checks those literals, all nine selections, keyboard activation, result focus/return, destination links, mobile bounds and retained hub sections across three languages and two themes.
+
+Reference files:
+- `opendefender-immigration-situations-preview.html`: SHA-256 `930c8fc511ca2f2cb4fac1a5f008679a628c1a43f39c08bb17456e865d9bb35c`
+- `immigration-situations-content.html`: SHA-256 `7789eba8ced51a3dcbc2ade5a291ae4111c1b508c0f4c8105747fab21dc931ec`
+- `counsel-immigration-graphics.css`: SHA-256 `335f3cfc324d5f9dc436f928616a3db4aef658f7f29b047c8fff74fee35748b7`
+
+Validation: typecheck and production build passed. All six dedicated locale/theme browser cases passed. Desktop and phone views were compared with the local accepted reference. The broader site translation gaps and existing full-suite failures are not resolved or reclassified by this design batch. No deployment or legal approval is claimed.
