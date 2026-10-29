@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "scope": "residual_priority_accounting_not_publication_or_currentness",
+  "sourceAsOf": "2026-09-24",
+  "priorComparisons": [
+    {
+      "instructionId": "1153",
+      "status": "existing_choice_requires_conduct_comparison",
+      "sha256": "acfe20214ec254d49d60b5a3f863435283657d01cb21bd41733ed77d91ca5407"
+    },
+    {
+      "instructionId": "2530",
+      "status": "unpublished_priority",
+      "sha256": "725609c3c5439a8d80be1cda46405aab027eb53bc460b4f56b243c6b2b07728d"
+    },
+    {
+      "instructionId": "2560",
+      "status": "existing_choice_missing_sibling",
+      "sha256": "dcdaf1c2f794c3ff342b4195a747b93482d51981e27af0327505fd624f7988ea"
+    },
+    {
+      "instructionId": "2561",
+      "status": "unpublished_priority",
+      "sha256": "21ec7f118ac23f71baeb8f81135be7a859dc6c7626e8a2311bd558477117eced"
+    }
+  ],
+  "benefitScopeSha256": "25d9c48a4ceb9ced597db5548f4dd4d6e284e0ef0cdd8b4da9508db2a7d64a7a",
+  "engagingReviewSha256": "db7d749246e3f4d1ce989e592d6295dbe218dbe8585805bade62a5bc0b68cbd0",
+  "sources": [
+    {
+      "key": "PEN:25850",
+      "retention": "reviewed_source_pool",
+      "versionId": "id_96bac7dd-8258-11ee-bcfe-9f16e66157a6",
+      "contentSha256": "751284549e5ef1ec95b9baaefede2511bbfe96d6802ba627abf1f5fb0c9a1b45",
+      "effectiveDate": "2024-01-01 00:00:00",
+      "history": "Amended by Stats. 2023, Ch. 249, Sec. 9.   (SB 2)   Effective January 1, 2024.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25850.",
+      "text": "(a) A person is guilty of carrying a loaded firearm when the person carries a loaded firearm on the person or in a vehicle while in any public place or on any public street in an incorporated city, city and county, or in any public place or on any public street in a prohibited area of an unincorporated area of a county or city and county. (b) In order to determine whether or not a firearm is loaded for the purpose of enforcing this section, peace officers are authorized to examine any firearm carried by anyone on the person or in a vehicle while in any public place or on any public street in an incorporated city or prohibited area of an unincorporated territory. Refusal to allow a peace officer to inspect a firearm pursuant to this section constitutes probable cause for arrest for violation of this section. (c) Carrying a loaded firearm in violation of this section is punishable, as follows: (1) Where the person previously has been convicted of any felony, or of any crime made punishable by a provision listed in Section 16580, as a felony. (2) Where the firearm is stolen and the person knew or had reasonable cause to believe that it was stolen, as a felony. (3) Where the person is an active participant in a criminal street gang, as defined in subdivision (a) of Section 186.22, under the California Street Terrorism Enforcement and Prevention Act (Chapter 11 (commencing with Section 186.20) of Title 7 of Part 1), as a felony. (4) Where the person is not in lawful possession of the firearm, or is within a class of persons prohibited from possessing or acquiring a firearm pursuant to Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this title, or Section 8100 or 8103 of the Welfare and Institutions Code, as a felony. (5) Where the person has been convicted of a crime against a person or property, or of a narcotics or dangerous drug violation, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine. (6) Where the person is not listed with the Department of Justice pursuant to Section 11106 as the recorded owner of the handgun, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, or by a fine not to exceed one thousand dollars ($1,000), or by both that fine and imprisonment. (7) In all cases other than those specified in paragraphs (1) to (6), inclusive, as a misdemeanor, punishable by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine. (d) (1) Every person convicted under this section who has previously been convicted of an offense enumerated in Section 23515, or of any crime made punishable under a provision listed in Section 16580, shall serve a term of at least three months in a county jail, or, if granted probation or if the execution or imposition of sentence is suspended, it shall be a condition thereof that the person be imprisoned for a period of at least three months. (2) The court shall apply the three-month minimum sentence except in unusual cases where the interests of justice would best be served by granting probation or suspending the imposition or execution of sentence without the minimum imprisonment required in this section or by granting probation or suspending the imposition or execution of sentence with conditions other than those set forth in this section, in which case, the court shall specify on the record and shall enter on the minutes the circumstances indicating that the interests of justice would best be served by that disposition. (e) A violation of this section that is punished by imprisonment in a county jail not exceeding one year shall not constitute a conviction of a crime punishable by imprisonment for a term exceeding one year for the purposes of determining federal firearms eligibility under Section 922(g)(1) of Title 18 of the United States Code. (f) Nothing in this section, or in Article 3 (commencing with Section 25900) or Article 4 (commencing with Section 26000), shall preclude prosecution under Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this title, Section 8100 or 8103 of the Welfare and Institutions Code, or any other law with a greater penalty than this section. (g) Notwithstanding paragraphs (2) and (3) of subdivision (a) of Section 836, a peace officer may make an arrest without a warrant: (1) When the person arrested has violated this section, although not in the officer’s presence. (2) Whenever the officer has reasonable cause to believe that the person to be arrested has violated this section, whether or not this section has, in fact, been violated. (h) A peace officer may arrest a person for a violation of paragraph (6) of subdivision (c), if the peace officer has probable cause to believe that the person is carrying a handgun in violation of this section and that person is not listed with the Department of Justice pursuant to paragraph (1) of subdivision (c) of Section 11106 as the recorded owner of that handgun."
+    },
+    {
+      "key": "PEN:30600",
+      "retention": "research_only_not_promoted",
+      "versionId": "id_bd9d7465-660f-11e0-8fc7-8d05c2a88098",
+      "contentSha256": "acab5b93310e48ead1cd2ba603dabbb5783ac833c3c4c5562c8eddf2796aba29",
+      "effectiveDate": "2011-04-04 00:00:00",
+      "history": "Amended by Stats. 2011, Ch. 15, Sec. 549.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600.",
+      "text": "(a) Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years. (b) In addition and consecutive to the punishment imposed under subdivision (a), any person who transfers, lends, sells, or gives any assault weapon or any .50 BMG rifle to a minor in violation of subdivision (a) shall receive an enhancement of imprisonment pursuant to subdivision (h) of Section 1170 of one year. (c) Except in the case of a first violation involving not more than two firearms as provided in Sections 30605 and 30610, for purposes of this article, if more than one assault weapon or .50 BMG rifle is involved in any violation of this article, there shall be a distinct and separate offense for each."
+    },
+    {
+      "key": "PEN:30615",
+      "retention": "research_only_not_promoted",
+      "versionId": "id_dc6c242d-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "4d33c1f025640e307856d4db87c1d2a0218a624c8cdc9177e6f33f426313a8e0",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30615.",
+      "text": "Notwithstanding Section 654 or any other provision of law, any person who commits another crime while violating this article may receive an additional, consecutive punishment of one year for violating this article, in addition and consecutive to the punishment, including enhancements, which is prescribed for the other crime."
+    },
+    {
+      "key": "WIC:10980",
+      "retention": "reviewed_source_pool",
+      "versionId": "id_0f8c7161-e5d0-11e7-99d3-2f570f4f10eb",
+      "contentSha256": "bbea0fc613add481efde7ff62964738b82dda50236c7bc310c52379b06a63d46",
+      "effectiveDate": "2018-01-01 00:00:00",
+      "history": "Amended by Stats. 2017, Ch. 390, Sec. 1.   (SB 360)   Effective January 1, 2018.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=10980.",
+      "text": "(a) Any person who, willfully and knowingly, with the intent to deceive, makes a false statement or representation or knowingly fails to disclose a material fact in order to obtain aid under the provisions of this division or who, knowing he or she is not entitled thereto, attempts to obtain aid or to continue to receive aid to which he or she is not entitled, or to receive a larger amount than that to which he or she is legally entitled, is guilty of a misdemeanor, punishable by imprisonment in a county jail for a period of not more than six months, by a fine of not more than five hundred dollars ($500), or by both imprisonment and fine. (b) Any person who knowingly makes more than one application for aid under the provisions of this division with the intent of establishing multiple entitlements for any person for the same period or who makes an application for that aid for a fictitious or nonexistent person or by claiming a false identity for any person is guilty of a felony, punishable by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine; or by imprisonment in a county jail for a period of not more than one year, or by a fine of not more than one thousand dollars ($1,000), or by both imprisonment and fine. (c) Whenever any person has, willfully and knowingly, with the intent to deceive, by means of false statement or representation, or by failing to disclose a material fact, or by impersonation or other fraudulent device, obtained or retained aid under the provisions of this division for himself or herself or for a child not in fact entitled thereto, the person obtaining this aid shall be punished as follows: (1) If the total amount of the aid obtained or retained is nine hundred fifty dollars ($950) or less, by imprisonment in a county jail for a period of not more than six months, by a fine of not more than five hundred dollars ($500), or by both imprisonment and fine. (2) If the total amount of the aid obtained or retained is more than nine hundred fifty dollars ($950), by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine; or by imprisonment in a county jail for a period of not more than one year, by a fine of not more than one thousand dollars ($1,000), or by both imprisonment and fine. (d) Any person who knowingly uses, transfers, acquires, or possesses blank authorizations to participate in the federal Supplemental Nutrition Assistance Program in any manner not authorized by Chapter 10 (commencing with Section 18900) of Part 6 with the intent to defraud is guilty of a felony, punishable by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine. (e) Any person who counterfeits or alters or knowingly uses, transfers, acquires, or possesses counterfeited or altered authorizations to participate in the federal Supplemental Nutrition Assistance Program or to receive CalFresh benefits or electronically transferred benefits in any manner not authorized by the former federal Food Stamp Act of 1964 (Public Law 88-525 and all amendments thereto) or the federal Food and Nutrition Act of 2008 (7 U.S.C. Sec. 2011 et seq.) or the federal regulations pursuant to the act is guilty of forgery. (f) Any person who fraudulently appropriates CalFresh benefits, electronically transferred benefits, or authorizations to participate in the federal Supplemental Nutrition Assistance Program with which he or she has been entrusted pursuant to his or her duties as a public employee is guilty of embezzlement of public funds. (g) Any person who knowingly uses, transfers, sells, purchases, or possesses CalFresh benefits, electronically transferred benefits, or authorizations to participate in the federal Supplemental Nutrition Assistance Program in any manner not authorized by Chapter 10 (commencing with Section 18900) of Part 6, or by the former federal Food Stamp Act of 1977 (Public Law 95-113 and all amendments thereto) or the federal Food and Nutrition Act of 2008 (7 U.S.C. Sec. 2011 et seq.) (1) is guilty of a misdemeanor if the face value of the benefits or the authorizations to participate is nine hundred fifty dollars ($950) or less, and shall be punished by imprisonment in a county jail for a period of not more than six months, by a fine of not more than five hundred dollars ($500), or by both imprisonment and fine, or (2) is guilty of a felony if the face value of the CalFresh benefits or the authorizations to participate exceeds nine hundred fifty dollars ($950), and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine, or by imprisonment in a county jail for a period of not more than one year, or by a fine of not more than one thousand dollars ($1,000), or by both imprisonment and fine. (h) (1) If the violation of subdivision (f) or (g) is committed by means of an electronic transfer of benefits, in addition and consecutive to the penalties for the violation, or attempted violation, of those subdivisions, the court shall impose the following punishment: (A) If the electronic transfer of benefits exceeds fifty thousand dollars ($50,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of one year. (B) If the electronic transfer of benefits exceeds one hundred fifty thousand dollars ($150,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of two years. (C) If the electronic transfer of benefits exceeds one million dollars ($1,000,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of three years. (D) If the electronic transfer of benefits exceeds two million five hundred thousand dollars ($2,500,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of four years. (2) In any accusatory pleading involving multiple charges of violations of subdivision (f) or (g), or both, committed by means of an electronic transfer of benefits, the additional terms provided in paragraph (1) may be imposed if the aggregate losses to the victims from all violations exceed the amounts specified in this paragraph and arise from a common scheme or plan. (i) A person who is punished by an additional term of imprisonment under another law for a violation of subdivision (f) or (g) shall not receive an additional term of imprisonment under subdivision (h). (j) (1) A person shall not be subject to criminal prosecution, under this section or under any other law, for an overpayment or overissuance of benefits, obtained under the California Work Opportunity and Responsibility to Kids (CalWORKs) program (Chapter 2 (commencing with Section 11200) of Part 3) or the CalFresh program (Chapter 10 (commencing with Section 18900) of Part 6), for any month in which the county human services agency was in receipt of any Income and Eligibility Verification System (IEVS) data match information indicating any potential for an overpayment or an overissuance and for which the county human services agency has not provided to the person a timely and adequate notice of action for the collection of the overpayment or the overissuance. (2) (A) For purposes of paragraph (1), the county human services agency shall be deemed to be in receipt of IEVS data match information indicating any potential for an overpayment or an overissuance following 45 days from the date of the county human services agency’s possession of that information. (B) Notwithstanding subparagraph (A), if the county human services agency does not complete the required actions for an IEVS data match for a CalFresh or CalWORKs applicant or recipient within 45 days of receipt of information pursuant to Section 272.8 of Title 7 of, or Section 205.56 of Title 45 of, the Code of Federal Regulations, or their successors, but is authorized to exceed the 45-day period due to exceptions provided under those regulations or under any other federal law, the county human services agency shall be deemed, for purposes of paragraph (1), to be in receipt of IEVS data match information indicating any potential for an overpayment or an overissuance following the combined total of 45 days and the authorized delay from the date of the county human services agency’s possession of that information."
+    },
+    {
+      "key": "BPC:7028",
+      "retention": "reviewed_source_pool",
+      "versionId": "id_3b0c5299-8ae3-11e4-9fb2-a185e941360d",
+      "contentSha256": "fdeb720f54150d1a225baa598c9e8066b3d88bcd513982c685bb52185170536a",
+      "effectiveDate": "2015-01-01 00:00:00",
+      "history": "Amended by Stats. 2014, Ch. 392, Sec. 3.   (SB 315)   Effective January 1, 2015.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=7028.",
+      "text": "(a) Unless exempted from this chapter, it is a misdemeanor for a person to engage in the business of, or act in the capacity of, a contractor within this state under either of the following conditions: (1) The person is not licensed in accordance with this chapter. (2) The person performs acts covered by this chapter under a license that is under suspension for failure to pay a civil penalty or to comply with an order of correction, pursuant to Section 7090.1, or for failure to resolve all outstanding final liabilities, pursuant to Section 7145.5. (b) A first conviction for the offense described in this section is punishable by a fine not exceeding five thousand dollars ($5,000) or by imprisonment in a county jail not exceeding six months, or by both that fine and imprisonment. (c) If a person has been previously convicted of the offense described in this section, unless the provisions of subdivision (d) are applicable, the court shall impose a fine of 20 percent of the contract price, or 20 percent of the aggregate payments made to, or at the direction of, the unlicensed person, or five thousand dollars ($5,000), whichever is greater, and, unless the sentence prescribed in subdivision (d) is imposed, the person shall be confined in a county jail for not less than 90 days, except in an unusual case where the interests of justice would be served by imposition of a lesser sentence or a fine. If the court imposes only a fine or a jail sentence of less than 90 days for second or subsequent convictions under this section, the court shall state the reasons for its sentencing choice on the record. (d) A third or subsequent conviction for the offense described in this section is punishable by a fine of not less than five thousand dollars ($5,000) nor more than the greater amount of ten thousand dollars ($10,000) or 20 percent of the contract price, or 20 percent of the aggregate payments made to, or at the direction of, the unlicensed person, and by imprisonment in a county jail for not more than one year or less than 90 days. The penalty provided by this subdivision is cumulative to the penalties available under all other laws of this state. (e) A person who violates this section is subject to the penalties prescribed in subdivision (d) if the person was named on a license that was previously revoked and, either in fact or under law, was held responsible for any act or omission resulting in the revocation. (f) If the unlicensed person engaging in the business of or acting in the capacity of a contractor has agreed to furnish materials and labor on an hourly basis, “the contract price” for the purposes of this section means the aggregate sum of the cost of materials and labor furnished and the cost of completing the work to be performed. (g) Notwithstanding any other law, an indictment for any violation of this section by an unlicensed person shall be found, or information or a complaint shall be filed, within four years from the date of the contract proposal, contract, completion, or abandonment of the work, whichever occurs last. (h) For any conviction under this section, a person who utilized the services of the unlicensed person is a victim of crime and is eligible, pursuant to subdivision (f) of Section 1202.4 of the Penal Code, for restitution for economic losses, regardless of whether he or she had knowledge that the person was unlicensed. (i) The changes made to this section by the act adding this subdivision are declaratory of existing law."
+    }
+  ],
+  "instruction": {
+    "id": "2561",
+    "heading": "2561. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other Offense—Charged as Separate Count and as Enhancement (Pen. Code, § 30615)",
+    "firstPage": 1797,
+    "family": "weapons",
+    "lastPage": 1798,
+    "pageHashes": [
+      {
+        "page": 1797,
+        "sha256": "54e4f1dfa5b644be2b1a7d4af8f39aac37d214e2ae92af5c6907ff91f20c3d80"
+      },
+      {
+        "page": 1798,
+        "sha256": "2d1ce26f5e2d3309cab60f63c99ee2382067ac70a9b715dd5a77b1e33f2addb2"
+      }
+    ],
+    "receipt": {
+      "sourceUrl": "https://courts.ca.gov/system/files/file/calcrim-2026.pdf",
+      "landingUrl": "https://courts.ca.gov/advisory-body/criminal-jury-instructions-advisory-committee",
+      "edition": "2026 approved February edition; later supplements not assumed incorporated",
+      "retrievedAt": "2026-09-28T05:28:52.309479+00:00",
+      "bytes": 84489227,
+      "sha256": "32cde18ace46a4a6fc4dd2ea27c9e30f923dc1d28dd554500119787f957a3d6e",
+      "pdfPages": 2680
+    },
+    "pages": [
+      {
+        "page": 1797,
+        "sha256": "54e4f1dfa5b644be2b1a7d4af8f39aac37d214e2ae92af5c6907ff91f20c3d80",
+        "text": "2561. Possession, etc., of Assault Weapon or .50 BMG Riﬂe While \nCommitting Other Offense—Charged as Separate Count and as \nEnhancement (Pen. Code, § 30615)\nIf you ﬁnd the defendant guilty of both (possessing/manufacturing/ \ncausing to be manufactured/distributing/transporting/importing/keeping \nfor sale/offering or exposing for sale/giving/lending) (an assault weapon/a \n.50 BMG riﬂe) under Count \nand the crime of\n<insert other offense alleged> under Count \n, you must then decide \nwhether the People have proved the additional allegation that (he/she) \ncommitted the ﬁrst crime while committing the second one.\nTo prove this allegation, the People must prove that the defendant \n(possessed/ manufactured/ caused to be manufactured/distributed/ \ntransported/imported/kept for sale/offered or exposed for sale/gave/lent) \n(an assault weapon/a .50 BMG riﬂe) while committing the crime of \n<insert other offense alleged>.\nThe People have the burden of proving this allegation beyond a \nreasonable doubt. If the People have not met this burden, you must ﬁnd \nthis allegation has not been proved.\nNew January 2006; Revised February 2012\nBENCH NOTES\nInstructional Duty \nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \nenhancement. (See Apprendi v. New Jersey (2000) 530 U.S. 466, 475–476, 490 [120 \nS.Ct. 2348, 147 L.Ed.2d 435]; People v. Jimenez (1992) 8 Cal.App.4th 391, 398 [10 \nCal.Rptr.2d 281] [enhancement under Pen. Code, § 30600(b) must be pleaded and \nproved].) \nGive this instruction if the defendant is charged with a separate count for violating \nPenal Code section 30615 and an enhancement for violating Penal Code section \n30600 while committing another crime. (Pen. Code, § 30615; People v. Jimenez, \nsupra, 8 Cal.App.4th at p. 398.) This instruction must be given with CALCRIM \nNo. 2560, Possession, etc., of Assault Weapon or .50 BMG Riﬂe, and the appropriate \ninstruction deﬁning the elements of the other offense charged. \nThe court must provide the jury with a verdict form on which the jury will indicate \nif the sentencing enhancement has been proved. \nIf the defendant is not charged with a separate count for violating Penal Code \nsection 30600 but is charged only with the enhancement, do not give this \ninstruction. Give CALCRIM No. 2562, Possession, etc., of Assault Weapon or .50 \n1673\n"
+      },
+      {
+        "page": 1798,
+        "sha256": "2d1ce26f5e2d3309cab60f63c99ee2382067ac70a9b715dd5a77b1e33f2addb2",
+        "text": "BMG Riﬂe While Committing Other Offense: Pen. Code, § 30600—Charged Only as \nEnhancement.\nAUTHORITY\n• \nEnhancement. Pen. Code, § 30615; People v. Jimenez (1992) 8 Cal.App.4th 391, \n398 [10 Cal.Rptr.2d 281].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 216–219, 220–222.\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][b] (Matthew Bender).\nCALCRIM No. 2561 \nWEAPONS\n1674\n"
+      }
+    ]
+  },
+  "completedBoundedComparison": {
+    "instructionId": "1153",
+    "status": "bounded_engaging_conduct_summary_not_exhaustive_instruction_coverage",
+    "chargeId": "ca-prostitution-solicitation"
+  },
+  "conductWork": [
+    {
+      "id": "PEN:25850",
+      "scope": "Loaded-firearm carrying: conduct, grading branches, exceptions and enforceability",
+      "status": "unpublished_priority",
+      "evidence": {
+        "key": "PEN:25850",
+        "start": 0,
+        "end": 5286,
+        "text": "(a) A person is guilty of carrying a loaded firearm when the person carries a loaded firearm on the person or in a vehicle while in any public place or on any public street in an incorporated city, city and county, or in any public place or on any public street in a prohibited area of an unincorporated area of a county or city and county. (b) In order to determine whether or not a firearm is loaded for the purpose of enforcing this section, peace officers are authorized to examine any firearm carried by anyone on the person or in a vehicle while in any public place or on any public street in an incorporated city or prohibited area of an unincorporated territory. Refusal to allow a peace officer to inspect a firearm pursuant to this section constitutes probable cause for arrest for violation of this section. (c) Carrying a loaded firearm in violation of this section is punishable, as follows: (1) Where the person previously has been convicted of any felony, or of any crime made punishable by a provision listed in Section 16580, as a felony. (2) Where the firearm is stolen and the person knew or had reasonable cause to believe that it was stolen, as a felony. (3) Where the person is an active participant in a criminal street gang, as defined in subdivision (a) of Section 186.22, under the California Street Terrorism Enforcement and Prevention Act (Chapter 11 (commencing with Section 186.20) of Title 7 of Part 1), as a felony. (4) Where the person is not in lawful possession of the firearm, or is within a class of persons prohibited from possessing or acquiring a firearm pursuant to Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this title, or Section 8100 or 8103 of the Welfare and Institutions Code, as a felony. (5) Where the person has been convicted of a crime against a person or property, or of a narcotics or dangerous drug violation, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine. (6) Where the person is not listed with the Department of Justice pursuant to Section 11106 as the recorded owner of the handgun, by imprisonment pursuant to subdivision (h) of Section 1170, or by imprisonment in a county jail not to exceed one year, or by a fine not to exceed one thousand dollars ($1,000), or by both that fine and imprisonment. (7) In all cases other than those specified in paragraphs (1) to (6), inclusive, as a misdemeanor, punishable by imprisonment in a county jail not to exceed one year, by a fine not to exceed one thousand dollars ($1,000), or by both that imprisonment and fine. (d) (1) Every person convicted under this section who has previously been convicted of an offense enumerated in Section 23515, or of any crime made punishable under a provision listed in Section 16580, shall serve a term of at least three months in a county jail, or, if granted probation or if the execution or imposition of sentence is suspended, it shall be a condition thereof that the person be imprisoned for a period of at least three months. (2) The court shall apply the three-month minimum sentence except in unusual cases where the interests of justice would best be served by granting probation or suspending the imposition or execution of sentence without the minimum imprisonment required in this section or by granting probation or suspending the imposition or execution of sentence with conditions other than those set forth in this section, in which case, the court shall specify on the record and shall enter on the minutes the circumstances indicating that the interests of justice would best be served by that disposition. (e) A violation of this section that is punished by imprisonment in a county jail not exceeding one year shall not constitute a conviction of a crime punishable by imprisonment for a term exceeding one year for the purposes of determining federal firearms eligibility under Section 922(g)(1) of Title 18 of the United States Code. (f) Nothing in this section, or in Article 3 (commencing with Section 25900) or Article 4 (commencing with Section 26000), shall preclude prosecution under Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this title, Section 8100 or 8103 of the Welfare and Institutions Code, or any other law with a greater penalty than this section. (g) Notwithstanding paragraphs (2) and (3) of subdivision (a) of Section 836, a peace officer may make an arrest without a warrant: (1) When the person arrested has violated this section, although not in the officer’s presence. (2) Whenever the officer has reasonable cause to believe that the person to be arrested has violated this section, whether or not this section has, in fact, been violated. (h) A peace officer may arrest a person for a violation of paragraph (6) of subdivision (c), if the peace officer has probable cause to believe that the person is carrying a handgun in violation of this section and that person is not listed with the Department of Justice pursuant to paragraph (1) of subdivision (c) of Section 11106 as the recorded owner of that handgun."
+      },
+      "next": "Reconcile the carrying exceptions and predicate-dependent grading with the retained section before preparing selectable branches. No generic misdemeanor default is assigned."
+    },
+    {
+      "id": "PEN:30600(a)",
+      "scope": "Assault-weapon or .50 BMG rifle manufacture, transfer and related conduct",
+      "status": "existing_possession_choice_does_not_cover_sibling_conduct",
+      "evidence": {
+        "key": "PEN:30600",
+        "start": 0,
+        "end": 432,
+        "text": "(a) Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years. "
+      },
+      "next": "Reconcile weapon definitions, chapter exceptions, conduct-specific knowledge requirements and enforceability. Preserve the existing possession decision; it is not blanket approval of this sibling."
+    },
+    {
+      "id": "WIC:10980(d)",
+      "scope": "Unauthorized blank program authorizations with intent to defraud",
+      "status": "unpublished_program_dependencies",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 2585,
+        "end": 3123,
+        "text": "(d) Any person who knowingly uses, transfers, acquires, or possesses blank authorizations to participate in the federal Supplemental Nutrition Assistance Program in any manner not authorized by Chapter 10 (commencing with Section 18900) of Part 6 with the intent to defraud is guilty of a felony, punishable by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine. "
+      },
+      "next": "Bind the Chapter 10 program authorization rules and sentencing dependencies. Do not collapse blank authorizations into ordinary aid overpayments."
+    },
+    {
+      "id": "WIC:10980(e)",
+      "scope": "Counterfeit or altered program authorizations and benefits",
+      "status": "unpublished_program_and_penalty_dependencies",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 3123,
+        "end": 3666,
+        "text": "(e) Any person who counterfeits or alters or knowingly uses, transfers, acquires, or possesses counterfeited or altered authorizations to participate in the federal Supplemental Nutrition Assistance Program or to receive CalFresh benefits or electronically transferred benefits in any manner not authorized by the former federal Food Stamp Act of 1964 (Public Law 88-525 and all amendments thereto) or the federal Food and Nutrition Act of 2008 (7 U.S.C. Sec. 2011 et seq.) or the federal regulations pursuant to the act is guilty of forgery. "
+      },
+      "next": "Bind the incorporated federal authorization rules and applicable forgery punishment. Do not copy the adjacent subdivision penalty."
+    },
+    {
+      "id": "WIC:10980(f)",
+      "scope": "Entrusted public employee appropriation of benefits or authorizations",
+      "status": "unpublished_program_and_penalty_dependencies",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 3666,
+        "end": 3991,
+        "text": "(f) Any person who fraudulently appropriates CalFresh benefits, electronically transferred benefits, or authorizations to participate in the federal Supplemental Nutrition Assistance Program with which he or she has been entrusted pursuant to his or her duties as a public employee is guilty of embezzlement of public funds. "
+      },
+      "next": "Bind public-funds embezzlement punishment and applicable program definitions, plus the (h), (i), and (j) provisions retained below."
+    },
+    {
+      "id": "WIC:10980(g)(1)",
+      "scope": "Unauthorized benefits or authorizations: face value $950 or less",
+      "status": "unpublished_program_dependencies",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 3991,
+        "end": 5380,
+        "text": "(g) Any person who knowingly uses, transfers, sells, purchases, or possesses CalFresh benefits, electronically transferred benefits, or authorizations to participate in the federal Supplemental Nutrition Assistance Program in any manner not authorized by Chapter 10 (commencing with Section 18900) of Part 6, or by the former federal Food Stamp Act of 1977 (Public Law 95-113 and all amendments thereto) or the federal Food and Nutrition Act of 2008 (7 U.S.C. Sec. 2011 et seq.) (1) is guilty of a misdemeanor if the face value of the benefits or the authorizations to participate is nine hundred fifty dollars ($950) or less, and shall be punished by imprisonment in a county jail for a period of not more than six months, by a fine of not more than five hundred dollars ($500), or by both imprisonment and fine, or (2) is guilty of a felony if the face value of the CalFresh benefits or the authorizations to participate exceeds nine hundred fifty dollars ($950), and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine, or by imprisonment in a county jail for a period of not more than one year, or by a fine of not more than one thousand dollars ($1,000), or by both imprisonment and fine. "
+      },
+      "next": "Bind authorized-use rules and the valuation language, including electronic benefits. Exactly $950 is in the lower branch; it is not evidence of authorized use."
+    },
+    {
+      "id": "WIC:10980(g)(2)",
+      "scope": "Unauthorized benefits or authorizations: face value more than $950",
+      "status": "unpublished_program_dependencies",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 3991,
+        "end": 5380,
+        "text": "(g) Any person who knowingly uses, transfers, sells, purchases, or possesses CalFresh benefits, electronically transferred benefits, or authorizations to participate in the federal Supplemental Nutrition Assistance Program in any manner not authorized by Chapter 10 (commencing with Section 18900) of Part 6, or by the former federal Food Stamp Act of 1977 (Public Law 95-113 and all amendments thereto) or the federal Food and Nutrition Act of 2008 (7 U.S.C. Sec. 2011 et seq.) (1) is guilty of a misdemeanor if the face value of the benefits or the authorizations to participate is nine hundred fifty dollars ($950) or less, and shall be punished by imprisonment in a county jail for a period of not more than six months, by a fine of not more than five hundred dollars ($500), or by both imprisonment and fine, or (2) is guilty of a felony if the face value of the CalFresh benefits or the authorizations to participate exceeds nine hundred fifty dollars ($950), and shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code for a period of 16 months, two years, or three years, by a fine of not more than five thousand dollars ($5,000), or by both that imprisonment and fine, or by imprisonment in a county jail for a period of not more than one year, or by a fine of not more than one thousand dollars ($1,000), or by both imprisonment and fine. "
+      },
+      "next": "Bind authorized-use rules, valuation and both punishment alternatives, with the (h), (i), and (j) provisions retained below."
+    }
+  ],
+  "additionalPunishment": [
+    {
+      "id": "PEN:30615",
+      "kind": "additional_punishment",
+      "evidence": {
+        "key": "PEN:30615",
+        "start": 0,
+        "end": 326,
+        "text": "Notwithstanding Section 654 or any other provision of law, any person who commits another crime while violating this article may receive an additional, consecutive punishment of one year for violating this article, in addition and consecutive to the punishment, including enhancements, which is prescribed for the other crime."
+      },
+      "treatment": "Keep visible as an additional-punishment dependency, not a new independent conduct choice. CALCRIM 2561 expressly discusses a separate-count and enhancement setting; this accounting does not decide pleading treatment or imply that the provision cannot appear on charging papers."
+    },
+    {
+      "id": "PEN:30600(b)-(c)",
+      "kind": "enhancement_and_offense_unit_rules",
+      "evidence": {
+        "key": "PEN:30600",
+        "start": 432,
+        "end": 1050,
+        "text": "(b) In addition and consecutive to the punishment imposed under subdivision (a), any person who transfers, lends, sells, or gives any assault weapon or any .50 BMG rifle to a minor in violation of subdivision (a) shall receive an enhancement of imprisonment pursuant to subdivision (h) of Section 1170 of one year. (c) Except in the case of a first violation involving not more than two firearms as provided in Sections 30605 and 30610, for purposes of this article, if more than one assault weapon or .50 BMG rifle is involved in any violation of this article, there shall be a distinct and separate offense for each."
+      },
+      "treatment": "Retain the minor-transfer enhancement and multiple-weapon offense-unit rule with the pending conduct group. Neither is silently absorbed into an ordinary custody ceiling."
+    },
+    {
+      "id": "WIC:10980(h)",
+      "kind": "electronic_transfer_additional_terms",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 5380,
+        "end": 6783,
+        "text": "(h) (1) If the violation of subdivision (f) or (g) is committed by means of an electronic transfer of benefits, in addition and consecutive to the penalties for the violation, or attempted violation, of those subdivisions, the court shall impose the following punishment: (A) If the electronic transfer of benefits exceeds fifty thousand dollars ($50,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of one year. (B) If the electronic transfer of benefits exceeds one hundred fifty thousand dollars ($150,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of two years. (C) If the electronic transfer of benefits exceeds one million dollars ($1,000,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of three years. (D) If the electronic transfer of benefits exceeds two million five hundred thousand dollars ($2,500,000), an additional term pursuant to subdivision (h) of Section 1170 of the Penal Code of four years. (2) In any accusatory pleading involving multiple charges of violations of subdivision (f) or (g), or both, committed by means of an electronic transfer of benefits, the additional terms provided in paragraph (1) may be imposed if the aggregate losses to the victims from all violations exceed the amounts specified in this paragraph and arise from a common scheme or plan. "
+      },
+      "treatment": "Retain thresholds and common-scheme aggregation for (f)/(g) violations or attempts; do not count the four additional terms as four new ordinary charges."
+    },
+    {
+      "id": "WIC:10980(i)",
+      "kind": "additional_term_limitation",
+      "evidence": {
+        "key": "WIC:10980",
+        "start": 6783,
+        "end": 6986,
+        "text": "(i) A person who is punished by an additional term of imprisonment under another law for a violation of subdivision (f) or (g) shall not receive an additional term of imprisonment under subdivision (h). "
+      },
+      "treatment": "Preserve the restriction on adding (h) punishment when another law supplies an additional term for the (f)/(g) violation."
+    }
+  ],
+  "sharedProtection": {
+    "id": "WIC:10980(j)",
+    "evidence": {
+      "key": "WIC:10980",
+      "start": 6986,
+      "end": 8883,
+      "text": "(j) (1) A person shall not be subject to criminal prosecution, under this section or under any other law, for an overpayment or overissuance of benefits, obtained under the California Work Opportunity and Responsibility to Kids (CalWORKs) program (Chapter 2 (commencing with Section 11200) of Part 3) or the CalFresh program (Chapter 10 (commencing with Section 18900) of Part 6), for any month in which the county human services agency was in receipt of any Income and Eligibility Verification System (IEVS) data match information indicating any potential for an overpayment or an overissuance and for which the county human services agency has not provided to the person a timely and adequate notice of action for the collection of the overpayment or the overissuance. (2) (A) For purposes of paragraph (1), the county human services agency shall be deemed to be in receipt of IEVS data match information indicating any potential for an overpayment or an overissuance following 45 days from the date of the county human services agency’s possession of that information. (B) Notwithstanding subparagraph (A), if the county human services agency does not complete the required actions for an IEVS data match for a CalFresh or CalWORKs applicant or recipient within 45 days of receipt of information pursuant to Section 272.8 of Title 7 of, or Section 205.56 of Title 45 of, the Code of Federal Regulations, or their successors, but is authorized to exceed the 45-day period due to exceptions provided under those regulations or under any other federal law, the county human services agency shall be deemed, for purposes of paragraph (1), to be in receipt of IEVS data match information indicating any potential for an overpayment or an overissuance following the combined total of 45 days and the authorized delay from the date of the county human services agency’s possession of that information."
+    },
+    "treatment": "Keep the specified overpayment prosecution bar and authorized-delay exceptions in the benefit-program review; (a)-(c) publication does not close (d)-(g)."
+  },
+  "carriedLimitation": {
+    "id": "BPC:7028(c)",
+    "status": "repeat_branch_upper_custody_limit_not_quantified_in_product",
+    "evidence": {
+      "key": "BPC:7028",
+      "start": 789,
+      "end": 1618,
+      "text": "(c) If a person has been previously convicted of the offense described in this section, unless the provisions of subdivision (d) are applicable, the court shall impose a fine of 20 percent of the contract price, or 20 percent of the aggregate payments made to, or at the direction of, the unlicensed person, or five thousand dollars ($5,000), whichever is greater, and, unless the sentence prescribed in subdivision (d) is imposed, the person shall be confined in a county jail for not less than 90 days, except in an unusual case where the interests of justice would be served by imposition of a lesser sentence or a fine. If the court imposes only a fine or a jail sentence of less than 90 days for second or subsequent convictions under this section, the court shall state the reasons for its sentencing choice on the record. "
+    }
+  },
+  "counts": {
+    "conductFollowUpUnits": 7,
+    "additionalPunishmentOrLimitationGroups": 4,
+    "newChoices": 0,
+    "newPins": 0,
+    "receiptRenewals": 0
+  },
+  "limits": [
+    "Follow-up units are work groups, not an offense denominator or a count of charges to publish.",
+    "Research-only sources remain separate from publication pins and runtime receipts. Active flags describe the retained snapshot, not a new currentness determination.",
+    "No existing attorney decision, source hold, transition or approved product entry is cleared, replaced or activated.",
+    "The frozen closeout inventory remains unchanged. This successor resolves classification of the residual work, not statewide completeness.",
+    "No low-volume or uncertain branch is silently declared minor or complete."
+  ]
+}
