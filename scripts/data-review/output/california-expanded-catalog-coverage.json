@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 717,
-    "configuredSelectable": 696,
+    "canonicalRecords": 724,
+    "configuredSelectable": 703,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 597,
-    "boundedCorrectionPass": 696,
+    "boundedAdditionPass": 604,
+    "boundedCorrectionPass": 703,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 352,
+    "distinctSelectablePrimarySections": 353,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 352,
-    "selectableRecordsWithAllPrimaryTextAcquired": 696,
-    "totalAcquiredSectionsIncludingDependencies": 937,
-    "totalAcquiredVersionsIncludingDependencies": 945,
+    "acquiredSelectablePrimarySections": 353,
+    "selectableRecordsWithAllPrimaryTextAcquired": 703,
+    "totalAcquiredSectionsIncludingDependencies": 959,
+    "totalAcquiredVersionsIncludingDependencies": 967,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "696 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "703 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -72,8 +72,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 538,
-      "corrected": 538,
+      "selectable": 545,
+      "corrected": 545,
       "awaitingCorrection": 0
     },
     {
@@ -1708,6 +1708,21 @@
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25800&lawCode=PEN",
       "recordIds": [
         "ca-pen-25800-a"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "25850",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25850&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-25850-c-1",
+        "ca-pen-25850-c-2",
+        "ca-pen-25850-c-3",
+        "ca-pen-25850-c-4",
+        "ca-pen-25850-c-5",
+        "ca-pen-25850-c-6",
+        "ca-pen-25850-c-7"
       ],
       "alreadyRetained": false
     },
@@ -5975,6 +5990,125 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-1",
+      "title": "Carrying a loaded firearm: prior felony or specified weapons conviction",
+      "citation": "Cal. Penal Code § 25850(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "1bfe75c743fecb935c8b298ba96747a06afd4dd85203fd6fb4813dcb741b1e81",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-2",
+      "title": "Carrying a loaded firearm: stolen firearm with knowledge or reasonable cause",
+      "citation": "Cal. Penal Code § 25850(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "14827942c7fcfd764932647f4d90699dfb86f0f87bcd5b6c704d997fcfb57454",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-3",
+      "title": "Carrying a loaded firearm: active criminal street gang participation",
+      "citation": "Cal. Penal Code § 25850(c)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "9e21ffbac1823d434af2ad7a884f7b063a979ae7cfcbbf3da7ab07de4f16542d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-4",
+      "title": "Carrying a loaded firearm: unlawful possession or prohibited possessor",
+      "citation": "Cal. Penal Code § 25850(c)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "2692eed587b377fb43b9a1281588eb454d9f6b124f6e1a95f9186634feb8d8f5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-5",
+      "title": "Carrying a loaded firearm: specified person, property or drug conviction",
+      "citation": "Cal. Penal Code § 25850(c)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "c9829f788b9ff681b970931ab62456c152ca0fd81148d6d699be4f15ae749178",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-6",
+      "title": "Carrying a loaded firearm: not recorded owner of the handgun",
+      "citation": "Cal. Penal Code § 25850(c)(6)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "53d3f70745c3faef3fb7e6f83a3124c32d5b73cb2934c20cf617741b456d4d00",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-25850-c-7",
+      "title": "Carrying a loaded firearm: no specified aggravating factor",
+      "citation": "Cal. Penal Code § 25850(c)(7)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:25850"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25850"
+      ],
+      "catalogSha256": "85e44895e8a7a5fb39d4732827a697ee80f3d3f87add0e70048196b075a153cc",
       "attorneyReview": "pending"
     },
     {

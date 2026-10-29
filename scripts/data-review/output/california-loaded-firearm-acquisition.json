@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "scope": "loaded_firearm_publication_dependency_acquisition",
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "retainedComparison": {
+    "receipt": {
+      "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+      "retrievedAt": "2026-10-01T18:00:08.220542+00:00",
+      "lastModified": "Mon, 28 Sep 2026 04:26:06 GMT",
+      "bytes": 1281829537,
+      "sha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6"
+    },
+    "sections": [
+      {
+        "key": "PEN:17030",
+        "expectedHash": "38ce851361d1803905b05bbfd47deffbe2d366fbbb5c0338664889339061eda5",
+        "observedHash": "38ce851361d1803905b05bbfd47deffbe2d366fbbb5c0338664889339061eda5",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:20"
+        ]
+      },
+      {
+        "key": "PEN:25900",
+        "expectedHash": "3aa1f65072bb64a5cb83e25cba9d3a563e40088444787db3edf76c9338ef618c",
+        "observedHash": "3aa1f65072bb64a5cb83e25cba9d3a563e40088444787db3edf76c9338ef618c",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25905",
+        "expectedHash": "dfcb59b6b7dbd2cc480caf12463002bb1b50e08551d967c52bb247e83c3c3400",
+        "observedHash": "dfcb59b6b7dbd2cc480caf12463002bb1b50e08551d967c52bb247e83c3c3400",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25910",
+        "expectedHash": "f5d0daf7616859f9db88f9b802c50c93e139570b6c6b57c0b01a4d8ac2ff0985",
+        "observedHash": "f5d0daf7616859f9db88f9b802c50c93e139570b6c6b57c0b01a4d8ac2ff0985",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25915",
+        "expectedHash": "eee0a54d18f0da0d59588bbaa44af96a560b5fffc2891973b9da86ed977fda8c",
+        "observedHash": "eee0a54d18f0da0d59588bbaa44af96a560b5fffc2891973b9da86ed977fda8c",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25920",
+        "expectedHash": "d908ff6a5516463df13719c15f0e4e09d06c2fc6a47ed6d2be5965604d6158f3",
+        "observedHash": "d908ff6a5516463df13719c15f0e4e09d06c2fc6a47ed6d2be5965604d6158f3",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:25925",
+        "expectedHash": "8bfa2e5d19baac1bbfd22d7f6303b45d0b66d46cd7d34d3e4926b016b33bf0bd",
+        "observedHash": "8bfa2e5d19baac1bbfd22d7f6303b45d0b66d46cd7d34d3e4926b016b33bf0bd",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26000",
+        "expectedHash": "4dd502c0a99aa5eed2ce20074cc869853457d36248363e84c5427f9ba75214ff",
+        "observedHash": "4dd502c0a99aa5eed2ce20074cc869853457d36248363e84c5427f9ba75214ff",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26005",
+        "expectedHash": "3a094a23a19e6692c4d4862b933a2bacb188da6eea1735d210c00a44fedebc80",
+        "observedHash": "3a094a23a19e6692c4d4862b933a2bacb188da6eea1735d210c00a44fedebc80",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26010",
+        "expectedHash": "76c8bdcda2906d9b3236a8aaacadac5faef8f88952d884706906d11044d36872",
+        "observedHash": "76c8bdcda2906d9b3236a8aaacadac5faef8f88952d884706906d11044d36872",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26015",
+        "expectedHash": "821ccade5ae220d3440153a72d865a5166d477fe10ebce2b8dc238561454d0b1",
+        "observedHash": "821ccade5ae220d3440153a72d865a5166d477fe10ebce2b8dc238561454d0b1",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26020",
+        "expectedHash": "d284e97d1633fa0b5d53da1f8018d70d5048f89fcaa40e661f09ce8172ff2235",
+        "observedHash": "d284e97d1633fa0b5d53da1f8018d70d5048f89fcaa40e661f09ce8172ff2235",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26025",
+        "expectedHash": "dc1db8757518c45a69142cbe0653ed80f66a19864eac3bfc87ba42976f834343",
+        "observedHash": "dc1db8757518c45a69142cbe0653ed80f66a19864eac3bfc87ba42976f834343",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26030",
+        "expectedHash": "33f9d6828ad0c8d9bb01920e98d0f2e21aff031d5a2ac9e6565ada50c25a9505",
+        "observedHash": "33f9d6828ad0c8d9bb01920e98d0f2e21aff031d5a2ac9e6565ada50c25a9505",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26035",
+        "expectedHash": "bcc53e8dba0d193b5d8edc050ac1a270e95ec1b6c9537bf7b6602328ef226fa7",
+        "observedHash": "bcc53e8dba0d193b5d8edc050ac1a270e95ec1b6c9537bf7b6602328ef226fa7",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26040",
+        "expectedHash": "9ef759b1e77fe010653d2773731e073dd10936d2c1e7cf0dbadef77afe762eca",
+        "observedHash": "9ef759b1e77fe010653d2773731e073dd10936d2c1e7cf0dbadef77afe762eca",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26045",
+        "expectedHash": "0114d4ab604aa5b9b089b4318b3aca531e4d495ddf2b29c65552f57902a0e389",
+        "observedHash": "0114d4ab604aa5b9b089b4318b3aca531e4d495ddf2b29c65552f57902a0e389",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26050",
+        "expectedHash": "cf5d173bffcf636856f31d85b5095914e90b9e91064b2b61093d6c78c6672df0",
+        "observedHash": "cf5d173bffcf636856f31d85b5095914e90b9e91064b2b61093d6c78c6672df0",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26055",
+        "expectedHash": "ba01c149619e29ebaad76d048646e42fb83bbaf560eb060152c3a0777f706a82",
+        "observedHash": "ba01c149619e29ebaad76d048646e42fb83bbaf560eb060152c3a0777f706a82",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26060",
+        "expectedHash": "85ecba826bc3b5a4a52e2bd2df73d814cb829860fb492de0302b08e5e3475255",
+        "observedHash": "85ecba826bc3b5a4a52e2bd2df73d814cb829860fb492de0302b08e5e3475255",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26165",
+        "expectedHash": "ffc152cc97489aa267ac740ff877426caa6886437f21aba04fcf676df756f821",
+        "observedHash": "ffc152cc97489aa267ac740ff877426caa6886437f21aba04fcf676df756f821",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      },
+      {
+        "key": "PEN:26200",
+        "expectedHash": "3e26651c66df1a0ed53ad91308d4be220ba6beb9c231787ca5bd68916f04e086",
+        "observedHash": "3e26651c66df1a0ed53ad91308d4be220ba6beb9c231787ca5bd68916f04e086",
+        "expectedVersions": 1,
+        "observedVersions": 1,
+        "status": "unchanged",
+        "expectedTransactionUpdates": [
+          "2026-07-21 01:00:21"
+        ],
+        "observedTransactionUpdates": [
+          "2026-09-26 01:01:21"
+        ]
+      }
+    ],
+    "scope": "historical_comparison_not_freshness_renewal"
+  },
+  "requiredKeys": [
+    "PEN:11106",
+    "PEN:1170",
+    "PEN:16520",
+    "PEN:16580",
+    "PEN:16840",
+    "PEN:17",
+    "PEN:17030",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:186.22",
+    "PEN:23515",
+    "PEN:25850",
+    "PEN:25900",
+    "PEN:25905",
+    "PEN:25910",
+    "PEN:25915",
+    "PEN:25920",
+    "PEN:25925",
+    "PEN:26000",
+    "PEN:26005",
+    "PEN:26010",
+    "PEN:26015",
+    "PEN:26020",
+    "PEN:26025",
+    "PEN:26030",
+    "PEN:26035",
+    "PEN:26040",
+    "PEN:26045",
+    "PEN:26050",
+    "PEN:26055",
+    "PEN:26060",
+    "PEN:26150",
+    "PEN:26155",
+    "PEN:26165",
+    "PEN:26200",
+    "PEN:29800",
+    "PEN:29805",
+    "PEN:29815",
+    "PEN:29820",
+    "PEN:29825",
+    "PEN:29900",
+    "PEN:672",
+    "WIC:8100",
+    "WIC:8103"
+  ],
+  "reusedKeys": [
+    "PEN:11106",
+    "PEN:1170",
+    "PEN:16520",
+    "PEN:16580",
+    "PEN:16840",
+    "PEN:17",
+    "PEN:18",
+    "PEN:18.5",
+    "PEN:186.22",
+    "PEN:23515",
+    "PEN:25850",
+    "PEN:26150",
+    "PEN:26155",
+    "PEN:29800",
+    "PEN:29805",
+    "PEN:29815",
+    "PEN:29820",
+    "PEN:29825",
+    "PEN:29900",
+    "PEN:672",
+    "WIC:8100",
+    "WIC:8103"
+  ],
+  "promotedResearchKeys": [
+    "PEN:17030",
+    "PEN:25900",
+    "PEN:25905",
+    "PEN:25910",
+    "PEN:25915",
+    "PEN:25920",
+    "PEN:25925",
+    "PEN:26000",
+    "PEN:26005",
+    "PEN:26010",
+    "PEN:26015",
+    "PEN:26020",
+    "PEN:26025",
+    "PEN:26030",
+    "PEN:26035",
+    "PEN:26040",
+    "PEN:26045",
+    "PEN:26050",
+    "PEN:26055",
+    "PEN:26060"
+  ],
+  "documents": {
+    "PEN:17030": [
+      {
+        "id": "PEN17030.20107116",
+        "lawCode": "PEN",
+        "section": "17030.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dbbd9509-0ebc-11e0-9b76-a227e281d99a",
+        "division": "2.",
+        "title": "1.",
+        "part": "6.",
+        "chapter": null,
+        "article": null,
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91107.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91107,
+        "tableRowSha256": "0dd38b16ec680cdebb25804aadd4c63fba904f483fbccea73b6e6a88e559810d",
+        "contentSha256": "3f940b37b97a0c417e8016656873563ff1c4b80e79b27d4a1cdb18a1975192b2",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As used in this part, “prohibited area” means any place where it is unlawful to discharge a weapon.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17030."
+      }
+    ],
+    "PEN:25900": [
+      {
+        "id": "PEN25900.20132672",
+        "lawCode": "PEN",
+        "section": "25900.",
+        "opStatutes": "2013",
+        "opChapter": "267",
+        "opSection": "2",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6b542000-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 267, Sec. 2.   (AB 703)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83750.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83750,
+        "tableRowSha256": "323b52d4437507739d9563a634513e44d3279c815da505da131cddfe20071e4a",
+        "contentSha256": "82e7e8c2d18dd7e44e299315a03de3e6fc1c6ca4680bd3d1100579c6bcbafbd6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>As provided in this article, Section 25850 does not apply to any of the following:</p><p>(a)<span class=\"EnSpace\"/>Any peace officer, listed in Section 830.1 or 830.2, or subdivision (a) of Section 830.33, whether active or honorably retired.</p><p>(b)<span class=\"EnSpace\"/>Any other duly appointed peace officer.</p><p>(c)<span class=\"EnSpace\"/>Any honorably retired peace officer listed in subdivision (c) of Section 830.5.</p><p>(d)<span class=\"EnSpace\"/>Any other honorably retired peace officer who during the course and scope of his or her appointment as a peace officer was authorized to, and did, carry a firearm.</p><p>(e)<span class=\"EnSpace\"/>Any full-time paid peace officer of another state or the federal government who is carrying out official duties while in California.</p><p>(f)<span class=\"EnSpace\"/>Any person summoned by any of these officers to assist in making arrests or preserving the peace while the person is actually engaged in assisting that officer.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25900."
+      }
+    ],
+    "PEN:25905": [
+      {
+        "id": "PEN25905.20131491",
+        "lawCode": "PEN",
+        "section": "25905.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "1",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6d1c83f2-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 1.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_91006.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91006,
+        "tableRowSha256": "127e095b0e60b6bdc600ef5b2bd3b5c0a869c1abbf64fe96ef05f2e4dff5f50f",
+        "contentSha256": "93ebc763054eb3e55aad4aad9e48b9f490be5471d17fc4fbf2cfe2311014c802",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>Any peace officer described in Section 25900 who has been honorably retired shall be issued an identification certificate by the law enforcement agency from which the officer has retired.</p><p>(2)<span class=\"EnSpace\"/>If the agency from which the officer has retired\n\t\t\t\t\t\tis no longer providing law enforcement services or the relevant governmental body is dissolved, the agency that subsequently provides law enforcement services for that jurisdiction shall issue the identification certificate to that peace officer. This paragraph shall apply only if the following conditions are met:</p><p>(A)<span class=\"EnSpace\"/>The successor agency is in possession of the retired officer’s complete personnel records or can otherwise verify the retired officer’s honorably retired status.</p><p>(B)<span class=\"EnSpace\"/>The retired officer is in compliance with all the requirements of the successor agency for the issuance of a retirement identification card and concealed weapon endorsement.</p><p>(b)<span class=\"EnSpace\"/>The issuing agency may charge a fee necessary to cover any reasonable expenses incurred by the agency in issuing certificates pursuant to Sections 25900, 25910, 25925, and this section.</p><p>(c)<span class=\"EnSpace\"/>Any officer, except an officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall have an endorsement on the identification certificate stating that the issuing agency\n\t\t\t\t\t\tapproves the officer’s carrying of a loaded firearm.</p><p>(d)<span class=\"EnSpace\"/>An honorably retired peace officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall not be required to obtain an endorsement from the issuing agency to carry a loaded firearm.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25905."
+      }
+    ],
+    "PEN:25910": [
+      {
+        "id": "PEN25910.20107116",
+        "lawCode": "PEN",
+        "section": "25910.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0265b3-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83751.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83751,
+        "tableRowSha256": "53146306093475227875bc1639decdc7338f6a5adb4eeb374d5875f46b3d6f28",
+        "contentSha256": "8da3cd0775f80840c1eb4d194239e845b9f2bd21f92930bd9e22307129d4293f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (b), no endorsement or renewal endorsement issued pursuant to Section 25915 shall be effective unless it is in the format set forth in subdivision (c) of Section 25460.</p><p>(b)<span class=\"EnSpace\"/>Any peace officer listed in subdivision (f) of Section 830.2 or in subdivision (c) of Section 830.5, who is retired between January 2, 1981, and on or before December 31, 1988, and who is authorized to carry a loaded firearm pursuant to this article, shall not be required to have an endorsement in the format set forth in subdivision (c) of Section 25460 until the time of the issuance, on or after January 1, 1989, of a renewal endorsement pursuant to Section 25915.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25910."
+      }
+    ],
+    "PEN:25915": [
+      {
+        "id": "PEN25915.20131492",
+        "lawCode": "PEN",
+        "section": "25915.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "2",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_6ee276e4-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 2.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_91007.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91007,
+        "tableRowSha256": "b93eb07ffce71a7399d73a43b39f92c5b15935f60288b259cddf7bd1b9ae2993",
+        "contentSha256": "396b7684de10c99da2dc05bb393bf694b2b4e34592e55c95387fe3b574d49176",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every five years, a retired peace officer, except an officer listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who retired prior to January 1, 1981, shall petition the issuing agency, or a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, for renewal of the privilege to carry a loaded firearm.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25915."
+      }
+    ],
+    "PEN:25920": [
+      {
+        "id": "PEN25920.20131493",
+        "lawCode": "PEN",
+        "section": "25920.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "3",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_70aa65a6-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 3.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83752.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83752,
+        "tableRowSha256": "6f98d393537b92747275f0de5771a640ed5868b7c959e91afcf9607baf14287e",
+        "contentSha256": "2fb759912bd184fc41ac5e26405d105b8e097f7a816cd5da6dc12fce4952e89c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>The agency from which a peace officer is honorably retired, or a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, may, upon initial retirement of the peace officer, or at any time subsequent thereto, deny or revoke for good cause the retired officer’s privilege to carry a loaded firearm.</p><p>(b)<span class=\"EnSpace\"/>A peace officer who is listed in Section 830.1 or 830.2, subdivision (a) of Section 830.33, or subdivision (c) of Section 830.5 who is retired prior to January 1, 1981, shall have the privilege to carry a loaded firearm denied or revoked by having the agency from which the officer retired,\n\t\t\t\t\t\tor a successor agency pursuant to paragraph (2) of subdivision (a) of Section 25905, stamp on the officer’s identification certificate “No CCW privilege.”</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25920."
+      }
+    ],
+    "PEN:25925": [
+      {
+        "id": "PEN25925.20131494",
+        "lawCode": "PEN",
+        "section": "25925.",
+        "opStatutes": "2013",
+        "opChapter": "149",
+        "opSection": "4",
+        "effectiveDate": "2014-01-01 00:00:00",
+        "versionId": "id_7266bba8-6e93-11e3-8818-ebf46b809fe7",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "3.",
+        "history": "Amended by Stats. 2013, Ch. 149, Sec. 4.   (SB 303)   Effective January 1, 2014.",
+        "contentMember": "LAW_SECTION_TBL_83869.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83869,
+        "tableRowSha256": "65b67598e33a38d9c9ba4ad84fbcd1283934e61775f97d1f01fb716ee8d1c458",
+        "contentSha256": "aba9ec3c92f7128ccef9a7954aa64e7a13868af0e1ef8ded41131a690d9f56e6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>An honorably retired peace officer who is listed in subdivision (c) of Section 830.5 and authorized to carry a loaded firearm by this article shall meet the training requirements of Section 832 and shall qualify with the firearm at least annually.</p><p>(b)<span class=\"EnSpace\"/>The individual retired peace officer shall be responsible for maintaining eligibility to carry a loaded firearm.</p><p>(c)<span class=\"EnSpace\"/>The Department of Justice shall provide subsequent arrest notification pursuant to Section 11105.2 regarding honorably retired peace officers listed in subdivision (c) of Section 830.5 to the agency from which the officer has retired, or a successor\n\t\t\t\t\t\tagency pursuant to paragraph (2) of subdivision (a) of Section 25905.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25925."
+      }
+    ],
+    "PEN:26000": [
+      {
+        "id": "PEN26000.20107116",
+        "lawCode": "PEN",
+        "section": "26000.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03501d-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91008.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91008,
+        "tableRowSha256": "24afa8adcea448a8aba729938b4e57f74a9eb4cec141a43d1a0724b69a52b022",
+        "contentSha256": "4aadb4c755b35918d01207ee6147d59289023526856a6892134c608dc3496618",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to members of the military forces of this state or of the United States engaged in the performance of their duties.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26000."
+      }
+    ],
+    "PEN:26005": [
+      {
+        "id": "PEN26005.20107116",
+        "lawCode": "PEN",
+        "section": "26005.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03772f-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83870.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83870,
+        "tableRowSha256": "ea947fdcd99807d5e56302d28f8fe2cb258d6ed428fc145631794ee2549d7e83",
+        "contentSha256": "f476aa64ea98e0fd89b11310a2ee8d207b62649248a81006f7b1d946fecabcbc",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to either of the following:</p><p>(a)<span class=\"EnSpace\"/>Persons who are using target ranges for the purpose of practice shooting with a firearm.</p><p>(b)<span class=\"EnSpace\"/>Members of shooting clubs while hunting on the premises of those clubs. </p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26005."
+      }
+    ],
+    "PEN:26010": [
+      {
+        "id": "PEN26010.20107116",
+        "lawCode": "PEN",
+        "section": "26010.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc039e41-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91009.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91009,
+        "tableRowSha256": "486bb83b23383bcf948fa9a1faa89096fc05e15523b0347c3427d7dc2d20389b",
+        "contentSha256": "74b1b42ac3d47a6eeda738721f99b80bca609ac0a0cd3123b7384d0549888ae9",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to the carrying of any handgun by any person as authorized pursuant to Chapter 4 (commencing with Section 26150) of Division 5.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26010."
+      }
+    ],
+    "PEN:26015": [
+      {
+        "id": "PEN26015.20107116",
+        "lawCode": "PEN",
+        "section": "26015.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc03c553-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83871.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83871,
+        "tableRowSha256": "4515225ab3f2f70409ba5cb65d60da8bffd49697d7cd53366fa782432b9a4275",
+        "contentSha256": "9258cd45740556b44cf743a1e5012469a5118ba30fc0de66f0fd1485c07b302f",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to any armored vehicle guard, as defined in Section 7582.1 of the Business and Professions Code, if either of the following conditions is satisfied:</p><p>(a)<span class=\"EnSpace\"/>The guard was hired prior to January 1, 1977, and is acting within the course and scope of employment. </p><p>(b)<span class=\"EnSpace\"/>The guard was hired on or after January 1, 1977, has received a firearms qualification card from the Department of Consumer Affairs, and is acting within the course and scope of employment.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26015."
+      }
+    ],
+    "PEN:26020": [
+      {
+        "id": "PEN26020.2011296231",
+        "lawCode": "PEN",
+        "section": "26020.",
+        "opStatutes": "2011",
+        "opChapter": "296",
+        "opSection": "231",
+        "effectiveDate": "2012-01-01 00:00:00",
+        "versionId": "id_4c881733-30d5-11e1-a5d5-ab3cb917b6aa",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Amended by Stats. 2011, Ch. 296, Sec. 231.   (AB 1023)   Effective January 1, 2012.",
+        "contentMember": "LAW_SECTION_TBL_77522.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 77522,
+        "tableRowSha256": "db7edba605f77d07109c162352a10f311973dce5bf6be180612fa5de9a36080f",
+        "contentSha256": "e4cf0a1e51df9f82f9704d051276e188d6b1c6ef7350c1c216ff03a35de365f1",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Upon approval of the sheriff of the county in which the retiree resides, Section 25850 does not apply to any honorably retired federal officer or agent of any federal law enforcement agency, including, but not limited to, the Federal Bureau of Investigation, the United States Secret Service, the United States Customs Service, the federal Bureau of Alcohol, Tobacco, Firearms and Explosives, the Federal Bureau of Narcotics, the United States Drug Enforcement Administration, the United States Border Patrol, and any officer or agent of the Internal Revenue Service who was authorized to carry weapons while on duty, who was assigned to duty within the state for a period of not less than one year, or who retired from active service in the state.</p><p>(b)<span class=\"EnSpace\"/>A retired federal officer or agent shall provide the sheriff with certification from the agency from which the officer or agent retired certifying that person’s service in the state, stating the nature of that person’s retirement, and indicating the agency’s concurrence that the retired federal officer or agent should be accorded the privilege of carrying a loaded firearm.</p><p>(c)<span class=\"EnSpace\"/>Upon approval, the sheriff shall issue a permit to the retired federal officer or agent indicating that the retiree may carry a loaded firearm in accordance with this section. The permit shall be valid for a period not exceeding five years, shall be carried by the retiree while carrying a loaded firearm, and may be revoked for good cause.</p><p>(d)<span class=\"EnSpace\"/>The sheriff of the county in which the retired federal officer or agent resides may require\n\t\t\t\t  recertification prior to a permit renewal, and may suspend the privilege for cause. The sheriff may charge a fee necessary to cover any reasonable expenses incurred by the county.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26020."
+      }
+    ],
+    "PEN:26025": [
+      {
+        "id": "PEN26025.20107116",
+        "lawCode": "PEN",
+        "section": "26025.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc043a87-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83977.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83977,
+        "tableRowSha256": "2f3a1036659e8d17043c6ef6eecc08a8bdceb9128a6147bb2ab6464f6de0f5f9",
+        "contentSha256": "2a671bd308da9f696fe63a0e01c270ffc02b2861e7da8527383cec43d7314171",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Section 25850 does not apply to any of the following who have completed a regular course in firearms training approved by the Commission on Peace Officer Standards and Training:</p><p>(a)<span class=\"EnSpace\"/>Patrol special police officers appointed by the police commission of any city, county, or city and county under the express terms of its charter who also, under the express terms of the charter, satisfy all of the following requirements: </p><p>(1)<span class=\"EnSpace\"/>They are subject to suspension or dismissal after a hearing on charges duly filed with the commission after a fair and impartial trial.</p><p>(2)<span class=\"EnSpace\"/>They are not less than 18\n\t\t\t\t\t\t\t\tyears of age or more than 40 years of age.</p><p>(3)<span class=\"EnSpace\"/>They possess physical qualifications prescribed by the commission.</p><p>(4)<span class=\"EnSpace\"/>They are designated by the police commission as the owners of a certain beat or territory as may be fixed from time to time by the police commission.</p><p>(b)<span class=\"EnSpace\"/>Animal control officers or zookeepers, regularly compensated in that capacity by a governmental agency, when carrying weapons while acting in the course and scope of their employment and when designated by a local ordinance or, if the governmental agency is not authorized to act by ordinance, by a resolution, either individually or by class, to carry the weapons.</p><p>(c)<span class=\"EnSpace\"/>Persons who are authorized to carry the weapons pursuant to Section 14502 of the Corporations Code, while actually\n\t\t\t\t\t\t\t\tengaged in the performance of their duties pursuant to that section.</p><p>(d)<span class=\"EnSpace\"/>Harbor police officers designated pursuant to Section 663.5 of the Harbors and Navigation Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26025."
+      }
+    ],
+    "PEN:26030": [
+      {
+        "id": "PEN26030.20107116",
+        "lawCode": "PEN",
+        "section": "26030.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0488a9-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91111.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91111,
+        "tableRowSha256": "c87775167936e47a367a7134e6f34a0bb30ab57c9fbcb50a2645ae597096d214",
+        "contentSha256": "79940c364e66c2b3dd179cf6d675ccc114f3d86413a2cdf51d38256b39db6c14",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Section 25850 does not apply to any of the following who have been issued a certificate pursuant to subdivision (d):</p><p>(1)<span class=\"EnSpace\"/>Guards or messengers of common carriers, banks, and other financial institutions, while actually employed in and about the shipment, transportation, or delivery of any money, treasure, bullion, bonds, or other thing of value within this state.</p><p>(2)<span class=\"EnSpace\"/>Guards of contract carriers operating armored vehicles pursuant to California Highway Patrol and Public Utilities Commission authority, if they were hired prior to January 1, 1977.</p><p>(3)<span class=\"EnSpace\"/>Guards of\n\t\t\t\t\t\t\t\tcontract carriers operating armored vehicles pursuant to California Highway Patrol and Public Utilities Commission authority, if they were hired on or after January 1, 1977, and they have completed a course in the carrying and use of firearms that meets the standards prescribed by the Department of Consumer Affairs.</p><p>(4)<span class=\"EnSpace\"/>Private investigators licensed pursuant to Chapter 11.3 (commencing with Section 7512) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(5)<span class=\"EnSpace\"/>Uniformed employees of private investigators licensed pursuant to Chapter 11.3 (commencing with Section 7512) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(6)<span class=\"EnSpace\"/>Private patrol operators licensed pursuant to Chapter 11.5 (commencing\n\t\t\t\t\t\t\t\twith Section 7580) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(7)<span class=\"EnSpace\"/>Uniformed employees of private patrol operators licensed pursuant to Chapter 11.5 (commencing with Section 7580) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(8)<span class=\"EnSpace\"/>Alarm company operators licensed pursuant to Chapter 11.6 (commencing with Section 7590) of Division 3 of the Business and Professions Code, while acting within the course and scope of their employment.</p><p>(9)<span class=\"EnSpace\"/>Uniformed security guards or night watch persons employed by any public agency, while acting within the scope and course of their employment.</p><p>(10)<span class=\"EnSpace\"/>Uniformed security guards, regularly\n\t\t\t\t\t\t\t\temployed and compensated in that capacity by persons engaged in any lawful business, and uniformed alarm agents employed by an alarm company operator, while actually engaged in protecting and preserving the property of their employers, or on duty or en route to or from their residences or their places of employment, and security guards and alarm agents en route to or from their residences or employer-required range training.</p><p>(b)<span class=\"EnSpace\"/>Nothing in paragraph (10) of subdivision (a) shall be construed to prohibit cities and counties from enacting ordinances requiring alarm agents to register their names.</p><p>(c)<span class=\"EnSpace\"/>A certificate under this section shall not be required of any person who is a peace officer, who has completed all training required by law for the exercise of the person’s power as a peace officer, and who is employed while not on duty as a peace officer.</p><p>(d)<span class=\"EnSpace\"/>The Department of Consumer Affairs may issue a certificate to any person referred to in this section, upon notification by the school where the course was completed, that the person has successfully completed a course in the carrying and use of firearms and a course of training in the exercise of the powers of arrest, which meet the standards prescribed by the department pursuant to Section 7583.5 of the Business and Professions Code.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26030."
+      }
+    ],
+    "PEN:26035": [
+      {
+        "id": "PEN26035.20107116",
+        "lawCode": "PEN",
+        "section": "26035.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc0524eb-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91110.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91110,
+        "tableRowSha256": "9a978d4cd227a842d97685d8397450db020b27cb3a49a9341fd4fb6bf06f999f",
+        "contentSha256": "1bda5abc01c0951314899a6d69d8d0f7365f70ccd9ff4287c2ce8d843a213848",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person engaged in any lawful business, including a nonprofit organization, or any officer, employee, or agent authorized by that person for lawful purposes connected with that business, from having a loaded firearm within the person’s place of business, or any person in lawful possession of private property from having a loaded firearm on that property.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26035."
+      }
+    ],
+    "PEN:26040": [
+      {
+        "id": "PEN26040.20107116",
+        "lawCode": "PEN",
+        "section": "26040.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc054bfd-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_83978.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 83978,
+        "tableRowSha256": "3df70808b1768e3cc2ec460eb11cc0d1c2780aa85f9e44158590f2e519ec6a61",
+        "contentSha256": "628eae8a5335d8d8e0fd98771273e110695a3849847186a665007124482662b6",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from carrying a loaded firearm in an area within an incorporated city while engaged in hunting, provided that the hunting at that place and time is not prohibited by the city council.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26040."
+      }
+    ],
+    "PEN:26045": [
+      {
+        "id": "PEN26045.20181857",
+        "lawCode": "PEN",
+        "section": "26045.",
+        "opStatutes": "2018",
+        "opChapter": "185",
+        "opSection": "7",
+        "effectiveDate": "2019-01-01 00:00:00",
+        "versionId": "id_507aa098-f97a-11e8-bd10-077ff3712fb6",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Amended by Stats. 2018, Ch. 185, Sec. 7.   (AB 2176)   Effective January 1, 2019.",
+        "contentMember": "LAW_SECTION_TBL_84077.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 84077,
+        "tableRowSha256": "ef16947b20cd7e9a15e816795d0ae0d22643093bd7c366649f673057c540b0dd",
+        "contentSha256": "7ca1e7e24530295ad46b49886507e23f9a897e4e8e20a21c65dfb67df97b6e4e",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Nothing in Section 25850 is intended to preclude the carrying of any loaded firearm, under circumstances where it would otherwise be lawful, by a person who reasonably believes that any person or the property of any person is in immediate, grave danger and that the carrying of the weapon is necessary for the preservation of that person or property.</p><p>(b)<span class=\"EnSpace\"/>A violation of Section 25850 is justifiable when a person who possesses a firearm reasonably believes that person is in grave danger because of circumstances forming the basis of a current restraining order issued by a court against another person who has been found to pose a threat to the life or safety of the person who possesses the firearm. This subdivision may not apply when the circumstances involve a mutual\n\t\t\t\t  restraining order issued pursuant to Division 10 (commencing with Section 6200) of the Family Code absent a factual finding of a specific threat to the person’s life or safety. It is not the intent of the Legislature to limit, restrict, or narrow the application of current statutory or judicial authority to apply this or other justifications to a defendant charged with violating Section 25850 or committing another similar offense. Upon trial for violating Section 25850, the trier of fact shall determine whether the defendant was acting out of a reasonable belief that the defendant was in grave danger.</p><p>(c)<span class=\"EnSpace\"/>As used in this section, “immediate” means the brief interval before and after the local law enforcement agency, when reasonably possible, has been notified of the danger and before the arrival of its assistance.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26045."
+      }
+    ],
+    "PEN:26050": [
+      {
+        "id": "PEN26050.20107116",
+        "lawCode": "PEN",
+        "section": "26050.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc059a21-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91112.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91112,
+        "tableRowSha256": "334adfeaf3f95ad7050061effdfb9fb309cd7e234b2d35954daa7a66da5aaf2a",
+        "contentSha256": "ddd2096bfb59afb310a4a509c05e275867c60f6a2212cf003d2e20359ef48683",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 is intended to preclude the carrying of a loaded firearm by any person while engaged in the act of making or attempting to make a lawful arrest.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26050."
+      }
+    ],
+    "PEN:26055": [
+      {
+        "id": "PEN26055.20107116",
+        "lawCode": "PEN",
+        "section": "26055.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc05c133-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_91113.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91113,
+        "tableRowSha256": "32ee741850dd9ac0c00038139fe579cf3c5ae3cc2ac1fc42b9092b7e27d9f14a",
+        "contentSha256": "21dd990e2f0ab79f3d92aab947df599b12020f6dadbbc2534a436fc846433b09",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from having a loaded weapon, if it is otherwise lawful, at the person’s place of residence, including any temporary residence or campsite.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26055."
+      }
+    ],
+    "PEN:26060": [
+      {
+        "id": "PEN26060.20107116",
+        "lawCode": "PEN",
+        "section": "26060.",
+        "opStatutes": "2010",
+        "opChapter": "711",
+        "opSection": "6",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_dc05e845-0ebc-11e0-9b76-a227e281d99a",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "3.",
+        "article": "4.",
+        "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+        "contentMember": "LAW_SECTION_TBL_84078.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 84078,
+        "tableRowSha256": "4915e3a6416eef9b5e4337dd528378b2312f9a504a66fb75bfec0ea98cef0341",
+        "contentSha256": "0991a6cb01f3c66ac9667f34fe78c7d1252a7a24ef4dc3c894c25185ebb15a53",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Nothing in Section 25850 shall prevent any person from storing aboard any vessel or aircraft any loaded or unloaded rocket, rocket propelled projectile launcher, or similar device designed primarily for emergency or distress signaling purposes, or from possessing that type of a device while in a permitted hunting area or traveling to or from a permitted hunting area and carrying a valid California permit or license to hunt.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26060."
+      }
+    ],
+    "PEN:26165": [
+      {
+        "id": "PEN26165.202324913",
+        "lawCode": "PEN",
+        "section": "26165.",
+        "opStatutes": "2023",
+        "opChapter": "249",
+        "opSection": "13",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_9d434af3-8258-11ee-bcfe-9f16e66157a6",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "4.",
+        "article": null,
+        "history": "Amended by Stats. 2023, Ch. 249, Sec. 13.   (SB 2)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_91117.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91117,
+        "tableRowSha256": "bdbe3cb57e026deef83faeede2d3069270f6c692ecf54c16779c90e25ba99ef3",
+        "contentSha256": "29e7186ab8517a589f9326d79a4c8d91848063b13e3ba6edaec573728418370c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>For new license applicants, the course of training for issuance of a license under Section 26150 or 26155 may be any course acceptable to the licensing authority that meets all of the following minimum criteria:</p><p>(1)<span class=\"EnSpace\"/>The course shall be no less than 16 hours in length.</p><p>(2)<span class=\"EnSpace\"/>The course shall include instruction on firearm safety, firearm handling, shooting technique, safe storage, legal methods to transport firearms and securing firearms in vehicles, laws governing where permitholders may carry firearms, laws regarding the permissible use of a firearm, and laws regarding the permissible use of lethal force in\n\t\t\t\t\t\tself-defense.</p><p>(3)<span class=\"EnSpace\"/>The course shall include a component, no less than one hour in length, on mental health and mental health resources.</p><p>(4)<span class=\"EnSpace\"/>Except for the component on mental health and mental health resources, the course shall be taught and supervised by firearms instructors certified by the Department of Justice pursuant to Section 31635, or in a manner to be prescribed by regulation.</p><p>(5)<span class=\"EnSpace\"/>The course shall require students to pass a written examination to\n\t\t\t\t\t\tdemonstrate their understanding of the covered topics.</p><p>(6)<span class=\"EnSpace\"/>The course shall include live-fire shooting exercises on a firing range and shall include a demonstration by the applicant of safe handling of, and shooting proficiency with, each firearm that the applicant is applying to be licensed to carry.</p><p>(b)<span class=\"EnSpace\"/>A licensing authority shall establish, and make available to the public, the standards it uses when issuing licenses with regards to the required live-fire shooting exercises, including, but not limited to, a minimum number of rounds to be fired and minimum passing scores from specified firing distances.</p><p>(c)<span class=\"EnSpace\"/>Notwithstanding subdivision (a), the licensing authority may require a community college course certified by the\n\t\t\t\t\t\tCommission on Peace Officer Standards and Training, up to a maximum of 24 hours, but only if required uniformly of all license applicants\n\t\t\t\t\t\twithout exception.</p><p>(d)<span class=\"EnSpace\"/>For license renewal applicants, the course of training may be any course acceptable to the licensing authority, shall be no less than eight hours, and shall satisfy the requirements of paragraphs (2) to (6), inclusive, of subdivision (a). No course of training shall be required for any person certified by the licensing authority as a trainer for purposes of this section, in order for that person to renew a license issued pursuant to this chapter.</p><p>(e)<span class=\"EnSpace\"/>The applicant shall not be required to pay for any training courses prior to the initial determination of whether the applicant is a disqualified person pursuant to paragraph (1) of subdivision (d) of Section 26202.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26165."
+      }
+    ],
+    "PEN:26200": [
+      {
+        "id": "PEN26200.202324919",
+        "lawCode": "PEN",
+        "section": "26200.",
+        "opStatutes": "2023",
+        "opChapter": "249",
+        "opSection": "19",
+        "effectiveDate": "2024-01-01 00:00:00",
+        "versionId": "id_a8b214cf-8258-11ee-bcfe-9f16e66157a6",
+        "division": "5.",
+        "title": "4.",
+        "part": "6.",
+        "chapter": "4.",
+        "article": null,
+        "history": "Amended by Stats. 2023, Ch. 249, Sec. 19.   (SB 2)   Effective January 1, 2024.",
+        "contentMember": "LAW_SECTION_TBL_91219.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:21",
+        "tableRow": 91219,
+        "tableRowSha256": "fa1cdcc4d6fd1584b0160e6a86a44850908b3ed0fa94df13b653fcff91ca09ca",
+        "contentSha256": "43b08057f4bda341d3ad5077b461eb75092538a5e47c1e6b6fe9c03a14712fe3",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>While carrying a firearm as authorized by a license issued pursuant to this chapter, a licensee shall not do any of the following:</p><p>(1)<span class=\"EnSpace\"/>Consume an alcoholic beverage or controlled substance as described in Sections 11053 to 11058, inclusive, of the Health and Safety Code.</p><p>(2)<span class=\"EnSpace\"/>Be in a place having a primary purpose of dispensing alcoholic beverages for onsite consumption.</p><p>(3)<span class=\"EnSpace\"/>Be under the influence of any alcoholic beverage, medication, or controlled substance as described in Sections 11053 to 11058, inclusive, of the Health and Safety Code.</p><p>(4)<span class=\"EnSpace\"/>Carry a firearm not listed on the license or a firearm for which they are not the recorded owner. This paragraph does not apply to a licensee who was issued a license pursuant to Section 26170, in which case they may carry a firearm that is registered to the agency for which the licensee has been deputized or appointed to serve as a peace officer, and the licensee carries the firearm consistent with that agency’s policies.</p><p>(5)<span class=\"EnSpace\"/>Falsely represent to a person that the licensee is a peace officer.</p><p>(6)<span class=\"EnSpace\"/>Engage in an unjustified display of a deadly weapon.</p><p>(7)<span class=\"EnSpace\"/>Fail to carry the license on their person.</p><p>(8)<span class=\"EnSpace\"/>Impede a peace officer in the conduct of their activities.</p><p>(9)<span class=\"EnSpace\"/>Refuse to display the license or to provide the firearm to a peace officer upon demand for purposes of inspecting the firearm.</p><p>(10)<span class=\"EnSpace\"/>Violate any federal, state, or local criminal law.</p><p>(b)<span class=\"EnSpace\"/>In addition to the restrictions and conditions listed in subdivision (a), a license issued pursuant to this chapter may also include any reasonable restrictions or conditions that the licensing authority deems warranted, including restrictions as to the time, place, manner, and circumstances under which a licensee may carry a pistol, revolver, or other firearm capable of being concealed upon the person.</p><p>(c)<span class=\"EnSpace\"/>Any restrictions imposed pursuant to subdivision (b) shall be indicated on any license issued.</p><p>(d)<span class=\"EnSpace\"/>A licensee authorized to carry a firearm pursuant to this chapter shall not carry more than two firearms under the licensee’s control at one time.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=26200."
+      }
+    ]
+  }
+}
