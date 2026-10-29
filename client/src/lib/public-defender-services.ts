@@ -14,6 +14,7 @@ export interface PublicDefenderOffice {
   services: string[];
   eligibility?: string;
   distance: number;
+  distanceAvailable?: boolean;
   lat: number;
   lng: number;
   jurisdiction: string; // State abbreviation
@@ -22,7 +23,7 @@ export interface PublicDefenderOffice {
 // Search for public defender offices using the local-resources API.
 // Returns all types: federal PDs, local/county PDs, and court-appointed programs,
 // sorted by distance from the provided ZIP code.
-export async function searchPublicDefenderOffices(zipCode: string): Promise<PublicDefenderOffice[]> {
+export async function searchPublicDefenderOffices(zipCode: string, options: { propagateErrors?: boolean } = {}): Promise<PublicDefenderOffice[]> {
   try {
     const response = await fetch(`/api/local-resources/public-defenders?zip=${zipCode}`);
 
@@ -32,7 +33,7 @@ export async function searchPublicDefenderOffices(zipCode: string): Promise<Publ
 
     const data = await response.json();
 
-    if (!data.success || !data.results || data.results.length === 0) {
+    if (!data.success || !Array.isArray(data.results)) {
       throw new Error('No public defender offices found');
     }
 
@@ -50,6 +51,7 @@ export async function searchPublicDefenderOffices(zipCode: string): Promise<Publ
       services: org.services || [],
       eligibility: org.eligibility || undefined,
       distance: org.distanceValue ?? 0,
+      distanceAvailable: typeof org.distanceValue === "number" && Number.isFinite(org.distanceValue),
       lat: 0,
       lng: 0,
       jurisdiction: data.state || '',
@@ -58,6 +60,7 @@ export async function searchPublicDefenderOffices(zipCode: string): Promise<Publ
     return offices.slice(0, 10);
   } catch (error) {
     console.error('Error searching for public defender offices:', error);
+    if (options.propagateErrors) throw error;
     return [];
   }
 }

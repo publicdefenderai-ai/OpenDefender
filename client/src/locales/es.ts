@@ -7889,6 +7889,21 @@ export default {
     }
   },
   "resources": {
+    "design": {
+      "heading": "Encuentre ayuda legal. Empiece cerca de casa.",
+      "kind": "¿Qué tipo de ayuda busca?",
+      "zip": "Código postal",
+      "beforeTitle": "Encuentre el apoyo adecuado.",
+      "beforeText": "Cada oficina tiene su propia área de servicio y proceso de admisión. Contacte a la organización para confirmar los requisitos de elegibilidad, los asuntos que atiende y su disponibilidad.",
+      "immigration": "¿Tiene inquietudes sobre inmigración?",
+      "tools": "Herramientas prácticas",
+      "court": "Localizador de tribunales",
+      "glossary": "Glosario legal",
+      "records": "Registros judiciales",
+      "diversion": "Programas de desvío",
+      "recordRelief": "Eliminación de antecedentes",
+      "summarizer": "Resumen de documentos"
+    },
     "hero": {
       "title": "Recursos Legales",
       "subtitle": "Herramientas e información para ayudarle a navegar el sistema legal",

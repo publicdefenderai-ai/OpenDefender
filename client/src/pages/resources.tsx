@@ -1,30 +1,22 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   MapPin,
-  ArrowRight,
-  Search,
   Scale,
   Phone,
   Mail,
   Navigation,
   Clock,
-  UserCheck,
-  Heart,
   BookOpen,
-  FileText,
-  GitBranch,
   Info,
   ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "wouter";
 
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
@@ -34,7 +26,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
   const { t } = useTranslation();
 
   return (
-    <Card className="card-hover">
+    <Card className="legal-result">
       <CardContent className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
@@ -45,9 +37,9 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
                   {office.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
-              <span className="text-xs bg-blue-600 text-white px-2 py-1 rounded">
+              {office.distanceAvailable !== false && (<span className="text-xs text-primary font-medium">
                 {office.distance} {t('home.publicDefenderSearch.milesAway')}
-              </span>
+              </span>)}
             </div>
           </div>
         </div>
@@ -66,7 +58,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
                 <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
-                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-blue-600">
+                <a href={`tel:${office.phone}`} className="text-sm font-medium hover:text-primary">
                   {office.phone}
                 </a>
               </div>
@@ -78,7 +70,7 @@ function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) 
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
                 <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
-                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-blue-600">
+                <a href={`mailto:${office.email}`} className="text-sm font-medium hover:text-primary">
                   {office.email}
                 </a>
               </div>
@@ -127,7 +119,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
   const { t } = useTranslation();
 
   return (
-    <Card className="card-hover">
+    <Card className="legal-result">
       <CardContent className="p-4">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
@@ -138,9 +130,9 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
                   {organization.county} {t('home.publicDefenderSearch.county')}
                 </span>
               )}
-              <span className="text-xs bg-green-600 text-white px-2 py-1 rounded">
+              {organization.distanceAvailable !== false && (<span className="text-xs text-primary font-medium">
                 {organization.distance} {t('home.publicDefenderSearch.milesAway')}
-              </span>
+              </span>)}
               <span className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">
                 {organization.organizationType}
               </span>
@@ -162,7 +154,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
               <Phone className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
                 <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.phone')}</div>
-                <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-green-600">
+                <a href={`tel:${organization.phone}`} className="text-sm font-medium hover:text-primary">
                   {organization.phone}
                 </a>
               </div>
@@ -174,7 +166,7 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
               <Mail className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
               <div>
                 <div className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.email')}</div>
-                <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-green-600">
+                <a href={`mailto:${organization.email}`} className="text-sm font-medium hover:text-primary">
                   {organization.email}
                 </a>
               </div>
@@ -222,192 +214,95 @@ function LegalAidOrganizationCard({ organization }: { organization: LegalAidOrga
 export default function Resources() {
   useScrollToTop();
   const { t } = useTranslation();
-
-  // Public Defender search state
-  const [showPublicDefenderModal, setShowPublicDefenderModal] = useState(false);
+  const [kind, setKind] = useState<"pd" | "la">("pd");
   const [pdZipCode, setPdZipCode] = useState("");
-  const [pdSearching, setPdSearching] = useState(false);
-  const [pdOffices, setPdOffices] = useState<PublicDefenderOffice[]>([]);
-  const [pdError, setPdError] = useState("");
-  const [pdHasSearched, setPdHasSearched] = useState(false);
-  const publicDefenderTriggerRef = useRef<HTMLDivElement>(null);
-
-  // Legal Aid Organizations search state
-  const [showLegalAidModal, setShowLegalAidModal] = useState(false);
   const [laZipCode, setLaZipCode] = useState("");
+  const [pdSearching, setPdSearching] = useState(false);
   const [laSearching, setLaSearching] = useState(false);
+  const [pdOffices, setPdOffices] = useState<PublicDefenderOffice[]>([]);
   const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
+  const [pdError, setPdError] = useState("");
   const [laError, setLaError] = useState("");
+  const [pdHasSearched, setPdHasSearched] = useState(false);
   const [laHasSearched, setLaHasSearched] = useState(false);
-  const legalAidTriggerRef = useRef<HTMLDivElement>(null);
+  const searching = kind === "pd" ? pdSearching : laSearching;
+  const zip = kind === "pd" ? pdZipCode : laZipCode;
+  const error = kind === "pd" ? pdError : laError;
+  const hasSearched = kind === "pd" ? pdHasSearched : laHasSearched;
+  const searchKey = kind === "pd" ? "home.publicDefenderSearch" : "home.legalAidSearch";
 
-  const handlePublicDefenderSearch = async () => {
-    if (!pdZipCode.trim() || pdZipCode.length !== 5) {
-      setPdError(t('home.publicDefenderSearch.error'));
-      return;
-    }
-    setPdSearching(true);
-    setPdError("");
-    setPdHasSearched(true);
+  const search = async () => {
+    if (searching) return;
+    const isPd = kind === "pd";
+    const setError = isPd ? setPdError : setLaError;
+    if (!/^\d{5}$/.test(zip)) { setError(t(`${searchKey}.error`)); return; }
+    const setSearching = isPd ? setPdSearching : setLaSearching;
+    setSearching(true);
+    setError("");
+    if (isPd) { setPdOffices([]); setPdHasSearched(true); }
+    else { setLaOrganizations([]); setLaHasSearched(true); }
     try {
-      const offices = await searchPublicDefenderOffices(pdZipCode);
-      setPdOffices(offices);
-    } catch (err) {
-      console.error('Public defender search error:', err);
-      setPdError(t('home.publicDefenderSearch.errorGeneral'));
-    } finally {
-      setPdSearching(false);
-    }
+      if (isPd) setPdOffices(await searchPublicDefenderOffices(zip, { propagateErrors: true }));
+      else setLaOrganizations(await searchLegalAidOrganizations(zip, { propagateErrors: true }));
+    } catch {
+      setError(t(`${searchKey}.errorGeneral`));
+    } finally { setSearching(false); }
   };
-
-  const handleLegalAidSearch = async () => {
-    if (!laZipCode.trim() || laZipCode.length !== 5) {
-      setLaError(t('home.legalAidSearch.error'));
-      return;
-    }
-    setLaSearching(true);
-    setLaError("");
-    setLaHasSearched(true);
-    try {
-      const organizations = await searchLegalAidOrganizations(laZipCode);
-      setLaOrganizations(organizations);
-    } catch (err) {
-      console.error('Legal aid search error:', err);
-      setLaError(t('home.legalAidSearch.errorGeneral'));
-    } finally {
-      setLaSearching(false);
-    }
+  const changeZip = (value: string) => {
+    const clean = value.replace(/\D/g, "").slice(0, 5);
+    if (kind === "pd") { setPdZipCode(clean); setPdError(""); setPdHasSearched(false); setPdOffices([]); }
+    else { setLaZipCode(clean); setLaError(""); setLaHasSearched(false); setLaOrganizations([]); }
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-
-      <section className="editorial-page-intro editorial-finder-intro py-10 md:py-14">
-        <div className="editorial-page-intro-inner max-w-3xl mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
-            {t('resources.hero.title', { defaultValue: 'Find Legal Help' })}
-          </h1>
-          <p className="text-base max-w-xl">
-            {t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you — search by ZIP code.' })}
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="mt-5 max-w-full h-auto min-h-11 flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
-            data-testid="button-start-resources"
-          >
-            <a href="#resource-finders">
-              {t('resources.hero.nextStep', 'Search for help by ZIP code')}
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </Button>
+    <ScanFirstPageFrame mainClassName="legal-resources-page">
+      <header className="legal-width legal-intro">
+        <h1>{t("resources.design.heading")}</h1>
+        <p>{t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you. Search by ZIP code.' })}</p>
+        <a href="#resource-finders" className="legal-link" data-testid="button-start-resources">{t('resources.hero.nextStep', 'Search for help by ZIP code')}</a>
+      </header>
+      <section id="resource-finders" className="legal-width legal-workspace">
+        <div>
+          <form className="legal-finder" noValidate onSubmit={event => { event.preventDefault(); void search(); }}>
+            <fieldset>
+              <legend>{t("resources.design.kind")}</legend>
+              {(["pd", "la"] as const).map(value => <label className="legal-choice" key={value}>
+                <input type="radio" name="legal-help-kind" value={value} checked={kind === value} onChange={() => setKind(value)} data-testid={value === "pd" ? "card-public-defender" : "card-legal-aid"} />
+                <span>{t(value === "pd" ? "resources.publicDefender.title" : "resources.legalAid.title")}<small>{t(value === "pd" ? "resources.publicDefender.description" : "resources.legalAid.description")}</small></span>
+              </label>)}
+            </fieldset>
+            <label className="legal-zip-label" htmlFor="legal-help-zip">{t("resources.design.zip")}</label>
+            <div className="legal-fields">
+              <Input id="legal-help-zip" type="text" inputMode="numeric" autoComplete="postal-code" maxLength={5} value={zip} onChange={event => changeZip(event.target.value)} disabled={searching} aria-invalid={!!error && zip.length !== 5} aria-describedby={error ? "legal-finder-error" : undefined} placeholder={t(`${searchKey}.inputPlaceholder`)} data-testid={`input-${kind}-zip-code-resources`} />
+              <Button type="submit" disabled={searching} data-testid={`button-search-${kind}-resources`}>{searching ? t(`${searchKey}.searching`) : t(`${searchKey}.searchButton`)}</Button>
+            </div>
+            {error && <p id="legal-finder-error" className="legal-search-error" role="alert">{error}</p>}
+            <p className="legal-search-status" role="status" aria-live="polite">{searching ? t(`${searchKey}.searching`) : hasSearched && !error ? kind === "pd" ? pdOffices.length ? t('home.searchResults.foundOffices', { count: pdOffices.length, plural: pdOffices.length !== 1 ? 's' : '' }) : t(`${searchKey}.noResults`) : laOrganizations.length ? t('home.legalAidSearch.resultsFound', { count: laOrganizations.length, plural: laOrganizations.length !== 1 ? 's' : '' }) : t(`${searchKey}.noResults`) : ""}</p>
+          </form>
+          <div className="legal-results" aria-busy={searching}>
+            {!searching && !error && (kind === "pd" ? pdOffices.map(office => <PublicDefenderOfficeCard key={office.id} office={office} />) : laOrganizations.map(organization => <LegalAidOrganizationCard key={organization.id} organization={organization} />))}
+          </div>
         </div>
+        <aside className="legal-help-notes">
+          <h2>{t("resources.design.beforeTitle")}</h2>
+          <p>{t("resources.design.beforeText")}</p>
+          <Link href="/right-to-counsel" className="legal-link">{t("howTo.rightToCounsel")}</Link>
+          <div><h3>{t("resources.design.immigration")}</h3><Link href="/immigration-guidance" className="legal-link">{t("design.immigrationNav")}</Link></div>
+          <div><h3>{t("design.life")}</h3><Link href="/support" className="legal-link">{t("design.life")}</Link>
+            <p><strong>Call or text 211</strong>. Free, 24/7 social services hotline that can also connect you to local legal aid organizations in your area.</p>
+          </div>
+        </aside>
       </section>
-
-      {/* Two finder cards */}
-      <section id="resource-finders" className="py-10 md:py-14 scroll-mt-24">
-        <div className="max-w-3xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="grid sm:grid-cols-2 gap-4 mb-10">
-              {/* Public Defender card */}
-              <Card
-                 className="editorial-finder-card cursor-pointer group"
-                onClick={() => setShowPublicDefenderModal(true)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    setShowPublicDefenderModal(true);
-                  }
-                }}
-                role="button"
-                tabIndex={0}
-                ref={publicDefenderTriggerRef}
-                data-testid="card-public-defender"
-              >
-                <CardContent className="p-5">
-                   <UserCheck className="h-6 w-6 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} />
-                  <p className="font-semibold text-foreground mb-1">
-                    {t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' })}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    {t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices near you by ZIP code. Free legal representation if you can\'t afford an attorney.' })}
-                  </p>
-                   <p className="text-sm font-semibold text-primary flex items-center gap-1">
-                    Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Legal Aid card */}
-              <Card
-                 className="editorial-finder-card cursor-pointer group"
-                onClick={() => setShowLegalAidModal(true)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    setShowLegalAidModal(true);
-                  }
-                }}
-                role="button"
-                tabIndex={0}
-                ref={legalAidTriggerRef}
-                data-testid="card-legal-aid"
-              >
-                <CardContent className="p-5">
-                   <Heart className="h-6 w-6 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} />
-                  <p className="font-semibold text-foreground mb-1">
-                    {t('resources.legalAid.title', { defaultValue: 'Find Legal Aid' })}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    {t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations providing free or low-cost legal help in your community.' })}
-                  </p>
-                   <p className="text-sm font-semibold text-primary flex items-center gap-1">
-                    Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </ScrollReveal>
-
-          {/* 211 callout */}
-          <ScrollReveal delay={0.1}>
-            <div className="rounded-xl border border-border bg-muted/30 p-4 mb-8 flex items-start gap-3">
-              <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Call or text 211</strong> — free, 24/7 social services hotline that can also connect you to local legal aid organizations in your area.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Secondary links */}
-          <ScrollReveal delay={0.15}>
-            <div className="border-t border-border/60 pt-8">
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4">Also available</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {[
-                  { href: "/court-locator",          Icon: MapPin,     label: "Court Locator" },
-                  { href: "/legal-glossary",          Icon: BookOpen,   label: "Legal Glossary" },
-                  { href: "/court-records",           Icon: Search,     label: "Court Records" },
-                  { href: "/diversion-programs",      Icon: GitBranch,  label: "Diversion Programs" },
-                  { href: "/support/reputation",      Icon: FileText,   label: "Record Expungement" },
-                  { href: "/document-summarizer",     Icon: FileText,   label: "Document Summarizer" },
-                ].map(({ href, Icon, label }) => (
-                  <Link key={href} href={href}>
-                    <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg border border-border/60 hover:border-border hover:bg-muted/40 transition-all text-sm text-muted-foreground hover:text-foreground">
-                      <Icon className="h-3.5 w-3.5 flex-shrink-0" />
-                      <span>{label}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+      <section className="legal-width legal-tools">
+        <h2>{t("resources.design.tools")}</h2>
+        <div>{[
+          { href: "/court-locator", key: "court" }, { href: "/legal-glossary", key: "glossary" },
+          { href: "/court-records", key: "records" }, { href: "/diversion-programs", key: "diversion" },
+          { href: "/support/reputation", key: "recordRelief" }, { href: "/document-summarizer", key: "summarizer" },
+        ].map(item => <Link className="legal-link" key={item.href} href={item.href}>{t(`resources.design.${item.key}`)}</Link>)}</div>
       </section>
-
       {/* Court-Appointed Counsel section */}
-      <section className="py-10 md:py-14 bg-muted/30 border-t border-border/30">
+      <section className="legal-counsel">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-2">
@@ -421,7 +316,7 @@ export default function Resources() {
 
           <div className="grid md:grid-cols-2 gap-5">
             <ScrollReveal>
-              <Card>
+              <Card className="legal-counsel-sheet">
                 <CardContent className="pt-5">
                   <div className="flex gap-3">
                     <Info className="h-5 w-5 text-slate-500 flex-shrink-0 mt-0.5" />
@@ -448,7 +343,7 @@ export default function Resources() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.07}>
-              <Card>
+              <Card className="legal-counsel-sheet">
                 <CardContent className="pt-5">
                   <div className="flex gap-3">
                     <BookOpen className="h-5 w-5 text-slate-500 flex-shrink-0 mt-0.5" />
@@ -487,101 +382,6 @@ export default function Resources() {
         </div>
       </section>
 
-      <Footer />
-
-      {/* Public Defender Search Modal — unchanged */}
-      <Dialog
-        open={showPublicDefenderModal}
-        onOpenChange={(open) => {
-          setShowPublicDefenderModal(open);
-          if (!open) requestAnimationFrame(() => publicDefenderTriggerRef.current?.focus());
-        }}
-      >
-        <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <Input
-                type="text"
-                placeholder={t('home.publicDefenderSearch.inputPlaceholder')}
-                value={pdZipCode}
-                onChange={(e) => setPdZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
-                onKeyPress={(e) => e.key === 'Enter' && handlePublicDefenderSearch()}
-                maxLength={5}
-                className="min-h-[44px] flex-1"
-                data-testid="input-pd-zip-code-resources"
-              />
-              <Button className="min-h-[44px] sm:w-auto" onClick={handlePublicDefenderSearch} disabled={pdSearching} data-testid="button-search-pd-resources">
-                <Search className="h-4 w-4 mr-2" />
-                {pdSearching ? t('home.publicDefenderSearch.searching') : t('home.publicDefenderSearch.searchButton')}
-              </Button>
-            </div>
-            {pdError && <div className="text-red-600 text-sm">{pdError}</div>}
-            {pdOffices.length > 0 && (
-              <div className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  {t('home.searchResults.foundOffices', { count: pdOffices.length, plural: pdOffices.length !== 1 ? 's' : '' })}
-                </p>
-                {pdOffices.map((office) => (
-                  <PublicDefenderOfficeCard key={office.id} office={office} />
-                ))}
-              </div>
-            )}
-            {!pdSearching && pdHasSearched && pdOffices.length === 0 && !pdError && (
-              <p className="text-sm text-muted-foreground">{t('home.publicDefenderSearch.noResults')}</p>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      {/* Legal Aid Search Modal — unchanged */}
-      <Dialog
-        open={showLegalAidModal}
-        onOpenChange={(open) => {
-          setShowLegalAidModal(open);
-          if (!open) requestAnimationFrame(() => legalAidTriggerRef.current?.focus());
-        }}
-      >
-        <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <Input
-                type="text"
-                placeholder={t('home.legalAidSearch.inputPlaceholder')}
-                value={laZipCode}
-                onChange={(e) => setLaZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
-                onKeyPress={(e) => e.key === 'Enter' && handleLegalAidSearch()}
-                maxLength={5}
-                className="min-h-[44px] flex-1"
-                data-testid="input-la-zip-code-resources"
-              />
-              <Button className="min-h-[44px] sm:w-auto" onClick={handleLegalAidSearch} disabled={laSearching} data-testid="button-search-la-resources">
-                <Search className="h-4 w-4 mr-2" />
-                {laSearching ? t('home.legalAidSearch.searching') : t('home.legalAidSearch.searchButton')}
-              </Button>
-            </div>
-            {laError && <div className="text-red-600 text-sm">{laError}</div>}
-            {laOrganizations.length > 0 && (
-              <div className="space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  {t('home.legalAidSearch.resultsFound', { count: laOrganizations.length, plural: laOrganizations.length !== 1 ? 's' : '' })}
-                </p>
-                {laOrganizations.map((org) => (
-                  <LegalAidOrganizationCard key={org.id} organization={org} />
-                ))}
-              </div>
-            )}
-            {!laSearching && laHasSearched && laOrganizations.length === 0 && !laError && (
-              <p className="text-sm text-muted-foreground">{t('home.legalAidSearch.noResults')}</p>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </div>
+    </ScanFirstPageFrame>
   );
 }

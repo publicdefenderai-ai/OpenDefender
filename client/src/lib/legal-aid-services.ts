@@ -12,6 +12,7 @@ export interface LegalAidOrganization {
   hours?: string;
   services: string[];
   distance: number;
+  distanceAvailable?: boolean;
   lat: number;
   lng: number;
   jurisdiction: string; // State abbreviation
@@ -19,7 +20,7 @@ export interface LegalAidOrganization {
 }
 
 // Search for legal aid organizations (immigration and civil legal aid)
-export async function searchLegalAidOrganizations(zipCode: string): Promise<LegalAidOrganization[]> {
+export async function searchLegalAidOrganizations(zipCode: string, options: { propagateErrors?: boolean } = {}): Promise<LegalAidOrganization[]> {
   try {
     // Use the proximity search API to find legal aid organizations near the ZIP code
     // Filter to immigration and civil legal aid organizations only
@@ -31,7 +32,7 @@ export async function searchLegalAidOrganizations(zipCode: string): Promise<Lega
     
     const data = await response.json();
     
-    if (!data.success || !data.organizations) {
+    if (!data.success || !Array.isArray(data.organizations)) {
       throw new Error('No legal aid organizations found');
     }
     
@@ -42,9 +43,7 @@ export async function searchLegalAidOrganizations(zipCode: string): Promise<Lega
         org.organizationType === 'civil_legal_aid'
       );
     
-    if (legalAidOrgs.length === 0) {
-      throw new Error('No legal aid organizations found');
-    }
+
     
     // Convert database organizations to LegalAidOrganization format
     const organizations: LegalAidOrganization[] = legalAidOrgs.map((org: any) => ({
@@ -58,6 +57,7 @@ export async function searchLegalAidOrganizations(zipCode: string): Promise<Lega
       hours: 'Call for hours',
       services: org.services || [],
       distance: Math.round(org.distance * 10) / 10,
+      distanceAvailable: typeof org.distance === "number" && Number.isFinite(org.distance),
       lat: parseFloat(org.latitude),
       lng: parseFloat(org.longitude),
       jurisdiction: org.state,
@@ -67,6 +67,7 @@ export async function searchLegalAidOrganizations(zipCode: string): Promise<Lega
     return organizations.slice(0, 10); // Limit to 10 results
   } catch (error) {
     console.error('Error searching for legal aid organizations:', error);
+    if (options.propagateErrors) throw error;
     // Return empty array on error
     return [];
   }

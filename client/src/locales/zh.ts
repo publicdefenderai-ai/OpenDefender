@@ -7889,6 +7889,21 @@ export default {
     }
   },
   "resources": {
+    "design": {
+      "heading": "寻找法律帮助，从您附近开始。",
+      "kind": "您需要哪一类帮助？",
+      "zip": "邮政编码",
+      "beforeTitle": "找到适合您的支持。",
+      "beforeText": "每个机构都有自己的服务区域和受理流程。请联系机构，确认资格要求、受理的事项和服务是否可用。",
+      "immigration": "有移民方面的问题？",
+      "tools": "实用工具",
+      "court": "法院查找器",
+      "glossary": "法律术语表",
+      "records": "法院记录",
+      "diversion": "分流项目",
+      "recordRelief": "犯罪记录消除",
+      "summarizer": "文件摘要"
+    },
     "hero": {
       "title": "法律资源",
       "subtitle": "帮助您了解法律体系的工具和信息",
