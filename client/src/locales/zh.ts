@@ -4388,6 +4388,14 @@ export default {
     }
   },
   "caseTimeline": {
+    "design": {
+      "heading": "了解诉讼流程，一次了解一个阶段。",
+      "count": "第 {{step}} 阶段，共 {{total}} 个阶段",
+      "previous": "上一阶段",
+      "next": "下一阶段",
+      "state": "查看您所在州的规定（可选）",
+      "bailLink": "保释如何运作：类型、无力支付时的选择及条件"
+    },
     "title": "案件时间线与诉讼流程",
     "subtitle": "从头到尾跟踪刑事案件的各个阶段。选择您当前的阶段，了解会发生什么以及您的权利。",
     "nextStep": "选择您当前的阶段",

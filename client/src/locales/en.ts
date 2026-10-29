@@ -4387,6 +4387,14 @@ export default {
     }
   },
   "caseTimeline": {
+    "design": {
+      "heading": "Understand the process. One stage at a time.",
+      "count": "Stage {{step}} of {{total}}",
+      "previous": "Previous stage",
+      "next": "Next stage",
+      "state": "See rules for your state (optional)",
+      "bailLink": "How bail works: types, options if you can't pay, and conditions"
+    },
     "title": "Case Timeline & Process",
     "subtitle": "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.",
     "nextStep": "Choose your current stage",

@@ -4389,6 +4389,14 @@ export default {
     }
   },
   "caseTimeline": {
+    "design": {
+      "heading": "Comprenda el proceso. Una etapa a la vez.",
+      "count": "Etapa {{step}} de {{total}}",
+      "previous": "Etapa anterior",
+      "next": "Etapa siguiente",
+      "state": "Ver las reglas de su estado (opcional)",
+      "bailLink": "Cómo funciona la fianza: tipos, opciones si no puede pagar y condiciones"
+    },
     "title": "Línea de Tiempo y Proceso del Caso",
     "subtitle": "Siga las etapas de un caso penal de principio a fin. Seleccione su etapa actual para ver qué esperar y cuáles son sus derechos.",
     "nextStep": "Elija su etapa actual",
