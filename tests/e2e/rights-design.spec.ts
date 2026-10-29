@@ -85,6 +85,10 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await expect(page.locator('#main-content > div').first()).toHaveCSS('opacity', '1');
     const explainer = page.locator('.rights-explainer');
     await expect(explainer.locator('h2')).toHaveText(copy.design.explainer.title);
+    const discs = explainer.locator('.rights-explainer-art span');
+    expect(await discs.first().evaluate(el => getComputedStyle(el, '::before').backgroundColor)).toBe(theme === 'dark' ? 'rgb(207, 170, 193)' : 'rgb(217, 178, 200)');
+    expect(await discs.nth(1).evaluate(el => getComputedStyle(el, '::before').backgroundColor)).toBe(theme === 'dark' ? 'rgb(203, 182, 157)' : 'rgb(216, 194, 169)');
+    await expect(discs.first()).toHaveCSS('color', theme === 'dark' ? 'rgb(48, 35, 45)' : 'rgb(56, 40, 49)');
     const controls = explainer.locator('.rights-explainer-controls button');
     await expect(controls.nth(0)).toBeDisabled();
     expect(await explainer.locator('.rights-explainer-art span').first().evaluate(el => parseFloat(getComputedStyle(el).transitionDuration))).toBeLessThan(0.001);

@@ -2441,8 +2441,8 @@ a:focus-visible,
 }
 
 /* Rights: open disclosures and a user-paced, non-diagnostic illustration. */
-.rights-page { --rights-soft: #eee4ea; }
-.dark .rights-page { --rights-soft: #342936; }
+.rights-page { --rights-soft: #eee4ea; --rights-art-custody: #d9b2c8; --rights-art-interrogation: #d8c2a9; --rights-art-ink: #382831; }
+.dark .rights-page { --rights-soft: #342936; --rights-art-custody: #cfaac1; --rights-art-interrogation: #cbb69d; --rights-art-ink: #30232d; }
 .rights-width { width: min(100% - 3rem, 1080px); margin-inline: auto; }
 .rights-page p { line-height: 1.7; }
 .rights-intro { padding-block: 2.75rem 2rem; }
@@ -2482,10 +2482,10 @@ a:focus-visible,
 .rights-explainer > p { margin-top: .75rem; color: var(--muted-foreground); }
 .rights-explainer-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-block: 1.5rem; }
 .rights-explainer-art { display: flex; justify-content: center; align-items: center; min-height: 235px; }
-.rights-explainer-art span { width: 156px; height: 156px; flex-shrink: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; position: relative; left: 0; color: #382831; transition: left 600ms ease; }
-.rights-explainer-art span::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: #d9b2c8; }
+.rights-explainer-art span { width: 156px; height: 156px; flex-shrink: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; position: relative; left: 0; color: var(--rights-art-ink); transition: left 600ms ease; }
+.rights-explainer-art span::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--rights-art-custody); }
 .rights-explainer-art span + span { margin-left: 12px; }
-.rights-explainer-art span + span::before { background: #d8c2a9; }
+.rights-explainer-art span + span::before { background: var(--rights-art-interrogation); }
 .rights-explainer-art b { position: relative; z-index: 1; font-weight: 400; }
 .rights-explainer-art[data-step="1"] span:first-child { left: 12px; }
 .rights-explainer-art[data-step="2"] span:first-child, .rights-explainer-art[data-step="3"] span:first-child { left: 22px; }
