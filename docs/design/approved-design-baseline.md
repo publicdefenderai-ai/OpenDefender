@@ -45,8 +45,9 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
 | Case Guidance, consent, questions, recovery and results | Implemented in PRs 64/65 and shared with conversational intake in PR 69; canonical questions and consent defaults retained |
 | Document Summarizer | Merged in PR 71 with computed-style regression checks; canonical workflow retained |
-| Letter Generator | Draft refresh prepared; all six letter types and canonical questions retained |
-| How to use this site and other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
+| Letter Generator | Implemented and merged in PR 73; all six letter types and canonical questions retained |
+| How to use this site | Draft refresh prepared; five paths, both example journeys and screenshot reservations retained |
+| Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
 
@@ -250,3 +251,21 @@ References:
 The full existing privacy statements remain subject to the separate content review; this presentation batch does not certify them. Browser fixtures exercise all six requests, copy and plain-text print, warnings, reset, failed-generation recovery and fresh CAPTCHA verification, plus all six questionnaires at 320px in English/Spanish/Chinese and both themes. The dedicated spec is wired into the release allowlist. Test responses are fictional; no live AI generation or full-CI claim.
 
 Letter batch validation: typecheck and production build passed; all 13 focused release-config browser tests passed. Desktop and mobile light/dark layouts and the plain print page were visually inspected. A final print/payload check also passed after making screenshot capture wait for the loaded page transition to finish.
+
+
+## How-to design batch
+
+Implements the accepted alternating editorial rows and paired example timelines. Keeps all five route destinations, path descriptions and four bullets per path, the full four-stage example journey and two-stage family journey, and the family guide link. Existing translated path/story text is unchanged. The new heading and screenshot-reservation caption are translated in English, Spanish and Chinese. Retains `how-to-paths`, `how-to-family` and `path-1` through `path-5` anchors; jump links are now native keyboard-operable anchors. Shared header/footer and theme controls remain in place. Adds directory access near the introduction and at the end.
+
+Removed obsolete, hardcoded English miniature screens (including outdated domains, colors and questionnaire step counts). The five reserved images are explicitly labeled as placeholders, not representations of the current tools. No tool questions, API calls or substantive content were changed. Full path bullets remain visible even though the simplified preview omitted them. Existing content is retained without a new accuracy certification.
+
+References:
+- `opendefender-how-to-preview.html`: SHA-256 `459c4b65e516d0a75af96b36e9df9ac76b627036bf0d376a78154740c22b9f0f`
+- `how-to-content.html`: SHA-256 `cd4c930b40f0eae33f253714a4d5b538c2d7cf738cd6fd27a563210256e9a1eb`
+- Composition refinement: `how-to-distinct.css` (alternating screenshot areas and paired timelines).
+
+Follow-up: after the remaining page designs are final, capture accurate desktop/mobile screenshots of First 24 Hours, Case Guidance, Life & Family Support, Immigration and Friends & Family. Replace all five placeholders with readable crops and localized accessible descriptions. Do not reuse the removed mock screens.
+
+Convention for future batches: custom CSS class names should have a corresponding styling rule; use `data-*` for non-styling hooks. PR 73 removed its unused `letter-privacy` class and only the unused hero title/subtitle strings. Its badge and the embedded summarizer description remain in use.
+
+Validation: production build passed and all six focused browser tests passed (English, Spanish and Chinese in light/dark themes). Each test checks 1280px and 320px layouts, every existing translated path bullet and story step, native jump links, direct hash entry, family-guide/directory navigation and real element bounds. The spec is included in the release allowlist. Desktop and narrow translated dark-mode views were visually inspected. This is focused validation, not a claim that the full release suite is clean.
