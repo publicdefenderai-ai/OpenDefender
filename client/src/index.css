@@ -2372,3 +2372,18 @@ a:focus-visible,
 .document-tool-related a:hover, .document-tool-related a:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
 @media (max-width: 480px) { .document-tool-width { width: calc(100% - 2rem); } .document-summarizer-page .summary-upload { padding: 2rem 1rem; } }
 @media (prefers-reduced-motion: reduce) { .document-summarizer .animate-spin, .document-summarizer .animate-pulse, .document-summarizer .animate-bounce { animation: none; } }
+
+/* Letter generator: purpose list and a readable draft on a paper-like surface. */
+.letter-purpose-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+.letter-purpose { width: 100%; text-align: left; padding: 1.5rem 0; border-top: 1px solid var(--border); background: transparent; }
+.letter-purpose:hover { color: var(--primary); background: var(--muted); }
+.letter-purpose:focus-visible { outline: 2px solid var(--ring); outline-offset: 5px; }
+.letter-workspace { overflow-wrap: anywhere; }
+.letter-intake { padding-block: 1rem; border-top: 1px solid var(--border); }
+.letter-workspace [data-letter-heading] { scroll-margin-top: 110px; }
+.letter-workspace input, .letter-workspace select, .letter-workspace textarea { min-width: 0; min-height: 44px; }
+.letter-sheet { background: var(--card); border: 1px solid var(--border); padding: clamp(1.25rem, 4vw, 3rem); }
+.letter-sheet pre { overflow-wrap: anywhere; }
+.letter-retention { padding-bottom: 1.5rem; }
+@media (max-width: 640px) { .letter-purpose-list { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .letter-workspace .animate-pulse, .letter-workspace .animate-spin { animation: none; } }

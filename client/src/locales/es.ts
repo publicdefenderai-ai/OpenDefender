@@ -13,6 +13,9 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    letterHeadline: "Encuentre las palabras que necesita.",
+    letterDescription: "Redacte una carta para su empleador, arrendador o compañía de servicios públicos. Elija un propósito, añada contexto y luego revise y edite.",
+
     summaryHeadline: "Comprenda el documento que tiene delante.",
     summaryDescription: "Convierta un documento en un resumen en lenguaje sencillo, con detalles importantes que debe comprobar en el original.",
     beforeSharing: "Antes de compartir",

@@ -1,25 +1,19 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import {
-  Briefcase,
-  Home,
-  Zap,
-  ChevronRight,
   ChevronLeft,
   Copy,
   Check,
   Printer,
   RefreshCw,
   AlertTriangle,
-  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
@@ -48,9 +42,6 @@ interface FieldDef {
 
 interface LetterTypeDef {
   id: LetterType;
-  icon: React.ElementType;
-  iconColor: string;
-  borderColor: string;
   i18nKey: string;
   fields: FieldDef[];
 }
@@ -62,9 +53,6 @@ type PageState = "select" | "intake" | "loading" | "result";
 const LETTER_TYPES: LetterTypeDef[] = [
   {
     id: "employer-court-dates",
-    icon: Briefcase,
-    iconColor: "text-blue-600 dark:text-blue-400",
-    borderColor: "#3b82f6",
     i18nKey: "employerCourtDates",
     fields: [
       { key: "Frequency", type: "select", i18nKey: "frequency", optionCount: 4 },
@@ -75,9 +63,6 @@ const LETTER_TYPES: LetterTypeDef[] = [
   },
   {
     id: "employer-explain-absence",
-    icon: Briefcase,
-    iconColor: "text-indigo-600 dark:text-indigo-400",
-    borderColor: "#6366f1",
     i18nKey: "employerExplainAbsence",
     fields: [
       { key: "Duration", type: "select", i18nKey: "duration", optionCount: 4 },
@@ -88,9 +73,6 @@ const LETTER_TYPES: LetterTypeDef[] = [
   },
   {
     id: "employer-record-disclosure",
-    icon: Briefcase,
-    iconColor: "text-teal-600 dark:text-teal-400",
-    borderColor: "#14b8a6",
     i18nKey: "employerRecordDisclosure",
     fields: [
       { key: "Type of role", type: "text", i18nKey: "typeOfRole" },
@@ -101,9 +83,6 @@ const LETTER_TYPES: LetterTypeDef[] = [
   },
   {
     id: "landlord-payment-plan",
-    icon: Home,
-    iconColor: "text-amber-600 dark:text-amber-400",
-    borderColor: "#f59e0b",
     i18nKey: "landlordPaymentPlan",
     fields: [
       { key: "How far behind", type: "select", i18nKey: "howFarBehind", optionCount: 4 },
@@ -114,9 +93,6 @@ const LETTER_TYPES: LetterTypeDef[] = [
   },
   {
     id: "landlord-situation-notice",
-    icon: Home,
-    iconColor: "text-orange-600 dark:text-orange-400",
-    borderColor: "#f97316",
     i18nKey: "landlordSituationNotice",
     fields: [
       { key: "What to communicate", type: "select", i18nKey: "whatToCommunicate", optionCount: 4 },
@@ -127,9 +103,6 @@ const LETTER_TYPES: LetterTypeDef[] = [
   },
   {
     id: "utility-hardship",
-    icon: Zap,
-    iconColor: "text-yellow-600 dark:text-yellow-400",
-    borderColor: "#eab308",
     i18nKey: "utilityHardship",
     fields: [
       { key: "Utility type", type: "select", i18nKey: "utilityType", optionCount: 5 },
@@ -167,20 +140,17 @@ function TypeCard({
   onSelect: (id: LetterType) => void;
 }) {
   const { t } = useTranslation();
-  const Icon = def.icon;
   return (
     <button
       onClick={() => onSelect(def.id)}
-      className="w-full text-left rounded-xl border border-border bg-background p-4 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
-      style={{ borderLeftWidth: 4, borderLeftColor: def.borderColor }}
+      className="letter-purpose"
+      data-testid={`letter-type-${def.id}`}
     >
       <div className="flex items-start gap-3">
-        <Icon className={`h-5 w-5 flex-shrink-0 mt-0.5 ${def.iconColor}`} strokeWidth={1.75} />
         <div className="flex-1 min-w-0">
-          <p className="font-semibold text-foreground text-sm mb-1">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</p>
-          <p className="text-xs text-muted-foreground leading-relaxed">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.description`)}</p>
+          <p className="font-semibold text-foreground text-base mb-2">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</p>
+          <p className="text-sm text-muted-foreground leading-relaxed">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.description`)}</p>
         </div>
-        <ChevronRight className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5 group-hover:text-foreground transition-colors" />
       </div>
     </button>
   );
@@ -202,10 +172,11 @@ function IntakeField({
   const { t } = useTranslation();
   const text = useTypeText(typeKey, field.i18nKey);
   const options = useOptions(typeKey, field.i18nKey, field.optionCount ?? 0);
+  const fieldId = `letter-${typeKey}-${field.i18nKey}`;
 
   return (
     <div>
-      <label className="block text-sm font-medium text-foreground mb-1.5">
+      <label htmlFor={fieldId} className="block text-sm font-medium text-foreground mb-1.5">
         {text("label")}
         {field.optional && (
           <span className="text-muted-foreground font-normal ml-1">{t("letterGenerator.optionalTag")}</span>
@@ -213,6 +184,7 @@ function IntakeField({
       </label>
       {field.type === "select" ? (
         <select
+          id={fieldId}
           value={value ?? ""}
           onChange={(e) => onChange(field.key, e.target.value)}
           className="w-full min-h-[44px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
@@ -226,6 +198,7 @@ function IntakeField({
         </select>
       ) : field.type === "textarea" ? (
         <textarea
+          id={fieldId}
           value={value ?? ""}
           onChange={(e) => onChange(field.key, e.target.value)}
           placeholder={text("placeholder")}
@@ -235,6 +208,7 @@ function IntakeField({
         />
       ) : (
         <input
+          id={fieldId}
           type="text"
           value={value ?? ""}
           onChange={(e) => onChange(field.key, e.target.value)}
@@ -273,7 +247,6 @@ function IntakeForm({
   onCaptchaVerify: (token: string) => void;
 }) {
   const { t } = useTranslation();
-  const Icon = def.icon;
   const requiredFields = def.fields.filter((f) => !f.optional);
   const allRequiredFilled = requiredFields.every(
     (f) => answers[f.key] && answers[f.key].trim()
@@ -287,14 +260,14 @@ function IntakeForm({
       <div className="flex flex-wrap items-center gap-3">
         <button
           onClick={onBack}
+          data-testid="letter-back"
           className="min-h-[44px] flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ChevronLeft className="h-4 w-4" />
           {t("letterGenerator.back")}
         </button>
         <div className="min-w-0 flex items-center gap-2">
-          <Icon className={`h-5 w-5 ${def.iconColor}`} strokeWidth={1.75} />
-          <h2 className="font-semibold text-foreground">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</h2>
+            <h2 data-letter-heading tabIndex={-1} className="font-semibold text-foreground">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</h2>
         </div>
       </div>
 
@@ -306,8 +279,8 @@ function IntakeForm({
           </AlertDescription>
         </Alert>
       ) : (
-        <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
-          <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
+        <Alert className="border-border bg-muted">
+          <AlertDescription className="text-foreground text-sm">
             <strong>{t("letterGenerator.generalNoteBold")}</strong> {t("letterGenerator.generalNoteRest")}
           </AlertDescription>
         </Alert>
@@ -342,10 +315,10 @@ function IntakeForm({
 
       <Button
         onClick={onSubmit}
+        data-testid="letter-generate"
         disabled={!allRequiredFilled || loading || (captchaRequired && !captchaToken)}
         className="w-full gap-2"
       >
-        <Sparkles className="h-4 w-4" />
         {t("letterGenerator.generateButton")}
       </Button>
     </div>
@@ -387,19 +360,20 @@ function LetterResult({
   };
 
   const handlePrint = () => {
+    const escapeText = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const win = window.open("", "_blank");
     if (win) {
       const printTitle = t("letterGenerator.result.printTitle");
       const printNote = t("letterGenerator.result.printNote");
-      win.document.write(`<html><head><title>${printTitle}</title>
+      win.document.write(`<html><head><title>${escapeText(printTitle)}</title>
         <style>body{font-family:Arial,sans-serif;padding:40px;max-width:700px;margin:0 auto;line-height:1.6}
         .subject{font-weight:bold;margin-bottom:20px}
         .body{white-space:pre-wrap}
         .note{font-size:12px;color:#666;margin-top:24px;border-top:1px solid #ddd;padding-top:12px;font-style:italic}
         </style></head><body>
-        ${subject ? `<p class="subject">${subjectLabelText} ${subject}</p>` : ""}
-        <div class="body">${letter.replace(/\n/g, "<br>")}</div>
-        <p class="note">${printNote}</p>
+        ${subject ? `<p class="subject">${escapeText(subjectLabelText)} ${escapeText(subject)}</p>` : ""}
+        <div class="body">${escapeText(letter)}</div>
+        <p class="note">${escapeText(printNote)}</p>
         </body></html>`);
       win.document.close();
       win.print();
@@ -409,9 +383,10 @@ function LetterResult({
   return (
     <div className="space-y-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="min-w-0 font-semibold text-foreground">{t("letterGenerator.result.title")}</h2>
+        <h2 data-letter-heading tabIndex={-1} className="min-w-0 font-semibold text-foreground">{t("letterGenerator.result.title")}</h2>
         <button
           onClick={onReset}
+          data-testid="letter-reset"
           className="min-h-[44px] flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <RefreshCw className="h-3.5 w-3.5" />
@@ -421,25 +396,25 @@ function LetterResult({
 
       {subject && (
         <div className="rounded-lg border border-border bg-muted/30 px-4 py-2.5">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mr-2">
+          <span className="text-sm font-semibold text-muted-foreground mr-2">
             {t("letterGenerator.result.subjectLabel")}
           </span>
           <span className="text-sm text-foreground">{subject}</span>
         </div>
       )}
 
-      <div className="rounded-xl border border-border bg-background p-5">
-        <pre className="whitespace-pre-wrap text-sm text-foreground font-sans leading-relaxed">
+      <div className="letter-sheet">
+        <pre className="whitespace-pre-wrap text-base text-foreground font-sans leading-relaxed" data-testid="letter-draft">
           {letter}
         </pre>
       </div>
 
       <div className="flex flex-wrap gap-2">
-        <Button onClick={handleCopy} variant="outline" size="sm" className="gap-2">
+        <Button data-testid="letter-copy" onClick={handleCopy} variant="outline" size="sm" className="gap-2">
           {copied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
           {copied ? t("letterGenerator.result.copiedButton") : t("letterGenerator.result.copyButton")}
         </Button>
-        <Button onClick={handlePrint} variant="outline" size="sm" className="gap-2">
+        <Button data-testid="letter-print" onClick={handlePrint} variant="outline" size="sm" className="gap-2">
           <Printer className="h-4 w-4" />
           {t("letterGenerator.result.printButton")}
         </Button>
@@ -447,7 +422,7 @@ function LetterResult({
 
       {tips.length > 0 && (
         <div className="rounded-xl border border-border bg-muted/30 p-4 space-y-2">
-          <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
+          <p className="text-sm font-semibold text-foreground">
             {t("letterGenerator.result.beforeYouSend")}
           </p>
           <ul className="space-y-1.5">
@@ -477,6 +452,12 @@ export default function LetterGenerator() {
   const { t, i18n } = useTranslation();
 
   const [state, setState] = useState<PageState>("select");
+  const workspace = useRef<HTMLDivElement>(null);
+  const previousState = useRef(state);
+  useEffect(() => {
+    if (previousState.current !== state && state !== "loading") workspace.current?.querySelector<HTMLElement>('[data-letter-heading]')?.focus();
+    previousState.current = state;
+  }, [state]);
   const [selectedType, setSelectedType] = useState<LetterType | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [result, setResult] = useState<{
@@ -558,44 +539,31 @@ export default function LetterGenerator() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="vivid-header py-14 md:py-18">
-        <div className="max-w-3xl mx-auto px-4 vivid-header-content text-center">
-          <ScrollReveal>
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="h-5 w-5 text-white/80" />
-              <span className="text-sm font-medium text-white/80 uppercase tracking-widest">
-                {t("letterGenerator.hero.badge")}
-              </span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {t("letterGenerator.hero.title")}
-            </h1>
-            <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
-              {t("letterGenerator.hero.subtitle")}
-            </p>
-          </ScrollReveal>
+      <section className="editorial-page-intro document-tool-intro">
+        <div className="document-tool-width">
+          <p className="document-tool-label">{t("letterGenerator.hero.badge")}</p>
+          <h1>{t("design.letterHeadline")}</h1>
+          <p className="document-tool-description">{t("design.letterDescription")}</p>
+          <aside className="document-tool-advisory" aria-label={t("design.beforeSharing")}>
+            <strong>{t("design.beforeSharing")}</strong>
+            <p>{t("design.aiSharingNotice")}</p>
+          </aside>
         </div>
       </section>
 
-      {/* Main content */}
-      <section className="py-12 md:py-16 bg-background">
-        <div className="max-w-2xl mx-auto px-4">
-
-          {/* Privacy notice */}
-          <ScrollReveal>
-            <div className="flex items-start gap-2.5 rounded-xl border border-border bg-muted/30 p-4 mb-8">
-              <BrandShieldIcon size={16} className="flex-shrink-0 mt-0.5 text-muted-foreground" />
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">{t("letterGenerator.privacyNotice.bold")}</strong> {t("letterGenerator.privacyNotice.rest")}
-              </p>
-            </div>
-          </ScrollReveal>
+      <section className="document-tool-width document-tool-workspace letter-workspace" data-state={state}>
+        <div ref={workspace}>
+          <div className="letter-privacy flex items-start gap-2.5 mb-8">
+            <BrandShieldIcon size={16} className="flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">{t("letterGenerator.privacyNotice.bold")}</strong> {t("letterGenerator.privacyNotice.rest")}
+            </p>
+          </div>
 
           {/* State: select */}
           {state === "select" && (
-            <ScrollReveal>
-              <h2 className="text-lg font-semibold text-foreground mb-1">
+            <>
+              <h2 data-letter-heading tabIndex={-1} className="text-xl font-semibold text-foreground mb-3">
                 {t("letterGenerator.select.title")}
               </h2>
               <p className="text-sm text-muted-foreground mb-6">
@@ -609,22 +577,18 @@ export default function LetterGenerator() {
                 </a>{" "}
                 {t("letterGenerator.select.templatesPost")}
               </p>
-              <div className="grid gap-3">
+              <div className="letter-purpose-list">
                 {LETTER_TYPES.map((def) => (
                   <TypeCard key={def.id} def={def} onSelect={handleSelect} />
                 ))}
               </div>
-            </ScrollReveal>
+            </>
           )}
 
           {/* State: intake */}
           {(state === "intake" || (state === "loading" && selectedDef)) && selectedDef && (
-            <ScrollReveal>
-              <Card className="border-border">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-base">{t(`${LETTER_TYPE_NS}.${selectedDef.i18nKey}.title`)}</CardTitle>
-                </CardHeader>
-                <CardContent>
+            <>
+              <div className="letter-intake">
                   {error && (
                     <Alert className="mb-4 border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-800">
                       <AlertTriangle className="h-4 w-4 text-red-600 dark:text-red-400" />
@@ -645,9 +609,8 @@ export default function LetterGenerator() {
                     captchaAttempt={captchaAttempt}
                     onCaptchaVerify={setCaptchaToken}
                   />
-                </CardContent>
-              </Card>
-            </ScrollReveal>
+              </div>
+            </>
           )}
 
           {/* State: loading */}
@@ -660,38 +623,34 @@ export default function LetterGenerator() {
 
           {/* Generating overlay when selectedDef exists */}
           {state === "loading" && selectedDef && (
-            <div className="mt-4 text-center">
+            <div className="mt-4 text-center" role="status">
               <p className="text-sm text-muted-foreground animate-pulse">{t("letterGenerator.writingLetter")}</p>
             </div>
           )}
 
           {/* State: result */}
           {state === "result" && result && (
-            <ScrollReveal>
+            <>
               <LetterResult
                 subject={result.subject}
                 letter={result.letter}
                 tips={result.tips}
                 onReset={handleReset}
               />
-            </ScrollReveal>
+            </>
           )}
         </div>
       </section>
 
-      <Footer />
-
-      {/* Privacy footer */}
-      <div className="legal-blue text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2">
-            <BrandShieldIcon size={16} />
-            <span className="text-sm font-medium">
-              <strong>{t("letterGenerator.privacyFooter.bold")}</strong> {t("letterGenerator.privacyFooter.rest")}
-            </span>
-          </div>
-        </div>
+      <div className="document-tool-width letter-retention text-sm text-muted-foreground">
+        <strong>{t("letterGenerator.privacyFooter.bold")}</strong> {t("letterGenerator.privacyFooter.rest")}
       </div>
+      <nav className="document-tool-width document-tool-related" aria-label={t("design.summaryRelated")}>
+        <Link href="/legal-aid">{t("design.summaryLegalHelp")}</Link>
+        <Link href="/document-library">{t("design.summaryExplainers")}</Link>
+        <Link href="/directory">{t("design.summaryAllResources")}</Link>
+      </nav>
+      <Footer />
     </div>
   );
 }

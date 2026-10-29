@@ -13,6 +13,9 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    letterHeadline: "找到表达需求的合适措辞。",
+    letterDescription: "为雇主、房东或公用事业公司起草信件。选择用途，补充背景，然后审阅并修改。",
+
     summaryHeadline: "读懂您面前的文件。",
     summaryDescription: "将文件转为通俗易懂的概述，并对照原文核实重要细节。",
     beforeSharing: "分享之前",
