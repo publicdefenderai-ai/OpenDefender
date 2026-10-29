@@ -1,30 +1,12 @@
-import { BrandShieldIcon } from "@/components/brand-logo";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Clock,
-  AlertTriangle,
-  Scale,
-  Gavel,
-  FileText,
-  Users,
-  Search,
-  BookOpen,
-  HandMetal,
-  DollarSign,
-  Calendar,
-  ChevronDown,
-} from "lucide-react";
+import { Clock, AlertTriangle, Scale, BookOpen, DollarSign, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
@@ -33,295 +15,92 @@ import { useJurisdiction } from "@/hooks/use-jurisdiction";
 import { JurisdictionSelector } from "@/components/ui/jurisdiction-selector";
 import { JurisdictionCallout } from "@/components/ui/jurisdiction-callout";
 
-interface TimelineStage {
-  id: string;
-  number: number;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-  borderColor: string;
-}
-
-const stages: TimelineStage[] = [
-  { id: "arrest", number: 1, icon: <HandMetal className="h-5 w-5" />, color: "text-red-700 dark:text-red-300", bgColor: "bg-red-100 dark:bg-red-900/40", borderColor: "border-red-300 dark:border-red-700" },
-  { id: "booking", number: 2, icon: <FileText className="h-5 w-5" />, color: "text-orange-700 dark:text-orange-300", bgColor: "bg-orange-100 dark:bg-orange-900/40", borderColor: "border-orange-300 dark:border-orange-700" },
-  { id: "firstAppearance", number: 3, icon: <Gavel className="h-5 w-5" />, color: "text-amber-700 dark:text-amber-300", bgColor: "bg-amber-100 dark:bg-amber-900/40", borderColor: "border-amber-300 dark:border-amber-700" },
-  { id: "pretrial", number: 4, icon: <Scale className="h-5 w-5" />, color: "text-blue-700 dark:text-blue-300", bgColor: "bg-blue-100 dark:bg-blue-900/40", borderColor: "border-blue-300 dark:border-blue-700" },
-  { id: "discovery", number: 5, icon: <Search className="h-5 w-5" />, color: "text-indigo-700 dark:text-indigo-300", bgColor: "bg-indigo-100 dark:bg-indigo-900/40", borderColor: "border-indigo-300 dark:border-indigo-700" },
-  { id: "trial", number: 6, icon: <Users className="h-5 w-5" />, color: "text-purple-700 dark:text-purple-300", bgColor: "bg-purple-100 dark:bg-purple-900/40", borderColor: "border-purple-300 dark:border-purple-700" },
-  { id: "sentencing", number: 7, icon: <BookOpen className="h-5 w-5" />, color: "text-slate-700 dark:text-slate-300", bgColor: "bg-slate-100 dark:bg-slate-800/60", borderColor: "border-slate-300 dark:border-slate-700" },
-];
+const stages = ["arrest", "booking", "firstAppearance", "pretrial", "discovery", "trial", "sentencing"] as const;
+type Stage = typeof stages[number];
 
 export default function CaseTimeline() {
   useScrollToTop();
   const { t } = useTranslation();
-  const { jurisdiction } = useJurisdiction();
-  const [selectedStage, setSelectedStage] = useState<string>("arrest");
-  const [direction, setDirection] = useState<number>(1);
-  const prevStageRef = useRef<string>("arrest");
-
-  const handleStageSelect = (stageId: string) => {
-    const prevIdx = stages.findIndex(s => s.id === prevStageRef.current);
-    const nextIdx = stages.findIndex(s => s.id === stageId);
-    setDirection(nextIdx >= prevIdx ? 1 : -1);
-    prevStageRef.current = stageId;
-    setSelectedStage(stageId);
+  const { jurisdiction, setJurisdiction } = useJurisdiction();
+  const [selectedStage, setSelectedStage] = useState<Stage>("arrest");
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const focusAfterChange = useRef(false);
+  const stageIndex = stages.indexOf(selectedStage);
+  const handleStageSelect = (stage: Stage, focusHeading = false) => {
+    focusAfterChange.current = focusHeading;
+    setSelectedStage(stage);
   };
-
-  const breadcrumbItems = [
-    { label: t("breadcrumb.home", "Home"), href: "/" },
-  ];
-
-  const currentStage = stages.find((s) => s.id === selectedStage) || stages[0];
-  const stageIndex = stages.findIndex((s) => s.id === selectedStage);
-
+  useEffect(() => {
+    if (focusAfterChange.current) {
+      headingRef.current?.focus();
+      focusAfterChange.current = false;
+    }
+  }, [selectedStage]);
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb
-        items={breadcrumbItems}
-        currentPage={t("caseTimeline.title", "Case Timeline & Process")}
-      />
-
-      <section className="editorial-page-intro py-12 md:py-16">
-        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-5">
-                {t("caseTimeline.title", "Case Timeline & Process")}
-              </h1>
-              <p className="text-lg md:text-xl max-w-3xl">
-                {t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}
-              </p>
-              <Button
-                asChild
-                size="lg"
-                className="mt-6 max-w-full h-auto min-h-11 flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
-                data-testid="button-start-timeline"
-              >
-                <a href="#timeline-stages">
-                  {t("caseTimeline.nextStep", "Choose your current stage")}
-                  <ChevronDown className="h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </ScrollReveal>
+    <ScanFirstPageFrame mainClassName="timeline-page">
+      <PageBreadcrumb items={[{ label: t("breadcrumb.home", "Home"), href: "/" }]} currentPage={t("caseTimeline.title", "Case Timeline & Process")} />
+      <header className="timeline-width timeline-intro">
+        <p className="timeline-label">{t("caseTimeline.title", "Case Timeline & Process")}</p>
+        <h1>{t("caseTimeline.design.heading")}</h1>
+        <p>{t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}</p>
+        <a className="timeline-link" href="#timeline-stages" data-testid="button-start-timeline">{t("caseTimeline.nextStep", "Choose your current stage")}</a>
+      </header>
+      <section id="timeline-stages" className="timeline-width timeline-layout" aria-label={t("caseTimeline.selectStage")}>
+        <div>
+          <nav className="timeline-stage-nav" aria-label={t("caseTimeline.selectStage")}>
+            {stages.map((stage, i) => <button type="button" key={stage} aria-controls="timeline-panel" aria-current={selectedStage === stage ? "step" : undefined} onClick={() => handleStageSelect(stage)}>
+              <span aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>{t(`caseTimeline.stages.${stage}.title`)}
+            </button>)}
+          </nav>
+          <label className="timeline-stage-mobile" htmlFor="timeline-stage-select">{t("caseTimeline.selectStage")}
+            <select id="timeline-stage-select" value={selectedStage} onChange={e => handleStageSelect(e.target.value as Stage)} aria-controls="timeline-panel">
+              {stages.map((stage, i) => <option key={stage} value={stage}>{i + 1}. {t(`caseTimeline.stages.${stage}.title`)}</option>)}
+            </select>
+          </label>
         </div>
-      </section>
-
-      <section id="timeline-stages" className="py-12 md:py-16 bg-background scroll-mt-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="mb-8 text-center">
-              <p className="text-muted-foreground">
-                {t("caseTimeline.selectStage", "Select a stage to learn what happens and what your rights are")}
-              </p>
+        <section id="timeline-panel" className="timeline-panel" aria-labelledby="timeline-stage-heading">
+          <p className="timeline-label" role="status">{t("caseTimeline.design.count", { step: stageIndex + 1, total: stages.length })}: {t(`caseTimeline.stages.${selectedStage}.title`)}</p>
+          <h2 id="timeline-stage-heading" ref={headingRef} tabIndex={-1}>{t(`caseTimeline.stages.${selectedStage}.title`)}</h2>
+          <LegalTextHighlighter text={t(`caseTimeline.stages.${selectedStage}.description`, "")} as="p" className="timeline-description" />
+          <p className="timeline-time">{t(`caseTimeline.stages.${selectedStage}.timeframe`, "")}</p>
+          <div className="timeline-jurisdiction">
+            <JurisdictionSelector label={t("caseTimeline.design.state")} value={jurisdiction} onChange={setJurisdiction} />
+          </div>
+          <h3>{t("caseTimeline.yourRights", "Your Rights")}</h3>
+          <ul className="timeline-rights">{(t(`caseTimeline.stages.${selectedStage}.rights`, { returnObjects: true }) as string[]).map((right, i) => <li key={i}><LegalTextHighlighter text={right} /></li>)}</ul>
+          <details className="timeline-tips" open key={selectedStage}>
+            <summary>{t("caseTimeline.whatToKnow", "What to Know")}</summary>
+            <ul>{(t(`caseTimeline.stages.${selectedStage}.tips`, { returnObjects: true }) as string[]).map((tip, i) => <li key={i}><LegalTextHighlighter text={tip} /></li>)}</ul>
+          </details>
+          {selectedStage === "sentencing" && <div className="timeline-fees">
+            <DollarSign className="h-4 w-4 shrink-0 mt-1" aria-hidden="true" /><div>
+              <p className="font-medium">Court fines and fees are set at sentencing</p>
+              <p>Fines, probation fees, restitution, and surcharges are typically ordered here. Many courts offer fee waivers and payment plans for those who qualify.</p>
+              <Link href="/support/finances" className="timeline-link">Learn about managing court costs</Link>
             </div>
-
-            <div className="relative mb-12">
-              <div className="hidden md:block absolute top-6 left-[calc(100%/14)] right-[calc(100%/14)] h-1 bg-muted rounded-full" />
-              <div
-                className="hidden md:block absolute top-6 left-[calc(100%/14)] h-1 bg-blue-500 rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${(stageIndex / (stages.length - 1)) * (100 - 100 / 7)}%` }}
-              />
-
-              <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-0">
-                {stages.map((stage, idx) => {
-                  const isActive = stage.id === selectedStage;
-                  const isPast = idx < stageIndex;
-                  return (
-                    <button
-                      key={stage.id}
-                      onClick={() => handleStageSelect(stage.id)}
-                      className="flex md:flex-col items-center gap-3 md:gap-2 group focus-visible:outline-none"
-                      aria-label={t(`caseTimeline.stages.${stage.id}.title`, stage.id)}
-                      aria-current={isActive ? "step" : undefined}
-                    >
-                      <div
-                        className={`
-                          relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold
-                          transition-all duration-300 shrink-0
-                           ${isActive
-                             ? "bg-[var(--editorial-signal)] text-white ring-4 ring-[var(--editorial-signal-soft)] scale-110"
-                            : isPast
-                               ? "bg-[var(--editorial-ink-soft)] text-white"
-                               : "bg-muted text-muted-foreground group-hover:bg-[var(--editorial-signal-soft)] group-hover:text-[var(--editorial-signal)]"
-                          }
-                          group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2
-                        `}
-                      >
-                        {stage.number}
-                      </div>
-                      <span
-                        className={`text-xs md:text-sm font-medium transition-colors md:text-center md:max-w-[100px]
-                           ${isActive ? "text-[var(--editorial-signal)]" : "text-muted-foreground group-hover:text-foreground"}
-                        `}
-                      >
-                        {t(`caseTimeline.stages.${stage.id}.title`, stage.id)}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <AnimatePresence mode="wait" custom={direction}>
-            <motion.div
-              key={selectedStage}
-              custom={direction}
-              variants={{
-                enter: (d: number) => ({ opacity: 0, x: d * 60 }),
-                center: { opacity: 1, x: 0 },
-                exit: (d: number) => ({ opacity: 0, x: d * -60 }),
-              }}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-            >
-              <Card className="editorial-card border-l-4 border-l-primary">
-                <CardHeader className="bg-muted/30">
-                  <CardTitle className={`flex items-center gap-3 ${currentStage.color}`}>
-                    {currentStage.icon}
-                    <span>
-                      {t(`caseTimeline.stages.${selectedStage}.title`, selectedStage)}
-                    </span>
-                    <Badge variant="secondary" className="ml-auto">
-                      <Clock className="h-3 w-3 mr-1" />
-                      {t(`caseTimeline.stages.${selectedStage}.timeframe`, "")}
-                    </Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6 space-y-6">
-                  <LegalTextHighlighter
-                    text={t(`caseTimeline.stages.${selectedStage}.description`, "")}
-                    as="p"
-                    className="text-muted-foreground text-lg leading-relaxed"
-                  />
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="editorial-card p-5 border-l-4 border-l-emerald-600">
-                      <h3 className="font-semibold text-green-800 dark:text-green-200 mb-3 flex items-center gap-2">
-                        <BrandShieldIcon size={16} />
-                        {t("caseTimeline.yourRights", "Your Rights")}
-                      </h3>
-                      <ul className="space-y-2">
-                        {(t(`caseTimeline.stages.${selectedStage}.rights`, { returnObjects: true }) as string[]).map(
-                          (right, idx) => (
-                            <li key={idx} className="text-sm text-green-700 dark:text-green-300 flex items-start gap-2">
-                              <span className="text-green-500 mt-0.5 shrink-0">&#10003;</span>
-                              <LegalTextHighlighter text={right} />
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-
-                    <div className="editorial-card p-5 border-l-4 border-l-amber-500">
-                      <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-3 flex items-center gap-2">
-                        <AlertTriangle className="h-4 w-4" />
-                        {t("caseTimeline.whatToKnow", "What to Know")}
-                      </h3>
-                      <ul className="space-y-2">
-                        {(t(`caseTimeline.stages.${selectedStage}.tips`, { returnObjects: true }) as string[]).map(
-                          (tip, idx) => (
-                            <li key={idx} className="text-sm text-amber-700 dark:text-amber-300 flex items-start gap-2">
-                              <span className="text-amber-500 mt-0.5 shrink-0">&#9679;</span>
-                              <LegalTextHighlighter text={tip} />
-                            </li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {selectedStage === 'sentencing' && (
-                    <div className="mt-4 p-4 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/60 dark:bg-amber-950/30 flex items-start gap-3">
-                      <DollarSign className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-sm font-medium text-foreground mb-1">
-                          Court fines and fees are set at sentencing
-                        </p>
-                        <p className="text-sm text-muted-foreground mb-2">
-                          Fines, probation fees, restitution, and surcharges are typically ordered here.
-                          Many courts offer fee waivers and payment plans for those who qualify.
-                        </p>
-                        <Link href="/support/finances">
-                          <Button variant="link" size="sm" className="p-0 h-auto text-amber-700 dark:text-amber-400 font-medium">
-                            Learn about managing court costs →
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    {stageIndex > 0 && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleStageSelect(stages[stageIndex - 1].id)}
-                      >
-                        ← {t(`caseTimeline.stages.${stages[stageIndex - 1].id}.title`, "Previous")}
-                      </Button>
-                    )}
-                    {stageIndex < stages.length - 1 && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleStageSelect(stages[stageIndex + 1].id)}
-                      >
-                        {t(`caseTimeline.stages.${stages[stageIndex + 1].id}.title`, "Next")} →
-                      </Button>
-                    )}
-                    <Link href="/quick-reference">
-                      <Button variant="secondary" size="sm" className="ml-auto">
-                        <FileText className="h-4 w-4 mr-1" />
-                        {t("caseTimeline.viewQuickRef", "Quick-Reference Card")}
-                      </Button>
-                    </Link>
-                  </div>
-
-                  {selectedStage === 'booking' && (
-                    <a href="#bail-guide" className="inline-flex items-center gap-2 text-sm text-green-700 dark:text-green-400 hover:underline font-medium mt-2">
-                      <DollarSign className="h-4 w-4" />
-                      How bail works — types, options if you can't pay, and conditions ↓
-                    </a>
-                  )}
-
-                  {(selectedStage === 'booking' || selectedStage === 'firstAppearance') && (
-                    <div className="mt-4">
-                      <JurisdictionCallout
-                        jurisdiction={jurisdiction}
-                        topic={selectedStage === 'booking' ? 'bail' : 'arraignment'}
-                      />
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </motion.div>
-          </AnimatePresence>
-
-          <ScrollReveal delay={0.2}>
-            <Alert className="mt-8 border-border">
-              <AlertTriangle className="h-4 w-4" />
-              <AlertDescription className="text-muted-foreground">
-                <strong>{t("caseTimeline.disclaimer.title", "Important:")}</strong>{" "}
-                {t("caseTimeline.disclaimer.text", "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation.")}
-                {" "}
-                {t("caseTimeline.disclaimer.deadlines", "Timeframes may be estimates or outdated; verify every deadline in your court papers or with an attorney or official court source.")}{" "}
-                <Link href="/data-sources" className="font-medium text-primary underline underline-offset-2">
-                  {t("disclosure.sources", "Sources")}
-                </Link>
-              </AlertDescription>
-            </Alert>
-          </ScrollReveal>
-        </div>
+          </div>}
+          {(selectedStage === "booking" || selectedStage === "firstAppearance") && <JurisdictionCallout jurisdiction={jurisdiction} topic={selectedStage === "booking" ? "bail" : "arraignment"} />}
+          <div className="timeline-stage-actions">
+            <button type="button" disabled={stageIndex === 0} onClick={() => handleStageSelect(stages[stageIndex - 1], true)} data-testid="timeline-previous">{t("caseTimeline.design.previous")}</button>
+            <button type="button" disabled={stageIndex === stages.length - 1} onClick={() => handleStageSelect(stages[stageIndex + 1], true)} data-testid="timeline-next">{t("caseTimeline.design.next")}</button>
+            <Link href="/quick-reference" className="timeline-link">{t("caseTimeline.viewQuickRef", "Quick-Reference Card")}</Link>
+          </div>
+          {selectedStage === "booking" && <a href="#bail-guide" className="timeline-link">{t("caseTimeline.design.bailLink")}</a>}
+        </section>
       </section>
-
+      <aside className="timeline-width timeline-caveat">
+        <strong>{t("caseTimeline.disclaimer.title", "Important:")}</strong>{" "}
+        {t("caseTimeline.disclaimer.text", "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation.")}{" "}
+        {t("caseTimeline.disclaimer.deadlines", "Timeframes may be estimates or outdated; verify every deadline in your court papers or with an attorney or official court source.")}{" "}
+        <Link href="/data-sources" className="timeline-link">{t("disclosure.sources", "Sources")}</Link>
+      </aside>
+      <nav className="timeline-width timeline-guide-links" aria-label={t("process.guides.title")}>
+        <a className="timeline-link" href="#bail-guide">{t("process.guides.bail.title")}</a>
+        <a className="timeline-link" href="#plea-guide">{t("process.guides.plea.title")}</a>
+        <Link className="timeline-link" href="/case-guidance">{t("rights.disclaimer.caseGuidance")}</Link>
+      </nav>
       {/* Detailed Guides */}
-      <section className="py-16 bg-muted/30">
+      <section className="timeline-guides" id="timeline-guides">
         <div className="max-w-5xl mx-auto px-4">
           <ScrollReveal>
             <h2 className="text-3xl font-bold text-center text-foreground mb-4">
@@ -332,7 +111,7 @@ export default function CaseTimeline() {
             </p>
           </ScrollReveal>
 
-          <JurisdictionSelector label="See rules for your state (optional)" />
+
 
           <ScrollReveal>
             <Alert className="my-8 border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
@@ -347,7 +126,7 @@ export default function CaseTimeline() {
             {/* Bail Guide */}
             <ScrollReveal delay={0.1}>
               <div id="bail-guide" className="scroll-mt-20">
-              <Card className="editorial-card border-l-4 border-l-green-600">
+              <Card className="timeline-guide-sheet">
                   <CardHeader className="bg-muted/30">
                     <CardTitle className="text-green-800 dark:text-green-200">
                       {t('process.guides.bail.title')}
@@ -458,7 +237,7 @@ export default function CaseTimeline() {
 
             {/* Plea Bargain Guide */}
             <ScrollReveal delay={0.2}>
-              <Card className="border-2 border-blue-200 dark:border-blue-800">
+              <Card className="timeline-guide-sheet" id="plea-guide">
                   <CardHeader className="bg-muted/30">
                   <CardTitle className="text-blue-800 dark:text-blue-200">
                     {t('process.guides.plea.title')}
@@ -594,7 +373,6 @@ export default function CaseTimeline() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

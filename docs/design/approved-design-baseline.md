@@ -47,7 +47,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Document Summarizer | Merged in PR 71 with computed-style regression checks; canonical workflow retained |
 | Letter Generator | Implemented and merged in PR 73; all six letter types and canonical questions retained |
 | How to use this site | Merged in PR 75; five paths, both example journeys and screenshot reservations retained |
-| Know Your Rights | Draft refresh prepared; full existing explanations retained in independent disclosures; paced Miranda illustration added |
+| Know Your Rights | Merged in PR 77; full existing explanations retained in independent disclosures; paced Miranda illustration added |
+| Case Timeline | Draft stage-layout refresh prepared; all seven stages and embedded guide content retained |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -291,3 +292,22 @@ How-to screenshot follow-up remains open after PR 75: replace all five labeled r
 Validation: typecheck and production build passed. Seven dedicated browser checks cover English/Spanish/Chinese in both themes at 1280px/320px, every previously rendered translated detail, all quick explanations, independent open sections, direct hash entry, printable-card navigation, transcript parity, real element bounds, non-overlapping translated graphic labels, keyboard controls, reduced motion and normal-motion/no-autoplay behavior. The existing search-scenario legal-copy regression also passed. The dedicated spec is included in the release allowlist. Desktop and mobile light/dark views were inspected; the Spanish mobile labels were adjusted after visual inspection caught overlap. No full-suite or attorney-approval claim.
 
 Rights review follow-up: the two illustration fills and label color now use named tokens with the exact dark variants from the accepted `rights-explainer.html` reference. This gently dims the artwork while retaining readable labels; it deliberately does not substitute the darker doorway token behind dark text. Browser checks assert the effective fill and label colors in both themes.
+
+
+## Case Timeline design batch
+
+Implements the approved vertical stage rail on desktop and native stage selector on phones. The open reading panel replaces the rainbow cards and animated completion bar. It retains all seven stages in their existing order, current translated descriptions/timeframes/rights/tips, legal-term popovers, previous/next navigation, printable reference access, sentencing finance guidance and booking/first-appearance state callouts. The new heading and stage/previous/next/state labels are translated in all three languages. Existing legal wording and time estimates are unchanged; the existing case-variation and deadline qualifications remain alongside the source link.
+
+Navigation behavior: desktop stage buttons retain keyboard focus, the mobile select retains its selection, and previous/next actions focus the updated stage heading. A short status announces the current stage. There is no stage-entry animation or implied completion meter. What to Know is an independently toggleable disclosure, open on entering each stage.
+
+State-selector bug fix: the previous selector created its own `useJurisdiction` instance while callouts read a separate instance, so selecting a state could leave callouts stale until reload. The selector now receives the parent's value and setter; callouts update immediately, clearing the selection removes them, and the existing persisted preference still survives reload. Its internal English state names/All states option and callout language remain unchanged.
+
+The complete embedded bail and plea guides, their 16 accordions, additional speedy-trial/public-defender explanations, legal warning and re-entry link remain. The `bail-guide` anchor still resolves; a `plea-guide` anchor now gives the companion guide direct access. The full guides deliberately remain embedded until their approved standalone-page batch, rather than replacing existing content with navigation placeholders. Guide container borders are quieter, but retained guide notices and ancillary content still use existing styling; this batch does not claim their final standalone design is implemented.
+
+References:
+- `opendefender-case-timeline-preview.html`: SHA-256 `4b62e89e5b23e0cc123047d97630b54ee4d74a11cd34775017a8f3f64893590e`
+- `timeline-content.html`: SHA-256 `6ecf477a118cb42f3a4e180f4282bf567dfc6d97edcbf0c942446412b4a4c322`
+
+Follow-up: implement the accepted standalone Bail and Plea guide designs with compatibility for existing timeline anchors. Preserve all guide sections, state-selection behavior and warnings through that extraction. The How-to screenshot dependency remains open.
+
+Validation: typecheck and production build passed. All seven dedicated checks passed (six locale/theme stage checks, then the embedded-guide check after adding a lazy-route readiness assertion). Each stage check covers all seven stages at 1280px and 320px, exact current translated text, element bounds, keyboard selection, previous/next focus, immediate state callouts, clearing/reloading the state preference, and existing/new guide anchors. The guide check opens all 10 bail and 6 plea accordions. All three existing L03/L04 multilingual phone/plea/bail browser regressions also passed. Direct source comparison confirmed 63 guide translation references and 16 accordion items in the original order. Desktop and translated mobile dark views were visually inspected. The dedicated spec is release-allowlisted; no full-suite claim.
