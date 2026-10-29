@@ -62,6 +62,7 @@ const releaseCheckCaliforniaSelectableChargeIds = [
   "ca-driving-without-license",
   "ca-domestic-battery",
   "ca-fare-evasion",
+  "ca-pen-30600-a-assault-weapon", "ca-pen-30600-a-50-bmg",
   "ca-wic-10980-d", "ca-wic-10980-e", "ca-wic-10980-f", "ca-wic-10980-g-1", "ca-wic-10980-g-2",
   "ca-prostitution-solicitation",
   "ca-resisting-arrest",

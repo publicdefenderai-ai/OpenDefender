@@ -1,0 +1,1012 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_assault_weapon_conduct_publication_not_statewide_completeness",
+  "sourceAsOf": "2026-09-24",
+  "acquisitionSha256": "a49cabd9568861d7a81ebe8b96ca14bb7cb5db14016892950e96a6757412e4c5",
+  "predecessorSha256": "bf887013c076367e8a7d7c30eb381afeac6d11c0c9a3bb14dd621835f940afac",
+  "approvedSuccessorSha256": "f305be060e2b2831c78e5398fc4479604ff4bab6054d601689c2b89af7d76858",
+  "sources": [
+    {
+      "key": "PEN:1170",
+      "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+      "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e",
+      "effectiveDate": "2026-01-01 00:00:00",
+      "history": "Amended by Stats. 2025, Ch. 225, Sec. 2.   (SB 551)   Effective January 1, 2026.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.",
+      "start": 0,
+      "end": 20885,
+      "text": "(a) (1) The Legislature finds and declares that the purpose of sentencing is public safety and to reduce recidivism achieved through punishment, rehabilitation, and restorative justice. When a sentence includes incarceration, the deprivation of liberty satisfies the punishment purpose of sentencing. Therefore, the carceral system should not, except as incidental to justifiable separation or the maintenance of discipline, aggravate the suffering inherent while experiencing imprisonment. The essential purpose of incarceration is rehabilitation and successful community reintegration achieved through education, treatment, and active participation in rehabilitative and restorative justice programs. This purpose is best served by terms that are proportionate to the seriousness of the offense with provision for uniformity in the sentences of people incarcerated for committing the same offense under similar circumstances. These purposes can be achieved only if the period of imprisonment is used to ensure, so far as possible, the promotion of personal growth for all residents and the reintegration of a person into society upon release so that they can lead a law-abiding and self-supporting life, reducing recidivism. (2) The Legislature further finds and declares that programs should be available for incarcerated persons, including, but not limited to, educational, rehabilitative, and restorative justice programs that are designed to promote behavioral change and to prepare all incarcerated persons for successful reentry into the community. The Legislature encourages the development of policies and programs designed to educate and rehabilitate all incarcerated persons. These programs, activities, and services should be delivered in line with the individual treatment needs of incarcerated persons. (3) In any case in which the sentence prescribed by statute for a person convicted of a public offense is a term of imprisonment in the state prison, or a term pursuant to subdivision (h), of any specification of three time periods, the court shall sentence the defendant to one of the terms of imprisonment specified unless the convicted person is given any other disposition provided by law, including a fine, jail, probation, or the suspension of imposition or execution of sentence or is sentenced pursuant to subdivision (b) of Section 1168 because they had committed their crime prior to July 1, 1977. In sentencing the convicted person, the court shall apply the sentencing rules of the Judicial Council. The court, unless it determines that there are circumstances in mitigation of the sentence prescribed, shall also impose any other term that it is required by law to impose as an additional term. Nothing in this article shall affect any provision of law that imposes the death penalty, that authorizes or restricts the granting of probation or suspending the execution or imposition of sentence, or expressly provides for imprisonment in the state prison for life, except as provided in subdivision (d). In any case in which the amount of preimprisonment credit under Section 2900.5 or any other provision of law is equal to or exceeds any sentence imposed pursuant to this chapter, except for a remaining portion of mandatory supervision imposed pursuant to subparagraph (B) of paragraph (5) of subdivision (h), the entire sentence shall be deemed to have been served, except for the remaining period of mandatory supervision, and the defendant shall not be actually delivered to the custody of the secretary or the county correctional administrator. The court shall advise the defendant that they shall serve an applicable period of parole, postrelease community supervision, or mandatory supervision and order the defendant to report to the parole or probation office closest to the defendant’s last legal residence, unless the in-custody credits equal the total sentence, including both confinement time and the period of parole, postrelease community supervision, or mandatory supervision. The sentence shall be deemed a separate prior prison term or a sentence of imprisonment in a county jail under subdivision (h) for purposes of Section 667.5, and a copy of the judgment and other necessary documentation shall be forwarded to the secretary. (b) (1) When a judgment of imprisonment is to be imposed and the statute specifies three possible terms, the court shall, in its sound discretion, order imposition of a sentence not to exceed the middle term, except as otherwise provided in paragraph (2). (2) The court may impose a sentence exceeding the middle term only when there are circumstances in aggravation of the crime that justify the imposition of a term of imprisonment exceeding the middle term and the facts underlying those circumstances have been stipulated to by the defendant or have been found true beyond a reasonable doubt at trial by the jury or by the judge in a court trial. Except where evidence supporting an aggravating circumstance is admissible to prove or defend against the charged offense or enhancement at trial, or it is otherwise authorized by law, upon request of a defendant, trial on the circumstances in aggravation alleged in the indictment or information shall be bifurcated from the trial of charges and enhancements. The jury shall not be informed of the bifurcated allegations until there has been a conviction of a felony offense. (3) Notwithstanding paragraphs (1) and (2), the court may consider the defendant’s prior convictions in determining sentencing based on a certified record of conviction without submitting the prior convictions to a jury. This paragraph does not apply to enhancements imposed on prior convictions. (4) At least four days prior to the time set for imposition of judgment, either party or the victim, or the family of the victim if the victim is deceased, may submit a statement in aggravation or mitigation to dispute facts in the record or the probation officer’s report or to present additional facts. The court may consider the record in the case, the probation officer’s report, other reports, including reports received pursuant to Section 1203.03, and statements in aggravation or mitigation submitted by the prosecution, the defendant, or the victim, or the family of the victim if the victim is deceased, and any further evidence introduced at the sentencing hearing. (5) The court shall set forth on the record the facts and reasons for choosing the sentence imposed. The court may not impose an upper term by using the fact of any enhancement upon which sentence is imposed under any provision of law. A term of imprisonment shall not be specified if imposition of sentence is suspended. (6) Notwithstanding paragraph (1), and unless the court finds that the aggravating circumstances outweigh the mitigating circumstances that imposition of the lower term would be contrary to the interests of justice, the court shall order imposition of the lower term if any of the following was a contributing factor in the commission of the offense: (A) The person has experienced psychological, physical, or childhood trauma, including, but not limited to, abuse, neglect, exploitation, or sexual violence. (B) The person is a youth or was a youth as defined under subdivision (b) of Section 1016.7 at the time of the commission of the offense. (C) Prior to the instant offense, or at the time of the commission of the offense, the person is or was a victim of intimate partner violence or human trafficking. (7) Paragraph (6) does not preclude the court from imposing the lower term even if there is no evidence of those circumstances listed in paragraph (6) present. (c) The court shall state the reasons for its sentence choice on the record at the time of sentencing. The court shall also inform the defendant that as part of the sentence after expiration of the term they may be on parole for a period as provided in Section 3000 or 3000.08 or postrelease community supervision for a period as provided in Section 3451. (d) (1) (A) When a defendant who was under 18 years of age at the time of the commission of the offense for which the defendant was sentenced to imprisonment for life without the possibility of parole has been incarcerated for at least 15 years, the defendant may submit to the sentencing court a petition for recall and resentencing. (B) Notwithstanding subparagraph (A), this paragraph shall not apply to defendants sentenced to life without parole for an offense where it was pled and proved that the defendant tortured, as described in Section 206, their victim or the victim was a public safety official, including any law enforcement personnel mentioned in Chapter 4.5 (commencing with Section 830) of Title 3, or any firefighter as described in Section 245.1, as well as any other officer in any segment of law enforcement who is employed by the federal government, the state, or any of its political subdivisions. (2) The defendant shall file the original petition with the sentencing court. A copy of the petition shall be served on the agency that prosecuted the case. The petition shall include the defendant’s statement that the defendant was under 18 years of age at the time of the crime and was sentenced to life in prison without the possibility of parole, the defendant’s statement describing their remorse and work towards rehabilitation, and the defendant’s statement that one of the following is true: (A) The defendant was convicted pursuant to felony murder or aiding and abetting murder provisions of law. (B) The defendant does not have juvenile felony adjudications for assault or other felony crimes with a significant potential for personal harm to victims prior to the offense for which the sentence is being considered for recall. (C) The defendant committed the offense with at least one adult codefendant. (D) The defendant has performed acts that tend to indicate rehabilitation or the potential for rehabilitation, including, but not limited to, availing themselves of rehabilitative, educational, or vocational programs, if those programs have been available at their classification level and facility, using self-study for self-improvement, or showing evidence of remorse. (3) If any of the information required in paragraph (2) is missing from the petition, or if proof of service on the prosecuting agency is not provided, the court shall return the petition to the defendant and advise the defendant that the matter cannot be considered without the missing information. (4) A reply to the petition, if any, shall be filed with the court within 60 days of the date on which the prosecuting agency was served with the petition unless a continuance is granted for good cause. (5) If the court finds by a preponderance of the evidence that one or more of the statements specified in subparagraphs (A) to (D), inclusive, of paragraph (2) is true, the court shall recall the sentence and commitment previously ordered and hold a hearing to resentence the defendant in the same manner as if the defendant had not previously been sentenced, provided that the new sentence, if any, is not greater than the initial sentence. Victims, or victim family members if the victim is deceased, shall retain the rights to participate in the hearing. (6) The factors that the court may consider when determining whether to resentence the defendant to a term of imprisonment with the possibility of parole include, but are not limited to, the following: (A) The defendant was convicted pursuant to felony murder or aiding and abetting murder provisions of law. (B) The defendant does not have juvenile felony adjudications for assault or other felony crimes with a significant potential for personal harm to victims prior to the offense for which the defendant was sentenced to life without the possibility of parole. (C) The defendant committed the offense with at least one adult codefendant. (D) Prior to the offense for which the defendant was sentenced to life without the possibility of parole, the defendant had insufficient adult support or supervision and had suffered from psychological or physical trauma or significant stress. (E) The defendant suffers from cognitive limitations due to mental illness, developmental disabilities, or other factors that did not constitute a defense but influenced the defendant’s involvement in the offense. (F) The defendant has performed acts that tend to indicate rehabilitation or the potential for rehabilitation, including, but not limited to, availing themselves of rehabilitative, educational, or vocational programs, if those programs have been available at their classification level and facility, using self-study for self-improvement, or showing evidence of remorse. (G) The defendant has maintained family ties or connections with others through letter writing, calls, or visits or has eliminated contact with individuals outside of prison who are currently involved with crime. (H) The defendant has had no disciplinary actions for violent activities in the last five years in which the defendant was determined to be the aggressor. (7) The court shall have the discretion to resentence the defendant in the same manner as if the defendant had not previously been sentenced, provided that the new sentence, if any, is not greater than the initial sentence. The discretion of the court shall be exercised in consideration of the criteria in paragraph (6). Victims, or victim family members if the victim is deceased, shall be notified of the resentencing hearing and shall retain their rights to participate in the hearing. (8) Notwithstanding paragraph (7), the court may also resentence the defendant to a term that is less than the initial sentence if any of the following were a contributing factor in the commission of the alleged offense: (A) The person has experienced psychological, physical, or childhood trauma, including, but not limited to, abuse, neglect, exploitation, or sexual violence. (B) The person is a youth or was a youth as defined under subdivision (b) of Section 1016.7 at the time of the commission of the offense. (C) Prior to the instant offense, or at the time of the commission of the offense, the person is or was a victim of intimate partner violence or human trafficking. (9) Paragraph (8) does not prohibit the court from resentencing the defendant to a term that is less than the initial sentence, even if none of the circumstances listed in paragraph (8) are present. (10) If the sentence is not recalled or the defendant is resentenced to imprisonment for life without the possibility of parole, the defendant may submit another petition for recall and resentencing to the sentencing court when the defendant has been committed to the custody of the department for at least 20 years. If the sentence is not recalled or the defendant is resentenced to imprisonment for life without the possibility of parole under that petition, the defendant may file another petition after having served 24 years. The final petition may be submitted, and the response to that petition shall be determined, during the 25th year of the defendant’s sentence. (11) In addition to the criteria in paragraph (6), the court may consider any other criteria that the court deems relevant to its decision, so long as the court identifies them on the record, provides a statement of reasons for adopting them, and states why the defendant does or does not satisfy the criteria. (12) This subdivision shall have retroactive application. (13) Nothing in this paragraph is intended to diminish or abrogate any rights or remedies otherwise available to the defendant. (e) Notwithstanding subdivision (a), the court may recall and resentence an incarcerated person pursuant to the compassionate release program set forth in Section 1172.2. (f) Notwithstanding any other provision of this section, for purposes of paragraph (3) of subdivision (h), an allegation that a defendant is eligible for state prison due to a prior or current conviction, sentence enhancement, or because the defendant is required to register as a sex offender shall not be subject to dismissal pursuant to Section 1385. (g) A sentence to the state prison for a determinate term for which only one term is specified is a sentence to state prison under this section. (h) (1) Except as provided in paragraph (3), a felony punishable pursuant to this subdivision where the term is not specified in the underlying offense shall be punishable by a term of imprisonment in a county jail for 16 months, or two or three years. (2) Except as provided in paragraph (3), a felony punishable pursuant to this subdivision shall be punishable by imprisonment in a county jail for the term described in the underlying offense. (3) Notwithstanding paragraphs (1) and (2), where the defendant (A) has a prior or current felony conviction for a serious felony described in subdivision (c) of Section 1192.7 or a prior or current conviction for a violent felony described in subdivision (c) of Section 667.5, (B) has a prior felony conviction in another jurisdiction for an offense that has all the elements of a serious felony described in subdivision (c) of Section 1192.7 or a violent felony described in subdivision (c) of Section 667.5, (C) is required to register as a sex offender pursuant to Chapter 5.5 (commencing with Section 290) of Title 9 of Part 1, or (D) is convicted of a crime and as part of the sentence an enhancement pursuant to Section 186.11 is imposed, an executed sentence for a felony punishable pursuant to this subdivision shall be served in the state prison. (4) Nothing in this subdivision shall be construed to prevent other dispositions authorized by law, including pretrial diversion, deferred entry of judgment, or an order granting probation pursuant to Section 1203.1. (5) (A) Unless the court finds, in the interest of justice, that it is not appropriate in a particular case, the court, when imposing a sentence pursuant to paragraph (1) or (2), shall suspend execution of a concluding portion of the term for a period selected at the court’s discretion. (B) The portion of a defendant’s sentenced term that is suspended pursuant to this paragraph shall be known as mandatory supervision, and, unless otherwise ordered by the court, shall commence upon release from physical custody or an alternative custody program, whichever is later. During the period of mandatory supervision, the defendant shall be supervised by the county probation officer in accordance with the terms, conditions, and procedures generally applicable to persons placed on probation for the remaining unserved portion of the sentence imposed by the court. The period of supervision shall be mandatory and may not be earlier terminated, except by court order. Any proceeding to revoke or modify mandatory supervision under this subparagraph shall be conducted pursuant to either subdivisions (a) and (b) of Section 1203.2 or Section 1203.3. During the period when the defendant is under that supervision, unless in actual custody related to the sentence imposed by the court, the defendant shall be entitled to only actual time credit against the term of imprisonment imposed by the court. Any time period that is suspended because a person has absconded shall not be credited toward the period of supervision. A defendant who is subject to search or seizure as part of the terms and conditions of mandatory supervision, is subject to search or seizure only by a probation officer or other peace officer. (6) When the court is imposing a judgment pursuant to this subdivision concurrent or consecutive to a judgment or judgments previously imposed pursuant to this subdivision in another county or counties, the court rendering the second or other subsequent judgment shall determine the county or counties of incarceration and supervision of the defendant. (7) The sentencing changes made by the act that added this subdivision shall be applied prospectively to any person sentenced on or after October 1, 2011. (8) The sentencing changes made to paragraph (5) by the act that added this paragraph shall become effective and operative on January 1, 2015, and shall be applied prospectively to any person sentenced on or after January 1, 2015. (9) Notwithstanding the separate punishment for any enhancement, any enhancement shall be punishable in a county jail or state prison as required by the underlying offense and not as would be required by the enhancement. The intent of the Legislature in enacting this paragraph is to abrogate the holding in People v. Vega (2014) 222 Cal.App.4th 1374, that if an enhancement specifies service of sentence in state prison, the entire sentence is served in state prison, even if the punishment for the underlying offense is a term of imprisonment in the county jail.",
+      "retainedVersions": [
+        {
+          "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+          "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:16850",
+      "versionId": "id_46e29cff-8666-11e4-9fd7-cecd375806d8",
+      "contentSha256": "9d1d529dcdfa4440e6aa1ff30b8a2cf7788ac7de6bed51420b0d2cbb2d2fc3f9",
+      "effectiveDate": "2015-01-01 00:00:00",
+      "history": "Amended by Stats. 2014, Ch. 103, Sec. 5.   (AB 1798)   Effective January 1, 2015.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=16850.",
+      "start": 0,
+      "end": 265,
+      "text": "As used in this part, “locked container” means a secure container that is fully enclosed and locked by a padlock, keylock, combination lock, or similar locking device. The term “locked container” does not include the utility or glove compartment of a motor vehicle.",
+      "retainedVersions": [
+        {
+          "versionId": "id_46e29cff-8666-11e4-9fd7-cecd375806d8",
+          "contentSha256": "9d1d529dcdfa4440e6aa1ff30b8a2cf7788ac7de6bed51420b0d2cbb2d2fc3f9",
+          "effectiveDate": "2015-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:25610",
+      "versionId": "id_941a536b-8258-11ee-bcfe-9f16e66157a6",
+      "contentSha256": "f36801d81b5aed3aaf476a645f1143298854afa0222b2bdca956dde5cf8afb90",
+      "effectiveDate": "2024-01-01 00:00:00",
+      "history": "Amended by Stats. 2023, Ch. 249, Sec. 8.   (SB 2)   Effective January 1, 2024.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=25610.",
+      "start": 0,
+      "end": 804,
+      "text": "Section 25400 shall not be construed to prohibit any citizen of the United States over 18 years of age who resides or is temporarily within this state, and who is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm, from transporting or carrying any pistol, revolver, or other firearm capable of being concealed upon the person for any purpose specified in Sections 25510 to 25595, inclusive, provided that either of the following applies to the firearm: (a) The firearm is unloaded, within a motor vehicle, and locked in the vehicle’s trunk or in a locked container in the vehicle. (b) The firearm is unloaded, carried by the person directly to or from any motor vehicle, and, while carrying the firearm, the firearm is contained within a locked container.",
+      "retainedVersions": [
+        {
+          "versionId": "id_941a536b-8258-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "f36801d81b5aed3aaf476a645f1143298854afa0222b2bdca956dde5cf8afb90",
+          "effectiveDate": "2024-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30510",
+      "versionId": "id_e4f7fbff-ac21-11ef-b77a-e14b39306f8a",
+      "contentSha256": "5611cd72ae223fb14a09d04aced17f5893a9bf8aa739eee34e63b81e1d5579b7",
+      "effectiveDate": "2025-01-01 00:00:00",
+      "history": "Amended by Stats. 2024, Ch. 540, Sec. 15.   (AB 3064)   Effective January 1, 2025.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30510.",
+      "start": 0,
+      "end": 2868,
+      "text": "As used in this chapter and in Sections 16780, 17000, 27555, 27560, 27565, 27875, 27920, 27966, and 28000, “assault weapon” means the following designated semiautomatic firearms: (a) All of the following specified rifles: (1) All AK series including, but not limited to, the models identified as follows: (A) Made in China AK, AKM, AKS, AK47, AK47S, 56, 56S, 84S, and 86S. (B) Norinco 56, 56S, 84S, and 86S. (C) Poly Technologies AKS and AK47. (D) MAADI AK47 and ARM. (2) UZI and Galil. (3) Beretta AR-70. (4) CETME Sporter. (5) Colt AR-15 series. (6) Daewoo K-1, K-2, Max 1, Max 2, AR 100, and AR 110C. (7) Fabrique Nationale FAL, LAR, FNC, 308 Match, and Sporter. (8) MAS 223. (9) HK-91, HK-93, HK-94, and HK-PSG-1. (10) The following MAC types: (A) RPB Industries Inc. sM10 and sM11. (B) SWD Incorporated M11. (11) SKS with detachable magazine. (12) SIG AMT, PE-57, SG 550, and SG 551. (13) Springfield Armory BM59 and SAR-48. (14) Sterling MK-6. (15) Steyr AUG. (16) Valmet M62S, M71S, and M78S. (17) Armalite AR-180. (18) Bushmaster Assault Rifle. (19) Calico M-900. (20) J&R ENG M-68. (21) Weaver Arms Nighthawk. (b) All of the following specified pistols: (1) UZI. (2) Encom MP-9 and MP-45. (3) The following MAC types: (A) RPB Industries Inc. sM10 and sM11. (B) SWD Incorporated M-11. (C) Advance Armament Inc. M-11. (D) Military Armament Corp. Ingram M-11. (4) Intratec TEC-9. (5) Sites Spectre. (6) Sterling MK-7. (7) Calico M-950. (8) Bushmaster Pistol. (c) All of the following specified shotguns: (1) Franchi SPAS 12 and LAW 12. (2) Striker 12. (3) The Streetsweeper type S/S Inc. SS/12. (d) Any firearm declared to be an assault weapon by the court pursuant to former Section 12276.5, as it read in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, which is specified as an assault weapon in a list promulgated pursuant to former Section 12276.5, as it read in Section 3 of Chapter 954 of the Statutes of 1991. (e) This section is declaratory of existing law and a clarification of the law and the Legislature’s intent which bans the weapons enumerated in this section, the weapons included in the list promulgated by the Attorney General pursuant to former Section 12276.5, as it read in Section 3 of Chapter 954 of the Statutes of 1991, and any other models that are only variations of those weapons with minor differences, regardless of the manufacturer. The Legislature has defined assault weapons as the types, series, and models listed in this section because it was the most effective way to identify and restrict a specific class of semiautomatic weapons. (f) As used in this section, “series” includes all other models that are only variations, with minor differences, of those models listed in subdivision (a), regardless of the manufacturer.",
+      "retainedVersions": [
+        {
+          "versionId": "id_e4f7fbff-ac21-11ef-b77a-e14b39306f8a",
+          "contentSha256": "5611cd72ae223fb14a09d04aced17f5893a9bf8aa739eee34e63b81e1d5579b7",
+          "effectiveDate": "2025-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30515",
+      "versionId": "id_e67ce615-b78e-11f1-83a9-f5ad4dab951a",
+      "contentSha256": "7b8e084792460b8122c6356de3b568a65f66291827c53bd29afa697790f68b34",
+      "effectiveDate": "2026-09-20 00:00:00",
+      "history": "Amended by Stats. 2026, Ch. 354, Sec. 6.   (AB 191)   Effective September 20, 2026.   Repealed as of January 1, 2029, by its own provisions.   See later operative version added by Sec. 7 of Stats. 2026, Ch. 354.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30515.",
+      "start": 0,
+      "end": 7354,
+      "text": "(a) Notwithstanding Section 30510, “assault weapon” also means any of the following: (1) A semiautomatic, centerfire rifle that does not have a fixed magazine but has any one of the following: (A) A pistol grip that protrudes conspicuously beneath the action of the weapon. (B) A thumbhole stock. (C) A folding or telescoping stock. (D) A grenade launcher or flare launcher. (E) A flash suppressor. (F) A forward pistol grip. (2) A semiautomatic, centerfire rifle that has a fixed magazine with the capacity to accept more than 10 rounds. (3) A semiautomatic, centerfire rifle that has an overall length of less than 30 inches. (4) A semiautomatic pistol that does not have a fixed magazine but has any one of the following: (A) A threaded barrel, capable of accepting a flash suppressor, forward handgrip, or silencer. (B) A second handgrip. (C) A shroud that is attached to, or partially or completely encircles, the barrel that allows the bearer to fire the weapon without burning the bearer’s hand, except a slide that encloses the barrel. (D) The capacity to accept a detachable magazine at some location outside of the pistol grip. (5) A semiautomatic pistol with a fixed magazine that has the capacity to accept more than 10 rounds. (6) A semiautomatic shotgun that has both of the following: (A) A folding or telescoping stock. (B) A pistol grip that protrudes conspicuously beneath the action of the weapon, thumbhole stock, or vertical handgrip. (7) A semiautomatic shotgun that does not have a fixed magazine. (8) Any shotgun with a revolving cylinder. (9) A semiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that does not have a fixed magazine, but that has any one of the following: (A) A pistol grip that protrudes conspicuously beneath the action of the weapon. (B) A thumbhole stock. (C) A folding or telescoping stock. (D) A grenade launcher or flare launcher. (E) A flash suppressor. (F) A forward pistol grip. (G) A threaded barrel, capable of accepting a flash suppressor, forward handgrip, or silencer. (H) A second handgrip. (I) A shroud that is attached to, or partially or completely encircles, the barrel that allows the bearer to fire the weapon without burning the bearer’s hand, except a slide that encloses the barrel. (J) The capacity to accept a detachable magazine at some location outside of the pistol grip. (10) A semiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that has a fixed magazine with the capacity to accept more than 10 rounds. (11) A semiautomatic centerfire firearm that is not a rifle, pistol, or shotgun, that has an overall length of less than 30 inches. (b) For purposes of this section, “fixed magazine” means an ammunition feeding device contained in, or permanently attached to, a firearm in such a manner that the device cannot be removed without disassembly of the firearm action. (c) The Legislature finds a significant public purpose in exempting from the definition of “assault weapon” pistols that are designed expressly for use in Olympic or Paralympic target shooting events. Therefore, those pistols that are sanctioned by the Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028, the International Olympic Committee, the International Paralympic Committee, or by USA Shooting, the national governing body for international shooting competition in the United States, and that would otherwise fall within the definition of “assault weapon” pursuant to this section are exempt, as provided in subdivision (d). (d) “Assault weapon” does not include either of the following: (1) Any antique firearm. (2) Any of the following pistols, because they are consistent with the significant public purpose expressed in subdivision (c): MANUFACTURER MODEL CALIBER BENELLI MP90 .22LR BENELLI MP90 .32 S&W LONG BENELLI MP95 .22LR BENELLI MP95 .32 S&W LONG HAMMERLI 280 .22LR HAMMERLI 280 .32 S&W LONG HAMMERLI SP20 .22LR HAMMERLI SP20 .32 S&W LONG PARDINI GPO .22 SHORT PARDINI GP-SCHUMANN .22 SHORT PARDINI HP .32 S&W LONG PARDINI MP .32 S&W LONG PARDINI SP .22LR PARDINI SPE .22LR WALTHER GSP .22LR WALTHER GSP .32 S&W LONG WALTHER OSP .22 SHORT WALTHER OSP-2000 .22 SHORT (3) The Department of Justice shall create a program that is consistent with the purposes stated in subdivision (c) to exempt new models of competitive pistols that would otherwise fall within the definition of “assault weapon” pursuant to this section from being classified as an assault weapon. The exempt competitive pistols may be based on recommendations by USA Shooting consistent with the regulations contained in the USA Shooting Official Rules or may be based on the recommendation or rules of any other organization that the department deems relevant. (4) (A) By June 30, 2028, the Department of Justice shall supplement the list of exempted pistols described in paragraph (3) to exempt new models of pistols anticipated to be utilized in the 2028 Olympic or Paralympic Games. (B) The department shall supplement the list of exempted pistols pursuant to subparagraph (A) in coordination with, and promptly after receipt of any sufficient recommendation from, the Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028. The Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028 shall provide any sufficient recommendations to the department by June 19, 2028. (C) Neither subparagraph (A) nor subparagraph (B) divest the Department of Justice of its independent authority to evaluate or render a decision regarding any sufficient recommendation submitted by the Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028. To the extent that it does not conflict with the other provisions of this section, a sufficient recommendation may be approved, and the list of exempted pistols described in paragraph (3) may be appropriately updated. (5) For the purposes of paragraph (4), a sufficient recommendation shall include all of the following: (A) Be signed and dated by either the chief executive officer or chief operating officer of the Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028. (B) Specify the make, model, and caliber of the pistol. (C) Include a statement that the pistol is sanctioned by the Los Angeles Organizing Committee for the Olympic and Paralympic Games 2028, the International Olympic Committee, or the International Paralympic Committee for use in an Olympic or Paralympic target shooting competition. (D) Include a statement that the pistol is or will be used for Olympic or Paralympic target shooting purposes. (e) Regulations adopted to implement paragraphs (4) and (5) of subdivision (d) are emergency regulations in accordance with Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code and shall be considered by the Office of Administrative Law to be necessary for the immediate preservation of the public health, safety, and welfare. (f) The provisions of this section are severable. If any provision of this section or its application is held invalid, that invalidity shall not affect other provisions or applications that can be given effect without the invalid provision or application. (g) This section shall remain in effect only until January 1, 2029, and as of that date is repealed.",
+      "retainedVersions": [
+        {
+          "versionId": "id_e67ce615-b78e-11f1-83a9-f5ad4dab951a",
+          "contentSha256": "7b8e084792460b8122c6356de3b568a65f66291827c53bd29afa697790f68b34",
+          "effectiveDate": "2026-09-20 00:00:00",
+          "activeFlag": "Y"
+        },
+        {
+          "versionId": "id_dbea2461-b78e-11f1-83a9-f5ad4dab951a",
+          "contentSha256": "f39f072716b5b42c9a94687339bdf13d09eb3ee13b2b32f828b460680f9ba858",
+          "effectiveDate": "2026-09-20 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30520",
+      "versionId": "id_dc6a9d7f-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "0e1f02b00f79f5860446372ab0a2a5f04b77dbe57ad8d7cd804c2a7ecf681264",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30520.",
+      "start": 0,
+      "end": 2205,
+      "text": "(a) The Attorney General shall prepare a description for identification purposes, including a picture or diagram, of each assault weapon listed in Section 30510, and any firearm declared to be an assault weapon pursuant to former Section 12276.5, as it read in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, and shall distribute the description to all law enforcement agencies responsible for enforcement of this chapter. Those law enforcement agencies shall make the description available to all agency personnel. (b) (1) Until January 1, 2007, the Attorney General shall promulgate a list that specifies all firearms designated as assault weapons in former Section 12276, as it read in Section 2 of Chapter 954 of the Statutes of 1991, Section 134 of Chapter 427 of the Statutes of 1992, or Section 19 of Chapter 606 of the Statutes of 1993, or declared to be assault weapons pursuant to former Section 12276.5, as it read in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991. The Attorney General shall file that list with the Secretary of State for publication in the California Code of Regulations. Any declaration that a specified firearm is an assault weapon shall be implemented by the Attorney General who, within 90 days, shall promulgate an amended list which shall include the specified firearm declared to be an assault weapon. The Attorney General shall file the amended list with the Secretary of State for publication in the California Code of Regulations. Any firearm declared to be an assault weapon prior to January 1, 2007, shall remain on the list filed with the Secretary of State. (2) Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code, pertaining to the adoption of rules and regulations, shall not apply to any list of assault weapons promulgated pursuant to this section. (c) The Attorney General shall adopt those rules and regulations that may be necessary or proper to carry out the purposes and intent of this chapter.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6a9d7f-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0e1f02b00f79f5860446372ab0a2a5f04b77dbe57ad8d7cd804c2a7ecf681264",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30525",
+      "versionId": "id_dc6ac491-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "354a9f4a0586322f8d68905cd8a4ca44ee2df3797ae5a85e717fc5acceb80ec8",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30525.",
+      "start": 0,
+      "end": 480,
+      "text": "As used in this part, “.50 BMG cartridge” means a cartridge that is designed and intended to be fired from a center fire rifle and that meets all of the following criteria: (a) It has an overall length of 5.54 inches from the base to the tip of the bullet. (b) The bullet diameter for the cartridge is from .510 to, and including, .511 inch. (c) The case base diameter for the cartridge is from .800 inch to, and including, .804 inch. (d) The cartridge case length is 3.91 inches.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6ac491-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "354a9f4a0586322f8d68905cd8a4ca44ee2df3797ae5a85e717fc5acceb80ec8",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30530",
+      "versionId": "id_dc6aeba3-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "d53a0924a12ca269e06fd6450da2fbfb42c93c22f15bea3033048944d6aff5ae",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30530.",
+      "start": 0,
+      "end": 315,
+      "text": "(a) As used in this part, “.50 BMG rifle” means a center fire rifle that can fire a .50 BMG cartridge and is not already an assault weapon or a machinegun. (b) A “.50 BMG rifle” does not include any antique firearm, nor any curio or relic as defined in Section 478.11 of Title 27 of the Code of Federal Regulations.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6aeba3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "d53a0924a12ca269e06fd6450da2fbfb42c93c22f15bea3033048944d6aff5ae",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30600",
+      "versionId": "id_bd9d7465-660f-11e0-8fc7-8d05c2a88098",
+      "contentSha256": "acab5b93310e48ead1cd2ba603dabbb5783ac833c3c4c5562c8eddf2796aba29",
+      "effectiveDate": "2011-04-04 00:00:00",
+      "history": "Amended by Stats. 2011, Ch. 15, Sec. 549.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600.",
+      "start": 0,
+      "end": 1050,
+      "text": "(a) Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years. (b) In addition and consecutive to the punishment imposed under subdivision (a), any person who transfers, lends, sells, or gives any assault weapon or any .50 BMG rifle to a minor in violation of subdivision (a) shall receive an enhancement of imprisonment pursuant to subdivision (h) of Section 1170 of one year. (c) Except in the case of a first violation involving not more than two firearms as provided in Sections 30605 and 30610, for purposes of this article, if more than one assault weapon or .50 BMG rifle is involved in any violation of this article, there shall be a distinct and separate offense for each.",
+      "retainedVersions": [
+        {
+          "versionId": "id_bd9d7465-660f-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "acab5b93310e48ead1cd2ba603dabbb5783ac833c3c4c5562c8eddf2796aba29",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30605",
+      "versionId": "id_bf69cff7-660f-11e0-8fc7-8d05c2a88098",
+      "contentSha256": "146974989df769275245ed2a8b09205ec0ed26b64120fed0d47c8be5036b9b29",
+      "effectiveDate": "2011-04-04 00:00:00",
+      "history": "Amended by Stats. 2011, Ch. 15, Sec. 550.   (AB 109)   Effective April 4, 2011.   Amending action operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.   Section operative January 1, 2012, pursuant to Stats. 2010, Ch. 711, Sec. 10.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30605.",
+      "start": 0,
+      "end": 1095,
+      "text": "(a) Any person who, within this state, possesses any assault weapon, except as provided in this chapter, shall be punished by imprisonment in a county jail for a period not exceeding one year, or by imprisonment pursuant to subdivision (h) of Section 1170. (b) Notwithstanding subdivision (a), a first violation of these provisions is punishable by a fine not exceeding five hundred dollars ($500) if the person was found in possession of no more than two firearms in compliance with Section 30945 and the person meets all of the following conditions: (1) The person proves that he or she lawfully possessed the assault weapon prior to the date it was defined as an assault weapon. (2) The person has not previously been convicted of a violation of this article. (3) The person was found to be in possession of the assault weapon within one year following the end of the one-year registration period established pursuant to Section 30900. (4) The person relinquished the firearm pursuant to Section 31100, in which case the assault weapon shall be destroyed pursuant to Sections 18000 and 18005.",
+      "retainedVersions": [
+        {
+          "versionId": "id_bf69cff7-660f-11e0-8fc7-8d05c2a88098",
+          "contentSha256": "146974989df769275245ed2a8b09205ec0ed26b64120fed0d47c8be5036b9b29",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30610",
+      "versionId": "id_dc6bfd1b-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "8a23ad7ed92d4ec2653e5ddc02f66eade6b605820559f3ce9cf6d530e30b9c86",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30610.",
+      "start": 0,
+      "end": 1431,
+      "text": "(a) Any person who, within this state, possesses any .50 BMG rifle, except as provided in this chapter, shall be punished by a fine of one thousand dollars ($1,000), imprisonment in a county jail for a period not to exceed one year, or by both that fine and imprisonment. (b) Notwithstanding subdivision (a), a first violation of these provisions is punishable by a fine not exceeding five hundred dollars ($500) if the person was found in possession of no more than two firearms in compliance with Section 30905 and the person satisfies all of the following conditions: (1) The person proves that he or she lawfully possessed the .50 BMG rifle prior to January 1, 2005. (2) The person has not previously been convicted of a violation of this article. (3) The person was found to be in possession of the .50 BMG rifle within one year following the end of the .50 BMG rifle registration period established pursuant to Section 30905. (c) Firearms seized pursuant to this section from persons who meet all of the conditions in paragraphs (1), (2), and (3) of subdivision (b) shall be returned unless the court finds in the interest of public safety, after notice and hearing, that the .50 BMG rifle should be destroyed pursuant to Sections 18000 and 18005. Firearms seized from persons who do not meet the conditions set forth in paragraphs (1), (2), and (3) of subdivision (b) shall be destroyed pursuant to Sections 18000 and 18005.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6bfd1b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "8a23ad7ed92d4ec2653e5ddc02f66eade6b605820559f3ce9cf6d530e30b9c86",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30615",
+      "versionId": "id_dc6c242d-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "4d33c1f025640e307856d4db87c1d2a0218a624c8cdc9177e6f33f426313a8e0",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30615.",
+      "start": 0,
+      "end": 326,
+      "text": "Notwithstanding Section 654 or any other provision of law, any person who commits another crime while violating this article may receive an additional, consecutive punishment of one year for violating this article, in addition and consecutive to the punishment, including enhancements, which is prescribed for the other crime.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6c242d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "4d33c1f025640e307856d4db87c1d2a0218a624c8cdc9177e6f33f426313a8e0",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30625",
+      "versionId": "id_e2c7dfd1-e63f-11eb-ad04-a7886069fc3b",
+      "contentSha256": "814aae06b53a5d2ac67c1b425ac6501fc249a9dd7a68c15c324b97b404944615",
+      "effectiveDate": "2021-07-12 00:00:00",
+      "history": "Amended by Stats. 2021, Ch. 70, Sec. 108.   (AB 141)   Effective July 12, 2021.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30625.",
+      "start": 0,
+      "end": 673,
+      "text": "Sections 30600, 30605, and 30610 do not apply to the sale of an assault weapon or .50 BMG rifle to, or the purchase, importation, or possession of an assault weapon or a .50 BMG rifle by, the Department of Justice, police departments, sheriffs’ offices, marshals’ offices, the Department of Corrections and Rehabilitation, the Department of the California Highway Patrol, district attorneys’ offices, the Department of Fish and Wildlife, the Department of Parks and Recreation, the Department of Cannabis Control, or the military or naval forces of this state or of the United States, or any federal law enforcement agency for use in the discharge of their official duties.",
+      "retainedVersions": [
+        {
+          "versionId": "id_e2c7dfd1-e63f-11eb-ad04-a7886069fc3b",
+          "contentSha256": "814aae06b53a5d2ac67c1b425ac6501fc249a9dd7a68c15c324b97b404944615",
+          "effectiveDate": "2021-07-12 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30630",
+      "versionId": "id_dc6c9963-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "19cadfdf8c6735bfce7d6b36f557857611a8ff8b04236a7a7455f8ba0b6d3761",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30630.",
+      "start": 0,
+      "end": 2644,
+      "text": "(a) Sections 30605 and 30610 shall not prohibit the possession or use of assault weapons or a .50 BMG rifle by sworn peace officer members of those agencies specified in Section 30625 for law enforcement purposes, whether on or off duty. (b) (1) Sections 30600, 30605, and 30610 shall not prohibit the sale, delivery, or transfer of an assault weapon or a .50 BMG rifle to, or the possession of an assault weapon or a .50 BMG rifle by, a sworn peace officer member of an agency specified in Section 30625 if the peace officer is authorized by the officer’s employer to possess or receive the assault weapon or the .50 BMG rifle. Required authorization is defined as verifiable written certification from the head of the agency, identifying the recipient or possessor of the assault weapon as a peace officer and authorizing that person to receive or possess the specific assault weapon. (2) For this exemption to apply, in the case of a peace officer who possesses or receives the assault weapon prior to January 1, 2002, the officer shall register the assault weapon on or before April 1, 2002, pursuant to former Section 12285, as it read at any time from when it was enacted by Section 3 of Chapter 19 of the Statutes of 1989, to and including when it was amended by Section 9 of Chapter 129 of the Statutes of 1999. In the case of a peace officer who possesses or receives the assault weapon on or after January 1, 2002, the officer shall, not later than 90 days after possession or receipt, register the assault weapon pursuant to Article 5 (commencing with Section 30900), or pursuant to former Section 12285, as it read at any time from when it was amended by Section 9 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010. In the case of a peace officer who possesses or receives a .50 BMG rifle on or before January 1, 2005, the officer shall register the .50 BMG rifle on or before April 30, 2006. In the case of a peace officer who possesses or receives a .50 BMG rifle after January 1, 2005, the officer shall register the .50 BMG rifle not later than one year after possession or receipt. (3) With the registration, the peace officer shall include a copy of the authorization required pursuant to this subdivision. (c) Nothing in this article shall be construed to limit or prohibit the sale, delivery, or transfer of an assault weapon or a .50 BMG rifle to, or the possession of an assault weapon or a .50 BMG rifle by, a member of a federal law enforcement agency provided that person is authorized by the employing agency to possess the assault weapon or .50 BMG rifle.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6c9963-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "19cadfdf8c6735bfce7d6b36f557857611a8ff8b04236a7a7455f8ba0b6d3761",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30631",
+      "versionId": "id_b6469a47-8257-11ee-bcfe-9f16e66157a6",
+      "contentSha256": "54a97cb6d65be4e78bbe0a096c4551ab414a154023364920c78ad4fce7b44c08",
+      "effectiveDate": "2024-01-01 00:00:00",
+      "history": "Added by Stats. 2023, Ch. 235, Sec. 1.   (AB 355)   Effective January 1, 2024.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30631.",
+      "start": 0,
+      "end": 884,
+      "text": "Sections 30600 and 30605 do not apply to the loan of an assault weapon to, nor the possession of an assault weapon by, a person enrolled in the course of basic training prescribed by the Commission on Peace Officer Standards and Training, or any other course certified by the commission, while engaged in firearms training and being supervised by a firearms instructor, if the following requirements are met: (a) The loaned assault weapon does not leave the training facility. (b) The enrollee has met the minimum peace officer hiring standards as stated in Sections 1029, 1030, and 1031 of the Government Code prior to entry to the course and is currently employed by any of the following: (1) A police department or sheriff’s office. (2) A marshal’s office. (3) The Department of Justice. (4) The Department of the California Highway Patrol. (5) The Department of Fish and Wildlife.",
+      "retainedVersions": [
+        {
+          "versionId": "id_b6469a47-8257-11ee-bcfe-9f16e66157a6",
+          "contentSha256": "54a97cb6d65be4e78bbe0a096c4551ab414a154023364920c78ad4fce7b44c08",
+          "effectiveDate": "2024-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30645",
+      "versionId": "id_dc6d35a9-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "15235c644ad65e4513d8ecb97ed8003182cf712ff5b3169b868e38becfff33e3",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30645.",
+      "start": 0,
+      "end": 710,
+      "text": "Sections 30600, 30605, and 30610 shall not apply to the manufacture by any person who is issued a permit pursuant to Section 31005 of assault weapons or .50 BMG rifles for sale to the following: (a) Exempt entities listed in Section 30625. (b) Entities and persons who have been issued permits pursuant to Section 31000 or 31005. (c) Federal military and law enforcement agencies. (d) Law enforcement and military agencies of other states. (e) Foreign governments and agencies approved by the United States State Department. (f) Entities outside the state who have, in effect, a federal firearms dealer’s license solely for the purpose of distribution to an entity listed in subdivisions (c) to (e), inclusive.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6d35a9-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "15235c644ad65e4513d8ecb97ed8003182cf712ff5b3169b868e38becfff33e3",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30650",
+      "versionId": "id_dc6d5cbb-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "1c0248566b6fe0792a2e1e5483be84f09f5041f86ab27baf7f83812107096156",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30650.",
+      "start": 0,
+      "end": 643,
+      "text": "Sections 30600, 30605, and 30610 shall not apply to the sale of assault weapons or .50 BMG rifles by persons who are issued permits pursuant to Section 31005 to any of the following: (a) Exempt entities listed in Section 30625. (b) Entities and persons who have been issued permits pursuant to Section 31000 or 31005. (c) Federal military and law enforcement agencies. (d) Law enforcement and military agencies of other states. (e) Foreign governments and agencies approved by the United States State Department. (f) Officers described in Section 30630 who are authorized to possess assault weapons or .50 BMG rifles pursuant to Section 30630.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6d5cbb-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "1c0248566b6fe0792a2e1e5483be84f09f5041f86ab27baf7f83812107096156",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30655",
+      "versionId": "id_dc6d83cd-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "047253b8f7dd5f284ea38b5e7d431730eda88d92ec33cc39797cf376fa5c778f",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30655.",
+      "start": 0,
+      "end": 820,
+      "text": "(a) Section 30600 shall not apply to a person who is the executor or administrator of an estate that includes an assault weapon or a .50 BMG rifle registered under Article 5 (commencing with Section 30900) or that was possessed pursuant to subdivision (a) of Section 30630 that is disposed of as authorized by the probate court, if the disposition is otherwise permitted by this chapter. (b) Sections 30605 and 30610 shall not apply to a person who is the executor or administrator of an estate that includes an assault weapon or a .50 BMG rifle registered under Article 5 (commencing with Section 30900) or that was possessed pursuant to subdivision (a) of Section 30630, if the assault weapon or .50 BMG rifle is possessed at a place set forth in subdivision (a) of Section 30945 or as authorized by the probate court.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6d83cd-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "047253b8f7dd5f284ea38b5e7d431730eda88d92ec33cc39797cf376fa5c778f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30660",
+      "versionId": "id_dc6daadf-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "9fe370b2072f66e1ac2286b3bb56d77040e2defcd2c5eb92fc16f01c91266063",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30660.",
+      "start": 0,
+      "end": 1708,
+      "text": "(a) Section 30600 shall not apply to a person who lawfully possesses and has registered an assault weapon or .50 BMG rifle pursuant to this chapter who lends that assault weapon or .50 BMG rifle to another person, if all the following requirements are satisfied: (1) The person to whom the assault weapon or .50 BMG rifle is lent is 18 years of age or over and is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm. (2) The person to whom the assault weapon or .50 BMG rifle is lent remains in the presence of the registered possessor of the assault weapon or .50 BMG rifle. (3) The assault weapon or .50 BMG rifle is possessed at any of the following locations: (A) While on a target range that holds a regulatory or business license for the purpose of practicing shooting at that target range. (B) While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets. (C) While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms. (b) Section 30600 shall not apply to the return of an assault weapon or .50 BMG rifle to the registered possessor, or the lawful possessor, which is lent by that registered or lawful possessor pursuant to subdivision (a). (c) Sections 30605 and 30610 shall not apply to the possession of an assault weapon or .50 BMG rifle by a person to whom an assault weapon or .50 BMG rifle is lent pursuant to subdivision (a).",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6daadf-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "9fe370b2072f66e1ac2286b3bb56d77040e2defcd2c5eb92fc16f01c91266063",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30665",
+      "versionId": "id_dc6df901-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "adc229004c50cba94acfa2975e807b96ac0edc5af7017a6c7ffa6d990fcdc741",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30665.",
+      "start": 0,
+      "end": 1419,
+      "text": "Sections 30600, 30605, and 30610 shall not apply to the possession and importation of an assault weapon or a .50 BMG rifle into this state by a nonresident if all of the following conditions are met: (a) The person is attending or going directly to or coming directly from an organized competitive match or league competition that involves the use of an assault weapon or a .50 BMG rifle. (b) The competition or match is conducted on the premises of one of the following: (1) A target range that holds a regulatory or business license for the purpose of practicing shooting at that target range. (2) A target range of a public or private club or organization that is organized for the purpose of practicing shooting at targets. (c) The match or competition is sponsored by, conducted under the auspices of, or approved by, a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms. (d) The assault weapon or .50 BMG rifle is transported in accordance with Section 25610 or Article 3 (commencing with Section 25505) of Chapter 2 of Division 5. (e) The person is 18 years of age or over and is not in a class of persons prohibited from possessing firearms by virtue of Chapter 2 (commencing with Section 29800) or Chapter 3 (commencing with Section 29900) of Division 9 of this code or Section 8100 or 8103 of the Welfare and Institutions Code.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6df901-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "adc229004c50cba94acfa2975e807b96ac0edc5af7017a6c7ffa6d990fcdc741",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30670",
+      "versionId": "id_dc6e2013-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "01782990057d735678b1b6d2732f8fe2d7c1a24c001d66d9c7698fc82d5f00d4",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30670.",
+      "start": 0,
+      "end": 469,
+      "text": "(a) Section 30600 shall not apply to the importation into this state of an assault weapon or a .50 BMG rifle by the registered owner of that assault weapon or a .50 BMG rifle if it is in accordance with the provisions of Section 30945. (b) Section 30600 shall not apply during the first 180 days of the 2005 calendar year to the importation into this state of a .50 BMG rifle by a person who lawfully possessed that .50 BMG rifle in this state prior to January 1, 2005.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6e2013-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "01782990057d735678b1b6d2732f8fe2d7c1a24c001d66d9c7698fc82d5f00d4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30675",
+      "versionId": "id_dc6e4725-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "64d2dcb3eefad7be9c05dd92002440c9e40a4150bff1e26ecf92041b5a8bcdd7",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30675.",
+      "start": 0,
+      "end": 788,
+      "text": "(a) Sections 30605 and 30610 shall not apply to any of the following persons: (1) A person acting in accordance with Section 31000 or 31005. (2) A person who has a permit to possess an assault weapon or a .50 BMG rifle issued pursuant to Section 31000 or 31005 when that person is acting in accordance with Section 31000 or 31005 or Article 5 (commencing with Section 30900). (b) Sections 30600, 30605, and 30610 shall not apply to any of the following persons: (1) A person acting in accordance with Article 5 (commencing with Section 30900). (2) A person acting in accordance with Section 31000, 31005, 31050, or 31055. (c) Sections 30605 and 30610 shall not apply to the registered owner of an assault weapon or a .50 BMG rifle possessing that firearm in accordance with Section 30945.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc6e4725-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "64d2dcb3eefad7be9c05dd92002440c9e40a4150bff1e26ecf92041b5a8bcdd7",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30900",
+      "versionId": "id_2c124ddf-d8f7-11ea-9efd-3da19d7eb114",
+      "contentSha256": "f1a071d1e17386709d94a57afa28403c74abb66fa866314f6d3f85e356983b60",
+      "effectiveDate": "2020-08-06 00:00:00",
+      "history": "Amended by Stats. 2020, Ch. 29, Sec. 40.   (SB 118)   Effective August 6, 2020.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30900.",
+      "start": 0,
+      "end": 6636,
+      "text": "(a) (1) Any person who, prior to June 1, 1989, lawfully possessed an assault weapon, as defined in former Section 12276, as added by Section 3 of Chapter 19 of the Statutes of 1989, shall register the firearm by January 1, 1991, and any person who lawfully possessed an assault weapon prior to the date it was specified as an assault weapon pursuant to former Section 12276.5, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended by Section 1 of Chapter 874 of the Statutes of 1990 or Section 3 of Chapter 954 of the Statutes of 1991, shall register the firearm within 90 days with the Department of Justice pursuant to those procedures that the department may establish. (2) Except as provided in Section 30600, any person who lawfully possessed an assault weapon prior to the date it was defined as an assault weapon pursuant to former Section 12276.1, as it read in Section 7 of Chapter 129 of the Statutes of 1999, and which was not specified as an assault weapon under former Section 12276, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended at any time before January 1, 2001, or former Section 12276.5, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as amended at any time before January 1, 2001, shall register the firearm by January 1, 2001, with the department pursuant to those procedures that the department may establish. (3) The registration shall contain a description of the firearm that identifies it uniquely, including all identification marks, the full name, address, date of birth, and thumbprint of the owner, and any other information that the department may deem appropriate. (4) The department may charge a fee for registration of up to twenty dollars ($20) per person but not to exceed the reasonable processing costs of the department. After the department establishes fees sufficient to reimburse the department for processing costs, fees charged shall increase at a rate not to exceed the legislatively approved annual cost-of-living adjustment for the department’s budget or as otherwise increased through the Budget Act but not to exceed the reasonable costs of the department. The fees shall be deposited into the Dealers’ Record of Sale Special Account. (b) (1) Any person who, from January 1, 2001, to December 31, 2016, inclusive, lawfully possessed an assault weapon that does not have a fixed magazine, as defined in Section 30515, including those weapons with an ammunition feeding device that can be readily removed from the firearm with the use of a tool, shall register the firearm before July 1, 2018, but not before the effective date of the regulations adopted pursuant to paragraph (5), with the department pursuant to those procedures that the department may establish by regulation pursuant to paragraph (5). (2) Registrations shall be submitted electronically via the Internet utilizing a public-facing application made available by the department. (3) The registration shall contain a description of the firearm that identifies it uniquely, including all identification marks, the date the firearm was acquired, the name and address of the individual from whom, or business from which, the firearm was acquired, as well as the registrant’s full name, address, telephone number, date of birth, sex, height, weight, eye color, hair color, and California driver’s license number or California identification card number. (4) The department may charge a fee in an amount of up to fifteen dollars ($15) per person but not to exceed the reasonable processing costs of the department. The fee shall be paid by debit or credit card at the time that the electronic registration is submitted to the department. The fee shall be deposited in the Dealers’ Record of Sale Special Account to be used for purposes of this section. (5) The department shall adopt regulations for the purpose of implementing this subdivision. These regulations are exempt from the Administrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code). (c) (1) Any person who, prior to September 1, 2020, lawfully possessed an assault weapon as defined by paragraph (9), (10), or (11) of subdivision (a) of Section 30515, and is eligible to register an assault weapon as set forth in Section 30950, shall submit an application to register the firearm before January 1, 2022, but not before the effective date of the regulations adopted pursuant to paragraph (5), with the department pursuant to those procedures that the department may establish by regulation pursuant to paragraph (5). (2) Registration applications shall be submitted in a manner and format to be specified by the department in regulations adopted pursuant to paragraph (5). (3) The registration application shall contain a description of the firearm that identifies it uniquely, including all identification marks, the date the firearm was acquired, the name and address of the individual from whom, or business from which, the firearm was acquired, as well as the registrant’s full name, address, telephone number, date of birth, sex, height, weight, eye color, hair color, and California driver’s license number or California identification card number, and any other information that the department may deem appropriate. The registration application shall also contain photographs of the firearm, as specified by the department in regulations adopted pursuant to paragraph (5). (4) For each registration application, the department may charge a fee that consists of the amount the department is authorized to require a dealer to charge each firearm purchaser under subdivision (a) of Section 28233, not to exceed the reasonable processing costs of the department. For registration applications seeking to register multiple firearms, the fee shall increase by up to five dollars ($5) for each additional firearm after the first, not to exceed the reasonable processing costs of the department. The fee shall be paid in a manner specified by the department in regulations adopted pursuant to paragraph (5) at the time the registration application is submitted to the department. The fee shall be deposited in the Dealers’ Record of Sale Special Account to be used for purposes of this section. (5) The department shall adopt regulations for the purpose of implementing this subdivision and paragraphs (9), (10), and (11) of subdivision (a) of Section 30515. These regulations are exempt from the Administrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code).",
+      "retainedVersions": [
+        {
+          "versionId": "id_2c124ddf-d8f7-11ea-9efd-3da19d7eb114",
+          "contentSha256": "f1a071d1e17386709d94a57afa28403c74abb66fa866314f6d3f85e356983b60",
+          "effectiveDate": "2020-08-06 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30905",
+      "versionId": "id_dc706a1d-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "c446f0d06f87d5d72aba3d5f3c5a9eee92f604ce6f3f56b101924084881778c5",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30905.",
+      "start": 0,
+      "end": 1332,
+      "text": "(a) Except as provided in Section 30600, any person who lawfully possesses any .50 BMG rifle prior to January 1, 2005, that is not specified as an assault weapon under former Section 12276, as it reads in Section 19 of Chapter 606 of the Statutes of 1993, or former Section 12276.5, as it reads in Section 3 of Chapter 954 of the Statutes of 1991, or defined as an assault weapon pursuant to former Section 12276.1, as it reads in Section 3 of Chapter 911 of the Statutes of 2002, shall register the .50 BMG rifle with the department no later than April 30, 2006, pursuant to those procedures that the department may establish. (b) The registration shall contain a description of the firearm that identifies it uniquely, including all identification marks, the full name, address, date of birth, and thumbprint of the owner, and any other information that the department may deem appropriate. (c) The department may charge a fee for registration of twenty-five dollars ($25) per person to cover the actual processing and public education campaign costs of the department. The fees shall be deposited into the Dealers’ Record of Sale Special Account. Data-processing costs associated with modifying the department’s data system to accommodate .50 caliber BMG rifles shall not be paid from the Dealers’ Record of Sale Special Account.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc706a1d-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "c446f0d06f87d5d72aba3d5f3c5a9eee92f604ce6f3f56b101924084881778c5",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30910",
+      "versionId": "id_dc70912f-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "87b980104d3d7651d05a6bc3684758ca09e2390eefdf770d875761a52dd9c00d",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30910.",
+      "start": 0,
+      "end": 242,
+      "text": "Except as provided in Section 30925, no assault weapon possessed pursuant to this article may be sold or transferred on or after January 1, 1990, to anyone within this state other than to a licensed gun dealer or as provided in Section 31100.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc70912f-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "87b980104d3d7651d05a6bc3684758ca09e2390eefdf770d875761a52dd9c00d",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30915",
+      "versionId": "id_dc70b841-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "42caa686497742ded83196663ef47e7a6e2b1ade4e9c161f3218a004a48effc8",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30915.",
+      "start": 0,
+      "end": 510,
+      "text": "Any person who obtains title to an assault weapon registered under this article or that was possessed pursuant to subdivision (a) of Section 30630 by bequest or intestate succession shall, within 90 days, do one or more of the following: (a) Render the weapon permanently inoperable. (b) Sell the weapon to a licensed gun dealer. (c) Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (d) Remove the weapon from this state.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc70b841-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "42caa686497742ded83196663ef47e7a6e2b1ade4e9c161f3218a004a48effc8",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30920",
+      "versionId": "id_dc70df53-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "fbaefa3d18e120a580c9ee0daf46e58d057dff5491b1859e5b692b9ec014db4f",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30920.",
+      "start": 0,
+      "end": 1361,
+      "text": "(a) Any person who lawfully possessed a firearm subsequently declared to be an assault weapon pursuant to former Section 12276.5, as it reads in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991, or subsequently defined as an assault weapon pursuant to former Section 12276.1, as that section read at any time from when it was enacted by Section 7 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010, shall, within 90 days, do one or more of the following: (1) Render the weapon permanently inoperable. (2) Sell the weapon to a licensed gun dealer. (3) Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (4) Remove the weapon from this state. (b) Notwithstanding subdivision (a), a person who lawfully possessed a firearm that was subsequently declared to be an assault weapon pursuant to former Section 12276.5 may alternatively register the firearm within 90 days of the declaration issued pursuant to subdivision (f) of former Section 12276.5, as it reads in Section 3 of Chapter 19 of the Statutes of 1989, Section 1 of Chapter 874 of the Statutes of 1990, or Section 3 of Chapter 954 of the Statutes of 1991.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc70df53-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "fbaefa3d18e120a580c9ee0daf46e58d057dff5491b1859e5b692b9ec014db4f",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30925",
+      "versionId": "id_dc710665-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "e4862af14b0ebe101b2ca4e4d8463e040a645fd6115f13893751c494ba03d483",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30925.",
+      "start": 0,
+      "end": 995,
+      "text": "A person moving into this state, otherwise in lawful possession of an assault weapon, shall do one of the following: (a) Prior to bringing the assault weapon into this state, that person shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (b) The person shall cause the assault weapon to be delivered to a licensed gun dealer in this state in accordance with Chapter 44 (commencing with Section 921) of Title 18 of the United States Code and the regulations issued pursuant thereto. If the person obtains a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6, the dealer shall redeliver that assault weapon to the person. If the licensed gun dealer is prohibited from delivering the assault weapon to a person pursuant to this section, the dealer shall possess or dispose of the assault weapon as allowed by this chapter.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc710665-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "e4862af14b0ebe101b2ca4e4d8463e040a645fd6115f13893751c494ba03d483",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30930",
+      "versionId": "id_dc715487-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "3087d6ad4537fe075e954553f0b825558c3d233758e38633143c99d229eef872",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30930.",
+      "start": 0,
+      "end": 241,
+      "text": "Except as provided in Section 30940, no .50 BMG rifle possessed pursuant to this article may be sold or transferred on or after January 1, 2005, to anyone within this state other than to a licensed gun dealer or as provided in Section 31100.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc715487-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "3087d6ad4537fe075e954553f0b825558c3d233758e38633143c99d229eef872",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30935",
+      "versionId": "id_dc715489-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "0f5b5dfe78dc7739e5a3cac064313be4e6488bfa40dcd120ed99dfaff80e9ac2",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30935.",
+      "start": 0,
+      "end": 520,
+      "text": "Any person who obtains title to a .50 BMG rifle registered under this article or that was possessed pursuant to subdivision (a) of Section 30630 by bequest or intestate succession shall, within 180 days of receipt, do one or more of the following: (a) Render the weapon permanently inoperable. (b) Sell the weapon to a licensed gun dealer. (c) Obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (d) Remove the weapon from this state.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc715489-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0f5b5dfe78dc7739e5a3cac064313be4e6488bfa40dcd120ed99dfaff80e9ac2",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30940",
+      "versionId": "id_dc717b9b-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "0e8bd71996b04d03936817e507dc1da2a5a4b66caa55e03a244f611bc632e179",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30940.",
+      "start": 0,
+      "end": 985,
+      "text": "A person moving into this state, otherwise in lawful possession of a .50 BMG rifle, shall do one of the following: (a) Prior to bringing the .50 BMG rifle into this state, that person shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (b) The person shall cause the .50 BMG rifle to be delivered to a licensed gun dealer in this state in accordance with Chapter 44 (commencing with Section 921) of Title 18 of the United States Code and the regulations issued pursuant thereto. If the person obtains a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6, the dealer shall redeliver that .50 BMG rifle to the person. If the licensed gun dealer is prohibited from delivering the .50 caliber BMG rifle to a person pursuant to this section, the dealer shall dispose of the .50 BMG rifle as allowed by this chapter.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc717b9b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "0e8bd71996b04d03936817e507dc1da2a5a4b66caa55e03a244f611bc632e179",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30945",
+      "versionId": "id_dc71a2ad-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "f8119e7506edc94e65ed05b7b49e7696d5036a4c78cf99a4cdc92f525f347bc4",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30945.",
+      "start": 0,
+      "end": 1533,
+      "text": "Unless a permit allowing additional uses is first obtained under Section 31000, a person who has registered an assault weapon or registered a .50 BMG rifle under this article may possess it only under any of the following conditions: (a) At that person’s residence, place of business, or other property owned by that person, or on property owned by another with the owner’s express permission. (b) While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets. (c) While on a target range that holds a regulatory or business license for the purpose of practicing shooting at that target range. (d) While on the premises of a shooting club that is licensed pursuant to the Fish and Game Code. (e) While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms. (f) While on publicly owned land, if the possession and use of a firearm described in Section 30510, 30515, 30520, or 30530, is specifically permitted by the managing agency of the land. (g) While transporting the assault weapon or .50 BMG rifle between any of the places mentioned in this section, or to any licensed gun dealer, for servicing or repair pursuant to Section 31050, if the assault weapon is transported as required by Sections 16850 and 25610.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc71a2ad-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "f8119e7506edc94e65ed05b7b49e7696d5036a4c78cf99a4cdc92f525f347bc4",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30950",
+      "versionId": "id_dc71f0cf-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "2b66a41a2fb03be755065094a697936cf86d2ad21f8829e3e596bcfe1c4f7b7e",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30950.",
+      "start": 0,
+      "end": 220,
+      "text": "No person who is under the age of 18 years, and no person who is prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm, may register or possess an assault weapon or .50 BMG rifle.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc71f0cf-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "2b66a41a2fb03be755065094a697936cf86d2ad21f8829e3e596bcfe1c4f7b7e",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30955",
+      "versionId": "id_37ce4c51-d8f7-11ea-9efd-3da19d7eb114",
+      "contentSha256": "ee56258da7ac33e9af2b7bc64c2e63b8efc418f89b72a92f8a2a5f7ab1d8a7de",
+      "effectiveDate": "2020-08-06 00:00:00",
+      "history": "Amended by Stats. 2020, Ch. 29, Sec. 41.   (SB 118)   Effective August 6, 2020.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30955.",
+      "start": 0,
+      "end": 350,
+      "text": "(a) The department’s registration procedures shall provide the option of joint registration for any assault weapon or .50 BMG rifle owned by family members residing in the same household. (b) Notwithstanding subdivision (a), for registration of assault weapons in accordance with subdivision (c) of Section 30900, joint registration is not permitted.",
+      "retainedVersions": [
+        {
+          "versionId": "id_37ce4c51-d8f7-11ea-9efd-3da19d7eb114",
+          "contentSha256": "ee56258da7ac33e9af2b7bc64c2e63b8efc418f89b72a92f8a2a5f7ab1d8a7de",
+          "effectiveDate": "2020-08-06 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30960",
+      "versionId": "id_dc7217e3-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "e5b167f5dbddb96316b63f141407c943785a27dcd0c744b57cd467bef225466c",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30960.",
+      "start": 0,
+      "end": 1254,
+      "text": "(a) For 90 days following January 1, 1992, a forgiveness period shall exist to allow any person specified in subdivision (b) of former Section 12280, as it reads in Section 4.5 of Chapter 954 of the Statutes of 1991, to register with the Department of Justice any assault weapon that the person lawfully possessed prior to June 1, 1989. (b) (1) Any person who registers an assault weapon during the 90-day forgiveness period described in subdivision (a), and any person whose registration form was received by the Department of Justice after January 1, 1991, and who was issued a temporary registration prior to the end of the forgiveness period, shall not be charged with a violation of subdivision (b) of former Section 12280, as added by Section 3 of Chapter 19 of the Statutes of 1989 or as subsequently amended, if law enforcement becomes aware of that violation only as a result of the registration of the assault weapon. (2) This section shall have no effect upon any person charged prior to January 1, 1992, with a violation of subdivision (b) of former Section 12280 as added by Section 3 of Chapter 19 of the Statutes of 1989 or as subsequently amended, provided that law enforcement was aware of the violation before the weapon was registered.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc7217e3-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "e5b167f5dbddb96316b63f141407c943785a27dcd0c744b57cd467bef225466c",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:30965",
+      "versionId": "id_dc723ef5-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "58135e17dafa75319830a279b9ac1286959eaf55b1efe97d38fecfc0af3808d0",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30965.",
+      "start": 0,
+      "end": 1003,
+      "text": "(a) Any person who registered a firearm as an assault weapon pursuant to the provisions of law in effect prior to January 1, 2000, where the assault weapon is thereafter defined as an assault weapon pursuant to Section 30515 or former Section 12276.1, as that section read at any time from when it was enacted by Section 7 of Chapter 129 of the Statutes of 1999 to when it was repealed by the Deadly Weapons Recodification Act of 2010, shall be deemed to have registered the weapon for purposes of this chapter and shall not be required to reregister the weapon pursuant to this article. (b) Any person who legally registered a firearm as an assault weapon pursuant to the provisions of law in effect prior to January 1, 2005, where the assault weapon is thereafter defined as a .50 caliber BMG rifle pursuant to Section 30530 or former Section 12278, shall be deemed to have registered the weapon for purposes of this chapter and shall not be required to reregister the weapon pursuant to this article.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc723ef5-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "58135e17dafa75319830a279b9ac1286959eaf55b1efe97d38fecfc0af3808d0",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:31000",
+      "versionId": "id_bdf42e61-8666-11e4-9fd7-cecd375806d8",
+      "contentSha256": "c769ffed574dc849393ced4fec5f1bf65d45dfb3c1595ed229c7fa3857f31baf",
+      "effectiveDate": "2015-01-01 00:00:00",
+      "history": "Amended by Stats. 2014, Ch. 54, Sec. 16.   (SB 1461)   Effective January 1, 2015.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31000.",
+      "start": 0,
+      "end": 1153,
+      "text": "(a) Any person who lawfully acquired an assault weapon before June 1, 1989, or a .50 BMG rifle before January 1, 2005, and wishes to use it in a manner different than specified in Section 30945 shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (b) Any person who lawfully acquired an assault weapon between June 1, 1989, and January 1, 1990, and wishes to keep it after January 1, 1990, shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (c) Any person who wishes to acquire an assault weapon after January 1, 1990, or a .50 BMG rifle after January 1, 2005, shall first obtain a permit from the Department of Justice in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6. (d) On and after January 1, 2014, no partnership, corporation, limited liability company, association, or any other group or entity, regardless of how the entity was created, may be issued a permit to possess an assault weapon or a .50 BMG rifle.",
+      "retainedVersions": [
+        {
+          "versionId": "id_bdf42e61-8666-11e4-9fd7-cecd375806d8",
+          "contentSha256": "c769ffed574dc849393ced4fec5f1bf65d45dfb3c1595ed229c7fa3857f31baf",
+          "effectiveDate": "2015-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:31005",
+      "versionId": "id_dc72b42b-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "dab9454dd439e702017cd0e0b125abd827612a228e8f9a4b43696c3564c662fa",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31005.",
+      "start": 0,
+      "end": 1023,
+      "text": "(a) The Department of Justice may, upon a finding of good cause, issue permits for the manufacture or sale of assault weapons or .50 BMG rifles for the sale to, purchase by, or possession of assault weapons or .50 BMG rifles by, any of the following: (1) The agencies listed in Section 30625, and the officers described in Section 30630. (2) Entities and persons who have been issued permits pursuant to this section or Section 31000. (3) Federal law enforcement and military agencies. (4) Law enforcement and military agencies of other states. (5) Foreign governments and agencies approved by the United States State Department. (6) Entities outside the state who have, in effect, a federal firearms dealer’s license solely for the purpose of distribution to an entity listed in paragraphs (3) to (5), inclusive. (b) Application for the permits, the keeping and inspection thereof, and the revocation of permits shall be undertaken in the same manner as specified in Article 3 (commencing with Section 32650) of Chapter 6.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc72b42b-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "dab9454dd439e702017cd0e0b125abd827612a228e8f9a4b43696c3564c662fa",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:31050",
+      "versionId": "id_dc73295f-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "4874ebda21b1887be37f13c6e3afe15e7c9b3d14b1c6e533917c1eb9ff8d649c",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31050.",
+      "start": 0,
+      "end": 1027,
+      "text": "(a) Any licensed gun dealer may take possession of any assault weapon or .50 BMG rifle for the purposes of servicing or repair from any person to whom it is legally registered or who has been issued a permit to possess it pursuant to this chapter. (b) Any licensed gun dealer may transfer possession of any assault weapon or .50 BMG rifle received pursuant to subdivision (a), to a gunsmith for purposes of accomplishing service or repair of that weapon. A transfer is permissible only to the following persons: (1) A gunsmith who is in the dealer’s employ. (2) A gunsmith with whom the dealer has contracted for gunsmithing services. (c) In order for paragraph (2) of subdivision (b) to apply, the gunsmith receiving the assault weapon or .50 BMG rifle shall hold all of the following: (1) A dealer’s license issued pursuant to Chapter 44 (commencing with Section 921) of Title 18 of the United States Code and the regulations issued pursuant thereto. (2) Any business license required by a state or local governmental entity.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc73295f-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "4874ebda21b1887be37f13c6e3afe15e7c9b3d14b1c6e533917c1eb9ff8d649c",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:31055",
+      "versionId": "id_dc735071-0ebc-11e0-9b76-a227e281d99a",
+      "contentSha256": "dfd70de567c489e01610e067b08022fa2d97cc38a4a17a8eefed958d61d09eb5",
+      "effectiveDate": "2011-01-01 00:00:00",
+      "history": "Added by Stats. 2010, Ch. 711, Sec. 6.   (SB 1080)   Effective January 1, 2011.   Operative January 1, 2012, by Sec. 10 of Ch. 711.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=31055.",
+      "start": 0,
+      "end": 717,
+      "text": "In addition to the uses allowed in Article 5 (commencing with Section 30900), any licensed gun dealer who lawfully possesses an assault weapon or .50 BMG rifle pursuant to Article 5 (commencing with Section 30900) may do any of the following: (a) Transport the firearm between dealers or out of the state if that person is permitted pursuant to the National Firearms Act. Any transporting allowed by this section or Section 31050 shall be done as required by Sections 16850 and 25610. (b) Display the firearm at any gun show licensed by a state or local governmental entity. (c) Sell the firearm to a resident outside the state. (d) Sell the firearm to a person who has been issued a permit pursuant to Section 31000.",
+      "retainedVersions": [
+        {
+          "versionId": "id_dc735071-0ebc-11e0-9b76-a227e281d99a",
+          "contentSha256": "dfd70de567c489e01610e067b08022fa2d97cc38a4a17a8eefed958d61d09eb5",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    },
+    {
+      "key": "PEN:672",
+      "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+      "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09",
+      "effectiveDate": "1983-09-27 00:00:00",
+      "history": "Amended by Stats. 1983, Ch. 1092, Sec. 320.   Effective September 27, 1983.   Operative January 1, 1984, by Sec. 427 of Ch. 1092.",
+      "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=672.",
+      "start": 0,
+      "end": 345,
+      "text": "Upon a conviction for any crime punishable by imprisonment in any jail or prison, in relation to which no fine is herein prescribed, the court may impose a fine on the offender not exceeding one thousand dollars ($1,000) in cases of misdemeanors or ten thousand dollars ($10,000) in cases of felonies, in addition to the imprisonment prescribed.",
+      "retainedVersions": [
+        {
+          "versionId": "id_691dc06c-2920-11d9-9844-b32bb8dfae52",
+          "contentSha256": "8173f3254dcef1dd1ccf31d7d2ec561bcfdfacf0831acf81463218e27415fc09",
+          "effectiveDate": "1983-09-27 00:00:00",
+          "activeFlag": "Y"
+        }
+      ]
+    }
+  ],
+  "instruction": {
+    "id": "2560",
+    "heading": "2560. Possession, etc., of Assault Weapon or .50 BMG Riﬂe (Pen. Code, §§ 30605, 30600)",
+    "firstPage": 1793,
+    "family": "weapons",
+    "lastPage": 1796,
+    "pageHashes": [
+      {
+        "page": 1793,
+        "sha256": "b88772f438eb060bc4e044844f6a9c61aec5144e83f6634749828a7ec1ed69af"
+      },
+      {
+        "page": 1794,
+        "sha256": "8e0f216fe3cb85246b918680cbffec0f604537131df4031a555604539469c842"
+      },
+      {
+        "page": 1795,
+        "sha256": "81aca41960a99e778c85a4b4526522dd6d32b15bf34b9e4bdc6bfbc95983a708"
+      },
+      {
+        "page": 1796,
+        "sha256": "dbb68f56352874879754b0b7683f0a721ae9832816f267fe0f5852ed54d37412"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1793,
+        "text": "D. \nASSAULT WEAPONS\n2560. Possession, etc., of Assault Weapon or .50 BMG Riﬂe (Pen. \nCode, §§ 30605, 30600)\nThe defendant is charged [in Count \n] with unlawfully (possessing/\nmanufacturing/causing to be manufactured/distributing/transporting/ \nimporting/keeping for sale/offering or exposing for sale/giving/lending)\n(an assault weapon, speciﬁcally [a/an] \n<insert type of \nweapon from Pen. Code, § 30510 or description from § 30515>/a .50 BMG\nriﬂe) [in violation of Penal Code section\n<insert relevant\nPenal Code section>].\nTo prove that the defendant is guilty of this crime, the People must \nprove that:\n1. The defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) (an assault weapon, \nspeciﬁcally [a/an] \n<insert type of weapon from Pen. \nCode, § 30510 or description from § 30515>/a .50 BMG riﬂe);\n2. The defendant knew that (he/she) (possessed/manufactured/caused \nto be manufactured/distributed/transported/imported/kept for \nsale/offered or exposed for sale/gave/lent) it;\nAND\n3. The defendant knew or reasonably should have known that it had \ncharacteristics that made it (an assault weapon/a .50 BMG riﬂe).\n[(A/An) \n<insert type of weapon from Pen. Code, § 30510 or \ndescription from § 30515> is an assault weapon.]\n[A .50 BMG riﬂe is a center ﬁre riﬂe that can ﬁre a .50 BMG cartridge \n[and that is not an assault weapon or a machine gun]. A .50 BMG \ncartridge is a cartridge that is designed and intended to be ﬁred from a \ncenter ﬁre riﬂe and that has all three of the following characteristics:\n1. The overall length is 5.54 inches from the base of the cartridge to \nthe tip of the bullet;\n2. The bullet diameter for the cartridge is from .510 to, and \nincluding, .511 inch;\nAND\n3. The case base diameter for the cartridge is from .800 inch to, and \nincluding, .804 inch.]\n1669\n",
+        "sha256": "b88772f438eb060bc4e044844f6a9c61aec5144e83f6634749828a7ec1ed69af"
+      },
+      {
+        "page": 1794,
+        "text": "[Two or more people may possess something at the same time.]\n[A person does not have to actually hold or touch something to possess \nit. It is enough if the person has (control over it/ [or] the right to control \nit), either personally or through another person.]\n[The People allege that the defendant (possessed/manufactured/caused to \nbe manufactured/distributed/transported/imported/kept for sale/offered \nor exposed for sale/gave/lent) the following weapons: \n<insert description of each weapon when multiple items alleged>. You may \nnot ﬁnd the defendant guilty unless all of you agree that the People have \nproved that the defendant (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for sale/offered or \nexposed for sale/gave/lent) at least one of these weapons, and you all \nagree on which weapon (he/she) (possessed/manufactured/caused to be \nmanufactured/distributed/transported/imported/kept for sale/offered or \nexposed for sale/gave/lent).]\n<Defense: Permit, Registration, or Exemption From Statute>\n[The defendant did not unlawfully (possess/manufacture/cause to be \nmanufactured/distribute/transport/import/keep for sale/offer or expose \nfor sale/give/lend) (an assault weapon/a .50 BMG riﬂe) if (he/she) (had \nregistered the weapon/had a valid permit to (possess/manufacture/sell) \nthe weapon/ \n<insert exemption from Pen. Code, §§ 30625, \n30630(a)–(c), 30635, 30640, 30645, 30655(a), (b), 30660(a)–(c), 30665, \n30670(a), (b), 30675(a)–(c)>). The People have the burden of proving \nbeyond a reasonable doubt that the defendant did not (register the \nweapon/have a valid permit to (possess/manufacture/sell) the weapon/ \n<insert exemption from Pen. Code, §§ 30625, 30630(a)–(c), \n30635, 30640, 30645, 30655(a), (b), 30660(a)–(c), 30665, 30670(a), (b), \n30675(a)–(c)>). If the People have not met this burden, you must ﬁnd the \ndefendant not guilty of this crime.]\nNew January 2006; Revised August 2006, February 2012\nBENCH NOTES\nInstructional Duty\nThe court has a sua sponte duty to give this instruction deﬁning the elements of the \ncrime.\nIf the prosecution alleges under a single count that the defendant possessed multiple \nweapons and the possession was “fragmented as to time . . . [or] space,” the court \nhas a sua sponte duty to instruct on unanimity. (See People v. Wolfe (2003) 114 \nCal.App.4th 177, 184–185 [7 Cal.Rptr.3d 483].) Give the bracketed paragraph that \nbegins, “The People allege that the defendant possessed the following weapons,” \ninserting the items alleged. But see Pen. Code, § 30600(c), which states that except \nCALCRIM No. 2560 \nWEAPONS\n1670\n",
+        "sha256": "8e0f216fe3cb85246b918680cbffec0f604537131df4031a555604539469c842"
+      },
+      {
+        "page": 1795,
+        "text": "in case of a ﬁrst violation involving not more than two ﬁrearms, if more than one \nassault weapon or .50 BMG riﬂe is involved in any violation of this section, there \nshall be a distinct and separate offense for each.\nThe jury must decide if the weapon possessed was an assault weapon or a .50 BMG \nriﬂe. (See People v. Flood (1998) 18 Cal.4th 470, 482 [76 Cal.Rptr.2d 180, 957 P.2d \n869].) When instructing on the deﬁnition of assault weapon or .50 BMG riﬂe, the \ncourt should not state that the weapon possessed by the defendant was an assault \nweapon or was a .50 BMG riﬂe. In the case of an assault weapon, where indicated \nin the instruction, the court may insert a weapon listed in Penal Code section 30510 \nor a description of a weapon from section 30515. In the case of a .50 BMG riﬂe, \ngive the bracketed deﬁnition of that term.\nIf the defendant is charged with both a separate count and an enhancement for \nviolating Penal Code section 30615 while committing another crime, give this \ninstruction and CALCRIM No. 2561, Possession, etc., of Assault or .50 BMG Riﬂe \nWeapon While Committing Other Offense: Pen. Code, § 30615—Enhancement of \nPunishment for Another Crime (Pen. Code, § 30615; People v. Jimenez (1992) 8 \nCal.App.4th 391, 398 [10 Cal.Rptr.2d 281].) If the defendant is only charged with \nan enhancement under Penal Code section 30615 and not with a separate count for \nviolating Penal Code section(s) 30605 or 30610, give only CALCRIM No. 2562, \nPossession, etc., of Assault Weapon or .50 BMG Riﬂe While Committing Other \nOffense: Pen. Code, § 30615—Charged Only as Enhancement.\nDefenses—Instructional Duty\nRegistration and permitting procedures are contained in Penal Code sections 30900 \nto 31005. Exemptions to the statute are stated in Penal Code section 30625 et seq. \nThe existence of a statutory exemption is an affirmative defense. (People v. Jimenez, \nsupra, 8 Cal.App.4th at pp. 395–397.) If the defense presents sufficient evidence to \nraise a reasonable doubt about the existence of a legal basis for his or her actions, \nthe court has a sua sponte duty to give the bracketed instruction on the defense. \n(See People v. Mower (2002) 28 Cal.4th 457, 478–481 [122 Cal.Rptr.2d 326, 49 \nP.3d 1067] [discussing affirmative defenses generally and the burden of proof].) \nInsert the appropriate language in the bracketed paragraph that begins, “The \ndefendant did not unlawfully . . . .”\nAUTHORITY\n• \nElements. Pen. Code, § 30605, 30600.\n• \nAssault Weapon Deﬁned. Pen. Code §§ 30510, 30515; see also Harrott v. County \nof Kings (2001) 25 Cal.4th 1138, 1142–1145 [108 Cal.Rptr.2d 445, 25 P.3d 649] \n[discussing statutory deﬁnition of assault weapon, amendments to statute and \npetition procedure by which the Attorney General may have weapon listed].\n• \n.50 BMG Riﬂe Deﬁned. Pen. Code, § 30530.\n• \nPermits and Registration. Pen. Code, §§ 30900–31005.\n• \nExemptions. Pen. Code, § 30625 et seq. \nWEAPONS\nCALCRIM No. 2560\n1671\n",
+        "sha256": "81aca41960a99e778c85a4b4526522dd6d32b15bf34b9e4bdc6bfbc95983a708"
+      },
+      {
+        "page": 1796,
+        "text": "• \nKnowledge Required. In re Jorge M. (2000) 23 Cal.4th 866, 887 [98 Cal.Rptr.2d \n466, 4 P.3d 297].\n• \nPermits, Registration, and Exemptions Are Affirmative Defenses. People v. \nJimenez (1992) 8 Cal.App.4th 391, 395–397 [10 Cal.Rptr.2d 281].\n• \nConstructive vs. Actual Possession. People v. Azevedo (1984) 161 Cal.App.3d \n235, 242–243 [207 Cal.Rptr. 270], questioned on other grounds in In re Jorge M. \n(2000) 23 Cal.4th 866, 876, fn. 6 [98 Cal.Rptr.2d 466, 4 P.3d 297].\n• \nStatute Constitutional. Silveira v. Lockyer (2002) 312 F.3d 1052, 1056; Kasler v. \nLockyer (2000) 23 Cal.4th 472, 478 [97 Cal.Rptr.2d 334, 2 P.3d 581].\nSECONDARY SOURCES\n2 Witkin & Epstein, California Criminal Law (4th ed. 2012) Crimes Against Public \nPeace and Welfare, §§ 216–219, 220–222.\n4 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 85, \nSubmission to Jury and Verdict, § 85.02[2][a][i] (Matthew Bender).\n6 Millman, Sevilla & Tarlow, California Criminal Defense Practice, Ch. 144, Crimes \nAgainst Order, § 144.01[1][b], [d] (Matthew Bender).\nCALCRIM No. 2560 \nWEAPONS\n1672\n",
+        "sha256": "dbb68f56352874879754b0b7683f0a721ae9832816f267fe0f5852ed54d37412"
+      }
+    ],
+    "receipt": {
+      "sourceUrl": "https://courts.ca.gov/system/files/file/calcrim-2026.pdf",
+      "landingUrl": "https://courts.ca.gov/advisory-body/criminal-jury-instructions-advisory-committee",
+      "edition": "2026 approved February edition; later supplements not assumed incorporated",
+      "retrievedAt": "2026-09-28T05:28:52.309479+00:00",
+      "bytes": 84489227,
+      "sha256": "32cde18ace46a4a6fc4dd2ea27c9e30f923dc1d28dd554500119787f957a3d6e",
+      "pdfPages": 2680
+    }
+  },
+  "records": [
+    {
+      "id": "ca-pen-30600-a-assault-weapon",
+      "definitionSha256": "b82ae40f51ba11de6b9fbfa28ad31999b8ea7babbd9d4c80824ea9cb3546b989",
+      "sourceKeys": [
+        "PEN:1170",
+        "PEN:16850",
+        "PEN:25610",
+        "PEN:30510",
+        "PEN:30515",
+        "PEN:30520",
+        "PEN:30525",
+        "PEN:30530",
+        "PEN:30600",
+        "PEN:30605",
+        "PEN:30610",
+        "PEN:30615",
+        "PEN:30625",
+        "PEN:30630",
+        "PEN:30631",
+        "PEN:30645",
+        "PEN:30650",
+        "PEN:30655",
+        "PEN:30660",
+        "PEN:30665",
+        "PEN:30670",
+        "PEN:30675",
+        "PEN:30900",
+        "PEN:30905",
+        "PEN:30910",
+        "PEN:30915",
+        "PEN:30920",
+        "PEN:30925",
+        "PEN:30930",
+        "PEN:30935",
+        "PEN:30940",
+        "PEN:30945",
+        "PEN:30950",
+        "PEN:30955",
+        "PEN:30960",
+        "PEN:30965",
+        "PEN:31000",
+        "PEN:31005",
+        "PEN:31050",
+        "PEN:31055",
+        "PEN:672"
+      ],
+      "primarySpan": {
+        "key": "PEN:30600",
+        "start": 0,
+        "end": 432,
+        "text": "(a) Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years. "
+      }
+    },
+    {
+      "id": "ca-pen-30600-a-50-bmg",
+      "definitionSha256": "e4c836db02d8e3bc4f835f03e26c3d77f98f2f4dba2c31e1ae322f7e20302be5",
+      "sourceKeys": [
+        "PEN:1170",
+        "PEN:16850",
+        "PEN:25610",
+        "PEN:30510",
+        "PEN:30515",
+        "PEN:30520",
+        "PEN:30525",
+        "PEN:30530",
+        "PEN:30600",
+        "PEN:30605",
+        "PEN:30610",
+        "PEN:30615",
+        "PEN:30625",
+        "PEN:30630",
+        "PEN:30631",
+        "PEN:30645",
+        "PEN:30650",
+        "PEN:30655",
+        "PEN:30660",
+        "PEN:30665",
+        "PEN:30670",
+        "PEN:30675",
+        "PEN:30900",
+        "PEN:30905",
+        "PEN:30910",
+        "PEN:30915",
+        "PEN:30920",
+        "PEN:30925",
+        "PEN:30930",
+        "PEN:30935",
+        "PEN:30940",
+        "PEN:30945",
+        "PEN:30950",
+        "PEN:30955",
+        "PEN:30960",
+        "PEN:30965",
+        "PEN:31000",
+        "PEN:31005",
+        "PEN:31050",
+        "PEN:31055",
+        "PEN:672"
+      ],
+      "primarySpan": {
+        "key": "PEN:30600",
+        "start": 0,
+        "end": 432,
+        "text": "(a) Any person who, within this state, manufactures or causes to be manufactured, distributes, transports, or imports into the state, keeps for sale, or offers or exposes for sale, or who gives or lends any assault weapon or any .50 BMG rifle, except as provided by this chapter, is guilty of a felony, and upon conviction shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 for four, six, or eight years. "
+      }
+    }
+  ],
+  "sharedSpans": [
+    {
+      "key": "PEN:30600",
+      "start": 432,
+      "end": 1050,
+      "text": "(b) In addition and consecutive to the punishment imposed under subdivision (a), any person who transfers, lends, sells, or gives any assault weapon or any .50 BMG rifle to a minor in violation of subdivision (a) shall receive an enhancement of imprisonment pursuant to subdivision (h) of Section 1170 of one year. (c) Except in the case of a first violation involving not more than two firearms as provided in Sections 30605 and 30610, for purposes of this article, if more than one assault weapon or .50 BMG rifle is involved in any violation of this article, there shall be a distinct and separate offense for each."
+    },
+    {
+      "key": "PEN:30615",
+      "start": 0,
+      "end": 326,
+      "text": "Notwithstanding Section 654 or any other provision of law, any person who commits another crime while violating this article may receive an additional, consecutive punishment of one year for violating this article, in addition and consecutive to the punishment, including enhancements, which is prescribed for the other crime."
+    },
+    {
+      "key": "PEN:672",
+      "start": 0,
+      "end": 345,
+      "text": "Upon a conviction for any crime punishable by imprisonment in any jail or prison, in relation to which no fine is herein prescribed, the court may impose a fine on the offender not exceeding one thousand dollars ($1,000) in cases of misdemeanors or ten thousand dollars ($10,000) in cases of felonies, in addition to the imprisonment prescribed."
+    },
+    {
+      "key": "PEN:30660",
+      "start": 0,
+      "end": 1708,
+      "text": "(a) Section 30600 shall not apply to a person who lawfully possesses and has registered an assault weapon or .50 BMG rifle pursuant to this chapter who lends that assault weapon or .50 BMG rifle to another person, if all the following requirements are satisfied: (1) The person to whom the assault weapon or .50 BMG rifle is lent is 18 years of age or over and is not prohibited by state or federal law from possessing, receiving, owning, or purchasing a firearm. (2) The person to whom the assault weapon or .50 BMG rifle is lent remains in the presence of the registered possessor of the assault weapon or .50 BMG rifle. (3) The assault weapon or .50 BMG rifle is possessed at any of the following locations: (A) While on a target range that holds a regulatory or business license for the purpose of practicing shooting at that target range. (B) While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets. (C) While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms. (b) Section 30600 shall not apply to the return of an assault weapon or .50 BMG rifle to the registered possessor, or the lawful possessor, which is lent by that registered or lawful possessor pursuant to subdivision (a). (c) Sections 30605 and 30610 shall not apply to the possession of an assault weapon or .50 BMG rifle by a person to whom an assault weapon or .50 BMG rifle is lent pursuant to subdivision (a)."
+    },
+    {
+      "key": "PEN:30675",
+      "start": 0,
+      "end": 788,
+      "text": "(a) Sections 30605 and 30610 shall not apply to any of the following persons: (1) A person acting in accordance with Section 31000 or 31005. (2) A person who has a permit to possess an assault weapon or a .50 BMG rifle issued pursuant to Section 31000 or 31005 when that person is acting in accordance with Section 31000 or 31005 or Article 5 (commencing with Section 30900). (b) Sections 30600, 30605, and 30610 shall not apply to any of the following persons: (1) A person acting in accordance with Article 5 (commencing with Section 30900). (2) A person acting in accordance with Section 31000, 31005, 31050, or 31055. (c) Sections 30605 and 30610 shall not apply to the registered owner of an assault weapon or a .50 BMG rifle possessing that firearm in accordance with Section 30945."
+    },
+    {
+      "key": "PEN:30945",
+      "start": 0,
+      "end": 1533,
+      "text": "Unless a permit allowing additional uses is first obtained under Section 31000, a person who has registered an assault weapon or registered a .50 BMG rifle under this article may possess it only under any of the following conditions: (a) At that person’s residence, place of business, or other property owned by that person, or on property owned by another with the owner’s express permission. (b) While on the premises of a target range of a public or private club or organization organized for the purpose of practicing shooting at targets. (c) While on a target range that holds a regulatory or business license for the purpose of practicing shooting at that target range. (d) While on the premises of a shooting club that is licensed pursuant to the Fish and Game Code. (e) While attending any exhibition, display, or educational project that is about firearms and that is sponsored by, conducted under the auspices of, or approved by a law enforcement agency or a nationally or state recognized entity that fosters proficiency in, or promotes education about, firearms. (f) While on publicly owned land, if the possession and use of a firearm described in Section 30510, 30515, 30520, or 30530, is specifically permitted by the managing agency of the land. (g) While transporting the assault weapon or .50 BMG rifle between any of the places mentioned in this section, or to any licensed gun dealer, for servicing or repair pursuant to Section 31050, if the assault weapon is transported as required by Sections 16850 and 25610."
+    }
+  ],
+  "remainingScopes": [
+    {
+      "key": "PEN:25850",
+      "status": "loaded_firearm_grading_exceptions_and_enforceability_not_published"
+    }
+  ],
+  "limits": [
+    "Two weapon-specific choices share section 30600(a); they are not two separate statutory subdivisions or an exhaustive count of possible charging theories.",
+    "These are conduct-specific statutory summaries, not an extension of the existing possession attorney decision. Court orders, exemptions and the alleged conduct date remain material.",
+    "Sections 30600(b)-(c) and 30615 are retained with the base offense rather than silently absorbed into its custody term. No separate ordinary enhancement choice is created.",
+    "Registration is not blanket authorization for every transport or transfer. Section 30675(b) and its registration and permit dependencies are retained; possession-only exemptions are not represented as universal conduct exemptions.",
+    "The already approved PEN:30515 operative version is reused while the future version and transition monitor remain intact. No attorney decision or hold is changed.",
+    "All new English content is explicitly marked untranslated for Spanish and Chinese requests. Existing translated summaries are unchanged.",
+    "Dependencies match the retained October 1 comparison archive. No new acquisition date, receipt renewal or live availability is established. Historical reports remain frozen."
+  ]
+}
