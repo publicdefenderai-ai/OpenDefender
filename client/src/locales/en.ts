@@ -3098,6 +3098,42 @@ export default {
     }
   },
   "rights": {
+    "design": {
+      "search": "Search & Seizure",
+      "immigration": "Looking for immigration rights?",
+      "explainer": {
+        "title": "When does Miranda apply?",
+        "intro": "Walk through the two conditions behind the warning requirement, at your own pace.",
+        "custody": "Custody",
+        "interrogation": "Interrogation",
+        "count": "Step {{step}} of {{total}}",
+        "back": "Back",
+        "next": "Next",
+        "replay": "Replay",
+        "transcript": "Read the complete explanation without animation",
+        "note": "A simplified explanation, not a test of your own encounter. Context and exceptions matter, including the public-safety exception. Ask a lawyer about your circumstances.",
+        "source": "Source: Constitution Annotated · Custodial interrogation",
+        "exceptions": "Exceptions to Miranda",
+        "steps": [
+          {
+            "title": "Talking to police is not the whole test.",
+            "body": "For Miranda, the central questions are custody and interrogation. A conversation with an officer does not, by itself, establish both."
+          },
+          {
+            "title": "Look at the circumstances.",
+            "body": "Custody generally involves formal arrest or comparable restraint. Courts assess the situation objectively; not every detention counts as Miranda custody."
+          },
+          {
+            "title": "More than direct questions.",
+            "body": "Interrogation includes questioning and its functional equivalent: police words or actions they should know are reasonably likely to elicit an incriminating response."
+          },
+          {
+            "title": "Warnings generally come before custodial interrogation.",
+            "body": "Both conditions matter. Whether Miranda applies requires context, and exceptions exist. This illustration cannot determine what happened in a particular case."
+          }
+        ]
+      }
+    },
     "hero": {
       "title": "Know Your Legal Rights",
       "subtitle": "Understanding your legal rights is the first step in protecting yourself in the legal system.",
