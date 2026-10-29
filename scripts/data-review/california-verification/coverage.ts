@@ -1,3 +1,4 @@
+import {validateEngagingConductReview} from "./engaging-conduct-review";
 import {validateOtherCodePriorityReview,readOtherCodePriorityAcquisition} from "./other-code-priority-review";
 import {validatePublicConductKnivesReview,readPublicConductKnivesAcquisition} from "./public-conduct-knives-review";
 import {validatePriorityPersonReview,readPriorityPersonAcquisition} from "./priority-person-review";
@@ -97,6 +98,7 @@ export function buildCaliforniaCoverage() {
   const drivingAccounting=validateDrivingPublication();
   const trafficAccounting=validateTrafficReview();
   const conductAccounting=validateTheftConductReview();
+  validateEngagingConductReview();
   acquiredKeys.add("PEN:532");
   const otherCodePriorityAccounting=validateOtherCodePriorityReview();
   Object.keys(readOtherCodePriorityAcquisition().documents).forEach(key=>acquiredKeys.add(key));

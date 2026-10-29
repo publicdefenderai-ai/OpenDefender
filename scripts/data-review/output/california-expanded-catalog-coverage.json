@@ -4736,7 +4736,7 @@
     },
     {
       "id": "ca-prostitution-solicitation",
-      "title": "Soliciting or Agreeing to Engage in Prostitution",
+      "title": "Prostitution: Soliciting, Agreeing, or Engaging",
       "citation": "Cal. Penal Code § 647(b)",
       "lawCode": "PEN",
       "selectable": true,
@@ -4748,7 +4748,7 @@
       "acquiredPrimaryKeys": [
         "PEN:647"
       ],
-      "catalogSha256": "347561f1ac9cb93617417cb030e830382f1e2cfcac3c7244ab8a3e694e3c18fe",
+      "catalogSha256": "6641c1b381462947452db23ae247fb523cdc3b7fff683ddf77eb74799afcd622",
       "attorneyReview": "pending"
     },
     {
