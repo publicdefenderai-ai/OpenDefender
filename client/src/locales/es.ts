@@ -8859,9 +8859,7 @@ export default {
   },
   "letterGenerator": {
     "hero": {
-      "badge": "Generador de cartas",
-      "title": "Obtenga ayuda para escribir una carta",
-      "subtitle": "Genere una carta profesional y de uso general para su empleador, arrendador o compañía de servicios públicos. Responda algunas preguntas a continuación."
+      "badge": "Generador de cartas"
     },
     "privacyNotice": {
       "bold": "Nada de lo que escriba aquí se guarda.",

@@ -8859,9 +8859,7 @@ export default {
   },
   "letterGenerator": {
     "hero": {
-      "badge": "信函生成器",
-      "title": "获取撰写信函的帮助",
-      "subtitle": "为您的雇主、房东或公用事业公司生成一封专业的通用信函。请回答以下几个问题。"
+      "badge": "信函生成器"
     },
     "privacyNotice": {
       "bold": "您在此输入的内容不会被保存。",

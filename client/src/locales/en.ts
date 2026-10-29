@@ -8853,9 +8853,7 @@ export default {
   },
   "letterGenerator": {
     "hero": {
-      "badge": "Letter Generator",
-      "title": "Get help writing a letter",
-      "subtitle": "Generate a professional, general-purpose letter for your employer, landlord, or utility company. Answer a few questions below."
+      "badge": "Letter Generator"
     },
     "privacyNotice": {
       "bold": "Nothing you enter here is saved.",

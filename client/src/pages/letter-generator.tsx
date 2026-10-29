@@ -553,7 +553,7 @@ export default function LetterGenerator() {
 
       <section className="document-tool-width document-tool-workspace letter-workspace" data-state={state}>
         <div ref={workspace}>
-          <div className="letter-privacy flex items-start gap-2.5 mb-8">
+          <div className="flex items-start gap-2.5 mb-8">
             <BrandShieldIcon size={16} className="flex-shrink-0 mt-0.5" />
             <p className="text-sm text-muted-foreground leading-relaxed">
               <strong className="text-foreground">{t("letterGenerator.privacyNotice.bold")}</strong> {t("letterGenerator.privacyNotice.rest")}
