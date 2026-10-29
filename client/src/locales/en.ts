@@ -13,6 +13,9 @@ const reviewedRightsCopy = {
 export default {
   translation: {
   design: {
+    letterHeadline: "Find the words for what you need.",
+    letterDescription: "Draft a letter to your employer, landlord, or utility company. Choose a purpose, add context, then review and edit.",
+
     summaryHeadline: "Understand what’s in front of you.",
     summaryDescription: "Turn a document into a plain-language overview, with important details to check against the original.",
     beforeSharing: "Before you share",
@@ -8850,9 +8853,7 @@ export default {
   },
   "letterGenerator": {
     "hero": {
-      "badge": "Letter Generator",
-      "title": "Get help writing a letter",
-      "subtitle": "Generate a professional, general-purpose letter for your employer, landlord, or utility company. Answer a few questions below."
+      "badge": "Letter Generator"
     },
     "privacyNotice": {
       "bold": "Nothing you enter here is saved.",
@@ -8877,7 +8878,7 @@ export default {
     "generalNoteBold": "Note:",
     "generalNoteRest": "These letters use general, professional language and do not disclose specific case details unless you choose to add them.",
     "employerHandbookBold": "Check your employee handbook first.",
-    "employerHandbookRest": "Some employers require advance notice or specific documentation for time off — review your company's policy before sending this letter.",
+    "employerHandbookRest": "Some employers require advance notice or specific documentation for time off. Review your company's policy before sending this letter.",
     "result": {
       "title": "Your draft letter",
       "writeAnother": "Write another",

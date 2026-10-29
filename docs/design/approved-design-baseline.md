@@ -44,7 +44,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | First 24 Hours | Numbered, independently expandable stages and mobile contents/state selection implemented. Full existing introduction, substantive content and ancillary sections retained; some ancillary layouts still use the previous styling |
 | Immigration | Two-line English heading, approved arch proportions, three starting routes, stationary guide list and independently expandable process phases implemented. Existing notices, full descriptions and ancillary content retained |
 | Case Guidance, consent, questions, recovery and results | Implemented in PRs 64/65 and shared with conversational intake in PR 69; canonical questions and consent defaults retained |
-| Document Summarizer | Draft refresh prepared; canonical consent, file processing, questions and export retained |
+| Document Summarizer | Merged in PR 71 with computed-style regression checks; canonical workflow retained |
+| Letter Generator | Draft refresh prepared; all six letter types and canonical questions retained |
 | How to use this site and other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -235,3 +236,17 @@ Validation: typecheck and production build passed. Seven focused browser checks 
 ### PR 71 review correction
 
 Removed five invalid `hsl()` wrappers around full-value theme tokens in the document-tool CSS. Upload focus now has a visible 2px outline; the advisory border, related-resource separator, link colors and page label resolve correctly. Browser checks now assert computed outline/border widths, styles and colors in all three locales and both themes. Production build and all seven focused browser checks passed. Legacy stylesheet wrappers and the existing unused terms-link translation remain separate follow-ups.
+
+## Letter Generator design batch
+
+Implemented the approved open layout with a purpose list (two columns on desktop, one on mobile), the short AI/privilege advisory under the introduction, full-width intake, a readable draft surface and three related links above the footer. Removed the rainbow card borders, decorative sparkle icons, duplicate intake heading and tracked uppercase result labels. The existing privacy footer text now sits before related resources rather than below the shared site footer. Existing legal/privacy wording and employment/disclosure warnings are retained; an English notice uses a period instead of an unnecessary em dash.
+
+All six letter types, field keys, option counts/order, optional flags, length limits, validation, request payloads, CAPTCHA retry logic and reset behavior remain intact. The structural question definitions and selection/generation/retry/reset handlers were compared directly with the prior source and are unchanged (excluding removed decoration metadata). Added real label associations and stage-change focus. Initial page entry does not steal focus. Print now escapes generated text so angle brackets and markup remain literal instead of becoming HTML; copy retains the original text. No backend or generated-letter prompt changes.
+
+References:
+- `opendefender-letter-generator-preview.html`: SHA-256 `1bd3e3011af75a958b447dd4628e7c0cf5102f64fde39c920649a4b34d46aa89`
+- `opendefender-mobile-letter-generator-preview.html`: SHA-256 `5d4e5a6d959132c3d35f240e14d3e43cbee27603ad58bc82b57fcbfaab8845e1`
+
+The full existing privacy statements remain subject to the separate content review; this presentation batch does not certify them. Browser fixtures exercise all six requests, copy and plain-text print, warnings, reset, failed-generation recovery and fresh CAPTCHA verification, plus all six questionnaires at 320px in English/Spanish/Chinese and both themes. The dedicated spec is wired into the release allowlist. Test responses are fictional; no live AI generation or full-CI claim.
+
+Letter batch validation: typecheck and production build passed; all 13 focused release-config browser tests passed. Desktop and mobile light/dark layouts and the plain print page were visually inspected. A final print/payload check also passed after making screenshot capture wait for the loaded page transition to finish.
