@@ -4388,6 +4388,17 @@ export default {
       "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción federal. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación."
     }
   },
+  "counselDesign": {
+    "label": "Derecho a un abogado",
+    "heading": "El papel de un abogado.",
+    "accent": "Su derecho a contar con uno.",
+    "subtitle": "Comprenda cuándo se aplica el derecho a un abogado, qué abarca y por qué los interrogatorios y los procesos penales implican protecciones diferentes.",
+    "explore": "Empiece por su pregunta.",
+    "sectionsLabel": "Secciones de la página",
+    "related": "Guías relacionadas",
+    "help": "Encuentre ayuda legal.",
+    "findHelp": "Defensores públicos y asistencia legal"
+  },
   "standaloneGuides": {
     "bail": {
       "heading": "Fianza y",

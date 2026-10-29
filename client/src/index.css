@@ -2676,3 +2676,70 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 }
 
 .guide-hero h1 > span { display: block; color: var(--primary); }
+
+/* Counsel: full constitutional comparison followed by a quiet reading index. */
+.counsel-page { --counsel-fifth: #eee4ea; --counsel-sixth: #eee5d9; }
+.dark .counsel-page { --counsel-fifth: #342936; --counsel-sixth: #332d29; }
+.counsel-width { width: min(100% - 3rem,1080px); margin-inline: auto; }
+.counsel-hero { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 35px; align-items: center; padding-block: 2.75rem 2rem; }
+.counsel-hero h1 { font-size: clamp(2.375rem,5vw,3.625rem); letter-spacing: -.03em; line-height: 1.08; font-weight: 500; margin-block: 1rem 1.5rem; }
+.counsel-hero h1 span { display: block; color: var(--primary); }
+.counsel-hero p { font-size: 1.125rem; line-height: 1.8; max-width: 680px; color: var(--muted-foreground); }
+.counsel-hero .counsel-label { font-size: .9375rem; }
+.counsel-art { width: 230px; height: 230px; color: var(--primary); }
+.counsel-comparison { padding-bottom: 2rem; }
+.counsel-comparison .counsel-section { border: 0; }
+.counsel-comparison .counsel-section > h2 { font-size: 1.35rem; margin-bottom: 1.25rem; }
+.counsel-section-content > .grid { gap: 0; }
+.counsel-amendment { border: 0; border-radius: 0; box-shadow: none; }
+.counsel-fifth { background: var(--counsel-fifth); }
+.counsel-sixth { background: var(--counsel-sixth); }
+.counsel-amendment > div { padding: 1.5rem; }
+.counsel-amendment > div + div { padding-top: 0; }
+.counsel-amendment-label { border: 0; padding: 0; border-radius: 0; font-size: .9375rem; font-weight: 500; margin-bottom: .5rem; color: var(--primary); }
+.counsel-amendment h3 { font-size: 1.45rem; font-weight: 500; line-height: 1.3; }
+.counsel-layout { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 38px; padding-bottom: 2.5rem; }
+.counsel-layout > * { min-width: 0; }
+.counsel-contents { align-self: start; position: sticky; top: 100px; }
+.counsel-contents h2 { font-size: 1.75rem; font-weight: 500; line-height: 1.25; margin-bottom: 1rem; }
+.counsel-contents > div { flex-direction: column; align-items: stretch; }
+.counsel-contents > div > div { flex-shrink: 1; }
+.counsel-contents button[role=combobox] { width: 100%; min-height: 44px; }
+.counsel-contents nav button, .counsel-quick-links a { display: flex; width: 100%; text-align: left; align-items: center; min-height: 44px; padding-block: .55rem; font-size: .9375rem; color: var(--muted-foreground); }
+.counsel-contents nav button:hover, .counsel-page a:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 4px; }
+.counsel-quick-links { border-top: 1px solid var(--border); margin-top: 1rem; padding-top: .75rem; }
+.counsel-section { border-top: 1px solid var(--border); scroll-margin-top: 115px; }
+.counsel-section > h2 { font-size: 1.3rem; font-weight: 500; line-height: 1.4; }
+.counsel-section > h2 button { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; padding-block: 1.4rem; text-align: left; }
+.counsel-toggle { color: var(--primary); font-size: 1.125rem; flex-shrink: 0; }
+.counsel-section-content { padding-bottom: 1.5rem; }
+.counsel-section-content > * + * { margin-top: 1.25rem; }
+.counsel-section-content p, .counsel-section-content li { font-size: 1rem; line-height: 1.8; }
+.counsel-reading-row { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.counsel-reading-row > div { padding: 1.25rem 0; }
+.counsel-reading .counsel-section-content > .grid { grid-template-columns: minmax(0,1fr); }
+.counsel-scenario { border-top: 1px solid var(--border); padding-block: 1rem; }
+.counsel-scenario h3 button { display: flex; justify-content: space-between; gap: 1rem; align-items: center; min-height: 44px; width: 100%; text-align: left; font-size: 1.1rem; font-weight: 500; }
+.counsel-scenario > p { color: var(--muted-foreground); margin-block: .5rem 1rem; }
+.counsel-scenario-answer { padding: 1rem; background: var(--counsel-fifth); border-left: 3px solid var(--primary); }
+.counsel-table { padding-block: .5rem; }
+.counsel-table th, .counsel-table td { overflow-wrap: anywhere; }
+.counsel-related { border-top: 1px solid var(--border); padding-block: 2rem; }
+.counsel-related h2 { font-size: 1.4rem; font-weight: 500; }
+.counsel-related-link { min-height: 44px; padding-block: .65rem; color: var(--primary); }
+.counsel-help { padding-block: 1.5rem; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; }
+.counsel-help h2 { font-size: 1.75rem; font-weight: 500; margin-right: auto; }
+.counsel-help a { min-height: 44px; display: inline-flex; align-items: center; color: var(--primary); font-weight: 600; }
+.counsel-page button:focus-visible, .counsel-page a:focus-visible, .counsel-page [tabindex='-1']:focus { outline: 2px solid var(--ring); outline-offset: 4px; }
+@media(max-width: 760px) {
+  .counsel-width { width: calc(100% - 2rem); }
+  .counsel-hero { grid-template-columns: minmax(0,1fr); gap: 1rem; }
+  .counsel-art { width: 140px; height: 140px; justify-self: end; }
+  .counsel-hero p { font-size: 1rem; }
+  .counsel-layout { grid-template-columns: minmax(0,1fr); gap: 1.5rem; }
+  .counsel-contents { position: static; }
+  .counsel-contents nav:not(.counsel-quick-links) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .25rem .75rem; }
+  .counsel-quick-links { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+  .counsel-quick-links a { width: auto; }
+  .counsel-amendment > div { padding-inline: 1.25rem; }
+}

@@ -4387,6 +4387,17 @@ export default {
       "text": "本信息仅供教育目的，不构成法律建议。各州和联邦管辖区的法律和程序各有不同。请务必咨询合格的律师以获取针对您具体情况的建议。"
     }
   },
+  "counselDesign": {
+    "label": "获得律师帮助的权利",
+    "heading": "律师的职责。",
+    "accent": "您获得律师帮助的权利。",
+    "subtitle": "了解获得律师帮助的权利何时适用、涵盖什么，以及为什么讯问与刑事诉讼涉及不同的保护。",
+    "explore": "从您的问题开始。",
+    "sectionsLabel": "页面章节",
+    "related": "相关指南",
+    "help": "寻找法律援助。",
+    "findHelp": "公设辩护律师与法律援助"
+  },
   "standaloneGuides": {
     "bail": {
       "heading": "保释与",
