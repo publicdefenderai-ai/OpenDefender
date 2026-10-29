@@ -5,11 +5,11 @@
   "accounting": {
     "specificOpenLegalQuestions": 0,
     "recordedAttorneyDecisions": 4,
-    "canonicalRecords": 715,
-    "configuredSelectable": 694,
+    "canonicalRecords": 717,
+    "configuredSelectable": 696,
     "withheldCanonicalLabels": 21,
-    "boundedAdditionPass": 595,
-    "boundedCorrectionPass": 694,
+    "boundedAdditionPass": 597,
+    "boundedCorrectionPass": 696,
     "awaitingCorrectionPass": 0,
     "legacyRows": 115,
     "legacyDispositions": {
@@ -20,21 +20,21 @@
     },
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
-    "distinctSelectablePrimarySections": 351,
+    "distinctSelectablePrimarySections": 352,
     "remainingSharedSourceGroups": 0,
     "remainingPrimarySections": 0,
     "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
-    "acquiredSelectablePrimarySections": 351,
-    "selectableRecordsWithAllPrimaryTextAcquired": 694,
-    "totalAcquiredSectionsIncludingDependencies": 907,
-    "totalAcquiredVersionsIncludingDependencies": 915,
+    "acquiredSelectablePrimarySections": 352,
+    "selectableRecordsWithAllPrimaryTextAcquired": 696,
+    "totalAcquiredSectionsIncludingDependencies": 937,
+    "totalAcquiredVersionsIncludingDependencies": 945,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
     "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
-    "694 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "696 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
     "Statewide source discovery is retained separately. Its candidate sections are not an offense denominator; independent miss detection remains necessary."
@@ -72,8 +72,8 @@
     },
     {
       "lawCode": "PEN",
-      "selectable": 536,
-      "corrected": 536,
+      "selectable": 538,
+      "corrected": 538,
       "awaitingCorrection": 0
     },
     {
@@ -2137,6 +2137,16 @@
       "recordIds": [
         "ca-pen-30305-a-1",
         "ca-pen-30305-b-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "30600",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=30600&lawCode=PEN",
+      "recordIds": [
+        "ca-pen-30600-a-assault-weapon",
+        "ca-pen-30600-a-50-bmg"
       ],
       "alreadyRetained": false
     },
@@ -5965,6 +5975,40 @@
         "PEN:653f"
       ],
       "catalogSha256": "288315b5dd519ab04b021fdf1062846fc593607c8384123ed2f88028f16f8065",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-30600-a-assault-weapon",
+      "title": "Manufacturing, transporting or transferring an assault weapon",
+      "citation": "Cal. Penal Code § 30600(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:30600"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30600"
+      ],
+      "catalogSha256": "94a12bcbe640f44f214fa6757280692159f38d6c4aad169b45fd1450c3ccd4b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-pen-30600-a-50-bmg",
+      "title": "Manufacturing, transporting or transferring a .50 BMG rifle",
+      "citation": "Cal. Penal Code § 30600(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:30600"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30600"
+      ],
+      "catalogSha256": "71875c0584f68f169422e9177c5e8254bb9165033b2fa9ab170ae98245df4cce",
       "attorneyReview": "pending"
     },
     {

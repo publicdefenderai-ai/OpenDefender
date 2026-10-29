@@ -1,0 +1,31 @@
+# California assault-weapon and .50 BMG conduct
+
+2 new choices from one primary section; 11 reused dependencies and 30 newly monitored sections. No receipt extension.
+
+- Two weapon-specific choices share section 30600(a); they are not two separate statutory subdivisions or an exhaustive count of possible charging theories.
+- These are conduct-specific statutory summaries, not an extension of the existing possession attorney decision. Court orders, exemptions and the alleged conduct date remain material.
+- Sections 30600(b)-(c) and 30615 are retained with the base offense rather than silently absorbed into its custody term. No separate ordinary enhancement choice is created.
+- Registration is not blanket authorization for every transport or transfer. Section 30675(b) and its registration and permit dependencies are retained; possession-only exemptions are not represented as universal conduct exemptions.
+- The already approved PEN:30515 operative version is reused while the future version and transition monitor remain intact. No attorney decision or hold is changed.
+- All new English content is explicitly marked untranslated for Spanish and Chinese requests. Existing translated summaries are unchanged.
+- Dependencies match the retained October 1 comparison archive. No new acquisition date, receipt renewal or live availability is established. Historical reports remain frozen.
+
+## Penal Code 30600(a): Manufacturing, transporting or transferring an assault weapon
+
+Knowingly manufacturing or causing to be manufactured, distributing, transporting, importing into California, keeping for sale, offering or exposing for sale, giving or lending an assault weapon within the conduct covered by Penal Code section 30600(a), without an applicable statutory authorization or exemption. The prosecution must prove knowledge of the conduct and that the person knew or reasonably should have known the weapon had the characteristics bringing it within the statutory definition. The weapon must meet the applicable statutory assault-weapon definition; a generic firearm description is insufficient. Mere possession is addressed by separate provisions. Registration alone is not blanket permission to sell, lend or transport the weapon: the exact conduct must satisfy the applicable registration, permit or exemption conditions. Those conditions can include authorized official use, permitted manufacture or sales, specified estate dispositions, supervised lending, qualifying nonresident competitions, and authorized importation or transport. The conduct date, weapon characteristics, permit or registration documents and any applicable court orders must be checked.
+
+Felony: 4, 6 or 8 years under Penal Code section 1170(h), subject to its state-prison exclusions. If no other offense-specific fine is prescribed, section 672 permits an additional discretionary base fine up to $10,000. Under section 30600(b), transferring, lending, selling or giving the weapon to a minor in violation of subdivision (a) adds one consecutive year under section 1170(h). Section 30600(c) provides a distinct offense for each weapon; its narrow first-violation exception refers to sections 30605 and 30610 and is not a general exception for section 30600(a). Section 30615 may add a consecutive year when another crime is committed while violating the article. These are separate punishment provisions, not a guarantee that every enhancement applies or a single maximum for the entire case. Restitution, assessments, firearm restrictions and other case-specific sentencing rules require separate review.
+
+[Official primary source](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600.)
+
+## Penal Code 30600(a): Manufacturing, transporting or transferring a .50 BMG rifle
+
+Knowingly manufacturing or causing to be manufactured, distributing, transporting, importing into California, keeping for sale, offering or exposing for sale, giving or lending a .50 BMG rifle within the conduct covered by Penal Code section 30600(a), without an applicable statutory authorization or exemption. The prosecution must prove knowledge of the conduct and that the person knew or reasonably should have known the weapon had the characteristics bringing it within the statutory definition. The weapon must meet the statutory .50 BMG rifle definition, including its exclusions; not every .50-caliber firearm qualifies. Mere possession is addressed by separate provisions. Registration alone is not blanket permission to sell, lend or transport the weapon: the exact conduct must satisfy the applicable registration, permit or exemption conditions. Those conditions can include authorized official use, permitted manufacture or sales, specified estate dispositions, supervised lending, qualifying nonresident competitions, and authorized importation or transport. The conduct date, weapon characteristics, permit or registration documents and any applicable court orders must be checked.
+
+Felony: 4, 6 or 8 years under Penal Code section 1170(h), subject to its state-prison exclusions. If no other offense-specific fine is prescribed, section 672 permits an additional discretionary base fine up to $10,000. Under section 30600(b), transferring, lending, selling or giving the weapon to a minor in violation of subdivision (a) adds one consecutive year under section 1170(h). Section 30600(c) provides a distinct offense for each weapon; its narrow first-violation exception refers to sections 30605 and 30610 and is not a general exception for section 30600(a). Section 30615 may add a consecutive year when another crime is committed while violating the article. These are separate punishment provisions, not a guarantee that every enhancement applies or a single maximum for the entire case. Restitution, assessments, firearm restrictions and other case-specific sentencing rules require separate review.
+
+[Official primary source](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=30600.)
+
+## Remaining priority work
+
+Loaded-firearm carrying under section 25850 remains unpublished. This packet does not resolve that separate conduct and grading group.
