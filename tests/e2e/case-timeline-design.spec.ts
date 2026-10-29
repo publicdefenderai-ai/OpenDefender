@@ -32,7 +32,10 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
         }
         if (stage === 'arrest') await expect(page.getByTestId('timeline-previous')).toBeDisabled();
         else await expect(page.getByTestId('timeline-previous')).toBeEnabled();
-        if (stage === 'sentencing') await expect(page.getByTestId('timeline-next')).toBeDisabled();
+        if (stage === 'sentencing') {
+          await expect(page.getByTestId('timeline-next')).toBeDisabled();
+          for (const text of [copy.design.feesTitle, copy.design.feesDescription, copy.design.feesLink]) await expect(panel.locator('.timeline-fees')).toContainText(text);
+        }
         else await expect(page.getByTestId('timeline-next')).toBeEnabled();
         const overflow = await panel.evaluate(root => [...root.querySelectorAll('p,h2,h3,li,a,button,summary')].filter(el => {
           const r = el.getBoundingClientRect(); return r.width > 0 && (r.left < -1 || r.right > innerWidth + 1);
@@ -58,32 +61,18 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await panel.locator('[role=combobox]').click();
     await page.getByRole('option', { name: 'All states', exact: true }).click();
     await expect(panel).not.toContainText('Rules for');
+    for (const text of [copy.design.reentryTitle, copy.design.reentryDescription, copy.design.reentryLink]) await expect(page.locator('.timeline-guides')).toContainText(text);
     await expect(page.locator('.timeline-caveat')).toContainText(copy.disclaimer.text);
     await expect(page.locator('.timeline-caveat')).toContainText(copy.disclaimer.deadlines);
     await expect(page.locator('.timeline-caveat a')).toHaveAttribute('href', '/data-sources');
-    await page.locator('.timeline-guide-links a[href="#bail-guide"]').click();
-    await expect(page).toHaveURL(/#bail-guide$/);
-    await expect(page.locator('#bail-guide')).toBeInViewport();
-    await page.goto('/case-timeline#plea-guide');
-    await expect(page.locator('#plea-guide')).toBeInViewport();
+    await expect(page.locator('.timeline-guide-links a[href="/bail"]')).toBeVisible();
+    await expect(page.locator('.timeline-guide-links a[href="/plea-agreements"]')).toBeVisible();
     await expect(page.locator('.timeline-guides')).toContainText(locale.translation.process.legalDisclaimer.text);
   });
 }
 
-test('embedded bail and plea guides retain every accordion and supporting resource', async ({ page }) => {
-  await page.goto('/case-timeline#bail-guide');
-  for (const selector of ['#bail-guide', '#plea-guide']) {
-    const guide = page.locator(selector);
-    const buttons = guide.locator('button[data-state]');
-    await expect(buttons).toHaveCount(selector === '#bail-guide' ? 10 : 6);
-    for (const button of await buttons.all()) {
-      await button.click();
-      await expect(button).toHaveAttribute('aria-expanded', 'true');
-      const contentId = await button.getAttribute('aria-controls');
-      await expect(page.locator(`[id="${contentId}"]`)).toBeVisible();
-      expect((await page.locator(`[id="${contentId}"]`).innerText()).length).toBeGreaterThan(30);
-    }
-  }
+test('timeline retains supporting resources after guide extraction', async ({ page }) => {
+  await page.goto('/case-timeline');
   await expect(page.getByRole('link', { name: /Re-entry Resources/ })).toHaveAttribute('href', '/support/reentry');
   await page.locator('.timeline-stage-nav button').last().click();
   await expect(page.locator('#timeline-panel a[href="/support/finances"]')).toBeVisible();

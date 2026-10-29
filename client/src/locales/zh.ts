@@ -4387,8 +4387,39 @@ export default {
       "text": "本信息仅供教育目的，不构成法律建议。各州和联邦管辖区的法律和程序各有不同。请务必咨询合格的律师以获取针对您具体情况的建议。"
     }
   },
+  "standaloneGuides": {
+    "bail": {
+      "heading": "保释与",
+      "subtitle": "了解释放选项、费用、条件以及可以向律师提出的问题。",
+      "support": "财务与法院费用支持",
+      "accent": "审前释放。"
+    },
+    "plea": {
+      "heading": "认罪协议。",
+      "subtitle": "了解协议可能意味着什么、涉及的权利以及对您生活的潜在影响。",
+      "support": "移民信息与支持",
+      "accent": "了解您正在考虑的选择。"
+    },
+    "orientation": "了解保释与释放。",
+    "immediate": "费用、条件与出庭日期。",
+    "rules": "规则如何适用。",
+    "agreement": "认罪协议可能涉及什么。",
+    "effects": "决定的更广泛影响。",
+    "context": "关于本指南。",
+    "related": "相关资源",
+    "help": "需要帮助了解您的选项吗？",
+    "findHelp": "寻找法律援助",
+    "sources": "资料来源"
+  },
   "caseTimeline": {
     "design": {
+      "feesTitle": "法院罚款和费用在量刑时确定",
+      "feesDescription": "罚款、缓刑费用、赔偿和附加费通常在此阶段确定。许多法院为符合条件的人提供费用减免和分期付款计划。",
+      "feesLink": "了解如何管理法院费用",
+      "reentryTitle": "正在规划量刑之后的生活吗？",
+      "reentryDescription": "重返社会资源中心涵盖身份证件补办、住房、有犯罪记录者的就业和投票权，并提供具体行动步骤和经过核实的资源。",
+      "reentryLink": "前往重返社会资源",
+
       "heading": "了解诉讼流程，一次了解一个阶段。",
       "count": "第 {{step}} 阶段，共 {{total}} 个阶段",
       "previous": "上一阶段",

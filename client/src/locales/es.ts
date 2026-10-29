@@ -4388,8 +4388,39 @@ export default {
       "text": "Esta información es solo para fines educativos y no constituye asesoramiento legal. Las leyes y procedimientos varían según el estado y la jurisdicción federal. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su situación."
     }
   },
+  "standaloneGuides": {
+    "bail": {
+      "heading": "Fianza y",
+      "subtitle": "Conozca las opciones de libertad, los costos, las condiciones y las preguntas para su abogado.",
+      "support": "Apoyo con las finanzas y los costos judiciales",
+      "accent": "libertad antes del juicio."
+    },
+    "plea": {
+      "heading": "Acuerdos de culpabilidad.",
+      "subtitle": "Explore lo que puede significar un acuerdo, los derechos involucrados y sus posibles efectos en su vida.",
+      "support": "Información y apoyo de inmigración",
+      "accent": "Comprenda lo que está considerando."
+    },
+    "orientation": "Comprenda la fianza y la libertad.",
+    "immediate": "Costos, condiciones y fechas de corte.",
+    "rules": "Cómo se aplican las reglas.",
+    "agreement": "Lo que puede implicar un acuerdo.",
+    "effects": "Los efectos más amplios de una decisión.",
+    "context": "Acerca de esta guía.",
+    "related": "Recursos relacionados",
+    "help": "¿Necesita ayuda para comprender sus opciones?",
+    "findHelp": "Encuentre ayuda legal",
+    "sources": "Fuentes"
+  },
   "caseTimeline": {
     "design": {
+      "feesTitle": "Las multas y los costos judiciales se fijan al dictar la sentencia",
+      "feesDescription": "Aquí se suelen ordenar multas, cuotas de libertad condicional, restitución y recargos. Muchos tribunales ofrecen exenciones de cuotas y planes de pago para quienes reúnen los requisitos.",
+      "feesLink": "Aprenda a gestionar los costos judiciales",
+      "reentryTitle": "¿Está planificando lo que viene después de la sentencia?",
+      "reentryDescription": "El centro de recursos de reinserción abarca la recuperación de documentos de identidad, la vivienda, el empleo con antecedentes penales y los derechos de voto, con pasos concretos y recursos verificados.",
+      "reentryLink": "Ir a recursos de reinserción",
+
       "heading": "Comprenda el proceso. Una etapa a la vez.",
       "count": "Etapa {{step}} de {{total}}",
       "previous": "Etapa anterior",

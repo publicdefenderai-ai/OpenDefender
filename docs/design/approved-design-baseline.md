@@ -49,7 +49,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | How to use this site | Merged in PR 75; five paths, both example journeys and screenshot reservations retained |
 | Know Your Rights | Merged in PR 77; full existing explanations retained in independent disclosures; paced Miranda illustration added |
 | Case Timeline | Merged in PR 78; all seven stages and embedded guide content retained |
-| Legal Resources | Draft inline-finder refresh prepared; both real search services and complete appointed-counsel content retained |
+| Legal Resources | Merged in PR 80; both real search services and complete appointed-counsel content retained |
+| Bail and Plea guides | Standalone routes prepared for review; full current translated guide content retained |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -331,3 +332,24 @@ References:
 The prior modal-specific navigation test was updated for the intentional inline workflow. Running that broader spec currently fails during collection because its import of `shared/california-authority` resolves `california-conduct-supplements` to JSON without a required JSON import attribute. This occurs before browser tests run and predates this design branch; it is not reported as a passing check. Dedicated finder coverage runs independently. Full release-suite status is not claimed.
 
 Validation: typecheck and production build passed; eight dedicated browser checks passed across English/Spanish/Chinese and light/dark themes, plus four service-compatibility unit tests. Browser coverage verifies both request contracts, local validation, Enter submission, aid-type filtering, source-backed contact/direction fields, type switching, clearing stale results, loading, valid empty results, unavailable service, retry and omission of missing distances. Desktop and narrow translated dark-mode layouts were visually inspected. The dedicated spec is wired into the release allowlist. Results are fictional fixtures in tests only; live provider coverage and production database availability were not certified.
+
+
+## Standalone Bail and Plea guide design batch
+
+Adds `/bail` and `/plea-agreements` from the accepted standalone references. Bail uses three reading groups and the theme-aware doorway illustration; Plea features the existing attorney discussion questions as an always-visible numbered list. All ten Bail sections and all six Plea sections remain (five Plea disclosures plus the visible questions). Independent disclosures replace single-open accordions, with the first explanation initially open and small plus/minus indicators. New page headings and interface labels are translated in English, Spanish and Chinese. Uppercase tracked eyebrows from the old preview are omitted in line with the later design direction.
+
+The body copy, lists, option descriptions, introduction/source context and both existing notices come from current locale entries. No historical preview body text replaces current published text. The five bail types and existing phone/plea/court-copy corrections remain. The current old guide titles remain in timeline/cross-guide navigation; the standalone hero headings use the accepted new wording. The general-information notice stays visually distinct; the legal disclaimer retains its amber treatment. No substantive accuracy certification is implied by this presentation change.
+
+Timeline links now lead to the standalone routes. Existing `/case-timeline#bail-guide` and `#plea-guide` links forward to the corresponding page with history replacement, both on initial load and subsequent hash changes. The timeline retains its stages, state selector/callouts, speedy-trial/public-defender explanations, warning and re-entry/finance links. Bail also has a state selector connected to the existing persisted preference and live callout. The shared state's English labels/callout prose remain an existing translation follow-up.
+
+Related links include the timeline, counterpart guide, legal help, sources and finance/immigration support. No provider lookup, questionnaire, consent, AI output or backend behavior changes. Removed the now-unused embedded-guide CSS. The How-to screenshot dependency remains open.
+
+References:
+- `opendefender-bail-preview.html`: SHA-256 `cab9a1350569e361920d36cff928f64f6b0fbf5b06c215a2f7f963293d139d07`
+- `opendefender-plea-agreements-preview.html`: SHA-256 `8a2a7650435a4bd77ea01f63cb892203dfdb4bf077e7e0bf5f3356bcc99ccdc3`
+- `bail-content.html`: SHA-256 `66afba574a8d678a23dc60c9a378f9014435f112def6c1f6961b9f2a6e584de7`
+- `plea-agreements-content.html`: SHA-256 `368ae2fa605feeaa40ca95b51ad3d9bce07daff462774bd45e9383868a15d561`
+
+Validation: typecheck and production build passed. Seventeen focused browser checks passed: seven guide checks, seven timeline checks and three existing multilingual printed-copy/bail checks. The guide checks verify every current body string, notices, five bail options, keyboard toggling, simultaneous open sections, initial and in-app legacy links, state changes/reload/clearing, related links and real element bounds at 1280px/320px in all languages and both themes. The guide spec is release-allowlisted, and the timeline spec now tests the intentional extraction rather than expecting embedded content. All seven guide checks passed again after the final headline/source-label refinements. Desktop and phone screenshots in both themes were compared with the accepted reference layouts. No full-suite or production-deployment claim.
+
+Timeline translation follow-up: localized both sentencing-finance and re-entry callouts in English, Spanish and Chinese, including their explanatory paragraphs and links. Existing English meaning is retained, with the re-entry sentence punctuation simplified. The six locale/theme timeline checks assert the translated strings.
