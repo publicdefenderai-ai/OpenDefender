@@ -46,7 +46,8 @@ Use direct, natural wording. Avoid unnecessary em dashes, formulaic slogans, exc
 | Case Guidance, consent, questions, recovery and results | Implemented in PRs 64/65 and shared with conversational intake in PR 69; canonical questions and consent defaults retained |
 | Document Summarizer | Merged in PR 71 with computed-style regression checks; canonical workflow retained |
 | Letter Generator | Implemented and merged in PR 73; all six letter types and canonical questions retained |
-| How to use this site | Draft refresh prepared; five paths, both example journeys and screenshot reservations retained |
+| How to use this site | Merged in PR 75; five paths, both example journeys and screenshot reservations retained |
+| Know Your Rights | Draft refresh prepared; full existing explanations retained in independent disclosures; paced Miranda illustration added |
 | Other approved resource-page layouts | Not yet implemented; old page layouts and accent colors remain under the new shared shell |
 
 Known deliberate production differences from the simplified homepage mockup: existing beta notice, full legal disclosure, search capability and chat launcher remain. The mockup did not establish permission to remove those safeguards or functions. The full homepage legal disclosure sits below Browse the full resource inventory, following the owner's placement correction. Existing translated legal disclaimers remain unchanged. Interface translations are not a new legal-content review.
@@ -269,3 +270,22 @@ Follow-up: after the remaining page designs are final, capture accurate desktop/
 Convention for future batches: custom CSS class names should have a corresponding styling rule; use `data-*` for non-styling hooks. PR 73 removed its unused `letter-privacy` class and only the unused hero title/subtitle strings. Its badge and the embedded summarizer description remain in use.
 
 Validation: production build passed and all six focused browser tests passed (English, Spanish and Chinese in light/dark themes). Each test checks 1280px and 320px layouts, every existing translated path bullet and story step, native jump links, direct hash entry, family-guide/directory navigation and real element bounds. The spec is included in the release allowlist. Desktop and narrow translated dark-mode views were visually inspected. This is focused validation, not a claim that the full release suite is clean.
+
+
+## Know Your Rights design batch
+
+Replaces four pointer-only cards/modal dialogs with native quick-reference disclosures, and the five exclusive tabs/duplicate sidebar with independently expandable detailed sections. Existing summaries, full explanations, the attorney distinction paragraph, detailed warnings, search scenarios, legal-term popovers, share action, printable-card link and all deeper-guide destinations remain. Existing anchors `quick-rights`, `quick-reference-cards`, `constitutional-rights` and `deep-dives` remain; new `rights-miranda/arrest/court/prison/search` anchors open their topic on direct entry. The disclaimer and case-guidance destination remain. This is an intentional interaction change, not merely CSS.
+
+Preservation: compared all 57 detailed translation references and every search-scenario title, description, rights/do/do-not array directly with the prior source. These remain unchanged. Tests pin the translation keys actually rendered before the refresh, not unused legacy locale entries. Existing English-only search scenarios, deeper-guide descriptions and the attorney distinction paragraph remain English-only; the new illustration, navigation label and controls are translated in all three locales. Completing that pre-existing translation gap remains a separate content task. The new typography retains the existing main title/subtitle rather than substituting the preview's shorter content.
+
+The four-step Miranda explainer is new published-page content drawn from the accepted preview. It is explicitly described as a simplified illustration, not an assessment of an encounter, and retains the context/exception caveat. It has no autoplay, no user questionnaire, no stored answers, no API requests and no valid/invalid verdict. Back, Next and Replay control the graphic; a full transcript is always available. Reduced-motion follows the site's existing near-zero transition policy. Labels sit above the overlapping shapes for small-screen readability.
+
+Source links retained with the illustration: [Constitution Annotated: Custodial Interrogation Standard](https://www.law.cornell.edu/constitution-conan/amendment-5/custodial-interrogation-standard) and [Exceptions to Miranda](https://www.law.cornell.edu/constitution-conan/amendment-5/exceptions-to-miranda). The preview's explanation was checked against those public sources during implementation. Design acceptance and source checking do not constitute attorney approval of either the new explainer or retained legacy content. No other substantive wording was changed.
+
+References:
+- `opendefender-rights-preview.html`: SHA-256 `0923491cd840874573c6a5a9edac7f5634d7cd13f6ac52be7a02b4f97294be80`
+- `rights-explainer.html`: SHA-256 `ac0a813c88a6d80d2387aaae79c210a3aebee44fe98a14d9827e9d87c2df2c1d`
+
+How-to screenshot follow-up remains open after PR 75: replace all five labeled reservations with final desktop/mobile page captures after those designs finish. The placeholder tests must be updated with the images, not removed without replacement coverage.
+
+Validation: typecheck and production build passed. Seven dedicated browser checks cover English/Spanish/Chinese in both themes at 1280px/320px, every previously rendered translated detail, all quick explanations, independent open sections, direct hash entry, printable-card navigation, transcript parity, real element bounds, non-overlapping translated graphic labels, keyboard controls, reduced motion and normal-motion/no-autoplay behavior. The existing search-scenario legal-copy regression also passed. The dedicated spec is included in the release allowlist. Desktop and mobile light/dark views were inspected; the Spanish mobile labels were adjusted after visual inspection caught overlap. No full-suite or attorney-approval claim.

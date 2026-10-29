@@ -1,434 +1,98 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  FileText,
-  Phone,
-  AlertTriangle,
-  Clock,
-  Scale,
-  Gavel,
-  UserCheck,
-  FileX,
-  Search,
-  MessageSquare,
-  ChevronRight,
-  Home,
-  Car,
-  Smartphone,
-  CheckCircle,
-  ChevronDown,
-  ArrowRight,
-  User,
-  Printer,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FileText, AlertTriangle, Scale, Gavel, UserCheck, FileX, Search, Home, Car, Smartphone, CheckCircle, ChevronDown, User } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Link } from "wouter";
-
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { ShareButton } from "@/components/ui/share-button";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { LegalTextHighlighter } from "@/components/legal-term-highlighter";
+import { MirandaExplainer } from "@/components/miranda-explainer";
 
 export default function RightsInfo() {
   useScrollToTop();
   const { t } = useTranslation();
-  const [selectedRight, setSelectedRight] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState("miranda");
-  const [animationKey, setAnimationKey] = useState(0);
-  
-  const breadcrumbItems = [
-    { label: t('breadcrumb.home', 'Home'), href: '/' }
+  // Native disclosures preserve independent open states and keyboard behavior.
+  useEffect(() => {
+    const openHash = () => {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    };
+    openHash();
+    window.addEventListener("hashchange", openHash);
+    return () => window.removeEventListener("hashchange", openHash);
+  }, []);
+  const topics = [
+    { id: "miranda", label: t("rights.detailedRights.tabs.miranda"), content: <MirandaRightsSection /> },
+    { id: "arrest", label: t("rights.detailedRights.tabs.arrest"), content: <ArrestRightsSection /> },
+    { id: "court", label: t("rights.detailedRights.tabs.court"), content: <CourtRightsSection /> },
+    { id: "prison", label: t("rights.detailedRights.tabs.prison"), content: <PrisonRightsSection /> },
+    { id: "search", label: t("rights.design.search"), content: <SearchSeizureSection /> },
   ];
-  
-  const handleTabChange = (value: string) => {
-    setAnimationKey(prev => prev + 1);
-    setActiveTab(value);
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb 
-        items={breadcrumbItems} 
-        currentPage={t('rights.hero.title')} 
-      />
-
-      <section className="editorial-page-intro py-12 md:py-16 lg:py-20">
-        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-5" data-testid="heading-rights-title">
-                {t('rights.hero.title')}
-              </h1>
-              <p className="text-lg md:text-xl max-w-3xl mb-6" data-testid="text-rights-subtitle">
-                {t('rights.hero.subtitle')}
-              </p>
-              <p className="text-sm font-medium text-muted-foreground mb-4">
-                {t('rights.hero.nextStepDescription', 'Start with the quick reference, then open the detail that fits your situation.')}
-              </p>
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <Button
-                  asChild
-                  className="w-full h-auto min-h-11 sm:w-auto max-w-full flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
-                  data-testid="button-start-rights"
-                >
-                  <a href="#quick-rights">
-                    {t('rights.hero.nextStep', 'See the quick rights reference')}
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
-                <ShareButton
-                  title={t('rights.hero.title')}
-                  text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
-                  variant="outline"
-                  className="bg-transparent border-[var(--editorial-signal)] text-foreground hover:bg-[var(--editorial-signal-soft)]"
-                  data-testid="button-share-rights"
-                />
+    <ScanFirstPageFrame mainClassName="rights-page">
+      <PageBreadcrumb items={[{ label: t("breadcrumb.home", "Home"), href: "/" }]} currentPage={t("rights.hero.title")} />
+      <header className="rights-width rights-intro">
+        <h1 data-testid="heading-rights-title">{t("rights.hero.title")}</h1>
+        <p data-testid="text-rights-subtitle">{t("rights.hero.subtitle")}</p>
+        <p>{t("rights.hero.nextStepDescription", "Start with the quick reference, then open the detail that fits your situation.")}</p>
+        <div className="rights-intro-actions">
+          <a className="rights-link" href="#quick-rights" data-testid="button-start-rights">{t("rights.hero.nextStep", "See the quick rights reference")}</a>
+          <ShareButton title={t("rights.hero.title")} text={t("share.rightsDescription", "Learn about your constitutional rights - important information everyone should know.")} variant="outline" data-testid="button-share-rights" />
+        </div>
+        <Link href="/immigration-guidance" className="rights-link">{t("rights.design.immigration")}</Link>
+      </header>
+      <section className="rights-width rights-topic-layout" id="quick-rights" aria-labelledby="quick-rights-title">
+        <h2 id="quick-rights-title" data-testid="heading-quick-rights">{t("rights.quickRights.title")}</h2>
+        <div>
+          {["silent", "attorney", "phoneCall", "knowCharges"].map(right => (
+            <details className="rights-disclosure" key={right} id={`right-${right}`}>
+              <summary data-testid={`card-right-${t(`rights.quickRights.${right}.title`).toLowerCase().replace(/\s+/g, '-')}`}>{t(`rights.quickRights.${right}.title`)}</summary>
+              <div className="rights-disclosure-body">
+                <p>{t(`rights.quickRights.${right}.description`)}</p>
+                <p>{t(`rights.quickRights.${right}.detailedExplanation`)}</p>
+                {right === "attorney" && <>
+                  <p>There's an important distinction between when your right to counsel begins during interrogation (5th Amendment) versus when it covers your full prosecution (6th Amendment). Many people don't know the right applies before formal charges are filed.</p>
+                  <Link href="/right-to-counsel" className="rights-link">Right to an Attorney: Full Guide</Link>
+                </>}
               </div>
-            </div>
-          </ScrollReveal>
+            </details>
+          ))}
         </div>
       </section>
-
-      {/* Quick Rights Reference */}
-      <section className="py-16 md:py-20 lg:py-24 bg-background" id="quick-rights">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-center text-foreground mb-10 md:mb-14" data-testid="heading-quick-rights">
-              {t('rights.quickRights.title')}
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <ScrollReveal delay={0.1}>
-              <QuickRightCard
-                icon={<BrandShieldIcon size={20} />}
-                title={t('rights.quickRights.silent.title')}
-                description={t('rights.quickRights.silent.description')}
-                onClick={() => setSelectedRight('silent')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <QuickRightCard
-                icon={<Scale className="h-5 w-5" />}
-                title={t('rights.quickRights.attorney.title')}
-                description={t('rights.quickRights.attorney.description')}
-                onClick={() => setSelectedRight('attorney')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <QuickRightCard
-                icon={<Phone className="h-5 w-5" />}
-                title={t('rights.quickRights.phoneCall.title')}
-                description={t('rights.quickRights.phoneCall.description')}
-                onClick={() => setSelectedRight('phoneCall')}
-              />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <QuickRightCard
-                icon={<UserCheck className="h-5 w-5" />}
-                title={t('rights.quickRights.knowCharges.title')}
-                description={t('rights.quickRights.knowCharges.description')}
-                onClick={() => setSelectedRight('knowCharges')}
-              />
-            </ScrollReveal>
-          </div>
+      <div className="rights-width"><MirandaExplainer /></div>
+      <section id="quick-reference-cards" className="rights-width rights-print" data-testid="section-printable-rights-cards">
+        <div><h2 data-testid="heading-printable-rights-cards">{t("rights.printableCards.title")}</h2><p>{t("rights.printableCards.description")}</p></div>
+        <Link href="/quick-reference-cards" className="rights-link" data-testid="button-open-printable-rights-cards">{t("rights.printableCards.button")}</Link>
+      </section>
+      <section className="rights-width rights-topic-layout" id="constitutional-rights" aria-labelledby="detailed-rights-title">
+        <h2 id="detailed-rights-title" data-testid="heading-detailed-rights">{t("rights.detailedRights.title")}</h2>
+        <div>{topics.map(topic => <details className="rights-disclosure" id={`rights-${topic.id}`} key={topic.id}>
+          <summary data-testid={`tab-${topic.id}`}>{topic.label}</summary>
+          <div className="rights-detail-panel">{topic.content}</div>
+        </details>)}</div>
+      </section>
+      <section className="rights-width rights-deeper" id="deep-dives">
+        <h2>Go deeper into your rights</h2>
+        <p>Each of these pages covers a specific area in full detail.</p>
+        <div className="rights-deeper-links">
+          {[
+            { href: "/right-to-counsel", title: "Right to an Attorney", desc: "When it begins, how to invoke it, and the dangerous gap before arraignment.", testId: "button-right-to-counsel" },
+            { href: "/warrants", title: "Warrants & Your Rights", desc: "Arrest warrants, search warrants, how to check if one exists, and what to do.", testId: "button-warrants" },
+            { href: "/support/reputation", title: "Hidden Consequences", desc: "What happens to housing, jobs, benefits, and family after a charge or conviction.", testId: "button-collateral-consequences" },
+          ].map(item => <div key={item.href}><Link href={item.href} className="rights-link" data-testid={item.testId}>{item.title}</Link><p>{item.desc}</p></div>)}
         </div>
       </section>
-
-      {/* Printable Quick Reference */}
-      <section
-        id="quick-reference-cards"
-        className="py-10 md:py-14 bg-muted/30"
-        data-testid="section-printable-rights-cards"
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <ScrollReveal>
-            <div className="editorial-surface rounded-2xl border border-border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2" data-testid="heading-printable-rights-cards">
-                  {t('rights.printableCards.title')}
-                </h2>
-                <p className="text-muted-foreground">
-                  {t('rights.printableCards.description')}
-                </p>
-              </div>
-              <Link href="/quick-reference-cards" className="w-full sm:w-auto">
-                <Button
-                  className="h-auto min-h-10 w-full shrink-0 whitespace-normal text-center sm:w-auto"
-                  data-testid="button-open-printable-rights-cards"
-                >
-                  <Printer className="h-4 w-4 mr-2" />
-                  {t('rights.printableCards.button')}
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
+      <section className="rights-width rights-closing">
+        <Alert><AlertDescription><strong>{t("rights.disclaimer.title")}</strong> {t("rights.disclaimer.text")}</AlertDescription></Alert>
+        <h2 data-testid="heading-need-help">{t("rights.disclaimer.needHelp")}</h2>
+        <Link href="/case-guidance" className="rights-link" data-testid="button-case-guidance">{t("rights.disclaimer.caseGuidance")}</Link>
       </section>
-
-      {/* Detailed Rights Information — two-column layout with sticky sidebar on desktop */}
-      <section className="py-16 md:py-20 lg:py-24 bg-muted/30" id="constitutional-rights">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex gap-10 items-start">
-
-            {/* Main content */}
-            <div className="flex-1 min-w-0">
-              <ScrollReveal>
-                <h2 className="text-3xl font-bold text-foreground mb-10 md:mb-12" data-testid="heading-detailed-rights">
-                  {t('rights.detailedRights.title')}
-                </h2>
-              </ScrollReveal>
-
-              <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-                <ScrollReveal delay={0.1}>
-                  <TabsList className="editorial-surface grid w-full grid-cols-3 lg:grid-cols-5 mb-10 md:mb-12 bg-background">
-                    <TabsTrigger value="miranda" data-testid="tab-miranda" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
-                      {t('rights.detailedRights.tabs.miranda')}
-                    </TabsTrigger>
-                    <TabsTrigger value="arrest" data-testid="tab-arrest" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
-                      {t('rights.detailedRights.tabs.arrest')}
-                    </TabsTrigger>
-                    <TabsTrigger value="court" data-testid="tab-court" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
-                      {t('rights.detailedRights.tabs.court')}
-                    </TabsTrigger>
-                    <TabsTrigger value="prison" data-testid="tab-prison" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
-                      {t('rights.detailedRights.tabs.prison')}
-                    </TabsTrigger>
-                    <TabsTrigger value="search" data-testid="tab-search" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
-                      Search & Seizure
-                    </TabsTrigger>
-                  </TabsList>
-                </ScrollReveal>
-
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`tab-${activeTab}-${animationKey}`}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                  >
-                    <TabsContent value="miranda" className="mt-0" forceMount={activeTab === "miranda" ? true : undefined}>
-                      {activeTab === "miranda" && <MirandaRightsSection />}
-                    </TabsContent>
-                    <TabsContent value="arrest" className="mt-0" forceMount={activeTab === "arrest" ? true : undefined}>
-                      {activeTab === "arrest" && <ArrestRightsSection />}
-                    </TabsContent>
-                    <TabsContent value="court" className="mt-0" forceMount={activeTab === "court" ? true : undefined}>
-                      {activeTab === "court" && <CourtRightsSection />}
-                    </TabsContent>
-                    <TabsContent value="prison" className="mt-0" forceMount={activeTab === "prison" ? true : undefined}>
-                      {activeTab === "prison" && <PrisonRightsSection />}
-                    </TabsContent>
-                    <TabsContent value="search" className="mt-0" forceMount={activeTab === "search" ? true : undefined}>
-                      {activeTab === "search" && <SearchSeizureSection />}
-                    </TabsContent>
-                  </motion.div>
-                </AnimatePresence>
-              </Tabs>
-            </div>
-
-            {/* Sticky sidebar — desktop only */}
-            <aside className="hidden lg:block w-52 flex-shrink-0 sticky top-6 self-start" aria-label="Rights navigation">
-              {/* On this page */}
-              <div className="mb-5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">On this page</p>
-                {([
-                  { value: 'miranda',  label: t('rights.detailedRights.tabs.miranda'), Icon: BrandShieldIcon },
-                  { value: 'arrest',   label: t('rights.detailedRights.tabs.arrest'),  Icon: UserCheck },
-                  { value: 'court',    label: t('rights.detailedRights.tabs.court'),   Icon: Gavel },
-                  { value: 'prison',   label: t('rights.detailedRights.tabs.prison'),  Icon: FileX },
-                  { value: 'search',   label: 'Search & Seizure',                      Icon: Search },
-                ] as const).map(({ value, label, Icon }) => (
-                  <button
-                    key={value}
-                    onClick={() => handleTabChange(value)}
-                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-left text-sm transition-all duration-150 ${
-                      activeTab === value
-                        ? "bg-primary/10 border border-primary/20 text-foreground font-medium"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                    }`}
-                  >
-                    <span className="flex-shrink-0 w-3.5 h-3.5"><Icon size={14} /></span>
-                    <span className="truncate flex-1">{label}</span>
-                    {activeTab === value && <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />}
-                  </button>
-                ))}
-              </div>
-
-              {/* Deep dives */}
-              <div className="border-t border-border/60 pt-4 mb-5">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-1">Go deeper</p>
-                {[
-                  { href: "/right-to-counsel",   label: "Right to an Attorney",   Icon: Scale   },
-                  { href: "/warrants",           label: "Warrants & Your Rights", Icon: FileText},
-                  { href: "/support/reputation", label: "Hidden Consequences",    Icon: FileX   },
-                ].map(({ href, label, Icon }) => (
-                  <Link key={href} href={href}>
-                    <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-150 text-left">
-                      <Icon className="h-3.5 w-3.5 flex-shrink-0" />
-                      <span className="flex-1">{label}</span>
-                      <ChevronRight className="h-3 w-3 flex-shrink-0 opacity-40" />
-                    </button>
-                  </Link>
-                ))}
-              </div>
-
-              {/* Take action */}
-              <div className="border-t border-border/60 pt-4">
-                <Link href="/first-24-hours">
-                  <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left">
-                    <Clock className="h-3.5 w-3.5 flex-shrink-0" />
-                    <span>First 24 Hours</span>
-                  </button>
-                </Link>
-                <Link href="/case-guidance">
-                  <button className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all text-left">
-                    <MessageSquare className="h-3.5 w-3.5 flex-shrink-0" />
-                    <span>Get guidance</span>
-                  </button>
-                </Link>
-              </div>
-            </aside>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Rights Deep Dives — replaces the old "Learn More" button row */}
-      <section className="py-12 bg-background" id="deep-dives">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <h2 className="text-xl font-bold text-foreground mb-1">Go deeper into your rights</h2>
-            <p className="text-sm text-muted-foreground mb-6">Each of these pages covers a specific area in full detail.</p>
-            <div className="grid sm:grid-cols-3 gap-3">
-              {[
-                { href: "/right-to-counsel",   Icon: Scale,    title: "Right to an Attorney",   desc: "When it begins, how to invoke it, and the dangerous gap before arraignment.", color: "text-green-600 dark:text-green-400", bg: "bg-green-50/60 dark:bg-green-900/10 border-green-200 dark:border-green-800/60", testId: "button-right-to-counsel" },
-                { href: "/warrants",           Icon: FileText, title: "Warrants & Your Rights", desc: "Arrest warrants, search warrants, how to check if one exists, and what to do.", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50/60 dark:bg-amber-900/10 border-amber-200 dark:border-amber-800/60", testId: "button-warrants" },
-                { href: "/support/reputation", Icon: FileX,    title: "Hidden Consequences",    desc: "What happens to housing, jobs, benefits, and family after a charge or conviction.", color: "text-slate-600 dark:text-slate-400", bg: "bg-slate-50/60 dark:bg-slate-800/40 border-slate-200 dark:border-slate-700",   testId: "button-collateral-consequences" },
-              ].map(({ href, Icon, title, desc, color, bg, testId }) => (
-                <Link key={href} href={href}>
-                  <div data-testid={testId} className={`rounded-xl border p-4 h-full cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg}`}>
-                    <Icon className={`h-5 w-5 mb-3 ${color}`} strokeWidth={1.75} />
-                    <p className="font-semibold text-foreground text-sm mb-1">{title}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Important Disclaimers */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4">
-          <ScrollReveal>
-            <Alert className="border-border bg-muted/50">
-              <AlertDescription className="text-muted-foreground">
-                <strong className="font-semibold text-foreground">{t('rights.disclaimer.title')}</strong> {t('rights.disclaimer.text')}
-              </AlertDescription>
-            </Alert>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="text-center mt-12">
-              <h3 className="text-xl font-semibold text-foreground mb-4" data-testid="heading-need-help">
-                {t('rights.disclaimer.needHelp')}
-              </h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                <Link href="/case-guidance">
-                  <Button 
-                    data-testid="button-case-guidance" 
-                    className="py-3 px-6"
-                  >
-                    {t('rights.disclaimer.caseGuidance')}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <Footer />
-
-      {/* Right Detail Dialog */}
-      <Dialog open={selectedRight !== null} onOpenChange={(open) => !open && setSelectedRight(null)}>
-        <DialogContent className="max-w-[92vw] sm:max-w-lg md:max-w-2xl overflow-hidden">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2 min-w-0">
-              <span className="flex-shrink-0">
-                {selectedRight === 'silent' && <BrandShieldIcon size={20} />}
-                {selectedRight === 'attorney' && <Scale className="h-5 w-5 text-green-600" />}
-                {selectedRight === 'phoneCall' && <Phone className="h-5 w-5 text-blue-500" />}
-                {selectedRight === 'knowCharges' && <UserCheck className="h-5 w-5 text-blue-600" />}
-              </span>
-              <span className="truncate">{selectedRight && t(`rights.quickRights.${selectedRight}.title`)}</span>
-            </DialogTitle>
-          </DialogHeader>
-          <div className="space-y-4">
-            <p className="text-muted-foreground text-sm sm:text-base">
-              {selectedRight && t(`rights.quickRights.${selectedRight}.detailedExplanation`)}
-            </p>
-            {selectedRight === 'attorney' && (
-              <div className="pt-2 border-t border-border">
-                <p className="text-sm text-muted-foreground mb-3">
-                  There's an important distinction between when your right to counsel begins during interrogation (5th Amendment) versus when it covers your full prosecution (6th Amendment). Many people don't know the right applies before formal charges are filed.
-                </p>
-                <Link href="/right-to-counsel" onClick={() => setSelectedRight(null)}>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="w-full h-auto py-2.5 px-3 whitespace-normal text-left border-green-300 text-green-700 hover:bg-green-50 dark:border-green-700 dark:text-green-300 dark:hover:bg-green-900/20"
-                  >
-                    <Scale className="mr-2 h-4 w-4 flex-shrink-0 mt-0.5" />
-                    <span>Right to an Attorney: Full Guide →</span>
-                  </Button>
-                </Link>
-              </div>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </div>
-  );
-}
-
-function QuickRightCard({ icon, title, description, onClick }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  onClick: () => void;
-}) {
-  return (
-    <Card 
-      className="editorial-card editorial-card-interactive text-center cursor-pointer card-press"
-      onClick={onClick}
-      data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
-    >
-      <CardContent className="p-6">
-        <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4 text-primary">
-          {icon}
-        </div>
-        <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </CardContent>
-    </Card>
+    </ScanFirstPageFrame>
   );
 }
 
@@ -613,15 +277,13 @@ interface SearchScenario {
   yourRights: string[];
   whatToDo: string[];
   whatNotToDo: string[];
-  iconBgColor: string;
 }
 
 const searchScenarios: SearchScenario[] = [
   {
-    icon: <User className="h-6 w-6 text-white" />,
+    icon: <User className="h-6 w-6 text-primary" />,
     title: "Stop and Frisk",
     description: "When police stop you on the street and pat you down for weapons",
-    iconBgColor: "bg-blue-600",
     yourRights: [
       "You can ask if you're free to leave",
       "You can refuse to answer questions (except giving your name in some states)",
@@ -644,10 +306,9 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Car className="h-6 w-6 text-white" />,
+    icon: <Car className="h-6 w-6 text-primary" />,
     title: "Vehicle Search",
     description: "When police want to search your car during a traffic stop",
-    iconBgColor: "bg-green-600",
     yourRights: [
       "Vehicles have fewer warrant protections than homes. Under the automobile exception, probable cause to believe a vehicle contains evidence or contraband can permit a search without a warrant or consent. This does not lower the probable-cause standard.",
       "You can say no to a search of your vehicle",
@@ -670,10 +331,9 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Home className="h-6 w-6 text-white" />,
+    icon: <Home className="h-6 w-6 text-primary" />,
     title: "Home Search",
     description: "When law enforcement wants to enter or search your home",
-    iconBgColor: "bg-purple-600",
     yourRights: [
       "Police usually need a warrant (court order) to enter your home",
       "You can say no if they don't have a warrant",
@@ -701,7 +361,6 @@ const searchScenarios: SearchScenario[] = [
     icon: <BrandShieldIcon size={24} light />,
     title: "Search of Your Person",
     description: "When police want to conduct a body search",
-    iconBgColor: "bg-red-600",
     yourRights: [
       "Police need a good reason to pat you down",
       "Full body search requires arrest or a very good reason",
@@ -725,10 +384,9 @@ const searchScenarios: SearchScenario[] = [
     ],
   },
   {
-    icon: <Smartphone className="h-6 w-6 text-white" />,
+    icon: <Smartphone className="h-6 w-6 text-primary" />,
     title: "Phone Search",
     description: "When police ask to see or unlock your phone",
-    iconBgColor: "bg-indigo-600",
     yourRights: [
       "Police usually need a warrant (court order) to search your phone",
       "You can decline to consent to unlocking your phone. Whether you can be compelled to unlock it depends on the law and circumstances; a lawyer can assess any warrant or order.",
@@ -757,16 +415,16 @@ function SearchScenarioCard({ scenario }: { scenario: SearchScenario }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className="rights-search-scenario">
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CardHeader>
           <CollapsibleTrigger className="w-full">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 ${scenario.iconBgColor} rounded-lg flex items-center justify-center`}>
+              <div className="flex items-center gap-4 min-w-0">
+                <div className={`w-12 h-12 bg-muted text-primary rounded-lg flex items-center justify-center`}>
                   {scenario.icon}
                 </div>
-                <div className="text-left">
+                <div className="text-left min-w-0">
                   <CardTitle className="text-base">{scenario.title}</CardTitle>
                   <p className="text-sm text-muted-foreground mt-1">{scenario.description}</p>
                 </div>

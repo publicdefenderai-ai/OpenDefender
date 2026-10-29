@@ -3100,6 +3100,42 @@ export default {
     }
   },
   "rights": {
+    "design": {
+      "search": "Registros e incautaciones",
+      "immigration": "¿Busca información sobre derechos de inmigración?",
+      "explainer": {
+        "title": "¿Cuándo se aplica Miranda?",
+        "intro": "Explore a su propio ritmo las dos condiciones que dan lugar al requisito de advertencia.",
+        "custody": "Custodia",
+        "interrogation": "Interrogatorio",
+        "count": "Paso {{step}} de {{total}}",
+        "back": "Atrás",
+        "next": "Siguiente",
+        "replay": "Repetir",
+        "transcript": "Leer la explicación completa sin animación",
+        "note": "Esta es una explicación simplificada, no una evaluación de su encuentro. El contexto y las excepciones importan, incluida la excepción de seguridad pública. Consulte a un abogado sobre sus circunstancias.",
+        "source": "Fuente: Constitución anotada · Interrogatorio bajo custodia",
+        "exceptions": "Excepciones a Miranda",
+        "steps": [
+          {
+            "title": "Hablar con la policía no es el único criterio.",
+            "body": "Para Miranda, las cuestiones centrales son la custodia y el interrogatorio. Una conversación con un agente no establece, por sí sola, ambas condiciones."
+          },
+          {
+            "title": "Considere las circunstancias.",
+            "body": "La custodia generalmente implica un arresto formal o una restricción comparable. Los tribunales evalúan la situación objetivamente; no toda detención constituye custodia a efectos de Miranda."
+          },
+          {
+            "title": "Más que preguntas directas.",
+            "body": "El interrogatorio incluye las preguntas y su equivalente funcional: palabras o acciones policiales que los agentes deberían saber que tienen una probabilidad razonable de provocar una respuesta incriminatoria."
+          },
+          {
+            "title": "Las advertencias generalmente preceden al interrogatorio bajo custodia.",
+            "body": "Ambas condiciones importan. Determinar si Miranda se aplica requiere contexto, y existen excepciones. Esta ilustración no puede determinar lo ocurrido en un caso particular."
+          }
+        ]
+      }
+    },
     "hero": {
       "title": "Conozca sus Derechos Legales",
       "subtitle": "Entender sus derechos constitucionales y legales es el primer paso para protegerse dentro del sistema de justicia penal.",
