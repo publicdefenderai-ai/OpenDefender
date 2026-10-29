@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 import os
 import urllib.request
+import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -94,6 +95,32 @@ def atomic_json(path, value):
     os.replace(temporary, path)
 
 
+def acquire_candidate_curl(folder):
+    """Explicit public-source transport fallback; never disable TLS or follow redirects."""
+    folder.mkdir(parents=True, exist_ok=True)
+    started = dt.datetime.now(dt.timezone.utc).isoformat()
+    part, headers = folder / 'archive.zip.part', folder / 'response-headers.txt'
+    result = subprocess.run(['curl', '--fail', '--silent', '--show-error', '--proto', '=https',
+        '--max-time', '600', '--header', 'Cache-Control: no-cache', '--header', 'Accept-Encoding: identity',
+        '--dump-header', str(headers), '--output', str(part), '--write-out', '%{http_code}', SOURCE_URL],
+        capture_output=True, text=True)
+    if result.returncode or result.stdout.strip() != '200':
+        raise ValueError('Official archive transfer failed; no receipt issued')
+    fields = {line.split(':', 1)[0].lower(): line.split(':', 1)[1].strip()
+              for line in headers.read_text().splitlines() if ':' in line}
+    try:
+        expected = int(fields['content-length'])
+    except (KeyError, ValueError) as error:
+        raise ValueError('Missing or invalid archive length') from error
+    size = part.stat().st_size
+    if expected <= 0 or expected > 3 * 1024 ** 3 or size != expected:
+        raise ValueError('Incomplete or oversized archive download')
+    digest = bulk.sha256_file(part)
+    os.replace(part, folder / 'archive.zip')
+    atomic_json(folder / 'archive-receipt.json', dict(sourceUrl=SOURCE_URL, retrievedAt=started,
+        lastModified=fields.get('last-modified'), bytes=size, sha256=digest))
+
+
 def acquire_candidate(folder):
     folder.mkdir(parents=True, exist_ok=True)
     started = dt.datetime.now(dt.timezone.utc).isoformat()
@@ -125,14 +152,15 @@ def acquire_candidate(folder):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--candidate', type=Path, default=ROOT / '.cache/california-bulk/refresh-candidate')
+    parser.add_argument('--candidate', type=Path, default=ROOT / '.cache/california-bulk/runtime-renewal-candidate')
     parser.add_argument('--activate-unchanged', action='store_true')
     parser.add_argument('--acquire', action='store_true')
+    parser.add_argument('--transport', choices=['urllib', 'curl'], default='urllib')
     args = parser.parse_args()
     if args.acquire:
         atomic_json(OUTPUT / 'california-archive-refresh-receipt.json', dict(schemaVersion=1,
                     status='unverified', method='retained_section_comparison', attemptedAt=dt.datetime.now(dt.timezone.utc).isoformat()))
-        acquire_candidate(args.candidate)
+        (acquire_candidate_curl if args.transport == 'curl' else acquire_candidate)(args.candidate)
     documents = retained_documents()
     pins = json.loads((ROOT / 'shared/california-retained-pins.json').read_text())
     expected_pins = {k: dict(hash=version_digest(v), versions=len(v)) for k, v in sorted(documents.items())}

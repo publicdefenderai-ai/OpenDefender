@@ -3,10 +3,10 @@
   "scope": "changed_statutory_versions_held_not_approved",
   "candidate": {
     "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
-    "retrievedAt": "2026-10-01T18:00:08.220542+00:00",
-    "lastModified": "Mon, 28 Sep 2026 04:26:06 GMT",
-    "bytes": 1281829537,
-    "sha256": "39a6b76269fd1dff5b0f3dd758dcf2f1a5c7ba8729542b550edc17dd2f0827d6"
+    "retrievedAt": "2026-10-29T23:28:32.557210+00:00",
+    "lastModified": "Mon, 26 Oct 2026 04:26:08 GMT",
+    "bytes": 1292052065,
+    "sha256": "ec562b927cd7714905450feca5a8f0d887db4f4f9250192663481c6d7149a431"
   },
   "documents": {}
 }

@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 import unittest
 import tempfile
+from unittest.mock import patch
+from types import SimpleNamespace
 
 spec = importlib.util.spec_from_file_location('refresh', Path(__file__).with_name('refresh-retained.py'))
 r = importlib.util.module_from_spec(spec)
@@ -57,6 +59,34 @@ class RetainedRefreshTests(unittest.TestCase):
                 (output / 'california-attorney-source-approval.json').write_text(json.dumps(approval))
                 with self.assertRaises(ValueError):
                     r.retained_documents(output=output)
+
+
+    def test_curl_transport_binds_success_and_rejects_partial_or_redirected_downloads(self):
+        for status, length in [('200', 7), ('302', 7), ('200', 8), ('200', None)]:
+            with self.subTest(status=status, length=length), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder)
+                (path/'archive.zip').write_bytes(b'old')
+                (path/'archive-receipt.json').write_text('{"unchanged": true}')
+                def transfer(args, **kwargs):
+                    self.assertNotIn('--insecure', args)
+                    self.assertNotIn('--location', args)
+                    self.assertEqual(args[-1], r.SOURCE_URL)
+                    Path(args[args.index('--output')+1]).write_bytes(b'archive')
+                    Path(args[args.index('--dump-header')+1]).write_text(
+                        'HTTP/2 '+status+'\n'+('Content-Length: '+str(length)+'\n' if length is not None else '')+'Last-Modified: retained publisher time\n')
+                    return SimpleNamespace(returncode=0, stdout=status, stderr='')
+                with patch.object(r.subprocess, 'run', side_effect=transfer):
+                    if status == '200' and length == 7:
+                        r.acquire_candidate_curl(path)
+                        receipt = json.loads((path/'archive-receipt.json').read_text())
+                        self.assertEqual(receipt['bytes'], 7)
+                        self.assertEqual(receipt['sha256'], hashlib.sha256(b'archive').hexdigest())
+                        self.assertEqual(receipt['sourceUrl'], r.SOURCE_URL)
+                        self.assertIsNotNone(r.dt.datetime.fromisoformat(receipt['retrievedAt']).tzinfo)
+                    else:
+                        with self.assertRaises(ValueError): r.acquire_candidate_curl(path)
+                        self.assertEqual((path/'archive.zip').read_bytes(), b'old')
+                        self.assertEqual(json.loads((path/'archive-receipt.json').read_text()), {'unchanged':True})
 
 if __name__ == '__main__':
     unittest.main()
