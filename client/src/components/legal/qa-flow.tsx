@@ -537,10 +537,13 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
+  const [catalogLoadFailed, setCatalogLoadFailed] = useState(false);
+  const [catalogRetry, setCatalogRetry] = useState(0);
   const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "CA"].includes(formData.jurisdiction);
   const isOhio = formData.jurisdiction?.toUpperCase() === "OH";
 
   useEffect(() => {
+    setCatalogLoadFailed(false);
     if (!isAuthorityBacked) {
       setRuntimeAuthorityCharges(null);
       return;
@@ -556,14 +559,17 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
       .catch(() => {
         // Do not fall back to the static catalog: an unavailable or
         // incomplete authority manifest must fail closed in the selector.
-        if (!cancelled) setRuntimeAuthorityCharges([]);
+        if (!cancelled) {
+          setCatalogLoadFailed(true);
+          setRuntimeAuthorityCharges([]);
+        }
       });
 
     return () => {
       cancelled = true;
       controller.abort();
     };
-  }, [isAuthorityBacked, formData.jurisdiction, i18n.language]);
+  }, [isAuthorityBacked, formData.jurisdiction, i18n.language, catalogRetry]);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
   const availableCharges = isAuthorityBacked
@@ -709,6 +715,9 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
 
         <div className="space-y-4">
+          <div role="note" data-testid="charge-coverage-notice" className="rounded-lg border bg-muted/30 p-4 text-sm leading-relaxed text-muted-foreground">
+            {t('legalGuidance.qaFlow.caseDetails.coverageNotice')}
+          </div>
           {isOhio && (
             <div
               className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
@@ -940,11 +949,26 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
             <div className="max-h-64 overflow-y-auto border rounded-md p-3 space-y-4">
               
               {totalFilteredCharges === 0 && (
-                <p className="text-sm text-muted-foreground text-center py-4">
-                  {isAuthorityBacked && runtimeAuthorityCharges === null
-                    ? `Loading current ${formData.jurisdiction} charges…`
-                    : t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
-                </p>
+                <div role="status" className="text-sm text-muted-foreground text-center py-4 space-y-3" data-testid="charge-catalog-status">
+                  <p>
+                    {isAuthorityBacked && runtimeAuthorityCharges === null
+                      ? t('legalGuidance.qaFlow.caseDetails.catalogLoading')
+                      : catalogLoadFailed
+                        ? t('legalGuidance.qaFlow.caseDetails.catalogLoadFailed')
+                        : isAuthorityBacked && runtimeAuthorityCharges?.length === 0
+                          ? t('legalGuidance.qaFlow.caseDetails.catalogUnavailable')
+                          : t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
+                  </p>
+                  {isAuthorityBacked && runtimeAuthorityCharges?.length === 0 && (
+                    <Button type="button" variant="outline" data-testid="button-retry-charge-catalog" onClick={() => {
+                      setRuntimeAuthorityCharges(null);
+                      setCatalogLoadFailed(false);
+                      setCatalogRetry(value => value + 1);
+                    }}>
+                      {t('legalGuidance.qaFlow.caseDetails.catalogRetry')}
+                    </Button>
+                  )}
+                </div>
               )}
 
               {/* State Charges Section */}
