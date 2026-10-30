@@ -1,4 +1,5 @@
 /** Read-only public release check. No admin token, seed operation or case data. */
+import { fetchChargeCatalog } from "../client/src/lib/charge-catalog";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CALIFORNIA_CANONICAL_RECORDS, getCaliforniaRecordEvidenceStatus } from "../shared/california-authority";
@@ -23,15 +24,17 @@ export function assessCaliforniaDeployment(status: any, selector: any, now = new
     actualCount: actualIds.length, expectedReceipt: expected, problems };
 }
 export async function checkCaliforniaDeployment() {
-  const responses = await Promise.all([
-    "/api/statutes/sources/california/status",
-    "/api/criminal-charges?jurisdiction=CA&limit=500",
-  ].map(async path => {
-    const response = await fetch(`https://opendefender.net${path}`, { redirect: "error", cache: "no-store", signal: AbortSignal.timeout(30_000) });
-    if (!response.ok) throw new Error(`Public deployment check failed: HTTP ${response.status}`);
-    return response.json();
-  }));
-  return assessCaliforniaDeployment(responses[0], responses[1]);
+  const publicFetch: typeof fetch = (path, options) => fetch(new URL(String(path), 'https://opendefender.net'), {
+    ...options, redirect: 'error', cache: 'no-store', signal: options?.signal ?? AbortSignal.timeout(30_000),
+  });
+  const [status, selector] = await Promise.all([
+    publicFetch('/api/statutes/sources/california/status').then(async response => {
+      if (!response.ok) throw new Error(`Public deployment check failed: HTTP ${response.status}`);
+      return response.json();
+    }),
+    fetchChargeCatalog({ jurisdiction: 'CA' }, AbortSignal.timeout(30_000), publicFetch),
+  ]);
+  return assessCaliforniaDeployment(status, { success: true, ...selector });
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   checkCaliforniaDeployment().then(report => {
