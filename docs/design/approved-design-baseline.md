@@ -390,3 +390,18 @@ Reference files:
 - `counsel-immigration-graphics.css`: SHA-256 `335f3cfc324d5f9dc436f928616a3db4aef658f7f29b047c8fff74fee35748b7`
 
 Validation: typecheck and production build passed. All six dedicated locale/theme browser cases passed. After integrating main and PR 86, all 13 combined collection and immigration-content browser checks passed. Desktop and phone views were compared with the local accepted reference. The broader site translation gaps and existing full-suite failures are not resolved or reclassified by this design batch. No deployment or legal approval is claimed.
+
+## Data Sources design batch
+
+Applies the accepted inventory-first layout without an illustration. The current 19 topics appear before the longer state notes. Each record keeps coverage, freshness, source link, confidence and limitation visible, with named sources, citations and evidence under native disclosure controls. The AI provider disclosure remains visible when its evidence notes are closed. Six confidence descriptions and all eight state explanations remain. Native state disclosures retain every prior anchor, official link, current-provenance explanation and developer endpoint; initial and changed hashes open the relevant disclosure. The shared header/footer and sun/moon control remain.
+
+Removes the old rainbow card surfaces, small external-link arrows and uppercase tracked labels in favor of warm plum surfaces, rules and reading space. The reporting email is replaced with the owner-approved X DM invitation, translated in English, Spanish and Chinese. This changes presentation, not legal guidance, source verification, data counts or review dates. Current shared inventory facts are used, including recent California changes; the older visual preview's counts are not copied. Existing source prose and named-source translation gaps remain unchanged. In particular, legacy numeric evidence prose is preserved, not re-certified against current dynamic totals; reconciling that source-content discrepancy is a separate follow-up.
+
+`tests/fixtures/data-sources-published.ts` independently captures the rendered headings, paragraphs, list items, coverage fields and unique source/link destinations in all three locales at `51914041` before the refresh. The only intentionally removed destination is the retired email. The release-allowlisted spec checks every captured fragment and link after keyboard expansion, all 19 records/eight states/six labels, inventory ordering, visible provider disclosure, initial and changed deep links, and actual element bounds at 1280px/320px in both themes and all three locales. The fixture is a preservation baseline, not an assertion that every captured source statement has been newly verified.
+
+References:
+- `opendefender-data-sources-preview.html`: SHA-256 `384155b2edce0cdb86f149d4a56262eee83bbe03182ff439f93c19075b5119a3`
+- `data-sources-content.html`: SHA-256 `d798befaed087bc866337706c04686e9b61092e5b5da5f2f2f898d9827299205`
+- `data-sources-style.html`: SHA-256 `ff92f05bd7585db262b0a4028975ab045be4bea7ad52345b9494080359b2d7fd`
+
+Validation: typecheck, production build, all six existing inventory tests and all six new browser cases passed. Desktop, phone and dark-mode renders were visually inspected. No full-suite, deployment or new legal-review completion claim. Next design batch: Developer page.
