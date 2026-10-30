@@ -405,3 +405,5 @@ References:
 - `data-sources-style.html`: SHA-256 `ff92f05bd7585db262b0a4028975ab045be4bea7ad52345b9494080359b2d7fd`
 
 Validation: typecheck, production build, all six existing inventory tests and all six new browser cases passed. Desktop, phone and dark-mode renders were visually inspected. No full-suite, deployment or new legal-review completion claim. Next design batch: Developer page.
+
+Data Sources review follow-up: coverage assertions retain independently captured wording templates but interpolate all 13 dynamic coverage groups from current DATA_SOURCE_FACTS with locale-aware number formatting. Static source prose remains a literal preservation fixture. Future publication batches no longer require rewriting historical coverage counts in the fixture.

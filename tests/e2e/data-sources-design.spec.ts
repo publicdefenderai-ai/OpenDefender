@@ -1,6 +1,23 @@
 import { test, expect } from '@playwright/test';
 // Captured from the published page at 51914041, before this layout change.
 import published from '../fixtures/data-sources-published';
+import { DATA_SOURCE_FACTS as F } from '../../shared/data-source-facts';
+// Expected coverage comes from maintained facts, not a historical publication count.
+const coverageFacts = {
+  federalStatutes: ['federal-statutes', [F.federalStatutes]],
+  charges: ['criminal-charges', [F.charges, F.chargeTiers.felony, F.chargeTiers.misdemeanor, F.chargeTiers.infraction]],
+  explanations: ['charge-explanations', [F.chargeExplanationsWithSources, F.chargeExplanations]],
+  procedure: ['procedure-rules', [F.procedureJurisdictions, F.procedureMediumConfidence]],
+  collateral: ['collateral-consequences', [F.collateralJurisdictions, F.driversLicenseJurisdictions, F.immigrationJurisdictions, F.sexOffenderJurisdictions]],
+  expungement: ['expungement', [F.expungementJurisdictions]],
+  diversion: ['diversion', [F.diversionPrograms, F.activeDiversionPrograms]],
+  legalAid: ['legal-aid', [F.legalAidOrganizations, F.legalAidJurisdictions]],
+  glossary: ['glossary', [F.glossaryTerms]],
+  courtServices: ['court-services', [F.courtServices]],
+  statuteLinks: ['statute-links', [F.statuteLinkJurisdictions]],
+  detention: ['detention', [F.detentionFacilities, F.detentionStates]],
+  consulates: ['consulates', [F.consulates]],
+} as const;
 for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light', 'dark']) {
   test(`Data Sources preserves published information: ${language}/${theme}`, async ({page}, info) => {
     await page.addInitScript(({language,theme}) => {
@@ -22,6 +39,15 @@ for (const language of ['en', 'es', 'zh'] as const) for (const theme of ['light'
       await control.focus(); await page.keyboard.press('Enter');
       await expect(detail).toHaveAttribute('open','');
       await expect(control).toBeFocused();
+    }
+    const number = new Intl.NumberFormat(language === 'zh' ? 'zh-CN' : language);
+    for (const key of Object.keys(coverageFacts) as (keyof typeof coverageFacts)[]) {
+      const [id, values] = coverageFacts[key];
+      const parts = values.map(value => number.format(value));
+      const count = key === 'charges' ? `${parts[0]} · ${parts.slice(1).join(' / ')}`
+        : parts.join(key === 'explanations' ? ' of ' : ' / ');
+      await expect(content.locator(`#${id} .sources-facts dd`).first())
+        .toHaveText(published[language].coverage[key].replace(/{{count}}/g, count));
     }
     for (const text of published[language].text) await expect(content).toContainText(text);
     for (const href of published[language].links) {
