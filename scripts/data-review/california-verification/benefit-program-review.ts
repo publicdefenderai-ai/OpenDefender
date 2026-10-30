@@ -12,7 +12,8 @@ import { sourceText } from './person-property-review';
 import { getCaliforniaCanonicalRecord } from '../../../shared/california-authority';
 import { californiaPrimaryIdentity } from '../../../shared/california-law-codes';
 import pins from '../../../shared/california-retained-pins.json';
-import comparison from '../output/california-retained-refresh-comparison.json';
+// Publication binds to its historical acquisition, never the rolling runtime renewal.
+import comparison from '../output/california-publication-comparison-2026-10-01.json';
 const hash = (v: unknown) => createHash('sha256').update(typeof v === 'string' ? v : JSON.stringify(v)).digest('hex');
 const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 const primary = (a: typeof additions[number]) => `${a.lawCode}:${a.code.split('(')[0]}`;

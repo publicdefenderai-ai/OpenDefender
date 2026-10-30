@@ -2795,3 +2795,61 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .situations-reader { padding: 24px 18px; }
   .situations-reader h3 { font-size: 26px; }
 }
+
+/* Data Sources: readable inventory, with detailed evidence and state notes. */
+.sources-page { --sources-soft: #eee4ea; color: var(--foreground); padding-bottom: 56px; }
+.dark .sources-page { --sources-soft: #342936; }
+.sources-width { max-width: 1120px; margin-inline: auto; padding-inline: 6%; }
+.sources-hero { padding-block: 48px 28px; }
+.sources-eyebrow { color: var(--muted-foreground); font-size: 14px; }
+.sources-title { font-size: clamp(36px,5vw,56px); line-height: 1.12; font-weight: 500; letter-spacing: -1.7px; }
+.sources-nav { display: flex; flex-wrap: wrap; gap: 8px 26px; padding-bottom: 20px; border-bottom: 1px solid var(--editorial-rule); }
+.sources-page a { overflow-wrap: anywhere; }
+.sources-nav a, .sources-index-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 600; font-size: 14px; }
+.sources-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.sources-page a:focus-visible, .sources-page summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.sources-body { padding-top: 28px; }
+.sources-page h2 { font-size: 28px; line-height: 1.25; font-weight: 500; letter-spacing: -.6px; }
+.sources-page h3 { font-size: 19px; line-height: 1.35; font-weight: 500; }
+.sources-warning { background: var(--sources-soft); padding: 26px; }
+.sources-warning h2 { font-size: 21px; }
+.sources-warning p, .sources-warning li { line-height: 1.75; }
+.sources-index { margin-top: 24px; }
+.sources-index-link { border-bottom: 1px solid var(--editorial-rule); padding-block: 7px; line-height: 1.5; }
+.sources-record { border-top: 1px solid var(--editorial-rule); padding-block: 28px; scroll-margin-top: 110px; }
+.sources-records { margin-top: 28px; }
+.sources-record-head { display: grid; grid-template-columns: minmax(0,1fr) 200px; gap: 25px; }
+.sources-confidence { color: var(--primary); font-size: 13px; text-align: right; line-height: 1.6; }
+.sources-facts { display: grid; grid-template-columns: 1fr 1fr 150px; gap: 24px; margin-block: 22px; }
+.sources-label { font-size: 13px; font-weight: 600; color: var(--muted-foreground); margin-bottom: 6px; }
+.sources-limitation { border-left: 2px solid var(--primary); padding-left: 16px; margin-block: 20px 8px; }
+.sources-evidence { padding: 1px 20px 18px; background: var(--muted); }
+.sources-provider { margin-top: 20px; padding: 18px; background: var(--sources-soft); }
+.sources-page summary { min-height: 44px; padding-block: 12px; cursor: pointer; color: var(--primary); }
+.sources-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 35px; margin-top: 24px; }
+.sources-legend-item { border-top: 1px solid var(--editorial-rule); padding-top: 16px; }
+.sources-states { margin-top: 48px; }
+.sources-states > h2 { margin-bottom: 24px; }
+.sources-state { border-top: 1px solid var(--editorial-rule); scroll-margin-top: 110px; }
+.sources-state > summary { padding-block: 22px; display: flex; gap: 20px; align-items: baseline; justify-content: space-between; list-style: none; color: var(--foreground); }
+.sources-state > summary::-webkit-details-marker { display: none; }
+.sources-state > summary::after { content: '+'; font-size: 16px; color: var(--primary); }
+.sources-state[open] > summary::after { content: '−'; }
+.sources-state > summary h2 { font-size: 21px; margin: 0; }
+.sources-state > div { max-width: 800px; padding-bottom: 28px; }
+.sources-state-body { display: grid; gap: 24px; margin-top: 24px; }
+.sources-state-part { margin-block: 18px; }
+.sources-state p.sources-state-part { color: var(--muted-foreground); font-size: 14px; }
+.sources-state a { display: inline-flex; align-items: center; min-height: 44px; }
+.sources-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; padding: 28px; margin-top: 40px; background: var(--sources-soft); }
+.sources-page [id] { scroll-margin-top: 110px; }
+@media (max-width: 700px) {
+  .sources-hero { padding-top: 30px; }
+  .sources-record-head, .sources-facts, .sources-legend, .sources-bottom { grid-template-columns: 1fr; }
+  .sources-record-head { gap: 8px; }
+  .sources-confidence { text-align: left; }
+  .sources-warning, .sources-bottom { padding: 22px 18px; }
+  .sources-page h2 { font-size: 25px; }
+  .sources-index > div { grid-template-columns: 1fr 1fr; }
+  .sources-evidence { padding-inline: 16px; }
+}

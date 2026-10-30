@@ -2,7 +2,7 @@
  * A failed or changed page rejects the entire result, never a partial catalog.
  */
 export async function fetchChargeCatalog<T extends { id: string } = { id: string }>(
-  filters: Record<string, string>, signal?: AbortSignal,
+  filters: Record<string, string>, signal?: AbortSignal, fetchPage: typeof fetch = fetch,
 ): Promise<{ charges: T[]; count: number; totalAvailable: number }> {
   const params = new URLSearchParams(filters);
   params.set("limit", "500");
@@ -17,7 +17,7 @@ export async function fetchChargeCatalog<T extends { id: string } = { id: string
   for (let page = 0; page < 100; page++) {
     params.set("offset", String(offset));
     if (snapshot) params.set("snapshot", snapshot);
-    const response = await fetch(`/api/criminal-charges?${params}`, { signal });
+    const response = await fetchPage(`/api/criminal-charges?${params}`, { signal });
     if (!response.ok) throw new Error("Current charge catalog could not be loaded");
     const body = await response.json();
     const p = body.pagination;

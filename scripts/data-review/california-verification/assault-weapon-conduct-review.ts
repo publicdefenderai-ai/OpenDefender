@@ -5,7 +5,8 @@ import additions from '../../../shared/california-assault-weapon-conduct-additio
 import acquisition from '../output/california-assault-weapon-conduct-acquisition.json';
 import predecessor from '../output/california-weapons-dependencies-review.json';
 import approved from '../output/california-attorney-source-approval.json';
-import comparison from '../output/california-retained-refresh-comparison.json';
+// Publication binds to its historical acquisition, never the rolling runtime renewal.
+import comparison from '../output/california-publication-comparison-2026-10-01.json';
 import pins from '../../../shared/california-retained-pins.json';
 import { benefitProgramDocuments } from './benefit-program-review';
 import { sourceText } from './person-property-review';
