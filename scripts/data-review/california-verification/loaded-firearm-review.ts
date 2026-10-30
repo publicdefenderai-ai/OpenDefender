@@ -4,7 +4,8 @@ import { fileURLToPath } from 'node:url';
 import additions from '../../../shared/california-loaded-firearm-additions.json';
 import acquisition from '../output/california-loaded-firearm-acquisition.json';
 import predecessor from '../output/california-weapons-dependencies-review.json';
-import comparison from '../output/california-retained-refresh-comparison.json';
+// Publication binds to its historical acquisition, never the rolling runtime renewal.
+import comparison from '../output/california-publication-comparison-2026-10-01.json';
 import pins from '../../../shared/california-retained-pins.json';
 import { assaultWeaponConductDocuments } from './assault-weapon-conduct-review';
 import { sourceText } from './person-property-review';

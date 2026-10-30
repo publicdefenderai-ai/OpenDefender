@@ -1,6 +1,6 @@
 # California archive currency and renewal
 
-California has 174 configured selectable records. Live selection and provenance
+California configured counts are reported by `coverage.ts`. Live selection and provenance
 also require complete database evidence and a valid, unexpired archive receipt.
 The configured catalog remains available for research and reproducible coverage
 counts; those counts are not a promise that all records are currently available.
@@ -20,13 +20,17 @@ when the receipt is stale or invalid; reimporting metadata does not renew eviden
 Run from the repository root:
 
 ```sh
-python3 scripts/data-review/california-verification/refresh-retained.py --acquire --activate-unchanged
+python3 scripts/data-review/california-verification/refresh-retained.py --acquire --transport curl --activate-unchanged
 node scripts/check-statutory-receipt-freshness.mjs
 ```
 
+The explicit curl transport uses HTTPS with certificate verification, rejects redirects and non-200 responses, checks the declared byte length and records a SHA-256 hash. The urllib transport remains available with `--transport urllib`. Neither transport bypasses source access controls.
+
+New renewals default to `.cache/california-bulk/runtime-renewal-candidate`. Preserve `.cache/california-bulk/refresh-candidate`: it contains the historical archive used by publication replay. An explicit `--candidate` can keep each renewal separate.
+
 The first command acquires a separate official candidate archive (approximately
-1.28 GB), records authentic request-start time, verifies transfer length and the
-archive SHA-256, and compares all 304 retained sections / 307 versions. It preserves
+1.3 GB), records authentic request-start time, verifies transfer length and the
+archive SHA-256, and compares every explicitly pinned retained section and version. It preserves
 the original reviewed archive. Only unchanged text hashes and legal/version metadata earn a seven-day receipt.
 Changed or missing sections remain explicit holds; every dependent charge is
 withheld while unrelated charges remain eligible. Code identity, version IDs,
@@ -47,6 +51,8 @@ To replay an already acquired candidate, omit `--acquire`. Its original retrieva
 time is preserved; a stale candidate cannot be activated. Without
 `--activate-unchanged`, the script produces comparison evidence only. Changed or missing versions require substantive review. Activation renews only the
 unchanged subset and records the rest as mandatory source holds.
+
+Historical publication validators use the frozen October 1 comparison, while runtime uses the rolling comparison. Do not rewrite old publication packets to give them new acquisition dates.
 
 Review and commit the comparison, receipt and changed-source evidence, then deploy
 the updated app.
