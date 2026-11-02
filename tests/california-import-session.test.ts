@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const mocks = vi.hoisted(() => ({
-  connect: vi.fn(), query: vi.fn(), end: vi.fn(), config: vi.fn(), database: {},
+  connect: vi.fn(), query: vi.fn(), end: vi.fn(), on: vi.fn(), config: vi.fn(), database: {},
 }));
 vi.mock("pg", () => ({
   Client: class {
@@ -8,6 +8,7 @@ vi.mock("pg", () => ({
     connect = mocks.connect;
     query = mocks.query;
     end = mocks.end;
+    on = mocks.on;
   },
 }));
 vi.mock("drizzle-orm/node-postgres", () => ({ drizzle: () => mocks.database }));
@@ -72,5 +73,15 @@ describe("California import session ownership and time limits", () => {
       })).rejects.toThrow("two-minute execution budget");
       expect(mocks.end).toHaveBeenCalledOnce();
     } finally { vi.useRealTimers(); }
+  });
+  it("owns unexpected connection errors and fails the next boundary check without crashing", async () => {
+    await expect(withCaliforniaImportSession(async (_database, check) => {
+      expect(mocks.on).toHaveBeenCalledWith("error", expect.any(Function));
+      const handler = mocks.on.mock.calls[0][1];
+      handler(new Error("connection lost"));
+      handler(new Error("later disconnect"));
+      check();
+    })).rejects.toThrow("connection lost");
+    expect(mocks.end).toHaveBeenCalledOnce();
   });
 });

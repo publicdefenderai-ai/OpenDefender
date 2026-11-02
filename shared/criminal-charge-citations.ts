@@ -19475,11 +19475,21 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
 for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
   const primary = definition.citations[0];
+  const existing = CHARGE_CITATIONS[definition.id];
   CHARGE_CITATIONS[definition.id] = {
     citation: primary.citation,
     confidence: "high",
     lastVerified: definition.verifiedMonth,
-    source: "Florida Legislature Online Sunshine reviewed source-first report",
+    // Statute approval does not establish a jury-instruction mapping. Preserve
+    // an exact existing mapping, otherwise state that none is verified here;
+    // this does not assert that the courts publish no applicable instruction.
+    source: "Florida Legislature Online Sunshine reviewed source-first report" +
+      (existing?.instructionRef ? "" :
+        "; no FSJI (per-charge instruction mapping not yet verified for this source-first record)"),
     sourceUrl: primary.url,
+    ...(existing?.instructionRef ? {
+      instructionRef: existing.instructionRef,
+      instructionUrl: existing.instructionUrl,
+    } : {}),
   };
 }

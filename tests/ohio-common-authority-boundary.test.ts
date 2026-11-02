@@ -1,6 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-const state = vi.hoisted(() => ({ fresh: true, missingId: "", rows: [] as any[], metadata: {} as any }));
+const state = vi.hoisted(() => ({ fresh: true, pilotFresh: true, missingId: "", rows: [] as any[], metadata: {} as any }));
 vi.mock("../server/data/ohio-chapter-2903-refresh", () => ({ isOhioChapter2903PilotFresh: () => true }));
+vi.mock("../server/services/ohio-pilot-refresh-service", () => ({
+  getOhioPilotRefreshStatus: async () => ({ fresh: state.pilotFresh }),
+}));
 vi.mock("../server/data/ohio-reviewed-source", async importOriginal => {
   const actual = await importOriginal<any>();
   return {
@@ -17,10 +20,10 @@ vi.mock("../server/db", () => ({ db: { select: () => ({ from: () => {
   }) }; return chain;
 } }) } }));
 import { getCurrentAuthoritySelectableChargeIds } from "../server/services/authority-source-database";
-import { buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
+import { buildOhioChapter2903PilotManifestRecords, buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
 
 describe("corrected Ohio records require deployed supporting evidence", () => {
-  beforeEach(() => { state.fresh = true; state.missingId = ""; });
+  beforeEach(() => { state.fresh = true; state.pilotFresh = true; state.missingId = ""; });
   const records = buildOhioReviewedManifestRecords(new Date());
   const record = records.find(r => r.chargeId === "oh-orc-3767-32-littering")!;
   const links = record.provisions.map(p => ({ chargeId: record.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision }));
@@ -45,6 +48,19 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
     state.fresh = true;
     expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set([record.chargeId]));
     state.fresh = false;
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
+  });
+  it("withholds an actual chapter 2903 pilot charge when its durable receipt is not fresh", async () => {
+    const pilot = buildOhioChapter2903PilotManifestRecords(new Date())
+      .find(row => row.chargeId === "oh-orc-2903-01-aggravated-murder")!;
+    expect(pilot).toBeDefined();
+    state.rows = pilot.provisions.map(p => ({
+      chargeId: pilot.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole,
+      citation: p.citation, subdivision: p.subdivision,
+    }));
+    state.metadata = { selectableChargeIds: [pilot.chargeId], catalogRecords: [pilot] };
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set([pilot.chargeId]));
+    state.pilotFresh = false;
     expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
   });
 });

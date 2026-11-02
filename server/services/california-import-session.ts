@@ -31,6 +31,12 @@ export async function withCaliforniaImportSession<T>(
     idle_in_transaction_session_timeout: CALIFORNIA_IMPORT_LIMITS.idleTransactionMs,
     application_name: "california-reference-import",
   });
+  // pg rejects active queries AND emits an error on an unexpected disconnect.
+  // Own that event on this disposable client so a lost COMMIT response or idle
+  // timeout cannot become an uncaught process error. Never infer rollback from
+  // this event: the server may already have committed.
+  let connectionError: Error | undefined;
+  client.on("error", (error: Error) => { connectionError ??= error; });
   const deadline = Date.now() + CALIFORNIA_IMPORT_LIMITS.totalMs;
   let locked = false;
   try {
@@ -55,6 +61,7 @@ export async function withCaliforniaImportSession<T>(
     }
     const database = drizzle({ client, schema });
     return await work(database, () => {
+      if (connectionError) throw connectionError;
       if (Date.now() >= deadline) {
         throw new Error("California import exceeded its two-minute execution budget; transaction must roll back.");
       }

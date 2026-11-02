@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { getInstructionRef, getInstructionUrl } from '../shared/criminal-charges';
 import type { CriminalCharge } from '../shared/criminal-charges';
 import { CHARGE_CITATIONS } from '../shared/criminal-charge-citations';
+import { FLORIDA_REVIEWED_DEFINITIONS } from '../shared/florida-reviewed-batch';
 
 function makeCharge(
   id: string,
@@ -237,6 +238,17 @@ describe('FL FSJI coverage — regression guard', () => {
       Boolean(record.source?.includes('no FSJI')),
     );
     expect(hasAny).toBe(true);
+  });
+  it('does not present reviewed statutes as verified jury-instruction mappings', () => {
+    for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
+      const citation = CHARGE_CITATIONS[definition.id];
+      if (citation.instructionRef) continue;
+      expect(citation.source).toContain(
+        'no FSJI (per-charge instruction mapping not yet verified for this source-first record)',
+      );
+      expect(getInstructionRef(makeCharge(definition.id, 'FL'))).toBeNull();
+      expect(getInstructionUrl(makeCharge(definition.id, 'FL'))).toBeNull();
+    }
   });
 });
 

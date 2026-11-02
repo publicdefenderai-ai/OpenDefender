@@ -32,6 +32,7 @@ import {
   OHIO_REVIEWED_BATCH,
   OHIO_REVIEWED_DEFINITIONS,
 } from '../shared/ohio-reviewed-batch';
+import ohioSourceChangeHolds from '../shared/ohio-source-change-holds.json';
 
 // ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
 const { caseStore, enrichmentUpdateCallbacks, authoritySelectableIds } = vi.hoisted(() => ({
@@ -290,8 +291,13 @@ describe('Ohio localized criminal-charge API', () => {
     const heldIds = OHIO_REVIEWED_DEFINITIONS
       .filter(row => !eligibleIds.has(row.id))
       .map(row => row.id);
-    expect(eligibleIds.size).toBe(105);
-    expect(heldIds).toHaveLength(20);
+    expect(eligibleIds.size).toBe(104);
+    expect(heldIds).toHaveLength(21);
+    expect(heldIds).toContain('oh-orc-2911-21-criminal-trespass');
+    for (const hold of ohioSourceChangeHolds) {
+      expect(eligibleIds.has(hold.id)).toBe(false);
+      expect(heldIds).toContain(hold.id);
+    }
 
     authoritySelectableIds.clear();
     for (const id of eligibleIds) authoritySelectableIds.add(id);
