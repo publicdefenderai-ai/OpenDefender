@@ -20,6 +20,7 @@ import { translateChargeName, translateDescription } from "../shared/charge-tran
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
 import { californiaSourceDatabase } from "./services/california-source-database";
+import { CaliforniaImportBlockedError } from "./services/california-import-session";
 import {
   newYorkSourceDatabase,
 } from "./services/new-york-source-database";
@@ -922,6 +923,13 @@ export async function registerRoutes(
       const result = await californiaSourceDatabase.seed();
       res.status(result.success ? 200 : 500).json(result);
     } catch (error) {
+      if (error instanceof CaliforniaImportBlockedError) {
+        return res.status(409).json({
+          success: false,
+          error: error.message,
+          code: "CALIFORNIA_IMPORT_BLOCKED",
+        });
+      }
       errLog("California source database seeding failed", error);
       res.status(500).json({ success: false, error: "California source database seeding failed" });
     }
