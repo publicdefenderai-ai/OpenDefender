@@ -1,23 +1,59 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({
-  fresh: false,
-  metadata: { selectableChargeIds: ["oh-orc-2903-01-aggravated-murder"], catalogRecords: [] },
+  sharedFresh: false,
+  metadata: {
+    selectableChargeIds: ["oh-orc-2903-01-aggravated-murder"],
+    catalogRecords: [{
+      chargeId: "oh-orc-2903-01-aggravated-murder",
+      provisions: [{
+        sourceKey: "oh:statute:2903.01",
+        supportRole: "offense",
+        citation: "Ohio Rev. Code Ann. § 2903.01",
+        subdivision: null,
+      }],
+    }],
+  },
+  selectCalls: 0,
 }));
-vi.mock("../server/data/ohio-chapter-2903-refresh", () => ({
-  isOhioChapter2903PilotFresh: () => mocks.fresh,
+vi.mock("../server/services/ohio-pilot-refresh-service", () => ({
+  getOhioPilotRefreshStatus: async () => ({
+    fresh: mocks.sharedFresh,
+    reason: mocks.sharedFresh ? null : "revoked",
+    receipt: mocks.sharedFresh ? {} : null,
+  }),
 }));
 vi.mock("../server/db", () => ({
   db: {
-    select: () => ({
-      from: () => ({
-        where: () => ({
-          orderBy: () => ({
-            limit: async () => [{ metadata: mocks.metadata }],
+    select: () => {
+      mocks.selectCalls++;
+      if (mocks.selectCalls === 1) {
+        return {
+          from: () => ({
+            where: () => ({
+              orderBy: () => ({
+                limit: async () => [{ metadata: mocks.metadata }],
+              }),
+            }),
+          }),
+        };
+      }
+      return {
+        from: () => ({
+          innerJoin: () => ({
+            innerJoin: () => ({
+              where: async () => [{
+                chargeId: "oh-orc-2903-01-aggravated-murder",
+                sourceKey: "oh:statute:2903.01",
+                supportRole: "offense",
+                citation: "Ohio Rev. Code Ann. § 2903.01",
+                subdivision: null,
+              }],
+            }),
           }),
         }),
-      }),
-    }),
+      };
+    },
   },
 }));
 
@@ -28,9 +64,12 @@ import {
 } from "../server/services/authority-source-database";
 
 describe("Ohio freshness at the database-backed provenance boundary", () => {
-  beforeEach(() => { mocks.fresh = false; });
+  beforeEach(() => {
+    mocks.sharedFresh = false;
+    mocks.selectCalls = 0;
+  });
 
-  it("rejects stale pilot IDs even when an old completed run still lists them", async () => {
+  it("rejects pilot IDs when the shared receipt is revoked even when an old completed run still lists them", async () => {
     expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
   });
 
@@ -51,5 +90,12 @@ describe("Ohio freshness at the database-backed provenance boundary", () => {
     expect(selectPrimaryAuthoritySource([...rows].reverse(), expected)).toBe(primary);
     expect(selectPrimaryAuthoritySource(rows.slice(0, -1), expected)).toBeUndefined();
     expect(selectPrimaryAuthoritySource([], expected)).toBeUndefined();
+  });
+
+  it("uses fresh shared state even when the checked-in receipt is stale", async () => {
+    mocks.sharedFresh = true;
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(
+      new Set(["oh-orc-2903-01-aggravated-murder"]),
+    );
   });
 });

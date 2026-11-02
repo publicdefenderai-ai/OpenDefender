@@ -11,8 +11,11 @@ import {
   type OhioAuthorityManifest,
 } from "./ohio-source-database-seed";
 import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "./ohio-chapter-2903-source";
-import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
 import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "./ohio-reviewed-source";
+import {
+  isOhioChapter2903PilotFresh,
+  validateOhioChapter2903RefreshReceipt,
+} from "./ohio-chapter-2903-refresh";
 
 export const OHIO_MANIFEST_PATH = resolve(
   process.cwd(),
@@ -22,6 +25,7 @@ export const OHIO_MANIFEST_PATH = resolve(
 export function loadOhioAuthorityManifest(
   manifestPath: string = OHIO_MANIFEST_PATH,
   now: Date = new Date(),
+  receipt?: unknown,
 ): OhioAuthorityManifest {
   const raw = JSON.parse(readFileSync(manifestPath, "utf8")) as {
     jurisdiction?: string;
@@ -70,8 +74,24 @@ export function loadOhioAuthorityManifest(
   const manifestGeneratedAt = generatedAt > sourceFirstGeneratedAt
     ? generatedAt
     : sourceFirstGeneratedAt;
-  const pilotFresh = isOhioChapter2903PilotFresh(now);
   const reviewedFresh = isOhioReviewedSourceFresh(now);
+  // An explicit receipt comes from the durable runtime ledger. Passing null
+  // deliberately fails closed; omitting the argument preserves the
+  // file-backed offline behavior used by manifest/build tests.
+  let pilotFresh: boolean;
+  if (receipt === undefined) {
+    // Vitest is the deliberate offline/build fixture boundary. Runtime
+    // callers must provide the durable receipt (or null to fail closed).
+    pilotFresh = process.env.VITEST === "true"
+      ? isOhioChapter2903PilotFresh(now)
+      : false;
+  } else if (receipt === null) {
+    pilotFresh = false;
+  } else {
+    const validationError = validateOhioChapter2903RefreshReceipt(receipt, now);
+    if (validationError) throw new Error(validationError);
+    pilotFresh = true;
+  }
   const recordsWithPilot = [
     ...raw.catalogRecords,
     ...(pilotFresh

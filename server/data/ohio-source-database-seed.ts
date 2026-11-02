@@ -22,13 +22,16 @@ import {
   type OhioChapter2903PilotSourceRecord,
   type OhioChapter2903SupportRole,
 } from "./ohio-chapter-2903-source";
-import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
 import {
   isOhioReviewedSourceFresh,
   OHIO_REVIEWED_SOURCES,
   type OhioReviewedDocument,
   type OhioReviewedSource,
 } from "./ohio-reviewed-source";
+import {
+  isOhioChapter2903PilotFresh,
+  validateOhioChapter2903RefreshReceipt,
+} from "./ohio-chapter-2903-refresh";
 
 export const OHIO_SOURCE_POLICY = "official_ohio_revised_code";
 export const OHIO_SOURCE_PUBLISHER = "Ohio Legislative Service Commission";
@@ -823,12 +826,26 @@ export function validateOhioManifestRecord(
 export function buildOhioSourceDatabaseSeed(
   manifest: OhioAuthorityManifest,
   now: Date = new Date(),
+  receipt?: unknown,
 ): AuthoritySourceDatabaseSeed {
+  // An explicit receipt is the durable runtime boundary. The file-backed
+  // default is retained only for offline/build callers that do not provide a
+  // receipt (the runtime seeding service always supplies one, including null
+  // when the shared receipt is unavailable).
+  const pilotFresh = receipt === undefined
+    ? process.env.VITEST === "true"
+      ? isOhioChapter2903PilotFresh(now)
+      : false
+    : receipt !== null && validateOhioChapter2903RefreshReceipt(receipt, now) === null;
+  if (receipt !== undefined && receipt !== null) {
+    const validationError = validateOhioChapter2903RefreshReceipt(receipt, now);
+    if (validationError) throw new Error(validationError);
+  }
   // A manifest supplied directly to this builder must not bypass the same
   // live receipt boundary that the loader uses.
   const records = manifest.catalogRecords.filter(record =>
     (!OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
-      isOhioChapter2903PilotFresh(now)) &&
+      pilotFresh) &&
     (!OHIO_REVIEWED_SOURCES.some(source => source.chargeId === record.chargeId) ||
       isOhioReviewedSourceFresh(now)));
   annotateSharedAuthorityMappings(records);

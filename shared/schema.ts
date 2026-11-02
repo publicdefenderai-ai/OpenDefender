@@ -395,6 +395,33 @@ export const statuteIngestionRuns = pgTable("statute_ingestion_runs", {
   metadata: jsonb("metadata"),
 });
 
+// A fenced singleton job, shared by all instances. Evidence lives in the
+// existing ingestion ledger; no deployed instance renews a local JSON file.
+export const ohioPilotRefreshState = pgTable("ohio_pilot_refresh_state", {
+  id: text("id").primaryKey(),
+  receipt: jsonb("receipt"),
+  approvedPinset: text("approved_pinset"),
+  reviewRequired: boolean("review_required").notNull().default(false),
+  reason: text("reason"),
+  nextCheckAt: timestamp("next_check_at", { withTimezone: true }).notNull().defaultNow(),
+  leaseToken: text("lease_token"),
+  leaseUntil: timestamp("lease_until", { withTimezone: true }),
+  lastRunId: varchar("last_run_id"),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const ohioPilotReviewDecisions = pgTable("ohio_pilot_review_decisions", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  runId: varchar("run_id").notNull().references(() => statuteIngestionRuns.id),
+  pinset: text("pinset").notNull(),
+  reviewer: text("reviewer").notNull(),
+  note: text("note").notNull(),
+  decision: text("decision").notNull(),
+  decidedAt: timestamp("decided_at", { withTimezone: true }).notNull().defaultNow(),
+}, table => ({
+  decisionCheck: check("ohio_pilot_review_decision_check", sql`${table.decision} in ('approve', 'reject')`),
+}));
+
 export const insertStatuteSourceSchema = createInsertSchema(statuteSources).omit({
   id: true,
 });

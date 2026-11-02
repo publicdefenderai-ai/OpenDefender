@@ -9,8 +9,18 @@ import {
 } from "../../server/data/ohio-source-database-seed";
 
 async function main(): Promise<void> {
-  const manifest = loadOhioAuthorityManifest();
-  const seed = buildOhioSourceDatabaseSeed(manifest);
+  const { getOhioPilotRefreshStatus } = await import("../../server/services/ohio-pilot-refresh-service");
+  const refreshStatus = await getOhioPilotRefreshStatus();
+  const manifest = loadOhioAuthorityManifest(
+    undefined,
+    new Date(),
+    refreshStatus.fresh ? refreshStatus.receipt : null,
+  );
+  const seed = buildOhioSourceDatabaseSeed(
+    manifest,
+    new Date(),
+    refreshStatus.fresh ? refreshStatus.receipt : null,
+  );
   if (process.argv.includes("--dry-run")) {
     console.log(JSON.stringify({
       jurisdiction: "OH",
@@ -25,7 +35,7 @@ async function main(): Promise<void> {
     return;
   }
   const { seedOhioSourceDatabase } = await import("../../server/services/ohio-source-database");
-  const result = await seedOhioSourceDatabase(manifest);
+  const result = await seedOhioSourceDatabase();
   console.log(JSON.stringify(result, null, 2));
   if (!result.success) process.exitCode = 1;
 }
