@@ -19,7 +19,7 @@ describe("California corrections require seeded supporting references", () => {
   const unaffected = "ca-prostitution-solicitation";
   const links = seed.links.filter(link => [affected, unaffected].includes(link.chargeId)).map(link => {
     const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-    return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+    return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, section: snapshot.section, supportRole: link.supportRole, subdivision: link.subdivision };
   });
   it("withholds only the corrected charge when the old seed lacks its sentencing references", async () => {
     state.ids = [affected, unaffected];
@@ -37,7 +37,7 @@ describe("California corrections require seeded supporting references", () => {
     const id = "ca-possession-of-drug-paraphernalia";
     const drugLinks = seed.links.filter(link => link.chargeId === id).map(link => {
       const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, section: snapshot.section, supportRole: link.supportRole, subdivision: link.subdivision };
     });
     const isPenalty = (row: typeof drugLinks[number]) => new URL(row.sourceUrl).searchParams.get("sectionNum") === "11374";
     expect(drugLinks.filter(isPenalty)).toHaveLength(1);
@@ -51,7 +51,7 @@ describe("California corrections require seeded supporting references", () => {
     const id = "ca-pen-244-5-b";
     const additionLinks = seed.links.filter(link => link.chargeId === id).map(link => {
       const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, section: snapshot.section, supportRole: link.supportRole, subdivision: link.subdivision };
     });
     state.ids = [id]; state.rows = additionLinks;
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));
@@ -65,7 +65,7 @@ describe("California corrections require seeded supporting references", () => {
     const id = "ca-pen-496d-a";
     const rows = seed.links.filter(link => link.chargeId === id).map(link => {
       const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, section: snapshot.section, supportRole: link.supportRole, subdivision: link.subdivision };
     });
     state.ids = [id]; state.rows = rows;
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));
@@ -78,7 +78,7 @@ describe("California corrections require seeded supporting references", () => {
     const id = "ca-pen-241-4";
     const rows = seed.links.filter(link => link.chargeId === id).map(link => {
       const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };
+      return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, section: snapshot.section, supportRole: link.supportRole, subdivision: link.subdivision };
     });
     state.ids = [id]; state.rows = rows;
     expect(await getCurrentCaliforniaSelectableChargeIds()).toEqual(new Set([id]));

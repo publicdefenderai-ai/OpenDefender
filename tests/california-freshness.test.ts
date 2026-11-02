@@ -99,7 +99,7 @@ describe("California archive currency", () => {
     const seed = buildCaliforniaSourceDatabaseSeed();
     const rows = seed.links.filter(link => link.chargeId === "ca-pen-245-a-4").map(link => {
       const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
-      return { chargeId: link.chargeId, citation: snapshot.citation, sourceUrl: snapshot.sourceUrl,
+      return { chargeId: link.chargeId, citation: snapshot.citation, section: snapshot.section, sourceUrl: snapshot.sourceUrl,
         supportRole: link.supportRole, subdivision: link.subdivision };
     });
     let crossDeadline = false;
