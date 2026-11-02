@@ -81,7 +81,7 @@ export interface CaliforniaChargeProvenance {
 type CaliforniaCurrentProvenanceRow = CaliforniaChargeProvenance["sources"][number];
 type CaliforniaEvidenceRow = Pick<
   CaliforniaCurrentProvenanceRow,
-  "sourceUrl" | "citation"
+  "sourceUrl" | "citation" | "section"
 > & {
   supportRole: string;
   subdivision: string | null;
@@ -102,14 +102,16 @@ function provenanceKey(source: {
   sourceUrl: string;
   supportRole: string;
   citation: string;
+  section: string;
   subdivision: string | null;
 }): string {
-  return [
+  return JSON.stringify([
     source.sourceUrl,
     source.supportRole,
     source.citation,
+    source.section,
     source.subdivision ?? "",
-  ].join("|");
+  ]);
 }
 
 function hasCompleteCaliforniaEvidence(
@@ -120,6 +122,9 @@ function hasCompleteCaliforniaEvidence(
     sourceUrl: source.url,
     supportRole: supportRoleForSourceKind(source.kind),
     citation: record.citation,
+    // Several reviewed instructions can share a landing-page URL. Match the
+    // specific cited reference, not just that URL and the charge's citation.
+    section: source.citation,
     subdivision: record.code,
   })));
   const actual = new Set(rows.map((row) => provenanceKey(row)));
@@ -601,6 +606,7 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     .select({
       chargeId: statuteChargeLinks.chargeId,
       citation: statuteSourceSnapshots.citation,
+      section: statuteSourceSnapshots.section,
       sourceUrl: statuteSourceSnapshots.sourceUrl,
       supportRole: statuteChargeLinks.supportRole,
       subdivision: statuteChargeLinks.subdivision,
@@ -618,6 +624,7 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     const rows = rowsByCharge.get(row.chargeId) ?? [];
     rows.push({
       citation: row.citation,
+      section: row.section,
       sourceUrl: row.sourceUrl,
       supportRole: row.supportRole,
       subdivision: row.subdivision,
