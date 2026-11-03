@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 1,
+  "scope": "neutral_correction_reconciliation_not_publication_or_receipt",
+  "checkedAt": "2026-11-03T06:05:41.105Z",
+  "counts": {
+    "records": 18,
+    "guidanceUpdates": 9,
+    "evidenceOnly": 7,
+    "relatedContext": 2,
+    "officialSections": 17
+  },
+  "sources": [
+    {
+      "section": "109.57",
+      "status": "matches_candidate",
+      "candidateHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+      "observedHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+      "candidateEffective": "2026-10-09",
+      "observedEffective": "2026-10-09",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-109.57",
+      "retrievedAt": "2026-11-03T06:05:41.719Z",
+      "responseHtmlSha256": "3229225d1cd68ae1fa4ac1e2600eb7abe425a45be49724ee2683af961553ca85"
+    },
+    {
+      "section": "1901.33",
+      "status": "matches_candidate",
+      "candidateHash": "66f6b58b41f4cd60d306798ba4aa8ee031a1464c09c780d81d4ef4b81dcc30f7",
+      "observedHash": "66f6b58b41f4cd60d306798ba4aa8ee031a1464c09c780d81d4ef4b81dcc30f7",
+      "candidateEffective": "2006-06-30",
+      "observedEffective": "2006-06-30",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1901.33",
+      "retrievedAt": "2026-11-03T06:05:42.889Z",
+      "responseHtmlSha256": "90d77c51394442075745b5ae99aa8470ab457b08fd12c2a267a2c60128e80cd7"
+    },
+    {
+      "section": "1907.201",
+      "status": "matches_candidate",
+      "candidateHash": "6a95cc19c687ff8ae5d4a89455a23a4a557636fc9bc8ae389b58bb2130bd5cec",
+      "observedHash": "6a95cc19c687ff8ae5d4a89455a23a4a557636fc9bc8ae389b58bb2130bd5cec",
+      "candidateEffective": "1997-07-01",
+      "observedEffective": "1997-07-01",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1907.201",
+      "retrievedAt": "2026-11-03T06:05:44.057Z",
+      "responseHtmlSha256": "eba0a6b10367a44fa0173f4a3ec6891aa2167459795a73586935de8ef222fd98"
+    },
+    {
+      "section": "2301.27",
+      "status": "matches_candidate",
+      "candidateHash": "21106baa3bbcc5e5b74e7e1bc17d32231d4c9c92894dc090a5a389caeb9ccb16",
+      "observedHash": "21106baa3bbcc5e5b74e7e1bc17d32231d4c9c92894dc090a5a389caeb9ccb16",
+      "candidateEffective": "2012-09-28",
+      "observedEffective": "2012-09-28",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2301.27",
+      "retrievedAt": "2026-11-03T06:05:45.234Z",
+      "responseHtmlSha256": "51a7417fc070c6ce6222daea51435e9745c261791572e375c5b9adc88751bff4"
+    },
+    {
+      "section": "2903.06",
+      "status": "matches_candidate",
+      "candidateHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+      "observedHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+      "retrievedAt": "2026-11-03T06:05:46.394Z",
+      "responseHtmlSha256": "8ea4005a4dd0a39a8bdd93f5c47e06a6ae0d3ec1b7661f0726758282a195eb45"
+    },
+    {
+      "section": "2903.08",
+      "status": "matches_candidate",
+      "candidateHash": "f95efb41d8331a4f7efaadb41f489746cbb99b68c099f886b8baa421bfacbb8a",
+      "observedHash": "f95efb41d8331a4f7efaadb41f489746cbb99b68c099f886b8baa421bfacbb8a",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
+      "retrievedAt": "2026-11-03T06:05:47.481Z",
+      "responseHtmlSha256": "f9a58abc645afd040a9a4623dc9c99fb04984d1d72caa95dd7d6f591e5c89a42"
+    },
+    {
+      "section": "2903.216",
+      "status": "matches_candidate",
+      "candidateHash": "df3ad72b600f341a3d45bd9fa39dbc7279b1213cda5a59bfaffc6c12a5fc55f8",
+      "observedHash": "df3ad72b600f341a3d45bd9fa39dbc7279b1213cda5a59bfaffc6c12a5fc55f8",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.216",
+      "retrievedAt": "2026-11-03T06:05:48.663Z",
+      "responseHtmlSha256": "16918fb97a263c4fbc9fad8d5e93b422d13ea9624fb238ed191a1a46b5500cc3"
+    },
+    {
+      "section": "2903.22",
+      "status": "matches_candidate",
+      "candidateHash": "d732e1a3963e30bbfb1f768d58e6b3a6f8feef1228e5307e7be2e2339fbac40b",
+      "observedHash": "d732e1a3963e30bbfb1f768d58e6b3a6f8feef1228e5307e7be2e2339fbac40b",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.22",
+      "retrievedAt": "2026-11-03T06:05:49.827Z",
+      "responseHtmlSha256": "09292c71c26643cf06bcbfb80916253652e1f8512f52785877968dfa7c4a670e"
+    },
+    {
+      "section": "2913.02",
+      "status": "matches_candidate",
+      "candidateHash": "edda13aad6cd648846fdff3fe40b9e9c4871989ee34e513a279716aa5bae1d6e",
+      "observedHash": "edda13aad6cd648846fdff3fe40b9e9c4871989ee34e513a279716aa5bae1d6e",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.02",
+      "retrievedAt": "2026-11-03T06:05:50.997Z",
+      "responseHtmlSha256": "5555491d5b1b3fb94f0a4c2c9ebd0282bacbf6eabce484ad75d641f59ae46d41"
+    },
+    {
+      "section": "2913.51",
+      "status": "matches_candidate",
+      "candidateHash": "edb22f26e6b728d17feeb37f6b15289c1519c1be705a85fca2781adea9d87705",
+      "observedHash": "edb22f26e6b728d17feeb37f6b15289c1519c1be705a85fca2781adea9d87705",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.51",
+      "retrievedAt": "2026-11-03T06:05:52.071Z",
+      "responseHtmlSha256": "48f69f4d9fc23918d7b6af2e92e8e8cf9f52dcd90914ce6c70cf0da5703a61eb"
+    },
+    {
+      "section": "2921.31",
+      "status": "matches_candidate",
+      "candidateHash": "620bd8db509d4378b87bc19a2039062dd2e088c6847be45bd58d8eefceb70deb",
+      "observedHash": "620bd8db509d4378b87bc19a2039062dd2e088c6847be45bd58d8eefceb70deb",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.31",
+      "retrievedAt": "2026-11-03T06:05:53.151Z",
+      "responseHtmlSha256": "eee64c48bf333a822b267ba7649cf288044f9e217ea36531d99db78986812580"
+    },
+    {
+      "section": "2929.31",
+      "status": "matches_candidate",
+      "candidateHash": "13ceea6273034671be05263bf300af0174472b45c309942e642ff1b08df8cc28",
+      "observedHash": "13ceea6273034671be05263bf300af0174472b45c309942e642ff1b08df8cc28",
+      "candidateEffective": "2004-01-01",
+      "observedEffective": "2004-01-01",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.31",
+      "retrievedAt": "2026-11-03T06:05:54.312Z",
+      "responseHtmlSha256": "b3d6cc1944b8dda636418ca8840d43195752a6f8360ada9e899fa1768983d3a1"
+    },
+    {
+      "section": "4501.01",
+      "status": "matches_candidate",
+      "candidateHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+      "observedHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+      "candidateEffective": "2025-06-30",
+      "observedEffective": "2025-06-30",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4501.01",
+      "retrievedAt": "2026-11-03T06:05:55.510Z",
+      "responseHtmlSha256": "e8d754d8f2b3f22c187006020f64594bae91de4f4bb63bb56c3d08dc7ce4cf71"
+    },
+    {
+      "section": "4519.01",
+      "status": "matches_candidate",
+      "candidateHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+      "observedHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+      "candidateEffective": "2017-06-30",
+      "observedEffective": "2017-06-30",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4519.01",
+      "retrievedAt": "2026-11-03T06:05:56.717Z",
+      "responseHtmlSha256": "c6cee7f32e51425d90583643ea6db2f123d3e84531dd4997e58f3e791056eda9"
+    },
+    {
+      "section": "4729.01",
+      "status": "matches_candidate",
+      "candidateHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+      "observedHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+      "candidateEffective": "2026-10-09",
+      "observedEffective": "2026-10-09",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
+      "retrievedAt": "2026-11-03T06:05:57.931Z",
+      "responseHtmlSha256": "426058cc4600abcdd13dc914fddce27af4eaa05049b6ca783b338ec56a0f6a7b"
+    },
+    {
+      "section": "4737.012",
+      "status": "matches_candidate",
+      "candidateHash": "4e16759ee45c833cb0c083888fc487555975f5da4b80d93d43cc7497c5649242",
+      "observedHash": "4e16759ee45c833cb0c083888fc487555975f5da4b80d93d43cc7497c5649242",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.012",
+      "retrievedAt": "2026-11-03T06:05:59.133Z",
+      "responseHtmlSha256": "e750a700ce01603b5122b19218eba62929cbfb62b8eb98e1172a3874efe57dc8"
+    },
+    {
+      "section": "4737.04",
+      "status": "matches_candidate",
+      "candidateHash": "fff0839c911c6ab9a433b912ff9ecc2a26b3517b28edb2e39c78496aeab4b54b",
+      "observedHash": "fff0839c911c6ab9a433b912ff9ecc2a26b3517b28edb2e39c78496aeab4b54b",
+      "candidateEffective": "2026-10-06",
+      "observedEffective": "2026-10-06",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.04",
+      "retrievedAt": "2026-11-03T06:06:00.307Z",
+      "responseHtmlSha256": "b7219237e1ec75940a7e732c4e83f5c90327b38319adb81a055ea00f5b7d146f"
+    }
+  ],
+  "records": [
+    {
+      "id": "oh-orc-2903-06-aggravated-vehicular-homicide",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.06",
+        "4501.01",
+        "4519.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2903.06",
+          "contentHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4501.01",
+          "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+          "effectiveFrom": "2025-06-30"
+        },
+        {
+          "section": "4519.01",
+          "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+          "effectiveFrom": "2017-06-30"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-06-vehicular-homicide",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.06",
+        "4501.01",
+        "4519.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2903.06",
+          "contentHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4501.01",
+          "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+          "effectiveFrom": "2025-06-30"
+        },
+        {
+          "section": "4519.01",
+          "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+          "effectiveFrom": "2017-06-30"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-06-vehicular-manslaughter",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.06",
+        "4501.01",
+        "4519.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2903.06",
+          "contentHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4501.01",
+          "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+          "effectiveFrom": "2025-06-30"
+        },
+        {
+          "section": "4519.01",
+          "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+          "effectiveFrom": "2017-06-30"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-08-aggravated-vehicular-assault",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.08",
+        "4501.01",
+        "4519.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2903.08",
+          "contentHash": "f95efb41d8331a4f7efaadb41f489746cbb99b68c099f886b8baa421bfacbb8a",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4501.01",
+          "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+          "effectiveFrom": "2025-06-30"
+        },
+        {
+          "section": "4519.01",
+          "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+          "effectiveFrom": "2017-06-30"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-08-vehicular-assault",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.08",
+        "4501.01",
+        "4519.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [],
+      "sourceBindings": [
+        {
+          "section": "2903.08",
+          "contentHash": "f95efb41d8331a4f7efaadb41f489746cbb99b68c099f886b8baa421bfacbb8a",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4501.01",
+          "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+          "effectiveFrom": "2025-06-30"
+        },
+        {
+          "section": "4519.01",
+          "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+          "effectiveFrom": "2017-06-30"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-216-illegal-use-of-a-tracking-device-or-application",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "2903.216"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2903.216",
+          "contentHash": "df3ad72b600f341a3d45bd9fa39dbc7279b1213cda5a59bfaffc6c12a5fc55f8",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-22-menacing",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceSections": [
+        "1901.33",
+        "1907.201",
+        "2301.27",
+        "2903.22"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [],
+      "sourceBindings": [
+        {
+          "section": "1901.33",
+          "contentHash": "66f6b58b41f4cd60d306798ba4aa8ee031a1464c09c780d81d4ef4b81dcc30f7",
+          "effectiveFrom": "2006-06-30"
+        },
+        {
+          "section": "1907.201",
+          "contentHash": "6a95cc19c687ff8ae5d4a89455a23a4a557636fc9bc8ae389b58bb2130bd5cec",
+          "effectiveFrom": "1997-07-01"
+        },
+        {
+          "section": "2301.27",
+          "contentHash": "21106baa3bbcc5e5b74e7e1bc17d32231d4c9c92894dc090a5a389caeb9ccb16",
+          "effectiveFrom": "2012-09-28"
+        },
+        {
+          "section": "2903.22",
+          "contentHash": "d732e1a3963e30bbfb1f768d58e6b3a6f8feef1228e5307e7be2e2339fbac40b",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-31-hazing",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "4729.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [],
+      "sourceBindings": [
+        {
+          "section": "4729.01",
+          "contentHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2903-311-reckless-failure-to-immediately-report-knowledge-of-hazing",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "4729.01"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [],
+      "sourceBindings": [
+        {
+          "section": "4729.01",
+          "contentHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-02-theft",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "degreeContext"
+      ],
+      "sourceSections": [
+        "2913.02",
+        "2929.31",
+        "4737.012",
+        "4737.04"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2913.02",
+          "contentHash": "edda13aad6cd648846fdff3fe40b9e9c4871989ee34e513a279716aa5bae1d6e",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "2929.31",
+          "contentHash": "13ceea6273034671be05263bf300af0174472b45c309942e642ff1b08df8cc28",
+          "effectiveFrom": "2004-01-01"
+        },
+        {
+          "section": "4737.012",
+          "contentHash": "4e16759ee45c833cb0c083888fc487555975f5da4b80d93d43cc7497c5649242",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4737.04",
+          "contentHash": "fff0839c911c6ab9a433b912ff9ecc2a26b3517b28edb2e39c78496aeab4b54b",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-property",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "109.57"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "109.57",
+          "contentHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-computer-cable-or-telecommunication-property",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "109.57"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "109.57",
+          "contentHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-the-law-enforcement-automated-database-system",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "109.57"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "109.57",
+          "contentHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-the-ohio-law-enforcement-gateway",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "109.57"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "109.57",
+          "contentHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+          "effectiveFrom": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-49-identity-fraud",
+      "classification": "dependency_evidence_only",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "2913.02"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2913.02",
+          "contentHash": "edda13aad6cd648846fdff3fe40b9e9c4871989ee34e513a279716aa5bae1d6e",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2913-51-receiving-stolen-property",
+      "classification": "guidance_and_evidence_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [
+        "degreeContext"
+      ],
+      "sourceSections": [
+        "2913.51",
+        "2929.31",
+        "4729.01",
+        "4737.012",
+        "4737.04"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2913.51",
+          "contentHash": "edb22f26e6b728d17feeb37f6b15289c1519c1be705a85fca2781adea9d87705",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "2929.31",
+          "contentHash": "13ceea6273034671be05263bf300af0174472b45c309942e642ff1b08df8cc28",
+          "effectiveFrom": "2004-01-01"
+        },
+        {
+          "section": "4729.01",
+          "contentHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+          "effectiveFrom": "2026-10-09"
+        },
+        {
+          "section": "4737.012",
+          "contentHash": "4e16759ee45c833cb0c083888fc487555975f5da4b80d93d43cc7497c5649242",
+          "effectiveFrom": "2026-10-06"
+        },
+        {
+          "section": "4737.04",
+          "contentHash": "fff0839c911c6ab9a433b912ff9ecc2a26b3517b28edb2e39c78496aeab4b54b",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+      "classification": "dependency_context_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "2921.31"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "2921.31",
+          "contentHash": "620bd8db509d4378b87bc19a2039062dd2e088c6847be45bd58d8eefceb70deb",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "id": "oh-orc-2927-12-ethnic-intimidation",
+      "classification": "dependency_context_update",
+      "baselineStatus": "matches_committed_baseline",
+      "englishFieldsToUpdate": [],
+      "sourceSections": [
+        "1901.33",
+        "1907.201",
+        "2301.27",
+        "2903.22"
+      ],
+      "candidateSourceStatus": "matches_fresh_official_acquisition",
+      "runtimeStatus": "inactive_not_approved_by_reconciliation",
+      "unchangedEnglishFields": [
+        "degreeContext",
+        "plainSummary"
+      ],
+      "sourceBindings": [
+        {
+          "section": "1901.33",
+          "contentHash": "66f6b58b41f4cd60d306798ba4aa8ee031a1464c09c780d81d4ef4b81dcc30f7",
+          "effectiveFrom": "2006-06-30"
+        },
+        {
+          "section": "1907.201",
+          "contentHash": "6a95cc19c687ff8ae5d4a89455a23a4a557636fc9bc8ae389b58bb2130bd5cec",
+          "effectiveFrom": "1997-07-01"
+        },
+        {
+          "section": "2301.27",
+          "contentHash": "21106baa3bbcc5e5b74e7e1bc17d32231d4c9c92894dc090a5a389caeb9ccb16",
+          "effectiveFrom": "2012-09-28"
+        },
+        {
+          "section": "2903.22",
+          "contentHash": "d732e1a3963e30bbfb1f768d58e6b3a6f8feef1228e5307e7be2e2339fbac40b",
+          "effectiveFrom": "2026-10-06"
+        }
+      ]
+    }
+  ],
+  "preservedHoldIds": [
+    "oh-orc-2911-21-criminal-trespass"
+  ],
+  "activationAllowed": false,
+  "receiptRenewalAllowed": false
+}
