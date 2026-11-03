@@ -2910,3 +2910,48 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .developer-page td { border: 0; padding: 6px 0; }
   .developer-page td::before { content: attr(data-label); display: block; color: var(--foreground); font-family: var(--font-sans); font-size: 12px; font-weight: 600; margin-bottom: 3px; }
 }
+
+/* Friends & Family: practical steps with a distinct helping-hands illustration. */
+.family-page { --family-soft: #eee4ea; max-width: 1120px; margin: auto; color: var(--foreground); }
+.dark .family-page { --family-soft: #342936; }
+.family-hero { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); gap: 40px; align-items: center; padding: 48px 6% 35px; }
+.family-eyebrow { font-size: 14px; color: var(--muted-foreground); }
+.family-page h1 { font-size: clamp(36px,4.7vw,56px); letter-spacing: -1.8px; line-height: 1.1; font-weight: 500; margin: 18px 0 24px; }
+.family-page h1 em { font-style: normal; color: var(--primary); }
+.family-page h2 { font-size: 28px; line-height: 1.25; letter-spacing: -.6px; font-weight: 500; margin-bottom: 18px; }
+.family-page h3, .family-page h4 { font-size: 18px; line-height: 1.4; font-weight: 600; margin-bottom: 10px; }
+.family-page p, .family-page li { font-size: 15px; line-height: 1.8; }
+.family-hero > div > p:not(.family-eyebrow) { font-size: 18px; max-width: 560px; }
+.family-art { width: 100%; height: auto; }
+.family-links, .family-nav { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.family-links { margin-top: 24px; }
+.family-page a { color: var(--primary); font-weight: 600; overflow-wrap: anywhere; }
+.family-links a, .family-nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.family-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.family-page :is(a,summary):focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.family-nav { padding: 12px 6%; border-block: 1px solid var(--editorial-rule); }
+.family-section { padding: 35px 6%; border-bottom: 1px solid var(--editorial-rule); }
+.family-section > div { padding-inline: 0; }
+.family-section-title { margin-bottom: 26px; }
+.family-step { display: grid; grid-template-columns: 60px minmax(0,1fr); gap: 22px; border-top: 1px solid var(--editorial-rule); padding: 27px 0; }
+.family-step-number { font-size: 30px; color: var(--primary); font-weight: 400; letter-spacing: -1px; }
+.family-step h3 { font-size: 23px; font-weight: 500; }
+.family-step p { margin-block: 8px; }
+.family-page summary { list-style: none; display: flex; justify-content: space-between; gap: 24px; align-items: center; min-height: 44px; padding: 16px 0; font-weight: 500; cursor: pointer; }
+.family-page summary::after { content: '+'; color: var(--primary); font-size: 16px; }
+.family-page details[open] > summary::after { content: '−'; }
+.family-page summary::-webkit-details-marker { display: none; }
+.family-step-body { padding-top: 8px; }
+.family-panel { padding: 20px; background: var(--family-soft); }
+.family-note { border-top: 1px solid var(--editorial-rule); padding: 20px 0; }
+.family-route { padding-block: 18px; border-top: 1px solid var(--editorial-rule); }
+.family-route-action { margin-top: 12px; color: var(--primary); }
+.family-privacy { padding: 22px 6%; background: var(--family-soft); color: var(--muted-foreground); }
+.family-page [id] { scroll-margin-top: 110px; }
+@media (max-width:700px) {
+  .family-hero { grid-template-columns: minmax(0,1fr); gap: 14px; padding-top: 30px; }
+  .family-art { display: none; }
+  .family-step { grid-template-columns: 35px minmax(0,1fr); gap: 12px; }
+  .family-hero > div > p:not(.family-eyebrow) { font-size: 16px; }
+  .family-panel { padding: 16px; }
+}
