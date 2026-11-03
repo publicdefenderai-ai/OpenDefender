@@ -476,3 +476,21 @@ Adds automatic parity/nonempty-string coverage for all standalone `*-design.ts` 
 Reference: `opendefender-collateral-screener-preview.html`, SHA-256 `94cf7a45bd494d64d3f3aebf7fdb9066e17245f4c17934b0ffc6a96ced266e70`.
 
 Validation: typecheck, production build, 155 targeted unit checks and ten browser checks passed. Desktop/light and phone/dark renders were visually inspected. No new full-suite, production deployment or legal-review completion claim. Next design batch: Resource Inventory/Directory, then revisit the remaining-page inventory.
+
+
+## Resource Inventory / Directory design batch
+
+Implements the approved volume revision at `/directory`: prominent library total, a full-width eight-choice category overview, two-column resource lists and full descriptions. Categories remain visible in two columns on phones; resource rows stack. Removes the earlier sidebar/card-grid approach, tiny decorative icons, truncated descriptions and staggered entry animation. Shared navigation/footer remain.
+
+Preserves all 51 published listings, seven category titles/descriptions and their destinations. Adds the now-implemented Bail and Plea guides, using their existing translated descriptions and new translated link labels. Current totals are 53 listings and 52 distinct destinations; the existing reputation cross-listing remains. The displayed total, category counts and filtered count are derived from the live array rather than copied from the preview. Counts explicitly describe listings. New framing, search, category and empty-state copy support all three locales.
+
+Local search matches titles, descriptions and category names, ignoring case and surrounding whitespace. It combines with category selection. Category buttons expose pressed state, retain keyboard focus and identify the results region. A live result count announces changes. Clear and the empty-state reset restore all categories and return focus to search. Queries are not put in URLs or browser storage. No new server requests, content-generation logic or legal guidance are introduced.
+
+The independent fixture captures the pre-change category/resource definitions resolved through each published locale on main `fa82186a`. The release-allowlisted browser spec checks every original title, description and destination, both additions, counts, every category via keyboard, description search, combined filters, empty/reset states, reload behavior, query storage absence and actual bounds at desktop/320px across three locales and both themes. Removes three obsolete directory CSS rules rather than leaving them after the markup replacement.
+
+References:
+- `opendefender-directory-preview.html`: SHA-256 `c1858a5bd0a5ad2616ba98d99c53fb4dc4cebd270a0857168c3544d2e1c10bf4`
+- `directory-content.html`: SHA-256 `d050eac8e794f0311c36f54365f37d34e0d100b692496e2f09029d1d79ad16a1`
+- `directory-volume-style.html`: SHA-256 `01ffe51547249dbe80622fbd54e29ddea31c63d5444fb15d36e91b2c41a64f63`
+
+Validation: typecheck, production build, 11 translation/coverage checks and six dedicated browser cases passed. Desktop/light and phone/dark views were visually inspected. Existing resource descriptions are preserved, not newly verified. No full-suite, deployment or substantive-review completion claim. This completes the requested Friends & Family / Toolkit / Screener / Directory implementation sequence; revisit the implementation inventory before choosing the next batch.
