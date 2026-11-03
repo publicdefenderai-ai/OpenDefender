@@ -1,9 +1,9 @@
 import {expect,test, type Page} from '@playwright/test';
 
-async function openCalifornia(page:Page) {
+async function openCalifornia(page:Page, path='/case-guidance') {
   await page.route('**/api/ai/status',r=>r.fulfill({json:{available:true}}));
-  await page.goto('/case-guidance');
-  await page.getByTestId('button-start-guidance').click();
+  await page.goto(path);
+  if (path === '/case-guidance') await page.getByTestId('button-start-guidance').click();
   await page.getByTestId('button-choose-ai').click();
   await page.getByTestId('select-jurisdiction').click();
   await page.getByRole('option',{name:'California',exact:true}).click();
@@ -45,11 +45,40 @@ for(const failSecondPage of [false,true]) {
     await expect.poll(()=>seen.includes(500)).toBe(true);
     await page.locator('#charge-search').fill(failSecondPage?'Pagination example 0':'Pagination example 500');
     if(failSecondPage){
-      await expect(page.getByText('No charges found. Try a different search term or category.')).toBeVisible();
+      await expect(page.getByText('We could not load the complete charge list. Please try again. No partial list is shown.')).toBeVisible();
       await expect(page.getByTestId('checkbox-charge-pagination-example-0')).toHaveCount(0);
     }else{
       const choice=page.getByTestId('checkbox-charge-pagination-example-500');
       await expect(choice).toBeVisible();await choice.locator('..').click();await expect(choice).toBeChecked();
     }
   });
+}
+
+for (const path of ['/case-guidance', '/chat?flow=case-roadmap']) {
+  for (const initial of ['empty', 'error']) {
+    test(`${path} explains ${initial} catalog and recovers on retry`, async ({page}) => {
+      let recovered = false;
+      await page.route('**/api/criminal-charges?**', async route => {
+        if (!recovered && initial === 'error') {
+          await route.fulfill({status:503,json:{success:false}}); return;
+        }
+        const charges = recovered ? [{id:'ca-assault',name:'Synthetic available charge',code:'240',category:'misdemeanor',jurisdiction:'CA'}] : [];
+        await route.fulfill({json:{success:true,charges,count:charges.length,totalAvailable:charges.length,
+          pagination:{offset:0,limit:500,totalMatches:charges.length,nextOffset:null,snapshot:'b'.repeat(64)}}});
+      });
+      await openCalifornia(page, path);
+      await expect(page.getByTestId('charge-coverage-notice')).toContainText('coverage is limited');
+      const status = page.getByTestId('charge-catalog-status');
+      await expect(status).toContainText(initial === 'empty' ? 'temporarily unavailable for this state' : 'could not load the complete charge list');
+      await expect(status).not.toContainText('Try a different search');
+      await expect(page.getByTestId('checkbox-charge-ca-assault')).toHaveCount(0);
+      recovered = true;
+      await page.getByTestId('button-retry-charge-catalog').click();
+      await expect(page.getByTestId('checkbox-charge-ca-assault')).toBeVisible();
+      await expect(page.getByTestId('checkbox-charge-ca-assault')).not.toBeChecked();
+      await page.locator('#charge-search').fill('not-a-charge-match');
+      await expect(status).toContainText('Try a different search term or category');
+      await expect(page.getByTestId('button-retry-charge-catalog')).toHaveCount(0);
+    });
+  }
 }
