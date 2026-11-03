@@ -6,11 +6,13 @@ import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-dat
 import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
 import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
 import { isFloridaReviewedSourceFresh, FLORIDA_REVIEWED_SOURCE_RECORDS } from "../data/florida-reviewed-source-records";
-import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../data/ohio-chapter-2903-source";
 
 export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "NC"]);
 const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
-  OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
+  // The shared catalog also includes the separately reviewed batch. Bind this
+  // receipt only to its own source records, as the manifest and seed builders do.
+  OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
 );
 
 function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }): boolean {
