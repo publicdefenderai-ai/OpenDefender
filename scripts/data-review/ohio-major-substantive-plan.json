@@ -1,0 +1,359 @@
+[
+  {
+    "section": "2905.01",
+    "scope": "A,B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "C(1) safe-release reduction excludes A(6). C(3) supplies separate life terms for the under-thirteen/sexual-motivation specification. C(2) trafficking specification has mandatory sentencing and restitution consequences.",
+    "dependencies": [
+      "2905.31",
+      "2907.01",
+      "2971.01",
+      "2971.03",
+      "2941.1422"
+    ]
+  },
+  {
+    "section": "2905.02",
+    "scope": "A,B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "A(1)/(2) and corresponding B conduct are F3; involuntary-servitude A(3) and corresponding B conduct are F2. Trafficking specification requires separate mandatory sentencing and restitution.",
+    "dependencies": [
+      "2905.31",
+      "2907.01",
+      "2941.1422"
+    ]
+  },
+  {
+    "section": "2905.03",
+    "scope": "A,B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "",
+    "dependencies": [
+      "2907.01"
+    ]
+  },
+  {
+    "section": "2905.11",
+    "scope": "B",
+    "gradingDivisions": "C",
+    "name": "extortion",
+    "limitations": "",
+    "dependencies": []
+  },
+  {
+    "section": "2905.11",
+    "scope": "D",
+    "gradingDivisions": "E",
+    "name": "sexual extortion",
+    "limitations": "E(2)/(3) escalation depends on the specified prior-offense and protected-victim conditions. F merger and G/H limitations remain attached; victim protection is in 2905.111.",
+    "dependencies": [
+      "2905.111"
+    ]
+  },
+  {
+    "section": "2905.12",
+    "scope": "A",
+    "gradingDivisions": "D",
+    "name": null,
+    "limitations": "B exceptions and C affirmative defenses remain part of the source binding.",
+    "dependencies": []
+  },
+  {
+    "section": "2905.22",
+    "scope": "A(1)",
+    "gradingDivisions": "B",
+    "name": "@heading",
+    "limitations": "No named guilt clause; retain official heading and subdivision. A(1)/(2) are F4; A(3) is M1. Definitions are in 2905.21.",
+    "dependencies": [
+      "2905.21"
+    ]
+  },
+  {
+    "section": "2905.22",
+    "scope": "A(2)",
+    "gradingDivisions": "B",
+    "name": "@heading",
+    "limitations": "No named guilt clause; retain official heading and subdivision. A(1)/(2) are F4; A(3) is M1. Definitions are in 2905.21.",
+    "dependencies": [
+      "2905.21"
+    ]
+  },
+  {
+    "section": "2905.22",
+    "scope": "A(3)",
+    "gradingDivisions": "B",
+    "name": "@heading",
+    "limitations": "No named guilt clause; retain official heading and subdivision. A(1)/(2) are F4; A(3) is M1. Definitions are in 2905.21.",
+    "dependencies": [
+      "2905.21"
+    ]
+  },
+  {
+    "section": "2905.32",
+    "scope": "A",
+    "gradingDivisions": "E",
+    "name": null,
+    "limitations": "Special minimum ten through fifteen years controls rather than the ordinary F1 range. Offense date changes definite/indefinite treatment. B compulsion, C evidentiary limitation and D merger remain attached.",
+    "dependencies": [
+      "2905.31",
+      "2907.01",
+      "5123.01"
+    ]
+  },
+  {
+    "section": "2905.33",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "",
+    "dependencies": [
+      "2905.01",
+      "2905.02",
+      "2905.32",
+      "2907.21",
+      "2907.22",
+      "2907.32"
+    ]
+  },
+  {
+    "section": "2909.02",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "A(1)/(3) F1; A(2) F2. Arson registration has separate eligibility, notice and duration rules.",
+    "dependencies": [
+      "2909.01",
+      "2909.13",
+      "2909.14",
+      "2909.15"
+    ]
+  },
+  {
+    "section": "2909.03",
+    "scope": "A,B",
+    "gradingDivisions": "D",
+    "name": null,
+    "limitations": "A(1)/B(1) M1 unless value or physical harm reaches $1,000 (F4); other branches separately F4 or F3. C consent defense is branch-specific. Arson registration is separate.",
+    "dependencies": [
+      "2909.01",
+      "2909.13",
+      "2909.14",
+      "2909.15"
+    ]
+  },
+  {
+    "section": "2909.04",
+    "scope": "A(1),A(2),B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "A(3) excluded from this mapping pending resolution of its hospital-definition reference to unavailable 3727.01; do not silently substitute a successor definition.",
+    "dependencies": []
+  },
+  {
+    "section": "2909.05",
+    "scope": "A,B,C,D",
+    "gradingDivisions": "E",
+    "name": null,
+    "limitations": "E sets F5/F4/F3 thresholds and expressly adds a fine to the F5 branch. F serious-property-harm definition is $1,000. Degree alone does not exhaust punishment.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.07",
+    "scope": "A(1)-A(6)",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "C(2) and C(3) have different aircraft, harm and dollar conditions. A(7)/C(4) excluded: critical-infrastructure definition reaches the existing 1509.01 hold.",
+    "dependencies": [
+      "2909.01",
+      "2911.21"
+    ]
+  },
+  {
+    "section": "2909.08",
+    "scope": "B",
+    "gradingDivisions": "D",
+    "name": "endangering aircraft",
+    "limitations": "M1/F5/F4 depend on risk and aircraft occupancy; F forfeiture is additional.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.08",
+    "scope": "C",
+    "gradingDivisions": "E",
+    "name": "endangering airport operations",
+    "limitations": "M2/F5/F4 depend on risk; C official/hunting exceptions, hunting-license sanction and F forfeiture are additional.",
+    "dependencies": [
+      "2909.01",
+      "1533.68"
+    ]
+  },
+  {
+    "section": "2909.09",
+    "scope": "B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "M1/F4/F3/F2 depend on risk, property damage and actual physical harm.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.10",
+    "scope": "A",
+    "gradingDivisions": "D",
+    "name": "railroad vandalism",
+    "limitations": "D supplies the M1/F4/F3/F2 escalation for each named offense.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.10",
+    "scope": "B",
+    "gradingDivisions": "D",
+    "name": "criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle",
+    "limitations": "D supplies the M1/F4/F3/F2 escalation for each named offense.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.10",
+    "scope": "C",
+    "gradingDivisions": "D",
+    "name": "interference with the operation of a train",
+    "limitations": "D supplies the M1/F4/F3/F2 escalation for each named offense.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2909.22",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "",
+    "dependencies": [
+      "2909.21",
+      "2909.25"
+    ]
+  },
+  {
+    "section": "2909.23",
+    "scope": "A",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "B rejects specified defenses; purpose and reasonable expectation/fear remain elements.",
+    "dependencies": [
+      "2909.21",
+      "2909.25"
+    ]
+  },
+  {
+    "section": "2909.26",
+    "scope": "A,B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "A F3; B F2. D official-duty exception remains attached.",
+    "dependencies": [
+      "2909.21",
+      "2917.33"
+    ]
+  },
+  {
+    "section": "2909.27",
+    "scope": "A,B",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "A F2; B F1. D exceptions apply to A, not automatically to B.",
+    "dependencies": [
+      "2909.21",
+      "2917.33"
+    ]
+  },
+  {
+    "section": "2909.28",
+    "scope": "A",
+    "gradingDivisions": "C",
+    "name": null,
+    "limitations": "B permits a single ingredient; D official-duty exception remains attached.",
+    "dependencies": [
+      "2909.21",
+      "2917.33"
+    ]
+  },
+  {
+    "section": "2909.29",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "M1 below $1,000; F5 $1,000 to below $5,000; F4 $5,000 to below $25,000; F3 $25,000 to below $75,000; F2 at least $75,000.",
+    "dependencies": [
+      "2909.21",
+      "1315.51"
+    ]
+  },
+  {
+    "section": "2909.081",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "C laser definition requires both stated characteristics.",
+    "dependencies": []
+  },
+  {
+    "section": "2909.101",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "M1/F4/F3/F2 depend on risk, property damage and actual physical harm.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2911.23",
+    "scope": "B",
+    "gradingDivisions": "E",
+    "name": null,
+    "limitations": "D(1) posted notice is necessary; D(2) actual notice is not. E(2) allows additional thirty to one hundred twenty hours of community service.",
+    "dependencies": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2911.31",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "",
+    "dependencies": []
+  },
+  {
+    "section": "2911.32",
+    "scope": "A",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "M1 escalates to F5 on a prior violation or theft offense as defined in 2913.01.",
+    "dependencies": [
+      "2913.01"
+    ]
+  },
+  {
+    "section": "2911.211",
+    "scope": "A(1)",
+    "gradingDivisions": "B",
+    "name": null,
+    "limitations": "Only M1 A(1) mapped; A(2) F3 remains withheld because the incorporated critical-infrastructure definition reaches the existing 1509.01 hold.",
+    "dependencies": [
+      "2911.21"
+    ]
+  }
+]
