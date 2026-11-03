@@ -8,7 +8,7 @@ import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
 import { OHIO_CHAPTER_BATCH_EXPLANATIONS } from "./ohio-chapter-batch";
 import { OHIO_HAZING_AND_PROTECTION_EXPLANATIONS } from "./ohio-hazing-and-protection";
 import { OHIO_PATIENT_CARE_BATCH } from "./ohio-patient-care";
-import { OHIO_REVIEWED_BATCH } from "./ohio-reviewed-batch";
+import { OHIO_REVIEWED_BATCH, OHIO_UNTRANSLATED_CORRECTION_IDS } from "./ohio-reviewed-batch";
 import { FLORIDA_REVIEWED_BATCH } from "./florida-reviewed-batch";
 import { getChargeById } from "./criminal-charges";
 
@@ -3852,7 +3852,8 @@ export function getChargeExplanation(
               ? { degreeContext: locale.degreeContext }
               : {}),
             // Surface draft flag so callers can show a pending-review notice
-            translationDraft: locale.draft,
+            translationDraft: explanation.canonicalChargeId && OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) ? false : locale.draft,
+            untranslated: Boolean(explanation.canonicalChargeId && OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId)),
           };
            const localizedScopedContent = jurisdiction
              ? getScopedCaseGuidance(explanation.slug, lang)

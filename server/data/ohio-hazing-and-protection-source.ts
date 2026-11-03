@@ -13,6 +13,9 @@ const document = createOhioEvidenceReader("scripts/data-review/output/ohio-hazin
   "4729.01": "a312e6c912b331423e392f28b6cf2d413cba35b493ed8e12cda804db34346b2b",
   "2925.01": "94de4c8c92ad62726293fb59e34c003194d17fe3d260c27c61bbaed09761dc4e",
 });
+const updatedDrugDocument = createOhioEvidenceReader("scripts/data-review/output/ohio-hazing-dependency-update.json", {
+  "4729.01": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+});
 const reckless = common("2901.22", "(C)", [["offense", "(C) A person acts recklessly"]]);
 const harm = assault("2901.01", "(A)(3),(5),(8)", [
   ["offense", '(3) "Physical harm to persons"'], ["offense", '(5) "Serious physical harm to persons"'],
@@ -25,7 +28,7 @@ const hazingDefinitions = document("2903.31", "(A)", [
 const drugDefinitions = [
   document("3719.011", "(A)", [["offense", '(A) "Drug of abuse"']]),
   document("3719.01", "(C)", [["offense", '(C) "Controlled substance"']]),
-  document("4729.01", "(F)", [
+  updatedDrugDocument("4729.01", "(F)", [
     ["offense", '(F) "Dangerous drug"'], ["offense", "(1) Any drug to which"],
     ["offense", '(a) Under the "Federal Food'], ["offense", "(b) Under Chapter"],
     ["offense", "(2) Any drug that contains"], ["offense", "(3) Any drug intended for administration"],

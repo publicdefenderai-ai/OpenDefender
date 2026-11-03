@@ -1,15 +1,14 @@
 {
   "schemaVersion": 1,
-  "reportHash": "2a444c126225073cc70c36592cf7738324e61f5edb4c3a02cdca4ec9bf68dcc6",
-  "checkedAt": "2026-10-01T18:03:07.076Z",
-  "expiresAt": "2026-10-08T18:01:30.540Z",
+  "checkedAt": "2026-11-03T08:42:08.859Z",
+  "expiresAt": "2026-11-10T06:05:41.719Z",
   "documents": [
     {
       "section": "109.57",
       "title": "Duties of superintendent",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-109.57",
-      "contentHash": "79a36a0dc58040edac43b9417118f06dbd154f83eb60b3dc3aadb5c2b765176e",
-      "effectiveDateStart": "2025-04-03"
+      "contentHash": "00e1e049a9b9f96d187781fa1445f0b97a600eb0276f241f5b73e04d548d4b56",
+      "effectiveDateStart": "2026-10-09"
     },
     {
       "section": "119.01",
@@ -45,6 +44,20 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1717.01",
       "contentHash": "f06422e6a4fc2e55eb8fefbe20b4db37f7fb344e8537522104081526faca0c69",
       "effectiveDateStart": "2021-03-31"
+    },
+    {
+      "section": "1901.33",
+      "title": "Court employees",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1901.33",
+      "contentHash": "66f6b58b41f4cd60d306798ba4aa8ee031a1464c09c780d81d4ef4b81dcc30f7",
+      "effectiveDateStart": "2006-06-30"
+    },
+    {
+      "section": "1907.201",
+      "title": "Appointment of employees",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1907.201",
+      "contentHash": "6a95cc19c687ff8ae5d4a89455a23a4a557636fc9bc8ae389b58bb2130bd5cec",
+      "effectiveDateStart": "1997-07-01"
     },
     {
       "section": "2133.21",
@@ -89,6 +102,13 @@
       "effectiveDateStart": "2023-04-04"
     },
     {
+      "section": "2301.27",
+      "title": "Probation and supervisory services",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2301.27",
+      "contentHash": "21106baa3bbcc5e5b74e7e1bc17d32231d4c9c92894dc090a5a389caeb9ccb16",
+      "effectiveDateStart": "2012-09-28"
+    },
+    {
       "section": "2901.01",
       "title": "General provisions definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.01",
@@ -120,15 +140,15 @@
       "section": "2903.06",
       "title": "Aggravated vehicular homicide - vehicular homicide - vehicular manslaughter",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
-      "contentHash": "3bcd8830c6a1af4f7231a8d719805a027174d94ae9100bb2b90653efda8e0db1",
-      "effectiveDateStart": "2025-04-09"
+      "contentHash": "5e2275613037bf19695fb30dc527ec73e913fc60ce378a04c03038f8dc758b14",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2903.08",
       "title": "Aggravated vehicular assault; vehicular assault",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
-      "contentHash": "2ad96ed8c8e8b3270c920ea0afd4ca363634219e6d4c6ce813cda952517f49fa",
-      "effectiveDateStart": "2024-10-24"
+      "contentHash": "f95efb41d8331a4f7efaadb41f489746cbb99b68c099f886b8baa421bfacbb8a",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2903.10",
@@ -183,15 +203,15 @@
       "section": "2903.216",
       "title": "Illegal use of a tracking device or application",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.216",
-      "contentHash": "ccf718c4688e38f196c3c2f36374bcf277e9b565d992a75b37ee09c1358f6f2e",
-      "effectiveDateStart": "2025-03-20"
+      "contentHash": "df3ad72b600f341a3d45bd9fa39dbc7279b1213cda5a59bfaffc6c12a5fc55f8",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2903.22",
       "title": "Menacing",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.22",
-      "contentHash": "ea58e11d6582e597bbc42a83fd27713cc4dc0a71e9c81fd201fc467a60876c32",
-      "effectiveDateStart": "2023-04-04"
+      "contentHash": "d732e1a3963e30bbfb1f768d58e6b3a6f8feef1228e5307e7be2e2339fbac40b",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2903.33",
@@ -372,8 +392,8 @@
       "section": "2913.02",
       "title": "Theft",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.02",
-      "contentHash": "f86873d5326c0f2efe8e36fe7ab5804932cf7ffd9fc55b4e0eb3ee351882d614",
-      "effectiveDateStart": "2025-04-09"
+      "contentHash": "edda13aad6cd648846fdff3fe40b9e9c4871989ee34e513a279716aa5bae1d6e",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2913.03",
@@ -386,7 +406,7 @@
       "section": "2913.04",
       "title": "Unauthorized use of property - computer, cable, or telecommunication property",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
-      "contentHash": "d5ae4b2c3eb945fac7fbf597c0daa8b5417cfa1a6075fe4871c95b7c062cecf1",
+      "contentHash": "60182c508fa0a231b8cb3e2e7371f72009521c71b9be85db824ea3cfcadf28d9",
       "effectiveDateStart": "2018-03-23"
     },
     {
@@ -442,8 +462,8 @@
       "section": "2913.51",
       "title": "Receiving stolen property",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.51",
-      "contentHash": "ba8001068d9e3f6bc51149aa32b2dff709d34ea3a2a7e7683e8317853bef2ac6",
-      "effectiveDateStart": "2013-07-01"
+      "contentHash": "edb22f26e6b728d17feeb37f6b15289c1519c1be705a85fca2781adea9d87705",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2913.71",
@@ -526,8 +546,8 @@
       "section": "2921.31",
       "title": "Obstructing official business",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.31",
-      "contentHash": "437e50fc0156e50dbc635064545e73b5e17aab2f386e2cd2bb5f2d00a0924826",
-      "effectiveDateStart": "2000-03-10"
+      "contentHash": "620bd8db509d4378b87bc19a2039062dd2e088c6847be45bd58d8eefceb70deb",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "2921.32",
@@ -773,6 +793,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.28",
       "contentHash": "c1468dc2d812517e755b4e1b5156d3393415b2028e0a37f02a20b3922da33561",
       "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2929.31",
+      "title": "Fines for organizations by degree of offense",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.31",
+      "contentHash": "13ceea6273034671be05263bf300af0174472b45c309942e642ff1b08df8cc28",
+      "effectiveDateStart": "2004-01-01"
     },
     {
       "section": "2941.1410",
@@ -1083,6 +1110,13 @@
       "effectiveDateStart": "2012-01-27"
     },
     {
+      "section": "4519.01",
+      "title": "Special vehicle definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4519.01",
+      "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+      "effectiveDateStart": "2017-06-30"
+    },
+    {
       "section": "4549.02",
       "title": "Stopping after accident on public roads or highways",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4549.02",
@@ -1100,22 +1134,22 @@
       "section": "4729.01",
       "title": "Pharmacists, dangerous drugs definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
-      "contentHash": "a312e6c912b331423e392f28b6cf2d413cba35b493ed8e12cda804db34346b2b",
-      "effectiveDateStart": "2026-06-09"
+      "contentHash": "af9162eefd2f0146bd2d4c266e3f7e705b3c5bc0edd6b46b0498303ea908fef0",
+      "effectiveDateStart": "2026-10-09"
     },
     {
       "section": "4737.012",
       "title": "Bulk merchandise containers; record keeping",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.012",
-      "contentHash": "47c96fe28c386cd3765cd6d2a10d8cf778b1235f24f4d658a96de9abc92e56da",
-      "effectiveDateStart": "2012-09-28"
+      "contentHash": "4e16759ee45c833cb0c083888fc487555975f5da4b80d93d43cc7497c5649242",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "4737.04",
       "title": "Scrap metal and merchandise container dealers; exertion of control over certain articles; record keeping",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.04",
-      "contentHash": "7469e07007d2a505b4b50e2897f05efc74700c99d64c638c1ce2dec1c241d9d1",
-      "effectiveDateStart": "2013-07-01"
+      "contentHash": "fff0839c911c6ab9a433b912ff9ecc2a26b3517b28edb2e39c78496aeab4b54b",
+      "effectiveDateStart": "2026-10-06"
     },
     {
       "section": "4749.01",
@@ -1195,13 +1229,5 @@
       "effectiveDateStart": "2025-09-22"
     }
   ],
-  "metrics": {
-    "requests": 5,
-    "reused": 167,
-    "acquired": 3,
-    "bulkDocumentsCached": 3,
-    "failed": 0,
-    "cachedFailures": 0,
-    "deferred": 0
-  }
+  "reportHash": "35367d2424b2a79be7e0bb4f7abd1d554a14dd136af9b0913dc6ba450ffc58f1"
 }

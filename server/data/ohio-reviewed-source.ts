@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { OHIO_REVIEWED_DEFINITIONS } from "@shared/ohio-reviewed-batch";
 import sourceChangeHolds from "@shared/ohio-source-change-holds.json";
+import sourceCorrections from "@shared/ohio-source-corrections.json";
 import updates from "@shared/ohio-common-charge-updates.json";
 import originalCommonDefinitions from "@shared/ohio-reviewed-data/c.json";
 import eligibility from "@shared/ohio-reviewed-eligibility.json";
@@ -137,9 +138,59 @@ export function validateOhioCommonCorrections(evidence = commonEvidence, definit
   }
 }
 validateOhioCommonCorrections();
+const sourceCorrectionEvidence = JSON.parse(readFileSync(resolve(process.cwd(),
+  "scripts/data-review/output/ohio-source-correction-evidence.json"), "utf8")) as {
+  schemaVersion: number; kind: string;
+  records: Array<{ id: string; classification: string;
+    sourceBindings: Array<{ section: string; contentHash: string; effectiveFrom: string }>;
+    evidenceSpans: EvidenceSpan[] }>;
+  documents: Record<string, OhioReviewedDocument>;
+};
+export function validateOhioSourceCorrections(evidence = sourceCorrectionEvidence): void {
+  if (evidence.schemaVersion !== 1 || evidence.kind !== "ohio_source_correction_evidence" ||
+      evidence.records.length !== 18 || new Set(evidence.records.map(r => r.id)).size !== 18) {
+    throw new Error("Invalid Ohio source correction accounting");
+  }
+  for (const [section, doc] of Object.entries(evidence.documents)) {
+    if (doc.section !== section || hash(doc.text) !== doc.contentHash ||
+        doc.sourceUrl !== `https://codes.ohio.gov/ohio-revised-code/section-${section}` ||
+        !doc.text.startsWith(`Section ${section} |\n${doc.title}.\nEffective: ${doc.effectiveDateStart}\n`) ||
+        !Number.isFinite(Date.parse(doc.retrievedAt))) {
+      throw new Error(`Invalid Ohio correction source: ${section}`);
+    }
+  }
+  for (const row of evidence.records) {
+    const isPilot = ["oh-orc-2903-31-hazing", "oh-orc-2903-311-reckless-failure-to-immediately-report-knowledge-of-hazing"].includes(row.id);
+    if ((!isPilot && !report.drafts.some(d => d.id.replace(/^oh-analysis-/, "oh-orc-") === row.id)) ||
+        sourceChangeHolds.some(hold => hold.id === row.id) || !row.evidenceSpans.length ||
+        !row.sourceBindings.length || new Set(row.sourceBindings.map(b => b.section)).size !== row.sourceBindings.length) {
+      throw new Error(`Unaccounted Ohio source correction: ${row.id}`);
+    }
+    for (const binding of row.sourceBindings) {
+      const doc = evidence.documents[binding.section];
+      if (!doc || doc.contentHash !== binding.contentHash || doc.effectiveDateStart !== binding.effectiveFrom ||
+          !row.evidenceSpans.some(span => span.section === binding.section)) {
+        throw new Error(`Ohio correction binding changed: ${row.id}/${binding.section}`);
+      }
+    }
+    for (const span of row.evidenceSpans) {
+      const doc = evidence.documents[span.section];
+      if (!row.sourceBindings.some(b => b.section === span.section) || !doc ||
+          doc.contentHash !== span.sourceHash || !Number.isInteger(span.start) || !Number.isInteger(span.end) ||
+          span.start < 0 || span.end <= span.start || doc.text.slice(span.start, span.end) !== span.text) {
+        throw new Error(`Ohio correction quote changed: ${row.id}/${span.section}`);
+      }
+    }
+  }
+  if (sourceCorrections.some(c => !evidence.records.some(r => r.id === c.id))) {
+    throw new Error("Ohio product correction has no evidence");
+  }
+}
+validateOhioSourceCorrections();
+
 // Changing summaries, supporting evidence or scope invalidates a prior receipt.
 export const OHIO_REVIEWED_CURRENT_REVIEW_HASH = hash(JSON.stringify({
-  base: eligibility.reportHash, commonEvidence, sourceChangeHolds,
+  base: eligibility.reportHash, commonEvidence, sourceChangeHolds, sourceCorrections, sourceCorrectionEvidence,
 }));
 
 
@@ -151,7 +202,7 @@ export const OHIO_REVIEWED_SOURCES: readonly OhioReviewedSource[] = report.draft
   .filter(draft => eligible.has(draft.id.replace(/^oh-analysis-/, "oh-orc-")))
   .map(draft => {
     const chargeId = draft.id.replace(/^oh-analysis-/, "oh-orc-");
-    const offense = report.sourceEvidence[draft.section];
+    let offense = report.sourceEvidence[draft.section];
     const namedBySource = normalize(draft.name) === normalize(offense.title) ||
       draft.reviewedEvidence.some(span =>
         span.section === draft.section &&
@@ -171,10 +222,31 @@ export const OHIO_REVIEWED_SOURCES: readonly OhioReviewedSource[] = report.draft
         if (!dependencies.some(d => d.section === section)) dependencies.push(document);
       }
     }
+    const sourceUpdate = sourceCorrectionEvidence.records.find(row => row.id === chargeId);
+    let currentEvidence = draft.reviewedEvidence;
+    if (sourceUpdate) {
+      const replacements = new Map(sourceUpdate.sourceBindings.map(binding =>
+        [binding.section, sourceCorrectionEvidence.documents[binding.section]]));
+      offense = replacements.get(offense.section) ?? offense;
+      for (const [section, document] of replacements) {
+        if (section === offense.section) continue;
+        const index = dependencies.findIndex(d => d.section === section);
+        if (index >= 0) dependencies[index] = document;
+        else dependencies.push(document);
+      }
+      // Superseded spans cannot remain bound to the previous source version.
+      // The new packet retains exact operative/exception/penalty spans together.
+      currentEvidence = [
+        ...draft.reviewedEvidence.filter(span => !replacements.has(span.section)),
+        ...sourceUpdate.evidenceSpans,
+      ];
+    }
+    const productUpdate = sourceCorrections.find(row => row.id === chargeId);
+    const definition = OHIO_REVIEWED_DEFINITIONS.find(row => row.id === chargeId)!;
     return {
       chargeId, canonicalTitle: draft.name[0].toUpperCase() + draft.name.slice(1),
-      section: draft.section, conduct: correction?.conduct ?? draft.conduct, grading: correction?.grading ?? draft.grading,
-      interpretation: correction?.interpretation ?? draft.scopeAndExceptions, offense, evidence: draft.reviewedEvidence,
+      section: draft.section, conduct: productUpdate ? definition.text.en.plainSummary : correction?.conduct ?? draft.conduct, grading: productUpdate ? definition.text.en.degreeContext : correction?.grading ?? draft.grading,
+      interpretation: correction?.interpretation ?? draft.scopeAndExceptions, offense, evidence: currentEvidence,
       dependencies, reviewedLegalDecision: draft.legalReview,
     };
   });

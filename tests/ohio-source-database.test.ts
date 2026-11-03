@@ -63,10 +63,10 @@ describe("Ohio authority manifest", () => {
     expect(ohioCount).toBe(238);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(257);
-    expect(seed.snapshots).toHaveLength(257);
-    expect(seed.links).toHaveLength(702);
-    expect(seed.selectableChargeIds).toHaveLength(133);
+    expect(seed.sources).toHaveLength(262);
+    expect(seed.snapshots).toHaveLength(262);
+    expect(seed.links).toHaveLength(719);
+    expect(seed.selectableChargeIds).toHaveLength(132);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
@@ -80,7 +80,7 @@ describe("Ohio authority manifest", () => {
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(105);
+      record.disposition === "require_exact_reselection")).toHaveLength(106);
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
