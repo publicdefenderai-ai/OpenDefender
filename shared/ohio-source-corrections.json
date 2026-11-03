@@ -1,0 +1,125 @@
+[
+  {
+    "id": "oh-orc-2903-06-aggravated-vehicular-homicide",
+    "baselineEnglish": {
+      "plainSummary": "Causing another's death while operating or participating in operating a vehicle, motorcycle, watercraft, aircraft, locomotive, or other covered transport: (A)(1) while committing the listed impaired-operation offense, or (A)(2) recklessly. The particular route matters.",
+      "degreeContext": "The impaired-operation route is a second-degree felony (F2), elevated to first-degree felony (F1) by the exact prior-offense, license-status, prior-suspension, or three-or-more OVI conditions in (B)(2). The reckless route is a third-degree felony (F3), elevated to F2 by the specified license status or qualifying prior traffic homicide/assault. Mandatory terms and license suspensions in (B) and (E) apply only when their stated conditions are met."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Causing another person's death or unlawful termination of a pregnancy while operating or participating in operating covered transport, through a listed impaired-operation offense under (A)(1), recklessness under (A)(2)(a), or the qualifying construction-zone reckless-operation route under (A)(2)(b). The impaired-operation and construction-zone routes require the stated proximate causal connection. For conduct on or after October 6, 2026, covered transport expressly includes under-speed vehicles, motorized bicycles or mopeds, motor-driven cycles or motor scooters, and all-purpose vehicles, alongside the previously listed transport. The vehicle must fit the statutory definition; not every device called a scooter necessarily does."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-06-vehicular-homicide",
+    "baselineEnglish": {
+      "plainSummary": "Negligently causing another's death while operating or participating in operating a covered vehicle, watercraft, aircraft, locomotive, or other transport.",
+      "degreeContext": "Normally a first-degree misdemeanor (M1). It becomes a fourth-degree felony (F4) if the person was under a driving suspension/cancellation, lacked a valid license and was ineligible to renew without examination, or had a qualifying prior traffic homicide, manslaughter, or assault conviction or plea. Section 2903.06(E) requires custody only in its stated circumstances."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Causing another person's death or unlawful termination of a pregnancy while operating or participating in operating covered transport, either negligently under (A)(3)(a), or as the proximate result of the qualifying construction-zone speeding offense under (A)(3)(b). That construction-zone route has location and statutory sign conditions. For conduct on or after October 6, 2026, covered transport expressly includes under-speed vehicles, motorized bicycles or mopeds, motor-driven cycles or motor scooters, and all-purpose vehicles, alongside the previously listed transport. The vehicle must fit the statutory definition; not every device called a scooter necessarily does."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-06-vehicular-manslaughter",
+    "baselineEnglish": {
+      "plainSummary": "Causing another's death while committing a qualifying minor-misdemeanor traffic offense while operating or participating in operating a covered vehicle or other transport.",
+      "degreeContext": "Normally a second-degree misdemeanor (M2). It becomes a first-degree misdemeanor (M1) for the stated suspension/cancellation condition, the combined no-valid-license and renewal-ineligibility condition, or a qualifying prior traffic homicide, manslaughter, or assault conviction or plea."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Causing another person's death or unlawful termination of a pregnancy as the proximate result of committing a qualifying minor-misdemeanor traffic offense or qualifying equivalent municipal offense while operating or participating in operating covered transport. For conduct on or after October 6, 2026, covered transport expressly includes under-speed vehicles, motorized bicycles or mopeds, motor-driven cycles or motor scooters, and all-purpose vehicles, alongside the previously listed transport. The vehicle must fit the statutory definition; not every device called a scooter necessarily does."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-08-aggravated-vehicular-assault",
+    "baselineEnglish": {
+      "plainSummary": "Causing serious physical harm to another while operating or participating in operating covered transport while committing one of the impaired-operation offenses listed in (A)(1). This is not a label for generic reckless driving.",
+      "degreeContext": "Third-degree felony (F3), elevated to second-degree felony (F2) by the exact qualifying prior-offense, license-status, prior-suspension, or three-or-more OVI conditions in (B). Section 2903.08(D) imposes a mandatory prison term and license consequences as specified."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Causing serious physical harm to another person or another's unborn as the proximate result of a listed impaired-operation offense under (A)(1), while operating or participating in operating covered transport. For conduct on or after October 6, 2026, covered transport expressly includes under-speed vehicles, motorized bicycles or mopeds, motor-driven cycles or motor scooters, and all-purpose vehicles, alongside the previously listed transport. The vehicle must fit the statutory definition; not every device called a scooter necessarily does."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-08-vehicular-assault",
+    "baselineEnglish": {
+      "plainSummary": "This covers causing serious physical harm through reckless operation under (A)(2), or causing serious physical harm through the specified speeding violation in a properly signed construction zone under (A)(3). The routes have different grades.",
+      "degreeContext": "The reckless route is a fourth-degree felony (F4), elevated to third-degree felony (F3) by the specified license status or qualifying prior traffic offense. The construction-zone route is a first-degree misdemeanor (M1), elevated to F4 under its specified license/prior conditions. Mandatory terms in (D) and the sign condition in (E) must be applied as written."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Causing serious physical harm to another person or another's unborn while operating covered transport through recklessness under (A)(2)(b), or as the proximate result of a qualifying construction-zone reckless-operation offense under (A)(2)(a) or speeding offense under (A)(3). Construction-zone location and sign conditions apply to the specified routes. For conduct on or after October 6, 2026, covered transport expressly includes under-speed vehicles, motorized bicycles or mopeds, motor-driven cycles or motor scooters, and all-purpose vehicles, alongside the previously listed transport. The vehicle must fit the statutory definition; not every device called a scooter necessarily does.",
+      "degreeContext": "The (A)(2) route is F4, elevated to F3 by the stated suspension or qualifying-prior conditions, or a same-course violation of 4549.02, 4549.021 or 4549.03. The (A)(3) route is M1, elevated to F4 by its stated suspension or qualifying-prior conditions. Apply mandatory custody and license consequences under (C) and (D), including the minimum seven-day jail term for misdemeanor (A)(3), and the sign limitation in (E)."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-216-illegal-use-of-a-tracking-device-or-application",
+    "baselineEnglish": {
+      "plainSummary": "Knowingly installing or using a tracking device or app to track another person or property without consent, or failing to remove it after consent is revoked. Divorce, dissolution, protection orders, and written revocation can trigger statutory revocation rules. Exceptions cover specified lawful officials, parents/guardians, caregivers, businesses, investigators, vehicle interests, owners, aircraft operators, and bail agents only within their stated conditions.",
+      "degreeContext": "Normally a first-degree misdemeanor (M1). It is a fourth-degree felony (F4) for a qualifying prior tracking/stalking offense, specified protection-order status, a prior dangerousness determination, or a history of violence toward the victim."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Knowingly installing or using a tracking device or app to track another person or property without consent, or failing to remove it after consent is revoked. Divorce, dissolution, protection orders, and written revocation can trigger statutory revocation rules. Exceptions cover specified lawful officials, parents/guardians, caregivers, businesses, investigators, vehicle interests, owners, aircraft operators, and bail agents only within their stated conditions. An additional exception covers location-verification technology used by the Medicaid department, a provider, its employee or contractor, or an electronic-visit-verification vendor solely for legally required electronic visit verification, including service start/end verification, claim validation and program-integrity activities. The technology must not continuously track outside delivery of Medicaid-covered services."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2903-22-menacing",
+    "baselineEnglish": {
+      "plainSummary": "Knowingly causing another to believe the offender will physically harm that person, property, unborn child, or immediate family; or displaying a deadly weapon to a specified emergency responder, family member, or co-worker while knowing the responder is acting officially and intending to obstruct or impede those duties.",
+      "degreeContext": "Normally a fourth-degree misdemeanor (M4). Specified child-services or emergency-responder circumstances make it a first-degree misdemeanor (M1); a qualifying prior offense plus the statute's victim-and-duty conditions makes the responder branch a fourth-degree felony (F4)."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Knowingly causing another to believe that physical harm will be caused to that person, their property, unborn child or immediate family; or knowingly placing or attempting to place someone in reasonable fear of harm or death by displaying a deadly weapon, even if inoperable, with the knowledge and specific targeting purpose required by (A)(2) for a responder or the responder's family/household member or co-worker. The responder definition now includes the probation officers specified in (D)(4).",
+      "degreeContext": "Ordinarily M4. The child-services or responder victim-and-duty circumstances in (B) make it M1; the additional specified prior-offense, prior-victim and prior-duty conditions make it F4. The weapon-display elements and enhanced grading conditions are separate inquiries."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2913-02-theft",
+    "baselineEnglish": {
+      "plainSummary": "With purpose to deprive the owner, knowingly obtaining or controlling property or services without consent, beyond consent, by deception, by threat, or by intimidation. The charging branch and property, victim, value, and prior-offense facts matter.",
+      "degreeContext": "The statute ranges from first-degree misdemeanor (M1) through fifth-, fourth-, third-, second-, and first-degree felonies (F5/F4/F3/F2/F1). Exact value bands, recidivism, protected elderly/disabled victims, and special property types control; named branches include grand/aggravated theft, motor-vehicle or drug theft, police/assistance-animal theft, anhydrous-ammonia theft, special-purpose-article theft, and bulk-container theft. No blanket maximum grade applies."
+    },
+    "englishFieldChanges": {
+      "degreeContext": "Grading ranges from M1 through F5/F4/F3/F2/F1 according to the exact value, prior, victim and property branch. Special-purchase articles and bulk containers have the (B)(9) F5 rule subject to its specified higher-value exceptions. New (B)(10) covers catalytic-converter theft as F5, with a separate business-entity enterprise-theft branch carrying a fine of up to $7,500 per violation under 2929.31. Do not substitute the enterprise fine for an individual defendant's punishment. Gasoline and rental provisions are now (B)(11) and (B)(12)."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2913-51-receiving-stolen-property",
+    "baselineEnglish": {
+      "plainSummary": "Receiving, keeping, or disposing of someone else’s property while knowing, or having reasonable cause to believe, that it was obtained through a theft offense.",
+      "degreeContext": "First-degree misdemeanor (M1) ordinarily. It becomes fifth-, fourth-, or third-degree felony (F5, F4, or F3) according to value or listed property. Receiving stolen special-purchase articles or bulk-merchandise containers is F5, subject to the $7,500-or-more value branch in division (C)."
+    },
+    "englishFieldChanges": {
+      "degreeContext": "Ordinarily M1 under (D), with F5/F4/F3 outcomes according to the listed value or property conditions. Under (E), special-purchase articles or bulk containers are F5, subject to (D) for values of $7,500 or more. Under (F), receiving a stolen catalytic converter is F5, except for the separate business-entity enterprise-receipt branch, which specifies a fine of up to $7,500 per violation under 2929.31. The enterprise fine is not an individual defendant's sentencing ceiling."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+    "baselineEnglish": {
+      "plainSummary": "Without privilege, recklessly making a road, sidewalk, or other public passage impassable without unreasonable inconvenience or hazard, when that blocks emergency access or response and the person refuses a responder’s request or order to stop or remove the obstruction.",
+      "degreeContext": "First-degree misdemeanor (M1). Both the emergency-access condition and refusal condition must be present."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Without privilege, recklessly making a road, sidewalk, or other public passage impassable without unreasonable inconvenience or hazard, when that blocks emergency access or response and the person refuses a responder’s request or order to stop or remove the obstruction. Section 2917.14(B) permits prosecution under other applicable provisions, including 2921.31. That separate statute now includes a warning/proximity route and additional grading rules. Those rules do not replace the elements or M1 classification of this charge."
+    },
+    "translationStatus": "english_only_pending_translation"
+  },
+  {
+    "id": "oh-orc-2927-12-ethnic-intimidation",
+    "baselineEnglish": {
+      "plainSummary": "Committing menacing, aggravated menacing, criminal damaging or endangering, criminal mischief, or one of the listed telecommunications-harassment acts because of another person or group's race, color, religion, or national origin.",
+      "degreeContext": "One degree higher than the required predicate offense. The resulting classification therefore depends on which listed underlying offense is proved; there is no single blanket degree."
+    },
+    "englishFieldChanges": {
+      "plainSummary": "Committing menacing, aggravated menacing, criminal damaging or endangering, criminal mischief, or one of the listed telecommunications-harassment acts because of another person or group's race, color, religion, or national origin. For a menacing predicate, apply the current 2903.22 elements and victim/duty/prior-offense conditions, including its specified probation-officer definition, before applying the next-higher-degree rule. The bias element remains separately required."
+    },
+    "translationStatus": "english_only_pending_translation"
+  }
+]

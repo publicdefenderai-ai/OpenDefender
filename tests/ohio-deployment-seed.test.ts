@@ -11,7 +11,7 @@ describe("committed Ohio deployment seed", () => {
 
     expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
     expect(manifest.catalogRecords).toHaveLength(238);
-    expect(seed.selectableChargeIds).toHaveLength(133);
+    expect(seed.selectableChargeIds).toHaveLength(132);
     expect(seed.selectableChargeIds).toEqual(expect.arrayContaining(
       OHIO_REVIEWED_SOURCES.map(source => source.chargeId),
     ));

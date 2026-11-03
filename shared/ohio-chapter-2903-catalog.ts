@@ -105,6 +105,9 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
   // Older common-charge IDs have materially different scope/penalty claims.
   // Keep saved IDs intact and require an explicit source-backed selection.
+  // The legacy menacing entry retains the superseded 2903.22 source version.
+  // Use the corrected source-first entry, with explicit reselection for saved cases.
+  "oh-menacing",
   "oh-open-container",
   "oh-alcohol-in-park",
   "oh-littering",

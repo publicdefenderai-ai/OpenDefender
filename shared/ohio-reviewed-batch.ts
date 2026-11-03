@@ -1,3 +1,4 @@
+import sourceCorrections from "./ohio-source-corrections.json";
 import a from "./ohio-reviewed-data/a.json";
 import b from "./ohio-reviewed-data/b.json";
 import c from "./ohio-reviewed-data/c.json";
@@ -10,11 +11,27 @@ import { projectEvidenceBackedChargeBatch, type EvidenceBackedChargeDefinition }
 /** Public summaries only. Full statutes, quote spans and source pins stay server-side. */
 export const OHIO_REVIEWED_DEFINITIONS: EvidenceBackedChargeDefinition[] =
   ([...a, ...b, ...c] as EvidenceBackedChargeDefinition[]).map(original => {
-    const row = (updates as EvidenceBackedChargeDefinition[]).find(update => update.id === original.id) ?? original;
+    let row = (updates as EvidenceBackedChargeDefinition[]).find(update => update.id === original.id) ?? original;
+    const correction = sourceCorrections.find(update => update.id === row.id);
+    if (correction) {
+      if (JSON.stringify(row.text.en) !== JSON.stringify(correction.baselineEnglish)) {
+        throw new Error(`Ohio correction baseline drift: ${row.id}`);
+      }
+      const english = { ...row.text.en, ...correction.englishFieldChanges };
+      // Do not continue serving translations of superseded legal claims.
+      // The explanation resolver explicitly labels this English fallback.
+      row = { ...row, text: { en: english, es: english, zh: english } };
+    }
     return OHIO_REVIEWED_MIXED_CLASS_IDS.has(row.id)
       ? { ...row, categories: ["felony", "misdemeanor"] }
       : row;
   });
+if (new Set(sourceCorrections.map(row => row.id)).size !== sourceCorrections.length ||
+    sourceCorrections.some(row => !OHIO_REVIEWED_DEFINITIONS.some(d => d.id === row.id) ||
+      sourceChangeHolds.some(hold => hold.id === row.id))) {
+  throw new Error("Orphaned, duplicate or held Ohio source correction");
+}
+export const OHIO_UNTRANSLATED_CORRECTION_IDS = new Set(sourceCorrections.map(row => row.id));
 const definitions = new Map(OHIO_REVIEWED_DEFINITIONS.map(row => [row.id, row]));
 const decisions = new Map(eligibility.decisions.map(row => [row.id, row]));
 if (definitions.size !== OHIO_REVIEWED_DEFINITIONS.length ||
