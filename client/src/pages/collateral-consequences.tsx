@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { collateralDesignCopy } from "@/locales/collateral-design";
 import {
   AlertTriangle, ArrowRight, ArrowLeft, Copy, Check,
-  Printer, Info, Home, Briefcase, Globe2,
-  DollarSign, Users, Scale, Award, CheckCircle2, Shield, Lock,
+  Printer, Home, Briefcase, Globe2,
+  DollarSign, Users, Scale, Award, Shield, Lock,
   Car, AlertOctagon, ChevronRight, Vote, Building2, Leaf, MapPin,
 } from "lucide-react";
 import { Link } from "wouter";
@@ -46,8 +46,6 @@ interface RiskMeta {
   urgency: number;
   Icon: React.ElementType;
   color: string;
-  bg: string;
-  border: string;
   linkHref: string;
 }
 
@@ -69,50 +67,36 @@ const RISKS: RiskMeta[] = [
   {
     id: "supervision", urgency: 1, Icon: Scale,
     color: "text-red-700 dark:text-red-400",
-    bg: "bg-red-50 dark:bg-red-950/30",
-    border: "border-red-200 dark:border-red-800",
     linkHref: "/case-guidance",
   },
   {
     id: "immigration", urgency: 2, Icon: Globe2,
     color: "text-orange-700 dark:text-orange-400",
-    bg: "bg-orange-50 dark:bg-orange-950/30",
-    border: "border-orange-200 dark:border-orange-800",
     linkHref: "/immigration-guidance",
   },
   {
     id: "children", urgency: 3, Icon: Users,
     color: "text-amber-700 dark:text-amber-400",
-    bg: "bg-amber-50 dark:bg-amber-950/30",
-    border: "border-amber-200 dark:border-amber-800",
     linkHref: "/support/childcare",
   },
   {
     id: "housing", urgency: 4, Icon: Home,
     color: "text-blue-700 dark:text-blue-400",
-    bg: "bg-blue-50 dark:bg-blue-950/30",
-    border: "border-blue-200 dark:border-blue-800",
     linkHref: "/support/housing",
   },
   {
     id: "employment", urgency: 5, Icon: Briefcase,
     color: "text-teal-700 dark:text-teal-400",
-    bg: "bg-teal-50 dark:bg-teal-950/30",
-    border: "border-teal-200 dark:border-teal-800",
     linkHref: "/support/employment",
   },
   {
     id: "benefits", urgency: 6, Icon: DollarSign,
     color: "text-violet-700 dark:text-violet-400",
-    bg: "bg-violet-50 dark:bg-violet-950/30",
-    border: "border-violet-200 dark:border-violet-800",
     linkHref: "/support/finances",
   },
   {
     id: "license", urgency: 7, Icon: Award,
     color: "text-slate-700 dark:text-slate-400",
-    bg: "bg-slate-50 dark:bg-slate-950/30",
-    border: "border-slate-200 dark:border-slate-800",
     linkHref: "/legal-aid",
   },
 ];
@@ -158,8 +142,6 @@ interface ChargeRiskMeta {
   urgency: number;
   Icon: React.ElementType;
   color: string;
-  bg: string;
-  border: string;
   linkHref: string;
 }
 
@@ -167,22 +149,16 @@ const CHARGE_TYPE_RISKS: ChargeRiskMeta[] = [
   {
     id: "sexOffender", urgency: 0.5, Icon: AlertOctagon,
     color: "text-red-700 dark:text-red-400",
-    bg: "bg-red-50 dark:bg-red-950/30",
-    border: "border-red-200 dark:border-red-800",
     linkHref: "/legal-aid",
   },
   {
     id: "driverLicense", urgency: 1.5, Icon: Car,
     color: "text-amber-700 dark:text-amber-400",
-    bg: "bg-amber-50 dark:bg-amber-950/30",
-    border: "border-amber-200 dark:border-amber-800",
     linkHref: "/support/transportation",
   },
   {
     id: "driverLicenseCheck", urgency: 1.5, Icon: Car,
     color: "text-slate-700 dark:text-slate-400",
-    bg: "bg-slate-50 dark:bg-slate-950/30",
-    border: "border-slate-200 dark:border-slate-800",
     linkHref: "/support/transportation",
   },
 ];
@@ -292,7 +268,7 @@ function StateRulesCard({ stateAbbr }: { stateAbbr: string }) {
   ];
 
   return (
-    <div className="rounded-xl border border-border bg-card overflow-hidden">
+    <div className="collateral-state-rules rounded-xl border border-border bg-card overflow-hidden">
       <div className="px-4 pt-4 pb-3 border-b border-border/60">
         <p className="text-sm font-bold text-foreground">
           {t("collateralConsequences.stateRules.heading", { stateName: rule.stateName })}
@@ -307,7 +283,7 @@ function StateRulesCard({ stateAbbr }: { stateAbbr: string }) {
           <div key={labelKey} className="flex items-center justify-between px-4 py-2.5 gap-3">
             <div className="flex items-center gap-2 min-w-0">
               <Icon className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" strokeWidth={1.75} aria-hidden="true" />
-              <span className="text-xs text-foreground truncate">{t(labelKey)}</span>
+              <span className="text-xs text-foreground">{t(labelKey)}</span>
             </div>
             <span className={`text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0 ${LEVEL_CLASSES[level]}`}>
               {t(statusKey)}
@@ -338,6 +314,9 @@ export default function CollateralConsequences() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
 
+  const copy = collateralDesignCopy[i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en"];
+  const contentRef = useRef<HTMLDivElement>(null);
+  const firstRender = useRef(true);
   const { jurisdiction } = useJurisdiction();
 
   const [step, setStep] = useState(0);
@@ -351,6 +330,10 @@ export default function CollateralConsequences() {
   const [screenerState, setScreenerState] = useState<string>("");
 
   const isResults = chargeTypeSelected && step === QUESTION_ORDER.length;
+  useEffect(() => {
+    if (firstRender.current) { firstRender.current = false; return; }
+    contentRef.current?.querySelector<HTMLHeadingElement>("h2")?.focus();
+  }, [step, chargeTypeSelected]);
   const progress = Math.round((step / QUESTION_ORDER.length) * 100);
   const currentMeta = QUESTIONS[step];
   const currentId = QUESTION_ORDER[step];
@@ -412,7 +395,6 @@ export default function CollateralConsequences() {
 
   function handleAnswer(ans: "yes" | "no") {
     setAnswers(prev => ({ ...prev, [currentId]: ans }));
-    setStep(s => s + 1);
   }
 
   function handleBack() {
@@ -465,49 +447,38 @@ export default function CollateralConsequences() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background collateral-page">
       <Header />
 
-      {/* Hero */}
-      <section className="vivid-header-rose py-12 md:py-16" aria-labelledby="screener-heading">
-        <div className="max-w-2xl mx-auto px-4 vivid-header-content text-center">
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 text-white/80 text-xs font-semibold uppercase tracking-wider mb-4">
-              <AlertTriangle className="h-3.5 w-3.5" aria-hidden="true" />
-              {t("collateralConsequences.badge")}
-            </div>
-            <h1 id="screener-heading" className="text-2xl md:text-3xl font-black text-white mb-4 leading-tight">
-              {t("collateralConsequences.pageTitle")}
-            </h1>
-            <p className="text-sm md:text-base text-white/80 leading-relaxed max-w-xl mx-auto">
-              {t("collateralConsequences.pageDesc")}
-            </p>
-          </motion.div>
-        </div>
+      <div className="collateral-body">
+      <section className="collateral-hero" aria-labelledby="screener-heading">
+        <p className="text-sm text-muted-foreground">{t("collateralConsequences.pageTitle")}</p>
+        <h1 id="screener-heading">{copy.title}</h1>
+        <p>{t("collateralConsequences.pageDesc")}</p>
       </section>
-
-      {/* Screener body */}
-      <section className="py-10 md:py-14">
-        <div className="max-w-xl mx-auto px-4">
-
+      <div className="collateral-work">
+        <aside className="collateral-rail" aria-label={copy.phasesLabel}>
+          <ol>{copy.phases.map((label, index) => <li key={label} aria-current={index === (!chargeTypeSelected ? 0 : isResults ? 2 : 1) ? "step" : undefined}>{label}</li>)}</ol>
+          <p>{copy.explanation}</p>
+        </aside>
+        <div className="collateral-content" ref={contentRef}>
           {/* ---------- CHARGE TYPE PRE-STEP ---------- */}
           {!chargeTypeSelected ? (
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
-              <div className="rounded-2xl border border-border bg-card shadow-sm p-6 md:p-8 mb-5">
-                <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mb-5">
-                  <Scale className="h-6 w-6 text-rose-600 dark:text-rose-400" strokeWidth={1.75} aria-hidden="true" />
-                </div>
-                <h2 className="text-lg font-bold text-foreground leading-snug mb-2">
+            <div>
+              <div className="collateral-question">
+                <h2 tabIndex={-1} className="text-lg font-bold text-foreground leading-snug mb-2">
                   {t("collateralConsequences.chargeType.heading")}
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                   {t("collateralConsequences.chargeType.sub")}
                 </p>
-                <div className="space-y-2">
+                <div className="collateral-options">
                   {CHARGE_TYPE_OPTION_KEYS.map(key => (
                     <button
                       key={key}
-                      onClick={() => { setChargeType(key); setChargeTypeSelected(true); }}
+                      onClick={() => setChargeType(key)}
+                      aria-pressed={chargeType === key}
+                      data-charge={key}
                       className="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:border-rose-300 hover:bg-rose-50/50 dark:hover:bg-rose-950/20 dark:hover:border-rose-700 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                     >
                       <span>{t(`collateralConsequences.chargeType.options.${key}`)}</span>
@@ -516,13 +487,16 @@ export default function CollateralConsequences() {
                   ))}
                 </div>
               </div>
+              <div className="collateral-actions">
+              <button className="collateral-continue" disabled={!chargeType} onClick={() => setChargeTypeSelected(true)}>{copy.continue}</button>
               <button
                 onClick={() => { setChargeType(null); setChargeTypeSelected(true); }}
                 className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {t("collateralConsequences.chargeType.skip")}
               </button>
-            </motion.div>
+              </div>
+            </div>
           ) : !isResults ? (
             <>
               {/* ---------- QUESTION FLOW ---------- */}
@@ -532,41 +506,29 @@ export default function CollateralConsequences() {
                   <span className="font-semibold">
                     {t("collateralConsequences.qOf", { n: step + 1, total: QUESTION_ORDER.length })}
                   </span>
-                  <span>{progress}%</span>
+
                 </div>
                 <div
                   className="h-1.5 rounded-full bg-muted overflow-hidden"
                   role="progressbar"
+                  aria-label={t("collateralConsequences.qOf", { n: step + 1, total: QUESTION_ORDER.length })}
                   aria-valuenow={progress}
                   aria-valuemin={0}
                   aria-valuemax={100}
                 >
-                  <motion.div
-                    className="h-full bg-rose-500 rounded-full"
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.3 }}
+                  <div
+                    className="h-full bg-primary rounded-full" style={{ width: `${progress}%` }}
                   />
                 </div>
               </div>
 
               {/* Question card */}
-              <AnimatePresence mode="wait">
-                <motion.div
+              <>
+                <div
                   key={step}
-                  initial={{ opacity: 0, x: 24 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -24 }}
-                  transition={{ duration: 0.2, ease: "easeOut" }}
                 >
-                  <div className="rounded-2xl border border-border bg-card shadow-sm p-6 md:p-8 mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mb-5">
-                      <currentMeta.Icon
-                        className="h-6 w-6 text-rose-600 dark:text-rose-400"
-                        strokeWidth={1.75}
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <h2 className="text-lg font-bold text-foreground leading-snug mb-2">
+                  <div className="collateral-question">
+                    <h2 tabIndex={-1} className="text-lg font-bold text-foreground leading-snug mb-2">
                       {t(`collateralConsequences.questions.${currentId}.question`)}
                     </h2>
                     <p className="text-sm text-muted-foreground leading-relaxed">
@@ -583,18 +545,21 @@ export default function CollateralConsequences() {
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <button
                       onClick={() => handleAnswer("yes")}
+                      data-answer="yes" aria-pressed={answers[currentId] === "yes"}
                       className="flex items-center justify-center py-4 rounded-xl border-2 border-rose-200 dark:border-rose-800 bg-rose-50 dark:bg-rose-950/30 text-rose-700 dark:text-rose-300 font-bold text-base hover:border-rose-400 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                     >
                       {t("collateralConsequences.yes")}
                     </button>
                     <button
                       onClick={() => handleAnswer("no")}
+                      data-answer="no" aria-pressed={answers[currentId] === "no"}
                       className="flex items-center justify-center py-4 rounded-xl border-2 border-border bg-background text-foreground font-bold text-base hover:border-muted-foreground hover:bg-muted/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
                       {t("collateralConsequences.no")}
                     </button>
                   </div>
 
+                  <div className="collateral-actions">
                   {/* Back */}
                   <button
                     onClick={handleBack}
@@ -603,22 +568,18 @@ export default function CollateralConsequences() {
                     <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
                     {t("collateralConsequences.back")}
                   </button>
-                </motion.div>
-              </AnimatePresence>
+                  <button className="collateral-continue" disabled={!answers[currentId]} onClick={() => setStep(s => s + 1)}>{step === QUESTION_ORDER.length - 1 ? copy.seeTopics : copy.continue}</button>
+                  </div>
+                </div>
+              </>
             </>
           ) : (
             /* ---------- RESULTS ---------- */
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.35 }}
+            <div
             >
               {activeRisks.length === 0 ? (
                 <div className="text-center py-8">
-                  <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="h-8 w-8 text-green-600 dark:text-green-400" aria-hidden="true" />
-                  </div>
-                  <h2 className="text-xl font-bold text-foreground mb-3">
+                  <h2 tabIndex={-1} className="text-xl font-bold text-foreground mb-3">
                     {t("collateralConsequences.noRiskTitle")}
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mx-auto mb-6">
@@ -628,7 +589,7 @@ export default function CollateralConsequences() {
               ) : (
                 <>
                   <div className="mb-6">
-                    <h2 className="text-xl font-bold text-foreground mb-1">
+                    <h2 tabIndex={-1} className="text-xl font-bold text-foreground mb-1">
                       {t("collateralConsequences.resultsTitle")}
                     </h2>
                     <p className="text-sm text-muted-foreground">
@@ -673,12 +634,9 @@ export default function CollateralConsequences() {
                         : "";
 
                       return (
-                      <motion.div
+                      <div
                         key={risk.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.06, duration: 0.22 }}
-                        className={`rounded-xl border p-5 ${risk.bg} ${risk.border}`}
+                        className="collateral-result" data-risk={risk.id}
                       >
                         <div className="flex items-start gap-3 mb-3">
                           <risk.Icon
@@ -693,7 +651,7 @@ export default function CollateralConsequences() {
 
                         <div className="space-y-3 text-sm">
                           <div>
-                            <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-0.5">
+                            <p className="text-xs font-bold text-muted-foreground mb-0.5">
                               {t("collateralConsequences.whatLabel")}
                             </p>
                             <p className="text-foreground leading-relaxed">
@@ -701,15 +659,15 @@ export default function CollateralConsequences() {
                             </p>
                           </div>
                           <div>
-                            <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-0.5">
+                            <p className="text-xs font-bold text-muted-foreground mb-0.5">
                               {t("collateralConsequences.timelineLabel")}
                             </p>
                             <p className="text-foreground leading-relaxed">
                               {t(`collateralConsequences.risks.${risk.id}.clock`)}
                             </p>
                           </div>
-                          <div className={`rounded-lg border p-3 ${risk.bg} ${risk.border}`}>
-                            <p className="text-xs font-bold uppercase tracking-wider mb-0.5 text-muted-foreground">
+                          <div className="collateral-action-note">
+                            <p className="text-xs font-bold mb-0.5 text-muted-foreground">
                               {t("collateralConsequences.actionLabel")}
                             </p>
                             <p className="text-foreground leading-relaxed">
@@ -722,7 +680,7 @@ export default function CollateralConsequences() {
                             <div className="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/40 p-3">
                               <div className="flex items-center gap-1.5 mb-1">
                                 <MapPin className="h-3 w-3 text-blue-600 dark:text-blue-400 flex-shrink-0" aria-hidden="true" />
-                                <p className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300">
+                                <p className="text-xs font-bold text-blue-700 dark:text-blue-300">
                                   {t("collateralConsequences.stateDeadlines.calloutHeading", {
                                     stateName: t(`collateralConsequences.stateDeadlines.entries.${selectedStateDeadlines.stateCode}.stateName`),
                                   })}
@@ -754,7 +712,7 @@ export default function CollateralConsequences() {
                             </span>
                           </Link>
                         </div>
-                      </motion.div>
+                      </div>
                       );
                     })}
                   </div>
@@ -780,6 +738,7 @@ export default function CollateralConsequences() {
                 </div>
               </div>
 
+              <button className="collateral-review" onClick={() => setStep(0)}>{copy.review}</button>
               {/* Export controls */}
               <div className="flex flex-wrap gap-2 mb-6">
                 <button
@@ -817,10 +776,10 @@ export default function CollateralConsequences() {
                   </span>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
-      </section>
+      </div>
 
       {/* Privacy strip */}
       <section className="py-8 border-t border-border/30 bg-muted/20">
@@ -832,6 +791,7 @@ export default function CollateralConsequences() {
         </div>
       </section>
 
+      </div>
       <Footer />
     </div>
   );

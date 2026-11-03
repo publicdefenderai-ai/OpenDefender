@@ -459,3 +459,20 @@ References:
 - `family-toolkit-design-notes.md`: SHA-256 `40dc3e635a5be596e93d6e520d38a82685b7db34e97383b4585b3a9b26494a42`
 
 Validation: typecheck and production build passed; all six dedicated browser cases passed. Desktop/mobile screens were inspected. All six pages of the three generated PDFs were rendered and visually checked for readability, clipping and page breaks. This is a presentation and print-behavior batch, not a new certification of retained reference content. Existing source-content review remains separate. No full-suite, deployment or legal-review completion claim. Next design batch: Collateral Consequences Screener.
+
+
+## Collateral Consequences Screener design batch
+
+Implements the approved three-phase workspace at `/collateral-consequences`, with the direct “What else could this affect?” heading, restrained plum controls, quiet progress line and a wider reading area. Charge and yes/no selections remain on screen until Continue is pressed. Back and Review answers preserve selections; deliberate phase/question transitions focus the new heading. Removes question-slide animation and the celebratory green no-result graphic. The empty state now says that these answers selected no topics and retains the limitation that the screener does not cover every possible consequence. This wording is translated and is also used by the existing plain-text export.
+
+Preserves the seven questions and seven charge choices, skip behavior, all existing consequence rule branches and priority ordering, state selector, deadline notes, sources, state-rule summaries and caveats. The simplified preview's generic result topics are not substituted for the live engine. State-rule labels wrap on phones instead of truncating. Existing warning colors on result titles, source callouts and legal/privacy notices remain distinct; ordinary card surfaces become reading sections. New interface copy is available in English, Spanish and Chinese. No answer persistence or new requests are introduced. The existing copy and escaped-text print handlers are unchanged.
+
+Published question, consequence and deadline copy is captured independently from main `f505a2c1` in `tests/fixtures/collateral-published.ts`. Tests use those literals for all questions and every displayed result field, including state deadline headlines/details. The fixture is a preservation baseline, not legal approval. Existing substantive content review remains outstanding and is not closed by this batch. The original screening logic and reference data have not been re-certified.
+
+The release-allowlisted browser spec covers three locales and two themes, keyboard selection/focus, explicit Continue, answer review/back/skip/reset, desktop and 320px bounds, all seven charge labels, eight simultaneous result sections, state deadline choices, retained disclaimers, copying and the print window. Additional cases exercise unknown-state drug checks, an existing negative state branch, an existing positive state branch and registration results. Tests assert current product behavior, not the legal correctness of those inherited rules.
+
+Adds automatic parity/nonempty-string coverage for all standalone `*-design.ts` locale modules, including the four preceding modules omitted by the central locale parity test. This does not turn the existing JSX heuristic into a comprehensive translation audit; inherited untranslated reference content remains separate debt.
+
+Reference: `opendefender-collateral-screener-preview.html`, SHA-256 `94cf7a45bd494d64d3f3aebf7fdb9066e17245f4c17934b0ffc6a96ced266e70`.
+
+Validation: typecheck, production build, 155 targeted unit checks and ten browser checks passed. Desktop/light and phone/dark renders were visually inspected. No new full-suite, production deployment or legal-review completion claim. Next design batch: Resource Inventory/Directory, then revisit the remaining-page inventory.

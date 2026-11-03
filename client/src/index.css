@@ -3007,3 +3007,42 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .toolkit-print-item { break-inside: avoid; margin-bottom: 12pt; }
   .toolkit-print .grid > div { break-inside: avoid; }
 }
+
+/* Collateral screener: a quiet workspace with explicit answer review. */
+.collateral-hero { max-width: 1100px; margin: auto; padding: 48px 24px 36px; }
+.collateral-hero h1 { font-size: clamp(36px, 5vw, 58px); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; max-width: 720px; margin: 18px 0 24px; }
+.collateral-hero > p:last-child { max-width: 720px; color: var(--muted-foreground); line-height: 1.8; }
+.collateral-work { max-width: 1100px; margin: auto; padding: 36px 24px 48px; border-top: 1px solid var(--border); display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 48px; }
+.collateral-rail { border-right: 1px solid var(--border); padding-right: 24px; }
+.collateral-rail li { padding: 12px 0; color: var(--muted-foreground); }
+.collateral-rail li[aria-current] { color: var(--primary); font-weight: 700; }
+.collateral-rail p { margin-top: 24px; font-size: 14px; line-height: 1.7; color: var(--muted-foreground); }
+.collateral-content { min-width: 0; }
+.collateral-content h2 { font-size: clamp(24px, 3vw, 30px); font-weight: 500; line-height: 1.35; margin-bottom: 16px; }
+.collateral-content h2:focus { outline: none; }
+.collateral-question { margin-bottom: 24px; }
+.collateral-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.collateral-options button, .collateral-content button[data-answer] { background: transparent; color: var(--foreground); border: 1px solid var(--border); border-radius: 5px; min-height: 52px; font-weight: 500; }
+.collateral-options button[aria-pressed=true], .collateral-content button[data-answer][aria-pressed=true], .collateral-content .collateral-continue { background: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+.collateral-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin: 26px 0; }
+.collateral-continue { padding: 12px 24px; border-radius: 5px; min-height: 48px; font-weight: 600; }
+.collateral-continue:disabled { opacity: .45; cursor: not-allowed; }
+.collateral-review { color: var(--primary); font-weight: 600; min-height: 44px; margin-bottom: 16px; }
+.collateral-result { border-top: 1px solid var(--border); padding: 24px 0; }
+.collateral-result h3 { font-size: 20px; font-weight: 600; }
+.collateral-action-note { padding-left: 16px; border-left: 2px solid var(--primary); }
+.collateral-page button:focus-visible, .collateral-page a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+@media(max-width: 740px) {
+ .collateral-work { grid-template-columns: 1fr; gap: 24px; padding: 24px 20px; }
+ .collateral-hero { padding: 32px 20px; }
+ .collateral-rail { border-right: 0; border-bottom: 1px solid var(--border); padding: 0 0 16px; }
+ .collateral-rail ol { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; }
+ .collateral-rail p { display: none; }
+ .collateral-options { grid-template-columns: 1fr; }
+ .collateral-content select { min-width: 0; max-width: 100%; font-size: 16px; }
+}
+
+@media(max-width: 740px) {
+ .collateral-state-rules .divide-y > div { flex-wrap: wrap; }
+ .collateral-state-rules .divide-y > div > span { flex-shrink: 1; }
+}
