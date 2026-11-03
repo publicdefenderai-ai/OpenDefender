@@ -426,3 +426,18 @@ References:
 - `developers-detail-style.html`: SHA-256 `bf4813586dc59a626c5013dcdd020385182e803d63b118c04bd0dd44124da96a`
 
 Validation: typecheck and production build passed, plus six release-allowlisted browser cases covering 1280px/320px, both themes, all locales, published content, keyboard interaction and anchors. Desktop/mobile renders were inspected. No full-suite, deployment or substantive-documentation approval claim.
+
+## Friends & Family design batch
+
+Implements the approved helping-hands revision at `/friends-family`, with a direct two-part heading, immediate-step and Family Toolkit links, a reading index and five numbered actions. The first disclosure starts open; each can open independently. Existing step descriptions remain visible while detailed lists/resources expand underneath. New step anchors reveal their associated disclosure. The illustration is the exact approved v2 transparent PNG, not a newly generated substitute or the family-care graphic. It is decorative and hidden on narrow screens, matching the accepted preview.
+
+All published guidance remains: five actions, supervision, case tracking, collateral impacts, legal warnings, disclaimer, long-term support, self-care, toolkit prompts and three orientation destinations. Orientation moves below the main guidance. The privacy-banner text is preserved above the shared footer. Ordinary colored cards become quiet reading sections; critical red/amber alerts and the blue legal notice retain distinct treatments. Removed nested button-in-link markup from the toolkit actions. No questionnaire/toolkit behavior, legal wording, translations, backend or contact destinations change.
+
+New heading/navigation/disclosure copy is translated in English, Spanish and Chinese. The previous hero title remains as context and its subtitle is retained. Content preservation uses independently captured rendered prose plus every static translation used by the old component at `33413fcd`, including Alert/strong/span notices that a paragraph-only capture would miss. Existing legal-content review work remains separate; preserving a statement does not mark it newly verified or attorney-approved.
+
+References:
+- `opendefender-friends-family-preview.html`: SHA-256 `3a74e33559cdebb05ce84afe8dbad02b26b2cab9b79e246352af0c7faeddd7d2`
+- `friends-family-content.html`: SHA-256 `a56d746bcbba256166f5ae4f51bfb3e54c97945ad927685334cdda4e970ade9a`
+- `friends-family-helping-hands-v2.png`: SHA-256 `eb2d598488657842a19ea8fbc7cdda7709c63892e26fce9568eb6e71265320a2`
+
+Validation: typecheck and production build passed. Six release-allowlisted browser cases cover all three languages, both themes, independent keyboard disclosures and focus, retained source text/links/notices, artwork loading, section/step anchors and actual element bounds at 1280px/320px. Desktop and phone layouts were inspected. No full-suite, production deployment or legal-review completion claim. Next batch: Family Toolkit.
