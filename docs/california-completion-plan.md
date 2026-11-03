@@ -1,5 +1,9 @@
 # California practical completion plan
 
+## First-pass handoff: November 2, 2026
+
+The priority queue now has bounded publication treatment through PR 87, with 703 configured choices. See [the consolidated closeout and Ohio continuation](california-first-pass-handoff-2026-11-02.md) for successor accounting, preserved gaps and the next-state scope. Earlier milestones below are historical, not the current task queue. This closes the current accounting packet, not the exhaustive-review objective. Remaining scope is preserved explicitly, and Ohio is next at the owner's direction.
+
 ## Other-code priority successor: October 28, 2026
 
 This proposed combined batch adds 19 configured choices across the seven priority primary sections: BPC 2052/7028, LAB 3700.5/6425, INS 1871.4, WIC 10980 and UIC 2101. It raises configured choices from 670 to 689, across 351 primary sections, with 21 canonical labels still withheld. Live availability is not established by this count.
