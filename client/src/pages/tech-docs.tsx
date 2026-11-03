@@ -1,34 +1,10 @@
+import { useEffect } from "react";
+import { developerDesignCopy } from "@/locales/developer-design";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
-import {
-  Code,
-  FileJson,
-  Layout,
-  Database,
-  ExternalLink,
-  BookOpen,
-  Download,
-  Search,
-  Shield,
-  RefreshCw,
-  UserCheck,
-  FileText,
-  Scale,
-  Lock,
-  AlertTriangle,
-  Layers,
-  Clock,
-  MessageSquare,
-  Mail,
-  Heart,
-  Compass,
-  ArrowRight,
-} from "lucide-react";
 
 const contentPages = [
   {
@@ -311,172 +287,140 @@ const contentPages = [
 ];
 
 export default function TechDocs() {
-  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const language = i18n.language.startsWith('es') ? 'es' : i18n.language.startsWith('zh') ? 'zh' : 'en';
+  const copy = developerDesignCopy[language];
+  useEffect(() => {
+    const reveal = () => {
+      let id: string;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      if (!target) return;
+      const details = target.closest('details');
+      if (details) details.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    };
+    reveal(); window.addEventListener('hashchange', reveal);
+    return () => window.removeEventListener('hashchange', reveal);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Technical Documentation</h1>
+      <div className="developer-page" lang="en">
+        <header className="developer-hero">
+          {language !== "en" && <p lang={language}>{copy.englishNotice}</p>}
+          <p className="developer-eyebrow">Technical Documentation</p><h1 lang={language}>{copy.title1}<br /><em>{copy.title2}</em></h1>
           <p className="text-lg text-muted-foreground">
             Reference for developers, advocates, and organizations building on or forking OpenDefender
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            OpenDefender is an organized legal information platform — not a personalized guidance or advice engine.
+            OpenDefender is an organized legal information platform. It is not a personalized guidance or advice engine.
             It helps users understand what is happening, what their options are, and where to find support.
             AI is used in a small number of specific, bounded features described below.
           </p>
-        </div>
+          <div className="developer-hero-links" lang={language}><a href="https://github.com/publicdefenderai-ai/OpenDefender">{copy.repository}</a><Link href="/api-docs">{copy.api}</Link></div></header>
 
+        <nav className="developer-nav" aria-label={copy.navigation} lang={language}>
+          {copy.sections.map((label, index) => <a key={label} href={'#' + ['developer-start', 'developer-pages', 'developer-features', 'developer-maintenance', 'developer-reuse', 'developer-standards', 'developer-examples'][index]}>{label}</a>)}
+        </nav>
         {/* Developer Tools Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
+        <section id="developer-start" className="developer-start"><h2 lang={language}>{copy.entry}</h2><div className="developer-start-grid"><div>
+          <article className="developer-entry">
+            <div className="developer-section-head">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900">
-                  <Code className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                </div>
+
                 <div>
-                  <CardTitle>API Documentation</CardTitle>
-                  <CardDescription>REST API endpoints and usage</CardDescription>
+                  <h3>API Documentation</h3>
+                  <p>REST API endpoints and usage</p>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent>
+            </div>
+            <div>
               <p className="text-sm text-muted-foreground mb-4">
                 Complete reference for the public API: search, charges, diversion programs,
                 glossary terms, and bulk data export. No authentication required for read endpoints.
               </p>
-              <Button asChild>
-                <Link href="/api-docs">View API Docs</Link>
-              </Button>
-            </CardContent>
-          </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
+              <Link href="/api-docs">View API Docs</Link>
+
+            </div>
+          </article>
+
+          <article className="developer-entry">
+            <div className="developer-section-head">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-purple-100 dark:bg-purple-900">
-                  <Layout className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-                </div>
+
                 <div>
-                  <CardTitle>Embeddable Widgets</CardTitle>
-                  <CardDescription>Add legal resources to your website</CardDescription>
+                  <h3>Embeddable Widgets</h3>
+                  <p>Add legal resources to your website</p>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent>
+            </div>
+            <div>
               <p className="text-sm text-muted-foreground mb-4">
                 Embed search, Know Your Rights cards, and legal glossary widgets via iframe.
                 Customizable themes, compact/full variants, and trilingual support (EN/ES/ZH).
               </p>
-              <Button asChild>
-                <Link href="/widgets">View Widgets</Link>
-              </Button>
-            </CardContent>
-          </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
+              <Link href="/widgets">View Widgets</Link>
+
+            </div>
+          </article>
+
+          <article className="developer-entry">
+            <div className="developer-section-head">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-green-100 dark:bg-green-900">
-                  <FileJson className="h-5 w-5 text-green-600 dark:text-green-400" />
-                </div>
+
                 <div>
-                  <CardTitle>JSON Schemas</CardTitle>
-                  <CardDescription>Data model specifications</CardDescription>
+                  <h3>JSON Schemas</h3>
+                  <p>Data model specifications</p>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent>
+            </div>
+            <div>
               <p className="text-sm text-muted-foreground mb-4">
                 JSON Schema definitions for all API data models: CriminalCharge,
                 DiversionProgram, GlossaryTerm, and ExpungementRule.
               </p>
-              <Button variant="outline" asChild>
-                <a href="/api/v1/schemas" target="_blank">
-                  <FileJson className="h-4 w-4 mr-2" />
-                  View Schemas
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
+              <a href="/api/v1/schemas" target="_blank">
+
+                View Schemas
+              </a>
+
+            </div>
+          </article>
+
+          <article className="developer-entry">
+            <div className="developer-section-head">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-orange-100 dark:bg-orange-900">
-                  <Download className="h-5 w-5 text-orange-600 dark:text-orange-400" />
-                </div>
+
                 <div>
-                  <CardTitle>OpenAPI Specification</CardTitle>
-                  <CardDescription>Machine-readable API definition</CardDescription>
+                  <h3>OpenAPI Specification</h3>
+                  <p>Machine-readable API definition</p>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent>
+            </div>
+            <div>
               <p className="text-sm text-muted-foreground mb-4">
                 Download the OpenAPI 3.0 specification to generate client libraries or import
                 into Postman or Swagger UI.
               </p>
-              <Button variant="outline" asChild>
-                <a href="/api/v1/openapi.json" target="_blank">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download OpenAPI Spec
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
 
-        {/* Data Coverage */}
-        <Card className="mb-10">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Database className="h-5 w-5" />
-              Data Coverage
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">7,155</div>
-                <div className="text-sm text-muted-foreground">Criminal Charges</div>
-              </div>
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">57</div>
-                <div className="text-sm text-muted-foreground">Jurisdictions</div>
-              </div>
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">111</div>
-                <div className="text-sm text-muted-foreground">Diversion Programs</div>
-              </div>
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">195+</div>
-                <div className="text-sm text-muted-foreground">Legal Aid Organizations</div>
-              </div>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">5,956</div>
-                <div className="text-sm text-muted-foreground">Verified Statutes</div>
-              </div>
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">50</div>
-                <div className="text-sm text-muted-foreground">Glossary Terms</div>
-              </div>
-              <div className="text-center p-4 bg-muted rounded-lg">
-                <div className="text-2xl font-bold text-primary">58+</div>
-                <div className="text-sm text-muted-foreground">Content Pages</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+              <a href="/api/v1/openapi.json" target="_blank">
 
+                Download OpenAPI Spec
+              </a>
+
+            </div>
+          </article>
+        </div><aside className="developer-code" lang={language}><h3>{copy.request}</h3><pre><code>{`fetch("/api/v1/glossary")\n  .then(response => response.json())\n  .then(data => console.log(data));`}</code></pre><p>{copy.requestNote}</p><Link href="/api-docs">{copy.api}</Link></aside></div></section>
+
+        <aside className="developer-coverage" lang={language}><div><h2>{copy.coverage}</h2><p>{copy.coverageNote}</p></div><Link href="/data-sources">{copy.sources}</Link></aside>
         {/* Content Pages */}
-        <div className="mb-10">
+        <section id="developer-pages" className="developer-section">
           <h2 className="text-xl font-bold mb-2">Content Pages</h2>
           <p className="text-sm text-muted-foreground mb-6">
             All content pages are publicly accessible with no authentication required. Pages are built in React (TypeScript),
@@ -486,10 +430,10 @@ export default function TechDocs() {
           </p>
           <div className="space-y-6">
             {contentPages.map((section) => (
-              <Card key={section.section}>
-                <CardHeader className="pb-3">
+              <details className="developer-disclosure"><summary><h3>{section.section}</h3></summary><div className="developer-detail">
+                <div className="developer-section-head">
                   <div className="flex items-start justify-between gap-3">
-                    <CardTitle className="text-base">{section.section}</CardTitle>
+
                     {section.section === "AI-Assisted Tools" && (
                       <Badge variant="outline" className="text-xs shrink-0">Requires Anthropic API key</Badge>
                     )}
@@ -497,29 +441,29 @@ export default function TechDocs() {
                   {"note" in section && section.note && (
                     <p className="text-xs text-muted-foreground mt-1">{section.note}</p>
                   )}
-                </CardHeader>
-                <CardContent className="p-0">
+                </div>
+                <div>
                   <div className="divide-y divide-border">
                     {section.pages.map((page) => (
-                      <div key={page.route} className="px-6 py-3 grid sm:grid-cols-[180px_1fr] gap-2 items-start">
+                      <div key={page.route} className="developer-route">
                         <code className="text-xs bg-muted px-2 py-1 rounded font-mono self-start mt-0.5 break-all">
                           {page.route}
                         </code>
                         <div>
-                          <p className="text-sm font-medium text-foreground">{page.title}</p>
+                          <Link href={page.route}>{page.title}</Link>
                           <p className="text-xs text-muted-foreground mt-0.5">{page.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div></details>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Platform Features */}
-        <div className="mb-10">
+        <section id="developer-features" className="developer-section">
           <h2 className="text-xl font-bold mb-2">Platform Features</h2>
           <p className="text-sm text-muted-foreground mb-6">
             Features beyond static content pages. Each entry notes what credentials or configuration it requires.
@@ -529,36 +473,36 @@ export default function TechDocs() {
           <div className="space-y-4">
 
             {/* First 24 Hours Hub */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>First 24 Hours Hub</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <Clock className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+
                   <div>
-                    <CardTitle className="text-base">First 24 Hours Hub</CardTitle>
+
                     <Badge variant="secondary" className="text-xs mt-1">Flagship feature</Badge>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
+              </div>
+              <div>
                 <p>
                   The platform's primary resource for people immediately after an arrest. Available at{" "}
                   <code className="bg-muted px-1 rounded text-xs">/first-24-hours</code>. No AI, no login.
                 </p>
                 <ul className="space-y-1 list-none">
                   <li>
-                    <ArrowRight className="inline h-3 w-3 mr-1" />
+
                     <strong className="text-foreground">7-step arrest-to-arraignment guide</strong> — arrest, booking, first phone call (with a sample script and a "never say" category list), bail hearing, right to counsel, arraignment, and post-arraignment.
                   </li>
                   <li>
-                    <ArrowRight className="inline h-3 w-3 mr-1" />
+
                     <strong className="text-foreground">State-by-state facility and inmate locator</strong> — all 50 states + DC + Federal system via VINELink and direct DOC links. Implemented as a standalone widget at <code className="bg-muted px-1 rounded text-xs">components/legal/facility-lookup-widget.tsx</code>.
                   </li>
                   <li>
-                    <ArrowRight className="inline h-3 w-3 mr-1" />
+
                     <strong className="text-foreground">Deep-dive accordion sections</strong> — when the right to counsel begins (5th vs. 6th Amendment, the arrest-to-arraignment gap), what to do if arrested while on probation or parole, and first appearance before a magistrate with jurisdiction-by-jurisdiction breakdown.
                   </li>
                   <li>
-                    <ArrowRight className="inline h-3 w-3 mr-1" />
+
                     <strong className="text-foreground">Juvenile arrest callout</strong> and full EN/ES/ZH i18n support throughout.
                   </li>
                 </ul>
@@ -566,18 +510,15 @@ export default function TechDocs() {
                   The former <code className="bg-muted px-1 rounded text-xs">/jail-phone-call</code> route permanently redirects to{" "}
                   <code className="bg-muted px-1 rounded text-xs">/first-24-hours#phone-call</code>.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Life Support Hub */}
-            <Card>
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <Heart className="h-5 w-5 text-rose-600 dark:text-rose-400" />
-                  <CardTitle className="text-base">Life Support Hub</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
+            <details className="developer-disclosure"><summary><h3>Life Support Hub</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
+
+              </div>
+              <div>
                 <p>
                   11 pages covering every major life area disrupted by a criminal charge or immigration matter: employment, finances, court logistics,
                   mental health, transportation, childcare, housing, family care, reputation and record clearance, reentry, and personal health.
@@ -596,19 +537,19 @@ export default function TechDocs() {
                   permanently to the eligibility screener. <code className="bg-muted px-1 rounded text-xs">/collateral-consequences</code> is a separate, live page (the consequence-risk screener), not a redirect.
                 </p>
                 <p>No AI, no login required for any page in this section.</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Case Roadmap */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>Case Roadmap</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <Compass className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                  <CardTitle className="text-base">Case Roadmap</CardTitle>
+
+
                   <Badge variant="outline" className="text-xs">Requires Anthropic API key</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
+              </div>
+              <div>
                 <p>
                   A structured Q&A intake flow at <code className="bg-muted px-1 rounded text-xs">/case-guidance</code>. Users select a jurisdiction, charge type, and case stage.
                   The platform then surfaces rights, deadlines, immediate actions, and resource recommendations relevant to that specific intersection — drawing from the statute database
@@ -626,19 +567,19 @@ export default function TechDocs() {
                 <p>
                   <strong className="text-foreground">Cost controls:</strong> Per-request ceiling of $0.25. Session-level budget cap configurable via environment variable.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* AI Chat */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>AI Chat</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <MessageSquare className="h-5 w-5 text-sky-600 dark:text-sky-400" />
-                  <CardTitle className="text-base">AI Chat</CardTitle>
+
+
                   <Badge variant="outline" className="text-xs">Requires Anthropic API key</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+              </div>
+              <div>
                 <p>
                   Conversational case intake at <code className="bg-muted px-1 rounded text-xs">/chat</code>. Uses a guided quick-reply flow with a state selector, charge selector,
                   and case status panel to help users describe their situation step by step. Surfaces relevant legal documents by case phase via{" "}
@@ -647,38 +588,38 @@ export default function TechDocs() {
                 <p>
                   Like the Case Roadmap, this is an orientation and routing tool, not a legal advice interface. Case records are held in server memory and generally expire within 24 hours or on service restart.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Document Summarizer */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>Document Summarizer</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <FileText className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                  <CardTitle className="text-base">Document Summarizer</CardTitle>
+
+
                   <Badge variant="outline" className="text-xs">Requires Anthropic API key</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
+              </div>
+              <div>
                 <p>
                   Available at <code className="bg-muted px-1 rounded text-xs">/document-summarizer</code>. Users paste or upload a legal document
                   (charging document, court order, plea agreement) and receive a plain-language summary written at a 6th grade reading level.
                   Document bytes and extracted text are processed temporarily in server memory rather than saved to a persistent document database. Anthropic may retain API inputs for up to 30 days under its standard terms.
                   Uses prompt caching on the system prompt to reduce latency on repeated calls.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Letter Generator */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>Letter Generator</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-green-600 dark:text-green-400" />
-                  <CardTitle className="text-base">Letter Generator</CardTitle>
+
+
                   <Badge variant="outline" className="text-xs">Requires Anthropic API key</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+              </div>
+              <div>
                 <p>
                   Available at <code className="bg-muted px-1 rounded text-xs">/letter-generator</code>. Generates ready-to-send letters for three contexts people commonly face during a criminal case:
                 </p>
@@ -690,18 +631,15 @@ export default function TechDocs() {
                 <p>
                   Users complete a short form; AI fills in the letter body. Output can be copied, printed, or saved. The request is processed by Anthropic; users should avoid unnecessary sensitive details and review the output.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Jury Instruction References */}
-            <Card>
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <Scale className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
-                  <CardTitle className="text-base">Jury Instruction References</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+            <details className="developer-disclosure"><summary><h3>Jury Instruction References</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
+
+              </div>
+              <div>
                 <p>
                   Pattern jury instructions — the exact standards a jury must apply to convict on a given charge — are surfaced alongside charge information throughout the platform.
                   Each entry in <code className="bg-muted px-1 rounded text-xs">shared/criminal-charge-citations.ts</code> supports two optional fields:
@@ -718,19 +656,19 @@ export default function TechDocs() {
                   <strong className="text-foreground">Testing:</strong> Vitest regression tests in <code className="bg-muted px-1 rounded text-xs">tests/jury-instructions.test.ts</code> cover display logic and link validation.
                   A link checker script (<code className="bg-muted px-1 rounded text-xs">scripts/check-jury-instruction-links.ts</code>) can be run manually to flag broken instruction URLs before release.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* LOCUS Municipal Ordinance Context */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>LOCUS Municipal Ordinance Context</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <BookOpen className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
-                  <CardTitle className="text-base">LOCUS Municipal Ordinance Context</CardTitle>
+
+
                   <Badge variant="secondary" className="text-xs">No API key required</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+              </div>
+              <div>
                 <p>
                   For charges with local-ordinance-relevant keywords (loitering, trespass, disorderly conduct, public intoxication, noise, curfew, park rules), the platform queries the{" "}
                   <strong className="text-foreground">LOCUS-v1</strong> dataset (LocalLaws / UC Berkeley) for the actual municipal ordinance text and injects it into Claude's prompt as context.
@@ -745,18 +683,15 @@ export default function TechDocs() {
                   Results are cached for 10 minutes per keyword/state pair. Lookup has an 8-second timeout; on failure, guidance proceeds without ordinance context.
                   When an ordinance is found, the metadata (section number, jurisdiction) surfaces in the guidance dashboard as a MapPin attribution line and inside the sourcing collapsible.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* AI Accuracy */}
-            <Card id="ai-validation">
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-teal-600 dark:text-teal-400" />
-                  <CardTitle className="text-base">AI Output Validation</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm text-muted-foreground">
+            <details className="developer-disclosure" id="ai-validation"><summary><h3>AI Output Validation</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
+
+              </div>
+              <div>
                 <p>
                   AI is used in four features: Case Roadmap, AI Chat, Document Summarizer, and Letter Generator. In all cases, the AI's role is bounded and the output is structured.
                   It does not provide open-ended legal analysis.
@@ -788,19 +723,19 @@ export default function TechDocs() {
                     When you see the "requires confirmation" banner, that is a signal that the AI was less certain about that specific jurisdiction.
                   </p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Alternative AI Providers */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>Alternative AI Providers (OpenRouter)</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <Layers className="h-5 w-5 text-orange-600 dark:text-orange-400" />
-                  <CardTitle className="text-base">Alternative AI Providers (OpenRouter)</CardTitle>
+
+
                   <Badge variant="secondary" className="text-xs">For forks only</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm text-muted-foreground">
+              </div>
+              <div>
                 <p>
                   OpenDefender uses Anthropic's Claude API directly. <strong className="text-foreground">We do not use OpenRouter</strong> and do not plan to.
                   OpenRouter is a third-party proxy — user-submitted case data passes through an intermediary before reaching the model.
@@ -808,40 +743,40 @@ export default function TechDocs() {
                 </p>
                 <p>If you are forking this project and want to use OpenRouter or a different provider:</p>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                  <div className="developer-maintenance-row">
                     <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">1.</code>
                     <span>Set your provider key (e.g., <code className="bg-background px-1 rounded text-xs">OPENROUTER_API_KEY</code>) in place of <code className="bg-background px-1 rounded text-xs">ANTHROPIC_API_KEY</code>.</span>
                   </div>
-                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                  <div className="developer-maintenance-row">
                     <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">2.</code>
                     <span>Replace the Anthropic SDK client in <code className="bg-background px-1 rounded text-xs">server/services/</code> with an OpenAI-compatible client pointed at your provider's base URL, using your key as the bearer token.</span>
                   </div>
-                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                  <div className="developer-maintenance-row">
                     <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">3.</code>
                     <span>Update <code className="bg-background px-1 rounded text-xs">server/config/ai-model.ts</code> to export the model string for your provider (e.g., <code className="bg-background px-1 rounded text-xs">anthropic/claude-sonnet-4-6</code>, <code className="bg-background px-1 rounded text-xs">openai/gpt-4o</code>).</span>
                   </div>
-                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                  <div className="developer-maintenance-row">
                     <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">4.</code>
                     <span>Prompt caching (used in the Document Summarizer and Case Roadmap system prompts) is Anthropic-specific. Cache control headers are silently ignored by other providers — this is safe but increases latency and token cost on repeated calls.</span>
                   </div>
-                  <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+                  <div className="developer-maintenance-row">
                     <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">5.</code>
                     <span>Update your privacy disclosure to reflect which providers your deployment uses and their data retention policies. Do not carry forward Anthropic's 30-day retention language if you are routing through a different provider.</span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Attorney Document Generation */}
-            <Card>
-              <CardHeader className="pb-3">
+            <details className="developer-disclosure"><summary><h3>Attorney Document Generation</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
                 <div className="flex items-center gap-3">
-                  <UserCheck className="h-5 w-5 text-purple-600 dark:text-purple-400" />
-                  <CardTitle className="text-base">Attorney Document Generation</CardTitle>
+
+
                   <Badge variant="outline" className="text-xs">Verified access</Badge>
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm text-muted-foreground">
+              </div>
+              <div>
                 <p>
                   Available through the Legal Aid Directory (<code className="bg-muted px-1 rounded text-xs">/directory</code>) to verified defense attorneys and legal aid organizations.
                   Provides jurisdiction-specific motion templates across all 50 states + DC.
@@ -854,18 +789,15 @@ export default function TechDocs() {
                   <strong className="text-foreground">Sessions:</strong> Attorney sessions are extended to one hour. Authentication can be disabled per-deployment via the{" "}
                   <code className="bg-muted px-1 rounded text-xs">ADMIN_DISABLE_AUTH</code> environment variable — never via <code className="bg-muted px-1 rounded text-xs">NODE_ENV</code>.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Search */}
-            <Card>
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <Search className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-                  <CardTitle className="text-base">Search</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+            <details className="developer-disclosure"><summary><h3>Search</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
+
+              </div>
+              <div>
                 <p>
                   Full-text search across all content types: charges, glossary terms, diversion programs, expungement rules, rights pages, immigration pages, and all 58+ site pages.
                   Implemented server-side in <code className="bg-muted px-1 rounded text-xs">server/services/search-indexer.ts</code>. Index is built at server startup in approximately 15ms.
@@ -882,18 +814,15 @@ export default function TechDocs() {
                 <p>
                   <strong className="text-foreground">Manual indexing required:</strong> New pages must be added to the <code className="bg-muted px-1 rounded text-xs">sitePages</code> array in search-indexer.ts — routes are not auto-discovered.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
             {/* Privacy Architecture */}
-            <Card>
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-3">
-                  <Lock className="h-5 w-5 text-slate-600 dark:text-slate-400" />
-                  <CardTitle className="text-base">Privacy Architecture</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground space-y-2">
+            <details className="developer-disclosure"><summary><h3>Privacy Architecture</h3></summary><div className="developer-detail">
+              <div className="developer-section-head">
+
+              </div>
+              <div>
                 <p>The platform is designed for users in legal distress who may be at risk. It minimizes data but still uses an essential session cookie, temporary in-memory records, standard operational logs, and disclosed third-party processors.</p>
                 <ul className="space-y-1 list-none">
                   <li>• Case and feedback records are held in server memory and generally expire within 24 hours; guidance responses may be cached in memory for about 15 minutes</li>
@@ -907,40 +836,40 @@ export default function TechDocs() {
                   <li>• No test or admin routes exposed in production</li>
                   <li>• Admin auth requires explicit <code className="bg-muted px-1 rounded text-xs">ADMIN_DISABLE_AUTH=true</code> env var, never gated on <code className="bg-muted px-1 rounded text-xs">NODE_ENV</code></li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div></details>
 
           </div>
-        </div>
+        </section>
 
         {/* Data Quality */}
-        <Card className="mb-10">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <RefreshCw className="h-5 w-5" />
+        <section id="developer-maintenance" className="developer-section">
+          <div className="developer-section-head">
+            <h2>
+
               Data Quality & Maintenance
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4 text-sm text-muted-foreground">
+            </h2>
+          </div>
+          <div>
             <p>Five GitHub Actions workflows run quarterly to flag stale external data. They do not auto-update content — they open a GitHub Issue listing items requiring manual review.</p>
             <div className="space-y-2">
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-legal-aid.ts</code>
                 <span>HTTP checks all legal aid organization URLs (195+ entries). Outputs <code className="bg-background px-1 rounded text-xs">legal-aid-diff.json</code> with any that return non-200 or redirect.</span>
               </div>
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-public-defenders.ts</code>
                 <span>HTTP checks all public defender and court-appointed program websites; flags entries with missing phone numbers. Outputs <code className="bg-background px-1 rounded text-xs">public-defenders-diff.json</code>.</span>
               </div>
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-federal-statutes.ts</code>
                 <span>HEAD checks all Cornell LII statute URLs in the database. Outputs <code className="bg-background px-1 rounded text-xs">statutes-diff.json</code>.</span>
               </div>
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-diversion-programs.ts</code>
                 <span>HEAD/GET checks all 111 diversion program contact URLs. Treats 403/999 CDN bot-blocks as live; exits non-zero on true 404/error. Outputs <code className="bg-background px-1 rounded text-xs">diversion-link-report.json</code>.</span>
               </div>
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">check-detention-facilities.ts</code>
                 <span>
                   Three-phase audit for the <code className="bg-background px-1 rounded text-xs">/find-detained</code> page.
@@ -953,24 +882,24 @@ export default function TechDocs() {
                   Note: phone numbers cannot be verified programmatically — manual review is always required for the facility table.
                 </span>
               </div>
-              <div className="flex items-start gap-3 p-3 bg-muted rounded-lg">
+              <div className="developer-maintenance-row">
                 <code className="text-xs bg-background px-2 py-1 rounded font-mono shrink-0">generate-report.ts</code>
                 <span>Reads all diff outputs and opens a GitHub Issue listing items needing manual review.</span>
               </div>
             </div>
             <p>Organizations forking this project should retain these workflows or implement equivalent checks. Statute content uses complete verbatim text — no excerpts or truncation.</p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* Content Standards */}
-        <Card className="mb-10">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5" />
+        <section id="developer-standards" className="developer-section">
+          <div className="developer-section-head">
+            <h2>
+
               Content Standards for Forks
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-2 text-sm text-muted-foreground">
+            </h2>
+          </div>
+          <div>
             <p>If you are deploying a fork, the following standards are built into the platform and should not be removed:</p>
             <ul className="space-y-2 list-none">
               <li>— <strong className="text-foreground">6th–8th grade reading level:</strong> All user-facing content, AI prompts, and tooltip text. Legal terms may appear as labels but must be explained immediately in plain language.</li>
@@ -982,18 +911,18 @@ export default function TechDocs() {
               <li>— <strong className="text-foreground">Platform scope:</strong> OpenDefender is an orientation tool. If your fork adds AI guidance that goes beyond orientation and information delivery, you are responsible for complying with applicable rules on the unauthorized practice of law.</li>
             </ul>
             <p className="mt-2">These rules are documented in detail in <code className="bg-muted px-1 rounded text-xs">CLAUDE.md</code> at the project root.</p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* Reusing Individual Features */}
-        <Card className="mb-10">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Layers className="h-5 w-5" />
+        <section id="developer-reuse" className="developer-section">
+          <div className="developer-section-head">
+            <h2>
+
               Reusing Individual Features
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6 text-sm">
+            </h2>
+          </div>
+          <div>
             <p className="text-muted-foreground">
               OpenDefender is MIT-licensed. You are free to copy any part of the site into your own project.
               Each significant feature lives in its own component file with a documented header listing
@@ -1002,13 +931,13 @@ export default function TechDocs() {
             </p>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-xs border-collapse">
-                <thead>
+              <table role="table" className="w-full text-xs border-collapse">
+                <thead role="rowgroup">
                   <tr className="border-b">
-                    <th className="text-left py-2 pr-4 font-semibold">Feature</th>
-                    <th className="text-left py-2 pr-4 font-semibold">Component file</th>
-                    <th className="text-left py-2 pr-4 font-semibold">Backend?</th>
-                    <th className="text-left py-2 font-semibold">i18n namespace</th>
+                    <th scope="col" role="columnheader" className="text-left py-2 pr-4 font-semibold">Feature</th>
+                    <th scope="col" role="columnheader" className="text-left py-2 pr-4 font-semibold">Component file</th>
+                    <th scope="col" role="columnheader" className="text-left py-2 pr-4 font-semibold">Backend?</th>
+                    <th scope="col" role="columnheader" className="text-left py-2 font-semibold">i18n namespace</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border/50">
@@ -1080,11 +1009,11 @@ export default function TechDocs() {
                       i18n: "None (content hardcoded)",
                     },
                   ].map((row) => (
-                    <tr key={row.feature}>
-                      <td className="py-2 pr-4 font-medium">{row.feature}</td>
-                      <td className="py-2 pr-4 font-mono text-muted-foreground">{row.file}</td>
-                      <td className="py-2 pr-4 text-muted-foreground">{row.backend}</td>
-                      <td className="py-2 font-mono text-muted-foreground">{row.i18n}</td>
+                    <tr role="row" key={row.feature}>
+                      <td role="cell" data-label="Feature" className="py-2 pr-4 font-medium">{row.feature}</td>
+                      <td role="cell" data-label="Component file" className="py-2 pr-4 font-mono text-muted-foreground">{row.file}</td>
+                      <td role="cell" data-label="Backend?" className="py-2 pr-4 text-muted-foreground">{row.backend}</td>
+                      <td role="cell" data-label="i18n namespace" className="py-2 font-mono text-muted-foreground">{row.i18n}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -1113,7 +1042,7 @@ export default function TechDocs() {
                 <li>
                   <strong className="text-foreground">For API-dependent widgets</strong>, point{" "}
                   <code className="bg-muted px-1 rounded">baseUrl</code> at your own OpenDefender instance
-                  or at <code className="bg-muted px-1 rounded">https://opendefender.io</code> (subject to rate limits).
+                  or at <code className="bg-muted px-1 rounded">https://opendefender.net</code> (subject to rate limits).
                 </li>
                 <li>
                   <strong className="text-foreground">Adapt the Tailwind theme</strong> — components use
@@ -1130,85 +1059,84 @@ export default function TechDocs() {
               citations must be verified, and reading level must remain accessible (6th–8th grade).
               See the Content Standards for Forks section above.
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* Quick Links */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <BookOpen className="h-5 w-5" />
+        <section id="developer-examples" className="developer-section">
+          <div className="developer-section-head">
+            <h2>
+
               Quick Links
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+            </h2>
+          </div>
+          <div>
             <div className="grid sm:grid-cols-2 gap-3">
               <a
                 href="/api/v1/search?q=theft"
-                target="_blank"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <Search className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">Try Search API</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
               <a
                 href="/api/v1/charges?jurisdiction=CA&limit=5"
-                target="_blank"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <Code className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">Sample Charges (CA)</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
               <a
                 href="/api/v1/glossary"
-                target="_blank"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <BookOpen className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">Legal Glossary</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
               <a
                 href="/api/v1/export/charges?format=csv&limit=100"
-                target="_blank"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <Download className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">Export Sample (CSV)</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
               <Link
                 href="/data-sources"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                className="developer-reference"
               >
-                <Database className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">Data Sources &amp; Methodology</span>
               </Link>
               <a
                 href="https://github.com/publicdefenderai-ai/OpenDefender"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <Shield className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">GitHub Repository</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
               <a
                 href="/api/v1/openapi.json"
-                target="_blank"
-                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="developer-reference"
               >
-                <FileJson className="h-4 w-4 text-muted-foreground" />
+
                 <span className="text-sm">OpenAPI JSON</span>
-                <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
+
               </a>
             </div>
-          </CardContent>
-        </Card>
-      </main>
+          </div>
+        </section>
+      </div>
 
       <Footer />
     </div>

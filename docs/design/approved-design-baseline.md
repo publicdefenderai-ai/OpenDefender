@@ -407,3 +407,22 @@ References:
 Validation: typecheck, production build, all six existing inventory tests and all six new browser cases passed. Desktop, phone and dark-mode renders were visually inspected. No full-suite, deployment or new legal-review completion claim. Next design batch: Developer page.
 
 Data Sources review follow-up: coverage assertions retain independently captured wording templates but interpolate all 13 dynamic coverage groups from current DATA_SOURCE_FACTS with locale-aware number formatting. Static source prose remains a literal preservation fixture. Future publication batches no longer require rewriting historical coverage counts in the fixture.
+
+## Developer reference design batch
+
+Implements the approved full-detail Developer reference at `/tech-docs`: “Build on OpenDefender,” section navigation, four integration entry points beside a same-origin API request example, a maintained-coverage link, expandable route groups and feature descriptions, and readable maintenance/portability documentation. No illustration is added. The full-detail revision governs; the earlier abbreviated preview does not justify deleting documentation.
+
+Preserves all eight route groups, all 13 detailed feature descriptions, the 11-row portability table, feature-copy steps, maintenance scripts/reports, seven content standards, requirements and original API/reference destinations. Route names now link to their existing destinations. The `#ai-validation` anchor opens its native disclosure on initial or changed hashes. Disclosures work independently by keyboard. Tables retain explicit table/row/cell roles and column labels when stacked on phones. Ordinary card/icon decoration becomes rules and quiet reading sections; credential requirement badges remain.
+
+Intentional changes: the seven stale coverage tiles are replaced with a Data Sources link rather than copied or given new static numbers; the copy/reuse backend example uses `opendefender.net` instead of `opendefender.io`; the introductory em dash becomes a sentence break. The independent fixture retains the original wording and the spec names the latter two substitutions explicitly. New framing/navigation is translated in all three languages. The existing detailed reference remains English, is marked `lang="en"`, and has a translated availability notice in Spanish/Chinese sessions. Existing English headings, detailed prose and requirements remain a translation follow-up.
+
+The captured public article fixture is taken before this design change at `443882ce`. Tests verify its paragraphs, lists, code paths, table content and existing destinations after keyboard expansion; structure checks additionally cover all route groups, feature sections, portability rows and standards. No runtime questionnaire, consent, AI request handler, API implementation or data publication behavior changes.
+
+Public technical-documentation follow-ups before treating the reference as re-certified: reconcile older route descriptions (including the extracted bail/plea guides), hub counts, dated model/privacy/provider assertions and broad verification descriptions with current implementations. These existing statements are preserved for review rather than silently rewritten by a styling change. The layout review does not certify their present accuracy. The request example uses the existing documented glossary endpoint; it is illustrative and makes no live availability claim.
+
+References:
+- `opendefender-developers-preview.html`: SHA-256 `ce089e5ada7522c283a546c2092ce35157a866817b2d76ac442a266a0d4cbeca`
+- `developers-content.html`: SHA-256 `b0e93aa03e4c0ec2ecd057c30c8b0d8014b090d6c8dbe16a5408f64ff0cc1290`
+- `developers-detail-style.html`: SHA-256 `bf4813586dc59a626c5013dcdd020385182e803d63b118c04bd0dd44124da96a`
+
+Validation: typecheck and production build passed, plus six release-allowlisted browser cases covering 1280px/320px, both themes, all locales, published content, keyboard interaction and anchors. Desktop/mobile renders were inspected. No full-suite, deployment or substantive-documentation approval claim.
