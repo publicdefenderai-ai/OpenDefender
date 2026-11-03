@@ -1,4 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useId } from "react";
+import { flushSync } from "react-dom";
+import { familyToolkitDesignCopy } from "@/locales/family-toolkit-design";
 import {
   ChevronLeft, Printer, AlertCircle, Phone, MapPin, Scale,
   FileText, Mail, Calendar, User, Hash, Clock, Building2,
@@ -12,7 +14,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 // ── State court lookup data ──────────────────────────────────────────────────
@@ -107,7 +108,7 @@ function PrintableKit({ fields }: { fields: Record<string, string> }) {
   return (
     <div className="hidden print:block p-8 font-sans text-sm">
       <h1 className="text-xl font-bold mb-1">Emergency Contact Kit</h1>
-      <p className="text-xs text-gray-500 mb-6">OpenDefender · opendefender.ai · Temporary in-memory session records · Not legal advice</p>
+      <p className="text-xs text-gray-500 mb-6">OpenDefender · opendefender.net · Temporary in-memory session records · Not legal advice</p>
       <div className="grid grid-cols-2 gap-x-8 gap-y-3">
         {Object.entries(fields).filter(([, v]) => v.trim()).map(([key, value]) => (
           <div key={key}>
@@ -124,8 +125,26 @@ function PrintableKit({ fields }: { fields: Record<string, string> }) {
 
 export default function FamilyToolkit() {
   useScrollToTop();
-  const { t } = useTranslation();
-  const printRef = useRef<HTMLDivElement>(null);
+  const { i18n } = useTranslation();
+  const language = i18n.language.startsWith('es') ? 'es' : i18n.language.startsWith('zh') ? 'zh' : 'en';
+  const copy = familyToolkitDesignCopy[language];
+  const [activeTool, setActiveTool] = useState('contact-kit');
+  const [printTarget, setPrintTarget] = useState('contact-kit');
+  const showTool = (id: string, focus = true) => {
+    setActiveTool(id);
+    if (focus) requestAnimationFrame(() => {
+      const heading = document.querySelector<HTMLElement>(`#${id} h2`);
+      heading?.focus({preventScroll:true}); heading?.scrollIntoView({block:'start'});
+    });
+  };
+  useEffect(() => {
+    const reveal = () => {
+      const id = location.hash.slice(1);
+      if (['contact-kit','docket-lookup','certified-mail','address-guide'].includes(id)) showTool(id);
+    };
+    reveal(); window.addEventListener('hashchange', reveal);
+    return () => window.removeEventListener('hashchange', reveal);
+  }, []);
 
   // Contact Kit state
   const [kit, setKit] = useState({
@@ -148,7 +167,10 @@ export default function FamilyToolkit() {
   const [checked, setChecked] = useState<Record<string, boolean>>({});
   const toggleCheck = (id: string) => setChecked(prev => ({ ...prev, [id]: !prev[id] }));
 
-  const handlePrint = () => window.print();
+  const handlePrint = (target: string) => {
+    flushSync(() => setPrintTarget(target));
+    window.print();
+  };
 
   // Certified mail items
   const mailItems = {
@@ -193,7 +215,7 @@ export default function FamilyToolkit() {
       category: "Financial",
       icon: Hash,
       items: [
-        { label: "Bank / Credit Union", url: "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/", timeline: "This week", detail: "Update the address on the account to ensure statements, tax documents, and important notices go to the right place." },
+        { label: "Bank / Credit Union", url: "", timeline: "This week", detail: "Update the address on the account to ensure statements, tax documents, and important notices go to the right place." },
         { label: "Direct Deposit Paychecks", url: "", timeline: "Before next pay period", detail: "Confirm direct deposit routing with the employer's payroll department to ensure pay continues to the correct account." },
         { label: "IRS / Tax Correspondence", url: "https://www.irs.gov/", timeline: "As needed", detail: "File IRS Form 8822 to update your address with the IRS. Important for tax refunds and any correspondence." },
       ],
@@ -225,11 +247,12 @@ export default function FamilyToolkit() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="toolkit-page min-h-screen bg-background">
       <Header />
 
       {/* Printable kit — only visible when printing */}
-      <div ref={printRef}>
+      <div className="toolkit-print" lang="en">
+      <div data-print-sheet="contact-kit" hidden={printTarget !== "contact-kit"}>
         <PrintableKit fields={{
           "Person Name": kit.personName,
           "Booking Number": kit.bookingNumber,
@@ -251,20 +274,33 @@ export default function FamilyToolkit() {
           "Judge / Courtroom": kit.judgeOrCourtroom,
         }} />
       </div>
+      <section data-print-sheet="certified-mail" hidden={printTarget !== 'certified-mail'}>
+        <h1>Certified Mail Checklist</h1>
+        <p>OpenDefender · opendefender.net · Not legal advice</p>
+        {Object.entries(mailItems).map(([group,items])=><div key={group}><h2>{group === 'thisWeek' ? 'This week' : group === 'beforeCourt' ? 'Before the next court date' : 'Ongoing'}</h2>
+          {items.map(item=><div className="toolkit-print-item" key={item.id}><h3>{checked[item.id] ? '☑' : '☐'} {item.label}</h3><p>{item.detail}</p></div>)}
+        </div>)}
+      </section>
+      <section data-print-sheet="address-guide" hidden={printTarget !== 'address-guide'}>
+        <h1>Change-of-Address Guide</h1><p>OpenDefender · opendefender.net · Not legal advice</p>
+        {addressGuide.map(group=><div key={group.category}><h2>{group.category}</h2>{group.items.map(item=><div className="toolkit-print-item" key={item.label}><h3>{item.label}</h3><p>{item.timeline}</p><p>{item.detail}</p>{item.url && <p>{item.url}</p>}</div>)}</div>)}
+      </section>
+      </div>
 
       {/* Hero */}
-      <section className="vivid-header-rose py-10 md:py-14 print:hidden">
-        <div className="max-w-3xl mx-auto px-4 vivid-header-content">
+      <section className="toolkit-hero print:hidden">
+        <div className="toolkit-width">
           <Link href="/friends-family">
-            <Button variant="ghost" size="sm" className="mb-4 text-white/70 hover:text-white hover:bg-white/10">
+            <span className="toolkit-back">
               <ChevronLeft className="h-4 w-4 mr-1" />
               Back to Family Guide
-            </Button>
+            </span>
           </Link>
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Family Toolkit</h1>
-          <p className="text-base text-white/80 max-w-xl">
-            Four practical tools for the work that needs to happen now. Fill in what you know — you can always add more later.
+          <h1 lang={language}>{copy.title}</h1>
+          <p className="toolkit-intro" lang="en">
+            Four practical tools for the work that needs to happen now. Fill in what you know. You can always add more later.
           </p>
+          {language !== "en" && <p lang={language}>{copy.englishNotice}</p>}
         </div>
       </section>
 
@@ -278,35 +314,25 @@ export default function FamilyToolkit() {
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-4 py-10 md:py-12 print:hidden">
+      <div className="toolkit-work toolkit-width print:hidden" lang="en">
 
-        {/* Jump nav */}
-        <div className="flex flex-wrap gap-2 mb-10">
-          {jumpLinks.map(({ id, label }) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className="px-3 py-1.5 rounded-full text-sm font-medium border border-border text-muted-foreground hover:text-foreground hover:border-foreground/30 hover:bg-muted/50 transition-all"
-            >
-              {label}
-            </a>
-          ))}
-        </div>
-
+<nav className="toolkit-nav" aria-label={copy.navigation} lang={language}>
+ {jumpLinks.map(({id},index)=><button key={id} type="button" aria-pressed={activeTool === id} aria-controls={id} onClick={()=>showTool(id)}>{copy.tools[index]}</button>)}
+</nav><div className="toolkit-panels">
         {/* ── TOOL 1: Contact Info Kit ──────────────────────────────────────── */}
-        <section id="contact-kit" className="mb-14 scroll-mt-6">
-          <ScrollReveal>
+        <section id="contact-kit" hidden={activeTool !== "contact-kit"} className="toolkit-panel">
+
             <div className="flex items-center justify-between mb-1">
               <div className="flex items-center gap-3">
-                <div className="w-7 h-7 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">1</div>
-                <h2 className="text-xl font-bold text-foreground">Contact Info Kit</h2>
+
+                <h2 tabIndex={-1} className="text-xl font-bold text-foreground">Contact Info Kit</h2>
               </div>
               {filledCount > 0 && (
                 <span className="text-xs text-muted-foreground">{filledCount} of {Object.keys(kit).length} filled</span>
               )}
             </div>
-            <p className="text-sm text-muted-foreground mb-5 ml-10">Fill in what you know. Blank fields stay blank — no need to complete everything at once. Print or screenshot before you leave.</p>
-          </ScrollReveal>
+            <p className="text-sm text-muted-foreground mb-5">Fill in what you know. Blank fields stay blank — no need to complete everything at once. Print or screenshot before you leave.</p>
+
 
           <div className="space-y-5">
             {/* Person */}
@@ -345,7 +371,7 @@ export default function FamilyToolkit() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <Button onClick={handlePrint} variant="outline" className="flex items-center gap-2">
+            <Button onClick={()=>handlePrint("contact-kit")}  variant="outline" className="flex items-center gap-2">
               <Printer className="h-4 w-4" />
               Print this kit
             </Button>
@@ -354,14 +380,14 @@ export default function FamilyToolkit() {
         </section>
 
         {/* ── TOOL 2: Docket & Warrant Lookup ──────────────────────────────── */}
-        <section id="docket-lookup" className="mb-14 scroll-mt-6">
-          <ScrollReveal>
+        <section id="docket-lookup" hidden={activeTool !== "docket-lookup"} className="toolkit-panel">
+
             <div className="flex items-center gap-3 mb-1">
-              <div className="w-7 h-7 rounded-full bg-teal-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">2</div>
-              <h2 className="text-xl font-bold text-foreground">Docket & Warrant Lookup</h2>
+
+              <h2 tabIndex={-1} className="text-xl font-bold text-foreground">Docket & Warrant Lookup</h2>
             </div>
-            <p className="text-sm text-muted-foreground mb-5 ml-10">Find the court record, case status, and hearing dates. Select the state where the person was arrested.</p>
-          </ScrollReveal>
+            <p className="text-sm text-muted-foreground mb-5">Find the court record, case status, and hearing dates. Select the state where the person was arrested.</p>
+
 
           <div className="space-y-4">
             <div>
@@ -397,7 +423,7 @@ export default function FamilyToolkit() {
                     </a>
                   </div>
                   <div className="border-t border-teal-200 dark:border-teal-800/40 pt-3 space-y-1.5">
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">What to look for</p>
+                    <p className="text-sm font-semibold text-muted-foreground">What to look for</p>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li className="flex items-start gap-2"><span className="text-teal-600 mt-0.5 flex-shrink-0">•</span> Search by full legal name and date of birth</li>
                       <li className="flex items-start gap-2"><span className="text-teal-600 mt-0.5 flex-shrink-0">•</span> Case number (if you have it) gives the most direct result</li>
@@ -419,7 +445,7 @@ export default function FamilyToolkit() {
                   { status: "Warrant Issued", meaning: "A judge has issued a warrant — often for failing to appear in court. This needs immediate attention. Contact an attorney today." },
                   { status: "Disposed / Closed", meaning: "The case has concluded. This could mean acquittal, conviction, dismissal, or a plea agreement." },
                 ].map(({ status, meaning }) => (
-                  <div key={status} className="flex gap-3 text-sm">
+                  <div key={status} className="toolkit-status">
                     <dt className="font-semibold text-foreground w-40 flex-shrink-0">{status}</dt>
                     <dd className="text-muted-foreground leading-snug">{meaning}</dd>
                   </div>
@@ -435,14 +461,14 @@ export default function FamilyToolkit() {
         </section>
 
         {/* ── TOOL 3: Certified Mail Checklist ─────────────────────────────── */}
-        <section id="certified-mail" className="mb-14 scroll-mt-6">
-          <ScrollReveal>
+        <section id="certified-mail" hidden={activeTool !== "certified-mail"} className="toolkit-panel">
+
             <div className="flex items-center gap-3 mb-1">
-              <div className="w-7 h-7 rounded-full bg-amber-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">3</div>
-              <h2 className="text-xl font-bold text-foreground">Certified Mail Checklist</h2>
+
+              <h2 tabIndex={-1} className="text-xl font-bold text-foreground">Certified Mail Checklist</h2>
             </div>
-            <p className="text-sm text-muted-foreground mb-2 ml-10">Certified mail creates a legal record that the letter was received. Use it for anything that matters legally or financially.</p>
-          </ScrollReveal>
+            <p className="text-sm text-muted-foreground mb-2">Certified mail creates a legal record that the letter was received. Use it for anything that matters legally or financially.</p>
+
 
           <Alert className="border-blue-200 bg-blue-50/60 dark:bg-blue-900/10 dark:border-blue-800/60 mb-5">
             <AlertDescription className="text-sm text-blue-800 dark:text-blue-200">
@@ -457,16 +483,13 @@ export default function FamilyToolkit() {
               { title: "Ongoing", items: mailItems.ongoing, urgency: "text-slate-600 dark:text-slate-400", bg: "bg-muted/30 border-border" },
             ].map(({ title, items, urgency, bg }) => (
               <div key={title}>
-                <p className={`text-xs font-bold uppercase tracking-widest mb-2 ${urgency}`}>{title}</p>
-                <div className={`rounded-xl border ${bg} divide-y divide-border/60 overflow-hidden`}>
+                <p className="toolkit-check-heading">{title}</p>
+                <div className="toolkit-check-list">
                   {items.map(({ id, label, detail }) => (
                     <label key={id} className="flex items-start gap-3 p-4 cursor-pointer hover:bg-muted/30 transition-colors">
-                      <div className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${checked[id] ? "border-primary bg-primary" : "border-border bg-background"}`}>
-                        {checked[id] && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
-                      </div>
                       <input
                         type="checkbox"
-                        className="sr-only"
+                        className="toolkit-checkbox"
                         checked={!!checked[id]}
                         onChange={() => toggleCheck(id)}
                         aria-label={label}
@@ -483,7 +506,7 @@ export default function FamilyToolkit() {
           </div>
 
           <div className="mt-5">
-            <Button onClick={handlePrint} variant="outline" className="flex items-center gap-2">
+            <Button onClick={()=>handlePrint("certified-mail")}  variant="outline" className="flex items-center gap-2">
               <Printer className="h-4 w-4" />
               Print this checklist
             </Button>
@@ -491,18 +514,18 @@ export default function FamilyToolkit() {
         </section>
 
         {/* ── TOOL 4: Change-of-Address Guide ──────────────────────────────── */}
-        <section id="address-guide" className="mb-10 scroll-mt-6">
-          <ScrollReveal>
+        <section id="address-guide" hidden={activeTool !== "address-guide"} className="toolkit-panel">
+
             <div className="flex items-center gap-3 mb-1">
-              <div className="w-7 h-7 rounded-full bg-violet-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">4</div>
-              <h2 className="text-xl font-bold text-foreground">Change-of-Address Guide</h2>
+
+              <h2 tabIndex={-1} className="text-xl font-bold text-foreground">Change-of-Address Guide</h2>
             </div>
-            <p className="text-sm text-muted-foreground mb-5 ml-10">What needs to be updated, who to contact, and how long you have. Address each category in timeline order.</p>
-          </ScrollReveal>
+            <p className="text-sm text-muted-foreground mb-5">What needs to be updated, who to contact, and how long you have. Address each category in timeline order.</p>
+
 
           <Accordion type="multiple" className="w-full space-y-2">
             {addressGuide.map(({ category, icon: Icon, items }) => (
-              <AccordionItem key={category} value={category} className="border border-border rounded-xl px-4 bg-background">
+              <AccordionItem key={category} value={category} className="toolkit-address-group">
                 <AccordionTrigger className="hover:no-underline py-4">
                   <div className="flex items-center gap-3">
                     <Icon className="h-4 w-4 text-muted-foreground flex-shrink-0" />
@@ -512,11 +535,11 @@ export default function FamilyToolkit() {
                 <AccordionContent className="pb-4">
                   <div className="space-y-3">
                     {items.map(({ label, url, timeline, detail }) => (
-                      <div key={label} className="rounded-lg bg-muted/40 p-3 border border-border/60">
-                        <div className="flex items-start justify-between gap-2 mb-1.5">
+                      <div key={label} className="toolkit-address-item">
+                        <div className="toolkit-address-heading">
                           <p className="text-sm font-semibold text-foreground leading-snug">{label}</p>
                           <div className="flex items-center gap-2 flex-shrink-0">
-                            <span className="text-xs font-medium text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 px-2 py-0.5 rounded-full whitespace-nowrap">{timeline}</span>
+                            <span className="toolkit-timing">{timeline}</span>
                             {url && (
                               <a href={url} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors" aria-label={`Visit ${label}`}>
                                 <ExternalLink className="h-3.5 w-3.5" />
@@ -534,28 +557,29 @@ export default function FamilyToolkit() {
           </Accordion>
 
           <div className="mt-5">
-            <Button onClick={handlePrint} variant="outline" className="flex items-center gap-2">
+            <Button onClick={()=>handlePrint("address-guide")}  variant="outline" className="flex items-center gap-2">
               <Printer className="h-4 w-4" />
               Print this guide
             </Button>
           </div>
         </section>
 
+</div></div><div className="toolkit-bottom toolkit-width print:hidden">
         {/* Bottom nav */}
         <div className="border-t border-border pt-6 flex items-center justify-between">
           <Link href="/friends-family">
-            <Button variant="ghost" size="sm" className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground">
+            <span>
               <ChevronLeft className="h-4 w-4" />
               Back to Family Guide
-            </Button>
+            </span>
           </Link>
           <Link href="/support">
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+            <span>
               Life Support Resources →
-            </Button>
+            </span>
           </Link>
         </div>
-      </main>
+      </div>
 
       <Footer />
     </div>
@@ -567,26 +591,19 @@ export default function FamilyToolkit() {
 function FieldGroup({ title, icon: Icon, color, children }: {
   title: string; icon: React.ElementType; color: string; children: React.ReactNode;
 }) {
-  return (
-    <div className="rounded-xl border border-border bg-background overflow-hidden">
-      <div className="flex items-center gap-2 px-4 py-2.5 border-b border-border bg-muted/30">
-        <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} />
-        <p className="text-sm font-semibold text-foreground">{title}</p>
-      </div>
-      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {children}
-      </div>
-    </div>
-  );
+  return (<fieldset className="toolkit-fieldset"><legend>{title}</legend><div className="toolkit-fields">{children}</div></fieldset>);
 }
 
 function Field({ label, value, onChange, type = "text", placeholder }: {
   label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string;
 }) {
+  const fieldId = useId();
   return (
     <div>
-      <label className="block text-xs font-medium text-muted-foreground mb-1">{label}</label>
+      <label htmlFor={fieldId} className="block text-xs font-medium text-muted-foreground mb-1">{label}</label>
       <input
+        id={fieldId}
+        autoComplete="off"
         type={type}
         value={value}
         onChange={e => onChange(e.target.value)}

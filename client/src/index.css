@@ -2955,3 +2955,55 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .family-hero > div > p:not(.family-eyebrow) { font-size: 16px; }
   .family-panel { padding: 16px; }
 }
+
+/* Family Toolkit: local-only workspace and separate printable sheets. */
+.toolkit-page { --toolkit-soft: #eee4ea; }
+.dark .toolkit-page { --toolkit-soft: #342936; }
+.toolkit-width { max-width: 1120px; margin: auto; padding-inline: 6%; }
+.toolkit-hero { padding-block: 36px 30px; }
+.toolkit-hero h1 { font-size: clamp(36px,5vw,58px); line-height: 1.1; letter-spacing: -1.7px; font-weight: 500; margin: 20px 0; }
+.toolkit-intro { max-width: 650px; color: var(--muted-foreground); font-size: 17px; line-height: 1.8; }
+.toolkit-back { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-size: 14px; font-weight: 600; }
+.toolkit-work { display: grid; grid-template-columns: 210px minmax(0,1fr); gap: 44px; padding-block: 35px 50px; }
+.toolkit-nav { display: flex; flex-direction: column; gap: 6px; align-self: start; }
+.toolkit-nav button { border-left: 3px solid transparent; padding: 16px 13px; text-align: left; min-height: 44px; font-size: 14px; color: var(--foreground); }
+.toolkit-nav button[aria-pressed=true] { background: var(--toolkit-soft); border-left-color: var(--primary); color: var(--primary); }
+.toolkit-page :is(a,button,input,select):focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.toolkit-page [hidden] { display: none !important; }
+.toolkit-panel h2 { font-size: 28px; line-height: 1.25; font-weight: 500; letter-spacing: -.5px; scroll-margin-top: 110px; }
+.toolkit-panel p, .toolkit-panel li { line-height: 1.75; }
+.toolkit-fieldset { border-top: 1px solid var(--editorial-rule); padding-top: 22px; margin-top: 22px; }
+.toolkit-fieldset legend { padding-right: 15px; font-size: 18px; font-weight: 500; }
+.toolkit-fields { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 20px; }
+.toolkit-fields input, .toolkit-panel select { font-size: 16px; border-radius: 4px; padding: 12px; min-width: 0; }
+.toolkit-checkbox { appearance: auto; width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; accent-color: var(--primary); }
+.toolkit-check-heading { font-size: 18px; font-weight: 500; margin-bottom: 12px; }
+.toolkit-check-list { border-top: 1px solid var(--editorial-rule); }
+.toolkit-check-list > label { border-bottom: 1px solid var(--editorial-rule); padding-inline: 0; }
+.toolkit-status { display: grid; grid-template-columns: 160px minmax(0,1fr); gap: 16px; font-size: 14px; }
+.toolkit-address-group { border: 0; border-top: 1px solid var(--editorial-rule); }
+.toolkit-address-item { padding: 18px 0; border-top: 1px solid var(--editorial-rule); }
+.toolkit-address-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.toolkit-timing { font-size: 12px; color: var(--muted-foreground); }
+.toolkit-bottom { padding-bottom: 40px; }
+.toolkit-bottom a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-size: 14px; font-weight: 600; }
+.toolkit-print { display: none; }
+@media (max-width:750px) {
+  .toolkit-work { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .toolkit-nav { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .toolkit-fields, .toolkit-status { grid-template-columns: minmax(0,1fr); }
+  .toolkit-panel h2 { font-size: 25px; }
+  .toolkit-status { gap: 4px; }
+  .toolkit-bottom > div { flex-wrap: wrap; gap: 12px; }
+}
+@media print {
+  body:has(.toolkit-page), .toolkit-page { background: white !important; color: black !important; }
+  body:has(.toolkit-page) #main-content { padding: 0 !important; }
+  .toolkit-print { display: block; padding: 0; font-size: 11pt; line-height: 1.5; }
+  .toolkit-print * { color: black !important; background: white !important; overflow-wrap: anywhere; }
+  .toolkit-print h1 { font-size: 20pt; margin-bottom: 12pt; }
+  .toolkit-print h2 { font-size: 14pt; margin: 18pt 0 8pt; break-after: avoid; }
+  .toolkit-print h3 { font-weight: 600; margin-bottom: 4pt; }
+  .toolkit-print-item { break-inside: avoid; margin-bottom: 12pt; }
+  .toolkit-print .grid > div { break-inside: avoid; }
+}

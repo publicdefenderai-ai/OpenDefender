@@ -441,3 +441,21 @@ References:
 - `friends-family-helping-hands-v2.png`: SHA-256 `eb2d598488657842a19ea8fbc7cdda7709c63892e26fce9568eb6e71265320a2`
 
 Validation: typecheck and production build passed. Six release-allowlisted browser cases cover all three languages, both themes, independent keyboard disclosures and focus, retained source text/links/notices, artwork loading, section/step anchors and actual element bounds at 1280px/320px. Desktop and phone layouts were inspected. No full-suite, production deployment or legal-review completion claim. Next batch: Family Toolkit.
+
+
+## Family Toolkit design batch
+
+Implements the approved four-tool workspace at `/friends-family/toolkit`: contact kit, court lookup, correspondence checklist and address guide. Desktop navigation becomes a quiet side index; phone navigation uses a two-column selector. Selecting a tool focuses its heading, and existing hashes open the corresponding panel. All panels stay mounted so switching tools preserves temporary entries. No illustration is added. Shared navigation, footer and theme controls remain.
+
+Preserves all 18 contact fields and input types, 52 court choices and their destinations, the case-status guide, ten checklist items, five address categories and 13 address entries. The simplified preview does not justify removing the existing status guide or timing text. Timing labels remain ordinary text. The approved removal of the irrelevant FDIC failed-bank-list link is applied; the bank entry still directs users to their own institution. New framing/navigation is translated in English, Spanish and Chinese; the existing detailed English content is marked accordingly with a translated availability notice.
+
+Entries and checklist selections remain in component memory only, with the existing unsaved-data warning. No persistence or submission is introduced. Native checkbox inputs restore straightforward keyboard interaction. Print buttons now select the correct sheet: previously all three invoked the same contact-kit print surface. Contact values remain escaped React text; the checklist prints checked state and the address guide prints every entry regardless of accordion state. The print header uses opendefender.net. Print surfaces use black text on white with item-level break protection.
+
+The independently captured pre-refresh fixture preserves rendered prose, labels/types, existing links and all court choices. The release-allowlisted browser spec covers every captured fragment and destination (with the named FDIC retirement), keyboard selection/focus, all fields and checkbox counts, panel switching, fresh-session reset, hashes, absence of entered values in browser storage, correct print targets and literal rendering of HTML-like input. It checks actual bounds at 1280px and 320px across three locales and both themes.
+
+References:
+- `opendefender-family-toolkit-preview.html`: SHA-256 `4b4eb53c73d7fd801069d199875d8e77006b3e6ea0f0d4aaa242658e4b5be65c`
+- `family-toolkit-content.html`: SHA-256 `4731cd5cb674b1ce9a536c0014c5442a309dedfa59fb2269bb62843d80c2c272`
+- `family-toolkit-design-notes.md`: SHA-256 `40dc3e635a5be596e93d6e520d38a82685b7db34e97383b4585b3a9b26494a42`
+
+Validation: typecheck and production build passed; all six dedicated browser cases passed. Desktop/mobile screens were inspected. All six pages of the three generated PDFs were rendered and visually checked for readability, clipping and page breaks. This is a presentation and print-behavior batch, not a new certification of retained reference content. Existing source-content review remains separate. No full-suite, deployment or legal-review completion claim. Next design batch: Collateral Consequences Screener.
