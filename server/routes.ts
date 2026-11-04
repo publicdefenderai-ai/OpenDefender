@@ -20,6 +20,7 @@ import { translateChargeName, translateDescription } from "../shared/charge-tran
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
 import { californiaSourceDatabase } from "./services/california-source-database";
+import { CaliforniaImportBlockedError } from "./services/california-import-session";
 import {
   newYorkSourceDatabase,
 } from "./services/new-york-source-database";
@@ -922,6 +923,13 @@ export async function registerRoutes(
       const result = await californiaSourceDatabase.seed();
       res.status(result.success ? 200 : 500).json(result);
     } catch (error) {
+      if (error instanceof CaliforniaImportBlockedError) {
+        return res.status(409).json({
+          success: false,
+          error: error.message,
+          code: "CALIFORNIA_IMPORT_BLOCKED",
+        });
+      }
       errLog("California source database seeding failed", error);
       res.status(500).json({ success: false, error: "California source database seeding failed" });
     }
@@ -1156,6 +1164,81 @@ export async function registerRoutes(
     } catch (error) {
       errLog("Ohio source database seeding failed", error);
       res.status(500).json({ success: false, error: "Ohio source database seeding failed" });
+    }
+  });
+
+  // Operator-only: exact legal text/evidence and review attribution are not
+  // public status data. Await work so an external scheduler keeps Autoscale
+  // alive; nothing runs or waits on official sources during port startup.
+  app.get("/api/statutes/sources/ohio/pilot-refresh", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { getOhioPilotRefreshEvidence } = await import("./services/ohio-pilot-refresh-service");
+      res.json(await getOhioPilotRefreshEvidence());
+    } catch (error) {
+      errLog("Ohio pilot operator status unavailable", error);
+      res.status(503).json({ healthy: false, error: "Ohio pilot shared status is unavailable" });
+    }
+  });
+  app.post("/api/statutes/sources/ohio/pilot-refresh", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { runOhioPilotRefresh } = await import("./services/ohio-pilot-refresh-service");
+      const result = await runOhioPilotRefresh({ triggeredBy: "authenticated-scheduler" });
+      res.status(result.healthy ? 200 : 503).json(result);
+    } catch (error) {
+      errLog("Ohio pilot scheduled refresh failed", error);
+      res.status(503).json({ healthy: false, error: "Ohio pilot refresh failed; inspect operator status" });
+    }
+  });
+  app.post("/api/statutes/sources/ohio/pilot-refresh/retry", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { runOhioPilotRefresh } = await import("./services/ohio-pilot-refresh-service");
+      const result = await runOhioPilotRefresh({ force: true, triggeredBy: "authenticated-operator" });
+      res.status(result.healthy ? 200 : 503).json(result);
+    } catch (error) {
+      errLog("Ohio pilot retry failed", error);
+      res.status(503).json({ healthy: false, error: "Ohio pilot retry failed; inspect operator status" });
+    }
+  });
+  app.post("/api/statutes/sources/ohio/pilot-refresh/review", adminRateLimiter, requireAdminAuth, async (req, res) => {
+    const { reviewOhioPilotRefresh, OhioPilotReviewError } = await import("./services/ohio-pilot-refresh-service");
+    try {
+      const result = await reviewOhioPilotRefresh(req.body);
+      res.status(result.healthy ? 200 : 409).json(result);
+    } catch (error) {
+      if (error instanceof OhioPilotReviewError) {
+        return res.status(409).json({ healthy: false, error: error.message });
+      }
+      errLog("Ohio pilot legal review failed", error);
+      res.status(503).json({ healthy: false, error: "Ohio pilot review could not be recorded" });
+    }
+  });
+  app.get("/api/statutes/sources/ohio/pending", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { getPendingAuthoritySourceSnapshots } = await import("./services/authority-source-database");
+      res.json({ success: true, snapshots: await getPendingAuthoritySourceSnapshots("OH") });
+    } catch (error) {
+      errLog("Ohio source review queue unavailable", error);
+      res.status(503).json({ success: false, error: "Ohio source review queue is unavailable" });
+    }
+  });
+  app.post("/api/statutes/sources/ohio/review/:snapshotId", attorneyReviewWriteLimiter, requireAdminAuth, async (req, res) => {
+    const { reviewAuthoritySourceSnapshot, AuthoritySourceReviewError } = await import("./services/authority-source-database");
+    const { decision, reviewer, note } = req.body ?? {};
+    if (!["approve", "reject"].includes(decision) || typeof reviewer !== "string" ||
+        typeof note !== "string" || note.trim().length < 20) {
+      return res.status(400).json({ success: false, error: "Supply decision, reviewer and a substantive legal-review note" });
+    }
+    try {
+      const result = await reviewAuthoritySourceSnapshot({
+        jurisdiction: "OH", snapshotId: req.params.snapshotId, decision, reviewer, note,
+      });
+      res.json({ success: true, ...result });
+    } catch (error) {
+      if (error instanceof AuthoritySourceReviewError) {
+        return res.status(error.statusCode).json({ success: false, error: error.message });
+      }
+      errLog("Ohio source snapshot review failed", error);
+      res.status(503).json({ success: false, error: "Ohio source snapshot review failed" });
     }
   });
 

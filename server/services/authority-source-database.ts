@@ -11,7 +11,7 @@ import {
 import { db } from "../db";
 import { errLog, opsLog } from "../utils/dev-logger";
 import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
-import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../data/ohio-chapter-2903-source";
 import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
 import { isFloridaReviewedSourceFresh, FLORIDA_REVIEWED_SOURCE_RECORDS } from "../data/florida-reviewed-source-records";
 import sourceChangeHolds from "@shared/ohio-source-change-holds.json";
@@ -212,6 +212,7 @@ export async function getCurrentAuthoritySelectableChargeIds(
     .where(and(
       eq(statuteIngestionRuns.jurisdiction, jurisdiction),
       eq(statuteIngestionRuns.status, "completed"),
+      eq(statuteIngestionRuns.operation, "seed"),
     ))
     .orderBy(desc(statuteIngestionRuns.startedAt))
     .limit(1);
@@ -226,12 +227,24 @@ export async function getCurrentAuthoritySelectableChargeIds(
       ? metadata.selectableChargeIds.filter((value): value is string => typeof value === "string")
       : [],
   );
-  // This lower-level boundary also protects direct provenance callers; the
-  // API selector's separate freshness filter is not sufficient for those.
   if (jurisdiction === "OH") for (const hold of sourceChangeHolds) selectable.delete(hold.id);
-  if (jurisdiction === "OH" && !isOhioChapter2903PilotFresh()) {
-    for (const charge of OHIO_CHAPTER_2903_PILOT_CHARGES) {
-      selectable.delete(charge.id);
+  // This lower-level boundary also protects direct provenance callers. Keep
+  // the receipt lookup here (rather than in the selector layer), since this
+  // function is also the provenance authorization boundary. The dynamic
+  // import avoids a cycle with the pilot refresh service, which seeds this
+  // database after a successful review.
+  if (jurisdiction === "OH") {
+    let pilotFresh = false;
+    try {
+      const { getOhioPilotRefreshStatus } = await import("./ohio-pilot-refresh-service");
+      pilotFresh = (await getOhioPilotRefreshStatus()).fresh;
+    } catch {
+      // A missing/unavailable durable receipt must fail closed.
+    }
+    if (!pilotFresh) {
+      for (const source of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
+        selectable.delete(source.chargeId);
+      }
     }
   }
   if (jurisdiction === "OH" && !isOhioReviewedSourceFresh()) {
@@ -720,7 +733,10 @@ export async function getAuthoritySourceDatabaseStatus(jurisdiction: string) {
         changeCount: statuteIngestionRuns.changeCount,
         errorCount: statuteIngestionRuns.errorCount,
         metadata: statuteIngestionRuns.metadata,
-      }).from(statuteIngestionRuns).where(eq(statuteIngestionRuns.jurisdiction, jurisdiction))
+      }).from(statuteIngestionRuns).where(and(
+        eq(statuteIngestionRuns.jurisdiction, jurisdiction),
+        eq(statuteIngestionRuns.operation, "seed"),
+      ))
         .orderBy(desc(statuteIngestionRuns.startedAt)).limit(1),
     ]);
   const metadata = lastRun[0]?.metadata as {

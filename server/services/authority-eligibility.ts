@@ -15,11 +15,11 @@ const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
   OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
 );
 
-function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }): boolean {
+function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sharedPilotChecked = false): boolean {
   if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !isFloridaReviewedSourceFresh()) return false;
   if (charge.jurisdiction === "CA" && (!isCaliforniaEvidenceFresh() || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
   if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !isOhioReviewedSourceFresh()) return false;
-  return charge.jurisdiction !== "OH" ||
+  return sharedPilotChecked || charge.jurisdiction !== "OH" ||
     !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
     isOhioChapter2903PilotFresh();
 }
@@ -102,7 +102,7 @@ export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<stri
     if (
       !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
       (byJurisdiction.get(charge.jurisdiction)?.has(charge.id) &&
-        canUseAuthorityCharge(charge))
+        canUseAuthorityCharge(charge, true))
     ) {
       allowed.add(charge.id);
     }

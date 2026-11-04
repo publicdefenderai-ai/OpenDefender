@@ -7,18 +7,17 @@ import {
   statuteIngestionRuns,
   statuteSourceSnapshots,
   statuteSources,
-  statuteUpdateQueue,
 } from "@shared/schema";
 import {
   assertCaliforniaSourceDatabaseSeed,
   buildCaliforniaSourceDatabaseSeed,
   type CaliforniaSourceDatabaseAudit,
   type CaliforniaSourceDatabaseSeed,
-  type CaliforniaSnapshotSeed,
-  type CaliforniaSourceSeed,
 } from "../data/california-source-database-seed";
 import { getCaliforniaCanonicalRecord } from "@shared/california-authority";
 import { errLog, opsLog } from "../utils/dev-logger";
+import { withCaliforniaImportSession, type CaliforniaImportDatabase } from "./california-import-session";
+import { writeCaliforniaImportBatches } from "./california-import-batches";
 
 export interface CaliforniaSourceDatabaseResult {
   success: boolean;
@@ -81,7 +80,7 @@ export interface CaliforniaChargeProvenance {
 type CaliforniaCurrentProvenanceRow = CaliforniaChargeProvenance["sources"][number];
 type CaliforniaEvidenceRow = Pick<
   CaliforniaCurrentProvenanceRow,
-  "sourceUrl" | "citation"
+  "sourceUrl" | "citation" | "section"
 > & {
   supportRole: string;
   subdivision: string | null;
@@ -102,14 +101,16 @@ function provenanceKey(source: {
   sourceUrl: string;
   supportRole: string;
   citation: string;
+  section: string;
   subdivision: string | null;
 }): string {
-  return [
+  return JSON.stringify([
     source.sourceUrl,
     source.supportRole,
     source.citation,
+    source.section,
     source.subdivision ?? "",
-  ].join("|");
+  ]);
 }
 
 function hasCompleteCaliforniaEvidence(
@@ -120,6 +121,9 @@ function hasCompleteCaliforniaEvidence(
     sourceUrl: source.url,
     supportRole: supportRoleForSourceKind(source.kind),
     citation: record.citation,
+    // Several reviewed instructions can share a landing-page URL. Match the
+    // specific cited reference, not just that URL and the charge's citation.
+    section: source.citation,
     subdivision: record.code,
   })));
   const actual = new Set(rows.map((row) => provenanceKey(row)));
@@ -162,26 +166,6 @@ async function getCurrentCaliforniaProvenanceRows(
     ));
 }
 
-function snapshotKey(snapshot: CaliforniaSnapshotSeed): string {
-  return snapshot.sourceKey;
-}
-
-function sourceValues(source: CaliforniaSourceSeed) {
-  return {
-    sourceKey: source.sourceKey,
-    jurisdiction: source.jurisdiction,
-    publisher: source.publisher,
-    sourceType: source.sourceType,
-    canonicalUrl: source.canonicalUrl,
-    apiIdentifier: source.apiIdentifier,
-    accessPolicy: source.accessPolicy,
-    reuseStatus: source.reuseStatus,
-    canStoreContent: source.canStoreContent,
-    metadata: source.metadata,
-    isActive: true,
-  };
-}
-
 /**
  * Seeds the narrow California authority layer without touching the legacy
  * `statutes` table. Reference-only snapshots are kept current until a human
@@ -192,6 +176,15 @@ export async function seedCaliforniaSourceDatabase(
 ): Promise<CaliforniaSourceDatabaseResult> {
   if (!isCaliforniaEvidenceFresh()) throw new Error("California evidence is stale or invalid; refresh and review before seeding");
   assertCaliforniaSourceDatabaseSeed(seed);
+  return withCaliforniaImportSession((database, checkDeadline) =>
+    seedCaliforniaOnSession(seed, database, checkDeadline));
+}
+
+async function seedCaliforniaOnSession(
+  seed: CaliforniaSourceDatabaseSeed,
+  database: CaliforniaImportDatabase,
+  checkDeadline: () => void,
+): Promise<CaliforniaSourceDatabaseResult> {
   const runId = randomUUID();
   const startedAt = new Date();
   let snapshotInserted = 0;
@@ -199,7 +192,8 @@ export async function seedCaliforniaSourceDatabase(
   let changeCount = 0;
   let linkCount = 0;
 
-  await db.insert(statuteIngestionRuns).values({
+  checkDeadline();
+  await database.insert(statuteIngestionRuns).values({
     id: runId,
     jurisdiction: "CA",
     operation: "seed",
@@ -218,195 +212,11 @@ export async function seedCaliforniaSourceDatabase(
   });
 
   try {
-    await db.transaction(async (tx) => {
-      const sourceIds = new Map<string, string>();
-
-      for (const source of seed.sources) {
-        const [row] = await tx
-          .insert(statuteSources)
-          .values(sourceValues(source))
-          .onConflictDoUpdate({
-            target: statuteSources.sourceKey,
-            set: {
-              canonicalUrl: source.canonicalUrl,
-              apiIdentifier: source.apiIdentifier,
-              accessPolicy: source.accessPolicy,
-              reuseStatus: source.reuseStatus,
-              canStoreContent: source.canStoreContent,
-              metadata: source.metadata,
-              isActive: true,
-            },
-          })
-          .returning({ id: statuteSources.id });
-
-        if (!row) {
-          throw new Error(`Unable to upsert California source ${source.sourceKey}`);
-        }
-        sourceIds.set(source.sourceKey, row.id);
-      }
-
-      const activeSnapshotIds = new Map<string, string>();
-
-      for (const snapshot of seed.snapshots) {
-        const sourceId = sourceIds.get(snapshot.sourceKey);
-        if (!sourceId) {
-          throw new Error(`Missing source row for ${snapshot.sourceKey}`);
-        }
-
-        const duplicate = await tx
-          .select({
-            id: statuteSourceSnapshots.id,
-            status: statuteSourceSnapshots.status,
-          })
-          .from(statuteSourceSnapshots)
-          .where(and(
-            eq(statuteSourceSnapshots.sourceId, sourceId),
-            eq(statuteSourceSnapshots.contentHash, snapshot.contentHash),
-          ))
-          .limit(1);
-
-        let activeSnapshotId: string | undefined;
-        if (duplicate[0]) {
-          snapshotReused++;
-          if (duplicate[0].status === "current") {
-            activeSnapshotId = duplicate[0].id;
-          }
-        }
-
-        const current = await tx
-          .select({
-            id: statuteSourceSnapshots.id,
-            contentHash: statuteSourceSnapshots.contentHash,
-          })
-          .from(statuteSourceSnapshots)
-          .where(and(
-            eq(statuteSourceSnapshots.sourceId, sourceId),
-            eq(statuteSourceSnapshots.status, "current"),
-          ))
-          .limit(1);
-
-        if (!duplicate[0]) {
-          if (current[0] && current[0].contentHash !== snapshot.contentHash) {
-            const [pending] = await tx
-              .insert(statuteSourceSnapshots)
-              .values({
-                sourceId,
-                jurisdiction: snapshot.jurisdiction,
-                citation: snapshot.citation,
-                section: snapshot.section,
-                officialTitle: snapshot.officialTitle,
-                sourceUrl: snapshot.sourceUrl,
-                content: snapshot.content,
-                contentHash: snapshot.contentHash,
-                hashBasis: snapshot.hashBasis,
-                retrievedAt: snapshot.retrievedAt,
-                manifestImportedAt: snapshot.manifestImportedAt,
-                effectiveDateStart: snapshot.effectiveDateStart,
-                effectiveDateEnd: snapshot.effectiveDateEnd,
-                status: "pending_review",
-                requiresReview: true,
-                supersedesSnapshotId: current[0].id,
-                metadata: snapshot.metadata,
-              })
-              .returning({ id: statuteSourceSnapshots.id });
-
-            if (!pending) {
-              throw new Error(`Unable to record changed California snapshot ${snapshot.citation}`);
-            }
-            snapshotInserted++;
-            changeCount++;
-
-            const existingQueue = await tx
-              .select({ id: statuteUpdateQueue.id })
-              .from(statuteUpdateQueue)
-              .where(and(
-                eq(statuteUpdateQueue.jurisdiction, "CA"),
-                eq(statuteUpdateQueue.citation, snapshot.citation),
-                eq(statuteUpdateQueue.status, "pending"),
-              ))
-              .limit(1);
-
-            if (!existingQueue[0]) {
-              await tx.insert(statuteUpdateQueue).values({
-                jurisdiction: "CA",
-                citation: snapshot.citation,
-                reason: "source_change",
-                triggeredBy: runId,
-                priority: "high",
-                status: "pending",
-                errorMessage: `Reference fingerprint changed for ${snapshot.sourceUrl}; human review required before promotion.`,
-              });
-            }
-            // Keep the prior current snapshot active until the change is reviewed.
-            activeSnapshotId = current[0].id;
-          } else {
-            const [currentInserted] = await tx
-              .insert(statuteSourceSnapshots)
-              .values({
-                sourceId,
-                jurisdiction: snapshot.jurisdiction,
-                citation: snapshot.citation,
-                section: snapshot.section,
-                officialTitle: snapshot.officialTitle,
-                sourceUrl: snapshot.sourceUrl,
-                content: snapshot.content,
-                contentHash: snapshot.contentHash,
-                hashBasis: snapshot.hashBasis,
-                retrievedAt: snapshot.retrievedAt,
-                manifestImportedAt: snapshot.manifestImportedAt,
-                effectiveDateStart: snapshot.effectiveDateStart,
-                effectiveDateEnd: snapshot.effectiveDateEnd,
-                status: "current",
-                requiresReview: false,
-                supersedesSnapshotId: null,
-                metadata: snapshot.metadata,
-              })
-              .returning({ id: statuteSourceSnapshots.id });
-
-            if (!currentInserted) {
-              throw new Error(`Unable to insert California snapshot ${snapshot.citation}`);
-            }
-            snapshotInserted++;
-            activeSnapshotId = currentInserted.id;
-          }
-        }
-
-        // A duplicate pending snapshot still needs the existing current row
-        // resolved for the charge relationship.
-        if (!activeSnapshotId && current[0]) {
-          activeSnapshotId = current[0].id;
-        }
-        if (!activeSnapshotId) {
-          throw new Error(`No active California snapshot for ${snapshot.citation}`);
-        }
-        activeSnapshotIds.set(snapshotKey(snapshot), activeSnapshotId);
-      }
-
-      for (const link of seed.links) {
-        const snapshotId = activeSnapshotIds.get(link.snapshotKey);
-        if (!snapshotId) {
-          throw new Error(`Missing snapshot for California charge ${link.chargeId}`);
-        }
-        const linkInsert = await tx
-          .insert(statuteChargeLinks)
-          .values({
-            chargeId: link.chargeId,
-            snapshotId,
-            supportRole: link.supportRole,
-            citation: link.citation,
-            subdivision: link.subdivision,
-            isCurrent: true,
-          })
-          .onConflictDoNothing({
-            target: [
-              statuteChargeLinks.chargeId,
-              statuteChargeLinks.snapshotId,
-              statuteChargeLinks.supportRole,
-            ],
-          });
-        if ((linkInsert.rowCount ?? 0) > 0) linkCount++;
-      }
-
+    await database.transaction(async (tx) => {
+      const counts = await writeCaliforniaImportBatches(tx, seed, runId, checkDeadline);
+      ({ snapshotInserted, snapshotReused, changeCount, linkCount } = counts);
+      checkDeadline();
+      if (!isCaliforniaEvidenceFresh()) throw new Error("California evidence expired during import; transaction must roll back.");
       await tx
         .update(statuteIngestionRuns)
         .set({
@@ -417,6 +227,7 @@ export async function seedCaliforniaSourceDatabase(
           completedAt: new Date(),
         })
         .where(eq(statuteIngestionRuns.id, runId));
+      checkDeadline();
     });
 
     const message = `California source database seeded: ${seed.sources.length} sources, ${snapshotInserted} snapshots, ${linkCount} links, ${changeCount} changes queued for review.`;
@@ -438,15 +249,24 @@ export async function seedCaliforniaSourceDatabase(
     };
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown California source database error";
-    await db
-      .update(statuteIngestionRuns)
-      .set({
-        status: "failed",
-        errorCount: 1,
-        errorMessage: message,
-        completedAt: new Date(),
-      })
-      .where(eq(statuteIngestionRuns.id, runId));
+    // Everything in the data transaction rolled back, including completion.
+    snapshotInserted = 0;
+    snapshotReused = 0;
+    changeCount = 0;
+    linkCount = 0;
+    let failureRecorded = false;
+    try {
+      const recorded = await database.update(statuteIngestionRuns).set({
+        status: "failed", errorCount: 1, errorMessage: message, completedAt: new Date(),
+      }).where(and(
+        eq(statuteIngestionRuns.id, runId),
+        eq(statuteIngestionRuns.status, "in_progress"),
+      )).returning({ id: statuteIngestionRuns.id });
+      // A lost COMMIT acknowledgement must not overwrite a completed run.
+      failureRecorded = recorded.length === 1;
+    } catch (recordError) {
+      errLog("California import failure record could not be saved; inspect primary activity before retrying", recordError);
+    }
     errLog("California source database seed failed", error);
     return {
       success: false,
@@ -461,7 +281,7 @@ export async function seedCaliforniaSourceDatabase(
       catalogRecordCount: seed.catalogRecords.length,
       withheldLegacyRecordCount: seed.audit.inventory.withheldCount,
       audit: seed.audit,
-      message,
+      message: failureRecorded ? message : `${message} Failure status could not be saved; do not retry without primary verification.`,
     };
   }
 }
@@ -601,6 +421,7 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     .select({
       chargeId: statuteChargeLinks.chargeId,
       citation: statuteSourceSnapshots.citation,
+      section: statuteSourceSnapshots.section,
       sourceUrl: statuteSourceSnapshots.sourceUrl,
       supportRole: statuteChargeLinks.supportRole,
       subdivision: statuteChargeLinks.subdivision,
@@ -618,6 +439,7 @@ export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<str
     const rows = rowsByCharge.get(row.chargeId) ?? [];
     rows.push({
       citation: row.citation,
+      section: row.section,
       sourceUrl: row.sourceUrl,
       supportRole: row.supportRole,
       subdivision: row.subdivision,

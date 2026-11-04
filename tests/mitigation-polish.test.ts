@@ -1,3 +1,6 @@
+vi.mock('../server/db', async () =>
+  (await import('./helpers/forbidden-database')).forbiddenDatabase(),
+);
 /**
  * Tests for POST /api/mitigation/polish
  *

@@ -1,0 +1,59 @@
+name: Ohio pilot official-source refresh
+
+on:
+  schedule:
+    # Independent of web instance lifetimes; UTC. DB decides if fetch is due.
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: ohio-pilot-official-source-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    # Activation is a separate approved production/environment operation.
+    if: vars.OHIO_PILOT_SCHEDULER_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 44
+    steps:
+      - name: Check published database-backed verification
+        id: refresh
+        env:
+          APP_URL: ${{ vars.OHIO_PILOT_APP_URL }}
+          ADMIN_TOKEN: ${{ secrets.OHIO_PILOT_ADMIN_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$APP_URL" == https://* ]] || { echo "Configure an approved HTTPS application URL"; exit 1; }
+          [[ -n "$ADMIN_TOKEN" ]] || { echo "Configure the scheduler admin credential"; exit 1; }
+          # Do not follow redirects or print credentials. The request stays open
+          # through comparison and reseed, including while Autoscale wakes.
+          code=$(curl --silent --show-error --max-time 2520 --connect-timeout 60 \
+            --output response.json --write-out '%{http_code}' \
+            --request POST \
+            --header "Authorization: Bearer $ADMIN_TOKEN" \
+            "${APP_URL%/}/api/statutes/sources/ohio/pilot-refresh")
+          jq '{fresh,healthy,expiresAt,nextCheckAt,notices,error}' response.json
+          [[ "$code" == 200 ]] && jq -e '.healthy == true' response.json
+      - name: Notify operators of failure or expiry risk
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Ohio pilot source verification needs attention";
+            const marker = "<!-- ohio-pilot-source-monitor -->";
+            const body = `${marker}\nThe scheduled official-source check failed or reported expiry/review risk. Inspect the authenticated Ohio pilot status for exact section evidence. Do not approve changed legal text automatically.\n\nRun: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\nFollow docs/ohio-pilot-source-operations.md.`;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              ...context.repo, state: "open", creator: "github-actions[bot]", per_page: 100
+            });
+            const existing = issues.find(i => i.title === title && i.body?.includes(marker));
+            if (!existing) {
+              await github.rest.issues.create({ ...context.repo, title, body });
+            } else {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: existing.number, body });
+            }

@@ -7,7 +7,11 @@ vi.mock('../server/data/ohio-reviewed-source', async original => ({
 }));
 vi.mock('../server/services/authority-source-database', () => ({
   getCurrentAuthoritySelectableChargeIds: async (jurisdiction: string) => new Set(
-    jurisdiction === 'OH' && state.database ? ['oh-orc-2903-01-aggravated-murder', 'oh-orc-2913-02-theft'] : []),
+    // Runtime pilot freshness is enforced by the durable database boundary,
+    // not the filesystem receipt used only by release fixtures.
+    jurisdiction === 'OH' && state.database
+      ? [...(state.pilot ? ['oh-orc-2903-01-aggravated-murder'] : []), 'oh-orc-2913-02-theft']
+      : []),
 }));
 vi.mock('../server/services/california-source-database', () => ({getCurrentCaliforniaSelectableChargeIds: async () => new Set()}));
 import {getCurrentAuthoritySelectableChargeIds} from '../server/services/authority-eligibility';

@@ -14,6 +14,20 @@ import {
   OHIO_REVIEWED_SOURCES,
 } from "../data/ohio-reviewed-source";
 
+import { loadOhioAuthorityManifest } from "../data/ohio-manifest-loader";
+
+async function getDurableOhioPilotReceipt(): Promise<unknown | null> {
+  try {
+    const { getOhioPilotRefreshStatus } = await import("./ohio-pilot-refresh-service");
+    const status = await getOhioPilotRefreshStatus();
+    return status.fresh ? status.receipt : null;
+  } catch {
+    // Runtime receipt access is fail-closed. In particular, do not fall back
+    // to the checked-in receipt file when the durable service is unavailable.
+    return null;
+  }
+}
+
 export async function getCurrentOhioSelectableChargeIds(): Promise<Set<string>> {
   const ids = await getCurrentAuthoritySelectableChargeIds("OH");
   if (!isOhioReviewedSourceFresh()) {
@@ -23,9 +37,22 @@ export async function getCurrentOhioSelectableChargeIds(): Promise<Set<string>> 
 }
 
 export async function seedOhioSourceDatabase(
-  manifest: OhioAuthorityManifest,
+  manifest?: OhioAuthorityManifest,
 ): Promise<AuthoritySourceDatabaseResult> {
-  return seedAuthoritySourceDatabase(buildOhioSourceDatabaseSeed(manifest));
+  const receipt = await getDurableOhioPilotReceipt();
+  // Recompose from the committed legacy manifest with the durable receipt so
+  // a successful refresh can reactivate the source-first pilot even when the
+  // caller supplied a stale/pre-refresh manifest.
+  const effectiveManifest = loadOhioAuthorityManifest(
+    undefined,
+    new Date(),
+    receipt,
+  );
+  return seedAuthoritySourceDatabase(buildOhioSourceDatabaseSeed(
+    effectiveManifest,
+    new Date(),
+    receipt,
+  ));
 }
 
 export async function getOhioSourceDatabaseStatus() {

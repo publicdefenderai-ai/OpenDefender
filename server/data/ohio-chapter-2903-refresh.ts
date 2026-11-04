@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { createHash } from "node:crypto";
 import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS, ohioChapter2903Evidence } from "./ohio-chapter-2903-source";
 
 export const OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH = resolve(
@@ -7,27 +8,26 @@ export const OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH = resolve(
   "scripts/data-review/output/ohio-chapter-2903-refresh-receipt.json",
 );
 const MAX_RECEIPT_AGE_MS = 7 * 24 * 60 * 60 * 1000;
-/** No scheduler exists for this bounded pilot; run the refresh script manually
- * before this receipt expires. Expiry is intentionally a publication gate,
- * not an automatic lifetime approval of the pinned source text. */
+/** Offline receipts are for review tooling only. Published runtime uses the
+ * shared database receipt; a scheduled comparison never approves new pins. */
 export const OHIO_CHAPTER_2903_MANUAL_REFRESH_REQUIRED =
-  "Run scripts/data-review/refresh-ohio-chapter-2903-pilot.ts manually before the seven-day receipt expires; a changed source requires reviewed pin updates and is never auto-approved.";
+  "Check the Ohio pilot operator status and scheduled refresh before the seven-day receipt expires; changed sources require explicit review and are never auto-approved.";
 
-interface ReceiptDocument {
+export interface ReceiptDocument {
   section: string;
   title: string;
   sourceUrl: string;
   contentHash: string;
   effectiveDateStart: string;
 }
-interface Receipt {
+export interface Receipt {
   schemaVersion: number;
   checkedAt: string;
   expiresAt: string;
   documents: ReceiptDocument[];
 }
 
-function expectedDocuments(): ReceiptDocument[] {
+export function expectedDocuments(): ReceiptDocument[] {
   const bySection = new Map<string, ReceiptDocument>();
   for (const record of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
     for (const { document } of ohioChapter2903Evidence(record)) {
@@ -43,6 +43,10 @@ function expectedDocuments(): ReceiptDocument[] {
   return [...bySection.values()].sort((a, b) => a.section.localeCompare(b.section));
 }
 
+export function ohioPilotPinset(): string {
+  return createHash("sha256").update(JSON.stringify(expectedDocuments())).digest("hex");
+}
+
 export function validateOhioChapter2903RefreshReceipt(
   value: unknown,
   now = new Date(),
@@ -55,6 +59,7 @@ export function validateOhioChapter2903RefreshReceipt(
   const expiresAt = new Date(receipt.expiresAt ?? "");
   if (
     receipt.schemaVersion !== 1 ||
+    ("status" in receipt && receipt.status === "blocked") ||
     !Array.isArray(receipt.documents) ||
     receipt.documents.some((document) => !document || typeof document.section !== "string") ||
     Number.isNaN(checkedAt.getTime()) ||
@@ -69,8 +74,13 @@ export function validateOhioChapter2903RefreshReceipt(
   const expected = expectedDocuments();
   if (
     actual.length !== expected.length ||
-    actual.some((document, index) =>
-      JSON.stringify(document) !== JSON.stringify(expected[index]))
+    actual.some((document, index) => {
+      // PostgreSQL jsonb deliberately reorders object keys. Compare values,
+      // not serialization order, while rejecting unrecognized receipt fields.
+      const keys = Object.keys(expected[index]) as (keyof ReceiptDocument)[];
+      return Object.keys(document).length !== keys.length ||
+        keys.some(key => document[key] !== expected[index][key]);
+    })
   ) return "Ohio Chapter 2903 refresh receipt does not attest to every pinned official dependency";
   return null;
 }
@@ -79,6 +89,9 @@ export function getOhioChapter2903RefreshStatus(now = new Date()): {
   fresh: boolean;
   reason: string | null;
 } {
+  if (process.env.NODE_ENV === "production") {
+    return { fresh: false, reason: "Published Ohio freshness requires the shared database receipt" };
+  }
   try {
     const receipt = JSON.parse(readFileSync(OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, "utf8"));
     const reason = validateOhioChapter2903RefreshReceipt(receipt, now);

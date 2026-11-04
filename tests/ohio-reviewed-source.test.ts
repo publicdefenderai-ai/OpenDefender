@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import eligibility from "../shared/ohio-reviewed-eligibility.json";
 import {
   OHIO_REVIEWED_RECEIPT_PATH,
@@ -84,7 +85,7 @@ describe("reviewed Ohio source-first batch", () => {
     expect(() => buildOhioSourceDatabaseSeed({
       jurisdiction: "OH", generatedAt: new Date("2026-09-18T05:00:00Z"),
       source: OHIO_MANIFEST_SOURCE, catalogRecords: [oacAsOffense],
-    })).toThrow("cannot be a primary criminal offense");
+    }, ohioEvidenceTestTime)).toThrow("cannot be a primary criminal offense");
 
     const wrongCatalogIdentity = structuredClone(record);
     wrongCatalogIdentity.catalogCode = "0000.00";
@@ -115,7 +116,7 @@ describe("reviewed Ohio source-first batch", () => {
       source: OHIO_MANIFEST_SOURCE,
       catalogRecords: firstRecords,
     };
-    const now = new Date();
+    const now = ohioEvidenceTestTime;
     const firstSeed = buildOhioSourceDatabaseSeed(manifest, now);
     const repeatedSeed = buildOhioSourceDatabaseSeed(manifest, now);
     expect(repeatedSeed).toEqual(firstSeed);
@@ -123,5 +124,18 @@ describe("reviewed Ohio source-first batch", () => {
       `${snapshot.sourceKey}|${snapshot.citation}|${snapshot.officialTitle}|${snapshot.contentHash}`,
     )).size).toBe(firstSeed.snapshots.length);
     expect(firstSeed.links.length).toBeGreaterThan(firstSeed.snapshots.length);
+  });
+  it("withholds the reviewed seed after its recorded receipt expires", () => {
+    const receipt = JSON.parse(readFileSync(OHIO_REVIEWED_RECEIPT_PATH, "utf8"));
+    const record = buildOhioReviewedManifestRecords(ohioEvidenceTestTime)
+      .find(row => row.chargeId === "oh-orc-3767-32-littering")!;
+    const seed = buildOhioSourceDatabaseSeed({
+      jurisdiction: "OH", generatedAt: ohioEvidenceTestTime,
+      source: OHIO_MANIFEST_SOURCE, catalogRecords: [record],
+    }, new Date(receipt.expiresAt));
+    expect(seed.sources).toHaveLength(0);
+    expect(seed.snapshots).toHaveLength(0);
+    expect(seed.links).toHaveLength(0);
+    expect(seed.selectableChargeIds).toHaveLength(0);
   });
 });
