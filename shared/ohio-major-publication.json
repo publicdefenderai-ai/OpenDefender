@@ -1,0 +1,453 @@
+[
+  {
+    "id": "oh-orc-2905-03-unlawful-restraint",
+    "section": "2905.03",
+    "scope": "A,B",
+    "statutoryName": "Unlawful restraint",
+    "mappingId": "orc-2905.03-a-b",
+    "conductSummary": "Knowingly restraining another person without privilege. Division (B) adds sexual motivation; that term has the statutory meaning in section 2971.01.",
+    "gradeSummary": "Third-degree misdemeanor (M3) under division (C).",
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2971.01"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2905-12-coercion",
+    "section": "2905.12",
+    "scope": "A",
+    "statutoryName": "Coercion",
+    "mappingId": "orc-2905.12-a",
+    "conductSummary": "Using a listed threat to coerce someone to take or refrain from action they have a legal freedom to choose. The listed threats include an offense, calumny, damaging exposure, criminal proceedings, or official action. Divisions (B) and (C) preserve specified good-faith prosecutor/court exceptions and limited affirmative defenses; not every demand or warning is coercion.",
+    "gradeSummary": "Second-degree misdemeanor (M2) under division (D).",
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2929.01",
+      "2945.44"
+    ],
+    "gradingDivisions": [
+      "D"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-08-endangering-aircraft",
+    "section": "2909.08",
+    "scope": "B",
+    "statutoryName": "Endangering aircraft",
+    "mappingId": "orc-2909.08-b",
+    "conductSummary": "Knowingly throwing or dropping an object at or upon a moving aircraft, or knowingly shooting a bow and arrow or discharging a listed gun at or toward an aircraft.",
+    "gradeSummary": "Under division (D): M1 ordinarily; F5 if the violation creates a risk of physical harm to a person; F4 if it creates a substantial risk of physical harm or the aircraft is occupied. Division (F) additionally requires seizure or forfeiture of a listed weapon used in a felony violation, with disposition under Chapter 2981.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2923.11"
+    ],
+    "gradingDivisions": [
+      "D"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-08-endangering-airport-operations",
+    "section": "2909.08",
+    "scope": "C",
+    "statutoryName": "Endangering airport operations",
+    "mappingId": "orc-2909.08-c",
+    "conductSummary": "Knowingly or recklessly shooting a bow and arrow or discharging a listed gun upon or over an airport operational surface. Division (C) excludes specified authorized official conduct and consented lawful hunting, sporting activity, or other lawful firearm discharge.",
+    "gradeSummary": "Under division (E): M2 ordinarily; F5 if the violation creates a risk of physical harm to a person; F4 if it creates a substantial risk. A hunting violation also requires license or permit suspension or revocation under section 1533.68. Division (F) adds seizure or forfeiture of a listed weapon used in a felony violation.",
+    "degrees": [
+      "M2",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2923.11",
+      "1533.68"
+    ],
+    "gradingDivisions": [
+      "E"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-09-vehicular-vandalism",
+    "section": "2909.09",
+    "scope": "B",
+    "statutoryName": "Vehicular vandalism",
+    "mappingId": "orc-2909.09-b",
+    "conductSummary": "Knowingly dropping or throwing an object at, onto, or in the path of a vehicle, streetcar, or trackless trolley on a highway, or a boat or vessel on Ohio waters. The statutory vehicle, highway, vessel, and waters definitions apply.",
+    "gradeSummary": "Division (C): M1 ordinarily; F4 if the violation creates a substantial risk of physical harm to a person or causes serious physical harm to property; F3 if it causes physical harm to a person; F2 if it causes serious physical harm to a person. These are alternative grades based on the statutory conditions.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "4511.01",
+      "1546.01"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-10-railroad-vandalism",
+    "section": "2909.10",
+    "scope": "A",
+    "statutoryName": "Railroad vandalism",
+    "mappingId": "orc-2909.10-a",
+    "conductSummary": "Knowingly dropping or throwing an object at, onto, or in the path of railroad rail, track, or a listed railroad vehicle while the vehicle is on a railroad track.",
+    "gradeSummary": "Division (D): M1 ordinarily; F4 if the violation creates a substantial risk of physical harm to a person or causes serious physical harm to property; F3 if it causes physical harm to a person; F2 if it causes serious physical harm to a person. These are alternative grades based on the statutory conditions.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "D"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-10-criminal-trespass-on-a-locomotive-engine-railroad-car-or-other-railroad-vehicle",
+    "section": "2909.10",
+    "scope": "B",
+    "statutoryName": "Criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle",
+    "mappingId": "orc-2909.10-b",
+    "conductSummary": "Without privilege, climbing upon or into a locomotive, engine, railroad car, or other railroad vehicle while it is on a railroad track.",
+    "gradeSummary": "Division (D): M1 ordinarily; F4 if the violation creates a substantial risk of physical harm to a person or causes serious physical harm to property; F3 if it causes physical harm to a person; F2 if it causes serious physical harm to a person. These are alternative grades based on the statutory conditions.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "D"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-10-interference-with-the-operation-of-a-train",
+    "section": "2909.10",
+    "scope": "C",
+    "statutoryName": "Interference with the operation of a train",
+    "mappingId": "orc-2909.10-c",
+    "conductSummary": "Without privilege, disrupting, delaying, or preventing operation of a train or other railroad vehicle while it is on a railroad track.",
+    "gradeSummary": "Division (D): M1 ordinarily; F4 if the violation creates a substantial risk of physical harm to a person or causes serious physical harm to property; F3 if it causes physical harm to a person; F2 if it causes serious physical harm to a person. These are alternative grades based on the statutory conditions.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "D"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-22-soliciting-or-providing-support-for-an-act-of-terrorism",
+    "section": "2909.22",
+    "scope": "A",
+    "statutoryName": "Soliciting or providing support for an act of terrorism",
+    "mappingId": "orc-2909.22-a",
+    "conductSummary": "Raising, soliciting, collecting, donating, or providing material support or resources with the purpose that they help plan, prepare, carry out, or aid an act of terrorism, its concealment, or escape from it. Section 2909.21 defines the required act and resources; medicine and religious materials are excluded from its material-support definition.",
+    "gradeSummary": "Third-degree felony (F3) under division (B). Section 2909.25(A) separately permits reasonable investigation and prosecution costs after a hearing.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2909.21",
+      "2909.25"
+    ],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-23-making-a-terroristic-threat",
+    "section": "2909.23",
+    "scope": "A",
+    "statutoryName": "Making a terroristic threat",
+    "mappingId": "orc-2909.23-a",
+    "conductSummary": "Threatening a specified offense with the purpose of intimidating or coercing a civilian population, influencing government policy by intimidation or coercion, or affecting government conduct, and causing a reasonable expectation or fear of its imminent commission. Section 2909.21 defines specified offense. Under division (B), lack of intent or capability to carry out the threat, or not making it to its subject, is not a defense.",
+    "gradeSummary": "Third-degree felony (F3) under division (C). Section 2909.25 permits investigation/prosecution costs after a hearing and reimbursement of qualifying political-subdivision response costs.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2909.21",
+      "2909.25"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-26-criminal-possession-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+    "section": "2909.26",
+    "scope": "A,B",
+    "statutoryName": "Criminal possession of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+    "mappingId": "orc-2909.26-a-b",
+    "conductSummary": "Knowingly possessing a statutorily defined chemical, biological, radiological or nuclear weapon, or explosive device with the intent required by division (A) or (B). Possession alone does not satisfy these intent elements. Division (D) excludes specified possession for official military or law-enforcement duties.",
+    "gradeSummary": "Division (A), intent to cause serious physical harm or death: F3. Division (B), intent to intimidate/coerce a civilian population, influence government policy by intimidation/coercion, or affect government conduct by murder, assassination, or kidnapping: F2. Grading is in division (C).",
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2909.21",
+      "2917.33",
+      "2923.11"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-27-criminal-use-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+    "section": "2909.27",
+    "scope": "A,B",
+    "statutoryName": "Criminal use of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+    "mappingId": "orc-2909.27-a-b",
+    "conductSummary": "Using, deploying, releasing, or causing use, deployment, or release of a statutorily defined weapon or explosive device with the mental state and circumstances in division (A) or (B). Division (D) contains specified consumer-product, self-defense-spray, peaceful biological-purpose, and permitted chemical-purpose exceptions to division (A); they do not automatically apply to division (B).",
+    "gradeSummary": "Division (A), reckless conduct creating a risk of death or serious physical harm to a nonparticipant: F2. Division (B), knowing conduct with a listed civilian/government purpose or intent to cause physical harm or death to a nonparticipant: F1. Grading is in division (C).",
+    "degrees": [
+      "F2",
+      "F1"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2909.21",
+      "2917.33",
+      "2923.11"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-28-illegal-assembly-or-possession-of-chemicals-or-substances-for-the-manufacture-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+    "section": "2909.28",
+    "scope": "A",
+    "statutoryName": "Illegal assembly or possession of chemicals or substances for the manufacture of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+    "mappingId": "orc-2909.28-a",
+    "conductSummary": "Knowingly assembling or possessing one or more listed substances with intent to manufacture a statutorily defined chemical, biological, radiological or nuclear weapon, or explosive device. Division (B) allows a single suitable substance to suffice; possession of every ingredient is unnecessary. Division (D) preserves specified official military and law-enforcement exceptions.",
+    "gradeSummary": "Fourth-degree felony (F4) under division (C).",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2909.21",
+      "2917.33",
+      "2923.11"
+    ],
+    "gradingDivisions": [
+      "C"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-29-money-laundering-in-support-of-terrorism",
+    "section": "2909.29",
+    "scope": "A",
+    "statutoryName": "Money laundering in support of terrorism",
+    "mappingId": "orc-2909.29-a",
+    "conductSummary": "Knowingly conducting or attempting a transaction in terrorism proceeds, or transporting, transmitting, or transferring a monetary instrument supporting terrorism, with the listed intent to further criminal activity, conceal or disguise specified facts, or conceal or disguise intent to avoid a reporting requirement. The property knowledge and intent elements in division (A) are required.",
+    "gradeSummary": "Division (B): M1 below $1,000; F5 at least $1,000 but below $5,000; F4 at least $5,000 but below $25,000; F3 at least $25,000 but below $75,000; F2 at least $75,000. The measure is the total value of the property or monetary instrument involved in the transaction.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2909.21",
+      "1315.53"
+    ],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-081-interfering-with-the-operation-of-an-aircraft-with-a-laser",
+    "section": "2909.081",
+    "scope": "A",
+    "statutoryName": "Interfering with the operation of an aircraft with a laser",
+    "mappingId": "orc-2909.081-a",
+    "conductSummary": "Knowingly discharging a laser or other device creating visible light into the cockpit of an aircraft taking off, landing, or in flight. Division (C) supplies the statutory laser definition.",
+    "gradeSummary": "Second-degree felony (F2) under division (B).",
+    "degrees": [
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2909-101-railroad-grade-crossing-device-vandalism",
+    "section": "2909.101",
+    "scope": "A",
+    "statutoryName": "Railroad grade crossing device vandalism",
+    "mappingId": "orc-2909.101-a",
+    "conductSummary": "Knowingly defacing, damaging, obstructing, removing, or otherwise impairing a railroad grade-crossing warning signal or protective device, including the devices listed in division (A).",
+    "gradeSummary": "Division (B): M1 ordinarily; F4 if the violation creates a substantial risk of physical harm to a person or causes serious physical harm to property; F3 if it causes physical harm to a person; F2 if it causes serious physical harm to a person. These are alternative grades based on the statutory conditions.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2911-23-criminal-trespass-on-a-place-of-public-amusement",
+    "section": "2911.23",
+    "scope": "B",
+    "statutoryName": "Criminal trespass on a place of public amusement",
+    "mappingId": "orc-2911.23-b",
+    "conductSummary": "Without privilege, knowingly entering or remaining in a restricted portion of a public-amusement venue and thereby interrupting or delaying the event, after conspicuously posted printed notice of restricted access. Actual receipt of notice need not be proved under division (D)(2). Mere entry without the required interruption/delay and notice does not describe all the elements.",
+    "gradeSummary": "First-degree misdemeanor (M1) under division (E)(1). Division (E)(2) additionally permits 30 to 120 hours of supervised community service.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "E"
+    ]
+  },
+  {
+    "id": "oh-orc-2911-31-safecracking",
+    "section": "2911.31",
+    "scope": "A",
+    "statutoryName": "Safecracking",
+    "mappingId": "orc-2911.31-a",
+    "conductSummary": "Knowingly entering, forcing entry into, or tampering with a vault, safe, or strongbox with purpose to commit an offense.",
+    "gradeSummary": "Fourth-degree felony (F4) under division (B).",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2911-32-tampering-with-coin-machines",
+    "section": "2911.32",
+    "scope": "A",
+    "statutoryName": "Tampering with coin machines",
+    "mappingId": "orc-2911.32-a",
+    "conductSummary": "Knowingly entering, forcing entry into, tampering with, or inserting part of an instrument into a coin machine, with purpose to commit theft or defraud. Section 2913.01 supplies the coin-machine and theft-offense definitions.",
+    "gradeSummary": "Division (B): M1 ordinarily; F5 if the person was previously convicted of this section or a theft offense as defined in section 2913.01.",
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2913.01"
+    ],
+    "gradingDivisions": [
+      "B"
+    ]
+  },
+  {
+    "id": "oh-orc-2911-211-aggravated-trespass-a-1",
+    "section": "2911.211",
+    "scope": "A(1)",
+    "statutoryName": "Aggravated trespass",
+    "mappingId": "orc-2911.211-a-1-",
+    "conductSummary": "This entry covers only division (A)(1): entering or remaining on another person's land or premises with purpose to commit a misdemeanor whose elements involve physical harm to a person or causing a person to believe the offender will cause physical harm. It does not cover the separate critical-infrastructure offense in division (A)(2).",
+    "gradeSummary": "First-degree misdemeanor (M1) for division (A)(1), under division (B). The F3 critical-infrastructure branch is outside this entry.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "gradingDivisions": [
+      "B"
+    ]
+  }
+]
