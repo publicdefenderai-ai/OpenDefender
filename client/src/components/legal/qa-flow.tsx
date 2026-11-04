@@ -541,6 +541,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [catalogRetry, setCatalogRetry] = useState(0);
   const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "CA"].includes(formData.jurisdiction);
   const isOhio = formData.jurisdiction?.toUpperCase() === "OH";
+  const isFlorida = formData.jurisdiction?.toUpperCase() === "FL";
 
   useEffect(() => {
     setCatalogLoadFailed(false);
@@ -727,6 +728,18 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
               <p className="text-sm leading-relaxed">
                 {t('legalGuidance.qaFlow.caseDetails.ohioCoverageNotice')}
+              </p>
+            </div>
+          )}
+          {isFlorida && (
+            <div
+              className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
+              role="note"
+              data-testid="florida-partial-coverage-notice"
+            >
+              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm leading-relaxed">
+                {t('legalGuidance.qaFlow.caseDetails.floridaCoverageNotice')}
               </p>
             </div>
           )}
