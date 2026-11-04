@@ -1,6 +1,9 @@
 import express from 'express';
 import request from 'supertest';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+vi.mock('../server/db', async () =>
+  (await import('./helpers/forbidden-database')).forbiddenDatabase(),
+);
 import { aiBodySizeLimit, TEN_KB } from '../server/middleware/ai-body-size';
 import {
   buildBoundedDocumentTextContent,

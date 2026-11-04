@@ -9,19 +9,26 @@ import {
 } from "../../server/data/ohio-source-database-seed";
 
 async function main(): Promise<void> {
-  const { getOhioPilotRefreshStatus } = await import("../../server/services/ohio-pilot-refresh-service");
-  const refreshStatus = await getOhioPilotRefreshStatus();
+  const dryRun = process.argv.includes("--dry-run");
+  // Offline planning must neither import the runtime database nor treat a
+  // checked-in receipt as approval for the durable production pilot.
+  let receipt: unknown = null;
+  if (!dryRun) {
+    const { getOhioPilotRefreshStatus } = await import("../../server/services/ohio-pilot-refresh-service");
+    const refreshStatus = await getOhioPilotRefreshStatus();
+    receipt = refreshStatus.fresh ? refreshStatus.receipt : null;
+  }
   const manifest = loadOhioAuthorityManifest(
     undefined,
     new Date(),
-    refreshStatus.fresh ? refreshStatus.receipt : null,
+    receipt,
   );
   const seed = buildOhioSourceDatabaseSeed(
     manifest,
     new Date(),
-    refreshStatus.fresh ? refreshStatus.receipt : null,
+    receipt,
   );
-  if (process.argv.includes("--dry-run")) {
+  if (dryRun) {
     console.log(JSON.stringify({
       jurisdiction: "OH",
       mode: "dry-run",

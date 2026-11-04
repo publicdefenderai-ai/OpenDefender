@@ -34,6 +34,10 @@ import {
 } from '../shared/ohio-reviewed-batch';
 import ohioSourceChangeHolds from '../shared/ohio-source-change-holds.json';
 
+vi.mock('../server/db', async () =>
+  (await import('./helpers/forbidden-database')).forbiddenDatabase(),
+);
+
 // ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
 const { caseStore, enrichmentUpdateCallbacks, authoritySelectableIds } = vi.hoisted(() => ({
   caseStore: {} as Record<string, any>,

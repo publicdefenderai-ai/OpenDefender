@@ -122,7 +122,9 @@ async function exactComparison(
   return comparison.compareOhioChapter2903Sources(fixtureFetch(changedSection, documents));
 }
 
-describe("Ohio pilot refresh against an isolated PostgreSQL cluster", () => {
+// Real database imports can exceed the unit-test budget on shared CI runners.
+// Keep the longer limit scoped to this disposable-cluster suite.
+describe("Ohio pilot refresh against an isolated PostgreSQL cluster", { timeout: 90_000 }, () => {
   beforeAll(async () => {
     root = mkdtempSync(join(tmpdir(), "ohio-pilot-postgres-"));
     dataDirectory = join(root, "data");
@@ -141,7 +143,7 @@ describe("Ohio pilot refresh against an isolated PostgreSQL cluster", () => {
     ]);
     await command("pg_ctl", [
       "-D", dataDirectory,
-      "-o", `-k ${socketDirectory} -p ${port}`,
+      "-o", `-k ${socketDirectory} -p ${port} -c listen_addresses=''`,
       "-l", join(root, "postgres.log"),
       "-w",
       "start",

@@ -19,6 +19,17 @@
  */
 
 import { describe, it, expect, vi, beforeAll, afterEach } from 'vitest';
+
+vi.mock('../server/db', async () =>
+  (await import('./helpers/forbidden-database')).forbiddenDatabase(),
+);
+// This suite exercises session ownership using cases with no charges.
+// Source eligibility is covered independently and must not query a database.
+vi.mock('../server/services/authority-eligibility', () => ({
+  getCurrentAuthoritySelectableChargeIds: async () => new Set<string>(),
+  filterAuthorityBackedCharges: (items: Array<{ id: string }>, allowed: Set<string>) =>
+    items.filter(item => allowed.has(item.id)),
+}));
 import request from 'supertest';
 import express from 'express';
 import session from 'express-session';

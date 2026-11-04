@@ -11,6 +11,7 @@ import {
 import { db } from "../db";
 import { errLog, opsLog } from "../utils/dev-logger";
 import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../data/ohio-chapter-2903-source";
 import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
 import { isFloridaReviewedSourceFresh, FLORIDA_REVIEWED_SOURCE_RECORDS } from "../data/florida-reviewed-source-records";
 import sourceChangeHolds from "@shared/ohio-source-change-holds.json";
@@ -241,8 +242,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
       // A missing/unavailable durable receipt must fail closed.
     }
     if (!pilotFresh) {
-      for (const charge of OHIO_CHAPTER_2903_PILOT_CHARGES) {
-        selectable.delete(charge.id);
+      for (const source of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
+        selectable.delete(source.chargeId);
       }
     }
   }

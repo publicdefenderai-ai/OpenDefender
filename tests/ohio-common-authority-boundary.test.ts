@@ -1,8 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-const state = vi.hoisted(() => ({ fresh: true, pilotFresh: true, missingId: "", rows: [] as any[], metadata: {} as any }));
-vi.mock("../server/data/ohio-chapter-2903-refresh", () => ({ isOhioChapter2903PilotFresh: () => true }));
+const state = vi.hoisted(() => ({ fresh: true, pilotFresh: true, pilotUnavailable: false, missingId: "", rows: [] as any[], metadata: {} as any }));
 vi.mock("../server/services/ohio-pilot-refresh-service", () => ({
-  getOhioPilotRefreshStatus: async () => ({ fresh: state.pilotFresh }),
+  getOhioPilotRefreshStatus: async () => {
+    if (state.pilotUnavailable) throw new Error("Durable pilot ledger unavailable");
+    return { fresh: state.pilotFresh };
+  },
 }));
 vi.mock("../server/data/ohio-reviewed-source", async importOriginal => {
   const actual = await importOriginal<any>();
@@ -23,7 +25,7 @@ import { getCurrentAuthoritySelectableChargeIds } from "../server/services/autho
 import { buildOhioChapter2903PilotManifestRecords, buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
 
 describe("corrected Ohio records require deployed supporting evidence", () => {
-  beforeEach(() => { state.fresh = true; state.pilotFresh = true; state.missingId = ""; });
+  beforeEach(() => { state.fresh = true; state.pilotFresh = true; state.pilotUnavailable = false; state.missingId = ""; });
   const records = buildOhioReviewedManifestRecords(new Date());
   const record = records.find(r => r.chargeId === "oh-orc-3767-32-littering")!;
   const links = record.provisions.map(p => ({ chargeId: record.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision }));
@@ -63,4 +65,25 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
     state.pilotFresh = false;
     expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
   });
+  for (const unavailable of [false, true]) {
+    it(`keeps separately reviewed charges eligible during a pilot outage (unavailable=${unavailable})`, async () => {
+      const pilotRecords = buildOhioChapter2903PilotManifestRecords(new Date());
+      const selected = [...records, ...pilotRecords];
+      state.rows = selected.flatMap(r => r.provisions.map(p => ({
+        chargeId: r.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole,
+        citation: p.citation, subdivision: p.subdivision,
+      })));
+      state.metadata = { selectableChargeIds: selected.map(r => r.chargeId), catalogRecords: selected };
+      const before = await getCurrentAuthoritySelectableChargeIds("OH");
+      const pilotIds = new Set(pilotRecords.map(r => r.chargeId));
+      const reviewedIds = [...before].filter(id => !pilotIds.has(id));
+      expect(reviewedIds).toHaveLength(104);
+      expect([...before].some(id => pilotIds.has(id))).toBe(true);
+      state.pilotFresh = false;
+      state.pilotUnavailable = unavailable;
+      expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set(reviewedIds));
+      state.fresh = false;
+      expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
+    });
+  }
 });

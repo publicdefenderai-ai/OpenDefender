@@ -28,6 +28,15 @@ jobs:
           test -x node_modules/.bin/vitest
           test -x node_modules/.bin/playwright
 
+      - name: Configure disposable PostgreSQL test tools
+        run: |
+          # Ubuntu ships versioned server binaries outside the default PATH.
+          pg_bin="$(pg_config --bindir)"
+          for tool in initdb pg_ctl psql createdb; do
+            test -x "$pg_bin/$tool" || { echo "::error::Missing PostgreSQL test tool: $tool"; exit 1; }
+          done
+          echo "$pg_bin" >> "$GITHUB_PATH"
+
       - name: Run regression tests
         run: ./node_modules/.bin/vitest run tests/
 
