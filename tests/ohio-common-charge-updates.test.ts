@@ -10,7 +10,7 @@ const evidence = JSON.parse(readFileSync("scripts/data-review/output/ohio-common
 const legacyIds = ["oh-open-container", "oh-alcohol-in-park", "oh-littering", "oh-animal-cruelty-misdemeanor", "oh-illegal-fireworks", "oh-minor-in-possession"];
 describe("Ohio common-charge correction delivery", () => {
   it("expires cached evidence from acquisition, not from a later cache check", () => {
-    expect(ohioRefreshExpiry([{ retrievedAt: "2026-09-18T12:00:00Z" }, { retrievedAt: "2026-09-24T12:00:00Z" }])).toBe("2026-09-25T12:00:00.000Z");
+    expect(ohioRefreshExpiry([{ retrievedAt: "2026-09-18T12:00:00Z" }, { retrievedAt: "2026-09-24T12:00:00Z" }])).toBe("2026-12-18T12:00:00.000Z");
     expect(() => ohioRefreshExpiry([{ retrievedAt: "invalid" }])).toThrow();
   });
   it.each(legacyIds)("requires explicit reselection for saved %s", id => {

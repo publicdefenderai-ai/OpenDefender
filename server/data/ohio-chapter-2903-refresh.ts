@@ -1,3 +1,4 @@
+import { validVerificationWindow } from "../../shared/source-verification-policy.mjs";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { createHash } from "node:crypto";
@@ -7,11 +8,10 @@ export const OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH = resolve(
   process.cwd(),
   "scripts/data-review/output/ohio-chapter-2903-refresh-receipt.json",
 );
-const MAX_RECEIPT_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 /** Offline receipts are for review tooling only. Published runtime uses the
  * shared database receipt; a scheduled comparison never approves new pins. */
 export const OHIO_CHAPTER_2903_MANUAL_REFRESH_REQUIRED =
-  "Check the Ohio pilot operator status and scheduled refresh before the seven-day receipt expires; changed sources require explicit review and are never auto-approved.";
+  "Check the Ohio pilot operator status before its declared verification deadline; changed sources require explicit review and are never auto-approved.";
 
 export interface ReceiptDocument {
   section: string;
@@ -22,6 +22,7 @@ export interface ReceiptDocument {
 }
 export interface Receipt {
   schemaVersion: number;
+  verificationPolicy?: string;
   checkedAt: string;
   expiresAt: string;
   documents: ReceiptDocument[];
@@ -67,7 +68,7 @@ export function validateOhioChapter2903RefreshReceipt(
     checkedAt > now ||
     expiresAt <= now ||
     expiresAt <= checkedAt ||
-    expiresAt.getTime() - checkedAt.getTime() > MAX_RECEIPT_AGE_MS
+    !validVerificationWindow(receipt)
   ) return "Ohio Chapter 2903 official-source refresh receipt is missing, malformed, or expired";
 
   const actual = [...receipt.documents].sort((a, b) => a.section.localeCompare(b.section));

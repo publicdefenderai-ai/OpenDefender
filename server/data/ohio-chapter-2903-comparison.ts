@@ -1,3 +1,4 @@
+import { QUARTERLY_POLICY, quarterlyDeadline } from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import {
   OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS,
@@ -36,6 +37,7 @@ export interface OhioChapter2903RefreshReceiptDocument {
 }
 
 export interface OhioChapter2903RefreshReceipt {
+  verificationPolicy?: string;
   schemaVersion: number;
   checkedAt: string;
   expiresAt: string;
@@ -289,8 +291,9 @@ export async function compareOhioChapter2903Sources(
   if (errors.length > 0) return { receipt: null, evidence, errors };
   const receipt: OhioChapter2903Receipt = {
     schemaVersion: 1,
+    verificationPolicy: QUARTERLY_POLICY,
     checkedAt: checkedAt.toISOString(),
-    expiresAt: new Date(checkedAt.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString(),
+    expiresAt: quarterlyDeadline(checkedAt),
     documents: documents.map(receiptDocument),
   };
   return { receipt, evidence, errors };

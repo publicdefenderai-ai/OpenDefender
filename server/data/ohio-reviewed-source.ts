@@ -1,3 +1,4 @@
+import { validVerificationWindow } from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -272,7 +273,7 @@ export function validateOhioReviewedRefreshReceipt(value: unknown, now = new Dat
     return "Ohio reviewed refresh receipt is missing or malformed";
   }
   const receipt = value as {
-    schemaVersion?: number; checkedAt?: string; expiresAt?: string;
+    schemaVersion?: number; verificationPolicy?: string; checkedAt?: string; expiresAt?: string;
     reportHash?: string; documents?: OhioReviewedReceiptDocument[];
   };
   const checkedAt = new Date(receipt.checkedAt ?? "");
@@ -281,7 +282,7 @@ export function validateOhioReviewedRefreshReceipt(value: unknown, now = new Dat
       !Array.isArray(receipt.documents) || Number.isNaN(checkedAt.getTime()) ||
       Number.isNaN(expiresAt.getTime()) || checkedAt > now || expiresAt <= now ||
       expiresAt <= checkedAt ||
-      expiresAt.getTime() - checkedAt.getTime() > OHIO_REVIEWED_MAX_AGE_MS) {
+      !validVerificationWindow(receipt)) {
     return "Ohio reviewed refresh receipt is malformed, mismatched, or expired";
   }
   const actual = [...receipt.documents].sort((a, b) => a.section.localeCompare(b.section));

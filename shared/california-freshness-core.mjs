@@ -1,3 +1,4 @@
+import { validVerificationWindow } from "./source-verification-policy.mjs";
 /** Archive currency is a bounded check, not a guarantee against intervening amendments. */
 // @ts-check
 import retainedPins from "./california-retained-pins.json" with { type: "json" };
@@ -27,7 +28,7 @@ export function californiaReceiptStatus(input, now = new Date(), comparison, req
       typeof receipt.checkedAt !== "string" || typeof receipt.expiresAt !== "string" ||
       !Number.isFinite(checked) || !Number.isFinite(expires) || !Number.isFinite(now.getTime()) ||
       checked < Date.parse(CALIFORNIA_ARCHIVE.acquiredAt) || checked > now.getTime() ||
-      expires - checked !== CALIFORNIA_MAX_AGE_MS ||
+      (!validVerificationWindow(receipt) || (receipt.verificationPolicy === undefined && expires - checked !== CALIFORNIA_MAX_AGE_MS)) ||
       !["original_acquisition", "full_archive_comparison", "retained_section_comparison"].includes(receipt.method) ||
       (receipt.method === "original_acquisition" && checked !== Date.parse(CALIFORNIA_ARCHIVE.acquiredAt))) return "invalid";
   // The original archive predates the approved PEN 30515 successor. A receipt

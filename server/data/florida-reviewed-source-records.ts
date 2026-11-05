@@ -1,3 +1,4 @@
+import { validVerificationWindow } from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -107,6 +108,7 @@ export interface FloridaReviewedEligibility {
 }
 
 export interface FloridaReviewedReceipt {
+  verificationPolicy?: string;
   schemaVersion: 1;
   reportHash: string;
   eligibilityHash: string;
@@ -961,9 +963,8 @@ export function validateFloridaReviewedRefreshReceipt(
       receipt.eligibilityHash !== hashJson(eligibility) ||
       Number.isNaN(checkedAt.getTime()) || Number.isNaN(expiresAt.getTime()) ||
       checkedAt > now || expiresAt <= now || expiresAt <= checkedAt ||
-      expiresAt.getTime() - checkedAt.getTime() > FLORIDA_REVIEWED_MAX_AGE_MS ||
-      (expected.size > 0 && (!Number.isFinite(oldestRetrieval) ||
-        expiresAt.getTime() > oldestRetrieval + FLORIDA_REVIEWED_MAX_AGE_MS)) ||
+      (expected.size > 0 && !Number.isFinite(oldestRetrieval)) ||
+      !validVerificationWindow(receipt, expected.size ? new Date(oldestRetrieval).toISOString() : receipt.checkedAt) ||
       actual.size !== expected.size ||
       receipt.documents.length !== actual.size ||
       [...expected].some(([key, value]) => JSON.stringify(actual.get(key)) !== JSON.stringify(value))) {

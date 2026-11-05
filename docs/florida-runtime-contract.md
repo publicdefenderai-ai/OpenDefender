@@ -1,3 +1,7 @@
+# Quarterly policy update
+
+The routine renewal policy is now [quarterly-v1](source-verification-policy.md). Legacy receipts retain their recorded deadlines; fresh verified acquisitions support three-calendar-month receipts anchored to the oldest required source. Historical seven-day examples below describe the legacy policy, not an instruction to renew weekly. No receipt is extended by this documentation.
+
 # Florida reviewed runtime contract
 
 The source-first Florida batch is additive. Its `fl-fs-*` IDs must not alias or

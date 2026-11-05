@@ -1,3 +1,4 @@
+import { QUARTERLY_POLICY, quarterlyDeadline } from "../../shared/source-verification-policy.mjs";
 /**
  * Refresh the finite, already-reviewed Ohio dependency set. Acquisition only
  * compares official text with reviewed hashes; it can never update those pins
@@ -75,7 +76,7 @@ export async function acquireOhioReviewedGroup(
 export function ohioRefreshExpiry(documents: Array<{ retrievedAt: string }>): string {
   const times = documents.map(document => Date.parse(document.retrievedAt));
   if (!times.length || times.some(time => !Number.isFinite(time))) throw new Error("Missing source acquisition time");
-  return new Date(Math.min(...times) + OHIO_REVIEWED_MAX_AGE_MS).toISOString();
+  return quarterlyDeadline(Math.min(...times));
 }
 
 export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
@@ -169,10 +170,10 @@ export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
   mkdirSync(resolve(".cache"), { recursive: true });
   atomicJson(cachePath, cache);
   atomicJson(OHIO_REVIEWED_RECEIPT_PATH, {
-    schemaVersion: 1, reportHash:
+    schemaVersion: 1, verificationPolicy: QUARTERLY_POLICY, reportHash:
       OHIO_REVIEWED_CURRENT_REVIEW_HASH,
     checkedAt: now.toISOString(),
-    // A cache check must not grant another seven days to older acquisitions.
+    // Anchor the calendar-quarter deadline to the oldest actual acquisition, not generation time.
     expiresAt: ohioRefreshExpiry(expected.map(document => batch.documents.get(document.section)!)),
     documents: expected,
     metrics: batch.metrics,

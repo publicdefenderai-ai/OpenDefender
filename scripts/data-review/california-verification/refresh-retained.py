@@ -150,6 +150,14 @@ def acquire_candidate(folder):
                 lastModified=modified, bytes=size, sha256=digest.hexdigest()))
 
 
+def quarterly_deadline(value):
+    import calendar
+    month_index = value.year * 12 + value.month - 1 + 3
+    year, month = divmod(month_index, 12)
+    month += 1
+    return value.replace(year=year, month=month, day=min(value.day, calendar.monthrange(year, month)[1]))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--candidate', type=Path, default=ROOT / '.cache/california-bulk/runtime-renewal-candidate')
@@ -157,10 +165,12 @@ def main():
     parser.add_argument('--acquire', action='store_true')
     parser.add_argument('--transport', choices=['urllib', 'curl'], default='urllib')
     args = parser.parse_args()
-    if args.acquire:
+    if args.acquire and args.activate_unchanged:
         atomic_json(OUTPUT / 'california-archive-refresh-receipt.json', dict(schemaVersion=1,
                     status='unverified', method='retained_section_comparison', attemptedAt=dt.datetime.now(dt.timezone.utc).isoformat()))
+    if args.acquire:
         (acquire_candidate_curl if args.transport == 'curl' else acquire_candidate)(args.candidate)
+    destination = OUTPUT if args.activate_unchanged else args.candidate
     documents = retained_documents()
     pins = json.loads((ROOT / 'shared/california-retained-pins.json').read_text())
     expected_pins = {k: dict(hash=version_digest(v), versions=len(v)) for k, v in sorted(documents.items())}
@@ -181,8 +191,8 @@ def main():
     unchanged = not held
     report = dict(schemaVersion=1, scope='retained_statutory_versions_comparison_not_new_legal_approval',
                   baselineArchiveSha256=BASELINE_SHA, candidate=candidate, sections=rows, allUnchanged=unchanged, heldSourceKeys=held)
-    atomic_json(OUTPUT / 'california-retained-refresh-comparison.json', report)
-    atomic_json(OUTPUT / 'california-changed-source-evidence.json', dict(schemaVersion=1,
+    atomic_json(destination / 'california-retained-refresh-comparison.json', report)
+    atomic_json(destination / 'california-changed-source-evidence.json', dict(schemaVersion=1,
                 scope='changed_statutory_versions_held_not_approved', candidate=candidate,
                 documents={key: [{k: v for k, v in version.items() if k != 'transUid'}
                                  for version in observed.get(key, [])] for key in held}))
@@ -190,7 +200,7 @@ def main():
                          unchanged=sum(r['status'] == 'unchanged' for r in rows),
                          changedOrMissing=[r['key'] for r in rows if r['status'] != 'unchanged'])))
     if not unchanged and not args.activate_unchanged:
-        atomic_json(OUTPUT / 'california-archive-refresh-receipt.json', dict(schemaVersion=1, status='changed',
+        atomic_json(destination / 'california-archive-refresh-receipt.json', dict(schemaVersion=1, status='changed',
                     method='retained_section_comparison', sourceUrl=SOURCE_URL, archiveSha256=BASELINE_SHA,
                     observedArchiveSha256=candidate['sha256'], attemptedAt=now.isoformat()))
         raise SystemExit('Changed dependencies remain held; this command cannot approve them')
@@ -199,7 +209,7 @@ def main():
         atomic_json(OUTPUT / 'california-archive-refresh-receipt.json', dict(schemaVersion=1, status='matched',
                     method='retained_section_comparison', sourceUrl=SOURCE_URL, archiveSha256=BASELINE_SHA,
                     archiveBytes=baseline['bytes'], observedArchiveSha256=candidate['sha256'], heldSourceKeys=held,
-                    checkedAt=checked.isoformat(), expiresAt=(checked + dt.timedelta(days=7)).isoformat()))
+                    verificationPolicy='quarterly-v1', checkedAt=checked.isoformat(), expiresAt=quarterly_deadline(checked).isoformat()))
         print(f'Activated unchanged retained versions; {len(held)} changed dependencies remain held; acquisition time preserved')
 
 if __name__ == '__main__':

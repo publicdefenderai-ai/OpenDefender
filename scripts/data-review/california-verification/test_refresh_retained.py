@@ -14,6 +14,30 @@ r = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(r)
 
 class RetainedRefreshTests(unittest.TestCase):
+    def test_quarterly_deadline_preserves_acquisition_and_clamps_month_end(self):
+        import datetime as dt
+        self.assertEqual(r.quarterly_deadline(dt.datetime(2026, 11, 30, tzinfo=dt.timezone.utc)).isoformat(), '2027-02-28T00:00:00+00:00')
+        self.assertEqual(r.quarterly_deadline(dt.datetime(2027, 11, 30, tzinfo=dt.timezone.utc)).isoformat(), '2028-02-29T00:00:00+00:00')
+
+
+    def test_comparison_only_cannot_write_active_receipt_or_comparison(self):
+        import datetime as dt
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder); candidate = root / 'candidate'; candidate.mkdir()
+            output = root / 'active'; output.mkdir()
+            (root / 'shared').mkdir()
+            original = self.version(); documents = {'PEN:1': [original]}
+            pins = {'PEN:1': dict(hash=r.version_digest([original]), versions=1)}
+            (root / 'shared/california-retained-pins.json').write_text(json.dumps(pins))
+            (candidate / 'archive.zip').write_bytes(b'archive')
+            (candidate / 'archive-receipt.json').write_text(json.dumps(dict(retrievedAt=dt.datetime.now(dt.timezone.utc).isoformat(), sourceUrl=r.SOURCE_URL, bytes=7, sha256='candidate')))
+            active = output / 'california-archive-refresh-receipt.json'; active.write_text('original receipt')
+            with patch.object(r, 'ROOT', root), patch.object(r, 'OUTPUT', output), patch.object(r, 'retained_documents', return_value=documents), patch.object(r.bulk, 'sha256_file', return_value='candidate'), patch.object(r.bulk, 'extract', return_value=[dict(lawCode='PEN', section='1', versions=[original])]), patch('sys.argv', ['refresh-retained.py', '--candidate', str(candidate)]):
+                r.main()
+            self.assertEqual(active.read_text(), 'original receipt')
+            self.assertEqual(len(list(output.iterdir())), 1)
+            self.assertTrue((candidate / 'california-retained-refresh-comparison.json').exists())
+
     def version(self):
         text = '<p>Original statutory text</p>'
         return dict(id='PEN1', lawCode='PEN', section='1.', versionId='v1', activeFlag='Y',
