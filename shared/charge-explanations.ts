@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_BATCH, OHIO_MAJOR_IDS } from "./ohio-major-batch";
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
@@ -64,6 +65,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   ...OHIO_PATIENT_CARE_BATCH.explanations,
   ...OHIO_REVIEWED_BATCH.explanations,
+  ...OHIO_MAJOR_BATCH.explanations,
   OHIO_FELONIOUS_ASSAULT_EXPLANATION,
   OHIO_AGGRAVATED_ASSAULT_EXPLANATION,
   ...OHIO_MANSLAUGHTER_EXPLANATIONS,
@@ -3852,8 +3854,8 @@ export function getChargeExplanation(
               ? { degreeContext: locale.degreeContext }
               : {}),
             // Surface draft flag so callers can show a pending-review notice
-            translationDraft: explanation.canonicalChargeId && OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) ? false : locale.draft,
-            untranslated: Boolean(explanation.canonicalChargeId && OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId)),
+            translationDraft: explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId)) ? false : locale.draft,
+            untranslated: Boolean(explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId))),
           };
            const localizedScopedContent = jurisdiction
              ? getScopedCaseGuidance(explanation.slug, lang)

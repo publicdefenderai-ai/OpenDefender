@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_IDS } from "../shared/ohio-major-batch";
 import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
@@ -60,9 +61,10 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(238);
-    expect(manifest.catalogRecords).toHaveLength(ohioCount);
-    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
+    expect(ohioCount).toBe(258);
+    // This historical fixture predates the new batch acquisition; those 20 cannot be current yet.
+    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size);
+    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size);
     expect(seed.sources).toHaveLength(262);
     expect(seed.snapshots).toHaveLength(262);
     expect(seed.links).toHaveLength(719);

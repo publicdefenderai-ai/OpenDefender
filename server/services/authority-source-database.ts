@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
 import {
@@ -247,6 +248,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
       }
     }
   }
+  if (jurisdiction === "OH" && !isOhioMajorSourceFresh()) {
+    for (const source of OHIO_MAJOR_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "OH" && !isOhioReviewedSourceFresh()) {
     for (const source of OHIO_REVIEWED_SOURCES) selectable.delete(source.chargeId);
   }
@@ -288,8 +292,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // Old completed ingestion runs must not serve corrected summaries until
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
-    for (const update of commonUpdates) {
-      const source = OHIO_REVIEWED_SOURCES.find(row => row.chargeId === update.id);
+    for (const update of [...commonUpdates, ...OHIO_MAJOR_SOURCES.map(source => ({id: source.chargeId}))]) {
+      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES].find(row => row.chargeId === update.id);
       if (!source) {
         selectable.delete(update.id);
         continue;
