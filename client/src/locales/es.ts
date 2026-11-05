@@ -3712,7 +3712,7 @@ export default {
       },
       "generator": {
         "title": "Formularios de autorización de cuidadores",
-        "description": "Elija su estado para acceder a formularios oficiales o una plantilla de autorización de cuidador. Estos documentos no sustituyen una designación de tutela para la custodia a largo plazo."
+        "description": "Elija su estado para acceder a formularios gubernamentales de autorización de cuidadores. Estos documentos no sustituyen una designación de tutela para la custodia a largo plazo."
       },
       "freeHelp": "Ayuda Gratuita Disponible:",
       "freeHelpText": "Muchas organizaciones de defensa de inmigrantes ofrecen asistencia gratuita con la planificación de emergencia familiar. Contacte a su organización local de ayuda legal o grupo de derechos de inmigrantes para ayuda creando estos documentos."

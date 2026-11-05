@@ -1,16 +1,23 @@
-# Caregiver forms update
+# Government-issued caregiver forms
 
-California, Texas and New York now link to official forms instead of generating custom versions. State-specific guidance appears in English and Spanish; the linked PDFs are identified as English. Florida retains its printable template with corrected statutory citations, acknowledgment certificates, an optional expiration date and a second-parent section. Illinois is unchanged.
+All five state choices now link to documents supplied by a government agency or court. Custom California, Texas, Florida, New York and Illinois templates and their generation/printing code have been removed. OpenDefender does not alter or collect information for the external documents. English and Spanish reference guidance accompanies each choice. The linked forms are identified as English, and the New York link is identified as a Word document rather than a PDF.
 
-Printed template values are escaped before insertion into HTML, so entered text cannot create executable markup.
+- California: California Courts caregiver affidavit.
+- Texas: DFPS Form 2638.
+- Florida: Fifteenth Judicial Circuit law-library child-care power of attorney. It is identified as a court-provided resource, without claiming universal suitability or acceptance.
+- New York: OCFS-4940 from the issuing agency, replacing the university-hosted mirror.
+- Illinois: DCFS CFS 444-2, under 755 ILCS 5/11-5.4. Guidance distinguishes short-term guardianship from a power of attorney for the parent’s own affairs and addresses witnesses, guardian acceptance, other-parent consent, duration exceptions and court orders.
 
 ## Public sources
 
-- [California Courts affidavit, January 2026](https://selfhelp.courts.ca.gov/sites/default/files/2026-01/Caregiver%20Authorization%20Affidavit-Jan2026%201.pdf)
+- [California Courts affidavit](https://selfhelp.courts.ca.gov/sites/default/files/2026-01/Caregiver%20Authorization%20Affidavit-Jan2026%201.pdf)
 - [Texas DFPS Form 2638](https://www.dfps.texas.gov/Application/Forms/showFile.aspx?NAME=2638.pdf) and [Family Code Chapter 34](https://tcss.legis.texas.gov/resources/FA/htm/FA.34.htm)
-- [Florida execution requirements](https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799%2F0709%2FSections%2F0709.2105.html)
-- [New York OCFS-4940, hosted by University at Buffalo](https://dental.buffalo.edu/content/dam/dental/Pictures/Patients/patient-forms---documents/OCFS-4940-uae.pdf) and [statutory requirements](https://www.nysenate.gov/legislation/laws/GOB/5-1552)
+- [Florida court form](https://www.15thcircuit.com/sites/default/files/court-admin/law-library/forms-download/Power-of-Attorney-Temporary-for-the-Care-of-Children-fillable.pdf) and [court form directory](https://www.15thcircuit.org/services/law-library/legal-forms)
+- [New York OCFS-4940](https://ocfs.ny.gov/forms/ocfs/ocfs-4940/OCFS-4940.docx) and [statutory requirements](https://www.nysenate.gov/legislation/laws/GOB/5-1552)
+- [Illinois DCFS CFS 444-2](https://dcfs.illinois.gov/content/dam/soi/en/web/dcfs/documents/about-us/policy-rules-and-forms/documents/cfs-400/cfs-444-2-appointment-of-short-term-guardian-fillable.pdf) and [755 ILCS 5/11-5.4](https://www.ilga.gov/documents/legislation/ilcs/documents/075500050K11-5.4.htm)
+
+The New York agency destination is also linked by CUNY’s government university resource page. Direct OCFS retrieval was blocked in this environment, so its current downloadable file could not be independently inspected. Browser tests check the destinations presented by OpenDefender; they do not certify third-party availability. Florida’s PDF downloaded successfully and Illinois’s four-page DCFS form was accessible.
 
 ## Validation
 
-Typecheck and production build pass. Focused unit and locale-parity checks: 15 passed. Browser checks: 2 passed, covering English and Spanish official-form selections, Florida print escaping and 320px layout. Browser specification is included in the release allowlist. No full-suite claim is made.
+Typecheck and production build pass. Focused unit and locale-parity checks: 15 passed. Four browser checks passed, covering all five selections, English and Spanish, both themes, keyboard selection, correct file-type labels, absence of personal-data inputs/custom printing, and 320px bounds. The specification remains in the release allowlist. No full-suite or production-deployment claim is made.

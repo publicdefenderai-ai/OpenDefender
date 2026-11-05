@@ -3710,7 +3710,7 @@ export default {
       },
       "generator": {
         "title": "Caregiver authorization forms",
-        "description": "Choose your state for official forms or a caregiver authorization template. These documents do not replace a guardianship nomination for long-term custody."
+        "description": "Choose your state for government-issued caregiver authorization forms. These documents do not replace a guardianship nomination for long-term custody."
       },
       "freeHelp": "Free Help Available:",
       "freeHelpText": "Many immigrant advocacy organizations offer free assistance with family emergency planning. Contact your local legal aid organization or immigrant rights group for help creating these documents."
