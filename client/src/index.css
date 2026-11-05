@@ -3082,3 +3082,52 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
  .directory-group { grid-template-columns: 1fr; }
  .directory-group h2 { font-size: 25px; }
 }
+
+/* Life & Family Support: grouped reading rows instead of category cards. */
+.support-hub { width: min(1120px,100%); margin: auto; padding: 32px 32px 64px; color: var(--foreground); }
+.support-home { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: var(--muted-foreground); }
+.support-hero { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 32px; align-items: center; padding: 18px 0 36px; }
+.support-hub p { line-height: 1.75; color: var(--muted-foreground); }
+.support-hero .support-label { font-weight: 600; font-size: 14px; color: var(--foreground); }
+.support-hub h1 { font-size: clamp(36px,4.5vw,54px); font-weight: 500; line-height: 1.12; letter-spacing: -1.5px; margin: 14px 0 24px; }
+.support-hub h1 em { font-style: normal; color: var(--primary); }
+.support-hero p { max-width: 620px; }
+.support-oak { display: block; width: 100%; height: auto; }
+.support-action { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 600; margin-top: 10px; overflow-wrap: anywhere; }
+.support-hub a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.support-hub a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+.support-jumps { display: flex; flex-wrap: wrap; column-gap: 28px; border-block: 1px solid var(--border); padding: 8px 0; }
+.support-jumps a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--primary); }
+.support-local { display: grid; grid-template-columns: minmax(0,1fr) minmax(160px,230px); align-items: start; gap: 32px; padding: 32px 0; }
+.support-hub h2 { font-size: 25px; font-weight: 500; line-height: 1.3; letter-spacing: -.4px; margin-bottom: 12px; }
+.support-local h2, .support-impact h2, .support-bottom h2 { font-size: 21px; }
+.support-local p, .support-bottom p { font-size: 14px; }
+.support-local .support-eligibility { display: flex; gap: 8px; font-size: 13px; margin-top: 12px; }
+.support-eligibility svg { flex-shrink: 0; margin-top: 3px; }
+.support-group { display: grid; grid-template-columns: 260px minmax(0,1fr); gap: 48px; border-top: 1px solid var(--border); padding: 36px 0; }
+.support-group > div p { font-size: 14px; }
+.support-group ul { list-style: none; margin: 0; padding: 0; }
+.support-resource { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--border); color: var(--foreground); }
+.support-group li:first-child .support-resource { padding-top: 0; }
+.support-resource h3 { font-size: 19px; font-weight: 500; margin-bottom: 6px; line-height: 1.4; }
+.support-resource span span { display: block; color: var(--muted-foreground); font-size: 14px; line-height: 1.6; }
+.support-resource svg { flex-shrink: 0; color: var(--primary); }
+.support-hub .support-resource:hover { text-decoration: none; }
+.support-resource:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.support-impact { display: flex; gap: 18px; padding: 28px; margin: 0 0 36px; border-left: 3px solid #a66a26; background: #faf1e3; }
+.dark .support-impact { background: #34291f; border-color: #d8ae73; }
+.support-impact > svg { flex-shrink: 0; color: #805019; }
+.dark .support-impact > svg { color: #e6bd83; }
+.support-impact p { font-size: 15px; }
+.support-bottom { border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding-top: 32px; }
+.support-hub [id] { scroll-margin-top: 110px; }
+@media(max-width:700px) {
+ .support-hub { padding: 20px 24px 40px; }
+ .support-hero { grid-template-columns: 1fr; gap: 0; padding-top: 8px; }
+ .support-oak { display: none; }
+ .support-group,.support-local,.support-bottom { grid-template-columns: 1fr; gap: 18px; }
+ .support-group { padding: 28px 0; }
+ .support-jumps { column-gap: 20px; }
+ .support-impact { padding: 22px 18px; gap: 12px; }
+ .support-hub h1 { letter-spacing: -1px; }
+}
