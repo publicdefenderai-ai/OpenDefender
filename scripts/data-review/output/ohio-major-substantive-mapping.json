@@ -5,7 +5,7 @@
   "inputs": {
     "researchSha256": "1ca00d9f239637fe81784db4cf39cd0c555526fdce459b122f8d28170d6afb67",
     "supplementalSha256": "eac0b9eecba035dde5e658d3ee9edba84138ef0efb24cfa8fddadfdb4393b459",
-    "planSha256": "3d054860a3f1562263b18d7014f9d471623ef29ccd5d2444d3937a43a8f9101a"
+    "planSha256": "fcce61729853ddef79d474743cd702c329f39ddaddec4dacc17c5b5de8a67c79"
   },
   "counts": {
     "primarySections": 32,
@@ -1176,8 +1176,8 @@
       "id": "orc-2909.07-a-1-a-6-",
       "section": "2909.07",
       "scope": "A(1)-A(6)",
-      "statutoryName": "criminal mischief, and shall be punished as provided in division (C)(2), (3), or (4) of this section",
-      "namingBasis": "operative_guilt_clause",
+      "statutoryName": "Criminal mischief",
+      "namingBasis": "official_heading_with_subdivision_not_synthesized_guilt_name",
       "status": "statutory_mapping_not_publication_approval",
       "limitations": "C(2) and C(3) have different aircraft, harm and dollar conditions. A(7)/C(4) excluded: critical-infrastructure definition reaches the existing 1509.01 hold.",
       "conduct": [
