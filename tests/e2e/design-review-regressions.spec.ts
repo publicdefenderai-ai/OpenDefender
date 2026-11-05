@@ -9,9 +9,18 @@ for (const language of ['en', 'es', 'zh']) {
         localStorage.setItem('i18nextLng', language);
         localStorage.setItem('public-defender-theme', theme);
       }, { language, theme });
+      // The app shell can be ready before the lazy page: exercise that ordering.
+      await page.route(/\/assets\/immigration-guidance-[^/]+\.js$/, async route => {
+        await new Promise(resolve => setTimeout(resolve, 350));
+        await route.continue();
+      });
       await page.goto('/immigration-guidance');
       await expect(page.locator('html')).toHaveClass(new RegExp(`\\b${theme}\\b`));
       await expect(page.locator('html')).toHaveAttribute('lang', language);
+      const headings = page.locator('.immigration-heading-line');
+      await expect(headings).toHaveCount(2);
+      await expect(headings.nth(0)).toBeVisible();
+      await expect(headings.nth(1)).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
       // Measure actual text, not document width: overflow-x:hidden can hide clipping.
       const lines = await page.locator('.immigration-heading-line').evaluateAll(elements => elements.map(element => {

@@ -50,6 +50,33 @@ async function completeScreener(page: import("@playwright/test").Page) {
   await page.getByRole("button", { name: /Get My Case Support/i }).click();
 }
 
+// The controlled clock also controls the 150ms screen exit animation. Wait
+// for each distinct screen instead of repeatedly clicking an exiting Back button.
+async function verifyRestoredAnswers(page: import("@playwright/test").Page) {
+  await expect(page.getByTestId("qa-step-label")).toContainText("Step 7 of 7");
+  await page.clock.runFor(300);
+  for (const [from, to] of [
+    ["button-prev-civil-emergencies", "button-prev-additional-details"],
+    ["button-prev-additional-details", "button-prev-background"],
+    ["button-prev-background", "button-prev-status"],
+  ]) {
+    await page.getByTestId(from).click();
+    await page.clock.runFor(300);
+    await expect(page.getByTestId(to)).toBeVisible();
+  }
+  await expect(page.getByTestId("select-case-stage")).toContainText("Pre-trial");
+  await expect(page.getByTestId("select-custody-status")).toContainText("not in custody");
+  await expect(page.getByTestId("select-has-attorney")).toContainText("No");
+  await page.getByTestId("button-prev-status").click();
+  await page.clock.runFor(300);
+  await expect(page.getByRole("checkbox", {
+    name: "I don't know what charges I'm facing", exact: true,
+  })).toBeChecked();
+  await page.getByTestId("button-prev-case-details").click();
+  await page.clock.runFor(300);
+  await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
+}
+
 test.describe("case guidance timeout recovery", () => {
   test("clears saved answers after a successful retry and does not reopen recovery on reload", async ({ page }) => {
     test.setTimeout(60_000);
@@ -230,16 +257,7 @@ test.describe("case guidance timeout recovery", () => {
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
     await page.getByTestId("button-review-guidance-answers").click();
 
-    const unknownCharges = page.getByRole("checkbox", {
-      name: "I don't know what charges I'm facing",
-      exact: true,
-    });
-    for (let step = 0; step < 7 && (await unknownCharges.count()) === 0; step += 1) {
-      await page.getByRole("button", { name: /^Back/ }).click();
-    }
-    await expect(unknownCharges).toBeChecked();
-    await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
+    await verifyRestoredAnswers(page);
 
     releaseFirstRequest?.();
   });
@@ -300,16 +318,7 @@ test.describe("case guidance timeout recovery", () => {
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
     await page.getByTestId("button-review-guidance-answers").click();
 
-    const unknownCharges = page.getByRole("checkbox", {
-      name: "I don't know what charges I'm facing",
-      exact: true,
-    });
-    for (let step = 0; step < 7 && (await unknownCharges.count()) === 0; step += 1) {
-      await page.getByRole("button", { name: /^Back/ }).click();
-    }
-    await expect(unknownCharges).toBeChecked();
-    await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
+    await verifyRestoredAnswers(page);
 
     releaseFirstRequest?.();
   });
@@ -378,16 +387,7 @@ test.describe("case guidance timeout recovery", () => {
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
     await page.getByTestId("button-review-guidance-answers").click();
 
-    const unknownCharges = page.getByRole("checkbox", {
-      name: "I don't know what charges I'm facing",
-      exact: true,
-    });
-    for (let step = 0; step < 7 && (await unknownCharges.count()) === 0; step += 1) {
-      await page.getByRole("button", { name: /^Back/ }).click();
-    }
-    await expect(unknownCharges).toBeChecked();
-    await page.getByRole("button", { name: /^Back/ }).click();
-    await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
+    await verifyRestoredAnswers(page);
 
     await page.getByTestId("button-cancel-qa").click();
     await expect(page.getByTestId("button-start-guidance")).toBeVisible();

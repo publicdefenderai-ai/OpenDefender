@@ -2630,7 +2630,9 @@ a:focus-visible,
 .guide-hero { display: grid; grid-template-columns: minmax(0,1fr) 210px; align-items: center; gap: 40px; padding-block: 2rem 2.5rem; }
 .guide-hero h1 { font-size: clamp(2.35rem,5vw,3.625rem); line-height: 1.08; letter-spacing: -.03em; font-weight: 500; margin-bottom: 1.5rem; max-width: 800px; }
 .guide-hero p { font-size: 1.125rem; line-height: 1.8; color: var(--muted-foreground); max-width: 660px; }
-.plea-standalone .guide-hero { grid-template-columns: 1fr; }
+.plea-standalone .guide-hero { grid-template-columns: minmax(0,1fr); }
+.guide-hero > div { min-width: 0; }
+.guide-hero h1, .guide-hero p { overflow-wrap: anywhere; }
 .guide-doorway { position: relative; height: 230px; }
 .guide-doorway::before { content: ''; position: absolute; left: 18px; top: 15px; width: 160px; height: 205px; border-radius: 80px 80px 0 0; background: var(--guide-art); }
 .guide-doorway::after { content: ''; position: absolute; left: 63px; top: 63px; width: 118px; height: 157px; border-radius: 60px 60px 0 0; background: var(--background); }
