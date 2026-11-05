@@ -1,3 +1,4 @@
+import { officialCaregiverForms } from "../../../../shared/templates/official-caregiver-forms";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -68,6 +69,7 @@ export function POAGenerator() {
   const [showInstructions, setShowInstructions] = useState(true);
 
   const states = getAvailableStates();
+  const official = officialCaregiverForms[selectedState];
   const template = selectedState ? getPOATemplate(selectedState) : null;
 
   const updateForm = (field: keyof FormData, value: string) => {
@@ -170,7 +172,7 @@ export function POAGenerator() {
             <em>${template.legalCitation}</em>
           </div>
 
-          <pre>${doc}</pre>
+          <pre>${doc.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
 
           <div class="instructions">
             <h3>${lang === 'es' ? 'INSTRUCCIONES' : 'INSTRUCTIONS'}</h3>
@@ -204,7 +206,7 @@ export function POAGenerator() {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
             <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
           </div>
-          {lang === 'es' ? 'Generador de Documentos de Autorización de Cuidador' : 'Caregiver Authorization Document Generator'}
+          {lang === 'es' ? 'Formularios de autorización de cuidadores' : 'Caregiver authorization forms'}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -214,8 +216,8 @@ export function POAGenerator() {
           <AlertDescription className="text-amber-800 dark:text-amber-200">
             <strong>{lang === 'es' ? 'AVISO IMPORTANTE:' : 'IMPORTANT NOTICE:'}</strong>{' '}
             {lang === 'es'
-              ? 'Este documento autoriza a un cuidador a tomar decisiones escolares y médicas por su hijo/a. NO transfiere la custodia legal; solo un tribunal puede hacer eso. Es solo un formulario de plantilla y NO constituye asesoría legal. Siempre consulte con un abogado calificado para su situación específica. Los requisitos legales varían por estado.'
-              : 'This document authorizes a caregiver to make school and medical decisions for your child. It does NOT transfer legal custody; only a court can do that. It is a template form only and does NOT constitute legal advice. Always consult with a qualified attorney for your specific situation. Legal requirements vary by state.'}
+              ? 'La autoridad disponible y los requisitos de firma dependen del estado y del documento. NO transfiere la custodia legal; solo un tribunal puede hacer eso. Es solo un formulario de plantilla y NO constituye asesoría legal. Siempre consulte con un abogado calificado para su situación específica. Los requisitos legales varían por estado.'
+              : 'The available authority and signing requirements depend on the state and the document. It does NOT transfer legal custody; only a court can do that. It is a template form only and does NOT constitute legal advice. Always consult with a qualified attorney for your specific situation. Legal requirements vary by state.'}
           </AlertDescription>
         </Alert>
 
@@ -224,13 +226,14 @@ export function POAGenerator() {
           <Label className="font-semibold">
             {lang === 'es' ? 'Seleccione su estado' : 'Select your state'}
           </Label>
-          <div className="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
             {states.map(state => {
-              const t = poaTemplates[state];
+              const stateName = officialCaregiverForms[state]?.stateName ?? poaTemplates[state]?.stateName;
               return (
                 <button
                   key={state}
                   onClick={() => setSelectedState(state)}
+                  aria-pressed={selectedState === state}
                   className={`p-3 rounded-lg border-2 text-center transition-all ${
                     selectedState === state
                       ? 'border-primary bg-primary/5'
@@ -238,13 +241,20 @@ export function POAGenerator() {
                   }`}
                 >
                   <span className="font-bold">{state}</span>
-                  <span className="block text-xs text-muted-foreground">{t.stateName}</span>
+                  <span className="block text-xs text-muted-foreground">{stateName}</span>
                 </button>
               );
             })}
           </div>
         </div>
 
+        {official && <section data-testid="official-caregiver-form" lang={lang} className="space-y-4">
+          <h3 className="text-xl font-semibold">{official.title}</h3>
+          <p>{lang === 'es' ? 'El enlace abre el formulario oficial en inglés. Complete y firme el formulario siguiendo sus instrucciones.' : 'The link opens the official English form. Complete and sign the form according to its instructions.'}</p>
+          <ul className="list-disc pl-5 space-y-3">{official[lang].map(text => <li key={text}>{text}</li>)}</ul>
+          <a className="inline-flex min-h-11 items-center font-semibold underline underline-offset-4" href={official.url} target="_blank" rel="noopener noreferrer">{lang === 'es' ? 'Abrir formulario oficial (PDF)' : 'Open official form (PDF)'}</a>
+          <p><a className="underline underline-offset-4" href={official.source} target="_blank" rel="noopener noreferrer">{lang === 'es' ? 'Fuente e instrucciones' : 'Source and instructions'}</a></p>
+        </section>}
         {template && (
           <>
             {/* State Requirements */}
