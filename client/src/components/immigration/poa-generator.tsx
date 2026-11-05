@@ -1,4 +1,5 @@
 import { officialCaregiverForms } from "../../../../shared/templates/official-caregiver-forms";
+import { translationUnavailableNotice } from '@shared/translation-unavailable-notice';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,8 +16,9 @@ export function POAGenerator() {
   const official = officialCaregiverForms[selectedState];
 
   return (
-    <Card>
+    <Card lang={lang}>
       <CardHeader>
+        {i18n.language?.startsWith('zh') && <p role="note" lang="zh" data-testid="caregiver-translation-notice" className="text-sm text-muted-foreground mb-3">{translationUnavailableNotice(i18n.language)}</p>}
         <CardTitle className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
             <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />

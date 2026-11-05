@@ -50,7 +50,7 @@ export const officialCaregiverForms: Record<string, OfficialCaregiverForm> = {
     "title": "Temporary Power of Attorney for the Care of Children",
     "format": "PDF",
     "url": "https://www.15thcircuit.com/sites/default/files/court-admin/law-library/forms-download/Power-of-Attorney-Temporary-for-the-Care-of-Children-fillable.pdf",
-    "source": "https://www.15thcircuit.org/services/law-library/legal-forms",
+    "source": "https://www.15thcircuit.com/services/law-library/legal-forms",
     "en": [
       "Use the child-care power of attorney published by Florida’s Fifteenth Judicial Circuit law library. This is a court-provided resource, not a promise that it fits every family or will be accepted everywhere.",
       "The form provides two witness signatures and a notarial acknowledgment, consistent with the execution requirements in Florida Statutes § 709.2105. It includes spaces for both parents, the children, the caregiver and the effective dates.",
