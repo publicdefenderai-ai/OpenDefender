@@ -11,9 +11,22 @@ This code-only follow-up is based on PR108 at `4acfa725ef34b722cbbbc03608de6a25e
 - Pennsylvania representative-title probing excludes only identities with an explicit existing `remove` decision. Holds remain included. Title 47's rejected consolidated citation is no longer a renewal prerequisite; Title 35 remains unresolved because held drug references still require a supported unconsolidated-source contract. This does not change coverage accounting, the manifest, a hold or a legal decision.
 - Illinois certificate-validation failures stop after the first request rather than being retried for every section. The error explains that source verification is incomplete. No TLS bypass or trust-store/configuration change is made, and no manifest/audit artifact is written on this path.
 
+Additional release repairs found during the broader run:
+
+- Complete both site-search and v1-search pagination assertions, including jurisdiction checks on every page.
+- Give the record-clearance state selector a translated accessible label and a stable test target, distinct from the page's language selector.
+- Include the 20 configured Ohio major IDs in the database-free release fixture. Their receipt/hold gates still run; no production import or eligibility is granted.
+- Wait for the AI-polish response handler to establish cooldown before advancing the simulated clock, and assert the daily-limit state on the twentieth request. Application throttling is unchanged.
+- Wait for the counsel page's dropdown close-autofocus before testing subsequent hash navigation. Focus-event diagnostics identified the race; the speculative page-code change was removed.
+- The readiness UI test now honestly expects both GA and PA blocked, matching the unchanged coverage gate.
+
 ## Validation and remaining boundaries
 
-Exact final results are recorded in the PR description. The initial three browser suites covering the five reported failures passed all 26 tests. The larger release allowlist is tested separately; a passing subset is not deployment clearance.
+Full database-free regression suite: 2,323 passed, 75 skipped (PostgreSQL tests excluded). Typecheck and production build pass. The final bundled source-readiness checker passes. After the fixture change, 36 focused startup/Ohio/policy tests pass.
+
+The initial three browser suites passed 26 tests. A broader run then passed 339 and exposed five later failures, with 30 not run. Follow-up runs exercised the unrun files and repaired failures. Inventory reconciliation finds a passing result for all 374 unique release-browser scenarios across those runs; this is not a claim that one uninterrupted full run passed. The corrected cooldown and counsel scenarios passed three repetitions. One extra shared-server readiness repetition failed its admin request; fresh-server readiness results are recorded in the PR. The strict ten-admin-requests-per-hour limiter is unchanged.
+
+These results do not establish database-boundary verification or deployment clearance.
 
 The actual Illinois request failed with `UNABLE_TO_VERIFY_LEAF_SIGNATURE`. A separate curl request using normal certificate validation received HTTP 403. This is a source-access failure, not evidence of a statutory amendment. Replit must test from its own supported network environment; do not disable certificate checks or substitute a mirror.
 

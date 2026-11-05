@@ -13,7 +13,7 @@ const EXPECTED_GATE_LABELS: Record<(typeof CURRENT_JURISDICTIONS)[number], "Read
   NY: "Ready",
   NC: "Ready",
   OH: "Ready",
-  PA: "Ready",
+  PA: "Blocked",
   SC: "Ready",
   TX: "Ready",
 };
@@ -103,7 +103,7 @@ test.describe("source readiness expansion gate", () => {
     const reportResponse = await page.request.get("/api/admin/source-coverage", {
       headers: { "x-admin-api-key": adminToken },
     });
-    expect(reportResponse.ok()).toBe(true);
+    expect(reportResponse.ok(), `Source-readiness HTTP ${reportResponse.status()}`).toBe(true);
     const report = await reportResponse.json() as SourceReadinessReport;
 
     expect(report.success).toBe(true);
@@ -112,7 +112,7 @@ test.describe("source readiness expansion gate", () => {
       officialResponseRate: 0.9,
     });
     expect(report.jurisdictions.map((row) => row.jurisdiction)).toEqual([...CURRENT_JURISDICTIONS]);
-    expect(report.belowTargetJurisdictions).toEqual(["GA"]);
+    expect(report.belowTargetJurisdictions).toEqual(["GA", "PA"]);
     const targetJurisdictions = report.nextHighestValueCoverageTargets.map((target) => target.jurisdiction);
     expect(targetJurisdictions).toHaveLength(CURRENT_JURISDICTIONS.length);
     expect(new Set(targetJurisdictions)).toEqual(new Set(CURRENT_JURISDICTIONS));

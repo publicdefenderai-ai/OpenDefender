@@ -60,6 +60,9 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await main.getByRole('combobox').click();
     await page.getByRole('option', { name: 'All states', exact: true }).click();
     await expect(page.locator('#custody-levels-content')).not.toContainText('Rules for');
+    // Wait for the select's close-autofocus before starting a new hash navigation.
+    // Otherwise the pending dropdown restoration can steal the anchor's focus.
+    await expect(main.getByRole('combobox')).toBeFocused();
     await page.goto('/right-to-counsel#unclear-situations');
     await expect(page.locator('#unclear-situations-trigger')).toHaveAttribute('aria-expanded','true');
     await expect(page.locator('#unclear-situations-trigger')).toBeFocused();

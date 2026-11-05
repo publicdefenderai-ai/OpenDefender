@@ -507,6 +507,8 @@ export default function RecordClearanceScreener() {
                   </CardHeader>
                   <CardContent>
                     <select
+                      data-testid="record-clearance-state"
+                      aria-label={t("screener.step1.question")}
                       value={answers.state}
                       onChange={(e) => handleStateChange(e.target.value)}
                       className="w-full min-h-[44px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"

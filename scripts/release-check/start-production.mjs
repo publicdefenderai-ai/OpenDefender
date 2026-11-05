@@ -135,6 +135,9 @@ const releaseCheckCaliforniaSelectableChargeIds = [
 // valid. authority-eligibility applies that same runtime receipt gate before
 // honoring this release fixture.
 const releaseCheckOhioSourceFirstChargeIds = [
+  // Database-free fixture membership only; the ordinary major receipt and
+  // source-hold gates still apply. This does not import or activate these IDs.
+  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-major-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-common-charge-updates.json"), "utf8")).map(row => row.id),
   "oh-orc-2903-01-aggravated-murder",
   "oh-orc-2903-02-murder",

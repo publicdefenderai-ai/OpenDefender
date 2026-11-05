@@ -10,6 +10,8 @@ export async function allChargeSearchIds(request: APIRequestContext, endpoint: s
     const total = body.meta?.totalResults ?? body.totalCount;
     expect(Number.isSafeInteger(total)).toBe(true);
     for (const result of body.results) {
+      const jurisdiction = new URL(endpoint, 'http://fixture.invalid').searchParams.get('jurisdiction');
+      if (jurisdiction) expect(result.document.jurisdiction).toBe(jurisdiction);
       const id = result.document.id.replace(/^charge-/, '');
       expect(ids.has(id), `duplicate search result ${id}`).toBe(false);
       ids.add(id);
