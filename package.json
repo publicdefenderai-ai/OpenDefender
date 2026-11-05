@@ -185,6 +185,7 @@
     "postcss": {
       "nanoid": "^3.3.17"
     },
-    "dompurify": "$dompurify"
+    "dompurify": "$dompurify",
+    "qs": "^6.16.2"
   }
 }
