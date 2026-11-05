@@ -1,3 +1,4 @@
+import { assertReadinessRow } from './source-readiness-contract.mjs';
 import { spawn } from "node:child_process";
 import { createServer } from "node:net";
 import {
@@ -53,33 +54,6 @@ const expectedReportKeys = [
   "jurisdictions",
   "belowTargetJurisdictions",
   "nextHighestValueCoverageTargets",
-];
-const expectedRowKeys = [
-  "jurisdiction",
-  "source",
-  "manifestGeneratedAt",
-  "catalogRows",
-  "selectableRows",
-  "withheldRows",
-  "rowsWithExplicitWithheldReason",
-  "catalogAccountingRate",
-  "rowsWithOfficialResponse",
-  "officialResponseRate",
-  "officialResponsePercentage",
-  "publishableRate",
-  "coveragePercentage",
-  "selectableCoveragePercentage",
-  "sources",
-  "snapshots",
-  "links",
-  "officialSourceAvailability",
-  "gapBreakdown",
-  "gapCounts",
-  "staleRows",
-  "status",
-  "blocker",
-  "manifestPath",
-  "seedScriptPath",
 ];
 
 function sortedKeys(value) {
@@ -234,9 +208,7 @@ async function checkSuccessfulReadiness() {
       throw new Error("Authenticated source-readiness response has an invalid jurisdiction set");
     }
     for (const row of jurisdictions) {
-      if (sortedKeys(row).join(",") !== expectedRowKeys.sort().join(",")) {
-        throw new Error(`Source-readiness row for ${row.jurisdiction} has an unexpected envelope`);
-      }
+      assertReadinessRow(row);
     }
   } finally {
     await server.stop();

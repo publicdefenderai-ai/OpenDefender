@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_BATCH } from "./ohio-major-batch";
 /**
  * Ohio source-first catalog assembled from independently gated batches.
  *
@@ -100,6 +101,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_HAZING_AND_PROTECTION_CHARGES,
   ...OHIO_PATIENT_CARE_BATCH.charges,
   ...OHIO_REVIEWED_BATCH.charges,
+  ...OHIO_MAJOR_BATCH.charges,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([

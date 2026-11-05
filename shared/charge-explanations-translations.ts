@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_BATCH } from "./ohio-major-batch";
 /**
  * Spanish and Chinese translations for charge plain-language explanations.
  *
@@ -39,6 +40,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   ...OHIO_PATIENT_CARE_BATCH.translations,
   ...OHIO_REVIEWED_BATCH.translations,
+  ...OHIO_MAJOR_BATCH.translations,
   "ohio-felonious-assault": {
     es: {
       draft: true, keyTerms: [],

@@ -1,3 +1,4 @@
+import { OHIO_MAJOR_SOURCES } from "../../server/data/ohio-major-source";
 /**
  * Import Ohio criminal-charge authority from official codes.ohio.gov section
  * pages. The committed manifest is later seeded without network calls.
@@ -160,6 +161,7 @@ export function getOhioLegacyManifestCharges() {
     [
       ...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map(record => record.chargeId),
       ...OHIO_REVIEWED_SOURCES.map(record => record.chargeId),
+      ...OHIO_MAJOR_SOURCES.map(record => record.chargeId),
     ],
   );
   return criminalCharges.filter((charge) =>

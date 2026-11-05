@@ -21,6 +21,11 @@ vi.mock("../server/db", () => ({ db: { select: () => ({ from: () => {
     orderBy: () => ({ limit: async () => [{ metadata: state.metadata }] }),
   }) }; return chain;
 } }) } }));
+vi.mock("../server/data/ohio-major-source", async original => ({
+  ...await original<typeof import('../server/data/ohio-major-source')>(),
+  isOhioMajorSourceFresh: () => state.fresh,
+}));
+import { OHIO_MAJOR_SOURCES } from '../server/data/ohio-major-source';
 import { getCurrentAuthoritySelectableChargeIds } from "../server/services/authority-source-database";
 import { buildOhioChapter2903PilotManifestRecords, buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
 
@@ -29,6 +34,16 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
   const records = buildOhioReviewedManifestRecords(new Date());
   const record = records.find(r => r.chargeId === "oh-orc-3767-32-littering")!;
   const links = record.provisions.map(p => ({ chargeId: record.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision }));
+  it("requires every new-batch dependency even if incomplete ingestion metadata omits it", async () => {
+    const newRecord = buildOhioReviewedManifestRecords(new Date(), OHIO_MAJOR_SOURCES)[0];
+    const allLinks = newRecord.provisions.map(p => ({chargeId: newRecord.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision}));
+    state.metadata = {selectableChargeIds: [newRecord.chargeId], catalogRecords: [newRecord]};
+    state.rows = allLinks;
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set([newRecord.chargeId]));
+    state.rows = allLinks.filter(p => !p.sourceKey.endsWith('2971.01'));
+    state.metadata.catalogRecords = [{...newRecord, provisions: state.rows}];
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
+  });
   it("withholds only the affected charge when a reviewed source is missing", async () => {
     const unaffected = records.find(r => r.chargeId === "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises")!;
     expect(unaffected).toBeDefined();
