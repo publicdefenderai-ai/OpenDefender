@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
   CALIFORNIA_LEGACY_DISPOSITIONS,
-} from "../../shared/california-authority";
+} from "./helpers/california-authority-fixture";
 
 const MOBILE_LANGUAGES = ["en", "es", "zh"] as const;
 const PHONE_VIEWPORTS = [

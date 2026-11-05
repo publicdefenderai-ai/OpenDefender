@@ -34,7 +34,7 @@ class AttorneySessionManager {
     // Validate the request (ensures all attestations are true)
     const validation = attorneyVerificationRequestSchema.safeParse(request);
     if (!validation.success) {
-      devLog('attorney-session', 'Validation failed', validation.error.errors);
+      devLog('attorney-session', 'Validation failed', validation.error.issues);
       return null;
     }
 

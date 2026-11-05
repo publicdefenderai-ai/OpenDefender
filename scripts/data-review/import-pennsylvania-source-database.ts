@@ -278,10 +278,43 @@ function decodeHtml(value: string): string {
     .trim();
 }
 
+// PAlegis now initializes a blank iframe with a literal loader call. Parse only
+// this known data shape; never execute publisher JavaScript or follow arbitrary URLs.
+function validEmbeddedStatuteUrl(value: string, canonical: string): boolean {
+  try {
+    const url = new URL(value), expected = new URL(canonical);
+    if (url.origin !== expected.origin || url.pathname !== expected.pathname ||
+        !isPennsylvaniaPalegisUrl(value) || url.username || url.password || url.hash ||
+        url.searchParams.get('iFrame') !== 'true') return false;
+    const keys = ['txtType', 'ttl', 'div', 'chpt', 'sctn', 'subsctn'];
+    for (const key of keys) {
+      const actual = url.searchParams.get(key), wanted = expected.searchParams.get(key);
+      if (url.searchParams.getAll(key).length !== 1 || actual === null || wanted === null) return false;
+      if (key === 'txtType' ? actual !== wanted :
+          !/^\d+(?:\.\d*)?$/.test(actual) || Number(actual) !== Number(wanted)) return false;
+    }
+    if (url.searchParams.getAll('iFrame').length !== 1) return false;
+    if (url.searchParams.has('subchpt') &&
+        (url.searchParams.getAll('subchpt').length !== 1 || !/^0+(?:\.0*)?$/.test(url.searchParams.get('subchpt')!))) return false;
+    return [...url.searchParams.keys()].every(key =>
+      keys.includes(key) || key === 'iFrame' || key === 'subchpt' || /^\d+$/.test(key));
+  } catch { return false; }
+}
+
+export function parsePennsylvaniaEmbeddedSourceUrl(html: string, canonical: string): string | null {
+  const prefix = html.match(/iframe\.src\s*=\s*['"]([^'"\n]+)['"]\s*\+\s*queryParams/);
+  const query = html.match(/globalThis\.loadIframe\(\s*['"]([^'"\n]+)['"]\s*\)/);
+  if (!prefix || !query) return null;
+  try {
+    const url = new URL(prefix[1] + query[1], canonical).toString();
+    return validEmbeddedStatuteUrl(url, canonical) ? url : null;
+  } catch { return null; }
+}
+
 function sourceFrameUrl(html: string, sourceUrl: string): string | null {
   const frame = html.match(/<(?:frame|iframe)\b[^>]*\bsrc\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
   const frameSource = frame?.[1] ?? frame?.[2] ?? frame?.[3];
-  if (!frameSource) return null;
+  if (!frameSource || frameSource === "about:blank") return parsePennsylvaniaEmbeddedSourceUrl(html, sourceUrl);
   try {
     return new URL(frameSource, sourceUrl).toString();
   } catch {
@@ -423,6 +456,7 @@ function isPennsylvaniaOfficialUrl(value: string): boolean {
 }
 
 interface PennsylvaniaSourceContractPage {
+  embeddedUrl?: string;
   requestedUrl: string;
   responseStatus: number;
   responseUrl: string;
@@ -491,7 +525,10 @@ export function validatePennsylvaniaSourceContract(
   } else if (page.responseStatus !== 200) {
     failures.push(`official source returned HTTP ${page.responseStatus}`);
   }
-  if (page.responseUrl !== page.requestedUrl) {
+  if (page.embeddedUrl && !validEmbeddedStatuteUrl(page.embeddedUrl, page.requestedUrl)) {
+    failures.push('unapproved embedded statute URL');
+  }
+  if (page.responseUrl !== (page.embeddedUrl ?? page.requestedUrl)) {
     failures.push(`unexpected final URL ${page.responseUrl}`);
   }
   if (!isPennsylvaniaPalegisUrl(page.responseUrl)) {
@@ -503,7 +540,7 @@ export function validatePennsylvaniaSourceContract(
 
   const hasHtmlShell = /<html\b/i.test(page.html) && /<body\b/i.test(page.html);
   const hasStatuteHeading = new RegExp(
-    `<h[1-3]\\b[^>]*>\\s*Section\\s+${escapeRegex(reference.section)}(?:\\.0)?\\s*-\\s*Title\\s+${escapeRegex(reference.title)}\\b`,
+    `<(?:h[1-3]|title)\\b[^>]*>\\s*Section\\s+${escapeRegex(reference.section)}(?:\\.0)?\\s*-\\s*Title\\s+${escapeRegex(reference.title)}\\b`,
     "i",
   ).test(page.html);
   if (!hasHtmlShell || !hasStatuteHeading) {
@@ -560,7 +597,7 @@ export async function checkPennsylvaniaSourceContract(
   const pages: PennsylvaniaSourceContractPageResult[] = [];
   for (const reference of PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES) {
     const requestedUrl = buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section);
-    const request = await requestPennsylvaniaSource(requestedUrl, fetchImpl, {
+    let request = await requestPennsylvaniaSource(requestedUrl, fetchImpl, {
       redirect: "manual",
       headers: {
         "User-Agent": "OpenDefender-PennsylvaniaSourceContract/1.0",
@@ -580,11 +617,32 @@ export async function checkPennsylvaniaSourceContract(
       });
       continue;
     }
+    let embeddedUrl: string | undefined;
+    // Only traverse a successful same-URL official HTML wrapper. Redirects and
+    // error pages remain failures, even if they contain a plausible frame string.
+    if (request.response.status === 200 && (!request.response.url || request.response.url === requestedUrl) &&
+        /\btext\/html\b/i.test(request.response.headers.get('content-type') ?? '')) {
+      embeddedUrl = parsePennsylvaniaEmbeddedSourceUrl(request.html, requestedUrl) ?? undefined;
+      if (embeddedUrl) {
+        const outerDiagnostics = request.diagnostics;
+        request = await requestPennsylvaniaSource(embeddedUrl, fetchImpl, {
+          redirect: 'manual', headers: { Accept: 'text/html' },
+        }, options);
+        if ('error' in request) {
+          pages.push({ ok: false, source: PENNSYLVANIA_RETRIEVAL_SOURCE, reference,
+            requestedUrl, responseUrl: embeddedUrl, failureKind: 'transport',
+            failures: [request.error], diagnostics: [...outerDiagnostics, ...request.diagnostics] });
+          continue;
+        }
+        request.diagnostics = [...outerDiagnostics, ...request.diagnostics];
+      }
+    }
     const response = request.response;
     const validation = validatePennsylvaniaSourceContract({
       requestedUrl,
       responseStatus: response.status,
-      responseUrl: response.url || requestedUrl,
+      responseUrl: response.url || embeddedUrl || requestedUrl,
+      embeddedUrl,
       redirectLocation: response.headers.get("location"),
       contentType: response.headers.get("content-type") ?? "",
       html: request.html,

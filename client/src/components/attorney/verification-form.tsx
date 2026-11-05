@@ -29,19 +29,13 @@ import { useAttorneySession } from "@/hooks/use-attorney-session";
 
 const formSchema = z.object({
   isLicensedAttorneyActingForClient: z.literal(true, {
-    errorMap: () => ({
-      message: "You must confirm you are a licensed attorney acting on behalf of a client",
-    }),
+    error: "You must confirm you are a licensed attorney acting on behalf of a client",
   }),
   understandsPrivilegeRequirements: z.literal(true, {
-    errorMap: () => ({
-      message: "You must acknowledge privilege requirements",
-    }),
+    error: "You must acknowledge privilege requirements",
   }),
   acceptsDisclosures: z.literal(true, {
-    errorMap: () => ({
-      message: "You must acknowledge the Notice & Disclosures",
-    }),
+    error: "You must acknowledge the Notice & Disclosures",
   }),
 });
 

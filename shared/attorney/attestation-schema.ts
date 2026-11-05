@@ -10,16 +10,16 @@ import { z } from "zod";
 // All attestations must be true
 export const attestationsSchema = z.object({
   isLicensedAttorney: z.literal(true, {
-    errorMap: () => ({ message: "You must attest that you are a licensed attorney" })
+    error: "You must attest that you are a licensed attorney"
   }),
   actingOnBehalfOfClient: z.literal(true, {
-    errorMap: () => ({ message: "You must attest that you are acting on behalf of a client" })
+    error: "You must attest that you are acting on behalf of a client"
   }),
   understandsPrivilegeRequirements: z.literal(true, {
-    errorMap: () => ({ message: "You must attest that you understand privilege requirements" })
+    error: "You must attest that you understand privilege requirements"
   }),
   acceptsDisclosures: z.literal(true, {
-    errorMap: () => ({ message: "You must acknowledge the Notice & Disclosures" })
+    error: "You must acknowledge the Notice & Disclosures"
   }),
 });
 

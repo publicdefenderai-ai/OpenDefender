@@ -1,5 +1,8 @@
 import { expect, test } from '@playwright/test';
-import rows from '../../shared/ohio-major-publication.json';
+import { readFileSync } from 'node:fs';
+const rows = JSON.parse(readFileSync('shared/ohio-major-publication.json', 'utf8')) as Array<{
+  id: string; statutoryName: string; categories: string[]; gradeSummary: string;
+}>;
 test('Ohio major publication preserves statutory identity and grading alternatives in the API', async ({request}) => {
   const response = await request.get('/api/criminal-charges?jurisdiction=OH&limit=500');
   expect(response.ok()).toBe(true);
