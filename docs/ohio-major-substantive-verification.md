@@ -2,7 +2,7 @@
 
 This packet maps 34 individual offense/subdivision identities across 28 sections. Four additional sections have separate dispositions below. These are statutory mappings, not 34 newly selectable charges. No runtime sources, catalog records, receipts, eligibility decisions, database contents or prior attorney decisions change.
 
-The input is PR 99's retained official-source packet. Fifteen additional official sections supply definitions, sentencing and arson-registration evidence. Each retained document records its exact official URL, acquisition time, effective-date metadata and SHA-256 of extracted text. The mapping binds each offense to its own conduct and grading divisions and retains its complete primary section, including defenses, exceptions and merger rules. Shared sentencing sources do not determine an offense's grade.
+The input is PR 99's retained official-source packet. The supplemental packet contains fifteen official sections supplying definitions, sentencing and arson-registration evidence: fourteen newly retained sections and section 2929.11 reused from PR 99 with an identical content hash. Each retained document records its exact official URL, acquisition time, effective-date metadata and SHA-256 of extracted text. The mapping binds each offense to its own conduct and grading divisions and retains its complete primary section, including defenses, exceptions and merger rules. Shared sentencing sources do not determine an offense's grade.
 
 ## Individual mappings
 
@@ -25,7 +25,7 @@ A scope listed below is the scope of the mapping. Broader parent-division quotat
 | 2909.03 | A,B | arson |
 | 2909.04 | A(1),A(2),B | disrupting public services |
 | 2909.05 | A,B,C,D | vandalism |
-| 2909.07 | A(1)-A(6) | criminal mischief, and shall be punished as provided in division (C)(2), (3), or (4) of this section |
+| 2909.07 | A(1)-A(6) | Criminal mischief |
 | 2909.08 | B | endangering aircraft |
 | 2909.08 | C | endangering airport operations |
 | 2909.09 | B | vehicular vandalism |

@@ -13,6 +13,8 @@ describe('Ohio individual substantive statutory mappings', () => {
   it('preserves full comma-containing statutory names and unnamed-grade identity', () => {
     expect(rows('2909.10')[1].statutoryName).toBe('criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle');
     expect(rows('2909.26')[0].statutoryName).toContain('radiological or nuclear weapon, or explosive device');
+    expect(rows('2909.07')[0].statutoryName).toBe('Criminal mischief');
+    expect(rows('2909.07')[0].namingBasis).toMatch(/^official_heading/);
     expect(rows('2905.22')).toHaveLength(3);
     expect(rows('2905.22').every(r => r.namingBasis.startsWith('official_heading'))).toBe(true);
   });
