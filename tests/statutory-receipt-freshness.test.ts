@@ -10,7 +10,7 @@ function withReceipts(run: (root: string, dir: string) => void) {
   const root = mkdtempSync(join(tmpdir(), "receipt-monitor-"));
   const dir = join(root, "scripts/data-review/output"); mkdirSync(dir, { recursive: true });
   for (const name of names) writeFileSync(join(dir, name), JSON.stringify({ checkedAt: "2026-09-24T00:00:00Z", expiresAt: "2026-10-01T00:00:00Z" }));
-  writeFileSync(join(dir, "california-archive-refresh-receipt.json"), JSON.stringify({ ...californiaReceipt, status: "matched", method: "original_acquisition", checkedAt: "2026-09-24T22:10:49.174Z", expiresAt: "2026-10-01T22:10:49.174Z" }));
+  writeFileSync(join(dir, "california-archive-refresh-receipt.json"), JSON.stringify({ ...californiaReceipt, verificationPolicy: undefined, status: "matched", method: "original_acquisition", checkedAt: "2026-09-24T22:10:49.174Z", expiresAt: "2026-10-01T22:10:49.174Z" }));
   try { run(root, dir); } finally { rmSync(root, { recursive: true, force: true }); }
 }
 describe("statutory receipt deadline alarm", () => {
@@ -18,6 +18,17 @@ describe("statutory receipt deadline alarm", () => {
     expect(checkStatutoryReceipts(root, new Date("2026-09-28T23:59:59.999Z")).ok).toBe(true);
     expect(checkStatutoryReceipts(root, new Date("2026-09-29T00:00:00Z")).ok).toBe(false);
     expect(checkStatutoryReceipts(root, new Date("2026-10-02T00:00:00Z")).receipts.every((r: any) => r.status === "expired")).toBe(true);
+  }));
+  it("alarms at fourteen days for a quarterly receipt independently of other states", () => withReceipts((root, dir) => {
+    writeFileSync(join(dir, "california-archive-refresh-receipt.json"), JSON.stringify({
+      ...californiaReceipt, method: "original_acquisition", verificationPolicy: "quarterly-v1",
+      checkedAt: "2026-09-24T22:10:49.174Z", expiresAt: "2026-12-24T22:10:49.174Z",
+    }));
+    const state = (instant: string) => checkStatutoryReceipts(root, new Date(instant)).receipts
+      .find((row: any) => row.name === "california-archive-refresh-receipt.json").status;
+    expect(state("2026-12-10T22:10:49.173Z")).toBe("current");
+    expect(state("2026-12-10T22:10:49.174Z")).toBe("due");
+    expect(state("2026-12-24T22:10:49.174Z")).toBe("expired");
   }));
   it("does not silently pass missing, malformed, or future-dated receipts", () => withReceipts((root, dir) => {
     rmSync(join(dir, names[0]));
