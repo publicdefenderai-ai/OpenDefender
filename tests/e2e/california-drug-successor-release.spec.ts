@@ -49,7 +49,7 @@ test("California questionnaire withholds unavailable authority and never falls b
   await page.getByRole("option", { name: "California", exact: true }).click();
   await page.getByTestId("button-next-jurisdiction").click();
   await page.locator("#charge-search").fill("11379.6(e)");
-  await expect(page.getByText("No charges found. Try a different search term or category.")).toBeVisible();
+  await expect(page.getByText("We could not load the complete charge list. Please try again. No partial list is shown.")).toBeVisible();
   await expect(page.getByTestId("checkbox-charge-ca-hsc-11379-6-e")).toHaveCount(0);
 });
 

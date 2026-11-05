@@ -1,3 +1,4 @@
+import { allChargeSearchIds } from './helpers/charge-search-pages';
 import { expect, test, type Page } from "@playwright/test";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
@@ -213,19 +214,8 @@ test.describe("intent navigation and accessibility", () => {
       .map((entry) => entry.legacyId)
       .filter((id) => !currentCaliforniaIdSet.has(id));
 
-    const allCaliforniaResponse = await page.request.get(
-      "/api/site-search?q=CA&types=charge&jurisdiction=CA&limit=500",
-    );
-    expect(allCaliforniaResponse.ok()).toBe(true);
-    const allCaliforniaPayload = await allCaliforniaResponse.json() as {
-      results: Array<{ document?: { id?: string } }>;
-    };
-    const searchableCaliforniaIds = new Set(
-      allCaliforniaPayload.results
-        .map((result) => result.document?.id)
-        .filter((id): id is string => typeof id === "string")
-        .map((id) => id.replace(/^charge-/, "")),
-    );
+    const searchableCaliforniaIds = await allChargeSearchIds(page.request,
+      '/api/site-search?q=CA&types=charge&jurisdiction=CA');
 
     const missingCurrentIds = currentCaliforniaIds
       .filter((id) => !searchableCaliforniaIds.has(id));

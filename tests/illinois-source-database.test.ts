@@ -602,3 +602,20 @@ describe("Illinois authority manifest", () => {
     expect(provision?.sourceUrl).not.toContain("justia.com");
   });
 });
+
+it('stops certificate failures after one request without changing retained evidence', async () => {
+  const directory = mkdtempSync(join(tmpdir(), 'illinois-tls-'));
+  const outputPath = join(directory, 'il-source-manifest.json');
+  const previous = readFileSync('scripts/data-review/output/il-source-manifest.json', 'utf8');
+  writeFileSync(outputPath, previous);
+  let requests = 0;
+  try {
+    await expect(refreshIllinoisManifest({ outputPath, importedAt, checkOnly:true,
+      fetchImpl: (async () => { requests++; throw Object.assign(new Error('fetch failed'),
+        {cause:{code:'UNABLE_TO_VERIFY_LEAF_SIGNATURE'}}); }) as typeof fetch,
+      rateLimitMs:0, retryDelayMs:0,
+    })).rejects.toThrow('source check incomplete');
+    expect(requests).toBe(1);
+    expect(readFileSync(outputPath,'utf8')).toBe(previous);
+  } finally { rmSync(directory,{recursive:true,force:true}); }
+});

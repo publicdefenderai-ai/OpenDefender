@@ -92,6 +92,13 @@ For integration support or to report issues, please open an issue on our GitHub 
             example: "charge,diversion_program"
           },
           {
+            name: "offset",
+            in: "query",
+            required: false,
+            description: "Zero-based result offset for charge-only searches (types=charge). Authority filtering is applied before pagination.",
+            schema: { type: "integer", minimum: 0, default: 0 }
+          },
+          {
             name: "limit",
             in: "query",
             required: false,

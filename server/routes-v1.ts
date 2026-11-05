@@ -77,7 +77,11 @@ export function registerV1Routes(app: Express): void {
       const types = req.query.types as string;
       const jurisdiction = req.query.jurisdiction as string | undefined;
       const { default: defaultLimit, max: maxLimit } = getSearchResultLimitPolicy(types);
-      const limit = Math.min(parseInt(req.query.limit as string) || defaultLimit, maxLimit);
+      const limit = Math.max(1, Math.min(parseInt(req.query.limit as string) || defaultLimit, maxLimit));
+      const offset = req.query.offset === undefined ? 0 : Number(req.query.offset);
+      if (!Number.isSafeInteger(offset) || offset < 0) {
+        return res.status(400).json({ success: false, error: 'offset must be a non-negative integer' });
+      }
 
       if (!q || q.length < 2 || q.length > 100) {
         return res.status(400).json({
@@ -103,6 +107,7 @@ export function registerV1Routes(app: Express): void {
           chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
         limit,
+        offset,
       });
 
       res.json({

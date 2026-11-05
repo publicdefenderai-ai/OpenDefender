@@ -1,3 +1,4 @@
+import { allChargeSearchIds } from './helpers/charge-search-pages';
 import { expect, test } from "@playwright/test";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
@@ -10,6 +11,7 @@ type JurisdictionBoundary = {
   query: string;
   selectableChargeId: string;
   withheldChargeIds: string[];
+  retainedAliasIds?: string[];
 };
 
 const boundaries: JurisdictionBoundary[] = [
@@ -18,9 +20,12 @@ const boundaries: JurisdictionBoundary[] = [
     code: "PA",
     query: "assault",
     selectableChargeId: "pa-aggravated-assault",
+    // These two identities were subsequently reviewed as exact aliases. Keep
+    // positive assertions for them and use actual held IDs for the negative path.
+    retainedAliasIds: ['pa-assault-on-peace-officer', 'pa-bank-robbery'],
     withheldChargeIds: [
-      "pa-assault-on-peace-officer",
-      "pa-bank-robbery",
+      "pa-robbery-in-the-second-degree",
+      "pa-maintaining-drug-house",
     ],
   },
   {
@@ -90,6 +95,12 @@ test.describe("authority boundary release gate", () => {
     ).toBe(false);
   });
 
+  test('charge search rejects invalid page offsets', async ({request}) => {
+    for (const offset of ['-1', '0.5', 'NaN']) {
+      expect((await request.get(`/api/v1/search?q=CA&types=charge&offset=${offset}`)).status()).toBe(400);
+    }
+  });
+
   test("public v1 charge search returns all current California authority without withheld IDs", async ({ page }) => {
     const currentCaliforniaIds = CALIFORNIA_CANONICAL_RECORDS
       .filter((record) => record.selectable)
@@ -99,17 +110,8 @@ test.describe("authority boundary release gate", () => {
       .map((entry) => entry.legacyId)
       .filter((id) => !currentCaliforniaIdSet.has(id));
 
-    const searchResponse = await page.request.get(
-      "/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500",
-    );
-    expect(searchResponse.ok()).toBe(true);
-    const searchPayload = await searchResponse.json() as SearchPayload;
-    const returnedIds = new Set(
-      searchPayload.results
-        .map((result) => result.document?.id)
-        .filter((id): id is string => typeof id === "string")
-        .map((id) => id.replace(/^charge-/, "")),
-    );
+    const returnedIds = await allChargeSearchIds(page.request,
+      '/api/v1/search?q=CA&types=charge&jurisdiction=CA');
 
     expect(
       returnedIds,
@@ -147,6 +149,10 @@ test.describe("authority boundary release gate", () => {
         );
       }
 
+      for (const id of boundary.retainedAliasIds ?? []) {
+        await expectChargePresence(chargesPayload.charges, id, true, `${boundary.name} reviewed alias`);
+      }
+
       const exportResponse = await page.request.get(
         `/api/v1/export/charges?jurisdiction=${boundary.code}`,
       );
@@ -170,7 +176,7 @@ test.describe("authority boundary release gate", () => {
 
     test(`${boundary.name} keeps withheld authority out of search and guidance`, async ({ page }) => {
       const searchResponse = await page.request.get(
-        `/api/v1/search?q=${encodeURIComponent(boundary.query)}&types=charge&limit=100`,
+        `/api/v1/search?q=${encodeURIComponent(boundary.query)}&types=charge&jurisdiction=${boundary.code}&limit=100`,
       );
       expect(searchResponse.ok()).toBe(true);
       const searchPayload = await searchResponse.json() as SearchPayload;

@@ -15,9 +15,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   checkPennsylvaniaSourceContract,
+  PENNSYLVANIA_RETIRED_CONTRACT_IDS,
 } from "./import-pennsylvania-source-database";
 
 export async function main(): Promise<void> {
+  console.log(`[ACCOUNTING] ${PENNSYLVANIA_RETIRED_CONTRACT_IDS.length} explicitly removed legacy identities remain excluded from renewal probing; no approval or availability is restored.`);
   const result = await checkPennsylvaniaSourceContract();
   for (const page of result.pages) {
     const prefix = page.ok ? "[OK]" : "[FAIL]";
