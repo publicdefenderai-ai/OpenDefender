@@ -55,6 +55,8 @@ If retrieval fails, stop and report the access problem; do not infer that law ch
 
 The application bundles the receipt at build time. Merging alone does not renew the live site. Replit must build and deploy the approved revision after publication approval. No new seed is needed solely to renew unchanged evidence already imported.
 
+Seeding is refused when the receipt is stale or invalid; reimporting metadata does not renew evidence. Existing seeded rows and release-check fixtures cannot bypass expiry.
+
 Read-only public check:
 
 ```sh
