@@ -20,6 +20,7 @@ import {
 } from "../server/data/pennsylvania-source-database-seed";
 import {
   checkPennsylvaniaSourceContract,
+  parsePennsylvaniaEmbeddedSourceUrl,
   diffPennsylvaniaCatalogRecords,
   extractPennsylvaniaDocument,
   extractPennsylvaniaLegacyDocument,
@@ -890,5 +891,39 @@ describe("Pennsylvania authority manifest", () => {
     )).toEqual([{ title: "18", section: "3124.1", subdivision: null }]);
     expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(30)")).toEqual([]);
     expect(parsePennsylvaniaCitation("72 P.S. § 7354")).toEqual([]);
+  });
+});
+
+describe('PAlegis JavaScript iframe contract', () => {
+  const canonical = buildPennsylvaniaOfficialSourceUrl('18', '2502');
+  const wrapper = `<html><body><iframe src="about:blank"></iframe><script>
+    iframe.src = '/statutes/consolidated/view-statute?76&iFrame=true' + queryParams;
+    globalThis.loadIframe('&txtType=HTM&ttl=18&div=00.&chpt=025.&sctn=002.&subsctn=000.');
+  </script></body></html>`;
+  it('parses the observed literal loader without executing scripts', () => {
+    expect(parsePennsylvaniaEmbeddedSourceUrl(wrapper, canonical)).toBe(
+      'https://www.palegis.us/statutes/consolidated/view-statute?76&iFrame=true&txtType=HTM&ttl=18&div=00.&chpt=025.&sctn=002.&subsctn=000.');
+  });
+  it('accepts the observed zero subchapter variant', () => {
+    expect(parsePennsylvaniaEmbeddedSourceUrl(wrapper.replace('ttl=18', 'ttl=18&subchpt=000.'), canonical)).not.toBeNull();
+  });
+  it('rejects alternate origins, altered citations and duplicate parameters', () => {
+    for (const bad of [
+      wrapper.replace('/statutes/consolidated', 'https://example.org/statutes/consolidated'),
+      wrapper.replace('ttl=18', 'ttl=23'),
+      wrapper.replace('sctn=002.', 'sctn=003.'),
+      wrapper.replace('ttl=18', 'ttl=18&ttl=23'),
+      wrapper.replace('ttl=18', 'ttl=18&subchpt=001.'),
+    ]) expect(parsePennsylvaniaEmbeddedSourceUrl(bad, canonical)).toBeNull();
+  });
+  it('accepts an exact embedded title only with the expected body section', () => {
+    const embeddedUrl = parsePennsylvaniaEmbeddedSourceUrl(wrapper, canonical)!;
+    const page = {requestedUrl: canonical, responseUrl: embeddedUrl, embeddedUrl,
+      responseStatus: 200, redirectLocation: null, contentType: 'text/html',
+      html: '<html><head><title>Section 2502.0 - Title 18 - CRIMES</title></head><body><p>§ 2502. Murder.</p><p>A person commits an offense when the statutory elements are met. This is complete section text for the contract test.</p></body></html>'};
+    expect(validatePennsylvaniaSourceContract(page).ok).toBe(true);
+    expect(validatePennsylvaniaSourceContract({...page, html: page.html.replace('§ 2502.', '§ 2503.')}).ok).toBe(false);
+    expect(validatePennsylvaniaSourceContract({...page, responseStatus: 302}).ok).toBe(false);
+    expect(validatePennsylvaniaSourceContract({...page, responseUrl: 'https://example.org/'}).ok).toBe(false);
   });
 });

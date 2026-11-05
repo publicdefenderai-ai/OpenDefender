@@ -251,12 +251,12 @@ export function TemplateWizard({ template, onComplete }: TemplateWizardProps) {
 
   // Build validation schema from template inputs
   const formSchema = useMemo(() => {
-    const schemaFields: Record<string, z.ZodType<any>> = {};
+    const schemaFields: Record<string, z.ZodType<any, any>> = {};
 
     for (const section of formSections) {
       if (section.inputs) {
         for (const input of section.inputs) {
-          let fieldSchema: z.ZodType<any> = z.string();
+          let fieldSchema: z.ZodType<any, any> = z.string();
 
           // Add validation based on input properties
           if (input.validation?.minLength) {

@@ -2283,7 +2283,7 @@ export async function registerRoutes(
       const parseResult = insertCaseFeedbackSchema.safeParse(req.body);
       
       if (!parseResult.success) {
-        const errorMessages = parseResult.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        const errorMessages = parseResult.error.issues.map(e => `${e.path.join('.')}: ${e.message}`);
         return res.status(400).json({ 
           success: false, 
           error: `Validation failed: ${errorMessages.join(', ')}` 
@@ -2753,7 +2753,7 @@ export async function registerRoutes(
       const validation = attorneyVerificationRequestSchema.safeParse(req.body);
 
       if (!validation.success) {
-        const errorMessages = validation.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        const errorMessages = validation.error.issues.map(e => `${e.path.join('.')}: ${e.message}`);
         return res.status(400).json({
           success: false,
           error: `Validation failed: ${errorMessages.join(', ')}`
@@ -2970,7 +2970,7 @@ export async function registerRoutes(
       const validation = generateDocumentSchema.safeParse(req.body);
 
       if (!validation.success) {
-        const errorMessages = validation.error.errors.map(e => `${e.path.join('.')}: ${e.message}`);
+        const errorMessages = validation.error.issues.map(e => `${e.path.join('.')}: ${e.message}`);
         return res.status(400).json({
           success: false,
           error: `Validation failed: ${errorMessages.join(', ')}`
@@ -3197,7 +3197,7 @@ export async function registerRoutes(
             'landlord-situation-notice',
             'utility-hardship',
           ]),
-          answers: z.record(z.string().max(500)).refine(
+          answers: z.record(z.string(), z.string().max(500)).refine(
             (obj) => Object.keys(obj).length <= 8,
             'Too many answer fields'
           ),

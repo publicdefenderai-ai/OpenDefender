@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
   CALIFORNIA_LEGACY_DISPOSITIONS,
-} from "../../shared/california-authority";
+} from "./helpers/california-authority-fixture";
 
 type JurisdictionBoundary = {
   name: string;
