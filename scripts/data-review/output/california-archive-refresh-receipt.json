@@ -5,8 +5,9 @@
   "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
   "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
   "archiveBytes": 1279738518,
-  "observedArchiveSha256": "ec562b927cd7714905450feca5a8f0d887db4f4f9250192663481c6d7149a431",
+  "observedArchiveSha256": "bfe01ed978c82c4e42580d448a45e6ad6d5c4c509135d04369ec47d2a1b597f3",
   "heldSourceKeys": [],
-  "checkedAt": "2026-10-29T23:28:32.557210+00:00",
-  "expiresAt": "2026-11-05T23:28:32.557210+00:00"
+  "verificationPolicy": "quarterly-v1",
+  "checkedAt": "2026-11-05T07:24:42.241007+00:00",
+  "expiresAt": "2027-02-05T07:24:42.241007+00:00"
 }

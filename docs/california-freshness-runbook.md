@@ -1,119 +1,71 @@
-# Quarterly policy update
+# California quarterly source refresh
 
-See [cross-state policy](source-verification-policy.md). Do not edit old receipt dates or interpret this policy as activation approval.
+This is a check of previously reviewed statutory evidence, not another review of every charge. It does not establish statewide completeness or review new case law. Existing attorney decisions, removals, and legal-source holds remain in force.
 
-# California archive currency and renewal
+## Who does what
 
-California configured counts are reported by `coverage.ts`. Live selection and provenance
-also require complete database evidence and a valid, unexpired archive receipt.
-The configured catalog remains available for research and reproducible coverage
-counts; those counts are not a promise that all records are currently available.
+1. **Owner:** authorize preparing a refresh. No terminal commands are required of you.
+2. **Codex:** download the official archive into a separate candidate folder and compare every pinned section/version with the reviewed evidence. Report unchanged, changed, missing, and future-version differences. This step does not alter the active receipt.
+3. **Codex:** when authorized, prepare a receipt update in a draft PR. If all retained sources are unchanged, the new deadline is three calendar months after the actual acquisition, not after merge or deployment. Changed or missing dependencies remain held; they require separate substantive review.
+4. **Reviewer and owner:** review the PR and approve its merge. This updates GitHub, not the running application.
+5. **Replit:** sync the approved commit, complete release checks, and inspect the Publishing schema proposal. A receipt-only update requires no database import or migration for sources already imported. Report any unexpected schema changes instead of approving them.
+6. **Owner:** authorize publication after release blockers are resolved. Replit publishes only after this approval.
+7. **Replit or Codex:** read the public California status endpoint and verify the deployed receipt's acquisition time, deadline, holds, and selectable IDs against the approved commit. Report completion only after the live values match.
 
-The initial receipt preserved the September 24 acquisition and October 1 deadline.
-The current receipt is tied to an actual candidate acquisition; see its `checkedAt`
-and `expiresAt` fields. Offline comparison never restarts that clock.
-It binds to the reviewed PUBINFO archive and, for a changed ZIP, the exact pinned
-set of retained statutory versions. A record's
-`currentness.status` is evaluated on access, including for an already-loaded
-object. Server queries check freshness before and after database reads. Old
-seeded rows and the release-check fixture cannot bypass expiry. Seeding is refused
-when the receipt is stale or invalid; reimporting metadata does not renew evidence.
+The owner approves decisions; Codex prepares and tests evidence/code; Replit handles the production deployment. Do not ask the owner to manually edit receipt dates or database records.
 
-## Renew retained statutory evidence
+## Codex commands: prepare candidate evidence
 
-Run from the repository root:
+Use a new candidate directory for each refresh. Keep the original historical archive and publication packets unchanged.
 
 ```sh
-python3 scripts/data-review/california-verification/refresh-retained.py --acquire --transport curl --activate-unchanged
+python3 scripts/data-review/california-verification/refresh-retained.py \
+  --acquire --transport curl \
+  --candidate /absolute/path/to/new-candidate
+```
+
+Without `--activate-unchanged`, outputs stay in that directory. Preserve its `archive.zip`, acquisition receipt, comparison, and changed-source evidence. The archive is about 1.3 GB and should not be committed to Git.
+
+Review the comparison before proceeding. Matching ZIP hashes alone are insufficient: the comparison checks retained legal text and version metadata, including code identity, version IDs, effective dates, and active flags. Publisher transaction timestamps alone do not establish amended law. New statutes outside the retained set are not certified by this check.
+
+## Codex commands: prepare the authorized receipt PR
+
+On a clean branch, replay the genuine candidate. Do not acquire again merely to restart its clock.
+
+```sh
+python3 scripts/data-review/california-verification/refresh-retained.py \
+  --candidate /absolute/path/to/new-candidate \
+  --activate-unchanged
 node scripts/check-statutory-receipt-freshness.mjs
 ```
 
-The explicit curl transport uses HTTPS with certificate verification, rejects redirects and non-200 responses, checks the declared byte length and records a SHA-256 hash. The urllib transport remains available with `--transport urllib`. Neither transport bypasses source access controls.
+Here `--activate-unchanged` writes repository receipt/comparison files; it does **not** deploy or change the production database. It requires an authentic candidate acquired less than seven days ago. This candidate-admission limit is distinct from the three-calendar-month quarterly verification period.
 
-New renewals default to `.cache/california-bulk/runtime-renewal-candidate`. Preserve `.cache/california-bulk/refresh-candidate`: it contains the historical archive used by publication replay. An explicit `--candidate` can keep each renewal separate.
+Review the diff. Expected files are:
 
-The first command acquires a separate official candidate archive (approximately
-1.3 GB), records authentic request-start time, verifies transfer length and the
-archive SHA-256, and compares every explicitly pinned retained section and version. It preserves
-the original reviewed archive. Only unchanged text hashes and legal/version metadata earn a quarterly-v1 receipt, ending three calendar months after acquisition. Legacy receipts retain their recorded deadlines until explicitly replaced.
-Changed or missing sections remain explicit holds; every dependent charge is
-withheld while unrelated charges remain eligible. Code identity, version IDs,
-effective dates and active flags all participate. Publisher transaction update
-timestamps are retained separately in the comparison audit. The real refresh
-changed those timestamps on every retained row without changing most statutes;
-timestamps alone are not treated as amended statutory content.
-ZIP member locations, table positions and publisher transaction-user IDs are
-excluded because they do not establish statutory content or version identity.
+- `scripts/data-review/output/california-archive-refresh-receipt.json`
+- `scripts/data-review/output/california-retained-refresh-comparison.json`
+- `scripts/data-review/output/california-changed-source-evidence.json`
 
-The explicit pins also participate in the running application's validation. A
-missing, duplicate, unaccounted-for change or differently acquired comparison row
-invalidates the receipt. Explicitly held rows cannot support dependent records. Tests require the pins to cover all retained artifacts and every configured
-primary/supporting statutory URL. Expanding the evidence set requires an explicit
-pin update; acquisition alone cannot grant approval to new charges.
+Check that the archive binding, pinned sections, prior approvals, and intentional holds are preserved. Run the California freshness and affected integration tests. The cross-state monitor can still fail for another state's expired receipt; report those results separately, without changing them to make California's check pass.
 
-To replay an already acquired candidate, omit `--acquire`. Its original retrieval
-time is preserved; a stale candidate cannot be activated. Without
-`--activate-unchanged`, all comparison evidence stays in the candidate directory; active receipts and comparison files are untouched. Changed or missing versions require substantive review. Activation renews only the
-unchanged subset and records the rest as mandatory source holds.
+If retrieval fails, stop and report the access problem; do not infer that law changed. If retained content differs, retain the evidence and holds for review. Never extend dates, discard changed dependencies, or rewrite historical review packets to clear an alarm. The combined `--acquire --activate-unchanged` mode can write an unverified repository receipt before acquisition; use the separated steps above so research cannot overwrite the active repository receipt accidentally.
 
-Historical publication validators use the frozen October 1 comparison, while runtime uses the rolling comparison. Do not rewrite old publication packets to give them new acquisition dates.
+## Deployment and confirmation
 
-Review and commit the comparison, receipt and changed-source evidence, then deploy
-the updated app.
-The server imports them at build time: a repository commit alone does not renew a
-running application. Follow `docs/pr23-release-checklist.md` to seed missing
-California source rows and confirm the exact receipt and selector in production.
-No new database seed is needed solely to renew an unchanged set already seeded.
+The application bundles the receipt at build time. Merging alone does not renew the live site. Replit must build and deploy the approved revision after publication approval. No new seed is needed solely to renew unchanged evidence already imported.
 
-## Changed source or failed retrieval
+Read-only public check:
 
-An acquisition attempt first writes an unverified receipt. Retrieval failure leaves
-it withheld. A changed dependency records a comparison hold and cannot be approved
-by this command, even when `--activate-unchanged` renews the unaffected subset. Resolve source differences through the existing legal-review
-process; never extend dates, replace pins, or drop a changed dependency merely to
-clear the alarm.
+```sh
+curl --fail --silent --show-error \
+  https://opendefender.net/api/statutes/sources/california/status
+```
 
-Commit and deploy a withheld receipt promptly when relevant source changes are
-confirmed. The running app does not observe local files; until deployment it uses
-its prior receipt and deadline. A failure confined to corrupt local candidate files
-requires recovery of the genuine evidence, not a conclusion that the law changed.
+Confirm `archiveEvidence.status`, `checkedAt`, `expiresAt`, and `heldSourceKeys`. Compare selectable IDs across all catalog pages with the approved catalog, not just a count. Do not equate stored source rows or linked charge counts with eligibility. If missing database evidence is discovered, report it for separate import approval; do not run an import as part of this routine refresh.
 
-The original `scripts/refresh-california-archive.mjs` remains a whole-archive
-comparison diagnostic. It rejects any archive byte change. Use the retained-source
-procedure above for routine renewal so unrelated archive churn does not force legal
-review of unchanged statutes. The publisher's documented Sunday full-session load
-makes such churn an expected maintenance case.
+## Monitoring and future updates
 
-A changed retained section holds only configured records declaring it as a primary
-or supporting dependency. Jury instructions, case-law
-changes and new statutes outside the retained set are not certified by this check.
-The original statewide discovery snapshot also remains historical; retained-source
-renewal does not rerun statewide discovery or establish completeness.
+See [cross-state verification policy](source-verification-policy.md). Quarterly verification and automated availability checks serve different purposes: availability checks can report inaccessible sources but cannot renew receipts or approve legal changes. Monitoring activation is a separate decision. Known statutory transitions still require their existing review deadlines and holds even between quarterly refreshes.
 
-## Activate the deadline alarm
-
-Follow `docs/operations/statutory-receipt-monitor.md` to install the supplied workflow
-as a repository owner and enable failure notifications. The template is not an
-active schedule. It checks all four required receipts daily and fails within 48
-hours of expiry. California additionally validates the archive binding and maximum
-receipt lifetime. The alarm does not retrieve law or extend any receipt.
-
-There is no continuous source-change detector in this change. A seven-day window
-bounds unchecked age; it cannot guarantee detection of an amendment made between
-checks. Known future statutory transitions still require the existing review holds.
-
-## September 28 renewal
-
-The publisher regenerated the session archive with a Last-Modified timestamp of
-September 28 at 04:26:06 UTC. The separately retained candidate was acquired at
-04:30:01 UTC. Comparison found 303 unchanged retained sections and one changed
-section, PEN:30515. The renewal expires **October 5, 2026 at 04:30:01 UTC**.
-
-`ca-possession-of-prohibited-weapon` remains configured for research but is withheld
-from live selection/provenance. Its supporting assault-weapon definition changed
-from one retained version to two publisher versions with distinct operative periods.
-The new texts and metadata are in
-`scripts/data-review/output/california-changed-source-evidence.json`; they are held,
-not a new legal approval. Resolve the current definition and known enforceability
-question together before restoring this charge. This release expects 173 live
-California selections after successful seeding and deployment, out of 174 configured.
+Historical renewal examples and earlier counts remain in Git history. They are not instructions for the current deployment. Use the approved receipt and live status for the current deadline.

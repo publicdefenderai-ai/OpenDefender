@@ -31,7 +31,12 @@ describe('quarterly verification policy',()=>{
   const receipt=read('california-archive-refresh-receipt'),comparison=read('california-retained-refresh-comparison');
   expect(californiaReceiptStatus(receipt,new Date(receipt.expiresAt),comparison)).toBe('stale');
   const quarterly={...receipt,verificationPolicy:'quarterly-v1',expiresAt:quarterlyDeadline(receipt.checkedAt)};
-  expect(californiaReceiptStatus(quarterly,new Date(receipt.expiresAt),comparison)).toBe('current');
+  // Exercise legacy-to-quarterly migration independently of the live receipt policy.
+  const legacyDeadline=new Date(Date.parse(receipt.checkedAt)+7*24*60*60*1000);
+  const legacy={...receipt,verificationPolicy:undefined,expiresAt:legacyDeadline.toISOString()};
+  expect(californiaReceiptStatus(legacy,legacyDeadline,comparison)).toBe('stale');
+  expect(californiaReceiptStatus(quarterly,legacyDeadline,comparison)).toBe('current');
+  expect(californiaReceiptStatus(quarterly,new Date(quarterly.expiresAt),comparison)).toBe('stale');
   expect(californiaReceiptStatus({...quarterly,observedArchiveSha256:'wrong'},new Date(receipt.checkedAt),comparison)).toBe('invalid');
  });
  it('covers all states and DC without calling portal reachability legal verification',async()=>{
