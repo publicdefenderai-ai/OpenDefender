@@ -1,3 +1,4 @@
+import { QUARTERLY_POLICY, quarterlyDeadline } from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import {
   existsSync,
@@ -177,15 +178,12 @@ async function main() {
       const now = new Date();
       const oldest = Math.min(...[...documents.values()].map(document =>
         Date.parse(document.retrievedAt)));
-      const expiresAt = new Date(Math.min(
-        now.getTime() + MAX_AGE_MS,
-        oldest + MAX_AGE_MS,
-      ));
+      const expiresAt = new Date(quarterlyDeadline(oldest));
       if (!documents.size || !Number.isFinite(oldest) || expiresAt <= now) {
         throw new Error("Reviewed Florida sources are too old to issue a freshness receipt");
       }
       writeJson(RECEIPT_PATH, {
-        schemaVersion: 1,
+        schemaVersion: 1, verificationPolicy: QUARTERLY_POLICY,
         reportHash: hashJson(assembled.report),
         eligibilityHash: hashJson(eligibility),
         checkedAt: now.toISOString(),

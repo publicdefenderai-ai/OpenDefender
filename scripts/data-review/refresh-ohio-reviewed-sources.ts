@@ -1,3 +1,4 @@
+import { QUARTERLY_POLICY, quarterlyDeadline } from "../../shared/source-verification-policy.mjs";
 /**
  * Refresh the finite, already-reviewed Ohio dependency set. Acquisition only
  * compares official text with reviewed hashes; it can never update those pins
@@ -12,6 +13,7 @@ import {
   OHIO_REVIEWED_RECEIPT_PATH,
   OHIO_REVIEWED_SOURCES,
   ohioReviewedExpectedDocuments,
+  validateOhioReviewedRefreshReceipt,
 } from "../../server/data/ohio-reviewed-source";
 import { createOhioAdapter } from "./batch/ohio-adapter";
 import { createOhioBulkAcquirer } from "./batch/ohio-bulk-source";
@@ -75,7 +77,25 @@ export async function acquireOhioReviewedGroup(
 export function ohioRefreshExpiry(documents: Array<{ retrievedAt: string }>): string {
   const times = documents.map(document => Date.parse(document.retrievedAt));
   if (!times.length || times.some(time => !Number.isFinite(time))) throw new Error("Missing source acquisition time");
-  return new Date(Math.min(...times) + OHIO_REVIEWED_MAX_AGE_MS).toISOString();
+  return quarterlyDeadline(Math.min(...times));
+}
+
+/** Pure issuance builder: proves the validator and generator share the same acquisition anchor. */
+export function buildOhioReviewedQuarterlyReceipt(
+  documents: Array<{ section: string; contentHash: string; retrievedAt: string }>,
+  checkedAt: Date,
+) {
+  const receipt = {
+    schemaVersion: 1, verificationPolicy: QUARTERLY_POLICY,
+    reportHash: OHIO_REVIEWED_CURRENT_REVIEW_HASH,
+    checkedAt: checkedAt.toISOString(), expiresAt: ohioRefreshExpiry(documents),
+    documents: ohioReviewedExpectedDocuments(),
+    acquisitions: documents.map(({section, contentHash, retrievedAt}) => ({section, contentHash, retrievedAt}))
+      .sort((a,b) => a.section.localeCompare(b.section)),
+  };
+  const error = validateOhioReviewedRefreshReceipt(receipt, checkedAt);
+  if (error) throw new Error(error);
+  return receipt;
 }
 
 export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
@@ -169,12 +189,10 @@ export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
   mkdirSync(resolve(".cache"), { recursive: true });
   atomicJson(cachePath, cache);
   atomicJson(OHIO_REVIEWED_RECEIPT_PATH, {
-    schemaVersion: 1, reportHash:
-      OHIO_REVIEWED_CURRENT_REVIEW_HASH,
-    checkedAt: now.toISOString(),
-    // A cache check must not grant another seven days to older acquisitions.
-    expiresAt: ohioRefreshExpiry(expected.map(document => batch.documents.get(document.section)!)),
-    documents: expected,
+    // Use completion time: acquisitions performed during this run follow its start time.
+    ...buildOhioReviewedQuarterlyReceipt(
+      expected.map(document => batch.documents.get(document.section)!), new Date(),
+    ),
     metrics: batch.metrics,
   });
   console.log(JSON.stringify(evidence, null, 2));

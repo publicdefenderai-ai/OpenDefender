@@ -170,7 +170,7 @@ export async function runOhioPilotRefresh(options: {
     await client.query(`UPDATE ohio_pilot_refresh_state SET receipt = $3::jsonb,
       approved_pinset = CASE WHEN $4 THEN $5 ELSE approved_pinset END,
       review_required = $6, reason = $7, next_check_at = now() +
-        CASE WHEN $4 THEN interval '24 hours' ELSE interval '6 hours' END,
+        CASE WHEN $4 THEN interval '3 months' ELSE interval '6 hours' END,
       lease_token = NULL, lease_until = NULL, last_run_id = $8, updated_at = now()
       WHERE id = $1 AND lease_token = $2`,
     [JOB, token, JSON.stringify(activate ? comparison.receipt : null), activate, pinset, reviewRequired, reason, runId]);

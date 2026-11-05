@@ -272,8 +272,15 @@ describe("Florida reviewed source-first contract", () => {
         retrievedAt: document.retrievedAt,
       })),
     };
+    receipt.documents = [...new Map(receipt.documents.map(d => [d.sourceKey, d])).values()];
     expect(validateFloridaReviewedRefreshReceipt(
       receipt, report, eligibility, records, new Date("2026-08-31T00:00:00.000Z"),
     )).not.toBeNull();
+    receipt.verificationPolicy = 'quarterly-v1';
+    receipt.expiresAt = '2026-11-25T00:00:00.000Z';
+    expect(validateFloridaReviewedRefreshReceipt(receipt, report, eligibility, records, new Date('2026-09-15'))).toBeNull();
+    receipt.expiresAt = '2026-11-25T00:00:00.001Z';
+    expect(validateFloridaReviewedRefreshReceipt(receipt, report, eligibility, records, new Date('2026-09-15'))).not.toBeNull();
+
   });
 });

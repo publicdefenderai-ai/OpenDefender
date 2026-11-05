@@ -1,0 +1,37 @@
+name: Read-only official source availability
+on:
+  schedule:
+    - cron: '35 15 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  availability:
+    # Separate approval required. No production/database/admin credential used.
+    if: vars.SOURCE_AVAILABILITY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --include=dev --ignore-scripts
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache/source-availability/state.json
+          key: source-availability-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: source-availability-${{ github.ref_name }}-
+      - run: node --import tsx scripts/source-monitor/check-availability.ts
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .cache/source-availability/state.json
+          key: source-availability-${{ github.ref_name }}-${{ github.run_id }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-source-availability
+          path: .cache/source-availability/report.json
+          retention-days: 30

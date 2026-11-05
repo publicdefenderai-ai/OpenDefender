@@ -1,3 +1,4 @@
+import {validVerificationWindow} from "../shared/source-verification-policy.mjs";
 /** Read-only deadline alarm. Does not validate legal content or renew evidence. */
 import { californiaReceiptStatus } from "../shared/california-freshness-core.mjs";
 import { readFileSync, readdirSync } from "node:fs";
@@ -15,9 +16,9 @@ export function checkStatutoryReceipts(root = process.cwd(), now = new Date()) {
       const receipt = JSON.parse(readFileSync(resolve(directory, name), "utf8"));
       if (name === "california-archive-refresh-receipt.json" && californiaReceiptStatus(receipt, now, receipt.method === "retained_section_comparison" ? JSON.parse(readFileSync(resolve(directory, "california-retained-refresh-comparison.json"), "utf8")) : undefined) === "invalid") throw new Error("Invalid California archive binding");
       const checkedAt = Date.parse(receipt.checkedAt), expiresAt = Date.parse(receipt.expiresAt);
-      if (typeof receipt.checkedAt !== "string" || typeof receipt.expiresAt !== "string" || !Number.isFinite(checkedAt) || !Number.isFinite(expiresAt) || checkedAt > now.getTime() || expiresAt <= checkedAt) throw new Error("Invalid receipt dates");
+      if (typeof receipt.checkedAt !== "string" || typeof receipt.expiresAt !== "string" || !Number.isFinite(checkedAt) || !Number.isFinite(expiresAt) || checkedAt > now.getTime() || expiresAt <= checkedAt || !validVerificationWindow(receipt)) throw new Error("Invalid receipt dates");
       const remainingHours = (expiresAt - now.getTime()) / 3_600_000;
-      return { name, expiresAt: receipt.expiresAt, remainingHours, status: remainingHours <= 0 ? "expired" : remainingHours <= 48 ? "due" : "current" };
+      return { name, expiresAt: receipt.expiresAt, remainingHours, status: remainingHours <= 0 ? "expired" : remainingHours <= (receipt.verificationPolicy === "quarterly-v1" ? 14 * 24 : 48) ? "due" : "current" };
     } catch {
       return { name, expiresAt: null, remainingHours: null, status: "invalid_or_missing" };
     }

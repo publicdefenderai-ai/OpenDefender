@@ -1,3 +1,4 @@
+import {validVerificationWindow, quarterlyDeadline} from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -19,7 +20,7 @@ export interface FloridaReviewedPreflightResult {
   ok: boolean;
   status: "ready" | "action_required" | "invalid";
   checkedAt: string;
-  leadHours: 48;
+  leadHours: number;
   expiresAt: string | null;
   dueBefore: string | null;
   dueWithinLead: boolean;
@@ -107,8 +108,8 @@ export function inspectFloridaReviewedPreflight(
   if (checkedAtMs === null || expiresAtMs === null) {
     metadataErrors.push("receipt checkedAt or expiresAt is malformed");
   } else if (checkedAtMs > nowMs || expiresAtMs <= checkedAtMs ||
-      expiresAtMs - checkedAtMs > FLORIDA_REVIEWED_MAX_AGE_MS) {
-    metadataErrors.push("receipt time bounds are impossible or exceed seven days");
+      !validVerificationWindow(receipt)) {
+    metadataErrors.push("receipt time bounds are impossible or violate the declared verification policy");
   }
 
   const evidence = report && isObject(report.sourceEvidence)
@@ -197,7 +198,9 @@ export function inspectFloridaReviewedPreflight(
       hashDrift.add(required.section);
       continue;
     }
-    if (nowMs - cacheRetrievedAt > FLORIDA_REVIEWED_MAX_AGE_MS ||
+    if ((receipt?.verificationPolicy === "quarterly-v1"
+        ? nowMs >= Date.parse(quarterlyDeadline(cacheRetrievedAt))
+        : nowMs - cacheRetrievedAt > FLORIDA_REVIEWED_MAX_AGE_MS) ||
         cacheRetrievedAt > nowMs) {
       stale.add(required.section);
       requiringRetrieval.add(required.section);
@@ -214,7 +217,7 @@ export function inspectFloridaReviewedPreflight(
 
   const dueBeforeMs = expiresAtMs === null
     ? null
-    : expiresAtMs - FLORIDA_REVIEWED_PREFLIGHT_LEAD_MS;
+    : expiresAtMs - (receipt?.verificationPolicy === "quarterly-v1" ? 14 * 86400000 : FLORIDA_REVIEWED_PREFLIGHT_LEAD_MS);
   const dueWithinLead = dueBeforeMs === null || nowMs >= dueBeforeMs;
   const hasDependencyAction = Boolean(
     missing.size || hashDrift.size || stale.size || reassemblyRequired.size,
@@ -233,14 +236,14 @@ export function inspectFloridaReviewedPreflight(
     actions.push("Reassemble a receipt/report from unchanged newer evidence, then explicitly review and activate it.");
   }
   if (dueWithinLead && !invalid) {
-    actions.push("Freshness is expired or due within 48 hours; follow the selective recovery runbook.");
+    actions.push("Freshness is expired or within its policy lead window; follow the selective recovery runbook.");
   }
 
   return {
     ok,
     status: invalid ? "invalid" : ok ? "ready" : "action_required",
     checkedAt: now.toISOString(),
-    leadHours: 48,
+    leadHours: receipt?.verificationPolicy === "quarterly-v1" ? 14 * 24 : 48,
     expiresAt,
     dueBefore: dueBeforeMs === null ? null : new Date(dueBeforeMs).toISOString(),
     dueWithinLead,

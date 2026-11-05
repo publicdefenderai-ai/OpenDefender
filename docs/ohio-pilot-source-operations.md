@@ -1,3 +1,7 @@
+# Quarterly policy update
+
+See [cross-state policy](source-verification-policy.md). Earlier instructions about recurring refresh activation are superseded: use the manual workflow only with explicit authorization.
+
 # Ohio pilot source operations
 
 ## Boundary and activation
@@ -5,8 +9,7 @@
 This is a bounded Chapter 2903 pilot, not all Ohio law. Scheduling, official
 source acquisition, and legal interpretation are separate:
 
-- GitHub Actions checks the **published app** every six hours (UTC). PostgreSQL
-  schedules full comparisons every 24 hours, or six hours after failure.
+- The renewal workflow is manual-only. Successful verification schedules the next comparison three calendar months later; failure remains flagged for operator attention. Weekly availability probes use the separate read-only workflow and never call the published refresh endpoint.
 - All instances read the same database receipt. There is no positive process
   cache or production fallback to the committed JSON receipt.
 - Full normalized official text, title and effective date must match every

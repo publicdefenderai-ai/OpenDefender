@@ -1,3 +1,7 @@
+# Quarterly policy update
+
+See [cross-state policy](source-verification-policy.md). Do not edit old receipt dates or interpret this policy as activation approval.
+
 # California archive currency and renewal
 
 California configured counts are reported by `coverage.ts`. Live selection and provenance
@@ -31,7 +35,7 @@ New renewals default to `.cache/california-bulk/runtime-renewal-candidate`. Pres
 The first command acquires a separate official candidate archive (approximately
 1.3 GB), records authentic request-start time, verifies transfer length and the
 archive SHA-256, and compares every explicitly pinned retained section and version. It preserves
-the original reviewed archive. Only unchanged text hashes and legal/version metadata earn a seven-day receipt.
+the original reviewed archive. Only unchanged text hashes and legal/version metadata earn a quarterly-v1 receipt, ending three calendar months after acquisition. Legacy receipts retain their recorded deadlines until explicitly replaced.
 Changed or missing sections remain explicit holds; every dependent charge is
 withheld while unrelated charges remain eligible. Code identity, version IDs,
 effective dates and active flags all participate. Publisher transaction update
@@ -49,7 +53,7 @@ pin update; acquisition alone cannot grant approval to new charges.
 
 To replay an already acquired candidate, omit `--acquire`. Its original retrieval
 time is preserved; a stale candidate cannot be activated. Without
-`--activate-unchanged`, the script produces comparison evidence only. Changed or missing versions require substantive review. Activation renews only the
+`--activate-unchanged`, all comparison evidence stays in the candidate directory; active receipts and comparison files are untouched. Changed or missing versions require substantive review. Activation renews only the
 unchanged subset and records the rest as mandatory source holds.
 
 Historical publication validators use the frozen October 1 comparison, while runtime uses the rolling comparison. Do not rewrite old publication packets to give them new acquisition dates.
