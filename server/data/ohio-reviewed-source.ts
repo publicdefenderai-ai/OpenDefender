@@ -1,4 +1,4 @@
-import { validVerificationWindow } from "../../shared/source-verification-policy.mjs";
+import { QUARTERLY_POLICY, validVerificationWindow } from "../../shared/source-verification-policy.mjs";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -275,6 +275,7 @@ export function validateOhioReviewedRefreshReceipt(value: unknown, now = new Dat
   const receipt = value as {
     schemaVersion?: number; verificationPolicy?: string; checkedAt?: string; expiresAt?: string;
     reportHash?: string; documents?: OhioReviewedReceiptDocument[];
+    acquisitions?: Array<{ section: string; contentHash: string; retrievedAt: string }>;
   };
   const checkedAt = new Date(receipt.checkedAt ?? "");
   const expiresAt = new Date(receipt.expiresAt ?? "");
@@ -287,8 +288,34 @@ export function validateOhioReviewedRefreshReceipt(value: unknown, now = new Dat
   }
   const actual = [...receipt.documents].sort((a, b) => a.section.localeCompare(b.section));
   const expected = ohioReviewedExpectedDocuments();
-  return JSON.stringify(actual) === JSON.stringify(expected) ? null :
-    "Ohio reviewed receipt does not attest to every approved dependency";
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    return "Ohio reviewed receipt does not attest to every approved dependency";
+  }
+  // Renewed acquisition times are independent of historical reviewed source dates.
+  // Require one hash-bound acquisition per approved dependency for quarterly receipts.
+  if (receipt.verificationPolicy === QUARTERLY_POLICY) {
+    const acquisitions = receipt.acquisitions;
+    if (!Array.isArray(acquisitions) || acquisitions.length !== expected.length ||
+        acquisitions.some(row => !row || typeof row.section !== "string") ||
+        new Set(acquisitions.map(row => row.section)).size !== expected.length) {
+      return "Ohio quarterly receipt lacks complete acquisition evidence";
+    }
+    const pins = new Map(expected.map(row => [row.section, row.contentHash]));
+    const times: number[] = [];
+    for (const row of acquisitions) {
+      const time = typeof row.retrievedAt === "string" ? Date.parse(row.retrievedAt) : NaN;
+      if (!pins.has(row.section) || pins.get(row.section) !== row.contentHash ||
+          !Number.isFinite(time) || time > checkedAt.getTime()) {
+        return "Ohio quarterly acquisition evidence is invalid or mismatched";
+      }
+      times.push(time);
+    }
+    const oldest = new Date(Math.min(...times)).toISOString();
+    if (!validVerificationWindow(receipt, oldest)) {
+      return "Ohio quarterly receipt exceeds its oldest acquisition window";
+    }
+  }
+  return null;
 }
 
 export function isOhioReviewedSourceFresh(now = new Date()): boolean {

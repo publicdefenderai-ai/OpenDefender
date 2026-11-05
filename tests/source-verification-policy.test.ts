@@ -21,7 +21,8 @@ describe('quarterly verification policy',()=>{
  it.each(['ohio-chapter-2903-refresh-receipt','ohio-reviewed-refresh-receipt'])('preserves bindings and legacy expiry for %s',name=>{
   const receipt=read(name),validate=name.includes('chapter')?validateOhioChapter2903RefreshReceipt:validateOhioReviewedRefreshReceipt;
   expect(validate(receipt,new Date(receipt.expiresAt))).not.toBeNull();
-  const future={...receipt,verificationPolicy:'quarterly-v1',expiresAt:quarterlyDeadline(receipt.checkedAt)};
+  const future={...receipt,verificationPolicy:'quarterly-v1',expiresAt:quarterlyDeadline(receipt.checkedAt),
+    acquisitions:receipt.documents.map((d:any)=>({section:d.section,contentHash:d.contentHash,retrievedAt:receipt.checkedAt}))};
   expect(validate(future,new Date(receipt.expiresAt))).toBeNull();
   expect(validate(future,new Date(future.expiresAt))).not.toBeNull();
   future.documents.pop();expect(validate(future,new Date(receipt.checkedAt))).not.toBeNull();
