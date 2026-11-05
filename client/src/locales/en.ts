@@ -3667,7 +3667,7 @@ export default {
           "description": "Allows a trusted person to care for your children and make day-to-day decisions.",
           "item1": "Authorizes school enrollment",
           "item2": "Allows medical treatment consent",
-          "item3": "Temporary (usually 6-12 months)"
+          "item3": "Duration and medical authority depend on the state and form."
         },
         "guardianship": {
           "title": "Guardianship Nomination",
@@ -3709,8 +3709,8 @@ export default {
         "medicalText": "Keep a list of children's medications, allergies, and doctor contacts with your caregiver authorization."
       },
       "generator": {
-        "title": "Generate Your Caregiver Authorization Document",
-        "description": "Create a state-specific caregiver authorization document below. This is the same document described above; it does not replace a guardianship nomination for long-term custody."
+        "title": "Caregiver authorization forms",
+        "description": "Choose your state for government-issued caregiver authorization forms. These documents do not replace a guardianship nomination for long-term custody."
       },
       "freeHelp": "Free Help Available:",
       "freeHelpText": "Many immigrant advocacy organizations offer free assistance with family emergency planning. Contact your local legal aid organization or immigrant rights group for help creating these documents."

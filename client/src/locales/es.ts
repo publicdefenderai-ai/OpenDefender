@@ -3669,7 +3669,7 @@ export default {
           "description": "Permite a una persona de confianza cuidar a sus hijos y tomar decisiones diarias.",
           "item1": "Autoriza inscripción escolar",
           "item2": "Permite consentimiento para tratamiento médico",
-          "item3": "Temporal (usualmente 6-12 meses)"
+          "item3": "La duración y la autoridad médica dependen del estado y del formulario."
         },
         "guardianship": {
           "title": "Nominación de Tutor",
@@ -3711,8 +3711,8 @@ export default {
         "medicalText": "Mantenga una lista de medicamentos de los niños, alergias y contactos de médicos con su autorización de cuidador."
       },
       "generator": {
-        "title": "Genere Su Documento de Autorización de Cuidador",
-        "description": "Cree a continuación un documento de autorización de cuidador específico para su estado. Este es el mismo documento descrito arriba; no reemplaza una nominación de tutela para custodia a largo plazo."
+        "title": "Formularios de autorización de cuidadores",
+        "description": "Elija su estado para acceder a formularios gubernamentales de autorización de cuidadores. Estos documentos no sustituyen una designación de tutela para la custodia a largo plazo."
       },
       "freeHelp": "Ayuda Gratuita Disponible:",
       "freeHelpText": "Muchas organizaciones de defensa de inmigrantes ofrecen asistencia gratuita con la planificación de emergencia familiar. Contacte a su organización local de ayuda legal o grupo de derechos de inmigrantes para ayuda creando estos documentos."
