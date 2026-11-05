@@ -1,9 +1,7 @@
 name: Ohio pilot official-source refresh
 
 on:
-  schedule:
-    # Independent of web instance lifetimes; UTC. DB decides if fetch is due.
-    - cron: "17 */6 * * *"
+  # Renewal/reactivation is manual; weekly read-only checks use source-availability.yml.
   workflow_dispatch:
 
 permissions:
