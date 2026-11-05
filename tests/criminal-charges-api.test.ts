@@ -344,25 +344,24 @@ describe('GET /api/v1/search — runtime New York eligibility contract', () => {
 });
 
 describe('GET /api/v1/search: California charge completeness contract', () => {
-  it('returns every current California charge when the requested limit covers the catalog', async () => {
+  it('returns every current California charge across bounded search pages', async () => {
     if (!serverAvailable || !californiaAuthorityAvailable) return;
 
-    const res = await fetch(
-      `${BASE_URL}/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500`,
-    );
-    expect(res.ok).toBe(true);
-    const payload = await res.json() as V1SearchResponse;
-    const returnedIds = payload.results
-      .map((result) => result.document.id)
-      .filter((id) => id.startsWith('charge-'))
-      .map((id) => id.replace(/^charge-/, ''));
+    const returnedIds: string[] = [];
+    for (let offset = 0; offset < 10000; offset += 500) {
+      const res = await fetch(`${BASE_URL}/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500&offset=${offset}`);
+      expect(res.ok).toBe(true);
+      const payload = await res.json() as V1SearchResponse;
+      expect(payload.results.every(result => result.document.id.startsWith('charge-ca-'))).toBe(true);
+      returnedIds.push(...payload.results.map(result => result.document.id.replace(/^charge-/, '')));
+      if (payload.results.length < 500) break;
+    }
     const expectedIds = CALIFORNIA_CANONICAL_RECORDS
       .filter((record) => record.selectable)
       .map((record) => record.canonicalId);
 
     expect(returnedIds).toHaveLength(expectedIds.length);
     expect(new Set(returnedIds)).toEqual(new Set(expectedIds));
-    expect(payload.results.every((result) => result.document.id.startsWith('charge-ca-'))).toBe(true);
   });
 });
 

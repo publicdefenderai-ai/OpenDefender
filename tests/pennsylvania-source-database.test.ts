@@ -29,6 +29,7 @@ import {
   PENNSYLVANIA_RETRIEVAL_SOURCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
+  PENNSYLVANIA_RETIRED_CONTRACT_IDS,
   validatePennsylvaniaSourceContract,
 } from "../scripts/data-review/import-pennsylvania-source-database";
 import {
@@ -154,19 +155,11 @@ describe("Pennsylvania authority manifest", () => {
       expect(buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section)).toBe(
         `https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
       );
-      if (reference.title === "3" || reference.title === "24") {
-        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).not.toContainEqual({
-          title: reference.title,
-          section: reference.section,
-          subdivision: null,
-        });
-      } else {
-        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
-          title: reference.title,
-          section: reference.section,
-          subdivision: null,
-        });
-      }
+      // These are unconsolidated identities; Title 47's legacy charge was
+      // explicitly removed and must not force a false consolidated-source probe.
+      expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).not.toContainEqual({
+        title: reference.title, section: reference.section, subdivision: null,
+      });
     }
   });
 
@@ -926,4 +919,18 @@ describe('PAlegis JavaScript iframe contract', () => {
     expect(validatePennsylvaniaSourceContract({...page, responseStatus: 302}).ok).toBe(false);
     expect(validatePennsylvaniaSourceContract({...page, responseUrl: 'https://example.org/'}).ok).toBe(false);
   });
+});
+
+
+it('excludes only explicitly removed identities from contract-title selection', () => {
+  expect(PENNSYLVANIA_RETIRED_CONTRACT_IDS).toEqual(expect.arrayContaining(['pa-illegal-fireworks', 'pa-alcohol-in-park']));
+  for (const id of PENNSYLVANIA_RETIRED_CONTRACT_IDS) {
+    expect(getPennsylvaniaAttorneyReviewDecision(id)?.action).toBe('remove');
+  }
+  const expectedTitles = [...new Set(criminalCharges.filter(c => c.jurisdiction === 'PA' &&
+    getPennsylvaniaAttorneyReviewDecision(c.id)?.action !== 'remove')
+    .flatMap(c => parsePennsylvaniaCitation(CHARGE_CITATIONS[c.id]?.citation ?? '').map(r => r.title)))].sort();
+  expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.map(r => r.title).sort()).toEqual(expectedTitles);
+  expect(expectedTitles).toEqual(['18', '23', '34', '35', '42', '75']);
+  expect(PENNSYLVANIA_RETIRED_CONTRACT_IDS).not.toContain('pa-possession-of-controlled-substance');
 });

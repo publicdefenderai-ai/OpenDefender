@@ -1669,9 +1669,8 @@ export function search(query: SearchQuery): SearchResponse {
   const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
 
   // Per-type result caps.
-  // When the caller filters to 'charge' only (e.g. ?types=charge), raise the
-  // charge cap to 20 so the full requested limit worth of matching charges can
-  // be returned — the outer route's limit=N slice is the real cap in that case.
+  // Charge-only searches paginate the complete authority-filtered result set.
+  // Do not truncate at the first-page limit before applying the offset.
   const chargesOnlyFilter =
     query.filters?.types &&
     query.filters.types.length === 1 &&
@@ -1685,7 +1684,7 @@ export function search(query: SearchQuery): SearchResponse {
     court: 2,
     mock_qa: 2,
     charge: chargesOnlyFilter
-      ? Math.max(50, Number.isFinite(query.limit ?? 50) ? query.limit ?? 50 : 50)
+      ? results.length
       : 3,
   };
 
@@ -1727,9 +1726,14 @@ export function search(query: SearchQuery): SearchResponse {
   // than expanding every group to fill a larger requested limit. The API route
   // applies the same upper bound defensively; keeping it here also makes the
   // shared service contract consistent for its other callers.
-  const responseResults = query.limit === undefined || !Number.isFinite(query.limit)
+  const offset = chargesOnlyFilter && Number.isSafeInteger(query.offset) && (query.offset ?? 0) >= 0 ? query.offset! : 0;
+  const pageLimit = chargesOnlyFilter
+    ? Number.isFinite(query.limit) ? query.limit! : 50
+    : query.limit;
+  const responseResults = pageLimit === undefined || !Number.isFinite(pageLimit)
     ? flatResults
-    : flatResults.slice(0, Math.max(0, query.limit));
+    : flatResults.slice(offset, offset + Math.max(0, pageLimit));
+  if (chargesOnlyFilter) groupedResults.charge = responseResults;
 
   const suggestions: string[] = [];
   if (results.length === 0) {

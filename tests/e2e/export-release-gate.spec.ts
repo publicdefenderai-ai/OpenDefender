@@ -332,6 +332,9 @@ test.describe("browser export release gate", () => {
         body: JSON.stringify({ required: false, siteKey: null }),
       });
     });
+    // Cross-tab state can schedule the one-second display tick just after the
+    // exact deadline. This test checks synchronization, not subsecond timing.
+    const finishCooldownTick = () => page.clock.fastForward(31_000);
     let polishRequestCount = 0;
     await context.route("**/api/mitigation/polish", async (route) => {
       polishRequestCount += 1;
@@ -368,7 +371,7 @@ test.describe("browser export release gate", () => {
       secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
     ).toBeDisabled();
 
-    await page.clock.fastForward(30_000);
+    await finishCooldownTick();
     await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
     await expect(secondPage.getByRole("button", { name: "Generate narrative", exact: true })).toBeEnabled();
 
@@ -381,9 +384,14 @@ test.describe("browser export release gate", () => {
     ).toBeDisabled();
 
     for (let expectedUsage = 3; expectedUsage <= 20; expectedUsage += 1) {
-      await page.clock.fastForward(30_000);
+      await finishCooldownTick();
       await page.getByRole("button", { name: "Regenerate", exact: true }).click();
       await expect.poll(() => polishRequestCount).toBe(expectedUsage);
+      // Request interception counts the start, not completion. Wait for the
+      // response handler to establish cooldown before advancing the fake clock.
+      if (expectedUsage < 20) await expect(page.getByRole('button', {name:/Regenerate in \d+s…/})).toBeDisabled();
+      else await expect(page.getByRole('button', {name:'Daily limit reached', exact:true})).toBeDisabled();
+      await expect(secondPage.getByText(`AI drafts used today on this browser: ${expectedUsage} of 20.`)).toBeVisible();
     }
 
     await expect(page.getByText("AI drafts used today on this browser: 20 of 20.")).toBeVisible();

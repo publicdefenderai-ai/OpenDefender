@@ -43,7 +43,7 @@ function sleep(ms: number): Promise<void> {
 
 type IllinoisFetchResult =
   | { html: string }
-  | { error: string; failureKind: "transport" | "official-page" };
+  | { error: string; failureKind: "transport" | "official-page"; fatalCertificateFailure?: boolean };
 
 async function fetchDocument(
   url: string,
@@ -72,6 +72,15 @@ async function fetchDocument(
       }
       return { html };
     } catch (error) {
+      const failure = error as {code?: string; cause?: {code?: string}};
+      const code = failure.cause?.code ?? failure.code;
+      if (code && ['UNABLE_TO_VERIFY_LEAF_SIGNATURE', 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY',
+        'CERT_HAS_EXPIRED', 'DEPTH_ZERO_SELF_SIGNED_CERT', 'SELF_SIGNED_CERT_IN_CHAIN',
+        'ERR_TLS_CERT_ALTNAME_INVALID'].includes(code)) {
+        return {error: `ILGA certificate verification failed (${code}); source check incomplete. Retry from a trusted environment; do not disable TLS verification.`,
+          failureKind: 'transport', fatalCertificateFailure: true};
+      }
+
       if (attempt < MAX_RETRIES) {
         await sleep(retryDelayMs * (attempt + 1));
         continue;
@@ -615,6 +624,11 @@ export async function refreshIllinoisManifest(
         );
         const response = await fetchDocument(url, fetchImpl, retryDelayMs);
         requests++;
+        if ('error' in response && response.fatalCertificateFailure) {
+          // One host-wide certificate failure cannot be repaired by repeating
+          // requests for every section. Stop before writing any audit/manifest.
+          throw new Error(response.error);
+        }
         const inspection = "html" in response
           ? inspectIllinoisDocument(
             response.html,

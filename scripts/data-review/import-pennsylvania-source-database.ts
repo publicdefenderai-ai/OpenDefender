@@ -9,6 +9,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { criminalCharges } from "../../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../../shared/criminal-charge-citations";
+import { getPennsylvaniaAttorneyReviewDecision } from "../../shared/pennsylvania-attorney-review";
 import {
   buildPennsylvaniaManifestRecord,
   buildPennsylvaniaOfficialSourceUrl,
@@ -416,17 +417,25 @@ const PENNSYLVANIA_SOURCE_CONTRACT_SECTIONS: Record<string, string> = {
   "75": "3736",
 };
 
-function pennsylvaniaTitlesUsedByImporter(): string[] {
+// Removed legacy identities are not candidates for renewed source approval.
+// Keep them in coverage/hold accounting, but do not require their rejected
+// citations to become valid again as a prerequisite to releasing reviewed work.
+export const PENNSYLVANIA_RETIRED_CONTRACT_IDS = criminalCharges
+  .filter(charge => charge.jurisdiction === 'PA' &&
+    getPennsylvaniaAttorneyReviewDecision(charge.id)?.action === 'remove')
+  .map(charge => charge.id);
+
+function pennsylvaniaContractTitles(): string[] {
   return [...new Set(
     criminalCharges
-      .filter((charge) => charge.jurisdiction === "PA")
+      .filter((charge) => charge.jurisdiction === "PA" && !PENNSYLVANIA_RETIRED_CONTRACT_IDS.includes(charge.id))
       .flatMap((charge) => parsePennsylvaniaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? ""))
       .map((reference) => reference.title),
   )].sort((left, right) => Number(left) - Number(right));
 }
 
-const PENNSYLVANIA_IMPORTER_TITLES = pennsylvaniaTitlesUsedByImporter();
-const missingContractSections = PENNSYLVANIA_IMPORTER_TITLES.filter(
+const PENNSYLVANIA_CONTRACT_TITLES = pennsylvaniaContractTitles();
+const missingContractSections = PENNSYLVANIA_CONTRACT_TITLES.filter(
   (title) => !PENNSYLVANIA_SOURCE_CONTRACT_SECTIONS[title],
 );
 if (missingContractSections.length > 0) {
@@ -436,7 +445,7 @@ if (missingContractSections.length > 0) {
 }
 
 export const PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES: PennsylvaniaSourceReference[] =
-  PENNSYLVANIA_IMPORTER_TITLES.map((title) => ({
+  PENNSYLVANIA_CONTRACT_TITLES.map((title) => ({
     title,
     section: PENNSYLVANIA_SOURCE_CONTRACT_SECTIONS[title],
     subdivision: null,

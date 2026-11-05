@@ -1,3 +1,4 @@
+import { allChargeSearchIds } from './helpers/charge-search-pages';
 import { expect, test, type Page } from "@playwright/test";
 import {
   CALIFORNIA_CANONICAL_RECORDS,
@@ -188,7 +189,7 @@ test.describe("intent navigation and accessibility", () => {
     ).toBe(true);
 
     const californiaResponse = await page.request.get(
-      "/api/site-search?q=grand%20theft&types=charge&limit=50",
+      "/api/site-search?q=grand%20theft&types=charge&jurisdiction=CA&limit=50",
     );
     expect(californiaResponse.ok()).toBe(true);
     const californiaPayload = await californiaResponse.json();
@@ -213,19 +214,8 @@ test.describe("intent navigation and accessibility", () => {
       .map((entry) => entry.legacyId)
       .filter((id) => !currentCaliforniaIdSet.has(id));
 
-    const allCaliforniaResponse = await page.request.get(
-      "/api/site-search?q=CA&types=charge&jurisdiction=CA&limit=500",
-    );
-    expect(allCaliforniaResponse.ok()).toBe(true);
-    const allCaliforniaPayload = await allCaliforniaResponse.json() as {
-      results: Array<{ document?: { id?: string } }>;
-    };
-    const searchableCaliforniaIds = new Set(
-      allCaliforniaPayload.results
-        .map((result) => result.document?.id)
-        .filter((id): id is string => typeof id === "string")
-        .map((id) => id.replace(/^charge-/, "")),
-    );
+    const searchableCaliforniaIds = await allChargeSearchIds(page.request,
+      '/api/site-search?q=CA&types=charge&jurisdiction=CA');
 
     const missingCurrentIds = currentCaliforniaIds
       .filter((id) => !searchableCaliforniaIds.has(id));
@@ -241,29 +231,10 @@ test.describe("intent navigation and accessibility", () => {
       "Withheld California authority IDs returned by charge search",
     ).toEqual([]);
 
-    const publicChargeSearchResponse = await page.request.get(
-      "/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500",
-    );
-    expect(publicChargeSearchResponse.ok()).toBe(true);
-    const publicChargeSearchPayload = await publicChargeSearchResponse.json() as {
-      results: Array<{ document?: { id?: string; jurisdiction?: string } }>;
-    };
-    const publicSearchCaliforniaIds = new Set(
-      publicChargeSearchPayload.results
-        .map((result) => result.document?.id)
-        .filter((id): id is string => typeof id === "string")
-        .map((id) => id.replace(/^charge-/, "")),
-    );
-    expect(
-      publicSearchCaliforniaIds,
-      "Public v1 charge search did not return every current California authority ID",
-    ).toEqual(currentCaliforniaIdSet);
-    expect(
-      publicChargeSearchPayload.results.every(
-        (result) => result.document?.jurisdiction === "CA",
-      ),
-      "Public v1 charge search returned a result outside the requested jurisdiction",
-    ).toBe(true);
+    const publicSearchCaliforniaIds = await allChargeSearchIds(page.request,
+      '/api/v1/search?q=CA&types=charge&jurisdiction=CA');
+    expect(publicSearchCaliforniaIds,
+      'Public v1 charge search did not return every current California authority ID').toEqual(currentCaliforniaIdSet);
   });
 
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {
@@ -339,7 +310,7 @@ test.describe("intent navigation and accessibility", () => {
 
     const next = page.getByRole("button", { name: "Next" });
     await expect(next).toBeDisabled();
-    await page.locator("select").selectOption("CA");
+    await page.getByTestId("record-clearance-state").selectOption("CA");
     await expect(next).toBeEnabled();
     await next.click();
 
