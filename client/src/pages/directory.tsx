@@ -1,80 +1,23 @@
-import { ChevronRight, MessageSquare, Scale, Users, Heart, BookOpen, FileText, Shield, Globe2 } from "lucide-react";
+import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { directoryDesignCopy } from "@/locales/directory-design";
 
-interface ResourceItem {
-  title: string;
-  description: string;
-  link: string;
-}
-
-interface CategorySection {
-  icon: React.ElementType;
-  accent: string;
-  accentBg: string;
-  title: string;
-  description: string;
-  resources: ResourceItem[];
-}
-
-function ResourceLink({ resource, index = 0 }: { resource: ResourceItem; index?: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, delay: index * 0.05, ease: "easeOut" }}
-    >
-      <Link href={resource.link}>
-        <div className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-border hover:border-primary/30 hover:bg-muted/50 transition-all cursor-pointer group card-press">
-          <div className="min-w-0">
-            <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
-              {resource.title}
-            </h3>
-            <p className="text-xs text-muted-foreground truncate mt-0.5">{resource.description}</p>
-          </div>
-          <ChevronRight className="h-3.5 w-3.5 text-muted-foreground group-hover:text-primary group-active:translate-x-1 transition-all flex-shrink-0 ml-3" />
-        </div>
-      </Link>
-    </motion.div>
-  );
-}
-
-function InventoryCategory({ cat, idx }: { cat: CategorySection; idx: number }) {
-  return (
-    <ScrollReveal delay={idx * 0.05}>
-      <div className="editorial-directory-category bg-background rounded-md border border-border overflow-hidden">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
-          <div className="editorial-directory-icon w-6 h-6 rounded flex items-center justify-center flex-shrink-0">
-            <cat.icon className="w-3.5 h-3.5 text-white" />
-          </div>
-          <div>
-            <div className="text-sm font-semibold text-foreground">{cat.title}</div>
-            <div className="text-[10px] text-muted-foreground">{cat.description}</div>
-          </div>
-        </div>
-        <div className="p-3 space-y-1">
-          {cat.resources.map((r, i) => (
-            <ResourceLink key={r.title} resource={r} index={i} />
-          ))}
-        </div>
-      </div>
-    </ScrollReveal>
-  );
-}
+interface ResourceItem { title: string; description: string; link: string; }
+interface CategorySection { title: string; description: string; resources: ResourceItem[]; }
 
 export default function Directory() {
   useScrollToTop();
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const copy = directoryDesignCopy[i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en"];
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState(-1);
+  const searchRef = useRef<HTMLInputElement>(null);
   const inventoryCategories: CategorySection[] = [
     {
-      icon: MessageSquare, accent: "#0f766e", accentBg: "#eef9f8",
       title: t("howTo.sections.getHelp.title"),
       description: t("howTo.sections.getHelp.description"),
       resources: [
@@ -87,7 +30,6 @@ export default function Directory() {
       ],
     },
     {
-      icon: Scale, accent: "#1e3a5f", accentBg: "#eef2f8",
       title: t("howTo.sections.knowYourRights.title"),
       description: t("howTo.sections.knowYourRights.description"),
       resources: [
@@ -95,12 +37,13 @@ export default function Directory() {
         { title: t("howTo.rightToCounsel"),                                      description: t("howTo.rightToCounselDesc"),                                       link: "/right-to-counsel" },
         { title: t("howTo.warrants"),                                            description: t("howTo.warrantsDesc"),                                             link: "/warrants" },
         { title: t("howTo.sections.knowYourRights.caseTimeline.title"),         description: t("howTo.sections.knowYourRights.caseTimeline.description"),         link: "/case-timeline" },
+        { title: copy.bail, description: t("standaloneGuides.bail.subtitle"), link: "/bail" },
+        { title: copy.plea, description: t("standaloneGuides.plea.subtitle"), link: "/plea-agreements" },
         { title: t("howTo.sections.knowYourRights.friendsFamily.title"),        description: t("howTo.sections.knowYourRights.friendsFamily.description"),        link: "/friends-family" },
         { title: t("howTo.sections.knowYourRights.familyToolkit.title"),        description: t("howTo.sections.knowYourRights.familyToolkit.description"),        link: "/friends-family/toolkit" },
       ],
     },
     {
-      icon: Users, accent: "#5b21b6", accentBg: "#f3effe",
       title: t("howTo.sections.findResources.title"),
       description: t("howTo.sections.findResources.description"),
       resources: [
@@ -111,7 +54,6 @@ export default function Directory() {
       ],
     },
     {
-      icon: Heart, accent: "#8b2252", accentBg: "#f8eef3",
       title: t("howTo.sections.lifeSupport.title"),
       description: t("howTo.sections.lifeSupport.description"),
       resources: [
@@ -133,7 +75,6 @@ export default function Directory() {
       ],
     },
     {
-      icon: Globe2, accent: "#b45309", accentBg: "#fffbeb",
       title: t("howTo.sections.immigration.title"),
       description: t("howTo.sections.immigration.description"),
       resources: [
@@ -150,7 +91,6 @@ export default function Directory() {
       ],
     },
     {
-      icon: BookOpen, accent: "#374151", accentBg: "#f3f4f6",
       title: t("howTo.sections.reference.title"),
       description: t("howTo.sections.reference.description"),
       resources: [
@@ -162,7 +102,6 @@ export default function Directory() {
       ],
     },
     {
-      icon: FileText, accent: "#92400e", accentBg: "#fef3e2",
       title: t("howTo.sections.attorneyTools.title"),
       description: t("howTo.sections.attorneyTools.description"),
       resources: [
@@ -175,36 +114,55 @@ export default function Directory() {
     },
   ];
 
+  const total = inventoryCategories.reduce((n, cat) => n + cat.resources.length, 0);
+  const term = query.trim().toLocaleLowerCase(i18n.language);
+  const groups = inventoryCategories.map((cat, index) => ({ ...cat, index, resources: cat.resources.filter(resource =>
+    `${resource.title} ${resource.description} ${cat.title}`.toLocaleLowerCase(i18n.language).includes(term)
+  ) })).filter(cat => (category === -1 || cat.index === category) && cat.resources.length > 0);
+  const found = groups.reduce((n, cat) => n + cat.resources.length, 0);
+  const number = (n: number) => new Intl.NumberFormat(i18n.language).format(n);
+  function reset() { setQuery(""); setCategory(-1); searchRef.current?.focus(); }
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
-      <section className="editorial-page-intro editorial-directory-intro py-10 md:py-14">
-        <div className="editorial-page-intro-inner max-w-3xl mx-auto px-4">
-          <ScrollReveal>
-            <div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
-                {t("directory.hero.title")}
-              </h1>
-              <p className="text-base md:text-lg max-w-xl">
-                {t("directory.hero.subtitle")}
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Full site inventory */}
-      <section className="editorial-reading py-10 md:py-14 bg-muted/20">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {inventoryCategories.map((cat, i) => (
-              <InventoryCategory key={cat.title} cat={cat} idx={i} />
-            ))}
+      <div className="resource-directory" data-testid="resource-directory">
+        <section className="directory-hero" aria-labelledby="directory-heading">
+          <div>
+            <p className="text-sm text-muted-foreground">{t("directory.hero.title")}</p>
+            <h1 id="directory-heading">{copy.heading}<br /><em>{copy.accent}</em></h1>
+            <p>{t("directory.hero.subtitle")}</p>
+            <Link className="directory-help" href="/how-to">{copy.help}</Link>
           </div>
+          <aside className="directory-volume" aria-label={copy.size}>
+            <strong>{number(total)}</strong>
+            <p>{copy.listings}</p>
+            <small>{copy.areas.replace("{count}", number(inventoryCategories.length))}</small>
+          </aside>
+        </section>
+        <div className="directory-search" role="search">
+          <label htmlFor="directory-query">{copy.search}</label>
+          <div><input id="directory-query" type="search" ref={searchRef} value={query} onChange={event => setQuery(event.target.value)} autoComplete="off" placeholder={copy.placeholder} /><button onClick={reset}>{copy.clear}</button></div>
         </div>
-      </section>
-
+        <nav className="directory-categories" aria-label={copy.categories}>
+          {[{title:copy.all, count:total, index:-1}, ...inventoryCategories.map((cat,index)=>({title:cat.title,count:cat.resources.length,index}))].map(cat=>(
+            <button key={cat.index} data-category={cat.index} aria-pressed={category===cat.index} aria-controls="directory-results" onClick={()=>setCategory(cat.index)}>
+              <span aria-hidden="true">{number(cat.count)}</span>{cat.title}
+            </button>
+          ))}
+        </nav>
+        <p className="directory-count" role="status">{copy.results.replace("{count}",number(found)).replace("{total}",number(total))}</p>
+        <div id="directory-results">
+          {groups.map(cat=>(<section className="directory-group" key={cat.index} aria-labelledby={`directory-category-${cat.index}`}>
+            <h2 id={`directory-category-${cat.index}`}>{cat.title}<span>{number(cat.resources.length)}</span></h2>
+            <p>{cat.description}</p>
+            {cat.resources.map(resource=>(<Link className="directory-resource" key={resource.link} href={resource.link}>
+              <h3>{resource.title}</h3><p>{resource.description}</p>
+            </Link>))}
+          </section>))}
+          {found===0 && <div className="directory-empty"><h2>{copy.empty}</h2><p>{copy.emptyHint}</p><button onClick={reset}>{copy.reset}</button></div>}
+        </div>
+      </div>
       <Footer />
     </div>
   );
