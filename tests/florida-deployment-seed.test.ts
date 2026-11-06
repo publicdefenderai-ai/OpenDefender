@@ -1,5 +1,14 @@
-import receipt from "../scripts/data-review/output/florida-reviewed-refresh-receipt.json";
-import { describe, expect, it } from "vitest";
+// Corrected hashes are deliberately not approved by the committed expired receipt.
+// Only this test substitutes a synthetic receipt, preserving real boundary checks.
+vi.mock('node:fs',async original=>{
+ const fs=await original<typeof import('node:fs')>();
+ const {syntheticFloridaReceipt}=await import('./helpers/florida-receipt-fixture');
+ return {...fs,readFileSync:(path:any,...args:any[])=>String(path).endsWith('/florida-reviewed-refresh-receipt.json')?JSON.stringify(syntheticFloridaReceipt):(fs.readFileSync as any)(path,...args)};
+});
+// Isolate the historical reviewed family; independent-family interaction has its own matrix test.
+vi.mock('../server/data/florida-persons-source',async original=>({...await original<typeof import('../server/data/florida-persons-source')>(),isFloridaPersonsSourceFresh:()=>false}));
+import {syntheticFloridaReceipt as receipt} from "./helpers/florida-receipt-fixture";
+import { describe, expect, it, vi } from "vitest";
 import { loadFloridaAuthorityManifest } from "../server/data/florida-manifest-loader";
 import { buildFloridaSourceDatabaseSeed } from "../server/data/florida-source-database-seed";
 import { FLORIDA_REVIEWED_SOURCE_RECORDS } from "../server/data/florida-reviewed-source-records";
@@ -19,7 +28,7 @@ describe("committed Florida deployment seed", () => {
   });
 
   it("loads the committed manifest without live legislative-site access", () => {
-    // Reproduce the approved snapshot independently of the day this test runs.
+    // Exercise the corrected content under a synthetic test-only receipt, independently of wall-clock time.
     const now = new Date(receipt.checkedAt);
     const manifest = loadFloridaAuthorityManifest(undefined, now);
     const seed = buildFloridaSourceDatabaseSeed(manifest, now);
