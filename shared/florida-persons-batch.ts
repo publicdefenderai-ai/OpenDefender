@@ -8,9 +8,17 @@ export const FLORIDA_PERSONS_SENTENCING = {
 } as const;
 export const floridaPersonsUrl = (section: string) => { const [c, s] = section.split('.'); const low = Math.floor(Number(c) / 100) * 100; return `https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=${String(low).padStart(4, '0')}-${String(low + 99).padStart(4, '0')}/${c.padStart(4, '0')}/Sections/${c.padStart(4, '0')}.${s}.html`; };
 export function floridaPersonsDependencies(row: typeof rows[number]) { return [...new Set([row.section, '775.082', '775.083', ...(row.grade.startsWith('F') ? ['775.084'] : []), ...row.dependencies])]; }
+export function validateFloridaPersonsCategories(row: { id: string; grade: string; categories: string[] }) {
+    const ordinary = row.grade.startsWith('F') ? 'felony' : 'misdemeanor';
+    if (!(row.grade in FLORIDA_PERSONS_SENTENCING) || row.categories[0] !== ordinary ||
+        new Set(row.categories).size !== row.categories.length ||
+        row.categories.some(category => !['felony', 'misdemeanor'].includes(category)))
+        throw Error(`Florida persons category mismatch ${row.id}`);
+}
 export const FLORIDA_PERSONS_DEFINITIONS: EvidenceBackedChargeDefinition[] = rows.map(row => {
     if (!(row.grade in FLORIDA_PERSONS_SENTENCING))
         throw Error(`Unknown Florida persons grade ${row.id}`);
+    validateFloridaPersonsCategories(row);
     // The singular category records the primary section's ordinary grade; categories preserves conditional domestic-violence exposure.
     const category = row.grade.startsWith('F') ? 'felony' : 'misdemeanor';
     const text = { plainSummary: row.conductSummary, degreeContext: FLORIDA_PERSONS_SENTENCING[row.grade as keyof typeof FLORIDA_PERSONS_SENTENCING] + ' ' + row.additionalPenalty + ' These are ordinary adult statutory ranges, not a sentence prediction or a total maximum for every case. Repeat-offender provisions, sentencing rules, other counts, restitution and costs require separate review. Section 775.083 also authorizes higher fines based on twice the pecuniary gain or loss and other specifically authorized amounts.' };

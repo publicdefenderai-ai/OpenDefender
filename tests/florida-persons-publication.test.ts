@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
 import rows from '../shared/florida-persons-publication.json';
-import { FLORIDA_PERSONS_DEFINITIONS, FLORIDA_PERSONS_IDS } from '../shared/florida-persons-batch';
+import { FLORIDA_PERSONS_DEFINITIONS, FLORIDA_PERSONS_IDS, validateFloridaPersonsCategories } from '../shared/florida-persons-batch';
 import { FLORIDA_REVIEWED_DEFINITIONS } from '../shared/florida-reviewed-batch';
 import { FLORIDA_PERSONS_SOURCES, FLORIDA_PERSONS_RECEIPT_PATH, floridaPersonsPacket, validateFloridaPersonsPacket, validateFloridaPersonsReceipt } from '../server/data/florida-persons-source';
 import { loadFloridaAuthorityManifest } from '../server/data/florida-manifest-loader';
@@ -52,7 +52,7 @@ describe('Florida persons publication', () => {
         }
         expect(byCode('784.048(7)').text.en.degreeContext).toContain('consecutively');
         expect(byCode('784.085(1)-(3)').text.en.plainSummary).toContain('attempting');
-        expect(byCode('784.08(2)(d)').categories).toEqual(['felony', 'misdemeanor']);
+        expect(byCode('784.08(2)(d)').categories).toEqual(['misdemeanor', 'felony']);
         expect(byCode('784.041(2)').text.en.degreeContext).toContain('second-degree felony, ordinarily punishable by up to 15 years');
         expect(byCode('784.03(2)').text.en.degreeContext).toContain('expressly excludes');
         for (const source of FLORIDA_PERSONS_SOURCES)
@@ -63,10 +63,18 @@ describe('Florida persons publication', () => {
             const charge = getChargeById(row.id)!;
             for (const category of ['misdemeanor', 'felony'])
                 expect(charge.category === category || charge.categories?.includes(category as any)).toBe(true);
+            expect(charge.category).toBe('misdemeanor');
+            expect(charge.categories?.[0]).toBe('misdemeanor');
             const guidance = classifyChargesForGuidance([row.id])[0];
-            expect(guidance.categories).toEqual(['felony', 'misdemeanor']);
+            expect(guidance.categories).toEqual(['misdemeanor', 'felony']);
             expect(guidance.maxPenalty).toContain('third-degree felony, ordinarily punishable by up to 5 years');
         }
+    });
+    it('rejects categories that obscure the ordinary grade', () => {
+        const row = rows.find(r => r.grade === 'M1')!;
+        expect(() => validateFloridaPersonsCategories(row)).not.toThrow();
+        for (const categories of [['felony', 'misdemeanor'], [], ['misdemeanor', 'misdemeanor'], ['misdemeanor', 'unknown']])
+            expect(() => validateFloridaPersonsCategories({ ...row, categories })).toThrow('category mismatch');
     });
     it('labels new English fallback honestly in Spanish and Chinese', () => {
         for (const d of FLORIDA_PERSONS_DEFINITIONS)
