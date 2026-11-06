@@ -933,15 +933,6 @@
         ],
         "gradeEvidence": [
           {
-            "sourceKey": "fl:statute:741.2801",
-            "target": "text",
-            "text": "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
-            "start": 263,
-            "end": 1312,
-            "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
-            "category": "felony"
-          },
-          {
             "sourceKey": "fl:statute:784.08:2_d",
             "target": "text",
             "text": "(d) \nIn the case of assault, from a misdemeanor of the second degree to a misdemeanor of the first degree.",
@@ -949,6 +940,15 @@
             "end": 1371,
             "sourceHash": "ff1866bf54e36c053f07836ef50aaa8a050eaaf27b80a9cb2e27ef03597b2326",
             "category": "misdemeanor"
+          },
+          {
+            "sourceKey": "fl:statute:741.2801",
+            "target": "text",
+            "text": "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+            "start": 263,
+            "end": 1312,
+            "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+            "category": "felony"
           }
         ],
         "requiredDependencies": [
@@ -1280,15 +1280,6 @@
         ],
         "gradeEvidence": [
           {
-            "sourceKey": "fl:statute:741.2801",
-            "target": "text",
-            "text": "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
-            "start": 263,
-            "end": 1312,
-            "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
-            "category": "felony"
-          },
-          {
             "sourceKey": "fl:statute:784.082:4",
             "target": "text",
             "text": "(4) \nIn the case of assault, from a misdemeanor of the second degree to a misdemeanor of the first degree.\n\nHistory.\n—\ns. 4, ch. 96-293.",
@@ -1296,6 +1287,15 @@
             "end": 987,
             "sourceHash": "fce60998662ceb95e6588dcf0f182b1f1ffe71d92e070afffee715dd2930f694",
             "category": "misdemeanor"
+          },
+          {
+            "sourceKey": "fl:statute:741.2801",
+            "target": "text",
+            "text": "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+            "start": 263,
+            "end": 1312,
+            "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+            "category": "felony"
           }
         ],
         "requiredDependencies": [
@@ -1994,7 +1994,7 @@
   },
   "eligibility": {
     "schemaVersion": 1,
-    "reportHash": "fe869cf0248e164041d657ea4b533df882b9a75ec16e08bf932dcee8ad6a61a1",
+    "reportHash": "b28373d1b45b2e466ed0ee4f91c9f5d4c49d30de365b5f9faec90b1e5ad3e534",
     "decisions": [
       {
         "id": "fl-fs-784-03-2-persons",
@@ -2072,9 +2072,9 @@
         "id": "fl-fs-784-08-2-d-persons",
         "status": "eligible",
         "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
-        "draftHash": "0a573c348050a54885731fd9fdebc006bea1fb35c2345d85e6405c5ca2350e53",
-        "definitionHash": "8c35a24019bdeaad80b92b5af4e33c11373cb1f78722dabbf4031f4d629290a6",
-        "approvalHash": "5165a1a9f939e9d50769878510e6faa52e2bdd453e59c7cd8b5dfc5e9e237729"
+        "draftHash": "b434cd7494e66fcd10b4caef64e464131807f211694e72de3b7942ddb763b8c2",
+        "definitionHash": "36b599a644af954e5eb4be5710412845868a6ba84344d0e0a5554ac727ca6b16",
+        "approvalHash": "2cb0ee63f7d46b2c7ec3ac6d3dbe0757acbfc3378a942c4fb9af8e06202d529e"
       },
       {
         "id": "fl-fs-784-082-1-persons",
@@ -2104,9 +2104,9 @@
         "id": "fl-fs-784-082-4-persons",
         "status": "eligible",
         "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
-        "draftHash": "c42748a3fb0865dbb64861dbbfa72c38f3872637155cbfefe895489852ed0558",
-        "definitionHash": "e8d77c88e821263eb3e2868cafcf6ffda571d2cc57fa7b9e3f0527386c19fb25",
-        "approvalHash": "2618be7054d0027ba58155bfb43315ca32f1bd5adbd212a784e0aa62ae11055b"
+        "draftHash": "3710123c91cdf75dfaf2514f0900767f44e04608f15323c4c1eca592cd4ed6e3",
+        "definitionHash": "5548cc6cc4d58e682a757aa72dc5027fd39688f3355199f85e46f37a4f909086",
+        "approvalHash": "5b277d9a6cce8504a2119791779c793d0f2de34c51614d2ddc2958a69e7207ed"
       },
       {
         "id": "fl-fs-784-085-1--3-persons",
