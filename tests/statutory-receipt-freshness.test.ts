@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 // @ts-expect-error Dependency-free operational script is intentionally plain Node.
 import { checkStatutoryReceipts } from "../scripts/check-statutory-receipt-freshness.mjs";
-const names = ["ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
+const names = ["ohio-theft-fraud-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
 function withReceipts(run: (root: string, dir: string) => void) {
   const root = mkdtempSync(join(tmpdir(), "receipt-monitor-"));
   const dir = join(root, "scripts/data-review/output"); mkdirSync(dir, { recursive: true });
@@ -34,6 +34,7 @@ describe("statutory receipt deadline alarm", () => {
     rmSync(join(dir, names[0]));
     rmSync(join(dir, names[3]));
     rmSync(join(dir, names[4]));
+    rmSync(join(dir, names[5]));
     writeFileSync(join(dir, names[1]), "not json");
     writeFileSync(join(dir, names[2]), JSON.stringify({ checkedAt: "2026-10-02", expiresAt: "2026-10-01" }));
     rmSync(join(dir, "california-archive-refresh-receipt.json"));
@@ -44,6 +45,6 @@ describe("statutory receipt deadline alarm", () => {
   it("discovers a new jurisdiction receipt without removing the required ones", () => withReceipts((root, dir) => {
     writeFileSync(join(dir, "new-state-refresh-receipt.json"), JSON.stringify({ checkedAt: "2026-09-24", expiresAt: "2026-09-25" }));
     const report = checkStatutoryReceipts(root, new Date("2026-09-26"));
-    expect(report.receipts).toHaveLength(7); expect(report.ok).toBe(false);
+    expect(report.receipts).toHaveLength(8); expect(report.ok).toBe(false);
   }));
 });
