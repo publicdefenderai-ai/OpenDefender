@@ -3099,7 +3099,7 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 .support-hub a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .support-hub a:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
 .support-jumps { display: flex; flex-wrap: wrap; column-gap: 28px; border-block: 1px solid var(--border); padding: 8px 0; }
-.support-jumps a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--primary); }
+.support-jumps a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; font-size: 14px; font-weight: 600; color: var(--primary); }
 .support-local { display: grid; grid-template-columns: minmax(0,1fr) minmax(160px,230px); align-items: start; gap: 32px; padding: 32px 0; }
 .support-hub h2 { font-size: 25px; font-weight: 500; line-height: 1.3; letter-spacing: -.4px; margin-bottom: 12px; }
 .support-local h2, .support-impact h2, .support-bottom h2 { font-size: 21px; }
