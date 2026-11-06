@@ -26,6 +26,11 @@ vi.mock("../server/data/ohio-major-source", async original => ({
   isOhioMajorSourceFresh: () => state.fresh,
 }));
 import { OHIO_MAJOR_SOURCES } from '../server/data/ohio-major-source';
+import { OHIO_RESIDUAL_SOURCES } from '../server/data/ohio-residual-source';
+vi.mock('../server/data/ohio-residual-source', async original => ({
+  ...await original<typeof import('../server/data/ohio-residual-source')>(),
+  isOhioResidualSourceFresh: () => state.fresh,
+}));
 import { getCurrentAuthoritySelectableChargeIds } from "../server/services/authority-source-database";
 import { buildOhioChapter2903PilotManifestRecords, buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
 
@@ -43,6 +48,19 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
     state.rows = allLinks.filter(p => !p.sourceKey.endsWith('2971.01'));
     state.metadata.catalogRecords = [{...newRecord, provisions: state.rows}];
     expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
+  });
+  it("requires the residual batch's complete evidence even when ingestion metadata omits a dependency", async () => {
+    const newRecord = buildOhioReviewedManifestRecords(new Date(), OHIO_RESIDUAL_SOURCES)
+      .find(record => record.chargeId === 'oh-orc-2905-33-unlawful-documents')!;
+    const links = newRecord.provisions.map(p => ({chargeId: newRecord.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision}));
+    state.metadata = {selectableChargeIds: [newRecord.chargeId], catalogRecords: [newRecord]};
+    state.rows = links;
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set([newRecord.chargeId]));
+    state.rows = links.filter(p => !p.sourceKey.endsWith('2907.323'));
+    state.metadata.catalogRecords = [{...newRecord, provisions: state.rows}];
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set());
+    state.rows = links; state.metadata.catalogRecords = [newRecord]; state.fresh = false;
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set());
   });
   it("withholds only the affected charge when a reviewed source is missing", async () => {
     const unaffected = records.find(r => r.chargeId === "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises")!;

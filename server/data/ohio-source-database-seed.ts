@@ -1,3 +1,5 @@
+import { OHIO_RESIDUAL_DEFINITIONS } from "@shared/ohio-residual-batch";
+import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "./ohio-residual-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "./ohio-major-source";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
@@ -449,7 +451,7 @@ function reviewedProvision(
     metadata: {
       chargeId: charge.id, catalogLabel: charge.name, catalogCode: charge.code,
       catalogClassification: charge.category,
-      sourceFirstBatch: OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
+      sourceFirstBatch: OHIO_RESIDUAL_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_residual_14" : OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
       reviewedDraftSection: source.section,
       reviewedInterpretation: source.interpretation,
       reviewedLegalDecision: source.reviewedLegalDecision,
@@ -482,7 +484,7 @@ function reviewedSupportRole(
 export function buildOhioReviewedManifestRecords(importedAt: Date, sources: readonly OhioReviewedSource[] = OHIO_REVIEWED_SOURCES): AuthorityCatalogRecord[] {
   return sources.map(source => {
     const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
-    if (!charge || charge.jurisdiction !== "OH" || charge.code !== source.section ||
+    if (!charge || charge.jurisdiction !== "OH" || charge.code !== (OHIO_RESIDUAL_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? source.section) ||
         charge.name !== source.canonicalTitle) {
       throw new Error(`Ohio reviewed source-first catalog identity is missing: ${source.chargeId}`);
     }
@@ -765,7 +767,7 @@ export function validateOhioManifestRecord(
   if (sourceFirstPilot) {
     return validateOhioChapter2903PilotManifestRecord(record, sourceFirstPilot);
   }
-  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES].find(
+  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES].find(
     candidate => candidate.chargeId === record.chargeId,
   );
   if (reviewedSource) return validateOhioReviewedManifestRecord(record, reviewedSource);
@@ -845,6 +847,7 @@ export function buildOhioSourceDatabaseSeed(
   // A manifest supplied directly to this builder must not bypass the same
   // live receipt boundary that the loader uses.
   const records = manifest.catalogRecords.filter(record =>
+    (!OHIO_RESIDUAL_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioResidualSourceFresh(now)) &&
     (!OHIO_MAJOR_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioMajorSourceFresh(now)) &&
     (!OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
       pilotFresh) &&
