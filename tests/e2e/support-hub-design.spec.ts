@@ -24,3 +24,12 @@ for(const language of ['en','es','zh'] as const)for(const theme of ['light','dar
   }
  });
 }
+
+test('Phone loads no decorative tree; desktop loads the optimized image',async({page})=>{
+ const images:string[]=[];page.on('request',r=>{if(r.url().includes('/images/design/support-oak'))images.push(r.url());});
+ await page.setViewportSize({width:375,height:900});await page.goto('/support');await page.waitForLoadState('networkidle');
+ await expect(page.locator('.support-art')).toBeHidden();expect(images).toEqual([]);
+ await page.setViewportSize({width:1280,height:900});await expect(page.locator('.support-oak')).toBeVisible();
+ await expect.poll(()=>page.locator('.support-oak').evaluate((img:HTMLImageElement)=>img.naturalWidth)).toBe(640);
+ expect(images).toHaveLength(1);expect(images[0]).toContain('support-oak.webp');
+});

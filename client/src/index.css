@@ -3126,7 +3126,7 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 @media(max-width:700px) {
  .support-hub { padding: 20px 24px 40px; }
  .support-hero { grid-template-columns: 1fr; gap: 0; padding-top: 8px; }
- .support-oak { display: none; }
+ .support-art { display: none; }
  .support-group,.support-local,.support-bottom { grid-template-columns: 1fr; gap: 18px; }
  .support-group { padding: 28px 0; }
  .support-jumps { column-gap: 20px; }

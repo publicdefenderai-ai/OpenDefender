@@ -30,7 +30,7 @@ export default function SupportHub() {
     <p>{t('support.description')}</p>
     <Link className="support-action" href="/friends-family">{copy.family}</Link>
    </div>
-   <img className="support-oak" src="/images/design/support-oak.png" alt="" aria-hidden="true" width="1280" height="1280"/>
+   <picture className="support-art"><source media="(min-width: 701px)" srcSet="/images/design/support-oak.webp"/><img className="support-oak" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" aria-hidden="true" width="640" height="640"/></picture>
   </section>
   <PageSectionNav ariaLabel={t('support.pageSections')} items={[
    {id:'support-start',label:t('support.startHereCard.heading')},
