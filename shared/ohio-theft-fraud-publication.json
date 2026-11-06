@@ -24,13 +24,26 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2913.61"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.03",
+          "quote": "(2) Except as otherwise provided in division (D)(4) of this section, a violation of division (A) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-03-extended-vehicle-use",
@@ -158,11 +171,24 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.07",
+          "quote": "(C) Whoever violates division (B) of this section is guilty of motion picture piracy, a misdemeanor of the first degree on the first offense and a felony of the fifth degree on each subsequent offense."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-08-organized-retail-theft",
@@ -360,11 +386,24 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.32",
+          "quote": "Except as otherwise provided in this division, criminal simulation is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-33-making-using-slugs",
@@ -450,13 +489,26 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "1329.54"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.34",
+          "quote": "(3) Except as otherwise provided in this division, a violation of division (A)(2) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-34-trademark-trafficking",
@@ -488,13 +540,26 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "1329.54"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.34",
+          "quote": "(4) Except as otherwise provided in this division, a violation of division (A)(3), (4), or (5) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-42-tampering-records",
@@ -518,11 +583,28 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.42",
+          "quote": "(2) Except as provided in division (B)(4) of this section, if the offense does not involve data or computer software, tampering with records is whichever of the following is applicable:\n(a) If division (B)(2)(b) of this section does not apply, a misdemeanor of the first degree;\n(b) If the writing or record is a will unrevoked at the time of the offense, a felony of the fifth degree."
+        },
+        {
+          "section": "2913.42",
+          "quote": "(3) Except as provided in division (B)(4) of this section, if the offense involves a violation of division (A) of this section involving data or computer software, tampering with records is whichever of the following is applicable:\n(a) Except as otherwise provided in division (B)(3)(b), (c), or (d) of this section, a misdemeanor of the first degree;\n(b) If the value of the data or computer software involved in the offense or the loss to the victim is one thousand dollars or more and is less than seven thousand five hundred dollars, a felony of the fifth degree;\n(c) If the value of the data or computer software involved in the offense or the loss to the victim is seven thousand five hundred dollars or more and is less than one hundred fifty thousand dollars, a felony of the fourth degree;\n(d) If the value of the data or computer software involved in the offense or the loss to the victim is one hundred fifty thousand dollars or more or if the offense is committed for the purpose of devising or executing a scheme to defraud or to obtain property or services and the value of the property or services or the loss to the victim is seven thousand five hundred dollars or more, a felony of the third degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-43-securing-writings-deception",
@@ -547,13 +629,26 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2913.61"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.43",
+          "quote": "(2) Except as otherwise provided in this division or division (B)(3) of this section, securing writings by deception is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-44-personating-officer",
@@ -601,11 +696,24 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.45",
+          "quote": "Except as otherwise provided in this division, defrauding creditors is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-47-insurance-fraud",
@@ -632,15 +740,28 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "3929.43",
       "4509.70",
       "2317.02"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.47",
+          "quote": "Except as otherwise provided in this division, insurance fraud is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-48-workers-compensation-fraud",
@@ -668,14 +789,27 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "4121.44",
       "4123.01",
       "2913.61"
     ],
-    "extraGrading": []
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.48",
+          "quote": "Except as otherwise provided in this division, a violation of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   }
 ]

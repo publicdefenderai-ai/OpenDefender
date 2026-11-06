@@ -9,6 +9,7 @@
       "id": "oh-orc-2905-03-unlawful-restraint",
       "section": "2905.03",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "ffc4ce8a415b066d1c2e779368292382b836d521af41f3036f6c1934fc06a39e",
       "mappingId": "orc-2905.03-a-b",
       "dependencies": [
@@ -119,6 +120,7 @@
       "id": "oh-orc-2905-12-coercion",
       "section": "2905.12",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "9b87fb0f5fece9cb5257acb53095750b04811ff66833ef714849e2ce26e780d8",
       "mappingId": "orc-2905.12-a",
       "dependencies": [
@@ -230,7 +232,20 @@
       "id": "oh-orc-2909-08-endangering-aircraft",
       "section": "2909.08",
       "scope": "B",
-      "definitionHash": "a6250aaff112bfa70675275d07613f53fdcdb2f7eacc293f1ee06623d21e59c4",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.08",
+            "quote": "(D) Whoever violates division (B) of this section is guilty of endangering aircraft, a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "15efa19cee0ca4117dd48c97d4aceeef18c2520a475af30cddff5f1768a3a99c",
       "mappingId": "orc-2909.08-b",
       "dependencies": [
         "2901.01",
@@ -374,7 +389,20 @@
       "id": "oh-orc-2909-08-endangering-airport-operations",
       "section": "2909.08",
       "scope": "C",
-      "definitionHash": "dfe040955f57687551b851e0652a8fa326471e1a5fb38be3264381ffddfdabe7",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M2"
+        ],
+        "evidence": [
+          {
+            "section": "2909.08",
+            "quote": "(E) Whoever violates division (C) of this section is guilty of endangering airport operations, a misdemeanor of the second degree."
+          }
+        ]
+      },
+      "definitionHash": "81248c0607e0f6f007c8db71a18867b75330ce243b0b86ee5fa22f9afa44790f",
       "mappingId": "orc-2909.08-c",
       "dependencies": [
         "2901.01",
@@ -529,7 +557,20 @@
       "id": "oh-orc-2909-09-vehicular-vandalism",
       "section": "2909.09",
       "scope": "B",
-      "definitionHash": "88040c32f8393330cf27c4ed258277ddcd61dacee4cb8465cf48f88277636179",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.09",
+            "quote": "Except as otherwise provided in this division, vehicular vandalism is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "8a56ddcbe6f81bbe899108e81d027895ad029f6baac76203093eb78ef768507d",
       "mappingId": "orc-2909.09-b",
       "dependencies": [
         "2901.01",
@@ -695,7 +736,20 @@
       "id": "oh-orc-2909-10-railroad-vandalism",
       "section": "2909.10",
       "scope": "A",
-      "definitionHash": "c437937b6feeb6aecddb66d96ddcfb94ed5680c9917af4e0589c35444c56200a",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.10",
+            "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "2f5407d63c8ca4e1269380bc7403c99bee7938a1372cc0d3de3faf2177ca5d97",
       "mappingId": "orc-2909.10-a",
       "dependencies": [
         "2901.01",
@@ -839,7 +893,20 @@
       "id": "oh-orc-2909-10-criminal-trespass-on-a-locomotive-engine-railroad-car-or-other-railroad-vehicle",
       "section": "2909.10",
       "scope": "B",
-      "definitionHash": "db055a8b5a90ad84b986fd293f818cca850e9d70377a1cacff5f60b0a6ec2616",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.10",
+            "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "2805a37eb5ec8fd2642306db06356311cd667fc3854c45e71bac5a84e8d69fdf",
       "mappingId": "orc-2909.10-b",
       "dependencies": [
         "2901.01",
@@ -983,7 +1050,20 @@
       "id": "oh-orc-2909-10-interference-with-the-operation-of-a-train",
       "section": "2909.10",
       "scope": "C",
-      "definitionHash": "ff158fe852f8219e1a726a31e7b9dcdc3af53b412a2e8ec1c21df30ff6e3f6cd",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.10",
+            "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "a770664c6ffa0b3b72825aa5de846d78969c349f6c0302ab82148aa75f4a7d45",
       "mappingId": "orc-2909.10-c",
       "dependencies": [
         "2901.01",
@@ -1127,6 +1207,7 @@
       "id": "oh-orc-2909-22-soliciting-or-providing-support-for-an-act-of-terrorism",
       "section": "2909.22",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "1ff35ba57733cab432a5bfd7097cde2d5cf1a2b408152b847a977ae2c7bf19d0",
       "mappingId": "orc-2909.22-a",
       "dependencies": [
@@ -1260,6 +1341,7 @@
       "id": "oh-orc-2909-23-making-a-terroristic-threat",
       "section": "2909.23",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "d1088fb67ae1089397566ef6b11a571c78482a7dbd1f426fa981f2a7535e1644",
       "mappingId": "orc-2909.23-a",
       "dependencies": [
@@ -1393,6 +1475,7 @@
       "id": "oh-orc-2909-26-criminal-possession-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
       "section": "2909.26",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "3587ea92523e3d65c28087abc22d2bf5c925a8bcb4bdd3c9ed4972ed3d33e150",
       "mappingId": "orc-2909.26-a-b",
       "dependencies": [
@@ -1558,6 +1641,7 @@
       "id": "oh-orc-2909-27-criminal-use-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
       "section": "2909.27",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "c2ec2d29d7afdf42690eb476423716fb527c349df5e21a0fa6aa8599e8220786",
       "mappingId": "orc-2909.27-a-b",
       "dependencies": [
@@ -1723,6 +1807,7 @@
       "id": "oh-orc-2909-28-illegal-assembly-or-possession-of-chemicals-or-substances-for-the-manufacture-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
       "section": "2909.28",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "8a226e8f4c73dee0ad03224cc745ef6c02207f944396634482e44d7eba441fd6",
       "mappingId": "orc-2909.28-a",
       "dependencies": [
@@ -1867,7 +1952,20 @@
       "id": "oh-orc-2909-29-money-laundering-in-support-of-terrorism",
       "section": "2909.29",
       "scope": "A",
-      "definitionHash": "be706bb10569eeba12ed39452fdcdb96b452e4c7c5e3f3ae014d0147f82464d1",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.29",
+            "quote": "(B)(1) Whoever violates this section is guilty of money laundering in support of terrorism, which is a misdemeanor of the first degree, except as otherwise provided in this division."
+          }
+        ]
+      },
+      "definitionHash": "d00550bc977f88dc29e1dcad573b744929a15b7255ecc67128b11205ea9fb481",
       "mappingId": "orc-2909.29-a",
       "dependencies": [
         "2901.01",
@@ -2033,6 +2131,7 @@
       "id": "oh-orc-2909-081-interfering-with-the-operation-of-an-aircraft-with-a-laser",
       "section": "2909.081",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "65cac48648b29071d567ef58dce01ce954f80913c87f0857c9f9277e66e49304",
       "mappingId": "orc-2909.081-a",
       "dependencies": [
@@ -2155,7 +2254,20 @@
       "id": "oh-orc-2909-101-railroad-grade-crossing-device-vandalism",
       "section": "2909.101",
       "scope": "A",
-      "definitionHash": "18674b7af3f6f60bffa7763c419cd3356fa7b51896fc999a330fb838df03902f",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.101",
+            "quote": "Except as otherwise provided in this division, railroad grade crossing device vandalism is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "1576df17671c42f474957ffa0bb40aaa3d87b9df82e3eb73af506a5c42d1646a",
       "mappingId": "orc-2909.101-a",
       "dependencies": [
         "2901.01",
@@ -2299,6 +2411,7 @@
       "id": "oh-orc-2911-23-criminal-trespass-on-a-place-of-public-amusement",
       "section": "2911.23",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "a5ca2a6ce1f6c1fe928ae3b39b83b83d10b2f8cf8120d3e60575d4c070a58246",
       "mappingId": "orc-2911.23-b",
       "dependencies": [
@@ -2388,6 +2501,7 @@
       "id": "oh-orc-2911-31-safecracking",
       "section": "2911.31",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "d6e5ae20e12a382ca318493c6e4850fb28a04be3e77967ba33310059d669e6ea",
       "mappingId": "orc-2911.31-a",
       "dependencies": [
@@ -2499,7 +2613,20 @@
       "id": "oh-orc-2911-32-tampering-with-coin-machines",
       "section": "2911.32",
       "scope": "A",
-      "definitionHash": "0c1df3613946f8be2e4e3faa6ed5da8b8fd7452eb8dab7725fbe5dc6ac2a9b19",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2911.32",
+            "quote": "(B) Whoever violates this section is guilty of tampering with coin machines, a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "235d5b57d9308078ce6e7a5b803b83dd1cc3986fca7fd14c2058ec586f55f8f9",
       "mappingId": "orc-2911.32-a",
       "dependencies": [
         "2901.01",
@@ -2643,6 +2770,7 @@
       "id": "oh-orc-2911-211-aggravated-trespass-a-1",
       "section": "2911.211",
       "scope": "A(1)",
+      "primaryClassification": null,
       "definitionHash": "543d55b3eff55b99d55bab5db769099adeb7512aa47210c52017393c6e6c9ab7",
       "mappingId": "orc-2911.211-a-1-",
       "dependencies": [

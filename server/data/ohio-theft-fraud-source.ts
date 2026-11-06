@@ -1,3 +1,4 @@
+import { validateOhioClassificationEvidence } from '@shared/ohio-primary-classification';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -12,7 +13,7 @@ export const OHIO_THEFT_FRAUD_RECEIPT_PATH = resolve(directory, 'ohio-theft-frau
 type Span = { section: string; sourceUrl: string; effectiveDateStart: string; retrievedAt: string; sourceHash: string; start: number; end: number; text: string };
 type Packet = { schemaVersion: number; kind: string; planHash: string; sentencingHash: string;
   documents: Record<string, OhioReviewedDocument>;
-  records: Array<{ id: string; section: string; scope: string; definitionHash: string;
+  records: Array<{ id: string; section: string; scope: string; definitionHash: string; primaryClassification: unknown;
     dependencies: string[]; conduct: Span[]; grading: Span[]; context: Span[]; evidence: Span[] }> };
 export const ohioTheftFraudPacket = JSON.parse(readFileSync(resolve(directory, 'ohio-theft-fraud-publication-evidence.json'), 'utf8')) as Packet;
 
@@ -47,6 +48,8 @@ export function validateOhioTheftFraudPacket(packet: Packet): void {
         record.definitionHash !== hash(JSON.stringify(definition)) ||
         JSON.stringify(record.dependencies) !== JSON.stringify(ohioTheftFraudDependencies(row)) ||
         !record.conduct.length || !record.grading.length) throw Error(`Unbound Ohio theft/fraud definition ${record.id}`);
+    if (JSON.stringify(record.primaryClassification) !== JSON.stringify("primaryClassification" in row ? row.primaryClassification : null)) throw Error(`Ohio classification binding changed ${record.id}`);
+    validateOhioClassificationEvidence(row, record.grading);
     const sections = [record.section, ...record.dependencies];
     for (const section of sections) {
       used.add(section); const doc = packet.documents[section];

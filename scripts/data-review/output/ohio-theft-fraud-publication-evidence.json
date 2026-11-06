@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "kind": "ohio_theft_fraud_publication_evidence",
-  "planHash": "72dcabf79ea8b3b58083961a0d7785d25e7f165c75f5b43b792ddeaca15ce481",
+  "planHash": "778d6b46b4e9d238d221e069b6730837c076ce607d772c14dae1c4e8ed6440b0",
   "sentencingHash": "caef647c5315579a0e512354943c3e737b7d7408951a04e9e5aefc79b3d6a6dd",
   "translationStatus": "english_only_pending_translation",
   "records": [
@@ -9,7 +9,20 @@
       "id": "oh-orc-2913-03-unauthorized-vehicle-use",
       "section": "2913.03",
       "scope": "A",
-      "definitionHash": "d9b1e43cd75b7d26c24e9211a1a66ce24d2046d900abd5256b58197d01a35e27",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.03",
+            "quote": "(2) Except as otherwise provided in division (D)(4) of this section, a violation of division (A) of this section is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "1675df82adb433352a470853b1a3b2cf1bded3269b0601ffa5a69d63e13da085",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -186,6 +199,7 @@
       "id": "oh-orc-2913-03-extended-vehicle-use",
       "section": "2913.03",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "dfdf7981ff3fe475dd7c9f329a198feb67321b7d9c2e7693c6a8de4919532719",
       "dependencies": [
         "2901.01",
@@ -341,6 +355,7 @@
       "id": "oh-orc-2913-05-telecommunications-fraud",
       "section": "2913.05",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "d41fc669d4c4914b65b8a63434fdd05e99008963fb4a9ee3ac77c4f23ac0d8da",
       "dependencies": [
         "2901.01",
@@ -614,6 +629,7 @@
       "id": "oh-orc-2913-06-unlawful-telecommunications-device",
       "section": "2913.06",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "1edf219b37fe15e6cc84773d29b95d7a61d171479c2ab348df41c69f07f37a58",
       "dependencies": [
         "2901.01",
@@ -767,7 +783,20 @@
       "id": "oh-orc-2913-07-motion-picture-piracy",
       "section": "2913.07",
       "scope": "B",
-      "definitionHash": "6901855de4a56d91df7bea4c1c0be31a7a313677fefe580059bb2d723ef24432",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.07",
+            "quote": "(C) Whoever violates division (B) of this section is guilty of motion picture piracy, a misdemeanor of the first degree on the first offense and a felony of the fifth degree on each subsequent offense."
+          }
+        ]
+      },
+      "definitionHash": "2b364aacad82987823998b3007f52cef80811e5fb250a3d2c52f54a1fd7aa038",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -942,6 +971,7 @@
       "id": "oh-orc-2913-08-organized-retail-theft",
       "section": "2913.08",
       "scope": "B,C,D,E",
+      "primaryClassification": null,
       "definitionHash": "4822f3c6e497b88624563be09aa5f0afd01b5b81905421649859414b9ec4b333",
       "dependencies": [
         "2901.01",
@@ -1224,6 +1254,7 @@
       "id": "oh-orc-2913-021-theft-of-mail",
       "section": "2913.021",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "7ca21b6fd402c4b003b44bc81c1ade318ff83cf1897a7209093400a3d8f20736",
       "dependencies": [
         "2901.01",
@@ -1431,6 +1462,7 @@
       "id": "oh-orc-2913-041-unauthorized-device-possession",
       "section": "2913.041",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "5787933926281b0201063a0cb5c3dde44eaf9fdff2e7230beb7c1a68207964d4",
       "dependencies": [
         "2901.01",
@@ -1564,6 +1596,7 @@
       "id": "oh-orc-2913-041-unauthorized-device-sale",
       "section": "2913.041",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "b5604f492ae76760c3e1220265264e32c2b36dd70accbca0a0d835977293907d",
       "dependencies": [
         "2901.01",
@@ -1697,6 +1730,7 @@
       "id": "oh-orc-2913-30-counterfeiting",
       "section": "2913.30",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "069f9b6842c1d3a419e32f710c7a2718d28ad2d1ec74769bed7572a99f6d170a",
       "dependencies": [
         "2901.01",
@@ -1906,7 +1940,20 @@
       "id": "oh-orc-2913-32-criminal-simulation",
       "section": "2913.32",
       "scope": "A",
-      "definitionHash": "14edbf39f0ce0fd251ef261b92bf2f3e4f6a89bfc71826e416cb5f1fd9732e64",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.32",
+            "quote": "Except as otherwise provided in this division, criminal simulation is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "9dcb6b9f06474935322d53566939c06447650ed4704a1127e76ebee81a3555ab",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -2050,6 +2097,7 @@
       "id": "oh-orc-2913-33-making-using-slugs",
       "section": "2913.33",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "47718ee96e1d0461d2bd794a0ca9962af347de82c84c7b0a596c1b4d2ef93284",
       "dependencies": [
         "2901.01",
@@ -2150,6 +2198,7 @@
       "id": "oh-orc-2913-34-trademark-manufacture",
       "section": "2913.34",
       "scope": "A(1)",
+      "primaryClassification": null,
       "definitionHash": "71edc4dceb311b186525a8d952133974d178b92556b4a8d52fb3d131057f8b5d",
       "dependencies": [
         "2901.01",
@@ -2344,7 +2393,20 @@
       "id": "oh-orc-2913-34-trademark-tools",
       "section": "2913.34",
       "scope": "A(2)",
-      "definitionHash": "1d074285743ac9dd617fd0fa536080bff6697a23c7ca968d54c7279b9014639c",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.34",
+            "quote": "(3) Except as otherwise provided in this division, a violation of division (A)(2) of this section is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "4c1f80a8740fc5313024803fdbfab492f24b49ed725a537fef132f5b59f1b708",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -2560,7 +2622,20 @@
       "id": "oh-orc-2913-34-trademark-trafficking",
       "section": "2913.34",
       "scope": "A(3),A(4),A(5)",
-      "definitionHash": "4db60ce54e2b86299e79d9d101214fd1088bf06b53da5699c2869e0955ff2631",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.34",
+            "quote": "(4) Except as otherwise provided in this division, a violation of division (A)(3), (4), or (5) of this section is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "bebb51953e0e0c7c3bae09fcd5dc453c6bf55f7cac582511ccc38060a564b36e",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -2796,7 +2871,24 @@
       "id": "oh-orc-2913-42-tampering-records",
       "section": "2913.42",
       "scope": "A",
-      "definitionHash": "753899ccfa709871e48338d7319b05ad6c7cba7aa7abe8df316c93deeb611275",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.42",
+            "quote": "(2) Except as provided in division (B)(4) of this section, if the offense does not involve data or computer software, tampering with records is whichever of the following is applicable:\n(a) If division (B)(2)(b) of this section does not apply, a misdemeanor of the first degree;\n(b) If the writing or record is a will unrevoked at the time of the offense, a felony of the fifth degree."
+          },
+          {
+            "section": "2913.42",
+            "quote": "(3) Except as provided in division (B)(4) of this section, if the offense involves a violation of division (A) of this section involving data or computer software, tampering with records is whichever of the following is applicable:\n(a) Except as otherwise provided in division (B)(3)(b), (c), or (d) of this section, a misdemeanor of the first degree;\n(b) If the value of the data or computer software involved in the offense or the loss to the victim is one thousand dollars or more and is less than seven thousand five hundred dollars, a felony of the fifth degree;\n(c) If the value of the data or computer software involved in the offense or the loss to the victim is seven thousand five hundred dollars or more and is less than one hundred fifty thousand dollars, a felony of the fourth degree;\n(d) If the value of the data or computer software involved in the offense or the loss to the victim is one hundred fifty thousand dollars or more or if the offense is committed for the purpose of devising or executing a scheme to defraud or to obtain property or services and the value of the property or services or the loss to the victim is seven thousand five hundred dollars or more, a felony of the third degree."
+          }
+        ]
+      },
+      "definitionHash": "369fdac38c7f0da0ef7b8adb2a7b21cbce646bb122f0dc7dfb2e259303ed2c8d",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -2940,7 +3032,20 @@
       "id": "oh-orc-2913-43-securing-writings-deception",
       "section": "2913.43",
       "scope": "A",
-      "definitionHash": "b45dc624f5e9e5d604bd714c70ef18f0fe8906686190b6c8c0be227f393cf687",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.43",
+            "quote": "(2) Except as otherwise provided in this division or division (B)(3) of this section, securing writings by deception is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "2544ad3a222d24779f2824d2a23383844c44a6ead0cda1c31f5e7cc49b16c290",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -3106,6 +3211,7 @@
       "id": "oh-orc-2913-44-personating-officer",
       "section": "2913.44",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "aaa625758d2ce9a27a878ae0f2ba34ac156c63bfb5e830bb292b654a1598b995",
       "dependencies": [
         "2901.01",
@@ -3206,7 +3312,20 @@
       "id": "oh-orc-2913-45-defrauding-creditors",
       "section": "2913.45",
       "scope": "A",
-      "definitionHash": "1bb5257d4b78728d7bd433dbd89139c6edacaafbfa1691cf9418a4dceda40c94",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.45",
+            "quote": "Except as otherwise provided in this division, defrauding creditors is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "16b972930703b505fc5b6efb44d7d09f890b0cdd5db1ca20853f780a33e72a53",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -3350,7 +3469,20 @@
       "id": "oh-orc-2913-47-insurance-fraud",
       "section": "2913.47",
       "scope": "B",
-      "definitionHash": "fc9cb7fea5729d7eb9e011dc8d723fdea87af86d0b2b7fc6e4b8f726afeb61e2",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.47",
+            "quote": "Except as otherwise provided in this division, insurance fraud is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "c03e82bd057c10f5a16d9dde53c58b6bdd032a49c9e239cde2f2e4a338ad4076",
       "dependencies": [
         "2901.01",
         "2901.22",
@@ -3548,7 +3680,20 @@
       "id": "oh-orc-2913-48-workers-compensation-fraud",
       "section": "2913.48",
       "scope": "A",
-      "definitionHash": "fa4e5e6018b4782ff9933f24b17d7b977c7e829b0b2272952b9da743070044e4",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2913.48",
+            "quote": "Except as otherwise provided in this division, a violation of this section is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "bd2a7bd96690f8e8ea9a52677641b2683cc50a04c55f9612159dc2a0c7007d01",
       "dependencies": [
         "2901.01",
         "2901.22",
