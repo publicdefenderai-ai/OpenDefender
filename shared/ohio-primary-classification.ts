@@ -3,7 +3,7 @@ type Row = { id: string; degrees: string[]; categories: string[]; primaryClassif
   category: string; basis: string; ordinaryDegrees: string[]; evidence: { section: string; quote: string }[];
 } };
 export function ohioPrimaryClassification(row: Row): 'felony' | 'misdemeanor' {
-  const expected = [...new Set(row.degrees.map(g => g.startsWith('F') ? 'felony' : 'misdemeanor'))];
+  const expected: string[] = [...new Set(row.degrees.map(g => g.startsWith('F') ? 'felony' : 'misdemeanor'))];
   if (!row.degrees.length || row.degrees.some(g => !/^[FM][1-5]$/.test(g)) || new Set(row.categories).size !== row.categories.length || expected.length !== row.categories.length || expected.some(c => !row.categories.includes(c))) throw Error(`Ohio category mismatch ${row.id}`);
   const profile = row.primaryClassification;
   if (!profile) {
