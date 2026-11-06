@@ -3,22 +3,85 @@
     "id": "fl-fs-784-045-1-2-aggravated-battery",
     "section": "784.045",
     "status": "eligible",
-    "reason": "The official heading supplies exact identity; subsections (1)-(2) state the alternative aggravated-battery branches and a single felony grade.",
-    "identity": { "kind": "official_heading", "quote": "Aggravated battery", "sourceHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
+    "reason": "Existing identity with individually bound domestic-violence grading and sentencing correction.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Aggravated battery",
+      "sourceHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+    },
     "conductQuotes": [
       "A person commits aggravated battery who, in committing battery:",
       "Intentionally or knowingly causes great bodily harm, permanent disability, or permanent disfigurement; or",
       "Uses a deadly weapon.",
       "A person commits aggravated battery if the person who was the victim of the battery was pregnant at the time of the offense and the offender knew or should have known that the victim was pregnant."
     ],
-    "gradingQuotes": ["A person who violates subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "requiredSections": [
-      { "section": "784.045", "role": "offense", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
-      { "section": "784.045", "role": "grading", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
-      { "section": "784.045", "role": "justification", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
-      { "section": "784.03", "role": "definition", "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20" }
+    "gradingQuotes": [
+      "A person who violates subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
     ],
-    "notes": "Section 784.03 supplies the incorporated battery conduct. Subsection (3)'s riot-related one-level sentencing ranking is described but is not projected as a separate offense or felony degree."
+    "requiredSections": [
+      {
+        "section": "784.045",
+        "role": "offense",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "section": "784.045",
+        "role": "grading",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.281",
+        "role": "penalty",
+        "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+      },
+      {
+        "section": "741.283",
+        "role": "penalty",
+        "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+      },
+      {
+        "section": "741.325",
+        "role": "definition",
+        "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+      },
+      {
+        "section": "870.01",
+        "role": "definition",
+        "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+      },
+      {
+        "section": "784.03",
+        "role": "definition",
+        "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      }
+    ],
+    "notes": "Existing identity and translated base summaries preserved. Ordinary statutory categories remain first; conditional domestic-violence upgrades and exact section 784.03(2) exception are bound separately. No receipt issuance or extension."
   },
   {
     "id": "fl-fs-806-01-1-arson-in-the-first-degree",

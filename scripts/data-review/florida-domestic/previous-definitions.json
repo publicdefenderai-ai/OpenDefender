@@ -1,0 +1,194 @@
+[
+  {
+    "id": "fl-fs-784-011-assault",
+    "jurisdiction": "FL",
+    "code": "784.011",
+    "slug": "fl-fs-784-011-assault",
+    "name": "Assault",
+    "names": {
+      "es": "Agresión",
+      "zh": "袭击"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally and unlawfully threatening violence by word or act, with an apparent ability to carry it out, and acting in a way that creates a well-founded fear that the violence is imminent.",
+        "degreeContext": "Ordinarily a second-degree misdemeanor; it is a first-degree misdemeanor when committed in furtherance of a riot or aggravated riot."
+      },
+      "es": {
+        "plainSummary": "Amenazar intencional e ilícitamente con violencia, mediante palabras o actos y con capacidad aparente para realizarla, y actuar de manera que cause un temor fundado de violencia inminente.",
+        "degreeContext": "Por regla general es un delito menor de segundo grado; es de primer grado cuando se comete para promover un motín o motín agravado."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地以言语或行为威胁对他人实施暴力，表面上有能力实施，并采取行为使对方有充分理由担心暴力即将发生。",
+        "degreeContext": "通常为二级轻罪；为推进骚乱或加重骚乱而实施时，为一级轻罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-03-battery",
+    "jurisdiction": "FL",
+    "code": "784.03(1)(a)",
+    "slug": "fl-fs-784-03-battery",
+    "name": "Battery",
+    "names": {
+      "es": "Agresión física",
+      "zh": "殴打"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.03(1)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Actually and intentionally touching or striking another person against that person's will, or intentionally causing bodily harm to another person.",
+        "degreeContext": "Ordinarily a first-degree misdemeanor. It becomes a third-degree felony for a qualifying second or subsequent battery, or when committed in furtherance of a riot or aggravated riot."
+      },
+      "es": {
+        "plainSummary": "Tocar o golpear efectiva e intencionalmente a otra persona contra su voluntad, o causarle intencionalmente daño corporal.",
+        "degreeContext": "Por regla general es un delito menor de primer grado. Se convierte en delito grave de tercer grado por una segunda o posterior agresión física que reúna los requisitos, o cuando se comete para promover un motín o motín agravado."
+      },
+      "zh": {
+        "plainSummary": "违背他人意愿实际且故意触碰或击打该人，或故意造成他人身体伤害。",
+        "degreeContext": "通常为一级轻罪。符合条件的第二次或后续殴打，或为推进骚乱或加重骚乱而实施时，构成三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-048-2-stalking",
+    "jurisdiction": "FL",
+    "code": "784.048(2)",
+    "slug": "fl-fs-784-048-2-stalking",
+    "name": "Stalking",
+    "names": {
+      "es": "Acecho",
+      "zh": "跟踪骚扰"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.048(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.048",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking another person, using the statute's definitions of harassment, course of conduct, and cyberstalking.",
+        "degreeContext": "A first-degree misdemeanor. Conduct involving a credible threat or one of the statute's other specified circumstances is separately classified as aggravated stalking."
+      },
+      "es": {
+        "plainSummary": "Seguir, hostigar o ciberacosar a otra persona de forma deliberada, maliciosa y repetida, según las definiciones legales de hostigamiento, patrón de conducta y ciberacoso.",
+        "degreeContext": "Es un delito menor de primer grado. La conducta que incluye una amenaza creíble u otra circunstancia especificada por la ley se clasifica por separado como acecho agravado."
+      },
+      "zh": {
+        "plainSummary": "依照该法对骚扰、持续行为和网络跟踪的定义，故意、恶意且反复地跟随、骚扰或网络跟踪他人。",
+        "degreeContext": "属于一级轻罪。涉及可信威胁或法律规定的其他特定情形时，另行归类为加重跟踪骚扰。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-048-3-aggravated-stalking",
+    "jurisdiction": "FL",
+    "code": "784.048(3)",
+    "slug": "fl-fs-784-048-3-aggravated-stalking",
+    "name": "Aggravated stalking",
+    "names": {
+      "es": "Acecho agravado",
+      "zh": "加重跟踪骚扰"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.048(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.048",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking another person while making a credible threat to that person.",
+        "degreeContext": "A third-degree felony under subsection (3). Other aggravated-stalking variants in the same section have different required circumstances and are not included in this record."
+      },
+      "es": {
+        "plainSummary": "Seguir, hostigar o ciberacosar deliberada, maliciosa y repetidamente a otra persona mientras se le hace una amenaza creíble.",
+        "degreeContext": "Es un delito grave de tercer grado conforme al apartado (3). Otras variantes de acecho agravado en la misma sección exigen circunstancias distintas y no se incluyen en este registro."
+      },
+      "zh": {
+        "plainSummary": "故意、恶意且反复地跟随、骚扰或网络跟踪他人，同时对该人作出可信威胁。",
+        "degreeContext": "依第(3)款属于三级重罪。同一法条中的其他加重跟踪骚扰类型要求不同情形，不包含在本记录中。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-045-1-2-aggravated-battery",
+    "jurisdiction": "FL",
+    "code": "784.045(1)-(2)",
+    "slug": "fl-fs-784-045-1-2-aggravated-battery",
+    "name": "Aggravated battery",
+    "names": {
+      "es": "Agresión física agravada",
+      "zh": "加重殴打"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.045(1)-(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.045",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "While committing a battery, intentionally or knowingly causing great bodily harm, permanent disability, or permanent disfigurement, or using a deadly weapon; also, committing battery against a person who was pregnant when the offender knew or should have known of the pregnancy.",
+        "degreeContext": "Second-degree felony. A violation committed in furtherance of a riot or aggravated riot is ranked one level higher for sentencing under chapter 921."
+      },
+      "es": {
+        "plainSummary": "Al cometer una agresión física, causar intencionalmente o a sabiendas lesiones corporales graves, discapacidad permanente o desfiguración permanente, o usar un arma mortal; también, cometer una agresión física contra una persona embarazada cuando el autor sabía o debía haber sabido del embarazo.",
+        "degreeContext": "Delito grave de segundo grado. Si la infracción se comete para promover un disturbio o disturbio agravado, se clasifica un nivel más alto para la imposición de pena conforme al capítulo 921."
+      },
+      "zh": {
+        "plainSummary": "在实施殴打时，故意或明知造成严重身体伤害、永久残疾或永久毁容，或使用致命武器；也包括对当时怀孕的人实施殴打且行为人知道或应当知道其怀孕。",
+        "degreeContext": "二级重罪。为推进暴乱或加重暴乱而实施本条违法行为的，在依第921章量刑时提高一个等级。"
+      }
+    }
+  }
+]
