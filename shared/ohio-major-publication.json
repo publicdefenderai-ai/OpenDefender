@@ -56,15 +56,28 @@
       "F4"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2923.11"
     ],
     "gradingDivisions": [
       "D"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.08",
+          "quote": "(D) Whoever violates division (B) of this section is guilty of endangering aircraft, a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-08-endangering-airport-operations",
@@ -80,8 +93,8 @@
       "F4"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2923.11",
@@ -89,7 +102,20 @@
     ],
     "gradingDivisions": [
       "E"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2909.08",
+          "quote": "(E) Whoever violates division (C) of this section is guilty of endangering airport operations, a misdemeanor of the second degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-09-vehicular-vandalism",
@@ -106,8 +132,8 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "4511.01",
@@ -115,7 +141,20 @@
     ],
     "gradingDivisions": [
       "C"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.09",
+          "quote": "Except as otherwise provided in this division, vehicular vandalism is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-10-railroad-vandalism",
@@ -132,13 +171,26 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
     "gradingDivisions": [
       "D"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.10",
+          "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-10-criminal-trespass-on-a-locomotive-engine-railroad-car-or-other-railroad-vehicle",
@@ -155,13 +207,26 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
     "gradingDivisions": [
       "D"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.10",
+          "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-10-interference-with-the-operation-of-a-train",
@@ -178,13 +243,26 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
     "gradingDivisions": [
       "D"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.10",
+          "quote": "Except as otherwise provided in this division, railroad vandalism; criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle; and interference with the operation of a train each is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-22-soliciting-or-providing-support-for-an-act-of-terrorism",
@@ -317,8 +395,8 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2909.21",
@@ -326,7 +404,20 @@
     ],
     "gradingDivisions": [
       "B"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.29",
+          "quote": "(B)(1) Whoever violates this section is guilty of money laundering in support of terrorism, which is a misdemeanor of the first degree, except as otherwise provided in this division."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-081-interfering-with-the-operation-of-an-aircraft-with-a-laser",
@@ -362,13 +453,26 @@
       "F2"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [],
     "gradingDivisions": [
       "B"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.101",
+          "quote": "Except as otherwise provided in this division, railroad grade crossing device vandalism is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2911-23-criminal-trespass-on-a-place-of-public-amusement",
@@ -421,15 +525,28 @@
       "F5"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2913.01"
     ],
     "gradingDivisions": [
       "B"
-    ]
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2911.32",
+          "quote": "(B) Whoever violates this section is guilty of tampering with coin machines, a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2911-211-aggravated-trespass-a-1",

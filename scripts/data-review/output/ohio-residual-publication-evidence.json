@@ -9,6 +9,7 @@
       "id": "oh-orc-2905-01-kidnapping",
       "section": "2905.01",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "a4117e713b51aaebd44e6365ea827d675b198975dc3de5b88d024e23a2375b35",
       "mappingId": "orc-2905.01-a-b",
       "namingBasis": "operative_guilt_clause",
@@ -217,6 +218,7 @@
       "id": "oh-orc-2905-02-abduction",
       "section": "2905.02",
       "scope": "A,B",
+      "primaryClassification": null,
       "definitionHash": "1b76f204f6d064306124255ffdbf613b1b720a4fd4a4859c55b7b7f8cd6a5673",
       "mappingId": "orc-2905.02-a-b",
       "namingBasis": "operative_guilt_clause",
@@ -383,6 +385,7 @@
       "id": "oh-orc-2905-11-extortion",
       "section": "2905.11",
       "scope": "B",
+      "primaryClassification": null,
       "definitionHash": "6ebf873b7090595664cc1efcc93f605af9241b216bce3c8e9e9935bbbc898efc",
       "mappingId": "orc-2905.11-b",
       "namingBasis": "operative_guilt_clause",
@@ -528,6 +531,7 @@
       "id": "oh-orc-2905-11-sexual-extortion",
       "section": "2905.11",
       "scope": "D",
+      "primaryClassification": null,
       "definitionHash": "5361707ff868c0804f1099446ad655af3e533bec68857d6bb01acea9637108ac",
       "mappingId": "orc-2905.11-d",
       "namingBasis": "operative_guilt_clause",
@@ -715,6 +719,7 @@
       "id": "oh-orc-2905-22-extortionate-credit",
       "section": "2905.22",
       "scope": "A(1)",
+      "primaryClassification": null,
       "definitionHash": "ab5cdf33b851dd6132dc130075486262aaa38046e3c291a736e31f21b11b5c40",
       "mappingId": "orc-2905.22-a-1-",
       "namingBasis": "official_heading_with_subdivision_not_synthesized_guilt_name",
@@ -848,6 +853,7 @@
       "id": "oh-orc-2905-22-criminal-usury",
       "section": "2905.22",
       "scope": "A(2)",
+      "primaryClassification": null,
       "definitionHash": "72863ed7ca731b27b8cf97de38868194931f3e5bdb9797d4f48c4cb7134f30e9",
       "mappingId": "orc-2905.22-a-2-",
       "namingBasis": "official_heading_with_subdivision_not_synthesized_guilt_name",
@@ -981,6 +987,7 @@
       "id": "oh-orc-2905-22-usurious-records",
       "section": "2905.22",
       "scope": "A(3)",
+      "primaryClassification": null,
       "definitionHash": "eef67bc0f63cc73a05d7743aabca3496caf0eea6d392b4d9cf08ee4ef5b24d68",
       "mappingId": "orc-2905.22-a-3-",
       "namingBasis": "official_heading_with_subdivision_not_synthesized_guilt_name",
@@ -1092,6 +1099,7 @@
       "id": "oh-orc-2905-32-trafficking-in-persons",
       "section": "2905.32",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "2a8582cff7181f9eeeab136149279c4dda1fcb49877284a46454f087cb0ef301",
       "mappingId": "orc-2905.32-a",
       "namingBasis": "operative_guilt_clause",
@@ -1270,6 +1278,7 @@
       "id": "oh-orc-2905-33-unlawful-documents",
       "section": "2905.33",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "5e473b5662340c1c2dbd8216156e152dd8dca58c5ee43e6fd40543b3e0ebf72c",
       "mappingId": "orc-2905.33-a",
       "namingBasis": "operative_guilt_clause",
@@ -1481,6 +1490,7 @@
       "id": "oh-orc-2909-02-aggravated-arson",
       "section": "2909.02",
       "scope": "A",
+      "primaryClassification": null,
       "definitionHash": "b0d6247b146815968c58dd6fe46c62a58f6bc2f483bb72ddfa30939652b1ad3f",
       "mappingId": "orc-2909.02-a",
       "namingBasis": "operative_guilt_clause",
@@ -1658,6 +1668,25 @@
       "id": "oh-orc-2909-03-arson",
       "section": "2909.03",
       "scope": "A,B",
+      "primaryClassification": {
+        "category": "felony",
+        "basis": "branch_dependent",
+        "ordinaryDegrees": [],
+        "evidence": [
+          {
+            "section": "2909.03",
+            "quote": "(2) A violation of division (A)(1) or (B) (1) of this section is one of the following:\n(a) Except as otherwise provided in division (D)(2)(b) of this section, a misdemeanor of the first degree;\n(b) If the value of the property or the amount of the physical harm involved is one thousand dollars or more, a felony of the fourth degree."
+          },
+          {
+            "section": "2909.03",
+            "quote": "(3) A violation of division (A)(2), (3), (5), or (6) or (B) (3) of this section is a felony of the fourth degree."
+          },
+          {
+            "section": "2909.03",
+            "quote": "(4) A violation of division (A)(4) or (B) (2) of this section is a felony of the third degree."
+          }
+        ]
+      },
       "definitionHash": "a6a811f4c05f03a2ea12119a613bd1da8fa33fb73631fbe9192739c710263b2b",
       "mappingId": "orc-2909.03-a-b",
       "namingBasis": "operative_guilt_clause",
@@ -1866,6 +1895,7 @@
       "id": "oh-orc-2909-04-disrupting-public-services",
       "section": "2909.04",
       "scope": "A(1),A(2),B",
+      "primaryClassification": null,
       "definitionHash": "65f8e9b1828ad53af24ae129cce2ccc3f6a93d6b38233ca28ca73ef47007185d",
       "mappingId": "orc-2909.04-a-1-a-2-b",
       "namingBasis": "operative_guilt_clause",
@@ -2008,6 +2038,7 @@
       "id": "oh-orc-2909-05-vandalism",
       "section": "2909.05",
       "scope": "A,B,C,D",
+      "primaryClassification": null,
       "definitionHash": "da7d701f5a685737d4117dabe20da6085a1ed4d0955d3ed96bf451f9c467e18f",
       "mappingId": "orc-2909.05-a-b-c-d",
       "namingBasis": "operative_guilt_clause",
@@ -2161,7 +2192,29 @@
       "id": "oh-orc-2909-07-criminal-mischief",
       "section": "2909.07",
       "scope": "A(1)-A(6)",
-      "definitionHash": "069fc48a0f664fad4ac944d5461a5685887edcb3f4a1441dbe83ab915db0d469",
+      "primaryClassification": {
+        "category": "misdemeanor",
+        "basis": "statutory_ordinary_grade",
+        "ordinaryDegrees": [
+          "M3",
+          "M1"
+        ],
+        "evidence": [
+          {
+            "section": "2909.07",
+            "quote": "(2) Except as otherwise provided in this division, criminal mischief committed in violation of division (A)(1), (2), (3), (4), or (5) of this section is a misdemeanor of the third degree."
+          },
+          {
+            "section": "2909.07",
+            "quote": "Except as otherwise provided in this division, if the violation of division (A)(1), (2), (3), (4), or (5) of this section creates a risk of physical harm to any person, criminal mischief committed in violation of division (A)(1), (2), (3), (4), or (5) of this section is a misdemeanor of the first degree."
+          },
+          {
+            "section": "2909.07",
+            "quote": "(3) Except as otherwise provided in this division, criminal mischief committed in violation of division (A)(6) of this section is a misdemeanor of the first degree."
+          }
+        ]
+      },
+      "definitionHash": "c351cfa8e31a3373a8d074a53f96dfa96b6ed55a0ac9da8a3656cbedbcbf00d6",
       "mappingId": "orc-2909.07-a-1-a-6-",
       "namingBasis": "official_heading_with_subdivision_not_synthesized_guilt_name",
       "dependencies": [

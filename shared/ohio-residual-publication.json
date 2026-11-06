@@ -283,7 +283,26 @@
       "D(3)",
       "D(4)"
     ],
-    "ordinarySentencing": true
+    "ordinarySentencing": true,
+    "primaryClassification": {
+      "category": "felony",
+      "basis": "branch_dependent",
+      "ordinaryDegrees": [],
+      "evidence": [
+        {
+          "section": "2909.03",
+          "quote": "(2) A violation of division (A)(1) or (B) (1) of this section is one of the following:\n(a) Except as otherwise provided in division (D)(2)(b) of this section, a misdemeanor of the first degree;\n(b) If the value of the property or the amount of the physical harm involved is one thousand dollars or more, a felony of the fourth degree."
+        },
+        {
+          "section": "2909.03",
+          "quote": "(3) A violation of division (A)(2), (3), (5), or (6) or (B) (3) of this section is a felony of the fourth degree."
+        },
+        {
+          "section": "2909.03",
+          "quote": "(4) A violation of division (A)(4) or (B) (2) of this section is a felony of the third degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2909-04-disrupting-public-services",
@@ -344,8 +363,8 @@
       "F4"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "2909.01"
@@ -354,6 +373,28 @@
       "C(2)",
       "C(3)"
     ],
-    "ordinarySentencing": true
+    "ordinarySentencing": true,
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M3",
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2909.07",
+          "quote": "(2) Except as otherwise provided in this division, criminal mischief committed in violation of division (A)(1), (2), (3), (4), or (5) of this section is a misdemeanor of the third degree."
+        },
+        {
+          "section": "2909.07",
+          "quote": "Except as otherwise provided in this division, if the violation of division (A)(1), (2), (3), (4), or (5) of this section creates a risk of physical harm to any person, criminal mischief committed in violation of division (A)(1), (2), (3), (4), or (5) of this section is a misdemeanor of the first degree."
+        },
+        {
+          "section": "2909.07",
+          "quote": "(3) Except as otherwise provided in this division, criminal mischief committed in violation of division (A)(6) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   }
 ]

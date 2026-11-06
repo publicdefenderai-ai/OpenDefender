@@ -1,3 +1,4 @@
+import { OHIO_THEFT_FRAUD_SOURCES, isOhioTheftFraudSourceFresh } from "../data/ohio-theft-fraud-source";
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "../data/ohio-major-source";
@@ -253,6 +254,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   if (jurisdiction === "OH" && !isOhioResidualSourceFresh()) {
     for (const source of OHIO_RESIDUAL_SOURCES) selectable.delete(source.chargeId);
   }
+  if (jurisdiction === "OH" && !isOhioTheftFraudSourceFresh()) {
+    for (const source of OHIO_THEFT_FRAUD_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "OH" && !isOhioMajorSourceFresh()) {
     for (const source of OHIO_MAJOR_SOURCES) selectable.delete(source.chargeId);
   }
@@ -300,8 +304,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // Old completed ingestion runs must not serve corrected summaries until
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
-    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES].map(source => ({id: source.chargeId}))]) {
-      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES].find(row => row.chargeId === update.id);
+    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES].map(source => ({id: source.chargeId}))]) {
+      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES].find(row => row.chargeId === update.id);
       if (!source) {
         selectable.delete(update.id);
         continue;
