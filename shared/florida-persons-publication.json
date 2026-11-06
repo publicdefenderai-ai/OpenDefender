@@ -1,0 +1,312 @@
+[
+  {
+    "id": "fl-fs-784-03-2-persons",
+    "section": "784.03",
+    "scope": "(2)",
+    "name": "Battery: second or subsequent offense",
+    "statutoryName": "battery",
+    "grade": "F3",
+    "conductSummary": "Committing battery after a prior conviction for battery, aggravated battery, felony battery, or resisting an officer with violence. The prior-conviction definition includes withheld adjudication and a nolo contendere plea. The underlying battery conduct is an intentional unwanted touch or strike, or intentionally causing bodily harm.",
+    "dependencies": [
+      "843.01",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "The resisting-with-violence prior-conviction alternative was added effective July 1, 2026; earlier conduct requires the earlier statutory version. Section 741.2801(3) expressly excludes this section 784.03(2) felony battery from its domestic-violence repeat enhancement.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Battery; felony battery",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-041-1-persons",
+    "section": "784.041",
+    "scope": "(1)",
+    "name": "Felony battery",
+    "statutoryName": "felony battery",
+    "grade": "F3",
+    "conductSummary": "Actually and intentionally touching or striking another person against that person's will and causing great bodily harm, permanent disability, or permanent disfigurement.",
+    "dependencies": [
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Felony battery; domestic battery by strangulation",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-041-2-persons",
+    "section": "784.041",
+    "scope": "(2)",
+    "name": "Domestic battery by strangulation",
+    "statutoryName": "domestic battery by strangulation",
+    "grade": "F3",
+    "conductSummary": "Knowingly and intentionally impeding the breathing or blood circulation of a family or household member or a person in a continuing significant romantic or intimate relationship, against that person's will, by pressure on the throat or neck or blocking the nose or mouth, creating a risk of or causing great bodily harm. Authorized medical diagnosis, treatment, or prescription is excluded. Family or household membership uses section 741.28, including its residence qualification and shared-child exception.",
+    "dependencies": [
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Felony battery; domestic battery by strangulation",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-048-4-persons",
+    "section": "784.048",
+    "scope": "(4)",
+    "name": "Aggravated stalking: after an injunction or court prohibition",
+    "statutoryName": "aggravated stalking",
+    "grade": "F3",
+    "conductSummary": "Knowingly, willfully, maliciously, and repeatedly following, harassing, or cyberstalking another person after one of the listed protective injunctions or another court-imposed prohibition concerning that person or their property. The statutory definitions require the specified course of conduct and exclude constitutionally protected activity; credible-threat stalking is a separately covered branch.",
+    "dependencies": [
+      "741.30",
+      "784.046",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Section 784.048(8) requires punishment to run consecutively to a former sentence for the listed offenses. Under subsection (9), the court must consider a no-contact order that may last up to 10 years. For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Stalking; definitions; penalties",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-048-5-persons",
+    "section": "784.048",
+    "scope": "(5)",
+    "name": "Aggravated stalking: child under 16",
+    "statutoryName": "aggravated stalking",
+    "grade": "F3",
+    "conductSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking a child under 16. The statutory definitions require the specified course of conduct and exclude constitutionally protected activity; credible-threat stalking is a separately covered branch.",
+    "dependencies": [
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Section 784.048(8) requires punishment to run consecutively to a former sentence for the listed offenses. Under subsection (9), the court must consider a no-contact order that may last up to 10 years. For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Stalking; definitions; penalties",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-048-7-persons",
+    "section": "784.048",
+    "scope": "(7)",
+    "name": "Aggravated stalking: victim of a specified prior offense",
+    "statutoryName": "aggravated stalking",
+    "grade": "F3",
+    "conductSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking the victim after sentencing for section 794.011, 800.04, or 847.0135(5), and a section 921.244 prohibition on contacting that victim. The statutory definitions require the specified course of conduct and exclude constitutionally protected activity; credible-threat stalking is a separately covered branch.",
+    "dependencies": [
+      "794.011",
+      "800.04",
+      "847.0135",
+      "921.244",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Section 784.048(8) requires punishment to run consecutively to a former sentence for the listed offenses. Under subsection (9), the court must consider a no-contact order that may last up to 10 years. For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Stalking; definitions; penalties",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-08-2-a-persons",
+    "section": "784.08",
+    "scope": "(2)(a)",
+    "name": "Aggravated battery: victim age 65 or older",
+    "statutoryName": "aggravated battery",
+    "grade": "F1",
+    "conductSummary": "The underlying aggravated battery involves intentional or knowing great bodily harm, permanent disability or disfigurement, use of a deadly weapon, or battery on a person known or reasonably understood to be pregnant. Section 784.08 reclassifies it when the victim is 65 or older, regardless of whether the accused knew or had reason to know the victim's age.",
+    "dependencies": [
+      "784.045",
+      "784.03",
+      "948.01",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Section 784.08(1) requires a minimum of 3 years imprisonment, a fine not exceeding $10,000, restitution, and up to 500 hours of community service in addition to punishment. Adjudication of guilt or imposition of sentence may not be suspended, deferred, or withheld under section 784.08(3). For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a life felony, ordinarily punishable by imprisonment for life and a conventional fine up to $15,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery on persons 65 years of age or older; reclassification of offenses; minimum sentence",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-08-2-b-persons",
+    "section": "784.08",
+    "scope": "(2)(b)",
+    "name": "Aggravated assault: victim age 65 or older",
+    "statutoryName": "aggravated assault",
+    "grade": "F2",
+    "conductSummary": "The underlying aggravated assault involves an intentional unlawful threat by word or act, apparent ability, and a well-founded fear of imminent violence, with a deadly weapon without intent to kill or with intent to commit a felony. Section 784.08 reclassifies it when the victim is 65 or older, regardless of whether the accused knew or had reason to know the victim's age.",
+    "dependencies": [
+      "784.021",
+      "784.011",
+      "948.01",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Section 784.08(1) requires a minimum of 3 years imprisonment, a fine not exceeding $10,000, restitution, and up to 500 hours of community service in addition to punishment. Adjudication of guilt or imposition of sentence may not be suspended, deferred, or withheld under section 784.08(3). For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a first-degree felony, ordinarily punishable by up to 30 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery on persons 65 years of age or older; reclassification of offenses; minimum sentence",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-08-2-c-persons",
+    "section": "784.08",
+    "scope": "(2)(c)",
+    "name": "Battery: victim age 65 or older",
+    "statutoryName": "battery",
+    "grade": "F3",
+    "conductSummary": "The underlying battery involves an intentional unwanted touch or strike, or intentionally causing bodily harm. Section 784.08 reclassifies it when the victim is 65 or older, regardless of whether the accused knew or had reason to know the victim's age.",
+    "dependencies": [
+      "784.03",
+      "948.01",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Adjudication of guilt or imposition of sentence may not be suspended, deferred, or withheld under section 784.08(3). For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery on persons 65 years of age or older; reclassification of offenses; minimum sentence",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-08-2-d-persons",
+    "section": "784.08",
+    "scope": "(2)(d)",
+    "name": "Assault: victim age 65 or older",
+    "statutoryName": "assault",
+    "grade": "M1",
+    "conductSummary": "The underlying assault involves an intentional unlawful threat by word or act, apparent ability, and a well-founded fear of imminent violence. Section 784.08 reclassifies it when the victim is 65 or older, regardless of whether the accused knew or had reason to know the victim's age.",
+    "dependencies": [
+      "784.011",
+      "948.01",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": "Adjudication of guilt or imposition of sentence may not be suspended, deferred, or withheld under section 784.08(3). For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a third-degree felony, ordinarily punishable by up to 5 years imprisonment and a conventional fine up to $5,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery on persons 65 years of age or older; reclassification of offenses; minimum sentence",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-082-1-persons",
+    "section": "784.082",
+    "scope": "(1)",
+    "name": "Aggravated battery: detained person against visitor or detainee",
+    "statutoryName": "aggravated battery",
+    "grade": "F1",
+    "conductSummary": "The underlying aggravated battery involves intentional or knowing great bodily harm, permanent disability or disfigurement, use of a deadly weapon, or battery on a person known or reasonably understood to be pregnant. Section 784.082 reclassifies it when a person detained in a prison, jail, or other detention facility commits it against a visitor or another detainee.",
+    "dependencies": [
+      "784.045",
+      "784.03",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a life felony, ordinarily punishable by imprisonment for life and a conventional fine up to $15,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery by a person who is being detained in a prison, jail, or other detention facility upon visitor or other detainee; reclassification of offenses",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-082-2-persons",
+    "section": "784.082",
+    "scope": "(2)",
+    "name": "Aggravated assault: detained person against visitor or detainee",
+    "statutoryName": "aggravated assault",
+    "grade": "F2",
+    "conductSummary": "The underlying aggravated assault involves an intentional unlawful threat by word or act, apparent ability, and a well-founded fear of imminent violence, with a deadly weapon without intent to kill or with intent to commit a felony. Section 784.082 reclassifies it when a person detained in a prison, jail, or other detention facility commits it against a visitor or another detainee.",
+    "dependencies": [
+      "784.021",
+      "784.011",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a first-degree felony, ordinarily punishable by up to 30 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery by a person who is being detained in a prison, jail, or other detention facility upon visitor or other detainee; reclassification of offenses",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-082-3-persons",
+    "section": "784.082",
+    "scope": "(3)",
+    "name": "Battery: detained person against visitor or detainee",
+    "statutoryName": "battery",
+    "grade": "F3",
+    "conductSummary": "The underlying battery involves an intentional unwanted touch or strike, or intentionally causing bodily harm. Section 784.082 reclassifies it when a person detained in a prison, jail, or other detention facility commits it against a visitor or another detainee.",
+    "dependencies": [
+      "784.03",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery by a person who is being detained in a prison, jail, or other detention facility upon visitor or other detainee; reclassification of offenses",
+    "categories": [
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-082-4-persons",
+    "section": "784.082",
+    "scope": "(4)",
+    "name": "Assault: detained person against visitor or detainee",
+    "statutoryName": "assault",
+    "grade": "M1",
+    "conductSummary": "The underlying assault involves an intentional unlawful threat by word or act, apparent ability, and a well-founded fear of imminent violence. Section 784.082 reclassifies it when a person detained in a prison, jail, or other detention facility commits it against a visitor or another detainee.",
+    "dependencies": [
+      "784.011",
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a third-degree felony, ordinarily punishable by up to 5 years imprisonment and a conventional fine up to $5,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Assault or battery by a person who is being detained in a prison, jail, or other detention facility upon visitor or other detainee; reclassification of offenses",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ]
+  },
+  {
+    "id": "fl-fs-784-085-1--3-persons",
+    "section": "784.085",
+    "scope": "(1)-(3)",
+    "name": "Battery of a child: specified bodily fluids or materials",
+    "statutoryName": "battery of a child",
+    "grade": "F3",
+    "conductSummary": "A person age 18 or older knowingly causing or attempting to cause a person under 18 to contact blood, seminal fluid, urine, or feces by throwing, tossing, projecting, or expelling the material.",
+    "dependencies": [
+      "741.28",
+      "741.2801"
+    ],
+    "additionalPenalty": " For conduct on or after July 1, 2026, if this is a crime of domestic violence within section 741.28 and the accused had a prior domestic-violence conviction when the offense occurred, section 741.2801 reclassifies it to a second-degree felony, ordinarily punishable by up to 15 years imprisonment and a conventional fine up to $10,000. That conviction definition includes withheld adjudication and a nolo contendere plea. A dating relationship alone does not establish the family-or-household relationship required by section 741.28.",
+    "namingBasis": "Source-derived offense name with a descriptive branch qualifier; qualifier is not claimed to be a statutory short title.",
+    "officialTitle": "Battery of child by throwing, tossing, projecting, or expelling certain fluids or materials",
+    "categories": [
+      "felony"
+    ]
+  }
+]

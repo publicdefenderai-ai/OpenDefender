@@ -1,0 +1,50 @@
+[
+  {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  {
+    "chapter": "2026-128",
+    "sourceUrl": "https://laws.flrules.org/2026/128",
+    "section": 3,
+    "page": 3,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323975+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  {
+    "chapter": "2026-144",
+    "sourceUrl": "https://laws.flrules.org/2026/144",
+    "section": 7,
+    "page": 12,
+    "effectiveDate": "2026-06-16",
+    "effectiveDateQuote": "This act shall take effect upon becoming a law.",
+    "quoteSha256": "b1640307c7bbd23f263aa57e2b6c01e3f836aa96629f65408fd040348ef7b421",
+    "retrievedAt": "2026-11-06T05:21:03.323978+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": "2026-06-16"
+  },
+  {
+    "chapter": "2026-149",
+    "sourceUrl": "https://laws.flrules.org/2026/149",
+    "section": 11,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323980+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  }
+]

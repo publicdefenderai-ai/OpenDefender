@@ -1,3 +1,4 @@
+import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 // Criminal Charges Database - Comprehensive Coverage for All US Jurisdictions
 // Generated: 2025-09-24T07:04:17.705Z
 // Total Charges: 7579 (as of 2026-03; base + 456 inchoate P1/2 + 285 enhancement P3 + 117 white-collar/federal P4 + 225 juvenile P5 entries)
@@ -94679,7 +94680,7 @@ criminalCharges.push(...phase5JuvenileCharges);
 // older degree-labelled Ohio homicide rows.
 criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
 // Additive source-first Florida identities never replace or alias legacy rows.
-criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges);
+criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges, ...FLORIDA_PERSONS_BATCH.charges);
 // Source-first California additions preserve the separate legacy inventory.
 criminalCharges.push(...getCaliforniaAdditionCharges());
 
