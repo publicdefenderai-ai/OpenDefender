@@ -23,6 +23,7 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
       const main = page.locator('main.standalone-guide');
       await expect(main.locator('h1')).toHaveText(`${locale.translation.standaloneGuides[kind].heading} ${locale.translation.standaloneGuides[kind].accent}`);
       await expect(page.locator('#main-content > div').first()).toHaveCSS('opacity', '1');
+      await page.evaluate(() => document.fonts.ready);
       await page.screenshot({ path: info.outputPath(`${kind}-desktop.png`), fullPage: true });
       const triggers = main.locator('.guide-disclosures button');
       await expect(triggers).toHaveCount(count);
@@ -46,6 +47,13 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
           const r = el.getBoundingClientRect(); return r.width > 0 && (r.left < -1 || r.right > innerWidth + 1);
         }).map(el => el.textContent));
         expect(overflow).toEqual([]);
+        // Element boxes alone can conceal clipped text; verify every hero line.
+        const clippedHeroText = await main.locator('.guide-hero h1, .guide-hero p').evaluateAll(elements => elements.filter(element => {
+          const range = document.createRange();
+          range.selectNodeContents(element);
+          return [...range.getClientRects()].some(rect => rect.left < -1 || rect.right > innerWidth + 1);
+        }).map(element => element.textContent));
+        expect(clippedHeroText).toEqual([]);
       }
       await page.screenshot({ path: info.outputPath(`${kind}-mobile.png`), fullPage: true });
       await expect(main.locator('.guide-close a')).toHaveAttribute('href', '/legal-aid');
