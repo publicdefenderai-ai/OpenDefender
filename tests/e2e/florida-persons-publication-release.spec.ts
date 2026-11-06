@@ -1,7 +1,10 @@
 import { expect, test } from '@playwright/test';
-import rows from '../../shared/florida-persons-publication.json';
-import { FLORIDA_REVIEWED_DEFINITIONS } from '../../shared/florida-reviewed-batch';
-test('Florida persons choices retain conditional severity while the older expired bundle stays withheld', async ({ request }) => {
+import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+const rows = JSON.parse(readFileSync('shared/florida-persons-publication.json', 'utf8'));
+const olderIds = JSON.parse(readFileSync('shared/florida-reviewed-eligibility.json', 'utf8')).decisions
+    .filter((row: any) => row.status === 'eligible').map((row: any) => row.id);
+test('Florida persons choices retain conditional severity independently of the older bundle freshness', async ({ request }) => {
     const response = await request.get('/api/criminal-charges?jurisdiction=FL&limit=500');
     expect(response.ok()).toBe(true);
     const body = await response.json();
@@ -13,6 +16,13 @@ test('Florida persons choices retain conditional severity while the older expire
         expect(charge.maxPenalty).toContain(row.additionalPenalty);
     }
     const ids = new Set(body.charges.map((c: any) => c.id));
-    for (const old of FLORIDA_REVIEWED_DEFINITIONS)
-        expect(ids.has(old.id), old.id).toBe(false);
+    // The fixture contains both families. A later legitimate renewal must restore
+    // the older set; today its expired receipt must withhold it independently.
+    // Use the offline validator under the repository's TS loader; Playwright's
+    // native ESM loader cannot import its JSON-backed server module directly.
+    const olderFresh = JSON.parse(execFileSync(process.execPath, ['--import', 'tsx', '--eval',
+        "import {isFloridaReviewedSourceFresh} from './server/data/florida-reviewed-source-records.ts'; process.stdout.write(JSON.stringify(isFloridaReviewedSourceFresh()));",
+    ], { encoding: 'utf8' }));
+    for (const id of olderIds)
+        expect(ids.has(id), id).toBe(olderFresh);
 });

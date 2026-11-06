@@ -31,9 +31,8 @@ describe("statutory receipt deadline alarm", () => {
     expect(state("2026-12-24T22:10:49.174Z")).toBe("expired");
   }));
   it("does not silently pass missing, malformed, or future-dated receipts", () => withReceipts((root, dir) => {
-    rmSync(join(dir, names[0]));
-    rmSync(join(dir, names[3]));
-    rmSync(join(dir, names[4]));
+    for (const name of names.filter((_, index) => index !== 1 && index !== 2))
+      rmSync(join(dir, name));
     writeFileSync(join(dir, names[1]), "not json");
     writeFileSync(join(dir, names[2]), JSON.stringify({ checkedAt: "2026-10-02", expiresAt: "2026-10-01" }));
     rmSync(join(dir, "california-archive-refresh-receipt.json"));
@@ -44,6 +43,6 @@ describe("statutory receipt deadline alarm", () => {
   it("discovers a new jurisdiction receipt without removing the required ones", () => withReceipts((root, dir) => {
     writeFileSync(join(dir, "new-state-refresh-receipt.json"), JSON.stringify({ checkedAt: "2026-09-24", expiresAt: "2026-09-25" }));
     const report = checkStatutoryReceipts(root, new Date("2026-09-26"));
-    expect(report.receipts).toHaveLength(7); expect(report.ok).toBe(false);
+    expect(report.receipts).toHaveLength(names.length + 2); expect(report.ok).toBe(false);
   }));
 });
