@@ -8,7 +8,7 @@ export function NrrcResources({ ids }: { ids: NrrcResourceId[] }) {
     <p className="mt-2 text-sm text-muted-foreground">{copy.note}</p>
     <ul className="mt-4 space-y-4">{resources.filter(resource => ids.includes(resource.id)).map(resource =>
       <li key={resource.id}>
-        <a className="font-semibold underline decoration-1 underline-offset-4" href={resource.link}>{resource.title}</a>
+        <a className="font-semibold underline decoration-1 underline-offset-4" href={resource.link} target="_blank" rel="noopener noreferrer">{resource.title}</a>
         <p className="mt-1 text-sm text-muted-foreground">{resource.description}</p>
       </li>)}
     </ul>

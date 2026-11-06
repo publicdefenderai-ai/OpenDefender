@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "a8b4a44971bb42641a555da7433e3013732eef79fa55d11ccf371cc09259e021",
+  "reportHash": "33620f9b3203dd830e068d3b3964f60378e6ae8836f8fa55147b4e70a74bb286",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -93,34 +93,34 @@
     {
       "id": "fl-fs-784-011-assault",
       "status": "eligible",
-      "reason": "Clear whole-section offense with conduct and conditional grades.",
-      "draftHash": "ef7b3f005ea8f06a371e7bb578c4ec611c265cf2977a2fcb2836aad573f334d9",
-      "definitionHash": "d95be317af1dacfc353e28ee6e1a5d4aefd8fa7f926d58a391213c6189ea6ceb",
-      "approvalHash": "cf1f17083b9baa2f963d13558dbe633b2d2e774b9995f41a9b9ed359dc824130"
+      "reason": "Corrected existing record with individually bound domestic-violence conditions; freshness and database gates remain separate.",
+      "draftHash": "3705fa0112735e31b454884ab6babe9ac55fd84d23187eb46b7d7a0d7ff59058",
+      "definitionHash": "44d6a7c2a398a4be6e5dd5250fd6a90d7a09b8feb00495f26ce1dbfd56a712c2",
+      "approvalHash": "d0660b0dfb32b212a6d9e2caab5a72c811e772554e5af540df31064ffcc8e0b0"
     },
     {
       "id": "fl-fs-784-03-battery",
       "status": "eligible",
-      "reason": "The operative clause expressly names battery and its conduct subdivision.",
-      "draftHash": "cdc6178f54221bdfe9f2679be2e286f917fb352d276e73f0aab9cf62f3d931c0",
-      "definitionHash": "3022ffda52a060aa286f21e2d7413c8c20d346f1696854249ad3a195af5dbc30",
-      "approvalHash": "288b0daa2c27660ba6cbafe63f0ac019fef0f042ad889e01a678fb90ada0ba5d"
+      "reason": "Corrected existing record with individually bound domestic-violence conditions; freshness and database gates remain separate.",
+      "draftHash": "958a3b6cb25db415b6537260fe4dce6dbe4bb8de421ef5c4e0f2b5711d97cfa3",
+      "definitionHash": "1cdd43c615a7282c90aede3ef211c08426671fb95470d12388bb9cf12ee24991",
+      "approvalHash": "a2574b338c2bde47f556640bfa8c2b25732f0d6174a455ba97fdaa750f9b15cf"
     },
     {
       "id": "fl-fs-784-048-2-stalking",
       "status": "eligible",
-      "reason": "Subsection (2) expressly names stalking and states its conduct and grade.",
-      "draftHash": "f90857c0b97da1da8e3b52004710aece1c78dc057b3d0d8fb48809bd5ebc094a",
-      "definitionHash": "9840340e99471fa44b665fb6bf6405c661d0e2eec09150379164b1426108a959",
-      "approvalHash": "d3c7434f69432940027d1979d45b359ec532bff7eb0b544fa20817a22d616081"
+      "reason": "Corrected existing record with individually bound domestic-violence conditions; freshness and database gates remain separate.",
+      "draftHash": "3737508ba9814f72dbac0da4a6bed1e0c27366dced59ac4b142912098e40f0c4",
+      "definitionHash": "f21f60f33c899606e73ca844dd2480cad99d29adda6da78d1cacbcde26d18392",
+      "approvalHash": "b6ec19a5f44406fa76cf00e87f6d90fa65c99c5b478ec2a4046912ca6f964069"
     },
     {
       "id": "fl-fs-784-048-3-aggravated-stalking",
       "status": "eligible",
-      "reason": "Subsection (3) expressly names the credible-threat variant and gives its grade.",
-      "draftHash": "f12299ec89051dbb00428d4c122e61e01b15d6af603e036c78db323cec746490",
-      "definitionHash": "bf33a3fa63947e6b3e7d23861ca63c50a867dff758956821f3281b65f9de0a42",
-      "approvalHash": "d12b4a2382109671598287a638db2c17e9f1899d8848993a1b499d3fed8790f6"
+      "reason": "Corrected existing record with individually bound domestic-violence conditions; freshness and database gates remain separate.",
+      "draftHash": "2abee2d0194b317f4b467253aa2654d38d6780d1e1e2cc60cc0d3880b924da51",
+      "definitionHash": "a9853edc0e1af02270aafe618a0f6bde64c2427719bf85adce8bef80bdf39f4a",
+      "approvalHash": "f44dacbabe4f683ab229545cc3f6b0ecf247d152712e1d3420731afa18e09d36"
     },
     {
       "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
@@ -565,10 +565,10 @@
     {
       "id": "fl-fs-784-045-1-2-aggravated-battery",
       "status": "eligible",
-      "reason": "The official heading supplies exact identity; subsections (1)-(2) state the alternative aggravated-battery branches and a single felony grade.",
-      "draftHash": "7ebf6065b7380d06a3a7aab78e95aec9d1e52a30a0de1a9e2c12a5c9dec95e9c",
-      "definitionHash": "f63300f5a5fd64ad13027592308795994b4260c89e5c9c8ca68aeba38272bd9b",
-      "approvalHash": "f5a6704d453f2fad3e8aa804df1cef0bc07112a45f670f0bdd7535277da06bfa"
+      "reason": "Corrected existing record with individually bound domestic-violence conditions; freshness and database gates remain separate.",
+      "draftHash": "a97597e03de6bc833e05d91979d27eab9033043e656aa5e0948fd8a8cccee54c",
+      "definitionHash": "1b537da954342b48a032fabb0089879c773e0a6174e332f83f4af1687872906d",
+      "approvalHash": "733579a9eecc2f2c8147fe4d0fbaa351873910189293825922010d81ee9d368b"
     },
     {
       "id": "fl-fs-806-01-1-arson-in-the-first-degree",

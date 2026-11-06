@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import corrections from "../scripts/data-review/output/florida-domestic-corrections.json";
 import { describe, expect, it } from "vitest";
 import d from "../shared/florida-reviewed-data/d.json";
 import e from "../shared/florida-reviewed-data/e.json";
@@ -14,9 +14,14 @@ import {
 
 const definitions = [...d, ...e] as EvidenceBackedChargeDefinition[];
 const analyses = [...analysisD, ...analysisE] as FloridaReviewedAnalysisEntry[];
-const cache = JSON.parse(readFileSync(
-  "scripts/data-review/output/florida-batch-source-cache.json", "utf8",
-)) as FloridaReviewedSourceCache;
+// The older bulk cache intentionally preserves its acquisition history. Use the
+// corrected record's coherent retained acquisition set, not the newest timestamp
+// from unrelated cache additions, so this test reaches the citation guard.
+const cache: FloridaReviewedSourceCache = {
+  schemaVersion: 1,
+  jurisdiction: "FL",
+  documents: corrections.documents as FloridaReviewedSourceCache["documents"],
+};
 const fixtureTime = new Date(Math.max(...Object.values(cache.documents)
   .map(document => Date.parse(document.retrievedAt))) + 1000);
 
@@ -36,8 +41,13 @@ describe("Florida second cached-source batch", () => {
   });
 
   it("turns mismatched public primary citations and URLs into explicit technical holds", () => {
+    const original = definitions.find(row =>
+      row.id === "fl-fs-784-045-1-2-aggravated-battery")!;
+    const control = assembleFloridaReviewedReport([original], analyses, cache, fixtureTime);
+    expect(control.technicalHolds).toEqual([]);
+    expect(control.report.drafts.map(row => row.id)).toEqual([original.id]);
     for (const field of ["citation", "url"] as const) {
-      const definition = structuredClone(definitions[0]);
+      const definition = structuredClone(original);
       definition.citations[0][field] += "-mismatch";
       const result = assembleFloridaReviewedReport([definition], analyses, cache, fixtureTime);
       expect(result.report.drafts).toHaveLength(0);

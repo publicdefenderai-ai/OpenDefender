@@ -1,4 +1,6 @@
+import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioTheftFraudSourceFresh } from "../data/ohio-theft-fraud-source";
 import { isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_IDS } from "@shared/florida-persons-batch";
 import { isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
@@ -26,6 +28,7 @@ function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sha
   if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !isFloridaReviewedSourceFresh()) return false;
   if (charge.jurisdiction === "CA" && (!isCaliforniaEvidenceFresh() || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
   if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !isOhioResidualSourceFresh()) return false;
+  if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !isOhioTheftFraudSourceFresh()) return false;
   if (charge.jurisdiction === "OH" && OHIO_MAJOR_IDS.has(charge.id) && !isOhioMajorSourceFresh()) return false;
   if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !isOhioReviewedSourceFresh()) return false;
   return sharedPilotChecked || charge.jurisdiction !== "OH" ||

@@ -1,12 +1,12 @@
 import { NrrcResources } from "@/components/nrrc-resources";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
-import { motion, AnimatePresence } from "framer-motion";
+import { financesDesignCopy } from "@/locales/finances-design";
 import {
-  DollarSign, CheckCircle, CheckCircle2, Calendar, ExternalLink,
-  Info, ChevronDown, Zap, HeartHandshake, Scale, Globe,
-  HelpCircle, Lightbulb, ArrowLeft, Phone, AlertCircle,
+  CheckCircle, CheckCircle2, Calendar, ExternalLink,
+  Info,
+  Lightbulb, Phone, AlertCircle,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +22,6 @@ import {
   ScanFirstPageFrame,
 } from "@/components/layout/scan-first-page-frame";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { Button } from "@/components/ui/button";
 import {
   getCourtFeesForState, courtFeesByState,
   ALL_STATE_CODES, NATIONAL_ASSISTANCE_ORGS,
@@ -31,21 +30,16 @@ import {
 /* ── Section map ───────────────────────────────────────────────── */
 
 const SECTIONS = [
-  { id: "quick-actions", shortLabel: "Quick Actions",  Icon: Zap           },
-  { id: "benefits",      shortLabel: "Benefits",       Icon: HeartHandshake },
-  { id: "court-fees",    shortLabel: "Court Fees",     Icon: Scale          },
-  { id: "resources",     shortLabel: "Resources",      Icon: Globe          },
-  { id: "faqs",          shortLabel: "FAQs & Tips",    Icon: HelpCircle     },
+  { id: "quick-actions", shortLabel: "Quick Actions" },
+  { id: "benefits",      shortLabel: "Benefits" },
+  { id: "court-fees",    shortLabel: "Court Fees" },
+  { id: "resources",     shortLabel: "Resources" },
+  { id: "faqs",          shortLabel: "FAQs & Tips" },
 ];
 
 const BENEFIT_IDS = ["snap", "medicaid", "tanf", "socialSecurity", "banking"] as const;
 const FEE_TYPE_IDS = ["filing", "probation", "publicDefender", "restitution", "labFees", "surcharges"] as const;
 
-const PRIORITY_LABELS: Record<string, string> = {
-  high:   "Do first",
-  medium: "Important",
-  low:    "When ready",
-};
 const PRIORITY_COLORS: Record<string, string> = {
   high:   "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300",
   medium: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300",
@@ -55,62 +49,21 @@ const PRIORITY_COLORS: Record<string, string> = {
 /* ── SectionPanel ──────────────────────────────────────────────── */
 
 function SectionPanel({
-  id, title, icon, isOpen, onToggle, children,
+  id, title, isOpen, onToggle, children,
 }: {
   id: string;
   title: string;
-  icon: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
 }) {
   return (
-    <div
-      id={id}
-      className={`rounded-xl border overflow-hidden scroll-mt-20 transition-colors duration-200 ${
-        isOpen ? "border-emerald-300/60 dark:border-emerald-700/40" : "border-border"
-      }`}
-    >
-      <button
-        onClick={onToggle}
-        aria-expanded={isOpen}
-        className={`w-full text-left flex items-center justify-between px-5 py-4 gap-3 transition-colors ${
-          isOpen ? "bg-emerald-50/60 dark:bg-emerald-900/15" : "bg-background hover:bg-muted/30"
-        }`}
-      >
-        <div className="flex items-center gap-3">
-          <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-            isOpen
-              ? "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300"
-              : "bg-muted text-muted-foreground"
-          }`}>
-            {icon}
-          </div>
-          <h2 className="text-base font-bold text-foreground leading-snug">{title}</h2>
-        </div>
-        <ChevronDown
-          className={`h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+    <section id={id} className="finances-panel">
+      <button onClick={onToggle} aria-expanded={isOpen} aria-controls={`${id}-body`} id={`${id}-trigger`}>
+        <h2>{title}</h2><span className="finances-toggle" aria-hidden="true">{isOpen ? '−' : '+'}</span>
       </button>
-      <AnimatePresence initial={false}>
-        {isOpen && (
-          <motion.div
-            key="content"
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.28, ease: [0.4, 0, 0.2, 1] }}
-            style={{ overflow: "hidden" }}
-          >
-            <div className="px-5 pb-6 pt-4 border-t border-border/50 space-y-4">
-              {children}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+      {isOpen && <div id={`${id}-body`} aria-labelledby={`${id}-trigger`} className="finances-panel-body">{children}</div>}
+    </section>
   );
 }
 
@@ -120,7 +73,8 @@ function SectionPanel({
 
 export default function FinancesSupport() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const copy=financesDesignCopy[i18n.language.startsWith('es')?'es':i18n.language.startsWith('zh')?'zh':'en'];
   const [openIds, setOpenIds] = useState<Set<string>>(new Set(["quick-actions"]));
   const [selectedState, setSelectedState] = useState("");
 
@@ -131,6 +85,12 @@ export default function FinancesSupport() {
       return next;
     });
   };
+
+  useEffect(()=>{
+    const reveal=()=>{const id=window.location.hash.slice(1);if(!SECTIONS.some(section=>section.id===id))return;
+      setOpenIds(prev=>new Set([...prev,id]));requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({block:'start'}));};
+    reveal();window.addEventListener('hashchange',reveal);return()=>window.removeEventListener('hashchange',reveal);
+  },[]);
 
   const feeData = selectedState ? getCourtFeesForState(selectedState) : null;
 
@@ -167,75 +127,49 @@ export default function FinancesSupport() {
   ];
 
   return (
-    <ScanFirstPageFrame>
+    <ScanFirstPageFrame mainClassName="finances-page">
 
-      {/* Hero */}
-      <section className="vivid-header py-10 md:py-14">
-        <div className="max-w-5xl mx-auto px-4 vivid-header-content">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/15 mb-4">
-              <DollarSign className="h-6 w-6 text-white" />
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
-              Financial Support After Arrest
-            </h1>
-            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-              {t('support.finances.overview')}
-            </p>
-            <Button asChild className="mt-6 gap-2">
-              <a href="#quick-actions">
-                {t('support.finances.nextStep', 'Start with quick actions')}
-                <ChevronDown className="h-4 w-4" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Link className="finances-back" href="/support">{t('support.backToSupport')}</Link>
+      <section className="finances-hero"><div><p>{copy.category}</p>
+        <h1>{copy.heading}<br/><em>{copy.accent}</em></h1>
+        <p>{t('support.finances.overview')}</p>
+        <a className="finances-start" href="#quick-actions" onClick={()=>setOpenIds(prev=>new Set([...prev,'quick-actions']))}>{t('support.finances.nextStep')}</a>
+      </div><img src="/images/design/finances.svg" alt="" aria-hidden="true" width="240" height="220"/></section>
 
-      {/* Back link */}
-      <div className="max-w-6xl mx-auto w-full px-4 pt-5">
-        <Link
-          href="/support"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
-        >
-          <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-          {t("support.backToSupport")}
-        </Link>
-      </div>
-
+      <div onClickCapture={event=>{const anchor=(event.target as HTMLElement).closest('a[href^="#"]');const id=anchor?.getAttribute('href')?.slice(1);if(id&&SECTIONS.some(section=>section.id===id)){setOpenIds(prev=>new Set([...prev,id]));requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({block:'start'}));}}}>
       <PageSectionNav
         ariaLabel={t("support.pageSections", "On this page")}
-        accentClassName="text-emerald-700 dark:text-emerald-300"
-        items={SECTIONS.map(({ id, Icon }) => ({
+        items={SECTIONS.map(({ id }) => ({
           id,
-          icon: Icon,
           label: t(`support.finances.navigation.${id}`, SECTIONS.find(section => section.id === id)?.shortLabel ?? id),
         }))}
       />
 
+      </div>
+
       {/* Content */}
-      <div className="max-w-4xl mx-auto w-full px-4 py-8 md:py-10">
+      <div className="finances-content">
         <div className="space-y-3">
 
             {/* ── QUICK ACTIONS ─────────────────────────────────── */}
             <SectionPanel
               id="quick-actions"
-              title="Quick Actions"
-              icon={<Zap className="h-4 w-4" />}
+              title={copy.quick}
+
               isOpen={openIds.has("quick-actions")}
               onToggle={() => toggleSection("quick-actions")}
             >
               <div className="space-y-3">
                 {actionItems.map((item) => (
-                  <div key={item.id} className="rounded-lg border border-border bg-muted/20 p-4">
-                    <div className="flex items-start justify-between gap-3 mb-1.5">
+                  <div key={item.id} className="finances-action">
+                    <div className="flex flex-wrap items-start justify-between gap-3 mb-1.5">
                       <p className="text-sm font-semibold text-foreground leading-snug">{item.title}</p>
-                      <div className="flex items-center gap-2 flex-shrink-0">
+                      <div className="flex flex-wrap items-center gap-2">
                         {item.timeframe && (
                           <span className="text-xs text-muted-foreground whitespace-nowrap">{item.timeframe}</span>
                         )}
                         <Badge className={`text-xs border-0 ${PRIORITY_COLORS[item.priority]}`}>
-                          {PRIORITY_LABELS[item.priority]}
+                          {copy[item.priority as 'high'|'medium'|'low']}
                         </Badge>
                       </div>
                     </div>
@@ -249,7 +183,7 @@ export default function FinancesSupport() {
             <SectionPanel
               id="benefits"
               title={t('support.finances.benefits.sectionTitle')}
-              icon={<HeartHandshake className="h-4 w-4" />}
+
               isOpen={openIds.has("benefits")}
               onToggle={() => toggleSection("benefits")}
             >
@@ -258,7 +192,7 @@ export default function FinancesSupport() {
               </p>
               <div className="space-y-3">
                 {BENEFIT_IDS.map((id) => (
-                  <div key={id} className="rounded-lg border border-border bg-background p-4">
+                  <div key={id} className="finances-benefit">
                     <p className="text-sm font-semibold text-foreground mb-2">
                       {t(`support.finances.benefits.${id}.name`)}
                     </p>
@@ -280,14 +214,14 @@ export default function FinancesSupport() {
             <SectionPanel
               id="court-fees"
               title={t('support.finances.courtFees.sectionTitle')}
-              icon={<Scale className="h-4 w-4" />}
+
               isOpen={openIds.has("court-fees")}
               onToggle={() => toggleSection("court-fees")}
             >
               {/* Fee types accordion */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
-                  Types of Court Fees
+                <p className="text-sm font-semibold text-muted-foreground mb-2">
+                  {copy.types}
                 </p>
                 <Accordion type="single" collapsible>
                   {FEE_TYPE_IDS.map(id => (
@@ -308,11 +242,11 @@ export default function FinancesSupport() {
 
               {/* State selector */}
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
+                <label htmlFor="finances-state" className="text-sm font-medium text-foreground mb-2 block">
                   {t('support.finances.courtFees.stateSelector.label')}
                 </label>
                 <Select value={selectedState} onValueChange={setSelectedState}>
-                  <SelectTrigger className="w-full md:w-72">
+                  <SelectTrigger id="finances-state" className="w-full md:w-72">
                     <SelectValue placeholder={t('support.finances.courtFees.stateSelector.placeholder')} />
                   </SelectTrigger>
                   <SelectContent>
@@ -323,7 +257,7 @@ export default function FinancesSupport() {
                 </Select>
 
                 {feeData && (
-                  <Card className="mt-4 border-emerald-200 dark:border-emerald-800">
+                  <Card lang="en" className="finances-state">
                     <CardContent className="p-5">
                       <h4 className="font-semibold mb-3">{feeData.stateName} — Typical Court Costs</h4>
                       <div className="divide-y divide-border text-sm mb-4">
@@ -334,7 +268,7 @@ export default function FinancesSupport() {
                           ["Fines",                      feeData.fineRange],
                           ["Surcharges / assessments",   feeData.surcharges],
                         ] as [string, string][]).map(([label, value]) => (
-                          <div key={label} className="flex justify-between py-2">
+                          <div key={label} className="finances-fee-row">
                             <span className="text-muted-foreground">{label}</span>
                             <span className="font-medium text-right ml-4">{value}</span>
                           </div>
@@ -355,7 +289,7 @@ export default function FinancesSupport() {
                             <a key={org.name} href={org.url} target="_blank" rel="noopener noreferrer"
                                className="flex items-start gap-2 text-sm text-emerald-700 dark:text-emerald-400 hover:underline">
                               <ExternalLink className="h-3 w-3 mt-0.5 flex-shrink-0" />
-                              <span><strong>{org.name}</strong> — {org.description}</span>
+                              <span><span lang="en"><strong>{org.name}</strong> — {org.description}</span></span>
                             </a>
                           ))}
                         </div>
@@ -415,15 +349,15 @@ export default function FinancesSupport() {
 
               {/* National assistance orgs */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
-                  National Resources
+                <p className="text-sm font-semibold text-muted-foreground mb-3">
+                  {copy.national}
                 </p>
                 <div className="space-y-2">
                   {NATIONAL_ASSISTANCE_ORGS.map(org => (
                     <a key={org.name} href={org.url} target="_blank" rel="noopener noreferrer"
                        className="flex items-start gap-2 text-sm hover:underline">
                       <ExternalLink className="h-3.5 w-3.5 mt-0.5 flex-shrink-0 text-muted-foreground" />
-                      <span><strong>{org.name}</strong> — {org.description}</span>
+                      <span><span lang="en"><strong>{org.name}</strong> — {org.description}</span></span>
                     </a>
                   ))}
                 </div>
@@ -433,8 +367,8 @@ export default function FinancesSupport() {
             {/* ── RESOURCES ─────────────────────────────────────── */}
             <SectionPanel
               id="resources"
-              title="Resources & Organizations"
-              icon={<Globe className="h-4 w-4" />}
+              title={copy.resources}
+
               isOpen={openIds.has("resources")}
               onToggle={() => toggleSection("resources")}
             >
@@ -445,20 +379,20 @@ export default function FinancesSupport() {
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded-lg border border-border hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-sm bg-background p-4 transition-all group"
+                    className="finances-resource group"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-1 flex-wrap">
-                          <p className="text-sm font-semibold text-foreground group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+                          <p lang="en" className="text-sm font-semibold text-foreground">
                             {resource.name}
                           </p>
                           {resource.free && (
                             <Badge className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-0 text-xs">
-                              Free
+                              {t('support.free')}
                             </Badge>
                           )}
-                          <Badge variant="outline" className="text-xs capitalize">{resource.type}</Badge>
+                          <Badge variant="outline" className="text-xs capitalize">{t(`support.resourceType.${resource.type}`)}</Badge>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed">{resource.description}</p>
                         {resource.phone && (
@@ -477,14 +411,14 @@ export default function FinancesSupport() {
             {/* ── FAQS & TIPS ───────────────────────────────────── */}
             <SectionPanel
               id="faqs"
-              title="FAQs & Tips"
-              icon={<HelpCircle className="h-4 w-4" />}
+              title={t('support.finances.navigation.faqs')}
+
               isOpen={openIds.has("faqs")}
               onToggle={() => toggleSection("faqs")}
             >
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
-                  Frequently Asked Questions
+                <p className="text-sm font-semibold text-muted-foreground mb-3">
+                  {t('support.faq.title')}
                 </p>
                 <Accordion type="single" collapsible>
                   {faqs.map((faq, i) => (
@@ -498,10 +432,10 @@ export default function FinancesSupport() {
                 </Accordion>
               </div>
 
-              <div className="bg-emerald-50 dark:bg-emerald-900/15 border border-emerald-200 dark:border-emerald-800/40 rounded-xl p-5">
+              <div className="finances-tips">
                 <div className="flex items-center gap-2 mb-3">
                   <Lightbulb className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                  <p className="text-sm font-semibold text-foreground">Practical Tips</p>
+                  <p className="text-sm font-semibold text-foreground">{t('support.tips.title')}</p>
                 </div>
                 <ul className="space-y-2">
                   {tips.map((tip, i) => (
@@ -515,7 +449,7 @@ export default function FinancesSupport() {
             </SectionPanel>
 
             {/* Collateral consequences callout */}
-            <div className="rounded-xl border border-amber-200 dark:border-amber-800/50 bg-amber-50/60 dark:bg-amber-900/10 p-5">
+            <div lang="en" className="finances-warning">
               <div className="flex items-start gap-3 mb-3">
                 <AlertCircle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
                 <p className="text-sm font-semibold text-foreground">Before any plea: know the benefit impacts</p>
@@ -548,7 +482,7 @@ export default function FinancesSupport() {
             </div>
 
             {/* Disclaimer */}
-            <Alert className="border-slate-200 dark:border-slate-700">
+            <Alert lang="en" className="border-slate-200 dark:border-slate-700">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription className="text-muted-foreground text-sm">
                 This page provides general legal information, not legal advice. Financial and legal situations vary by jurisdiction. Always consult a licensed attorney or accredited financial counselor about your specific situation.

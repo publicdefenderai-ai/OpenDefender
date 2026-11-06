@@ -160,7 +160,7 @@ export default function Directory() {
           {groups.map(cat=>(<section className="directory-group" key={cat.index} aria-labelledby={`directory-category-${cat.index}`}>
             <h2 id={`directory-category-${cat.index}`}>{cat.title}<span>{number(cat.resources.length)}</span></h2>
             <p>{cat.description}</p>
-            {cat.resources.map(resource=>{ const ResourceLink = resource.link.startsWith("https://") ? "a" : Link; return <ResourceLink className="directory-resource" key={resource.link} href={resource.link}>
+            {cat.resources.map(resource=>{ const ResourceLink = resource.link.startsWith("https://") ? "a" : Link; return <ResourceLink className="directory-resource" key={resource.link} href={resource.link} {...(resource.link.startsWith("https://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
               <h3>{resource.title}</h3><p>{resource.description}</p>
             </ResourceLink>; })}
           </section>))}

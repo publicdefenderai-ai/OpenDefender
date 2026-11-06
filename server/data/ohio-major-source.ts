@@ -1,3 +1,4 @@
+import { validateOhioClassificationEvidence } from '@shared/ohio-primary-classification';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -10,7 +11,7 @@ export const OHIO_MAJOR_RECEIPT_PATH = resolve(directory, 'ohio-major-refresh-re
 type Span = { section: string; sourceHash: string; start: number; end: number; text: string };
 type Packet = { schemaVersion: number; kind: string; sentencingHash: string;
   documents: Record<string, OhioReviewedDocument>;
-  records: Array<{ id: string; section: string; scope: string; definitionHash: string;
+  records: Array<{ id: string; section: string; scope: string; definitionHash: string; primaryClassification: unknown;
     dependencies: string[]; conduct: Span[]; grading: Span[]; evidence: Span[] }> };
 export const ohioMajorPacket = JSON.parse(readFileSync(resolve(directory, 'ohio-major-publication-evidence.json'), 'utf8')) as Packet;
 export function validateOhioMajorPacket(packet: Packet): void {
@@ -24,6 +25,8 @@ export function validateOhioMajorPacket(packet: Packet): void {
         record.definitionHash !== hash(JSON.stringify(definition)) ||
         JSON.stringify(record.dependencies) !== JSON.stringify(ohioMajorDependencies(row)) ||
         !record.conduct.length || !record.grading.length) throw Error(`Unbound Ohio major definition ${record.id}`);
+    if (JSON.stringify(record.primaryClassification) !== JSON.stringify("primaryClassification" in row ? row.primaryClassification : null)) throw Error(`Ohio classification binding changed ${record.id}`);
+    validateOhioClassificationEvidence(row, record.grading);
     const sections = [record.section, ...record.dependencies];
     for (const section of sections) {
       used.add(section); const doc = packet.documents[section];

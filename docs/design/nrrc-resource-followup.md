@@ -9,8 +9,8 @@ Completed:
 - Provide English, Spanish and Chinese descriptions. Preserve existing guidance and tool behavior.
 
 Remaining:
-- [ ] Verify and inspect NRRC's record-clearance resource at https://nationalreentryresourcecenter.org/cleanslate before adding it to the record-relief pages. The homepage links to it, but both browser retrieval and a direct HTTP check returned access errors.
-- [ ] Verify and inspect the Medicaid reentry demonstration resource at https://nationalreentryresourcecenter.org/resources/toolkits/medicaid/approved-and-pending-medicaid-section-1115-reentry-demonstrations before adding it to benefits/health pages. Retrieval was blocked; do not infer program eligibility from the homepage label.
+- [ ] Verify and inspect NRRC's record-clearance resource at https://nationalreentryresourcecenter.org/cleanslate before adding it to the record-relief pages. Initial retrieval returned access errors; a subsequent reviewer reported HTTP 200. Availability is therefore not a confirmed ongoing blocker; content inspection remains pending.
+- [ ] Verify and inspect the Medicaid reentry demonstration resource at https://nationalreentryresourcecenter.org/resources/toolkits/medicaid/approved-and-pending-medicaid-section-1115-reentry-demonstrations before adding it to benefits/health pages. Initial retrieval was blocked; a subsequent reviewer reported HTTP 200. Content inspection remains pending; do not infer program eligibility from the homepage label.
 - [ ] Evaluate newer, practical housing and employment materials for people leaving incarceration, rather than relying only on provider-oriented background resources.
 - [ ] When changing substantive claims, record the specific publication, date and supporting current primary authority. A resource listing does not establish that the site's existing guidance was verified against it.
 

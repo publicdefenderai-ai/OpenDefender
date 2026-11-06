@@ -1,0 +1,835 @@
+{
+  "schemaVersion": 1,
+  "scope": "targeted_741_2801_applicability_screen_not_statewide_legal_clearance",
+  "catalogIdsSha256": "bebef55ffb8710e85a7052e4f20bdfe77888be09e42f5de1324f15e7dc6279a3",
+  "sources": [
+    {
+      "section": "741.28",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html",
+      "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+      "retrievedAt": "2026-11-06T05:11:00.730Z"
+    },
+    {
+      "section": "741.2801",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html",
+      "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+      "retrievedAt": "2026-11-06T05:20:09.924Z"
+    }
+  ],
+  "counts": {
+    "residual_factual_condition_not_cleared": 80,
+    "injury_or_death_condition_priority": 15,
+    "enumerated_family_remaining_branch_review": 1,
+    "corrected_current_batch": 5
+  },
+  "rows": [
+    {
+      "id": "fl-fs-777-04-1-criminal-attempt",
+      "code": "777.04(1)",
+      "name": "criminal attempt",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-777-04-2-criminal-solicitation",
+      "code": "777.04(2)",
+      "name": "criminal solicitation",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-777-04-3-criminal-conspiracy",
+      "code": "777.04(3)",
+      "name": "criminal conspiracy",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-782-07-1-manslaughter",
+      "code": "782.07(1)",
+      "name": "manslaughter",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
+      "code": "782.07(2)",
+      "name": "aggravated manslaughter of an elderly person or disabled adult",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
+      "code": "782.07(3)",
+      "name": "aggravated manslaughter of a child",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+      "code": "782.04(5)",
+      "name": "murder in the third degree",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+      "code": "782.04(4)",
+      "name": "murder in the third degree",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-794-011-2-sexual-battery",
+      "code": "794.011(2)",
+      "name": "Sexual battery",
+      "classification": "enumerated_family_remaining_branch_review",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html",
+      "disposition": "Family enumerated in section 741.28; reconcile exact branch, original grade and section 741.2801 scope before restoration."
+    },
+    {
+      "id": "fl-fs-777-03-accessory-after-the-fact",
+      "code": "777.03",
+      "name": "Accessory after the fact",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+      "code": "796.07",
+      "name": "Prohibiting prostitution and related acts",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.07.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-784-011-assault",
+      "code": "784.011",
+      "name": "Assault",
+      "classification": "corrected_current_batch",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html",
+      "disposition": "Corrected product content and evidence; committed receipt unchanged and unable to approve the new hashes."
+    },
+    {
+      "id": "fl-fs-784-03-battery",
+      "code": "784.03(1)(a)",
+      "name": "Battery",
+      "classification": "corrected_current_batch",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html",
+      "disposition": "Corrected product content and evidence; committed receipt unchanged and unable to approve the new hashes."
+    },
+    {
+      "id": "fl-fs-784-048-2-stalking",
+      "code": "784.048(2)",
+      "name": "Stalking",
+      "classification": "corrected_current_batch",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html",
+      "disposition": "Corrected product content and evidence; committed receipt unchanged and unable to approve the new hashes."
+    },
+    {
+      "id": "fl-fs-784-048-3-aggravated-stalking",
+      "code": "784.048(3)",
+      "name": "Aggravated stalking",
+      "classification": "corrected_current_batch",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html",
+      "disposition": "Corrected product content and evidence; committed receipt unchanged and unable to approve the new hashes."
+    },
+    {
+      "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+      "code": "800.03(1)",
+      "name": "Unlawful exposure of sexual organs",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+      "code": "790.23(1)",
+      "name": "Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+      "code": "790.221",
+      "name": "Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.221.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+      "code": "800.04(4)",
+      "name": "lewd or lascivious battery",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+      "code": "800.04(5)",
+      "name": "lewd or lascivious molestation",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+      "code": "800.04(6)",
+      "name": "lewd or lascivious conduct",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+      "code": "800.04(7)",
+      "name": "lewd or lascivious exhibition",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+      "code": "827.071(2)(a)",
+      "name": "use of a child in a sexual performance",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+      "code": "827.071(2)(b)",
+      "name": "aggravated use of a child in a sexual performance",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+      "code": "827.071(3)",
+      "name": "promoting a sexual performance by a child",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-806-13-criminal-mischief",
+      "code": "806.13(1)",
+      "name": "Criminal mischief",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+      "code": "810.09(1)-(2)",
+      "name": "Trespass on property other than structure or conveyance",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-015-retail-theft",
+      "code": "812.015(8)-(11)",
+      "name": "Retail theft",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-019-dealing-in-stolen-property",
+      "code": "812.019",
+      "name": "Dealing in stolen property",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+      "code": "815.06(2)-(3)",
+      "name": "Offense against users of computers, computer systems, computer networks, or electronic devices",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-234-insurance-fraud",
+      "code": "817.234(1)(a)",
+      "name": "Insurance fraud",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+      "code": "817.568(2)",
+      "name": "Fraudulent use of personal identification information",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+      "code": "817.568(4)",
+      "name": "Harassment by use of personal identification information",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+      "code": "817.568(8)",
+      "name": "Fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+      "code": "817.568(9)",
+      "name": "Fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+      "code": "817.61",
+      "name": "Fraudulent use of credit cards",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-06-nonsupport-of-dependents",
+      "code": "827.06(2)-(3)",
+      "name": "Nonsupport of dependents",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.06.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-828-12-animal-cruelty",
+      "code": "828.12(1)",
+      "name": "Animal cruelty",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-828-12-aggravated-animal-cruelty",
+      "code": "828.12(2)",
+      "name": "Aggravated animal cruelty",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-831-01-forgery",
+      "code": "831.01",
+      "name": "Forgery",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+      "code": "832.05(2)-(4)",
+      "name": "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+      "code": "837.05",
+      "name": "False reports to law enforcement authorities",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.05.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+      "code": "843.01",
+      "name": "Resisting, obstructing, or opposing by offering or doing violence to legally authorized person, police canine, or police horse",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.01.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+      "code": "843.15(1)",
+      "name": "Failure of defendant on bail to appear",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.15.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+      "code": "316.061(1)",
+      "name": "Crashes involving damage to vehicle or property",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+      "code": "316.193(3)(c)3.",
+      "name": "DUI manslaughter",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+      "code": "741.31(4)(a)",
+      "name": "Violation of an injunction for protection against domestic violence",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.31.html",
+      "disposition": "Separate section 741.31(4)(c) repeat-injunction amendment in chapter 2026-86 also requires reconciliation; not cleared by this screen."
+    },
+    {
+      "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+      "code": "893.135(1)(b)1.",
+      "name": "Trafficking in cocaine",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+      "code": "320.07(3)(c)",
+      "name": "Expiration of registration; renewal required; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+      "code": "322.34(2)",
+      "name": "Driving while license suspended, revoked, canceled, or disqualified",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.34.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-403-413-6-b-florida-litter-law",
+      "code": "403.413(6)(b)",
+      "name": "Florida Litter Law",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+      "code": "562.12(1)",
+      "name": "Beverages sold with improper license, or without license or registration, or held with intent to sell prohibited",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+      "code": "877.03",
+      "name": "Breach of the peace; disorderly conduct",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-316-193-1-driving-under-the-influence",
+      "code": "316.193(1)",
+      "name": "Driving under the influence",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+      "code": "893.135(1)(c)1.",
+      "name": "Trafficking in illegal drugs",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+      "code": "893.135(1)(c)2.",
+      "name": "Trafficking in hydrocodone",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+      "code": "893.135(1)(c)3.",
+      "name": "Trafficking in oxycodone",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+      "code": "893.135(1)(c)4.a.",
+      "name": "Trafficking in dangerous fentanyl or fentanyl analogues",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+      "code": "893.135(1)(c)7.",
+      "name": "Trafficking in xylazine",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+      "code": "893.135(1)(d)1.",
+      "name": "Trafficking in phencyclidine",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+      "code": "893.135(1)(e)1.",
+      "name": "Trafficking in methaqualone",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+      "code": "893.135(1)(f)1.",
+      "name": "Trafficking in amphetamine",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+      "code": "893.135(1)(g)1.",
+      "name": "Trafficking in flunitrazepam",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+      "code": "893.135(1)(h)1.",
+      "name": "Trafficking in gamma-hydroxybutyric acid (GHB)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+      "code": "893.135(1)(i)1.",
+      "name": "Trafficking in gamma-butyrolactone (GBL)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+      "code": "893.135(1)(j)1.",
+      "name": "Trafficking in 1,4-Butanediol",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+      "code": "893.135(1)(k)1.",
+      "name": "Trafficking in phenethylamines",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+      "code": "893.135(1)(l)1.",
+      "name": "Trafficking in lysergic acid diethylamide (LSD)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+      "code": "893.135(1)(m)1.",
+      "name": "Trafficking in synthetic cannabinoids",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+      "code": "893.135(1)(n)1.",
+      "name": "Trafficking in n-benzyl phenethylamines",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-784-045-1-2-aggravated-battery",
+      "code": "784.045(1)-(2)",
+      "name": "Aggravated battery",
+      "classification": "corrected_current_batch",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html",
+      "disposition": "Corrected product content and evidence; committed receipt unchanged and unable to approve the new hashes."
+    },
+    {
+      "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+      "code": "806.01(1)",
+      "name": "Arson in the first degree",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+      "code": "806.01(2)",
+      "name": "Arson in the second degree",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+      "code": "812.014(2)(e)",
+      "name": "Petit theft of the first degree",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+      "code": "812.014(2)(f)",
+      "name": "Petit theft of the first degree",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+      "code": "812.014(3)(a)",
+      "name": "Petit theft of the second degree",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-014-3-b-petit-theft",
+      "code": "812.014(3)(b)",
+      "name": "Petit theft",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-812-014-3-c-petit-theft",
+      "code": "812.014(3)(c)",
+      "name": "Petit theft",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+      "code": "837.02(1)-(2)",
+      "name": "Perjury in official proceedings",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+      "code": "893.13(1)(a)",
+      "name": "Prohibited acts; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+      "code": "893.13(2)(a)",
+      "name": "Prohibited acts; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+      "code": "893.13(4)",
+      "name": "Prohibited acts; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+      "code": "893.13(5)",
+      "name": "Prohibited acts; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+      "code": "893.13(6)(a)",
+      "name": "Prohibited acts; penalties",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(1)",
+      "name": "Use or possession of drug paraphernalia",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(2)",
+      "name": "Manufacture or delivery of drug paraphernalia",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(3)(a)",
+      "name": "Delivery of drug paraphernalia to a minor (adult deliverer)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(3)(b)",
+      "name": "Delivery of injection equipment to a minor",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(4)(a)",
+      "name": "Transportation of a controlled substance using drug paraphernalia",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(4)(b)",
+      "name": "Transportation of a contraband article using drug paraphernalia",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(5)",
+      "name": "Advertisement of drug paraphernalia",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "code": "893.147(6)",
+      "name": "Retail sale of drug paraphernalia (first or repeat offense)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "code": "825.102(1)",
+      "name": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "code": "825.102(2)",
+      "name": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "code": "825.102(3)(b)",
+      "name": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "code": "825.102(3)(c)",
+      "name": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "code": "827.03(2)(a)",
+      "name": "Aggravated child abuse (first-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "code": "827.03(2)(b)",
+      "name": "Child neglect causing great bodily harm (second-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "code": "827.03(2)(c)",
+      "name": "Child abuse without great bodily harm (third-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "code": "827.03(2)(d)",
+      "name": "Child neglect without great bodily harm (third-degree felony)",
+      "classification": "injury_or_death_condition_priority",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    },
+    {
+      "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+      "code": "827.04(3)",
+      "name": "Impregnation of a child under 16 by a person age 21 or older (third-degree felony)",
+      "classification": "residual_factual_condition_not_cleared",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "disposition": "No exclusion is inferred from the offense label. The residual section 741.28 clause depends on a criminal offense resulting in physical injury or death between qualifying family or household members. Case-specific applicability remains unresolved."
+    }
+  ]
+}
