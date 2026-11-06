@@ -1,3 +1,4 @@
+import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "./ohio-residual-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "./ohio-major-source";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -49,6 +50,7 @@ export function loadOhioAuthorityManifest(
       ...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map(record => record.chargeId),
       ...OHIO_REVIEWED_SOURCES.map(record => record.chargeId),
       ...OHIO_MAJOR_SOURCES.map(record => record.chargeId),
+      ...OHIO_RESIDUAL_SOURCES.map(record => record.chargeId),
     ],
   );
   if (raw.catalogRecords.some((record) => sourceFirstIds.has(record.chargeId))) {
@@ -64,7 +66,7 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
-    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES].flatMap(record => [
+    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES].flatMap(record => [
       Date.parse(record.offense.retrievedAt),
       ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
     ]),
@@ -78,6 +80,7 @@ export function loadOhioAuthorityManifest(
     : sourceFirstGeneratedAt;
   const reviewedFresh = isOhioReviewedSourceFresh(now);
   const majorFresh = isOhioMajorSourceFresh(now);
+  const residualFresh = isOhioResidualSourceFresh(now);
   // An explicit receipt comes from the durable runtime ledger. Passing null
   // deliberately fails closed; omitting the argument preserves the
   // file-backed offline behavior used by manifest/build tests.
@@ -102,10 +105,12 @@ export function loadOhioAuthorityManifest(
       : []),
     ...(reviewedFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt) : []),
     ...(majorFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_MAJOR_SOURCES) : []),
+    ...(residualFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_RESIDUAL_SOURCES) : []),
   ];
   const expectedIds = criminalCharges
     .filter((charge) =>
       charge.jurisdiction === "OH" &&
+      (residualFresh || !OHIO_RESIDUAL_SOURCES.some(record => record.chargeId === charge.id)) &&
       (majorFresh || !OHIO_MAJOR_SOURCES.some(record => record.chargeId === charge.id)) &&
       (pilotFresh || !OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(record => record.chargeId === charge.id)) &&
       (reviewedFresh || !OHIO_REVIEWED_SOURCES.some(record => record.chargeId === charge.id))

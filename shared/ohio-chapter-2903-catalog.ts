@@ -1,3 +1,4 @@
+import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
 import { OHIO_MAJOR_BATCH } from "./ohio-major-batch";
 /**
  * Ohio source-first catalog assembled from independently gated batches.
@@ -102,9 +103,12 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_PATIENT_CARE_BATCH.charges,
   ...OHIO_REVIEWED_BATCH.charges,
   ...OHIO_MAJOR_BATCH.charges,
+  ...OHIO_RESIDUAL_BATCH.charges,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
+  // §2909.05 is felony-graded; the old misdemeanor identity must be reselected.
+  "oh-vandalism",
   // Older common-charge IDs have materially different scope/penalty claims.
   // Keep saved IDs intact and require an explicit source-backed selection.
   // The legacy menacing entry retains the superseded 2903.22 source version.
