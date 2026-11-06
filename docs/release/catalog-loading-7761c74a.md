@@ -1,6 +1,6 @@
 # Catalog loading and Support navigation release fixes
 
-Base: `7761c74a24ed9cf8b5376c5c9979b44b65b5509d`. No later state or design commits are included.
+Original diagnostic baseline: `7761c74a24ed9cf8b5376c5c9979b44b65b5509d`. Following review, this PR is rebased onto reviewed main `4bbe2aa46933ae6dbdc3ed0c7960b91bb4a13db6`, including merged PRs 118, 119, 120 and 121. Those changes are inherited from main, not additional changes made by this PR. Later state drafts remain excluded. Release checks must use the resulting exact revision.
 
 ## Confirmed application issues
 
@@ -25,3 +25,7 @@ Ohio's 12 reported conflict keys and 17 candidate-eligible dependents match the 
 ## Supplemental browser finding
 
 The complete browser run passed 400 of 401 tests, including all California and Support checks. The remaining simulated multi-day daily-usage test advanced its clock after usage increment but before the first response established its cooldown. Its failure snapshot showed usage correctly reset to zero with a newly started 26-second cooldown. An isolated unchanged rerun passed. The test now waits for the response-completion cooldown before jumping, following the adjacent test pattern; reset, cross-tab and enabled-button assertions remain intact. No application cooldown or limit changed.
+
+## Reviewed main integration
+
+Preserve the Ohio theft/fraud receipt gate introduced by PR119 inside the request-local freshness memo. The isolated request-scope test mocks both theft/fraud identity and freshness modules, preventing transitive sentencing imports from undermining isolation. It covers two theft/fraud choices, exact expiry on the next request, and theft/fraud-only withholding while other Ohio evidence remains current, on both fixture and database-provider paths. No receipt or source evidence changes accompany this integration.
