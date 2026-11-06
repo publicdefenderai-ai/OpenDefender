@@ -1,3 +1,4 @@
+import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
 import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
@@ -15,6 +16,8 @@ import {
   type FloridaReviewedDocument,
   type FloridaReviewedSourceRecord,
 } from "./florida-reviewed-source-records";
+
+const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES];
 
 export const FLORIDA_SOURCE_POLICY = "official_florida_online_sunshine_statutes";
 export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.cfm";
@@ -383,8 +386,9 @@ export function groupFloridaReviewedDependenciesForAuthority(
 
 export function buildFloridaReviewedManifestRecords(
   importedAt: Date,
+  sourceRecords: readonly FloridaReviewedSourceRecord[] = FLORIDA_REVIEWED_SOURCE_RECORDS,
 ): AuthorityCatalogRecord[] {
-  return FLORIDA_REVIEWED_SOURCE_RECORDS.map(source => {
+  return sourceRecords.map(source => {
     const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
     if (!charge || charge.jurisdiction !== "FL" || charge.code !== source.code ||
         source.canonicalTitle !== source.offense.title) {
@@ -576,7 +580,7 @@ export function validateFloridaManifestRecord(
   ) {
     return "Manifest catalog identity does not match the current Florida catalog";
   }
-  const reviewedSource = FLORIDA_REVIEWED_SOURCE_RECORDS.find(
+  const reviewedSource = allReviewedSources.find(
     candidate => candidate.chargeId === record.chargeId,
   );
   if (reviewedSource) return validateFloridaReviewedManifestRecord(record, reviewedSource);
@@ -643,7 +647,8 @@ export function buildFloridaSourceDatabaseSeed(
 ): AuthoritySourceDatabaseSeed {
   const records = manifest.catalogRecords.filter(record =>
     !FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
-    isFloridaReviewedSourceFresh(now));
+    isFloridaReviewedSourceFresh(now))
+    .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now));
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const snapshotIdentities = new Set<string>();
@@ -720,7 +725,7 @@ export function buildFloridaSourceDatabaseSeed(
       record.provisions.length > 0,
     )
     .map((record) => record.chargeId);
-  const reviewedIds = new Set(FLORIDA_REVIEWED_SOURCE_RECORDS.map(source => source.chargeId));
+  const reviewedIds = new Set(allReviewedSources.map(source => source.chargeId));
   const expectedFloridaChargeIds = criminalCharges
     .filter((charge) => charge.jurisdiction === "FL" && !reviewedIds.has(charge.id))
     .map((charge) => charge.id);

@@ -165,6 +165,12 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
         )
         .map((record) => record.chargeId);
     }),
+    // Include the previously approved IDs so the runtime receipt gate, not fixture omission,
+    // determines their availability. This does not bypass freshness or grant production eligibility.
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-reviewed-eligibility.json"), "utf8")).decisions
+      .filter(row => row.status === "eligible").map(row => row.id),
+    // Independently reviewed Florida persons batch; its own receipt gate still applies.
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-persons-publication.json"), "utf8")).map(row => row.id),
     ...releaseCheckOhioSourceFirstChargeIds,
     ...releaseCheckCaliforniaSelectableChargeIds,
   ])];

@@ -1,5 +1,6 @@
 import { OHIO_THEFT_FRAUD_BATCH } from "./ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
+import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { OHIO_MAJOR_BATCH } from "./ohio-major-batch";
 /**
  * Spanish and Chinese translations for charge plain-language explanations.
@@ -38,6 +39,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
+  ...FLORIDA_PERSONS_BATCH.translations,
   ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
   ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   ...OHIO_PATIENT_CARE_BATCH.translations,

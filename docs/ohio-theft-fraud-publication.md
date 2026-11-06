@@ -66,3 +66,7 @@ These 21 new English summaries are explicitly marked as untranslated for Spanish
 After review and merge, Replit should first perform a read-only import/eligibility preflight against the exact synced candidate. Any source import, pilot schema work, activation or publication remains a separate owner-approved action. Do not infer production restoration from these configured totals or from the new receipt alone.
 
 Validation before integration with later main: 442 tests passed across 48 suites (all non-database Ohio suites plus catalog facts, public coverage and receipt monitoring). Application typecheck and publication regeneration passed. Browser/full regression results are not claimed by this packet.
+
+Integration includes reviewed main `7761c74a24ed9cf8b5376c5c9979b44b65b5509d` (PR115 design and PR116 Florida) before final checks. The global catalog total is 8,056 after combining main's 8,035 with these 21 Ohio additions; Ohio remains 293 configured. Neither later Florida draft corrections nor any later Ohio work are included.
+
+After integrating that main revision: all 454 tests passed across 49 focused suites, including the Florida publication suite and Ohio catalog/runtime gates. Application typecheck and regeneration passed again. No database or live API test was run.

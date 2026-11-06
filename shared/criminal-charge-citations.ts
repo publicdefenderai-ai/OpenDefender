@@ -1,3 +1,4 @@
+import { FLORIDA_PERSONS_DEFINITIONS } from "./florida-persons-batch";
 import { FLORIDA_REVIEWED_DEFINITIONS } from "./florida-reviewed-batch";
 
 /**
@@ -19473,7 +19474,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
 };
 
-for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
+for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS]) {
   const primary = definition.citations[0];
   const existing = CHARGE_CITATIONS[definition.id];
   CHARGE_CITATIONS[definition.id] = {

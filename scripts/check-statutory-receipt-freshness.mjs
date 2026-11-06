@@ -5,7 +5,7 @@ import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const REQUIRED = ["ohio-theft-fraud-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "california-archive-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
+const REQUIRED = ["ohio-theft-fraud-refresh-receipt.json", "florida-persons-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "california-archive-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
 export function checkStatutoryReceipts(root = process.cwd(), now = new Date()) {
   if (!Number.isFinite(now.getTime())) throw new Error("Invalid check time");
   const directory = resolve(root, "scripts/data-review/output");

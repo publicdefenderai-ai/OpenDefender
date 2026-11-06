@@ -3133,3 +3133,56 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
  .support-impact { padding: 22px 18px; gap: 12px; }
  .support-hub h1 { letter-spacing: -1px; }
 }
+
+/* Employment support: open reading sections and a practical template workspace. */
+.employment-page { max-width: 1120px; width: 100%; padding: 32px 32px 56px; margin: auto; }
+.employment-page p,.employment-page li { color: var(--muted-foreground); line-height: 1.8; font-size: 15px; }
+.employment-page a { color: var(--primary); overflow-wrap: anywhere; }
+.employment-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.employment-page :is(a,button,summary):focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.employment-back,.employment-action { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 14px; }
+.employment-hero { display: grid; grid-template-columns: minmax(0,1fr) 290px; gap: 40px; align-items: center; padding: 24px 0 40px; }
+.employment-hero img { width: 100%; height: auto; }
+.employment-page h1 { font-size: clamp(36px,4.5vw,56px); font-weight: 500; line-height: 1.1; letter-spacing: -1.5px; margin: 16px 0 24px; }
+.employment-page h1 em { font-style: normal; color: var(--primary); }
+.employment-action { margin: 18px 28px 0 0; }
+.employment-page h2 { font-size: 27px; font-weight: 500; line-height: 1.35; margin-bottom: 18px; }
+.employment-page h3 { font-size: 19px; font-weight: 500; line-height: 1.4; margin-bottom: 8px; }
+.employment-section,.employment-tools { padding: 36px 0; border-top: 1px solid var(--border); }
+.employment-actions,.employment-resources { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+.employment-actions article,.employment-resources article { padding: 20px 0; border-top: 1px solid var(--border); }
+.employment-page .employment-priority,.employment-page .employment-meta { font-size: 13px; margin-bottom: 8px; }
+.employment-page .employment-priority-high { color: #9b302c; }
+.dark .employment-page .employment-priority-high { color: #e9a49c; }
+.employment-resource-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 14px; }
+.employment-resource-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 14px; }
+.employment-letter-link { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; margin-bottom: 24px; border-block: 1px solid var(--border); }
+.employment-paper { background: var(--background); border: 1px solid var(--border); border-radius: 4px; box-shadow: none; }
+.employment-script { padding: 12px 0; }
+.employment-tools pre { overflow-wrap: anywhere; }
+.employment-tools [role="tablist"] { border-bottom: 1px solid var(--border); }
+.employment-tools [role="tab"] { background: transparent; border: 0; border-radius: 0; color: var(--muted-foreground); box-shadow: none; }
+.employment-tools [role="tab"][aria-selected="true"] { color: var(--primary); border-bottom: 2px solid var(--primary); }
+.employment-collateral { background: #faf1e3; border-left: 3px solid #a66a26; padding: 28px; }
+.dark .employment-collateral { background: #34291f; border-color: #d8ae73; }
+.employment-consequence { padding: 12px 0; }
+.employment-page details { border-bottom: 1px solid var(--border); padding: 12px 0; }
+.employment-page summary { display: flex; justify-content: space-between; gap: 20px; align-items: center; cursor: pointer; list-style: none; min-height: 44px; font-weight: 500; }
+.employment-page summary::-webkit-details-marker { display: none; }
+.employment-page summary span::after { content: '+'; font-size: 16px; color: var(--primary); }
+.employment-page details[open] summary span::after { content: '−'; }
+.employment-page details p { padding: 14px 0; }
+.employment-page #section-tips ul { list-style: disc; padding-left: 22px; }
+.employment-page .employment-disclaimer { font-size: 13px; }
+.employment-page [id] { scroll-margin-top: 110px; }
+@media(max-width:700px) {
+ .employment-page { padding: 24px 24px 40px; }
+ .employment-hero { grid-template-columns: 1fr; gap: 10px; }
+ .employment-hero img { width: 200px; justify-self: center; }
+ .employment-actions,.employment-resources { grid-template-columns: 1fr; gap: 16px; }
+ .employment-letter-link { flex-direction: column; align-items: stretch; }
+ .employment-collateral { padding: 20px; }
+ .employment-tools .employment-paper > div { padding: 18px; }
+}
+
+.employment-call-tips { background: var(--muted); border: 0; border-radius: 4px; margin-top: 24px; }
