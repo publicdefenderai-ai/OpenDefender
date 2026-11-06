@@ -111,8 +111,9 @@ describe("public-source coverage gate", () => {
       rows: 129,
     });
     expect(report.nextHighestValueCoverageTargets.map((target) => target.rows)).toEqual(
-      // Ohio includes retired legacy manslaughter and aggravated-assault audit rows.
-      [129, 69, 106, 94, 93, 92, 78, 60, 27, 21],
+      // Ohio includes retired manslaughter, aggravated-assault, and legacy vandalism
+      // identities requiring explicit reselection.
+      [129, 69, 107, 94, 93, 92, 78, 60, 27, 21],
     );
     for (const target of report.nextHighestValueCoverageTargets) {
       expect(target.coveragePercentage).toBeGreaterThanOrEqual(0);
