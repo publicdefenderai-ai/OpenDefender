@@ -522,3 +522,15 @@ Print HTML now escapes labels, subjects, bodies and the note before insertion, w
 The independent fixture captures translated employment content, literal English text and links from main `5a6c0c48` before implementation. The release-allowlisted spec checks all action/resource/FAQ/tip content, each full email and phone script, copy output, three print windows, image loading, keyboard expansion, tab switching, and actual desktop/320px bounds in all three locales and both themes. Existing support navigation checks remain unchanged and pass.
 
 Validation: typecheck, production build and 16 locale/coverage checks passed. Six Employment browser cases and five existing navigation cases passed; the six Employment cases passed again after the final style and fixture refinement. Desktop/light, phone/dark and the clean email print layout were visually inspected. No full-suite or deployment claim. Next support page: Finances.
+
+## Finances support
+
+Refreshes `/support/finances` with the approved wallet and blank coins, direct two-line heading, open action/resource rows and compact expandable section controls. Retains all five section anchors, initial expansion defaults, six actions, five benefits, six fee types, state selection, waiver/payment guidance, national organizations, six resources, four FAQs, tips, collateral warning and disclaimer. Anchor navigation opens a closed destination, including repeated clicks on the same hash. Existing state selection survives section collapse.
+
+The shortened preview does not replace published substantive copy. State fee data and benefit descriptions are unchanged; this is not a legal review or recertification. Existing English-only state information and collateral content are marked `lang="en"`. New framing and interface labels support English, Spanish and Chinese. Informational and warning treatments remain distinct.
+
+The decorative SVG has explicit dimensions and no dollar symbol. Approved `finances-content.html` SHA-256: `3a4a622a8ad7a3eb7339bcf1ab72e14b707af55b209b528810f143732da3d0ea`; illustration SHA-256: `d8e159432ffa161096d32f456cf7caaa40ff50e0e722912f7968396be265f702`.
+
+Independent fixtures capture published translations, literal text, destinations and state profiles from main `d83a2a02` before editing. The release-allowlisted browser spec checks the content in all three locales and both themes, keyboard expansion, image loading, actual 320px/desktop bounds, repeated anchor navigation and every published state profile and assistance destination. Static state data is intentionally captured to detect substantive changes; no live publication counts are frozen.
+
+Validation: typecheck, production build and 16 translation/coverage checks passed. Seven Finances browser cases and five existing support navigation cases passed. Desktop/light and phone/dark previews inspected. No full-suite, deployment or legal-approval claim. Next support page: Housing.
