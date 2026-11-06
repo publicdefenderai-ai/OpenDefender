@@ -494,3 +494,17 @@ References:
 - `directory-volume-style.html`: SHA-256 `01ffe51547249dbe80622fbd54e29ddea31c63d5444fb15d36e91b2c41a64f63`
 
 Validation: typecheck, production build, 11 translation/coverage checks and six dedicated browser cases passed. Desktop/light and phone/dark views were visually inspected. Existing resource descriptions are preserved, not newly verified. No full-suite, deployment or substantive-review completion claim. This completes the requested Friends & Family / Toolkit / Screener / Directory implementation sequence; revisit the implementation inventory before choosing the next batch.
+
+## Life & Family Support hub
+
+Refreshes `/support` with the approved tree illustration and grouped resource rows: daily life, health/caregiving, and legal/court support. Preserves every published category label, full description, 13 destinations, 211 callout and eligibility note, impact-screener warning, and community-partner paragraph/link. Adds Friends & Family and Directory links. Existing English-only partner content is marked `lang="en"`; its inherited claims are preserved, not newly verified. New framing supports English, Spanish and Chinese. No form or advice workflow changes.
+
+Retains the four original section anchors and active-section navigation. Their order now follows the page, including the screener between health and court groups. Additional native anchors jump directly to each topic group. Category rows have no truncated text, colored cards or entry animation. The warning remains visually distinct. Mobile stacks the groups and omits the decorative tree, matching the approved preview.
+
+The approved oak image was prepared as a transparent cutout with imagegen and committed locally. The house remains reserved for Housing, and the family illustration for Family & Dependent Care. The image is decorative, has explicit dimensions and is checked for successful loading. Source asset: `life-family-oak-alternate.png`, SHA-256 `1b78a67ed58e7c210e4d477cbda802d4bdd91b0fc5980daa8fdb5be027e29348`. Layout reference: `life-family-content.html`, SHA-256 `4ed784b0454bd494026df7626fa8f23b455d7ccaea425a74d87051eb47d859c7`. Simplified preview descriptions do not replace published substantive content.
+
+An independent trilingual fixture captures the pre-change source text and destinations. Browser coverage checks content, all 13 rows, the illustration, keyboard group navigation, section activity and actual desktop/320px bounds in both themes. The new spec joins the release allowlist; the existing section-navigation spec retains its checks with the new section order.
+
+Validation: typecheck, production build and 16 locale/coverage checks passed. Five existing navigation cases passed; six new browser cases passed in three consecutive repetitions (18 runs). The initial mid-page resize check exposed intermittent anchor misalignment. Group links now align their target on the next animation frame while retaining native URL behavior; the repeated runs include that resize path. Desktop/light and phone/dark renders visually inspected. No full-suite, deployment or legal-approval claim. Next: support subpages in the approved sequence, beginning with Employment.
+
+Hub image follow-up: replaces the 556,558-byte PNG with a transparent 640px WebP. A picture media source selects it only above 700px; phones use an inline transparent fallback with no tree request. Width/height match the asset. A browser network assertion verifies a fresh phone load does not fetch the tree and resizing to desktop loads the 640px asset.
