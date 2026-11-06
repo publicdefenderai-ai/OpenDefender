@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import housingHero from "@assets/stock_images/housing.png";
+import { HousingDesignFrame } from "@/components/support/housing-design-frame";
 import {
   Home,
   Copy,
@@ -9,13 +9,11 @@ import {
   Phone,
   Mail,
   ChevronDown,
-  Users,
   ShieldCheck,
   AlertTriangle,
 } from "lucide-react";
 import { Link } from "wouter";
 import {
-  ResourcePageTemplate,
   ActionItem,
   ExternalResource,
   FAQ,
@@ -23,7 +21,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Fragment } from "react";
+
+function escapePrint(text: string) { return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 
 function TemplateCard({
   label,
@@ -62,21 +62,21 @@ function TemplateCard({
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title>${escapePrint(label)}</title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #d97706; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ""}
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.housing.networkSection.personalizeNote")}</p>
+            <h1>${escapePrint(label)}</h1>
+            ${subject ? `<p class="subject">${escapePrint(subject)}</p>` : ""}
+            <div class="body">${escapePrint(body)}</div>
+            <p class="note">${escapePrint(t("support.housing.networkSection.personalizeNote"))}</p>
           </body>
         </html>
       `);
@@ -86,7 +86,7 @@ function TemplateCard({
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card className="housing-paper">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -154,36 +154,36 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
 
 function HomeownerSection() {
   return (
-    <div className="mb-8">
-      <ScrollReveal>
+    <div id="housing-homeowner" lang="en" className="housing-section housing-homeowner">
+      <Fragment>
         <h2 className="text-xl font-bold text-foreground mb-1">If you own your home</h2>
         <p className="text-sm text-muted-foreground mb-4">The content above focuses on renters. If you own your home, your concerns are different — here's where to start.</p>
-      </ScrollReveal>
+      </Fragment>
       <div className="grid sm:grid-cols-3 gap-4">
-        <ScrollReveal delay={0.05}>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Contact your mortgage servicer</p>
               <p className="text-sm text-muted-foreground">Call the number on your mortgage statement and ask about hardship options. Most servicers have forbearance programs that let you pause or reduce payments temporarily — you typically must request this; it is not automatic.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
+        </Fragment>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Know your forbearance rights</p>
               <p className="text-sm text-muted-foreground">The CFPB (Consumer Financial Protection Bureau) provides free guidance on mortgage forbearance and your rights as a homeowner facing hardship. Visit <a href="https://www.consumerfinance.gov/housing/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">consumerfinance.gov/housing</a> or call 1-855-411-2372.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
-        <ScrollReveal delay={0.15}>
+        </Fragment>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Free HUD-approved counseling</p>
               <p className="text-sm text-muted-foreground">HUD-approved housing counselors can help you understand your options at no cost. Call <strong>1-800-569-4287</strong> or visit <a href="https://www.hud.gov/findacounselor" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">hud.gov/findacounselor</a> to find someone in your area.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </Fragment>
       </div>
     </div>
   );
@@ -191,8 +191,8 @@ function HomeownerSection() {
 
 function HousingInstabilitySection() {
   return (
-    <div className="mb-8 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-5">
-      <ScrollReveal>
+    <div id="housing-urgent" lang="en" className="housing-urgent mb-8 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/60 dark:bg-amber-900/10 p-5">
+      <Fragment>
         <h2 className="text-base font-bold text-foreground mb-1">If you don't have stable housing</h2>
         <p className="text-sm text-muted-foreground mb-4">If you're currently without stable housing, that's the most urgent thing to address — it also affects your ability to receive court notices and meet bail conditions.</p>
         <ul className="space-y-2.5 text-sm text-muted-foreground">
@@ -209,7 +209,7 @@ function HousingInstabilitySection() {
             <span>Court notices and case documents must reach you. A trusted contact's address, a shelter's address, or a local post office box all work. Let your attorney and the court know immediately if your address changes.</span>
           </li>
         </ul>
-      </ScrollReveal>
+      </Fragment>
     </div>
   );
 }
@@ -225,12 +225,10 @@ function HousingNetworkSection() {
   return (
     <section className="py-10 md:py-14 bg-background" id="housing-network">
       <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-8">
+        <Fragment>
+          <div className="mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-amber-500/10">
-                <Users className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-              </div>
+
               <h2 className="text-2xl font-bold text-foreground">
                 {t("support.housing.networkSection.sectionTitle")}
               </h2>
@@ -239,9 +237,9 @@ function HousingNetworkSection() {
               {t("support.housing.networkSection.sectionDescription")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
+        <Fragment>
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8 flex items-start gap-3">
             <Badge
               variant="outline"
@@ -253,15 +251,16 @@ function HousingNetworkSection() {
               {t("support.housing.networkSection.personalizeNote")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
+        <Fragment>
           <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "written" ? "default" : "outline"}
               onClick={() => setActiveTab("written")}
               className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
+              id="housing-written-tab" aria-controls="housing-written-panel"
               aria-selected={activeTab === "written"}
             >
               <Mail className="h-4 w-4" />
@@ -272,18 +271,19 @@ function HousingNetworkSection() {
               onClick={() => setActiveTab("call")}
               className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
+              id="housing-call-tab" aria-controls="housing-call-panel"
               aria-selected={activeTab === "call"}
             >
               <Phone className="h-4 w-4" />
               {t("support.housing.networkSection.callScripts.title")}
             </Button>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
         {activeTab === "written" && (
-          <div className="space-y-4">
+          <div id="housing-written-panel" role="tabpanel" aria-labelledby="housing-written-tab" className="space-y-4">
             {writtenTemplates.map((key) => (
-              <ScrollReveal key={key}>
+              <Fragment key={key}>
                 <TemplateCard
                   label={t(`support.housing.networkSection.emailTemplates.${key}.label`)}
                   subject={
@@ -292,20 +292,20 @@ function HousingNetworkSection() {
                   body={t(`support.housing.networkSection.emailTemplates.${key}.body`)}
                   t={t}
                 />
-              </ScrollReveal>
+              </Fragment>
             ))}
           </div>
         )}
 
         {activeTab === "call" && (
-          <div className="space-y-4">
+          <div id="housing-call-panel" role="tabpanel" aria-labelledby="housing-call-tab" className="space-y-4">
             <p className="text-sm text-muted-foreground mb-4">
               {t("support.housing.networkSection.callScripts.description")}
             </p>
 
             {callScripts.map((key) => (
-              <ScrollReveal key={key}>
-                <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+              <Fragment key={key}>
+                <Card className="housing-paper">
                   <CardHeader className="pb-3">
                     <button
                       type="button"
@@ -342,10 +342,10 @@ function HousingNetworkSection() {
                     </CardContent>
                   )}
                 </Card>
-              </ScrollReveal>
+              </Fragment>
             ))}
 
-            <ScrollReveal>
+            <Fragment>
               <Card className="border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 shadow-sm mt-6">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base font-semibold flex items-center gap-2">
@@ -364,16 +364,16 @@ function HousingNetworkSection() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+            </Fragment>
           </div>
         )}
 
-        <ScrollReveal>
+        <Fragment>
           <Card className="border border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/20 shadow-sm mt-8">
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
                 <ShieldCheck className="h-4 w-4 text-green-600 dark:text-green-400" />
-                Know Your Rights
+                <span lang="en">Know Your Rights</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -386,13 +386,13 @@ function HousingNetworkSection() {
                 ].map((right, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <span className="text-green-500 font-bold mt-0.5 shrink-0">✓</span>
-                    <span>{right}</span>
+                    <span lang={i > 0 ? "en" : undefined}>{right}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </Fragment>
       </div>
     </section>
   );
@@ -400,7 +400,7 @@ function HousingNetworkSection() {
 
 function HousingCollateralCallout() {
   return (
-    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+    <section lang="en" className="housing-collateral py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-start gap-3 mb-4">
           <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
@@ -551,9 +551,8 @@ export default function HousingSupport() {
   ];
 
   return (
-    <ResourcePageTemplate
+    <HousingDesignFrame
       categoryId="housing"
-      heroImage={housingHero}
       icon={Home}
       iconColor="bg-amber-500/10 text-amber-600 dark:text-amber-400"
       heroGradient="bg-gradient-to-br from-amber-500/5 via-background to-background"
@@ -567,10 +566,10 @@ export default function HousingSupport() {
         { label: t("support.relatedLinks.employment"), href: "/support/employment" },
         { label: t("support.relatedLinks.mentalHealth"), href: "/support/mental-health" },
       ]}
+      urgentSection={<HousingInstabilitySection />}
       customSections={
         <>
           <HomeownerSection />
-          <HousingInstabilitySection />
           <HousingNetworkSection />
           <HousingCollateralCallout />
         </>

@@ -3226,3 +3226,55 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
  .finances-fee-row > span:last-child { margin-left: 0; text-align: left; }
  .finances-warning { padding: 20px; }
 }
+
+/* Housing: reading sections, three direct paths and preserved communications tools. */
+.housing-page { max-width: 1120px; margin: auto; padding: 32px 40px 60px; }
+.housing-back { display: inline-block; margin-bottom: 28px; font-size: 13px; font-weight: 600; color: var(--primary); }
+.housing-hero { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 40px; align-items: center; margin-bottom: 36px; }
+.housing-hero h1 { font-size: clamp(36px,4.7vw,56px); line-height: 1.1; letter-spacing: -.045em; font-weight: 500; margin-bottom: 24px; }
+.housing-hero em { color: var(--primary); font-style: normal; }
+.housing-hero p { color: var(--muted-foreground); font-size: 17px; line-height: 1.8; }
+.housing-hero img { width: 100%; height: auto; }
+.housing-paths { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; background: var(--muted); padding: 28px; margin-bottom: 28px; }
+.housing-paths a { display: flex; flex-direction: column; gap: 12px; }
+.housing-paths strong { font-size: 21px; font-weight: 500; color: var(--primary); }
+.housing-paths span, .housing-section p { color: var(--muted-foreground); line-height: 1.8; font-size: 14px; }
+.housing-section { padding: 32px 0; border-top: 1px solid var(--border); scroll-margin-top: 90px; }
+.housing-page h2 { font-size: 27px; line-height: 1.25; font-weight: 500; letter-spacing: -.025em; margin-bottom: 18px; }
+.housing-page h3 { font-size: 16px; font-weight: 600; }
+.housing-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; }
+.housing-row { padding: 18px 0; border-top: 1px solid var(--border); }
+.housing-row-heading { display: flex; flex-wrap: wrap; align-items: start; gap: 10px; margin-bottom: 8px; }
+.housing-row-heading h3 { flex: 1; min-width: 160px; }
+.housing-priority { font-size: 12px; padding: 2px 6px; border-radius: 3px; }
+.housing-priority-high { background: #fee2e2; color: #991b1b; }
+.housing-priority-medium { background: #fef3c7; color: #92400e; }
+.dark .housing-priority-high { background: #481e25; color: #fecaca; }
+.dark .housing-priority-medium { background: #423020; color: #fde68a; }
+.housing-resource-meta, .housing-related { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 13px; }
+.housing-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.housing-resource-meta a, .housing-related a { color: var(--primary); font-weight: 600; }
+.housing-page .housing-paper { border: 1px solid var(--border); border-radius: 2px; box-shadow: none; background: var(--background); }
+.housing-page pre { overflow-wrap: anywhere; }
+.housing-page #housing-network { border-top: 1px solid var(--border); }
+.housing-page #housing-network > div { max-width: none; padding-left: 0; padding-right: 0; }
+.housing-homeowner .grid > div { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.housing-urgent { scroll-margin-top: 90px; margin-top: 28px; }
+.housing-urgent li { flex-wrap: wrap; }
+.housing-faq { border-bottom: 1px solid var(--border); padding: 17px 0; }
+.housing-faq summary { display: flex; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-weight: 500; }
+.housing-faq summary::-webkit-details-marker { display: none; }
+.housing-faq summary span::after { content: '+'; font-size: 16px; }
+.housing-faq[open] summary span::after { content: '−'; }
+.housing-faq p { margin-top: 14px; }
+.housing-tips { list-style: disc; padding-left: 20px; color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
+.housing-disclaimer { margin-top: 28px; color: var(--muted-foreground); font-size: 12px; line-height: 1.8; }
+@media(max-width:700px) {
+ .housing-page { padding: 28px 24px 50px; }
+ .housing-hero { display: block; }
+ .housing-hero picture { display: none; }
+ .housing-paths, .housing-grid { grid-template-columns: 1fr; }
+ .housing-paths { padding: 22px; gap: 20px; }
+ .housing-paths a + a { border-top: 1px solid var(--border); padding-top: 18px; }
+ .housing-page h2 { font-size: 24px; }
+}
