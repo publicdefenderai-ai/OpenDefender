@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "scope": "five_existing_florida_persons_choices",
+  "sections": [
+    "784.011",
+    "784.03",
+    "784.048",
+    "784.045",
+    "775.082",
+    "775.083",
+    "775.084",
+    "741.28",
+    "741.2801",
+    "741.281",
+    "741.283",
+    "741.325",
+    "843.01",
+    "870.01",
+    "794.011",
+    "800.04",
+    "847.0135",
+    "921.244"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-784-011-assault",
+      "ordinaryGrade": "M2",
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ],
+      "riotAlternative": true
+    },
+    {
+      "id": "fl-fs-784-03-battery",
+      "ordinaryGrade": "M1",
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ],
+      "riotAlternative": true
+    },
+    {
+      "id": "fl-fs-784-048-2-stalking",
+      "ordinaryGrade": "M1",
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ],
+      "riotAlternative": false
+    },
+    {
+      "id": "fl-fs-784-048-3-aggravated-stalking",
+      "ordinaryGrade": "F3",
+      "categories": [
+        "felony"
+      ],
+      "riotAlternative": false
+    },
+    {
+      "id": "fl-fs-784-045-1-2-aggravated-battery",
+      "ordinaryGrade": "F2",
+      "categories": [
+        "felony"
+      ],
+      "riotAlternative": true
+    }
+  ],
+  "conditions": {
+    "en": "For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient.",
+    "es": "Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta.",
+    "zh": "对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。"
+  },
+  "ordinaryRanges": {
+    "M2": {
+      "en": "The ordinary second-degree misdemeanor permits up to 60 days in jail and a conventional fine up to $500; a first-degree misdemeanor permits up to 1 year and $1,000.",
+      "es": "El delito menor ordinario de segundo grado permite hasta 60 días de cárcel y una multa ordinaria de hasta $500; un delito menor de primer grado permite hasta 1 año y $1,000.",
+      "zh": "通常的二级轻罪最高可处60天监禁及500美元常规罚款；一级轻罪最高可处1年监禁及1,000美元罚款。"
+    },
+    "M1": {
+      "en": "The ordinary first-degree misdemeanor permits up to 1 year in jail and a conventional fine up to $1,000.",
+      "es": "El delito menor ordinario de primer grado permite hasta 1 año de cárcel y una multa ordinaria de hasta $1,000.",
+      "zh": "通常的一级轻罪最高可处1年监禁及1,000美元常规罚款。"
+    },
+    "F3": {
+      "en": "The ordinary third-degree felony permits up to 5 years imprisonment and a conventional fine up to $5,000.",
+      "es": "El delito grave ordinario de tercer grado permite hasta 5 años de prisión y una multa ordinaria de hasta $5,000.",
+      "zh": "通常的三级重罪最高可处5年监禁及5,000美元常规罚款。"
+    },
+    "F2": {
+      "en": "The ordinary second-degree felony permits up to 15 years imprisonment and a conventional fine up to $10,000.",
+      "es": "El delito grave ordinario de segundo grado permite hasta 15 años de prisión y una multa ordinaria de hasta $10,000.",
+      "zh": "通常的二级重罪最高可处15年监禁及10,000美元常规罚款。"
+    }
+  },
+  "enhancedRanges": {
+    "M2": {
+      "en": "When that domestic-violence repeat rule applies, an ordinary second-degree misdemeanor becomes a first-degree misdemeanor (up to 1 year and $1,000). If the underlying assault is already a first-degree misdemeanor under the riot branch, section 741.2801's first-degree-misdemeanor rule instead specifies a third-degree felony (up to 5 years and $5,000).",
+      "es": "Cuando se aplica esa regla de reincidencia por violencia doméstica, un delito menor ordinario de segundo grado pasa a primer grado (hasta 1 año y $1,000). Si la agresión ya es un delito menor de primer grado por la variante de motín, la regla de la sección 741.2801 para delitos menores de primer grado establece un delito grave de tercer grado (hasta 5 años y $5,000).",
+      "zh": "符合该家庭暴力再犯规则时，通常的二级轻罪升为一级轻罪（最高1年及1,000美元）。如果相关袭击因骚乱分支已属一级轻罪，第741.2801条针对一级轻罪的规则则规定升为三级重罪（最高5年及5,000美元）。"
+    },
+    "M1": {
+      "en": "When that domestic-violence repeat rule applies to the ordinary first-degree misdemeanor, it becomes a third-degree felony (up to 5 years imprisonment and a conventional fine up to $5,000).",
+      "es": "Cuando esa regla de reincidencia por violencia doméstica se aplica al delito menor ordinario de primer grado, pasa a ser delito grave de tercer grado (hasta 5 años de prisión y una multa ordinaria de hasta $5,000).",
+      "zh": "该家庭暴力再犯规则适用于通常的一级轻罪时，犯罪升为三级重罪（最高5年监禁及5,000美元常规罚款）。"
+    },
+    "F3": {
+      "en": "When that domestic-violence repeat rule applies, the third-degree felony becomes a second-degree felony (up to 15 years imprisonment and a conventional fine up to $10,000).",
+      "es": "Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de tercer grado pasa a segundo grado (hasta 15 años de prisión y una multa ordinaria de hasta $10,000).",
+      "zh": "符合该家庭暴力再犯规则时，三级重罪升为二级重罪（最高15年监禁及10,000美元常规罚款）。"
+    },
+    "F2": {
+      "en": "When that domestic-violence repeat rule applies, the second-degree felony becomes a first-degree felony (up to 30 years imprisonment and a conventional fine up to $10,000).",
+      "es": "Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de segundo grado pasa a primer grado (hasta 30 años de prisión y una multa ordinaria de hasta $10,000).",
+      "zh": "符合该家庭暴力再犯规则时，二级重罪升为一级重罪（最高30年监禁及10,000美元常规罚款）。"
+    }
+  },
+  "batteryException": {
+    "en": "Section 741.2801(3) expressly excludes felony battery under section 784.03(2) from its enhancement; that repeat-battery branch remains a third-degree felony under its own terms. Battery in furtherance of a riot under section 784.03(3) is a different third-degree-felony branch; section 741.2801's conditional third-to-second-degree rule is not excluded by that express exception. A second-degree felony ordinarily permits up to 15 years and $10,000.",
+    "es": "La sección 741.2801(3) excluye expresamente de su aumento la agresión física grave de la sección 784.03(2); esa variante de reincidencia sigue siendo delito grave de tercer grado conforme a sus propios requisitos. La agresión física para promover un motín de la sección 784.03(3) es otra variante de tercer grado; esa excepción expresa no excluye la regla condicional que aumenta de tercer a segundo grado prevista en la sección 741.2801. Un delito grave de segundo grado normalmente permite hasta 15 años y $10,000.",
+    "zh": "第741.2801(3)款明确排除第784.03(2)款的重罪殴打，因此该殴打再犯分支依其自身条件仍属三级重罪。第784.03(3)款为推进骚乱而实施的殴打是另一三级重罪分支；这一明确例外不排除第741.2801条有条件地将三级重罪升为二级重罪的规则。二级重罪通常最高可处15年监禁及10,000美元罚款。"
+  },
+  "domesticSentencing": {
+    "en": "Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version.",
+    "es": "La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable.",
+    "zh": "家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
+  },
+  "stalkingSentencing": {
+    "en": "Section 784.048(8) requires punishment to run consecutively to a former sentence for its listed offenses. Subsection (9) requires the court to consider a no-contact order lasting up to 10 years.",
+    "es": "La sección 784.048(8) exige que la pena se cumpla de forma consecutiva a una sentencia anterior por los delitos enumerados. El apartado (9) exige que el tribunal considere una orden de no contacto de hasta 10 años.",
+    "zh": "第784.048(8)款要求刑罚与其列明犯罪的先前刑罚连续执行。第(9)款要求法院考虑最长10年的禁止接触令。"
+  }
+}

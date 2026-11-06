@@ -1,3 +1,4 @@
+import { validateOhioClassificationEvidence } from '../../shared/ohio-primary-classification';
 /** Offline publication packet: never connects to a database or renews older receipts. */
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -21,8 +22,9 @@ export function buildOhioMajorPublication() {
       documents[section] = doc; return bind(doc);
     });
     const grading = row.gradingDivisions.map(letter => division(all[row.section], letter));
+    validateOhioClassificationEvidence(row, grading);
     return { id: row.id, section: row.section, scope: row.scope,
-      definitionHash: hash(JSON.stringify(definition)), mappingId: row.mappingId,
+      primaryClassification: "primaryClassification" in row ? row.primaryClassification : null, definitionHash: hash(JSON.stringify(definition)), mappingId: row.mappingId,
       dependencies: sections.slice(1), conduct: prior.conduct, grading,
       // Preserve exceptions/definitions and sentencing text for every identity.
       evidence: spans };

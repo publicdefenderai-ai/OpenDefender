@@ -1,3 +1,4 @@
+import { validateOhioClassificationEvidence } from '../../shared/ohio-primary-classification';
 /** Offline new-batch preparation; no database or existing receipt writes. */
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -32,7 +33,8 @@ export function buildOhioTheftFraudPublication() {
       if(!grading.some(s=>s.text.includes(`${grade[0]==='F'?'felony':'misdemeanor'} of the ${degree} degree`))) throw Error(`Unbound grade ${row.id}/${grade}`);
     }
     if(!grading.some(s=>s.section===row.section && s.text.toLowerCase().includes(`guilty of ${row.statutoryName.toLowerCase()}`)))throw Error(`Unbound statutory name ${row.id}`);
-    return {id:row.id,section:row.section,scope:row.scope,definitionHash:hash(JSON.stringify(definition)),dependencies:sections.slice(1),
+    validateOhioClassificationEvidence(row, grading);
+    return {id:row.id,section:row.section,scope:row.scope,primaryClassification: "primaryClassification" in row ? row.primaryClassification : null, definitionHash:hash(JSON.stringify(definition)),dependencies:sections.slice(1),
       conduct:[...preambles,...row.conductPaths.map(path=>subdivision(primary,path))],grading,
       context:row.contextPaths.map(path=>subdivision(primary,path)),evidence};
   });

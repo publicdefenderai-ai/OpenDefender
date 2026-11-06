@@ -558,7 +558,7 @@
       "id": "fl-fs-784-011-assault",
       "section": "784.011",
       "status": "eligible",
-      "reason": "Clear whole-section offense with conduct and conditional grades.",
+      "reason": "Existing identity with individually bound domestic-violence grading and sentencing correction.",
       "identity": {
         "kind": "official_heading",
         "quote": "Assault",
@@ -569,22 +569,73 @@
       ],
       "gradingQuotes": [
         "Except as provided in subsection (3), a person who assaults another person commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-        "A person who assaults another person in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+        "(3) \nA person who assaults another person in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 5, Feb. 10, 1832; RS 2400; GS 3226; RGS 5059; CGL 7161; s. 1, ch. 70-88; s. 729, ch 71-136; s. 17, ch. 74-383; s. 7, ch. 75-298; s. 171, ch. 91-224; s. 4, ch. 2021-6.\n\nNote.\n—\nFormer s. 784.02."
       ],
       "requiredSections": [
         {
           "section": "784.011",
           "role": "offense",
           "contentHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6"
+        },
+        {
+          "section": "784.011",
+          "role": "grading",
+          "contentHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "870.01",
+          "role": "definition",
+          "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
         }
       ],
-      "notes": "Source-first replacement, not the legacy Menacing label."
+      "notes": "Existing identity and translated base summaries preserved. Ordinary statutory categories remain first; conditional domestic-violence upgrades and exact section 784.03(2) exception are bound separately. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-784-03-battery",
       "section": "784.03",
       "status": "eligible",
-      "reason": "The operative clause expressly names battery and its conduct subdivision.",
+      "reason": "Existing identity with individually bound domestic-violence grading and sentencing correction.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "The offense of battery occurs when a person:",
@@ -597,7 +648,7 @@
       "gradingQuotes": [
         "Except as provided in subsection (2) or subsection (3), a person who commits battery commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
         "A person who has one prior conviction for battery, aggravated battery, felony battery, or resisting an officer with violence under s. 843.01 and who commits any second or subsequent battery commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A person who commits a battery in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or 775.084."
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -609,15 +660,65 @@
           "section": "784.03",
           "role": "grading",
           "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "870.01",
+          "role": "definition",
+          "contentHash": "c1d8ccd9761c35f7db93b40516d01c68f2a33477afef95bd0d8f206dbfc467cb"
+        },
+        {
+          "section": "843.01",
+          "role": "definition",
+          "contentHash": "73b17f040c91922032611719813fc53f91c96cb914bb26703521ec185c85160f"
         }
       ],
-      "notes": "Both misdemeanor and felony categories are operative."
+      "notes": "Existing identity and translated base summaries preserved. Ordinary statutory categories remain first; conditional domestic-violence upgrades and exact section 784.03(2) exception are bound separately. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-784-048-2-stalking",
       "section": "784.048",
       "status": "eligible",
-      "reason": "Subsection (2) expressly names stalking and states its conduct and grade.",
+      "reason": "Existing identity with individually bound domestic-violence grading and sentencing correction.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits the offense of stalking",
@@ -627,7 +728,8 @@
         "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person commits the offense of stalking, a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
       ],
       "gradingQuotes": [
-        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person commits the offense of stalking, a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person commits the offense of stalking, a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -639,15 +741,75 @@
           "section": "784.048",
           "role": "grading",
           "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "794.011",
+          "role": "definition",
+          "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+        },
+        {
+          "section": "800.04",
+          "role": "definition",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "847.0135",
+          "role": "definition",
+          "contentHash": "fafb49782fc614a1c484bf61322539a91b6a411d15cc0d058a7e904fb8be506d"
+        },
+        {
+          "section": "921.244",
+          "role": "definition",
+          "contentHash": "15cb12378b2a4b1bbac2bcd5a5498ad02a2b178f574f1ac75cd3de5586f16103"
         }
       ],
-      "notes": "Definitions are in subsection (1) of the same source."
+      "notes": "Existing identity and translated base summaries preserved. Ordinary statutory categories remain first; conditional domestic-violence upgrades and exact section 784.03(2) exception are bound separately. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-784-048-3-aggravated-stalking",
       "section": "784.048",
       "status": "eligible",
-      "reason": "Subsection (3) expressly names the credible-threat variant and gives its grade.",
+      "reason": "Existing identity with individually bound domestic-violence grading and sentencing correction.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits the offense of aggravated stalking",
@@ -657,7 +819,8 @@
         "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person and makes a credible threat to that person commits the offense of aggravated stalking, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person and makes a credible threat to that person commits the offense of aggravated stalking, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person and makes a credible threat to that person commits the offense of aggravated stalking, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -669,9 +832,69 @@
           "section": "784.048",
           "role": "grading",
           "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "794.011",
+          "role": "definition",
+          "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+        },
+        {
+          "section": "800.04",
+          "role": "definition",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "847.0135",
+          "role": "definition",
+          "contentHash": "fafb49782fc614a1c484bf61322539a91b6a411d15cc0d058a7e904fb8be506d"
+        },
+        {
+          "section": "921.244",
+          "role": "definition",
+          "contentHash": "15cb12378b2a4b1bbac2bcd5a5498ad02a2b178f574f1ac75cd3de5586f16103"
         }
       ],
-      "notes": "Limited to subsection (3), not the other variants."
+      "notes": "Existing identity and translated base summaries preserved. Ordinary statutory categories remain first; conditional domestic-violence upgrades and exact section 784.03(2) exception are bound separately. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
