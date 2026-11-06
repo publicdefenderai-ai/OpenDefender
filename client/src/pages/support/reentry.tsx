@@ -1,3 +1,4 @@
+import { NrrcResources } from "@/components/nrrc-resources";
 import { useTranslation } from "react-i18next";
 import { Compass, IdCard, FileX, Home, Briefcase, Vote, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
@@ -312,7 +313,7 @@ export default function ReentrySupport() {
       startHereItems={startHereItems}
       externalResources={externalResources}
       faqs={faqs}
-      customSections={<CustomSections />}
+      customSections={<><CustomSections /><NrrcResources ids={["home", "consequences", "housing"]} /></>}
       relatedLinks={[
         { label: t("support.relatedLinks.recordClearing"), href: "/support/reputation/eligibility" },
         { label: t("support.relatedLinks.reputation"), href: "/support/reputation" },

@@ -1,3 +1,4 @@
+import { NrrcResources } from "@/components/nrrc-resources";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import reputationHero from "@assets/stock_images/reputation.jpg";
@@ -949,6 +950,7 @@ export default function ReputationSupport() {
             ))}
           </div>
         </div>
+      <NrrcResources ids={["consequences"]} />
         <CleanSlateSection /><FcraRightsSection /><RapSheetSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
       sidebar={<ReputationSidebar activeId={activeId} />}
     />

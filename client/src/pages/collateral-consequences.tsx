@@ -1,3 +1,4 @@
+import { NrrcResources } from "@/components/nrrc-resources";
 import { useState, useEffect, useRef } from "react";
 import { collateralDesignCopy } from "@/locales/collateral-design";
 import {
@@ -781,6 +782,7 @@ export default function CollateralConsequences() {
         </div>
       </div>
 
+      <div className="max-w-5xl mx-auto px-6"><NrrcResources ids={["consequences"]} /></div>
       {/* Privacy strip */}
       <section className="py-8 border-t border-border/30 bg-muted/20">
         <div className="max-w-xl mx-auto px-4 text-center">
