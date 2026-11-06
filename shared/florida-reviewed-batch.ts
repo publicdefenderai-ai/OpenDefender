@@ -58,7 +58,9 @@ export const FLORIDA_REVIEWED_BATCH = projectEvidenceBackedChargeBatch(
 // Judicial holdings supplement the explanation's statutory sources. They are not
 // statute snapshots or a freshness receipt, and never make a charge selectable.
 for (const authority of judicialAuthorities) {
+  if (!definitions.has(authority.chargeId)) throw new Error(`Orphaned Florida judicial source: ${authority.chargeId}`);
   const explanation = FLORIDA_REVIEWED_BATCH.explanations.find(row => row.canonicalChargeId === authority.chargeId);
-  if (!explanation) throw new Error(`Orphaned Florida judicial source: ${authority.chargeId}`);
+  // A held record has no projected explanation; its retained authority is still valid accounting.
+  if (!explanation) continue;
   explanation.sources = [...(explanation.sources ?? []), { citation: authority.citation, url: authority.sourceUrl, jurisdiction: "FL" }];
 }

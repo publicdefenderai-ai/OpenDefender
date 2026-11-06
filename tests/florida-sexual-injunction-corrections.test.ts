@@ -1,6 +1,6 @@
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import packet from '../scripts/data-review/output/florida-sexual-injunction-corrections.json';
 import originals from '../scripts/data-review/florida-sexual-injunction/previous-definitions.json';
 import authorities from '../shared/florida-reviewed-data/judicial-authorities.json';
@@ -84,4 +84,16 @@ describe('Florida sexual battery and injunction corrective evidence', () => {
     const all=buildFloridaReviewedSourceRecords(FLORIDA_REVIEWED_DEFINITIONS,report as any,eligibility as any);
     expect(validateFloridaReviewedRefreshReceipt(receipt as any,report as any,eligibility as any,all,new Date(receipt.checkedAt))).not.toBeNull();
   });
+  it('allows an existing held identity to retain judicial evidence without breaking other Florida choices', async () => {
+    vi.resetModules();
+    const held = structuredClone(eligibility);
+    held.decisions.find(d => d.id === authorities[0].chargeId)!.status = 'held';
+    vi.doMock('../shared/florida-reviewed-eligibility.json', () => ({default:held}));
+    try {
+      const { FLORIDA_REVIEWED_BATCH } = await import('../shared/florida-reviewed-batch');
+      expect(FLORIDA_REVIEWED_BATCH.explanations.some(e=>e.canonicalChargeId===authorities[0].chargeId)).toBe(false);
+      expect(FLORIDA_REVIEWED_BATCH.explanations.some(e=>e.canonicalChargeId?.includes('741-31'))).toBe(true);
+    } finally { vi.doUnmock('../shared/florida-reviewed-eligibility.json'); vi.resetModules(); }
+  });
+
 });

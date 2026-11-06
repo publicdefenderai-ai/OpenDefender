@@ -43,4 +43,4 @@ The ordinary tests verify retained excerpt hashes, record linkage, statutory bin
 
 Production restoration remains a separate evidence comparison, approval, import and deployment operation. An expired or mismatched receipt must continue to withhold this reviewed family. The independent 15-record persons family and its receipt are untouched.
 
-Validation on this branch: all 16 Florida suites passed (95 passed, 43 pre-existing skips); application typecheck passed; both official PDF replays passed; offline packet reproduction and whitespace checks passed. Exactly two existing reviewed drafts changed. Both the old reviewed receipt and independent persons receipt are byte-identical to the base.
+Validation on this branch: all 16 Florida suites passed (96 passed, 43 pre-existing skips); application typecheck passed; both official PDF replays passed; offline packet reproduction and whitespace checks passed. Exactly two existing reviewed drafts changed. Both the old reviewed receipt and independent persons receipt are byte-identical to the base.
