@@ -21,3 +21,7 @@ No production credential or database is needed for these checks. Do not run the 
 ## Separate source reconciliation
 
 Ohio's 12 reported conflict keys and 17 candidate-eligible dependents match the previously reviewed PR97 source overlay in this exact candidate. Production comparison and source-conflict disposition are handled separately outside this PR. This code change does not authorize replacing stored snapshots, clearing conflict holds, adding pilot schema, renewing receipts or importing data. Any source reconciliation must preserve historical evidence and pass the existing conflict-review process. Georgia/Pennsylvania coverage, Illinois certificate access, the older Florida receipt and Ohio's existing receipt deadlines remain separate limitations.
+
+## Supplemental browser finding
+
+The complete browser run passed 400 of 401 tests, including all California and Support checks. The remaining simulated multi-day daily-usage test advanced its clock after usage increment but before the first response established its cooldown. Its failure snapshot showed usage correctly reset to zero with a newly started 26-second cooldown. An isolated unchanged rerun passed. The test now waits for the response-completion cooldown before jumping, following the adjacent test pattern; reset, cross-tab and enabled-button assertions remain intact. No application cooldown or limit changed.
