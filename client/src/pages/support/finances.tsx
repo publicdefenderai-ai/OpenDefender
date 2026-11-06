@@ -1,3 +1,4 @@
+import { NrrcResources } from "@/components/nrrc-resources";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
@@ -557,6 +558,7 @@ export default function FinancesSupport() {
           </div>
       </div>
 
+      <NrrcResources ids={["consequences"]} />
     </ScanFirstPageFrame>
   );
 }

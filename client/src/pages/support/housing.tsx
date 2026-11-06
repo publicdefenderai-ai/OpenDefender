@@ -1,3 +1,4 @@
+import { NrrcResources } from "@/components/nrrc-resources";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import housingHero from "@assets/stock_images/housing.png";
@@ -572,6 +573,7 @@ export default function HousingSupport() {
           <HomeownerSection />
           <HousingInstabilitySection />
           <HousingNetworkSection />
+      <NrrcResources ids={["housing", "consequences"]} />
           <HousingCollateralCallout />
         </>
       }

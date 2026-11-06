@@ -7,7 +7,7 @@ for(const language of ['en','es','zh'] as const) for(const theme of ['light','da
   await page.addInitScript(({language,theme})=>{localStorage.setItem('i18nextLng',language);localStorage.setItem('public-defender-theme',theme);},{language,theme});
   await page.setViewportSize({width:1280,height:1000});await page.goto('/directory');
   const root=page.getByTestId('resource-directory');const rows=root.locator('.directory-resource');
-  const total=baseline.reduce((n,c)=>n+c.resources.length,0)+2;
+  const total=baseline.reduce((n,c)=>n+c.resources.length,0)+5;
   await expect(rows).toHaveCount(total);await expect(root.locator('.directory-volume strong')).toHaveText(String(total));
   await expect(root.locator('.directory-categories button')).toHaveCount(baseline.length+1);
   for(const [index,cat] of baseline.entries()){
@@ -19,7 +19,7 @@ for(const language of ['en','es','zh'] as const) for(const theme of ['light','da
   for(const [index,cat] of baseline.entries()){
    const button=root.locator(`[data-category="${index}"]`);await button.focus();await page.keyboard.press('Enter');
    await expect(button).toHaveAttribute('aria-pressed','true');await expect(button).toBeFocused();
-   await expect(root.locator('.directory-group')).toHaveCount(1);await expect(rows).toHaveCount(cat.resources.length+(index===1?2:0));
+   await expect(root.locator('.directory-group')).toHaveCount(1);await expect(rows).toHaveCount(cat.resources.length+(index===1?2:index===2?3:0));
   }
   await root.locator('[data-category="-1"]').click();
   const query=root.getByRole('searchbox');

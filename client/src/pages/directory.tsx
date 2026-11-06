@@ -6,6 +6,8 @@ import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { directoryDesignCopy } from "@/locales/directory-design";
 
+import { getNrrcResources } from "@/lib/nrrc-resources";
+
 interface ResourceItem { title: string; description: string; link: string; }
 interface CategorySection { title: string; description: string; resources: ResourceItem[]; }
 
@@ -13,6 +15,7 @@ export default function Directory() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
   const copy = directoryDesignCopy[i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en"];
+  const nrrc = getNrrcResources(i18n.language);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(-1);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -47,6 +50,7 @@ export default function Directory() {
       title: t("howTo.sections.findResources.title"),
       description: t("howTo.sections.findResources.description"),
       resources: [
+        ...nrrc.resources.map(resource => ({ ...resource, description: `${resource.description} ${nrrc.copy.note}` })),
         { title: t("howTo.sections.findResources.legalAid.title"),                description: t("howTo.sections.findResources.legalAid.description"),                link: "/legal-aid" },
         { title: t("howTo.sections.findResources.diversionPrograms.title"),       description: t("howTo.sections.findResources.diversionPrograms.description"),       link: "/diversion-programs" },
         { title: t("howTo.sections.findResources.recordExpungement.title"),       description: t("howTo.sections.findResources.recordExpungement.description"),       link: "/support/reputation" },
@@ -156,9 +160,9 @@ export default function Directory() {
           {groups.map(cat=>(<section className="directory-group" key={cat.index} aria-labelledby={`directory-category-${cat.index}`}>
             <h2 id={`directory-category-${cat.index}`}>{cat.title}<span>{number(cat.resources.length)}</span></h2>
             <p>{cat.description}</p>
-            {cat.resources.map(resource=>(<Link className="directory-resource" key={resource.link} href={resource.link}>
+            {cat.resources.map(resource=>{ const ResourceLink = resource.link.startsWith("https://") ? "a" : Link; return <ResourceLink className="directory-resource" key={resource.link} href={resource.link}>
               <h3>{resource.title}</h3><p>{resource.description}</p>
-            </Link>))}
+            </ResourceLink>; })}
           </section>))}
           {found===0 && <div className="directory-empty"><h2>{copy.empty}</h2><p>{copy.emptyHint}</p><button onClick={reset}>{copy.reset}</button></div>}
         </div>
