@@ -68,14 +68,27 @@
       "M1"
     ],
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "dependencies": [
       "5164.01"
     ],
     "extraGrading": [],
-    "sentencingMode": "ordinary"
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.401",
+          "quote": "Except as otherwise provided in this division, a violation of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
   },
   {
     "id": "oh-orc-2913-46-illegal-benefits-use",

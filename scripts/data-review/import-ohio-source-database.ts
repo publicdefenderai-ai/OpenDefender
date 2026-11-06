@@ -1,3 +1,4 @@
+import { OHIO_BENEFITS_FRAUD_SOURCES } from "../../server/data/ohio-benefits-fraud-source";
 import { OHIO_THEFT_FRAUD_SOURCES } from "../../server/data/ohio-theft-fraud-source";
 import { OHIO_RESIDUAL_SOURCES } from "../../server/data/ohio-residual-source";
 import { OHIO_MAJOR_SOURCES } from "../../server/data/ohio-major-source";
@@ -166,6 +167,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_MAJOR_SOURCES.map(record => record.chargeId),
       ...OHIO_RESIDUAL_SOURCES.map(record => record.chargeId),
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
+      ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
     ],
   );
   return criminalCharges.filter((charge) =>
