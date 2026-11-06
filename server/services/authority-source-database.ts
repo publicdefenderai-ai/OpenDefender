@@ -1,4 +1,5 @@
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-residual-source";
+import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
@@ -257,6 +258,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "OH" && !isOhioReviewedSourceFresh()) {
     for (const source of OHIO_REVIEWED_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaPersonsSourceFresh()) {
+    for (const source of FLORIDA_PERSONS_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaReviewedSourceFresh()) {
     for (const source of FLORIDA_REVIEWED_SOURCE_RECORDS) selectable.delete(source.chargeId);

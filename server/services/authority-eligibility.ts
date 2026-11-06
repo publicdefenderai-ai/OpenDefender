@@ -1,5 +1,7 @@
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
 import { isOhioResidualSourceFresh } from "../data/ohio-residual-source";
+import { FLORIDA_PERSONS_IDS } from "@shared/florida-persons-batch";
+import { isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { OHIO_MAJOR_IDS } from "@shared/ohio-major-batch";
 import { isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { isCaliforniaEvidenceFresh } from "@shared/california-freshness";
@@ -20,6 +22,7 @@ const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
 );
 
 function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sharedPilotChecked = false): boolean {
+  if (charge.jurisdiction === "FL" && FLORIDA_PERSONS_IDS.has(charge.id) && !isFloridaPersonsSourceFresh()) return false;
   if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !isFloridaReviewedSourceFresh()) return false;
   if (charge.jurisdiction === "CA" && (!isCaliforniaEvidenceFresh() || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
   if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !isOhioResidualSourceFresh()) return false;

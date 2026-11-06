@@ -1,3 +1,4 @@
+import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { criminalCharges } from "@shared/criminal-charges";
@@ -40,7 +41,7 @@ export function loadFloridaAuthorityManifest(
     throw new Error("The committed Florida manifest has an invalid generation timestamp");
   }
 
-  const sourceFirstIds = new Set(FLORIDA_REVIEWED_SOURCE_RECORDS.map(row => row.chargeId));
+  const sourceFirstIds = new Set([...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES].map(row => row.chargeId));
   if (raw.catalogRecords.some(record => sourceFirstIds.has(record.chargeId))) {
     throw new Error("The legacy Florida manifest must not shadow a reviewed source-first record");
   }
@@ -60,7 +61,9 @@ export function loadFloridaAuthorityManifest(
   }
 
   const reviewedFresh = isFloridaReviewedSourceFresh(now);
-  const reviewedRetrievals = FLORIDA_REVIEWED_SOURCE_RECORDS.flatMap(record =>
+  const personsFresh = isFloridaPersonsSourceFresh(now);
+  const publishableReviewedIds = new Set([...(reviewedFresh ? FLORIDA_REVIEWED_SOURCE_RECORDS : []), ...(personsFresh ? FLORIDA_PERSONS_SOURCES : [])].map(row => row.chargeId));
+  const reviewedRetrievals = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES].flatMap(record =>
     record.dependencies.map(document => Date.parse(document.retrievedAt)));
   const manifestGeneratedAt = reviewedRetrievals.length
     ? new Date(Math.max(generatedAt.getTime(), ...reviewedRetrievals))
@@ -68,10 +71,11 @@ export function loadFloridaAuthorityManifest(
   const records = [
     ...raw.catalogRecords,
     ...(reviewedFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt) : []),
+    ...(personsFresh ? buildFloridaReviewedManifestRecords(manifestGeneratedAt, FLORIDA_PERSONS_SOURCES) : []),
   ];
   const expectedIds = criminalCharges
     .filter(charge => charge.jurisdiction === "FL" &&
-      (reviewedFresh || !sourceFirstIds.has(charge.id)))
+      (publishableReviewedIds.has(charge.id) || !sourceFirstIds.has(charge.id)))
     .map(charge => charge.id);
   const ids = new Set(records.map(record => record.chargeId));
   if (ids.size !== records.length || ids.size !== expectedIds.length ||
