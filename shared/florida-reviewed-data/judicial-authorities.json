@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kennedy",
+    "citation": "Kennedy v. Louisiana, 554 U.S. 407, 413 (2008)",
+    "sourceUrl": "https://tile.loc.gov/storage-services/service/ll/usrep/usrep554/usrep554407/usrep554407.pdf",
+    "pdfSha256": "e6d97018d9253bd9737f84f19b378f242d89782ac4bf41aa0b185f68cdcdfbf6",
+    "pdfPage": 7,
+    "pageTextSha256": "bcfe9897fdea37adf83b66dfd4c93724012efcc9520b18b8e66a640f63c4ffa8",
+    "extraction": "PyMuPDF page text; soft-hyphen line joins removed and whitespace collapsed; retained text is the majority holding excerpt only",
+    "pageStart": 233,
+    "pageEnd": 567,
+    "text": "This case presents the question whether the Constitution bars respondent from imposing the death penalty for the rape of a child where the crime did not result, and was not intended to result, in death of the victim. We hold the Eighth Amendment prohibits the death penalty for this offense. The Louisiana statute is unconstitutional.",
+    "contentHash": "b2fb56b99c5c9598d78a01c9cffbc9db3125b1733bbf8d764f2b723025ca12e4",
+    "retrievedAt": "2026-11-06T17:53:45.116565+00:00",
+    "chargeId": "fl-fs-794-011-2-sexual-battery"
+  },
+  {
+    "id": "graham",
+    "citation": "Graham v. Florida, 560 U.S. 48, 82 (2010)",
+    "sourceUrl": "https://tile.loc.gov/storage-services/service/ll/usrep/usrep560/usrep560048/usrep560048.pdf",
+    "pdfSha256": "89a460451a28231e6d8301ea8001aebd7145aff6d2180ecd6b922341c6e18a23",
+    "pdfPage": 35,
+    "pageTextSha256": "909ffd99e09f608b7ea0634156740e735534f9106262f8a0518fba369019af2a",
+    "extraction": "PyMuPDF page text; soft-hyphen line joins removed and whitespace collapsed; retained text is the majority holding excerpt only",
+    "pageStart": 731,
+    "pageEnd": 1059,
+    "text": "The Constitution prohibits the imposition of a life without parole sentence on a juvenile offender who did not commit homicide. A State need not guarantee the offender eventual release, but if it imposes a sentence of life it must provide him or her with some realistic opportunity to obtain release before the end of that term.",
+    "contentHash": "bc7cf80566058ed276693926ab503a82fe820cf0363dbd967423ab9b0ff4b76e",
+    "retrievedAt": "2026-11-06T17:53:45.533797+00:00",
+    "chargeId": "fl-fs-794-011-2-sexual-battery"
+  }
+]

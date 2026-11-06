@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "794.011",
+    "775.082",
+    "775.083",
+    "794.0115",
+    "921.1425",
+    "921.1401",
+    "921.1402",
+    "741.2801",
+    "741.31",
+    "741.30",
+    "741.315",
+    "775.084"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-794-011-2-sexual-battery",
+      "section": "794.011",
+      "requiredSections": [
+        "794.011",
+        "775.082",
+        "775.083",
+        "794.0115",
+        "921.1425",
+        "921.1401",
+        "921.1402",
+        "741.2801"
+      ],
+      "conductScope": "(2)",
+      "gradingScopes": [
+        "(2)"
+      ]
+    },
+    {
+      "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+      "section": "741.31",
+      "requiredSections": [
+        "741.31",
+        "741.30",
+        "741.315",
+        "775.082",
+        "775.083",
+        "775.084"
+      ],
+      "conductScope": "(4)(a)",
+      "gradingScopes": [
+        "(4)(a)",
+        "(4)(c)"
+      ]
+    }
+  ]
+}

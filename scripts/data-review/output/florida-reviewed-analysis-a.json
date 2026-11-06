@@ -437,7 +437,7 @@
       "id": "fl-fs-794-011-2-sexual-battery",
       "section": "794.011",
       "status": "eligible",
-      "reason": "Subsection (2) is a distinct age-defined scope not duplicated by retained subdivisions (3)-(5).",
+      "reason": "Existing identity with complete conduct and independently bound sentencing dependencies.",
       "identity": {
         "kind": "official_heading",
         "quote": "Sexual battery",
@@ -456,12 +456,47 @@
           "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
         },
         {
+          "section": "794.011",
+          "role": "grading",
+          "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
           "section": "921.1425",
           "role": "penalty",
           "contentHash": "3f12910e8649cf859740ec39a810f96319c887c24f5476314ca34e30d9bd0822"
+        },
+        {
+          "section": "921.1401",
+          "role": "penalty",
+          "contentHash": "a45f15bc4398d482cb00587541d2f37542a34593cbe1968f78b44da71657ee50"
+        },
+        {
+          "section": "921.1402",
+          "role": "penalty",
+          "contentHash": "18621af3e70fa4b7e0a457dcfd0bf3cb58ab6f6f45a18dedfb14eb73910cb60e"
+        },
+        {
+          "section": "741.2801",
+          "role": "definition",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
         }
       ],
-      "notes": "Exact subsection scope; retained records at subdivisions (3)-(5) were not duplicated."
+      "notes": "Existing identity and translated base summaries preserved; complete mapped conduct and statutory sentencing dependencies retained. Constitutional holdings are separately bound in the judicial-authorities artifact. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-777-03-accessory-after-the-fact",

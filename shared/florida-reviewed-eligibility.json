@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "33620f9b3203dd830e068d3b3964f60378e6ae8836f8fa55147b4e70a74bb286",
+  "reportHash": "5e5594d89aa3b7b4d8054314abcec65217aa334460ad9414d3f70aac6feb5750",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -69,10 +69,10 @@
     {
       "id": "fl-fs-794-011-2-sexual-battery",
       "status": "eligible",
-      "reason": "Subsection (2) is a distinct age-defined scope not duplicated by retained subdivisions (3)-(5).",
-      "draftHash": "4672d649f273d73bb053f8ef1bbb1f37c54fde76766583388921106aeccf9358",
-      "definitionHash": "0f59e4de8f61b6942c86de1df7c1cf24647d89b28a27e4426c946bdb84a225b3",
-      "approvalHash": "bc3e320af5eb29a083872791097f71ba7d09c6735ddf20de6a324363cc722bf7"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "3480edb2d98006a8d5c20937703ba49822ddff60de4d50b5b845e4c239f52359",
+      "definitionHash": "ad417cc5383901fd384e0a7e6a92ddb5cc57c154a6a1c62e0de25a485a0d978e",
+      "approvalHash": "c7970bab53d42f1426b037adcae02df07cf1ae798438b290a4bbd67944219aa5"
     },
     {
       "id": "fl-fs-777-03-accessory-after-the-fact",
@@ -373,10 +373,10 @@
     {
       "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
       "status": "eligible",
-      "reason": "The exact heading identifies the offense, subsection (4)(a) supplies enumerated willful conduct, and paragraph (c) supplies the same-victim prior-conviction felony condition.",
-      "draftHash": "acebfdffa2d19beca6189a9587e8a94987cb06914dc9c488a119e5a8aea82072",
-      "definitionHash": "30f7411e2d54886db0065a2ce17662e56f0928f178161ba04738708a33d51b4a",
-      "approvalHash": "d148180b89ef1cd163cd67d621658429fd3b9d32a1e00632ca0d213b331cae15"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "8653b5093e9d8fd229ec41fb8259e5c4f57ce6a6dc4b6650bf4fcf25c575bdf7",
+      "definitionHash": "6ede44dfbadf91371e7fbe01f80f0e4838951821d2dc559bd670642bb80ddeb6",
+      "approvalHash": "0279912c71d0d6f463ff27b5365de5f07064c39da2b24ff9a99e54402558616e"
     },
     {
       "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
