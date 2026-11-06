@@ -5,7 +5,7 @@ const SUPPORT_SECTION_NAV = "On this page";
 const SUPPORT_PAGES = [
   {
     path: "/support",
-    sections: ["support-start", "support-screener", "support-topics", "support-partners"],
+    sections: ["support-start", "support-topics", "support-screener", "support-partners"],
     navigationTarget: "support-topics",
     scrollTargets: {
       desktop: ["support-topics", "support-start"],
@@ -35,15 +35,15 @@ const SUPPORT_PAGES = [
 const TRANSLATED_SUPPORT_PAGES = [
   {
     path: "/support",
-    sections: ["support-start", "support-screener", "support-topics", "support-partners"],
+    sections: ["support-start", "support-topics", "support-screener", "support-partners"],
     navigationTarget: "support-topics",
     scrollTargets: {
       desktop: ["support-topics", "support-start"],
       mobile: ["support-topics", "support-start"],
     },
     labels: {
-      es: ["¿No sabe por dónde empezar?", "¿Fue arrestado recientemente o le acaban de presentar cargos?", "Explorar temas de apoyo", "Socios comunitarios"],
-      zh: ["不知道从哪里开始？", "刚刚被捕或最近被指控？", "浏览支持主题", "社区合作伙伴"],
+      es: ["¿No sabe por dónde empezar?", "Explorar temas de apoyo", "¿Fue arrestado recientemente o le acaban de presentar cargos?", "Socios comunitarios"],
+      zh: ["不知道从哪里开始？", "浏览支持主题", "刚刚被捕或最近被指控？", "社区合作伙伴"],
     },
   },
   {

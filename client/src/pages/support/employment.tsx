@@ -1,11 +1,10 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import employmentHero from "@assets/stock_images/employment.jpg";
-import { Briefcase, Mail, Phone, Copy, Check, Printer, ChevronDown, FileText, Sparkles, AlertTriangle } from "lucide-react";
+import { EmploymentFrame } from "@/components/support/employment-frame";
+import { Mail, Phone, Copy, Check, Printer, ChevronDown, FileText, Sparkles, AlertTriangle } from "lucide-react";
 import { Link } from "wouter";
 import {
-  ResourcePageTemplate,
   ActionItem,
   ExternalResource,
   FAQ,
@@ -13,7 +12,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+
+
+function escapePrint(text: string) { return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 
 function TemplateCard({ label, subject, body, t }: { label: string; subject?: string; body: string; t: (key: string) => string }) {
   const [copied, setCopied] = useState(false);
@@ -42,21 +43,21 @@ function TemplateCard({ label, subject, body, t }: { label: string; subject?: st
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title>${escapePrint(label)}</title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #2563eb; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ''}
-            <div class="body">${body.replace(/\n/g, '<br>')}</div>
-            <p class="note">${t('support.employment.courtTimeOff.personalizeNote')}</p>
+            <h1>${escapePrint(label)}</h1>
+            ${subject ? `<p class="subject">${escapePrint(subject)}</p>` : ''}
+            <div class="body">${escapePrint(body)}</div>
+            <p class="note">${escapePrint(t('support.employment.courtTimeOff.personalizeNote'))}</p>
           </body>
         </html>
       `);
@@ -66,7 +67,7 @@ function TemplateCard({ label, subject, body, t }: { label: string; subject?: st
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card className="employment-paper">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -125,10 +126,10 @@ function CourtTimeOffSection() {
   const rights = ['r1', 'r2', 'r3', 'r4', 'r5'];
 
   return (
-    <section className="py-10 md:py-14 bg-background" id="court-time-off">
-      <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-8">
+    <section className="employment-tools" id="court-time-off">
+      <div >
+        <div>
+          <div className="mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
               <div className="p-2 rounded-lg bg-blue-500/10">
                 <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -137,13 +138,13 @@ function CourtTimeOffSection() {
                 {t('support.employment.courtTimeOff.sectionTitle')}
               </h2>
             </div>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl">
               {t('support.employment.courtTimeOff.sectionDescription')}
             </p>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal>
+        <div>
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4 flex items-start gap-3">
             <Badge variant="outline" className="shrink-0 mt-0.5 border-amber-400 text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40">
               {t('support.employment.courtTimeOff.tipLabel')}
@@ -152,10 +153,10 @@ function CourtTimeOffSection() {
               {t('support.employment.courtTimeOff.personalizeNote')}
             </p>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal>
-          <div className="rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-4 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <div lang="en" className="employment-letter-link">
             <div className="min-w-0">
               <p className="text-sm font-semibold text-foreground mb-0.5">Need something tailored to your exact situation?</p>
               <p className="text-xs text-muted-foreground">The templates below are a good starting point. Our letter generator creates a personalized draft based on your specific circumstances.</p>
@@ -167,9 +168,9 @@ function CourtTimeOffSection() {
               </Button>
             </a>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal>
+        <div>
           <div className="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Template type">
             <Button
               variant={activeTab === 'email' ? 'default' : 'outline'}
@@ -196,19 +197,19 @@ function CourtTimeOffSection() {
               {t('support.employment.courtTimeOff.callScripts.title')}
             </Button>
           </div>
-        </ScrollReveal>
+        </div>
 
         {activeTab === 'email' && (
           <div id="email-panel" role="tabpanel" aria-labelledby="email-tab" className="space-y-4">
             {emailTemplates.map((tmpl) => (
-              <ScrollReveal key={tmpl.key}>
+              <div key={tmpl.key}>
                 <TemplateCard
                   label={t(`support.employment.courtTimeOff.emailTemplates.${tmpl.key}.label`)}
                   subject={tmpl.hasSubject ? t(`support.employment.courtTimeOff.emailTemplates.${tmpl.key}.subject`) : undefined}
                   body={t(`support.employment.courtTimeOff.emailTemplates.${tmpl.key}.body`)}
                   t={t}
                 />
-              </ScrollReveal>
+              </div>
             ))}
           </div>
         )}
@@ -220,8 +221,8 @@ function CourtTimeOffSection() {
             </p>
 
             {callScripts.map((script) => (
-              <ScrollReveal key={script.key}>
-                <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+              <div key={script.key}>
+                <Card className="employment-paper">
                   <CardHeader className="pb-3">
                     <button
                       type="button"
@@ -238,7 +239,7 @@ function CourtTimeOffSection() {
                   </CardHeader>
                   {expandedScript === script.key && (
                     <CardContent>
-                      <div className="bg-muted/40 dark:bg-muted/20 rounded-lg p-4 border border-border/40">
+                      <div className="employment-script">
                         <pre className="whitespace-pre-wrap text-sm text-foreground font-sans leading-relaxed">
                           {t(`support.employment.courtTimeOff.callScripts.${script.key}.script`)}
                         </pre>
@@ -252,11 +253,11 @@ function CourtTimeOffSection() {
                     </CardContent>
                   )}
                 </Card>
-              </ScrollReveal>
+              </div>
             ))}
 
-            <ScrollReveal>
-              <Card className="border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-950/20 shadow-sm mt-6">
+            <div>
+              <Card className="employment-call-tips">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base font-semibold flex items-center gap-2">
                     <Phone className="h-4 w-4 text-blue-600 dark:text-blue-400" />
@@ -274,11 +275,11 @@ function CourtTimeOffSection() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+            </div>
           </div>
         )}
 
-        <ScrollReveal>
+        <div>
           <Card className="border border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/20 shadow-sm mt-8">
             <CardHeader className="pb-3">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
@@ -302,7 +303,7 @@ function CourtTimeOffSection() {
               </ul>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );
@@ -338,8 +339,8 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
 
 function EmploymentCollateralCallout() {
   return (
-    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
-      <div className="max-w-4xl mx-auto px-4">
+    <section lang="en" className="employment-collateral">
+      <div >
         <div className="flex items-start gap-3 mb-4">
           <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
           <div>
@@ -348,15 +349,15 @@ function EmploymentCollateralCallout() {
           </div>
         </div>
         <div className="grid sm:grid-cols-3 gap-3 mb-4">
-          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+          <div className="employment-consequence">
             <p className="text-xs font-semibold text-foreground mb-1">Professional licenses</p>
             <p className="text-xs text-muted-foreground">Nursing, teaching, CDL, contractor, security, real estate, and many other licenses can be automatically suspended or revoked upon conviction. The licensing board acts independently of the court.</p>
           </div>
-          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+          <div className="employment-consequence">
             <p className="text-xs font-semibold text-foreground mb-1">Background checks</p>
             <p className="text-xs text-muted-foreground">Employers in healthcare, education, childcare, finance, and security sectors are often legally required to terminate employees with certain convictions. This can happen even if you have worked there for years.</p>
           </div>
-          <div className="bg-white dark:bg-background border border-amber-200 dark:border-amber-800/50 rounded-lg p-3">
+          <div className="employment-consequence">
             <p className="text-xs font-semibold text-foreground mb-1">Federal contractor jobs</p>
             <p className="text-xs text-muted-foreground">Felony convictions can result in loss of security clearance and disqualification from federal employment or work on government contracts. Some positions require a waiting period before you can reapply.</p>
           </div>
@@ -483,12 +484,7 @@ export default function EmploymentSupport() {
   ];
 
   return (
-    <ResourcePageTemplate
-      categoryId="employment"
-      heroImage={employmentHero}
-      icon={Briefcase}
-      iconColor="bg-blue-500/10 text-blue-600 dark:text-blue-400"
-      heroGradient="bg-gradient-to-br from-blue-500/5 via-background to-background"
+    <EmploymentFrame
       overview={t('support.employment.overview')}
       startHereItems={startHereItems}
       externalResources={externalResources}

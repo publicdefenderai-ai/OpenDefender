@@ -494,3 +494,31 @@ References:
 - `directory-volume-style.html`: SHA-256 `01ffe51547249dbe80622fbd54e29ddea31c63d5444fb15d36e91b2c41a64f63`
 
 Validation: typecheck, production build, 11 translation/coverage checks and six dedicated browser cases passed. Desktop/light and phone/dark views were visually inspected. Existing resource descriptions are preserved, not newly verified. No full-suite, deployment or substantive-review completion claim. This completes the requested Friends & Family / Toolkit / Screener / Directory implementation sequence; revisit the implementation inventory before choosing the next batch.
+
+## Life & Family Support hub
+
+Refreshes `/support` with the approved tree illustration and grouped resource rows: daily life, health/caregiving, and legal/court support. Preserves every published category label, full description, 13 destinations, 211 callout and eligibility note, impact-screener warning, and community-partner paragraph/link. Adds Friends & Family and Directory links. Existing English-only partner content is marked `lang="en"`; its inherited claims are preserved, not newly verified. New framing supports English, Spanish and Chinese. No form or advice workflow changes.
+
+Retains the four original section anchors and active-section navigation. Their order now follows the page, including the screener between health and court groups. Additional native anchors jump directly to each topic group. Category rows have no truncated text, colored cards or entry animation. The warning remains visually distinct. Mobile stacks the groups and omits the decorative tree, matching the approved preview.
+
+The approved oak image was prepared as a transparent cutout with imagegen and committed locally. The house remains reserved for Housing, and the family illustration for Family & Dependent Care. The image is decorative, has explicit dimensions and is checked for successful loading. Source asset: `life-family-oak-alternate.png`, SHA-256 `1b78a67ed58e7c210e4d477cbda802d4bdd91b0fc5980daa8fdb5be027e29348`. Layout reference: `life-family-content.html`, SHA-256 `4ed784b0454bd494026df7626fa8f23b455d7ccaea425a74d87051eb47d859c7`. Simplified preview descriptions do not replace published substantive content.
+
+An independent trilingual fixture captures the pre-change source text and destinations. Browser coverage checks content, all 13 rows, the illustration, keyboard group navigation, section activity and actual desktop/320px bounds in both themes. The new spec joins the release allowlist; the existing section-navigation spec retains its checks with the new section order.
+
+Validation: typecheck, production build and 16 locale/coverage checks passed. Five existing navigation cases passed; six new browser cases passed in three consecutive repetitions (18 runs). The initial mid-page resize check exposed intermittent anchor misalignment. Group links now align their target on the next animation frame while retaining native URL behavior; the repeated runs include that resize path. Desktop/light and phone/dark renders visually inspected. No full-suite, deployment or legal-approval claim. Next: support subpages in the approved sequence, beginning with Employment.
+
+Hub image follow-up: replaces the 556,558-byte PNG with a transparent 640px WebP. A picture media source selects it only above 700px; phones use an inline transparent fallback with no tree request. Width/height match the asset. A browser network assertion verifies a fresh phone load does not fetch the tree and resizing to desktop loads the 640px asset.
+
+## Employment support
+
+Refreshes `/support/employment` using the approved briefcase/document illustration, a direct “Manage work during your case” heading, open two-column action/resource sections and native expandable FAQs. The existing email/phone tabs, three complete email templates, two expandable phone scripts and copy controls remain. The preview’s simplified template selector and shorter substantive copy do not replace the published workflow or guidance. Seven external resources, both phone links, related links, priorities/timeframes, call tips, rights list, collateral-consequence warning and disclaimer remain.
+
+The page uses its own frame, leaving other support pages unchanged. Existing section anchors and active navigation stay intact. Removes staggered section reveals. The collateral warning and rights-notice treatment remain distinct; ordinary resource boxes become reading sections. Existing English-only partner, letter-generator promotion and collateral text are explicitly marked in English. New hero wording supports English, Spanish and Chinese. Published legal claims are preserved, not re-certified by this design batch.
+
+The SVG is the approved local source, with explicit dimensions and decorative semantics; it remains visible on phones and is under 1 KB. `employment-illustration.svg` SHA-256: `f8615abb13ca3592808cddbaa19743b1319fb87fd9a9333b18704a141f8f6fc1`. Layout reference `employment-content.html` SHA-256: `1d1208df804cf39ce8349916d7951ef921ff1cc51a0c7f40bb5cbda0f5b7b72a`.
+
+Print HTML now escapes labels, subjects, bodies and the note before insertion, while clipboard output remains plain text. Print output stays black on white, preserves paragraph breaks and wraps long content. No input fields, storage or new requests are introduced.
+
+The independent fixture captures translated employment content, literal English text and links from main `5a6c0c48` before implementation. The release-allowlisted spec checks all action/resource/FAQ/tip content, each full email and phone script, copy output, three print windows, image loading, keyboard expansion, tab switching, and actual desktop/320px bounds in all three locales and both themes. Existing support navigation checks remain unchanged and pass.
+
+Validation: typecheck, production build and 16 locale/coverage checks passed. Six Employment browser cases and five existing navigation cases passed; the six Employment cases passed again after the final style and fixture refinement. Desktop/light, phone/dark and the clean email print layout were visually inspected. No full-suite or deployment claim. Next support page: Finances.
