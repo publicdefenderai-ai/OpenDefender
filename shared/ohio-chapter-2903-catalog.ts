@@ -111,6 +111,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
   // §2909.05 is felony-graded; the old misdemeanor identity must be reselected.
   "oh-vandalism",
+  "oh-insurance-fraud",
   // Older common-charge IDs have materially different scope/penalty claims.
   // Keep saved IDs intact and require an explicit source-backed selection.
   // The legacy menacing entry retains the superseded 2903.22 source version.

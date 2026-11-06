@@ -8,6 +8,7 @@ test('Ohio theft/fraud publication preserves statutory identity and grading alte
   expect(response.ok()).toBe(true);
   const body = await response.json();
   expect(body.charges.some((charge: any) => charge.id === 'oh-vandalism')).toBe(false);
+  expect(body.charges.some((charge: any) => charge.id === 'oh-insurance-fraud')).toBe(false);
   for (const row of rows) {
     const charge = body.charges.find((c: any) => c.id === row.id);
     expect(charge, row.id).toBeDefined();

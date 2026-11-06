@@ -1,6 +1,6 @@
 # Ohio theft and fraud publication batch
 
-This batch adds 21 individually supported choices across 17 sections of Chapter 2913. It follows the residual person/property batch and does not claim completion of Chapter 2913 or statewide review. Existing reviewed charges, attorney decisions, exclusions and holds, including section 1509.01, are unchanged.
+This batch adds 21 individually supported choices across 17 sections of Chapter 2913. It follows the residual person/property batch and does not claim completion of Chapter 2913 or statewide review. Prior attorney decisions, exclusions and legal-source holds, including section 1509.01, are unchanged. The incorrect legacy insurance-fraud choice is separately withheld as explained below.
 
 ## Scope and source identity
 
@@ -42,6 +42,8 @@ The vehicle-use, unauthorized-cable-device and trademark records are split where
 
 The remaining benefit-fraud and spamming provisions, general theft branch expansion, and other unscheduled Chapter 2913 sections are outside this batch. Existing configured generic records are not represented as complete subdivision coverage.
 
+Legacy `oh-insurance-fraud` is withheld through explicit reselection. Its generic ten-year maximum does not match the statute-supported ordinary M1/F5/F4/F3 ladder. Saved ID-based and code-only selections require reselection instead of silently remapping. All seventeen new primary sections were checked against the eligible legacy set; insurance fraud was the only collision. Gross additions are 21; net potential eligible increase is 20. Configured counts include the retained, withheld legacy identity.
+
 ## Acquisition and new-batch window
 
 Fifty-one official section documents were acquired successfully during the November 6 evidence session. The second bounded pass reused fifty and fetched the missing explicit dependency, 2921.13. Forty-seven documents are used in the publication packet. Eleven used documents overlap the prior residual packet and their legal text hashes match; original acquisitions in other packets remain unchanged. No existing receipt was renewed.
@@ -52,7 +54,7 @@ New-batch `quarterly-v1` checkedAt: `2026-11-06T06:39:01.825Z`. Expiry: `2027-02
 
 ## Configured versus available
 
-On the original PR114 base, Ohio configured records increase from 272 to 293. At the new evidence clock, offline eligibility without a durable pilot receipt increases from 146 to 167. The separately gated nineteen pilot records are not included in that number. Production import and actual selectable IDs remain unverified; database links and current evidence gates are still mandatory. No import, migration, activation, monitoring change, or deployment occurred.
+On the original PR114 base, Ohio configured records increase from 272 to 293. At the new evidence clock, offline eligibility without a durable pilot receipt increases from 146 to 166. The separately gated nineteen pilot records are not included in that number. Production import and actual selectable IDs remain unverified; database links and current evidence gates are still mandatory. No import, migration, activation, monitoring change, or deployment occurred.
 
 These 21 new English summaries are explicitly marked as untranslated for Spanish/Chinese requests. Existing translated summaries are not replaced. This batch does not label English text as a translated draft.
 
@@ -70,3 +72,5 @@ Validation before integration with later main: 442 tests passed across 48 suites
 Integration includes reviewed main `7761c74a24ed9cf8b5376c5c9979b44b65b5509d` (PR115 design and PR116 Florida) before final checks. The global catalog total is 8,056 after combining main's 8,035 with these 21 Ohio additions; Ohio remains 293 configured. Neither later Florida draft corrections nor any later Ohio work are included.
 
 After integrating that main revision: all 454 tests passed across 49 focused suites, including the Florida publication suite and Ohio catalog/runtime gates. Application typecheck and regeneration passed again. No database or live API test was run.
+
+The legacy insurance-fraud retirement passed 55 focused tests across seven suites, application typecheck and unchanged evidence regeneration. The eligibility collision regression checks every new primary section, not only insurance fraud. Historical seed accounting now retains 238 manifest rows but withholds the additional legacy choice (130 eligible at the historical fixture clock).

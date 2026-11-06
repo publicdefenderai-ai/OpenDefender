@@ -1,8 +1,10 @@
+import {resolveGuidanceCharge} from '../shared/guidance-charge-resolution';
+import {loadOhioAuthorityManifest} from '../server/data/ohio-manifest-loader';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import rows from '../shared/ohio-theft-fraud-publication.json';
 import {OHIO_THEFT_FRAUD_DEFINITIONS,OHIO_THEFT_FRAUD_IDS} from '../shared/ohio-theft-fraud-batch';
-import {getChargeById} from '../shared/criminal-charges';
+import {getChargeById,getSelectableCharges,isChargeIdRequiringReselection} from '../shared/criminal-charges';
 import {getChargeExplanation} from '../shared/charge-explanations';
 import {OHIO_THEFT_FRAUD_SOURCES,ohioTheftFraudPacket,validateOhioTheftFraudPacket,validateOhioTheftFraudReceipt,OHIO_THEFT_FRAUD_RECEIPT_PATH} from '../server/data/ohio-theft-fraud-source';
 import {OHIO_REVIEWED_SOURCES} from '../server/data/ohio-reviewed-source';
@@ -28,6 +30,19 @@ describe('Ohio theft and fraud publication',()=>{
     expect(result.plainSummary).toBe(definition.text.en.plainSummary);
    }
   }
+ });
+ it('retires incorrect legacy insurance fraud and leaves no eligible legacy section collisions',()=>{
+  const legacy={id:'oh-insurance-fraud',name:'Insurance Fraud',code:'2913.47',classification:'felony'};
+  expect(isChargeIdRequiringReselection(legacy.id)).toBe(true);
+  expect(getSelectableCharges().some(c=>c.id===legacy.id)).toBe(false);
+  expect(resolveGuidanceCharge(legacy,'OH')).toBeUndefined();
+  expect(resolveGuidanceCharge({...legacy,id:undefined},'OH')).toBeUndefined();
+  const seed=buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest(undefined,fresh),fresh);
+  const sections=new Set(rows.map(r=>r.section));
+  const collisions=seed.selectableChargeIds.filter(id=>!OHIO_THEFT_FRAUD_IDS.has(id))
+    .map(id=>getChargeById(id)!).filter(c=>sections.has(c.code.match(/\d+\.\d+/)?.[0]??''));
+  expect(collisions.map(c=>c.id)).toEqual([]);
+  expect(seed.selectableChargeIds).toContain('oh-orc-2913-47-insurance-fraud');
  });
  it('keeps distinct vehicle, device and trademark conduct and grading branches',()=>{
   expect(row('unauthorized-vehicle-use').degrees).toContain('M1');

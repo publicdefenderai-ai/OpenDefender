@@ -67,10 +67,10 @@ describe("Ohio authority manifest", () => {
     // This historical fixture predates the new batch acquisition; both publication batches cannot be current yet.
     expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size);
-    expect(seed.sources).toHaveLength(261);
-    expect(seed.snapshots).toHaveLength(261);
-    expect(seed.links).toHaveLength(718);
-    expect(seed.selectableChargeIds).toHaveLength(131);
+    expect(seed.sources).toHaveLength(260);
+    expect(seed.snapshots).toHaveLength(260);
+    expect(seed.links).toHaveLength(717);
+    expect(seed.selectableChargeIds).toHaveLength(130);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
@@ -84,7 +84,7 @@ describe("Ohio authority manifest", () => {
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(107);
+      record.disposition === "require_exact_reselection")).toHaveLength(108);
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
