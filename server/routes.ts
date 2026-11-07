@@ -417,7 +417,9 @@ export async function registerRoutes(
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
         : getSelectableCharges();
-      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds(
+        [...new Set(charges.map(charge => charge.jurisdiction))],
+      );
       charges = filterAuthorityBackedCharges(charges, currentAuthoritySelectableIds);
       const totalAvailable = charges.length;
       

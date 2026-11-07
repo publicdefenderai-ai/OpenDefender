@@ -12,11 +12,13 @@ for(const language of ['en','es','zh'] as const)for(const theme of ['light','dar
   await expect(root.locator('#support-partners')).toContainText('operating in 20+ states and connecting over 29,000 people with services.');
   const art=root.locator('.support-oak');await expect(art).toHaveAttribute('aria-hidden','true');
   expect(await art.evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);
-  for(const width of [1280,320]){
+  for(const width of [1280,375,320]){
    await page.setViewportSize({width,height:1000});
    expect(await root.evaluate(r=>[...r.querySelectorAll('h1,h2,h3,p,a')].filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&(b.left< -1||b.right>innerWidth+1)}).map(e=>e.textContent))).toEqual([]);
    for(const id of ['support-daily','support-care','support-court']){
-    const link=root.locator(`a[href="#${id}"]`);await link.focus();await page.keyboard.press('Enter');
+    const link=root.locator(`a[href="#${id}"]`);
+    const box=await link.boundingBox();expect(box!.width).toBeGreaterThanOrEqual(44);expect(box!.height).toBeGreaterThanOrEqual(44);
+    await link.focus();await page.keyboard.press('Enter');
     await expect(page).toHaveURL(new RegExp(`#${id}$`));await expect(root.locator(`#${id} h2`)).toBeInViewport();
    }
    const impactLink=root.locator('a[href="#support-screener"]');await impactLink.click();await expect(impactLink).toHaveAttribute('aria-current','location');
