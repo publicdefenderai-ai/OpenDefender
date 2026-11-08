@@ -1,0 +1,860 @@
+[
+  {
+    "id": "fl-fs-782-07-1-manslaughter",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.07:1",
+      "target": "text",
+      "text": "is manslaughter",
+      "start": 517,
+      "end": 532,
+      "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "The killing of a human being by the act, procurement, or culpable negligence of another",
+        "start": 233,
+        "end": 320,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "without lawful justification according to the provisions of chapter 776",
+        "start": 322,
+        "end": 393,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "such killing shall not be excusable homicide or murder",
+        "start": 416,
+        "end": 470,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 517,
+        "end": 629,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "role": "offense",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07",
+        "role": "grading",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:776.012",
+        "role": "justification",
+        "contentHash": "4c82f432745169104e9d97e706f1cc863c9b865cfdbd215340e2c87bbe1647cb"
+      },
+      {
+        "sourceKey": "fl:statute:776.013",
+        "role": "justification",
+        "contentHash": "9fc162802b16ff80f2f3594a3cdddfd9c0089011e608b48a203de83018668be1"
+      },
+      {
+        "sourceKey": "fl:statute:776.031",
+        "role": "justification",
+        "contentHash": "19a00e10c34d1876fc4feb29ac1901bf96edec719a8b1b5289a80b8c9c3cc084"
+      },
+      {
+        "sourceKey": "fl:statute:776.032",
+        "role": "justification",
+        "contentHash": "096c2ee76f0190119db9583677ce9bc92e2ba26757feee2314ca63ba84db8023"
+      },
+      {
+        "sourceKey": "fl:statute:776.041",
+        "role": "justification",
+        "contentHash": "99e3f241a9d7bc5a39740a6e0677394b99cf8f9b4c8b45b6b703bb7a53cdba5b"
+      },
+      {
+        "sourceKey": "fl:statute:776.05",
+        "role": "justification",
+        "contentHash": "34bb4f7f06619d06d5744a084e464a2c9dc41042800318af015b43e38fbf45fe"
+      },
+      {
+        "sourceKey": "fl:statute:776.051",
+        "role": "justification",
+        "contentHash": "9dc0a5e6e6bf54996472e375854a27c2ff4f6f54ef0569a11b64738a7dcda78a"
+      },
+      {
+        "sourceKey": "fl:statute:776.06",
+        "role": "justification",
+        "contentHash": "973dda02890b8d8bb21c11c0082396f96a362d86f7c3ba578e25cbc2e5689e39"
+      },
+      {
+        "sourceKey": "fl:statute:776.07",
+        "role": "justification",
+        "contentHash": "85c47a2137048b35c12b76e94c2f50268809ef09248917de3d5c1c3f78e35f8f"
+      },
+      {
+        "sourceKey": "fl:statute:776.08",
+        "role": "justification",
+        "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d"
+      },
+      {
+        "sourceKey": "fl:statute:776.085",
+        "role": "justification",
+        "contentHash": "903aba7fb14da11661fbeb026184c44cdd8aec5404c5f8011c7478aa59d29080"
+      },
+      {
+        "sourceKey": "fl:statute:776.09",
+        "role": "justification",
+        "contentHash": "529f5a5cf36f99e0e95d66d1521bf1ce91746b2953e87bbf948bac3a9b1533eb"
+      },
+      {
+        "sourceKey": "fl:statute:782.03",
+        "role": "exception",
+        "contentHash": "66b49cf07e36ace8fd8a52371d26ff091c127bd13d2e8b2881ff31817aa63680"
+      },
+      {
+        "sourceKey": "fl:statute:782.04",
+        "role": "exception",
+        "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.07:2",
+      "target": "text",
+      "text": "commits aggravated manslaughter of an elderly person or disabled adult",
+      "start": 749,
+      "end": 819,
+      "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:2",
+        "target": "text",
+        "text": "A person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3)",
+        "start": 636,
+        "end": 748,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:2",
+        "target": "text",
+        "text": "commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 749,
+        "end": 915,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.07:2",
+        "role": "offense",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07",
+        "role": "grading",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "definition",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.07:3",
+      "target": "text",
+      "text": "commits aggravated manslaughter of a child",
+      "start": 1031,
+      "end": 1073,
+      "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:3",
+        "target": "text",
+        "text": "A person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b)",
+        "start": 922,
+        "end": 1030,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:3",
+        "target": "text",
+        "text": "commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1031,
+        "end": 1169,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.07:3",
+        "role": "offense",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07",
+        "role": "grading",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:825.102:1",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "start": 0,
+      "end": 86,
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;",
+        "start": 164,
+        "end": 264,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "An intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;",
+        "start": 271,
+        "end": 409,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "Active encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or",
+        "start": 416,
+        "end": 601,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "Intentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.",
+        "start": 608,
+        "end": 1277,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1279,
+        "end": 1584,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "text",
+        "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1279,
+        "end": 1584,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:825.102:1",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "exception",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:825.102:2",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "start": 0,
+      "end": 86,
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:2",
+        "target": "text",
+        "text": "Commits aggravated battery on an elderly person or disabled adult;",
+        "start": 1676,
+        "end": 1742,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:2",
+        "target": "text",
+        "text": "Willfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or",
+        "start": 1749,
+        "end": 1865,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102:2",
+        "target": "text",
+        "text": "Knowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.",
+        "start": 1872,
+        "end": 2069,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:2",
+        "target": "text",
+        "text": "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2071,
+        "end": 2250,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:825.102:2",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "sourceKey": "fl:statute:784.03",
+        "role": "definition",
+        "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      },
+      {
+        "sourceKey": "fl:statute:784.045",
+        "role": "justification",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:825.102:3_b",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "start": 0,
+      "end": 86,
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:3_b",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3212,
+        "end": 3540,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:3_b",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3212,
+        "end": 3540,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:825.102:3_b",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "definition",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:825.102:3_c",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "start": 0,
+      "end": 86,
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:3_c",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3547,
+        "end": 3867,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:825.102:3_c",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3547,
+        "end": 3867,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:825.102:3_c",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.102",
+        "role": "definition",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "sourceKey": "fl:statute:825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.03:2_a",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "start": 0,
+      "end": 58,
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_a",
+        "target": "text",
+        "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2774,
+        "end": 2920,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_a",
+        "target": "text",
+        "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2774,
+        "end": 2920,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.03:2_a",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "sourceKey": "fl:statute:784.03",
+        "role": "definition",
+        "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      },
+      {
+        "sourceKey": "fl:statute:784.045",
+        "role": "justification",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.03:2_b",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "start": 0,
+      "end": 58,
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_b",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2927,
+        "end": 3200,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_b",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2927,
+        "end": 3200,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.03:2_b",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "exception",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.03:2_c",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "start": 0,
+      "end": 58,
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_c",
+        "target": "text",
+        "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3207,
+        "end": 3457,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_c",
+        "target": "text",
+        "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3207,
+        "end": 3457,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.03:2_c",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.03:2_d",
+      "target": "title",
+      "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "start": 0,
+      "end": 58,
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_d",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3464,
+        "end": 3729,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.03:2_d",
+        "target": "text",
+        "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3464,
+        "end": 3729,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.03:2_d",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.03",
+        "role": "exception",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "sourceKey": "fl:statute:827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  }
+]

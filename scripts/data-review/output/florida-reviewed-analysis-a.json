@@ -200,19 +200,18 @@
       "id": "fl-fs-782-07-1-manslaughter",
       "section": "782.07",
       "status": "eligible",
-      "reason": "Subsection (1) supplies the literal offense identity, scoped killing conduct and exclusions, and a complete second-degree felony grade.",
+      "reason": "Existing harm-family identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "is manslaughter",
         "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
       },
       "conductQuotes": [
-        "The killing of a human being by the act, procurement, or culpable negligence of another",
-        "without lawful justification according to the provisions of chapter 776",
-        "such killing shall not be excusable homicide or murder"
+        "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -294,25 +293,66 @@
           "section": "782.04",
           "role": "exception",
           "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "notes": "Limited to subsection (1); all cached current chapter 776 justification sections and the chapter 782 excusable-homicide and murder exclusions are pinned."
+      "notes": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
       "section": "782.07",
       "status": "eligible",
-      "reason": "Subsection (2) supplies a literal offense identity, death caused by culpable negligence under § 825.102(3), and a complete first-degree felony grade; current § 825.101 closes both victim definitions.",
+      "reason": "Existing harm-family identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits aggravated manslaughter of an elderly person or disabled adult",
         "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
       },
       "conductQuotes": [
-        "A person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3)"
+        "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -334,25 +374,66 @@
           "section": "825.102",
           "role": "definition",
           "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "notes": "Limited to subsection (2). Incorporated definitions: § 825.101(3): “Disabled adult” means a person 18 years of age or older who suffers from a condition of physical or mental incapacitation due to a developmental disability, organic brain damage, or mental illness, or who has one or more physical or mental limitations that restrict the person’s ability to perform the normal activities of daily living. § 825.101(4): “Elderly person” means a person 60 years of age or older who is suffering from the infirmities of aging as manifested by advanced age or organic brain damage, or other physical, mental, or emotional dysfunctioning, to the extent that the ability of the person to provide adequately for the person’s own care or protection is impaired. § 825.102(3)(a): Neglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult."
+      "notes": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
       "section": "782.07",
       "status": "eligible",
-      "reason": "Subsection (3) supplies a literal offense identity, an under-18 death caused by incorporated culpable negligence, and a complete first-degree felony grade.",
+      "reason": "Existing harm-family identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits aggravated manslaughter of a child",
         "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
       },
       "conductQuotes": [
-        "A person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b)"
+        "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
       ],
       "requiredSections": [
         {
@@ -369,9 +450,49 @@
           "section": "827.03",
           "role": "definition",
           "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "notes": "Limited to subsection (3); current § 827.03 closes the incorporated subsection (2)(b) culpable-negligence scope."
+      "notes": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension."
     },
     {
       "id": "fl-fs-782-04-5-murder-in-the-third-degree",
