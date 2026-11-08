@@ -1,4 +1,6 @@
+import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioTheftFraudSourceFresh } from "../data/ohio-theft-fraud-source";
 import { isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_IDS } from "@shared/florida-persons-batch";
 import { isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
@@ -21,16 +23,26 @@ const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
   OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
 );
 
-function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sharedPilotChecked = false): boolean {
-  if (charge.jurisdiction === "FL" && FLORIDA_PERSONS_IDS.has(charge.id) && !isFloridaPersonsSourceFresh()) return false;
-  if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !isFloridaReviewedSourceFresh()) return false;
-  if (charge.jurisdiction === "CA" && (!isCaliforniaEvidenceFresh() || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
-  if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !isOhioResidualSourceFresh()) return false;
-  if (charge.jurisdiction === "OH" && OHIO_MAJOR_IDS.has(charge.id) && !isOhioMajorSourceFresh()) return false;
-  if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !isOhioReviewedSourceFresh()) return false;
-  return sharedPilotChecked || charge.jurisdiction !== "OH" ||
-    !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
-    isOhioChapter2903PilotFresh();
+// Cache only within this eligibility evaluation. The next request rereads receipts
+// and rechecks the clock; no process-wide freshness or database approval cache.
+function createAuthorityChargeGate() {
+  const results = new Map<() => boolean, boolean>();
+  const fresh = (check: () => boolean) => {
+    if (!results.has(check)) results.set(check, check());
+    return results.get(check)!;
+  };
+  return function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sharedPilotChecked = false): boolean {
+    if (charge.jurisdiction === "FL" && FLORIDA_PERSONS_IDS.has(charge.id) && !fresh(isFloridaPersonsSourceFresh)) return false;
+    if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !fresh(isFloridaReviewedSourceFresh)) return false;
+    if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
+    if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_MAJOR_IDS.has(charge.id) && !fresh(isOhioMajorSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !fresh(isOhioReviewedSourceFresh)) return false;
+    return sharedPilotChecked || charge.jurisdiction !== "OH" ||
+      !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
+      fresh(isOhioChapter2903PilotFresh);
+  };
 }
 
 function getReleaseCheckSelectableChargeIds(): Set<string> | undefined {
@@ -83,11 +95,14 @@ function getReleaseCheckSelectableChargeIds(): Set<string> | undefined {
   return fixtureIds;
 }
 
-export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<string>> {
+export async function getCurrentAuthoritySelectableChargeIds(jurisdictions?: readonly string[]): Promise<Set<string>> {
+  const requested = jurisdictions === undefined ? undefined : new Set(jurisdictions);
+  const charges = getSelectableCharges().filter(charge => !requested || requested.has(charge.jurisdiction));
+  const canUseAuthorityCharge = createAuthorityChargeGate();
   const releaseCheckSelectableIds = getReleaseCheckSelectableChargeIds();
   if (releaseCheckSelectableIds) {
     return new Set(
-      getSelectableCharges()
+      charges
         .filter((charge) =>
           !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
           (releaseCheckSelectableIds.has(charge.id) && canUseAuthorityCharge(charge)),
@@ -98,7 +113,7 @@ export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<stri
 
   const byJurisdiction = new Map(
     await Promise.all(
-      [...AUTHORITY_BACKED_JURISDICTIONS].map(async (jurisdiction) => [
+      [...AUTHORITY_BACKED_JURISDICTIONS].filter(jurisdiction => !requested || requested.has(jurisdiction)).map(async (jurisdiction) => [
         jurisdiction,
         jurisdiction === "CA"
           ? await getCurrentCaliforniaSelectableChargeIds()
@@ -107,7 +122,7 @@ export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<stri
     ),
   );
   const allowed = new Set<string>();
-  for (const charge of getSelectableCharges()) {
+  for (const charge of charges) {
     if (
       !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
       (byJurisdiction.get(charge.jurisdiction)?.has(charge.id) &&

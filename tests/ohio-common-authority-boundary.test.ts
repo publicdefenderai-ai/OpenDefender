@@ -26,6 +26,11 @@ vi.mock("../server/data/ohio-major-source", async original => ({
   isOhioMajorSourceFresh: () => state.fresh,
 }));
 import { OHIO_MAJOR_SOURCES } from '../server/data/ohio-major-source';
+import { OHIO_THEFT_FRAUD_SOURCES } from '../server/data/ohio-theft-fraud-source';
+vi.mock('../server/data/ohio-theft-fraud-source', async original => ({
+  ...await original<typeof import('../server/data/ohio-theft-fraud-source')>(),
+  isOhioTheftFraudSourceFresh: () => state.fresh,
+}));
 import { OHIO_RESIDUAL_SOURCES } from '../server/data/ohio-residual-source';
 vi.mock('../server/data/ohio-residual-source', async original => ({
   ...await original<typeof import('../server/data/ohio-residual-source')>(),
@@ -57,6 +62,19 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
     state.rows = links;
     expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set([newRecord.chargeId]));
     state.rows = links.filter(p => !p.sourceKey.endsWith('2907.323'));
+    state.metadata.catalogRecords = [{...newRecord, provisions: state.rows}];
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set());
+    state.rows = links; state.metadata.catalogRecords = [newRecord]; state.fresh = false;
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set());
+  });
+  it("requires the theft/fraud batch's complete evidence even when ingestion metadata omits a dependency", async () => {
+    const newRecord = buildOhioReviewedManifestRecords(new Date(), OHIO_THEFT_FRAUD_SOURCES)
+      .find(record => record.chargeId === 'oh-orc-2913-021-theft-of-mail')!;
+    const links = newRecord.provisions.map(p => ({chargeId: newRecord.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision}));
+    state.metadata = {selectableChargeIds: [newRecord.chargeId], catalogRecords: [newRecord]};
+    state.rows = links;
+    expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set([newRecord.chargeId]));
+    state.rows = links.filter(p => !p.sourceKey.endsWith('2913.02'));
     state.metadata.catalogRecords = [{...newRecord, provisions: state.rows}];
     expect(await getCurrentAuthoritySelectableChargeIds('OH')).toEqual(new Set());
     state.rows = links; state.metadata.catalogRecords = [newRecord]; state.fresh = false;

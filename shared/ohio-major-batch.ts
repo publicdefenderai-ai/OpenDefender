@@ -1,3 +1,4 @@
+import { ohioPrimaryClassification } from './ohio-primary-classification';
 import records from './ohio-major-publication.json';
 import { projectEvidenceBackedChargeBatch, type EvidenceBackedChargeDefinition } from './evidence-backed-charge-batch';
 
@@ -23,8 +24,7 @@ export function ohioMajorDependencies(row: typeof records[number]): string[] {
 export const OHIO_MAJOR_DEFINITIONS: EvidenceBackedChargeDefinition[] = records.map(row => {
   if (!row.degrees.length || row.degrees.some(g => !(g in OHIO_MAJOR_SENTENCING))) throw Error(`Unsupported Ohio grade ${row.id}`);
   const categories = row.categories as EvidenceBackedChargeDefinition['category'][];
-  const expected = row.degrees.some(g => g.startsWith('F')) ? 'felony' : 'misdemeanor';
-  if (categories[0] !== expected || categories.includes('misdemeanor') !== row.degrees.some(g => g.startsWith('M'))) throw Error(`Ohio category mismatch ${row.id}`);
+  const category = ohioPrimaryClassification(row);
   const penalty = row.gradeSummary + ' ' + row.degrees.map(g => OHIO_MAJOR_SENTENCING[g as keyof typeof OHIO_MAJOR_SENTENCING]).join(' ') +
     (row.degrees.some(g => g === 'F1' || g === 'F2') ? ' For one qualifying felony alone, section 2929.144 generally sets the maximum at the minimum plus 50%; multiple counts and specifications use different rules. Earlier offense dates require separate review.' : '') +
     ' These are ordinary adult sentencing ranges, not a prediction or an all-inclusive total maximum. Restitution, costs, special fines, specifications, other counts, and case-specific rules may add consequences.';
@@ -32,7 +32,7 @@ export const OHIO_MAJOR_DEFINITIONS: EvidenceBackedChargeDefinition[] = records.
   const sources = [row.section, ...ohioMajorDependencies(row)];
   return {
     id: row.id, jurisdiction: 'OH', code: row.section, slug: row.id,
-    name: row.statutoryName, category: categories[0], categories,
+    name: row.statutoryName, category, categories,
     verifiedMonth: '2026-11',
     aliases: Object.fromEntries(['en','es','zh'].map(language => [language,
       [`ORC ${row.section}`, `R.C. ${row.section}`, `Ohio Rev. Code ${row.section}`, `§ ${row.section}`, ...row.scope.split(',').map(scope => `ORC ${row.section}(${scope})`.replace(/\(A\(1\)\)/, '(A)(1)'))],

@@ -1,3 +1,4 @@
+import { validateOhioClassificationEvidence } from '../../shared/ohio-primary-classification';
 /** New-batch evidence preparation only: no database, import, or existing receipt renewal. */
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -22,8 +23,9 @@ export function buildOhioResidualPublication() {
       const doc = all[section]; if (!doc) throw Error(`Missing residual dependency ${row.id}/${section}`);
       documents[section] = doc; return bind(doc);
     });
+    validateOhioClassificationEvidence(row, prior.penaltyRules.map(rule => rule.evidence));
     return { id: row.id, section: row.section, scope: row.scope,
-      definitionHash: hash(JSON.stringify(definition)), mappingId: row.mappingId,
+      primaryClassification: "primaryClassification" in row ? row.primaryClassification : null, definitionHash: hash(JSON.stringify(definition)), mappingId: row.mappingId,
       namingBasis: prior.namingBasis, dependencies: sections.slice(1),
       conduct: prior.conduct.map(span => span.evidence),
       grading: prior.penaltyRules.map(rule => rule.evidence), evidence };

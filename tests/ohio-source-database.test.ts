@@ -1,3 +1,4 @@
+import { OHIO_THEFT_FRAUD_IDS } from "../shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "../shared/ohio-residual-batch";
 import { OHIO_MAJOR_IDS } from "../shared/ohio-major-batch";
 import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
@@ -62,14 +63,14 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(272);
+    expect(ohioCount).toBe(293);
     // This historical fixture predates the new batch acquisition; both publication batches cannot be current yet.
-    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size);
-    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size);
-    expect(seed.sources).toHaveLength(261);
-    expect(seed.snapshots).toHaveLength(261);
-    expect(seed.links).toHaveLength(718);
-    expect(seed.selectableChargeIds).toHaveLength(131);
+    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size);
+    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size);
+    expect(seed.sources).toHaveLength(260);
+    expect(seed.snapshots).toHaveLength(260);
+    expect(seed.links).toHaveLength(717);
+    expect(seed.selectableChargeIds).toHaveLength(130);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
@@ -83,7 +84,7 @@ describe("Ohio authority manifest", () => {
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(107);
+      record.disposition === "require_exact_reselection")).toHaveLength(108);
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
@@ -185,7 +186,7 @@ describe("Ohio authority manifest", () => {
     // Derive a post-expiry instant across legacy and quarterly batches.
     const afterAnyCurrentReceipt = new Date(Math.max(...[
       'ohio-chapter-2903-refresh-receipt.json', 'ohio-reviewed-refresh-receipt.json',
-      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json',
+      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json', 'ohio-theft-fraud-refresh-receipt.json',
     ].map(name => Date.parse(JSON.parse(readFileSync(`scripts/data-review/output/${name}`, 'utf8')).expiresAt))) + 1);
     expect(loadOhioAuthorityManifest(undefined, afterAnyCurrentReceipt).catalogRecords)
       .toHaveLength(115);

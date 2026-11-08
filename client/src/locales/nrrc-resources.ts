@@ -1,0 +1,32 @@
+export const nrrcCopy = {
+  en: {
+    heading: "Reentry research and resources",
+    note: "External resources in English. These tools provide research and background information, not individual legal advice or a direct application for assistance.",
+    home: "National Reentry Resource Center",
+    homeDescription: "Reentry information from the Council of State Governments Justice Center, including resources for service providers and community organizations.",
+    consequences: "Research consequences of a conviction",
+    consequencesDescription: "The National Inventory of Collateral Consequences of Conviction (NICCC) lets you research restrictions by state and topic, including employment, housing and benefits. Confirm current rules with an attorney or the responsible agency.",
+    housing: "Understanding homeless services after incarceration",
+    housingDescription: "An archived NRRC webinar for reentry service providers about homeless services and local housing systems. Background information, not a housing application or a current eligibility guide.",
+  },
+  es: {
+    heading: "Investigación y recursos para la reinserción",
+    note: "Recursos externos en inglés. Estas herramientas ofrecen investigación e información general, no asesoramiento jurídico individual ni una solicitud directa de ayuda.",
+    home: "Centro Nacional de Recursos para la Reinserción (NRRC)",
+    homeDescription: "Información sobre reinserción del Centro de Justicia del Consejo de Gobiernos Estatales, con recursos para proveedores de servicios y organizaciones comunitarias.",
+    consequences: "Investigue las consecuencias de una condena",
+    consequencesDescription: "El Inventario Nacional de Consecuencias Colaterales de las Condenas Penales (NICCC) permite investigar restricciones por estado y tema, como empleo, vivienda y beneficios. Confirme las normas vigentes con un abogado o la agencia responsable.",
+    housing: "Entender los servicios para personas sin hogar después del encarcelamiento",
+    housingDescription: "Seminario web archivado del NRRC para proveedores de servicios de reinserción sobre servicios para personas sin hogar y sistemas locales de vivienda. Información general, no una solicitud de vivienda ni una guía actual de elegibilidad.",
+  },
+  zh: {
+    heading: "重返社会研究与资源",
+    note: "外部资源为英文。这些工具提供研究和背景信息，不提供针对个人的法律建议，也不是直接申请援助的渠道。",
+    home: "全国重返社会资源中心（NRRC）",
+    homeDescription: "州政府委员会司法中心提供的重返社会信息，包括面向服务机构和社区组织的资源。",
+    consequences: "研究定罪的附带后果",
+    consequencesDescription: "全国刑事定罪附带后果数据库（NICCC）可按州和主题查询就业、住房和福利等方面的限制。请向律师或主管机构确认现行规定。",
+    housing: "了解出狱后的无家可归者服务",
+    housingDescription: "NRRC 面向重返社会服务机构的存档网络研讨会，介绍无家可归者服务和地方住房体系。这是背景信息，不是住房申请或现行资格指南。",
+  },
+};

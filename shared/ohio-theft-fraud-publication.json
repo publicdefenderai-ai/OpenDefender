@@ -1,0 +1,815 @@
+[
+  {
+    "id": "oh-orc-2913-03-unauthorized-vehicle-use",
+    "section": "2913.03",
+    "code": "2913.03(A)",
+    "scope": "A",
+    "statutoryName": "Unauthorized use of a vehicle",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "conductSummary": "Knowingly using or operating a listed motor-propelled vehicle without the consent of its owner or someone authorized to consent. Reasonable mistaken belief in authorization, or reasonable belief the owner would authorize the use, is an affirmative defense under (C).",
+    "gradeSummary": "For (A), ordinarily M1. If an elderly or disabled victim incurs loss, (D)(4) instead establishes F5 below $1,000; F4 at $1,000 to less than $7,500; F3 at $7,500 to less than $37,500; F2 at $37,500 or more. The separate removal/more-than-48-hours branch is (B).",
+    "degrees": [
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2913.61"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.03",
+          "quote": "(2) Except as otherwise provided in division (D)(4) of this section, a violation of division (A) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-03-extended-vehicle-use",
+    "section": "2913.03",
+    "code": "2913.03(B)",
+    "scope": "B",
+    "statutoryName": "Unauthorized use of a vehicle",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "conductSummary": "Knowingly using a listed motor-propelled vehicle without consent and either taking it out of Ohio or keeping it for more than 48 hours. The reasonable-belief affirmative defenses in (C) apply.",
+    "gradeSummary": "For (B), ordinarily F5. If an elderly or disabled victim incurs loss, (D)(4) establishes F5 below $1,000; F4 at $1,000 to less than $7,500; F3 at $7,500 to less than $37,500; F2 at $37,500 or more.",
+    "degrees": [
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2913.61"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-05-telecommunications-fraud",
+    "section": "2913.05",
+    "code": "2913.05",
+    "scope": "A,B",
+    "statutoryName": "Telecommunications fraud",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "C",
+      "D",
+      "F"
+    ],
+    "conductSummary": "Knowingly using communications to further a scheme to defraud, or knowingly causing false caller-ID information with intent to defraud, harm, or wrongfully obtain value. Subsection (C) excludes specified blocked/unknown-number or true-identity messages, authorized government activities, and court-authorized caller-ID manipulation.",
+    "gradeSummary": "(E)(1) specifies F5 ordinarily, F4 at $1,000 to less than $7,500, F3 at $7,500 to less than $150,000, F2 at $150,000 to less than $1 million, and F1 at $1 million or more, using benefit obtained or victim detriment. (E)(2) separately specifies F4 for an elderly or disabled victim, active-duty service member, or spouse; this summary does not resolve its interaction with higher value-based grades or treat F4 as a guaranteed ceiling. Course-of-conduct aggregation under (D) may affect the grade.",
+    "degrees": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "4927.01",
+      "2913.02",
+      "2913.04",
+      "2913.11",
+      "2913.21",
+      "2913.31",
+      "2913.42",
+      "2913.43",
+      "2921.13"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-06-unlawful-telecommunications-device",
+    "section": "2913.06",
+    "code": "2913.06",
+    "scope": "A,B",
+    "statutoryName": "Unlawful use of a telecommunications device",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "E"
+    ],
+    "conductSummary": "Knowingly making, possessing, delivering, offering, or advertising a counterfeit telecommunications device for criminal use or for the prohibited service-charge avoidance or origin/destination concealment. Lawful amateur-radio equipment and the right to dispute service charges are preserved in (D)-(E).",
+    "gradeSummary": "F5 under (C).",
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-07-motion-picture-piracy",
+    "section": "2913.07",
+    "code": "2913.07",
+    "scope": "B",
+    "statutoryName": "Motion picture piracy",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Knowingly operating a device to record or transmit a movie in a theater without the required written consent of both the facility owner/lessee and movie licensor. Authorized government personnel acting officially are excepted.",
+    "gradeSummary": "First offense M1; each subsequent offense F5. Other applicable offenses can also be prosecuted under (E).",
+    "degrees": [
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.07",
+          "quote": "(C) Whoever violates division (B) of this section is guilty of motion picture piracy, a misdemeanor of the first degree on the first offense and a felony of the fifth degree on each subsequent offense."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-08-organized-retail-theft",
+    "section": "2913.08",
+    "code": "2913.08",
+    "scope": "B,C,D,E",
+    "statutoryName": "Organized theft of retail property",
+    "conductPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "A",
+      "G",
+      "H"
+    ],
+    "conductSummary": "The listed enterprise-related stealing, receiving, directing, recruiting, or financing of stolen retail property valued at least $7,500. Each branch has its own knowledge or belief requirements; (G) aggregates the same person or persons' thefts within 12 months. Retail value includes applicable taxes and shipping.",
+    "gradeSummary": "F3 below $750,000; F2 at $750,000 to less than $1.5 million; F1 at $1.5 million or more. For F3, specified prior organized-retail-theft convictions or felony-theft convictions within three years create a prison presumption; the specified two-or-more prior convictions require a mandatory F3 prison term. Same-conduct convictions listed in (H) are subject to the express allied-offense rule.",
+    "degrees": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2923.31",
+      "1349.65",
+      "1349.61",
+      "2913.02",
+      "2913.51",
+      "2913.32",
+      "2923.32",
+      "2941.25"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-021-theft-of-mail",
+    "section": "2913.021",
+    "code": "2913.021",
+    "scope": "B",
+    "statutoryName": "Theft of mail",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "conductSummary": "Knowingly obtaining or controlling mail with purpose to deprive its owner, without consent, beyond consent, or by deception, threat, or intimidation. Mail includes contents delivered or collected by postal, common-carrier, and private-delivery services.",
+    "gradeSummary": "Ordinarily F5. (C) incorporates the higher-value provisions of 2913.02(B)(2) for property worth at least $7,500 and (B)(3) for property worth at least $1,000. The ordinary-value thresholds are F4 from $7,500, F3 from $150,000, F2 from $750,000, and F1 from $1.5 million. The protected-victim thresholds are F4 from $1,000, F3 from $7,500, F2 from $37,500, and F1 from $150,000. The incorporated provisions also contain repeat-theft rules and additional elderly-victim restitution/fine provisions; value alone is not the complete sentencing analysis. Same-conduct/same-victim theft convictions are subject to (D)'s allied-offense rule.",
+    "degrees": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2913.02",
+      "2941.25",
+      "2913.61"
+    ],
+    "extraGrading": [
+      {
+        "section": "2913.02",
+        "path": "B(2)"
+      },
+      {
+        "section": "2913.02",
+        "path": "B(3)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2913-041-unauthorized-device-possession",
+    "section": "2913.041",
+    "code": "2913.041(A)",
+    "scope": "A",
+    "statutoryName": "Possession of an unauthorized device",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "conductSummary": "Knowingly possessing a device specially adapted, modified, or remanufactured to access cable TV without authorization or required payment to the system owner/operator.",
+    "gradeSummary": "(A) is F5. Each device is a separate violation under (D); the sale/distribution/manufacture branch has a different grade.",
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-041-unauthorized-device-sale",
+    "section": "2913.041",
+    "code": "2913.041(B)",
+    "scope": "B",
+    "statutoryName": "Sale of an unauthorized device",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "conductSummary": "Knowingly selling, distributing, or manufacturing a device specially adapted, modified, or remanufactured to access cable TV without authorization or required payment to the system owner/operator.",
+    "gradeSummary": "(B) is F4. Each device is a separate violation under (D).",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-30-counterfeiting",
+    "section": "2913.30",
+    "code": "2913.30",
+    "scope": "B",
+    "statutoryName": "Counterfeiting",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "conductSummary": "Fraudulently making, altering, transferring, possessing, or using the specified United States securities or access devices, including unauthorized scanning/encoding of access-device information. Each listed branch requires purpose to defraud or knowledge of facilitating fraud.",
+    "gradeSummary": "Ordinarily F4, with a mandatory fine of at least $500 from the F4 fine range. F3 applies at $5,000 to less than $100,000 or for five or more access devices; F2 at $100,000 to less than $1 million; F1 at $1 million or more. Overlapping device-count/value circumstances and the reach of the additional fine require branch-specific sentencing review; the F4 default is not the ceiling. (D) provides an allied-offense rule for the specified same-conduct/same-victim convictions.",
+    "degrees": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "1349.61",
+      "2913.02",
+      "2913.31",
+      "2913.32",
+      "2941.25"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-32-criminal-simulation",
+    "section": "2913.32",
+    "code": "2913.32",
+    "scope": "A",
+    "statutoryName": "Criminal simulation",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "With purpose to defraud or knowledge of facilitating fraud, making an object appear valuable for qualities it lacks, deceptively editing recordings/images, falsely making or reusing the listed liquor-control labels or seals, or passing or possessing for passing an object known to have been simulated in one of those ways.",
+    "gradeSummary": "The grade uses loss to the victim. Ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.32",
+          "quote": "Except as otherwise provided in this division, criminal simulation is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-33-making-using-slugs",
+    "section": "2913.33",
+    "code": "2913.33",
+    "scope": "A",
+    "statutoryName": "Making or using slugs",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Inserting a slug into a coin machine to defraud, or making, possessing, or disposing of one to enable another person to do so.",
+    "gradeSummary": "M2 under (B).",
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-34-trademark-manufacture",
+    "section": "2913.34",
+    "code": "2913.34(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Trademark counterfeiting",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Knowingly attaching, affixing, or using a counterfeit mark in manufacturing goods or services, whether or not intended for sale. Authorized marks excluded by (F)(1)(b) are not counterfeit marks under this section.",
+    "gradeSummary": "For (A)(1), ordinarily F5. F4 at cumulative sales price $5,000 to less than $100,000 OR more than 100 but fewer than 1,000 units; F3 at $100,000 or more OR at least 1,000 units. Exactly 100 units does not satisfy the more-than-100 count test. (C) preserves specified defenses; (D) requires forfeiture of covered goods/property upon conviction.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "1329.54"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-34-trademark-tools",
+    "section": "2913.34",
+    "code": "2913.34(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Trademark counterfeiting",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Knowingly possessing, selling, or offering items known to be designed for producing or reproducing counterfeit marks.",
+    "gradeSummary": "For (A)(2), ordinarily M1; F5 if circumstances show the items were intended for use in a felony. (C) preserves specified defenses; (D) requires forfeiture of covered goods/property upon conviction.",
+    "degrees": [
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "1329.54"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.34",
+          "quote": "(3) Except as otherwise provided in this division, a violation of division (A)(2) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-34-trademark-trafficking",
+    "section": "2913.34",
+    "code": "2913.34(A)(3)-(5)",
+    "scope": "A(3),A(4),A(5)",
+    "statutoryName": "Trademark counterfeiting",
+    "conductPaths": [
+      "A(3)",
+      "A(4)",
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(4)"
+    ],
+    "contextPaths": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Knowingly acquiring counterfeit-marked goods to resell/dispose of them, selling or offering such goods, or selling/providing services using a known counterfeit mark. The conduct and cumulative-sales-price definitions in (F) apply.",
+    "gradeSummary": "For (A)(3)-(5), ordinarily M1; F5 at cumulative sales price $1,000 to less than $7,500; F4 at $7,500 to less than $150,000 OR more than 100 but fewer than 1,000 units; F3 at $150,000 or more OR at least 1,000 units. Exactly 100 units does not satisfy the more-than-100 count test. (C) preserves specified defenses; (D) requires forfeiture of covered goods/property upon conviction.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "1329.54"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.34",
+          "quote": "(4) Except as otherwise provided in this division, a violation of division (A)(3), (4), or (5) of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-42-tampering-records",
+    "section": "2913.42",
+    "code": "2913.42",
+    "scope": "A",
+    "statutoryName": "Tampering with records",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Without privilege and with purpose to defraud or knowledge of facilitating fraud, falsifying, destroying, hiding, altering, defacing, or mutilating records/data/software, or passing a record known to have been tampered with.",
+    "gradeSummary": "Non-data/software records are ordinarily M1, but an unrevoked will is F5. Data/software cases are ordinarily M1; $1,000 to less than $7,500 value/loss is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3. The separate fraud-scheme/property-or-services branch reaches F3 at $7,500. Records/data/software kept by or belonging to a local, state, or federal government entity are F3 under (B)(4), overriding those ordinary branches.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.42",
+          "quote": "(2) Except as provided in division (B)(4) of this section, if the offense does not involve data or computer software, tampering with records is whichever of the following is applicable:\n(a) If division (B)(2)(b) of this section does not apply, a misdemeanor of the first degree;\n(b) If the writing or record is a will unrevoked at the time of the offense, a felony of the fifth degree."
+        },
+        {
+          "section": "2913.42",
+          "quote": "(3) Except as provided in division (B)(4) of this section, if the offense involves a violation of division (A) of this section involving data or computer software, tampering with records is whichever of the following is applicable:\n(a) Except as otherwise provided in division (B)(3)(b), (c), or (d) of this section, a misdemeanor of the first degree;\n(b) If the value of the data or computer software involved in the offense or the loss to the victim is one thousand dollars or more and is less than seven thousand five hundred dollars, a felony of the fifth degree;\n(c) If the value of the data or computer software involved in the offense or the loss to the victim is seven thousand five hundred dollars or more and is less than one hundred fifty thousand dollars, a felony of the fourth degree;\n(d) If the value of the data or computer software involved in the offense or the loss to the victim is one hundred fifty thousand dollars or more or if the offense is committed for the purpose of devising or executing a scheme to defraud or to obtain property or services and the value of the property or services or the loss to the victim is seven thousand five hundred dollars or more, a felony of the third degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-43-securing-writings-deception",
+    "section": "2913.43",
+    "code": "2913.43",
+    "scope": "A",
+    "statutoryName": "Securing writings by deception",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "By deception causing another person to sign or execute a writing disposing of or encumbering property, or creating a financial obligation.",
+    "gradeSummary": "Ordinary value/obligation: Ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3. For an elderly/disabled victim, active-duty service member, or spouse: F5 below $1,000; F4 at $1,000 to less than $7,500; F3 at $7,500 to less than $37,500; F2 at $37,500 or more. An elderly victim additionally triggers full restitution and a fine of up to $50,000. Aggregation rules may affect the relevant value.",
+    "degrees": [
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2913.61"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.43",
+          "quote": "(2) Except as otherwise provided in this division or division (B)(3) of this section, securing writings by deception is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-44-personating-officer",
+    "section": "2913.44",
+    "code": "2913.44",
+    "scope": "A",
+    "statutoryName": "Personating an officer",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Pretending to be a law enforcement officer or government inspector, investigator, or agent with purpose to defraud, knowledge of facilitating fraud, or purpose to induce another person to buy property or services.",
+    "gradeSummary": "M1 under (B).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2913-45-defrauding-creditors",
+    "section": "2913.45",
+    "code": "2913.45",
+    "scope": "A",
+    "statutoryName": "Defrauding creditors",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "With purpose to defraud creditors, removing, hiding, destroying, encumbering, conveying, or otherwise dealing with your property, or misrepresenting/withholding required property information from a fiduciary managing your affairs or estate.",
+    "gradeSummary": "The grade uses property value. Ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.45",
+          "quote": "Except as otherwise provided in this division, defrauding creditors is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-47-insurance-fraud",
+    "section": "2913.47",
+    "code": "2913.47",
+    "scope": "B",
+    "statutoryName": "Insurance fraud",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "conductSummary": "With purpose to defraud or knowledge of facilitating fraud, presenting or helping prepare an insurance application, claim, or benefit statement known to be false or deceptive. The statute separately defines insurer, statement, and deceptive.",
+    "gradeSummary": "The grade uses the amount of the false/deceptive claim. Ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3. Subsection (D) preserves the specified attorney-client privilege provision.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "3929.43",
+      "4509.70",
+      "2317.02"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.47",
+          "quote": "Except as otherwise provided in this division, insurance fraud is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-48-workers-compensation-fraud",
+    "section": "2913.48",
+    "code": "2913.48",
+    "scope": "A",
+    "statutoryName": "Workers' compensation fraud",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C",
+      "D",
+      "E"
+    ],
+    "conductSummary": "With purpose to defraud or knowledge of facilitating fraud, committing a listed workers' compensation benefits, claim, record, premium, certificate, or coverage fraud. Mere lack of insurance is not this fraud offense without the required fraudulent intent.",
+    "gradeSummary": "The grade uses unpaid premiums/assessments for (A)(5)-(7), or the value of stolen goods, services, property, or money. Ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3. On application, the court must order payment of the investigating/prosecuting governmental body's costs in addition to other penalties under (C). Applicable series-of-offenses aggregation is addressed in 2913.61(C)(3).",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "4121.44",
+      "4123.01",
+      "2913.61"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.48",
+          "quote": "Except as otherwise provided in this division, a violation of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  }
+]
