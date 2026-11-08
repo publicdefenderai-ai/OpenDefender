@@ -14,14 +14,14 @@
     "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
     "section": "316.061",
     "status": "eligible",
-    "reason": "The current section heading supplies a literal identity, and subsection (1) supplies exact conduct and misdemeanor grading at the exact subdivision.",
+    "reason": "Existing roadway identity with individually bound ordinary and conditional sentencing.",
     "identity": {
       "kind": "official_heading",
       "quote": "Crashes involving damage to vehicle or property",
       "sourceHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
     },
     "conductQuotes": [
-      "The driver of any vehicle involved in a crash resulting only in damage to a vehicle or other property which is driven or attended by any person shall immediately stop such vehicle at the scene of such crash or as close thereto as possible, and shall forthwith return to, and in every event shall remain at, the scene of the crash until he or she has fulfilled the requirements of s. 316.062."
+      "(1) \nThe driver of any vehicle involved in a crash resulting only in damage to a vehicle or other property which is driven or attended by any person shall immediately stop such vehicle at the scene of such crash or as close thereto as possible, and shall forthwith return to, and in every event shall remain at, the scene of the crash until he or she has fulfilled the requirements of s. 316.062. A person who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083. The court may order a driver convicted of a violation of this section, who caused or otherwise contributed to the crash, to make restitution to the owner of a vehicle or other property damaged in the crash for any damage that was caused by the driver’s vehicle. Notwithstanding any other provision of this section, $5 shall be added to a fine imposed pursuant to this section, which $5 shall be deposited in the Emergency Medical Services Trust Fund."
     ],
     "gradingQuotes": [
       "A person who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
@@ -36,9 +36,24 @@
         "section": "316.062",
         "role": "exception",
         "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa"
+      },
+      {
+        "section": "316.061",
+        "role": "grading",
+        "contentHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
       }
     ],
-    "notes": "The code is narrowed to subsection (1); the noncriminal subsection (2) is expressly excluded. Section 316.062 supplies the incorporated duties and autonomous-vehicle exception."
+    "notes": "Preserve existing identity and translated base summaries. Ordinary misdemeanor grades remain primary where felony punishment is conditional; special suspension rules and conviction conditions remain explicit. No receipt issuance or extension."
   },
   {
     "id": "fl-section-316.192",
@@ -67,20 +82,18 @@
     "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
     "section": "316.193",
     "status": "eligible",
-    "reason": "Subsection (3)(c)3 expressly names DUI manslaughter and ties that name to the death-causing conduct and conditional felony grades.",
+    "reason": "Existing roadway identity with individually bound ordinary and conditional sentencing.",
     "identity": {
       "kind": "operative_guilt_clause",
       "quote": "The death of any human being or unborn child commits DUI manslaughter, and commits:",
       "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
     },
     "conductQuotes": [
-      "The death of any human being or unborn child commits DUI manslaughter, and commits:"
+      "3. \nThe death of any human being or unborn child commits DUI manslaughter, and commits:\na. \nA felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nb. \nA felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if:\n(I) \nAt the time of the crash, the person knew, or should have known, that the crash occurred; and\n\n(II) \nThe person failed to give information and render aid as required by s. 316.062.\n\nc. \nA felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person has a prior conviction under this subparagraph, s. 327.35(3)(a)3.c., s. 782.071, or s. 782.072.\n\nFor purposes of this subsection, the term “unborn child” has the same meaning as provided in s. 775.021(5). A person who is convicted of DUI manslaughter shall be sentenced to a mandatory minimum term of imprisonment of 4 years."
     ],
     "gradingQuotes": [
-      "A felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "A felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if:",
-      "A felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person has a prior conviction under this subparagraph, s. 327.35(3)(a)3.c., s. 782.071, or s. 782.072.",
-      "A person who is convicted of DUI manslaughter shall be sentenced to a mandatory minimum term of imprisonment of 4 years."
+      "3. \nThe death of any human being or unborn child commits DUI manslaughter, and commits:\na. \nA felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nb. \nA felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if:\n(I) \nAt the time of the crash, the person knew, or should have known, that the crash occurred; and\n\n(II) \nThe person failed to give information and render aid as required by s. 316.062.\n\nc. \nA felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person has a prior conviction under this subparagraph, s. 327.35(3)(a)3.c., s. 782.071, or s. 782.072.\n\nFor purposes of this subsection, the term “unborn child” has the same meaning as provided in s. 775.021(5). A person who is convicted of DUI manslaughter shall be sentenced to a mandatory minimum term of imprisonment of 4 years.",
+      "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
     ],
     "requiredSections": [
       {
@@ -97,9 +110,104 @@
         "section": "775.021",
         "role": "definition",
         "contentHash": "2a605d893dc481376f6e9fd2f989ddd2b5647d24c007da514f6d6cf63d8f7f99"
+      },
+      {
+        "section": "316.062",
+        "role": "definition",
+        "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa"
+      },
+      {
+        "section": "327.35",
+        "role": "definition",
+        "contentHash": "28d945d394b2c9a2171cc7b129b65fc42af90f25840b1f924936fe322141a088"
+      },
+      {
+        "section": "782.071",
+        "role": "definition",
+        "contentHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698"
+      },
+      {
+        "section": "782.072",
+        "role": "definition",
+        "contentHash": "16956ec6ab9c44313bc9624469e3e70bd402c9aefbcec5507e39bc8046613809"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.281",
+        "role": "penalty",
+        "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+      },
+      {
+        "section": "741.283",
+        "role": "penalty",
+        "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+      },
+      {
+        "section": "741.325",
+        "role": "definition",
+        "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+      },
+      {
+        "section": "322.28",
+        "role": "penalty",
+        "contentHash": "f8fb7a86a02d4a9f7c258078f9167763a7257c3a1312a484fa0ec904d1e99c04"
+      },
+      {
+        "section": "316.656",
+        "role": "penalty",
+        "contentHash": "b9c0ed083161b4a6b875afbd213cc75d39ae123bf44bafc2167a6fe6a3de4344"
+      },
+      {
+        "section": "322.292",
+        "role": "definition",
+        "contentHash": "262d38263882ccca556a4b10ec5532ab9ccee7538e12b26b41788007ad691ea0"
+      },
+      {
+        "section": "877.111",
+        "role": "definition",
+        "contentHash": "6c76a5178a4811d81e0f1c8f731b57201e57363b71ee4dab7534130af0e1e44a"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "322.271",
+        "role": "exception",
+        "contentHash": "70b7db8d71a29613c338fdfdbe4c7ee44d3a6ff25e67e19612c6c3cc8b1d3f8a"
       }
     ],
-    "notes": "Parent conduct support, § 316.193(1): “A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:”; “The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;”; “The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or”; “The person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath.” Parent causal support, § 316.193(3): “Who, by reason of such operation, causes or contributes to causing:”. These parent clauses remain whole-section definition support rather than primary-leaf conductQuotes. The incorporated § 775.021 unborn-child meaning is included. The record states classes and the four-year minimum, not uncached general felony penalty sums."
+    "notes": "Preserve existing identity and translated base summaries. Ordinary misdemeanor grades remain primary where felony punishment is conditional; special suspension rules and conviction conditions remain explicit. No receipt issuance or extension."
   },
   {
     "id": "fl-section-316.1936",
@@ -240,24 +348,18 @@
     "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
     "section": "322.34",
     "status": "eligible",
-    "reason": "The exact whole-section official heading supplies the identity, while subsection (2) narrowly supplies the knowing-driving conduct and each conditional misdemeanor or felony grade.",
+    "reason": "Existing roadway identity with individually bound ordinary and conditional sentencing.",
     "identity": {
       "kind": "official_heading",
       "quote": "Driving while license suspended, revoked, canceled, or disqualified",
       "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
     },
     "conductQuotes": [
-      "Any person whose driver license or driving privilege has been canceled, suspended, or revoked as provided by law, or who does not have a driver license or driving privilege but is under suspension or revocation equivalent status as defined in s. 322.01(43), except persons defined in s. 322.264, who, knowing of such cancellation, suspension, revocation, or suspension or revocation equivalent status, drives any motor vehicle upon the highways of this state while such license or privilege is canceled, suspended, or revoked, or while under suspension or revocation equivalent status, commits:"
+      "(2) \nAny person whose driver license or driving privilege has been canceled, suspended, or revoked as provided by law, or who does not have a driver license or driving privilege but is under suspension or revocation equivalent status as defined in s. 322.01(43), except persons defined in s. 322.264, who, knowing of such cancellation, suspension, revocation, or suspension or revocation equivalent status, drives any motor vehicle upon the highways of this state while such license or privilege is canceled, suspended, or revoked, or while under suspension or revocation equivalent status, commits:\n(a) \nA misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b)1. \nA misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, upon a second or subsequent conviction, except as provided in paragraph (c).\n\n2. \nA person convicted of a third or subsequent conviction, except as provided in paragraph (c), must serve a minimum of 10 days in jail.\n\n(c) \nA felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, upon a third or subsequent conviction if the current violation of this section or the most recent prior violation of the section is related to driving while license canceled, suspended, revoked, or suspension or revocation equivalent status resulting from a violation of:\n1. \nDriving under the influence;\n\n2. \nRefusal to submit to a urine, breath-alcohol, or blood alcohol test;\n\n3. \nA traffic offense causing death or serious bodily injury; or\n\n4. \nFleeing or eluding.\n\nThe element of knowledge is satisfied if the person has been previously cited as provided in subsection (1); or the person admits to knowledge of the cancellation, suspension, or revocation, or suspension or revocation equivalent status; or the person received notice as provided in subsection (4). There shall be a rebuttable presumption that the knowledge requirement is satisfied if a judgment or order as provided in subsection (4) appears in the department’s records for any case except for one involving a suspension by the department for failure to pay a traffic fine or for a financial responsibility violation."
     ],
     "gradingQuotes": [
-      "A misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
-      "A misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, upon a second or subsequent conviction, except as provided in paragraph (c).",
-      "A person convicted of a third or subsequent conviction, except as provided in paragraph (c), must serve a minimum of 10 days in jail.",
       "A felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, upon a third or subsequent conviction if the current violation of this section or the most recent prior violation of the section is related to driving while license canceled, suspended, revoked, or suspension or revocation equivalent status resulting from a violation of:",
-      "Driving under the influence;",
-      "Refusal to submit to a urine, breath-alcohol, or blood alcohol test;",
-      "A traffic offense causing death or serious bodily injury; or",
-      "Fleeing or eluding."
+      "A misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
     ],
     "requiredSections": [
       {
@@ -279,9 +381,49 @@
         "section": "322.264",
         "role": "exception",
         "contentHash": "c4eb707c8a2ed6985eaad76041793b38118aa53e8363663358792e2fd614b22c"
+      },
+      {
+        "section": "776.08",
+        "role": "definition",
+        "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d"
+      },
+      {
+        "section": "322.245",
+        "role": "definition",
+        "contentHash": "c39538ebf6d11ad16d3b1bba41a768a0e90b6d8297da8adbc124bf6e0c298a73"
+      },
+      {
+        "section": "61.13016",
+        "role": "definition",
+        "contentHash": "64cb771da300f8483abf95a02abdfe320ef0e55f499f1258f7ff2847a9b059f9"
+      },
+      {
+        "section": "318.15",
+        "role": "definition",
+        "contentHash": "aa232e4560872e4eb860b1f81ca90f0fc1adb0904f2ab7d13961c579398b0dfc"
+      },
+      {
+        "section": "322.091",
+        "role": "definition",
+        "contentHash": "cf84562b78353f5586801d850c252444b421a3cfa6dbc84705a883c71f9df14d"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
       }
     ],
-    "notes": "The record is limited to subsection (2). The nonknowing moving violation, habitual-traffic-offender offense, death/injury offense, commercial-license provisions, and special financial-suspension tiers elsewhere in § 322.34 remain outside this definition."
+    "notes": "Preserve existing identity and translated base summaries. Ordinary misdemeanor grades remain primary where felony punishment is conditional; special suspension rules and conviction conditions remain explicit. No receipt issuance or extension."
   },
   {
     "id": "fl-section-322.212",
@@ -774,39 +916,92 @@
     "id": "fl-fs-316-193-1-driving-under-the-influence",
     "section": "316.193",
     "status": "eligible",
-    "reason": "Subsection (1) expressly names the offense; § 316.193 supplies county-jail terms not exceeding one year for the ordinary tiers, which § 775.08(2) classifies as misdemeanors, while § 316.193 expressly classifies the conditional repeat tiers as third-degree felonies.",
+    "reason": "Existing roadway identity with individually bound ordinary and conditional sentencing.",
     "identity": {
       "kind": "operative_guilt_clause",
       "quote": "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
       "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
     },
     "conductQuotes": [
-      "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
-      "The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;",
-      "The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or",
-      "The person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath."
+      "(1) \nA person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:\n(a) \nThe person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;\n\n(b) \nThe person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or\n\n(c) \nThe person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath."
     ],
     "gradingQuotes": [
-      "Not less than $500 or more than $1,000 for a first conviction.",
-      "Not less than $1,000 or more than $2,000 for a second conviction; and",
-      "Not more than 6 months for a first conviction.",
-      "Not more than 9 months for a second conviction.",
       "Any person who is convicted of a third violation of this section for an offense that occurs within 10 years after a prior conviction for a violation of this section commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Any person who is convicted of a third violation of this section for an offense that occurs more than 10 years after the date of a prior conviction for a violation of this section shall be punished by a fine of not less than $2,000 or more than $5,000 and by imprisonment for not more than 12 months.",
-      "Any person who is convicted of a fourth or subsequent violation of this section, regardless of when any prior conviction for a violation of this section occurred, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Not less than $1,000 or more than $2,000 for a first conviction.",
-      "Not less than $2,000 or more than $4,000 for a second conviction.",
-      "Not less than $4,000 for a third or subsequent conviction.",
-      "Not more than 9 months for a first conviction.",
-      "Not more than 12 months for a second conviction.",
       "The term “misdemeanor” shall mean any criminal offense that is punishable under the laws of this state, or that would be punishable if committed in this state, by a term of imprisonment in a county correctional facility, except an extended term, not in excess of 1 year."
     ],
     "requiredSections": [
-      {"section": "316.193", "role": "offense", "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"},
-      {"section": "316.193", "role": "grading", "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"},
-      {"section": "775.08", "role": "definition", "contentHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32"}
+      {
+        "section": "316.193",
+        "role": "offense",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "section": "316.193",
+        "role": "grading",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "section": "775.08",
+        "role": "definition",
+        "contentHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32"
+      },
+      {
+        "section": "316.1938",
+        "role": "definition",
+        "contentHash": "3aa422af4a3b14a37ab75f871dda0bce0a9364b41e189c9d30839aac34d9e3bb"
+      },
+      {
+        "section": "316.656",
+        "role": "penalty",
+        "contentHash": "b9c0ed083161b4a6b875afbd213cc75d39ae123bf44bafc2167a6fe6a3de4344"
+      },
+      {
+        "section": "322.28",
+        "role": "penalty",
+        "contentHash": "f8fb7a86a02d4a9f7c258078f9167763a7257c3a1312a484fa0ec904d1e99c04"
+      },
+      {
+        "section": "322.292",
+        "role": "definition",
+        "contentHash": "262d38263882ccca556a4b10ec5532ab9ccee7538e12b26b41788007ad691ea0"
+      },
+      {
+        "section": "877.111",
+        "role": "definition",
+        "contentHash": "6c76a5178a4811d81e0f1c8f731b57201e57363b71ee4dab7534130af0e1e44a"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "322.271",
+        "role": "exception",
+        "contentHash": "70b7db8d71a29613c338fdfdbe4c7ee44d3a6ff25e67e19612c6c3cc8b1d3f8a"
+      }
     ],
-    "notes": "Subsection (3) damage, injury, and death offenses are excluded. The misdemeanor classification is an explicit statutory inference from § 775.08(2), not an invented degree designation; the public summaries therefore say misdemeanor without claiming first- or second-degree misdemeanor."
+    "notes": "Preserve existing identity and translated base summaries. Ordinary misdemeanor grades remain primary where felony punishment is conditional; special suspension rules and conviction conditions remain explicit. No receipt issuance or extension."
   },
   {
     "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",

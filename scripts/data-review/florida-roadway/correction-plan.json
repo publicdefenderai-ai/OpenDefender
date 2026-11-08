@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "316.061",
+    "316.062",
+    "775.082",
+    "775.083",
+    "316.193",
+    "775.021",
+    "327.35",
+    "782.071",
+    "782.072",
+    "775.084",
+    "741.28",
+    "741.2801",
+    "741.281",
+    "741.283",
+    "741.325",
+    "322.28",
+    "316.656",
+    "322.292",
+    "877.111",
+    "893.02",
+    "893.03",
+    "322.34",
+    "322.01",
+    "322.264",
+    "776.08",
+    "322.245",
+    "61.13016",
+    "318.15",
+    "322.091",
+    "775.08",
+    "316.1938",
+    "322.271"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+      "section": "316.061",
+      "scope": "(1)",
+      "ordinaryCategory": "misdemeanor",
+      "requiredSections": [
+        {
+          "section": "316.062",
+          "role": "exception"
+        },
+        {
+          "section": "316.061",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "316.062",
+          "scope": "(1)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+      "section": "316.193",
+      "scope": "(3)(c)3.",
+      "ordinaryCategory": "felony",
+      "requiredSections": [
+        {
+          "section": "316.193",
+          "role": "definition"
+        },
+        {
+          "section": "775.021",
+          "role": "definition"
+        },
+        {
+          "section": "316.062",
+          "role": "definition"
+        },
+        {
+          "section": "327.35",
+          "role": "definition"
+        },
+        {
+          "section": "782.071",
+          "role": "definition"
+        },
+        {
+          "section": "782.072",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        },
+        {
+          "section": "322.28",
+          "role": "penalty"
+        },
+        {
+          "section": "316.656",
+          "role": "penalty"
+        },
+        {
+          "section": "322.292",
+          "role": "definition"
+        },
+        {
+          "section": "877.111",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "322.271",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "316.193",
+          "scope": "(1)"
+        },
+        {
+          "section": "316.193",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "322.28",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+      "section": "322.34",
+      "scope": "(2)",
+      "ordinaryCategory": "misdemeanor",
+      "requiredSections": [
+        {
+          "section": "322.34",
+          "role": "grading"
+        },
+        {
+          "section": "322.01",
+          "role": "definition"
+        },
+        {
+          "section": "322.264",
+          "role": "exception"
+        },
+        {
+          "section": "776.08",
+          "role": "definition"
+        },
+        {
+          "section": "322.245",
+          "role": "definition"
+        },
+        {
+          "section": "61.13016",
+          "role": "definition"
+        },
+        {
+          "section": "318.15",
+          "role": "definition"
+        },
+        {
+          "section": "322.091",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "322.34",
+          "scope": "(3)"
+        },
+        {
+          "section": "322.34",
+          "scope": "(4)"
+        },
+        {
+          "section": "322.34",
+          "scope": "(10)"
+        },
+        {
+          "section": "322.34",
+          "scope": "(11)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-316-193-1-driving-under-the-influence",
+      "section": "316.193",
+      "scope": "(1)",
+      "ordinaryCategory": "misdemeanor",
+      "requiredSections": [
+        {
+          "section": "316.193",
+          "role": "grading"
+        },
+        {
+          "section": "775.08",
+          "role": "definition"
+        },
+        {
+          "section": "316.1938",
+          "role": "definition"
+        },
+        {
+          "section": "316.656",
+          "role": "penalty"
+        },
+        {
+          "section": "322.28",
+          "role": "penalty"
+        },
+        {
+          "section": "322.292",
+          "role": "definition"
+        },
+        {
+          "section": "877.111",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "322.271",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "316.193",
+          "scope": "(2)"
+        },
+        {
+          "section": "316.193",
+          "scope": "(4)"
+        },
+        {
+          "section": "316.193",
+          "scope": "(5)"
+        },
+        {
+          "section": "316.193",
+          "scope": "(6)"
+        },
+        {
+          "section": "316.193",
+          "scope": "(12)"
+        },
+        {
+          "section": "322.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "316.656",
+          "scope": "(1)"
+        }
+      ]
+    }
+  ]
+}

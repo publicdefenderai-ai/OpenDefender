@@ -1,0 +1,170 @@
+[
+  {
+    "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+    "jurisdiction": "FL",
+    "code": "316.061(1)",
+    "slug": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+    "name": "Crashes involving damage to vehicle or property",
+    "names": {
+      "es": "Choques que involucran daños a un vehículo o a la propiedad",
+      "zh": "涉及车辆或财产损坏的碰撞"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 316.061(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.062",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A driver in a crash causing only damage to an attended vehicle or other attended property must stop immediately at or as close as possible to the scene, return if necessary, remain there, and fulfill the information-and-aid duties in § 316.062. Section 316.062 contains a limited exception for a fully autonomous vehicle operating with its automated driving system engaged when the owner or another person promptly reports the crash, or the vehicle can alert law enforcement.",
+        "degreeContext": "A violation of § 316.061(1) is a second-degree misdemeanor. The separate failure to avoid unnecessarily obstructing traffic under subsection (2) is instead a noncriminal nonmoving violation and is not part of this charge definition."
+      },
+      "es": {
+        "plainSummary": "El conductor involucrado en un choque que cause únicamente daños a un vehículo atendido u otra propiedad atendida debe detenerse inmediatamente en el lugar o lo más cerca posible, regresar si es necesario, permanecer allí y cumplir los deberes de información y auxilio del § 316.062. El § 316.062 contiene una excepción limitada para un vehículo totalmente autónomo que opere con el sistema automatizado activado cuando el propietario u otra persona reporte prontamente el choque, o el vehículo pueda alertar a la policía.",
+        "degreeContext": "La infracción del § 316.061(1) es un delito menor de segundo grado. El incumplimiento separado de evitar obstruir innecesariamente el tránsito bajo el inciso (2) es una infracción no penal de tránsito y no forma parte de esta definición."
+      },
+      "zh": {
+        "plainSummary": "仅造成有人照管的车辆或其他财产损坏时，涉事驾驶员必须立即在现场或尽可能靠近现场停车，必要时返回并留在现场，同时履行第316.062条规定的信息提供和救助义务。第316.062条对自动驾驶系统正在运行的全自动车辆规定了有限例外：车主或代其行事的人及时报警，或者车辆能够向执法机关发出警报。",
+        "degreeContext": "违反第316.061(1)条属于二级轻罪。第(2)款中未避免不必要阻碍交通的独立行为属于非刑事、非行驶类交通违法，不包含在本指控定义中。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+    "jurisdiction": "FL",
+    "code": "316.193(3)(c)3.",
+    "slug": "fl-fs-316-193-3-c-3-dui-manslaughter",
+    "name": "DUI manslaughter",
+    "names": {
+      "es": "Homicidio involuntario por conducir bajo la influencia",
+      "zh": "酒驾过失杀人"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 316.193(3)(c)3.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.021",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "DUI manslaughter applies when a person drives or is in actual physical control of a vehicle in Florida while normal faculties are impaired by a listed intoxicant, or with a blood- or breath-alcohol level of at least 0.08, operates the vehicle, and by that operation causes or contributes to the death of a human being or unborn child. For this provision, an unborn child means a human being at any developmental stage carried in the womb.",
+        "degreeContext": "The offense is ordinarily a second-degree felony with a four-year mandatory minimum. It becomes a first-degree felony if the person knew or should have known of the crash and failed to provide the information and aid required by § 316.062, or if the person has a prior conviction of a kind listed in § 316.193(3)(c)3.c."
+      },
+      "es": {
+        "plainSummary": "El homicidio involuntario por conducir bajo la influencia se aplica cuando una persona conduce o tiene el control físico efectivo de un vehículo en Florida con sus facultades normales afectadas por una sustancia indicada, o con un nivel de alcohol en sangre o aliento de al menos 0.08, opera el vehículo y mediante esa operación causa o contribuye a la muerte de una persona o de un no nacido. Para esta disposición, un no nacido es un ser humano en cualquier etapa de desarrollo llevado en el útero.",
+        "degreeContext": "Por regla general, es un delito grave de segundo grado con un mínimo obligatorio de cuatro años. Pasa a ser delito grave de primer grado si la persona sabía o debía saber que ocurrió el choque y no proporcionó la información y ayuda exigidas por el § 316.062, o si tiene una condena previa de las enumeradas en el § 316.193(3)(c)3.c."
+      },
+      "zh": {
+        "plainSummary": "在佛罗里达州，行为人驾驶或实际控制车辆时，因法律列明的致醉物质而正常能力受损，或血液、呼气酒精浓度达到0.08以上，并因车辆运行造成或促成他人或胎儿死亡，即构成酒驾过失杀人。本条所称胎儿，是指在子宫内任何发育阶段的人类成员。",
+        "degreeContext": "本罪通常为二级重罪，并有四年强制最低刑期。行为人知道或应当知道发生碰撞却未按第316.062条提供信息和救助，或者具有第316.193(3)(c)3.c条列明类型的前科时，升为一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+    "jurisdiction": "FL",
+    "code": "322.34(2)",
+    "slug": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+    "name": "Driving while license suspended, revoked, canceled, or disqualified",
+    "names": {
+      "es": "Conducir con la licencia suspendida, revocada, cancelada o descalificada",
+      "zh": "在驾驶证被暂停、撤销、取消或取消资格期间驾驶"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 322.34(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.34.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.34",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.34.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.264",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.264.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "This offense applies when a person knows that the person's driver license or driving privilege has been canceled, suspended, or revoked, or that the person is under the suspension-or-revocation equivalent status defined in § 322.01(43), and drives a motor vehicle on a Florida highway while that status remains in effect. Persons defined as habitual traffic offenders under § 322.264 are excluded from this subsection.",
+        "degreeContext": "A first conviction is a second-degree misdemeanor. A second or subsequent conviction is ordinarily a first-degree misdemeanor; a third or later conviction ordinarily requires at least 10 days in jail. A third or later conviction is instead a third-degree felony when the current or most recent prior violation resulted from DUI, test refusal, a traffic offense causing death or serious bodily injury, or fleeing or eluding."
+      },
+      "es": {
+        "plainSummary": "Este delito se aplica cuando una persona sabe que su licencia o privilegio de conducir fue cancelado, suspendido o revocado, o que está bajo el estado equivalente de suspensión o revocación definido en el § 322.01(43), y conduce un vehículo motorizado en una carretera de Florida mientras ese estado sigue vigente. Quedan excluidas las personas definidas como infractores habituales de tránsito por el § 322.264.",
+        "degreeContext": "La primera condena es un delito menor de segundo grado. La segunda o posterior es normalmente un delito menor de primer grado; una tercera o posterior exige normalmente al menos 10 días de cárcel. La tercera o posterior es, en cambio, un delito grave de tercer grado cuando la infracción actual o la previa más reciente resultó de DUI, negativa a una prueba, una infracción de tránsito que causó muerte o lesión corporal grave, o huida o evasión."
+      },
+      "zh": {
+        "plainSummary": "行为人明知自己的驾驶证或驾驶资格已被取消、暂停或撤销，或者处于第322.01(43)条定义的暂停或撤销等同状态，仍在该状态有效期间于佛罗里达州公路驾驶机动车，即适用本罪。第322.264条定义的惯常交通违法者不适用本款。",
+        "degreeContext": "首次定罪为二级轻罪。第二次或后续定罪通常为一级轻罪；第三次或后续定罪通常至少监禁10日。如果本次或最近一次先前违法源于酒驾、拒绝接受检测、造成死亡或严重人身伤害的交通违法，或者逃避、拒捕驾驶，则第三次或后续定罪改为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-193-1-driving-under-the-influence",
+    "jurisdiction": "FL",
+    "code": "316.193(1)",
+    "slug": "fl-fs-316-193-1-driving-under-the-influence",
+    "name": "Driving under the influence",
+    "names": {
+      "es": "Conducir bajo la influencia",
+      "zh": "酒后或受药物影响驾驶"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 316.193(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.193",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.08",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A person commits driving under the influence by driving or being in actual physical control of a vehicle in Florida while a listed intoxicant impairs the person's normal faculties, or while the person's blood-alcohol or breath-alcohol level is 0.08 or higher. This base definition excludes the separately graded damage, serious-injury, and death results in subsection (3).",
+        "degreeContext": "First conviction: $500-$1,000 and up to 6 months. Second: $1,000-$2,000 and up to 9 months. A third violation within 10 years after a prior conviction is a third-degree felony; a third outside that period carries $2,000-$5,000 and up to 12 months. A fourth or later violation is a third-degree felony with a fine of at least $2,000. For a first conviction with alcohol level 0.15 or higher or a passenger under 18: $1,000-$2,000 and up to 9 months; for a second: $2,000-$4,000 and up to 12 months; for a third or later: a fine of at least $4,000. Additional timing-based mandatory jail and ignition-interlock provisions also apply."
+      },
+      "es": {
+        "plainSummary": "Una persona comete conducción bajo la influencia al conducir o tener el control físico efectivo de un vehículo en Florida mientras una sustancia indicada afecta sus facultades normales, o con un nivel de alcohol en sangre o aliento de 0.08 o más. Esta definición básica excluye los resultados de daños, lesiones graves y muerte, que se gradúan por separado en el inciso (3).",
+        "degreeContext": "Primera condena: $500-$1,000 y hasta 6 meses. Segunda: $1,000-$2,000 y hasta 9 meses. Una tercera infracción dentro de 10 años de una condena previa es delito grave de tercer grado; una tercera fuera de ese período conlleva $2,000-$5,000 y hasta 12 meses. La cuarta o posterior es delito grave de tercer grado con multa mínima de $2,000. En una primera condena con alcohol de 0.15 o más o pasajero menor de 18: $1,000-$2,000 y hasta 9 meses; en una segunda: $2,000-$4,000 y hasta 12 meses; en una tercera o posterior: multa mínima de $4,000. También se aplican disposiciones adicionales de cárcel obligatoria e interbloqueo según el tiempo."
+      },
+      "zh": {
+        "plainSummary": "行为人在佛罗里达州驾驶或实际控制车辆时，因列明的致醉物质导致正常能力受损，或者血液、呼气酒精浓度达到0.08以上，即构成受影响驾驶。本基础定义不包括第(3)款另行分级的财产损害、严重人身伤害或死亡结果。",
+        "degreeContext": "首次定罪：罚金500至1,000美元，监禁不超过6个月。第二次：1,000至2,000美元，监禁不超过9个月。距前次定罪10年内的第三次违法为三级重罪；超过该期间的第三次违法处2,000至5,000美元及不超过12个月监禁。第四次或以后违法为三级重罪，罚金至少2,000美元。首次定罪时酒精浓度达到0.15以上或车内有18岁以下乘客的，处1,000至2,000美元及不超过9个月；第二次处2,000至4,000美元及不超过12个月；第三次或以后罚金至少4,000美元。另有按时间条件适用的强制监禁和点火锁规定。"
+      }
+    }
+  }
+]

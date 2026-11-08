@@ -294,7 +294,7 @@ export function buildFloridaReviewedSourceRecords(
     const offenseDependencies = draft.requiredDependencies.filter(row => row.role === "offense");
     const primaryOffenseDependency = offenseDependencies[0];
     const citation = draft.citation.match(
-      /^Fla\.\s+Stat\.\s+§\s+(\d{3,4}\.\d{2,6})(.*)$/i,
+      /^Fla\.\s+Stat\.\s+§\s+(\d{1,4}\.\d{2,6})(.*)$/i,
     );
     const citedSubdivision = citation?.[2]?.trim() || null;
     if (!offense || dependencies.size !== draft.requiredDependencies.length ||
@@ -321,7 +321,7 @@ export function buildFloridaReviewedSourceRecords(
     }
     for (const secondary of definition.citations.slice(1)) {
       const secondaryMatch = secondary.citation.match(
-        /^Fla\.\s+Stat\.\s+§\s+(\d{3,4}\.\d{2,6})$/i,
+        /^Fla\.\s+Stat\.\s+§\s+(\d{1,4}\.\d{2,6})$/i,
       );
       const supporting = draft.requiredDependencies.find(dependency => {
         const document = report.sourceEvidence[dependency.sourceKey];
@@ -653,7 +653,7 @@ export function assembleFloridaReviewedReport(
       hold("Eligible analyst entry or localized definition is malformed");
       continue;
     }
-    const sectionMatch = definition.code.match(/^(\d{3,4}\.\d{2,6})(.*)$/);
+    const sectionMatch = definition.code.match(/^(\d{1,4}\.\d{2,6})(.*)$/);
     const section = sectionMatch?.[1];
     const subdivision = sectionMatch?.[2]?.trim() || null;
     const primary = section ? cache.documents[section] : undefined;
@@ -692,7 +692,7 @@ export function assembleFloridaReviewedReport(
     }
     const secondaryProblems = definition.citations.slice(1).flatMap(citation => {
       const match = citation.citation.match(
-        /^Fla\.\s+Stat\.\s+§\s+(\d{3,4}\.\d{2,6})$/i,
+        /^Fla\.\s+Stat\.\s+§\s+(\d{1,4}\.\d{2,6})$/i,
       );
       if (!match) return [`${citation.citation}: secondary citation is not whole-section exact`];
       const dependency = required.find(row =>

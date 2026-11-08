@@ -10,7 +10,7 @@
       "zh": "涉及车辆或财产损坏的碰撞"
     },
     "category": "misdemeanor",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 316.061(1)",
@@ -19,20 +19,32 @@
       {
         "citation": "Fla. Stat. § 316.062",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.061",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "A driver in a crash causing only damage to an attended vehicle or other attended property must stop immediately at or as close as possible to the scene, return if necessary, remain there, and fulfill the information-and-aid duties in § 316.062. Section 316.062 contains a limited exception for a fully autonomous vehicle operating with its automated driving system engaged when the owner or another person promptly reports the crash, or the vehicle can alert law enforcement.",
-        "degreeContext": "A violation of § 316.061(1) is a second-degree misdemeanor. The separate failure to avoid unnecessarily obstructing traffic under subsection (2) is instead a noncriminal nonmoving violation and is not part of this charge definition."
+        "degreeContext": "A violation of § 316.061(1) is a second-degree misdemeanor. The separate failure to avoid unnecessarily obstructing traffic under subsection (2) is instead a noncriminal nonmoving violation and is not part of this charge definition. The ordinary second-degree misdemeanor permits up to 60 days in jail and a conventional fine up to $500 under sections 775.082 and 775.083. These are ordinary statutory limits, not a prediction; specifically authorized higher fines and case-specific sentencing rules require separate review."
       },
       "es": {
         "plainSummary": "El conductor involucrado en un choque que cause únicamente daños a un vehículo atendido u otra propiedad atendida debe detenerse inmediatamente en el lugar o lo más cerca posible, regresar si es necesario, permanecer allí y cumplir los deberes de información y auxilio del § 316.062. El § 316.062 contiene una excepción limitada para un vehículo totalmente autónomo que opere con el sistema automatizado activado cuando el propietario u otra persona reporte prontamente el choque, o el vehículo pueda alertar a la policía.",
-        "degreeContext": "La infracción del § 316.061(1) es un delito menor de segundo grado. El incumplimiento separado de evitar obstruir innecesariamente el tránsito bajo el inciso (2) es una infracción no penal de tránsito y no forma parte de esta definición."
+        "degreeContext": "La infracción del § 316.061(1) es un delito menor de segundo grado. El incumplimiento separado de evitar obstruir innecesariamente el tránsito bajo el inciso (2) es una infracción no penal de tránsito y no forma parte de esta definición. El delito menor ordinario de segundo grado permite hasta 60 días de cárcel y una multa ordinaria de hasta $500 conforme a las secciones 775.082 y 775.083. Son límites legales ordinarios, no una predicción; las multas superiores autorizadas expresamente y las reglas particulares de sentencia requieren revisión separada."
       },
       "zh": {
         "plainSummary": "仅造成有人照管的车辆或其他财产损坏时，涉事驾驶员必须立即在现场或尽可能靠近现场停车，必要时返回并留在现场，同时履行第316.062条规定的信息提供和救助义务。第316.062条对自动驾驶系统正在运行的全自动车辆规定了有限例外：车主或代其行事的人及时报警，或者车辆能够向执法机关发出警报。",
-        "degreeContext": "违反第316.061(1)条属于二级轻罪。第(2)款中未避免不必要阻碍交通的独立行为属于非刑事、非行驶类交通违法，不包含在本指控定义中。"
+        "degreeContext": "违反第316.061(1)条属于二级轻罪。第(2)款中未避免不必要阻碍交通的独立行为属于非刑事、非行驶类交通违法，不包含在本指控定义中。 根据第775.082及775.083条，通常的二级轻罪最高可处60天监禁及500美元常规罚金。这是一般法定范围，并非刑罚预测；另有明确授权的更高罚金及个案量刑规则须另行审查。"
       }
     }
   },
@@ -47,29 +59,109 @@
       "zh": "酒驾过失杀人"
     },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 316.193(3)(c)3.",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
       },
       {
+        "citation": "Fla. Stat. § 316.193",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html"
+      },
+      {
         "citation": "Fla. Stat. § 775.021",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.062",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+      },
+      {
+        "citation": "Fla. Stat. § 327.35",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+      },
+      {
+        "citation": "Fla. Stat. § 782.071",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.071.html"
+      },
+      {
+        "citation": "Fla. Stat. § 782.072",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.072.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.656",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.656.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.292",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.292.html"
+      },
+      {
+        "citation": "Fla. Stat. § 877.111",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.02",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.271",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "DUI manslaughter applies when a person drives or is in actual physical control of a vehicle in Florida while normal faculties are impaired by a listed intoxicant, or with a blood- or breath-alcohol level of at least 0.08, operates the vehicle, and by that operation causes or contributes to the death of a human being or unborn child. For this provision, an unborn child means a human being at any developmental stage carried in the womb.",
-        "degreeContext": "The offense is ordinarily a second-degree felony with a four-year mandatory minimum. It becomes a first-degree felony if the person knew or should have known of the crash and failed to provide the information and aid required by § 316.062, or if the person has a prior conviction of a kind listed in § 316.193(3)(c)3.c."
+        "degreeContext": "The offense is ordinarily a second-degree felony with a four-year mandatory minimum. It becomes a first-degree felony if the person knew or should have known of the crash and failed to provide the information and aid required by § 316.062, or if the person has a prior conviction of a kind listed in § 316.193(3)(c)3.c. The ordinary second-degree felony permits up to 15 years imprisonment and a conventional fine up to $10,000; either first-degree branch permits up to 30 years and $10,000. The four-year mandatory minimum remains applicable. The October 1, 2025 prior-conviction enhancement lists DUI manslaughter, the current BUI-manslaughter provision in section 327.35(3)(a)3.c., vehicular homicide under section 782.071 and vessel homicide under section 782.072; an ordinary prior DUI alone is not that list. Section 322.28 requires permanent license revocation for DUI manslaughter, with any restricted-license relief separately governed by section 322.271. Section 316.656 restricts withholding adjudication and lesser pleas; DUI-program and other applicable sentencing duties are additional. A first-DUI probation limit must not be presented as reducing the manslaughter minimum to one year. For conduct on or after July 1, 2026, section 741.2801 may also reclassify an offense that meets section 741.28's domestic-violence definition if a domestic-violence conviction already existed when the offense occurred. The required family/household relationship and shared-residence rule, with the shared-child exception, must be established; a crash or victim relationship label alone does not establish all conditions. If applicable, F2 becomes F1 (up to 30 years and $10,000), while an already F1 branch becomes a life felony (life or a term of years not exceeding life under section 775.082(3)(a)3, and an ordinary fine ceiling of $15,000). Withheld adjudication and no-contest pleas count under that prior-conviction definition. Sections 741.281 and 741.283 carry separate domestic-sentencing conditions; the additional jail minima require adjudication and intentional bodily harm, not merely negligent causation of death, and retain the state-incarceration exception. Higher gain/loss-based fines and other case-specific sentencing require separate review; earlier conduct needs its applicable version."
       },
       "es": {
         "plainSummary": "El homicidio involuntario por conducir bajo la influencia se aplica cuando una persona conduce o tiene el control físico efectivo de un vehículo en Florida con sus facultades normales afectadas por una sustancia indicada, o con un nivel de alcohol en sangre o aliento de al menos 0.08, opera el vehículo y mediante esa operación causa o contribuye a la muerte de una persona o de un no nacido. Para esta disposición, un no nacido es un ser humano en cualquier etapa de desarrollo llevado en el útero.",
-        "degreeContext": "Por regla general, es un delito grave de segundo grado con un mínimo obligatorio de cuatro años. Pasa a ser delito grave de primer grado si la persona sabía o debía saber que ocurrió el choque y no proporcionó la información y ayuda exigidas por el § 316.062, o si tiene una condena previa de las enumeradas en el § 316.193(3)(c)3.c."
+        "degreeContext": "Por regla general, es un delito grave de segundo grado con un mínimo obligatorio de cuatro años. Pasa a ser delito grave de primer grado si la persona sabía o debía saber que ocurrió el choque y no proporcionó la información y ayuda exigidas por el § 316.062, o si tiene una condena previa de las enumeradas en el § 316.193(3)(c)3.c. El delito grave ordinario de segundo grado permite hasta 15 años de prisión y multa ordinaria de $10,000; cualquiera de las variantes de primer grado permite hasta 30 años y $10,000. Sigue aplicándose el mínimo obligatorio de cuatro años. El aumento por condena previa vigente desde el 1 de octubre de 2025 enumera homicidio por DUI, la disposición actual de homicidio por navegación bajo influencia en la sección 327.35(3)(a)3.c., homicidio vehicular de la sección 782.071 y homicidio con embarcación de la sección 782.072; una condena previa ordinaria de DUI por sí sola no es esa lista. La sección 322.28 exige revocación permanente por homicidio DUI, y cualquier licencia restringida se rige separadamente por la sección 322.271. La sección 316.656 limita la retención de adjudicación y los acuerdos por delitos menores; el programa DUI y otras obligaciones aplicables son adicionales. El límite de supervisión de un primer DUI no debe presentarse como si redujera el mínimo del homicidio a un año. Para hechos desde el 1 de julio de 2026, la sección 741.2801 puede reclasificar un delito que cumpla la definición de violencia doméstica de la sección 741.28 si ya existía una condena de violencia doméstica al cometerlo. Deben establecerse la relación familiar o de convivencia y la residencia compartida, con la excepción de hijo común; el choque o la etiqueta de relación con la víctima no prueban todas las condiciones. Si se aplica, F2 pasa a F1 (hasta 30 años y $10,000), y una variante ya F1 pasa a delito grave de por vida (prisión perpetua o plazo que no exceda la vida según la sección 775.082(3)(a)3, con multa ordinaria máxima de $15,000). La definición de condena previa incluye adjudicación retenida y declaración de no impugnar. Las secciones 741.281 y 741.283 tienen condiciones separadas; los mínimos adicionales de cárcel requieren adjudicación y daño corporal intencional, no solo causar la muerte por negligencia, y conservan la excepción de prisión estatal. Las multas superiores por ganancia o pérdida y otras reglas particulares necesitan revisión; los hechos anteriores requieren su versión aplicable."
       },
       "zh": {
         "plainSummary": "在佛罗里达州，行为人驾驶或实际控制车辆时，因法律列明的致醉物质而正常能力受损，或血液、呼气酒精浓度达到0.08以上，并因车辆运行造成或促成他人或胎儿死亡，即构成酒驾过失杀人。本条所称胎儿，是指在子宫内任何发育阶段的人类成员。",
-        "degreeContext": "本罪通常为二级重罪，并有四年强制最低刑期。行为人知道或应当知道发生碰撞却未按第316.062条提供信息和救助，或者具有第316.193(3)(c)3.c条列明类型的前科时，升为一级重罪。"
+        "degreeContext": "本罪通常为二级重罪，并有四年强制最低刑期。行为人知道或应当知道发生碰撞却未按第316.062条提供信息和救助，或者具有第316.193(3)(c)3.c条列明类型的前科时，升为一级重罪。 通常的二级重罪最高可处15年监禁及10,000美元常规罚金；任一一级重罪分支最高30年及10,000美元。四年强制最低刑期仍适用。2025年10月1日起的前科加重列明DUI过失杀人、现行第327.35(3)(a)3.c.条的醉酒驾船过失杀人、第782.071条车辆杀人及第782.072条船舶杀人；单纯普通DUI前科不属于该清单。第322.28条要求对DUI过失杀人永久吊销驾照，任何限制驾照救济另依第322.271条。第316.656条限制暂缓有罪裁定及较轻罪名认罪，DUI课程和其他适用量刑义务另行适用。不能把首次DUI的缓刑监督上限表述为将过失杀人最低刑期降为一年。对2026年7月1日或之后的行为，若犯罪符合第741.28条家庭暴力定义，且犯罪时已有家庭暴力定罪，第741.2801条还可能升级犯罪等级。必须满足规定的家庭或同住关系、共同居住条件及共同育有子女的例外；不能仅凭车祸或与受害人的关系名称认定所有条件。适用时，二级升为一级（最高30年及10,000美元）；已经属于一级的分支升为终身重罪（第775.082(3)(a)3条允许终身或不超过终身的有期监禁，一般罚金上限15,000美元）。前科定义包括暂缓正式有罪裁定及不抗辩答辩。第741.281及741.283条另有家庭暴力量刑条件；额外最低县监狱刑期须有正式有罪裁定和故意身体伤害，仅有过失致死不够，且保留州监禁例外。按收益或损失计算的更高罚金及其他个案规则须另审；较早行为须适用当时版本。"
       }
     }
   },
@@ -218,9 +310,12 @@
       "es": "Conducir con la licencia suspendida, revocada, cancelada o descalificada",
       "zh": "在驾驶证被暂停、撤销、取消或取消资格期间驾驶"
     },
-    "category": "felony",
-    "categories": ["felony", "misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 322.34(2)",
@@ -237,20 +332,52 @@
       {
         "citation": "Fla. Stat. § 322.264",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.264.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.08",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.08.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.245",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.245.html"
+      },
+      {
+        "citation": "Fla. Stat. § 61.13016",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0061/Sections/0061.13016.html"
+      },
+      {
+        "citation": "Fla. Stat. § 318.15",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0318/Sections/0318.15.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.091",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.091.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "This offense applies when a person knows that the person's driver license or driving privilege has been canceled, suspended, or revoked, or that the person is under the suspension-or-revocation equivalent status defined in § 322.01(43), and drives a motor vehicle on a Florida highway while that status remains in effect. Persons defined as habitual traffic offenders under § 322.264 are excluded from this subsection.",
-        "degreeContext": "A first conviction is a second-degree misdemeanor. A second or subsequent conviction is ordinarily a first-degree misdemeanor; a third or later conviction ordinarily requires at least 10 days in jail. A third or later conviction is instead a third-degree felony when the current or most recent prior violation resulted from DUI, test refusal, a traffic offense causing death or serious bodily injury, or fleeing or eluding."
+        "degreeContext": "A first conviction is a second-degree misdemeanor. A second or subsequent conviction is ordinarily a first-degree misdemeanor; a third or later conviction ordinarily requires at least 10 days in jail. A third or later conviction is instead a third-degree felony when the current or most recent prior violation resulted from DUI, test refusal, a traffic offense causing death or serious bodily injury, or fleeing or eluding. The ordinary M2/M1/F3 ranges are respectively up to 60 days and $500, 1 year and $1,000, or 5 years and $5,000, subject to the specified branch and other sentencing rules. Subsection (10) supplies a separate limited-suspension rule notwithstanding other provisions: where there is no prior forcible-felony conviction and the suspension ground is one of the listed financial, child-support, insurance, school-attendance or related habitual-offender grounds, it prescribes M2 for a first knowing-driving conviction and M1 for a second or later conviction. Do not apply the ordinary subsection (2) escalation without checking that exception. Under subsection (11), qualifying noncommercial drivers with a listed subsection (10)(a) ground may elect a no-contest plea and proof of compliance in lieu of the fine or court appearance; adjudication is withheld and does not count as a conviction. No election is available if one was made in the preceding 12 months, and no more than three elections are permitted. The knowledge element may be established by the specified citation, admission, notice or other evidence; the records-based rebuttable presumption excludes the specified failure-to-pay-traffic-fine and financial-responsibility suspensions. Lack of that presumption does not itself prove lack of knowledge. Subsections (1), (5), (6) and (7) have separate nonknowing, habitual-offender, injury/death and commercial-driving routes and are not silently added to this subsection (2) identity."
       },
       "es": {
         "plainSummary": "Este delito se aplica cuando una persona sabe que su licencia o privilegio de conducir fue cancelado, suspendido o revocado, o que está bajo el estado equivalente de suspensión o revocación definido en el § 322.01(43), y conduce un vehículo motorizado en una carretera de Florida mientras ese estado sigue vigente. Quedan excluidas las personas definidas como infractores habituales de tránsito por el § 322.264.",
-        "degreeContext": "La primera condena es un delito menor de segundo grado. La segunda o posterior es normalmente un delito menor de primer grado; una tercera o posterior exige normalmente al menos 10 días de cárcel. La tercera o posterior es, en cambio, un delito grave de tercer grado cuando la infracción actual o la previa más reciente resultó de DUI, negativa a una prueba, una infracción de tránsito que causó muerte o lesión corporal grave, o huida o evasión."
+        "degreeContext": "La primera condena es un delito menor de segundo grado. La segunda o posterior es normalmente un delito menor de primer grado; una tercera o posterior exige normalmente al menos 10 días de cárcel. La tercera o posterior es, en cambio, un delito grave de tercer grado cuando la infracción actual o la previa más reciente resultó de DUI, negativa a una prueba, una infracción de tránsito que causó muerte o lesión corporal grave, o huida o evasión. Los límites ordinarios M2/M1/F3 son, respectivamente, hasta 60 días y $500, 1 año y $1,000, o 5 años y $5,000, sujetos a la variante y demás reglas. El apartado (10) establece una regla especial de suspensión limitada pese a otras disposiciones: sin condena previa por delito grave de violencia y con uno de los motivos enumerados de obligaciones económicas, manutención, seguro, asistencia escolar o reincidencia relacionada, dispone M2 para la primera condena por conducir a sabiendas y M1 para la segunda o posterior. Debe comprobarse esa excepción antes de aplicar el aumento ordinario del apartado (2). Según el apartado (11), conductores no comerciales que cumplan un motivo del apartado (10)(a) pueden elegir una declaración de no impugnar y presentar prueba de cumplimiento en lugar de multa o comparecencia; se retiene la adjudicación y no cuenta como condena. No puede elegirse si ya se hizo en los últimos 12 meses, ni más de tres veces. El conocimiento puede probarse mediante la citación, admisión, notificación u otras pruebas previstas; la presunción refutable basada en registros excluye las suspensiones especificadas por impago de multa de tráfico y responsabilidad financiera. La ausencia de esa presunción no prueba por sí sola falta de conocimiento. Los apartados (1), (5), (6) y (7) contienen variantes separadas sin conocimiento, de infractor habitual, lesión o muerte y conducción comercial, no añadidas tácitamente a esta identidad del apartado (2)."
       },
       "zh": {
         "plainSummary": "行为人明知自己的驾驶证或驾驶资格已被取消、暂停或撤销，或者处于第322.01(43)条定义的暂停或撤销等同状态，仍在该状态有效期间于佛罗里达州公路驾驶机动车，即适用本罪。第322.264条定义的惯常交通违法者不适用本款。",
-        "degreeContext": "首次定罪为二级轻罪。第二次或后续定罪通常为一级轻罪；第三次或后续定罪通常至少监禁10日。如果本次或最近一次先前违法源于酒驾、拒绝接受检测、造成死亡或严重人身伤害的交通违法，或者逃避、拒捕驾驶，则第三次或后续定罪改为三级重罪。"
+        "degreeContext": "首次定罪为二级轻罪。第二次或后续定罪通常为一级轻罪；第三次或后续定罪通常至少监禁10日。如果本次或最近一次先前违法源于酒驾、拒绝接受检测、造成死亡或严重人身伤害的交通违法，或者逃避、拒捕驾驶，则第三次或后续定罪改为三级重罪。 通常M2/M1/F3的范围分别为最高60天及500美元、1年及1,000美元、或5年及5,000美元，须按具体分支及其他量刑规定适用。第(10)款设有优先于其他规定的特定吊扣原因规则：没有既往暴力重罪定罪，且吊扣基于所列经济义务、子女抚养、保险、到校要求或相关惯犯原因时，首次明知驾驶定罪为M2，第二次及以后为M1。适用第(2)款通常的再犯升级前，必须核查该例外。第(11)款允许符合第(10)(a)款原因的非商业驾照驾驶人选择不抗辩答辩并提交履行证明，替代罚金或出庭；法院暂缓正式有罪裁定，此处理不算定罪。如过去12个月已作过一次选择则不得再选，总计不得超过三次。明知要件可通过规定的罚单、承认、通知或其他证据证明；依据记录的可反驳推定不适用于所列未缴交通罚款及财务责任吊扣。没有该推定本身不证明不知情。第(1)、(5)、(6)、(7)款另有不知情、惯犯、伤亡及商业驾驶分支，不能视为本第(2)款条目已涵盖。"
       }
     }
   },
@@ -375,9 +502,12 @@
       "es": "Conducir bajo la influencia",
       "zh": "酒后或受药物影响驾驶"
     },
-    "category": "felony",
-    "categories": ["felony", "misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 316.193(1)",
@@ -390,20 +520,64 @@
       {
         "citation": "Fla. Stat. § 775.08",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.1938",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.1938.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.656",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.656.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.292",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.292.html"
+      },
+      {
+        "citation": "Fla. Stat. § 877.111",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.111.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.02",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.271",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "A person commits driving under the influence by driving or being in actual physical control of a vehicle in Florida while a listed intoxicant impairs the person's normal faculties, or while the person's blood-alcohol or breath-alcohol level is 0.08 or higher. This base definition excludes the separately graded damage, serious-injury, and death results in subsection (3).",
-        "degreeContext": "First conviction: $500-$1,000 and up to 6 months. Second: $1,000-$2,000 and up to 9 months. A third violation within 10 years after a prior conviction is a third-degree felony; a third outside that period carries $2,000-$5,000 and up to 12 months. A fourth or later violation is a third-degree felony with a fine of at least $2,000. For a first conviction with alcohol level 0.15 or higher or a passenger under 18: $1,000-$2,000 and up to 9 months; for a second: $2,000-$4,000 and up to 12 months; for a third or later: a fine of at least $4,000. Additional timing-based mandatory jail and ignition-interlock provisions also apply."
+        "degreeContext": "First conviction: $500-$1,000 and up to 6 months. Second: $1,000-$2,000 and up to 9 months. A third violation within 10 years after a prior conviction is a third-degree felony; a third outside that period carries $2,000-$5,000 and up to 12 months. A fourth or later violation is a third-degree felony with a fine of at least $2,000. For a first conviction with alcohol level 0.15 or higher or a passenger under 18: $1,000-$2,000 and up to 9 months; for a second: $2,000-$4,000 and up to 12 months; for a third or later: a fine of at least $4,000. Additional timing-based mandatory jail and ignition-interlock provisions also apply. The third-degree felony branches ordinarily permit up to 5 years imprisonment and a conventional fine up to $5,000, with the specific DUI fine floors still applying. A second conviction within 5 years requires at least 10 days in jail; a third or later conviction within 10 years requires at least 30 days, with at least 48 hours consecutive in either case. For a first conviction, probation and incarceration together may not exceed 1 year, with at least 50 hours of community work; the court may substitute $10 per hour only upon the statutory undue-hardship finding. Reporting probation, a DUI course and evaluation are required; recommended treatment and any waiver follow subsection (5). Vehicle impoundment is ordinarily 10 days for a first conviction, 30 for the qualifying second and 90 for the qualifying third or later conviction, subject to statutory exceptions; it cannot run concurrently with incarceration. Ignition interlock is mandatory for at least 1 year for a second conviction and at least 2 years for either third-conviction timing branch. For the 0.15-or-higher/under-18-passenger branch it is at least 6 months for a first offense and 2 years for a second. These interlock duties concern the listed owned or leased, routinely operated vehicles when the person qualifies for a permanent or restricted license; additional discretionary interlock rules also exist. Under section 322.28, first-conviction revocation without death is 180 days to 1 year; the specified second-within-5-years and third-within-10-years convictions require at least 5 and 10 years respectively, and a fourth requires permanent revocation. Restricted-license relief has separate conditions under section 322.271. Section 316.656 restricts withholding adjudication and accepting lesser pleas. These penalties do not include the separately graded damage, serious-injury or death branches of subsection (3). Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Una persona comete conducción bajo la influencia al conducir o tener el control físico efectivo de un vehículo en Florida mientras una sustancia indicada afecta sus facultades normales, o con un nivel de alcohol en sangre o aliento de 0.08 o más. Esta definición básica excluye los resultados de daños, lesiones graves y muerte, que se gradúan por separado en el inciso (3).",
-        "degreeContext": "Primera condena: $500-$1,000 y hasta 6 meses. Segunda: $1,000-$2,000 y hasta 9 meses. Una tercera infracción dentro de 10 años de una condena previa es delito grave de tercer grado; una tercera fuera de ese período conlleva $2,000-$5,000 y hasta 12 meses. La cuarta o posterior es delito grave de tercer grado con multa mínima de $2,000. En una primera condena con alcohol de 0.15 o más o pasajero menor de 18: $1,000-$2,000 y hasta 9 meses; en una segunda: $2,000-$4,000 y hasta 12 meses; en una tercera o posterior: multa mínima de $4,000. También se aplican disposiciones adicionales de cárcel obligatoria e interbloqueo según el tiempo."
+        "degreeContext": "Primera condena: $500-$1,000 y hasta 6 meses. Segunda: $1,000-$2,000 y hasta 9 meses. Una tercera infracción dentro de 10 años de una condena previa es delito grave de tercer grado; una tercera fuera de ese período conlleva $2,000-$5,000 y hasta 12 meses. La cuarta o posterior es delito grave de tercer grado con multa mínima de $2,000. En una primera condena con alcohol de 0.15 o más o pasajero menor de 18: $1,000-$2,000 y hasta 9 meses; en una segunda: $2,000-$4,000 y hasta 12 meses; en una tercera o posterior: multa mínima de $4,000. También se aplican disposiciones adicionales de cárcel obligatoria e interbloqueo según el tiempo. Las variantes de delito grave de tercer grado permiten normalmente hasta 5 años de prisión y una multa ordinaria de hasta $5,000, manteniéndose los mínimos de multa específicos de DUI. Una segunda condena dentro de 5 años exige al menos 10 días de cárcel; una tercera o posterior dentro de 10 años exige al menos 30 días, con un mínimo de 48 horas consecutivas en ambos casos. En la primera condena, la libertad a prueba y la prisión juntas no pueden superar 1 año, con al menos 50 horas de trabajo comunitario; el tribunal solo puede sustituirlas por $10 por hora si determina la dificultad excesiva prevista por ley. Se exigen supervisión mensual, curso DUI y evaluación; el tratamiento recomendado y su posible dispensa siguen el apartado (5). La inmovilización ordinaria es de 10 días por la primera condena, 30 por la segunda que reúna los requisitos y 90 por la tercera o posterior que los reúna, con las excepciones legales; no puede coincidir con el encarcelamiento. El bloqueo de encendido es obligatorio durante al menos 1 año por la segunda condena y 2 años por cualquiera de las dos variantes temporales de tercera condena. Con alcohol de 0.15 o más o pasajero menor de 18, es al menos 6 meses por la primera infracción y 2 años por la segunda. Estas obligaciones afectan a los vehículos enumerados, propios o arrendados y usados habitualmente, cuando la persona reúne los requisitos para una licencia permanente o restringida; también hay reglas discrecionales. Según la sección 322.28, la primera revocación sin muerte es de 180 días a 1 año; la segunda dentro de 5 años y la tercera dentro de 10 años requieren al menos 5 y 10 años respectivamente, y la cuarta exige revocación permanente. La licencia restringida tiene condiciones separadas en la sección 322.271. La sección 316.656 limita la retención de adjudicación y la aceptación de acuerdos por cargos menores. Estas penas no incluyen las variantes separadas de daños, lesiones graves o muerte del apartado (3). Los hechos anteriores necesitan la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "行为人在佛罗里达州驾驶或实际控制车辆时，因列明的致醉物质导致正常能力受损，或者血液、呼气酒精浓度达到0.08以上，即构成受影响驾驶。本基础定义不包括第(3)款另行分级的财产损害、严重人身伤害或死亡结果。",
-        "degreeContext": "首次定罪：罚金500至1,000美元，监禁不超过6个月。第二次：1,000至2,000美元，监禁不超过9个月。距前次定罪10年内的第三次违法为三级重罪；超过该期间的第三次违法处2,000至5,000美元及不超过12个月监禁。第四次或以后违法为三级重罪，罚金至少2,000美元。首次定罪时酒精浓度达到0.15以上或车内有18岁以下乘客的，处1,000至2,000美元及不超过9个月；第二次处2,000至4,000美元及不超过12个月；第三次或以后罚金至少4,000美元。另有按时间条件适用的强制监禁和点火锁规定。"
+        "degreeContext": "首次定罪：罚金500至1,000美元，监禁不超过6个月。第二次：1,000至2,000美元，监禁不超过9个月。距前次定罪10年内的第三次违法为三级重罪；超过该期间的第三次违法处2,000至5,000美元及不超过12个月监禁。第四次或以后违法为三级重罪，罚金至少2,000美元。首次定罪时酒精浓度达到0.15以上或车内有18岁以下乘客的，处1,000至2,000美元及不超过9个月；第二次处2,000至4,000美元及不超过12个月；第三次或以后罚金至少4,000美元。另有按时间条件适用的强制监禁和点火锁规定。 三级重罪分支通常最高可处5年监禁及5,000美元常规罚金，DUI专门规定的最低罚金仍适用。5年内第二次定罪至少监禁10天；10年内第三次及以后定罪至少30天，两者均须至少连续服刑48小时。首次定罪的缓刑监督与监禁合计不得超过1年，并须至少完成50小时社区工作；法院只有认定法定过度困难时，才能按每小时10美元替代。须按月报告、参加DUI课程及评估；建议的治疗及豁免依第(5)款处理。车辆扣押或停用通常首次为10天、符合条件的第二次为30天、第三次及以后为90天，适用法定例外，且不得与监禁同时计算。第二次定罪须安装点火联锁装置至少1年，两种时间分支的第三次定罪均至少2年。酒精含量达0.15或以上或载有未满18岁乘客时，首次至少6个月、第二次至少2年。这些义务适用于所列本人拥有或租赁并经常驾驶的车辆，且在符合永久或限制驾照资格时实施；另有酌情联锁规定。第322.28条规定，无死亡的首次定罪吊销驾照180天至1年；5年内第二次、10年内第三次分别至少5年和10年，第四次须永久吊销。限制驾照救济另受第322.271条条件约束。第316.656条限制暂缓有罪裁定及接受较轻罪名认罪。这些刑罚不涵盖第(3)款另行分级的财产损害、严重伤害或死亡分支。较早行为须使用当时适用的法律版本。"
       }
     }
   },
