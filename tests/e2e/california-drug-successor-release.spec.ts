@@ -113,11 +113,21 @@ for (const unavailable of [false, true]) {
       // Recheck all pages at export time, even after a successful dashboard load.
       authorityGone = true;
       await page.getByTestId("button-export-pdf").click();
-      const failure = page.waitForEvent("dialog");
-      await page.getByTestId("button-confirm-export").click();
-      const dialog = await failure;
-      expect(dialog.message()).toContain("PDF export failed");
-      await dialog.dismiss();
+      // Dismiss inside the listener: a native alert can block click completion.
+      // Waiting for click before dismissing makes this depend on response timing.
+      const failure = page.waitForEvent("dialog").then(async dialog => {
+        const message = dialog.message();
+        await dialog.dismiss();
+        return message;
+      });
+      const recheck = page.waitForResponse(response =>
+        new URL(response.url()).pathname === '/api/criminal-charges' && response.request().method() === 'GET');
+      await test.step('export rechecks authority and reports the withheld charge', async () => {
+        await page.getByTestId("button-confirm-export").click();
+        expect((await (await recheck).json()).charges).toEqual([]);
+        expect(await failure).toContain("PDF export failed");
+        await expect(page.getByTestId("button-export-pdf")).toBeEnabled();
+      });
     }
   });
 }
