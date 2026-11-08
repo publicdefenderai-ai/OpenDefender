@@ -471,6 +471,10 @@ test.describe("browser export release gate", () => {
     await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
     await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
 
+    // Usage is recorded before the response completes. Establish the completed
+    // response's cooldown before jumping time, as in the adjacent usage test.
+    await expect(page.getByRole("button", { name: /Regenerate in \d+s…/ })).toBeDisabled();
+
     // fastForward models a suspended tab: it jumps across multiple midnights
     // while due timers fire at most once when the browser resumes.
     await Promise.all([

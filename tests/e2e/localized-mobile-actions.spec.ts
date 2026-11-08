@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { housingDesignCopy } from "../../client/src/locales/housing-design";
 
 const PHONE_VIEWPORT = { width: 320, height: 812 } as const;
 
@@ -71,6 +72,7 @@ type LocalizedCtaContext = {
   language: string;
   route: string;
   testId: string;
+  selector?: string;
   label: string;
   expectedDestination: string;
 };
@@ -94,7 +96,7 @@ async function expectLocalizedMobileCta(
   page: Page,
   context: LocalizedCtaContext,
 ) {
-  const cta = page.getByTestId(context.testId);
+  const cta = context.selector ? page.locator(context.selector) : page.getByTestId(context.testId);
   const description = describeLocalizedCta(context);
 
   await expect(
@@ -213,18 +215,22 @@ for (const language of LANGUAGES) {
       for (const route of SUPPORT_TEMPLATE_ROUTES) {
         await page.goto(route);
         await expect(page.locator("h1").first()).toBeVisible();
+        // Housing now uses the approved renter pathway instead of the generic template CTA.
+        // Verify its localized label and the same destination, rather than skipping the route.
+        const housingSelector = route === '/support/housing' ? '.housing-paths a[href="#section-start-here"]' : undefined;
         await expectLocalizedMobileCta(
           page,
           {
             language: language.name,
             route,
+            selector: housingSelector,
             testId: "button-start-here",
-            label: language.labels.support,
+            label: housingSelector ? housingDesignCopy[language.code].renters : language.labels.support,
             expectedDestination: 'hash "#section-start-here"',
           },
         );
 
-        await page.getByTestId("button-start-here").click();
+        await (housingSelector ? page.locator(housingSelector) : page.getByTestId("button-start-here")).click();
         await expect(page).toHaveURL(
           new RegExp(`${escapeRegExp(route)}#section-start-here$`),
           `${language.name} ${route} CTA "${language.labels.support}" ` +

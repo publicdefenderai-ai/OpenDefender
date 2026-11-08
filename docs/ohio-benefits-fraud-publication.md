@@ -1,6 +1,6 @@
 # Ohio benefit fraud and electronic-message publication batch
 
-Six source-bound choices across five sections add Medicaid provider fraud, Medicaid eligibility fraud, individual SNAP/WIC benefit misuse, commercial electronic-message transmission, unauthorized computer access for electronic messages, and unlawful display of a law-enforcement emblem. Every choice carries its own conduct, grading, exceptions/context and complete retained statutory dependency spans. This is configured publication work; merge does not import records, deploy the app or establish live availability.
+Six source-bound choices across five sections add Medicaid provider fraud, Medicaid eligibility fraud, individual SNAP/WIC benefit misuse, commercial electronic-message transmission, unauthorized computer access for electronic messages, and unlawful display of a law-enforcement emblem. Every choice carries its own conduct, grading, exceptions/context and the listed retained Ohio statutory dependency spans. This is configured publication work; merge does not import records, deploy the app or establish live availability.
 
 | Section | Published scope | Grading treatment |
 | --- | --- | --- |
@@ -13,7 +13,7 @@ Six source-bound choices across five sections add Medicaid provider fraud, Medic
 
 The provider-fraud fine ladder is not the ordinary felony fine table: $1,000, $5,000, $25,000, $75,000 and $150,000 apply at the specified thresholds. Its generic sentencing supplement therefore supplies custody ranges only. Offense-date applicability remains explicit. Medicaid eligibility is a different offense; its doubled restitution is not described as the conventional fine.
 
-The benefits entry does not publish organizational conduct/fines under §2913.46(C). Program authorization incorporated by reference is a conduct limitation, not presumed unlawful conduct. The electronic-message entries preserve separate civil remedies and forfeiture context without treating civil amounts as criminal fines. The emblem entry uses the exact official heading as its short display name; its longer guilt-clause identity and grading are retained in the bound source. It does not cover impersonation offenses.
+The benefits entry does not publish organizational conduct/fines under §2913.46(C). Program authorization incorporated by reference is a conduct limitation, not presumed unlawful conduct. The packet retains Ohio’s incorporation text, but does not retain or independently verify the federal trafficking definition in 7 C.F.R. 271.2, the Food and Nutrition Act (7 U.S.C. 2011 et seq.) and implementing rules, or the WIC authority in 42 U.S.C. 1786. It therefore does not establish complete federal dependency closure or determine whether a specific transaction is authorized or constitutes trafficking. Those incorporated questions require the applicable federal authority. The published summary expressly preserves this limitation. The electronic-message entries preserve separate civil remedies and forfeiture context without treating civil amounts as criminal fines. The emblem entry uses the exact official heading as its short display name; its longer guilt-clause identity and grading are retained in the bound source. It does not cover impersonation offenses.
 
 ## Evidence and reuse
 
@@ -31,4 +31,6 @@ The source packet adds no statute acquisition for the purpose of renewing prior 
 
 ## Verification
 
-65 focused tests passed across nine suites, including packet tampering, expiry, identity collisions, public counts, independent source gates and existing holds. Typecheck, production build and packet regeneration passed. The isolated production-artifact release check passed for all six expected IDs, names, category arrays and penalty summaries. Existing receipt files are unchanged. These checks use no production database and do not establish live availability.
+77 focused tests passed across ten suites, including packet tampering, expiry, identity collisions, public counts, independent source gates and existing holds. Typecheck, production build and packet regeneration passed. The isolated production-artifact release check passed for all six expected IDs, names, category arrays and penalty summaries. Existing receipt files are unchanged. These checks use no production database and do not establish live availability.
+
+Integrated main `4c44290ce92e13de7cb1a8bb919f9291bc0a7875` and preserved request-local eligibility memoization. The benefits family is checked once per evaluation and rechecked on the next request; fixture and database-provider paths retain independent gates. Validation uses the lockfile-matched Vite 6.4.5 installation. Source review reuses November 6 evidence; it does not claim a fresh November 8 statutory verification.

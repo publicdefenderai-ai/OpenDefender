@@ -13,19 +13,20 @@ for (const language of ['en','es','zh'] as const) for (const theme of ['light','
   await page.setViewportSize({width:1280,height:1000});
   await page.goto('/collateral-consequences');const main=page.locator('.collateral-body');
   await expect(main.locator('[data-charge]')).toHaveCount(7);
+  await expect(main.getByTestId('nrrc-resources')).toBeVisible();
   for (const [key,value] of Object.entries(old.chargeType.options)) await expect(main.locator(`[data-charge="${key}"]`)).toHaveText(value);
   await expect(main.locator('.collateral-continue')).toBeDisabled();
   await main.locator('[data-charge="dui"]').click();
   await expect(main.locator('[data-charge="dui"]')).toHaveAttribute('aria-pressed','true');
   await main.locator('.collateral-continue').click();
   for (const [index,id] of order.entries()) {
-   await expect(main.locator('h2')).toHaveText(old.questions[id].question);
-   await expect(main.locator('h2')).toBeFocused();
+   await expect(main.locator('.collateral-content h2')).toHaveText(old.questions[id].question);
+   await expect(main.locator('.collateral-content h2')).toBeFocused();
    await expect(main).toContainText(old.questions[id].sub);
    if(id==='immigration') await expect(main).toContainText(old.questions.immigration.privacyNote);
    await expect(main.locator('.collateral-continue')).toBeDisabled();
    await main.locator('[data-answer=yes]').focus();await page.keyboard.press('Space');
-   await expect(main.locator('h2')).toHaveText(old.questions[id].question);
+   await expect(main.locator('.collateral-content h2')).toHaveText(old.questions[id].question);
    await expect(main.locator('[data-answer=yes]')).toHaveAttribute('aria-pressed','true');
    for(const width of [1280,320]) {
     await page.setViewportSize({width,height:1000});
