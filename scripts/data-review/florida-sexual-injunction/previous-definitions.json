@@ -1,0 +1,88 @@
+[
+  {
+    "id": "fl-fs-794-011-2-sexual-battery",
+    "jurisdiction": "FL",
+    "code": "794.011(2)",
+    "slug": "fl-fs-794-011-2-sexual-battery",
+    "name": "Sexual battery",
+    "names": {
+      "es": "Agresión sexual",
+      "zh": "性侵害"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 794.011(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 921.1425",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1425.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Committing sexual battery upon a child under 12, or injuring the child's sexual organs while attempting sexual battery, under subsection (2). Sexual battery excludes a bona fide medical act.",
+        "degreeContext": "A capital felony when the offender is 18 or older; a life felony when the offender is under 18. Capital-case sentencing follows § 921.1425."
+      },
+      "es": {
+        "plainSummary": "Cometer agresión sexual contra un menor de 12 años, o lesionar sus órganos sexuales al intentar cometerla, conforme al apartado (2). Se excluyen los actos médicos de buena fe.",
+        "degreeContext": "Es delito capital si el autor tiene 18 años o más, y delito grave de por vida si es menor de 18. La sentencia capital sigue el § 921.1425."
+      },
+      "zh": {
+        "plainSummary": "依第(2)款对12岁以下儿童实施性侵害，或在企图实施性侵害时伤害其性器官。善意医疗行为不属于性侵害。",
+        "degreeContext": "行为人年满18岁时为死刑重罪；未满18岁时为终身重罪。死刑案件量刑依第921.1425条进行。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+    "jurisdiction": "FL",
+    "code": "741.31(4)(a)",
+    "slug": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+    "name": "Violation of an injunction for protection against domestic violence",
+    "names": {
+      "es": "Violación de una orden de protección contra la violencia doméstica",
+      "zh": "违反家庭暴力保护禁令"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 741.31(4)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.31.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.30",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.30.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.315",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.315.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.31",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.31.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "This offense covers willfully violating a Florida domestic-violence injunction issued under § 741.30, or a qualifying foreign protection order under § 741.315, through one of the acts listed in § 741.31(4)(a), such as prohibited proximity or communication, refusing to vacate a shared dwelling, violence or threats, property damage, or refusing a court-ordered surrender of firearms or ammunition.",
+        "degreeContext": "The listed willful violation is ordinarily a first-degree misdemeanor. It is a third-degree felony when the person has at least one prior conviction for a crime of domestic violence or an injunction/protection-order violation and then violates an injunction or foreign protection order against the same victim."
+      },
+      "es": {
+        "plainSummary": "Este delito comprende la violación deliberada de una orden de protección de Florida emitida bajo el § 741.30, o de una orden extranjera que reúna los requisitos del § 741.315, mediante uno de los actos enumerados en el § 741.31(4)(a), como acercamiento o comunicación prohibidos, negarse a desalojar la vivienda compartida, violencia o amenazas, daños a la propiedad o negarse a entregar armas de fuego o municiones por orden judicial.",
+        "degreeContext": "La violación deliberada enumerada es normalmente un delito menor de primer grado. Es un delito grave de tercer grado cuando la persona tiene al menos una condena previa por violencia doméstica o por violar una orden de protección y luego viola una orden contra la misma víctima."
+      },
+      "zh": {
+        "plainSummary": "本罪适用于故意违反依据第741.30条签发的佛州家庭暴力保护禁令，或第741.315条认可的外州保护令，并实施第741.31(4)(a)条列举的行为，例如进入禁入范围、禁止的联络、拒绝搬离共同住所、暴力或威胁、损坏财产，或拒绝按法院命令交出枪支弹药。",
+        "degreeContext": "列明的故意违反行为通常构成一级轻罪。行为人曾因家庭暴力犯罪或违反禁令、保护令被定罪，之后又违反针对同一受害人的禁令或外州保护令时，构成三级重罪。"
+      }
+    }
+  }
+]

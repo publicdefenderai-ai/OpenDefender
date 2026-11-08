@@ -403,19 +403,18 @@
     "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
     "section": "741.31",
     "status": "eligible",
-    "reason": "The exact heading identifies the offense, subsection (4)(a) supplies enumerated willful conduct, and paragraph (c) supplies the same-victim prior-conviction felony condition.",
+    "reason": "Existing identity with complete conduct and independently bound sentencing dependencies.",
     "identity": {
       "kind": "official_heading",
       "quote": "Violation of an injunction for protection against domestic violence",
       "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
     },
     "conductQuotes": [
-      "A person who willfully violates an injunction for protection against domestic violence issued pursuant to s. 741.30, or a foreign protection order accorded full faith and credit pursuant to s. 741.315, by:",
-      "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c)."
+      "(4)(a) \nA person who willfully violates an injunction for protection against domestic violence issued pursuant to s. 741.30, or a foreign protection order accorded full faith and credit pursuant to s. 741.315, by:\n1. \nRefusing to vacate the dwelling that the parties share;\n\n2. \nGoing to, or being within 500 feet of, the petitioner’s residence, school, place of employment, or a specified place frequented regularly by the petitioner and any named family or household member;\n\n3. \nCommitting an act of domestic violence against the petitioner;\n\n4. \nCommitting any other violation of the injunction through an intentional unlawful threat, word, or act to do violence to the petitioner;\n\n5. \nTelephoning, contacting, or otherwise communicating with the petitioner directly or indirectly, unless the injunction specifically allows indirect contact through a third party;\n\n6. \nKnowingly and intentionally coming within 100 feet of the petitioner’s motor vehicle, whether or not that vehicle is occupied;\n\n7. \nDefacing or destroying the petitioner’s personal property, including the petitioner’s motor vehicle; or\n\n8. \nRefusing to surrender firearms or ammunition if ordered to do so by the court\n\ncommits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c)."
     ],
     "gradingQuotes": [
-      "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c).",
-      "A person who has one or more prior convictions for a crime of domestic violence or violation of an injunction or foreign protection order, and who subsequently commits a violation of any injunction or foreign protection order against the same victim, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083 or s. 775.084."
+      "(4)(a) \nA person who willfully violates an injunction for protection against domestic violence issued pursuant to s. 741.30, or a foreign protection order accorded full faith and credit pursuant to s. 741.315, by:\n1. \nRefusing to vacate the dwelling that the parties share;\n\n2. \nGoing to, or being within 500 feet of, the petitioner’s residence, school, place of employment, or a specified place frequented regularly by the petitioner and any named family or household member;\n\n3. \nCommitting an act of domestic violence against the petitioner;\n\n4. \nCommitting any other violation of the injunction through an intentional unlawful threat, word, or act to do violence to the petitioner;\n\n5. \nTelephoning, contacting, or otherwise communicating with the petitioner directly or indirectly, unless the injunction specifically allows indirect contact through a third party;\n\n6. \nKnowingly and intentionally coming within 100 feet of the petitioner’s motor vehicle, whether or not that vehicle is occupied;\n\n7. \nDefacing or destroying the petitioner’s personal property, including the petitioner’s motor vehicle; or\n\n8. \nRefusing to surrender firearms or ammunition if ordered to do so by the court\n\ncommits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c).",
+      "(c) \nA person who has one or more prior convictions for a crime of domestic violence or violation of an injunction or foreign protection order, and who subsequently commits a violation of any injunction or foreign protection order against the same victim, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083 or s. 775.084. For purposes of this paragraph, the term “conviction” means a determination of guilt which is the result of a plea or a trial, regardless of whether adjudication is withheld or a plea of nolo contendere is entered."
     ],
     "requiredSections": [
       {
@@ -435,11 +434,26 @@
       },
       {
         "section": "741.315",
-        "role": "exception",
+        "role": "definition",
         "contentHash": "2625ce28385057cadc189bcd552d39251d0c024ab3c757f4f70cac8fa90a51de"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
       }
     ],
-    "notes": "The summaries track all eight listed acts without treating every injunction violation as criminal."
+    "notes": "Existing identity and translated base summaries preserved; complete mapped conduct and statutory sentencing dependencies retained. Constitutional holdings are separately bound in the judicial-authorities artifact. No receipt issuance or extension."
   },
   {
     "id": "fl-section-791.01",

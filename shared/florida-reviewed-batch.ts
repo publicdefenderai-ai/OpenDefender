@@ -1,3 +1,4 @@
+import judicialAuthorities from "./florida-reviewed-data/judicial-authorities.json";
 import a from "./florida-reviewed-data/a.json";
 import b from "./florida-reviewed-data/b.json";
 import c from "./florida-reviewed-data/c.json";
@@ -54,3 +55,12 @@ for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
 export const FLORIDA_REVIEWED_BATCH = projectEvidenceBackedChargeBatch(
   FLORIDA_REVIEWED_DEFINITIONS.filter(row => decisions.get(row.id)?.status === "eligible"),
 );
+// Judicial holdings supplement the explanation's statutory sources. They are not
+// statute snapshots or a freshness receipt, and never make a charge selectable.
+for (const authority of judicialAuthorities) {
+  if (!definitions.has(authority.chargeId)) throw new Error(`Orphaned Florida judicial source: ${authority.chargeId}`);
+  const explanation = FLORIDA_REVIEWED_BATCH.explanations.find(row => row.canonicalChargeId === authority.chargeId);
+  // A held record has no projected explanation; its retained authority is still valid accounting.
+  if (!explanation) continue;
+  explanation.sources = [...(explanation.sources ?? []), { citation: authority.citation, url: authority.sourceUrl, jurisdiction: "FL" }];
+}

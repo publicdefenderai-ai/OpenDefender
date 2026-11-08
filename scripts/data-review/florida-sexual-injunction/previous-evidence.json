@@ -1,0 +1,83 @@
+[
+  {
+    "id": "fl-fs-794-011-2-sexual-battery",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:794.011:2",
+      "target": "title",
+      "text": "Sexual battery",
+      "start": 0,
+      "end": 14,
+      "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:794.011:2",
+        "target": "text",
+        "text": "(2)(a)\u2003\nA person 18 years of age or older who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a capital felony, punishable as provided in ss. 775.082 and 921.1425. In all capital cases under this section, the procedure set forth in s. 921.1425 shall be followed in order to determine a sentence of death or life imprisonment. If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.\n\n(b)\u2003\nA person less than 18 years of age who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a life felony, punishable as provided in s. 775.082, s. 775.083, s. 775.084, or s. 794.0115.",
+        "start": 1867,
+        "end": 2977,
+        "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:794.011:2",
+        "target": "text",
+        "text": "(2)(a)\u2003\nA person 18 years of age or older who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a capital felony, punishable as provided in ss. 775.082 and 921.1425. In all capital cases under this section, the procedure set forth in s. 921.1425 shall be followed in order to determine a sentence of death or life imprisonment. If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.\n\n(b)\u2003\nA person less than 18 years of age who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a life felony, punishable as provided in s. 775.082, s. 775.083, s. 775.084, or s. 794.0115.",
+        "start": 1867,
+        "end": 2977,
+        "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+        "category": "felony"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:741.31:4_a",
+      "target": "title",
+      "text": "Violation of an injunction for protection against domestic violence",
+      "start": 0,
+      "end": 67,
+      "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:741.31:4_a",
+        "target": "text",
+        "text": "A person who willfully violates an injunction for protection against domestic violence issued pursuant to s. 741.30, or a foreign protection order accorded full faith and credit pursuant to s. 741.315, by:",
+        "start": 2748,
+        "end": 2953,
+        "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+      },
+      {
+        "sourceKey": "fl:statute:741.31:4_a",
+        "target": "text",
+        "text": "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c).",
+        "start": 3934,
+        "end": 4065,
+        "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:741.31",
+        "target": "text",
+        "text": "A person who has one or more prior convictions for a crime of domestic violence or violation of an injunction or foreign protection order, and who subsequently commits a violation of any injunction or foreign protection order against the same victim, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083 or s. 775.084.",
+        "start": 4841,
+        "end": 5193,
+        "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:741.31:4_a",
+        "target": "text",
+        "text": "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c).",
+        "start": 3934,
+        "end": 4065,
+        "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae",
+        "category": "misdemeanor"
+      }
+    ]
+  }
+]
