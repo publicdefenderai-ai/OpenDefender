@@ -547,6 +547,12 @@ The independent pre-change fixture captures published translated content, litera
 
 Validation: typecheck, production build, 16 translation/coverage checks and 12 browser cases passed (seven Housing, five existing support-navigation cases). Desktop/light, phone/dark and clean print output visually inspected. No full-suite or deployment claim. Next: Transportation support.
 
+## Guidance choice visibility follow-up
+
+The AI/immediate guidance choices now have complete plum-toned borders, subtle background fills, inset spacing and stronger Option 1/Option 2 labels. Hover and keyboard focus highlight the entire button; focus retains a separate outline. A pressed state gives tap feedback, and phone layouts maintain a 16px gap. Reduced-motion preference disables the short color transition. Both options receive the same treatment. This scoped CSS update also applies wherever the shared questionnaire appears; copy, consent and selection handlers are unchanged.
+
+Validation: production build and all six existing form-intake browser cases passed (three languages, both themes, both choices, seven steps and 320px bounds). Desktop hover and actual Tab-key focus were visually inspected in light/dark modes. No new test suite or full-suite claim.
+
 ## Transportation support
 
 Refreshes `/support/transportation` using the approved “Get to court. Plan your ride.” heading and house-to-courthouse route illustration. Retains six actions with their priorities/timeframes, all four non-driver guidance blocks, six resources and phone destination, two complete written templates, the expandable DMV call script, call tips, warning, four FAQs, three tips, related links and disclaimer. Existing substantive wording is preserved; simplified preview text does not replace it. New framing supports English, Spanish and Chinese, and the existing English-only non-driver section is marked `lang="en"`.
