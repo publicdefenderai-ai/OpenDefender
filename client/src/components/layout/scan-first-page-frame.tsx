@@ -142,7 +142,7 @@ export function PageSectionNav({
                 href={`#${id}`}
                 aria-current={isActive ? "location" : undefined}
                 onClick={() => setActiveId(id)}
-                className={`inline-flex min-h-11 max-w-full items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium leading-snug whitespace-normal break-words transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:min-h-0 lg:rounded-md lg:px-2 lg:py-1 ${
+                className={`inline-flex min-h-11 min-w-11 max-w-full items-center justify-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium leading-snug whitespace-normal break-words transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:min-h-0 lg:rounded-md lg:px-2 lg:py-1 ${
                   isActive ? "bg-muted text-foreground font-semibold" : accentClassName
                 }`}
               >
