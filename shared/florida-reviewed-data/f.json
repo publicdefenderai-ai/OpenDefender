@@ -9,31 +9,81 @@
       "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
       "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 825.102(1)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
       },
       {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
         "citation": "Fla. Stat. § 825.101",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Knowingly or willfully abusing an elderly person or disabled adult, without causing great bodily harm, permanent disability, or permanent disfigurement. Abuse includes intentionally inflicting injury, an intentional act reasonably expected to cause injury, actively encouraging such an act, or the specified intentional and unauthorized isolation or restriction of family access.",
-        "degreeContext": "Third-degree felony. For the isolation or family-access branch, it is a defense that the defendant reasonably believed the action was necessary to protect the person's welfare. Section 825.101 supplies the controlling definitions of elderly person and disabled adult."
+        "degreeContext": "Third-degree felony. For the isolation or family-access branch, it is a defense that the defendant reasonably believed the action was necessary to protect the person's welfare. Section 825.101 supplies the controlling definitions of elderly person and disabled adult. The ordinary third-degree felony permits up to 5 years imprisonment and a conventional fine up to $5,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the third-degree felony becomes a second-degree felony (up to 15 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Abusar a sabiendas o deliberadamente de una persona anciana o un adulto con discapacidad, sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. El abuso incluye infligir intencionalmente una lesión, realizar un acto intencional del que razonablemente se espere una lesión, alentar activamente tal acto, o el aislamiento o la restricción intencional y sin autoridad del acceso familiar en las circunstancias especificadas.",
-        "degreeContext": "Delito grave de tercer grado. Para la rama de aislamiento o restricción del acceso familiar, es defensa que el acusado creyera razonablemente que la medida era necesaria para proteger el bienestar de la persona. El § 825.101 contiene las definiciones aplicables de persona anciana y adulto con discapacidad."
+        "degreeContext": "Delito grave de tercer grado. Para la rama de aislamiento o restricción del acceso familiar, es defensa que el acusado creyera razonablemente que la medida era necesaria para proteger el bienestar de la persona. El § 825.101 contiene las definiciones aplicables de persona anciana y adulto con discapacidad. El delito grave ordinario de tercer grado permite hasta 5 años de prisión y una multa ordinaria de hasta $5,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de tercer grado pasa a segundo grado (hasta 15 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "明知或故意虐待老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。虐待包括故意造成伤害、实施可合理预期导致伤害的故意行为、积极鼓励他人实施此类行为，或在法定情形下故意且无合法授权地隔离该人或限制其与家人接触。",
-        "degreeContext": "三级重罪。对于隔离或限制家人接触的分支，被告有合理理由相信该行为为保护该人的福祉所必要，属于一项抗辩。第825.101条规定了老年人和残障成年人的适用定义。"
+        "degreeContext": "三级重罪。对于隔离或限制家人接触的分支，被告有合理理由相信该行为为保护该人的福祉所必要，属于一项抗辩。第825.101条规定了老年人和残障成年人的适用定义。 通常的三级重罪最高可处5年监禁及5,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，三级重罪升为二级重罪（最高15年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -47,12 +97,26 @@
       "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
       "zh": "加重虐待老年人或残障成年人（一级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 825.102(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.102",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
       },
       {
@@ -66,20 +130,52 @@
       {
         "citation": "Fla. Stat. § 784.045",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Committing aggravated abuse of an elderly person or disabled adult by committing aggravated battery on the person; willfully torturing, maliciously punishing, or willfully and unlawfully caging the person; or knowingly or willfully abusing the person and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "First-degree felony. Section 825.101 defines elderly person and disabled adult. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements."
+        "degreeContext": "First-degree felony. Section 825.101 defines elderly person and disabled adult. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements. The ordinary first-degree felony permits up to 30 years imprisonment and a conventional fine up to $10,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the first-degree felony becomes a life felony. For conduct covered by the 2026 rule, section 775.082(3)(a)3 permits life imprisonment or a term of years not exceeding life; the conventional fine ceiling is $15,000 under section 775.083. Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Cometer abuso agravado de una persona anciana o un adulto con discapacidad mediante agresión física agravada contra la persona; torturarla deliberadamente, castigarla maliciosamente o enjaularla deliberada e ilícitamente; o abusar de ella a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
-        "degreeContext": "Delito grave de primer grado. El § 825.101 define persona anciana y adulto con discapacidad. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada."
+        "degreeContext": "Delito grave de primer grado. El § 825.101 define persona anciana y adulto con discapacidad. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada. El delito grave ordinario de primer grado permite hasta 30 años de prisión y una multa ordinaria de hasta $10,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de primer grado pasa a ser un delito grave de por vida. Para hechos cubiertos por la regla de 2026, el apartado 775.082(3)(a)3 permite prisión perpetua o un plazo de años que no exceda la vida; la multa ordinaria máxima es $15,000 conforme al apartado 775.083. La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "通过以下方式加重虐待老年人或残障成年人：对其实施加重殴打；故意折磨、恶意惩罚或故意且非法地将其关入笼中；或者明知或故意虐待并由此造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "一级重罪。第825.101条界定老年人及残障成年人。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。"
+        "degreeContext": "一级重罪。第825.101条界定老年人及残障成年人。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。 通常的一级重罪最高可处30年监禁及10,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，一级重罪升为终身重罪。对2026年规则涵盖的行为，第775.082(3)(a)3条允许终身监禁或不超过终身的有期监禁；第775.083条的一般罚金上限为15,000美元。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -93,31 +189,81 @@
       "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
       "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 825.102(3)(b)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
       },
       {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
         "citation": "Fla. Stat. § 825.101",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Willfully or by culpable negligence neglecting an elderly person or disabled adult and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "Second-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult."
+        "degreeContext": "Second-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult. The ordinary second-degree felony permits up to 15 years imprisonment and a conventional fine up to $10,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the second-degree felony becomes a first-degree felony (up to 30 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
-        "degreeContext": "Delito grave de segundo grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad."
+        "degreeContext": "Delito grave de segundo grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad. El delito grave ordinario de segundo grado permite hasta 15 años de prisión y una multa ordinaria de hasta $10,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de segundo grado pasa a primer grado (hasta 30 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "故意或因有罪过的过失疏忽照料老年人或残障成年人，并由此造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "二级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。"
+        "degreeContext": "二级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。 通常的二级重罪最高可处15年监禁及10,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，二级重罪升为一级重罪（最高30年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -131,31 +277,81 @@
       "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
       "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 825.102(3)(c)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
       },
       {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.102",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
         "citation": "Fla. Stat. § 825.101",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Willfully or by culpable negligence neglecting an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "Third-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult."
+        "degreeContext": "Third-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult. The ordinary third-degree felony permits up to 5 years imprisonment and a conventional fine up to $5,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the third-degree felony becomes a second-degree felony (up to 15 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
-        "degreeContext": "Delito grave de tercer grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad."
+        "degreeContext": "Delito grave de tercer grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad. El delito grave ordinario de tercer grado permite hasta 5 años de prisión y una multa ordinaria de hasta $5,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de tercer grado pasa a segundo grado (hasta 15 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "故意或因有罪过的过失疏忽照料老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "三级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。"
+        "degreeContext": "三级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。 通常的三级重罪最高可处5年监禁及5,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，三级重罪升为二级重罪（最高15年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -169,12 +365,30 @@
       "es": "Abuso infantil agravado (delito grave de primer grado)",
       "zh": "加重虐待儿童（一级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 827.03(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
       },
       {
@@ -188,20 +402,52 @@
       {
         "citation": "Fla. Stat. § 784.045",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Committing aggravated child abuse by committing aggravated battery on a child; willfully torturing, maliciously punishing, or willfully and unlawfully caging a child; or knowingly or willfully abusing a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "First-degree felony. Subsection (1)(a) supplies the complete aggravated-child-abuse definition, and § 827.01 defines child as a person under 18. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements."
+        "degreeContext": "First-degree felony. Subsection (1)(a) supplies the complete aggravated-child-abuse definition, and § 827.01 defines child as a person under 18. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements. The ordinary first-degree felony permits up to 30 years imprisonment and a conventional fine up to $10,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the first-degree felony becomes a life felony. For conduct covered by the 2026 rule, section 775.082(3)(a)3 permits life imprisonment or a term of years not exceeding life; the conventional fine ceiling is $15,000 under section 775.083. Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Cometer abuso infantil agravado mediante agresión física agravada contra un menor; torturarlo deliberadamente, castigarlo maliciosamente o enjaularlo deliberada e ilícitamente; o abusar del menor a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
-        "degreeContext": "Delito grave de primer grado. El inciso (1)(a) contiene la definición completa de abuso infantil agravado y el § 827.01 define menor como una persona de menos de 18 años. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada."
+        "degreeContext": "Delito grave de primer grado. El inciso (1)(a) contiene la definición completa de abuso infantil agravado y el § 827.01 define menor como una persona de menos de 18 años. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada. El delito grave ordinario de primer grado permite hasta 30 años de prisión y una multa ordinaria de hasta $10,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de primer grado pasa a ser un delito grave de por vida. Para hechos cubiertos por la regla de 2026, el apartado 775.082(3)(a)3 permite prisión perpetua o un plazo de años que no exceda la vida; la multa ordinaria máxima es $15,000 conforme al apartado 775.083. La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "通过以下方式实施加重虐待儿童：对儿童实施加重殴打；故意折磨、恶意惩罚或故意且非法地将儿童关入笼中；或者明知或故意虐待儿童并由此造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "一级重罪。第(1)(a)款规定加重虐待儿童的完整定义，第827.01条将儿童界定为未满18岁者。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。"
+        "degreeContext": "一级重罪。第(1)(a)款规定加重虐待儿童的完整定义，第827.01条将儿童界定为未满18岁者。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。 通常的一级重罪最高可处30年监禁及10,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，一级重罪升为终身重罪。对2026年规则涵盖的行为，第775.082(3)(a)3条允许终身监禁或不超过终身的有期监禁；第775.083条的一般罚金上限为15,000美元。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -215,31 +461,85 @@
       "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
       "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 827.03(2)(b)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
       },
       {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
         "citation": "Fla. Stat. § 827.01",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Willfully or by culpable negligence neglecting a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "Second-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver."
+        "degreeContext": "Second-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver. The ordinary second-degree felony permits up to 15 years imprisonment and a conventional fine up to $10,000. The caregiver-omission definition requires willful failure. Allowing independent, unsupervised childhood activities is excluded unless it amounts to willful and wanton conduct endangering the child; the statute gives examples such as walking or bicycling to school, outdoor play and reasonable periods at home. This does not erase the separate failure-to-protect branch or its other elements. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the second-degree felony becomes a first-degree felony (up to 30 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Descuidar deliberadamente o por negligencia culpable a un menor y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
-        "degreeContext": "Delito grave de segundo grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador."
+        "degreeContext": "Delito grave de segundo grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador. El delito grave ordinario de segundo grado permite hasta 15 años de prisión y una multa ordinaria de hasta $10,000. La definición de omisión del cuidador exige incumplimiento deliberado. Permitir actividades infantiles independientes y sin supervisión queda excluido, salvo que constituya conducta deliberada y temeraria que ponga en peligro al menor; la ley cita ir a la escuela a pie o en bicicleta, jugar al aire libre y permanecer en casa durante períodos razonables. Esto no elimina la rama separada de falta de protección ni sus demás elementos. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de segundo grado pasa a primer grado (hasta 30 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "故意或因有罪过的过失疏忽照料儿童，并由此造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "二级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。"
+        "degreeContext": "二级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。 通常的二级重罪最高可处15年监禁及10,000美元常规罚款。 照护者不履行义务的定义要求故意不履行。允许儿童独立且无人监督的活动通常被排除，除非构成危及儿童的故意且恣意妄为行为；法条例举步行或骑车上学、户外玩耍及在家停留合理时间。这不取消另行规定的未尽保护义务分支或其其他要件。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，二级重罪升为一级重罪（最高30年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -253,31 +553,81 @@
       "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
       "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 827.03(2)(c)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
       },
       {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
         "citation": "Fla. Stat. § 827.01",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Knowingly or willfully abusing a child without causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "Third-degree felony. Subsection (1)(b) defines child abuse as intentional injury, an intentional act reasonably expected to cause injury, or active encouragement of an act that causes or could reasonably be expected to cause injury; § 827.01 defines child."
+        "degreeContext": "Third-degree felony. Subsection (1)(b) defines child abuse as intentional injury, an intentional act reasonably expected to cause injury, or active encouragement of an act that causes or could reasonably be expected to cause injury; § 827.01 defines child. The ordinary third-degree felony permits up to 5 years imprisonment and a conventional fine up to $5,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the third-degree felony becomes a second-degree felony (up to 15 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Abusar a sabiendas o deliberadamente de un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
-        "degreeContext": "Delito grave de tercer grado. El inciso (1)(b) define el abuso infantil como lesión intencional, un acto intencional del que razonablemente se espere una lesión, o el aliento activo de un acto que cause o pueda razonablemente esperarse que cause una lesión; el § 827.01 define menor."
+        "degreeContext": "Delito grave de tercer grado. El inciso (1)(b) define el abuso infantil como lesión intencional, un acto intencional del que razonablemente se espere una lesión, o el aliento activo de un acto que cause o pueda razonablemente esperarse que cause una lesión; el § 827.01 define menor. El delito grave ordinario de tercer grado permite hasta 5 años de prisión y una multa ordinaria de hasta $5,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de tercer grado pasa a segundo grado (hasta 15 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "明知或故意虐待儿童，但未造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "三级重罪。第(1)(b)款将虐待儿童界定为故意造成伤害、实施可合理预期导致伤害的故意行为，或积极鼓励实施造成或可合理预期造成伤害的行为；第827.01条界定儿童。"
+        "degreeContext": "三级重罪。第(1)(b)款将虐待儿童界定为故意造成伤害、实施可合理预期导致伤害的故意行为，或积极鼓励实施造成或可合理预期造成伤害的行为；第827.01条界定儿童。 通常的三级重罪最高可处5年监禁及5,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，三级重罪升为二级重罪（最高15年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
@@ -291,31 +641,85 @@
       "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
       "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 827.03(2)(d)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
       },
       {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
         "citation": "Fla. Stat. § 827.01",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Willfully or by culpable negligence neglecting a child without causing great bodily harm, permanent disability, or permanent disfigurement.",
-        "degreeContext": "Third-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver."
+        "degreeContext": "Third-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver. The ordinary third-degree felony permits up to 5 years imprisonment and a conventional fine up to $5,000. The caregiver-omission definition requires willful failure. Allowing independent, unsupervised childhood activities is excluded unless it amounts to willful and wanton conduct endangering the child; the statute gives examples such as walking or bicycling to school, outdoor play and reasonable periods at home. This does not erase the separate failure-to-protect branch or its other elements. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the third-degree felony becomes a second-degree felony (up to 15 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
       },
       "es": {
         "plainSummary": "Descuidar deliberadamente o por negligencia culpable a un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
-        "degreeContext": "Delito grave de tercer grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador."
+        "degreeContext": "Delito grave de tercer grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador. El delito grave ordinario de tercer grado permite hasta 5 años de prisión y una multa ordinaria de hasta $5,000. La definición de omisión del cuidador exige incumplimiento deliberado. Permitir actividades infantiles independientes y sin supervisión queda excluido, salvo que constituya conducta deliberada y temeraria que ponga en peligro al menor; la ley cita ir a la escuela a pie o en bicicleta, jugar al aire libre y permanecer en casa durante períodos razonables. Esto no elimina la rama separada de falta de protección ni sus demás elementos. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de tercer grado pasa a segundo grado (hasta 15 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
       },
       "zh": {
         "plainSummary": "故意或因有罪过的过失疏忽照料儿童，但未造成严重身体伤害、永久残疾或永久毁容。",
-        "degreeContext": "三级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。"
+        "degreeContext": "三级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。 通常的三级重罪最高可处5年监禁及5,000美元常规罚款。 照护者不履行义务的定义要求故意不履行。允许儿童独立且无人监督的活动通常被排除，除非构成危及儿童的故意且恣意妄为行为；法条例举步行或骑车上学、户外玩耍及在家停留合理时间。这不取消另行规定的未尽保护义务分支或其其他要件。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，三级重罪升为二级重罪（最高15年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
       }
     }
   },
