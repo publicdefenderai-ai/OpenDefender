@@ -564,3 +564,15 @@ Approved layout `transportation-content.html` SHA-256: `b53fadbf27136c9b511262bc
 Independent fixture captures translated and literal published content and destinations from main `4c44290c` before implementation. The release-allowlisted browser spec verifies the captured text, both copy/print outputs, the phone script, warning, FAQ keyboard expansion, existing resource anchor, actual desktop/320px bounds and image loading across all three languages and both themes.
 
 Validation: typecheck, production build, 16 translation/coverage checks, six Transportation browser cases and five existing support navigation cases passed. An initial test incorrectly expected blank subject separators in the family message; its expectation now matches the original subject-free copy behavior. Desktop/light, phone/dark and clean print output inspected. No full-suite, deployment or legal-approval claim. Next support page: Childcare.
+
+## Childcare support
+
+Refreshes `/support/childcare` using the approved “Keep your child's care on track” heading and gender-neutral adult/child hand-holding illustration, with circular heads and no hair. Uses open action/resource rows, native expandable FAQs and quiet paper-style reference/message sections. All six actions, six external resources, three phone destinations, the complete caregiver reference card, three written templates (school, daycare, doctor), personalization note, four FAQs, five tips, related links and disclaimer remain. No new editable fields or data storage are introduced. Preview simplifications do not replace published guidance.
+
+A dedicated frame leaves other support pages unchanged. Preserves section navigation, `#needs-card` and `#childcare-comms` anchors, clipboard payloads and four print actions. Removes staggered reveals and small decorative section icons. Print output now escapes all inserted labels, subjects, bodies and notes, preserves line breaks and wraps long lines on white paper. New framing is trilingual; existing English-only resource names are explicitly marked. Existing substantive wording remains subject to separate review.
+
+Approved `childcare-content.html` SHA-256: `08b27580f11750684b3f8d0f177b15b01210b14d8f0876ef61f85726397b0ae5`. Approved SVG copied unchanged to `client/public/images/design/childcare.svg`, SHA-256 `6f61e28d814fe9d484ad70cfbec934c574307a909ec6472f1b7e116d413faa57`; 1,524 bytes, decorative and explicitly sized at 240×220. The image remains visible on phones.
+
+Independent fixture captures published translations, literal text and destinations from main `b36ec2a0` before changes. The release-allowlisted spec verifies captured content, all four clipboard/print outputs, FAQ keyboard expansion, the resource anchor, actual desktop/320px bounds and successful image loading across all three languages and both themes.
+
+Validation: typecheck, production build, 16 translation/coverage checks and 11 browser cases passed (six Childcare, five existing support navigation). Desktop/light, phone/dark and reference-card print output visually inspected. No full-suite, deployment or legal-approval claim. Continue with the remaining support subpages.

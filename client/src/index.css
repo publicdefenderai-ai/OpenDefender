@@ -3327,3 +3327,48 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 }
 .transportation-nondriver .grid > div { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
 @media(max-width:700px) { .transportation-grid { grid-template-columns: 1fr; } }
+
+/* Childcare support */
+.childcare-page { max-width: 1120px; margin: auto; padding: 32px 40px 60px; }
+.childcare-back { display: inline-block; margin-bottom: 28px; font-size: 13px; font-weight: 600; color: var(--primary); }
+.childcare-hero { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 40px; align-items: center; margin-bottom: 36px; }
+.childcare-hero h1 { font-size: clamp(36px,4.7vw,56px); line-height: 1.1; letter-spacing: -.045em; font-weight: 500; margin-bottom: 24px; }
+.childcare-hero em { color: var(--primary); font-style: normal; }
+.childcare-hero p { color: var(--muted-foreground); font-size: 17px; line-height: 1.8; }
+.childcare-hero img { width: 100%; height: auto; }
+.childcare-section { padding: 32px 0; border-top: 1px solid var(--border); scroll-margin-top: 90px; }
+.childcare-page h2 { font-size: 27px; line-height: 1.25; font-weight: 500; letter-spacing: -.025em; margin-bottom: 18px; }
+.childcare-page h3 { font-size: 16px; font-weight: 600; }
+.childcare-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; }
+.childcare-row { padding: 18px 0; border-top: 1px solid var(--border); }
+.childcare-row-heading { display: flex; flex-wrap: wrap; align-items: start; gap: 10px; margin-bottom: 8px; }
+.childcare-row-heading h3 { flex: 1; min-width: 160px; }
+.childcare-priority { font-size: 12px; padding: 2px 6px; border-radius: 3px; }
+.childcare-priority-high { background: #fee2e2; color: #991b1b; }
+.childcare-priority-medium { background: #fef3c7; color: #92400e; }
+.dark .childcare-priority-high { background: #481e25; color: #fecaca; }
+.dark .childcare-priority-medium { background: #423020; color: #fde68a; }
+.childcare-resource-meta, .childcare-related { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 13px; }
+.childcare-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.childcare-resource-meta a, .childcare-related a { color: var(--primary); font-weight: 600; }
+.childcare-page .childcare-paper { border: 1px solid var(--border); border-radius: 2px; box-shadow: none; background: var(--background); }
+.childcare-page pre { overflow-wrap: anywhere; }
+.childcare-page #childcare-comms { border-top: 1px solid var(--border); }
+.childcare-page #childcare-comms > div { max-width: none; padding-left: 0; padding-right: 0; }
+.childcare-faq { border-bottom: 1px solid var(--border); padding: 17px 0; }
+.childcare-faq summary { display: flex; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-weight: 500; }
+.childcare-faq summary::-webkit-details-marker { display: none; }
+.childcare-faq summary span::after { content: '+'; font-size: 16px; }
+.childcare-faq[open] summary span::after { content: '−'; }
+.childcare-faq p { margin-top: 14px; }
+.childcare-tips { list-style: disc; padding-left: 20px; color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
+.childcare-disclaimer { margin-top: 28px; color: var(--muted-foreground); font-size: 12px; line-height: 1.8; }
+@media(max-width:700px) {
+ .childcare-page { padding: 28px 24px 50px; }
+ .childcare-hero { grid-template-columns: 1fr; gap: 22px; }
+ .childcare-hero img { width: 190px; justify-self: center; }
+ .childcare-page h2 { font-size: 24px; }
+}
+@media(max-width:700px) { .childcare-grid { grid-template-columns: 1fr; } }
+.childcare-page #needs-card { border-top: 1px solid var(--border); }
+.childcare-page #needs-card > div { max-width: none; padding-left: 0; padding-right: 0; }

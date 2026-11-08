@@ -1,17 +1,13 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import childcareHero from "@assets/stock_images/childcare.png";
+import { ChildcareDesignFrame } from "@/components/support/childcare-design-frame";
 import {
   Baby,
   Copy,
   Check,
   Printer,
-  Mail,
-  ClipboardList,
-  Heart,
 } from "lucide-react";
 import {
-  ResourcePageTemplate,
   ActionItem,
   ExternalResource,
   FAQ,
@@ -19,7 +15,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Fragment } from "react";
+
+function escapePrint(text: string) { return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 
 function TemplateCard({
   label,
@@ -58,21 +56,21 @@ function TemplateCard({
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title>${escapePrint(label)}</title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #ec4899; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ""}
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.childcare.commsSection.personalizeNote")}</p>
+            <h1>${escapePrint(label)}</h1>
+            ${subject ? `<p class="subject">${escapePrint(subject)}</p>` : ""}
+            <div class="body">${escapePrint(body)}</div>
+            <p class="note">${escapePrint(t("support.childcare.commsSection.personalizeNote"))}</p>
           </body>
         </html>
       `);
@@ -82,7 +80,7 @@ function TemplateCard({
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card className="childcare-paper">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -156,19 +154,19 @@ function NeedsCardSection() {
       printWindow.document.write(`
         <html>
           <head>
-            <title>${t("support.childcare.needsCard.sectionTitle")}</title>
+            <title>${escapePrint(t("support.childcare.needsCard.sectionTitle"))}</title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.8; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #ec4899; padding-bottom: 8px; margin-bottom: 20px; }
-              .card { white-space: pre-wrap; font-size: 13px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; margin-bottom: 20px; }
+              .card { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
               .note { font-size: 11px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${t("support.childcare.needsCard.sectionTitle")}</h1>
-            <div class="card">${template.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.childcare.needsCard.printInstructions")}</p>
+            <h1>${escapePrint(t("support.childcare.needsCard.sectionTitle"))}</h1>
+            <div class="card">${escapePrint(template)}</div>
+            <p class="note">${escapePrint(t("support.childcare.needsCard.printInstructions"))}</p>
           </body>
         </html>
       `);
@@ -178,14 +176,11 @@ function NeedsCardSection() {
   };
 
   return (
-    <section className="py-10 md:py-14 bg-pink-50/40 dark:bg-pink-950/10" id="needs-card">
+    <section className="py-10 md:py-14 bg-background" id="needs-card">
       <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-8">
+        <Fragment>
+          <div className="mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-pink-500/10">
-                <ClipboardList className="h-5 w-5 text-pink-600 dark:text-pink-400" />
-              </div>
               <h2 className="text-2xl font-bold text-foreground">
                 {t("support.childcare.needsCard.sectionTitle")}
               </h2>
@@ -194,14 +189,13 @@ function NeedsCardSection() {
               {t("support.childcare.needsCard.sectionDescription")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
-          <Card className="border border-pink-200 dark:border-pink-800 shadow-sm">
+        <Fragment>
+          <Card className="childcare-paper">
             <CardHeader className="pb-3">
               <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <CardTitle className="text-base font-semibold flex items-center gap-2">
-                  <Heart className="h-4 w-4 text-pink-600 dark:text-pink-400" />
                   {t("support.childcare.needsCard.sectionTitle")}
                 </CardTitle>
                 <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">
@@ -243,7 +237,7 @@ function NeedsCardSection() {
               </p>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </Fragment>
       </div>
     </section>
   );
@@ -257,12 +251,9 @@ function ChildcareCommsSection() {
   return (
     <section className="py-10 md:py-14 bg-background" id="childcare-comms">
       <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-8">
+        <Fragment>
+          <div className="mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-pink-500/10">
-                <Mail className="h-5 w-5 text-pink-600 dark:text-pink-400" />
-              </div>
               <h2 className="text-2xl font-bold text-foreground">
                 {t("support.childcare.commsSection.sectionTitle")}
               </h2>
@@ -271,9 +262,9 @@ function ChildcareCommsSection() {
               {t("support.childcare.commsSection.sectionDescription")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
+        <Fragment>
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8 flex items-start gap-3">
             <Badge
               variant="outline"
@@ -285,11 +276,11 @@ function ChildcareCommsSection() {
               {t("support.childcare.commsSection.personalizeNote")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
         <div className="space-y-4">
           {emailTemplates.map((key) => (
-            <ScrollReveal key={key}>
+            <Fragment key={key}>
               <TemplateCard
                 label={t(`support.childcare.commsSection.emailTemplates.${key}.label`)}
                 subject={
@@ -298,7 +289,7 @@ function ChildcareCommsSection() {
                 body={t(`support.childcare.commsSection.emailTemplates.${key}.body`)}
                 t={t}
               />
-            </ScrollReveal>
+            </Fragment>
           ))}
         </div>
       </div>
@@ -426,9 +417,8 @@ export default function ChildcareSupport() {
   ];
 
   return (
-    <ResourcePageTemplate
+    <ChildcareDesignFrame
       categoryId="childcare"
-      heroImage={childcareHero}
       icon={Baby}
       iconColor="bg-pink-500/10 text-pink-600 dark:text-pink-400"
       heroGradient="bg-gradient-to-br from-pink-500/5 via-background to-background"
