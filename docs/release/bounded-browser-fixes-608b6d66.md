@@ -36,3 +36,11 @@ Clean installation uses npm ci --include=dev --ignore-scripts. Typecheck and pro
 The browser command is built from the exact committed allowlist in scripts/release-check/run-browser-tests.mjs, using the installed Playwright CLI and playwright.release.config.ts, one worker, zero retries, XDG_CONFIG_HOME, no production credentials and a temporary local release-check token. It does not run the seed-containing release:verify pipeline.
 
 Publication remains unapproved. Georgia/Pennsylvania coverage, Illinois certificate access, Florida's older expired bundle, Ohio receipt deadlines and Ohio staging/source decisions remain separate. After review, Replit must reconcile the exact final candidate, inspect the Publishing schema proposal and report final checks before requesting publication approval.
+
+## Additional validation finding
+
+The first full local run passed 364 scenarios, including all 11 Replit failures, then reported one navigation assertion failure and 54 connection-refused failures after the local server stopped. The cause of the server exit was not established; those 54 checks were not counted as passes. An isolated navigation run passed 11/12; its sole assertion also failed on the unchanged release candidate (the reviewed PR122 tree is byte-identical to its merge 608b6d66).
+
+The navigation assertion selected both existing main-content IDs once the lazy page loaded. It now targets the outer focusable main container and retains the class, fixed-nav position and launcher-clearance assertions. This is an additional pre-existing test selector issue, not an application layout change. The existing duplicate landmark IDs are not redesigned in this bounded release PR.
+
+Final full-allowlist verification uses two isolated Playwright shards with separate ports and output directories, one worker per shard, zero retries and all 75 committed spec paths. Sharding changes neither the test list nor assertions. Final results are recorded in the PR; an unclean first run is not represented as an uninterrupted green run.

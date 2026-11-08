@@ -91,7 +91,8 @@ test.describe("intent navigation and accessibility", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/case-timeline");
 
-    const main = page.locator("#main-content");
+    // Measure the outer focusable app shell, not the nested page landmark.
+    const main = page.locator('main#main-content[tabindex="-1"]');
     await expect(main).toHaveClass(/mobile-nav-page-offset/);
     const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
     const launcher = page.locator('[data-testid="chat-launcher"]');
