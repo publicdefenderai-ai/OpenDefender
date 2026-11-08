@@ -1,0 +1,1170 @@
+[
+  {
+    "id": "oh-orc-2921-321-assault-police-animal",
+    "section": "2921.321",
+    "code": "2921.321(A)",
+    "scope": "A",
+    "statutoryName": "Assaulting a police dog or horse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E(1)"
+    ],
+    "contextPaths": [
+      "E(5)",
+      "F",
+      "G",
+      "H"
+    ],
+    "conductSummary": "Knowingly causing or attempting physical harm to a police dog or horse. The animal must be serving the covered officer/person, or the actor must actually know its protected off-duty status. Division (G) also requires knowledge or reason to know protected status; licensed veterinary activity within Chapter 4741 is excepted. The precise acts in division (A) and definitions in (H) control.",
+    "gradeSummary": "Ordinarily M2; physical harm other than serious harm/death makes M1, serious nonfatal harm F4, and death F3. For death, (E)(1) requires an A(3)(b) F3 prison term and the mandatory fine under 2929.18(B)(10), within the F3 fine range up to $10,000. These are mandatory sanctions, not merely discretionary conventional penalties. Division (E)(5) also requires the specified veterinary, equipment, retraining or replacement costs.",
+    "degrees": [
+      "M2",
+      "M1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "955.021"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.321",
+          "quote": "(a) Except as otherwise provided in this division, assaulting a police dog or horse is a misdemeanor of the second degree."
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-321-harass-police-animal",
+    "section": "2921.321",
+    "code": "2921.321(B)",
+    "scope": "B",
+    "statutoryName": "Harassing a police dog or horse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E(2)"
+    ],
+    "contextPaths": [
+      "E(5)",
+      "F",
+      "G",
+      "H"
+    ],
+    "conductSummary": "Recklessly committing the specified taunting, striking, interference, serious-injury-risk or failure-to-restrain conduct against a police dog or horse. The animal must be serving the covered officer/person, or the actor must actually know its protected off-duty status. Division (G) also requires knowledge or reason to know protected status; licensed veterinary activity within Chapter 4741 is excepted. The precise acts in division (B) and definitions in (H) control.",
+    "gradeSummary": "Ordinarily M2; physical harm other than serious harm/death makes M1, serious nonfatal harm F4, and death F3. Division (E)(5) also requires the specified veterinary, equipment, retraining or replacement costs.",
+    "degrees": [
+      "M2",
+      "M1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "955.021"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.321",
+          "quote": "Except as otherwise provided in this division, harassing a police dog or horse is a misdemeanor of the second degree."
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-321-assault-assistance-dog",
+    "section": "2921.321",
+    "code": "2921.321(C)",
+    "scope": "C",
+    "statutoryName": "Assaulting an assistance dog",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "E(3)"
+    ],
+    "contextPaths": [
+      "E(5)",
+      "F",
+      "G",
+      "H"
+    ],
+    "conductSummary": "Knowingly causing or attempting physical harm to an assistance dog. The animal must be serving the covered officer/person, or the actor must actually know its protected off-duty status. Division (G) also requires knowledge or reason to know protected status; licensed veterinary activity within Chapter 4741 is excepted. The precise acts in division (C) and definitions in (H) control.",
+    "gradeSummary": "Ordinarily M2; physical harm other than serious harm/death makes M1, serious nonfatal harm F4, and death F3. Division (E)(5) also requires the specified veterinary, equipment, retraining or replacement costs.",
+    "degrees": [
+      "M2",
+      "M1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "955.021"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.321",
+          "quote": "Except as otherwise provided in this division, assaulting an assistance dog is a misdemeanor of the second degree."
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-321-harass-assistance-dog",
+    "section": "2921.321",
+    "code": "2921.321(D)",
+    "scope": "D",
+    "statutoryName": "Harassing an assistance dog",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "E(4)"
+    ],
+    "contextPaths": [
+      "E(5)",
+      "F",
+      "G",
+      "H"
+    ],
+    "conductSummary": "Recklessly committing the specified taunting, striking, interference, serious-injury-risk or failure-to-restrain conduct against an assistance dog. The animal must be serving the covered officer/person, or the actor must actually know its protected off-duty status. Division (G) also requires knowledge or reason to know protected status; licensed veterinary activity within Chapter 4741 is excepted. The precise acts in division (D) and definitions in (H) control.",
+    "gradeSummary": "Ordinarily M2; physical harm other than serious harm/death makes M1, serious nonfatal harm F4, and death F3. Division (E)(5) also requires the specified veterinary, equipment, retraining or replacement costs.",
+    "degrees": [
+      "M2",
+      "M1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "955.021"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.321",
+          "quote": "Except as otherwise provided in this division, harassing an assistance dog is a misdemeanor of the second degree."
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-331-traffic-order",
+    "section": "2921.331",
+    "code": "2921.331(A)",
+    "scope": "A",
+    "statutoryName": "Failure to comply with an order or signal of a police officer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Failing to comply with a lawful order or direction of a police officer authorized to direct, control or regulate traffic. This is separate from willful motor-vehicle flight under (B).",
+    "gradeSummary": "M1. A class-five license suspension of six months to three years ordinarily applies; a prior conviction under this section requires class one (life). Limited privileges may be available only as permitted by 4510.021.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "4510.02",
+      "4510.021",
+      "4511.01",
+      "2743.70"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-331-motor-vehicle-flight",
+    "section": "2921.331",
+    "code": "2921.331(B)",
+    "scope": "B",
+    "statutoryName": "Failure to comply with an order or signal of a police officer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Operating a motor vehicle so as willfully to elude or flee a police officer after a visible or audible signal to stop. The felony-flight and serious-harm/risk findings in (C)(4)/(5) must be proved beyond a reasonable doubt.",
+    "gradeSummary": "Ordinarily F4 under (C)(3). F3 under (C)(4) for immediate flight after a felony, with the ordinary 9-36-month F3 range; (C)(5) serious harm or substantial risk instead uses the special 12, 18, 24, 30, 36, 42, 48, 54 or 60-month range under 2929.14(A)(3)(a). Any prison term is consecutive to other prison terms. A class-two suspension of three years to life applies; a prior section violation requires class one (life). Felony limited privileges are prohibited, and the first three years of class two or any class-one suspension cannot be suspended.",
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "4510.02",
+      "4510.021",
+      "4511.01",
+      "2743.70",
+      "2929.12"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {
+      "F3": "F3: (C)(4) uses 9, 12, 18, 24, 30 or 36 months; (C)(5) instead uses 12, 18, 24, 30, 36, 42, 48, 54 or 60 months under 2929.14(A)(3)(a). The conventional F3 fine is up to $10,000."
+    }
+  },
+  {
+    "id": "oh-orc-2921-34-detention-escape",
+    "section": "2921.34",
+    "code": "2921.34(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Escape",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "conductSummary": "Knowing or reckless as to detention other than supervised release, purposely breaking or attempting to break detention, or purposely failing to return after temporary leave or intermittent confinement. This choice covers (A)(1), not the geographic-restriction (A)(2), supervised-release (A)(3), or juvenile-only grading profile. Irregular detention is not automatically a defense; (B) specifies its limits.",
+    "gradeSummary": "For adult (A)(1), the highest detention predicate controls: F2 for aggravated murder, murder, F1/F2; F3 for F3/F4/F5 or unclassified felony; F5 for a misdemeanor predicate or the listed insanity-acquittal hospitalization. The narrower failure-to-return branch with a misdemeanor predicate is M1. There is no single ordinary grade across these branches. Section 2929.14(C)(2) addresses consecutive terms for the specified escape-related circumstances; it must be applied to its own facts.",
+    "degrees": [
+      "F2",
+      "F3",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2945.40",
+      "2945.401",
+      "2945.402",
+      "2967.26",
+      "2967.28"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "felony",
+      "basis": "branch_dependent",
+      "ordinaryDegrees": [],
+      "evidence": [
+        {
+          "section": "2921.34",
+          "quote": "A misdemeanor of the first degree, when the most serious offense for which the person was under detention is a misdemeanor"
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-34-supervised-release-escape",
+    "section": "2921.34",
+    "code": "2921.34(A)(3)",
+    "scope": "A(3)",
+    "statutoryName": "Escape",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "conductSummary": "Knowing or reckless as to supervised-release detention, purposely breaking or attempting to break it or purposely failing to return after temporary leave. Division (D) defines this detention as specified DRC release supervision and excludes transitional control and the listed community-facility placement.",
+    "gradeSummary": "Ordinarily F5; F4 if the highest underlying detention offense was aggravated murder, murder, another life-punishable offense, or F1/F2. This does not assign the separate (A)(1)/(2) grades to supervised release.",
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2967.26",
+      "2967.28"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-35-aiding-escape",
+    "section": "2921.35",
+    "code": "2921.35",
+    "scope": "A,B",
+    "statutoryName": "Aiding escape or resistance to lawful authority",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "conductSummary": "With purpose to promote or facilitate escape or resistance to lawful authority, conveying/providing an instrument or thing to a confined person, or an inmate making, procuring, concealing, unlawfully possessing or giving another inmate such an item.",
+    "gradeSummary": "F4 under (C). Section 2929.14(C)(2) requires consecutive service in its specified institutional-inmate circumstances; it is not assigned to every person covered by (A).",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-36-weapons",
+    "section": "2921.36",
+    "code": "2921.36(A)(1)/(C)",
+    "scope": "A(1),C",
+    "statutoryName": "Illegal conveyance of weapons onto the grounds of a specified governmental facility",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)",
+      "C"
+    ],
+    "gradingPaths": [
+      "G(1)"
+    ],
+    "contextPaths": [
+      "B",
+      "F"
+    ],
+    "conductSummary": "Knowingly conveying or attempting to convey a deadly weapon, dangerous ordnance, part or ammunition onto the listed facility grounds under (A) or delivering/attempting delivery to the covered confined person under (C). This record covers only that item, not the other items named in the broader (C) quotation. Written authorization in (B) applies only to (A); the delivery affirmative defense in (F)(2) applies only to (C). The lawful vehicle-transport affirmative defense in (F)(1) applies only to (A)(1).",
+    "gradeSummary": "F3; a DRC officer or employee must receive a prison term under 2929.14(A)(3)(b).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-36-drugs",
+    "section": "2921.36",
+    "code": "2921.36(A)(2)/(C)",
+    "scope": "A(2),C",
+    "statutoryName": "Illegal conveyance of drugs of abuse onto the grounds of a specified governmental facility",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)",
+      "C"
+    ],
+    "gradingPaths": [
+      "G(2)"
+    ],
+    "contextPaths": [
+      "B",
+      "F"
+    ],
+    "conductSummary": "Knowingly conveying or attempting to convey a drug of abuse onto the listed facility grounds under (A) or delivering/attempting delivery to the covered confined person under (C). This record covers only that item, not the other items named in the broader (C) quotation. Written authorization in (B) applies only to (A); the delivery affirmative defense in (F)(2) applies only to (C). The definition in 3719.011 controls which substances are drugs of abuse.",
+    "gradeSummary": "F3; a DRC or DYS officer or employee must receive a prison term under 2929.14(A)(3)(b).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "3719.011"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-36-liquor",
+    "section": "2921.36",
+    "code": "2921.36(A)(3)/(C)",
+    "scope": "A(3),C",
+    "statutoryName": "Illegal conveyance of intoxicating liquor onto the grounds of a specified governmental facility",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)",
+      "C"
+    ],
+    "gradingPaths": [
+      "G(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "F"
+    ],
+    "conductSummary": "Knowingly conveying or attempting to convey intoxicating liquor onto the listed facility grounds under (A) or delivering/attempting delivery to the covered confined person under (C). This record covers only that item, not the other items named in the broader (C) quotation. Written authorization in (B) applies only to (A); the delivery affirmative defense in (F)(2) applies only to (C). The small sacramental-wine exception in (A)(3) requires the specified cleric and religious use.",
+    "gradeSummary": "M2.",
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "4301.01",
+      "2317.02"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-36-cash",
+    "section": "2921.36",
+    "code": "2921.36(D)",
+    "scope": "D",
+    "statutoryName": "Illegal conveyance of cash onto the grounds of a detention facility",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "G(4)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowingly delivering or attempting to deliver cash to the covered confined person, committed youth or temporarily work-released prisoner. The written-authorization and affirmative-defense provisions for (A)/(C) are not extended to this separate branch.",
+    "gradeSummary": "Ordinarily M1; a prior conviction under (D) makes F5. ",
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2921.36",
+          "quote": "illegal conveyance of cash onto the grounds of a detention facility, a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-36-device",
+    "section": "2921.36",
+    "code": "2921.36(E)",
+    "scope": "E",
+    "statutoryName": "Illegal conveyance of a communications device onto the grounds of a specified governmental facility",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "G(5)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowingly delivering or attempting to deliver a cellular telephone, two-way radio or other communications device to the covered confined person, committed youth or temporarily work-released prisoner. The written-authorization and affirmative-defense provisions for (A)/(C) are not extended to this separate branch.",
+    "gradeSummary": "Ordinarily M1; a prior conviction under (E) makes F5. For a DRC/DYS officer or employee, or specified contractor or contractor employee, (G)(5)(b) instead makes F3 and requires an A(3)(b) prison term.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2921.36",
+          "quote": "illegal conveyance of a communications device onto the grounds of a specified governmental facility, a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-38-ordinary",
+    "section": "2921.38",
+    "code": "2921.38(A)/(B)",
+    "scope": "A,B",
+    "statutoryName": "Harassment with a bodily substance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "A confined person targeting another person under (A), or any person targeting a law-enforcement officer under (B), with intent to harass, annoy, threaten or alarm, causing or attempting contact with the specified bodily substances. Division (F) excludes people hospitalized, institutionalized or confined in facilities operated by the specified mental-health or developmental-disabilities departments.",
+    "gradeSummary": "F5 for (A)/(B). Division (E) also requires testing on the specified request and assigns testing costs, subject to inability to pay; this is distinct from the conventional fine.",
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-38-known-infection",
+    "section": "2921.38",
+    "code": "2921.38(C)",
+    "scope": "C",
+    "statutoryName": "Harassment with a bodily substance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "A person who knows they carry HIV or a hepatitis virus or are infected with tuberculosis with intent to harass, annoy, threaten or alarm, causing or attempting contact with the specified bodily substances. Division (F) excludes people hospitalized, institutionalized or confined in facilities operated by the specified mental-health or developmental-disabilities departments.",
+    "gradeSummary": "F3 for (C). Division (E) also requires testing on the specified request and assigns testing costs, subject to inability to pay; this is distinct from the conventional fine.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-41-theft-in-office",
+    "section": "2921.41",
+    "code": "2921.41",
+    "scope": "A",
+    "statutoryName": "Theft in office",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "conductSummary": "A public or party official committing a theft offense, using or permitting use of office to aid it, or involving government, political-party or campaign-fund property/services. The underlying theft-offense definition in 2913.01(K) remains necessary.",
+    "gradeSummary": "Ordinarily F5; value of at least $1,000 but under $7,500 makes F4; $7,500 to under $150,000 F3; $150,000 to under $750,000 F2; $750,000 or more F1. Conviction carries lifetime disqualification from Ohio public office, employment or trust. Division (C) requires specified restitution and addresses audit costs and retirement-benefit collection; the detailed collection procedures require separate application and are not a new criminal fine.",
+    "degrees": [
+      "F5",
+      "F4",
+      "F3",
+      "F2",
+      "F1"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2913.01",
+      "148.01",
+      "148.06",
+      "3305.01",
+      "2935.01"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-42-authorization",
+    "section": "2921.42",
+    "code": "2921.42(A)(1)-(2)",
+    "scope": "A(1),A(2)",
+    "statutoryName": "Having an unlawful interest in a public contract",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)",
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "conductSummary": "A public official knowingly authorizing or using authority/influence to secure a public contract involving a self/family/business-associate interest, or authorizing public investment in an interested security. The cumulative stock/creditor, necessary-supply, housing-program, legal-officer and small-township exceptions in (B)-(D)/(F)-(G) must be evaluated on their own terms; one satisfied condition alone is insufficient.",
+    "gradeSummary": "F4 for (A)(1)/(2). Division (H) also makes a violating contract void and unenforceable.",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "309.06",
+      "2921.421",
+      "733.621",
+      "504.15",
+      "504.151"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-42-profit-interest",
+    "section": "2921.42",
+    "code": "2921.42(A)(3)-(5)",
+    "scope": "A(3),A(4),A(5)",
+    "statutoryName": "Having an unlawful interest in a public contract",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)",
+      "A(4)",
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "conductSummary": "A public official knowingly holding the specified profitable contract position or interest covered by (A)(3), (4) or (5). The cumulative stock/creditor, necessary-supply, housing-program, legal-officer and small-township exceptions in (B)-(D)/(F)-(G) must be evaluated on their own terms; one satisfied condition alone is insufficient.",
+    "gradeSummary": "M1 for (A)(3)-(5). Division (H) also makes a violating contract void and unenforceable.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "309.06",
+      "2921.421",
+      "733.621",
+      "504.15",
+      "504.151"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-43-improper-compensation",
+    "section": "2921.43",
+    "code": "2921.43",
+    "scope": "A,B,C",
+    "statutoryName": "Soliciting improper compensation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B",
+      "C"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "The specified improper compensation for public duties, pay-for-appointment/employment-preference arrangements, or coerced political contributions tied to appointments or preferences. Division (A) expressly requires knowing conduct and recognizes compensation otherwise authorized by law, including 102.03(G)-(I). Voluntary political contributions are not prohibited by (F); the remaining culpability rules require their own application.",
+    "gradeSummary": "M1. A convicted public servant is disqualified from public office, employment or trust for seven years.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "102.03",
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-44-dereliction",
+    "section": "2921.44",
+    "code": "2921.44",
+    "scope": "A,B,C,D,E",
+    "statutoryName": "Dereliction of duty",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "conductSummary": "The specified negligent failures of law-enforcement, ministerial, judicial or detention officers under (A)-(C), or reckless fiscal/duty violations by the covered public officials or servants under (D)/(E). These are actor- and duty-specific offenses, not a general criminalization of every workplace mistake.",
+    "gradeSummary": "M2. Division (G) imposes a four-year disqualification on the listed fiscal officers and bars public office until required repayment or restitution is completed.",
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "9.08"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-45-civil-rights",
+    "section": "2921.45",
+    "code": "2921.45",
+    "scope": "A",
+    "statutoryName": "Interfering with civil rights",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "A public servant, under color of office, knowingly depriving, conspiring or attempting to deprive a person of a constitutional or statutory right. Whether the asserted right applies requires identification of that right and the particular conduct.",
+    "gradeSummary": "M1.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-51-impersonation",
+    "section": "2921.51",
+    "code": "2921.51(B)",
+    "scope": "B",
+    "statutoryName": "Impersonation of peace officer or private police officer",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [
+      "A",
+      "F"
+    ],
+    "conductSummary": "Impersonating the listed peace officer, private police officer, federal law-enforcement officer or BCI investigator. Impersonation requires the statutory purpose of making another believe the assumed identity. The lawful-purpose affirmative defense in (F) is confined to (B) and the actors it expressly lists; it does not clear the other branches or silently include an omitted actor.",
+    "gradeSummary": "M4 for (B).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "3735.31",
+      "306.35",
+      "3345.04",
+      "5907.02",
+      "4582.04",
+      "4582.28",
+      "2903.11"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-51-detention-search",
+    "section": "2921.51",
+    "code": "2921.51(C)",
+    "scope": "C",
+    "statutoryName": "Impersonation of peace officer or private police officer",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [
+      "A",
+      "F"
+    ],
+    "conductSummary": "By impersonating a listed officer or investigator, arresting, detaining or searching a person, or searching property. Impersonation requires the statutory purpose of making another believe the assumed identity. The lawful-purpose affirmative defense in (F) is confined to (B) and the actors it expressly lists; it does not clear the other branches or silently include an omitted actor.",
+    "gradeSummary": "M1 for (C).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "3735.31",
+      "306.35",
+      "3345.04",
+      "5907.02",
+      "4582.04",
+      "4582.28",
+      "2903.11"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-51-offense-purpose",
+    "section": "2921.51",
+    "code": "2921.51(D)",
+    "scope": "D",
+    "statutoryName": "Impersonation of peace officer or private police officer",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [
+      "A",
+      "F"
+    ],
+    "conductSummary": "Impersonating a listed officer, investigator or Ohio officer/agent/employee with purpose to commit or facilitate an offense. Impersonation requires the statutory purpose of making another believe the assumed identity. The lawful-purpose affirmative defense in (F) is confined to (B) and the actors it expressly lists; it does not clear the other branches or silently include an omitted actor.",
+    "gradeSummary": "Ordinarily M1 for (D); purpose to commit or facilitate a felony makes F4.",
+    "degrees": [
+      "M1",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "3735.31",
+      "306.35",
+      "3345.04",
+      "5907.02",
+      "4582.04",
+      "4582.28",
+      "2903.11"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2921.51",
+          "quote": "Whoever violates division (C) or (D) of this section is guilty of a misdemeanor of the first degree."
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-51-felony",
+    "section": "2921.51",
+    "code": "2921.51(E)",
+    "scope": "E",
+    "statutoryName": "Impersonation of peace officer or private police officer",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [
+      "A",
+      "F"
+    ],
+    "conductSummary": "Committing a felony while impersonating a listed officer, investigator or Ohio officer/agent/employee. Impersonation requires the statutory purpose of making another believe the assumed identity. The lawful-purpose affirmative defense in (F) is confined to (B) and the actors it expressly lists; it does not clear the other branches or silently include an omitted actor.",
+    "gradeSummary": "F3 for (E).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "3735.31",
+      "306.35",
+      "3345.04",
+      "5907.02",
+      "4582.04",
+      "4582.28",
+      "2903.11"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-52-use",
+    "section": "2921.52",
+    "code": "2921.52(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Using sham legal process",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E"
+    ],
+    "conductSummary": "Issuing, displaying, delivering, distributing or otherwise using sham legal process. The actor must know it is sham process, and all three conditions in (A) matter: the process is not lawfully issued, purports legal authority, and is designed to make another believe it is lawful. The lawful-purpose affirmative defense applies only to (B)(1)/(2).",
+    "gradeSummary": "M4 for (B)(1). Division (E) permits separate civil remedies for harm and costs.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-52-detention-search",
+    "section": "2921.52",
+    "code": "2921.52(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Using sham legal process",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E"
+    ],
+    "conductSummary": "Using sham legal process to arrest, detain or search a person, or search or seize property. The actor must know it is sham process, and all three conditions in (A) matter: the process is not lawfully issued, purports legal authority, and is designed to make another believe it is lawful. The lawful-purpose affirmative defense applies only to (B)(1)/(2).",
+    "gradeSummary": "M1 for (B)(2). Division (E) permits separate civil remedies for harm and costs.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-52-offense",
+    "section": "2921.52",
+    "code": "2921.52(B)(3)",
+    "scope": "B(3)",
+    "statutoryName": "Using sham legal process",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E"
+    ],
+    "conductSummary": "Committing or facilitating an offense using sham legal process. The actor must know it is sham process, and all three conditions in (A) matter: the process is not lawfully issued, purports legal authority, and is designed to make another believe it is lawful. The lawful-purpose affirmative defense applies only to (B)(1)/(2).",
+    "gradeSummary": "Ordinarily M1 for (B)(3); purpose to commit or facilitate a felony makes F4. Division (E) permits separate civil remedies for harm and costs.",
+    "degrees": [
+      "M1",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2921.52",
+          "quote": "A violation of division (B)(2) or (3) of this section is a misdemeanor of the first degree, except that"
+        }
+      ]
+    },
+    "sentencingOverrides": {}
+  },
+  {
+    "id": "oh-orc-2921-52-felony",
+    "section": "2921.52",
+    "code": "2921.52(B)(4)",
+    "scope": "B(4)",
+    "statutoryName": "Using sham legal process",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(4)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E"
+    ],
+    "conductSummary": "Committing a felony using sham legal process. The actor must know it is sham process, and all three conditions in (A) matter: the process is not lawfully issued, purports legal authority, and is designed to make another believe it is lawful. The lawful-purpose affirmative defense applies only to (B)(1)/(2).",
+    "gradeSummary": "F3 for (B)(4). Division (E) permits separate civil remedies for harm and costs.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "sentencingOverrides": {}
+  }
+]

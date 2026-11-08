@@ -1,3 +1,4 @@
+import { OHIO_CUSTODY_BATCH } from "./ohio-custody-batch";
 import { OHIO_JUSTICE_BATCH } from "./ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_BATCH } from "./ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_BATCH } from "./ohio-theft-fraud-batch";
@@ -110,6 +111,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_CUSTODY_BATCH.charges,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
