@@ -46,3 +46,9 @@ Production restoration remains a separate evidence comparison, approval, import 
 Validation is run against merged main `4c44290ce92e13de7cb1a8bb919f9291bc0a7875`. The focused Florida and aggregate-count suites, application typecheck, isolated production build, existing Florida release API check, both official PDF replays, offline packet reproduction and whitespace checks exercise this corrective batch. Exactly two existing reviewed drafts changed. Both the old reviewed receipt and independent persons receipt are byte-identical to the base.
 
 Final standalone validation on the current lockfile (Vite 6.4.5): 102 tests passed across 17 Florida/aggregate-count suites, with 43 existing skips; typecheck and isolated production build passed. The existing Florida browser-release API test passed against a local fixture server with no production credentials, confirming independent persons-family availability and withholding of every older reviewed ID. This is fixture verification, not a claim of live database eligibility or production restoration.
+
+## Coordinated merge order
+
+This Florida draft is stacked on `codex/ohio-benefits-fraud-publication` at `462583a9f467ee3a0deedee10c6a75097fa99f95`. Merge Ohio PR #126 first, then this two-record Florida correction. The shared aggregate resolves additively: six Ohio additions plus Florida’s one-record primary-tier shift produce 8,062 choices, with 4,473 felony, 3,522 misdemeanor and 67 infraction primary tiers. No Ohio evidence, receipt, or eligibility changes are introduced by the Florida delta.
+
+Stacked validation: 145 tests passed across 22 combined Florida, Ohio benefits, authority/primary-tier, aggregate-count and receipt-gate suites, with 43 existing skips. Typecheck and Florida offline reproduction passed. The Florida delta contains no Ohio evidence or receipt files.

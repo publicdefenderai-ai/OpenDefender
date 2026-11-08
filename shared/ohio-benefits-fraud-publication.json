@@ -1,0 +1,231 @@
+[
+  {
+    "id": "oh-orc-2913-40-medicaid-fraud",
+    "section": "2913.40",
+    "code": "2913.40",
+    "scope": "B,C,D",
+    "statutoryName": "Medicaid fraud",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B",
+      "C",
+      "D"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "F",
+      "G"
+    ],
+    "conductSummary": "Knowingly making a false or misleading statement to obtain Medicaid reimbursement; fraudulently seeking unauthorized extra payment or kickbacks; or knowingly altering, destroying, concealing, or removing the specified reimbursement records during the required six-year period. Authorized cost-sharing and the provider agreement matter. This is different from application/asset-disclosure fraud under 2913.401.",
+    "gradeSummary": "For conduct on or after October 6, 2026, the obtained-value ladder and mandatory fixed fines are: F5 below $1,000 with a $1,000 fine; F4 at $1,000 to less than $7,500 with a $5,000 fine; F3 at $7,500 to less than $75,000 with a $25,000 fine; F3 at $75,000 to less than $150,000 with a $75,000 fine and a prison presumption; F2 at $150,000 to less than $750,000 with a $150,000 fine and a prison presumption; F1 at $750,000 or more with a $150,000 fine and a prison presumption. The fixed fines apply notwithstanding ordinary section 2929.18 fines. On the investigating/prosecuting agency's application, (F) also requires its costs for the specified conviction involving reimbursement not owed. Other civil/administrative consequences under 5164.35 are separate. Earlier conduct requires the earlier applicable law.",
+    "degrees": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "5164.01",
+      "5162.20",
+      "2929.11",
+      "5164.35",
+      "2913.61"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "custody_only"
+  },
+  {
+    "id": "oh-orc-2913-401-medicaid-eligibility-fraud",
+    "section": "2913.401",
+    "code": "2913.401",
+    "scope": "B",
+    "statutoryName": "Medicaid eligibility fraud",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Knowingly making a false or misleading Medicaid eligibility statement, hiding a property interest, or failing to disclose covered property transfers. The statute uses a 36-month transfer period generally and 60 months for the specified trust transfers. Fully disclosing the interests, transfers and circumstances described in (D) excludes the person from this section.",
+    "gradeSummary": "The grade uses Medicaid services paid as a result of the violation: ordinarily M1; $1,000 to less than $7,500 is F5; $7,500 to less than $150,000 is F4; $150,000 or more is F3. In addition, (C)(2) permits restitution of 200% of Medicaid services paid for an ineligible person, plus judgment-rate interest on unreimbursed amounts. The double-value restitution is not the conventional criminal fine. Other criminal or civil remedies are not excluded.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "5164.01"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2913.401",
+          "quote": "Except as otherwise provided in this division, a violation of this section is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2913-46-illegal-benefits-use",
+    "section": "2913.46",
+    "code": "2913.46(B)",
+    "scope": "B",
+    "statutoryName": "Illegal use of supplemental nutrition assistance program benefits or WIC program benefits",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "conductSummary": "An individual knowingly soliciting, possessing, buying, selling, using, altering, accepting, or transferring SNAP/WIC or electronically transferred benefits in a manner unauthorized by the incorporated federal program law; or knowingly trafficking SNAP benefits. Federal program authorization rules and the incorporated federal trafficking definition matter: this entry does not decide whether a particular transaction is authorized. Organization liability under (C) is outside this individual-conduct choice.",
+    "gradeSummary": "F5 below $1,000 aggregate benefit value; F4 at $1,000 to less than $7,500; F3 at $7,500 to less than $150,000; F2 at $150,000 or more. Subsection (A)(2) permits a twelve-month course of conduct to be charged as one offense and its values aggregated. Access-device value includes what could be obtained or transferred with it at the time, not only money actually spent. These are natural-person ranges, not the organization fines under (C).",
+    "degrees": [
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "5101.33",
+      "2901.23",
+      "2929.31"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2913-421-commercial-email-spam",
+    "section": "2913.421",
+    "code": "2913.421(B)",
+    "scope": "B",
+    "statutoryName": "Illegally transmitting multiple commercial electronic mail messages",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C",
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "conductSummary": "The specified deceptive relaying, material header falsification, false account/domain registration, or false IP-address claims concerning commercial email sent from or to an Ohio computer. Each branch has its own knowledge/purpose requirements. Multiple means more than 10 messages in 24 hours, 100 in 30 days, or 1,000 in a year. Transactional/relationship messages and routine conveyance are excluded as specified in (A).",
+    "gradeSummary": "Ordinarily F5. (C)(2) increases the grade to F4 for specified larger false-registration counts; more than 250 messages in 24 hours, 2,500 in 30 days or 25,000 in a year; annual loss or obtained value at least $1,000; leadership of three or more other participants; or the specified knowingly harvested/generated addresses. (E) makes it F3 for a qualifying prior electronic-mail/unauthorized-access conviction or furtherance of a felony. Equipment, technology and proceeds are subject to seizure/forfeiture under (G); separate civil penalties/damages in (F) are not the criminal fine.",
+    "degrees": [
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.64",
+      "341.42"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2913-421-unauthorized-computer-access",
+    "section": "2913.421",
+    "code": "2913.421(D)(1)",
+    "scope": "D(1)",
+    "statutoryName": "Unauthorized access of a computer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [
+      "D(2)",
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "conductSummary": "Knowingly accessing a computer without authorization and purposely initiating multiple commercial emails from or through it, with the statutory Ohio connection. Multiple and commercial-email exclusions are defined in (A); merely accessing a computer, without the commercial-email elements, is not this branch.",
+    "gradeSummary": "Ordinarily F4. (E) increases it to F3 for a qualifying prior electronic-mail/unauthorized-access conviction or commission in furtherance of a felony. Equipment, technology and proceeds are subject to seizure/forfeiture under (G); separate civil penalties/damages in (F) are not the criminal fine.",
+    "degrees": [
+      "F3",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.64",
+      "341.42"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2913-441-law-enforcement-emblem",
+    "section": "2913.441",
+    "code": "2913.441",
+    "scope": "A",
+    "statutoryName": "Unlawful display of law enforcement emblem",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowingly displaying on a motor vehicle the emblem of a law-enforcement agency or organization of law-enforcement officers when not entitled to do so.",
+    "gradeSummary": "Minor misdemeanor under (B). This entry covers the display prohibition, not impersonating an officer or another separate offense.",
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.02"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  }
+]

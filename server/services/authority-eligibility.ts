@@ -1,5 +1,7 @@
+import { OHIO_BENEFITS_FRAUD_IDS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioBenefitsFraudSourceFresh } from "../data/ohio-benefits-fraud-source";
 import { isOhioTheftFraudSourceFresh } from "../data/ohio-theft-fraud-source";
 import { isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_IDS } from "@shared/florida-persons-batch";
@@ -37,6 +39,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_BENEFITS_FRAUD_IDS.has(charge.id) && !fresh(isOhioBenefitsFraudSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_MAJOR_IDS.has(charge.id) && !fresh(isOhioMajorSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !fresh(isOhioReviewedSourceFresh)) return false;
     return sharedPilotChecked || charge.jurisdiction !== "OH" ||
