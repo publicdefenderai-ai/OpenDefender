@@ -1,0 +1,588 @@
+[
+  {
+    "id": "oh-orc-2921-02-bribery",
+    "section": "2921.02",
+    "code": "2921.02",
+    "scope": "A,B,C,D,E,F",
+    "statutoryName": "Bribery",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "gradingPaths": [
+      "H"
+    ],
+    "contextPaths": [
+      "G",
+      "I"
+    ],
+    "conductSummary": "Purposely offering or giving value to corrupt or improperly influence a public servant, party official, witness or specified municipal-school transformation-alliance personnel; or knowingly soliciting or accepting value for those corrupt or improper purposes. The covered duties, testimony and actor definitions matter, and the statute applies before as well as after formal appointment, election or witness process.",
+    "gradeSummary": "F3 under (H). Under (I), a convicted public servant, party official or covered transformation-alliance director/officer/employee is forever disqualified from public office, employment or a position of trust in Ohio.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "3311.86",
+      "1717.06"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-03-intimidation",
+    "section": "2921.03",
+    "code": "2921.03",
+    "scope": "A",
+    "statutoryName": "Intimidation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "conductSummary": "Knowingly attempting to influence, intimidate or hinder a public servant, party official, or attorney/witness in a civil proceeding, through force, an unlawful threat of harm, or the specified materially false/fraudulent writing used maliciously, in bad faith or wantonly/recklessly. Criminal-case attorney/victim/witness intimidation has separate scope under 2921.04.",
+    "gradeSummary": "F3. Division (C) also permits a separate civil action for harm, fees, costs and expenses; those civil remedies are not the conventional criminal fine.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-04-victim-witness-intimidation",
+    "section": "2921.04",
+    "code": "2921.04(A)",
+    "scope": "A",
+    "statutoryName": "Intimidation of an attorney, victim, or witness in a criminal case",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "C",
+      "E"
+    ],
+    "conductSummary": "Knowingly attempting to intimidate or hinder a victim in filing or prosecuting criminal/delinquency proceedings, or attempting to intimidate a witness because of that status. Division (C) excludes the specified authorized dispute-resolution activity from this (A) branch; witness status does not require charges actually to have been filed.",
+    "gradeSummary": "M1 for (A). This entry does not include the force/unlawful-threat felony branch in (B).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-04-force-threat-intimidation",
+    "section": "2921.04",
+    "code": "2921.04(B)",
+    "scope": "B",
+    "statutoryName": "Intimidation of an attorney, victim, or witness in a criminal case",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E"
+    ],
+    "conductSummary": "Knowingly using force, an unlawful threat of harm, or an unlawful threat to commit an offense or calumny to influence, intimidate or hinder the covered victim, witness or attorney in a criminal/delinquency matter. The statute defines witness broadly even before charges are filed. The dispute-resolution exclusion in (C) is expressly limited to (A).",
+    "gradeSummary": "F3 for (B); this is separate from the misdemeanor (A) branch.",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-05-retaliation",
+    "section": "2921.05",
+    "code": "2921.05",
+    "scope": "A,B",
+    "statutoryName": "Retaliation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Purposely retaliating by force or unlawful threat of harm against a public servant, party official, attorney or witness because the person discharged covered duties; or against a crime victim because the victim filed or prosecuted charges.",
+    "gradeSummary": "F3 under (C).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-11-perjury",
+    "section": "2921.11",
+    "code": "2921.11",
+    "scope": "A",
+    "statutoryName": "Perjury",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Knowingly making a material false statement under oath or affirmation in an official proceeding, or knowingly swearing/affirming a previously made material false statement. Materiality, contradictory statements and proof-of-falsity limits in (B)-(E) matter; contradiction solely by one other witness cannot alone support conviction.",
+    "gradeSummary": "F3 under (F).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-12-tampering-evidence",
+    "section": "2921.12",
+    "code": "2921.12",
+    "scope": "A",
+    "statutoryName": "Tampering with evidence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowing an official proceeding or investigation is underway, about to begin or likely: altering, destroying, concealing or removing evidence with purpose to impair its value/availability; or knowingly making, presenting or using false material with purpose to mislead an involved public official or corrupt the proceeding/investigation.",
+    "gradeSummary": "F3 under (B).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-14-false-child-abuse-report",
+    "section": "2921.14",
+    "code": "2921.14",
+    "scope": "A",
+    "statutoryName": "Making or causing a false report of child abuse or child neglect",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowingly making or causing a false report under 2151.421(B) alleging acts or omissions resulting in statutory child abuse or neglect. The referenced reporting route and abuse/neglect definitions limit this offense.",
+    "gradeSummary": "M1 under (B).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.421",
+      "2151.031",
+      "2151.03"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-21-compounding-crime",
+    "section": "2921.21",
+    "code": "2921.21",
+    "scope": "A",
+    "statutoryName": "Compounding a crime",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "B",
+      "C"
+    ],
+    "conductSummary": "Knowingly demanding, accepting or agreeing to accept value in exchange for abandoning a pending criminal prosecution. Division (B) supplies a limited affirmative defense for victims of specified property offenses seeking no more than reasonably believed restitution. A witness agreement does not bind the state to abandon prosecution.",
+    "gradeSummary": "M1 under (D).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2913.02",
+      "2913.11",
+      "2913.21",
+      "2913.47",
+      "2913.01"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-22-failure-report-crime-fourth-degree",
+    "section": "2921.22",
+    "code": "2921.22(A)(1), (F)(1)",
+    "scope": "A(1),F(1)",
+    "statutoryName": "Failure to report a crime",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)",
+      "F(1)"
+    ],
+    "gradingPaths": [
+      "J"
+    ],
+    "contextPaths": [
+      "H",
+      "I",
+      "F"
+    ],
+    "conductSummary": "The (A)(1) branch prohibits knowingly failing to report a known felony, subject to the separately graded computer-information branch (A)(2) and the (H) disclosure exceptions. The distinct (F)(1) branch requires reporting knowledge of a licensed medical professional committing a covered sexual offense against a patient within 30 days. The (H) exceptions expressly cover (A) and (D), not (F); (F) has its own immunity and evidence rules.",
+    "gradeSummary": "M4 for (A)(1) or (F)(1). This entry does not include the M2 (A)(2)/(B) branches, death reporting, burn reporting or domestic-violence record notation.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2913.04",
+      "2907.01",
+      "2739.04",
+      "2739.12",
+      "5119.36",
+      "2907.02",
+      "2907.05"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-22-failure-report-crime-second-degree",
+    "section": "2921.22",
+    "code": "2921.22(A)(2), (B)",
+    "scope": "A(2),B",
+    "statutoryName": "Failure to report a crime",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)",
+      "B"
+    ],
+    "gradingPaths": [
+      "J"
+    ],
+    "contextPaths": [
+      "H",
+      "I",
+      "E"
+    ],
+    "conductSummary": "Knowingly failing to report known unauthorized computer/cable/telecommunication use under 2913.04(B), including receipt of information derived from it; or, while aiding a sick/injured person, negligently failing to report treated/observed gunshot or stab wounds or specified violence-related serious harm. The (B) duty excludes burn conditions within (E). The (H) disclosure exceptions apply to (A), not generally to (B).",
+    "gradeSummary": "M2 for (A)(2) or (B). This entry does not grade the separate burn-reporting duties in (E).",
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2913.04",
+      "2907.01",
+      "2739.04",
+      "2739.12",
+      "5119.36",
+      "2907.02",
+      "2907.05",
+      "3743.01",
+      "3737.22",
+      "4731.22"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-22-failure-report-death",
+    "section": "2921.22",
+    "code": "2921.22(C), (D)",
+    "scope": "C,D",
+    "statutoryName": "Failure to report knowledge of a death",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C",
+      "D"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "H",
+      "I",
+      "M"
+    ],
+    "conductSummary": "Failing to report immediately discovery or first knowledge of a death to one of the specified recipients, or failing to provide relevant known facts upon a qualifying request. Reporting to a treating clinician is limited to the statutory expected-death conditions. Division (H) disclosure exceptions apply to (D). These divisions do not expressly name a culpability level; the applicable 2901.21 rules must be considered, rather than assuming strict liability.",
+    "gradeSummary": "M4 under (K).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2913.04",
+      "2907.01",
+      "2739.04",
+      "2739.12",
+      "5119.36",
+      "2907.02",
+      "2907.05",
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-23-failure-aid-officer",
+    "section": "2921.23",
+    "code": "2921.23",
+    "scope": "A",
+    "statutoryName": "Failure to aid a law enforcement officer",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Negligently failing or refusing a law-enforcement officer request for help preventing/halting an offense or apprehending/detaining an offender, when help can be given without substantial risk of physical harm to the person asked.",
+    "gradeSummary": "Minor misdemeanor under (B). The absence of substantial personal risk is part of the statutory condition.",
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.02"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-24-disclosure-confidential-information",
+    "section": "2921.24",
+    "code": "2921.24",
+    "scope": "A",
+    "statutoryName": "Disclosure of confidential information",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "B",
+      "C",
+      "E"
+    ],
+    "conductSummary": "Covered law-enforcement/court/clerk personnel disclosing a listed witness or arresting officer home address while a criminal case is pending. The statute excludes disclosure of one\u2019s own address and qualifying court-ordered disclosure. Division (A) does not expressly name a culpability level; applying 2901.21 is required rather than assuming strict liability.",
+    "gradeSummary": "M4 under (D).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2935.01",
+      "149.43",
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-29-failure-disclose-personal-information",
+    "section": "2921.29",
+    "code": "2921.29",
+    "scope": "A",
+    "statutoryName": "Failure to disclose one's personal information",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "conductSummary": "Refusing name, address or birth date in a public place when an officer reasonably suspects the person committed/is committing/is about to commit an offense, or witnessed the specified serious conduct. No answers beyond those identifiers or description of the observed offense are required. Refusing an age/birth-date answer is not a violation if age is an element of the suspected crime. The applicable culpability rules in 2901.21 must be considered.",
+    "gradeSummary": "M4 under (B). This is not a general duty to answer police questions.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary"
+  },
+  {
+    "id": "oh-orc-2921-31-obstructing-official-business",
+    "section": "2921.31",
+    "code": "2921.31(B)",
+    "scope": "B",
+    "statutoryName": "Obstructing official business",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "conductSummary": "Without privilege and with purpose to prevent, obstruct or delay a public official lawful authorized duties, doing an act that hampers or impedes those duties. The responder-warning definitions matter for the specific enhancement.",
+    "gradeSummary": "For (B), ordinarily M2; M1 if the victim is a lawfully working emergency service responder who warned the person before the (B) conduct began or continued. F5 if the violation creates a risk of physical harm to a non-responder; F4 if it creates a risk of physical harm to an emergency service responder. These October 6, 2026 provisions require earlier offense dates to be assessed under applicable earlier law.",
+    "degrees": [
+      "M2",
+      "M1",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2903.22",
+      "2903.13",
+      "1901.33",
+      "1907.201",
+      "2301.27"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.31",
+          "quote": "Except as otherwise provided in divisions (D)(2), (3), and (4) of this section, obstructing official business is a misdemeanor of the second degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2921-31-responder-warning-obstruction",
+    "section": "2921.31",
+    "code": "2921.31(C)",
+    "scope": "C",
+    "statutoryName": "Obstructing official business",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "conductSummary": "Without privilege, after the defined warning, knowingly approaching or remaining within 15 feet of a lawfully working emergency service responder and impeding/interfering with the responder duties or threatening the responder with physical harm. Both the warning and specified additional conduct matter; distance alone is not this offense.",
+    "gradeSummary": "For (C), ordinarily M2; F5 if the violation creates risk of physical harm to a non-responder; F4 for risk to an emergency service responder. The (D)(2) M1 enhancement expressly references (B) conduct and is not assigned to this (C) choice. This new October 6, 2026 branch does not describe earlier conduct.",
+    "degrees": [
+      "M2",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2903.22",
+      "2903.13",
+      "1901.33",
+      "1907.201",
+      "2301.27"
+    ],
+    "extraGrading": [],
+    "sentencingMode": "ordinary",
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M2"
+      ],
+      "evidence": [
+        {
+          "section": "2921.31",
+          "quote": "Except as otherwise provided in divisions (D)(2), (3), and (4) of this section, obstructing official business is a misdemeanor of the second degree."
+        }
+      ]
+    }
+  }
+]
