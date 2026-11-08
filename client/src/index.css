@@ -3283,3 +3283,47 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
  .housing-paths a + a { border-top: 1px solid var(--border); padding-top: 18px; }
  .housing-page h2 { font-size: 24px; }
 }
+
+/* Transportation support */
+.transportation-page { max-width: 1120px; margin: auto; padding: 32px 40px 60px; }
+.transportation-back { display: inline-block; margin-bottom: 28px; font-size: 13px; font-weight: 600; color: var(--primary); }
+.transportation-hero { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 40px; align-items: center; margin-bottom: 36px; }
+.transportation-hero h1 { font-size: clamp(36px,4.7vw,56px); line-height: 1.1; letter-spacing: -.045em; font-weight: 500; margin-bottom: 24px; }
+.transportation-hero em { color: var(--primary); font-style: normal; }
+.transportation-hero p { color: var(--muted-foreground); font-size: 17px; line-height: 1.8; }
+.transportation-hero img { width: 100%; height: auto; }
+.transportation-section { padding: 32px 0; border-top: 1px solid var(--border); scroll-margin-top: 90px; }
+.transportation-page h2 { font-size: 27px; line-height: 1.25; font-weight: 500; letter-spacing: -.025em; margin-bottom: 18px; }
+.transportation-page h3 { font-size: 16px; font-weight: 600; }
+.transportation-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; }
+.transportation-row { padding: 18px 0; border-top: 1px solid var(--border); }
+.transportation-row-heading { display: flex; flex-wrap: wrap; align-items: start; gap: 10px; margin-bottom: 8px; }
+.transportation-row-heading h3 { flex: 1; min-width: 160px; }
+.transportation-priority { font-size: 12px; padding: 2px 6px; border-radius: 3px; }
+.transportation-priority-high { background: #fee2e2; color: #991b1b; }
+.transportation-priority-medium { background: #fef3c7; color: #92400e; }
+.dark .transportation-priority-high { background: #481e25; color: #fecaca; }
+.dark .transportation-priority-medium { background: #423020; color: #fde68a; }
+.transportation-resource-meta, .transportation-related { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 13px; }
+.transportation-page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.transportation-resource-meta a, .transportation-related a { color: var(--primary); font-weight: 600; }
+.transportation-page .transportation-paper { border: 1px solid var(--border); border-radius: 2px; box-shadow: none; background: var(--background); }
+.transportation-page pre { overflow-wrap: anywhere; }
+.transportation-page #transport-comms { border-top: 1px solid var(--border); }
+.transportation-page #transport-comms > div { max-width: none; padding-left: 0; padding-right: 0; }
+.transportation-faq { border-bottom: 1px solid var(--border); padding: 17px 0; }
+.transportation-faq summary { display: flex; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; font-weight: 500; }
+.transportation-faq summary::-webkit-details-marker { display: none; }
+.transportation-faq summary span::after { content: '+'; font-size: 16px; }
+.transportation-faq[open] summary span::after { content: '−'; }
+.transportation-faq p { margin-top: 14px; }
+.transportation-tips { list-style: disc; padding-left: 20px; color: var(--muted-foreground); font-size: 14px; line-height: 1.8; }
+.transportation-disclaimer { margin-top: 28px; color: var(--muted-foreground); font-size: 12px; line-height: 1.8; }
+@media(max-width:700px) {
+ .transportation-page { padding: 28px 24px 50px; }
+ .transportation-hero { grid-template-columns: 1fr; gap: 22px; }
+ .transportation-hero img { width: 190px; justify-self: center; }
+ .transportation-page h2 { font-size: 24px; }
+}
+.transportation-nondriver .grid > div { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+@media(max-width:700px) { .transportation-grid { grid-template-columns: 1fr; } }
