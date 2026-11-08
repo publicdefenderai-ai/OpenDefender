@@ -9,6 +9,7 @@ import report from '../scripts/data-review/output/florida-reviewed-analysis.json
 import eligibility from '../shared/florida-reviewed-eligibility.json';
 import { FLORIDA_REVIEWED_DEFINITIONS } from '../shared/florida-reviewed-batch';
 import { buildFloridaReviewedSourceRecords, validateFloridaReviewedRefreshReceipt } from '../server/data/florida-reviewed-source-records';
+import { getChargeById, classifyChargesForGuidance } from '../shared/criminal-charges';
 import { getChargeExplanation } from '../shared/charge-explanations';
 const hash = (text: string) => createHash('sha256').update(text).digest('hex');
 const rows = buildFloridaReviewedSourceRecords(packet.definitions as any, packet.report as any, packet.eligibility as any);
@@ -69,7 +70,12 @@ describe('Florida sexual battery and injunction corrective evidence', () => {
       const after = FLORIDA_REVIEWED_DEFINITIONS.find(d=>d.id===original.id)!;
       expect(after.name).toBe(original.name);
       expect(after.code).toBe(original.code);
-      expect(after.categories).toEqual(original.categories);
+      if (after.code === '741.31(4)(a)') {
+        expect(after.category).toBe('misdemeanor');
+        expect(after.categories).toEqual(['misdemeanor','felony']);
+        expect(getChargeById(after.id)?.category).toBe('misdemeanor');
+        expect(classifyChargesForGuidance([after.id])[0].categories).toEqual(['misdemeanor','felony']);
+      } else expect(after.categories).toEqual(original.categories);
       for (const lang of ['en','es','zh'] as const) {
         const exp=getChargeExplanation('', 'FL',lang,after.id)!;
         expect(exp.plainSummary).toBe(original.text[lang].plainSummary);

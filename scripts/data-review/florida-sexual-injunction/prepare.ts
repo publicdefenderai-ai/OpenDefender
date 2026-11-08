@@ -69,6 +69,8 @@ const definitions = originals.map(original => {
     const d = structuredClone(original) as EvidenceBackedChargeDefinition;
     const row = plan.records.find(r => r.id === d.id)!;
     d.verifiedMonth = '2026-11';
+    d.category = row.ordinaryCategory as typeof d.category;
+    if (row.categories.length > 1) d.categories = row.categories as typeof d.categories;
     d.citations = [d.citations[0], ...row.requiredSections.map(s => ({ citation: `Fla. Stat. § ${s}`, url: floridaSectionUrl(s) }))];
     for (const lang of ['en', 'es', 'zh'] as const)
         d.text[lang].degreeContext = penalties[row.section as keyof typeof penalties][lang];

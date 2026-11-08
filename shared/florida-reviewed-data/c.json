@@ -83,10 +83,10 @@
       "es": "Violación de una orden de protección contra la violencia doméstica",
       "zh": "违反家庭暴力保护禁令"
     },
-    "category": "felony",
+    "category": "misdemeanor",
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
     "verifiedMonth": "2026-11",
     "citations": [
@@ -122,15 +122,15 @@
     "text": {
       "en": {
         "plainSummary": "This offense covers willfully violating a Florida domestic-violence injunction issued under § 741.30, or a qualifying foreign protection order under § 741.315, through one of the acts listed in § 741.31(4)(a), such as prohibited proximity or communication, refusing to vacate a shared dwelling, violence or threats, property damage, or refusing a court-ordered surrender of firearms or ammunition.",
-        "degreeContext": "The listed willful violation is ordinarily a first-degree misdemeanor, punishable by up to one year in jail and a $1,000 fine. Under § 741.31(4)(c), at least one prior conviction for a crime of domestic violence or an injunction/protection-order violation, followed by a violation against the same victim, makes it a third-degree felony, ordinarily up to five years and a $5,000 fine. For this provision, conviction includes a guilty or no-contest plea and withheld adjudication. This is not a new two-prior requirement: the current statute says one prior. These are the ordinary § 775.082/§ 775.083 ranges, subject to applicable sentencing enhancements. A willful violation finding also requires a batterer intervention program unless the court makes the written findings specified in subsection (5), even without criminal prosecution. Subsection (6) permits economic damages, costs and attorney fees. Firearm or ammunition possession under subsection (4)(b) and § 790.233 is a separate branch, not silently covered by this subsection (4)(a) entry."
+        "degreeContext": "The listed willful violation is ordinarily a first-degree misdemeanor, punishable by up to one year in jail and a $1,000 fine. Under § 741.31(4)(c), at least one prior conviction for a crime of domestic violence or an injunction/protection-order violation, followed by a violation against the same victim, makes it a third-degree felony, ordinarily up to five years and a $5,000 fine. For this provision, conviction includes a guilty or no-contest plea and withheld adjudication. These are the ordinary § 775.082/§ 775.083 ranges, subject to applicable sentencing enhancements. A willful violation finding also requires a batterer intervention program unless the court makes the written findings specified in subsection (5), even without criminal prosecution. Subsection (6) permits economic damages, costs and attorney fees. Firearm or ammunition possession under subsection (4)(b) and § 790.233 is a separate branch, not silently covered by this subsection (4)(a) entry."
       },
       "es": {
         "plainSummary": "Este delito comprende la violación deliberada de una orden de protección de Florida emitida bajo el § 741.30, o de una orden extranjera que reúna los requisitos del § 741.315, mediante uno de los actos enumerados en el § 741.31(4)(a), como acercamiento o comunicación prohibidos, negarse a desalojar la vivienda compartida, violencia o amenazas, daños a la propiedad o negarse a entregar armas de fuego o municiones por orden judicial.",
-        "degreeContext": "La violación deliberada enumerada es normalmente un delito menor de primer grado, con hasta un año de cárcel y multa de $1,000. Conforme al § 741.31(4)(c), al menos una condena previa por violencia doméstica o violación de una orden de protección, seguida de una violación contra la misma víctima, constituye un delito grave de tercer grado, normalmente hasta cinco años y multa de $5,000. Aquí, condena incluye declararse culpable o no impugnar los cargos y la adjudicación retenida. La ley vigente exige una condena previa, no dos. Son los límites ordinarios de los §§ 775.082 y 775.083, sujetos a aumentos de pena aplicables. Una determinación de violación deliberada también exige un programa de intervención para agresores, salvo las conclusiones escritas del apartado (5), incluso sin proceso penal. El apartado (6) permite daños económicos, costas y honorarios de abogado. La posesión de armas o municiones del apartado (4)(b) y § 790.233 es una rama distinta, no incluida tácitamente en esta entrada del apartado (4)(a)."
+        "degreeContext": "La violación deliberada enumerada es normalmente un delito menor de primer grado, con hasta un año de cárcel y multa de $1,000. Conforme al § 741.31(4)(c), al menos una condena previa por violencia doméstica o violación de una orden de protección, seguida de una violación contra la misma víctima, constituye un delito grave de tercer grado, normalmente hasta cinco años y multa de $5,000. Aquí, condena incluye declararse culpable o no impugnar los cargos y la adjudicación retenida. Son los límites ordinarios de los §§ 775.082 y 775.083, sujetos a aumentos de pena aplicables. Una determinación de violación deliberada también exige un programa de intervención para agresores, salvo las conclusiones escritas del apartado (5), incluso sin proceso penal. El apartado (6) permite daños económicos, costas y honorarios de abogado. La posesión de armas o municiones del apartado (4)(b) y § 790.233 es una rama distinta, no incluida tácitamente en esta entrada del apartado (4)(a)."
       },
       "zh": {
         "plainSummary": "本罪适用于故意违反依据第741.30条签发的佛州家庭暴力保护禁令，或第741.315条认可的外州保护令，并实施第741.31(4)(a)条列举的行为，例如进入禁入范围、禁止的联络、拒绝搬离共同住所、暴力或威胁、损坏财产，或拒绝按法院命令交出枪支弹药。",
-        "degreeContext": "列明的故意违反行为通常为一级轻罪，可处最高一年监禁及1,000美元罚金。根据第741.31(4)(c)条，已有至少一次家庭暴力犯罪或违反禁令、保护令的定罪，之后又违反针对同一受害人的保护令时，构成三级重罪，通常最高五年监禁及5,000美元罚金。此处定罪包括认罪、不抗辩及暂缓正式裁定有罪。现行法要求一次前科，而非两次。这些是第775.082及775.083条的一般范围，适用的加重规定仍须考虑。认定故意违反禁令时，即使没有刑事起诉，也须参加施暴者干预项目，除非法院作出第(5)款规定的书面认定。第(6)款允许经济损害赔偿、诉讼费及律师费。第(4)(b)款及第790.233条的持有枪支弹药分支另行处理，不能视为本第(4)(a)款条目已涵盖。"
+        "degreeContext": "列明的故意违反行为通常为一级轻罪，可处最高一年监禁及1,000美元罚金。根据第741.31(4)(c)条，已有至少一次家庭暴力犯罪或违反禁令、保护令的定罪，之后又违反针对同一受害人的保护令时，构成三级重罪，通常最高五年监禁及5,000美元罚金。此处定罪包括认罪、不抗辩及暂缓正式裁定有罪。这些是第775.082及775.083条的一般范围，适用的加重规定仍须考虑。认定故意违反禁令时，即使没有刑事起诉，也须参加施暴者干预项目，除非法院作出第(5)款规定的书面认定。第(6)款允许经济损害赔偿、诉讼费及律师费。第(4)(b)款及第790.233条的持有枪支弹药分支另行处理，不能视为本第(4)(a)款条目已涵盖。"
       }
     }
   },

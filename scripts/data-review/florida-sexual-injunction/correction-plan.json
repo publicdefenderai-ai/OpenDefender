@@ -31,6 +31,10 @@
       "conductScope": "(2)",
       "gradingScopes": [
         "(2)"
+      ],
+      "ordinaryCategory": "felony",
+      "categories": [
+        "felony"
       ]
     },
     {
@@ -48,6 +52,11 @@
       "gradingScopes": [
         "(4)(a)",
         "(4)(c)"
+      ],
+      "ordinaryCategory": "misdemeanor",
+      "categories": [
+        "misdemeanor",
+        "felony"
       ]
     }
   ]
