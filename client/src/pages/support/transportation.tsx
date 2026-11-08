@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import transportationHero from "@assets/stock_images/transportation.jpg";
+import { TransportationDesignFrame } from "@/components/support/transportation-design-frame";
 import { Car, Copy, Check, Printer, Phone, Mail, ChevronDown, AlertTriangle } from "lucide-react";
 import {
-  ResourcePageTemplate,
   ActionItem,
   ExternalResource,
   FAQ,
@@ -11,7 +10,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Fragment } from "react";
+
+function escapePrint(text: string) { return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 
 function TemplateCard({
   label,
@@ -50,21 +51,21 @@ function TemplateCard({
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title>${escapePrint(label)}</title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #0891b2; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ""}
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.transportation.commsSection.personalizeNote")}</p>
+            <h1>${escapePrint(label)}</h1>
+            ${subject ? `<p class="subject">${escapePrint(subject)}</p>` : ""}
+            <div class="body">${escapePrint(body)}</div>
+            <p class="note">${escapePrint(t("support.transportation.commsSection.personalizeNote"))}</p>
           </body>
         </html>
       `);
@@ -74,7 +75,7 @@ function TemplateCard({
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card className="transportation-paper">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -152,44 +153,44 @@ function CopyScriptButton({ text, t }: { text: string; t: (key: string) => strin
 
 function NonDriverSection() {
   return (
-    <div className="mb-8">
-      <ScrollReveal>
+    <div id="transportation-nondriver" lang="en" className="transportation-section transportation-nondriver">
+      <Fragment>
         <h2 className="text-xl font-bold text-foreground mb-1">Getting to court without a car</h2>
         <p className="text-sm text-muted-foreground mb-4">If you don't drive or your license is suspended, missing court is still not an option. Here are reliable ways to get there.</p>
-      </ScrollReveal>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <ScrollReveal delay={0.05}>
+      </Fragment>
+      <div className="grid sm:grid-cols-2 gap-6">
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Public transit</p>
               <p className="text-sm text-muted-foreground">Look up your courthouse address and plan the trip in advance using Google Maps or your local transit agency's app. Many courthouses are on major bus or rail lines. Do a practice run if you're unsure of timing.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
+        </Fragment>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Transportation assistance</p>
               <p className="text-sm text-muted-foreground">Call 211 to find local programs that provide rides to court appointments. Many legal aid organizations and nonprofits offer this service. Some courts also have partnerships with rideshare programs — ask your attorney or the clerk's office.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
-        <ScrollReveal delay={0.15}>
+        </Fragment>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Paratransit (if disabled)</p>
               <p className="text-sm text-muted-foreground">If you have a disability that prevents using standard transit, ADA paratransit services provide door-to-door rides. Contact your local transit authority to apply. Allow extra time — you must typically register in advance.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
+        </Fragment>
+        <Fragment>
           <Card className="h-full">
             <CardContent className="p-4">
               <p className="font-semibold text-sm text-foreground mb-1.5">Ask about remote appearance</p>
               <p className="text-sm text-muted-foreground">Some courts allow virtual appearances for certain hearings, especially pre-trial matters. Ask your attorney whether any of your upcoming court dates can be attended by video or phone before assuming you must appear in person.</p>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </Fragment>
       </div>
     </div>
   );
@@ -205,12 +206,9 @@ function TransportationCommsSection() {
   return (
     <section className="py-10 md:py-14 bg-background" id="transport-comms">
       <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="text-center mb-8">
+        <Fragment>
+          <div className="mb-8">
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="p-2 rounded-lg bg-cyan-500/10">
-                <Mail className="h-5 w-5 text-cyan-600 dark:text-cyan-400" />
-              </div>
               <h2 className="text-2xl font-bold text-foreground">
                 {t("support.transportation.commsSection.sectionTitle")}
               </h2>
@@ -219,9 +217,9 @@ function TransportationCommsSection() {
               {t("support.transportation.commsSection.sectionDescription")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
+        <Fragment>
           <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8 flex items-start gap-3">
             <Badge
               variant="outline"
@@ -233,15 +231,16 @@ function TransportationCommsSection() {
               {t("support.transportation.commsSection.personalizeNote")}
             </p>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
-        <ScrollReveal>
+        <Fragment>
           <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "email" ? "default" : "outline"}
               onClick={() => setActiveTab("email")}
               className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
+              id="transportation-written-tab" aria-controls="transportation-written-panel"
               aria-selected={activeTab === "email"}
             >
               <Mail className="h-4 w-4" />
@@ -252,18 +251,19 @@ function TransportationCommsSection() {
               onClick={() => setActiveTab("call")}
               className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
+              id="transportation-call-tab" aria-controls="transportation-call-panel"
               aria-selected={activeTab === "call"}
             >
               <Phone className="h-4 w-4" />
               {t("support.transportation.commsSection.callScripts.title")}
             </Button>
           </div>
-        </ScrollReveal>
+        </Fragment>
 
         {activeTab === "email" && (
-          <div className="space-y-4">
+          <div id="transportation-written-panel" role="tabpanel" aria-labelledby="transportation-written-tab" className="space-y-4">
             {(["employer", "family"] as const).map((key) => (
-              <ScrollReveal key={key}>
+              <Fragment key={key}>
                 <TemplateCard
                   label={t(
                     `support.transportation.commsSection.emailTemplates.${key}.label`
@@ -275,19 +275,19 @@ function TransportationCommsSection() {
                   body={t(`support.transportation.commsSection.emailTemplates.${key}.body`)}
                   t={t}
                 />
-              </ScrollReveal>
+              </Fragment>
             ))}
           </div>
         )}
 
         {activeTab === "call" && (
-          <div className="space-y-4">
+          <div id="transportation-call-panel" role="tabpanel" aria-labelledby="transportation-call-tab" className="space-y-4">
             <p className="text-sm text-muted-foreground mb-4">
               {t("support.transportation.commsSection.callScripts.description")}
             </p>
 
-            <ScrollReveal>
-              <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+            <Fragment>
+              <Card className="transportation-paper">
                 <CardHeader className="pb-3">
                   <button
                     type="button"
@@ -320,9 +320,9 @@ function TransportationCommsSection() {
                   </CardContent>
                 )}
               </Card>
-            </ScrollReveal>
+            </Fragment>
 
-            <ScrollReveal>
+            <Fragment>
               <Card className="border border-cyan-200 dark:border-cyan-800 bg-cyan-50/50 dark:bg-cyan-950/20 shadow-sm mt-6">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-base font-semibold flex items-center gap-2">
@@ -346,12 +346,12 @@ function TransportationCommsSection() {
                   </ul>
                 </CardContent>
               </Card>
-            </ScrollReveal>
+            </Fragment>
           </div>
         )}
 
-        <ScrollReveal>
-          <Card className="border border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 shadow-sm mt-8">
+        <Fragment>
+          <Card role="alert" className="transportation-warning border border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-950/20 shadow-sm mt-8">
             <CardContent className="p-5">
               <div className="flex items-start gap-3">
                 <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
@@ -361,7 +361,7 @@ function TransportationCommsSection() {
               </div>
             </CardContent>
           </Card>
-        </ScrollReveal>
+        </Fragment>
       </div>
     </section>
   );
@@ -483,9 +483,8 @@ export default function TransportationSupport() {
   ];
 
   return (
-    <ResourcePageTemplate
+    <TransportationDesignFrame
       categoryId="transportation"
-      heroImage={transportationHero}
       icon={Car}
       iconColor="bg-cyan-500/10 text-cyan-600 dark:text-cyan-400"
       heroGradient="bg-gradient-to-br from-cyan-500/5 via-background to-background"
@@ -499,9 +498,9 @@ export default function TransportationSupport() {
         { label: t("support.relatedLinks.courtLogistics"), href: "/support/court-logistics" },
         { label: t("support.relatedLinks.childcare"), href: "/support/childcare" },
       ]}
+      nonDriverSection={<NonDriverSection />}
       customSections={
         <>
-          <NonDriverSection />
           <TransportationCommsSection />
         </>
       }
