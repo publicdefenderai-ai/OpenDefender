@@ -308,25 +308,9 @@
         {
           "sourceKey": "fl:statute:782.07:1",
           "target": "text",
-          "text": "The killing of a human being by the act, procurement, or culpable negligence of another",
-          "start": 233,
-          "end": 320,
-          "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
-        },
-        {
-          "sourceKey": "fl:statute:782.07:1",
-          "target": "text",
-          "text": "without lawful justification according to the provisions of chapter 776",
-          "start": 322,
-          "end": 393,
-          "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
-        },
-        {
-          "sourceKey": "fl:statute:782.07:1",
-          "target": "text",
-          "text": "such killing shall not be excusable homicide or murder",
-          "start": 416,
-          "end": 470,
+          "text": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 228,
+          "end": 629,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
         }
       ],
@@ -334,8 +318,8 @@
         {
           "sourceKey": "fl:statute:782.07:1",
           "target": "text",
-          "text": "is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 517,
+          "text": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 228,
           "end": 629,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
           "category": "felony"
@@ -421,11 +405,51 @@
           "sourceKey": "fl:statute:782.04",
           "role": "exception",
           "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "The killing of a human being by the act, procurement, or culpable negligence of another\nwithout lawful justification according to the provisions of chapter 776\nsuch killing shall not be excusable homicide or murder",
-      "grading": "is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Limited to subsection (1); all cached current chapter 776 justification sections and the chapter 782 excusable-homicide and murder exclusions are pinned.",
+      "conduct": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -446,9 +470,9 @@
         {
           "sourceKey": "fl:statute:782.07:2",
           "target": "text",
-          "text": "A person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3)",
-          "start": 636,
-          "end": 748,
+          "text": "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 631,
+          "end": 915,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
         }
       ],
@@ -456,8 +480,8 @@
         {
           "sourceKey": "fl:statute:782.07:2",
           "target": "text",
-          "text": "commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 749,
+          "text": "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 631,
           "end": 915,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
           "category": "felony"
@@ -483,11 +507,51 @@
           "sourceKey": "fl:statute:825.102",
           "role": "definition",
           "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3)",
-      "grading": "commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Limited to subsection (2). Incorporated definitions: § 825.101(3): “Disabled adult” means a person 18 years of age or older who suffers from a condition of physical or mental incapacitation due to a developmental disability, organic brain damage, or mental illness, or who has one or more physical or mental limitations that restrict the person’s ability to perform the normal activities of daily living. § 825.101(4): “Elderly person” means a person 60 years of age or older who is suffering from the infirmities of aging as manifested by advanced age or organic brain damage, or other physical, mental, or emotional dysfunctioning, to the extent that the ability of the person to provide adequately for the person’s own care or protection is impaired. § 825.102(3)(a): Neglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.",
+      "conduct": "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -508,9 +572,9 @@
         {
           "sourceKey": "fl:statute:782.07:3",
           "target": "text",
-          "text": "A person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b)",
-          "start": 922,
-          "end": 1030,
+          "text": "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 917,
+          "end": 1169,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
         }
       ],
@@ -518,8 +582,8 @@
         {
           "sourceKey": "fl:statute:782.07:3",
           "target": "text",
-          "text": "commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1031,
+          "text": "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 917,
           "end": 1169,
           "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
           "category": "felony"
@@ -540,11 +604,51 @@
           "sourceKey": "fl:statute:827.03",
           "role": "definition",
           "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b)",
-      "grading": "commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Limited to subsection (3); current § 827.03 closes the incorporated subsection (2)(b) culpable-negligence scope.",
+      "conduct": "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6270,40 +6374,8 @@
         {
           "sourceKey": "fl:statute:825.102:1",
           "target": "text",
-          "text": "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;",
-          "start": 164,
-          "end": 264,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:1",
-          "target": "text",
-          "text": "An intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;",
-          "start": 271,
-          "end": 409,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:1",
-          "target": "text",
-          "text": "Active encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or",
-          "start": 416,
-          "end": 601,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:1",
-          "target": "text",
-          "text": "Intentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.",
-          "start": 608,
-          "end": 1277,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:1",
-          "target": "text",
-          "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1279,
+          "text": "(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 100,
           "end": 1584,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
         }
@@ -6312,8 +6384,8 @@
         {
           "sourceKey": "fl:statute:825.102:1",
           "target": "text",
-          "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 1279,
+          "text": "(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 100,
           "end": 1584,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
           "category": "felony"
@@ -6354,11 +6426,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;\nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Scope is exactly subsection (1), including all four statutory abuse alternatives and the paragraph (d) defense. It excludes aggravated abuse and both neglect grades. Section 825.101 is required for the victim definitions.",
+      "conduct": "(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6379,25 +6476,9 @@
         {
           "sourceKey": "fl:statute:825.102:2",
           "target": "text",
-          "text": "Commits aggravated battery on an elderly person or disabled adult;",
-          "start": 1676,
-          "end": 1742,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:2",
-          "target": "text",
-          "text": "Willfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or",
-          "start": 1749,
-          "end": 1865,
-          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
-        },
-        {
-          "sourceKey": "fl:statute:825.102:2",
-          "target": "text",
-          "text": "Knowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.",
-          "start": 1872,
-          "end": 2069,
+          "text": "(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1586,
+          "end": 2250,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
         }
       ],
@@ -6405,8 +6486,8 @@
         {
           "sourceKey": "fl:statute:825.102:2",
           "target": "text",
-          "text": "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 2071,
+          "text": "(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1586,
           "end": 2250,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
           "category": "felony"
@@ -6452,11 +6533,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "Commits aggravated battery on an elderly person or disabled adult;\nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.",
-      "grading": "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Scope is exactly subsection (2). Whole current §§ 784.03 and 784.045 together supply the battery and aggravated-battery elements of the expressly incorporated alternative; neither section alone closes that branch, and no generic-name alias is used.",
+      "conduct": "(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6477,8 +6583,8 @@
         {
           "sourceKey": "fl:statute:825.102:3_b",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3212,
+          "text": "(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3207,
           "end": 3540,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
         }
@@ -6487,8 +6593,8 @@
         {
           "sourceKey": "fl:statute:825.102:3_b",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3212,
+          "text": "(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3207,
           "end": 3540,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
           "category": "felony"
@@ -6529,11 +6635,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(b), and paragraph (3)(c)'s no-great-harm grade is separate.",
+      "conduct": "(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6554,9 +6685,9 @@
         {
           "sourceKey": "fl:statute:825.102:3_c",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3547,
-          "end": 3867,
+          "text": "(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+          "start": 3542,
+          "end": 3955,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
         }
       ],
@@ -6564,9 +6695,9 @@
         {
           "sourceKey": "fl:statute:825.102:3_c",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3547,
-          "end": 3867,
+          "text": "(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+          "start": 3542,
+          "end": 3955,
           "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
           "category": "felony"
         }
@@ -6606,11 +6737,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(c), and paragraph (3)(b)'s resulting-great-harm grade is separate.",
+      "conduct": "(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+      "grading": "(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6631,8 +6787,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_a",
           "target": "text",
-          "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 2774,
+          "text": "(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2769,
           "end": 2920,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
         }
@@ -6641,8 +6797,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_a",
           "target": "text",
-          "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 2774,
+          "text": "(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2769,
           "end": 2920,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
           "category": "felony"
@@ -6693,11 +6849,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "The cited child paragraph relies on the parent section's express aggravated-child-abuse definition. Current §§ 784.03 and 784.045 together are required for the aggravated-battery alternative; neither section alone closes that branch. The other two alternatives remain stated in § 827.03(1)(a).",
+      "conduct": "(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6718,8 +6899,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_b",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 2927,
+          "text": "(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2922,
           "end": 3200,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
         }
@@ -6728,8 +6909,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_b",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 2927,
+          "text": "(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2922,
           "end": 3200,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
           "category": "felony"
@@ -6775,11 +6956,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(d)'s no-great-harm grade is separate.",
+      "conduct": "(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6800,8 +7006,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_c",
           "target": "text",
-          "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3207,
+          "text": "(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3202,
           "end": 3457,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
         }
@@ -6810,8 +7016,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_c",
           "target": "text",
-          "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3207,
+          "text": "(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3202,
           "end": 3457,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
           "category": "felony"
@@ -6852,11 +7058,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Subsection (1)(b)'s three abuse alternatives and § 827.01's child definition are required. This record does not include aggravated abuse or either neglect branch.",
+      "conduct": "(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -6877,8 +7108,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_d",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3464,
+          "text": "(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3459,
           "end": 3729,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
         }
@@ -6887,8 +7118,8 @@
         {
           "sourceKey": "fl:statute:827.03:2_d",
           "target": "text",
-          "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-          "start": 3464,
+          "text": "(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3459,
           "end": 3729,
           "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
           "category": "felony"
@@ -6934,11 +7165,36 @@
           "sourceKey": "fl:statute:775.084",
           "role": "penalty",
           "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "sourceKey": "fl:statute:741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "sourceKey": "fl:statute:741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "sourceKey": "fl:statute:741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "sourceKey": "fl:statute:741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "sourceKey": "fl:statute:741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
         }
       ],
-      "conduct": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "grading": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "interpretation": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(b)'s resulting-great-harm grade is separate.",
+      "conduct": "(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section.",
+      "interpretation": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension.",
       "legalReview": null
     },
     {
@@ -7190,7 +7446,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
       "text": "782.07 \nManslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.\n—\n\n(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person who causes the death, through culpable negligence, of an officer as defined in s. 943.10(14), a firefighter as defined in s. 112.191, an emergency medical technician as defined in s. 401.23, or a paramedic as defined in s. 401.23, while the officer, firefighter, emergency medical technician, or paramedic is performing duties that are within the course of his or her employment, commits aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\nRS 2384; GS 3209; RGS 5039; CGL 7141; s. 715, ch. 71-136; s. 180, ch. 73-333; s. 15, ch. 74-383; s. 6, ch. 75-298; s. 12, ch. 96-322; s. 2, ch. 2002-74; s. 12, ch. 2012-155; s. 14, ch. 2026-16.",
       "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
-      "retrievedAt": "2026-10-01T18:01:49.587Z",
+      "retrievedAt": "2026-11-08T22:42:03.530Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -7209,7 +7465,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
       "text": "782.07 \nManslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.\n—\n\n(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person who causes the death, through culpable negligence, of an officer as defined in s. 943.10(14), a firefighter as defined in s. 112.191, an emergency medical technician as defined in s. 401.23, or a paramedic as defined in s. 401.23, while the officer, firefighter, emergency medical technician, or paramedic is performing duties that are within the course of his or her employment, commits aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\nRS 2384; GS 3209; RGS 5039; CGL 7141; s. 715, ch. 71-136; s. 180, ch. 73-333; s. 15, ch. 74-383; s. 6, ch. 75-298; s. 12, ch. 96-322; s. 2, ch. 2002-74; s. 12, ch. 2012-155; s. 14, ch. 2026-16.",
       "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
-      "retrievedAt": "2026-10-01T18:01:49.587Z",
+      "retrievedAt": "2026-11-08T22:42:03.530Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7222,7 +7478,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.012.html",
       "text": "776.012 \nUse or threatened use of force in defense of person.\n—\n\n(1) \nA person is justified in using or threatening to use force, except deadly force, against another when and to the extent that the person reasonably believes that such conduct is necessary to defend himself or herself or another against the other’s imminent use of unlawful force. A person who uses or threatens to use force in accordance with this subsection does not have a duty to retreat before using or threatening to use such force.\n\n(2) \nA person is justified in using or threatening to use deadly force if he or she reasonably believes that using or threatening to use such force is necessary to prevent imminent death or great bodily harm to himself or herself or another or to prevent the imminent commission of a forcible felony. A person who uses or threatens to use deadly force in accordance with this subsection does not have a duty to retreat and has the right to stand his or her ground if the person using or threatening to use the deadly force is not engaged in a criminal activity and is in a place where he or she has a right to be.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1188, ch. 97-102; s. 2, ch. 2005-27; s. 3, ch. 2014-195.",
       "contentHash": "4c82f432745169104e9d97e706f1cc863c9b865cfdbd215340e2c87bbe1647cb",
-      "retrievedAt": "2026-10-01T18:01:16.267Z",
+      "retrievedAt": "2026-11-08T22:42:04.480Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7235,7 +7491,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.013.html",
       "text": "776.013 \nHome protection; use or threatened use of deadly force; presumption of fear of death or great bodily harm.\n—\n\n(1) \nA person who is in a dwelling or residence in which the person has a right to be has no duty to retreat and has the right to stand his or her ground and use or threaten to use:\n(a) \nNondeadly force against another when and to the extent that the person reasonably believes that such conduct is necessary to defend himself or herself or another against the other’s imminent use of unlawful force; or\n\n(b) \nDeadly force if he or she reasonably believes that using or threatening to use such force is necessary to prevent imminent death or great bodily harm to himself or herself or another or to prevent the imminent commission of a forcible felony.\n\n(2) \nA person is presumed to have held a reasonable fear of imminent peril of death or great bodily harm to himself or herself or another when using or threatening to use defensive force that is intended or likely to cause death or great bodily harm to another if:\n(a) \nThe person against whom the defensive force was used or threatened was in the process of unlawfully and forcefully entering, or had unlawfully and forcibly entered, a dwelling, residence, or occupied vehicle, or if that person had removed or was attempting to remove another against that person’s will from the dwelling, residence, or occupied vehicle; and\n\n(b) \nThe person who uses or threatens to use defensive force knew or had reason to believe that an unlawful and forcible entry or unlawful and forcible act was occurring or had occurred.\n\n(3) \nThe presumption set forth in subsection (2) does not apply if:\n(a) \nThe person against whom the defensive force is used or threatened has the right to be in or is a lawful resident of the dwelling, residence, or vehicle, such as an owner, lessee, or titleholder, and there is not an injunction for protection from domestic violence or a written pretrial supervision order of no contact against that person; or\n\n(b) \nThe person or persons sought to be removed is a child or grandchild, or is otherwise in the lawful custody or under the lawful guardianship of, the person against whom the defensive force is used or threatened; or\n\n(c) \nThe person who uses or threatens to use defensive force is engaged in a criminal activity or is using the dwelling, residence, or occupied vehicle to further a criminal activity; or\n\n(d) \nThe person against whom the defensive force is used or threatened is a law enforcement officer, as defined in s. 943.10(14), who enters or attempts to enter a dwelling, residence, or vehicle in the performance of his or her official duties and the officer identified himself or herself in accordance with any applicable law or the person using or threatening to use force knew or reasonably should have known that the person entering or attempting to enter was a law enforcement officer.\n\n(4) \nA person who unlawfully and by force enters or attempts to enter a person’s dwelling, residence, or occupied vehicle is presumed to be doing so with the intent to commit an unlawful act involving force or violence.\n\n(5) \nAs used in this section, the term:\n(a) \n“Dwelling” means a building or conveyance of any kind, including any attached porch, whether the building or conveyance is temporary or permanent, mobile or immobile, which has a roof over it, including a tent, and is designed to be occupied by people lodging therein at night.\n\n(b) \n“Residence” means a dwelling in which a person resides either temporarily or permanently or is visiting as an invited guest.\n\n(c) \n“Vehicle” means a conveyance of any kind, whether or not motorized, which is designed to transport people or property.\n\nHistory.\n—\ns. 1, ch. 2005-27; s. 4, ch. 2014-195; s. 1, ch. 2017-77.",
       "contentHash": "9fc162802b16ff80f2f3594a3cdddfd9c0089011e608b48a203de83018668be1",
-      "retrievedAt": "2026-10-01T18:01:18.430Z",
+      "retrievedAt": "2026-11-08T22:42:05.440Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7248,7 +7504,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.031.html",
       "text": "776.031 \nUse or threatened use of force in defense of property.\n—\n\n(1) \nA person is justified in using or threatening to use force, except deadly force, against another when and to the extent that the person reasonably believes that such conduct is necessary to prevent or terminate the other’s trespass on, or other tortious or criminal interference with, either real property other than a dwelling or personal property, lawfully in his or her possession or in the possession of another who is a member of his or her immediate family or household or of a person whose property he or she has a legal duty to protect. A person who uses or threatens to use force in accordance with this subsection does not have a duty to retreat before using or threatening to use such force.\n\n(2) \nA person is justified in using or threatening to use deadly force only if he or she reasonably believes that such conduct is necessary to prevent the imminent commission of a forcible felony. A person who uses or threatens to use deadly force in accordance with this subsection does not have a duty to retreat and has the right to stand his or her ground if the person using or threatening to use the deadly force is not engaged in a criminal activity and is in a place where he or she has a right to be.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1189, ch. 97-102; s. 3, ch. 2005-27; s. 5, ch. 2014-195.",
       "contentHash": "19a00e10c34d1876fc4feb29ac1901bf96edec719a8b1b5289a80b8c9c3cc084",
-      "retrievedAt": "2026-10-01T18:01:20.607Z",
+      "retrievedAt": "2026-11-08T22:42:06.408Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7261,7 +7517,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.032.html",
       "text": "776.032 \nImmunity from criminal prosecution and civil action for justifiable use or threatened use of force.\n—\n\n(1) \nA person who uses or threatens to use force as permitted in s. 776.012, s. 776.013, or s. 776.031 is justified in such conduct and is immune from criminal prosecution and civil action for the use or threatened use of such force by the person, personal representative, or heirs of the person against whom the force was used or threatened, unless the person against whom force was used or threatened is a law enforcement officer, as defined in s. 943.10(14), who was acting in the performance of his or her official duties and the officer identified himself or herself in accordance with any applicable law or the person using or threatening to use force knew or reasonably should have known that the person was a law enforcement officer. As used in this subsection, the term “criminal prosecution” includes arresting, detaining in custody, and charging or prosecuting the defendant.\n\n(2) \nA law enforcement agency may use standard procedures for investigating the use or threatened use of force as described in subsection (1), but the agency may not arrest the person for using or threatening to use force unless it determines that there is probable cause that the force that was used or threatened was unlawful.\n\n(3) \nThe court shall award reasonable attorney’s fees, court costs, compensation for loss of income, and all expenses incurred by the defendant in defense of any civil action brought by a plaintiff if the court finds that the defendant is immune from prosecution as provided in subsection (1).\n\n(4) \nIn a criminal prosecution, once a prima facie claim of self-defense immunity from criminal prosecution has been raised by the defendant at a pretrial immunity hearing, the burden of proof by clear and convincing evidence is on the party seeking to overcome the immunity from criminal prosecution provided in subsection (1).\n\nHistory.\n—\ns. 4, ch. 2005-27; s. 6, ch. 2014-195; s. 1, ch. 2017-72.",
       "contentHash": "096c2ee76f0190119db9583677ce9bc92e2ba26757feee2314ca63ba84db8023",
-      "retrievedAt": "2026-10-01T18:01:22.797Z",
+      "retrievedAt": "2026-11-08T22:42:07.377Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7274,7 +7530,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.041.html",
       "text": "776.041 \nUse or threatened use of force by aggressor.\n—\n\nThe justification described in the preceding sections of this chapter is not available to a person who:\n(1) \nIs attempting to commit, committing, or escaping after the commission of, a forcible felony; or\n\n(2) \nInitially provokes the use or threatened use of force against himself or herself, unless:\n(a) \nSuch force or threat of force is so great that the person reasonably believes that he or she is in imminent danger of death or great bodily harm and that he or she has exhausted every reasonable means to escape such danger other than the use or threatened use of force which is likely to cause death or great bodily harm to the assailant; or\n\n(b) \nIn good faith, the person withdraws from physical contact with the assailant and indicates clearly to the assailant that he or she desires to withdraw and terminate the use or threatened use of force, but the assailant continues or resumes the use or threatened use of force.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1190, ch. 97-102; s. 7, ch. 2014-195.",
       "contentHash": "99e3f241a9d7bc5a39740a6e0677394b99cf8f9b4c8b45b6b703bb7a53cdba5b",
-      "retrievedAt": "2026-10-01T18:01:24.966Z",
+      "retrievedAt": "2026-11-08T22:42:08.349Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7287,7 +7543,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.05.html",
       "text": "776.05 \nLaw enforcement officers; use of force in making an arrest.\n—\n\nA law enforcement officer, or any person whom the officer has summoned or directed to assist him or her, need not retreat or desist from efforts to make a lawful arrest because of resistance or threatened resistance to the arrest. The officer is justified in the use of any force:\n(1) \nWhich he or she reasonably believes to be necessary to defend himself or herself or another from bodily harm while making the arrest;\n\n(2) \nWhen necessarily committed in retaking felons who have escaped; or\n\n(3) \nWhen necessarily committed in arresting felons fleeing from justice. However, this subsection shall not constitute a defense in any civil action for damages brought for the wrongful use of deadly force unless the use of deadly force was necessary to prevent the arrest from being defeated by such flight and, when feasible, some warning had been given, and:\n(a) \nThe officer reasonably believes that the fleeing felon poses a threat of death or serious physical harm to the officer or others; or\n\n(b) \nThe officer reasonably believes that the fleeing felon has committed a crime involving the infliction or threatened infliction of serious physical harm to another person.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1, ch. 75-64; s. 1, ch. 87-147; s. 54, ch. 88-381; s. 1191, ch. 97-102.",
       "contentHash": "34bb4f7f06619d06d5744a084e464a2c9dc41042800318af015b43e38fbf45fe",
-      "retrievedAt": "2026-10-01T18:01:27.147Z",
+      "retrievedAt": "2026-11-08T22:42:09.312Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7300,7 +7556,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.051.html",
       "text": "776.051 \nUse or threatened use of force in resisting arrest or detention; prohibition.\n—\n\nA person is not justified in the use or threatened use of force to resist any arrest or detention by a law enforcement officer, or to resist a law enforcement officer who is engaged in the performance of his or her official duties as described in s. 943.10(1), if the law enforcement officer was acting in good faith and he or she is known, or reasonably appears, to be a law enforcement officer. As used in this section, the term “acting in good faith” means to make sincere and reasonable efforts to comply with legal requirements, even if the arrest, detention, or other act is later found to have been unlawful.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1192, ch. 97-102; s. 1, ch. 2008-67; s. 8, ch. 2014-195; s. 2, ch. 2026-144.",
       "contentHash": "9dc0a5e6e6bf54996472e375854a27c2ff4f6f54ef0569a11b64738a7dcda78a",
-      "retrievedAt": "2026-10-01T18:01:29.307Z",
+      "retrievedAt": "2026-11-08T22:42:10.280Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7313,7 +7569,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.06.html",
       "text": "776.06 \nDeadly force by a law enforcement or correctional officer.\n—\n\n(1) \nAs applied to a law enforcement officer or correctional officer acting in the performance of his or her official duties, the term “deadly force” means force that is likely to cause death or great bodily harm and includes, but is not limited to:\n(a) \nThe firing of a firearm in the direction of the person to be arrested, even though no intent exists to kill or inflict great bodily harm; and\n\n(b) \nThe firing of a firearm at a vehicle in which the person to be arrested is riding.\n\n(2)(a) \nThe term “deadly force” does not include the discharge of a firearm by a law enforcement officer or correctional officer during and within the scope of his or her official duties which is loaded with a less-lethal munition. As used in this subsection, the term “less-lethal munition” means a projectile that is designed to stun, temporarily incapacitate, or cause temporary discomfort to a person without penetrating the person’s body.\n\n(b) \nA law enforcement officer or a correctional officer is not liable in any civil or criminal action arising out of the use of any less-lethal munition in good faith during and within the scope of his or her official duties.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 1, ch. 99-272; s. 9, ch. 2014-195.",
       "contentHash": "973dda02890b8d8bb21c11c0082396f96a362d86f7c3ba578e25cbc2e5689e39",
-      "retrievedAt": "2026-10-01T18:01:31.455Z",
+      "retrievedAt": "2026-11-08T22:42:11.240Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7326,7 +7582,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.07.html",
       "text": "776.07 \nUse of force to prevent escape.\n—\n\n(1) \nA law enforcement officer or other person who has an arrested person in his or her custody is justified in the use of any force which he or she reasonably believes to be necessary to prevent the escape of the arrested person from custody.\n\n(2) \nA correctional officer or other law enforcement officer is justified in the use of force, including deadly force, which he or she reasonably believes to be necessary to prevent the escape from a penal institution of a person whom the officer reasonably believes to be lawfully detained in such institution under sentence for an offense or awaiting trial or commitment for an offense.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 7, ch. 95-283; s. 1193, ch. 97-102.",
       "contentHash": "85c47a2137048b35c12b76e94c2f50268809ef09248917de3d5c1c3f78e35f8f",
-      "retrievedAt": "2026-10-01T18:01:33.605Z",
+      "retrievedAt": "2026-11-08T22:42:12.210Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7339,7 +7595,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.08.html",
       "text": "776.08 \nForcible felony.\n—\n\n“Forcible felony” means treason; murder; manslaughter; sexual battery; carjacking; home-invasion robbery; robbery; burglary; arson; kidnapping; aggravated assault; aggravated battery; aggravated stalking; aircraft piracy; unlawful throwing, placing, or discharging of a destructive device or bomb; and any other felony which involves the use or threat of physical force or violence against any individual.\n\nHistory.\n—\ns. 13, ch. 74-383; s. 4, ch. 75-298; s. 289, ch. 79-400; s. 5, ch. 93-212; s. 10, ch. 95-195.",
       "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d",
-      "retrievedAt": "2026-10-01T18:01:35.755Z",
+      "retrievedAt": "2026-11-08T22:42:13.189Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7352,7 +7608,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.085.html",
       "text": "776.085 \nDefense to civil action for damages; party convicted of forcible or attempted forcible felony.\n—\n\n(1) \nIt shall be a defense to any action for damages for personal injury or wrongful death, or for injury to property, that such action arose from injury sustained by a participant during the commission or attempted commission of a forcible felony. The defense authorized by this section shall be established by evidence that the participant has been convicted of such forcible felony or attempted forcible felony, or by proof of the commission of such crime or attempted crime by a preponderance of the evidence.\n\n(2) \nFor the purposes of this section, the term “forcible felony” shall have the same meaning as in s. 776.08.\n\n(3) \nAny civil action in which the defense recognized by this section is raised shall be stayed by the court on the motion of the civil defendant during the pendency of any criminal action which forms the basis for the defense, unless the court finds that a conviction in the criminal action would not form a valid defense under this section.\n\n(4) \nIn any civil action where a party prevails based on the defense created by this section:\n(a) \nThe losing party, if convicted of and incarcerated for the crime or attempted crime, shall, as determined by the court, lose any privileges provided by the correctional facility, including, but not limited to:\n1. \nCanteen purchases;\n\n2. \nTelephone access;\n\n3. \nOutdoor exercise;\n\n4. \nUse of the library; and\n\n5. \nVisitation.\n\n(b) \nThe court shall award a reasonable attorney’s fee to be paid to the prevailing party in equal amounts by the losing party and the losing party’s attorney; however, the losing party’s attorney is not personally responsible if he or she has acted in good faith, based on the representations of his or her client. If the losing party is incarcerated for the crime or attempted crime and has insufficient assets to cover payment of the costs of the action and the award of fees pursuant to this paragraph, the party shall, as determined by the court, be required to pay by deduction from any payments the prisoner receives while incarcerated.\n\n(c) \nIf the losing party is incarcerated for the crime or attempted crime, the court shall issue a written order containing its findings and ruling pursuant to paragraphs (a) and (b) and shall direct that a certified copy be forwarded to the appropriate correctional institution or facility.\n\nHistory.\n—\ns. 1, ch. 87-187; s. 72, ch. 96-388.",
       "contentHash": "903aba7fb14da11661fbeb026184c44cdd8aec5404c5f8011c7478aa59d29080",
-      "retrievedAt": "2026-10-01T18:01:38.171Z",
+      "retrievedAt": "2026-11-08T22:42:14.157Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7365,7 +7621,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.09.html",
       "text": "776.09 \nRetention of records pertaining to persons found to be acting in lawful self-defense; expunction of criminal history records.\n—\n\n(1) \nWhenever the state attorney or statewide prosecutor dismisses an information, indictment, or other charging document, or decides not to file an information, indictment, or other charging document because of a finding that the person accused acted in lawful self-defense pursuant to the provisions related to the justifiable use of force in this chapter, that finding shall be documented in writing and retained in the files of the state attorney or statewide prosecutor.\n\n(2) \nWhenever a court dismisses an information, indictment, or other charging document because of a finding that the person accused acted in lawful self-defense pursuant to the provisions related to the justifiable use of force in this chapter, that finding shall be recorded in an order or memorandum, which shall be retained in the court’s records.\n\n(3) \nUnder either condition described in subsection (1) or subsection (2), the person accused may apply for a certificate of eligibility to expunge the associated criminal history record, pursuant to s. 943.0578, notwithstanding the eligibility requirements prescribed in s. 943.0585(1) or (2).\n\nHistory.\n—\ns. 10, ch. 2014-195; s. 77, ch. 2019-167.",
       "contentHash": "529f5a5cf36f99e0e95d66d1521bf1ce91746b2953e87bbf948bac3a9b1533eb",
-      "retrievedAt": "2026-10-01T18:01:38.498Z",
+      "retrievedAt": "2026-11-08T22:42:15.117Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7378,7 +7634,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.03.html",
       "text": "782.03 \nExcusable homicide.\n—\n\nHomicide is excusable when committed by accident and misfortune in doing any lawful act by lawful means with usual ordinary caution, and without any unlawful intent, or by accident and misfortune in the heat of passion, upon any sudden and sufficient provocation, or upon a sudden combat, without any dangerous weapon being used and not done in a cruel or unusual manner.\n\nHistory.\n—\ns. 6, ch. 1637, 1868; RS 2379; GS 3204; RGS 5034; CGL 7136; s. 1, ch. 75-13.",
       "contentHash": "66b49cf07e36ace8fd8a52371d26ff091c127bd13d2e8b2881ff31817aa63680",
-      "retrievedAt": "2026-10-01T18:01:45.271Z",
+      "retrievedAt": "2026-11-08T22:42:16.099Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7391,7 +7647,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html",
       "text": "782.04 \nMurder.\n—\n\n(1)(a) \nThe unlawful killing of a human being:\n1. \nWhen perpetrated from a premeditated design to effect the death of the person killed or any human being;\n\n2. \nWhen committed by a person engaged in the perpetration of, or in the attempt to perpetrate, any:\na. \nTrafficking offense prohibited by s. 893.135(1),\n\nb. \nArson,\n\nc. \nSexual battery,\n\nd. \nRobbery,\n\ne. \nBurglary,\n\nf. \nKidnapping,\n\ng. \nEscape,\n\nh. \nAggravated child abuse,\n\ni. \nAggravated abuse of an elderly person or disabled adult,\n\nj. \nAircraft piracy,\n\nk. \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\nl. \nCarjacking,\n\nm. \nHome-invasion robbery,\n\nn. \nAggravated stalking,\n\no. \nMurder of another human being,\n\np. \nResisting an officer with violence to his or her person,\n\nq. \nAggravated fleeing or eluding with serious bodily injury or death,\n\nr. \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35, or\n\ns. \nHuman trafficking; or\n\n3. \nWhich resulted from the unlawful distribution by a person 18 years of age or older of any of the following substances, or mixture containing any of the following substances, when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user:\na. \nA substance controlled under s. 893.03(1);\n\nb. \nCocaine, as described in s. 893.03(2)(a)4.;\n\nc. \nOpium or any synthetic or natural salt, compound, derivative, or preparation of opium;\n\nd. \nMethadone;\n\ne. \nAlfentanil, as described in s. 893.03(2)(b)1.;\n\nf. \nCarfentanil, as described in s. 893.03(2)(b)6.;\n\ng. \nFentanyl, as described in s. 893.03(2)(b)9.;\n\nh. \nSufentanil, as described in s. 893.03(2)(b)30.;\n\ni. \nMethamphetamine, as described in s. 893.03(2)(c)5.; or\n\nj. \nA controlled substance analog, as described in s. 893.0356, of any substance specified in sub-subparagraphs a.-i.,\n\nis murder in the first degree and constitutes a capital felony, punishable as provided in s. 775.082.\n\n(b) \nIn all cases under this section, the procedure set forth in s. 921.141 shall be followed in order to determine sentence of death or life imprisonment. If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.\n\n(2) \nThe unlawful killing of a human being, when perpetrated by any act imminently dangerous to another and evincing a depraved mind regardless of human life, although without any premeditated design to effect the death of any particular individual, is murder in the second degree and constitutes a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nWhen a human being is killed during the perpetration of, or during the attempt to perpetrate, any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nCarjacking,\n\n(m) \nHome-invasion robbery,\n\n(n) \nAggravated stalking,\n\n(o) \nMurder of another human being,\n\n(p) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(q) \nResisting an officer with violence to his or her person, or\n\n(r) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nby a person other than the person engaged in the perpetration of or in the attempt to perpetrate such felony, the person perpetrating or attempting to perpetrate such felony commits murder in the second degree, which constitutes a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(6) \nAs used in this section, the term:\n(a) \n“Substantial factor” means that the use of the substance or mixture alone is sufficient to cause death, regardless of whether any other substance or mixture used is also sufficient to cause death.\n\n(b) \n“Terrorism” means an activity that:\n1.a. \nInvolves a violent act or an act dangerous to human life which is a violation of the criminal laws of this state or of the United States; or\n\nb. \nInvolves a violation of s. 815.06; and\n\n2. \nIs intended to:\na. \nIntimidate, injure, or coerce a civilian population;\n\nb. \nInfluence the policy of a government by intimidation or coercion; or\n\nc. \nAffect the conduct of government through destruction of property, assassination, murder, kidnapping, or aircraft piracy.\n\nHistory.\n—\ns. 2, ch. 1637, 1868; RS 2380; GS 3205; RGS 5035; s. 1, ch. 8470, 1921; CGL 7137; s. 1, ch. 28023, 1953; s. 712, ch. 71-136; s. 3, ch. 72-724; s. 14, ch. 74-383; s. 6, ch. 75-298; s. 1, ch. 76-141; s. 290, ch. 79-400; s. 1, ch. 82-4; s. 1, ch. 82-69; s. 1, ch. 84-16; s. 6, ch. 87-243; ss. 2, 4, ch. 89-281; s. 4, ch. 90-112; s. 3, ch. 93-212; s. 11, ch. 95-195; s. 18, ch. 96-322; s. 1, ch. 98-417; s. 10, ch. 99-188; s. 16, ch. 2000-320; s. 2, ch. 2001-236; s. 2, ch. 2001-357; s. 1, ch. 2002-212; s. 12, ch. 2005-128; s. 1, ch. 2010-121; s. 2, ch. 2012-21; s. 4, ch. 2014-176; s. 9, ch. 2015-34; s. 2, ch. 2016-13; s. 2, ch. 2016-24; s. 24, ch. 2016-105; s. 4, ch. 2017-1; s. 7, ch. 2017-37; s. 2, ch. 2017-107; s. 17, ch. 2018-13; ss. 114, 122, ch. 2019-167; s. 1, ch. 2022-129; s. 1, ch. 2023-196; s. 1, ch. 2025-69.",
       "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
-      "retrievedAt": "2026-10-01T18:01:47.444Z",
+      "retrievedAt": "2026-11-08T22:42:17.147Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7404,7 +7660,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
       "text": "782.07 \nManslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.\n—\n\n(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person who causes the death, through culpable negligence, of an officer as defined in s. 943.10(14), a firefighter as defined in s. 112.191, an emergency medical technician as defined in s. 401.23, or a paramedic as defined in s. 401.23, while the officer, firefighter, emergency medical technician, or paramedic is performing duties that are within the course of his or her employment, commits aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\nRS 2384; GS 3209; RGS 5039; CGL 7141; s. 715, ch. 71-136; s. 180, ch. 73-333; s. 15, ch. 74-383; s. 6, ch. 75-298; s. 12, ch. 96-322; s. 2, ch. 2002-74; s. 12, ch. 2012-155; s. 14, ch. 2026-16.",
       "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
-      "retrievedAt": "2026-10-01T18:01:49.587Z",
+      "retrievedAt": "2026-11-08T22:42:03.530Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -7423,7 +7679,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html",
       "text": "825.101 \nDefinitions.\n—\n\nAs used in this chapter:\n(1) \n“Business relationship” means a relationship between two or more individuals or entities where there exists an oral or written contract or agreement for goods or services.\n\n(2) \n“Caregiver” means a person who has been entrusted with or has assumed responsibility for the care or the property of an elderly person or disabled adult. “Caregiver” includes, but is not limited to, relatives, court-appointed or voluntary guardians, adult household members, neighbors, health care providers, and employees and volunteers of facilities as defined in subsection (7).\n\n(3) \n“Disabled adult” means a person 18 years of age or older who suffers from a condition of physical or mental incapacitation due to a developmental disability, organic brain damage, or mental illness, or who has one or more physical or mental limitations that restrict the person’s ability to perform the normal activities of daily living.\n\n(4) \n“Elderly person” means a person 60 years of age or older who is suffering from the infirmities of aging as manifested by advanced age or organic brain damage, or other physical, mental, or emotional dysfunctioning, to the extent that the ability of the person to provide adequately for the person’s own care or protection is impaired.\n\n(5) \n“Endeavor” means to attempt or try.\n\n(6) \n“Exploitation” has the same meaning as the term “exploitation of an elderly person or disabled adult” as defined in s. 825.103(1).\n\n(7) \n“Facility” means any location providing day or residential care or treatment for elderly persons or disabled adults. The term “facility” may include, but is not limited to, any hospital, training center, state institution, nursing home, assisted living facility, adult family-care home, adult day care center, group home, mental health treatment center, or continuing care community.\n\n(8) \n“Improper benefit” means any remuneration or payment, by or on behalf of any service provider or merchant of goods, to any person as an incentive or inducement to refer customers or patrons for past or future services or goods.\n\n(9) \n“Kickback” has the same meaning as in s. 456.054(1).\n\n(10) \n“Lacks capacity to consent” means an impairment by reason of mental illness, developmental disability, organic brain disorder, physical illness or disability, chronic use of drugs, chronic intoxication, short-term memory loss, or other cause, that causes an elderly person or disabled adult to lack sufficient understanding or capacity to make or communicate reasonable decisions concerning the elderly person’s or disabled adult’s person or property.\n\n(11) \n“Obtains or uses” means any manner of:\n(a) \nTaking or exercising control over property; or\n\n(b) \nMaking any use, disposition, or transfer of property.\n\n(12) \n“Position of trust and confidence” with respect to an elderly person or a disabled adult means the position of a person who:\n(a) \nIs a parent, spouse, adult child, or other relative by blood or marriage of the elderly person or disabled adult;\n\n(b) \nIs a joint tenant or tenant in common with the elderly person or disabled adult;\n\n(c) \nHas a legal or fiduciary relationship with the elderly person or disabled adult, including, but not limited to, a court-appointed or voluntary guardian, trustee, attorney, or conservator;\n\n(d) \nIs a caregiver of the elderly person or disabled adult; or\n\n(e) \nIs any other person who has been entrusted with or has assumed responsibility for the use or management of the elderly person’s or disabled adult’s funds, assets, or property.\n\n(13) \n“Property” means anything of value and includes:\n(a) \nReal property, including things growing on, affixed to, and found in land.\n\n(b) \nTangible or intangible personal property, including rights, privileges, interests, and claims.\n\n(c) \nServices.\n\n(14) \n“Services” means anything of value resulting from a person’s physical or mental labor or skill, or from the use, possession, or presence of property, and includes:\n(a) \nRepairs or improvements to property.\n\n(b) \nProfessional services.\n\n(c) \nPrivate, public, or governmental communication, transportation, power, water, or sanitation services.\n\n(d) \nLodging accommodations.\n\n(e) \nAdmissions to places of exhibition or entertainment.\n\n(15) \n“Value” means value determined according to any of the following:\n(a)1. \nThe market value of the property at the time and place of the offense or, if the market value cannot be satisfactorily ascertained, the cost of replacing the property within a reasonable time after the offense.\n\n2. \nIn the case of a written instrument such as a check, draft, or promissory note, which does not have a readily ascertainable market value, the value is the amount due or collectible. The value of any other instrument that creates, releases, discharges, or otherwise affects any valuable legal right, privilege, or obligation is the greatest amount of economic loss that the owner of the instrument might reasonably suffer by the loss of the instrument.\n\n3. \nThe value of a trade secret that does not have a readily ascertainable market value is any reasonable value representing the damage to the owner suffered by reason of losing advantage over those who do not know of or use the trade secret.\n\n(b) \nIf the value of the property cannot be ascertained, the trier of fact may find the value to be not less than a certain amount; if no such minimum value can be ascertained, the value is an amount less than $100.\n\n(c) \nAmounts of value of separate properties involved in exploitation committed pursuant to one scheme or course of conduct, whether the exploitation involves the same person or several persons, may be aggregated in determining the degree of the offense.\n\n(16) \n“Vulnerable adult” has the same meaning as in s. 415.102(28).\n\nHistory.\n—\ns. 2, ch. 95-158; s. 1, ch. 96-322; s. 1, ch. 2002-195; s. 3, ch. 2014-200; s. 1, ch. 2018-100; s. 104, ch. 2019-3; s. 5, ch. 2021-221.",
       "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c",
-      "retrievedAt": "2026-10-01T18:02:41.727Z",
+      "retrievedAt": "2026-11-08T22:42:18.189Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7436,7 +7692,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
       "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
-      "retrievedAt": "2026-10-01T18:02:44.194Z",
+      "retrievedAt": "2026-11-08T22:42:19.140Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -7449,7 +7705,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
       "text": "782.07 \nManslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.\n—\n\n(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nA person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3) commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b) commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nA person who causes the death, through culpable negligence, of an officer as defined in s. 943.10(14), a firefighter as defined in s. 112.191, an emergency medical technician as defined in s. 401.23, or a paramedic as defined in s. 401.23, while the officer, firefighter, emergency medical technician, or paramedic is performing duties that are within the course of his or her employment, commits aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\nRS 2384; GS 3209; RGS 5039; CGL 7141; s. 715, ch. 71-136; s. 180, ch. 73-333; s. 15, ch. 74-383; s. 6, ch. 75-298; s. 12, ch. 96-322; s. 2, ch. 2002-74; s. 12, ch. 2012-155; s. 14, ch. 2026-16.",
       "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
-      "retrievedAt": "2026-10-01T18:01:49.587Z",
+      "retrievedAt": "2026-11-08T22:42:03.530Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -7468,7 +7724,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
       "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
-      "retrievedAt": "2026-10-01T18:02:48.667Z",
+      "retrievedAt": "2026-11-08T22:42:20.072Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -9692,7 +9948,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
       "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
-      "retrievedAt": "2026-10-01T18:02:44.194Z",
+      "retrievedAt": "2026-11-08T22:42:19.140Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9750,7 +10006,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
       "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
-      "retrievedAt": "2026-10-01T18:02:44.194Z",
+      "retrievedAt": "2026-11-08T22:42:19.140Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9769,7 +10025,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
       "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
-      "retrievedAt": "2026-10-01T18:02:44.194Z",
+      "retrievedAt": "2026-11-08T22:42:19.140Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9788,7 +10044,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
       "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
-      "retrievedAt": "2026-10-01T18:02:44.194Z",
+      "retrievedAt": "2026-11-08T22:42:19.140Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9807,7 +10063,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
       "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
-      "retrievedAt": "2026-10-01T18:02:48.667Z",
+      "retrievedAt": "2026-11-08T22:42:20.072Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9826,7 +10082,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html",
       "text": "827.01 \nDefinitions.\n—\n\nAs used in this chapter:\n(1) \n“Caregiver” means a parent, adult household member, or other person responsible for a child’s welfare.\n\n(2) \n“Child” means any person under the age of 18 years.\n\n(3) \n“Placement” means the giving or transferring of possession or custody of a child by any person to another person for adoption or with the intent or purpose of surrendering the control of the child.\n\nHistory.\n—\ns. 48, ch. 74-383; s. 1, ch. 77-174; s. 7, ch. 96-322.",
       "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0",
-      "retrievedAt": "2026-10-01T18:02:46.427Z",
+      "retrievedAt": "2026-11-08T22:42:21.017Z",
       "effectiveDateStart": null,
       "subdivisionRanges": []
     },
@@ -9839,7 +10095,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
       "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
-      "retrievedAt": "2026-10-01T18:02:48.667Z",
+      "retrievedAt": "2026-11-08T22:42:20.072Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9858,7 +10114,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
       "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
-      "retrievedAt": "2026-10-01T18:02:48.667Z",
+      "retrievedAt": "2026-11-08T22:42:20.072Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {
@@ -9877,7 +10133,7 @@
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
       "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
-      "retrievedAt": "2026-10-01T18:02:48.667Z",
+      "retrievedAt": "2026-11-08T22:42:20.072Z",
       "effectiveDateStart": null,
       "subdivisionRanges": [
         {

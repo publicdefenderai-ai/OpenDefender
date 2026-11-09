@@ -1,0 +1,727 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "782.07",
+    "776.012",
+    "776.013",
+    "776.031",
+    "776.032",
+    "776.041",
+    "776.05",
+    "776.051",
+    "776.06",
+    "776.07",
+    "776.08",
+    "776.085",
+    "776.09",
+    "782.03",
+    "782.04",
+    "775.082",
+    "775.083",
+    "775.084",
+    "741.28",
+    "741.2801",
+    "741.281",
+    "741.283",
+    "741.325",
+    "825.101",
+    "825.102",
+    "827.03",
+    "784.03",
+    "784.045",
+    "827.01"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-782-07-1-manslaughter",
+      "section": "782.07",
+      "scope": "(1)",
+      "ordinaryGrade": "F2",
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "grading"
+        },
+        {
+          "section": "776.012",
+          "role": "justification"
+        },
+        {
+          "section": "776.013",
+          "role": "justification"
+        },
+        {
+          "section": "776.031",
+          "role": "justification"
+        },
+        {
+          "section": "776.032",
+          "role": "justification"
+        },
+        {
+          "section": "776.041",
+          "role": "justification"
+        },
+        {
+          "section": "776.05",
+          "role": "justification"
+        },
+        {
+          "section": "776.051",
+          "role": "justification"
+        },
+        {
+          "section": "776.06",
+          "role": "justification"
+        },
+        {
+          "section": "776.07",
+          "role": "justification"
+        },
+        {
+          "section": "776.08",
+          "role": "justification"
+        },
+        {
+          "section": "776.085",
+          "role": "justification"
+        },
+        {
+          "section": "776.09",
+          "role": "justification"
+        },
+        {
+          "section": "782.03",
+          "role": "exception"
+        },
+        {
+          "section": "782.04",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": []
+    },
+    {
+      "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
+      "section": "782.07",
+      "scope": "(2)",
+      "ordinaryGrade": "F1",
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "grading"
+        },
+        {
+          "section": "825.101",
+          "role": "definition"
+        },
+        {
+          "section": "825.102",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "825.102",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
+      "section": "782.07",
+      "scope": "(3)",
+      "ordinaryGrade": "F1",
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "grading"
+        },
+        {
+          "section": "827.03",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.03",
+          "scope": "(1)(e)"
+        },
+        {
+          "section": "827.03",
+          "scope": "(2)(b)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "section": "825.102",
+      "scope": "(1)",
+      "ordinaryGrade": "F3",
+      "requiredSections": [
+        {
+          "section": "825.102",
+          "role": "grading"
+        },
+        {
+          "section": "825.102",
+          "role": "exception"
+        },
+        {
+          "section": "825.101",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": []
+    },
+    {
+      "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "section": "825.102",
+      "scope": "(2)",
+      "ordinaryGrade": "F1",
+      "requiredSections": [
+        {
+          "section": "825.102",
+          "role": "grading"
+        },
+        {
+          "section": "825.101",
+          "role": "definition"
+        },
+        {
+          "section": "784.03",
+          "role": "definition"
+        },
+        {
+          "section": "784.045",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": []
+    },
+    {
+      "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "section": "825.102",
+      "scope": "(3)(b)",
+      "ordinaryGrade": "F2",
+      "requiredSections": [
+        {
+          "section": "825.102",
+          "role": "grading"
+        },
+        {
+          "section": "825.102",
+          "role": "definition"
+        },
+        {
+          "section": "825.101",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "825.102",
+          "scope": "(3)(a)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "section": "825.102",
+      "scope": "(3)(c)",
+      "ordinaryGrade": "F3",
+      "requiredSections": [
+        {
+          "section": "825.102",
+          "role": "grading"
+        },
+        {
+          "section": "825.102",
+          "role": "definition"
+        },
+        {
+          "section": "825.101",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "825.102",
+          "scope": "(3)(a)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "section": "827.03",
+      "scope": "(2)(a)",
+      "ordinaryGrade": "F1",
+      "requiredSections": [
+        {
+          "section": "827.03",
+          "role": "grading"
+        },
+        {
+          "section": "827.03",
+          "role": "definition"
+        },
+        {
+          "section": "827.01",
+          "role": "definition"
+        },
+        {
+          "section": "784.03",
+          "role": "definition"
+        },
+        {
+          "section": "784.045",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.03",
+          "scope": "(1)(a)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "section": "827.03",
+      "scope": "(2)(b)",
+      "ordinaryGrade": "F2",
+      "requiredSections": [
+        {
+          "section": "827.03",
+          "role": "grading"
+        },
+        {
+          "section": "827.03",
+          "role": "definition"
+        },
+        {
+          "section": "827.03",
+          "role": "exception"
+        },
+        {
+          "section": "827.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.03",
+          "scope": "(1)(e)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "section": "827.03",
+      "scope": "(2)(c)",
+      "ordinaryGrade": "F3",
+      "requiredSections": [
+        {
+          "section": "827.03",
+          "role": "grading"
+        },
+        {
+          "section": "827.03",
+          "role": "definition"
+        },
+        {
+          "section": "827.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.03",
+          "scope": "(1)(b)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "section": "827.03",
+      "scope": "(2)(d)",
+      "ordinaryGrade": "F3",
+      "requiredSections": [
+        {
+          "section": "827.03",
+          "role": "grading"
+        },
+        {
+          "section": "827.03",
+          "role": "definition"
+        },
+        {
+          "section": "827.03",
+          "role": "exception"
+        },
+        {
+          "section": "827.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.03",
+          "scope": "(1)(e)"
+        }
+      ]
+    }
+  ]
+}

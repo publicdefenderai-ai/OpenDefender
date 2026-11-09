@@ -3,6 +3,8 @@ import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import e from "../shared/florida-reviewed-data/e.json";
 import f from "../shared/florida-reviewed-data/f.json";
+import priorHarmDefinitions from "../scripts/data-review/florida-harm/previous-definitions.json";
+import harmCorrections from "../scripts/data-review/output/florida-harm-corrections.json";
 import audit from "../scripts/data-review/output/florida-eyeball-review-reconciliation-audit.json";
 
 const hashJson = (value: unknown) =>
@@ -47,7 +49,16 @@ describe("Florida eyeball-review reconciliation", () => {
     for (const mapping of mappings) {
       const definition = definitionById.get(mapping.id!);
       expect(definition?.code).toBe(mapping.code);
-      expect(mapping.reconciledRecordHash).toBe(hashJson(definition));
+      // The original reconciliation is historical, not authority to overwrite
+      // a later bound correction. Preserve its original product hash and test
+      // the current identity against the explicit successor packet separately.
+      const prior = priorHarmDefinitions.find(row => row.id === mapping.id);
+      if (prior) {
+        expect(mapping.reconciledRecordHash).toBe(hashJson(prior));
+        expect(definition).toEqual(harmCorrections.definitions.find(row => row.id === mapping.id));
+      } else {
+        expect(mapping.reconciledRecordHash).toBe(hashJson(definition));
+      }
     }
   });
 

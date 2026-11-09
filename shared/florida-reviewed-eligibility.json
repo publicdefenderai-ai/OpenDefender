@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "7d87bbf92bb7b56bfe94b6adc9dc85f4d5dbf7bd41e86bfc511388d1626eb444",
+  "reportHash": "24d2463d7e58c94bba2eeb32565af5c3884a4fdb0c3757ab44ec7e81ca94d940",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -29,26 +29,26 @@
     {
       "id": "fl-fs-782-07-1-manslaughter",
       "status": "eligible",
-      "reason": "Subsection (1) supplies the literal offense identity, scoped killing conduct and exclusions, and a complete second-degree felony grade.",
-      "draftHash": "87dd393b58ca520f33ce4a17938df71d7a6e7886bb8564f011458eaa680973ca",
-      "definitionHash": "b179c92f410f7a723b02511a85e31e705b9ea57ecd35574223d79937a2381a44",
-      "approvalHash": "75311a5262a5bcc1254828e82ff161a2a9c1f551fc0b847038b5771fa9734dad"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "c0cd5d72b08f9cec957737158f9200105ec0e3e9030fa5f60b3ad480252c3f85",
+      "definitionHash": "ef645fb3e2db683d9f92a1fd5d2f8dfe92a79a44c8eb3d36e30fc894648e52e3",
+      "approvalHash": "780a5de0872fae0878d704acd6989dcc0b9d5ff808f32ce4dc7562520baeffa6"
     },
     {
       "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
       "status": "eligible",
-      "reason": "Subsection (2) supplies a literal offense identity, death caused by culpable negligence under § 825.102(3), and a complete first-degree felony grade; current § 825.101 closes both victim definitions.",
-      "draftHash": "32e5a4670dffee83c86145c5f0fea8bbcd949feedae9db10c4b05f6d34833550",
-      "definitionHash": "48ad59aec02e90c46f38d56fc335190bf52b35e3e7c8ceeac3d1b47d30926cc2",
-      "approvalHash": "535d585d69193690c7d402fb8ff9ab31201d41498328b30ebd72214518aa17b2"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "aaf57a9be9c88f624e67192f3c6ef18fe03ef0d6e59c70817e8389b28292f4ab",
+      "definitionHash": "3d3e773372b0b21ef37b9cfc6402a0cd53a4e7bfcccda8605867388ac3e341ac",
+      "approvalHash": "588bcd06881d52a4c6263513f317defec482b48a9dd1efae17ffbd549c00694c"
     },
     {
       "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
       "status": "eligible",
-      "reason": "Subsection (3) supplies a literal offense identity, an under-18 death caused by incorporated culpable negligence, and a complete first-degree felony grade.",
-      "draftHash": "6e179e9812ed6bd0bded8413e422d2821ecbdf6b1a430953bb158125643bc02a",
-      "definitionHash": "eb0c70d6ec303a0c49a12be6beb447e18e7bbce06e179450e0370a4a3c5a55fd",
-      "approvalHash": "73eb2b9d1ee50b8dd03c4b865b83e59fbf2c04f26e1e8863080902fccd3cdd2a"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d2950108f31d616a742ef87b476eaf9ddc81ae0e39d843b4d9abcd5b31196937",
+      "definitionHash": "9439e0703d31eb6444f058897165897457372bb882582ea5d6d1fcf3c70def2e",
+      "approvalHash": "b848de4e93591eecb80ac8201c4c79461a121328bf4a9aa2c3cbf0fdac8e7e6e"
     },
     {
       "id": "fl-fs-782-04-5-murder-in-the-third-degree",
@@ -741,66 +741,66 @@
     {
       "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies the statutory identity; subsection (1) supplies four abuse alternatives, the knowledge or willfulness requirement, the no-great-harm limitation, an express isolation defense, and the third-degree-felony grade.",
-      "draftHash": "6526a4bf6f905ccdb4265ab44076787e441602a84152f8baf7ab6ecbddf27792",
-      "definitionHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078",
-      "approvalHash": "fa7f9cfca48831c426ad7111a907680d7092b30eaabf071e254960463449186d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "eedee1f5357d8dca056f13cb67a803459ba3ee1f100f367f3eeee13558124ec7",
+      "definitionHash": "cbbac532ac97703c09be4391d263af7f494b2f6214c57d9a690c8ba69b56107a",
+      "approvalHash": "03b3484ddc5ca66a399baaa1453cfca9a25f086eeb4c216255986b2e51755479"
     },
     {
       "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies the statutory identity; subsection (2) supplies three aggravated-abuse alternatives and the first-degree-felony grade, with the incorporated aggravated-battery branch bound to current §§ 784.03 and 784.045.",
-      "draftHash": "da1ee31f7487cfc492360bfa6da715e656fcc26b044cd2cca2500eae9e8d7fb9",
-      "definitionHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768",
-      "approvalHash": "4722f41d3fe1b241ac6372a38e4efc179756f554fbe4e5ca9126cccb2a539e8c"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "1817b5726c7b6eb9413e5dd7d5d1005a546162bdddad1fcc1b438fe2388a9a58",
+      "definitionHash": "349fc3572a04cd93a117e8374b1cc895ea74f6c1ad5ef862f5ae33bb326ac411",
+      "approvalHash": "67028e9cdc9a8fd4c9ebb42cc9601f4848a55ff96c76ca3eaad3ba8373d5e67e"
     },
     {
       "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies the statutory identity; paragraph (3)(b) supplies willful-or-culpably-negligent neglect, the resulting-harm element, and the second-degree-felony grade.",
-      "draftHash": "0a23e77dab4803a3796886088b6bbd594317407b74d9b8032e9bc57ddb670470",
-      "definitionHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982",
-      "approvalHash": "9e9f61030a3395c546e60adf42832c3f95e210b1e0b1cc44d0fad51f6a50fb4b"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "0e98dc9bb86adff9072c1dc306d876e88496cd0d0eedcb21233226405b1b0e11",
+      "definitionHash": "6876560879a0cdab4dbcbc2b688b5c867c1f3c2811a9acac56d48366e316adf1",
+      "approvalHash": "77e33440678aae30e052278213be56169fe06c57ecc457ffbfdb696a5648be9f"
     },
     {
       "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies the statutory identity; paragraph (3)(c) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade.",
-      "draftHash": "d8a40d6aacb78630c62192eaad5235844c92a9f01daea90e51a00a409433f627",
-      "definitionHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d",
-      "approvalHash": "a93a59c92189ebf1094f6210d2417c4f1615956579a358db24b9f45cc5d0f31f"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "c0e56c30dae071aff748c3ca4b22f12d9ed33dee7e3aa45fd33313bc48872840",
+      "definitionHash": "3aae9b8ffd4005456dc4e3842ee61d2f1c0b69a45e3103aa3bee44b9370bbb10",
+      "approvalHash": "0b6675bdbdd4a59418d033074a465c42972cbb4c65501f42dead816f6daddfc2"
     },
     {
       "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies statutory identity; paragraph (2)(a) expressly criminalizes aggravated child abuse and states the first-degree-felony grade, while subsection (1)(a) and current §§ 784.03 and 784.045 close the definition and incorporated aggravated-battery branch.",
-      "draftHash": "326900b595e2a5ec5f82498d6e063f4cc59f041798bc51013df8eba370703175",
-      "definitionHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b",
-      "approvalHash": "884980dfc8cf1055469470d98bee7f9cabbb14a514786474a0ead267a7d852b6"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "32a6abf71d351fca19a2b215562011a79384b7dc284baf648ada34a223ac1a4e",
+      "definitionHash": "10cae57c39b1d0bcffab7a67243b7129f63679449cef9f69d15dc8066d9312ed",
+      "approvalHash": "0cc719fc27d592f63130207f84f67166e64d4d978d3e985841deefc0ec4a647b"
     },
     {
       "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies statutory identity; paragraph (2)(b) supplies willful-or-culpably-negligent neglect, resulting great harm, and the second-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
-      "draftHash": "18eb8b7972be0644858c76ed83d2c54cc7306c2456192476d96a423efd581b75",
-      "definitionHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3",
-      "approvalHash": "f16c331d95d129464cded337dca0c7d3a073275049119cbae0e687ae571c58a3"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "24b4637af9f22e7e689b96e1c0cd22523b2e7e65071e26da78c7895ce3b42b9c",
+      "definitionHash": "74e7253f43cad053cbfc017838c4261921b4a2306f5951cf23cdf6fd245a940c",
+      "approvalHash": "3cac1f2a2b08d7327766fd7ef6fbf006de3415f676cfd8405757b0156a1242fd"
     },
     {
       "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies statutory identity; paragraph (2)(c) supplies knowing-or-willful abuse, the no-great-harm limitation, and the third-degree-felony grade, with the complete abuse definition retained as a same-section dependency.",
-      "draftHash": "2d37bbbc621b89c415d962b5d065bf359e70f602afabd82a4641866d72ac1f5c",
-      "definitionHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25",
-      "approvalHash": "362e7425c6487de727dc184c7a4c09a8b9c264b1f1884b3936a2041646230893"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "5504dbf4ad586c7664bea1bc8c600f9d6563bce8b3032916d79bd405662f1e22",
+      "definitionHash": "4ba655abc2b7f6c7c3da7cf8a66df4675ccc18893769c4c16df79ae7d671bdb0",
+      "approvalHash": "d2064039a4eab844db66ce15da8a35576509f6823d5fc25aeaac320ca0275725"
     },
     {
       "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
-      "reason": "The exact official heading supplies statutory identity; paragraph (2)(d) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
-      "draftHash": "b85474ea7eb42d8ed9b07f35380dd3e299e138b865e5cdd4a22a7d58e2ceb8f5",
-      "definitionHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c",
-      "approvalHash": "b61205241f8bce08ecb5a57169a2b888196e0f8b7a77a671756f377b67e0c512"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "4381922aa34c371506ed8741e86469e224de98469fdf6bde069e467cd9e5f386",
+      "definitionHash": "ad7091c953f7e0bc2fc5f51278bb99b007ea2b3d90872df1bdbeb04832a5580e",
+      "approvalHash": "fb40d63b5846d238a003819c6b83052e68ee9a621d3e82d4655a260002e12e1a"
     },
     {
       "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
