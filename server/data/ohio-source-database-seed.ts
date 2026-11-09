@@ -1,6 +1,8 @@
+import { OHIO_JUSTICE_DEFINITIONS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_DEFINITIONS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_DEFINITIONS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_DEFINITIONS } from "@shared/ohio-residual-batch";
+import { OHIO_JUSTICE_SOURCES, isOhioJusticeSourceFresh } from "./ohio-justice-source";
 import { OHIO_BENEFITS_FRAUD_SOURCES, isOhioBenefitsFraudSourceFresh } from "./ohio-benefits-fraud-source";
 import { OHIO_THEFT_FRAUD_SOURCES, isOhioTheftFraudSourceFresh } from "./ohio-theft-fraud-source";
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "./ohio-residual-source";
@@ -455,7 +457,7 @@ function reviewedProvision(
     metadata: {
       chargeId: charge.id, catalogLabel: charge.name, catalogCode: charge.code,
       catalogClassification: charge.category,
-      sourceFirstBatch: OHIO_BENEFITS_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_benefits_fraud_6" : OHIO_THEFT_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_theft_fraud_21" : OHIO_RESIDUAL_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_residual_14" : OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
+      sourceFirstBatch: OHIO_JUSTICE_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_justice_17" : OHIO_BENEFITS_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_benefits_fraud_6" : OHIO_THEFT_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_theft_fraud_21" : OHIO_RESIDUAL_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_residual_14" : OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
       reviewedDraftSection: source.section,
       reviewedInterpretation: source.interpretation,
       reviewedLegalDecision: source.reviewedLegalDecision,
@@ -488,7 +490,7 @@ function reviewedSupportRole(
 export function buildOhioReviewedManifestRecords(importedAt: Date, sources: readonly OhioReviewedSource[] = OHIO_REVIEWED_SOURCES): AuthorityCatalogRecord[] {
   return sources.map(source => {
     const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
-    if (!charge || charge.jurisdiction !== "OH" || charge.code !== (OHIO_BENEFITS_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_THEFT_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_RESIDUAL_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? source.section) ||
+    if (!charge || charge.jurisdiction !== "OH" || charge.code !== (OHIO_JUSTICE_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_BENEFITS_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_THEFT_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_RESIDUAL_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? source.section) ||
         charge.name !== source.canonicalTitle) {
       throw new Error(`Ohio reviewed source-first catalog identity is missing: ${source.chargeId}`);
     }
@@ -771,7 +773,7 @@ export function validateOhioManifestRecord(
   if (sourceFirstPilot) {
     return validateOhioChapter2903PilotManifestRecord(record, sourceFirstPilot);
   }
-  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES].find(
+  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES].find(
     candidate => candidate.chargeId === record.chargeId,
   );
   if (reviewedSource) return validateOhioReviewedManifestRecord(record, reviewedSource);
@@ -852,6 +854,7 @@ export function buildOhioSourceDatabaseSeed(
   // live receipt boundary that the loader uses.
   const records = manifest.catalogRecords.filter(record =>
     (!OHIO_RESIDUAL_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioResidualSourceFresh(now)) &&
+    (!OHIO_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioJusticeSourceFresh(now)) &&
     (!OHIO_BENEFITS_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioBenefitsFraudSourceFresh(now)) &&
     (!OHIO_THEFT_FRAUD_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioTheftFraudSourceFresh(now)) &&
     (!OHIO_MAJOR_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioMajorSourceFresh(now)) &&

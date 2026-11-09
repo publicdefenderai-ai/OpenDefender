@@ -1,3 +1,4 @@
+import { OHIO_JUSTICE_BATCH } from "./ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_BATCH } from "./ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_BATCH } from "./ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
@@ -49,6 +50,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_RESIDUAL_BATCH.translations,
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
+  ...OHIO_JUSTICE_BATCH.translations,
   "ohio-felonious-assault": {
     es: {
       draft: true, keyTerms: [],
