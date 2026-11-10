@@ -1,0 +1,39 @@
+[
+  {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  {
+    "chapter": "2026-144",
+    "sourceUrl": "https://laws.flrules.org/files/Ch_2026-144.pdf",
+    "section": 7,
+    "page": 12,
+    "effectiveDate": "2026-06-16",
+    "effectiveDateQuote": "This act shall take effect upon becoming a law.",
+    "quoteSha256": "b1640307c7bbd23f263aa57e2b6c01e3f836aa96629f65408fd040348ef7b421",
+    "retrievedAt": "2026-11-10T17:13:57.100346+00:00",
+    "method": "official PDF; section 3 adds manslaughter, section 7 and Governor approval establish commencement",
+    "approvalDate": "2026-06-16",
+    "approvalQuote": "Approved by the Governor June 16, 2026."
+  },
+  {
+    "chapter": "2025-69",
+    "sourceUrl": "https://laws.flrules.org/2025/69",
+    "section": 2,
+    "page": 1,
+    "effectiveDate": "2025-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2025.",
+    "quoteSha256": "7e2f0828ffb552aa35b239b968c3e603772159a29229603f6e81059cad996147",
+    "retrievedAt": "2026-11-10T17:18:48.379265+00:00",
+    "method": "Official session law, section 1 introduces subsection (5), section 2 gives commencement",
+    "approvalDate": "2025-05-22"
+  }
+]

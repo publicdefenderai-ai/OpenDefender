@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "2c890b68e7ea6b67033579c207f904bdca7fbdbd3a4314dfaa0f95bfed260c2c",
+  "reportHash": "3f19103e383425e3fcb96b6be91e60930220c430850108f246d1ea4e77557c7c",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -30,9 +30,9 @@
       "id": "fl-fs-782-07-1-manslaughter",
       "status": "eligible",
       "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
-      "draftHash": "c0cd5d72b08f9cec957737158f9200105ec0e3e9030fa5f60b3ad480252c3f85",
-      "definitionHash": "ef645fb3e2db683d9f92a1fd5d2f8dfe92a79a44c8eb3d36e30fc894648e52e3",
-      "approvalHash": "780a5de0872fae0878d704acd6989dcc0b9d5ff808f32ce4dc7562520baeffa6"
+      "draftHash": "e4bcb330a519f8edba02fd4a45a840cc3c71a20c7d68573b8c87ed4ea419c89b",
+      "definitionHash": "a4470ac4621521d22097f19137f3ba6dd020f439f95f04d5e3425fe75b42688b",
+      "approvalHash": "be854713a963eadec0338edd736769cc0d5a0e1f54653053eabc81df8aa4e2ce"
     },
     {
       "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
@@ -53,18 +53,18 @@
     {
       "id": "fl-fs-782-04-5-murder-in-the-third-degree",
       "status": "eligible",
-      "reason": "Subsection (5) separately supplies the same literal offense name for a distinct under-18 distribution scope.",
-      "draftHash": "6ffed2d1810471b5cfe31ee5363aa015399c12bdf543219fc1abe8b843b8e9c5",
-      "definitionHash": "e11841fb3713ac06d2d4d0ece306dbc40d03df420214c9771709e90336d1d855",
-      "approvalHash": "499d56a6eadc48be2e48c07afba2200bea3c3adbe7c6ea036c6cb23514122975"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "55c24745f45a2c2901c305544b684532b10f68f8f010cca1f4628e9a16e1cc76",
+      "definitionHash": "fc7d9f316c0b05fb970980e7ef4fe78c5c5b4e1a1420e2a2733a3b84a2bebf6c",
+      "approvalHash": "6d06fec728b269893c7d4558853ddeb06c7d684aa6f3ccefb343c0e11e793bc1"
     },
     {
       "id": "fl-fs-782-04-4-murder-in-the-third-degree",
       "status": "eligible",
-      "reason": "Subsection (4) supplies a literal offense name, conduct boundary, and grade distinct from existing first- and second-degree records.",
-      "draftHash": "e77727b0d2ac76704a90e4575e35789e533ca65d8d5e785223ec84b59c9ec408",
-      "definitionHash": "b1cec094c7045035758011cfa85db5ac159da3a5bd3dd8ec86db19fd0b850d1b",
-      "approvalHash": "45c609673f9a711617ffaef1c0602bdcfad9b24cafd43227771f0d100f201bb4"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "c05b9a75405da96f850d5f0922eaca7b992a2b52693aaf75b5dd26b663882691",
+      "definitionHash": "62a3491187aece267d9e21d0715d71fc78fa9b4f71fda72a014af4356108af6b",
+      "approvalHash": "c8278a07c05efdf00863a524ab3d619012f4ca3b19bcbcca85e0565f9269652a"
     },
     {
       "id": "fl-fs-794-011-2-sexual-battery",
