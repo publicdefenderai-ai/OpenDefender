@@ -1,5 +1,6 @@
 import { extractOhioDocument } from "./ohio-discovery/section-document";
 export { extractOhioDocument } from "./ohio-discovery/section-document";
+import { OHIO_CUSTODY_SOURCES } from "../../server/data/ohio-custody-source";
 import { OHIO_JUSTICE_SOURCES } from "../../server/data/ohio-justice-source";
 import { OHIO_BENEFITS_FRAUD_SOURCES } from "../../server/data/ohio-benefits-fraud-source";
 import { OHIO_THEFT_FRAUD_SOURCES } from "../../server/data/ohio-theft-fraud-source";
@@ -104,6 +105,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_CUSTODY_SOURCES.map(record => record.chargeId),
     ],
   );
   return criminalCharges.filter((charge) =>

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:316.061:1",
+      "target": "title",
+      "text": "Crashes involving damage to vehicle or property",
+      "start": 0,
+      "end": 47,
+      "sourceHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:316.061:1",
+        "target": "text",
+        "text": "The driver of any vehicle involved in a crash resulting only in damage to a vehicle or other property which is driven or attended by any person shall immediately stop such vehicle at the scene of such crash or as close thereto as possible, and shall forthwith return to, and in every event shall remain at, the scene of the crash until he or she has fulfilled the requirements of s. 316.062.",
+        "start": 66,
+        "end": 457,
+        "sourceHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:316.061:1",
+        "target": "text",
+        "text": "A person who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 458,
+        "end": 591,
+        "sourceHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:316.061:1",
+        "role": "offense",
+        "contentHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+      },
+      {
+        "sourceKey": "fl:statute:316.062",
+        "role": "exception",
+        "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:316.193:3_c_3",
+      "target": "text",
+      "text": "The death of any human being or unborn child commits DUI manslaughter, and commits:",
+      "start": 4955,
+      "end": 5038,
+      "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:316.193:3_c_3",
+        "target": "text",
+        "text": "The death of any human being or unborn child commits DUI manslaughter, and commits:",
+        "start": 4955,
+        "end": 5038,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:316.193:3_c_3",
+        "target": "text",
+        "text": "A felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5043,
+        "end": 5138,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:316.193:3_c_3",
+        "role": "offense",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:316.193",
+        "role": "definition",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:775.021",
+        "role": "definition",
+        "contentHash": "2a605d893dc481376f6e9fd2f989ddd2b5647d24c007da514f6d6cf63d8f7f99"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:322.34:2",
+      "target": "title",
+      "text": "Driving while license suspended, revoked, canceled, or disqualified",
+      "start": 0,
+      "end": 67,
+      "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:322.34:2",
+        "target": "text",
+        "text": "Any person whose driver license or driving privilege has been canceled, suspended, or revoked as provided by law, or who does not have a driver license or driving privilege but is under suspension or revocation equivalent status as defined in s. 322.01(43), except persons defined in s. 322.264, who, knowing of such cancellation, suspension, revocation, or suspension or revocation equivalent status, drives any motor vehicle upon the highways of this state while such license or privilege is canceled, suspended, or revoked, or while under suspension or revocation equivalent status, commits:",
+        "start": 479,
+        "end": 1073,
+        "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:322.34:2",
+        "target": "text",
+        "text": "A felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, upon a third or subsequent conviction if the current violation of this section or the most recent prior violation of the section is related to driving while license canceled, suspended, revoked, or suspension or revocation equivalent status resulting from a violation of:",
+        "start": 1484,
+        "end": 1850,
+        "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:322.34:2",
+        "target": "text",
+        "text": "A misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 1079,
+        "end": 1166,
+        "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:322.34:2",
+        "role": "offense",
+        "contentHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+      },
+      {
+        "sourceKey": "fl:statute:322.34",
+        "role": "grading",
+        "contentHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+      },
+      {
+        "sourceKey": "fl:statute:322.01",
+        "role": "definition",
+        "contentHash": "c407705ecbc5c0eb5e044d38781f8612155ed9ca9c4147b2a6031763e4c5fa88"
+      },
+      {
+        "sourceKey": "fl:statute:322.264",
+        "role": "exception",
+        "contentHash": "c4eb707c8a2ed6985eaad76041793b38118aa53e8363663358792e2fd614b22c"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-316-193-1-driving-under-the-influence",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:316.193:1",
+      "target": "text",
+      "text": "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
+      "start": 57,
+      "end": 271,
+      "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:316.193:1",
+        "target": "text",
+        "text": "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
+        "start": 57,
+        "end": 271,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:316.193:1",
+        "target": "text",
+        "text": "The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;",
+        "start": 277,
+        "end": 506,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:316.193:1",
+        "target": "text",
+        "text": "The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or",
+        "start": 513,
+        "end": 615,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:316.193:1",
+        "target": "text",
+        "text": "The person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath.",
+        "start": 622,
+        "end": 718,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:316.193",
+        "target": "text",
+        "text": "Any person who is convicted of a third violation of this section for an offense that occurs within 10 years after a prior conviction for a violation of this section commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1859,
+        "end": 2126,
+        "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:775.08",
+        "target": "text",
+        "text": "The term “misdemeanor” shall mean any criminal offense that is punishable under the laws of this state, or that would be punishable if committed in this state, by a term of imprisonment in a county correctional facility, except an extended term, not in excess of 1 year.",
+        "start": 488,
+        "end": 758,
+        "sourceHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:316.193:1",
+        "role": "offense",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:316.193",
+        "role": "grading",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "sourceKey": "fl:statute:775.08",
+        "role": "definition",
+        "contentHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32"
+      }
+    ]
+  }
+]
