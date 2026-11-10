@@ -3372,3 +3372,30 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 @media(max-width:700px) { .childcare-grid { grid-template-columns: 1fr; } }
 .childcare-page #needs-card { border-top: 1px solid var(--border); }
 .childcare-page #needs-card > div { max-width: none; padding-left: 0; padding-right: 0; }
+
+/* Family & Dependent Care */
+.family-care-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.family-care-back, .family-care-paths a { color: var(--primary); font-weight: 600; }
+.family-care-back { font-size: 14px; }
+.family-care-hero { display: grid; grid-template-columns: minmax(0,1fr) 245px; align-items: center; gap: 48px; margin: 32px 0; }
+.family-care-hero h1 { font-weight: 500; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.1; letter-spacing: -.045em; }
+.family-care-hero h1 em { font-style: normal; color: var(--primary); }
+.family-care-hero p { margin-top: 24px; line-height: 1.75; color: var(--muted-foreground); }
+.family-care-hero img { width: 100%; height: auto; border-radius: 8px; }
+.family-care-paths { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 14px; }
+.family-care-paths a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.family-care-back:hover, .family-care-paths a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.family-care-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; letter-spacing: -.025em; text-transform: none; white-space: normal; }
+.family-care-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.family-care-page #section-resources { background: transparent; }
+.family-care-page #family-care-comms { scroll-margin-top: 5rem; border-block: 1px solid var(--border); }
+.family-care-page #family-care-comms > div { max-width: none; }
+.family-care-page #family-care-comms .text-center { text-align: left; }
+.family-care-page #family-care-comms p { margin-inline-start: 0; }
+.family-care-page pre { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .family-care-hero { display: block; }
+  .family-care-hero picture { display: none; }
+}
+
+.family-care-letter { border-radius: 2px; box-shadow: none; }
