@@ -493,13 +493,13 @@ export default function FamilyCareSupport() {
     <ResourcePageTemplate
       categoryId="familyCare"
       mainClassName="family-care-page"
-      actionHeading={copy.actions}
+      actionHeading={copy.plan}
       introduction={
         <>
           <Link className="family-care-back" href="/support">{t("support.backToSupport")}</Link>
           <section className="family-care-hero">
             <div>
-              <h1>{copy.title}<br /><em>{copy.accent}</em></h1>
+              <h1><span className="family-care-name">{copy.pageName}</span>{copy.title}<br /><em>{copy.accent}</em></h1>
               <p>{t("support.familyCare.overview")}</p>
               <nav aria-label={t("support.startHere")} className="family-care-paths">
                 <a data-testid="button-start-here" href="#section-start-here">{copy.plan}</a>

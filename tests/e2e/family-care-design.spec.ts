@@ -45,6 +45,7 @@ for (const language of ["en", "es", "zh"] as const) {
         await group.getByRole("button", { name: copy.printButton, exact: true }).click();
         const print = await opened;
         await expect(print.locator("h1")).toHaveText(letter.label);
+        await expect(print.locator(".subject")).toHaveText(letter.subject ?? "");
         await expect(print.locator(".body")).toHaveText(letter.body);
         await expect(print.locator(".note")).toHaveText(copy.personalizeNote);
         await print.close();

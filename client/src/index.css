@@ -3379,6 +3379,7 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 .family-care-back { font-size: 14px; }
 .family-care-hero { display: grid; grid-template-columns: minmax(0,1fr) 245px; align-items: center; gap: 48px; margin: 32px 0; }
 .family-care-hero h1 { font-weight: 500; font-size: clamp(36px, 4.7vw, 56px); line-height: 1.1; letter-spacing: -.045em; }
+.family-care-name { display: block; margin-bottom: 10px; font-size: 16px; letter-spacing: normal; line-height: 1.5; }
 .family-care-hero h1 em { font-style: normal; color: var(--primary); }
 .family-care-hero p { margin-top: 24px; line-height: 1.75; color: var(--muted-foreground); }
 .family-care-hero img { width: 100%; height: auto; border-radius: 8px; }
