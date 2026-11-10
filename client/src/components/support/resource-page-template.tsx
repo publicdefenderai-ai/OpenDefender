@@ -60,6 +60,9 @@ export interface ResourcePageProps {
   relatedLinks?: { label: string; href: string }[];
   customSections?: ReactNode;
   heroImage?: string;
+  introduction?: ReactNode;
+  mainClassName?: string;
+  actionHeading?: string;
   sidebar?: ReactNode;
 }
 
@@ -274,6 +277,9 @@ export function ResourcePageTemplate({
   relatedLinks,
   customSections,
   heroImage,
+  introduction,
+  mainClassName,
+  actionHeading,
   sidebar,
 }: ResourcePageProps) {
   useScrollToTop();
@@ -283,8 +289,9 @@ export function ResourcePageTemplate({
   const theme = categoryThemes[categoryId] || categoryThemes.employment;
 
   return (
-    <ScanFirstPageFrame>
+    <ScanFirstPageFrame mainClassName={mainClassName}>
 
+        {introduction ?? (
         <section className="editorial-page-intro editorial-hero overflow-hidden">
           <div className={`editorial-page-intro-inner max-w-6xl mx-auto px-4 flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
             <div className={`flex flex-col justify-center py-10 md:py-14 ${heroImage ? 'flex-1 md:max-w-[58%]' : 'w-full max-w-4xl'}`}>
@@ -332,6 +339,7 @@ export function ResourcePageTemplate({
             )}
           </div>
         </section>
+        )}
 
         {!sidebar && (
           <PageSectionNav
@@ -365,7 +373,7 @@ export function ResourcePageTemplate({
               <section id="section-start-here" className="py-10 md:py-12 scroll-mt-20">
                 <div className={sidebar ? "" : "container mx-auto px-4"}>
                   <ScrollReveal>
-                    <SectionHeading title={t('support.startHere')} />
+                    <SectionHeading title={actionHeading ?? t('support.startHere')} />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {startHereItems.map((item, index) => (
                         <ActionCard key={item.id} item={item} index={index} theme={theme} />

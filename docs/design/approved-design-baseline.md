@@ -576,3 +576,13 @@ Approved `childcare-content.html` SHA-256: `08b27580f11750684b3f8d0f177b15b01210
 Independent fixture captures published translations, literal text and destinations from main `b36ec2a0` before changes. The release-allowlisted spec verifies captured content, all four clipboard/print outputs, FAQ keyboard expansion, the resource anchor, actual desktop/320px bounds and successful image loading across all three languages and both themes.
 
 Validation: typecheck, production build, 16 translation/coverage checks and 11 browser cases passed (six Childcare, five existing support navigation). Desktop/light, phone/dark and reference-card print output visually inspected. No full-suite, deployment or legal-approval claim. Continue with the remaining support subpages.
+
+## Family & Dependent Care support
+
+The refreshed `/support/family-care` page opens with “Care for those who depend on you.” Caregivers can jump to planning steps and support messages or open Childcare. The shared resource template accepts an optional introduction and action heading. Page styles apply to the family care route.
+
+The illustration comes from the approved `family-care-content.html` preview (SHA-256 `d5e80efa4b11f2c7788a079af2451b90b879332e5ab02736ab12015be2bdb8a9`). The desktop page loads an 11 KB WebP. Small screens use an inline image fallback and omit the illustration. New navigation and heading text is available in English, Spanish and Chinese.
+
+The existing written-message and phone-script tabs provide three letters and two scripts. Each letter has a labelled control group for copying and printing. The print document inserts message text through the DOM and preserves paragraph breaks. The existing provider authorization wording and family-court warning carry forward for the separate substantive review.
+
+The release browser tests compare the rendered passages, destinations, clipboard results and printed letters with a source snapshot from main `3ff45bee`. Six language/theme cases and five support-navigation cases passed, along with the production build, typecheck and 16 locale checks. Desktop/light and phone/dark layouts were visually inspected.

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import familyCareHero from "@assets/stock_images/family-care.png";
+import { familyCareDesignCopy } from "@/locales/family-care-design";
 import {
   Users,
   Copy,
@@ -61,31 +61,39 @@ function TemplateCard({
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title></title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #6366f1; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ""}
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.familyCare.commsSection.personalizeNote")}</p>
+            <h1></h1>
+            <p class="subject"></p>
+            <div class="body"></div>
+            <p class="note"></p>
           </body>
         </html>
       `);
-      printWindow.document.close();
+      const page = printWindow.document;
+      page.title = label;
+      page.querySelector("h1")!.textContent = label;
+      const subjectLine = page.querySelector<HTMLElement>(".subject")!;
+      subjectLine.hidden = !subject;
+      subjectLine.textContent = subject ?? "";
+      page.querySelector(".body")!.textContent = body;
+      page.querySelector(".note")!.textContent = t("support.familyCare.commsSection.personalizeNote");
+      page.close();
       printWindow.print();
     }
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card role="group" aria-label={label} className="family-care-letter">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -306,7 +314,7 @@ function FamilyCareCommsSection() {
         )}
 
         <ScrollReveal>
-          <Card className="border border-indigo-200 dark:border-indigo-800 bg-indigo-50/30 dark:bg-indigo-950/10 shadow-sm mt-8">
+          <Card lang="en" className="border border-indigo-200 dark:border-indigo-800 bg-indigo-50/30 dark:bg-indigo-950/10 shadow-sm mt-8">
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-semibold flex items-center gap-2">
                 <Heart className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
@@ -327,7 +335,7 @@ function FamilyCareCommsSection() {
 
 function FamilyCareCollateralCallout() {
   return (
-    <section className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
+    <section lang="en" className="py-10 md:py-12 bg-amber-50/60 dark:bg-amber-900/10 border-y border-amber-200 dark:border-amber-800/40">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-start gap-3 mb-4">
           <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
@@ -360,7 +368,9 @@ function FamilyCareCollateralCallout() {
 }
 
 export default function FamilyCareSupport() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language.split("-")[0];
+  const copy = familyCareDesignCopy[language === "es" || language === "zh" ? language : "en"];
 
   const startHereItems: ActionItem[] = [
     {
@@ -482,7 +492,29 @@ export default function FamilyCareSupport() {
   return (
     <ResourcePageTemplate
       categoryId="familyCare"
-      heroImage={familyCareHero}
+      mainClassName="family-care-page"
+      actionHeading={copy.plan}
+      introduction={
+        <>
+          <Link className="family-care-back" href="/support">{t("support.backToSupport")}</Link>
+          <section className="family-care-hero">
+            <div>
+              <h1><span className="family-care-name">{copy.pageName}</span>{copy.title}<br /><em>{copy.accent}</em></h1>
+              <p>{t("support.familyCare.overview")}</p>
+              <nav aria-label={t("support.startHere")} className="family-care-paths">
+                <a data-testid="button-start-here" href="#section-start-here">{copy.plan}</a>
+                <a href="#family-care-comms">{copy.messages}</a>
+                <Link href="/support/childcare">{copy.childcare}</Link>
+              </nav>
+            </div>
+            <picture>
+              <source media="(min-width: 701px)" srcSet="/images/design/family-care.webp" />
+              <img alt="" aria-hidden="true" width="560" height="560"
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </picture>
+          </section>
+        </>
+      }
       icon={Users}
       iconColor="bg-indigo-500/10 text-indigo-600 dark:text-indigo-400"
       heroGradient="bg-gradient-to-br from-indigo-500/5 via-background to-background"
