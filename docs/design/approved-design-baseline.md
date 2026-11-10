@@ -586,3 +586,11 @@ The illustration comes from the approved `family-care-content.html` preview (SHA
 The existing written-message and phone-script tabs provide three letters and two scripts. Each letter has a labelled control group for copying and printing. The print document inserts message text through the DOM and preserves paragraph breaks. The existing provider authorization wording and family-court warning carry forward for the separate substantive review.
 
 The release browser tests compare the rendered passages, destinations, clipboard results and printed letters with a source snapshot from main `3ff45bee`. Six language/theme cases and five support-navigation cases passed, along with the production build, typecheck and 16 locale checks. Desktop/light and phone/dark layouts were visually inspected.
+
+## Mental Health support
+
+The Mental Health page opens with the approved therapy-chair illustration and crisis contacts. Call, text and chat are available before the planning steps. The existing treatment checklist, provider questions, outreach script, two printable messages, resource directory, FAQs and tips remain available through the shared support template. Print windows insert each message as plain text with its heading and paragraph breaks.
+
+The approved layout is `mental-health-content.html`, SHA-256 `67d1ca35e9df362065d6b31a38ecf1372a2a149c58e644051fe29950f157f1c7`. The page uses the approved `mental-health-illustration.svg` and new interface copy in English, Spanish and Chinese. The browser fixture captures the published copy and destinations from main at `ab704c44`.
+
+Typecheck, the production build, 16 translation checks, six Mental Health browser cases and five support navigation cases passed. Desktop and 320px layouts were inspected. Next support page is Personal Health.

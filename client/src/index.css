@@ -3400,3 +3400,29 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 }
 
 .family-care-letter { border-radius: 2px; box-shadow: none; }
+
+/* Mental Health support */
+.mental-health-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.mental-health-back, .mental-health-paths a { color: var(--primary); font-weight: 600; font-size: 14px; }
+.mental-health-hero { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 44px; align-items: center; margin-block: 24px; }
+.mental-health-hero h1 { font-size: clamp(36px,4.7vw,56px); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; }
+.mental-health-hero em { color: var(--primary); font-style: normal; }
+.mental-health-hero p { margin-top: 20px; max-width: 66ch; color: var(--muted-foreground); line-height: 1.75; }
+.mental-health-hero img { max-width: 100%; height: auto; }
+.mental-health-crisis > div { padding-inline: 0; }
+.mental-health-paths { display: flex; flex-wrap: wrap; gap: 0 20px; padding-block: 8px; }
+.mental-health-paths a { display: inline-flex; align-items: center; min-height: 44px; }
+.mental-health-paths a:hover, .mental-health-back:hover { text-decoration: underline; }
+.mental-health-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; line-height: 1.25; text-transform: none; white-space: normal; letter-spacing: -.025em; }
+.mental-health-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.mental-health-page #treatment-connection { scroll-margin-top: 5rem; background: transparent; }
+.mental-health-page pre { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .mental-health-hero { grid-template-columns: minmax(0,1fr) 76px; gap: 12px; align-items: start; }
+  .mental-health-hero > div { display: contents; }
+  .mental-health-hero img { grid-area: 1 / 2; align-self: center; }
+  .mental-health-hero p { grid-column: 1 / -1; margin-top: 0; }
+}
+
+.mental-health-contact-links { display: flex; flex-wrap: wrap; gap: 0 16px; }
+.mental-health-contact-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
