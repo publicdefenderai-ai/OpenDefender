@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "24d2463d7e58c94bba2eeb32565af5c3884a4fdb0c3757ab44ec7e81ca94d940",
+  "reportHash": "2c890b68e7ea6b67033579c207f904bdca7fbdbd3a4314dfaa0f95bfed260c2c",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -357,18 +357,18 @@
     {
       "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
       "status": "eligible",
-      "reason": "The current section heading supplies a literal identity, and subsection (1) supplies exact conduct and misdemeanor grading at the exact subdivision.",
-      "draftHash": "564ae0c805bb69906b25d5514674dae6e41eb29c9946f8fc7ca23d1100f1313b",
-      "definitionHash": "c5ffc5cb786ffc20559cf401d3d3ec726a81ac1541a3a6c1bc8576a13d30ff47",
-      "approvalHash": "ee40c9dd4b0244b4874e5d170b4a5772b1cb32bfa095957a472fd9d2ccd8e65d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "9b7bea76d37aab73a632e9bc35481eb15d9d4d05697bf941571056e1ab3b14d1",
+      "definitionHash": "a2adc8a13d5d55b691b6c854251b6b1927156360ba49286e9ef3171464f5fcb5",
+      "approvalHash": "d17d5596689f6a965cc19b69d1b6ad7816368e9c4c7d7dc9912cfcec31ea1a07"
     },
     {
       "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
       "status": "eligible",
-      "reason": "Subsection (3)(c)3 expressly names DUI manslaughter and ties that name to the death-causing conduct and conditional felony grades.",
-      "draftHash": "d89df775fd2ef03cdf7ba0aed67f85ae2c012eddd80aba379a91d122d1481470",
-      "definitionHash": "626e3ad346147f089dce3e4a549509450e30f1517477507897b30f79039f02a1",
-      "approvalHash": "ae1e5c3393558da8c7d0d7059b779d2140eee670e590d68d313db971e985409a"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "8d79c9887e0b5f67b2fe5dd00267a054063beb8f8e071699b62068d25f805164",
+      "definitionHash": "833aa4f8b4972be0d1119eb84131237d723b4385ca3c43b1084bf11dda9a9411",
+      "approvalHash": "b430ee3f3a28257d57bf9ca02f2fcc039c9c2241d65b0f82506a4e5f2e087dfd"
     },
     {
       "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
@@ -397,10 +397,10 @@
     {
       "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
       "status": "eligible",
-      "reason": "The exact whole-section official heading supplies the identity, while subsection (2) narrowly supplies the knowing-driving conduct and each conditional misdemeanor or felony grade.",
-      "draftHash": "b230973d8809a6c70dbe849e87c585d4e3c2629c270d753388cf4fa62dc3c971",
-      "definitionHash": "825199ac92a45f0118e11c7c4374baacfc842d90c9d7d48dd46b724b45423afd",
-      "approvalHash": "2ae7e9f2c8aa5ea81f0802b28c30121fd794feb37eff8a42304133a411a4cc3b"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d34a39f94237c75cea114b1cf051d5d54b69e65eeb3ec0a6a8232afd4f88fa6d",
+      "definitionHash": "cf08546538b6d08a560b5dafcd4f0a584c962015cff7d2838b495f5d84caa342",
+      "approvalHash": "156b8d80db47cf8a19e374d9adf75fad5f2db4e297c03be5b5e5557fa0352e03"
     },
     {
       "id": "fl-fs-403-413-6-b-florida-litter-law",
@@ -429,10 +429,10 @@
     {
       "id": "fl-fs-316-193-1-driving-under-the-influence",
       "status": "eligible",
-      "reason": "Subsection (1) expressly names the offense; § 316.193 supplies county-jail terms not exceeding one year for the ordinary tiers, which § 775.08(2) classifies as misdemeanors, while § 316.193 expressly classifies the conditional repeat tiers as third-degree felonies.",
-      "draftHash": "edc49eac2fe94e9b2b90c50d2ba90dcbaec4fef30574565e925f976b0fab42af",
-      "definitionHash": "c719fcbf702708b17969d1cc4b838ca642f13e5b587a333c2ba1e2b51687094d",
-      "approvalHash": "43ff9bff1f9e8312cf47c36aaca7a2a5eeaf70a250f428c25a3d3779664400cd"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "50f1f6be4677cafa76cae3ee2d17373c0152abeb59bc45270072d805d65516af",
+      "definitionHash": "47daee1bded5a89c4390e22f0530b391dfaec4ea33175ce6038cc1ff5b3958fd",
+      "approvalHash": "f9e32e682132baf155199000271332c2c038a381dfe762deed6bf6cfde6e0a8a"
     },
     {
       "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
