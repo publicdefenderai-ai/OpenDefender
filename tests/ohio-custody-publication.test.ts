@@ -41,6 +41,8 @@ describe('Ohio custody publication',()=>{
  });
  it('keeps special ranges, mandatory sanctions and branch limits distinct',()=>{
   const flight=OHIO_CUSTODY_DEFINITIONS.find(r=>r.code==='2921.331(B)')!.text.en.degreeContext;
+  expect(flight).toContain('on or after October 24, 2024');
+  expect(flight).toContain('For earlier conduct, check the version in effect');
   expect(flight).toContain('60 months');expect(flight).toContain('(C)(4) uses 9');expect(flight).toContain('(C)(5) instead');
   expect(flight).toContain('consecutive');expect(flight).toContain('class-two');
   expect(row('assault-police-animal').gradeSummary).toContain('mandatory fine');
