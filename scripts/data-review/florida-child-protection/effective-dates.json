@@ -1,0 +1,38 @@
+[
+  {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  {
+    "chapter": "2026-18",
+    "sourceUrl": "https://laws.flrules.org/2026/18",
+    "section": 22,
+    "page": 30,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-11T04:59:41.934192+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  {
+    "chapter": "2026-20",
+    "sourceUrl": "https://laws.flrules.org/2026/20",
+    "section": 24,
+    "page": 39,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-11T04:59:41.934336+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  }
+]
