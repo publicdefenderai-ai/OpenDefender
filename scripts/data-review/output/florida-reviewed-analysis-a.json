@@ -1323,7 +1323,7 @@
       "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
       "section": "800.04",
       "status": "eligible",
-      "reason": "Subsection (4) supplies a literal offense name, conduct, and conditional grades.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person commits lewd or lascivious battery by:",
@@ -1345,15 +1345,55 @@
           "section": "800.04",
           "role": "grading",
           "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "The incorporated prior-conviction list remains in paragraph (4)(c)."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
       "section": "800.04",
       "status": "eligible",
-      "reason": "Subsection (5) expressly names the offense and exhaustively grades it by ages and priors.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.",
@@ -1375,15 +1415,65 @@
           "section": "800.04",
           "role": "grading",
           "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "948.012",
+          "role": "penalty",
+          "contentHash": "7dd9321ff9241c3e832c2e34b5f54f43777466be705e8bc3a1f4ff9197bf1a42"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty",
+          "contentHash": "a22a3a7d31a537b1ca7cb9d5092823c39be2ed17c83c6ddd1ff69b0124a9d847"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "Evidence covers all four possible felony grades."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
       "section": "800.04",
       "status": "eligible",
-      "reason": "Subsection (6) supplies a literal name, exact conduct, and age-conditional grades.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.",
@@ -1405,15 +1495,50 @@
           "section": "800.04",
           "role": "grading",
           "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "Both grading branches are quoted and separately pinned."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
       "section": "800.04",
       "status": "eligible",
-      "reason": "Subsection (7) supplies a literal name, conduct, exception, and age-conditional grades.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "commits lewd or lascivious exhibition",
@@ -1440,15 +1565,50 @@
           "section": "800.04",
           "role": "grading",
           "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "All three conduct branches and the breastfeeding exception are quoted."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
       "section": "827.071",
       "status": "eligible",
-      "reason": "Paragraph (2)(a) expressly names the offense and states its conditional mandatory minimum.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance.",
@@ -1458,13 +1618,7 @@
         "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance."
       ],
       "gradingQuotes": [
-        "A person who violates this paragraph commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "Except as provided in subsection (7), a person 18 years of age or older at the time of the offense who is convicted of a violation of this paragraph must be sentenced to a mandatory minimum term of imprisonment of 15 years.",
-        "A court is not required to impose a mandatory minimum term of imprisonment for a violation of this section if the court makes the following written findings related to the sexual performance that forms the basis of the violation:",
-        "The child depicted in the sexual performance was 14 years of age or older at the time the sexual performance was created;",
-        "The sexual performance was created with the depicted child’s permission;",
-        "The offender was not more than 4 years older than the depicted child at the time the sexual performance was created; and",
-        "The offender did not promote the sexual performance to any third party."
+        "A person who violates this paragraph commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
         {
@@ -1481,15 +1635,60 @@
           "section": "827.071",
           "role": "exception",
           "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty",
+          "contentHash": "a22a3a7d31a537b1ca7cb9d5092823c39be2ed17c83c6ddd1ff69b0124a9d847"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "All four findings in subsection (7) are quoted."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
       "section": "827.071",
       "status": "eligible",
-      "reason": "Paragraph (2)(b) expressly names and grades the under-12 offense.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance.",
@@ -1499,23 +1698,67 @@
         "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance."
       ],
       "gradingQuotes": [
-        "A person who violates this paragraph commits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "A person 18 years of age or older at the time of the offense who is convicted of a violation of this paragraph must be sentenced to a mandatory minimum term of imprisonment of 25 years."
+        "A person who violates this paragraph commits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
         {
           "section": "827.071",
           "role": "offense",
           "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty",
+          "contentHash": "a22a3a7d31a537b1ca7cb9d5092823c39be2ed17c83c6ddd1ff69b0124a9d847"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "Subsection (7) by its text applies to a violation of the section, but its findings require a depicted child age 14 or older and therefore cannot be met for this under-12 variant."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     },
     {
       "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
       "section": "827.071",
       "status": "eligible",
-      "reason": "Subsection (3) expressly names, defines, and grades the offense.",
+      "reason": "Individually bound child-offense conduct, age conditions and penalties.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child.",
@@ -1525,13 +1768,7 @@
         "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child."
       ],
       "gradingQuotes": [
-        "A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "Except as provided in subsection (7), a person 18 years of age or older at the time of the offense who is convicted of a violation of this subsection must be sentenced to a mandatory minimum term of imprisonment of 5 years.",
-        "A court is not required to impose a mandatory minimum term of imprisonment for a violation of this section if the court makes the following written findings related to the sexual performance that forms the basis of the violation:",
-        "The child depicted in the sexual performance was 14 years of age or older at the time the sexual performance was created;",
-        "The sexual performance was created with the depicted child’s permission;",
-        "The offender was not more than 4 years older than the depicted child at the time the sexual performance was created; and",
-        "The offender did not promote the sexual performance to any third party."
+        "A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "requiredSections": [
         {
@@ -1548,9 +1785,59 @@
           "section": "827.071",
           "role": "exception",
           "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "775.0847",
+          "role": "grading",
+          "contentHash": "cdf5eeda82ec0c2fd1bbdd48084b9707fec2a84f28b4a6b2b29de91346c68dc9"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty",
+          "contentHash": "a22a3a7d31a537b1ca7cb9d5092823c39be2ed17c83c6ddd1ff69b0124a9d847"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty",
+          "contentHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition",
+          "contentHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception",
+          "contentHash": "5e3d02688bf448191a6c326fc8d72833c905a34c7729116e89a5f8c664f573d1"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
         }
       ],
-      "notes": "All four findings in subsection (7) are quoted."
+      "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
     }
   ],
   "sectionNotes": [

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "2a133ce96214d3bbe62f047fbf39ebc71194b8c530a2e250b131a0036453545c",
+  "reportHash": "2b415cd72817dba8e1e009ee5b179b32faf57f8234cc17cf3680ae9e5ce8ea11",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -149,58 +149,58 @@
     {
       "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
       "status": "eligible",
-      "reason": "Subsection (4) supplies a literal offense name, conduct, and conditional grades.",
-      "draftHash": "afeecb6fae6834a28adc886879d6c74d23c77d622178ae261ac815aacd705b0b",
-      "definitionHash": "aa2f5db54e7c836be8be7b1c1ab07918180b9d0f38336086f20fa5e36268c4ef",
-      "approvalHash": "9be06b6e1bcf8d7f3329f893a7747c2a14d8a0d159cbb9eb1ea44f1363a98268"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "58498128b95a2d05e3087d8f5ae167f9602804dbeca66e1723ad9ade3ad5b242",
+      "definitionHash": "cdb926979cb4d060aaf2018610b196b6f596a85c912b0b8b7398901ae20e2930",
+      "approvalHash": "dd7f3c7dc2283cea02f5aa980f4ce9999578ddbf4ebb7a2b444f27ef1ecec97c"
     },
     {
       "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
       "status": "eligible",
-      "reason": "Subsection (5) expressly names the offense and exhaustively grades it by ages and priors.",
-      "draftHash": "f13b9060fe0a29952a9f64a628e1767afec20ec6d61de99b5ccfd6b83e5b5270",
-      "definitionHash": "797d5eb6f9c42600df06531c34be3d7aeea6fb96d775d06441ddf1f9c34db4b1",
-      "approvalHash": "16633c0bca0600fff85116a0aa23da116f1b3e00bf41ddcfb51e46821ca444b1"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "405d9708ea65cad3f3bb8fc482c7634e15011ea078b7729fd7c473e755bb58fb",
+      "definitionHash": "7f1fcb14f8d1cd5a0ddbe9a69a2cd8be8f22530d867ab9b165187bc9e099b27f",
+      "approvalHash": "68a9d3a8cd3ceae4c4bf6b96adb4965bb4f4dc3c8d226222cd07f953572596fa"
     },
     {
       "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
       "status": "eligible",
-      "reason": "Subsection (6) supplies a literal name, exact conduct, and age-conditional grades.",
-      "draftHash": "72a84d7979576b14c140b42748230a921333ca5406535edbed76a642bb73efc3",
-      "definitionHash": "448fca56c73f377f5e69d5609c8a3c75854cb0aa2c895520021707d75f9678fe",
-      "approvalHash": "2e8be1b36fbbb4462609a2ff0f89aea66d599871b408090f696e5d2aa42a71dc"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "41dcce5e7402e1c9d5462d657b6d50e4b687f3e990b6cad9d9317a2a1549ee2a",
+      "definitionHash": "01995f473a31c5cc9790c1def3a3ab728d5cd86c9e50bf5cb647f325ad49133d",
+      "approvalHash": "116554ad4ef7719fbd2130cfe38fb0e36b37f732a6e32df01adaac8af255e9e0"
     },
     {
       "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
       "status": "eligible",
-      "reason": "Subsection (7) supplies a literal name, conduct, exception, and age-conditional grades.",
-      "draftHash": "6906ed74acd8762b6d9c7283c8ed0f4a61b106a6e1674ceb16e79b002c9fbbd7",
-      "definitionHash": "8443ecdf8e06aa017a4c94347003f76a66fab0a2c3f1f47e1f9a5adde9019d11",
-      "approvalHash": "76f2a3ec0bd54ac0bb83a4aea18b67f0858f88045c2eff5620b066c87708cdc1"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "c2a9fff8740bd2111d02b233a630708b44815a7040d59d557676a2778af8616a",
+      "definitionHash": "950adc11df090de507ef105f5bc5e7e4c820c418966d283713151cebb5d1b5a5",
+      "approvalHash": "5e3e78e6bc733250b6d1fcf237a4dd0cb2b92f503db5a390919beaaa1356e886"
     },
     {
       "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
       "status": "eligible",
-      "reason": "Paragraph (2)(a) expressly names the offense and states its conditional mandatory minimum.",
-      "draftHash": "f29ed0fe1e8095bf8f8e1993d76a8de83af62c5e26c5267fee853254b2d9992c",
-      "definitionHash": "7c0adab4a1c56f2aa7eed21bdd66ef80d2369f3a669e8270d3cc40f39301a105",
-      "approvalHash": "1fb21bdac9c9f3bebdbdd4b54dd8efd71670330a891082ba45cfcd708732a3a3"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "b8b5163eea3f87fa55e6b0454ce00ef63a3770560f2bd9bc1ea961ec6d6085ce",
+      "definitionHash": "490b5706ef993c66399e6951cf76a1eeee5dd28b731450770aba3f3315b85b25",
+      "approvalHash": "b02868854a3a2e68ca438335128b764e1edc9ce7189ce1e0bbab88b9dbd42e1e"
     },
     {
       "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
       "status": "eligible",
-      "reason": "Paragraph (2)(b) expressly names and grades the under-12 offense.",
-      "draftHash": "09adbe600779f2731125be88cb2ca3e8699c4b19e0193fdc05050d3c6ac65ac8",
-      "definitionHash": "10539bf49e5af99b62c15b647f4b6712b933ae97a2b18e5015ddab81b17c2437",
-      "approvalHash": "c90a582bcb39c2ad80633b7ad64d5fcbc9f6972b30482b748d05356ca49a83be"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "33ebbe2d46d0b3eddab397119edc889bcf9c9467c3ab9bad590d33c86b6c5fbf",
+      "definitionHash": "0b5f27842ce9440eb07bdf88cc5a154576146bc1084567471b908dbec781f45f",
+      "approvalHash": "58f6471a7da17ba7ec3c1649caa4d66f22fd5c8a01ae28c78580ebdac5915d5c"
     },
     {
       "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
       "status": "eligible",
-      "reason": "Subsection (3) expressly names, defines, and grades the offense.",
-      "draftHash": "940d26508b471f4d2e6afe1b6c7dbd7842fdac855600dcec65216f15dd84bbc9",
-      "definitionHash": "5b2f242c926651e76bc0004dd316ec21daf48eb9b3a74c7dfb79af0d1feb3385",
-      "approvalHash": "3349ff3d74d4d9448aaf00bc8b3bb2e945d18ee6c834e536370bf3f68b5fc787"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "0c31fe739eaba66dc5a0df14fc3fe2d5aed7df7e9fe1bcb9841e2bf6cadab5eb",
+      "definitionHash": "a23133b20e2ae3e792323472363483038ea00cba3d07c3329d10be83db526cc8",
+      "approvalHash": "f5df8bb83eba23229e2897cd2d1ae8ff080c8aa8b916f6df47fb726838224187"
     },
     {
       "id": "fl-fs-806-13-criminal-mischief",
@@ -805,10 +805,10 @@
     {
       "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
       "status": "eligible",
-      "reason": "The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.",
-      "draftHash": "476418db870c59be57282befbb0dd2bd4fc3d87b9980b1ba266adc16427e9a0c",
-      "definitionHash": "357ae25311848a7be61e87f77a5c97eb9edc26a56281be63f81d11a0c47c0e50",
-      "approvalHash": "96fc393a0c9a6daf2548db7e0c1a2523c2f8a6b3b07a3dec5a6575965cc561ae"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "ad747324213f0a939dac19034f0ad3066a26534c9c0b13194ba3c9f28593c4fc",
+      "definitionHash": "d0a8d4f2ff3d91b093f493592a9a59b7d294158801b3089263325bfd204804f0",
+      "approvalHash": "c829345bfc726cfe00d990e81772f6db066b7b5bbc48b9ac5874d1ff75708603"
     }
   ]
 }

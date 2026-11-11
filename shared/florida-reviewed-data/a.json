@@ -661,31 +661,474 @@
     }
   },
   {
-    "id":"fl-fs-800-04-4-lewd-or-lascivious-battery","jurisdiction":"FL","code":"800.04(4)","slug":"fl-fs-800-04-4-lewd-or-lascivious-battery","name":"lewd or lascivious battery","names":{"es":"agresión sexual lasciva","zh":"淫亵殴打"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 800.04(4)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
-    "text":{"en":{"plainSummary":"Engaging in sexual activity with a person age 12 through 15, or encouraging, forcing, or enticing a person under 16 to engage in the listed sexual acts.","degreeContext":"Ordinarily a second-degree felony; it is a first-degree felony when an offender age 18 or older has a prior conviction listed in subsection (4)(c)."},"es":{"plainSummary":"Realizar actividad sexual con una persona de 12 a 15 años, o alentar, forzar o inducir a una persona menor de 16 años a realizar los actos sexuales enumerados.","degreeContext":"Por regla general es un delito grave de segundo grado; es de primer grado si el autor tiene 18 años o más y una condena previa enumerada en el apartado (4)(c)."},"zh":{"plainSummary":"与12至15岁者发生性活动，或鼓励、强迫、诱使16岁以下者参与法条列明的性行为。","degreeContext":"通常为二级重罪；行为人年满18岁且有第(4)(c)款列明的先前定罪时，为一级重罪。"}}},
+    "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+    "jurisdiction": "FL",
+    "code": "800.04(4)",
+    "slug": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+    "name": "lewd or lascivious battery",
+    "names": {
+      "es": "agresión sexual lasciva",
+      "zh": "淫亵殴打"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Engaging in sexual activity with a person age 12 through 15, or encouraging, forcing, or enticing a person under 16 to engage in the listed sexual acts.",
+        "degreeContext": "Ordinarily a second-degree felony; it is a first-degree felony when an offender age 18 or older has a prior conviction listed in subsection (4)(c). Consent and prior sexual history are not defenses under §800.04. Neither ignorance, misrepresentation nor a good-faith belief about the child’s age is a defense. Under §794.0115, an offender aged 18 or older at the time who also caused serious personal injury, used or threatened a deadly weapon, victimized multiple people in the episode, was under a court’s jurisdiction for a qualifying felony, or had a qualifying prior conviction faces a separate minimum of 50 years for conduct from October 1, 2014, up to life. The qualifying facts must be established. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Realizar actividad sexual con una persona de 12 a 15 años, o alentar, forzar o inducir a una persona menor de 16 años a realizar los actos sexuales enumerados.",
+        "degreeContext": "Por regla general es un delito grave de segundo grado; es de primer grado si el autor tiene 18 años o más y una condena previa enumerada en el apartado (4)(c). En §800.04, ni el consentimiento ni los antecedentes sexuales constituyen defensa. Tampoco el desconocimiento de la edad, la edad falsa declarada ni la creencia de buena fe sobre la edad. Según §794.0115, si tenía al menos 18 años al ocurrir los hechos y además causó lesiones personales graves, usó o amenazó con usar un arma letal, afectó a varias víctimas en el episodio, estaba bajo jurisdicción judicial por un delito grave pertinente o tenía una condena previa comprendida en la ley, hay una pena mínima separada de 50 años por hechos desde el 1 de octubre de 2014, hasta prisión perpetua. Deben acreditarse esos hechos. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "与12至15岁者发生性活动，或鼓励、强迫、诱使16岁以下者参与法条列明的性行为。",
+        "degreeContext": "通常为二级重罪；行为人年满18岁且有第(4)(c)款列明的先前定罪时，为一级重罪。 依第800.04条，同意及既往性经历均不构成抗辩；不了解年龄、被告知不实年龄或善意误认年龄也不构成抗辩。 第794.0115条另规定，行为时年满18岁并造成严重人身伤害、使用或威胁使用致命武器、同一事件涉及多名被害人、因符合法定条件的重罪处于法院管辖下，或有符合法定条件的前科，且行为发生于2014年10月1日或之后的，最低刑期为50年，最高终身监禁。须证实相应情节。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-800-04-5-lewd-or-lascivious-molestation","jurisdiction":"FL","code":"800.04(5)","slug":"fl-fs-800-04-5-lewd-or-lascivious-molestation","name":"lewd or lascivious molestation","names":{"es":"tocamiento lascivo","zh":"淫亵猥亵"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 800.04(5)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
-    "text":{"en":{"plainSummary":"Intentionally and lewdly touching specified intimate areas, or clothing covering them, of a person under 16, or forcing or enticing that person to touch the perpetrator that way.","degreeContext":"The grade depends on offender and victim ages and qualifying prior convictions: life felony, first-degree felony, second-degree felony, or third-degree felony under subsection (5)."},"es":{"plainSummary":"Tocar intencional y lascivamente las zonas íntimas especificadas, o la ropa que las cubre, de una persona menor de 16 años, o forzarla o inducirla a tocar así al autor.","degreeContext":"El grado depende de las edades del autor y la víctima y de condenas previas: delito grave de por vida, de primer, segundo o tercer grado según el apartado (5)."},"zh":{"plainSummary":"故意以淫亵方式触碰16岁以下者法定的私密部位或其衣物，或强迫、诱使该人以同样方式触碰行为人。","degreeContext":"等级取决于行为人与被害人年龄及符合条件的先前定罪，依第(5)款可为终身重罪或一、二、三级重罪。"}}},
+    "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+    "jurisdiction": "FL",
+    "code": "800.04(5)",
+    "slug": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+    "name": "lewd or lascivious molestation",
+    "names": {
+      "es": "tocamiento lascivo",
+      "zh": "淫亵猥亵"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(5)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 948.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0948/Sections/0948.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0116",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0116.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally and lewdly touching specified intimate areas, or clothing covering them, of a person under 16, or forcing or enticing that person to touch the perpetrator that way.",
+        "degreeContext": "The grade depends on offender and victim ages and qualifying prior convictions: life felony, first-degree felony, second-degree felony, or third-degree felony under subsection (5). Consent and prior sexual history are not defenses under §800.04. Neither ignorance, misrepresentation nor a good-faith belief about the child’s age is a defense. For an offender under 18, the grade is second degree if the child was under 12 and third degree if the child was 12–15. For an adult and a child aged 12–15, it is second degree, or first degree with a prior listed in (5)(e). For an adult and a child under 12, (5)(b) is a life felony. Under §775.082(3)(a)4, for that branch from September 1, 2005, the sentence is life or a split sentence of at least 25 years followed by supervision for the rest of the person’s life. A second or later violation of (5)(b) from July 1, 2008 requires life imprisonment. For conduct from July 1, 2026, §794.0116 requires at least 15 years if a prior listed in §943.0435(1)(h)1.a. resulted in conviction or withheld adjudication. That minimum can exceed the ordinary maximum. Under §794.0115, an offender aged 18 or older at the time who also caused serious personal injury, used or threatened a deadly weapon, victimized multiple people in the episode, was under a court’s jurisdiction for a qualifying felony, or had a qualifying prior conviction faces a separate minimum of 50 years for conduct from October 1, 2014, up to life. The qualifying facts must be established. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For a current life felony the ordinary maximum is life imprisonment and a $15,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Tocar intencional y lascivamente las zonas íntimas especificadas, o la ropa que las cubre, de una persona menor de 16 años, o forzarla o inducirla a tocar así al autor.",
+        "degreeContext": "El grado depende de las edades del autor y la víctima y de condenas previas: delito grave de por vida, de primer, segundo o tercer grado según el apartado (5). En §800.04, ni el consentimiento ni los antecedentes sexuales constituyen defensa. Tampoco el desconocimiento de la edad, la edad falsa declarada ni la creencia de buena fe sobre la edad. Para quien tenía menos de 18 años, es de segundo grado si la víctima tenía menos de 12, y de tercero si tenía 12–15. Para un adulto con víctima de 12–15 es de segundo grado, o de primero con un antecedente de (5)(e). Para un adulto con víctima menor de 12, (5)(b) es delito grave de por vida. Desde el 1 de septiembre de 2005, §775.082(3)(a)4 prevé prisión perpetua o al menos 25 años en prisión seguidos de supervisión por el resto de la vida. Una segunda infracción o posterior de (5)(b) desde el 1 de julio de 2008 exige prisión perpetua. Para hechos desde el 1 de julio de 2026, §794.0116 exige al menos 15 años si un delito anterior de la lista de §943.0435(1)(h)1.a. resultó en condena o adjudicación reservada. Ese mínimo puede superar el máximo ordinario. Según §794.0115, si tenía al menos 18 años al ocurrir los hechos y además causó lesiones personales graves, usó o amenazó con usar un arma letal, afectó a varias víctimas en el episodio, estaba bajo jurisdicción judicial por un delito grave pertinente o tenía una condena previa comprendida en la ley, hay una pena mínima separada de 50 años por hechos desde el 1 de octubre de 2014, hasta prisión perpetua. Deben acreditarse esos hechos. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Un delito grave de por vida cometido actualmente conlleva ordinariamente hasta prisión perpetua y una multa de $15,000. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "故意以淫亵方式触碰16岁以下者法定的私密部位或其衣物，或强迫、诱使该人以同样方式触碰行为人。",
+        "degreeContext": "等级取决于行为人与被害人年龄及符合条件的先前定罪，依第(5)款可为终身重罪或一、二、三级重罪。 依第800.04条，同意及既往性经历均不构成抗辩；不了解年龄、被告知不实年龄或善意误认年龄也不构成抗辩。 行为人未满18岁时，被害人未满12岁为二级重罪，12至15岁为三级。成年人对12至15岁者实施本罪为二级，有第(5)(e)款列出的前科则为一级。成年人对未满12岁者实施第(5)(b)款行为为终身重罪。自2005年9月1日起，第775.082(3)(a)4条规定终身监禁，或至少监禁25年、随后接受终身监督。自2008年7月1日起，第二次或以后违反第(5)(b)款须判终身监禁。 对2026年7月1日及以后的行为，如第943.0435(1)(h)1.a.条列出的先前犯罪已被定罪或暂缓正式定罪，第794.0116条要求最低15年监禁。该最低刑可超过一般最高刑。 第794.0115条另规定，行为时年满18岁并造成严重人身伤害、使用或威胁使用致命武器、同一事件涉及多名被害人、因符合法定条件的重罪处于法院管辖下，或有符合法定条件的前科，且行为发生于2014年10月1日或之后的，最低刑期为50年，最高终身监禁。须证实相应情节。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 二级重罪通常最高可判监禁15年及罚款10,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 依现行法，终身重罪通常最高可判终身监禁及罚款15,000美元。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-800-04-6-lewd-or-lascivious-conduct","jurisdiction":"FL","code":"800.04(6)","slug":"fl-fs-800-04-6-lewd-or-lascivious-conduct","name":"lewd or lascivious conduct","names":{"es":"conducta lasciva","zh":"淫亵行为"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 800.04(6)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
-    "text":{"en":{"plainSummary":"Intentionally touching a person under 16 in a lewd or lascivious manner, or soliciting that person to commit a lewd or lascivious act.","degreeContext":"A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."},"es":{"plainSummary":"Tocar intencionalmente de manera lasciva a una persona menor de 16 años, o solicitarle que cometa un acto lascivo.","degreeContext":"Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."},"zh":{"plainSummary":"故意以淫亵方式触碰16岁以下者，或请求该人实施淫亵行为。","degreeContext":"行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"}}},
+    "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+    "jurisdiction": "FL",
+    "code": "800.04(6)",
+    "slug": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+    "name": "lewd or lascivious conduct",
+    "names": {
+      "es": "conducta lasciva",
+      "zh": "淫亵行为"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(6)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally touching a person under 16 in a lewd or lascivious manner, or soliciting that person to commit a lewd or lascivious act.",
+        "degreeContext": "A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18. Consent and prior sexual history are not defenses under §800.04. Neither ignorance, misrepresentation nor a good-faith belief about the child’s age is a defense. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Tocar intencionalmente de manera lasciva a una persona menor de 16 años, o solicitarle que cometa un acto lascivo.",
+        "degreeContext": "Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18. En §800.04, ni el consentimiento ni los antecedentes sexuales constituyen defensa. Tampoco el desconocimiento de la edad, la edad falsa declarada ni la creencia de buena fe sobre la edad. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "故意以淫亵方式触碰16岁以下者，或请求该人实施淫亵行为。",
+        "degreeContext": "行为人年满18岁时为二级重罪；未满18岁时为三级重罪。 依第800.04条，同意及既往性经历均不构成抗辩；不了解年龄、被告知不实年龄或善意误认年龄也不构成抗辩。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 二级重罪通常最高可判监禁15年及罚款10,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-800-04-7-lewd-or-lascivious-exhibition","jurisdiction":"FL","code":"800.04(7)","slug":"fl-fs-800-04-7-lewd-or-lascivious-exhibition","name":"lewd or lascivious exhibition","names":{"es":"exhibición lasciva","zh":"淫亵展示"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 800.04(7)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
-    "text":{"en":{"plainSummary":"In the presence of a person under 16, intentionally masturbating, lewdly exposing the genitals, or intentionally committing another listed noncontact sexual act. Breastfeeding is excluded.","degreeContext":"A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."},"es":{"plainSummary":"En presencia de una persona menor de 16 años, masturbarse intencionalmente, exponer los genitales de manera lasciva o cometer intencionalmente otro acto sexual sin contacto enumerado. Se excluye la lactancia.","degreeContext":"Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."},"zh":{"plainSummary":"在16岁以下者面前故意自慰、以淫亵方式暴露生殖器，或故意实施其他列明的非接触性行为。母乳喂养除外。","degreeContext":"行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"}}},
+    "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+    "jurisdiction": "FL",
+    "code": "800.04(7)",
+    "slug": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+    "name": "lewd or lascivious exhibition",
+    "names": {
+      "es": "exhibición lasciva",
+      "zh": "淫亵展示"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(7)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "In the presence of a person under 16, intentionally masturbating, lewdly exposing the genitals, or intentionally committing another listed noncontact sexual act. Breastfeeding is excluded.",
+        "degreeContext": "A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18. Consent and prior sexual history are not defenses under §800.04. Neither ignorance, misrepresentation nor a good-faith belief about the child’s age is a defense. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "En presencia de una persona menor de 16 años, masturbarse intencionalmente, exponer los genitales de manera lasciva o cometer intencionalmente otro acto sexual sin contacto enumerado. Se excluye la lactancia.",
+        "degreeContext": "Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18. En §800.04, ni el consentimiento ni los antecedentes sexuales constituyen defensa. Tampoco el desconocimiento de la edad, la edad falsa declarada ni la creencia de buena fe sobre la edad. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "在16岁以下者面前故意自慰、以淫亵方式暴露生殖器，或故意实施其他列明的非接触性行为。母乳喂养除外。",
+        "degreeContext": "行为人年满18岁时为二级重罪；未满18岁时为三级重罪。 依第800.04条，同意及既往性经历均不构成抗辩；不了解年龄、被告知不实年龄或善意误认年龄也不构成抗辩。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 二级重罪通常最高可判监禁15年及罚款10,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance","jurisdiction":"FL","code":"827.071(2)(a)","slug":"fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance","name":"use of a child in a sexual performance","names":{"es":"uso de un menor en una actuación sexual","zh":"利用儿童进行性表演"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 827.071(2)(a)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
-    "text":{"en":{"plainSummary":"Knowing the performance's character and content, employing, authorizing, or inducing a child to engage in a sexual performance, or as the child's parent, guardian, or custodian consenting to participation.","degreeContext":"A first-degree felony. An offender age 18 or older generally faces a 15-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."},"es":{"plainSummary":"Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor a participar en una actuación sexual, o consentir como padre, tutor o custodio.","degreeContext":"Delito grave de primer grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 15 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."},"zh":{"plainSummary":"明知表演的性质和内容，雇用、授权或诱使儿童参与性表演，或作为父母、监护人或保管人同意其参与。","degreeContext":"一级重罪。年满18岁的行为人通常面临15年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"}}},
+    "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+    "jurisdiction": "FL",
+    "code": "827.071(2)(a)",
+    "slug": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+    "name": "use of a child in a sexual performance",
+    "names": {
+      "es": "uso de un menor en una actuación sexual",
+      "zh": "利用儿童进行性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0116",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0116.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing the performance's character and content, employing, authorizing, or inducing a child to engage in a sexual performance, or as the child's parent, guardian, or custodian consenting to participation.",
+        "degreeContext": "A first-degree felony. An offender age 18 or older generally faces a 15-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made. These §827.071 offense and sentencing provisions reflect the law effective July 1, 2026. An earlier offense date requires the law then in effect. The ordinary adult minimum may be omitted only on written findings that the depicted child was at least 14 and permitted creation, the offender was no more than four years older, and the offender did not promote it to a third party. These findings concern the minimum under §827.071. For conduct from July 1, 2026, §794.0116 requires at least 30 years if a prior listed in §943.0435(1)(h)1.a. resulted in conviction or withheld adjudication. That minimum can exceed the ordinary maximum. Under §794.0115, an offender aged 18 or older at the time who also caused serious personal injury, used or threatened a deadly weapon, victimized multiple people in the episode, was under a court’s jurisdiction for a qualifying felony, or had a qualifying prior conviction faces a separate minimum of 50 years for conduct from October 1, 2014, up to life. The qualifying facts must be established. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor a participar en una actuación sexual, o consentir como padre, tutor o custodio.",
+        "degreeContext": "Delito grave de primer grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 15 años, salvo que el tribunal formule todos los hallazgos del apartado (7). Estas reglas del §827.071 reflejan la ley vigente desde el 1 de julio de 2026. Para hechos anteriores debe consultarse la ley entonces vigente. Para omitir el mínimo ordinario del adulto se requiere que el tribunal determine por escrito que la persona menor representada tenía al menos 14 años y permitió la creación, que la diferencia de edad no superaba cuatro años y que el acusado no promovió la actuación ante terceros. Esto se refiere al mínimo de §827.071. Para hechos desde el 1 de julio de 2026, §794.0116 exige al menos 30 años si un delito anterior de la lista de §943.0435(1)(h)1.a. resultó en condena o adjudicación reservada. Ese mínimo puede superar el máximo ordinario. Según §794.0115, si tenía al menos 18 años al ocurrir los hechos y además causó lesiones personales graves, usó o amenazó con usar un arma letal, afectó a varias víctimas en el episodio, estaba bajo jurisdicción judicial por un delito grave pertinente o tenía una condena previa comprendida en la ley, hay una pena mínima separada de 50 años por hechos desde el 1 de octubre de 2014, hasta prisión perpetua. Deben acreditarse esos hechos. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "明知表演的性质和内容，雇用、授权或诱使儿童参与性表演，或作为父母、监护人或保管人同意其参与。",
+        "degreeContext": "一级重罪。年满18岁的行为人通常面临15年强制最低刑期，但法院作出第(7)款全部认定时可不适用。 这些第827.071条规定反映自2026年7月1日起生效的法律。更早的行为须依当时适用的法律判断。 免除第827.071条的通常成年人最低刑须由法院书面认定：被描绘的儿童当时年满14岁并同意制作，行为人比儿童年长不超过四岁，且未向第三方推广该表演。 对2026年7月1日及以后的行为，如第943.0435(1)(h)1.a.条列出的先前犯罪已被定罪或暂缓正式定罪，第794.0116条要求最低30年监禁。该最低刑可超过一般最高刑。 第794.0115条另规定，行为时年满18岁并造成严重人身伤害、使用或威胁使用致命武器、同一事件涉及多名被害人、因符合法定条件的重罪处于法院管辖下，或有符合法定条件的前科，且行为发生于2014年10月1日或之后的，最低刑期为50年，最高终身监禁。须证实相应情节。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance","jurisdiction":"FL","code":"827.071(2)(b)","slug":"fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance","name":"aggravated use of a child in a sexual performance","names":{"es":"uso agravado de un menor en una actuación sexual","zh":"加重利用儿童进行性表演"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 827.071(2)(b)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
-    "text":{"en":{"plainSummary":"Knowing the performance's character and content, employing, authorizing, or inducing a child under 12 to engage in a sexual performance.","degreeContext":"A life felony. An offender age 18 or older must receive a 25-year mandatory minimum."},"es":{"plainSummary":"Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor de 12 años a participar en una actuación sexual.","degreeContext":"Delito grave de por vida. El autor de 18 años o más debe recibir un mínimo obligatorio de 25 años."},"zh":{"plainSummary":"明知表演的性质和内容，雇用、授权或诱使12岁以下儿童参与性表演。","degreeContext":"终身重罪。年满18岁的行为人必须判处25年强制最低刑期。"}}},
+    "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+    "jurisdiction": "FL",
+    "code": "827.071(2)(b)",
+    "slug": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+    "name": "aggravated use of a child in a sexual performance",
+    "names": {
+      "es": "uso agravado de un menor en una actuación sexual",
+      "zh": "加重利用儿童进行性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(2)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0116",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0116.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing the performance's character and content, employing, authorizing, or inducing a child under 12 to engage in a sexual performance.",
+        "degreeContext": "A life felony. An offender age 18 or older must receive a 25-year mandatory minimum. These §827.071 offense and sentencing provisions reflect the law effective July 1, 2026. An earlier offense date requires the law then in effect. For conduct from July 1, 2026, §794.0116 requires at least 30 years if a prior listed in §943.0435(1)(h)1.a. resulted in conviction or withheld adjudication. That minimum can exceed the ordinary maximum. Under §794.0115, an offender aged 18 or older at the time who also caused serious personal injury, used or threatened a deadly weapon, victimized multiple people in the episode, was under a court’s jurisdiction for a qualifying felony, or had a qualifying prior conviction faces a separate minimum of 50 years for conduct from October 1, 2014, up to life. The qualifying facts must be established. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. The adult sentencing ranges do not determine a juvenile disposition. For a current life felony the ordinary maximum is life imprisonment and a $15,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor de 12 años a participar en una actuación sexual.",
+        "degreeContext": "Delito grave de por vida. El autor de 18 años o más debe recibir un mínimo obligatorio de 25 años. Estas reglas del §827.071 reflejan la ley vigente desde el 1 de julio de 2026. Para hechos anteriores debe consultarse la ley entonces vigente. Para hechos desde el 1 de julio de 2026, §794.0116 exige al menos 30 años si un delito anterior de la lista de §943.0435(1)(h)1.a. resultó en condena o adjudicación reservada. Ese mínimo puede superar el máximo ordinario. Según §794.0115, si tenía al menos 18 años al ocurrir los hechos y además causó lesiones personales graves, usó o amenazó con usar un arma letal, afectó a varias víctimas en el episodio, estaba bajo jurisdicción judicial por un delito grave pertinente o tenía una condena previa comprendida en la ley, hay una pena mínima separada de 50 años por hechos desde el 1 de octubre de 2014, hasta prisión perpetua. Deben acreditarse esos hechos. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de por vida cometido actualmente conlleva ordinariamente hasta prisión perpetua y una multa de $15,000. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "明知表演的性质和内容，雇用、授权或诱使12岁以下儿童参与性表演。",
+        "degreeContext": "终身重罪。年满18岁的行为人必须判处25年强制最低刑期。 这些第827.071条规定反映自2026年7月1日起生效的法律。更早的行为须依当时适用的法律判断。 对2026年7月1日及以后的行为，如第943.0435(1)(h)1.a.条列出的先前犯罪已被定罪或暂缓正式定罪，第794.0116条要求最低30年监禁。该最低刑可超过一般最高刑。 第794.0115条另规定，行为时年满18岁并造成严重人身伤害、使用或威胁使用致命武器、同一事件涉及多名被害人、因符合法定条件的重罪处于法院管辖下，或有符合法定条件的前科，且行为发生于2014年10月1日或之后的，最低刑期为50年，最高终身监禁。须证实相应情节。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。 成年人刑罚范围不能决定未成年人司法程序中的处分。 依现行法，终身重罪通常最高可判终身监禁及罚款15,000美元。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  },
   {
-    "id":"fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child","jurisdiction":"FL","code":"827.071(3)","slug":"fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child","name":"promoting a sexual performance by a child","names":{"es":"promoción de una actuación sexual de un menor","zh":"推广儿童性表演"},"category":"felony","verifiedMonth":"2026-09",
-    "citations":[{"citation":"Fla. Stat. § 827.071(3)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
-    "text":{"en":{"plainSummary":"Knowing its character and content, producing, directing, or promoting a performance that includes sexual conduct by a child.","degreeContext":"A second-degree felony. An offender age 18 or older generally faces a 5-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."},"es":{"plainSummary":"Conociendo su carácter y contenido, producir, dirigir o promover una actuación que incluya conducta sexual de un menor.","degreeContext":"Delito grave de segundo grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 5 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."},"zh":{"plainSummary":"明知其性质和内容，制作、导演或推广包含儿童性行为的表演。","degreeContext":"二级重罪。年满18岁的行为人通常面临5年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"}}}
+    "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+    "jurisdiction": "FL",
+    "code": "827.071(3)",
+    "slug": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+    "name": "promoting a sexual performance by a child",
+    "names": {
+      "es": "promoción de una actuación sexual de un menor",
+      "zh": "推广儿童性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.0847",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.0847.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0116",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0116.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.04354",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.04354.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing its character and content, producing, directing, or promoting a performance that includes sexual conduct by a child.",
+        "degreeContext": "A second-degree felony. An offender age 18 or older generally faces a 5-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made. These §827.071 offense and sentencing provisions reflect the law effective July 1, 2026. An earlier offense date requires the law then in effect. The ordinary adult minimum may be omitted only on written findings that the depicted child was at least 14 and permitted creation, the offender was no more than four years older, and the offender did not promote it to a third party. These findings concern the minimum under §827.071. Under §775.0847, promotion can become a first-degree felony if the offender possessed at least ten images of child sexual abuse material and at least one meets a listed content condition, including depiction of a child under 12 or a qualifying moving image. For conduct from July 1, 2026, §794.0116 requires at least 20 years if a prior listed in §943.0435(1)(h)1.a. resulted in conviction or withheld adjudication. That minimum can exceed the ordinary maximum. Under §794.0115, an offender aged 18 or older at the time who also caused serious personal injury, used or threatened a deadly weapon, victimized multiple people in the episode, was under a court’s jurisdiction for a qualifying felony, or had a qualifying prior conviction faces a separate minimum of 50 years for conduct from October 1, 2014, up to life. The qualifying facts must be established. A conviction may require sex-offender registration. §943.0435 includes separate eligibility rules for adults and juvenile adjudications. A close-in-age case can seek court-ordered removal under §943.04354 only for a victim aged 13–17, an age difference of no more than four years, and fulfillment of the remaining statutory conditions; the age gap alone does not remove a duty. The adult sentencing ranges do not determine a juvenile disposition. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
+      },
+      "es": {
+        "plainSummary": "Conociendo su carácter y contenido, producir, dirigir o promover una actuación que incluya conducta sexual de un menor.",
+        "degreeContext": "Delito grave de segundo grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 5 años, salvo que el tribunal formule todos los hallazgos del apartado (7). Estas reglas del §827.071 reflejan la ley vigente desde el 1 de julio de 2026. Para hechos anteriores debe consultarse la ley entonces vigente. Para omitir el mínimo ordinario del adulto se requiere que el tribunal determine por escrito que la persona menor representada tenía al menos 14 años y permitió la creación, que la diferencia de edad no superaba cuatro años y que el acusado no promovió la actuación ante terceros. Esto se refiere al mínimo de §827.071. Según §775.0847, la promoción puede pasar a delito grave de primer grado si el acusado poseía al menos diez imágenes de material de abuso sexual infantil y una o más cumplen una de las condiciones de contenido enumeradas, como representar a un menor de 12 años o ser una imagen en movimiento comprendida por la norma. Para hechos desde el 1 de julio de 2026, §794.0116 exige al menos 20 años si un delito anterior de la lista de §943.0435(1)(h)1.a. resultó en condena o adjudicación reservada. Ese mínimo puede superar el máximo ordinario. Según §794.0115, si tenía al menos 18 años al ocurrir los hechos y además causó lesiones personales graves, usó o amenazó con usar un arma letal, afectó a varias víctimas en el episodio, estaba bajo jurisdicción judicial por un delito grave pertinente o tenía una condena previa comprendida en la ley, hay una pena mínima separada de 50 años por hechos desde el 1 de octubre de 2014, hasta prisión perpetua. Deben acreditarse esos hechos. Una condena puede exigir registro como delincuente sexual. §943.0435 contiene condiciones distintas para adultos y adjudicaciones de menores. Los casos con edades próximas pueden solicitar judicialmente la eliminación del deber conforme a §943.04354 solo con víctima de 13–17 años, diferencia de edad que no supere cuatro años y cumplimiento de los demás requisitos legales; la diferencia de edad por sí sola no elimina la obligación. Los límites penales para adultos no determinan la medida que corresponda en el sistema de menores. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
+      },
+      "zh": {
+        "plainSummary": "明知其性质和内容，制作、导演或推广包含儿童性行为的表演。",
+        "degreeContext": "二级重罪。年满18岁的行为人通常面临5年强制最低刑期，但法院作出第(7)款全部认定时可不适用。 这些第827.071条规定反映自2026年7月1日起生效的法律。更早的行为须依当时适用的法律判断。 免除第827.071条的通常成年人最低刑须由法院书面认定：被描绘的儿童当时年满14岁并同意制作，行为人比儿童年长不超过四岁，且未向第三方推广该表演。 依第775.0847条，如行为人持有至少十幅儿童性虐待材料图像，且至少一幅符合法定内容条件，例如描绘未满12岁的儿童或属于适用的动态影像，推广行为可升为一级重罪。 对2026年7月1日及以后的行为，如第943.0435(1)(h)1.a.条列出的先前犯罪已被定罪或暂缓正式定罪，第794.0116条要求最低20年监禁。该最低刑可超过一般最高刑。 第794.0115条另规定，行为时年满18岁并造成严重人身伤害、使用或威胁使用致命武器、同一事件涉及多名被害人、因符合法定条件的重罪处于法院管辖下，或有符合法定条件的前科，且行为发生于2014年10月1日或之后的，最低刑期为50年，最高终身监禁。须证实相应情节。 定罪可能产生性犯罪者登记义务。第943.0435条分别规定成年人和少年裁判的适用条件。年龄相近者只有在被害人当时13至17岁、相差不超过四岁且满足第943.04354条其他条件时才可向法院申请解除登记义务；仅年龄相近不会自动解除。 成年人刑罚范围不能决定未成年人司法程序中的处分。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
+      }
+    }
+  }
 ]

@@ -676,7 +676,7 @@
     "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
     "section": "827.04",
     "status": "eligible",
-    "reason": "The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.",
+    "reason": "Individually bound child-offense conduct, age conditions and penalties.",
     "identity": {
       "kind": "official_heading",
       "quote": "Contributing to the delinquency or dependency of a child; penalty",
@@ -723,9 +723,19 @@
         "section": "775.084",
         "role": "penalty",
         "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
       }
     ],
-    "notes": "This is the independently complete subsection (3) felony, not subsection (1)'s delinquency/dependency misdemeanor. The same-transaction rule and the express statement that lack of chastity and consent are not defenses are preserved."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
