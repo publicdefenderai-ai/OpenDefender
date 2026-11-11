@@ -315,7 +315,17 @@ function App() {
                 <Toaster />
                 <SkipNavigation />
                 <BetaBanner />
-                <main id="main-content" tabIndex={-1} className="mobile-nav-page-offset">
+                <main
+                  id="main-content"
+                  tabIndex={-1}
+                  className="mobile-nav-page-offset"
+                  onFocus={event => {
+                    // A framed page has its own header before the reading content.
+                    if (event.target === event.currentTarget) {
+                      event.currentTarget.querySelector<HTMLElement>("[data-skip-content]")?.focus();
+                    }
+                  }}
+                >
                   <Suspense fallback={<RouteLoading />}>
                     <AnimatePresence mode="wait">
                       <PageTransition key={location}>

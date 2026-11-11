@@ -91,7 +91,6 @@ test.describe("intent navigation and accessibility", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/case-timeline");
 
-    // Measure the outer focusable app shell, not the nested page landmark.
     const main = page.locator('main#main-content[tabindex="-1"]');
     await expect(main).toHaveClass(/mobile-nav-page-offset/);
     const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
@@ -329,3 +328,20 @@ test.describe("intent navigation and accessibility", () => {
     await expectNoHorizontalOverflow(page, 390);
   });
 });
+for (const path of ["/", "/support", "/support/personal-health", "/how-to"]) {
+  test(`one main landmark and keyboard skip destination on ${path}`, async ({ page }) => {
+    await page.goto(path);
+    await expect(page.locator("h1").first()).toBeVisible();
+    const main = page.getByRole("main");
+    await expect(main).toHaveCount(1);
+    await expect(page.locator('[id="main-content"]')).toHaveCount(1);
+    await expect(main).toHaveAttribute("id", "main-content");
+    const skip = page.getByTestId("skip-navigation");
+    await page.keyboard.press("Tab");
+    await expect(skip).toBeFocused();
+    await page.keyboard.press("Enter");
+    const destination = path === "/" ? main : main.locator("[data-skip-content]");
+    await expect(destination).toBeFocused();
+    await expect(destination.locator("h1").first()).toBeVisible();
+  });
+}

@@ -15,11 +15,7 @@ interface ScanFirstPageFrameProps {
   mainClassName?: string;
 }
 
-/**
- * Shared shell for support and utility pages. Keeping the landmark and
- * vertical rhythm here makes specialized pages feel related without forcing
- * their content into one component.
- */
+/** Shared header, content and footer for support and utility pages. */
 export function ScanFirstPageFrame({
   children,
   className = "",
@@ -28,9 +24,9 @@ export function ScanFirstPageFrame({
   return (
     <div className={`min-h-screen flex flex-col bg-background ${className}`}>
       <Header />
-      <main id="main-content" className={`flex-1 ${mainClassName}`}>
+      <div data-skip-content tabIndex={-1} className={`flex-1 ${mainClassName}`}>
         {children}
-      </main>
+      </div>
       <Footer />
     </div>
   );
