@@ -1,0 +1,663 @@
+[
+  {
+    "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.014:2_e",
+      "target": "text",
+      "text": "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).",
+      "start": 8273,
+      "end": 8581,
+      "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:2_e",
+        "target": "text",
+        "text": "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).",
+        "start": 8273,
+        "end": 8581,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014:2_e",
+        "target": "text",
+        "text": "A person who commits a violation of subparagraph 1. and who has previously been convicted of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 8587,
+        "end": 8779,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:2_e",
+        "target": "text",
+        "text": "A person who commits a violation of subparagraph 1. and who has previously been convicted of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 8587,
+        "end": 8779,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:812.014:2_e",
+        "target": "text",
+        "text": "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).",
+        "start": 8273,
+        "end": 8581,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.014:2_e",
+        "role": "offense",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "grading",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "exception",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:810.011",
+        "role": "definition",
+        "contentHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d"
+      },
+      {
+        "sourceKey": "fl:statute:810.09",
+        "role": "definition",
+        "contentHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.014:2_f",
+      "target": "text",
+      "text": "Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083.",
+      "start": 9002,
+      "end": 9252,
+      "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:2_f",
+        "target": "text",
+        "text": "Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083.",
+        "start": 9002,
+        "end": 9252,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:2_f",
+        "target": "text",
+        "text": "Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083.",
+        "start": 9002,
+        "end": 9252,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.014:2_f",
+        "role": "offense",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "exception",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.014:3_a",
+      "target": "text",
+      "text": "Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable.",
+      "start": 9543,
+      "end": 9774,
+      "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_a",
+        "target": "text",
+        "text": "Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable.",
+        "start": 9543,
+        "end": 9774,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_a",
+        "target": "text",
+        "text": "Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable.",
+        "start": 9543,
+        "end": 9774,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.014:3_a",
+        "role": "offense",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "definition",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "exception",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-014-3-b-petit-theft",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.014:3_b",
+      "target": "text",
+      "text": "A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "start": 9781,
+      "end": 9959,
+      "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_b",
+        "target": "text",
+        "text": "A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 9781,
+        "end": 9959,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_b",
+        "target": "text",
+        "text": "A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 9781,
+        "end": 9959,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.014:3_b",
+        "role": "offense",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "definition",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "exception",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-014-3-c-petit-theft",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.014:3_c",
+      "target": "text",
+      "text": "A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "start": 9966,
+      "end": 10157,
+      "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_c",
+        "target": "text",
+        "text": "A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 9966,
+        "end": 10157,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.014:3_c",
+        "target": "text",
+        "text": "A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 9966,
+        "end": 10157,
+        "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.014:3_c",
+        "role": "offense",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "definition",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      },
+      {
+        "sourceKey": "fl:statute:812.014",
+        "role": "exception",
+        "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-015-retail-theft",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.015:8_11",
+      "target": "text",
+      "text": "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:",
+      "start": 9625,
+      "end": 9833,
+      "sourceHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.015:8_11",
+        "target": "text",
+        "text": "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:",
+        "start": 9625,
+        "end": 9833,
+        "sourceHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "sourceKey": "fl:statute:812.015:8_11",
+        "target": "text",
+        "text": "Individually, or in concert with one or more other persons, coordinates the activities of one or more individuals in committing the offense, which may occur through multiple acts of retail theft, in which the amount of each individual theft is aggregated within a 120-day period to determine the value of the property stolen and such value is $750 or more;",
+        "start": 9839,
+        "end": 10195,
+        "sourceHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.015:8_11",
+        "target": "text",
+        "text": "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:",
+        "start": 9625,
+        "end": 9833,
+        "sourceHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.015:8_11",
+        "role": "offense",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "sourceKey": "fl:statute:812.015",
+        "role": "grading",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "sourceKey": "fl:statute:812.015",
+        "role": "definition",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-812-019-dealing-in-stolen-property",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:812.019",
+      "target": "title",
+      "text": "Dealing in stolen property",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:812.019",
+        "target": "text",
+        "text": "Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084.",
+        "start": 45,
+        "end": 267,
+        "sourceHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:812.019",
+        "target": "text",
+        "text": "Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084.",
+        "start": 45,
+        "end": 267,
+        "sourceHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:812.019",
+        "role": "offense",
+        "contentHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"
+      },
+      {
+        "sourceKey": "fl:statute:812.012",
+        "role": "definition",
+        "contentHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-234-insurance-fraud",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.234:1_a",
+      "target": "text",
+      "text": "A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:",
+      "start": 59,
+      "end": 209,
+      "sourceHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.234:1_a",
+        "target": "text",
+        "text": "A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:",
+        "start": 59,
+        "end": 209,
+        "sourceHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.234",
+        "target": "text",
+        "text": "Is less than $20,000, the offender commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 11715,
+        "end": 11852,
+        "sourceHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.234:1_a",
+        "role": "offense",
+        "contentHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+      },
+      {
+        "sourceKey": "fl:statute:817.234",
+        "role": "grading",
+        "contentHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+      },
+      {
+        "sourceKey": "fl:statute:812.012",
+        "role": "definition",
+        "contentHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.568:2",
+      "target": "text",
+      "text": "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 2820,
+      "end": 3226,
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:2",
+        "target": "text",
+        "text": "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2820,
+        "end": 3226,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:2",
+        "target": "text",
+        "text": "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2820,
+        "end": 3226,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.568:2",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.568:4",
+      "target": "text",
+      "text": "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "start": 6081,
+      "end": 6505,
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:4",
+        "target": "text",
+        "text": "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 6081,
+        "end": 6505,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:4",
+        "target": "text",
+        "text": "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 6081,
+        "end": 6505,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.568:4",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.568:8",
+      "target": "text",
+      "text": "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 8159,
+      "end": 8607,
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:8",
+        "target": "text",
+        "text": "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 8159,
+        "end": 8607,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:8",
+        "target": "text",
+        "text": "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 8159,
+        "end": 8607,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.568:8",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.568:9",
+      "target": "text",
+      "text": "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 10805,
+      "end": 11516,
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:9",
+        "target": "text",
+        "text": "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 10805,
+        "end": 11516,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.568:9",
+        "target": "text",
+        "text": "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 10805,
+        "end": 11516,
+        "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.568:9",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "sourceKey": "fl:statute:817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:817.61",
+      "target": "title",
+      "text": "Fraudulent use of credit cards",
+      "start": 0,
+      "end": 30,
+      "sourceHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:817.61",
+        "target": "text",
+        "text": "A person who, with intent to defraud the issuer or a person or organization providing money, goods, services, or anything else of value or any other person, uses, for the purpose of obtaining money, goods, services, or anything else of value, a credit card obtained or retained in violation of this part or a credit card which he or she knows is forged, or who obtains money, goods, services, or anything else of value by representing, without the consent of the cardholder, that he or she is the holder of a specified card or by representing that he or she is the holder of a card and such card has not in fact been issued violates this section.",
+        "start": 43,
+        "end": 689,
+        "sourceHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:817.67",
+        "target": "text",
+        "text": "A person who is subject to the penalties of this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 199,
+        "end": 366,
+        "sourceHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:817.67",
+        "target": "text",
+        "text": "A person who is subject to the penalties of this subsection shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 27,
+        "end": 192,
+        "sourceHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:817.61",
+        "role": "offense",
+        "contentHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"
+      },
+      {
+        "sourceKey": "fl:statute:817.67",
+        "role": "penalty",
+        "contentHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158"
+      }
+    ]
+  }
+]

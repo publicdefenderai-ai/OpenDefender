@@ -1,0 +1,1033 @@
+{
+  "records": [
+    {
+      "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+      "section": "800.04",
+      "grades": [
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "age",
+        "danger",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense"
+        },
+        {
+          "section": "800.04",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "800.04",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(1)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(3)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(8)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+      "section": "800.04",
+      "grades": [
+        "F2",
+        "F3",
+        "F1",
+        "life"
+      ],
+      "messages": [
+        "age",
+        "moles",
+        "prior15",
+        "danger",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense"
+        },
+        {
+          "section": "800.04",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "948.012",
+          "role": "penalty"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "800.04",
+          "scope": "(5)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(1)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(3)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(8)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)(a)4."
+        },
+        {
+          "section": "948.012",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(1)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+      "section": "800.04",
+      "grades": [
+        "F2",
+        "F3"
+      ],
+      "messages": [
+        "age",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense"
+        },
+        {
+          "section": "800.04",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "800.04",
+          "scope": "(6)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(1)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(3)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(8)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+      "section": "800.04",
+      "grades": [
+        "F2",
+        "F3"
+      ],
+      "messages": [
+        "age",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense"
+        },
+        {
+          "section": "800.04",
+          "role": "exception"
+        },
+        {
+          "section": "800.04",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "800.04",
+          "scope": "(7)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(1)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(3)"
+        },
+        {
+          "section": "800.04",
+          "scope": "(8)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+      "section": "827.071",
+      "grades": [
+        "F1"
+      ],
+      "messages": [
+        "date",
+        "findings",
+        "prior30",
+        "danger",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense"
+        },
+        {
+          "section": "827.071",
+          "role": "grading"
+        },
+        {
+          "section": "827.071",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.071",
+          "scope": "(2)(a)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(a)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(l)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(m)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(7)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(1)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+      "section": "827.071",
+      "grades": [
+        "life"
+      ],
+      "messages": [
+        "date",
+        "prior30",
+        "danger",
+        "registrationOnly",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.071",
+          "scope": "(2)(b)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(a)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(l)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(m)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(1)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+      "section": "827.071",
+      "grades": [
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "date",
+        "findings",
+        "images",
+        "prior20",
+        "danger",
+        "registration",
+        "juvenile"
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense"
+        },
+        {
+          "section": "827.071",
+          "role": "grading"
+        },
+        {
+          "section": "827.071",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.0847",
+          "role": "grading"
+        },
+        {
+          "section": "794.0116",
+          "role": "penalty"
+        },
+        {
+          "section": "794.0115",
+          "role": "penalty"
+        },
+        {
+          "section": "943.0435",
+          "role": "definition"
+        },
+        {
+          "section": "943.04354",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.071",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(a)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(l)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(1)(m)"
+        },
+        {
+          "section": "827.071",
+          "scope": "(7)"
+        },
+        {
+          "section": "775.0847",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.0847",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(1)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0116",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(3)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(1)"
+        },
+        {
+          "section": "943.04354",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+      "section": "827.04",
+      "grades": [
+        "F3"
+      ],
+      "messages": [],
+      "requiredSections": [
+        {
+          "section": "827.04",
+          "role": "offense"
+        },
+        {
+          "section": "827.04",
+          "role": "grading"
+        },
+        {
+          "section": "827.04",
+          "role": "exception"
+        },
+        {
+          "section": "827.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.04",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    "741.28",
+    "741.2801",
+    "775.082",
+    "775.083",
+    "775.084",
+    "775.0847",
+    "794.0115",
+    "794.0116",
+    "800.04",
+    "827.01",
+    "827.04",
+    "827.071",
+    "943.0435",
+    "943.04354",
+    "948.012"
+  ]
+}

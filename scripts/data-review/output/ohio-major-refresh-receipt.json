@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
-  "kind": "initial_acquired_evidence_window",
-  "checkedAt": "2026-11-03T21:23:28.334Z",
-  "expiresAt": "2026-11-10T07:20:48.867Z",
-  "packetHash": "44bd94e27050a3d826c03f1a43d83735a856cbff8150cad167fc819a83a5b3eb"
+  "kind": "reacquired_evidence_window",
+  "verificationPolicy": "quarterly-v1",
+  "checkedAt": "2026-11-11T04:54:58.358Z",
+  "expiresAt": "2027-02-11T04:52:15.561Z",
+  "packetHash": "ca670efbf4b5c0e9f81ac6fb610635360c056e86a2d2f5d49dca2317c1434e94"
 }

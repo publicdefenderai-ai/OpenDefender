@@ -1,0 +1,389 @@
+[
+  {
+    "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:800.04:4",
+      "target": "text",
+      "text": "A person commits lewd or lascivious battery by:",
+      "start": 1422,
+      "end": 1469,
+      "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:4",
+        "target": "text",
+        "text": "(4) \nLEWD OR LASCIVIOUS BATTERY.—\n\n(a) \nA person commits lewd or lascivious battery by:\n1. \nEngaging in sexual activity with a person 12 years of age or older but less than 16 years of age; or\n\n2. \nEncouraging, forcing, or enticing any person less than 16 years of age to engage in sadomasochistic abuse, sexual bestiality, prostitution, or any other act involving sexual activity.\n\n(b) \nExcept as provided in paragraph (c), an offender who commits lewd or lascivious battery commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is an offender 18 years of age or older who commits lewd or lascivious battery and was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing that violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section.",
+        "start": 1382,
+        "end": 2673,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:4",
+        "target": "text",
+        "text": "(4) \nLEWD OR LASCIVIOUS BATTERY.—\n\n(a) \nA person commits lewd or lascivious battery by:\n1. \nEngaging in sexual activity with a person 12 years of age or older but less than 16 years of age; or\n\n2. \nEncouraging, forcing, or enticing any person less than 16 years of age to engage in sadomasochistic abuse, sexual bestiality, prostitution, or any other act involving sexual activity.\n\n(b) \nExcept as provided in paragraph (c), an offender who commits lewd or lascivious battery commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is an offender 18 years of age or older who commits lewd or lascivious battery and was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing that violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section.",
+        "start": 1382,
+        "end": 2673,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:800.04:4",
+        "role": "offense",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      {
+        "sourceKey": "fl:statute:800.04",
+        "role": "grading",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:800.04:5",
+      "target": "text",
+      "text": "A person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.",
+      "start": 2719,
+      "end": 3025,
+      "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:5",
+        "target": "text",
+        "text": "(5) \nLEWD OR LASCIVIOUS MOLESTATION.—\n\n(a) \nA person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim less than 12 years of age commits a life felony, punishable as provided in s. 775.082(3)(a)4.\n\n(c)1. \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim less than 12 years of age; or\n\n2. \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age\n\ncommits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is 18 years of age or older and commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age and the person was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing the violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section.",
+        "start": 2675,
+        "end": 4668,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:5",
+        "target": "text",
+        "text": "(5) \nLEWD OR LASCIVIOUS MOLESTATION.—\n\n(a) \nA person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim less than 12 years of age commits a life felony, punishable as provided in s. 775.082(3)(a)4.\n\n(c)1. \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim less than 12 years of age; or\n\n2. \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age\n\ncommits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is 18 years of age or older and commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age and the person was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing the violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section.",
+        "start": 2675,
+        "end": 4668,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:800.04:5",
+        "role": "offense",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      {
+        "sourceKey": "fl:statute:800.04",
+        "role": "grading",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:800.04:6",
+      "target": "text",
+      "text": "A person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.",
+      "start": 4710,
+      "end": 4932,
+      "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:6",
+        "target": "text",
+        "text": "(6) \nLEWD OR LASCIVIOUS CONDUCT.—\n\n(a) \nA person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious conduct commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits lewd or lascivious conduct commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 4670,
+        "end": 5304,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:6",
+        "target": "text",
+        "text": "(6) \nLEWD OR LASCIVIOUS CONDUCT.—\n\n(a) \nA person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious conduct commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits lewd or lascivious conduct commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 4670,
+        "end": 5304,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:800.04:6",
+        "role": "offense",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      {
+        "sourceKey": "fl:statute:800.04",
+        "role": "grading",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:800.04:7",
+      "target": "text",
+      "text": "commits lewd or lascivious exhibition",
+      "start": 5781,
+      "end": 5818,
+      "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:7",
+        "target": "text",
+        "text": "(7) \nLEWD OR LASCIVIOUS EXHIBITION.—\n\n(a) \nA person who:\n1. \nIntentionally masturbates;\n\n2. \nIntentionally exposes the genitals in a lewd or lascivious manner; or\n\n3. \nIntentionally commits any other sexual act that does not involve actual physical or sexual contact with the victim, including, but not limited to, sadomasochistic abuse, sexual bestiality, or the simulation of any act involving sexual activity\n\nin the presence of a victim who is less than 16 years of age, commits lewd or lascivious exhibition.\n\n(b) \nAn offender 18 years of age or older who commits a lewd or lascivious exhibition commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits a lewd or lascivious exhibition commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5306,
+        "end": 6201,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:800.04:7",
+        "target": "text",
+        "text": "(7) \nLEWD OR LASCIVIOUS EXHIBITION.—\n\n(a) \nA person who:\n1. \nIntentionally masturbates;\n\n2. \nIntentionally exposes the genitals in a lewd or lascivious manner; or\n\n3. \nIntentionally commits any other sexual act that does not involve actual physical or sexual contact with the victim, including, but not limited to, sadomasochistic abuse, sexual bestiality, or the simulation of any act involving sexual activity\n\nin the presence of a victim who is less than 16 years of age, commits lewd or lascivious exhibition.\n\n(b) \nAn offender 18 years of age or older who commits a lewd or lascivious exhibition commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits a lewd or lascivious exhibition commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5306,
+        "end": 6201,
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:800.04:7",
+        "role": "offense",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      {
+        "sourceKey": "fl:statute:800.04",
+        "role": "exception",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      {
+        "sourceKey": "fl:statute:800.04",
+        "role": "grading",
+        "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.071:2_a",
+      "target": "text",
+      "text": "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance.",
+      "start": 4410,
+      "end": 4738,
+      "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:2_a",
+        "target": "text",
+        "text": "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance.",
+        "start": 4410,
+        "end": 4738,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:2_a",
+        "target": "text",
+        "text": "A person who violates this paragraph commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 4739,
+        "end": 4878,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.071:2_a",
+        "role": "offense",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      {
+        "sourceKey": "fl:statute:827.071",
+        "role": "grading",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      {
+        "sourceKey": "fl:statute:827.071",
+        "role": "exception",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.071:2_b",
+      "target": "text",
+      "text": "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance.",
+      "start": 5109,
+      "end": 5341,
+      "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:2_b",
+        "target": "text",
+        "text": "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance.",
+        "start": 5109,
+        "end": 5341,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:2_b",
+        "target": "text",
+        "text": "A person who violates this paragraph commits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5342,
+        "end": 5466,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.071:2_b",
+        "role": "offense",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.071:3",
+      "target": "text",
+      "text": "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child.",
+      "start": 5659,
+      "end": 5870,
+      "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:3",
+        "target": "text",
+        "text": "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child.",
+        "start": 5659,
+        "end": 5870,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.071:3",
+        "target": "text",
+        "text": "A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5871,
+        "end": 6012,
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.071:3",
+        "role": "offense",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      {
+        "sourceKey": "fl:statute:827.071",
+        "role": "grading",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      {
+        "sourceKey": "fl:statute:827.071",
+        "role": "exception",
+        "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:827.04:3",
+      "target": "title",
+      "text": "Contributing to the delinquency or dependency of a child; penalty",
+      "start": 0,
+      "end": 65,
+      "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:827.04:3",
+        "target": "text",
+        "text": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1044,
+        "end": 1266,
+        "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:827.04:3",
+        "target": "text",
+        "text": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1044,
+        "end": 1266,
+        "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:827.04:3",
+        "role": "offense",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "sourceKey": "fl:statute:827.04",
+        "role": "grading",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "sourceKey": "fl:statute:827.04",
+        "role": "exception",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "sourceKey": "fl:statute:827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ]
+  }
+]

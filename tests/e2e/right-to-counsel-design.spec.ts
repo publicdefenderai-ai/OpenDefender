@@ -14,7 +14,7 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto('/right-to-counsel');
-    const main = page.locator('main.counsel-page');
+    const main = page.locator('.counsel-page');
     await expect(main.locator('h1')).toContainText(locale.translation.counselDesign.heading);
     await expect(main.locator('h1')).toContainText(locale.translation.counselDesign.accent);
     await expect(page.locator('#main-content > div').first()).toHaveCSS('opacity', '1');

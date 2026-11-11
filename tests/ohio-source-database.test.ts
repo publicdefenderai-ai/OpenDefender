@@ -1,12 +1,3 @@
-import { OHIO_PROTECTION_IDS } from "../shared/ohio-protection-batch";
-import { OHIO_FAMILY_IDS } from "../shared/ohio-family-batch";
-import { OHIO_PUBLIC_PEACE_IDS } from "../shared/ohio-public-peace-batch";
-import { OHIO_CUSTODY_IDS } from "../shared/ohio-custody-batch";
-import { OHIO_JUSTICE_IDS } from "../shared/ohio-justice-batch";
-import { OHIO_BENEFITS_FRAUD_IDS } from "../shared/ohio-benefits-fraud-batch";
-import { OHIO_THEFT_FRAUD_IDS } from "../shared/ohio-theft-fraud-batch";
-import { OHIO_RESIDUAL_IDS } from "../shared/ohio-residual-batch";
-import { OHIO_MAJOR_IDS } from "../shared/ohio-major-batch";
 import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
@@ -70,13 +61,13 @@ describe("Ohio authority manifest", () => {
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
     expect(ohioCount).toBe(391);
-    // This historical fixture predates the new batch acquisition; both publication batches cannot be current yet.
-    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_PROTECTION_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
-    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_PROTECTION_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
-    expect(seed.sources).toHaveLength(259);
-    expect(seed.snapshots).toHaveLength(259);
-    expect(seed.links).toHaveLength(716);
-    expect(seed.selectableChargeIds).toHaveLength(129);
+    expect(manifest.catalogRecords.map(record => record.chargeId).sort()).toEqual(
+      criminalCharges.filter(charge => charge.jurisdiction === "OH").map(charge => charge.id).sort(),
+    );
+    expect(seed.sources).toHaveLength(458);
+    expect(seed.snapshots).toHaveLength(458);
+    expect(seed.links).toHaveLength(2270);
+    expect(seed.selectableChargeIds).toHaveLength(282);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",

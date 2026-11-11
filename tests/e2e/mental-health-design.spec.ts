@@ -19,6 +19,11 @@ for (const language of ["en", "es", "zh"] as const) {
       const crisis = main.locator("#crisis-support");
       await expect(crisis).toBeVisible();
       await expect(crisis.locator('a[href="sms:988"]')).toBeVisible();
+      if (language === "es") {
+        const note = crisis.getByText(/llame al 988 y presione 2/);
+        await expect(note).toContainText("envíe AYUDA al 988");
+        await expect(note).toContainText("seleccione «Español»");
+      }
       if (language === "zh") {
         await expect(crisis.getByText(/如需中文口译，请拨打 988/)).toContainText("仅提供英语和西班牙语支持");
       }

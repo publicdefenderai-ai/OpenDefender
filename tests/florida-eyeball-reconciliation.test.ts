@@ -1,3 +1,5 @@
+import priorChildDefinitions from '../scripts/data-review/florida-child-protection/previous-definitions.json';
+import childCorrections from '../scripts/data-review/output/florida-child-protection-corrections.json';
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
@@ -56,12 +58,16 @@ describe("Florida eyeball-review reconciliation", () => {
       // the current identity against the explicit successor packet separately.
       const prior = priorHarmDefinitions.find(row => row.id === mapping.id);
       const priorDrug = priorDrugDefinitions.find(row => row.id === mapping.id);
+      const priorChild = priorChildDefinitions.find(row => row.id === mapping.id);
       if (prior) {
         expect(mapping.reconciledRecordHash).toBe(hashJson(prior));
         expect(definition).toEqual(harmCorrections.definitions.find(row => row.id === mapping.id));
       } else if (priorDrug) {
         expect(mapping.reconciledRecordHash).toBe(hashJson(priorDrug));
         expect(definition).toEqual(drugCorrections.definitions.find(row => row.id === mapping.id));
+      } else if (priorChild) {
+        expect(mapping.reconciledRecordHash).toBe(hashJson(priorChild));
+        expect(definition).toEqual(childCorrections.definitions.find(row => row.id === mapping.id));
       } else {
         expect(mapping.reconciledRecordHash).toBe(hashJson(definition));
       }

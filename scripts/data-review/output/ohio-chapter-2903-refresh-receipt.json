@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-03T08:42:08.859Z",
-  "expiresAt": "2026-11-10T06:05:55.510Z",
+  "verificationPolicy": "quarterly-v1",
+  "checkedAt": "2026-11-11T04:52:10.198Z",
+  "expiresAt": "2027-02-11T04:52:10.198Z",
   "documents": [
     {
       "section": "109.54",

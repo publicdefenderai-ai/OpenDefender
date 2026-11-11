@@ -2,7 +2,9 @@
 import { readFileSync } from 'node:fs';
 import { prepareOhioMajorQuarterlyReceipt, validateOhioMajorReceipt } from '../../server/data/ohio-major-source';
 
-const comparison = JSON.parse(readFileSync('scripts/data-review/output/ohio-quarterly-comparison-candidate.json','utf8'));
+const candidatePath = process.argv[2];
+if (!candidatePath) throw Error('Supply the path to a newly acquired Ohio comparison JSON file');
+const comparison = JSON.parse(readFileSync(candidatePath,'utf8'));
 const now = new Date();
 const candidate = prepareOhioMajorQuarterlyReceipt(comparison, now);
 const error = validateOhioMajorReceipt(candidate, now, comparison);

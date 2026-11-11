@@ -1,0 +1,281 @@
+[
+  {
+    "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+    "jurisdiction": "FL",
+    "code": "800.04(4)",
+    "slug": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+    "name": "lewd or lascivious battery",
+    "names": {
+      "es": "agresión sexual lasciva",
+      "zh": "淫亵殴打"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Engaging in sexual activity with a person age 12 through 15, or encouraging, forcing, or enticing a person under 16 to engage in the listed sexual acts.",
+        "degreeContext": "Ordinarily a second-degree felony; it is a first-degree felony when an offender age 18 or older has a prior conviction listed in subsection (4)(c)."
+      },
+      "es": {
+        "plainSummary": "Realizar actividad sexual con una persona de 12 a 15 años, o alentar, forzar o inducir a una persona menor de 16 años a realizar los actos sexuales enumerados.",
+        "degreeContext": "Por regla general es un delito grave de segundo grado; es de primer grado si el autor tiene 18 años o más y una condena previa enumerada en el apartado (4)(c)."
+      },
+      "zh": {
+        "plainSummary": "与12至15岁者发生性活动，或鼓励、强迫、诱使16岁以下者参与法条列明的性行为。",
+        "degreeContext": "通常为二级重罪；行为人年满18岁且有第(4)(c)款列明的先前定罪时，为一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+    "jurisdiction": "FL",
+    "code": "800.04(5)",
+    "slug": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+    "name": "lewd or lascivious molestation",
+    "names": {
+      "es": "tocamiento lascivo",
+      "zh": "淫亵猥亵"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(5)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally and lewdly touching specified intimate areas, or clothing covering them, of a person under 16, or forcing or enticing that person to touch the perpetrator that way.",
+        "degreeContext": "The grade depends on offender and victim ages and qualifying prior convictions: life felony, first-degree felony, second-degree felony, or third-degree felony under subsection (5)."
+      },
+      "es": {
+        "plainSummary": "Tocar intencional y lascivamente las zonas íntimas especificadas, o la ropa que las cubre, de una persona menor de 16 años, o forzarla o inducirla a tocar así al autor.",
+        "degreeContext": "El grado depende de las edades del autor y la víctima y de condenas previas: delito grave de por vida, de primer, segundo o tercer grado según el apartado (5)."
+      },
+      "zh": {
+        "plainSummary": "故意以淫亵方式触碰16岁以下者法定的私密部位或其衣物，或强迫、诱使该人以同样方式触碰行为人。",
+        "degreeContext": "等级取决于行为人与被害人年龄及符合条件的先前定罪，依第(5)款可为终身重罪或一、二、三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+    "jurisdiction": "FL",
+    "code": "800.04(6)",
+    "slug": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+    "name": "lewd or lascivious conduct",
+    "names": {
+      "es": "conducta lasciva",
+      "zh": "淫亵行为"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(6)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally touching a person under 16 in a lewd or lascivious manner, or soliciting that person to commit a lewd or lascivious act.",
+        "degreeContext": "A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."
+      },
+      "es": {
+        "plainSummary": "Tocar intencionalmente de manera lasciva a una persona menor de 16 años, o solicitarle que cometa un acto lascivo.",
+        "degreeContext": "Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."
+      },
+      "zh": {
+        "plainSummary": "故意以淫亵方式触碰16岁以下者，或请求该人实施淫亵行为。",
+        "degreeContext": "行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+    "jurisdiction": "FL",
+    "code": "800.04(7)",
+    "slug": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+    "name": "lewd or lascivious exhibition",
+    "names": {
+      "es": "exhibición lasciva",
+      "zh": "淫亵展示"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.04(7)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "In the presence of a person under 16, intentionally masturbating, lewdly exposing the genitals, or intentionally committing another listed noncontact sexual act. Breastfeeding is excluded.",
+        "degreeContext": "A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."
+      },
+      "es": {
+        "plainSummary": "En presencia de una persona menor de 16 años, masturbarse intencionalmente, exponer los genitales de manera lasciva o cometer intencionalmente otro acto sexual sin contacto enumerado. Se excluye la lactancia.",
+        "degreeContext": "Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."
+      },
+      "zh": {
+        "plainSummary": "在16岁以下者面前故意自慰、以淫亵方式暴露生殖器，或故意实施其他列明的非接触性行为。母乳喂养除外。",
+        "degreeContext": "行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+    "jurisdiction": "FL",
+    "code": "827.071(2)(a)",
+    "slug": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+    "name": "use of a child in a sexual performance",
+    "names": {
+      "es": "uso de un menor en una actuación sexual",
+      "zh": "利用儿童进行性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing the performance's character and content, employing, authorizing, or inducing a child to engage in a sexual performance, or as the child's parent, guardian, or custodian consenting to participation.",
+        "degreeContext": "A first-degree felony. An offender age 18 or older generally faces a 15-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."
+      },
+      "es": {
+        "plainSummary": "Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor a participar en una actuación sexual, o consentir como padre, tutor o custodio.",
+        "degreeContext": "Delito grave de primer grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 15 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."
+      },
+      "zh": {
+        "plainSummary": "明知表演的性质和内容，雇用、授权或诱使儿童参与性表演，或作为父母、监护人或保管人同意其参与。",
+        "degreeContext": "一级重罪。年满18岁的行为人通常面临15年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+    "jurisdiction": "FL",
+    "code": "827.071(2)(b)",
+    "slug": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+    "name": "aggravated use of a child in a sexual performance",
+    "names": {
+      "es": "uso agravado de un menor en una actuación sexual",
+      "zh": "加重利用儿童进行性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(2)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing the performance's character and content, employing, authorizing, or inducing a child under 12 to engage in a sexual performance.",
+        "degreeContext": "A life felony. An offender age 18 or older must receive a 25-year mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor de 12 años a participar en una actuación sexual.",
+        "degreeContext": "Delito grave de por vida. El autor de 18 años o más debe recibir un mínimo obligatorio de 25 años."
+      },
+      "zh": {
+        "plainSummary": "明知表演的性质和内容，雇用、授权或诱使12岁以下儿童参与性表演。",
+        "degreeContext": "终身重罪。年满18岁的行为人必须判处25年强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+    "jurisdiction": "FL",
+    "code": "827.071(3)",
+    "slug": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+    "name": "promoting a sexual performance by a child",
+    "names": {
+      "es": "promoción de una actuación sexual de un menor",
+      "zh": "推广儿童性表演"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.071(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing its character and content, producing, directing, or promoting a performance that includes sexual conduct by a child.",
+        "degreeContext": "A second-degree felony. An offender age 18 or older generally faces a 5-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."
+      },
+      "es": {
+        "plainSummary": "Conociendo su carácter y contenido, producir, dirigir o promover una actuación que incluya conducta sexual de un menor.",
+        "degreeContext": "Delito grave de segundo grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 5 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."
+      },
+      "zh": {
+        "plainSummary": "明知其性质和内容，制作、导演或推广包含儿童性行为的表演。",
+        "degreeContext": "二级重罪。年满18岁的行为人通常面临5年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "jurisdiction": "FL",
+    "code": "827.04(3)",
+    "slug": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "name": "Impregnation of a child under 16 by a person age 21 or older (third-degree felony)",
+    "names": {
+      "es": "Embarazo de una menor de 16 por una persona de 21 años o más (delito grave de tercer grado)",
+      "zh": "年满21岁者使未满16岁儿童怀孕（三级重罪）"
+    },
+    "aliases": {
+      "en": [
+        "Contributing to the delinquency or dependency of a child; penalty"
+      ],
+      "es": [
+        "Contribución a la delincuencia o dependencia de un menor; pena"
+      ],
+      "zh": [
+        "促使儿童成为违法或受抚养儿童；处罚"
+      ]
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.04(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A person age 21 or older impregnating a child under age 16.",
+        "degreeContext": "Third-degree felony. The offense applies regardless of whether the person is found to have committed, charged with, or prosecuted for another offense in the same criminal transaction or episode. The victim's lack of chastity and consent are not defenses."
+      },
+      "es": {
+        "plainSummary": "Una persona de 21 años o más que embaraza a una menor de 16 años.",
+        "degreeContext": "Delito grave de tercer grado. El delito se aplica independientemente de que la persona sea declarada autora, acusada o procesada por otro delito en la misma transacción o episodio penal. Ni la falta de castidad ni el consentimiento de la víctima constituyen defensa."
+      },
+      "zh": {
+        "plainSummary": "年满21岁者使未满16岁的儿童怀孕。",
+        "degreeContext": "三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。"
+      }
+    }
+  }
+]

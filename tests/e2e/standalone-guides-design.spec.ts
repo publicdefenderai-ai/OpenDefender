@@ -20,7 +20,7 @@ for (const [language, locale] of Object.entries({ en, es, zh })) for (const them
       // Old externally shared timeline URLs must still reach the actual guide.
       await page.goto(`/case-timeline#${kind}-guide`);
       await expect(page).toHaveURL(new RegExp(`${route}$`));
-      const main = page.locator('main.standalone-guide');
+      const main = page.locator('.standalone-guide');
       await expect(main.locator('h1')).toHaveText(`${locale.translation.standaloneGuides[kind].heading} ${locale.translation.standaloneGuides[kind].accent}`);
       await expect(page.locator('#main-content > div').first()).toHaveCSS('opacity', '1');
       await page.evaluate(() => document.fonts.ready);

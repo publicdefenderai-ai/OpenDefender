@@ -1,5 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
+import { familyCareDesignCopy } from "../../client/src/locales/family-care-design";
 import { housingDesignCopy } from "../../client/src/locales/housing-design";
+import { mentalHealthDesignCopy } from "../../client/src/locales/mental-health-design";
+import { personalHealthDesignCopy } from "../../client/src/locales/personal-health-design";
 
 const PHONE_VIEWPORT = { width: 320, height: 812 } as const;
 
@@ -12,6 +15,7 @@ const LANGUAGES = [
       timeline: "Elija su etapa actual",
       rights: "Vea la referencia rápida de derechos",
       resources: "Buscar ayuda por código postal",
+      sectionStart: "Comience Aquí",
       support: "Comience con el primer paso",
     },
   },
@@ -23,6 +27,7 @@ const LANGUAGES = [
       timeline: "选择您当前的阶段",
       rights: "查看权利速查参考",
       resources: "按邮政编码查找帮助",
+      sectionStart: "从这里开始",
       support: "从第一步开始",
     },
   },
@@ -212,33 +217,45 @@ for (const language of LANGUAGES) {
         language.code,
       );
 
+      const labels: Partial<Record<typeof SUPPORT_TEMPLATE_ROUTES[number], string>> = {
+        "/support/transportation": language.labels.sectionStart,
+        "/support/childcare": language.labels.sectionStart,
+        "/support/housing": housingDesignCopy[language.code].renters,
+        "/support/family-care": familyCareDesignCopy[language.code].plan,
+        "/support/personal-health": personalHealthDesignCopy[language.code].plan,
+        "/support/mental-health": mentalHealthDesignCopy[language.code].actions,
+      };
       for (const route of SUPPORT_TEMPLATE_ROUTES) {
         await page.goto(route);
         await expect(page.locator("h1").first()).toBeVisible();
-        // Housing now uses the approved renter pathway instead of the generic template CTA.
-        // Verify its localized label and the same destination, rather than skipping the route.
-        const housingSelector = route === '/support/housing' ? '.housing-paths a[href="#section-start-here"]' : undefined;
+        const label = labels[route] ?? language.labels.support;
+        const selectors: Partial<Record<typeof route, string>> = {
+          "/support/housing": '.housing-paths a[href="#section-start-here"]',
+          "/support/transportation": '.transportation-page nav a[href="#section-start-here"]',
+          "/support/childcare": '.childcare-page nav a[href="#section-start-here"]',
+        };
+        const selector = selectors[route];
         await expectLocalizedMobileCta(
           page,
           {
             language: language.name,
             route,
-            selector: housingSelector,
+            selector,
             testId: "button-start-here",
-            label: housingSelector ? housingDesignCopy[language.code].renters : language.labels.support,
+            label,
             expectedDestination: 'hash "#section-start-here"',
           },
         );
 
-        await (housingSelector ? page.locator(housingSelector) : page.getByTestId("button-start-here")).click();
+        await (selector ? page.locator(selector) : page.getByTestId("button-start-here")).click();
         await expect(page).toHaveURL(
           new RegExp(`${escapeRegExp(route)}#section-start-here$`),
-          `${language.name} ${route} CTA "${language.labels.support}" ` +
+          `${language.name} ${route} CTA "${label}" ` +
             'did not reach expected hash "#section-start-here"',
         );
         await expect(
           page.locator("#section-start-here"),
-          `${language.name} ${route} CTA "${language.labels.support}" ` +
+          `${language.name} ${route} CTA "${label}" ` +
             'expected hash "#section-start-here" section is not visible',
         ).toBeVisible();
       }

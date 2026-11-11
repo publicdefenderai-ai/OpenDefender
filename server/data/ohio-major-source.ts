@@ -1,4 +1,4 @@
-import { QUARTERLY_POLICY, LEGACY_WINDOW_MS, quarterlyDeadline, validVerificationWindow } from '../../shared/source-verification-policy.mjs';
+import { QUARTERLY_POLICY, quarterlyDeadline, validVerificationWindow } from '../../shared/source-verification-policy.mjs';
 import { validateOhioClassificationEvidence } from '@shared/ohio-primary-classification';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -149,11 +149,11 @@ export function validateOhioMajorReceipt(value: unknown, now = new Date(), compa
       !Number.isFinite(checked) || !Number.isFinite(expires) || checked > now.getTime() || expires <= checked || expires <= now.getTime()) {
     return 'Ohio major evidence window is missing, mismatched or expired';
   }
-  if (receipt.kind === 'initial_acquired_evidence_window') {
-    const original = Object.values(ohioMajorPacket.documents).map(document => Date.parse(document.retrievedAt));
-    return receipt.verificationPolicy === undefined && receipt.comparisonHash === undefined && receipt.acquisitions === undefined &&
-      checked >= Math.max(...original) && expires <= Math.min(...original) + LEGACY_WINDOW_MS
-      ? null : 'Invalid initial Ohio major evidence window';
+  if (receipt.kind === 'reacquired_evidence_window') {
+    const times = Object.values(ohioMajorPacket.documents).map(doc => Date.parse(doc.retrievedAt));
+    return receipt.verificationPolicy === QUARTERLY_POLICY && checked === Math.max(...times) &&
+      validVerificationWindow(receipt, new Date(Math.min(...times)).toISOString())
+      ? null : 'Invalid Ohio major packet reacquisition window';
   }
   if (receipt.kind !== quarterlyKind || receipt.verificationPolicy !== QUARTERLY_POLICY ||
       typeof receipt.comparisonHash !== 'string' || !digest.test(receipt.comparisonHash) || !Array.isArray(receipt.acquisitions)) {

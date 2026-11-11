@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import {
   ohioMajorPacket, prepareOhioMajorQuarterlyReceipt, validateOhioMajorReceipt,
 } from '../server/data/ohio-major-source';
+import active from '../scripts/data-review/output/ohio-major-refresh-receipt.json';
 import { quarterlyDeadline } from '../shared/source-verification-policy.mjs';
 
 const originalTimes = Object.values(ohioMajorPacket.documents).map(doc=>Date.parse(doc.retrievedAt));
@@ -23,7 +24,7 @@ const issued = new Date(Math.max(...acquired));
 const receipt = prepareOhioMajorQuarterlyReceipt(comparison, issued);
 
 describe('Ohio major unchanged quarterly comparisons', () => {
-  it('validates the complete ledger and preserves the separate original seven-day window', () => {
+  it('validates the complete ledger and preserves the approved packet reacquisition window', () => {
     expect(receipt.acquisitions).toHaveLength(38);
     expect(receipt.expiresAt).toBe(quarterlyDeadline(Math.min(...acquired)));
     expect(validateOhioMajorReceipt(receipt, issued, comparison)).toBeNull();
@@ -31,11 +32,9 @@ describe('Ohio major unchanged quarterly comparisons', () => {
     expect(validateOhioMajorReceipt(receipt, new Date(Date.parse(receipt.expiresAt)), comparison)).not.toBeNull();
     expect(validateOhioMajorReceipt(receipt, new Date(issued.getTime()-1), comparison)).not.toBeNull();
     expect(validateOhioMajorReceipt(receipt, issued)).not.toBeNull();
-    const legacy={schemaVersion:1,kind:'initial_acquired_evidence_window',packetHash:receipt.packetHash,
-      checkedAt:new Date(Math.max(...originalTimes)).toISOString(), expiresAt:new Date(Math.min(...originalTimes)+7*86400000).toISOString()};
-    expect(validateOhioMajorReceipt(legacy,new Date(legacy.checkedAt))).toBeNull();
-    expect(validateOhioMajorReceipt(legacy,issued)).not.toBeNull();
-    expect(validateOhioMajorReceipt({...legacy,verificationPolicy:'quarterly-v1'},new Date(legacy.checkedAt))).not.toBeNull();
+    expect(validateOhioMajorReceipt(active,new Date(active.checkedAt))).toBeNull();
+    expect(validateOhioMajorReceipt(active,new Date(active.expiresAt))).not.toBeNull();
+    expect(validateOhioMajorReceipt({...active,kind:'initial_acquired_evidence_window'},new Date(active.checkedAt))).not.toBeNull();
   });
   it('rejects changed, missing, duplicate or invented retrieval claims and excessive duration', () => {
     const [first,...rest] = receipt.acquisitions;

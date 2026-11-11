@@ -733,9 +733,19 @@
       "es": "Embarazo de una menor de 16 por una persona de 21 años o más (delito grave de tercer grado)",
       "zh": "年满21岁者使未满16岁儿童怀孕（三级重罪）"
     },
-    "aliases": { "en": ["Contributing to the delinquency or dependency of a child; penalty"], "es": ["Contribución a la delincuencia o dependencia de un menor; pena"], "zh": ["促使儿童成为违法或受抚养儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Contributing to the delinquency or dependency of a child; penalty"
+      ],
+      "es": [
+        "Contribución a la delincuencia o dependencia de un menor; pena"
+      ],
+      "zh": [
+        "促使儿童成为违法或受抚养儿童；处罚"
+      ]
+    },
     "category": "felony",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 827.04(3)",
@@ -744,20 +754,40 @@
       {
         "citation": "Fla. Stat. § 827.01",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "A person age 21 or older impregnating a child under age 16.",
-        "degreeContext": "Third-degree felony. The offense applies regardless of whether the person is found to have committed, charged with, or prosecuted for another offense in the same criminal transaction or episode. The victim's lack of chastity and consent are not defenses."
+        "degreeContext": "Third-degree felony. The offense applies regardless of whether the person is found to have committed, charged with, or prosecuted for another offense in the same criminal transaction or episode. The victim's lack of chastity and consent are not defenses. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 separately increases the degree if the offense itself meets §741.28’s definition of domestic violence and the accused already had a qualifying domestic-violence conviction when the offense occurred. A family relationship alone does not establish this. The statute lists no increase from an existing life felony. For eligible third-, second- and first-degree felonies the respective enhanced grades are second degree (ordinarily up to 15 years and $10,000), first degree (30 years and $10,000) and life felony (up to life and $15,000)."
       },
       "es": {
         "plainSummary": "Una persona de 21 años o más que embaraza a una menor de 16 años.",
-        "degreeContext": "Delito grave de tercer grado. El delito se aplica independientemente de que la persona sea declarada autora, acusada o procesada por otro delito en la misma transacción o episodio penal. Ni la falta de castidad ni el consentimiento de la víctima constituyen defensa."
+        "degreeContext": "Delito grave de tercer grado. El delito se aplica independientemente de que la persona sea declarada autora, acusada o procesada por otro delito en la misma transacción o episodio penal. Ni la falta de castidad ni el consentimiento de la víctima constituyen defensa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 eleva por separado el grado si el delito constituye violencia doméstica según §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. El vínculo familiar por sí solo no lo acredita. La norma no prevé otro aumento para un delito que ya es grave de por vida. Los delitos graves de tercero, segundo y primer grado que cumplan las condiciones pasan, respectivamente, a segundo grado (ordinariamente hasta 15 años y $10,000), primero (30 años y $10,000) y delito grave de por vida (hasta prisión perpetua y $15,000)."
       },
       "zh": {
         "plainSummary": "年满21岁者使未满16岁的儿童怀孕。",
-        "degreeContext": "三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。"
+        "degreeContext": "三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对于2026年7月1日或之后的行为，若本罪本身符合第741.28条的家庭暴力定义，且行为发生时被告已有符合条件的家庭暴力前科，第741.2801条另要求提高等级。仅有亲属关系不足以认定。法律未规定已属终身重罪再升级。 符合条件的三级、二级、一级重罪分别升为二级（通常最高15年及10,000美元）、一级（30年及10,000美元）及终身重罪（最高终身监禁及15,000美元）。"
       }
     }
   }
