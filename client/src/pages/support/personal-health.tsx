@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import personalHealthHero from "@assets/stock_images/personal-health.png";
-import { Activity, Pill, AlertTriangle, CheckCircle, Copy, Check, Printer, Phone, FileText } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "wouter";
+import { personalHealthDesignCopy } from "@/locales/personal-health-design";
+import { Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   ResourcePageTemplate,
@@ -10,372 +10,112 @@ import {
   ExternalResource,
   FAQ,
 } from "@/components/support/resource-page-template";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
-
-function MedicationPrepSection() {
-  const { t } = useTranslation();
-
-  const steps = [
-    {
-      key: "step1",
-      icon: <Pill className="h-5 w-5" />,
-    },
-    {
-      key: "step2",
-      icon: <Activity className="h-5 w-5" />,
-    },
-    {
-      key: "step3",
-      icon: <AlertTriangle className="h-5 w-5" />,
-    },
+function TreatmentMessages() {
+  const { t, i18n } = useTranslation();
+  const prefix = "support.personalHealth.treatmentConnection";
+  const messages = [
+    { title: t(`${prefix}.scriptTitle`), label: t(`${prefix}.scriptTitle`), body: t(`${prefix}.scriptBody`) },
+    { title: t(`${prefix}.letterTitle`), label: t(`${prefix}.letterLabel`), body: t(`${prefix}.letterBody`) },
+    { title: t(`${prefix}.attorneyTitle`), label: t(`${prefix}.attorneyLabel`), body: t(`${prefix}.attorneyBody`) },
   ];
-
-  return (
-    <section className="py-10">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <Card className="border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/20">
-            <CardContent className="p-6">
-              <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-green-700 dark:text-green-400">
-                <Pill className="h-5 w-5" />
-                {t('support.personalHealth.medicationSection.title')}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-5">
-                {t('support.personalHealth.medicationSection.description')}
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {steps.map((step, i) => (
-                  <div key={step.key} className="bg-white dark:bg-slate-900 rounded-lg p-4 border border-green-100 dark:border-green-900">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-7 h-7 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center text-green-700 dark:text-green-400 font-bold text-sm shrink-0">
-                        {i + 1}
-                      </div>
-                      <span className="font-semibold text-sm text-foreground">
-                        {t(`support.personalHealth.medicationSection.${step.key}.title`)}
-                      </span>
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {t(`support.personalHealth.medicationSection.${step.key}.body`)}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-      </div>
-    </section>
-  );
-}
-
-function CopyPrintCard({
-  label,
-  body,
-  copyKey,
-  copiedKey,
-  printKey,
-  t,
-}: {
-  label: string;
-  body: string;
-  copyKey: string;
-  copiedKey: string;
-  printKey: string;
-  t: (key: string) => string;
-}) {
+  const [index, setIndex] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [drafts, setDrafts] = useState<Record<number, string>>({});
+  const message = messages[index];
+  const body = drafts[index] ?? message.body;
 
-  const handleCopy = async () => {
+  async function copy() {
     try {
       await navigator.clipboard.writeText(body);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     } catch {
-      const textarea = document.createElement("textarea");
-      textarea.value = body;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      const field = document.getElementById("health-message") as HTMLTextAreaElement;
+      field.focus();
+      field.select();
     }
-  };
+  }
 
-  const handlePrint = () => {
-    const printWindow = window.open("", "_blank");
-    if (printWindow) {
-      printWindow.document.write(`
-        <html>
-          <head>
-            <title>${label}</title>
-            <style>
-              body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #16a34a; padding-bottom: 8px; }
-              .body { white-space: pre-wrap; }
-              @media print { body { padding: 20px; } }
-            </style>
-          </head>
-          <body>
-            <h1>${label}</h1>
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-          </body>
-        </html>
-      `);
-      printWindow.document.close();
-      printWindow.print();
-    }
-  };
+  function print() {
+    const popup = window.open("", "_blank");
+    if (!popup) return;
+    const doc = popup.document;
+    doc.documentElement.lang = i18n.language;
+    doc.title = message.label;
+    const style = doc.createElement("style");
+    style.textContent = "body { max-width: 42rem; margin: 2rem auto; padding: 1rem; font: 12pt/1.6 Arial, sans-serif; } h1 { font-size: 16pt; } p { white-space: pre-wrap; overflow-wrap: anywhere; }";
+    doc.head.append(style);
+    const heading = doc.createElement("h1");
+    heading.textContent = message.label;
+    const text = doc.createElement("p");
+    text.textContent = body;
+    doc.body.append(heading, text);
+    popup.print();
+  }
 
+  const locale = i18n.language.split("-")[0];
+  const copyText = personalHealthDesignCopy[locale as keyof typeof personalHealthDesignCopy] ?? personalHealthDesignCopy.en;
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
-      <CardHeader className="pb-3">
-        <div className="flex items-center justify-between flex-wrap gap-2">
-          <CardTitle className="text-base font-semibold">{label}</CardTitle>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleCopy}
-              className="h-8 text-xs gap-1.5"
-            >
-              {copied ? (
-                <Check className="h-3.5 w-3.5 text-green-600" />
-              ) : (
-                <Copy className="h-3.5 w-3.5" />
-              )}
-              {copied ? t(copiedKey) : t(copyKey)}
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handlePrint}
-              className="h-8 text-xs gap-1.5"
-            >
-              <Printer className="h-3.5 w-3.5" />
-              {t(printKey)}
-            </Button>
-          </div>
+    <section className="health-section" id="health-messages">
+      <h2>{copyText.messages}</h2>
+      <div className="health-editor">
+        <label htmlFor="health-template">{copyText.choose}</label>
+        <select id="health-template" value={index} onChange={event => { setIndex(Number(event.target.value)); setCopied(false); }}>
+          {messages.map((item, value) => <option key={value} value={value}>{item.title}</option>)}
+        </select>
+        <label htmlFor="health-message">{message.label}</label>
+        <textarea id="health-message" rows={10} value={body} onChange={event => {
+          setDrafts({ ...drafts, [index]: event.target.value });
+          setCopied(false);
+        }} />
+        <div className="flex flex-wrap gap-3">
+          <Button variant="outline" onClick={copy}>{t(`${prefix}.${copied ? "copied" : "copyButton"}`)}</Button>
+          <Button variant="outline" onClick={print}>{t(`${prefix}.printButton`)}</Button>
         </div>
-      </CardHeader>
-      <CardContent>
-        <pre className="whitespace-pre-wrap text-sm text-muted-foreground font-sans leading-relaxed">
-          {body}
-        </pre>
-      </CardContent>
-    </Card>
+      </div>
+    </section>
   );
 }
 
-function TreatmentConnectionSection() {
+function CareSections() {
   const { t, i18n } = useTranslation();
-
-  const checklistItems = t('support.personalHealth.treatmentConnection.checklistItems', {
-    returnObjects: true,
-  }) as string[];
-
-  const angerQuestions = t('support.personalHealth.treatmentConnection.angerQuestions', {
-    returnObjects: true,
-  }) as string[];
-
-  const copyKey = 'support.personalHealth.treatmentConnection.copyButton';
-  const copiedKey = 'support.personalHealth.treatmentConnection.copied';
-  const printKey = 'support.personalHealth.treatmentConnection.printButton';
-
+  const med = "support.personalHealth.medicationSection";
+  const care = "support.personalHealth.treatmentConnection";
+  const items = t(`${care}.checklistItems`, { returnObjects: true }) as string[];
+  const questions = t(`${care}.angerQuestions`, { returnObjects: true }) as string[];
   return (
-    <section className="py-10 md:py-14 bg-background" id="treatment-connection">
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Section header */}
-        <ScrollReveal>
-          <div className="flex items-center gap-3 mb-3">
-            <div className="p-2 rounded-lg bg-green-500/10">
-              <Activity className="h-5 w-5 text-green-600 dark:text-green-400" />
-            </div>
-            <h2 className="text-2xl font-bold text-foreground">
-              {t('support.personalHealth.treatmentConnection.sectionTitle')}
-            </h2>
-          </div>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
-            {t('support.personalHealth.treatmentConnection.sectionSubtitle')}
-          </p>
-        </ScrollReveal>
-
-        {/* Why this matters */}
-        <ScrollReveal>
-          <Card className="border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-950/20 mb-8">
-            <CardContent className="p-5">
-              <h3 className="font-bold text-green-700 dark:text-green-400 mb-2">
-                {t('support.personalHealth.treatmentConnection.whyTitle')}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {t('support.personalHealth.treatmentConnection.whyBody')}
-              </p>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-
-        {/* Checklist */}
-        <ScrollReveal>
-          <div className="mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
-              {t('support.personalHealth.treatmentConnection.checklistTitle')}
-            </h3>
-            <ul className="space-y-3">
-              {Array.isArray(checklistItems) && checklistItems.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-foreground">
-                  <span className="w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                    {i + 1}
-                  </span>
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </ScrollReveal>
-
-        {/* Finding programs */}
-        <ScrollReveal>
-          <div className="mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-4">
-              {t('support.personalHealth.treatmentConnection.findTitle')}
-            </h3>
-            <div className="space-y-4">
-              <Card className="border border-border/60">
-                <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1.5">
-                    {t('support.personalHealth.treatmentConnection.findSamhsaLabel')}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('support.personalHealth.treatmentConnection.findSamhsa')}
-                  </p>
-                  <p className="text-xs text-amber-700 dark:text-amber-400 mt-2 italic">
-                    {t('support.personalHealth.treatmentConnection.findSamhsaNote')}
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border border-border/60">
-                <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1.5 flex items-center gap-1.5">
-                    <Phone className="h-4 w-4 text-green-600 dark:text-green-400" />
-                    211
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('support.personalHealth.treatmentConnection.find211')}
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border border-border/60">
-                <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1.5">
-                    {t('support.personalHealth.treatmentConnection.findAttorney').split('.')[0]}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {t('support.personalHealth.treatmentConnection.findAttorney')}
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20">
-                <CardContent className="p-4">
-                  <div className="flex items-start gap-2">
-                    <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-                    <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
-                      {t('support.personalHealth.treatmentConnection.findCourt')}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        {/* Anger management */}
-        <ScrollReveal>
-          <div className="mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-3">
-              {t('support.personalHealth.treatmentConnection.angerTitle')}
-            </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              {t('support.personalHealth.treatmentConnection.angerBody')}
-            </p>
-            <Card className="border border-border/60">
-              <CardContent className="p-4">
-                <p className="text-sm font-semibold text-foreground mb-3">
-                  {t('support.personalHealth.treatmentConnection.angerQuestionsLabel')}
-                </p>
-                <ul className="space-y-2">
-                  {Array.isArray(angerQuestions) && angerQuestions.map((q, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="text-green-500 mt-1 shrink-0">•</span>
-                      {q}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </ScrollReveal>
-
-        {/* Call script */}
-        <ScrollReveal>
-          <div className="mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-3 flex items-center gap-2">
-              <Phone className="h-5 w-5 text-green-600 dark:text-green-400" />
-              {t('support.personalHealth.treatmentConnection.scriptTitle')}
-            </h3>
-            <CopyPrintCard
-              label={t('support.personalHealth.treatmentConnection.scriptTitle')}
-              body={t('support.personalHealth.treatmentConnection.scriptBody')}
-              copyKey={copyKey}
-              copiedKey={copiedKey}
-              printKey={printKey}
-              t={t}
-            />
-          </div>
-        </ScrollReveal>
-
-        {/* Letter template */}
-        <ScrollReveal>
-          <div className="mb-8">
-            <h3 className="text-lg font-bold text-foreground mb-3 flex items-center gap-2">
-              <FileText className="h-5 w-5 text-green-600 dark:text-green-400" />
-              {t('support.personalHealth.treatmentConnection.letterTitle')}
-            </h3>
-            <CopyPrintCard
-              label={t('support.personalHealth.treatmentConnection.letterLabel')}
-              body={t('support.personalHealth.treatmentConnection.letterBody')}
-              copyKey={copyKey}
-              copiedKey={copiedKey}
-              printKey={printKey}
-              t={t}
-            />
-          </div>
-        </ScrollReveal>
-
-        {/* Attorney message */}
-        <ScrollReveal>
-          <div>
-            <h3 className="text-lg font-bold text-foreground mb-3 flex items-center gap-2">
-              <FileText className="h-5 w-5 text-green-600 dark:text-green-400" />
-              {t('support.personalHealth.treatmentConnection.attorneyTitle')}
-            </h3>
-            <CopyPrintCard
-              label={t('support.personalHealth.treatmentConnection.attorneyLabel')}
-              body={t('support.personalHealth.treatmentConnection.attorneyBody')}
-              copyKey={copyKey}
-              copiedKey={copiedKey}
-              printKey={printKey}
-              t={t}
-            />
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
+    <>
+      <section className="health-section">
+        <div><h2>{t(`${med}.title`)}</h2><p>{t(`${med}.description`)}</p></div>
+        <ol className="health-steps">{["step1", "step2", "step3"].map(step =>
+          <li key={step}><h3>{t(`${med}.${step}.title`)}</h3><p>{t(`${med}.${step}.body`)}</p></li>
+        )}</ol>
+      </section>
+      <section className="health-section" id="treatment-connection">
+        <div><h2>{t(`${care}.sectionTitle`)}</h2><p>{t(`${care}.sectionSubtitle`)}</p></div>
+        <div className="health-reading">
+          <h3>{t(`${care}.whyTitle`)}</h3><p>{t(`${care}.whyBody`)}</p>
+          <fieldset><legend>{t(`${care}.checklistTitle`)}</legend>
+            {items.map((item, index) => <label key={index}><input type="checkbox" />{item}</label>)}
+          </fieldset>
+          <h3>{t(`${care}.findTitle`)}</h3>
+          <a href="https://findtreatment.gov/">{t(`${care}.findSamhsaLabel`)}</a>
+          <p>{t(`${care}.findSamhsa`)}</p><p>{t(`${care}.findSamhsaNote`)}</p>
+          <a href="tel:211">211</a><p>{t(`${care}.find211`)}</p>
+          <p>{t(`${care}.findAttorney`)}</p><aside>{t(`${care}.findCourt`)}</aside>
+          <h3>{t(`${care}.angerTitle`)}</h3><p>{t(`${care}.angerBody`)}</p>
+          <strong>{t(`${care}.angerQuestionsLabel`)}</strong>
+          <ul className="list-disc pl-5">{questions.map(question => <li key={question}>{question}</li>)}</ul>
+        </div>
+      </section>
+      <TreatmentMessages key={i18n.language} />
+    </>
   );
 }
 
 export default function PersonalHealthSupport() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.split("-")[0];
+  const copy = personalHealthDesignCopy[lang as keyof typeof personalHealthDesignCopy] ?? personalHealthDesignCopy.en;
 
   const startHereItems: ActionItem[] = [
     {
@@ -511,7 +251,22 @@ export default function PersonalHealthSupport() {
   return (
     <ResourcePageTemplate
       categoryId="personalHealth"
-      heroImage={personalHealthHero}
+      mainClassName="personal-health-page"
+      actionHeading={copy.plan}
+      introduction={<>
+        <Link href="/support">{t("support.backToSupport")}</Link>
+        <section className="health-hero">
+          <div>
+            <h1><small>{t("legalGuidance.qaFlow.additionalDetails.concernsCategories.personalHealth.label")}</small>{copy.title}<br /><em>{copy.accent}</em></h1>
+            <p>{t("support.personalHealth.overview")}</p>
+            <nav aria-label={t("support.startHere")}>
+              <a data-testid="button-start-here" href="#section-start-here">{copy.plan}</a>
+              <a href="#health-messages">{copy.messages}</a>
+            </nav>
+          </div>
+          <img src="/images/design/personal-health.svg" width="240" height="220" alt="" aria-hidden="true" />
+        </section>
+      </>}
       icon={Activity}
       iconColor="bg-green-500/10 text-green-600 dark:text-green-400"
       heroGradient="bg-gradient-to-br from-green-500/5 via-background to-background"
@@ -520,12 +275,7 @@ export default function PersonalHealthSupport() {
       externalResources={externalResources}
       faqs={faqs}
       tips={tips}
-      customSections={
-        <>
-          <MedicationPrepSection />
-          <TreatmentConnectionSection />
-        </>
-      }
+      customSections={<CareSections />}
       relatedLinks={[
         { label: t('support.relatedLinks.mentalHealth'), href: "/support/mental-health" },
         { label: t('support.relatedLinks.finances'), href: "/support/finances" },

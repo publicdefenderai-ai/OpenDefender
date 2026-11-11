@@ -586,3 +586,9 @@ The illustration comes from the approved `family-care-content.html` preview (SHA
 The existing written-message and phone-script tabs provide three letters and two scripts. Each letter has a labelled control group for copying and printing. The print document inserts message text through the DOM and preserves paragraph breaks. The existing provider authorization wording and family-court warning carry forward for the separate substantive review.
 
 The release browser tests compare the rendered passages, destinations, clipboard results and printed letters with a source snapshot from main `3ff45bee`. Six language/theme cases and five support-navigation cases passed, along with the production build, typecheck and 16 locale checks. Desktop/light and phone/dark layouts were visually inspected.
+
+### Personal Health support
+
+The Personal Health page uses the approved pink medical cross and “Keep your care on track” introduction. It keeps the published medication steps, treatment guidance, support destinations and FAQs. The treatment checklist and three editable message drafts live only on the current page. Switching messages retains edits, and copy and print use the selected draft. Printed text preserves paragraphs.
+
+The Personal Health release browser spec checks English, Spanish and Chinese in both themes, including 320px layouts, medication steps, FAQs, and the copy and print workflows against the pre-refresh content.
