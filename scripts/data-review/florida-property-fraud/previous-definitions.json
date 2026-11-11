@@ -1,0 +1,536 @@
+[
+  {
+    "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(e)",
+    "slug": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "name": "Petit theft of the first degree",
+    "names": {
+      "es": "Hurto menor de primer grado",
+      "zh": "一级轻微盗窃"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(2)(e)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.014",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.09",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Stealing property valued at less than $40 from a dwelling or from the unenclosed curtilage of a dwelling.",
+        "degreeContext": "First-degree misdemeanor. A person who commits this under-$40 dwelling or curtilage offense after any prior theft conviction commits a third-degree felony; paragraph (2)(e) also states the third-degree-felony grade for two or more prior theft convictions. Property valued at $40 or more taken from a dwelling or its unenclosed curtilage is instead subject to the special grand-theft rules in paragraph (2)(d)."
+      },
+      "es": {
+        "plainSummary": "Hurtar propiedad valorada en menos de $40 de una vivienda o del terreno residencial no cercado que la rodea.",
+        "degreeContext": "Delito menor de primer grado. Quien comete este hurto de menos de $40 en una vivienda o su terreno circundante después de cualquier condena anterior por hurto comete delito grave de tercer grado; el párrafo (2)(e) también establece ese grado grave cuando hay dos o más condenas anteriores. La propiedad valorada en $40 o más tomada de una vivienda o su terreno residencial no cercado queda sujeta, en cambio, a las reglas especiales de hurto mayor del párrafo (2)(d)."
+      },
+      "zh": {
+        "plainSummary": "从住宅或住宅未围合的附属区域盗取价值低于40美元的财产。",
+        "degreeContext": "一级轻罪。曾因任何盗窃被定罪后实施本项住宅或附属区域内低于40美元的盗窃，构成三级重罪；第(2)(e)项也明确规定有两次以上盗窃前科时为三级重罪。从住宅或其未围合附属区域盗取价值40美元以上财产的，改按第(2)(d)项特别规定的重大盗窃规则处理。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(f)",
+    "slug": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "name": "Petit theft of the first degree",
+    "names": {
+      "es": "Hurto menor de primer grado",
+      "zh": "一级轻微盗窃"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(2)(f)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.014",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Stealing property valued at $100 or more but less than $750, except property governed by paragraph (2)(d)'s special dwelling or unenclosed-curtilage rules.",
+        "degreeContext": "First-degree misdemeanor. Under paragraph (2)(d), property in this value range taken from a dwelling or its unenclosed curtilage is grand theft of the third degree, not this petit-theft branch."
+      },
+      "es": {
+        "plainSummary": "Hurtar propiedad valorada en $100 o más pero menos de $750, salvo la propiedad sujeta a las reglas especiales del párrafo (2)(d) para viviendas o su terreno residencial no cercado.",
+        "degreeContext": "Delito menor de primer grado. Conforme al párrafo (2)(d), la propiedad de este valor tomada de una vivienda o su terreno residencial no cercado constituye hurto mayor de tercer grado, no esta modalidad de hurto menor."
+      },
+      "zh": {
+        "plainSummary": "盗取价值100美元以上但低于750美元的财产，但第(2)(d)项关于住宅或住宅未围合附属区域的特别规则所涵盖的财产除外。",
+        "degreeContext": "一级轻罪。依第(2)(d)项，在此金额范围内从住宅或其未围合附属区域盗取财产构成三级重大盗窃，而不属于本轻微盗窃分支。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(a)",
+    "slug": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "name": "Petit theft of the second degree",
+    "names": {
+      "es": "Hurto menor de segundo grado",
+      "zh": "二级轻微盗窃"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(3)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.014",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly obtaining, using, or endeavoring to obtain or use another's property, with intent temporarily or permanently to deprive the other person of a right or benefit or to appropriate the property to an unauthorized use, when the property is not specified in subsection (2).",
+        "degreeContext": "Second-degree misdemeanor. For retail gasoline taken by driving a vehicle away without paying, subsection (5), when applicable, also requires driver's-license suspension for up to 6 months for the first suspension and 1 year for a second or subsequent suspension."
+      },
+      "es": {
+        "plainSummary": "Obtener, usar o intentar obtener o usar a sabiendas propiedad ajena, con intención temporal o permanente de privar a la otra persona de un derecho o beneficio, o de destinar la propiedad a un uso no autorizado, cuando la propiedad no está especificada en el inciso (2).",
+        "degreeContext": "Delito menor de segundo grado. Cuando se toma gasolina al por menor alejando un vehículo sin pagar, el inciso (5), si corresponde, exige además suspender la licencia de conducir hasta 6 meses por la primera suspensión y por 1 año por la segunda o una posterior."
+      },
+      "zh": {
+        "plainSummary": "明知地取得、使用或企图取得、使用他人财产，意图暂时或永久剥夺他人对财产的权利或利益，或者将财产挪作无权使用者之用，且该财产不属于第(2)款列明的财产。",
+        "degreeContext": "二级轻罪。驾驶车辆离开零售加油场所而未支付油款的，在第(5)款适用时还须吊销驾驶证：首次最长6个月，第二次或其后为1年。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-b-petit-theft",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(b)",
+    "slug": "fl-fs-812-014-3-b-petit-theft",
+    "name": "Petit theft",
+    "names": {
+      "es": "Hurto menor",
+      "zh": "轻微盗窃"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(3)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.014",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted of any theft.",
+        "degreeContext": "First-degree misdemeanor under paragraph (3)(b). The specific under-$40 dwelling or unenclosed-curtilage repeat branch in paragraph (2)(e) is a third-degree felony, and paragraph (3)(c) separately grades the subsection (3) branch after two or more prior theft convictions as a third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de una condena anterior por cualquier hurto.",
+        "degreeContext": "Delito menor de primer grado conforme al párrafo (3)(b). La modalidad específica del párrafo (2)(e), por hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado, es delito grave de tercer grado; el párrafo (3)(c) también clasifica por separado como delito grave de tercer grado la modalidad del inciso (3) después de dos o más condenas anteriores por hurto."
+      },
+      "zh": {
+        "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾因任何盗窃被定罪后再次实施该罪。",
+        "degreeContext": "依第(3)(b)项为一级轻罪。第(2)(e)项关于住宅或未围合附属区域内低于40美元盗窃的特定再犯分支为三级重罪；第(3)(c)项另行将有两次以上盗窃前科后实施的第(3)款分支定为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-c-petit-theft",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(c)",
+    "slug": "fl-fs-812-014-3-c-petit-theft",
+    "name": "Petit theft",
+    "names": {
+      "es": "Hurto menor",
+      "zh": "轻微盗窃"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(3)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.014",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted two or more times of any theft.",
+        "degreeContext": "Third-degree felony. Paragraph (2)(e) separately supplies the same felony degree for its specific under-$40 dwelling or unenclosed-curtilage repeat branch."
+      },
+      "es": {
+        "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de dos o más condenas anteriores por cualquier hurto.",
+        "degreeContext": "Delito grave de tercer grado. El párrafo (2)(e) establece por separado el mismo grado grave para su modalidad específica de hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado."
+      },
+      "zh": {
+        "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾两次以上因任何盗窃被定罪后再次实施该罪。",
+        "degreeContext": "三级重罪。第(2)(e)项对其特定的住宅或未围合附属区域内低于40美元盗窃再犯分支另行规定相同重罪等级。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-015-retail-theft",
+    "jurisdiction": "FL",
+    "code": "812.015(8)-(11)",
+    "slug": "fl-fs-812-015-retail-theft",
+    "name": "Retail theft",
+    "names": {
+      "es": "Hurto minorista",
+      "zh": "零售盗窃"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.015(8)-(11)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Committing retail theft under one of the statute's coordinated, repeated, multi-location, aggregated-value, item-count, or group-participation circumstances.",
+        "degreeContext": "Third-degree felony under subsection (8); second-degree felony under subsection (9), including specified repeat or higher-value conduct; and first-degree felony under subsection (11) for two or more prior convictions under subsections (8) or (9), or possession of a firearm during that offense."
+      },
+      "es": {
+        "plainSummary": "Cometer hurto minorista bajo una de las circunstancias legales de coordinación, repetición, múltiples lugares, valor agregado, cantidad de artículos o participación grupal.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (8); de segundo grado conforme al inciso (9), incluso por ciertas reincidencias o mayor valor; y de primer grado conforme al inciso (11) por dos o más condenas anteriores bajo los incisos (8) o (9), o por poseer un arma de fuego durante el delito."
+      },
+      "zh": {
+        "plainSummary": "在法条规定的协同行动、重复实施、多地点、金额合并、物品数量或团伙参与等情形下实施零售盗窃。",
+        "degreeContext": "第(8)款规定为三级重罪；第(9)款所列特定再犯或更高金额等情形为二级重罪；如对第(8)或第(9)款已有两次以上定罪，或犯罪时持有枪支，第(11)款规定为一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-812-019-dealing-in-stolen-property",
+    "jurisdiction": "FL",
+    "code": "812.019",
+    "slug": "fl-fs-812-019-dealing-in-stolen-property",
+    "name": "Dealing in stolen property",
+    "names": {
+      "es": "Comercio con propiedad robada",
+      "zh": "买卖赃物"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.019",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Trafficking, or endeavoring to traffic, in property known or reasonably known to be stolen; the section also covers directing or managing a theft and trafficking in that stolen property.",
+        "degreeContext": "Second-degree felony for trafficking or endeavoring to traffic in property the person knows or should know was stolen. First-degree felony when the person initiates, organizes, plans, finances, directs, manages, or supervises the theft and traffics in the stolen property."
+      },
+      "es": {
+        "plainSummary": "Traficar, o intentar traficar, con propiedad que se sabe o se debe saber que fue robada; la sección también abarca dirigir o administrar el hurto y traficar con esa propiedad.",
+        "degreeContext": "Delito grave de segundo grado por traficar o intentar traficar con propiedad que la persona sabe o debe saber que fue robada. Delito grave de primer grado si inicia, organiza, planea, financia, dirige, administra o supervisa el hurto y trafica con la propiedad robada."
+      },
+      "zh": {
+        "plainSummary": "买卖或企图买卖明知或理应知道是赃物的财产；本条也涵盖指挥或管理盗窃并买卖该赃物。",
+        "degreeContext": "买卖或企图买卖行为人明知或理应知道为赃物的财产，构成二级重罪。发起、组织、策划、资助、指挥、管理或监督盗窃并买卖该赃物的，构成一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-234-insurance-fraud",
+    "jurisdiction": "FL",
+    "code": "817.234(1)(a)",
+    "slug": "fl-fs-817-234-insurance-fraud",
+    "name": "Insurance fraud",
+    "names": {
+      "es": "Fraude de seguros",
+      "zh": "保险欺诈"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.234(1)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.234",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "With intent to injure, defraud, or deceive an insurer, knowingly presenting, preparing, or concealing material false, incomplete, or misleading information in support of an insurance claim or application, as specified in subsection (1)(a).",
+        "degreeContext": "The value involved controls the grade under subsection (11): third-degree felony below $20,000, second-degree felony from $20,000 to under $100,000, and first-degree felony at $100,000 or more."
+      },
+      "es": {
+        "plainSummary": "Con intención de perjudicar, defraudar o engañar a una aseguradora, presentar o preparar a sabiendas información material falsa, incompleta o engañosa, u ocultarla, en apoyo de una reclamación o solicitud de seguro según el inciso (1)(a).",
+        "degreeContext": "El valor involucrado determina el grado conforme al inciso (11): delito grave de tercer grado por menos de $20,000, de segundo grado desde $20,000 hasta menos de $100,000 y de primer grado por $100,000 o más."
+      },
+      "zh": {
+        "plainSummary": "意图损害、欺诈或欺骗保险人，依第(1)(a)款在保险理赔或申请中明知地提交、制作或隐瞒重大虚假、不完整或误导性信息。",
+        "degreeContext": "第(11)款按涉及财产价值分级：低于20,000美元为三级重罪；20,000美元以上但低于100,000美元为二级重罪；100,000美元以上为一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(2)",
+    "slug": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "name": "Fraudulent use of personal identification information",
+    "names": {
+      "es": "Uso fraudulento de información de identificación personal",
+      "zh": "欺诈使用个人身份信息"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.568(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.568",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and without authorization fraudulently using, or possessing with intent to fraudulently use, another person's personal identification information without consent.",
+        "degreeContext": "Third-degree felony under subsection (2)(a). It becomes a second- or first-degree felony under subsections (2)(b)-(c) at the specified benefit, loss, injury, fraud, or victim-count thresholds, with stated mandatory minimum terms."
+      },
+      "es": {
+        "plainSummary": "Usar fraudulentamente, de manera intencional y sin autorización, la información de identificación personal de otra persona sin consentimiento, o poseerla con intención de usarla fraudulentamente.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (2)(a). Pasa a segundo o primer grado bajo los incisos (2)(b)-(c) al alcanzar los umbrales especificados de beneficio, pérdida, lesión, fraude o número de víctimas, con penas mínimas obligatorias indicadas."
+      },
+      "zh": {
+        "plainSummary": "故意且未经授权，在未获同意的情况下欺诈使用他人的个人身份信息，或持有该信息并意图欺诈使用。",
+        "degreeContext": "第(2)(a)款为三级重罪。达到第(2)(b)-(c)款规定的收益、损失、伤害、欺诈金额或受害人数门槛时，升为二级或一级重罪，并适用所列强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(4)",
+    "slug": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "name": "Harassment by use of personal identification information",
+    "names": {
+      "es": "Acoso mediante el uso de información de identificación personal",
+      "zh": "利用个人身份信息进行骚扰"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.568(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.568",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and without authorization possessing, using, or attempting to use a person's personal identification information without consent for the purpose of harassing that person.",
+        "degreeContext": "First-degree misdemeanor. The section separately provides reclassification when a public record facilitates the offense or when specified false representations are used."
+      },
+      "es": {
+        "plainSummary": "Poseer, usar o intentar usar intencionalmente y sin autorización la información de identificación personal de una persona, sin su consentimiento, con el propósito de acosarla.",
+        "degreeContext": "Delito menor de primer grado. La sección dispone por separado la reclasificación cuando un registro público facilita el delito o se usan ciertas representaciones falsas."
+      },
+      "zh": {
+        "plainSummary": "为骚扰某人，故意且未经授权，在未获同意的情况下持有、使用或企图使用该人的个人身份信息。",
+        "degreeContext": "一级轻罪。本条另规定，如公共记录促成犯罪或使用特定虚假身份陈述，罪名可升格。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "jurisdiction": "FL",
+    "code": "817.568(8)",
+    "slug": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "name": "Fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity",
+    "names": {
+      "es": "Uso fraudulento o posesión con intención de usar información de identificación de una persona fallecida o entidad disuelta",
+      "zh": "欺诈使用或意图使用而持有死者或已解散企业实体的身份信息"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.568(8)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.568",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and fraudulently using, or possessing with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity.",
+        "degreeContext": "Third-degree felony under subsection (8)(a). Subsections (8)(b)-(c) provide second- and first-degree felony levels at specified value or number thresholds, with stated mandatory minimum terms."
+      },
+      "es": {
+        "plainSummary": "Usar intencional y fraudulentamente, o poseer con intención de usar fraudulentamente, información de identificación personal de una persona fallecida o entidad comercial disuelta.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (8)(a). Los incisos (8)(b)-(c) establecen niveles de segundo y primer grado al alcanzar ciertos umbrales de valor o cantidad, con penas mínimas obligatorias indicadas."
+      },
+      "zh": {
+        "plainSummary": "故意且欺诈地使用死者或已解散企业实体的个人身份信息，或持有该信息并意图欺诈使用。",
+        "degreeContext": "第(8)(a)款为三级重罪。达到第(8)(b)-(c)款规定的金额或数量门槛时为二级或一级重罪，并适用所列强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(9)",
+    "slug": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "name": "Fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information",
+    "names": {
+      "es": "Creación o uso fraudulento, o posesión con intención de usar, información de identificación personal falsificada o ficticia",
+      "zh": "欺诈制作、使用或意图欺诈使用而持有伪造或虚构的个人身份信息"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.568(9)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.568",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and fraudulently creating, using, or possessing with intent to fraudulently use counterfeit or fictitious personal identification information, with intent to commit or facilitate a fraud on another person.",
+        "degreeContext": "Third-degree felony. The section excludes lawfully authorized governmental investigative, protective, or intelligence activity."
+      },
+      "es": {
+        "plainSummary": "Crear, usar o poseer intencional y fraudulentamente información de identificación personal falsificada o ficticia, con intención de cometer o facilitar un fraude contra otra persona.",
+        "degreeContext": "Delito grave de tercer grado. La sección excluye actividades gubernamentales de investigación, protección o inteligencia legalmente autorizadas."
+      },
+      "zh": {
+        "plainSummary": "故意且欺诈地制作、使用，或意图欺诈使用而持有伪造或虚构的个人身份信息，并意图对他人实施或协助实施欺诈。",
+        "degreeContext": "三级重罪。本条不适用于依法授权的政府调查、保护或情报活动。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "jurisdiction": "FL",
+    "code": "817.61",
+    "slug": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "name": "Fraudulent use of credit cards",
+    "names": {
+      "es": "Uso fraudulento de tarjetas de crédito",
+      "zh": "欺诈使用信用卡"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 817.61",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.67",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "With intent to defraud, using a wrongfully obtained, retained, or forged credit card, or falsely representing cardholder status, to obtain money, goods, services, or another thing of value.",
+        "degreeContext": "First-degree misdemeanor when, in six months, the card is used two or fewer times or the value obtained is under $100. Third-degree felony when it is used more than twice or the value is $100 or more."
+      },
+      "es": {
+        "plainSummary": "Con intención de defraudar, usar una tarjeta de crédito obtenida, retenida o falsificada indebidamente, o afirmar falsamente ser su titular, para obtener dinero, bienes, servicios u otra cosa de valor.",
+        "degreeContext": "Delito menor de primer grado cuando, en seis meses, la tarjeta se usa dos veces o menos o el valor obtenido es menor de $100. Delito grave de tercer grado si se usa más de dos veces o el valor es de $100 o más."
+      },
+      "zh": {
+        "plainSummary": "意图欺诈，使用非法取得、保留或伪造的信用卡，或虚假声称持卡人身份，以取得金钱、商品、服务或其他有价物。",
+        "degreeContext": "六个月内使用不超过两次或取得价值低于100美元的，为一级轻罪；使用超过两次或取得价值达到100美元的，为三级重罪。"
+      }
+    }
+  }
+]

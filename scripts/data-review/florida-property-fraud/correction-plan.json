@@ -1,0 +1,1169 @@
+{
+  "records": [
+    {
+      "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+      "section": "812.014",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "messages": [
+        "repeatRetail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.014",
+          "role": "offense"
+        },
+        {
+          "section": "812.014",
+          "role": "grading"
+        },
+        {
+          "section": "812.014",
+          "role": "exception"
+        },
+        {
+          "section": "810.011",
+          "role": "definition"
+        },
+        {
+          "section": "810.09",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "812.015",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+      "section": "812.014",
+      "grades": [
+        "M1"
+      ],
+      "messages": [
+        "repeatRetail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.014",
+          "role": "offense"
+        },
+        {
+          "section": "812.014",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "812.015",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(f)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+      "section": "812.014",
+      "grades": [
+        "M2"
+      ],
+      "messages": [
+        "repeatRetail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.014",
+          "role": "offense"
+        },
+        {
+          "section": "812.014",
+          "role": "definition"
+        },
+        {
+          "section": "812.014",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "812.015",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)(a)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(5)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-014-3-b-petit-theft",
+      "section": "812.014",
+      "grades": [
+        "M1"
+      ],
+      "messages": [
+        "repeatRetail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.014",
+          "role": "offense"
+        },
+        {
+          "section": "812.014",
+          "role": "definition"
+        },
+        {
+          "section": "812.014",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "812.015",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)(b)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-014-3-c-petit-theft",
+      "section": "812.014",
+      "grades": [
+        "F3"
+      ],
+      "messages": [
+        "repeatRetail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.014",
+          "role": "offense"
+        },
+        {
+          "section": "812.014",
+          "role": "definition"
+        },
+        {
+          "section": "812.014",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "812.015",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)(c)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "812.014",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-015-retail-theft",
+      "section": "812.015",
+      "grades": [
+        "F3",
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "retail"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.015",
+          "role": "offense"
+        },
+        {
+          "section": "812.015",
+          "role": "grading"
+        },
+        {
+          "section": "812.015",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(1)(i)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(8)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(9)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(10)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(11)"
+        },
+        {
+          "section": "812.015",
+          "scope": "(12)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-812-019-dealing-in-stolen-property",
+      "section": "812.019",
+      "grades": [
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "dealing"
+      ],
+      "requiredSections": [
+        {
+          "section": "812.019",
+          "role": "offense"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "812.025",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.019",
+          "scope": "(1)"
+        },
+        {
+          "section": "812.019",
+          "scope": "(2)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(8)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-234-insurance-fraud",
+      "section": "817.234",
+      "grades": [
+        "F3",
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "insurance"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.234",
+          "role": "offense"
+        },
+        {
+          "section": "817.234",
+          "role": "grading"
+        },
+        {
+          "section": "812.012",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.234",
+          "scope": "(1)(a)"
+        },
+        {
+          "section": "817.234",
+          "scope": "(11)"
+        },
+        {
+          "section": "817.234",
+          "scope": "(12)"
+        },
+        {
+          "section": "817.234",
+          "scope": "(13)"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+      "section": "817.568",
+      "grades": [
+        "F3",
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "thresholds",
+        "identity"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.568",
+          "role": "offense"
+        },
+        {
+          "section": "817.568",
+          "role": "grading"
+        },
+        {
+          "section": "817.568",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(1)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(5)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(10)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(12)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(13)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(14)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(15)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(2)(b)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(2)(c)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+      "section": "817.568",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "messages": [
+        "identity",
+        "harassment"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.568",
+          "role": "offense"
+        },
+        {
+          "section": "817.568",
+          "role": "grading"
+        },
+        {
+          "section": "817.568",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(1)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(4)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(5)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(10)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(12)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(13)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(14)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(15)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+      "section": "817.568",
+      "grades": [
+        "F3",
+        "F2",
+        "F1"
+      ],
+      "messages": [
+        "thresholds",
+        "identity"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.568",
+          "role": "offense"
+        },
+        {
+          "section": "817.568",
+          "role": "grading"
+        },
+        {
+          "section": "817.568",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(1)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(8)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(5)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(10)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(12)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(13)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(14)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(15)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(8)(b)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(8)(c)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+      "section": "817.568",
+      "grades": [
+        "F3",
+        "F2"
+      ],
+      "messages": [
+        "identity",
+        "counterfeit"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.568",
+          "role": "offense"
+        },
+        {
+          "section": "817.568",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(1)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(9)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(5)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(10)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(12)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(13)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(14)"
+        },
+        {
+          "section": "817.568",
+          "scope": "(15)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+      "section": "817.61",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "messages": [
+        "card"
+      ],
+      "requiredSections": [
+        {
+          "section": "817.61",
+          "role": "offense"
+        },
+        {
+          "section": "817.67",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "817.67",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "817.67",
+          "scope": "(1)"
+        },
+        {
+          "section": "817.67",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    "741.28",
+    "741.2801",
+    "775.082",
+    "775.083",
+    "775.084",
+    "810.011",
+    "810.09",
+    "812.012",
+    "812.014",
+    "812.015",
+    "812.019",
+    "812.025",
+    "817.234",
+    "817.568",
+    "817.61",
+    "817.67"
+  ]
+}

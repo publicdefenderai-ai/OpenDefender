@@ -7,7 +7,7 @@
 export const DATA_SOURCE_FACTS = {
   federalStatutes: 10,
   charges: 8154,
-  chargeTiers: { felony: 4504, misdemeanor: 3583, infraction: 67 },
+  chargeTiers: { felony: 4502, misdemeanor: 3585, infraction: 67 },
   chargeJurisdictions: 57,
   chargeExplanations: 453,
   chargeExplanationsWithSources: 437,

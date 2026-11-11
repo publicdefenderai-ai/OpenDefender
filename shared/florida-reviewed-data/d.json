@@ -125,20 +125,71 @@
     "code": "812.014(2)(e)",
     "slug": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
     "name": "Petit theft of the first degree",
-    "names": { "es": "Hurto menor de primer grado", "zh": "一级轻微盗窃" },
-    "category": "felony",
-    "categories": ["felony", "misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "names": {
+      "es": "Hurto menor de primer grado",
+      "zh": "一级轻微盗窃"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.014(2)(e)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 810.011", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html" },
-      { "citation": "Fla. Stat. § 810.09", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html" }
+      {
+        "citation": "Fla. Stat. § 812.014(2)(e)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.09",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Stealing property valued at less than $40 from a dwelling or from the unenclosed curtilage of a dwelling.", "degreeContext": "First-degree misdemeanor. A person who commits this under-$40 dwelling or curtilage offense after any prior theft conviction commits a third-degree felony; paragraph (2)(e) also states the third-degree-felony grade for two or more prior theft convictions. Property valued at $40 or more taken from a dwelling or its unenclosed curtilage is instead subject to the special grand-theft rules in paragraph (2)(d)." },
-      "es": { "plainSummary": "Hurtar propiedad valorada en menos de $40 de una vivienda o del terreno residencial no cercado que la rodea.", "degreeContext": "Delito menor de primer grado. Quien comete este hurto de menos de $40 en una vivienda o su terreno circundante después de cualquier condena anterior por hurto comete delito grave de tercer grado; el párrafo (2)(e) también establece ese grado grave cuando hay dos o más condenas anteriores. La propiedad valorada en $40 o más tomada de una vivienda o su terreno residencial no cercado queda sujeta, en cambio, a las reglas especiales de hurto mayor del párrafo (2)(d)." },
-      "zh": { "plainSummary": "从住宅或住宅未围合的附属区域盗取价值低于40美元的财产。", "degreeContext": "一级轻罪。曾因任何盗窃被定罪后实施本项住宅或附属区域内低于40美元的盗窃，构成三级重罪；第(2)(e)项也明确规定有两次以上盗窃前科时为三级重罪。从住宅或其未围合附属区域盗取价值40美元以上财产的，改按第(2)(d)项特别规定的重大盗窃规则处理。" }
+      "en": {
+        "plainSummary": "Stealing property valued at less than $40 from a dwelling or from the unenclosed curtilage of a dwelling.",
+        "degreeContext": "First-degree misdemeanor. A person who commits this under-$40 dwelling or curtilage offense after any prior theft conviction commits a third-degree felony; paragraph (2)(e) also states the third-degree-felony grade for two or more prior theft convictions. Property valued at $40 or more taken from a dwelling or its unenclosed curtilage is instead subject to the special grand-theft rules in paragraph (2)(d). For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000). A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum)."
+      },
+      "es": {
+        "plainSummary": "Hurtar propiedad valorada en menos de $40 de una vivienda o del terreno residencial no cercado que la rodea.",
+        "degreeContext": "Delito menor de primer grado. Quien comete este hurto de menos de $40 en una vivienda o su terreno circundante después de cualquier condena anterior por hurto comete delito grave de tercer grado; el párrafo (2)(e) también establece ese grado grave cuando hay dos o más condenas anteriores. La propiedad valorada en $40 o más tomada de una vivienda o su terreno residencial no cercado queda sujeta, en cambio, a las reglas especiales de hurto mayor del párrafo (2)(d). Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000). Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000)."
+      },
+      "zh": {
+        "plainSummary": "从住宅或住宅未围合的附属区域盗取价值低于40美元的财产。",
+        "degreeContext": "一级轻罪。曾因任何盗窃被定罪后实施本项住宅或附属区域内低于40美元的盗窃，构成三级重罪；第(2)(e)项也明确规定有两次以上盗窃前科时为三级重罪。从住宅或其未围合附属区域盗取价值40美元以上财产的，改按第(2)(d)项特别规定的重大盗窃规则处理。 如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+      }
     }
   },
   {
@@ -147,18 +198,58 @@
     "code": "812.014(2)(f)",
     "slug": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
     "name": "Petit theft of the first degree",
-    "names": { "es": "Hurto menor de primer grado", "zh": "一级轻微盗窃" },
+    "names": {
+      "es": "Hurto menor de primer grado",
+      "zh": "一级轻微盗窃"
+    },
     "category": "misdemeanor",
-    "categories": ["misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.014(2)(f)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+      {
+        "citation": "Fla. Stat. § 812.014(2)(f)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Stealing property valued at $100 or more but less than $750, except property governed by paragraph (2)(d)'s special dwelling or unenclosed-curtilage rules.", "degreeContext": "First-degree misdemeanor. Under paragraph (2)(d), property in this value range taken from a dwelling or its unenclosed curtilage is grand theft of the third degree, not this petit-theft branch." },
-      "es": { "plainSummary": "Hurtar propiedad valorada en $100 o más pero menos de $750, salvo la propiedad sujeta a las reglas especiales del párrafo (2)(d) para viviendas o su terreno residencial no cercado.", "degreeContext": "Delito menor de primer grado. Conforme al párrafo (2)(d), la propiedad de este valor tomada de una vivienda o su terreno residencial no cercado constituye hurto mayor de tercer grado, no esta modalidad de hurto menor." },
-      "zh": { "plainSummary": "盗取价值100美元以上但低于750美元的财产，但第(2)(d)项关于住宅或住宅未围合附属区域的特别规则所涵盖的财产除外。", "degreeContext": "一级轻罪。依第(2)(d)项，在此金额范围内从住宅或其未围合附属区域盗取财产构成三级重大盗窃，而不属于本轻微盗窃分支。" }
+      "en": {
+        "plainSummary": "Stealing property valued at $100 or more but less than $750, except property governed by paragraph (2)(d)'s special dwelling or unenclosed-curtilage rules.",
+        "degreeContext": "First-degree misdemeanor. Under paragraph (2)(d), property in this value range taken from a dwelling or its unenclosed curtilage is grand theft of the third degree, not this petit-theft branch. For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000)."
+      },
+      "es": {
+        "plainSummary": "Hurtar propiedad valorada en $100 o más pero menos de $750, salvo la propiedad sujeta a las reglas especiales del párrafo (2)(d) para viviendas o su terreno residencial no cercado.",
+        "degreeContext": "Delito menor de primer grado. Conforme al párrafo (2)(d), la propiedad de este valor tomada de una vivienda o su terreno residencial no cercado constituye hurto mayor de tercer grado, no esta modalidad de hurto menor. Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000)."
+      },
+      "zh": {
+        "plainSummary": "盗取价值100美元以上但低于750美元的财产，但第(2)(d)项关于住宅或住宅未围合附属区域的特别规则所涵盖的财产除外。",
+        "degreeContext": "一级轻罪。依第(2)(d)项，在此金额范围内从住宅或其未围合附属区域盗取财产构成三级重大盗窃，而不属于本轻微盗窃分支。 如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。"
+      }
     }
   },
   {
@@ -167,18 +258,58 @@
     "code": "812.014(3)(a)",
     "slug": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
     "name": "Petit theft of the second degree",
-    "names": { "es": "Hurto menor de segundo grado", "zh": "二级轻微盗窃" },
+    "names": {
+      "es": "Hurto menor de segundo grado",
+      "zh": "二级轻微盗窃"
+    },
     "category": "misdemeanor",
-    "categories": ["misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.014(3)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+      {
+        "citation": "Fla. Stat. § 812.014(3)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Knowingly obtaining, using, or endeavoring to obtain or use another's property, with intent temporarily or permanently to deprive the other person of a right or benefit or to appropriate the property to an unauthorized use, when the property is not specified in subsection (2).", "degreeContext": "Second-degree misdemeanor. For retail gasoline taken by driving a vehicle away without paying, subsection (5), when applicable, also requires driver's-license suspension for up to 6 months for the first suspension and 1 year for a second or subsequent suspension." },
-      "es": { "plainSummary": "Obtener, usar o intentar obtener o usar a sabiendas propiedad ajena, con intención temporal o permanente de privar a la otra persona de un derecho o beneficio, o de destinar la propiedad a un uso no autorizado, cuando la propiedad no está especificada en el inciso (2).", "degreeContext": "Delito menor de segundo grado. Cuando se toma gasolina al por menor alejando un vehículo sin pagar, el inciso (5), si corresponde, exige además suspender la licencia de conducir hasta 6 meses por la primera suspensión y por 1 año por la segunda o una posterior." },
-      "zh": { "plainSummary": "明知地取得、使用或企图取得、使用他人财产，意图暂时或永久剥夺他人对财产的权利或利益，或者将财产挪作无权使用者之用，且该财产不属于第(2)款列明的财产。", "degreeContext": "二级轻罪。驾驶车辆离开零售加油场所而未支付油款的，在第(5)款适用时还须吊销驾驶证：首次最长6个月，第二次或其后为1年。" }
+      "en": {
+        "plainSummary": "Knowingly obtaining, using, or endeavoring to obtain or use another's property, with intent temporarily or permanently to deprive the other person of a right or benefit or to appropriate the property to an unauthorized use, when the property is not specified in subsection (2).",
+        "degreeContext": "Second-degree misdemeanor. For retail gasoline taken by driving a vehicle away without paying, subsection (5), when applicable, also requires driver's-license suspension for up to 6 months for the first suspension and 1 year for a second or subsequent suspension. For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place. A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A qualifying second-degree misdemeanor becomes a first-degree misdemeanor, ordinarily up to 1 year and $1,000."
+      },
+      "es": {
+        "plainSummary": "Obtener, usar o intentar obtener o usar a sabiendas propiedad ajena, con intención temporal o permanente de privar a la otra persona de un derecho o beneficio, o de destinar la propiedad a un uso no autorizado, cuando la propiedad no está especificada en el inciso (2).",
+        "degreeContext": "Delito menor de segundo grado. Cuando se toma gasolina al por menor alejando un vehículo sin pagar, el inciso (5), si corresponde, exige además suspender la licencia de conducir hasta 6 meses por la primera suspensión y por 1 año por la segunda o una posterior. Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal. Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Si se cumplen estos requisitos, el delito menor de segundo grado pasa a primer grado: ordinariamente hasta 1 año y $1,000."
+      },
+      "zh": {
+        "plainSummary": "明知地取得、使用或企图取得、使用他人财产，意图暂时或永久剥夺他人对财产的权利或利益，或者将财产挪作无权使用者之用，且该财产不属于第(2)款列明的财产。",
+        "degreeContext": "二级轻罪。驾驶车辆离开零售加油场所而未支付油款的，在第(5)款适用时还须吊销驾驶证：首次最长6个月，第二次或其后为1年。 如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。 二级轻罪通常最高可判监禁60天及罚款500美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 如符合这些条件，二级轻罪升为一级轻罪，通常最高可判1年监禁及罚款1,000美元。"
+      }
     }
   },
   {
@@ -187,18 +318,58 @@
     "code": "812.014(3)(b)",
     "slug": "fl-fs-812-014-3-b-petit-theft",
     "name": "Petit theft",
-    "names": { "es": "Hurto menor", "zh": "轻微盗窃" },
+    "names": {
+      "es": "Hurto menor",
+      "zh": "轻微盗窃"
+    },
     "category": "misdemeanor",
-    "categories": ["misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.014(3)(b)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+      {
+        "citation": "Fla. Stat. § 812.014(3)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted of any theft.", "degreeContext": "First-degree misdemeanor under paragraph (3)(b). The specific under-$40 dwelling or unenclosed-curtilage repeat branch in paragraph (2)(e) is a third-degree felony, and paragraph (3)(c) separately grades the subsection (3) branch after two or more prior theft convictions as a third-degree felony." },
-      "es": { "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de una condena anterior por cualquier hurto.", "degreeContext": "Delito menor de primer grado conforme al párrafo (3)(b). La modalidad específica del párrafo (2)(e), por hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado, es delito grave de tercer grado; el párrafo (3)(c) también clasifica por separado como delito grave de tercer grado la modalidad del inciso (3) después de dos o más condenas anteriores por hurto." },
-      "zh": { "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾因任何盗窃被定罪后再次实施该罪。", "degreeContext": "依第(3)(b)项为一级轻罪。第(2)(e)项关于住宅或未围合附属区域内低于40美元盗窃的特定再犯分支为三级重罪；第(3)(c)项另行将有两次以上盗窃前科后实施的第(3)款分支定为三级重罪。" }
+      "en": {
+        "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted of any theft.",
+        "degreeContext": "First-degree misdemeanor under paragraph (3)(b). The specific under-$40 dwelling or unenclosed-curtilage repeat branch in paragraph (2)(e) is a third-degree felony, and paragraph (3)(c) separately grades the subsection (3) branch after two or more prior theft convictions as a third-degree felony. For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000)."
+      },
+      "es": {
+        "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de una condena anterior por cualquier hurto.",
+        "degreeContext": "Delito menor de primer grado conforme al párrafo (3)(b). La modalidad específica del párrafo (2)(e), por hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado, es delito grave de tercer grado; el párrafo (3)(c) también clasifica por separado como delito grave de tercer grado la modalidad del inciso (3) después de dos o más condenas anteriores por hurto. Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000)."
+      },
+      "zh": {
+        "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾因任何盗窃被定罪后再次实施该罪。",
+        "degreeContext": "依第(3)(b)项为一级轻罪。第(2)(e)项关于住宅或未围合附属区域内低于40美元盗窃的特定再犯分支为三级重罪；第(3)(c)项另行将有两次以上盗窃前科后实施的第(3)款分支定为三级重罪。 如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。"
+      }
     }
   },
   {
@@ -207,18 +378,62 @@
     "code": "812.014(3)(c)",
     "slug": "fl-fs-812-014-3-c-petit-theft",
     "name": "Petit theft",
-    "names": { "es": "Hurto menor", "zh": "轻微盗窃" },
+    "names": {
+      "es": "Hurto menor",
+      "zh": "轻微盗窃"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.014(3)(c)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
-      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+      {
+        "citation": "Fla. Stat. § 812.014(3)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.015",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted two or more times of any theft.", "degreeContext": "Third-degree felony. Paragraph (2)(e) separately supplies the same felony degree for its specific under-$40 dwelling or unenclosed-curtilage repeat branch." },
-      "es": { "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de dos o más condenas anteriores por cualquier hurto.", "degreeContext": "Delito grave de tercer grado. El párrafo (2)(e) establece por separado el mismo grado grave para su modalidad específica de hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado." },
-      "zh": { "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾两次以上因任何盗窃被定罪后再次实施该罪。", "degreeContext": "三级重罪。第(2)(e)项对其特定的住宅或未围合附属区域内低于40美元盗窃再犯分支另行规定相同重罪等级。" }
+      "en": {
+        "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted two or more times of any theft.",
+        "degreeContext": "Third-degree felony. Paragraph (2)(e) separately supplies the same felony degree for its specific under-$40 dwelling or unenclosed-curtilage repeat branch. For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum)."
+      },
+      "es": {
+        "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de dos o más condenas anteriores por cualquier hurto.",
+        "degreeContext": "Delito grave de tercer grado. El párrafo (2)(e) establece por separado el mismo grado grave para su modalidad específica de hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado. Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000)."
+      },
+      "zh": {
+        "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾两次以上因任何盗窃被定罪后再次实施该罪。",
+        "degreeContext": "三级重罪。第(2)(e)项对其特定的住宅或未围合附属区域内低于40美元盗窃再犯分支另行规定相同重罪等级。 如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+      }
     }
   },
   {
