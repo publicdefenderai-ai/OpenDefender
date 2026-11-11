@@ -1,0 +1,631 @@
+[
+  {
+    "id": "oh-orc-2919-22-care-duty",
+    "section": "2919.22",
+    "code": "2919.22(A)",
+    "scope": "A",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(2)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "A parent, guardian, custodian, person with custody or control, or person acting in place of a parent recklessly creating a substantial risk to the health or safety of a child under 18, or a child with a mental or physical disability under 21 by violating a duty of care, protection or support. Division (A) excludes the specified treatment by prayer alone in accordance with the tenets of a recognized religious body.",
+    "gradeSummary": "Ordinarily M1. F4 for a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse. Serious physical harm to the child makes this care-duty branch F3 under (E)(2)(c).",
+    "degrees": [
+      "M1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.22",
+          "quote": "Except as otherwise provided in division (E)(2)(b), (c), or (d) of this section, a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "caseCitations": [
+      {
+        "citation": "State v. McGee, 79 Ohio St.3d 193 (1997)",
+        "url": "https://www.supremecourt.ohio.gov/rod/docs/pdf/0/1997/1997-ohio-156.pdf"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2919-22-abuse",
+    "section": "2919.22",
+    "code": "2919.22(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(2)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Recklessly abusing a child under 18, or a child with a mental or physical disability under 21. This requires proof of abuse and applies to any person.",
+    "gradeSummary": "Ordinarily M1. F4 for a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse. Serious physical harm to the child makes this abuse branch F2 under (E)(2)(d). A conviction or guilty plea on a charged 2941.1422 human-trafficking specification requires a mandatory prison term under 2929.14(B)(7) and victim restitution under 2929.18(B)(8). With that specification the mandatory F4 term is the 18-month maximum. For F2 conduct on or after March 22, 2019, the mandatory minimum term is three to eight years with an indefinite maximum. Earlier F2 conduct uses the applicable definite-term rules.",
+    "degrees": [
+      "M1",
+      "F4",
+      "F2"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2941.1422",
+      "2901.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.22",
+          "quote": "Except as otherwise provided in division (E)(2)(b), (c), or (d) of this section, a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "caseCitations": [
+      {
+        "citation": "State v. Daniels, 2026-Ohio-3728, \u00b6 32 (5th Dist.)",
+        "url": "https://www.supremecourt.ohio.gov/rod/docs/pdf/5/2026/2026-Ohio-3728.pdf"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2919-22-torture-or-cruel-abuse",
+    "section": "2919.22",
+    "code": "2919.22(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(3)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Torturing or cruelly abusing a child under 18, or a child with a mental or physical disability under 21. The applicable culpability rules in 2901.21 and 2901.22 also matter.",
+    "gradeSummary": "Ordinarily F3. Serious physical harm to the child or a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse makes F2. A conviction or guilty plea on a charged 2941.1422 human-trafficking specification requires a mandatory prison term under 2929.14(B)(7) and victim restitution under 2929.18(B)(8). With that specification the F3 prison term is three years. For F2 conduct on or after March 22, 2019, the mandatory minimum term is three to eight years with an indefinite maximum. Earlier F2 conduct uses the applicable definite-term rules.",
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2941.1422",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-22-excessive-discipline-or-restraint",
+    "section": "2919.22",
+    "code": "2919.22(B)(3)",
+    "scope": "B(3)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(3)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Administering excessive corporal punishment or other physical discipline, or excessive cruel or prolonged physical restraint, creating a substantial risk of serious physical harm to a child under 18, or a child with a mental or physical disability under 21. The applicable culpability rules in 2901.21 and 2901.22 also matter.",
+    "gradeSummary": "Ordinarily F3. Serious physical harm to the child or a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse makes F2. A conviction or guilty plea on a charged 2941.1422 human-trafficking specification requires a mandatory prison term under 2929.14(B)(7) and victim restitution under 2929.18(B)(8). With that specification the F3 prison term is three years. For F2 conduct on or after March 22, 2019, the mandatory minimum term is three to eight years with an indefinite maximum. Earlier F2 conduct uses the applicable definite-term rules.",
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2941.1422",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-22-repeated-unwarranted-discipline",
+    "section": "2919.22",
+    "code": "2919.22(B)(4)",
+    "scope": "B(4)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(4)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(3)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Repeatedly administering unwarranted discipline that, if continued, poses a substantial risk of seriously impairing or retarding the mental health or development of a child under 18, or a child with a mental or physical disability under 21. The applicable culpability rules in 2901.21 and 2901.22 also matter.",
+    "gradeSummary": "Ordinarily F3. Serious physical harm to the child or a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse makes F2. A conviction or guilty plea on a charged 2941.1422 human-trafficking specification requires a mandatory prison term under 2929.14(B)(7) and victim restitution under 2929.18(B)(8). With that specification the F3 prison term is three years. For F2 conduct on or after March 22, 2019, the mandatory minimum term is three to eight years with an indefinite maximum. Earlier F2 conduct uses the applicable definite-term rules.",
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2941.1422",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-22-material-or-performance",
+    "section": "2919.22",
+    "code": "2919.22(B)(5)",
+    "scope": "B(5)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(5)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(4)"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "conductSummary": "Causing or allowing a child under 18, or a child with a mental or physical disability under 21 to participate or be photographed for production, presentation, distribution or advertising of material or a performance the actor knows or reasonably should know falls within the specified obscene, sexually oriented or nudity-oriented categories. Division (D) provides a qualified proper-purpose exception and says mistake of age is no defense.",
+    "gradeSummary": "F2. A conviction or guilty plea on a charged 2941.1422 human-trafficking specification requires a mandatory prison term under 2929.14(B)(7) and victim restitution under 2929.18(B)(8). For F2 conduct on or after March 22, 2019, the specification requires a mandatory minimum term of three to eight years with an indefinite maximum. Earlier F2 conduct uses the applicable definite-term rules.",
+    "degrees": [
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2941.1422",
+      "2907.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-22-impaired-operation-child-passenger",
+    "section": "2919.22",
+    "code": "2919.22(C)(1)",
+    "scope": "C(1)",
+    "statutoryName": "Endangering children",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(1)"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(5)"
+    ],
+    "contextPaths": [
+      "C(2)",
+      "F",
+      "G",
+      "H",
+      "I"
+    ],
+    "conductSummary": "Operating a vehicle, streetcar or trackless trolley in Ohio in violation of 4511.19(A) with one or more children under 18 aboard. The prosecution must establish the underlying impaired-operation or prohibited-concentration offense.",
+    "gradeSummary": "Ordinarily M1. Serious physical harm to the child or a prior conviction under this section or for an offense involving child neglect, abandonment, contributing to delinquency, or physical abuse makes F5, subject to the F4 rule. F4 requires serious physical harm plus a listed prior under (C), 2903.06, 2903.08, former 2903.07 as it existed before March 23, 2000, or qualifying 2903.04(D) circumstances. Check the actual historical conviction and version. Up to 200 hours of supervised community service and an additional, consecutive class-seven suspension of up to one year are possible. Three or more qualifying convictions or pleas in the preceding six years bar limited privileges on that suspension. Multiple children in the motor vehicle can support multiple convictions but only one child-endangerment sentence under (H)(1). A separate 4511.19(A) conviction at the same proceeding is sentenced separately.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "4511.19",
+      "4511.01",
+      "3719.01",
+      "2903.04",
+      "2903.06",
+      "2903.08",
+      "4510.02",
+      "4511.181",
+      "2951.02",
+      "2929.25",
+      "2949.08",
+      "2967.191",
+      "4501.01",
+      "2929.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.22",
+          "quote": "endangering children in violation of division (C) of this section is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2919-23-child",
+    "section": "2919.23",
+    "code": "2919.23(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Interference with custody",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "D(1)",
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "conductSummary": "Enticing, taking, keeping or harboring a child under 18, or a child with a mental or physical disability under 21 from a parent, guardian or custodian, knowing of or being reckless about lack of privilege. For enticing or taking under (A)(1), reasonable belief that the conduct was necessary for the child\u2019s health or safety is an affirmative defense. For keeping or harboring under (A), good-faith notice to law enforcement or judicial authorities within a reasonable time is a distinct affirmative defense.",
+    "gradeSummary": "Ordinarily M1. Removing the child from Ohio or a prior conviction under this section makes F5. Physical harm to the child resulting from the violation makes F4.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.23",
+          "quote": "a violation of division (A)(1) of this section is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2919-23-committed-person",
+    "section": "2919.23",
+    "code": "2919.23(A)(2)/(3)",
+    "scope": "A(2),A(3)",
+    "statutoryName": "Interference with custody",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)",
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "D(1)",
+      "D(3)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "conductSummary": "Enticing, taking, keeping or harboring a person lawfully committed to one of the listed child, mental-illness or intellectual-disability institutions from the person\u2019s parent, guardian or custodian, knowing of or being reckless about lack of privilege. The good-faith timely-notice affirmative defense applies to keeping or harboring. The health-or-safety affirmative defense expressly applies to enticing or taking under (A)(1).",
+    "gradeSummary": "M3 for (A)(2) or (3). The (A)(1) removal, prior-conviction and harm enhancements do not supply these branches\u2019 grades.",
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-23-leave-committed-custody",
+    "section": "2919.23",
+    "code": "2919.23(B)",
+    "scope": "B",
+    "statutoryName": "Interference with custody",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D(1)",
+      "D(4)"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Aiding, inducing, causing or encouraging a child or juvenile-court ward committed to a person, department or institution to leave that custody without legal consent. The affirmative defenses in (C) expressly concern (A) conduct.",
+    "gradeSummary": "M1. Each day of violating (B) is a separate offense.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-24-unruliness-delinquency",
+    "section": "2919.24",
+    "code": "2919.24(B)(1)/(2)",
+    "scope": "B(1),B(2)",
+    "statutoryName": "Contributing to the unruliness or delinquency of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)",
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C"
+    ],
+    "conductSummary": "Aiding, causing or contributing to a child or juvenile-court ward becoming unruly or delinquent, or acting in a way tending to cause that result. Under the October 9, 2026 text, a prior adjudication of unruliness or delinquency is unnecessary. The prohibition can apply to people other than the child\u2019s parent or custodian.",
+    "gradeSummary": "M1 under the text effective October 9, 2026. Each day of violation is a separate offense. Apply the statutory wording in effect on the alleged conduct date.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.011",
+      "2151.022",
+      "2152.02",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-24-habitual-truancy",
+    "section": "2919.24",
+    "code": "2919.24(B)(3)",
+    "scope": "B(3)",
+    "statutoryName": "Contributing to the unruliness or delinquency of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C"
+    ],
+    "conductSummary": "Acting in a way that contributes to a child being a habitual truant. The applicable statutory definition and attendance facts matter. Under the October 9, 2026 text, a prior adjudication of unruliness or delinquency is unnecessary. The prohibition can apply to people other than the child\u2019s parent or custodian.",
+    "gradeSummary": "M1 under the text effective October 9, 2026. Each day of violation is a separate offense. Apply the statutory wording in effect on the alleged conduct date. For conduct from April 6, 2017 through October 8, 2026, (B)(3) instead required conduct contributing to a delinquency adjudication based on violation of a court order adjudicating the child unruly for habitual truancy. The earlier (C) still prescribed M1 and separate daily offenses.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.011",
+      "2151.022",
+      "2152.02",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-222-parental-education-neglect",
+    "section": "2919.222",
+    "code": "2919.222",
+    "scope": "whole",
+    "statutoryName": "Parental education neglect",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [
+      "whole"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Failing to attend a parental education or training program when required under a district policy adopted under 3313.663(A) or (B). The authorized policy concerns specified suspensions or expulsions, or truancy or habitual absence. The adopted policy and whether it required attendance matter.",
+    "gradeSummary": "M4. The school-policy dependency used here took effect October 9, 2026. Check the applicable version and local policy for earlier conduct. From October 9, 2026, posting the policy on the district website is an alternative to posting centrally in each school. The earlier version required posting in each school.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "3313.663",
+      "3313.66",
+      "2901.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-224-provider-misrepresentation",
+    "section": "2919.224",
+    "code": "2919.224",
+    "scope": "A",
+    "statutoryName": "Misrepresentation by a child care provider",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "conductSummary": "A child care provider knowingly misrepresenting a care-related factor or condition that substantially affects child health or safety to a covered current or prospective caregiver, licensing or investigating official, or peace officer. The statute lists examples involving personnel, qualifications, staffing, conditions and care areas.",
+    "gradeSummary": "M1. The jail range concerns an individual. An organization convicted under 2901.23 faces an organizational fine up to $5,000 under 2929.31(A)(8), with available civil sanctions under (D).",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.23",
+      "2929.31"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-227-enrollment-disclosure",
+    "section": "2919.227",
+    "code": "2919.227(A)",
+    "scope": "A",
+    "statutoryName": "Failure of a child care center to disclose the death or serious injury of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "conductSummary": "A center licensee admitting a child without giving requested types and counts of reportable injuries during the period specified in (A)(1), or without advance notice of a qualifying death during the preceding fifteen years. The death disclosure applies even without a request. The licensee must keep copies of the information provided for at least three years.",
+    "gradeSummary": "M4. The jail range concerns an individual. An organization convicted under 2901.23 faces an organizational fine up to $2,000 under 2929.31(A)(11), with available civil sanctions under (D).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.23",
+      "2929.31",
+      "2901.21",
+      "5104.015"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-227-death-notice",
+    "section": "2919.227",
+    "code": "2919.227(B)",
+    "scope": "B",
+    "statutoryName": "Failure of a child care center to disclose the death or serious injury of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "conductSummary": "A center licensee failing to notify all recipients listed in (B)(2) of a qualifying death within 48 hours. The recipients include responsible adults of children receiving or enrolled for care, the public children services agency, a covered peace officer and the applicable child fatality review board.",
+    "gradeSummary": "M4. The jail range concerns an individual. An organization convicted under 2901.23 faces an organizational fine up to $2,000 under 2929.31(A)(11), with available civil sanctions under (D).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2901.23",
+      "2929.31",
+      "2901.21",
+      "307.621"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-231-support-action",
+    "section": "2919.231",
+    "code": "2919.231",
+    "scope": "A",
+    "statutoryName": "Interfering with an action to issue or modify a support order",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Using physical harassment or threats of violence to interfere with, or try to prevent, another person starting or continuing an action to issue or modify a support order under one of the authorities listed in (A). It concerns interference with the proceeding itself.",
+    "gradeSummary": "Ordinarily M1. A prior conviction or guilty plea under this section or 3111.19 makes F5.",
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "3111.19",
+      "2151.23",
+      "2151.231",
+      "2151.232",
+      "2151.33",
+      "2151.36",
+      "2151.361",
+      "2151.49",
+      "3105.18",
+      "3105.21",
+      "3109.05",
+      "3109.19",
+      "3111.13",
+      "3113.04",
+      "3113.07",
+      "3113.31"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.231",
+          "quote": "guilty of interfering with an action to issue or modify a support order, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  }
+]
