@@ -1,3 +1,4 @@
+import { QUARTERLY_POLICY, validVerificationWindow } from "../../shared/source-verification-policy.mjs";
 import { validateOhioClassificationEvidence } from '@shared/ohio-primary-classification';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -61,11 +62,11 @@ export const OHIO_MAJOR_SOURCES: readonly OhioReviewedSource[] = ohioMajorPacket
 export function validateOhioMajorReceipt(receipt: any, now = new Date()): string | null {
   const checked = Date.parse(receipt?.checkedAt), expires = Date.parse(receipt?.expiresAt);
   const acquisitions = Object.values(ohioMajorPacket.documents).map(doc => Date.parse(doc.retrievedAt));
-  if (!Number.isFinite(now.getTime()) || receipt?.schemaVersion !== 1 || receipt?.kind !== 'initial_acquired_evidence_window' ||
+  if (!Number.isFinite(now.getTime()) || receipt?.schemaVersion !== 1 || receipt?.kind !== 'reacquired_evidence_window' || receipt.verificationPolicy !== QUARTERLY_POLICY ||
       receipt?.packetHash !== hash(JSON.stringify(ohioMajorPacket)) ||
       !Number.isFinite(checked) || !Number.isFinite(expires) || checked > now.getTime() ||
-      checked < Math.max(...acquisitions) || expires <= checked || expires <= now.getTime() ||
-      expires > Math.min(...acquisitions) + 7 * 86400000) return 'Ohio major evidence window is missing, mismatched or expired';
+      checked !== Math.max(...acquisitions) || expires <= checked || expires <= now.getTime() ||
+      !validVerificationWindow(receipt, new Date(Math.min(...acquisitions)).toISOString())) return 'Ohio major evidence window is missing, mismatched or expired';
   return null;
 }
 export function isOhioMajorSourceFresh(now = new Date()): boolean {

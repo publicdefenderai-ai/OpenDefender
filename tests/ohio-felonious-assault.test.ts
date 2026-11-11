@@ -110,7 +110,7 @@ describe("Ohio felonious assault source-first record", () => {
     for (const id of ["oh-assault-with-deadly-weapon", "oh-assault-on-peace-officer"]) {
       expect(getChargeById(id)).toBeUndefined();
       expect(resolveGuidanceCharge({ id, name: "Assault", code: "2903.11", classification: "felony" }, "OH")).toBeUndefined();
-      for (const now of [new Date(), new Date(Date.now() + 8 * 86400000)]) {
+      for (const now of [new Date(), new Date(JSON.parse(readFileSync(OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, "utf8")).expiresAt)]) {
         const manifest = loadOhioAuthorityManifest(undefined, now);
         expect(manifest.catalogRecords.find(row => row.chargeId === id)).toMatchObject({
           disposition: "require_exact_reselection", provisions: [],
