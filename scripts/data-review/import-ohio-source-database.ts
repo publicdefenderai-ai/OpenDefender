@@ -1,5 +1,6 @@
 import { extractOhioDocument } from "./ohio-discovery/section-document";
 export { extractOhioDocument } from "./ohio-discovery/section-document";
+import { OHIO_PROTECTION_SOURCES } from "../../server/data/ohio-protection-source";
 import { OHIO_FAMILY_SOURCES } from "../../server/data/ohio-family-source";
 import { OHIO_PUBLIC_PEACE_SOURCES } from "../../server/data/ohio-public-peace-source";
 import { OHIO_CUSTODY_SOURCES } from "../../server/data/ohio-custody-source";
@@ -107,6 +108,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_PROTECTION_SOURCES.map(record => record.chargeId),
       ...OHIO_FAMILY_SOURCES.map(record => record.chargeId),
       ...OHIO_PUBLIC_PEACE_SOURCES.map(record => record.chargeId),
       ...OHIO_CUSTODY_SOURCES.map(record => record.chargeId),

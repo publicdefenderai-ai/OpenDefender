@@ -1,0 +1,560 @@
+[
+  {
+    "id": "oh-orc-2919-01-bigamy",
+    "section": "2919.01",
+    "code": "2919.01(A)",
+    "scope": "A",
+    "statutoryName": "Bigamy",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "conductSummary": "A married person marrying another or continuing to cohabit with that other person in Ohio. Division (B) provides an affirmative defense if the spouse was continuously absent for five years immediately before the purported marriage and the accused did not know the spouse was alive during that time.",
+    "gradeSummary": "M1.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-25-physical-harm",
+    "section": "2919.25",
+    "code": "2919.25(A)",
+    "scope": "A",
+    "statutoryName": "Domestic violence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "Knowingly causing or attempting to cause physical harm to a family or household member. Division (F) covers listed relatives who live or formerly lived with the accused, including a person living as a spouse under the statutory cohabitation definition. It separately includes the natural parent of a child whose other natural or putative parent is the accused.",
+    "gradeSummary": "Ordinarily M1. One qualifying prior makes F4. Two or more make F3. The presumption of prison in (D)(4) took effect March 20, 2025; the preceding version did not state that presumption. Qualifying priors are defined in (D)(3) and (4), including the household relationship required for specified other offenses. Known pregnancy makes F5 without qualifying priors, F4 with one and F3 with two or more, with mandatory prison. For F4/F5 the minimum is six months, except that serious physical harm to the unborn or termination of the pregnancy requires twelve months for F5 or at least twelve months for F4. For F3 in known-pregnancy cases, (D)(6)(d) specifies twelve months or a term under 2929.14(A)(3)(a); with serious physical harm to the unborn or termination, (D)(6)(e) specifies eighteen months or a term under that same provision. The special F3 terms below reflect law effective March 20, 2025. Check the applicable version for earlier conduct.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2903.14",
+      "2909.06",
+      "2909.07",
+      "2911.12",
+      "2911.211",
+      "2919.22",
+      "2903.09"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.25",
+          "quote": "a violation of division (A) or (B) of this section is a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2919.25 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.25/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2919-25-reckless-serious-harm",
+    "section": "2919.25",
+    "code": "2919.25(B)",
+    "scope": "B",
+    "statutoryName": "Domestic violence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "Recklessly causing serious physical harm to a family or household member. Division (F) covers listed relatives who live or formerly lived with the accused, including a person living as a spouse under the statutory cohabitation definition. It separately includes the natural parent of a child whose other natural or putative parent is the accused.",
+    "gradeSummary": "Ordinarily M1. One qualifying prior makes F4. Two or more make F3. The presumption of prison in (D)(4) took effect March 20, 2025; the preceding version did not state that presumption. Qualifying priors are defined in (D)(3) and (4), including the household relationship required for specified other offenses. Known pregnancy makes F5 without qualifying priors, F4 with one and F3 with two or more, with mandatory prison. For F4/F5 the minimum is six months, except that serious physical harm to the unborn or termination of the pregnancy requires twelve months for F5 or at least twelve months for F4. For F3 in known-pregnancy cases, (D)(6)(d) specifies twelve months or a term under 2929.14(A)(3)(a); with serious physical harm to the unborn or termination, (D)(6)(e) specifies eighteen months or a term under that same provision. The special F3 terms below reflect law effective March 20, 2025. Check the applicable version for earlier conduct.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2903.14",
+      "2909.06",
+      "2909.07",
+      "2911.12",
+      "2911.211",
+      "2919.22",
+      "2903.09"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2919.25",
+          "quote": "a violation of division (A) or (B) of this section is a misdemeanor of the first degree"
+        }
+      ]
+    },
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2919.25 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.25/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2919-25-threat-of-force",
+    "section": "2919.25",
+    "code": "2919.25(C)",
+    "scope": "C",
+    "statutoryName": "Domestic violence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "D(1)",
+      "D(2)",
+      "D(3)",
+      "D(4)",
+      "D(5)"
+    ],
+    "contextPaths": [
+      "E",
+      "F"
+    ],
+    "conductSummary": "Knowingly causing a family or household member, by threat of force, to believe the accused will cause imminent physical harm to that member. Division (F) covers listed relatives who live or formerly lived with the accused, including a person living as a spouse under the statutory cohabitation definition. It separately includes the natural parent of a child whose other natural or putative parent is the accused.",
+    "gradeSummary": "Ordinarily M4. Known pregnancy makes M3 under (D)(5) unless the prior-conviction provisions apply. One qualifying prior makes M2 and two or more make M1. Qualifying priors are defined in (D)(3) and (4), including the household relationship required for specified other offenses. The felony pregnancy rules apply to the physical-harm branches.",
+    "degrees": [
+      "M4",
+      "M3",
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2903.14",
+      "2909.06",
+      "2909.07",
+      "2911.12",
+      "2911.211",
+      "2919.22",
+      "2903.09"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2919.25 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.25/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2919-225-admission-disclosure",
+    "section": "2919.225",
+    "code": "2919.225(A)",
+    "scope": "A",
+    "statutoryName": "Failure of a type A or type B family child care home to disclose the death or serious injury of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "conductSummary": "An owner, provider or administrator knowingly accepting a child into a type A or B family child care home without first disclosing to the responsible adult a qualifying prior death, or a qualifying injury within the preceding ten years that led to hospitalization for more than 24 hours. One disclosure per recipient and event suffices.",
+    "gradeSummary": "M4.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2919-225-event-notice",
+    "section": "2919.225",
+    "code": "2919.225(B)",
+    "scope": "B",
+    "statutoryName": "Failure of a type A or type B family child care home to disclose the death or serious injury of a child",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "conductSummary": "An owner, provider or administrator failing to notify the responsible adult for each currently enrolled or receiving-care child after a qualifying death or injury leading to hospitalization over 24 hours. Death also requires notice to the specified children services agency, peace officer and review board. Notice is due within 48 hours of death or injury, with separate notices if the child later dies. One notice per recipient and event suffices.",
+    "gradeSummary": "M4.",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "307.621"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-3111-19-paternity-action",
+    "section": "3111.19",
+    "code": "3111.19",
+    "scope": "whole",
+    "statutoryName": "Interfering with the establishment of paternity",
+    "namingBasis": "external_guilt_clause",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "conductSummary": "Using physical harassment or threats of violence to interfere with another person initiating or continuing a paternity action under sections 3111.01 through 3111.18, or attempting to prevent that person from initiating or continuing the action.",
+    "gradeSummary": "M1 under 3111.99.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "3111.01",
+      "3111.18",
+      "3111.99"
+    ],
+    "extraGrading": [
+      {
+        "section": "3111.99",
+        "path": "whole"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2917-211-private-image",
+    "section": "2917.211",
+    "code": "2917.211(B)",
+    "scope": "B",
+    "statutoryName": "Nonconsensual dissemination of private sexual images",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "H(1)",
+      "H(4)"
+    ],
+    "contextPaths": [
+      "A",
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "conductSummary": "Knowingly disseminating without consent an image of an identifiable adult who is nude or engaged in a sexual act, with intent to harm that person. If identification depends on accompanying information, the offender must have supplied it. Division (E) lists exceptions for dissemination, including lawful reporting, medical and specified expressive uses. Division (F) limits provider liability for third-party material.",
+    "gradeSummary": "Under the version effective September 30, 2025, ordinarily F5; F4 for a prior (B) violation, a sexually oriented offense or a child-victim oriented offense. The version from March 22, 2019 through September 29, 2025 ordinarily classified private-image dissemination as M3, M2 with one prior violation, M1 with two or more. It also barred prosecution under this section where the offender was under 18 and the person depicted was no more than five years older. The court may order forfeiture of qualifying proceeds, property or enterprise interests under (H)(4).",
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.66",
+      "2950.01"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2917.211 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.211/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2917-211-disseminating-fabricated-image",
+    "section": "2917.211",
+    "code": "2917.211(C)",
+    "scope": "C",
+    "statutoryName": "Nonconsensual dissemination of fabricated sexual images",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "H(2)",
+      "H(4)"
+    ],
+    "contextPaths": [
+      "A",
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "conductSummary": "Knowingly disseminating a fabricated sexual image of another person without that person’s consent. Section 2307.66(F) defines this as a created, adapted or modified image depicting a recognizable person in a state of nudity or engaged in a sexual act. Division (E) lists exceptions for dissemination, including lawful reporting, medical and specified expressive uses. Division (F) limits provider liability for third-party material.",
+    "gradeSummary": "Under the version effective September 30, 2025, ordinarily F4; F3 for a prior violation of this section, a sexually oriented offense or a child-victim oriented offense. The separate fabricated-image branches were added September 30, 2025. Earlier conduct requires its own statutory review. The court may order forfeiture of qualifying proceeds, property or enterprise interests under (H)(4).",
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.66",
+      "2950.01"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2917.211 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.211/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2917-211-creating-fabricated-image",
+    "section": "2917.211",
+    "code": "2917.211(D)(1)",
+    "scope": "D(1)",
+    "statutoryName": "Nonconsensual creation of fabricated sexual images",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [
+      "H(3)",
+      "H(4)"
+    ],
+    "contextPaths": [
+      "A",
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "conductSummary": "Knowingly creating a fabricated sexual image with intent to distribute, without consent and for the purpose of harassing, extorting, threatening or causing physical, emotional, reputational or economic harm to the falsely depicted person. Section 2307.66(F) defines this as a created, adapted or modified image depicting a recognizable person in a state of nudity or engaged in a sexual act. Division (E) lists exceptions for dissemination, including lawful reporting, medical and specified expressive uses. Division (F) limits provider liability for third-party material.",
+    "gradeSummary": "Under the version effective September 30, 2025, ordinarily F4; F3 for a prior violation of this section, a sexually oriented offense or a child-victim oriented offense. The separate fabricated-image branches were added September 30, 2025. Earlier conduct requires its own statutory review. The court may order forfeiture of qualifying proceeds, property or enterprise interests under (H)(4).",
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.66",
+      "2950.01"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2917.211 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.211/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2917-211-soliciting-fabricated-image",
+    "section": "2917.211",
+    "code": "2917.211(D)(2)",
+    "scope": "D(2)",
+    "statutoryName": "Nonconsensual creation of fabricated sexual images",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(2)"
+    ],
+    "gradingPaths": [
+      "H(3)",
+      "H(4)"
+    ],
+    "contextPaths": [
+      "A",
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "conductSummary": "Knowingly soliciting creation of a fabricated sexual image with intent to distribute, without consent and for the purpose of harassing, extorting, threatening or causing physical, emotional, reputational or economic harm to the falsely depicted person. Section 2307.66(F) defines this as a created, adapted or modified image depicting a recognizable person in a state of nudity or engaged in a sexual act. Division (E) lists exceptions for dissemination, including lawful reporting, medical and specified expressive uses. Division (F) limits provider liability for third-party material.",
+    "gradeSummary": "Under the version effective September 30, 2025, ordinarily F4; F3 for a prior violation of this section, a sexually oriented offense or a child-victim oriented offense. The separate fabricated-image branches were added September 30, 2025. Earlier conduct requires its own statutory review. The court may order forfeiture of qualifying proceeds, property or enterprise interests under (H)(4).",
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2307.66",
+      "2950.01"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2917.211 (March 22, 2019 version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.211/3-22-2019"
+    }
+  },
+  {
+    "id": "oh-orc-2151-421-mandatory-professional-report",
+    "section": "2151.421",
+    "code": "2151.421(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Reporting child abuse or neglect",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A(2)",
+      "A(3)",
+      "B",
+      "O"
+    ],
+    "conductSummary": "A listed professional acting in that capacity failing to immediately report known or reasonably suspected abuse or neglect of a child under 18 or a person under 21 with a developmental disability or physical impairment. Report to the public children services agency or a peace officer in the county of residence or abuse. A peace officer who is reporting must report to the agency. Section 5120.173 sets a separate route for specified institutional cases. Divisions (A)(2) and (3) address privileged communications and waiver for attorneys, physicians and advanced practice registered nurses. Division (A)(1)(c) permits the specified health care professionals to designate one reporter.",
+    "gradeSummary": "Ordinarily M4. M1 if the child suffered or faced the relevant threatened injury while under the direct care or supervision of the professional or of someone under that professional’s supervisory control as described in 2151.99(C)(2).",
+    "degrees": [
+      "M4",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.99",
+      "2317.02",
+      "5120.173",
+      "2151.423",
+      "2151.4210"
+    ],
+    "extraGrading": [
+      {
+        "section": "2151.99",
+        "path": "C"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2151-421-mandatory-clergy-report",
+    "section": "2151.421",
+    "code": "2151.421(A)(4)",
+    "scope": "A(4)",
+    "statutoryName": "Reporting child abuse or neglect",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "B",
+      "O"
+    ],
+    "conductSummary": "A cleric or qualifying nonvolunteer religious leader, official or delegate acting in that capacity failing to immediately report abuse or neglect the reporter knows or has reasonable cause to believe occurred or is threatened, when the reporter also knows or has reasonable cause to believe the person responsible is another cleric or qualifying nonvolunteer religious representative. The statute covers children under 18 and persons under 21 with a developmental disability or physical impairment. Check the cleric-penitent privilege and waiver rules in (A)(4)(b) and (c).",
+    "gradeSummary": "Ordinarily M4. M1 under 2151.99(A)(2) only with knowledge that abuse or neglect occurred, knowledge that the perpetrator was a cleric or qualifying nonvolunteer religious representative, and common membership in the same church, religious society or faith.",
+    "degrees": [
+      "M4",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.99",
+      "2317.02",
+      "5120.173",
+      "2151.423",
+      "2151.4210"
+    ],
+    "extraGrading": [
+      {
+        "section": "2151.99",
+        "path": "A(1)"
+      },
+      {
+        "section": "2151.99",
+        "path": "A(2)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-2151-421-unauthorized-report-dissemination",
+    "section": "2151.421",
+    "code": "2151.421(I)(2)",
+    "scope": "I(2)",
+    "statutoryName": "Reporting child abuse or neglect",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "I(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "I(1)",
+      "I(4)",
+      "N"
+    ],
+    "conductSummary": "Permitting or encouraging unauthorized dissemination of the contents of a report made under this section. The statute identifies circumstances allowing disclosure. A health professional obtaining the same information from another source may disseminate it if otherwise permitted by law.",
+    "gradeSummary": "M4 under 2151.99(A)(1).",
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2151.99",
+      "2317.02",
+      "5120.173",
+      "2151.423",
+      "2151.4210"
+    ],
+    "extraGrading": [
+      {
+        "section": "2151.99",
+        "path": "A(1)"
+      }
+    ]
+  }
+]

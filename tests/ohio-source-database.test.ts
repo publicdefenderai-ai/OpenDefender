@@ -1,3 +1,4 @@
+import { OHIO_PROTECTION_IDS } from "../shared/ohio-protection-batch";
 import { OHIO_FAMILY_IDS } from "../shared/ohio-family-batch";
 import { OHIO_PUBLIC_PEACE_IDS } from "../shared/ohio-public-peace-batch";
 import { OHIO_CUSTODY_IDS } from "../shared/ohio-custody-batch";
@@ -68,14 +69,14 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(377);
+    expect(ohioCount).toBe(391);
     // This historical fixture predates the new batch acquisition; both publication batches cannot be current yet.
-    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
-    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
-    expect(seed.sources).toHaveLength(260);
-    expect(seed.snapshots).toHaveLength(260);
-    expect(seed.links).toHaveLength(717);
-    expect(seed.selectableChargeIds).toHaveLength(130);
+    expect(manifest.catalogRecords).toHaveLength(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_PROTECTION_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
+    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount - OHIO_MAJOR_IDS.size - OHIO_RESIDUAL_IDS.size - OHIO_THEFT_FRAUD_IDS.size - OHIO_BENEFITS_FRAUD_IDS.size - OHIO_JUSTICE_IDS.size - OHIO_PROTECTION_IDS.size - OHIO_FAMILY_IDS.size - OHIO_PUBLIC_PEACE_IDS.size - OHIO_CUSTODY_IDS.size);
+    expect(seed.sources).toHaveLength(259);
+    expect(seed.snapshots).toHaveLength(259);
+    expect(seed.links).toHaveLength(716);
+    expect(seed.selectableChargeIds).toHaveLength(129);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
@@ -89,7 +90,7 @@ describe("Ohio authority manifest", () => {
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(108);
+      record.disposition === "require_exact_reselection")).toHaveLength(109);
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
@@ -191,7 +192,7 @@ describe("Ohio authority manifest", () => {
     // Derive a post-expiry instant across legacy and quarterly batches.
     const afterAnyCurrentReceipt = new Date(Math.max(...[
       'ohio-chapter-2903-refresh-receipt.json', 'ohio-reviewed-refresh-receipt.json',
-      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json', 'ohio-theft-fraud-refresh-receipt.json', 'ohio-benefits-fraud-refresh-receipt.json', 'ohio-justice-refresh-receipt.json', 'ohio-custody-refresh-receipt.json', 'ohio-public-peace-refresh-receipt.json', 'ohio-family-refresh-receipt.json',
+      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json', 'ohio-theft-fraud-refresh-receipt.json', 'ohio-benefits-fraud-refresh-receipt.json', 'ohio-justice-refresh-receipt.json', 'ohio-custody-refresh-receipt.json', 'ohio-public-peace-refresh-receipt.json', 'ohio-family-refresh-receipt.json', 'ohio-protection-refresh-receipt.json',
     ].map(name => Date.parse(JSON.parse(readFileSync(`scripts/data-review/output/${name}`, 'utf8')).expiresAt))) + 1);
     expect(loadOhioAuthorityManifest(undefined, afterAnyCurrentReceipt).catalogRecords)
       .toHaveLength(115);

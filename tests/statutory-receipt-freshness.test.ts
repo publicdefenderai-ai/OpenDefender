@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 // @ts-expect-error Dependency-free operational script is intentionally plain Node.
 import { checkStatutoryReceipts } from "../scripts/check-statutory-receipt-freshness.mjs";
-const names = ["ohio-justice-refresh-receipt.json", "ohio-family-refresh-receipt.json", "ohio-public-peace-refresh-receipt.json", "ohio-custody-refresh-receipt.json", "ohio-benefits-fraud-refresh-receipt.json", "ohio-theft-fraud-refresh-receipt.json", "florida-persons-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
+const names = ["ohio-justice-refresh-receipt.json", "ohio-protection-refresh-receipt.json", "ohio-family-refresh-receipt.json", "ohio-public-peace-refresh-receipt.json", "ohio-custody-refresh-receipt.json", "ohio-benefits-fraud-refresh-receipt.json", "ohio-theft-fraud-refresh-receipt.json", "florida-persons-refresh-receipt.json", "ohio-residual-refresh-receipt.json", "ohio-major-refresh-receipt.json", "ohio-chapter-2903-refresh-receipt.json", "ohio-reviewed-refresh-receipt.json", "florida-reviewed-refresh-receipt.json"];
 function withReceipts(run: (root: string, dir: string) => void) {
   const root = mkdtempSync(join(tmpdir(), "receipt-monitor-"));
   const dir = join(root, "scripts/data-review/output"); mkdirSync(dir, { recursive: true });
