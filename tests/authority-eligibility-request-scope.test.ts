@@ -2,10 +2,12 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 const state = vi.hoisted(() => {
   const deadline = Date.parse('2026-11-10T00:00:00Z');
   const checks = Object.fromEntries(['ca','pilot','reviewed','major','theftFraud','benefitsFraud','justice','custody','publicPeace','family','protection','residual','flOld','flNew'].map(key => [key, vi.fn(() => Date.now() < deadline)]));
-  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','fl-n1','fl-n2'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
+  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','fl-n1','fl-n2','oh-criminal-trespass'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
 });
+// Synthetic IDs stand in for the reviewed batches mocked below.
+vi.mock('../shared/ohio-reviewed-identity', () => ({isReviewedOhioChargeId: (id: string) => /^oh-(?:r|t|b|j|c|pp|fa|pr)[12]$/.test(id)}));
 vi.mock('../shared/criminal-charges', () => ({getSelectableCharges: () => [
-  {id:'ca-one',jurisdiction:'CA'}, {id:'oh-r1',jurisdiction:'OH'}, {id:'oh-r2',jurisdiction:'OH'},
+  {id:'ca-one',jurisdiction:'CA'}, {id:'oh-criminal-trespass',jurisdiction:'OH'}, {id:'oh-r1',jurisdiction:'OH'}, {id:'oh-r2',jurisdiction:'OH'},
   {id:'oh-t1',jurisdiction:'OH'}, {id:'oh-t2',jurisdiction:'OH'},
   {id:'oh-b1',jurisdiction:'OH'}, {id:'oh-b2',jurisdiction:'OH'},
   {id:'oh-j1',jurisdiction:'OH'}, {id:'oh-j2',jurisdiction:'OH'},
@@ -47,7 +49,7 @@ import {getCurrentAuthoritySelectableChargeIds} from '../server/services/authori
 beforeEach(() => {vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(state.deadline-1);});
 afterEach(() => {vi.useRealTimers();vi.unstubAllEnvs();});
 for (const fixture of [true,false]) describe(`request-scoped eligibility fixture=${fixture}`, () => {
-  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','fl-n1','fl-n2']));});
+  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','fl-n1','fl-n2','oh-criminal-trespass']));});
   it('does not evaluate unrelated state evidence or databases for California',async()=>{
     expect([...await getCurrentAuthoritySelectableChargeIds(['CA'])]).toEqual(['ca-one']);
     expect(state.db).not.toHaveBeenCalled();

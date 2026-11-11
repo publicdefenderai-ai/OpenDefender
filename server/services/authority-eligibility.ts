@@ -1,3 +1,4 @@
+import { isReviewedOhioChargeId } from "@shared/ohio-reviewed-identity";
 import { OHIO_PROTECTION_IDS } from "@shared/ohio-protection-batch";
 import { OHIO_FAMILY_IDS } from "@shared/ohio-family-batch";
 import { OHIO_PUBLIC_PEACE_IDS } from "@shared/ohio-public-peace-batch";
@@ -44,6 +45,7 @@ function createAuthorityChargeGate() {
     return results.get(check)!;
   };
   return function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }, sharedPilotChecked = false): boolean {
+    if (charge.jurisdiction === "OH" && !isReviewedOhioChargeId(charge.id)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_PERSONS_IDS.has(charge.id) && !fresh(isFloridaPersonsSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !fresh(isFloridaReviewedSourceFresh)) return false;
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
