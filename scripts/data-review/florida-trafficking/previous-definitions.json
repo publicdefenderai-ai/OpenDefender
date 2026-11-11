@@ -1,0 +1,631 @@
+[
+  {
+    "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(b)1.",
+    "slug": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+    "name": "Trafficking in cocaine",
+    "names": {
+      "es": "Tráfico de cocaína",
+      "zh": "可卡因贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(b)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or chapter 499, a person commits trafficking in cocaine by knowingly selling, purchasing, manufacturing, delivering, bringing into Florida, or actually or constructively possessing at least 28 grams of cocaine or a cocaine mixture, but less than 150 kilograms.",
+        "degreeContext": "This offense is a first-degree felony. For 28 to under 200 grams, the statute requires at least 3 years and a $50,000 fine; for 200 to under 400 grams, at least 7 years and a $100,000 fine; and for 400 grams to under 150 kilograms, at least 15 calendar years and a $250,000 fine."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o el capítulo 499, una persona comete tráfico de cocaína si a sabiendas vende, compra, fabrica, entrega, introduce en Florida o posee real o constructivamente al menos 28 gramos de cocaína o de una mezcla con cocaína, pero menos de 150 kilogramos.",
+        "degreeContext": "Este delito es un delito grave de primer grado. De 28 a menos de 200 gramos, la ley exige al menos 3 años y una multa de $50,000; de 200 a menos de 400 gramos, al menos 7 años y $100,000; y de 400 gramos a menos de 150 kilogramos, al menos 15 años calendario y $250,000."
+      },
+      "zh": {
+        "plainSummary": "除佛州法典第893章或第499章授权的情形外，行为人明知而出售、购买、制造、交付、带入佛州，或实际、推定持有至少28克但少于150公斤的可卡因或含可卡因混合物，即构成可卡因贩运。",
+        "degreeContext": "本罪为一级重罪。数量为28克以上、不足200克时，法定最低刑期为3年并处罚金50,000美元；200克以上、不足400克时，最低7年并处罚金100,000美元；400克以上、不足150公斤时，最低15个日历年并处罚金250,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(c)1.",
+    "slug": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+    "name": "Trafficking in illegal drugs",
+    "names": {
+      "es": "Tráfico de drogas ilegales",
+      "zh": "非法药物贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(c)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers knowingly selling, purchasing, manufacturing, delivering, bringing into Florida, or actually or constructively possessing at least 4 grams but less than 30 kilograms of the morphine-, opium-, hydromorphone-, or heroin-related substances and mixtures listed in subsection (1)(c)1.",
+        "degreeContext": "First-degree felony. 4 to under 14 grams: 3-year mandatory minimum and $50,000 fine; 14 to under 28 grams: 15 years and $100,000; 28 grams to under 30 kilograms: 25 years and $500,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca vender, comprar, fabricar, entregar, introducir en Florida o poseer real o constructivamente, a sabiendas, al menos 4 gramos y menos de 30 kilogramos de las sustancias o mezclas relacionadas con morfina, opio, hidromorfona o heroína enumeradas en el inciso (1)(c)1.",
+        "degreeContext": "Delito grave de primer grado. De 4 a menos de 14 g: mínimo obligatorio de 3 años y $50,000; de 14 a menos de 28 g: 15 años y $100,000; de 28 g a menos de 30 kg: 25 años y $500,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知而出售、购买、制造、交付、带入佛州，或实际、推定持有第(1)(c)1款列明的至少4克但少于30公斤的吗啡、鸦片、氢吗啡酮、海洛因相关物质或混合物。",
+        "degreeContext": "一级重罪。4克以上不足14克：强制最低3年及罚金50,000美元；14克以上不足28克：15年及100,000美元；28克以上不足30公斤：25年及500,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(c)2.",
+    "slug": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+    "name": "Trafficking in hydrocodone",
+    "names": {
+      "es": "Tráfico de hidrocodona",
+      "zh": "氢可酮贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(c)2.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers the listed knowing trafficking acts involving at least 28 grams but less than 30 kilograms of hydrocodone, codeine, their salts, or a mixture containing them.",
+        "degreeContext": "First-degree felony. 28 to under 50 grams: 3 years and $50,000; 50 to under 100 grams: 7 years and $100,000; 100 to under 300 grams: 15 years and $500,000; 300 grams to under 30 kilograms: 25 years and $750,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 28 gramos y menos de 30 kilogramos de hidrocodona, codeína, sus sales o una mezcla que las contenga.",
+        "degreeContext": "Delito grave de primer grado. De 28 a menos de 50 g: 3 años y $50,000; 50 a menos de 100 g: 7 años y $100,000; 100 a menos de 300 g: 15 años y $500,000; 300 g a menos de 30 kg: 25 años y $750,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少28克但少于30公斤的氢可酮、可待因、其盐类或含有这些物质的混合物。",
+        "degreeContext": "一级重罪。28克以上不足50克：3年及50,000美元；50克以上不足100克：7年及100,000美元；100克以上不足300克：15年及500,000美元；300克以上不足30公斤：25年及750,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(c)3.",
+    "slug": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+    "name": "Trafficking in oxycodone",
+    "names": {
+      "es": "Tráfico de oxicodona",
+      "zh": "羟考酮贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(c)3.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers the listed knowing trafficking acts involving at least 7 grams but less than 30 kilograms of oxycodone, its salts, or a mixture containing it.",
+        "degreeContext": "First-degree felony. 7 to under 14 grams: 3 years and $50,000; 14 to under 25 grams: 7 years and $100,000; 25 to under 100 grams: 15 years and $500,000; 100 grams to under 30 kilograms: 25 years and $750,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 7 gramos y menos de 30 kilogramos de oxicodona, sus sales o una mezcla que la contenga.",
+        "degreeContext": "Delito grave de primer grado. De 7 a menos de 14 g: 3 años y $50,000; 14 a menos de 25 g: 7 años y $100,000; 25 a menos de 100 g: 15 años y $500,000; 100 g a menos de 30 kg: 25 años y $750,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少7克但少于30公斤的羟考酮、其盐类或含羟考酮混合物。",
+        "degreeContext": "一级重罪。7克以上不足14克：3年及50,000美元；14克以上不足25克：7年及100,000美元；25克以上不足100克：15年及500,000美元；100克以上不足30公斤：25年及750,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(c)4.a.",
+    "slug": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+    "name": "Trafficking in dangerous fentanyl or fentanyl analogues",
+    "names": {
+      "es": "Tráfico de fentanilo peligroso o análogos del fentanilo",
+      "zh": "危险芬太尼或芬太尼类似物贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(c)4.a.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 4 grams of the fentanyl substances, analogues, or mixtures specified in subsection (1)(c)4.a.",
+        "degreeContext": "First-degree felony. 4 to under 14 grams: 7-year mandatory minimum and $50,000 fine; 14 to under 28 grams: 20 years and $100,000; 28 grams or more: 25 years and $500,000. A separate enhanced rule applies to specified sales or deliveries to a minor and is not included here."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 4 gramos de las sustancias de fentanilo, análogos o mezclas especificados en el inciso (1)(c)4.a.",
+        "degreeContext": "Delito grave de primer grado. De 4 a menos de 14 g: mínimo obligatorio de 7 años y $50,000; 14 a menos de 28 g: 20 años y $100,000; 28 g o más: 25 años y $500,000. Una regla agravada separada rige ciertas ventas o entregas a menores y no se incluye aquí."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及第(1)(c)4.a款规定的至少4克芬太尼物质、类似物或混合物。",
+        "degreeContext": "一级重罪。4克以上不足14克：强制最低7年及50,000美元；14克以上不足28克：20年及100,000美元；28克以上：25年及500,000美元。向未成年人实施特定出售或交付适用独立加重规则，不包含在本定义中。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(c)7.",
+    "slug": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+    "name": "Trafficking in xylazine",
+    "names": {
+      "es": "Tráfico de xilazina",
+      "zh": "赛拉嗪贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(c)7.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers the listed knowing trafficking acts involving at least 28 grams of xylazine, its salts, or a mixture containing it.",
+        "degreeContext": "First-degree felony. 28 to under 100 grams: 3-year mandatory minimum and $50,000 fine; 100 to under 200 grams: 7 years and $100,000; 200 grams or more: 25 years and $500,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 28 gramos de xilazina, sus sales o una mezcla que la contenga.",
+        "degreeContext": "Delito grave de primer grado. De 28 a menos de 100 g: mínimo obligatorio de 3 años y $50,000; 100 a menos de 200 g: 7 años y $100,000; 200 g o más: 25 años y $500,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少28克赛拉嗪、其盐类或含赛拉嗪混合物。",
+        "degreeContext": "一级重罪。28克以上不足100克：强制最低3年及50,000美元；100克以上不足200克：7年及100,000美元；200克以上：25年及500,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(d)1.",
+    "slug": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+    "name": "Trafficking in phencyclidine",
+    "names": {
+      "es": "Tráfico de fenciclidina",
+      "zh": "苯环利定贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(d)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers the listed knowing trafficking acts involving at least 28 grams of the phencyclidine-related substances or mixtures specified in subsection (1)(d)1.",
+        "degreeContext": "First-degree felony. 28 to under 200 grams: 3 years and $50,000; 200 to under 400 grams: 7 years and $100,000; 400 grams or more: 15 calendar years and $250,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 28 gramos de las sustancias o mezclas relacionadas con fenciclidina especificadas en el inciso (1)(d)1.",
+        "degreeContext": "Delito grave de primer grado. De 28 a menos de 200 g: 3 años y $50,000; 200 a menos de 400 g: 7 años y $100,000; 400 g o más: 15 años calendario y $250,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及第(1)(d)1款规定的至少28克苯环利定相关物质或混合物。",
+        "degreeContext": "一级重罪。28克以上不足200克：3年及50,000美元；200克以上不足400克：7年及100,000美元；400克以上：15个日历年及250,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(e)1.",
+    "slug": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+    "name": "Trafficking in methaqualone",
+    "names": {
+      "es": "Tráfico de metacualona",
+      "zh": "甲喹酮贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(e)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 200 grams of methaqualone or a mixture containing it.",
+        "degreeContext": "First-degree felony. 200 grams to under 5 kilograms: 3-year mandatory minimum and $50,000 fine; 5 to under 25 kilograms: 7 years and $100,000; 25 kilograms or more: 15 calendar years and $250,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 200 gramos de metacualona o una mezcla que la contenga.",
+        "degreeContext": "Delito grave de primer grado. De 200 g a menos de 5 kg: mínimo de 3 años y $50,000; 5 a menos de 25 kg: 7 años y $100,000; 25 kg o más: 15 años calendario y $250,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少200克甲喹酮或含甲喹酮混合物。",
+        "degreeContext": "一级重罪。200克以上不足5公斤：强制最低3年及50,000美元；5公斤以上不足25公斤：7年及100,000美元；25公斤以上：15个日历年及250,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(f)1.",
+    "slug": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+    "name": "Trafficking in amphetamine",
+    "names": {
+      "es": "Tráfico de anfetamina",
+      "zh": "安非他明贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(f)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 14 grams of amphetamine, methamphetamine, listed phenylacetone, their salts or isomers, or a mixture containing them.",
+        "degreeContext": "First-degree felony. 14 to under 28 grams: 3 years and $50,000; 28 to under 200 grams: 7 years and $100,000; 200 grams or more: 15 calendar years and $250,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 14 gramos de anfetamina, metanfetamina, fenilacetona indicada, sus sales o isómeros, o una mezcla que los contenga.",
+        "degreeContext": "Delito grave de primer grado. De 14 a menos de 28 g: 3 años y $50,000; 28 a menos de 200 g: 7 años y $100,000; 200 g o más: 15 años calendario y $250,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少14克安非他明、甲基安非他明、列明的苯丙酮、其盐类或异构体，或含这些物质的混合物。",
+        "degreeContext": "一级重罪。14克以上不足28克：3年及50,000美元；28克以上不足200克：7年及100,000美元；200克以上：15个日历年及250,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(g)1.",
+    "slug": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+    "name": "Trafficking in flunitrazepam",
+    "names": {
+      "es": "Tráfico de flunitrazepam",
+      "zh": "氟硝西泮贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(g)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 4 grams but less than 30 kilograms of flunitrazepam or a mixture containing it.",
+        "degreeContext": "First-degree felony. 4 to under 14 grams: 3 years and $50,000; 14 to under 28 grams: 7 years and $100,000; 28 grams to under 30 kilograms: 25 calendar years and $500,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 4 gramos y menos de 30 kilogramos de flunitrazepam o una mezcla que lo contenga.",
+        "degreeContext": "Delito grave de primer grado. De 4 a menos de 14 g: 3 años y $50,000; 14 a menos de 28 g: 7 años y $100,000; 28 g a menos de 30 kg: 25 años calendario y $500,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少4克但少于30公斤的氟硝西泮或含氟硝西泮混合物。",
+        "degreeContext": "一级重罪。4克以上不足14克：3年及50,000美元；14克以上不足28克：7年及100,000美元；28克以上不足30公斤：25个日历年及500,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(h)1.",
+    "slug": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+    "name": "Trafficking in gamma-hydroxybutyric acid (GHB)",
+    "names": {
+      "es": "Tráfico de ácido gamma-hidroxibutírico (GHB)",
+      "zh": "γ-羟基丁酸（GHB）贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(h)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 1 kilogram of GHB, its salts, isomers, or a mixture containing them.",
+        "degreeContext": "First-degree felony. 1 to under 5 kilograms: 3-year mandatory minimum and $50,000 fine; 5 to under 10 kilograms: 7 years and $100,000; 10 kilograms or more: 15 calendar years and $250,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 1 kilogramo de GHB, sus sales, isómeros o una mezcla que los contenga.",
+        "degreeContext": "Delito grave de primer grado. De 1 a menos de 5 kg: mínimo de 3 años y $50,000; 5 a menos de 10 kg: 7 años y $100,000; 10 kg o más: 15 años calendario y $250,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少1公斤GHB、其盐类、异构体或含这些物质的混合物。",
+        "degreeContext": "一级重罪。1公斤以上不足5公斤：强制最低3年及50,000美元；5公斤以上不足10公斤：7年及100,000美元；10公斤以上：15个日历年及250,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(i)1.",
+    "slug": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+    "name": "Trafficking in gamma-butyrolactone (GBL)",
+    "names": {
+      "es": "Tráfico de gamma-butirolactona (GBL)",
+      "zh": "γ-丁内酯（GBL）贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(i)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 1 kilogram of GBL, its salts, isomers, or a mixture containing them.",
+        "degreeContext": "First-degree felony. 1 to under 5 kilograms: 3-year mandatory minimum and $50,000 fine; 5 to under 10 kilograms: 7 years and $100,000; 10 kilograms or more: 15 calendar years and $250,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 1 kilogramo de GBL, sus sales, isómeros o una mezcla que los contenga.",
+        "degreeContext": "Delito grave de primer grado. De 1 a menos de 5 kg: mínimo de 3 años y $50,000; 5 a menos de 10 kg: 7 años y $100,000; 10 kg o más: 15 años calendario y $250,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少1公斤GBL、其盐类、异构体或含这些物质的混合物。",
+        "degreeContext": "一级重罪。1公斤以上不足5公斤：强制最低3年及50,000美元；5公斤以上不足10公斤：7年及100,000美元；10公斤以上：15个日历年及250,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(j)1.",
+    "slug": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+    "name": "Trafficking in 1,4-Butanediol",
+    "names": {
+      "es": "Tráfico de 1,4-butanodiol",
+      "zh": "1,4-丁二醇贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(j)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 1 kilogram of 1,4-Butanediol or a mixture containing it.",
+        "degreeContext": "First-degree felony. 1 to under 5 kilograms: 3-year mandatory minimum and $50,000 fine; 5 to under 10 kilograms: 7 years and $100,000; 10 kilograms or more: 15 calendar years and $500,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 1 kilogramo de 1,4-butanodiol o una mezcla que lo contenga.",
+        "degreeContext": "Delito grave de primer grado. De 1 a menos de 5 kg: mínimo de 3 años y $50,000; 5 a menos de 10 kg: 7 años y $100,000; 10 kg o más: 15 años calendario y $500,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少1公斤1,4-丁二醇或含该物质的混合物。",
+        "degreeContext": "一级重罪。1公斤以上不足5公斤：强制最低3年及50,000美元；5公斤以上不足10公斤：7年及100,000美元；10公斤以上：15个日历年及500,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(k)1.",
+    "slug": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+    "name": "Trafficking in phenethylamines",
+    "names": {
+      "es": "Tráfico de fenetilaminas",
+      "zh": "苯乙胺类物质贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(k)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 10 grams of the phenethylamine substances, their listed salts or isomers, or mixtures specified in subsection (1)(k)1.",
+        "degreeContext": "First-degree felony. 10 to under 200 grams: 3-year mandatory minimum and $50,000 fine; 200 to under 400 grams: 7 years and $100,000; 400 grams or more: 15 years and $250,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 10 gramos de las fenetilaminas, sales o isómeros indicados, o mezclas especificadas en el inciso (1)(k)1.",
+        "degreeContext": "Delito grave de primer grado. De 10 a menos de 200 g: mínimo de 3 años y $50,000; 200 a menos de 400 g: 7 años y $100,000; 400 g o más: 15 años y $250,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及第(1)(k)1款规定的至少10克苯乙胺类物质、列明盐类或异构体，或其混合物。",
+        "degreeContext": "一级重罪。10克以上不足200克：强制最低3年及50,000美元；200克以上不足400克：7年及100,000美元；400克以上：15年及250,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(l)1.",
+    "slug": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+    "name": "Trafficking in lysergic acid diethylamide (LSD)",
+    "names": {
+      "es": "Tráfico de dietilamida del ácido lisérgico (LSD)",
+      "zh": "麦角酸二乙酰胺（LSD）贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(l)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 1 gram of LSD or a mixture containing it.",
+        "degreeContext": "First-degree felony. 1 to under 5 grams: 3-year mandatory minimum and $50,000 fine; 5 to under 7 grams: 7 years and $100,000; 7 grams or more: 15 calendar years and $500,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 1 gramo de LSD o una mezcla que lo contenga.",
+        "degreeContext": "Delito grave de primer grado. De 1 a menos de 5 g: mínimo de 3 años y $50,000; 5 a menos de 7 g: 7 años y $100,000; 7 g o más: 15 años calendario y $500,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及至少1克LSD或含LSD混合物。",
+        "degreeContext": "一级重罪。1克以上不足5克：强制最低3年及50,000美元；5克以上不足7克：7年及100,000美元；7克以上：15个日历年及500,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(m)1.",
+    "slug": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+    "name": "Trafficking in synthetic cannabinoids",
+    "names": {
+      "es": "Tráfico de cannabinoides sintéticos",
+      "zh": "合成大麻素贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(m)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 280 grams of the synthetic-cannabinoid substances or mixtures specified in subsection (1)(m)1.",
+        "degreeContext": "First-degree felony. 280 to under 500 grams: 3 years and $50,000; 500 to under 1,000 grams: 7 years and $100,000; 1,000 grams to under 30 kilograms: 15 years and $200,000; 30 kilograms or more: 25 years and $750,000. Each term is a mandatory minimum."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 280 gramos de los cannabinoides sintéticos o mezclas especificados en el inciso (1)(m)1.",
+        "degreeContext": "Delito grave de primer grado. De 280 a menos de 500 g: 3 años y $50,000; 500 a menos de 1,000 g: 7 años y $100,000; 1,000 g a menos de 30 kg: 15 años y $200,000; 30 kg o más: 25 años y $750,000. Cada plazo es mínimo obligatorio."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及第(1)(m)1款规定的至少280克合成大麻素物质或混合物。",
+        "degreeContext": "一级重罪。280克以上不足500克：3年及50,000美元；500克以上不足1,000克：7年及100,000美元；1,000克以上不足30公斤：15年及200,000美元；30公斤以上：25年及750,000美元。各刑期均为强制最低刑期。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+    "jurisdiction": "FL",
+    "code": "893.135(1)(n)1.",
+    "slug": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+    "name": "Trafficking in n-benzyl phenethylamines",
+    "names": {
+      "es": "Tráfico de n-bencil-fenetilaminas",
+      "zh": "N-苄基苯乙胺类物质贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.135(1)(n)1.",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Except as authorized by chapter 893 or 499, this offense covers listed knowing trafficking acts involving at least 14 grams of the n-benzyl phenethylamine substances or mixtures specified in subsection (1)(n)1.",
+        "degreeContext": "First-degree felony. 14 to under 100 grams: 3-year mandatory minimum and $50,000 fine; 100 to under 200 grams: 7 years and $100,000; 200 grams or more: 15 years and $500,000."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización bajo el capítulo 893 o 499, abarca los actos de tráfico enumerados, cometidos a sabiendas, con al menos 14 gramos de las n-bencil-fenetilaminas o mezclas especificadas en el inciso (1)(n)1.",
+        "degreeContext": "Delito grave de primer grado. De 14 a menos de 100 g: mínimo de 3 años y $50,000; 100 a menos de 200 g: 7 años y $100,000; 200 g o más: 15 años y $500,000."
+      },
+      "zh": {
+        "plainSummary": "除第893章或第499章授权外，本罪涵盖明知实施列明贩运行为，涉及第(1)(n)1款规定的至少14克N-苄基苯乙胺类物质或混合物。",
+        "degreeContext": "一级重罪。14克以上不足100克：强制最低3年及50,000美元；100克以上不足200克：7年及100,000美元；200克以上：15年及500,000美元。"
+      }
+    }
+  }
+]

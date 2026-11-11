@@ -1,0 +1,854 @@
+[
+  {
+    "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_b_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 2565,
+      "end": 2724,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_b_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of cocaine, as described in s. 893.03(2)(a)4., or of any mixture containing cocaine, but less than 150 kilograms of cocaine or any such mixture, commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2248,
+        "end": 2724,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_b_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2565,
+        "end": 2724,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_b_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_c_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 5509,
+      "end": 5674,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_1",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,",
+        "start": 5034,
+        "end": 5186,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135:1_c_1",
+        "target": "text",
+        "text": "4 grams or more of any morphine, opium, hydromorphone, or any salt, derivative, isomer, or salt of an isomer thereof, including heroin,",
+        "start": 5187,
+        "end": 5322,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5509,
+        "end": 5674,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_c_2",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 6617,
+      "end": 6780,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_2",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,",
+        "start": 6261,
+        "end": 6413,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135:1_c_2",
+        "target": "text",
+        "text": "28 grams or more of hydrocodone, as described in s. 893.03(2)(a)1.k., codeine, as described in s. 893.03(2)(a)1.g., or any salt thereof,",
+        "start": 6414,
+        "end": 6550,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_2",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 6617,
+        "end": 6780,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_2",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_c_3",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 7862,
+      "end": 8023,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_3",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,",
+        "start": 7556,
+        "end": 7708,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135:1_c_3",
+        "target": "text",
+        "text": "7 grams or more of oxycodone, as described in s. 893.03(2)(a)1.q., or any salt thereof,",
+        "start": 7709,
+        "end": 7796,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_3",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 7862,
+        "end": 8023,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_3",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_c_4_a",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 9471,
+      "end": 9663,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_4_a",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of:",
+        "start": 8798,
+        "end": 8970,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_4_a",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 9471,
+        "end": 9663,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_4_a",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_c_7",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 13781,
+      "end": 13941,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_7",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of xylazine, as described in s. 893.03(1)(c)37., or any salt thereof, or 28 grams or more of any mixture containing any such substance,",
+        "start": 13475,
+        "end": 13780,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_7",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 13781,
+        "end": 13941,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_c_7",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_d_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 15107,
+      "end": 15272,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_d_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of phencyclidine,",
+        "start": 14507,
+        "end": 14696,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_d_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 15107,
+        "end": 15272,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_d_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_e_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 16969,
+      "end": 17133,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_e_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 200 grams or more of methaqualone or of any mixture containing methaqualone, as described in s. 893.03(1)(d), commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 16704,
+        "end": 17133,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_e_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 16969,
+        "end": 17133,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_e_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_f_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 18761,
+      "end": 18924,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_f_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of amphetamine, as described in s. 893.03(2)(c)2., or methamphetamine, as described in s. 893.03(2)(c)5.,",
+        "start": 18242,
+        "end": 18519,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_f_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 18761,
+        "end": 18924,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_f_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_g_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 20573,
+      "end": 20738,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_g_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of flunitrazepam or any mixture containing flunitrazepam as described in s. 893.03(1)(a) commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 20313,
+        "end": 20738,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_g_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 20573,
+        "end": 20738,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_g_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_h_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 22933,
+      "end": 23116,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_h_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-hydroxybutyric acid (GHB), as described in s. 893.03(1)(d), or any mixture containing gamma-hydroxybutyric acid (GHB), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 22631,
+        "end": 23116,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_h_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 22933,
+        "end": 23116,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_h_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_i_1",
+      "target": "text",
+      "text": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "start": 24616,
+      "end": 24793,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_i_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-butyrolactone (GBL), as described in s. 893.03(1)(d), or any mixture containing gamma-butyrolactone (GBL), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 24326,
+        "end": 24793,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_i_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 24616,
+        "end": 24793,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_i_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_j_1",
+      "target": "text",
+      "text": "known as “trafficking in 1,4-Butanediol,”",
+      "start": 26314,
+      "end": 26355,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_j_1",
+        "target": "text",
+        "text": "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of 1,4-Butanediol as described in s. 893.03(1)(d), or of any mixture containing 1,4-Butanediol, commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 25984,
+        "end": 26420,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_j_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 26254,
+        "end": 26420,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_j_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_k_1",
+      "target": "text",
+      "text": "known as “trafficking in phenethylamines,”",
+      "start": 28350,
+      "end": 28392,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_k_1",
+        "target": "text",
+        "text": "A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 10 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)4., 5., 10., 11., 15., 17., 21.-27., 29., 39., 40.-45., 58., 72.-80., 81.-86., 90.-102., 104.-108., 110.-113., 143.-145., 148.-150., 160.-163., 165., or 187.-189., a substituted cathinone, as described in s. 893.03(1)(c)191., or substituted phenethylamine, as described in s. 893.03(1)(c)192.;\n\nb. \nMixture containing any substance described in sub-subparagraph a.; or\n\nc. \nSalt, isomer, ester, or ether or salt of an isomer, ester, or ether of a substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 27580,
+        "end": 28457,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_k_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 28290,
+        "end": 28457,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_k_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_l_1",
+      "target": "text",
+      "text": "known as “trafficking in lysergic acid diethylamide (LSD),”",
+      "start": 30077,
+      "end": 30136,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_l_1",
+        "target": "text",
+        "text": "1 gram or more of lysergic acid diethylamide (LSD)",
+        "start": 29870,
+        "end": 29920,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_l_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in lysergic acid diethylamide (LSD),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 30017,
+        "end": 30201,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_l_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_m_1",
+      "target": "text",
+      "text": "known as “trafficking in synthetic cannabinoids,”",
+      "start": 31867,
+      "end": 31916,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_m_1",
+        "target": "text",
+        "text": "280 grams or more of a:",
+        "start": 31540,
+        "end": 31563,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_m_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in synthetic cannabinoids,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 31807,
+        "end": 31981,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_m_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.135:1_n_1",
+      "target": "text",
+      "text": "known as “trafficking in n-benzyl phenethylamines,”",
+      "start": 33282,
+      "end": 33333,
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_n_1",
+        "target": "text",
+        "text": "14 grams or more of:",
+        "start": 32985,
+        "end": 33005,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.135:1_n_1",
+        "target": "text",
+        "text": "commits a felony of the first degree, which felony shall be known as “trafficking in n-benzyl phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 33222,
+        "end": 33398,
+        "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.135:1_n_1",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  }
+]

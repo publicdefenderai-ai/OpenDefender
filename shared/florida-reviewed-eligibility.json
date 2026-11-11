@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "3f19103e383425e3fcb96b6be91e60930220c430850108f246d1ea4e77557c7c",
+  "reportHash": "b63a4b792364ce4e82d1b6b8e33a6bb6b3f8a354d8fa5fbc220ec48524978407",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -381,10 +381,10 @@
     {
       "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
       "status": "eligible",
-      "reason": "The operative clause expressly names trafficking in cocaine and ties that name to subsection (1)(b)1 conduct and quantity-based grading.",
-      "draftHash": "1f504552761d3b35c66971f68e6be4605a3598dde745c77cae6bf860ff40f963",
-      "definitionHash": "89af096a7ef708096747cb626e0e6f93c1e1e9d349d1186dfe540f5abf712027",
-      "approvalHash": "c13b405fd9751974e625508c741580ee842bae4d5d8b217e191728c5d00bf31b"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "ea90f7f3621f429fd0647a2cce2a52ef132b80af9c8c801ec706ddfc3bac9d03",
+      "definitionHash": "a5295900a49d893e0f5965ae3376dced4299b66f3244a96d56ac9ec58387f55b",
+      "approvalHash": "6fb1840f32f12716c2963a1a203122560a4a2732ba96d2876e261ec2c5747144"
     },
     {
       "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
@@ -437,130 +437,130 @@
     {
       "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
       "status": "eligible",
-      "reason": "Subsection (1)(c)1 expressly names this offense and supplies all three quantity tiers.",
-      "draftHash": "c62f5977f4d1b21e05b223a54ae7b1ad1e26ea740cd9dd163079f8a31944924b",
-      "definitionHash": "12e686906eada671873dd49232df7cc5be81c87122a0105d7dd904c19bfe46f2",
-      "approvalHash": "c73487cffd3ab43bcc5a228b6475a181b94801e39fc4e2052826eb56b3512ea9"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "229f43534287018ac467ab120b269f4c590d886db3b0320fa033c35b305f205e",
+      "definitionHash": "0ef4888283112bddb8d88054d28e5d4192eb0499feccc9e783da6e90433d8718",
+      "approvalHash": "6831a45e05c762544938e86fc1a4adf3c032cc03d1226f70c07a454ae7ec7733"
     },
     {
       "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
       "status": "eligible",
-      "reason": "Subsection (1)(c)2 expressly names this offense and supplies all four quantity tiers.",
-      "draftHash": "606ecbec4c56b8ecec331d0ba88778e4f89981eceb754a083e0a353003117ab5",
-      "definitionHash": "7685ad3d7853dc60862f3455f9922fc859dcbcd90b3d4cf98232b7b9a8ba3c93",
-      "approvalHash": "d659d48096a6e13f712bc334a9a304c361d80bb418a4596f536959bcece4f288"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "9d8cea91f9a6f14d293375dac4f00c75e9e9f4120eea4fc4d16f1becbeeb6d72",
+      "definitionHash": "d26b62858d3891b847afd73e64aaabc4483fc1109359a49b31a964506963d2c0",
+      "approvalHash": "0a7c0c2d3fdb2e938bb1347ae000b334f2a07ccdf94b8600bbbc422eb0b053ed"
     },
     {
       "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
       "status": "eligible",
-      "reason": "Subsection (1)(c)3 expressly names this offense and supplies all four quantity tiers.",
-      "draftHash": "7bd9d4a3c650575ed82639fb0cb0276c2cf6c3d1c91aacef8c122be98d78c954",
-      "definitionHash": "cacab1ff881aab5d2554d0b911a2779bc4ba7a6d1e1e60a1a5763e2aa5eb4a50",
-      "approvalHash": "bdd8783e3edb1b424bd148473b865626bf37730b915a0252f765e43f3a26c7bd"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "a6e09d34a5ca9d08a5c4bff69c51e8945a7b89f96dc331b2e3e384e065647780",
+      "definitionHash": "cf49cba64141f0c2d257693db06b09a52c3814b2b64e07354ec4e4b13a1fdae4",
+      "approvalHash": "bda282c3461f934385b414d9d4c3d5814c08fde6e303998995dd8f8fbdbf9e0b"
     },
     {
       "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
       "status": "eligible",
-      "reason": "Sub-subparagraph (1)(c)4.a expressly names this offense; (1)(c)4.b supplies all quantity tiers.",
-      "draftHash": "829ddb8c5f46646054fdc07e52cb653800aab853e64d8990b5c122835d5d2a9e",
-      "definitionHash": "0554fa717ecc060aec6eefa8d74454025fcabcedc41c92a259398cf9de9bc693",
-      "approvalHash": "ae37bae2cd70470d18c26d1d457cf55a38629ba472c249fed43dcab291e8e407"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "cf1a104054efd151370bf6095e4d9f2d7ce3344ffb0536e6d94c0120b075c7da",
+      "definitionHash": "b94e9931b37a91c261af0610d7ecc16f8c60cd4147b6ebaca957fed342af4007",
+      "approvalHash": "0af6aa23a1728be3e9f84e3c63bd4ca8c9245d708a7e01867a43baec27046dba"
     },
     {
       "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
       "status": "eligible",
-      "reason": "Subsection (1)(c)7 expressly names this offense and supplies all three quantity tiers.",
-      "draftHash": "d8b74a33171ea0ce917973c035992eb60b2253a40382b541196f81f762ec3f5b",
-      "definitionHash": "e674b4a838f6e7a5b2ddad6e52c9c07734a8b96a604be404b6999d9677cf3843",
-      "approvalHash": "02d61979dfa4ec41d347b183f19437d0705a73b5e46fd9194f4b39f38a81c60e"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "472908564186cec809ccff4cb7b59451430713849afe978e5224bbc25811f2c4",
+      "definitionHash": "9b07b7aee854f29db89c6c32e52517d71cc591d6510beab75898f33ecee06f1c",
+      "approvalHash": "15e3b90810ecea2e47f7654108264c340b8576b6a5cb495a4987eb0b14975869"
     },
     {
       "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
       "status": "eligible",
-      "reason": "Subsection (1)(d)1 expressly names this offense and supplies all three quantity tiers.",
-      "draftHash": "73165d28565bd8794422522d85de6bbe7384020e3dca273b95a559d29200b320",
-      "definitionHash": "1f5f5321adf2bf489d59b1001fb8c598c653683a9034808245bfb509c5a92252",
-      "approvalHash": "f75f535ba4f198c1244a6673da8e38aef8b3d483ddb1b35111d6c2f9b6d6db06"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "ceb45a9f49e5498a99c3f4d03b4c75ec18e3aa2f4c641d27c5761ce37a3533e2",
+      "definitionHash": "80f12048398802a5491e52da19c393715d3556ce8d57a4b8b1d618428451b164",
+      "approvalHash": "6c1e1597dde6767ee0282924d73c73723b4184db6b30cb5ba300d16356ec7c19"
     },
     {
       "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
       "status": "eligible",
-      "reason": "Subsection (1)(e)1 expressly names this offense and supplies all three quantity tiers.",
-      "draftHash": "85230ac53ce1abfe4f8ab0c5a0ac4ef23b4f2ed1ceb568ca7059e945318476cf",
-      "definitionHash": "9f109ef564e831748e78729a6f6ec01d173ec99400e147b0193b695b570bf938",
-      "approvalHash": "0573266dd131121d6c7ae214ee771ecec733fb2d231da37ba463ddf4cadf07f4"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "b506f00681a44cfa1efc771542191ae1187f86ddf0ecc83815d3923c02e19fdf",
+      "definitionHash": "c327b2478e20b4455ee37affae65cac4ba3142eeab7536fd3157d883f05b41c9",
+      "approvalHash": "787a5b518f6a71f0f7f0e104cd42fd0d4a18a75b85bc35de3d582d6346f820fb"
     },
     {
       "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
       "status": "eligible",
-      "reason": "Subsection (1)(f)1 expressly names the offense and supplies all quantity tiers.",
-      "draftHash": "b472421cbf33c6de27e4c10bacbd8f2463c0a29f1ece36da7faa9b064e1fc731",
-      "definitionHash": "59581ac53229eaf7586cb603cee28217426eac6bbea56817de121afa29ab71b7",
-      "approvalHash": "5ec6c2d7d0c3bd634c29326feee19face5a9f28132a174677ffabfee9bfcfe1e"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "42c719e0b0ead1975f0a894275b68a54443a41a5d2432e499dbede0ac171d222",
+      "definitionHash": "e040a900dc54f666597d8a81897b92a6de689da426ccfeedd93c86fe6bb7d95d",
+      "approvalHash": "55d078e2797318cd99d2816997e69c5f7c3fefc8e26be2856489c2afdcad3508"
     },
     {
       "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
       "status": "eligible",
-      "reason": "Subsection (1)(g)1 expressly names the offense and supplies all quantity tiers.",
-      "draftHash": "448ae70139b1e69ffacdc8e946a149318113a11ed9e3224a1810590c29926b67",
-      "definitionHash": "11d34fbc67ba31551de5439d4fa551491e051d0da28eb1c523e12b74458790d3",
-      "approvalHash": "108e410ed96c835be19ad526101e1fdbdf4c5ed7a6618e8ee39b3e643c0f8085"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "2114d998f57e441c16ccc692081f560672c91826c4b080171557b24fe99857c1",
+      "definitionHash": "99fde62d0c22ceb7ffcc757e665a22814618f0d9fe4abc10773c07fead9ec2c5",
+      "approvalHash": "e72df6eb0a8174fe791d2bff841ae1457ef6fc6ef10ea9af2a78fb7001fec070"
     },
     {
       "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
       "status": "eligible",
-      "reason": "Subsection (1)(h)1 expressly names the offense and supplies all tiers.",
-      "draftHash": "e52dc7ecd1d69fe0a635ac36502571f2eb8e9eab4efd6212e9becc7c411fa2e3",
-      "definitionHash": "0be5c17abd3de7145dc233584f5b008f54b51166c00e75da7e905c7fa22d853b",
-      "approvalHash": "6b57db9a87c79763888559b8b939dda68741daded21dd0fdd38bf6576bef9b6d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "c2b61268045a63f47f511ecd64dbdd8de179662ee774cf2bc1adc75eb0107ee0",
+      "definitionHash": "1ff10ac8de77c39e9ace98e9b67df240ff87b70150b60b7a6bd15b907524d92e",
+      "approvalHash": "14bdf7b42a7c9dd53074f0f9e80628216ee4e474c963effbf0987dd859f29067"
     },
     {
       "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
       "status": "eligible",
-      "reason": "Subsection (1)(i)1 expressly names the offense and supplies all tiers.",
-      "draftHash": "905b83b783222d076d3a7c37cd386254b67b1941c6348e1fa699979ad9f78607",
-      "definitionHash": "467bf887c7cb5b15204e53d0d0771a8b68d658776447ffcc0d19c172439669d5",
-      "approvalHash": "4519daaed0ff2420633604952ce66027208c06b44ca7d4dcc844562f6c101b3c"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "7eb541faebd0738a8e038c2201744e2606e76314a9fd0696455ad98e545d0508",
+      "definitionHash": "46e332702ea2463a5404f7f23e09af8bf0df78b7254862da4d7ddb1bd2d694d2",
+      "approvalHash": "f0bc072989b9648f5f842780148e12c6042cf9df51fce200732bcd8acc98a902"
     },
     {
       "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
       "status": "eligible",
-      "reason": "Expressly named first-degree felony with three quantity tiers.",
-      "draftHash": "a3f39d0688a8c60ff556917679e353af8efac68c17ee98a4fb396702546255db",
-      "definitionHash": "7a078a36f5f849df34b933c70ec425d0e3ee19b09f70d6b8ec63fab1f9d28e7f",
-      "approvalHash": "334953fc8e3996589f7f58b2e48664acc61f685c6ed9a90326ebb1937490927c"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "8e64f90290764646805e8bcbd3ec22f3f9a2e88e5206ca5affc55fd9879d8e53",
+      "definitionHash": "6c311e90d320b13314dac833838c416ff88244943ef4a4b63c86603b7a873827",
+      "approvalHash": "6f77676f09a0183804849f6df31fb8c89de04839420d5eacdcec0b0563d37b3d"
     },
     {
       "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
       "status": "eligible",
-      "reason": "Expressly named first-degree felony with three quantity tiers.",
-      "draftHash": "90bee4616f030f75640abe5a86bc8c33ada6630d59b9a873d509b7a19338486b",
-      "definitionHash": "4abc927eda2a02d714da14e784ee1e96e6cfc84f2f5577aaec14713806d88136",
-      "approvalHash": "8aa6bf0566b6bda08d74a3c36c8c93f1783fcdbd5713e1eee1e54682a320791d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "eba099820eb3f64dbbfb04814a0f6ab5a08f2ba415574dc39f4d7fa41ffdde71",
+      "definitionHash": "ace0d4213c30191607abf66523c6dba49cc3bd16531a599d58df93e74a2bc710",
+      "approvalHash": "8f9e6d2d7758c1e697946241e691171d5ff71285a00d05fc7ee8a60d6c3c85bc"
     },
     {
       "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
       "status": "eligible",
-      "reason": "Expressly named first-degree felony with three quantity tiers.",
-      "draftHash": "b657a47f4ca210d8055ec96432e30f55b53b27627953255ad5ff74edff5698f2",
-      "definitionHash": "61341bc84560282dbecb9fb813c525e976c8bb4621bdf0d74a3ea349fb898246",
-      "approvalHash": "5aefe0107107c45fef1823b5f8e975b4caa8d4608c26713cacc7a944f1d3c160"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "72684be63263db348e1b6699b538830b83ecb6ad16def4d1f7c37eb959182c4a",
+      "definitionHash": "337200b12ef083cfa51b126f5d1220f686fb21070d02a6a2fa6c337be33aa589",
+      "approvalHash": "62ea1b1be0c29853979b54793fc529b34ec64b6233ea67b17b12aeb6890cf91e"
     },
     {
       "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
       "status": "eligible",
-      "reason": "Expressly named first-degree felony with four quantity tiers.",
-      "draftHash": "8414d4878eb704ddd877e125da57b70fe98dbfc4dc2b5f96b1f7065166d63617",
-      "definitionHash": "7fe627828fc0607896b3ff98653e4885917bb728d72c67ba6daca5a0bbb9c09f",
-      "approvalHash": "888d37d85717aebb5cdd17baf05315aa1c389c94e57bcd84627bfdd503faad12"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "254edc1bc20d734597ca18d682a23db60fcbe64bd5453c3e07b4d64246d6f89f",
+      "definitionHash": "5ca5d4ec8971b33d85cff1e77e398f1effa2c9daf696e80bdae3f0a7ebfe5ed5",
+      "approvalHash": "194c7e92bcc4e1383dad12c3dc0822554e6626077a5ad45dce2a83e5bfe0908f"
     },
     {
       "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
       "status": "eligible",
-      "reason": "Expressly named first-degree felony with three quantity tiers.",
-      "draftHash": "f45b0fae3d643473cf7a1de3dbf707aad66ec59d4c4e33fdd6e25d125221866a",
-      "definitionHash": "7ae677ae61331e1beb89143c0c9937f039fe29f2a604bdc8bf066f21f5a0018e",
-      "approvalHash": "249a385140a7a26c5d64db3bc7fc708012ebeceab4d4719d8a3db7781bbd559f"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "8320b9192a5d69dcbb726d73f8c38333c85305aef24004fc2e068ec22f33c63f",
+      "definitionHash": "bb5ae1f00da61703b3640a062292fc430af51d2bb410c60506ff37fb25d2f23f",
+      "approvalHash": "1e3e8cb2dfce281b66156c6970c03d87bfae849f8ece4c2b8d5a026c12fc2cc5"
     },
     {
       "id": "fl-fs-784-045-1-2-aggravated-battery",
