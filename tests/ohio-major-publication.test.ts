@@ -1,3 +1,4 @@
+import { quarterlyDeadline } from '../shared/source-verification-policy.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { OHIO_MAJOR_DEFINITIONS, OHIO_MAJOR_IDS } from '../shared/ohio-major-batch';
@@ -44,6 +45,10 @@ describe('Ohio major publication', () => {
   });
   it('anchors expiry to acquisition and rejects future, extended or mismatched windows', () => {
     expect(validateOhioMajorReceipt(receipt, fresh)).toBeNull();
+    const oldest = Math.min(...Object.values(ohioMajorPacket.documents).map(doc => Date.parse(doc.retrievedAt)));
+    expect(receipt.expiresAt).toBe(quarterlyDeadline(oldest));
+    expect(validateOhioMajorReceipt({...receipt, verificationPolicy: undefined}, fresh)).not.toBeNull();
+    expect(validateOhioMajorReceipt({...receipt, expiresAt: new Date(Date.parse(receipt.expiresAt) + 1).toISOString()}, fresh)).not.toBeNull();
     expect(validateOhioMajorReceipt(receipt, new Date(Date.parse(receipt.expiresAt) - 1))).toBeNull();
     expect(validateOhioMajorReceipt(receipt, new Date(receipt.expiresAt))).not.toBeNull();
     expect(validateOhioMajorReceipt(receipt, new Date(fresh.getTime() - 1))).not.toBeNull();

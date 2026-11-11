@@ -73,7 +73,7 @@ describe("Ohio three-charge source-first batch", () => {
       wrongRole.provisions[index].supportRole = wrongRole.provisions[index].supportRole === "penalty" ? "offense" : "penalty";
       expect(validateOhioManifestRecord(wrongRole)).not.toBeNull();
     }
-    const future = new Date(Date.now() + 8 * 86400000);
+    const future = new Date(JSON.parse(readFileSync(OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, "utf8")).expiresAt);
     const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest(undefined, future), future);
     expect(seed.selectableChargeIds).not.toContain(charge.id);
   });

@@ -85,7 +85,7 @@ describe("source-first Ohio manslaughter", () => {
       expect(getChargeById(id)).toBeUndefined();
       expect(resolveGuidanceCharge({ id, name: "Manslaughter", code: id.includes("involuntary") ? "2903.04" : "2903.03",
         classification: "felony" }, "OH")).toBeUndefined();
-      for (const now of [new Date(), new Date(Date.now() + 8 * 86400000)]) {
+      for (const now of [new Date(), new Date(JSON.parse(readFileSync(OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, "utf8")).expiresAt)]) {
         const manifest = loadOhioAuthorityManifest(undefined, now);
         expect(manifest.catalogRecords.find(record => record.chargeId === id)).toMatchObject({
           disposition: "require_exact_reselection", provisions: [],

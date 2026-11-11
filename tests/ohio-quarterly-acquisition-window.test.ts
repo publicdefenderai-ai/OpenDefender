@@ -45,9 +45,10 @@ describe('Ohio reviewed quarterly acquisition anchor',()=>{
   expect(()=>buildOhioReviewedQuarterlyReceipt(docs,checked)).toThrow('complete acquisition');
   expect(()=>buildOhioReviewedQuarterlyReceipt([],checked)).toThrow('Missing source acquisition');
  });
- it('preserves the committed legacy receipt and its original expiry without retrofitting evidence',()=>{
-  const bytes=readFileSync(OHIO_REVIEWED_RECEIPT_PATH,'utf8');const receipt=JSON.parse(bytes);
-  expect(receipt.verificationPolicy).toBeUndefined();
+ it('preserves the legacy seven-day boundary and leaves the committed receipt unchanged',()=>{
+  const bytes=readFileSync(OHIO_REVIEWED_RECEIPT_PATH,'utf8');const current=JSON.parse(bytes);
+  const receipt={ schemaVersion: 1, reportHash: current.reportHash, documents: current.documents,
+    checkedAt: '2026-11-03T06:05:55.510Z', expiresAt: '2026-11-10T06:05:55.510Z' };
   expect(validateOhioReviewedRefreshReceipt(receipt,new Date(receipt.checkedAt))).toBeNull();
   expect(validateOhioReviewedRefreshReceipt(receipt,new Date(receipt.expiresAt))).not.toBeNull();
   fixture();expect(readFileSync(OHIO_REVIEWED_RECEIPT_PATH,'utf8')).toBe(bytes);

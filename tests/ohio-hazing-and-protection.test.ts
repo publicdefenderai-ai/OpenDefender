@@ -85,7 +85,7 @@ describe("Ohio hazing and protection batch", () => {
       wrong.provisions[index].supportRole = wrong.provisions[index].supportRole === "offense" ? "penalty" : "offense";
       expect(validateOhioManifestRecord(wrong)).not.toBeNull();
     }
-    const future = new Date(Date.now() + 8 * 86400000);
+    const future = new Date(JSON.parse(readFileSync(OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, "utf8")).expiresAt);
     expect(buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest(undefined, future), future).selectableChargeIds).not.toContain(charge.id);
   });
 

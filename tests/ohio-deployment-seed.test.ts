@@ -10,9 +10,8 @@ describe("committed Ohio deployment seed", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
 
     expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
-    expect(manifest.catalogRecords).toHaveLength(238);
-    // Historical fixture excludes later acquisitions and the retired vandalism, insurance-fraud, and domestic-violence identities.
-    expect(seed.selectableChargeIds).toHaveLength(129);
+    expect(manifest.catalogRecords).toHaveLength(391);
+    expect(seed.selectableChargeIds).toHaveLength(282);
     expect(seed.selectableChargeIds).not.toContain("oh-vandalism");
     expect(seed.selectableChargeIds).not.toContain("oh-insurance-fraud");
     expect(seed.selectableChargeIds).not.toContain("oh-domestic-violence");
