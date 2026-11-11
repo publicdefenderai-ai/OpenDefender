@@ -594,3 +594,9 @@ The Mental Health page opens with the approved therapy-chair illustration and cr
 The approved layout is `mental-health-content.html`, SHA-256 `67d1ca35e9df362065d6b31a38ecf1372a2a149c58e644051fe29950f157f1c7`. The page uses the approved `mental-health-illustration.svg` and new interface copy in English, Spanish and Chinese. The browser fixture captures the published copy and destinations from main at `ab704c44`.
 
 Typecheck, the production build, 16 translation checks, six Mental Health browser cases and five support navigation cases passed. Desktop and 320px layouts were inspected. Next support page is Personal Health.
+
+### Personal Health support
+
+The Personal Health page uses the approved pink medical cross and “Keep your care on track” introduction. It keeps the published medication steps, treatment guidance, support destinations and FAQs. The treatment checklist and three editable message drafts live only on the current page. Switching messages retains edits, and copy and print use the selected draft. Printed text preserves paragraphs.
+
+The Personal Health release browser spec checks English, Spanish and Chinese in both themes, including 320px layouts, medication steps, FAQs, and the copy and print workflows against the pre-refresh content.
