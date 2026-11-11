@@ -1,0 +1,1012 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "741.28",
+    "741.2801",
+    "775.082",
+    "775.083",
+    "775.084",
+    "893.02",
+    "893.03",
+    "893.101",
+    "893.13",
+    "893.135",
+    "893.145",
+    "893.146",
+    "893.147",
+    "893.21",
+    "932.701"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+      "section": "893.13",
+      "scope": "(1)(a)",
+      "gradeRule": "scheduled",
+      "requiredSections": [
+        {
+          "section": "893.13",
+          "role": "grading"
+        },
+        {
+          "section": "893.13",
+          "role": "exception"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.101",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(1)(a)1."
+        },
+        {
+          "section": "893.13",
+          "scope": "(1)(a)2."
+        },
+        {
+          "section": "893.13",
+          "scope": "(1)(a)3."
+        },
+        {
+          "section": "893.13",
+          "scope": "(1)(b)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+      "section": "893.13",
+      "scope": "(2)(a)",
+      "gradeRule": "scheduled",
+      "requiredSections": [
+        {
+          "section": "893.13",
+          "role": "grading"
+        },
+        {
+          "section": "893.13",
+          "role": "exception"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.101",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(2)(a)1."
+        },
+        {
+          "section": "893.13",
+          "scope": "(2)(a)2."
+        },
+        {
+          "section": "893.13",
+          "scope": "(2)(a)3."
+        },
+        {
+          "section": "893.13",
+          "scope": "(2)(b)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+      "section": "893.13",
+      "scope": "(4)",
+      "gradeRule": "minor",
+      "requiredSections": [
+        {
+          "section": "893.13",
+          "role": "grading"
+        },
+        {
+          "section": "893.13",
+          "role": "exception"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.101",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(4)(a)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(4)(b)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(4)(c)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+      "section": "893.13",
+      "scope": "(5)",
+      "gradeRule": "scheduled",
+      "requiredSections": [
+        {
+          "section": "893.13",
+          "role": "grading"
+        },
+        {
+          "section": "893.13",
+          "role": "exception"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.101",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(5)(a)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(5)(b)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(5)(c)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+      "section": "893.13",
+      "scope": "(6)(a)",
+      "gradeRule": "F3",
+      "requiredSections": [
+        {
+          "section": "893.13",
+          "role": "grading"
+        },
+        {
+          "section": "893.13",
+          "role": "exception"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.101",
+          "role": "justification"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.21",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.101",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(6)(b)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(6)(c)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(6)(d)"
+        },
+        {
+          "section": "893.13",
+          "scope": "(9)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(1)",
+      "gradeRule": "M1",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        },
+        {
+          "section": "893.21",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.145",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.21",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(2)",
+      "gradeRule": "F3",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.145",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(3)(a)",
+      "gradeRule": "F2",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.147",
+          "role": "justification"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.145",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.147",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(3)(b)",
+      "gradeRule": "M1",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.147",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(4)(a)",
+      "gradeRule": "F3",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.147",
+          "role": "justification"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.147",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(4)(b)",
+      "gradeRule": "F3",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.147",
+          "role": "justification"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "932.701",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.147",
+          "scope": "(4)"
+        },
+        {
+          "section": "932.701",
+          "scope": "(2)(a)1."
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(5)",
+      "gradeRule": "M1",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.145",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "section": "893.147",
+      "scope": "(6)",
+      "gradeRule": "retail",
+      "requiredSections": [
+        {
+          "section": "893.147",
+          "role": "grading"
+        },
+        {
+          "section": "893.145",
+          "role": "definition"
+        },
+        {
+          "section": "893.145",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "893.146",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(1)"
+        },
+        {
+          "section": "893.146",
+          "scope": "(12)"
+        },
+        {
+          "section": "893.147",
+          "scope": "(6)(a)"
+        },
+        {
+          "section": "893.147",
+          "scope": "(6)(b)"
+        },
+        {
+          "section": "893.145",
+          "scope": "(12)"
+        }
+      ]
+    }
+  ]
+}

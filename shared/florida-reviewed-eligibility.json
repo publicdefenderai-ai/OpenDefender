@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "b63a4b792364ce4e82d1b6b8e33a6bb6b3f8a354d8fa5fbc220ec48524978407",
+  "reportHash": "41b64134d19f0996d468a885f39c0ca7a06e1c4b57a7eae2fc2fae667554a940",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -637,106 +637,106 @@
     {
       "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
       "status": "eligible",
-      "reason": "The official section heading supplies the literal identity; paragraph (1)(a) supplies ordinary sale, manufacture, delivery, and possession-with-intent conduct and schedule-dependent criminal grades.",
-      "draftHash": "c7424d4d131a85db6813b94b9296bceec330578b9c44e8bbdc6a50af34d9752c",
-      "definitionHash": "c741f8393c6efeb4b95f8a858cd3c38a3ea2e88660d1845796a858b80fd08fe8",
-      "approvalHash": "a8f95cbcdadb393682c19fb9e66ec7f99e9ac3865728c2607a21efd39ecd4932"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "fae30ee27a67b5180e2961c690c5a541bf88138120a8b69de27d5129998104b2",
+      "definitionHash": "88993babc129fd06ecbe484d626b859056eedaf4c8fc15077721fcdd10bc26fa",
+      "approvalHash": "2df922b39340af10d538eb4d41eb5fcbce0c3f603de70e6d8e7570035af3365b"
     },
     {
       "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
       "status": "eligible",
-      "reason": "The official section heading supplies the literal identity; paragraph (2)(a) supplies purchase and possession-with-intent-to-purchase conduct and schedule-dependent grades.",
-      "draftHash": "fcf72c1645155f397ce01e5d57fb97efefb57a04b65addb095279c49e99e1cac",
-      "definitionHash": "f5b61f986d1df3012733a3ec5f05291ee090044a099b1b036ddc0e001785d442",
-      "approvalHash": "b57f899c6b07ee227fb419eba4dbf4412e8ea7caed8a4e22ad4c574e8dea63a8"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "5ca6c0a47684530d34bfa4468c618718df2a06ea94755a2ac6135ef0b136b190",
+      "definitionHash": "4127b3e568e881e7424dc9de677269aa9a669ea27fbfba416b66985a2dfdc40f",
+      "approvalHash": "c499f75d77b0a83032dbdd68d63aa30c33d76edc4a9ec9426fb6963df699f6f6"
     },
     {
       "id": "fl-fs-893-13-4-prohibited-acts-penalties",
       "status": "eligible",
-      "reason": "The official heading identifies the section, and subsection (4) supplies the adult-to-minor delivery/use conduct and all schedule-dependent felony grades.",
-      "draftHash": "8c08c488efe791ad9f7e1c8c3bcda529289de6d6cf99faf285736a083b10c49f",
-      "definitionHash": "d4f90e96fd0608a35f839acc9d0d75413039decdce54b6a3dfba7f6aab46ee4c",
-      "approvalHash": "88ba12b39fc3c47546a69b98dc45caff525f111498ff2e23a4cf36a491667443"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "1140875c76a7bce829f8ede88da5da4671296bef685e6d8bd166fb2e93fb51e3",
+      "definitionHash": "2cf9be51fb360dda5ea722ca120c634555dca4f9c306b340b4348dd005273445",
+      "approvalHash": "bc20809d73eb557c786015210f344a61ebbc26f1e6be169ea47bca432c4f4056"
     },
     {
       "id": "fl-fs-893-13-5-prohibited-acts-penalties",
       "status": "eligible",
-      "reason": "The official heading identifies the section; subsection (5) supplies bringing-into-state conduct, exceptions, and schedule-dependent grades.",
-      "draftHash": "5f69f463b9ae8bf1ea7e250afe04e100128260f638349430fa57e7f2da968d0e",
-      "definitionHash": "b428d1492cb9580d81637524408a3f8a872ce248ce71c0db1fbb3343bfee444b",
-      "approvalHash": "ebc0d12b430eef602cb3be19e7a227ad318eeca92964becf2234035f125167fe"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "54aa036a97c4aa7b0ff4d7f3eb3ce2490e732f0d28069b45a5e5ecc0563f46e7",
+      "definitionHash": "d5a574d7973482800d4cf712bdbae814e05f23c79f6ee89e9c313f6652e6f6b3",
+      "approvalHash": "609a83754d76a3d2be37405f96d25064f0e80158abfe8f2fe04d999fe151988e"
     },
     {
       "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
       "status": "eligible",
-      "reason": "The official section heading supplies literal identity, and paragraph (6)(a) supplies the general non-cannabis actual-or-constructive-possession felony without duplicating the separately maintained paragraph (6)(b) misdemeanor for 20 grams or less of cannabis.",
-      "draftHash": "5c6ebd43ccbc6bc778f66696ef7c2749e32a2171b01328286c3c70ad17ee82c6",
-      "definitionHash": "bd96ab702c6b2bdebef43c533a0ca3e35c60b6cdb062bd5b7f15648496d682c8",
-      "approvalHash": "ed0f37a758416bc720888f8a316fd9371b1c583476a4eea92318365b34d13d91"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "1b5548ab05e148ac656ff1d9a3f7d65e16dc8b17d9bda2ebb2c9860212f9b536",
+      "definitionHash": "14dfe7dd04d6d213001efcd1ec24ce4cb19e31c32de1a81b0c3edff6ffade730",
+      "approvalHash": "76d6679ad91011bef411c24e27195822fb671e45a6f7cfa030eda6ed39cb064d"
     },
     {
       "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies the exact statutory identity; subsection (1) supplies both use-purpose alternatives and misdemeanor grading.",
-      "draftHash": "573732bdc95c44491bf65345bf3148acb7a3c21ebcf1e9ca2e2985852ccb9366",
-      "definitionHash": "8d65299469763e2401ee8e04326b9402ed1d7f327d2d6b8fcb1807e7d96e442b",
-      "approvalHash": "3d651d9cfe88c0d39552148443831c387b695fda2ab5c17997bb4aa5a782f9d2"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d65fd3b3839f2ca279127e0d788aa0f3ed6d8e19061ff2fee427e2340bd671af",
+      "definitionHash": "3153de7c2e3bca59d0a754e47841aaa2adb5948559e34d515a939beec3bd9c0b",
+      "approvalHash": "5070e2264990d0b861dbe98660347e6b6929b40b3fbe15f4cc11fef8beb06994"
     },
     {
       "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies the exact statutory identity; subsection (2) supplies conduct, knowledge standard, intended uses, and felony grade.",
-      "draftHash": "17de59e233c3b65dd0fac40af701941ed0518e66b0dcf98cc42dbadafb4baa31",
-      "definitionHash": "04883cdb3de7c3a03ad28ceddffd4d36254d320c64ec464ce924fee082fe5150",
-      "approvalHash": "9f359db79f6dd71bcdf78446c9b42f4bf08b934dd5872b5694125cc292f9fd9f"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d8b793f760db9b0b1b3e1c32c67f1bbc806380fc024fac2bc5ebdca79141322a",
+      "definitionHash": "626a543a18d91273cd6cec4601e5f8766b50656628f085dd7abdd1478a4a3f94",
+      "approvalHash": "0d5232e21acc89490666824ce979dcf846576b8e794a9d1711f9e1f30e808613"
     },
     {
       "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies exact statutory identity; paragraph (3)(a) expressly incorporates subsection (2), adds adult/minor ages and delivery, and grades the offense.",
-      "draftHash": "a322ea8435dfc827cf50b2f45ae10e0930101771ffde8058363ccaf2e6f732a7",
-      "definitionHash": "1133c99596098156a10cf69d5b99ea14e3fab4abae9b019cd76fb5936a2c5381",
-      "approvalHash": "3ee4d24660e940a379c54a17f54d56b1b3ab5e2ab388c401178d8a9f41d2d155"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "cb0b132a368e64b214063837fcf54346d1d61cea08b3a2c5be87286d5f247a70",
+      "definitionHash": "aaa4e93bad36aca7ed84f8f2acd3244e6c3cf9700c698831f6370fb149c514d3",
+      "approvalHash": "7402d0e3ce6d321956831df8c74ae167f66a90ab53e0f5d1df53a677ade873fe"
     },
     {
       "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies exact statutory identity, while paragraph (3)(b) independently states syringe/needle delivery conduct, lawful-dispensation exceptions, and misdemeanor guilt.",
-      "draftHash": "4e8faed32e6152950401bc89f81d002a26d50ea55403965f4a447dbb74867ba6",
-      "definitionHash": "e69d3c1d7b0009d02e05911314ad57174bd1b07a36728fac283f9160d50b1d8d",
-      "approvalHash": "3189acd7267c3810e2f5194c7971df3aacb89ba1b3e7ecaed69d142edf17e69d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "4b3f08e566929a85bf1d5f5b5208911406a3564c6a1ae845de04c9aae6e4a172",
+      "definitionHash": "b1db154d4bd880b3267dc7c1497797c2266820548edb30a819a0b6f9ed6a5ad3",
+      "approvalHash": "d1894fc79190f37662cce26e55534947770dc38b0fcb30ee2ed1b90647059766"
     },
     {
       "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies exact statutory identity; this subsection (4) draft is deliberately confined in its stated conduct to paragraph (4)(a), avoiding the unavailable definition incorporated only by (4)(b).",
-      "draftHash": "5fc28ece83079a27b9d9cac7ae942447cde919c7f056867f77453f951b5ff4cd",
-      "definitionHash": "56b8d369428eeade6e61cdd8f5409ff8bd1815d0a52d85ae3f57d746df0b43a4",
-      "approvalHash": "32686157fadd03dbecd62660f7fa5b56fc5a6b754a7742ba4ab05703fd5b3fec"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "746116a9b5e5b7f807991bed18846e7cd6f0756cb686246a0ca099d831e9f315",
+      "definitionHash": "4a02af96892628dfd742d9369d684b3776beba7ccdda9a1dba94a28e77e07853",
+      "approvalHash": "30364f937ef1d013e27e254c6b12260e10643bfd01a92b588820e354483665fa"
     },
     {
       "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The official section heading supplies exact statutory identity; subsection (4)'s parent supplies the conduct, knowledge, and transportation elements, paragraph (4)(b) supplies the narrow incorporated contraband alternative, and the common subsection tail supplies felony grading. Current § 932.701(2)(a)1. supports that alternative without projecting the rest of the contraband-article list.",
-      "draftHash": "f9829a1a359c771810d60df39a1441a19d6b374bef16d002d453b65b0b097630",
-      "definitionHash": "36278ef52df3ce30ef47022784ff258346b30c49eca3a860346f13795dfbcac6",
-      "approvalHash": "d10b6202057a3aac22413c940eeb8eda34899b09b109d0c4c3225016e5984764"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "8adb351f118f33b5df13b1651d7f5e2a3aa48558fdc44ef352179d5684ca25e8",
+      "definitionHash": "412b27d3da9ba430943071578cb220f104f984d75b16d4347a70ead9afeb8f9a",
+      "approvalHash": "63a1d8838857d4f04232ee4376fea1cf8a2d42ce3db147c719780e25a9f09d1a"
     },
     {
       "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The exact official section heading identifies the statutory charge, and subsection (5) supplies publication, knowledge, purpose, and misdemeanor guilt in one clause.",
-      "draftHash": "2361cd9fa3cb6a1011fd8dabf8b9466d7ff4b8543b478997271862f219c7f5c3",
-      "definitionHash": "04ff9a5fef658596622a205fe251c323f4766122043731d0c0c750593ea305b5",
-      "approvalHash": "028e0076046da8df4097f21379022826095c17893efad0e704f3b4ebbf5f5827"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d5e4aff026fe661e000b572debf7487449a06332acf6fdd02928f79635590b10",
+      "definitionHash": "439122b48ee8485e2f8bfbca2119c14738550a3534a14a8ae61553d6469ab8dd",
+      "approvalHash": "19e7e7226575a07a1311157620ac5209a0f204038e50517f73972033f7b799ed"
     },
     {
       "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
-      "reason": "The exact official section heading identifies the statutory charge; paragraph (6)(a) narrowly enumerates retail items and an exception, and paragraph (6)(b) supplies first and repeat grades.",
-      "draftHash": "b283ce28aed9fbfc36dad9216640ab12ece06719ac7890b417573637c56b2dd1",
-      "definitionHash": "b09dda884876def6ba7d975aa29de25e2f02673fb22b8ca1c1e3636c097f6010",
-      "approvalHash": "7e7a8febe5c7635af11adf5c502aeb29afd987aa924f1609ee730b5df7645509"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "643c37fe7cdcbf291034fa57e73d191e3e1900fcaae669a65c407c2eeb47f507",
+      "definitionHash": "394a016716a7856dba83d10247403c3d095fdf6f6737b7cc7b1291042fdae3ce",
+      "approvalHash": "83e9ea04d3bc5b68c3daaef972eb46ce6aa8b357e0062ec42b8becf3dba6afc8"
     },
     {
       "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
