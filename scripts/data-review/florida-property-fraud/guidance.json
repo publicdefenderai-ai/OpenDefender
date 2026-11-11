@@ -1,0 +1,104 @@
+{
+  "M1": {
+    "en": "A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine.",
+    "es": "Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa.",
+    "zh": "一级轻罪通常最高可判监禁1年及罚款1,000美元。"
+  },
+  "F3": {
+    "en": "A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine.",
+    "es": "Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa.",
+    "zh": "三级重罪通常最高可判监禁5年及罚款5,000美元。"
+  },
+  "F2": {
+    "en": "A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine.",
+    "es": "Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa.",
+    "zh": "二级重罪通常最高可判监禁15年及罚款10,000美元。"
+  },
+  "domestic": {
+    "en": "For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions.",
+    "es": "Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones.",
+    "zh": "对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。"
+  },
+  "enhanced": {
+    "M1": {
+      "en": "A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000).",
+      "es": "Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000).",
+      "zh": "一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。"
+    },
+    "F3": {
+      "en": "A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum).",
+      "es": "Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000).",
+      "zh": "三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+    },
+    "F2": {
+      "en": "A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum).",
+      "es": "Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000).",
+      "zh": "二级重罪因此升为一级重罪（通常最高30年及10,000美元）。"
+    },
+    "F1": {
+      "en": "A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine).",
+      "es": "Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000).",
+      "zh": "一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+    },
+    "M2": {
+      "en": "A qualifying second-degree misdemeanor becomes a first-degree misdemeanor, ordinarily up to 1 year and $1,000.",
+      "es": "Si se cumplen estos requisitos, el delito menor de segundo grado pasa a primer grado: ordinariamente hasta 1 año y $1,000.",
+      "zh": "如符合这些条件，二级轻罪升为一级轻罪，通常最高可判1年监禁及罚款1,000美元。"
+    }
+  },
+  "F1": {
+    "en": "A first-degree felony ordinarily carries up to 30 years and a $10,000 fine.",
+    "es": "Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa.",
+    "zh": "一级重罪通常最高可判30年监禁及10,000美元罚款。"
+  },
+  "M2": {
+    "en": "A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine.",
+    "es": "Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa.",
+    "zh": "二级轻罪通常最高可判监禁60天及罚款500美元。"
+  },
+  "retail": {
+    "en": "Restitution is mandatory and includes the value of stolen or damaged merchandise and the cost of repairing or replacing other property damaged during the offense.",
+    "es": "La restitución es obligatoria e incluye el valor de la mercancía robada o dañada y el costo de reparar o reemplazar otros bienes dañados durante el delito.",
+    "zh": "必须赔偿被盗或损坏商品的价值以及修理或更换犯罪过程中受损的其他财产的费用。"
+  },
+  "dealing": {
+    "en": "If theft and dealing are charged in separate counts for the same scheme or course of conduct, §812.025 allows a guilty verdict on only one of those counts.",
+    "es": "Cuando se imputan por separado el hurto y el tráfico de bienes robados por un mismo plan o curso de conducta, §812.025 permite un veredicto de culpabilidad por solo uno de esos cargos.",
+    "zh": "如果就同一计划或同一系列行为分别指控盗窃和交易赃物，第812.025条仅准许对其中一项作出有罪裁决。"
+  },
+  "insurance": {
+    "en": "For a conviction involving an attempt to receive motor-vehicle insurance proceeds, subsection (12) adds a civil penalty: up to $5,000 for a first offense, over $5,000 through $10,000 for a second, and over $10,000 through $15,000 for a third or later offense under this branch.",
+    "es": "Si la condena es por actos con el fin de cobrar un seguro de automóvil, el apartado (12) añade una multa civil de hasta $5,000 la primera vez, más de $5,000 y hasta $10,000 la segunda, y más de $10,000 y hasta $15,000 la tercera o posterior en esta modalidad.",
+    "zh": "如实施本项行为是为了取得汽车保险赔款，定罪后第(12)款另加民事罚款：初犯最高5,000美元，第二次超过5,000且不超过10,000美元，第三次及以后超过10,000且不超过15,000美元。"
+  },
+  "thresholds": {
+    "en": "The higher tiers require actual fraudulent use. Monetary benefit, value of services, payment sought to be avoided, or amount of injury or fraud of at least $5,000, or 10–19 affected identities, triggers a second-degree felony with a 3-year minimum. At least $50,000 or 20–29 identities triggers a first-degree felony with a 5-year minimum. At least $100,000 or 30 or more identities carries a 10-year minimum.",
+    "es": "Los grados superiores exigen uso fraudulento efectivo. Si el beneficio monetario, el valor de los servicios, el pago que se quiso evitar o el monto del daño o fraude llega a $5,000, o se usan 10–19 identidades, es delito grave de segundo grado con mínimo de 3 años. Con $50,000 o más o 20–29 identidades es de primer grado con mínimo de 5 años. Con $100,000 o más o al menos 30 identidades el mínimo es de 10 años.",
+    "zh": "加重等级要求实际欺诈使用。金钱利益、服务价值、试图避免的付款或损害或欺诈金额达到5,000美元，或涉及10至19个身份，为二级重罪，最低3年。达到50,000美元或涉及20至29个身份，为一级重罪，最低5年；达到100,000美元或涉及至少30个身份，最低10年。"
+  },
+  "identity": {
+    "en": "A guilty or no-contest plea or guilty finding carries a mandatory $1,001 surcharge regardless of adjudication. The court may order restitution. Use of a public record to facilitate the offense under (5), or specified impersonation to obtain or use identification under (10), can raise a first-degree misdemeanor to a third-degree felony, a third-degree felony to second degree, or a second-degree felony to first degree. Only (10) lists an increase from a first-degree felony to a life felony. Under (13), substantial assistance may support a reduced or suspended sentence on the prosecutor’s motion.",
+    "es": "Un reconocimiento de culpabilidad, una declaración de no oposición o una determinación de culpabilidad conlleva un recargo obligatorio de $1,001 aunque se reserve la adjudicación. El tribunal puede ordenar restitución. Usar un registro público para facilitar el delito según (5), o la suplantación especificada para obtener o usar información según (10), puede elevar el delito menor de primer grado a grave de tercero, el grave de tercero a segundo o el grave de segundo a primero. Solo (10) enumera el aumento del primer grado a delito grave castigable con cadena perpetua. Según (13), el fiscal puede solicitar reducción o suspensión por colaboración sustancial.",
+    "zh": "认罪、不抗辩答辩或被认定有罪均须缴纳1,001美元附加费，即使暂缓正式定罪也适用。法院可以命令赔偿。第(5)款所指利用公共记录便利犯罪，或第(10)款规定的通过冒充特定身份获取或使用身份信息，可将一级轻罪升为三级重罪、三级重罪升为二级或二级升为一级。只有第(10)款列出从一级重罪升为可判终身监禁重罪。依第(13)款，经检方申请，提供重大协助可获减刑或暂停执行。"
+  },
+  "card": {
+    "en": "The filed count and its six-month use or value allegation determine which §817.67 penalty is at issue.",
+    "es": "El cargo presentado y la alegación sobre uso o valor dentro de seis meses determinan qué pena de §817.67 está en cuestión.",
+    "zh": "应依具体指控及六个月期间内使用次数或金额的指称确定涉及第817.67条的哪项处罚。"
+  },
+  "repeatRetail": {
+    "en": "For a second or later conviction for petit theft from a merchant, farmer or transit agency, §812.015(2) requires a $50–$1,000 fine or court-designated public service in its place.",
+    "es": "Para una segunda condena o posterior por hurto menor a un comerciante, agricultor u organismo de transporte, §812.015(2) exige una multa de $50 a $1,000 o, en su lugar, servicio público designado por el tribunal.",
+    "zh": "如第二次或以后因从商家、农户或公共交通机构小额盗窃被定罪，第812.015(2)条要求罚款50至1,000美元，法院也可指定以公共服务代替。"
+  },
+  "counterfeit": {
+    "en": "The information may concern a fictitious person. When it concerns a real person, this branch requires absence of that person’s consent.",
+    "es": "La información puede referirse a una persona ficticia. Si corresponde a una persona real, esta modalidad exige que dicha persona no haya dado su consentimiento.",
+    "zh": "所涉信息可以涉及虚构的人。如涉及真实的人，此项指控要求该人未同意。"
+  },
+  "harassment": {
+    "en": "Harassment requires conduct aimed at a specific person, intended to cause substantial emotional distress, without a legitimate purpose. Constitutionally protected conduct and accepted commercial uses are excluded.",
+    "es": "El acoso exige conducta dirigida a una persona específica con intención de causar angustia emocional sustancial y sin propósito legítimo. Se excluyen la conducta protegida constitucionalmente y los usos comerciales aceptados.",
+    "zh": "骚扰须针对特定的人，意图造成严重精神痛苦且没有正当目的。受宪法保护的行为与公认的商业用途不在此限。"
+  }
+}

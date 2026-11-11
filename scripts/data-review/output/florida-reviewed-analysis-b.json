@@ -10,9 +10,126 @@
   {
     "id":"fl-section-812.014","section":"812.014","status":"duplicate","reason":"Existing exact aliases already cover grand theft in the first, second, and third degrees at reviewed subdivisions.","identity":{"kind":"official_heading","quote":"Theft","sourceHash":"fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"},"conductQuotes":["A person commits theft if he or she knowingly obtains or uses, or endeavors to obtain or to use, the property of another with intent to, either temporarily or permanently:"],"gradingQuotes":["the offender commits grand theft in the first degree, punishable as a felony of the first degree, as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"812.014","role":"offense","contentHash":"fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3"}],"notes":"A broad overlapping theft definition was not added."},
   {
-    "id":"fl-fs-812-015-retail-theft","section":"812.015","status":"eligible","reason":"The statute defines retail theft and subsections (8)-(11) use that identity with complete felony grades.","identity":{"kind":"operative_guilt_clause","quote":"Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:","sourceHash":"291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"},"conductQuotes":["Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:","Individually, or in concert with one or more other persons, coordinates the activities of one or more individuals in committing the offense, which may occur through multiple acts of retail theft, in which the amount of each individual theft is aggregated within a 120-day period to determine the value of the property stolen and such value is $750 or more;"],"gradingQuotes":["Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:","Except as provided in subsection (11), a person commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:","A person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if he or she violates subsection (8) or subsection (9) and:"],"requiredSections":[{"section":"812.015","role":"offense","contentHash":"291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"},{"section":"812.015","role":"grading","contentHash":"291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"},{"section":"812.015","role":"definition","contentHash":"291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"}],"notes":"Confined to subsections (8)-(11); whole § 812.015 is pinned only to incorporate subsection (1)(d)'s definition of retail theft, not to broaden operative conduct."},
+    "id": "fl-fs-812-015-retail-theft",
+    "section": "812.015",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:",
+      "sourceHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+    },
+    "conductQuotes": [
+      "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:",
+      "Individually, or in concert with one or more other persons, coordinates the activities of one or more individuals in committing the offense, which may occur through multiple acts of retail theft, in which the amount of each individual theft is aggregated within a 120-day period to determine the value of the property stolen and such value is $750 or more;"
+    ],
+    "gradingQuotes": [
+      "Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person:"
+    ],
+    "requiredSections": [
+      {
+        "section": "812.015",
+        "role": "offense",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "section": "812.015",
+        "role": "grading",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "section": "812.015",
+        "role": "definition",
+        "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-812-019-dealing-in-stolen-property","section":"812.019","status":"eligible","reason":"The clear heading and two guilt clauses support one conditionally graded offense.","identity":{"kind":"official_heading","quote":"Dealing in stolen property","sourceHash":"94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"},"conductQuotes":["Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084."],"gradingQuotes":["Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084.","Any person who initiates, organizes, plans, finances, directs, manages, or supervises the theft of property and traffics in such stolen property shall be guilty of a felony of the first degree, punishable as provided in ss. 775.082, 775.083, and 775.084."],"requiredSections":[{"section":"812.019","role":"offense","contentHash":"94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"},{"section":"812.012","role":"definition","contentHash":"8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"}],"notes":"Section 812.012 closes the meanings of traffic and stolen property."},
+    "id": "fl-fs-812-019-dealing-in-stolen-property",
+    "section": "812.019",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Dealing in stolen property",
+      "sourceHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"
+    },
+    "conductQuotes": [
+      "Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084."
+    ],
+    "gradingQuotes": [
+      "Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "812.019",
+        "role": "offense",
+        "contentHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89"
+      },
+      {
+        "section": "812.012",
+        "role": "definition",
+        "contentHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "812.025",
+        "role": "exception",
+        "contentHash": "f578cf966d2cf01466a009fc3f90724e7494c30965c2b04cf9d575a8b63ef46f"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
     "id":"fl-section-812.13","section":"812.13","status":"duplicate","reason":"Existing exact aliases cover first- and second-degree robbery under this section.","identity":{"kind":"official_heading","quote":"Robbery","sourceHash":"0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13"},"conductQuotes":["“Robbery” means the taking of money or other property which may be the subject of larceny from the person or custody of another, with intent to either permanently or temporarily deprive the person or the owner of the money or other property, when in the course of the taking there is the use of force, violence, assault, or putting in fear."],"gradingQuotes":["If in the course of committing the robbery the offender carried no firearm, deadly weapon, or other weapon, then the robbery is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"812.13","role":"offense","contentHash":"0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13"}],"notes":"Compared by degree and scope."},
   {
@@ -20,17 +137,362 @@
   {
     "id":"fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices","section":"815.06","status":"eligible","reason":"Subsection (2) expressly names and defines the offense; subsection (3) grades it and subsection (7) supplies exceptions.","identity":{"kind":"operative_guilt_clause","quote":"A person commits an offense against users of computers, computer systems, computer networks, or electronic devices if he or she willfully, knowingly, and without authorization or exceeding authorization:","sourceHash":"fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377"},"conductQuotes":["A person commits an offense against users of computers, computer systems, computer networks, or electronic devices if he or she willfully, knowingly, and without authorization or exceeding authorization:","Accesses or causes to be accessed any computer, computer system, computer network, or electronic device with knowledge that such access is unauthorized or the manner of use exceeds authorization;","Introduces any computer contaminant into any computer, computer system, computer network, or electronic device; or"],"gradingQuotes":["Except as provided in paragraphs (b) and (c), a person who violates subsection (2) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","A person commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if he or she violates subsection (2) and:","A person who violates subsection (2) commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the violation:"],"requiredSections":[{"section":"815.06","role":"offense","contentHash":"fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377"},{"section":"815.06","role":"grading","contentHash":"fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377"},{"section":"815.06","role":"exception","contentHash":"fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377"}],"notes":"The unnamed subsection (4) misdemeanor is not merged into the named subsection (2) offense."},
   {
-    "id":"fl-fs-817-234-insurance-fraud","section":"817.234","status":"eligible","reason":"Subsection (1)(a) expressly names insurance fraud and subsection (11) conditionally grades it.","identity":{"kind":"operative_guilt_clause","quote":"A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:","sourceHash":"3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"},"conductQuotes":["A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:"],"gradingQuotes":["Is less than $20,000, the offender commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is $20,000 or more, but less than $100,000, the offender commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is $100,000 or more, the offender commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"817.234","role":"offense","contentHash":"3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"},{"section":"817.234","role":"grading","contentHash":"3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"},{"section":"812.012","role":"definition","contentHash":"8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"}],"notes":"Limited to the named subsection (1)(a) offense; value and property definitions are closed by section 812.012."},
+    "id": "fl-fs-817-234-insurance-fraud",
+    "section": "817.234",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:",
+      "sourceHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+    },
+    "conductQuotes": [
+      "A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:"
+    ],
+    "gradingQuotes": [
+      "Is less than $20,000, the offender commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.234",
+        "role": "offense",
+        "contentHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+      },
+      {
+        "section": "817.234",
+        "role": "grading",
+        "contentHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5"
+      },
+      {
+        "section": "812.012",
+        "role": "definition",
+        "contentHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-817-568-fraudulent-use-of-personal-identification-information","section":"817.568","status":"eligible","reason":"Subsection (2) states an exact offense name, conduct, and threshold grades.","identity":{"kind":"operative_guilt_clause","quote":"Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},"conductQuotes":["Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Any person who willfully and without authorization fraudulently uses personal identification information concerning a person without first obtaining that person’s consent commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the pecuniary benefit, the value of the services received, the payment sought to be avoided, or the amount of the injury or fraud perpetrated is $5,000 or more or if the person fraudulently uses the personal identification information of 10 or more persons, but fewer than 20 persons, without their consent. Notwithstanding any other provision of law, the court shall sentence any person convicted of committing the offense described in this paragraph to a mandatory minimum sentence of 3 years’ imprisonment.","Any person who willfully and without authorization fraudulently uses personal identification information concerning a person without first obtaining that person’s consent commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the pecuniary benefit, the value of the services received, the payment sought to be avoided, or the amount of the injury or fraud perpetrated is $50,000 or more or if the person fraudulently uses the personal identification information of 20 or more persons, but fewer than 30 persons, without their consent."],"requiredSections":[{"section":"817.568","role":"offense","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"grading","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"exception","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"}],"notes":"Subsection (14)'s governmental-activity exclusion is included in the pinned source."},
+    "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "section": "817.568",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductQuotes": [
+      "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.568",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-817-568-harassment-by-use-of-personal-identification-information","section":"817.568","status":"eligible","reason":"Subsection (4) states a distinct literal offense name, conduct, and grade.","identity":{"kind":"operative_guilt_clause","quote":"Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.","sourceHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},"conductQuotes":["Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],"gradingQuotes":["Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.","A misdemeanor of the first degree is reclassified as a felony of the third degree."],"requiredSections":[{"section":"817.568","role":"offense","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"grading","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"exception","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"}],"notes":"The same source defines harass and excludes constitutionally protected conduct."},
+    "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "section": "817.568",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductQuotes": [
+      "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "gradingQuotes": [
+      "Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "(a) \nA misdemeanor of the first degree is reclassified as a felony of the third degree."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.568",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity","section":"817.568","status":"eligible","reason":"Subsection (8)(a) gives a distinct literal identity and paragraphs (b)-(c) supply threshold grades.","identity":{"kind":"operative_guilt_clause","quote":"Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},"conductQuotes":["Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Any person who willfully and fraudulently uses personal identification information concerning a deceased individual or dissolved business entity commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the pecuniary benefit, the value of the services received, the payment sought to be avoided, or the amount of injury or fraud perpetrated is $5,000 or more, or if the person fraudulently uses the personal identification information of 10 or more but fewer than 20 deceased individuals or dissolved business entities.","Any person who willfully and fraudulently uses personal identification information concerning a deceased individual or dissolved business entity commits the offense of aggravated fraudulent use of the personal identification information of multiple deceased individuals or dissolved business entities, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the pecuniary benefit, the value of the services received, the payment sought to be avoided, or the amount of injury or fraud perpetrated is $50,000 or more, or if the person fraudulently uses the personal identification information of 20 or more but fewer than 30 deceased individuals or dissolved business entities."],"requiredSections":[{"section":"817.568","role":"offense","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"grading","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"exception","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"}],"notes":"The first-degree branch uses its own exact aggravated statutory name; it is reported only as the conditional branch of subsection (8)."},
+    "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "section": "817.568",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductQuotes": [
+      "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "Any person who willfully and fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity commits the offense of fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.568",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "grading",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information","section":"817.568","status":"eligible","reason":"Subsection (9) states the complete literal identity, conduct, and grade.","identity":{"kind":"operative_guilt_clause","quote":"Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},"conductQuotes":["Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"817.568","role":"offense","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"},{"section":"817.568","role":"exception","contentHash":"77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"}],"notes":"Subsection (1)(g)'s definition and subsection (14)'s exclusion are in the same dependency."},
+    "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "section": "817.568",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+    },
+    "conductQuotes": [
+      "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "Any person who willfully and fraudulently creates or uses, or possesses with intent to fraudulently use, counterfeit or fictitious personal identification information concerning a fictitious person, or concerning a real person without first obtaining that real person’s consent, with intent to use such counterfeit or fictitious personal identification information for the purpose of committing or facilitating the commission of a fraud on another person, commits the offense of fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.568",
+        "role": "offense",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "817.568",
+        "role": "exception",
+        "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
-    "id":"fl-fs-817-61-fraudulent-use-of-credit-cards","section":"817.61","status":"eligible","reason":"The clear heading and conduct are graded by the current expressly incorporated penalty section.","identity":{"kind":"official_heading","quote":"Fraudulent use of credit cards","sourceHash":"0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"},"conductQuotes":["A person who, with intent to defraud the issuer or a person or organization providing money, goods, services, or anything else of value or any other person, uses, for the purpose of obtaining money, goods, services, or anything else of value, a credit card obtained or retained in violation of this part or a credit card which he or she knows is forged, or who obtains money, goods, services, or anything else of value by representing, without the consent of the cardholder, that he or she is the holder of a specified card or by representing that he or she is the holder of a card and such card has not in fact been issued violates this section."],"gradingQuotes":["A person who is subject to the penalties of this subsection shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.","A person who is subject to the penalties of this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"817.61","role":"offense","contentHash":"0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"},{"section":"817.67","role":"penalty","contentHash":"3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158"}],"notes":"Section 817.67 closes both misdemeanor and felony grades."},
+    "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "section": "817.61",
+    "status": "eligible",
+    "reason": "Individually bound property or fraud conduct and penalties.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Fraudulent use of credit cards",
+      "sourceHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"
+    },
+    "conductQuotes": [
+      "A person who, with intent to defraud the issuer or a person or organization providing money, goods, services, or anything else of value or any other person, uses, for the purpose of obtaining money, goods, services, or anything else of value, a credit card obtained or retained in violation of this part or a credit card which he or she knows is forged, or who obtains money, goods, services, or anything else of value by representing, without the consent of the cardholder, that he or she is the holder of a specified card or by representing that he or she is the holder of a card and such card has not in fact been issued violates this section."
+    ],
+    "gradingQuotes": [
+      "A person who is subject to the penalties of this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A person who is subject to the penalties of this subsection shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      {
+        "section": "817.61",
+        "role": "offense",
+        "contentHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57"
+      },
+      {
+        "section": "817.67",
+        "role": "penalty",
+        "contentHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "817.67",
+        "role": "grading",
+        "contentHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158"
+      }
+    ],
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
+  },
   {
     "id":"fl-fs-827-06-nonsupport-of-dependents","section":"827.06","status":"eligible","reason":"The clear heading and subsections (2)-(3) provide adult conduct and conditional grades.","identity":{"kind":"official_heading","quote":"Nonsupport of dependents","sourceHash":"b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0"},"conductQuotes":["Any person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],"gradingQuotes":["Any person who willfully fails to provide support which he or she has the ability to provide to a child or a spouse whom the person knows he or she is legally obligated to support commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.","Any person who is convicted of a fourth or subsequent violation of subsection (2) or who violates subsection (2) and who has owed to that child or spouse for more than 1 year support in an amount equal to or greater than $5,000 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"requiredSections":[{"section":"827.06","role":"offense","contentHash":"b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0"},{"section":"827.06","role":"grading","contentHash":"b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0"}],"notes":"No claim is made about the optional tribunal-based evidentiary route."},
   {

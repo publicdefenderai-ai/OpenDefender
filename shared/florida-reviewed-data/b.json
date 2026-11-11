@@ -42,18 +42,54 @@
     "code": "812.015(8)-(11)",
     "slug": "fl-fs-812-015-retail-theft",
     "name": "Retail theft",
-    "names": { "es": "Hurto minorista", "zh": "零售盗窃" },
+    "names": {
+      "es": "Hurto minorista",
+      "zh": "零售盗窃"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.015(8)-(11)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html" },
-      { "citation": "Fla. Stat. § 812.015", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html" }
+      {
+        "citation": "Fla. Stat. § 812.015(8)-(11)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Committing retail theft under one of the statute's coordinated, repeated, multi-location, aggregated-value, item-count, or group-participation circumstances.", "degreeContext": "Third-degree felony under subsection (8); second-degree felony under subsection (9), including specified repeat or higher-value conduct; and first-degree felony under subsection (11) for two or more prior convictions under subsections (8) or (9), or possession of a firearm during that offense." },
-      "es": { "plainSummary": "Cometer hurto minorista bajo una de las circunstancias legales de coordinación, repetición, múltiples lugares, valor agregado, cantidad de artículos o participación grupal.", "degreeContext": "Delito grave de tercer grado conforme al inciso (8); de segundo grado conforme al inciso (9), incluso por ciertas reincidencias o mayor valor; y de primer grado conforme al inciso (11) por dos o más condenas anteriores bajo los incisos (8) o (9), o por poseer un arma de fuego durante el delito." },
-      "zh": { "plainSummary": "在法条规定的协同行动、重复实施、多地点、金额合并、物品数量或团伙参与等情形下实施零售盗窃。", "degreeContext": "第(8)款规定为三级重罪；第(9)款所列特定再犯或更高金额等情形为二级重罪；如对第(8)或第(9)款已有两次以上定罪，或犯罪时持有枪支，第(11)款规定为一级重罪。" }
+      "en": {
+        "plainSummary": "Committing retail theft under one of the statute's coordinated, repeated, multi-location, aggregated-value, item-count, or group-participation circumstances.",
+        "degreeContext": "Third-degree felony under subsection (8); second-degree felony under subsection (9), including specified repeat or higher-value conduct; and first-degree felony under subsection (11) for two or more prior convictions under subsections (8) or (9), or possession of a firearm during that offense. Restitution is mandatory and includes the value of stolen or damaged merchandise and the cost of repairing or replacing other property damaged during the offense. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum). A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum). A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine)."
+      },
+      "es": {
+        "plainSummary": "Cometer hurto minorista bajo una de las circunstancias legales de coordinación, repetición, múltiples lugares, valor agregado, cantidad de artículos o participación grupal.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (8); de segundo grado conforme al inciso (9), incluso por ciertas reincidencias o mayor valor; y de primer grado conforme al inciso (11) por dos o más condenas anteriores bajo los incisos (8) o (9), o por poseer un arma de fuego durante el delito. La restitución es obligatoria e incluye el valor de la mercancía robada o dañada y el costo de reparar o reemplazar otros bienes dañados durante el delito. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000). Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000). Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000)."
+      },
+      "zh": {
+        "plainSummary": "在法条规定的协同行动、重复实施、多地点、金额合并、物品数量或团伙参与等情形下实施零售盗窃。",
+        "degreeContext": "第(8)款规定为三级重罪；第(9)款所列特定再犯或更高金额等情形为二级重罪；如对第(8)或第(9)款已有两次以上定罪，或犯罪时持有枪支，第(11)款规定为一级重罪。 必须赔偿被盗或损坏商品的价值以及修理或更换犯罪过程中受损的其他财产的费用。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。 一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+      }
     }
   },
   {
@@ -62,18 +98,62 @@
     "code": "812.019",
     "slug": "fl-fs-812-019-dealing-in-stolen-property",
     "name": "Dealing in stolen property",
-    "names": { "es": "Comercio con propiedad robada", "zh": "买卖赃物" },
+    "names": {
+      "es": "Comercio con propiedad robada",
+      "zh": "买卖赃物"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 812.019", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html" },
-      { "citation": "Fla. Stat. § 812.012", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html" }
+      {
+        "citation": "Fla. Stat. § 812.019",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.025",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.025.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Trafficking, or endeavoring to traffic, in property known or reasonably known to be stolen; the section also covers directing or managing a theft and trafficking in that stolen property.", "degreeContext": "Second-degree felony for trafficking or endeavoring to traffic in property the person knows or should know was stolen. First-degree felony when the person initiates, organizes, plans, finances, directs, manages, or supervises the theft and traffics in the stolen property." },
-      "es": { "plainSummary": "Traficar, o intentar traficar, con propiedad que se sabe o se debe saber que fue robada; la sección también abarca dirigir o administrar el hurto y traficar con esa propiedad.", "degreeContext": "Delito grave de segundo grado por traficar o intentar traficar con propiedad que la persona sabe o debe saber que fue robada. Delito grave de primer grado si inicia, organiza, planea, financia, dirige, administra o supervisa el hurto y trafica con la propiedad robada." },
-      "zh": { "plainSummary": "买卖或企图买卖明知或理应知道是赃物的财产；本条也涵盖指挥或管理盗窃并买卖该赃物。", "degreeContext": "买卖或企图买卖行为人明知或理应知道为赃物的财产，构成二级重罪。发起、组织、策划、资助、指挥、管理或监督盗窃并买卖该赃物的，构成一级重罪。" }
+      "en": {
+        "plainSummary": "Trafficking, or endeavoring to traffic, in property known or reasonably known to be stolen; the section also covers directing or managing a theft and trafficking in that stolen property.",
+        "degreeContext": "Second-degree felony for trafficking or endeavoring to traffic in property the person knows or should know was stolen. First-degree felony when the person initiates, organizes, plans, finances, directs, manages, or supervises the theft and traffics in the stolen property. If theft and dealing are charged in separate counts for the same scheme or course of conduct, §812.025 allows a guilty verdict on only one of those counts. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum). A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine)."
+      },
+      "es": {
+        "plainSummary": "Traficar, o intentar traficar, con propiedad que se sabe o se debe saber que fue robada; la sección también abarca dirigir o administrar el hurto y traficar con esa propiedad.",
+        "degreeContext": "Delito grave de segundo grado por traficar o intentar traficar con propiedad que la persona sabe o debe saber que fue robada. Delito grave de primer grado si inicia, organiza, planea, financia, dirige, administra o supervisa el hurto y trafica con la propiedad robada. Cuando se imputan por separado el hurto y el tráfico de bienes robados por un mismo plan o curso de conducta, §812.025 permite un veredicto de culpabilidad por solo uno de esos cargos. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000). Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000)."
+      },
+      "zh": {
+        "plainSummary": "买卖或企图买卖明知或理应知道是赃物的财产；本条也涵盖指挥或管理盗窃并买卖该赃物。",
+        "degreeContext": "买卖或企图买卖行为人明知或理应知道为赃物的财产，构成二级重罪。发起、组织、策划、资助、指挥、管理或监督盗窃并买卖该赃物的，构成一级重罪。 如果就同一计划或同一系列行为分别指控盗窃和交易赃物，第812.025条仅准许对其中一项作出有罪裁决。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。 一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+      }
     }
   },
   {
@@ -99,19 +179,58 @@
     "code": "817.234(1)(a)",
     "slug": "fl-fs-817-234-insurance-fraud",
     "name": "Insurance fraud",
-    "names": { "es": "Fraude de seguros", "zh": "保险欺诈" },
+    "names": {
+      "es": "Fraude de seguros",
+      "zh": "保险欺诈"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.234(1)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html" },
-      { "citation": "Fla. Stat. § 817.234", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html" },
-      { "citation": "Fla. Stat. § 812.012", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html" }
+      {
+        "citation": "Fla. Stat. § 817.234(1)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "With intent to injure, defraud, or deceive an insurer, knowingly presenting, preparing, or concealing material false, incomplete, or misleading information in support of an insurance claim or application, as specified in subsection (1)(a).", "degreeContext": "The value involved controls the grade under subsection (11): third-degree felony below $20,000, second-degree felony from $20,000 to under $100,000, and first-degree felony at $100,000 or more." },
-      "es": { "plainSummary": "Con intención de perjudicar, defraudar o engañar a una aseguradora, presentar o preparar a sabiendas información material falsa, incompleta o engañosa, u ocultarla, en apoyo de una reclamación o solicitud de seguro según el inciso (1)(a).", "degreeContext": "El valor involucrado determina el grado conforme al inciso (11): delito grave de tercer grado por menos de $20,000, de segundo grado desde $20,000 hasta menos de $100,000 y de primer grado por $100,000 o más." },
-      "zh": { "plainSummary": "意图损害、欺诈或欺骗保险人，依第(1)(a)款在保险理赔或申请中明知地提交、制作或隐瞒重大虚假、不完整或误导性信息。", "degreeContext": "第(11)款按涉及财产价值分级：低于20,000美元为三级重罪；20,000美元以上但低于100,000美元为二级重罪；100,000美元以上为一级重罪。" }
+      "en": {
+        "plainSummary": "With intent to injure, defraud, or deceive an insurer, knowingly presenting, preparing, or concealing material false, incomplete, or misleading information in support of an insurance claim or application, as specified in subsection (1)(a).",
+        "degreeContext": "The value involved controls the grade under subsection (11): third-degree felony below $20,000, second-degree felony from $20,000 to under $100,000, and first-degree felony at $100,000 or more. For a conviction involving an attempt to receive motor-vehicle insurance proceeds, subsection (12) adds a civil penalty: up to $5,000 for a first offense, over $5,000 through $10,000 for a second, and over $10,000 through $15,000 for a third or later offense under this branch. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum). A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum). A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine)."
+      },
+      "es": {
+        "plainSummary": "Con intención de perjudicar, defraudar o engañar a una aseguradora, presentar o preparar a sabiendas información material falsa, incompleta o engañosa, u ocultarla, en apoyo de una reclamación o solicitud de seguro según el inciso (1)(a).",
+        "degreeContext": "El valor involucrado determina el grado conforme al inciso (11): delito grave de tercer grado por menos de $20,000, de segundo grado desde $20,000 hasta menos de $100,000 y de primer grado por $100,000 o más. Si la condena es por actos con el fin de cobrar un seguro de automóvil, el apartado (12) añade una multa civil de hasta $5,000 la primera vez, más de $5,000 y hasta $10,000 la segunda, y más de $10,000 y hasta $15,000 la tercera o posterior en esta modalidad. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000). Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000). Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000)."
+      },
+      "zh": {
+        "plainSummary": "意图损害、欺诈或欺骗保险人，依第(1)(a)款在保险理赔或申请中明知地提交、制作或隐瞒重大虚假、不完整或误导性信息。",
+        "degreeContext": "第(11)款按涉及财产价值分级：低于20,000美元为三级重罪；20,000美元以上但低于100,000美元为二级重罪；100,000美元以上为一级重罪。 如实施本项行为是为了取得汽车保险赔款，定罪后第(12)款另加民事罚款：初犯最高5,000美元，第二次超过5,000且不超过10,000美元，第三次及以后超过10,000且不超过15,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。 一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+      }
     }
   },
   {
@@ -120,18 +239,54 @@
     "code": "817.568(2)",
     "slug": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
     "name": "Fraudulent use of personal identification information",
-    "names": { "es": "Uso fraudulento de información de identificación personal", "zh": "欺诈使用个人身份信息" },
+    "names": {
+      "es": "Uso fraudulento de información de identificación personal",
+      "zh": "欺诈使用个人身份信息"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.568(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
-      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+      {
+        "citation": "Fla. Stat. § 817.568(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and without authorization fraudulently using, or possessing with intent to fraudulently use, another person's personal identification information without consent.", "degreeContext": "Third-degree felony under subsection (2)(a). It becomes a second- or first-degree felony under subsections (2)(b)-(c) at the specified benefit, loss, injury, fraud, or victim-count thresholds, with stated mandatory minimum terms." },
-      "es": { "plainSummary": "Usar fraudulentamente, de manera intencional y sin autorización, la información de identificación personal de otra persona sin consentimiento, o poseerla con intención de usarla fraudulentamente.", "degreeContext": "Delito grave de tercer grado conforme al inciso (2)(a). Pasa a segundo o primer grado bajo los incisos (2)(b)-(c) al alcanzar los umbrales especificados de beneficio, pérdida, lesión, fraude o número de víctimas, con penas mínimas obligatorias indicadas." },
-      "zh": { "plainSummary": "故意且未经授权，在未获同意的情况下欺诈使用他人的个人身份信息，或持有该信息并意图欺诈使用。", "degreeContext": "第(2)(a)款为三级重罪。达到第(2)(b)-(c)款规定的收益、损失、伤害、欺诈金额或受害人数门槛时，升为二级或一级重罪，并适用所列强制最低刑期。" }
+      "en": {
+        "plainSummary": "Willfully and without authorization fraudulently using, or possessing with intent to fraudulently use, another person's personal identification information without consent.",
+        "degreeContext": "Third-degree felony under subsection (2)(a). It becomes a second- or first-degree felony under subsections (2)(b)-(c) at the specified benefit, loss, injury, fraud, or victim-count thresholds, with stated mandatory minimum terms. The higher tiers require actual fraudulent use. Monetary benefit, value of services, payment sought to be avoided, or amount of injury or fraud of at least $5,000, or 10–19 affected identities, triggers a second-degree felony with a 3-year minimum. At least $50,000 or 20–29 identities triggers a first-degree felony with a 5-year minimum. At least $100,000 or 30 or more identities carries a 10-year minimum. A guilty or no-contest plea or guilty finding carries a mandatory $1,001 surcharge regardless of adjudication. The court may order restitution. Use of a public record to facilitate the offense under (5), or specified impersonation to obtain or use identification under (10), can raise a first-degree misdemeanor to a third-degree felony, a third-degree felony to second degree, or a second-degree felony to first degree. Only (10) lists an increase from a first-degree felony to a life felony. Under (13), substantial assistance may support a reduced or suspended sentence on the prosecutor’s motion. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum). A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum). A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine)."
+      },
+      "es": {
+        "plainSummary": "Usar fraudulentamente, de manera intencional y sin autorización, la información de identificación personal de otra persona sin consentimiento, o poseerla con intención de usarla fraudulentamente.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (2)(a). Pasa a segundo o primer grado bajo los incisos (2)(b)-(c) al alcanzar los umbrales especificados de beneficio, pérdida, lesión, fraude o número de víctimas, con penas mínimas obligatorias indicadas. Los grados superiores exigen uso fraudulento efectivo. Si el beneficio monetario, el valor de los servicios, el pago que se quiso evitar o el monto del daño o fraude llega a $5,000, o se usan 10–19 identidades, es delito grave de segundo grado con mínimo de 3 años. Con $50,000 o más o 20–29 identidades es de primer grado con mínimo de 5 años. Con $100,000 o más o al menos 30 identidades el mínimo es de 10 años. Un reconocimiento de culpabilidad, una declaración de no oposición o una determinación de culpabilidad conlleva un recargo obligatorio de $1,001 aunque se reserve la adjudicación. El tribunal puede ordenar restitución. Usar un registro público para facilitar el delito según (5), o la suplantación especificada para obtener o usar información según (10), puede elevar el delito menor de primer grado a grave de tercero, el grave de tercero a segundo o el grave de segundo a primero. Solo (10) enumera el aumento del primer grado a delito grave castigable con cadena perpetua. Según (13), el fiscal puede solicitar reducción o suspensión por colaboración sustancial. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000). Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000). Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000)."
+      },
+      "zh": {
+        "plainSummary": "故意且未经授权，在未获同意的情况下欺诈使用他人的个人身份信息，或持有该信息并意图欺诈使用。",
+        "degreeContext": "第(2)(a)款为三级重罪。达到第(2)(b)-(c)款规定的收益、损失、伤害、欺诈金额或受害人数门槛时，升为二级或一级重罪，并适用所列强制最低刑期。 加重等级要求实际欺诈使用。金钱利益、服务价值、试图避免的付款或损害或欺诈金额达到5,000美元，或涉及10至19个身份，为二级重罪，最低3年。达到50,000美元或涉及20至29个身份，为一级重罪，最低5年；达到100,000美元或涉及至少30个身份，最低10年。 认罪、不抗辩答辩或被认定有罪均须缴纳1,001美元附加费，即使暂缓正式定罪也适用。法院可以命令赔偿。第(5)款所指利用公共记录便利犯罪，或第(10)款规定的通过冒充特定身份获取或使用身份信息，可将一级轻罪升为三级重罪、三级重罪升为二级或二级升为一级。只有第(10)款列出从一级重罪升为可判终身监禁重罪。依第(13)款，经检方申请，提供重大协助可获减刑或暂停执行。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。 一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+      }
     }
   },
   {
@@ -140,18 +295,55 @@
     "code": "817.568(4)",
     "slug": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
     "name": "Harassment by use of personal identification information",
-    "names": { "es": "Acoso mediante el uso de información de identificación personal", "zh": "利用个人身份信息进行骚扰" },
+    "names": {
+      "es": "Acoso mediante el uso de información de identificación personal",
+      "zh": "利用个人身份信息进行骚扰"
+    },
     "category": "misdemeanor",
-    "categories": ["misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.568(4)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
-      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+      {
+        "citation": "Fla. Stat. § 817.568(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and without authorization possessing, using, or attempting to use a person's personal identification information without consent for the purpose of harassing that person.", "degreeContext": "First-degree misdemeanor. The section separately provides reclassification when a public record facilitates the offense or when specified false representations are used." },
-      "es": { "plainSummary": "Poseer, usar o intentar usar intencionalmente y sin autorización la información de identificación personal de una persona, sin su consentimiento, con el propósito de acosarla.", "degreeContext": "Delito menor de primer grado. La sección dispone por separado la reclasificación cuando un registro público facilita el delito o se usan ciertas representaciones falsas." },
-      "zh": { "plainSummary": "为骚扰某人，故意且未经授权，在未获同意的情况下持有、使用或企图使用该人的个人身份信息。", "degreeContext": "一级轻罪。本条另规定，如公共记录促成犯罪或使用特定虚假身份陈述，罪名可升格。" }
+      "en": {
+        "plainSummary": "Willfully and without authorization possessing, using, or attempting to use a person's personal identification information without consent for the purpose of harassing that person.",
+        "degreeContext": "First-degree misdemeanor. The section separately provides reclassification when a public record facilitates the offense or when specified false representations are used. A guilty or no-contest plea or guilty finding carries a mandatory $1,001 surcharge regardless of adjudication. The court may order restitution. Use of a public record to facilitate the offense under (5), or specified impersonation to obtain or use identification under (10), can raise a first-degree misdemeanor to a third-degree felony, a third-degree felony to second degree, or a second-degree felony to first degree. Only (10) lists an increase from a first-degree felony to a life felony. Under (13), substantial assistance may support a reduced or suspended sentence on the prosecutor’s motion. Harassment requires conduct aimed at a specific person, intended to cause substantial emotional distress, without a legitimate purpose. Constitutionally protected conduct and accepted commercial uses are excluded. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000). A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum)."
+      },
+      "es": {
+        "plainSummary": "Poseer, usar o intentar usar intencionalmente y sin autorización la información de identificación personal de una persona, sin su consentimiento, con el propósito de acosarla.",
+        "degreeContext": "Delito menor de primer grado. La sección dispone por separado la reclasificación cuando un registro público facilita el delito o se usan ciertas representaciones falsas. Un reconocimiento de culpabilidad, una declaración de no oposición o una determinación de culpabilidad conlleva un recargo obligatorio de $1,001 aunque se reserve la adjudicación. El tribunal puede ordenar restitución. Usar un registro público para facilitar el delito según (5), o la suplantación especificada para obtener o usar información según (10), puede elevar el delito menor de primer grado a grave de tercero, el grave de tercero a segundo o el grave de segundo a primero. Solo (10) enumera el aumento del primer grado a delito grave castigable con cadena perpetua. Según (13), el fiscal puede solicitar reducción o suspensión por colaboración sustancial. El acoso exige conducta dirigida a una persona específica con intención de causar angustia emocional sustancial y sin propósito legítimo. Se excluyen la conducta protegida constitucionalmente y los usos comerciales aceptados. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000). Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000)."
+      },
+      "zh": {
+        "plainSummary": "为骚扰某人，故意且未经授权，在未获同意的情况下持有、使用或企图使用该人的个人身份信息。",
+        "degreeContext": "一级轻罪。本条另规定，如公共记录促成犯罪或使用特定虚假身份陈述，罪名可升格。 认罪、不抗辩答辩或被认定有罪均须缴纳1,001美元附加费，即使暂缓正式定罪也适用。法院可以命令赔偿。第(5)款所指利用公共记录便利犯罪，或第(10)款规定的通过冒充特定身份获取或使用身份信息，可将一级轻罪升为三级重罪、三级重罪升为二级或二级升为一级。只有第(10)款列出从一级重罪升为可判终身监禁重罪。依第(13)款，经检方申请，提供重大协助可获减刑或暂停执行。 骚扰须针对特定的人，意图造成严重精神痛苦且没有正当目的。受宪法保护的行为与公认的商业用途不在此限。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+      }
     }
   },
   {
@@ -160,18 +352,54 @@
     "code": "817.568(8)",
     "slug": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
     "name": "Fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity",
-    "names": { "es": "Uso fraudulento o posesión con intención de usar información de identificación de una persona fallecida o entidad disuelta", "zh": "欺诈使用或意图使用而持有死者或已解散企业实体的身份信息" },
+    "names": {
+      "es": "Uso fraudulento o posesión con intención de usar información de identificación de una persona fallecida o entidad disuelta",
+      "zh": "欺诈使用或意图使用而持有死者或已解散企业实体的身份信息"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.568(8)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
-      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+      {
+        "citation": "Fla. Stat. § 817.568(8)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and fraudulently using, or possessing with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity.", "degreeContext": "Third-degree felony under subsection (8)(a). Subsections (8)(b)-(c) provide second- and first-degree felony levels at specified value or number thresholds, with stated mandatory minimum terms." },
-      "es": { "plainSummary": "Usar intencional y fraudulentamente, o poseer con intención de usar fraudulentamente, información de identificación personal de una persona fallecida o entidad comercial disuelta.", "degreeContext": "Delito grave de tercer grado conforme al inciso (8)(a). Los incisos (8)(b)-(c) establecen niveles de segundo y primer grado al alcanzar ciertos umbrales de valor o cantidad, con penas mínimas obligatorias indicadas." },
-      "zh": { "plainSummary": "故意且欺诈地使用死者或已解散企业实体的个人身份信息，或持有该信息并意图欺诈使用。", "degreeContext": "第(8)(a)款为三级重罪。达到第(8)(b)-(c)款规定的金额或数量门槛时为二级或一级重罪，并适用所列强制最低刑期。" }
+      "en": {
+        "plainSummary": "Willfully and fraudulently using, or possessing with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity.",
+        "degreeContext": "Third-degree felony under subsection (8)(a). Subsections (8)(b)-(c) provide second- and first-degree felony levels at specified value or number thresholds, with stated mandatory minimum terms. The higher tiers require actual fraudulent use. Monetary benefit, value of services, payment sought to be avoided, or amount of injury or fraud of at least $5,000, or 10–19 affected identities, triggers a second-degree felony with a 3-year minimum. At least $50,000 or 20–29 identities triggers a first-degree felony with a 5-year minimum. At least $100,000 or 30 or more identities carries a 10-year minimum. A guilty or no-contest plea or guilty finding carries a mandatory $1,001 surcharge regardless of adjudication. The court may order restitution. Use of a public record to facilitate the offense under (5), or specified impersonation to obtain or use identification under (10), can raise a first-degree misdemeanor to a third-degree felony, a third-degree felony to second degree, or a second-degree felony to first degree. Only (10) lists an increase from a first-degree felony to a life felony. Under (13), substantial assistance may support a reduced or suspended sentence on the prosecutor’s motion. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum). A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum). A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine)."
+      },
+      "es": {
+        "plainSummary": "Usar intencional y fraudulentamente, o poseer con intención de usar fraudulentamente, información de identificación personal de una persona fallecida o entidad comercial disuelta.",
+        "degreeContext": "Delito grave de tercer grado conforme al inciso (8)(a). Los incisos (8)(b)-(c) establecen niveles de segundo y primer grado al alcanzar ciertos umbrales de valor o cantidad, con penas mínimas obligatorias indicadas. Los grados superiores exigen uso fraudulento efectivo. Si el beneficio monetario, el valor de los servicios, el pago que se quiso evitar o el monto del daño o fraude llega a $5,000, o se usan 10–19 identidades, es delito grave de segundo grado con mínimo de 3 años. Con $50,000 o más o 20–29 identidades es de primer grado con mínimo de 5 años. Con $100,000 o más o al menos 30 identidades el mínimo es de 10 años. Un reconocimiento de culpabilidad, una declaración de no oposición o una determinación de culpabilidad conlleva un recargo obligatorio de $1,001 aunque se reserve la adjudicación. El tribunal puede ordenar restitución. Usar un registro público para facilitar el delito según (5), o la suplantación especificada para obtener o usar información según (10), puede elevar el delito menor de primer grado a grave de tercero, el grave de tercero a segundo o el grave de segundo a primero. Solo (10) enumera el aumento del primer grado a delito grave castigable con cadena perpetua. Según (13), el fiscal puede solicitar reducción o suspensión por colaboración sustancial. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000). Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000). Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000)."
+      },
+      "zh": {
+        "plainSummary": "故意且欺诈地使用死者或已解散企业实体的个人身份信息，或持有该信息并意图欺诈使用。",
+        "degreeContext": "第(8)(a)款为三级重罪。达到第(8)(b)-(c)款规定的金额或数量门槛时为二级或一级重罪，并适用所列强制最低刑期。 加重等级要求实际欺诈使用。金钱利益、服务价值、试图避免的付款或损害或欺诈金额达到5,000美元，或涉及10至19个身份，为二级重罪，最低3年。达到50,000美元或涉及20至29个身份，为一级重罪，最低5年；达到100,000美元或涉及至少30个身份，最低10年。 认罪、不抗辩答辩或被认定有罪均须缴纳1,001美元附加费，即使暂缓正式定罪也适用。法院可以命令赔偿。第(5)款所指利用公共记录便利犯罪，或第(10)款规定的通过冒充特定身份获取或使用身份信息，可将一级轻罪升为三级重罪、三级重罪升为二级或二级升为一级。只有第(10)款列出从一级重罪升为可判终身监禁重罪。依第(13)款，经检方申请，提供重大协助可获减刑或暂停执行。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。 一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+      }
     }
   },
   {
@@ -180,18 +408,54 @@
     "code": "817.568(9)",
     "slug": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
     "name": "Fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information",
-    "names": { "es": "Creación o uso fraudulento, o posesión con intención de usar, información de identificación personal falsificada o ficticia", "zh": "欺诈制作、使用或意图欺诈使用而持有伪造或虚构的个人身份信息" },
+    "names": {
+      "es": "Creación o uso fraudulento, o posesión con intención de usar, información de identificación personal falsificada o ficticia",
+      "zh": "欺诈制作、使用或意图欺诈使用而持有伪造或虚构的个人身份信息"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.568(9)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
-      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+      {
+        "citation": "Fla. Stat. § 817.568(9)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and fraudulently creating, using, or possessing with intent to fraudulently use counterfeit or fictitious personal identification information, with intent to commit or facilitate a fraud on another person.", "degreeContext": "Third-degree felony. The section excludes lawfully authorized governmental investigative, protective, or intelligence activity." },
-      "es": { "plainSummary": "Crear, usar o poseer intencional y fraudulentamente información de identificación personal falsificada o ficticia, con intención de cometer o facilitar un fraude contra otra persona.", "degreeContext": "Delito grave de tercer grado. La sección excluye actividades gubernamentales de investigación, protección o inteligencia legalmente autorizadas." },
-      "zh": { "plainSummary": "故意且欺诈地制作、使用，或意图欺诈使用而持有伪造或虚构的个人身份信息，并意图对他人实施或协助实施欺诈。", "degreeContext": "三级重罪。本条不适用于依法授权的政府调查、保护或情报活动。" }
+      "en": {
+        "plainSummary": "Willfully and fraudulently creating, using, or possessing with intent to fraudulently use counterfeit or fictitious personal identification information, with intent to commit or facilitate a fraud on another person.",
+        "degreeContext": "Third-degree felony. The section excludes lawfully authorized governmental investigative, protective, or intelligence activity. A guilty or no-contest plea or guilty finding carries a mandatory $1,001 surcharge regardless of adjudication. The court may order restitution. Use of a public record to facilitate the offense under (5), or specified impersonation to obtain or use identification under (10), can raise a first-degree misdemeanor to a third-degree felony, a third-degree felony to second degree, or a second-degree felony to first degree. Only (10) lists an increase from a first-degree felony to a life felony. Under (13), substantial assistance may support a reduced or suspended sentence on the prosecutor’s motion. The information may concern a fictitious person. When it concerns a real person, this branch requires absence of that person’s consent. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum). A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum)."
+      },
+      "es": {
+        "plainSummary": "Crear, usar o poseer intencional y fraudulentamente información de identificación personal falsificada o ficticia, con intención de cometer o facilitar un fraude contra otra persona.",
+        "degreeContext": "Delito grave de tercer grado. La sección excluye actividades gubernamentales de investigación, protección o inteligencia legalmente autorizadas. Un reconocimiento de culpabilidad, una declaración de no oposición o una determinación de culpabilidad conlleva un recargo obligatorio de $1,001 aunque se reserve la adjudicación. El tribunal puede ordenar restitución. Usar un registro público para facilitar el delito según (5), o la suplantación especificada para obtener o usar información según (10), puede elevar el delito menor de primer grado a grave de tercero, el grave de tercero a segundo o el grave de segundo a primero. Solo (10) enumera el aumento del primer grado a delito grave castigable con cadena perpetua. Según (13), el fiscal puede solicitar reducción o suspensión por colaboración sustancial. La información puede referirse a una persona ficticia. Si corresponde a una persona real, esta modalidad exige que dicha persona no haya dado su consentimiento. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000). Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000)."
+      },
+      "zh": {
+        "plainSummary": "故意且欺诈地制作、使用，或意图欺诈使用而持有伪造或虚构的个人身份信息，并意图对他人实施或协助实施欺诈。",
+        "degreeContext": "三级重罪。本条不适用于依法授权的政府调查、保护或情报活动。 认罪、不抗辩答辩或被认定有罪均须缴纳1,001美元附加费，即使暂缓正式定罪也适用。法院可以命令赔偿。第(5)款所指利用公共记录便利犯罪，或第(10)款规定的通过冒充特定身份获取或使用身份信息，可将一级轻罪升为三级重罪、三级重罪升为二级或二级升为一级。只有第(10)款列出从一级重罪升为可判终身监禁重罪。依第(13)款，经检方申请，提供重大协助可获减刑或暂停执行。 所涉信息可以涉及虚构的人。如涉及真实的人，此项指控要求该人未同意。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。 二级重罪因此升为一级重罪（通常最高30年及10,000美元）。"
+      }
     }
   },
   {
@@ -200,18 +464,59 @@
     "code": "817.61",
     "slug": "fl-fs-817-61-fraudulent-use-of-credit-cards",
     "name": "Fraudulent use of credit cards",
-    "names": { "es": "Uso fraudulento de tarjetas de crédito", "zh": "欺诈使用信用卡" },
-    "category": "felony",
-    "categories": ["felony", "misdemeanor"],
-    "verifiedMonth": "2026-09",
+    "names": {
+      "es": "Uso fraudulento de tarjetas de crédito",
+      "zh": "欺诈使用信用卡"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 817.61", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html" },
-      { "citation": "Fla. Stat. § 817.67", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html" }
+      {
+        "citation": "Fla. Stat. § 817.61",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html"
+      },
+      {
+        "citation": "Fla. Stat. § 817.67",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "With intent to defraud, using a wrongfully obtained, retained, or forged credit card, or falsely representing cardholder status, to obtain money, goods, services, or another thing of value.", "degreeContext": "First-degree misdemeanor when, in six months, the card is used two or fewer times or the value obtained is under $100. Third-degree felony when it is used more than twice or the value is $100 or more." },
-      "es": { "plainSummary": "Con intención de defraudar, usar una tarjeta de crédito obtenida, retenida o falsificada indebidamente, o afirmar falsamente ser su titular, para obtener dinero, bienes, servicios u otra cosa de valor.", "degreeContext": "Delito menor de primer grado cuando, en seis meses, la tarjeta se usa dos veces o menos o el valor obtenido es menor de $100. Delito grave de tercer grado si se usa más de dos veces o el valor es de $100 o más." },
-      "zh": { "plainSummary": "意图欺诈，使用非法取得、保留或伪造的信用卡，或虚假声称持卡人身份，以取得金钱、商品、服务或其他有价物。", "degreeContext": "六个月内使用不超过两次或取得价值低于100美元的，为一级轻罪；使用超过两次或取得价值达到100美元的，为三级重罪。" }
+      "en": {
+        "plainSummary": "With intent to defraud, using a wrongfully obtained, retained, or forged credit card, or falsely representing cardholder status, to obtain money, goods, services, or another thing of value.",
+        "degreeContext": "First-degree misdemeanor when, in six months, the card is used two or fewer times or the value obtained is under $100. Third-degree felony when it is used more than twice or the value is $100 or more. The filed count and its six-month use or value allegation determine which §817.67 penalty is at issue. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. The injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions. A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000). A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum)."
+      },
+      "es": {
+        "plainSummary": "Con intención de defraudar, usar una tarjeta de crédito obtenida, retenida o falsificada indebidamente, o afirmar falsamente ser su titular, para obtener dinero, bienes, servicios u otra cosa de valor.",
+        "degreeContext": "Delito menor de primer grado cuando, en seis meses, la tarjeta se usa dos veces o menos o el valor obtenido es menor de $100. Delito grave de tercer grado si se usa más de dos veces o el valor es de $100 o más. El cargo presentado y la alegación sobre uso o valor dentro de seis meses determinan qué pena de §817.67 está en cuestión. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. La lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones. Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000). Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000)."
+      },
+      "zh": {
+        "plainSummary": "意图欺诈，使用非法取得、保留或伪造的信用卡，或虚假声称持卡人身份，以取得金钱、商品、服务或其他有价物。",
+        "degreeContext": "六个月内使用不超过两次或取得价值低于100美元的，为一级轻罪；使用超过两次或取得价值达到100美元的，为三级重罪。 应依具体指控及六个月期间内使用次数或金额的指称确定涉及第817.67条的哪项处罚。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 三级重罪通常最高可判监禁5年及罚款5,000美元。 对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类指控须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。 一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。 三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+      }
     }
   },
   {
