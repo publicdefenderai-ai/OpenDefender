@@ -1,0 +1,2714 @@
+{
+  "schemaVersion": 1,
+  "publicObservation": {
+    "observedAt": "2026-11-11T06:07:44.073Z",
+    "origin": "https://opendefender.net",
+    "snapshot": "34ed5248ad0fc0dafe4013d62d45ab676e294b26d9fd622349a93ee57ace6d6c",
+    "choices": [
+      {
+        "id": "oh-rape-in-the-first-degree",
+        "name": "Rape",
+        "code": "2907.02",
+        "maxPenalty": "First-degree felony; up to 11 years imprisonment; up to life if prior offenses"
+      },
+      {
+        "id": "oh-sexual-assault-in-the-third-degree",
+        "name": "Gross Sexual Imposition",
+        "code": "2907.05",
+        "maxPenalty": "Third-degree felony; up to 5 years imprisonment; up to life if victim under 13"
+      },
+      {
+        "id": "oh-robbery-in-the-first-degree",
+        "name": "Aggravated Robbery",
+        "code": "2911.01",
+        "maxPenalty": "Up to life imprisonment and/or substantial fines"
+      },
+      {
+        "id": "oh-robbery-in-the-second-degree",
+        "name": "Robbery",
+        "code": "2911.02",
+        "maxPenalty": "Up to 20 years imprisonment and/or substantial fines"
+      },
+      {
+        "id": "oh-disorderly-conduct",
+        "name": "Disorderly Conduct",
+        "code": "2917.11",
+        "maxPenalty": "Penalties vary by jurisdiction"
+      },
+      {
+        "id": "oh-domestic-violence",
+        "name": "Domestic Violence",
+        "code": "2919.25",
+        "maxPenalty": "M1 1st offense: up to 180 days/$1,000"
+      },
+      {
+        "id": "oh-criminal-trespass",
+        "name": "Criminal Trespass",
+        "code": "2911.21",
+        "maxPenalty": "M4: up to 30 days/$250"
+      }
+    ],
+    "status": {
+      "sourceCount": 259,
+      "snapshotCount": 259,
+      "currentSnapshotCount": 259,
+      "pendingReviewCount": 0,
+      "linkedChargeCount": 134,
+      "selectableChargeCount": 10,
+      "catalogRecordCount": 115,
+      "lastImportStatus": "completed",
+      "lastImportCompletedAt": "2026-10-27T02:21:42.972Z"
+    }
+  },
+  "counts": {
+    "raw": 391,
+    "configured": 372,
+    "reviewed": 276,
+    "public": 7,
+    "publicReviewed": 0
+  },
+  "publicIdentityChecks": [
+    {
+      "id": "oh-rape-in-the-first-degree",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2907-02-rape"
+      ]
+    },
+    {
+      "id": "oh-sexual-assault-in-the-third-degree",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2907-05-gross-sexual-imposition"
+      ]
+    },
+    {
+      "id": "oh-robbery-in-the-first-degree",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2911-01-aggravated-robbery"
+      ]
+    },
+    {
+      "id": "oh-robbery-in-the-second-degree",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2911-02-robbery"
+      ]
+    },
+    {
+      "id": "oh-disorderly-conduct",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2917-11-disorderly-conduct"
+      ]
+    },
+    {
+      "id": "oh-domestic-violence",
+      "configured": false,
+      "reviewed": false,
+      "sameSectionReviewedIds": [
+        "oh-orc-2919-25-physical-harm",
+        "oh-orc-2919-25-reckless-serious-harm",
+        "oh-orc-2919-25-threat-of-force"
+      ]
+    },
+    {
+      "id": "oh-criminal-trespass",
+      "configured": true,
+      "reviewed": false,
+      "sameSectionReviewedIds": []
+    }
+  ],
+  "priorityGroups": [
+    {
+      "priority": "assault",
+      "sections": [
+        "2903.11",
+        "2903.12",
+        "2903.13",
+        "2903.14"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-2903-11-felonious-assault",
+          "group": "chapter-2903",
+          "code": "2903.11",
+          "name": "Felonious assault",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-12-aggravated-assault",
+          "group": "chapter-2903",
+          "code": "2903.12",
+          "name": "Aggravated assault",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-14-negligent-assault",
+          "group": "chapter-2903",
+          "code": "2903.14",
+          "name": "Negligent assault",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-13-assault",
+          "group": "reviewed",
+          "code": "2903.13",
+          "name": "Assault",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": []
+    },
+    {
+      "priority": "domestic violence",
+      "sections": [
+        "2919.25"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-2919-25-physical-harm",
+          "group": "protection",
+          "code": "2919.25(A)",
+          "name": "Domestic violence",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-25-reckless-serious-harm",
+          "group": "protection",
+          "code": "2919.25(B)",
+          "name": "Domestic violence",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-25-threat-of-force",
+          "group": "protection",
+          "code": "2919.25(C)",
+          "name": "Domestic violence",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": [
+        "oh-domestic-violence"
+      ]
+    },
+    {
+      "priority": "theft",
+      "sections": [
+        "2913.02"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-2913-02-theft",
+          "group": "reviewed",
+          "code": "2913.02",
+          "name": "Theft",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": []
+    },
+    {
+      "priority": "impaired driving",
+      "sections": [
+        "4511.19"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
+          "group": "reviewed",
+          "code": "4511.19",
+          "name": "Operating a vehicle after underage alcohol consumption",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-under-the-influence-of-alcohol-a-drug-of-abuse-or-a-combination-of-them",
+          "group": "reviewed",
+          "code": "4511.19",
+          "name": "Operating a vehicle under the influence of alcohol, a drug of abuse, or a combination of them",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-while-under-the-influence-of-a-listed-controlled-substance-or-a-listed-metabolite-of-a-controlled-substance",
+          "group": "reviewed",
+          "code": "4511.19",
+          "name": "Operating a vehicle while under the influence of a listed controlled substance or a listed metabolite of a controlled substance",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": []
+    },
+    {
+      "priority": "drug possession",
+      "sections": [
+        "2925.11"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-2925-11-aggravated-possession-of-drugs",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Aggravated possession of drugs",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-a-controlled-substance-analog",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of a controlled substance analog",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-a-fentanyl-related-compound",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of a fentanyl-related compound",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-cocaine",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of cocaine",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-drugs",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of drugs",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-hashish",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of hashish",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-heroin",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of heroin",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-l-s-d",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of L.S.D.",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-marihuana",
+          "group": "reviewed",
+          "code": "2925.11",
+          "name": "Possession of marihuana",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": []
+    },
+    {
+      "priority": "extortion",
+      "sections": [
+        "2905.11"
+      ],
+      "reviewed": [
+        {
+          "id": "oh-orc-2905-11-extortion",
+          "group": "residual",
+          "code": "2905.11",
+          "name": "Extortion",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-11-sexual-extortion",
+          "group": "residual",
+          "code": "2905.11",
+          "name": "Sexual extortion",
+          "public": false
+        }
+      ],
+      "publicLegacyIds": []
+    }
+  ],
+  "researchQueue": [
+    {
+      "family": "Sexual offenses",
+      "section": "2907.06",
+      "title": "Sexual imposition",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.06",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Sexual offenses",
+      "section": "2907.07",
+      "title": "Importuning",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.07",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Sexual offenses",
+      "section": "2907.08",
+      "title": "Voyeurism",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.08",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Weapons offenses",
+      "section": "2923.15",
+      "title": "Using weapons while intoxicated",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.15",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Weapons offenses",
+      "section": "2923.16",
+      "title": "Improperly handling firearms in a motor vehicle",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.16",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Drug offenses",
+      "section": "2925.12",
+      "title": "Possessing drug abuse instruments",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.12",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    },
+    {
+      "family": "Drug offenses",
+      "section": "2925.22",
+      "title": "Deception to obtain a dangerous drug",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.22",
+      "catalogIds": [],
+      "reviewedIds": [],
+      "publicIds": []
+    }
+  ],
+  "holds": [
+    {
+      "id": "oh-orc-2911-21-criminal-trespass",
+      "sections": [
+        "1509.01"
+      ]
+    }
+  ],
+  "families": [
+    {
+      "group": "chapter-2903",
+      "receiptExpiresAt": "2027-02-11T04:52:10.198Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2903-01-aggravated-murder",
+          "section": "2903.01",
+          "code": "2903.01",
+          "name": "Aggravated murder",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-02-murder",
+          "section": "2903.02",
+          "code": "2903.02",
+          "name": "Murder",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-03-voluntary-manslaughter",
+          "section": "2903.03",
+          "code": "2903.03",
+          "name": "Voluntary manslaughter",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-04-involuntary-manslaughter",
+          "section": "2903.04",
+          "code": "2903.04",
+          "name": "Involuntary manslaughter",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-041-reckless-homicide",
+          "section": "2903.041",
+          "code": "2903.041",
+          "name": "Reckless homicide",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.041",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-05-negligent-homicide",
+          "section": "2903.05",
+          "code": "2903.05",
+          "name": "Negligent homicide",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-11-felonious-assault",
+          "section": "2903.11",
+          "code": "2903.11",
+          "name": "Felonious assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-12-aggravated-assault",
+          "section": "2903.12",
+          "code": "2903.12",
+          "name": "Aggravated assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-14-negligent-assault",
+          "section": "2903.14",
+          "code": "2903.14",
+          "name": "Negligent assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-15-permitting-child-abuse",
+          "section": "2903.15",
+          "code": "2903.15",
+          "name": "Permitting child abuse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.15",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-18-strangulation",
+          "section": "2903.18",
+          "code": "2903.18",
+          "name": "Strangulation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.18",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-21-aggravated-menacing",
+          "section": "2903.21",
+          "code": "2903.21",
+          "name": "Aggravated menacing",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-31-hazing",
+          "section": "2903.31",
+          "code": "2903.31",
+          "name": "Hazing",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-311-reckless-failure-to-immediately-report-knowledge-of-hazing",
+          "section": "2903.311",
+          "code": "2903.311",
+          "name": "Reckless failure to immediately report knowledge of hazing",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.311",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-32-female-genital-mutilation",
+          "section": "2903.32",
+          "code": "2903.32",
+          "name": "Female genital mutilation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-34-a1-patient-abuse",
+          "section": "2903.34",
+          "code": "2903.34",
+          "name": "Patient abuse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-34-a2-gross-patient-neglect",
+          "section": "2903.34",
+          "code": "2903.34",
+          "name": "Gross patient neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-34-a3-patient-neglect",
+          "section": "2903.34",
+          "code": "2903.34",
+          "name": "Patient neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-35-filing-false-patient-abuse-or-neglect-complaints",
+          "section": "2903.35",
+          "code": "2903.35",
+          "name": "Filing false patient abuse or neglect complaints",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.35",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "reviewed",
+      "receiptExpiresAt": "2027-02-11T04:52:12.895Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2903-06-aggravated-vehicular-homicide",
+          "section": "2903.06",
+          "code": "2903.06",
+          "name": "Aggravated vehicular homicide",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-06-vehicular-homicide",
+          "section": "2903.06",
+          "code": "2903.06",
+          "name": "Vehicular homicide",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-06-vehicular-manslaughter",
+          "section": "2903.06",
+          "code": "2903.06",
+          "name": "Vehicular manslaughter",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-08-aggravated-vehicular-assault",
+          "section": "2903.08",
+          "code": "2903.08",
+          "name": "Aggravated vehicular assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-08-vehicular-assault",
+          "section": "2903.08",
+          "code": "2903.08",
+          "name": "Vehicular assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-13-assault",
+          "section": "2903.13",
+          "code": "2903.13",
+          "name": "Assault",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-16-knowingly-failing-to-provide-for-a-person-with-a-functional-impairment",
+          "section": "2903.16",
+          "code": "2903.16",
+          "name": "Knowingly failing to provide for a person with a functional impairment",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-16-recklessly-failing-to-provide-for-a-person-with-a-functional-impairment",
+          "section": "2903.16",
+          "code": "2903.16",
+          "name": "Recklessly failing to provide for a person with a functional impairment",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-211-menacing-by-stalking",
+          "section": "2903.211",
+          "code": "2903.211",
+          "name": "Menacing by stalking",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-216-illegal-use-of-a-tracking-device-or-application",
+          "section": "2903.216",
+          "code": "2903.216",
+          "name": "Illegal use of a tracking device or application",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.216",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-22-menacing",
+          "section": "2903.22",
+          "code": "2903.22",
+          "name": "Menacing",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2903-341-patient-endangerment",
+          "section": "2903.341",
+          "code": "2903.341",
+          "name": "Patient endangerment",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.341",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-02-rape",
+          "section": "2907.02",
+          "code": "2907.02",
+          "name": "Rape",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-03-sexual-battery",
+          "section": "2907.03",
+          "code": "2907.03",
+          "name": "Sexual battery",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-04-unlawful-sexual-conduct-with-a-minor",
+          "section": "2907.04",
+          "code": "2907.04",
+          "name": "Unlawful sexual conduct with a minor",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-05-gross-sexual-imposition",
+          "section": "2907.05",
+          "code": "2907.05",
+          "name": "Gross sexual imposition",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-09-public-indecency",
+          "section": "2907.09",
+          "code": "2907.09",
+          "name": "Public indecency",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.09",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-24-engaging-in-solicitation-after-a-positive-hiv-test",
+          "section": "2907.24",
+          "code": "2907.24",
+          "name": "Engaging in solicitation after a positive HIV test",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.24",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-24-soliciting",
+          "section": "2907.24",
+          "code": "2907.24",
+          "name": "Soliciting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.24",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-25-engaging-in-prostitution-after-a-positive-hiv-test",
+          "section": "2907.25",
+          "code": "2907.25",
+          "name": "Engaging in prostitution after a positive HIV test",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.25",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-25-prostitution",
+          "section": "2907.25",
+          "code": "2907.25",
+          "name": "Prostitution",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.25",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2907-321-pandering-obscenity-involving-a-minor-or-impaired-person",
+          "section": "2907.321",
+          "code": "2907.321",
+          "name": "Pandering obscenity involving a minor or impaired person",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-06-criminal-damaging-or-endangering",
+          "section": "2909.06",
+          "code": "2909.06",
+          "name": "Criminal damaging or endangering",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.06",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-01-aggravated-robbery",
+          "section": "2911.01",
+          "code": "2911.01",
+          "name": "Aggravated robbery",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-02-robbery",
+          "section": "2911.02",
+          "code": "2911.02",
+          "name": "Robbery",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-11-aggravated-burglary",
+          "section": "2911.11",
+          "code": "2911.11",
+          "name": "Aggravated burglary",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-12-burglary",
+          "section": "2911.12",
+          "code": "2911.12",
+          "name": "Burglary",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-12-trespass-in-a-habitation-when-a-person-is-present-or-likely-to-be-present",
+          "section": "2911.12",
+          "code": "2911.12",
+          "name": "Trespass in a habitation when a person is present or likely to be present",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-13-breaking-and-entering",
+          "section": "2911.13",
+          "code": "2911.13",
+          "name": "Breaking and entering",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-02-theft",
+          "section": "2913.02",
+          "code": "2913.02",
+          "name": "Theft",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-04-unauthorized-use-of-computer-cable-or-telecommunication-property",
+          "section": "2913.04",
+          "code": "2913.04",
+          "name": "Unauthorized use of computer, cable, or telecommunication property",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-04-unauthorized-use-of-property",
+          "section": "2913.04",
+          "code": "2913.04",
+          "name": "Unauthorized use of property",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-04-unauthorized-use-of-the-law-enforcement-automated-database-system",
+          "section": "2913.04",
+          "code": "2913.04",
+          "name": "Unauthorized use of the law enforcement automated database system",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-04-unauthorized-use-of-the-ohio-law-enforcement-gateway",
+          "section": "2913.04",
+          "code": "2913.04",
+          "name": "Unauthorized use of the Ohio law enforcement gateway",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-11-passing-bad-checks",
+          "section": "2913.11",
+          "code": "2913.11",
+          "name": "Passing bad checks",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-21-misuse-of-credit-cards",
+          "section": "2913.21",
+          "code": "2913.21",
+          "name": "Misuse of credit cards",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-31-forgery",
+          "section": "2913.31",
+          "code": "2913.31",
+          "name": "Forgery",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-31-forging-identification-cards-or-selling-or-distributing-forged-identification-cards",
+          "section": "2913.31",
+          "code": "2913.31",
+          "name": "Forging identification cards or selling or distributing forged identification cards",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-49-identity-fraud",
+          "section": "2913.49",
+          "code": "2913.49",
+          "name": "Identity fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.49",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-51-receiving-stolen-property",
+          "section": "2913.51",
+          "code": "2913.51",
+          "name": "Receiving stolen property",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.51",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-11-disorderly-conduct",
+          "section": "2917.11",
+          "code": "2917.11",
+          "name": "Disorderly conduct",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-12-disturbing-a-lawful-meeting",
+          "section": "2917.12",
+          "code": "2917.12",
+          "name": "Disturbing a lawful meeting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+          "section": "2917.14",
+          "code": "2917.14",
+          "name": "Unlawfully impeding public passage of an emergency service responder",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-21-telecommunications-harassment",
+          "section": "2917.21",
+          "code": "2917.21",
+          "name": "Telecommunications harassment",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-21-contributing-to-the-nonsupport-of-dependents",
+          "section": "2919.21",
+          "code": "2919.21",
+          "name": "Contributing to the nonsupport of dependents",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-21-nonsupport-of-dependents",
+          "section": "2919.21",
+          "code": "2919.21",
+          "name": "Nonsupport of dependents",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-27-violating-a-protection-order",
+          "section": "2919.27",
+          "code": "2919.27",
+          "name": "Violating a protection order",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.27",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-13-falsification",
+          "section": "2921.13",
+          "code": "2921.13",
+          "name": "Falsification",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-13-falsification-in-a-theft-offense",
+          "section": "2921.13",
+          "code": "2921.13",
+          "name": "Falsification in a theft offense",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-13-falsification-regarding-a-removal-proceeding",
+          "section": "2921.13",
+          "code": "2921.13",
+          "name": "Falsification regarding a removal proceeding",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-13-falsification-to-obtain-a-concealed-handgun-license",
+          "section": "2921.13",
+          "code": "2921.13",
+          "name": "Falsification to obtain a concealed handgun license",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-13-falsification-to-purchase-a-firearm",
+          "section": "2921.13",
+          "code": "2921.13",
+          "name": "Falsification to purchase a firearm",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-32-obstructing-justice",
+          "section": "2921.32",
+          "code": "2921.32",
+          "name": "Obstructing justice",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-33-resisting-arrest",
+          "section": "2921.33",
+          "code": "2921.33",
+          "name": "Resisting arrest",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.33",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-01-conspiracy",
+          "section": "2923.01",
+          "code": "2923.01",
+          "name": "Conspiracy",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-02-attempt-to-commit-an-offense",
+          "section": "2923.02",
+          "code": "2923.02",
+          "name": "Attempt to commit an offense",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-03-complicity-in-the-commission-of-an-offense",
+          "section": "2923.03",
+          "code": "2923.03",
+          "name": "Complicity in the commission of an offense",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-12-carrying-concealed-weapons",
+          "section": "2923.12",
+          "code": "2923.12",
+          "name": "Carrying concealed weapons",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-13-having-weapons-while-under-disability",
+          "section": "2923.13",
+          "code": "2923.13",
+          "name": "Having weapons while under disability",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-161-improperly-discharging-a-firearm-at-or-into-a-habitation-in-a-school-safety-zone-or-with-the-intent-to-cause-harm-or-panic-to-persons-in-a-school-in-a-school-building-or-at-a-school-function-or-the-evacuation-of-a-school-function",
+          "section": "2923.161",
+          "code": "2923.161",
+          "name": "Improperly discharging a firearm at or into a habitation, in a school safety zone, or with the intent to cause harm or panic to persons in a school, in a school building, or at a school function or the evacuation of a school function",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.161",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-162-discharge-of-a-firearm-on-or-near-prohibited-premises",
+          "section": "2923.162",
+          "code": "2923.162",
+          "name": "Discharge of a firearm on or near prohibited premises",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.162",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-17-illegally-manufacturing-or-processing-explosives",
+          "section": "2923.17",
+          "code": "2923.17",
+          "name": "Illegally manufacturing or processing explosives",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.17",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-17-unlawful-possession-of-dangerous-ordnance",
+          "section": "2923.17",
+          "code": "2923.17",
+          "name": "Unlawful possession of dangerous ordnance",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.17",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-211-underage-purchase-of-a-handgun",
+          "section": "2923.211",
+          "code": "2923.211",
+          "name": "Underage purchase of a handgun",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2923-32-engaging-in-a-pattern-of-corrupt-activity",
+          "section": "2923.32",
+          "code": "2923.32",
+          "name": "Engaging in a pattern of corrupt activity",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-aggravated-trafficking-in-drugs",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Aggravated trafficking in drugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-a-controlled-substance-analog",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in a controlled substance analog",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-a-fentanyl-related-compound",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in a fentanyl-related compound",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-cocaine",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in cocaine",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-drugs",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in drugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-hashish",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in hashish",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-heroin",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in heroin",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-l-s-d",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in L.S.D.",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-03-trafficking-in-marihuana",
+          "section": "2925.03",
+          "code": "2925.03",
+          "name": "Trafficking in marihuana",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-04-illegal-cultivation-of-marihuana",
+          "section": "2925.04",
+          "code": "2925.04",
+          "name": "Illegal cultivation of marihuana",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-04-illegal-manufacture-of-drugs",
+          "section": "2925.04",
+          "code": "2925.04",
+          "name": "Illegal manufacture of drugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-05-aggravated-funding-of-drug-trafficking",
+          "section": "2925.05",
+          "code": "2925.05",
+          "name": "Aggravated funding of drug trafficking",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-05-funding-of-drug-trafficking",
+          "section": "2925.05",
+          "code": "2925.05",
+          "name": "Funding of drug trafficking",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-05-funding-of-marihuana-trafficking",
+          "section": "2925.05",
+          "code": "2925.05",
+          "name": "Funding of marihuana trafficking",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-aggravated-possession-of-drugs",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Aggravated possession of drugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-a-controlled-substance-analog",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of a controlled substance analog",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-a-fentanyl-related-compound",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of a fentanyl-related compound",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-cocaine",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of cocaine",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-drugs",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of drugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-hashish",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of hashish",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-heroin",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of heroin",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-l-s-d",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of L.S.D.",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-11-possession-of-marihuana",
+          "section": "2925.11",
+          "code": "2925.11",
+          "name": "Possession of marihuana",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-13-permitting-drug-abuse",
+          "section": "2925.13",
+          "code": "2925.13",
+          "name": "Permitting drug abuse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-14-dealing-in-drug-paraphernalia",
+          "section": "2925.14",
+          "code": "2925.14",
+          "name": "Dealing in drug paraphernalia",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-14-illegal-advertising-of-drug-paraphernalia",
+          "section": "2925.14",
+          "code": "2925.14",
+          "name": "Illegal advertising of drug paraphernalia",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-14-illegal-use-or-possession-of-drug-paraphernalia",
+          "section": "2925.14",
+          "code": "2925.14",
+          "name": "Illegal use or possession of drug paraphernalia",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2925-14-selling-drug-paraphernalia-to-juveniles",
+          "section": "2925.14",
+          "code": "2925.14",
+          "name": "Selling drug paraphernalia to juveniles",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2927-12-ethnic-intimidation",
+          "section": "2927.12",
+          "code": "2927.12",
+          "name": "Ethnic intimidation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2927.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-3767-32-littering",
+          "section": "3767.32",
+          "code": "3767.32",
+          "name": "Littering",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
+          "section": "4301.62",
+          "code": "4301.62",
+          "name": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
+          "section": "4301.633",
+          "code": "4301.633",
+          "name": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4510-11-driving-under-suspension-or-in-violation-of-license-restriction",
+          "section": "4510.11",
+          "code": "4510.11",
+          "name": "Driving under suspension or in violation of license restriction",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
+          "section": "4511.19",
+          "code": "4511.19",
+          "name": "Operating a vehicle after underage alcohol consumption",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-under-the-influence-of-alcohol-a-drug-of-abuse-or-a-combination-of-them",
+          "section": "4511.19",
+          "code": "4511.19",
+          "name": "Operating a vehicle under the influence of alcohol, a drug of abuse, or a combination of them",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4511-19-operating-a-vehicle-while-under-the-influence-of-a-listed-controlled-substance-or-a-listed-metabolite-of-a-controlled-substance",
+          "section": "4511.19",
+          "code": "4511.19",
+          "name": "Operating a vehicle while under the influence of a listed controlled substance or a listed metabolite of a controlled substance",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4513-02-unsafe-vehicles",
+          "section": "4513.02",
+          "code": "4513.02",
+          "name": "Unsafe vehicles",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-4549-02-failure-to-stop-after-an-accident",
+          "section": "4549.02",
+          "code": "4549.02",
+          "name": "Failure to stop after an accident",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-4549.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-959-13-cruelty-to-animals",
+          "section": "959.13",
+          "code": "959.13",
+          "name": "Cruelty to animals",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.13",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "major",
+      "receiptExpiresAt": "2027-02-11T04:52:15.561Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2905-03-unlawful-restraint",
+          "section": "2905.03",
+          "code": "2905.03",
+          "name": "Unlawful restraint",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-12-coercion",
+          "section": "2905.12",
+          "code": "2905.12",
+          "name": "Coercion",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-08-endangering-aircraft",
+          "section": "2909.08",
+          "code": "2909.08",
+          "name": "Endangering aircraft",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.08",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-08-endangering-airport-operations",
+          "section": "2909.08",
+          "code": "2909.08",
+          "name": "Endangering airport operations",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.08",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-081-interfering-with-the-operation-of-an-aircraft-with-a-laser",
+          "section": "2909.081",
+          "code": "2909.081",
+          "name": "Interfering with the operation of an aircraft with a laser",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.081",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-09-vehicular-vandalism",
+          "section": "2909.09",
+          "code": "2909.09",
+          "name": "Vehicular vandalism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.09",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-10-criminal-trespass-on-a-locomotive-engine-railroad-car-or-other-railroad-vehicle",
+          "section": "2909.10",
+          "code": "2909.10",
+          "name": "Criminal trespass on a locomotive, engine, railroad car, or other railroad vehicle",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.10",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-10-interference-with-the-operation-of-a-train",
+          "section": "2909.10",
+          "code": "2909.10",
+          "name": "Interference with the operation of a train",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.10",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-10-railroad-vandalism",
+          "section": "2909.10",
+          "code": "2909.10",
+          "name": "Railroad vandalism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.10",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-101-railroad-grade-crossing-device-vandalism",
+          "section": "2909.101",
+          "code": "2909.101",
+          "name": "Railroad grade crossing device vandalism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.101",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-22-soliciting-or-providing-support-for-an-act-of-terrorism",
+          "section": "2909.22",
+          "code": "2909.22",
+          "name": "Soliciting or providing support for an act of terrorism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-23-making-a-terroristic-threat",
+          "section": "2909.23",
+          "code": "2909.23",
+          "name": "Making a terroristic threat",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-26-criminal-possession-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+          "section": "2909.26",
+          "code": "2909.26",
+          "name": "Criminal possession of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.26",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-27-criminal-use-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+          "section": "2909.27",
+          "code": "2909.27",
+          "name": "Criminal use of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.27",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-28-illegal-assembly-or-possession-of-chemicals-or-substances-for-the-manufacture-of-a-chemical-weapon-biological-weapon-radiological-or-nuclear-weapon-or-explosive-device",
+          "section": "2909.28",
+          "code": "2909.28",
+          "name": "Illegal assembly or possession of chemicals or substances for the manufacture of a chemical weapon, biological weapon, radiological or nuclear weapon, or explosive device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.28",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-29-money-laundering-in-support-of-terrorism",
+          "section": "2909.29",
+          "code": "2909.29",
+          "name": "Money laundering in support of terrorism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.29",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-211-aggravated-trespass-a-1",
+          "section": "2911.211",
+          "code": "2911.211",
+          "name": "Aggravated trespass",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-23-criminal-trespass-on-a-place-of-public-amusement",
+          "section": "2911.23",
+          "code": "2911.23",
+          "name": "Criminal trespass on a place of public amusement",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-31-safecracking",
+          "section": "2911.31",
+          "code": "2911.31",
+          "name": "Safecracking",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2911-32-tampering-with-coin-machines",
+          "section": "2911.32",
+          "code": "2911.32",
+          "name": "Tampering with coin machines",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.32",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "residual",
+      "receiptExpiresAt": "2027-02-03T07:20:48.867Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2905-01-kidnapping",
+          "section": "2905.01",
+          "code": "2905.01",
+          "name": "Kidnapping",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-02-abduction",
+          "section": "2905.02",
+          "code": "2905.02",
+          "name": "Abduction",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-11-extortion",
+          "section": "2905.11",
+          "code": "2905.11",
+          "name": "Extortion",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-11-sexual-extortion",
+          "section": "2905.11",
+          "code": "2905.11",
+          "name": "Sexual extortion",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-22-criminal-usury",
+          "section": "2905.22",
+          "code": "2905.22(A)(2)",
+          "name": "Extortionate extension of credit - criminal usury",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-22-extortionate-credit",
+          "section": "2905.22",
+          "code": "2905.22(A)(1)",
+          "name": "Extortionate extension of credit - criminal usury",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-22-usurious-records",
+          "section": "2905.22",
+          "code": "2905.22(A)(3)",
+          "name": "Extortionate extension of credit - criminal usury",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-32-trafficking-in-persons",
+          "section": "2905.32",
+          "code": "2905.32",
+          "name": "Trafficking in persons",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2905-33-unlawful-documents",
+          "section": "2905.33",
+          "code": "2905.33",
+          "name": "Unlawful conduct with respect to documents",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2905.33",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-02-aggravated-arson",
+          "section": "2909.02",
+          "code": "2909.02",
+          "name": "Aggravated arson",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-03-arson",
+          "section": "2909.03",
+          "code": "2909.03",
+          "name": "Arson",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-04-disrupting-public-services",
+          "section": "2909.04",
+          "code": "2909.04",
+          "name": "Disrupting public services",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-05-vandalism",
+          "section": "2909.05",
+          "code": "2909.05",
+          "name": "Vandalism",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2909-07-criminal-mischief",
+          "section": "2909.07",
+          "code": "2909.07",
+          "name": "Criminal mischief",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.07",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "theft-fraud",
+      "receiptExpiresAt": "2027-02-06T06:35:18.651Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2913-021-theft-of-mail",
+          "section": "2913.021",
+          "code": "2913.021",
+          "name": "Theft of mail",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.021",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-03-extended-vehicle-use",
+          "section": "2913.03",
+          "code": "2913.03(B)",
+          "name": "Unauthorized use of a vehicle",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-03-unauthorized-vehicle-use",
+          "section": "2913.03",
+          "code": "2913.03(A)",
+          "name": "Unauthorized use of a vehicle",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-041-unauthorized-device-possession",
+          "section": "2913.041",
+          "code": "2913.041(A)",
+          "name": "Possession of an unauthorized device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.041",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-041-unauthorized-device-sale",
+          "section": "2913.041",
+          "code": "2913.041(B)",
+          "name": "Sale of an unauthorized device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.041",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-05-telecommunications-fraud",
+          "section": "2913.05",
+          "code": "2913.05",
+          "name": "Telecommunications fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-06-unlawful-telecommunications-device",
+          "section": "2913.06",
+          "code": "2913.06",
+          "name": "Unlawful use of a telecommunications device",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.06",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-07-motion-picture-piracy",
+          "section": "2913.07",
+          "code": "2913.07",
+          "name": "Motion picture piracy",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.07",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-08-organized-retail-theft",
+          "section": "2913.08",
+          "code": "2913.08",
+          "name": "Organized theft of retail property",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.08",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-30-counterfeiting",
+          "section": "2913.30",
+          "code": "2913.30",
+          "name": "Counterfeiting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.30",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-32-criminal-simulation",
+          "section": "2913.32",
+          "code": "2913.32",
+          "name": "Criminal simulation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-33-making-using-slugs",
+          "section": "2913.33",
+          "code": "2913.33",
+          "name": "Making or using slugs",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.33",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-34-trademark-manufacture",
+          "section": "2913.34",
+          "code": "2913.34(A)(1)",
+          "name": "Trademark counterfeiting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-34-trademark-tools",
+          "section": "2913.34",
+          "code": "2913.34(A)(2)",
+          "name": "Trademark counterfeiting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-34-trademark-trafficking",
+          "section": "2913.34",
+          "code": "2913.34(A)(3)-(5)",
+          "name": "Trademark counterfeiting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-42-tampering-records",
+          "section": "2913.42",
+          "code": "2913.42",
+          "name": "Tampering with records",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.42",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-43-securing-writings-deception",
+          "section": "2913.43",
+          "code": "2913.43",
+          "name": "Securing writings by deception",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.43",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-44-personating-officer",
+          "section": "2913.44",
+          "code": "2913.44",
+          "name": "Personating an officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.44",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-45-defrauding-creditors",
+          "section": "2913.45",
+          "code": "2913.45",
+          "name": "Defrauding creditors",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.45",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-47-insurance-fraud",
+          "section": "2913.47",
+          "code": "2913.47",
+          "name": "Insurance fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.47",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-48-workers-compensation-fraud",
+          "section": "2913.48",
+          "code": "2913.48",
+          "name": "Workers' compensation fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.48",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "benefits-fraud",
+      "receiptExpiresAt": "2027-02-06T06:35:45.021Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2913-40-medicaid-fraud",
+          "section": "2913.40",
+          "code": "2913.40",
+          "name": "Medicaid fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.40",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-401-medicaid-eligibility-fraud",
+          "section": "2913.401",
+          "code": "2913.401",
+          "name": "Medicaid eligibility fraud",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.401",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-421-commercial-email-spam",
+          "section": "2913.421",
+          "code": "2913.421(B)",
+          "name": "Illegally transmitting multiple commercial electronic mail messages",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-421-unauthorized-computer-access",
+          "section": "2913.421",
+          "code": "2913.421(D)(1)",
+          "name": "Unauthorized access of a computer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-441-law-enforcement-emblem",
+          "section": "2913.441",
+          "code": "2913.441",
+          "name": "Unlawful display of law enforcement emblem",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.441",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2913-46-illegal-benefits-use",
+          "section": "2913.46",
+          "code": "2913.46(B)",
+          "name": "Illegal use of supplemental nutrition assistance program benefits or WIC program benefits",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.46",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "justice",
+      "receiptExpiresAt": "2027-02-03T06:05:53.151Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2921-02-bribery",
+          "section": "2921.02",
+          "code": "2921.02",
+          "name": "Bribery",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-03-intimidation",
+          "section": "2921.03",
+          "code": "2921.03",
+          "name": "Intimidation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-04-force-threat-intimidation",
+          "section": "2921.04",
+          "code": "2921.04(B)",
+          "name": "Intimidation of an attorney, victim, or witness in a criminal case",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-04-victim-witness-intimidation",
+          "section": "2921.04",
+          "code": "2921.04(A)",
+          "name": "Intimidation of an attorney, victim, or witness in a criminal case",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-05-retaliation",
+          "section": "2921.05",
+          "code": "2921.05",
+          "name": "Retaliation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.05",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-11-perjury",
+          "section": "2921.11",
+          "code": "2921.11",
+          "name": "Perjury",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.11",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-12-tampering-evidence",
+          "section": "2921.12",
+          "code": "2921.12",
+          "name": "Tampering with evidence",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.12",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-14-false-child-abuse-report",
+          "section": "2921.14",
+          "code": "2921.14",
+          "name": "Making or causing a false report of child abuse or child neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.14",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-21-compounding-crime",
+          "section": "2921.21",
+          "code": "2921.21",
+          "name": "Compounding a crime",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.21",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-22-failure-report-crime-fourth-degree",
+          "section": "2921.22",
+          "code": "2921.22(A)(1), (F)(1)",
+          "name": "Failure to report a crime",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-22-failure-report-crime-second-degree",
+          "section": "2921.22",
+          "code": "2921.22(A)(2), (B)",
+          "name": "Failure to report a crime",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-22-failure-report-death",
+          "section": "2921.22",
+          "code": "2921.22(C), (D)",
+          "name": "Failure to report knowledge of a death",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-23-failure-aid-officer",
+          "section": "2921.23",
+          "code": "2921.23",
+          "name": "Failure to aid a law enforcement officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-24-disclosure-confidential-information",
+          "section": "2921.24",
+          "code": "2921.24",
+          "name": "Disclosure of confidential information",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.24",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-29-failure-disclose-personal-information",
+          "section": "2921.29",
+          "code": "2921.29",
+          "name": "Failure to disclose one's personal information",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.29",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-31-obstructing-official-business",
+          "section": "2921.31",
+          "code": "2921.31(B)",
+          "name": "Obstructing official business",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-31-responder-warning-obstruction",
+          "section": "2921.31",
+          "code": "2921.31(C)",
+          "name": "Obstructing official business",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.31",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "custody",
+      "receiptExpiresAt": "2027-02-03T07:21:33.397Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2921-321-assault-assistance-dog",
+          "section": "2921.321",
+          "code": "2921.321(C)",
+          "name": "Assaulting an assistance dog",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-321-assault-police-animal",
+          "section": "2921.321",
+          "code": "2921.321(A)",
+          "name": "Assaulting a police dog or horse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-321-harass-assistance-dog",
+          "section": "2921.321",
+          "code": "2921.321(D)",
+          "name": "Harassing an assistance dog",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-321-harass-police-animal",
+          "section": "2921.321",
+          "code": "2921.321(B)",
+          "name": "Harassing a police dog or horse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-331-motor-vehicle-flight",
+          "section": "2921.331",
+          "code": "2921.331(B)",
+          "name": "Failure to comply with an order or signal of a police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.331",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-331-traffic-order",
+          "section": "2921.331",
+          "code": "2921.331(A)",
+          "name": "Failure to comply with an order or signal of a police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.331",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-34-detention-escape",
+          "section": "2921.34",
+          "code": "2921.34(A)(1)",
+          "name": "Escape",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-34-supervised-release-escape",
+          "section": "2921.34",
+          "code": "2921.34(A)(3)",
+          "name": "Escape",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.34",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-35-aiding-escape",
+          "section": "2921.35",
+          "code": "2921.35",
+          "name": "Aiding escape or resistance to lawful authority",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.35",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-36-cash",
+          "section": "2921.36",
+          "code": "2921.36(D)",
+          "name": "Illegal conveyance of cash onto the grounds of a detention facility",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.36",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-36-device",
+          "section": "2921.36",
+          "code": "2921.36(E)",
+          "name": "Illegal conveyance of a communications device onto the grounds of a specified governmental facility",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.36",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-36-drugs",
+          "section": "2921.36",
+          "code": "2921.36(A)(2)/(C)",
+          "name": "Illegal conveyance of drugs of abuse onto the grounds of a specified governmental facility",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.36",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-36-liquor",
+          "section": "2921.36",
+          "code": "2921.36(A)(3)/(C)",
+          "name": "Illegal conveyance of intoxicating liquor onto the grounds of a specified governmental facility",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.36",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-36-weapons",
+          "section": "2921.36",
+          "code": "2921.36(A)(1)/(C)",
+          "name": "Illegal conveyance of weapons onto the grounds of a specified governmental facility",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.36",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-38-known-infection",
+          "section": "2921.38",
+          "code": "2921.38(C)",
+          "name": "Harassment with a bodily substance",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.38",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-38-ordinary",
+          "section": "2921.38",
+          "code": "2921.38(A)/(B)",
+          "name": "Harassment with a bodily substance",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.38",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-41-theft-in-office",
+          "section": "2921.41",
+          "code": "2921.41",
+          "name": "Theft in office",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.41",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-42-authorization",
+          "section": "2921.42",
+          "code": "2921.42(A)(1)-(2)",
+          "name": "Having an unlawful interest in a public contract",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.42",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-42-profit-interest",
+          "section": "2921.42",
+          "code": "2921.42(A)(3)-(5)",
+          "name": "Having an unlawful interest in a public contract",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.42",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-43-improper-compensation",
+          "section": "2921.43",
+          "code": "2921.43",
+          "name": "Soliciting improper compensation",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.43",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-44-dereliction",
+          "section": "2921.44",
+          "code": "2921.44",
+          "name": "Dereliction of duty",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.44",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-45-civil-rights",
+          "section": "2921.45",
+          "code": "2921.45",
+          "name": "Interfering with civil rights",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.45",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-51-detention-search",
+          "section": "2921.51",
+          "code": "2921.51(C)",
+          "name": "Impersonation of peace officer or private police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.51",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-51-felony",
+          "section": "2921.51",
+          "code": "2921.51(E)",
+          "name": "Impersonation of peace officer or private police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.51",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-51-impersonation",
+          "section": "2921.51",
+          "code": "2921.51(B)",
+          "name": "Impersonation of peace officer or private police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.51",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-51-offense-purpose",
+          "section": "2921.51",
+          "code": "2921.51(D)",
+          "name": "Impersonation of peace officer or private police officer",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.51",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-52-detention-search",
+          "section": "2921.52",
+          "code": "2921.52(B)(2)",
+          "name": "Using sham legal process",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.52",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-52-felony",
+          "section": "2921.52",
+          "code": "2921.52(B)(4)",
+          "name": "Using sham legal process",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.52",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-52-offense",
+          "section": "2921.52",
+          "code": "2921.52(B)(3)",
+          "name": "Using sham legal process",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.52",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2921-52-use",
+          "section": "2921.52",
+          "code": "2921.52(B)(1)",
+          "name": "Using sham legal process",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.52",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "public-peace",
+      "receiptExpiresAt": "2027-02-03T18:19:05.622Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2917-01-inciting-to-violence",
+          "section": "2917.01",
+          "code": "2917.01",
+          "name": "Inciting to violence",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-02-felony-or-weapon",
+          "section": "2917.02",
+          "code": "2917.02(A)(1)/(3)",
+          "name": "Aggravated riot",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-02-inmate-felony-or-weapon",
+          "section": "2917.02",
+          "code": "2917.02(B)(1)",
+          "name": "Aggravated riot",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-02-inmate-violence-or-riot",
+          "section": "2917.02",
+          "code": "2917.02(B)(2)",
+          "name": "Aggravated riot",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-02-offense-of-violence",
+          "section": "2917.02",
+          "code": "2917.02(A)(2)",
+          "name": "Aggravated riot",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.02",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-03-riot",
+          "section": "2917.03",
+          "code": "2917.03",
+          "name": "Riot",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.03",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-04-failure-to-disperse",
+          "section": "2917.04",
+          "code": "2917.04",
+          "name": "Failure to disperse",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.04",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-13-emergency-misconduct",
+          "section": "2917.13",
+          "code": "2917.13",
+          "name": "Misconduct at an emergency",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.13",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-31-false-warning",
+          "section": "2917.31",
+          "code": "2917.31(A)(1)",
+          "name": "Inducing panic",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-31-threat-or-offense",
+          "section": "2917.31",
+          "code": "2917.31(A)(2)/(3)",
+          "name": "Inducing panic",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.31",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-32-critical-infrastructure",
+          "section": "2917.32",
+          "code": "2917.32(A)(4)",
+          "name": "Making false alarms",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-32-false-alarms",
+          "section": "2917.32",
+          "code": "2917.32(A)(1)-(3)",
+          "name": "Making false alarms",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.32",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-321-swatting",
+          "section": "2917.321",
+          "code": "2917.321",
+          "name": "Swatting",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.321",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-33-hoax-weapon",
+          "section": "2917.33",
+          "code": "2917.33",
+          "name": "Unlawful possession or use of a hoax weapon of mass destruction",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.33",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "family",
+      "receiptExpiresAt": "2027-02-06T06:35:45.021Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2919-22-abuse",
+          "section": "2919.22",
+          "code": "2919.22(B)(1)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-care-duty",
+          "section": "2919.22",
+          "code": "2919.22(A)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-excessive-discipline-or-restraint",
+          "section": "2919.22",
+          "code": "2919.22(B)(3)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-impaired-operation-child-passenger",
+          "section": "2919.22",
+          "code": "2919.22(C)(1)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-material-or-performance",
+          "section": "2919.22",
+          "code": "2919.22(B)(5)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-repeated-unwarranted-discipline",
+          "section": "2919.22",
+          "code": "2919.22(B)(4)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-22-torture-or-cruel-abuse",
+          "section": "2919.22",
+          "code": "2919.22(B)(2)",
+          "name": "Endangering children",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.22",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-222-parental-education-neglect",
+          "section": "2919.222",
+          "code": "2919.222",
+          "name": "Parental education neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.222",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-224-provider-misrepresentation",
+          "section": "2919.224",
+          "code": "2919.224",
+          "name": "Misrepresentation by a child care provider",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.224",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-227-death-notice",
+          "section": "2919.227",
+          "code": "2919.227(B)",
+          "name": "Failure of a child care center to disclose the death or serious injury of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.227",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-227-enrollment-disclosure",
+          "section": "2919.227",
+          "code": "2919.227(A)",
+          "name": "Failure of a child care center to disclose the death or serious injury of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.227",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-23-child",
+          "section": "2919.23",
+          "code": "2919.23(A)(1)",
+          "name": "Interference with custody",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-23-committed-person",
+          "section": "2919.23",
+          "code": "2919.23(A)(2)/(3)",
+          "name": "Interference with custody",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-23-leave-committed-custody",
+          "section": "2919.23",
+          "code": "2919.23(B)",
+          "name": "Interference with custody",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.23",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-231-support-action",
+          "section": "2919.231",
+          "code": "2919.231",
+          "name": "Interfering with an action to issue or modify a support order",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.231",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-24-habitual-truancy",
+          "section": "2919.24",
+          "code": "2919.24(B)(3)",
+          "name": "Contributing to the unruliness or delinquency of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.24",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-24-unruliness-delinquency",
+          "section": "2919.24",
+          "code": "2919.24(B)(1)/(2)",
+          "name": "Contributing to the unruliness or delinquency of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.24",
+          "public": false
+        }
+      ]
+    },
+    {
+      "group": "protection",
+      "receiptExpiresAt": "2027-02-06T06:35:43.800Z",
+      "localReceiptValid": true,
+      "repositoryWindow": "within_dates_only",
+      "records": [
+        {
+          "id": "oh-orc-2151-421-mandatory-clergy-report",
+          "section": "2151.421",
+          "code": "2151.421(A)(4)",
+          "name": "Reporting child abuse or neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.421",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2151-421-mandatory-professional-report",
+          "section": "2151.421",
+          "code": "2151.421(A)(1)",
+          "name": "Reporting child abuse or neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.421",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2151-421-unauthorized-report-dissemination",
+          "section": "2151.421",
+          "code": "2151.421(I)(2)",
+          "name": "Reporting child abuse or neglect",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.421",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-211-creating-fabricated-image",
+          "section": "2917.211",
+          "code": "2917.211(D)(1)",
+          "name": "Nonconsensual creation of fabricated sexual images",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-211-disseminating-fabricated-image",
+          "section": "2917.211",
+          "code": "2917.211(C)",
+          "name": "Nonconsensual dissemination of fabricated sexual images",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-211-private-image",
+          "section": "2917.211",
+          "code": "2917.211(B)",
+          "name": "Nonconsensual dissemination of private sexual images",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2917-211-soliciting-fabricated-image",
+          "section": "2917.211",
+          "code": "2917.211(D)(2)",
+          "name": "Nonconsensual creation of fabricated sexual images",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.211",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-01-bigamy",
+          "section": "2919.01",
+          "code": "2919.01(A)",
+          "name": "Bigamy",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.01",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-225-admission-disclosure",
+          "section": "2919.225",
+          "code": "2919.225(A)",
+          "name": "Failure of a type A or type B family child care home to disclose the death or serious injury of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.225",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-225-event-notice",
+          "section": "2919.225",
+          "code": "2919.225(B)",
+          "name": "Failure of a type A or type B family child care home to disclose the death or serious injury of a child",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.225",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-25-physical-harm",
+          "section": "2919.25",
+          "code": "2919.25(A)",
+          "name": "Domestic violence",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.25",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-25-reckless-serious-harm",
+          "section": "2919.25",
+          "code": "2919.25(B)",
+          "name": "Domestic violence",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.25",
+          "public": false
+        },
+        {
+          "id": "oh-orc-2919-25-threat-of-force",
+          "section": "2919.25",
+          "code": "2919.25(C)",
+          "name": "Domestic violence",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.25",
+          "public": false
+        },
+        {
+          "id": "oh-orc-3111-19-paternity-action",
+          "section": "3111.19",
+          "code": "3111.19",
+          "name": "Interfering with the establishment of paternity",
+          "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-3111.19",
+          "public": false
+        }
+      ]
+    }
+  ]
+}
