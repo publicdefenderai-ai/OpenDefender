@@ -1,0 +1,525 @@
+[
+  {
+    "id": "oh-orc-2917-01-inciting-to-violence",
+    "section": "2917.01",
+    "code": "2917.01",
+    "scope": "A",
+    "statutoryName": "Inciting to violence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Knowingly acting to urge another to commit an offense of violence, under circumstances creating a clear and present danger that such an offense will occur, or where the conduct proximately results in an offense of violence. The underlying offense must meet the statutory definition.",
+    "gradeSummary": "The offense urged controls the grade. A misdemeanor offense of violence makes this M1 and a felony offense of violence makes it F3. Neither category supplies a universal default.",
+    "degrees": [
+      "F3",
+      "M1"
+    ],
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "felony",
+      "basis": "branch_dependent",
+      "ordinaryDegrees": [],
+      "evidence": [
+        {
+          "section": "2917.01",
+          "quote": "If the offense of violence that the other person is being urged or incited to commit is a felony"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2917-02-felony-or-weapon",
+    "section": "2917.02",
+    "code": "2917.02(A)(1)/(3)",
+    "scope": "A(1),A(3)",
+    "statutoryName": "Aggravated riot",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)",
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "conductSummary": "Participating with four or more others in a course of disorderly conduct under 2917.11 with purpose to commit or facilitate a felony, or under the specified possession, use or intended use of a deadly weapon or dangerous ordnance by the actor or a participant known to the actor.",
+    "gradeSummary": "F5 for (A)(1) or (3). The separate detention-facility inmate provision is graded under (B)(1).",
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2917.11",
+      "2923.11",
+      "2921.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-02-offense-of-violence",
+    "section": "2917.02",
+    "code": "2917.02(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Aggravated riot",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "conductSummary": "Participating with four or more others in a course of disorderly conduct under 2917.11 with purpose to commit or facilitate an offense of violence.",
+    "gradeSummary": "F4 for (A)(2). The inmate branch in (B)(2) has a separate grade.",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2917.11",
+      "2921.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-02-inmate-felony-or-weapon",
+    "section": "2917.02",
+    "code": "2917.02(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Aggravated riot",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "conductSummary": "An inmate in a detention facility committing the felony-purpose or weapon branch of aggravated riot under (A)(1) or (3). Both the underlying group disorderly conduct and the specified purpose or weapon circumstances matter.",
+    "gradeSummary": "F4 for (B)(1).",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2917.11",
+      "2923.11",
+      "2921.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-02-inmate-violence-or-riot",
+    "section": "2917.02",
+    "code": "2917.02(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Aggravated riot",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "D"
+    ],
+    "conductSummary": "An inmate in a detention facility committing the violence-purpose group disorderly conduct under (A)(2), or committing riot under 2917.03.",
+    "gradeSummary": "F3 for (B)(2).",
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2917.03",
+      "2917.11",
+      "2921.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-03-riot",
+    "section": "2917.03",
+    "code": "2917.03",
+    "scope": "A,B",
+    "statutoryName": "Riot",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "conductSummary": "Participating with four or more others in a course of disorderly conduct under 2917.11 with purpose to commit or facilitate a misdemeanor other than disorderly conduct, intimidate an official or employee into official action or inaction, obstruct a government function, or interfere with specified educational activities. Division (B) separately covers participating with four or more others with purpose to do an act using unlawful force or violence, even when the act might otherwise be lawful.",
+    "gradeSummary": "M1. The separate aggravated-riot provisions depend on additional facts.",
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2917.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-04-failure-to-disperse",
+    "section": "2917.04",
+    "code": "2917.04",
+    "scope": "A",
+    "statutoryName": "Failure to disperse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "conductSummary": "Knowingly disobeying an authorized dispersal order when five or more persons are engaging in statutory disorderly conduct and the presence of others nearby creates the specified likelihood of harm, serious inconvenience, annoyance or alarm. Peaceable assembly for a lawful purpose does not require dispersal under this section.",
+    "gradeSummary": "Ordinarily a minor misdemeanor. M4 if disobedience creates a likelihood of physical harm to persons or occurs at the scene of a fire, accident, disaster, riot or emergency.",
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2917.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-13-emergency-misconduct",
+    "section": "2917.13",
+    "code": "2917.13",
+    "scope": "A",
+    "statutoryName": "Misconduct at an emergency",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "conductSummary": "Knowingly hampering authorized responders performing lawful emergency-scene operations, hampering personnel performing lawful emergency-facility duties, or disobeying a lawful police order connected with the emergency. The law preserves access and information for news media representatives lawfully performing their duties.",
+    "gradeSummary": "Ordinarily M4. A violation that creates a risk of physical harm to people or property is M1.",
+    "degrees": [
+      "M4",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "dependencies": [
+      "2133.21",
+      "2909.04"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-31-false-warning",
+    "section": "2917.31",
+    "code": "2917.31(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Inducing panic",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Causing evacuation of a public place or serious public inconvenience or alarm by initiating or circulating a catastrophe warning known to be false. Authorized fire or emergency drills are excluded from this branch. The school and higher-education definitions in (E) govern the location enhancement.",
+    "gradeSummary": "Ordinarily M1. Subject to the special branches, physical harm to a person makes F4. Economic harm of $1,000 to under $7,500 makes F5 if the physical-harm provision does not apply, $7,500 to under $150,000 makes F4, and $150,000 or more makes F3. A purported, threatened or actual weapon of mass destruction generally makes F4, rising to F3 with physical harm to a person or economic harm of $100,000 or more. For (A)(1) involving a defined school or institution of higher education, (C)(5) makes the offense F2, including when a weapon-of-mass-destruction allegation is involved. Economic harm can include response costs as well as defined victim losses. For purported or threatened weapons of mass destruction, lack of possession or ability to use the weapon does not by itself supply a defense.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "3301.07",
+      "3345.12",
+      "2917.33",
+      "2133.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2917.31",
+          "quote": "inducing panic is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2917-31-threat-or-offense",
+    "section": "2917.31",
+    "code": "2917.31(A)(2)/(3)",
+    "scope": "A(2),A(3)",
+    "statutoryName": "Inducing panic",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)",
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "E"
+    ],
+    "conductSummary": "Causing evacuation of a public place or serious public inconvenience or alarm by threatening an offense of violence, or by committing any offense with reckless disregard of the likelihood of causing serious public inconvenience or alarm.",
+    "gradeSummary": "Ordinarily M1. Subject to the special branches, physical harm to a person makes F4. Economic harm of $1,000 to under $7,500 makes F5 if the physical-harm provision does not apply, $7,500 to under $150,000 makes F4, and $150,000 or more makes F3. A purported, threatened or actual weapon of mass destruction generally makes F4, rising to F3 with physical harm to a person or economic harm of $100,000 or more. The (C)(5) school-location F2 applies only to the false-warning branch (A)(1). Economic harm can include response costs as well as defined victim losses. For purported or threatened weapons of mass destruction, lack of possession or ability to use the weapon does not by itself supply a defense.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2917.33",
+      "2133.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2917.31",
+          "quote": "inducing panic is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2917-32-false-alarms",
+    "section": "2917.32",
+    "code": "2917.32(A)(1)-(3)",
+    "scope": "A(1),A(2),A(3)",
+    "statutoryName": "Making false alarms",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)",
+      "A(2)",
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "conductSummary": "A known false catastrophe warning likely to cause public inconvenience or alarm, knowingly transmitting a false emergency alarm to a response organization, or reporting an incident to law enforcement knowing it did not occur.",
+    "gradeSummary": "Ordinarily M1. Economic harm of $1,000 to under $7,500 makes F5, $7,500 to under $150,000 F4, and $150,000 or more F3. A purported, threatened or actual weapon of mass destruction makes F3 independently of those dollar thresholds. Authorized fire or emergency drills are excluded. Economic harm can include response costs as well as defined victim losses. For purported or threatened weapons of mass destruction, lack of possession or ability to use the weapon does not by itself supply a defense.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2917.31",
+      "2917.33",
+      "2133.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2917.32",
+          "quote": "making false alarms is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2917-32-critical-infrastructure",
+    "section": "2917.32",
+    "code": "2917.32(A)(4)",
+    "scope": "A(4)",
+    "statutoryName": "Making false alarms",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Initiating or circulating a catastrophe warning knowing it is false and likely to impede a defined critical infrastructure facility. The cross-reference to 2911.21 supplies only the facility definition.",
+    "gradeSummary": "Ordinarily M1. Economic harm of $1,000 to under $7,500 makes F5, $7,500 to under $150,000 F4, and $150,000 or more F3. A purported, threatened or actual weapon of mass destruction makes F3 independently of those dollar thresholds. Authorized fire or emergency drills are excluded. Economic harm can include response costs as well as defined victim losses. For purported or threatened weapons of mass destruction, lack of possession or ability to use the weapon does not by itself supply a defense.",
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "dependencies": [
+      "2917.31",
+      "2917.33",
+      "2133.21",
+      "2911.21"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2917.32",
+          "quote": "making false alarms is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2917-321-swatting",
+    "section": "2917.321",
+    "code": "2917.321",
+    "scope": "B",
+    "statutoryName": "Swatting",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E",
+      "F"
+    ],
+    "conductSummary": "Using a telecommunications device or service to report or cause a report to the named emergency recipients, knowing it is false or misleading, with reckless disregard for bodily harm directly resulting from the response. The report must be reasonably likely to cause an emergency response and must actually cause one. Authorized emergency drills are excluded.",
+    "gradeSummary": "Ordinarily F4. Serious physical harm to any person makes F2. Before sentencing the court must invite itemized claims from responding agencies seeking reimbursement and may order all or part of eligible response costs.",
+    "degrees": [
+      "F4",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "128.01",
+      "2913.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-33-hoax-weapon",
+    "section": "2917.33",
+    "code": "2917.33",
+    "scope": "A",
+    "statutoryName": "Unlawful possession or use of a hoax weapon of mass destruction",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "conductSummary": "Without privilege, manufacturing, possessing, selling, delivering, displaying, using, threatening, attempting or conspiring to use, or making accessible a defined hoax weapon of mass destruction, intending to mislead someone into believing it will cause terror, bodily harm or property damage. The exception for specified members or employees requires lawful duties, authorization or licensing, and compliance with applicable law.",
+    "gradeSummary": "F4. Whether a particular object qualifies requires the definitions in (E) and 2917.31.",
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "dependencies": [
+      "2917.31"
+    ],
+    "extraGrading": []
+  }
+]

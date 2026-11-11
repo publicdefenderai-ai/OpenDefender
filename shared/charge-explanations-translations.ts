@@ -1,3 +1,4 @@
+import { OHIO_PUBLIC_PEACE_BATCH } from "./ohio-public-peace-batch";
 import { OHIO_CUSTODY_BATCH } from "./ohio-custody-batch";
 import { OHIO_JUSTICE_BATCH } from "./ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_BATCH } from "./ohio-benefits-fraud-batch";
@@ -52,6 +53,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
+  ...OHIO_PUBLIC_PEACE_BATCH.translations,
   ...OHIO_CUSTODY_BATCH.translations,
   "ohio-felonious-assault": {
     es: {

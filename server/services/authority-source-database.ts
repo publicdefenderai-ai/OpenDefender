@@ -1,3 +1,4 @@
+import { OHIO_PUBLIC_PEACE_SOURCES, isOhioPublicPeaceSourceFresh } from "../data/ohio-public-peace-source";
 import { OHIO_CUSTODY_SOURCES, isOhioCustodySourceFresh } from "../data/ohio-custody-source";
 import { OHIO_JUSTICE_SOURCES, isOhioJusticeSourceFresh } from "../data/ohio-justice-source";
 import { OHIO_BENEFITS_FRAUD_SOURCES, isOhioBenefitsFraudSourceFresh } from "../data/ohio-benefits-fraud-source";
@@ -257,6 +258,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   if (jurisdiction === "OH" && !isOhioResidualSourceFresh()) {
     for (const source of OHIO_RESIDUAL_SOURCES) selectable.delete(source.chargeId);
   }
+  if (jurisdiction === "OH" && !isOhioPublicPeaceSourceFresh()) {
+    for (const source of OHIO_PUBLIC_PEACE_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "OH" && !isOhioCustodySourceFresh()) {
     for (const source of OHIO_CUSTODY_SOURCES) selectable.delete(source.chargeId);
   }
@@ -316,8 +320,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // Old completed ingestion runs must not serve corrected summaries until
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
-    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES].map(source => ({id: source.chargeId}))]) {
-      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES].find(row => row.chargeId === update.id);
+    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES].map(source => ({id: source.chargeId}))]) {
+      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES].find(row => row.chargeId === update.id);
       if (!source) {
         selectable.delete(update.id);
         continue;
