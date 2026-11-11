@@ -1,0 +1,201 @@
+[
+  {
+    "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+    "jurisdiction": "FL",
+    "code": "782.04(5)",
+    "slug": "fl-fs-782-04-5-murder-in-the-third-degree",
+    "name": "murder in the third degree",
+    "names": {
+      "es": "homicidio de tercer grado",
+      "zh": "三级谋杀"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.04(5)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.02",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 893.135",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "An unlawful killing without a design to cause death resulting from distribution by a person under 18 of a substance the person knew or reasonably should have known contained statutorily defined dangerous fentanyl or fentanyl analogs, when the substance caused or substantially contributed to the user's death.",
+        "degreeContext": "A second-degree felony. This record is limited to the under-18 distribution route in subsection (5)."
+      },
+      "es": {
+        "plainSummary": "Muerte ilícita sin intención de causarla, resultante de la distribución por una persona menor de 18 años de una sustancia que sabía o razonablemente debía saber que contenía fentanilo peligroso o análogos definidos por ley, cuando causó o contribuyó sustancialmente a la muerte.",
+        "degreeContext": "Delito grave de segundo grado. Este registro se limita a la vía de distribución por menores de 18 años del apartado (5)."
+      },
+      "zh": {
+        "plainSummary": "未满18岁者分销其知道或理应知道含有法定危险芬太尼或其类似物的物质，该物质导致或实质促成使用者死亡，且行为人无致死意图而造成非法死亡。",
+        "degreeContext": "二级重罪。本记录仅限第(5)款未满18岁分销途径。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+    "jurisdiction": "FL",
+    "code": "782.04(4)",
+    "slug": "fl-fs-782-04-4-murder-in-the-third-degree",
+    "name": "murder in the third degree",
+    "names": {
+      "es": "homicidio de tercer grado",
+      "zh": "三级谋杀"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.04(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "An unlawful killing, without a design to cause death, committed while perpetrating or attempting a felony other than the felonies expressly excluded in subsection (4).",
+        "degreeContext": "A second-degree felony. This record is limited to subsection (4), not the controlled-substance-distribution route in subsection (5)."
+      },
+      "es": {
+        "plainSummary": "Muerte ilícita, sin intención de causarla, cometida al perpetrar o intentar un delito grave distinto de los expresamente excluidos en el apartado (4).",
+        "degreeContext": "Delito grave de segundo grado. Este registro se limita al apartado (4), no a la vía de distribución de sustancias controladas del apartado (5)."
+      },
+      "zh": {
+        "plainSummary": "在实施或企图实施第(4)款明确排除罪名以外的重罪时，在无致死意图的情况下造成非法死亡。",
+        "degreeContext": "二级重罪。本记录仅限第(4)款，不包括第(5)款受控物质分销途径。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-782-07-1-manslaughter",
+    "jurisdiction": "FL",
+    "code": "782.07(1)",
+    "slug": "fl-fs-782-07-1-manslaughter",
+    "name": "manslaughter",
+    "names": {
+      "es": "homicidio involuntario",
+      "zh": "过失杀人"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.07(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html"
+      },
+      {
+        "citation": "Fla. Stat. § 782.07",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.013",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.013.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.031",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.031.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.032",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.032.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.041",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.041.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.05",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.05.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.051",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.051.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.06",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.06.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.07",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.07.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.08",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.08.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.085",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.085.html"
+      },
+      {
+        "citation": "Fla. Stat. § 776.09",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.09.html"
+      },
+      {
+        "citation": "Fla. Stat. § 782.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 782.04",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.281",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.281.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.283",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.283.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.325",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.325.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Killing a human being by act, procurement, or culpable negligence, without lawful justification under the inventoried chapter 776 provisions and when the killing is neither excusable homicide nor murder.",
+        "degreeContext": "A second-degree felony. The ordinary second-degree felony permits up to 15 years imprisonment and a conventional fine up to $10,000. The charge label alone does not establish domestic violence. Section 741.28 covers its expressly listed offenses, including qualifying assault or battery, and other criminal offenses resulting in physical injury or death, together with the required family or household relationship. Psychological injury or risk alone does not satisfy that residual physical-injury/death clause; a separately listed offense may have different elements. Do not automatically apply this enhancement to every abuse, neglect or homicide charge. The intentional-bodily-harm requirement for the additional jail minimum below is not established merely by culpable negligence. For conduct on or after July 1, 2026, section 741.2801 reclassifies a crime of domestic violence when the accused already had a domestic-violence conviction at the time of the offense. The conviction definition includes withheld adjudication and a nolo contendere plea. Section 741.28 requires the specified family or household relationship, including its shared-residence requirement and shared-child exception; a dating relationship alone is insufficient. When that domestic-violence repeat rule applies, the second-degree felony becomes a first-degree felony (up to 30 years imprisonment and a conventional fine up to $10,000). Domestic-violence sentencing also carries separate conditions. Section 741.281 requires at least 1 year of probation and a batterers' intervention program, subject to its stated program exceptions and section 741.325 qualifications. If adjudicated guilty and intentional bodily harm occurred, section 741.283 ordinarily requires minimum county-jail terms of 10/15/20 days for first/second/third-or-later offenses, increasing to 15/20/30 days if the offense occurred in the presence of a qualifying family or household child under 16. Its exception applies when the court imposes nonsuspended incarceration in a state correctional facility. These rules do not erase other authorized imprisonment, restitution or case-specific sentencing rules. Section 775.083 also permits fines based on twice the pecuniary gain or loss and other specifically authorized higher amounts. Earlier conduct needs its applicable statutory version."
+      },
+      "es": {
+        "plainSummary": "Causar la muerte de una persona por acto, procuración o negligencia culpable, sin justificación legal conforme a las disposiciones inventariadas del capítulo 776 y sin que sea homicidio excusable ni asesinato.",
+        "degreeContext": "Delito grave de segundo grado. El delito grave ordinario de segundo grado permite hasta 15 años de prisión y una multa ordinaria de hasta $10,000. El nombre del cargo por sí solo no establece violencia doméstica. La sección 741.28 comprende los delitos que enumera expresamente, incluidos determinados delitos de agresión, y otros delitos que causen lesión física o muerte, junto con la relación familiar o de convivencia requerida. La lesión psicológica o el riesgo por sí solos no cumplen esa cláusula residual de lesión física o muerte; un delito enumerado separadamente puede tener elementos distintos. Este aumento no se aplica automáticamente a todo cargo de abuso, negligencia u homicidio. La negligencia culpable por sí sola no prueba el daño corporal intencional exigido para el mínimo adicional de cárcel indicado abajo. Para hechos ocurridos a partir del 1 de julio de 2026, la sección 741.2801 reclasifica un delito de violencia doméstica cuando la persona acusada ya tenía una condena por violencia doméstica al cometerlo. La definición de condena incluye casos en los que se retuvo la adjudicación de culpabilidad y declaraciones de nolo contendere. La sección 741.28 exige la relación familiar o de convivencia especificada, incluido el requisito de residencia compartida y la excepción para quienes tienen un hijo en común; una relación de noviazgo por sí sola no basta. Cuando se aplica esa regla de reincidencia por violencia doméstica, el delito grave de segundo grado pasa a primer grado (hasta 30 años de prisión y una multa ordinaria de hasta $10,000). La sentencia por violencia doméstica también tiene condiciones separadas. La sección 741.281 exige al menos 1 año de libertad a prueba y un programa de intervención para agresores, sujeto a sus excepciones y a los requisitos de la sección 741.325. Si existe adjudicación de culpabilidad y se causó daño corporal intencional, la sección 741.283 normalmente exige mínimos de 10/15/20 días de cárcel del condado por la primera/segunda/tercera o posterior infracción; aumentan a 15/20/30 días si ocurrió en presencia de un menor de 16 años que reúne los requisitos de familiar o miembro del hogar. Su excepción se aplica cuando el tribunal impone encarcelamiento no suspendido en un centro penitenciario estatal. Estas reglas no eliminan otras penas de prisión, restitución ni reglas de sentencia aplicables. La sección 775.083 también permite multas basadas en el doble de la ganancia o pérdida económica y otros importes superiores autorizados expresamente. Los hechos anteriores requieren la versión legal aplicable."
+      },
+      "zh": {
+        "plainSummary": "通过行为、促成或可责过失致人死亡，且依已清点的第776章规定无合法正当理由，并且不属于可宽宥杀人或谋杀。",
+        "degreeContext": "二级重罪。 通常的二级重罪最高可处15年监禁及10,000美元常规罚款。 仅凭罪名不能认定家庭暴力。第741.28条涵盖其明确列举的犯罪（包括符合条件的袭击或殴打），以及造成身体伤害或死亡的其他犯罪，并要求具备规定的家庭或同住关系。仅有心理伤害或风险不足以满足该兜底条款的身体伤害或死亡条件；另行列举的犯罪可能具有不同要件。不能自动将此加重规则套用于每项虐待、疏忽或杀人指控。仅有可归责的过失也不能证明下述额外最低监禁所要求的故意身体伤害。 对于2026年7月1日或之后的行为，如果被告在犯罪时已有家庭暴力定罪，第741.2801条要求提高家庭暴力犯罪的等级。此处的定罪包括暂不作出正式有罪裁定及不抗辩答辩。第741.28条要求符合特定家庭或同住关系，包括共同居住要求及共同育有子女的例外；仅有恋爱关系并不足够。 符合该家庭暴力再犯规则时，二级重罪升为一级重罪（最高30年监禁及10,000美元常规罚款）。 家庭暴力量刑还有其他条件。第741.281条要求至少1年缓刑监督及施暴者干预课程，但适用该条规定的课程例外及第741.325条的资格要求。如被正式裁定有罪且故意造成身体伤害，第741.283条通常要求首次、第二次、第三次及以后犯罪分别至少在县监狱服刑10、15、20天；如犯罪发生在符合家庭或同住成员条件的16岁以下儿童面前，则分别增加为15、20、30天。法院判处不予缓期执行的州惩教设施监禁时，适用该条例外。这些规则不排除其他依法可判处的监禁、赔偿或个案量刑规则。第775.083条还允许按经济收益或损失的两倍及其他明确授权的更高数额处以罚款。较早行为须依据当时适用的法条版本。"
+      }
+    }
+  }
+]

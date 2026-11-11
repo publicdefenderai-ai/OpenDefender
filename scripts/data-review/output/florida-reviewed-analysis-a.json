@@ -200,7 +200,7 @@
       "id": "fl-fs-782-07-1-manslaughter",
       "section": "782.07",
       "status": "eligible",
-      "reason": "Existing harm-family identity with individually bound ordinary and conditional sentencing.",
+      "reason": "Existing homicide identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "is manslaughter",
@@ -211,7 +211,7 @@
       ],
       "gradingQuotes": [
         "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-        "(2) \nThe penalty for a crime of domestic violence shall be reclassified if, at the time of the commission of the offense, the offender has a prior conviction for a crime of domestic violence. The reclassification is as follows:\n(a) \nA misdemeanor of the second degree is reclassified to a misdemeanor of the first degree.\n\n(b) \nA misdemeanor of the first degree is reclassified to a felony of the third degree. For purposes of sentencing under chapter 921, such offense is ranked in level 1 of the offense severity ranking chart.\n\n(c) \nA felony of the third degree is reclassified to a felony of the second degree.\n\n(d) \nA felony of the second degree is reclassified to a felony of the first degree.\n\n(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+        "(d) \nA felony of the second degree is reclassified to a felony of the first degree."
       ],
       "requiredSections": [
         {
@@ -333,9 +333,29 @@
           "section": "741.325",
           "role": "definition",
           "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "782.065",
+          "role": "penalty",
+          "contentHash": "b056aa6b2d1967d45f36cdd9182dd9f94f4515f4187561184e9fa60e834dedd6"
+        },
+        {
+          "section": "943.10",
+          "role": "definition",
+          "contentHash": "8adad5e3d99b9ba0e3e226d9be154c33e77f068c7d30b4cbca2d9b0eceee30e5"
+        },
+        {
+          "section": "775.0823",
+          "role": "penalty",
+          "contentHash": "25aa1a20ec980e069c957710b6a145be360c2a5368a197da2d27dd266c1375dd"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty",
+          "contentHash": "a93e8883314ad28346769dcd9300460b96e5e2faeb25a72e5575cc8733df72a2"
         }
       ],
-      "notes": "Preserve existing identity, ordinary felony grade and translated base summaries. Domestic-violence reclassification is conditional on statutory conduct, relationship and prior-conviction requirements; intentional-injury minima are not inferred from culpable negligence. No receipt issuance or extension."
+      "notes": "Both identities keep separate predicate conduct and the ordinary second-degree felony classification."
     },
     {
       "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
@@ -498,7 +518,7 @@
       "id": "fl-fs-782-04-5-murder-in-the-third-degree",
       "section": "782.04",
       "status": "eligible",
-      "reason": "Subsection (5) separately supplies the same literal offense name for a distinct under-18 distribution scope.",
+      "reason": "Existing homicide identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "is murder in the third degree",
@@ -508,13 +528,64 @@
         "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(d) \nA felony of the second degree is reclassified to a felony of the first degree."
       ],
       "requiredSections": [
         {
           "section": "782.04",
           "role": "offense",
           "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "782.04",
+          "role": "definition",
+          "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty",
+          "contentHash": "a93e8883314ad28346769dcd9300460b96e5e2faeb25a72e5575cc8733df72a2"
         },
         {
           "section": "893.02",
@@ -525,15 +596,20 @@
           "section": "893.135",
           "role": "definition",
           "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+        },
+        {
+          "section": "782.065",
+          "role": "exception",
+          "contentHash": "b056aa6b2d1967d45f36cdd9182dd9f94f4515f4187561184e9fa60e834dedd6"
         }
       ],
-      "notes": "Distinct exact subdivision scope from subsection (4)."
+      "notes": "Both identities keep separate predicate conduct and the ordinary second-degree felony classification."
     },
     {
       "id": "fl-fs-782-04-4-murder-in-the-third-degree",
       "section": "782.04",
       "status": "eligible",
-      "reason": "Subsection (4) supplies a literal offense name, conduct boundary, and grade distinct from existing first- and second-degree records.",
+      "reason": "Existing homicide identity with individually bound ordinary and conditional sentencing.",
       "identity": {
         "kind": "operative_guilt_clause",
         "quote": "is murder in the third degree",
@@ -543,16 +619,87 @@
         "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
       ],
       "gradingQuotes": [
-        "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+        "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "(d) \nA felony of the second degree is reclassified to a felony of the first degree."
       ],
       "requiredSections": [
         {
           "section": "782.04",
           "role": "offense",
           "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "782.04",
+          "role": "definition",
+          "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        },
+        {
+          "section": "741.28",
+          "role": "definition",
+          "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading",
+          "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty",
+          "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty",
+          "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+        },
+        {
+          "section": "741.325",
+          "role": "definition",
+          "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty",
+          "contentHash": "a93e8883314ad28346769dcd9300460b96e5e2faeb25a72e5575cc8733df72a2"
+        },
+        {
+          "section": "782.065",
+          "role": "penalty",
+          "contentHash": "b056aa6b2d1967d45f36cdd9182dd9f94f4515f4187561184e9fa60e834dedd6"
+        },
+        {
+          "section": "943.10",
+          "role": "definition",
+          "contentHash": "8adad5e3d99b9ba0e3e226d9be154c33e77f068c7d30b4cbca2d9b0eceee30e5"
+        },
+        {
+          "section": "775.0823",
+          "role": "penalty",
+          "contentHash": "25aa1a20ec980e069c957710b6a145be360c2a5368a197da2d27dd266c1375dd"
+        },
+        {
+          "section": "893.135",
+          "role": "definition",
+          "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
         }
       ],
-      "notes": "Limited to subsection (4); subsection (5)'s separately conditioned distribution route is not folded into this record."
+      "notes": "Both identities keep separate predicate conduct and the ordinary second-degree felony classification."
     },
     {
       "id": "fl-fs-794-011-2-sexual-battery",

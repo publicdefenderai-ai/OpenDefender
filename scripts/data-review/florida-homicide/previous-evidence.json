@@ -1,0 +1,244 @@
+[
+  {
+    "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.04:5",
+      "target": "text",
+      "text": "is murder in the third degree",
+      "start": 6386,
+      "end": 6415,
+      "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.04:5",
+        "target": "text",
+        "text": "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5712,
+        "end": 6527,
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.04:5",
+        "target": "text",
+        "text": "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 5712,
+        "end": 6527,
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.04:5",
+        "role": "offense",
+        "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.135",
+        "role": "definition",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.04:4",
+      "target": "text",
+      "text": "is murder in the third degree",
+      "start": 5569,
+      "end": 5598,
+      "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.04:4",
+        "target": "text",
+        "text": "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 4343,
+        "end": 5710,
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.04:4",
+        "target": "text",
+        "text": "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 4343,
+        "end": 5710,
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.04:4",
+        "role": "offense",
+        "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-782-07-1-manslaughter",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:782.07:1",
+      "target": "text",
+      "text": "is manslaughter",
+      "start": 517,
+      "end": 532,
+      "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 228,
+        "end": 629,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "target": "text",
+        "text": "(1) \nThe killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 228,
+        "end": 629,
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:782.07:1",
+        "role": "offense",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:782.07",
+        "role": "grading",
+        "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      {
+        "sourceKey": "fl:statute:776.012",
+        "role": "justification",
+        "contentHash": "4c82f432745169104e9d97e706f1cc863c9b865cfdbd215340e2c87bbe1647cb"
+      },
+      {
+        "sourceKey": "fl:statute:776.013",
+        "role": "justification",
+        "contentHash": "9fc162802b16ff80f2f3594a3cdddfd9c0089011e608b48a203de83018668be1"
+      },
+      {
+        "sourceKey": "fl:statute:776.031",
+        "role": "justification",
+        "contentHash": "19a00e10c34d1876fc4feb29ac1901bf96edec719a8b1b5289a80b8c9c3cc084"
+      },
+      {
+        "sourceKey": "fl:statute:776.032",
+        "role": "justification",
+        "contentHash": "096c2ee76f0190119db9583677ce9bc92e2ba26757feee2314ca63ba84db8023"
+      },
+      {
+        "sourceKey": "fl:statute:776.041",
+        "role": "justification",
+        "contentHash": "99e3f241a9d7bc5a39740a6e0677394b99cf8f9b4c8b45b6b703bb7a53cdba5b"
+      },
+      {
+        "sourceKey": "fl:statute:776.05",
+        "role": "justification",
+        "contentHash": "34bb4f7f06619d06d5744a084e464a2c9dc41042800318af015b43e38fbf45fe"
+      },
+      {
+        "sourceKey": "fl:statute:776.051",
+        "role": "justification",
+        "contentHash": "9dc0a5e6e6bf54996472e375854a27c2ff4f6f54ef0569a11b64738a7dcda78a"
+      },
+      {
+        "sourceKey": "fl:statute:776.06",
+        "role": "justification",
+        "contentHash": "973dda02890b8d8bb21c11c0082396f96a362d86f7c3ba578e25cbc2e5689e39"
+      },
+      {
+        "sourceKey": "fl:statute:776.07",
+        "role": "justification",
+        "contentHash": "85c47a2137048b35c12b76e94c2f50268809ef09248917de3d5c1c3f78e35f8f"
+      },
+      {
+        "sourceKey": "fl:statute:776.08",
+        "role": "justification",
+        "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d"
+      },
+      {
+        "sourceKey": "fl:statute:776.085",
+        "role": "justification",
+        "contentHash": "903aba7fb14da11661fbeb026184c44cdd8aec5404c5f8011c7478aa59d29080"
+      },
+      {
+        "sourceKey": "fl:statute:776.09",
+        "role": "justification",
+        "contentHash": "529f5a5cf36f99e0e95d66d1521bf1ce91746b2953e87bbf948bac3a9b1533eb"
+      },
+      {
+        "sourceKey": "fl:statute:782.03",
+        "role": "exception",
+        "contentHash": "66b49cf07e36ace8fd8a52371d26ff091c127bd13d2e8b2881ff31817aa63680"
+      },
+      {
+        "sourceKey": "fl:statute:782.04",
+        "role": "exception",
+        "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      },
+      {
+        "sourceKey": "fl:statute:775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "sourceKey": "fl:statute:775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "sourceKey": "fl:statute:775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "sourceKey": "fl:statute:741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "sourceKey": "fl:statute:741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "sourceKey": "fl:statute:741.281",
+        "role": "penalty",
+        "contentHash": "c3b3197207761ec28f184bb2089d098418e2060da937bb4bd20becc10bf3ddd2"
+      },
+      {
+        "sourceKey": "fl:statute:741.283",
+        "role": "penalty",
+        "contentHash": "f814350e1a3edda2342d128ed32d3f5cc5638bd1b4c1486d954a06914a738e3a"
+      },
+      {
+        "sourceKey": "fl:statute:741.325",
+        "role": "definition",
+        "contentHash": "304f59c86130d1cd2162a1ad62c53106775898825c1602feb74bbc69e009288b"
+      }
+    ]
+  }
+]

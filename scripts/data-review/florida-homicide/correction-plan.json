@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "741.28",
+    "741.2801",
+    "741.281",
+    "741.283",
+    "741.325",
+    "775.082",
+    "775.0823",
+    "775.083",
+    "775.084",
+    "776.012",
+    "776.013",
+    "776.031",
+    "776.032",
+    "776.041",
+    "776.05",
+    "776.051",
+    "776.06",
+    "776.07",
+    "776.08",
+    "776.085",
+    "776.09",
+    "782.03",
+    "782.04",
+    "782.065",
+    "782.07",
+    "893.02",
+    "893.135",
+    "943.10",
+    "985.565"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+      "section": "782.04",
+      "scope": "(5)",
+      "ordinaryCategory": "felony",
+      "requiredSections": [
+        {
+          "section": "782.04",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        },
+        {
+          "section": "782.065",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "985.565",
+          "scope": "(4)(a)"
+        },
+        {
+          "section": "782.04",
+          "scope": "(6)(a)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(c)4.a."
+        },
+        {
+          "section": "782.065",
+          "scope": "(1)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+      "section": "782.04",
+      "scope": "(4)",
+      "ordinaryCategory": "felony",
+      "requiredSections": [
+        {
+          "section": "782.04",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty"
+        },
+        {
+          "section": "782.065",
+          "role": "penalty"
+        },
+        {
+          "section": "943.10",
+          "role": "definition"
+        },
+        {
+          "section": "775.0823",
+          "role": "penalty"
+        },
+        {
+          "section": "893.135",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "741.2801",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(d)"
+        },
+        {
+          "section": "985.565",
+          "scope": "(4)(a)"
+        },
+        {
+          "section": "782.04",
+          "scope": "(1)(a)3."
+        },
+        {
+          "section": "782.04",
+          "scope": "(6)(b)"
+        },
+        {
+          "section": "782.065",
+          "scope": "(1)"
+        },
+        {
+          "section": "782.065",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.0823",
+          "scope": "(6)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-782-07-1-manslaughter",
+      "section": "782.07",
+      "scope": "(1)",
+      "ordinaryGrade": "F2",
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "grading"
+        },
+        {
+          "section": "776.012",
+          "role": "justification"
+        },
+        {
+          "section": "776.013",
+          "role": "justification"
+        },
+        {
+          "section": "776.031",
+          "role": "justification"
+        },
+        {
+          "section": "776.032",
+          "role": "justification"
+        },
+        {
+          "section": "776.041",
+          "role": "justification"
+        },
+        {
+          "section": "776.05",
+          "role": "justification"
+        },
+        {
+          "section": "776.051",
+          "role": "justification"
+        },
+        {
+          "section": "776.06",
+          "role": "justification"
+        },
+        {
+          "section": "776.07",
+          "role": "justification"
+        },
+        {
+          "section": "776.08",
+          "role": "justification"
+        },
+        {
+          "section": "776.085",
+          "role": "justification"
+        },
+        {
+          "section": "776.09",
+          "role": "justification"
+        },
+        {
+          "section": "782.03",
+          "role": "exception"
+        },
+        {
+          "section": "782.04",
+          "role": "exception"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.281",
+          "role": "penalty"
+        },
+        {
+          "section": "741.283",
+          "role": "penalty"
+        },
+        {
+          "section": "741.325",
+          "role": "definition"
+        },
+        {
+          "section": "782.065",
+          "role": "penalty"
+        },
+        {
+          "section": "943.10",
+          "role": "definition"
+        },
+        {
+          "section": "775.0823",
+          "role": "penalty"
+        },
+        {
+          "section": "985.565",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "782.065",
+          "scope": "(1)"
+        },
+        {
+          "section": "782.065",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.0823",
+          "scope": "(8)"
+        }
+      ],
+      "ordinaryCategory": "felony"
+    }
+  ]
+}
