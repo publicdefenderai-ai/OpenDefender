@@ -5,6 +5,8 @@ import e from "../shared/florida-reviewed-data/e.json";
 import f from "../shared/florida-reviewed-data/f.json";
 import priorHarmDefinitions from "../scripts/data-review/florida-harm/previous-definitions.json";
 import harmCorrections from "../scripts/data-review/output/florida-harm-corrections.json";
+import priorDrugDefinitions from "../scripts/data-review/florida-drug-acts/previous-definitions.json";
+import drugCorrections from "../scripts/data-review/output/florida-drug-acts-corrections.json";
 import audit from "../scripts/data-review/output/florida-eyeball-review-reconciliation-audit.json";
 
 const hashJson = (value: unknown) =>
@@ -53,9 +55,13 @@ describe("Florida eyeball-review reconciliation", () => {
       // a later bound correction. Preserve its original product hash and test
       // the current identity against the explicit successor packet separately.
       const prior = priorHarmDefinitions.find(row => row.id === mapping.id);
+      const priorDrug = priorDrugDefinitions.find(row => row.id === mapping.id);
       if (prior) {
         expect(mapping.reconciledRecordHash).toBe(hashJson(prior));
         expect(definition).toEqual(harmCorrections.definitions.find(row => row.id === mapping.id));
+      } else if (priorDrug) {
+        expect(mapping.reconciledRecordHash).toBe(hashJson(priorDrug));
+        expect(definition).toEqual(drugCorrections.definitions.find(row => row.id === mapping.id));
       } else {
         expect(mapping.reconciledRecordHash).toBe(hashJson(definition));
       }

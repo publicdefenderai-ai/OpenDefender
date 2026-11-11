@@ -1,0 +1,99 @@
+{
+  "M1": {
+    "en": "A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine.",
+    "es": "Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa.",
+    "zh": "一级轻罪通常最高可判监禁1年及罚款1,000美元。"
+  },
+  "F3": {
+    "en": "A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine.",
+    "es": "Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa.",
+    "zh": "三级重罪通常最高可判监禁5年及罚款5,000美元。"
+  },
+  "F2": {
+    "en": "A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine.",
+    "es": "Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa.",
+    "zh": "二级重罪通常最高可判监禁15年及罚款10,000美元。"
+  },
+  "retail": {
+    "en": "A first violation is a first-degree misdemeanor, ordinarily up to 1 year in jail and $1,000. A second or subsequent violation is a third-degree felony, ordinarily up to 5 years and $5,000.",
+    "es": "Una primera infracción es delito menor de primer grado, ordinariamente hasta 1 año de cárcel y $1,000 de multa. Una segunda infracción o infracción posterior es delito grave de tercer grado, ordinariamente hasta 5 años y $5,000.",
+    "zh": "初次违反为一级轻罪，通常最高监禁1年及罚款1,000美元；第二次或以后违反为三级重罪，通常最高监禁5年及罚款5,000美元。"
+  },
+  "scheduled": {
+    "en": "Match the particular substance to §893.03. Subsections (1)(a), (1)(b), (1)(d), (2)(a), (2)(b) and (2)(c)5 carry a second-degree felony, ordinarily up to 15 years and $10,000. Subsections (1)(c), (2)(c)1 through 3 or 6 through 10, (3) and (4) carry a third-degree felony, ordinarily up to 5 years and $5,000. Subsection (5) carries a first-degree misdemeanor, ordinarily up to 1 year and $1,000.",
+    "es": "Identifique la sustancia en el §893.03. Los apartados (1)(a), (1)(b), (1)(d), (2)(a), (2)(b) y (2)(c)5 conllevan delito grave de segundo grado, ordinariamente hasta 15 años y $10,000. Los apartados (1)(c), (2)(c)1 a 3 o 6 a 10, (3) y (4) conllevan delito grave de tercer grado, ordinariamente hasta 5 años y $5,000. El apartado (5) conlleva delito menor de primer grado, ordinariamente hasta 1 año y $1,000.",
+    "zh": "请在第893.03条中核对具体物质。第(1)(a)、(1)(b)、(1)(d)、(2)(a)、(2)(b)和(2)(c)5项对应二级重罪，通常最高15年及罚款10,000美元。第(1)(c)、(2)(c)第1至3或6至10项、(3)和(4)款对应三级重罪，通常最高5年及罚款5,000美元。第(5)款对应一级轻罪，通常最高1年及罚款1,000美元。"
+  },
+  "minor": {
+    "en": "Under §893.13(4), the grade for an adult involving a minor depends on the substance in §893.03. The (1)(a), (1)(b), (1)(d), (2)(a), (2)(b) and (2)(c)5 group is a first-degree felony, ordinarily up to 30 years and $10,000. The (1)(c), (2)(c)1 through 3 or 6 through 10, (3) and (4) group is a second-degree felony, ordinarily up to 15 years and $10,000. Other controlled substances covered by (4)(c) are a third-degree felony, ordinarily up to 5 years and $5,000. The court cannot suspend or defer the sentence or place the convicted person on probation.",
+    "es": "Cuando un adulto involucra a un menor, el §893.13(4) determina el grado según la sustancia del §893.03. El grupo (1)(a), (1)(b), (1)(d), (2)(a), (2)(b) y (2)(c)5 conlleva delito grave de primer grado, ordinariamente hasta 30 años y $10,000. El grupo (1)(c), (2)(c)1 a 3 o 6 a 10, (3) y (4) conlleva delito grave de segundo grado, ordinariamente hasta 15 años y $10,000. Las demás sustancias comprendidas en (4)(c) conllevan delito grave de tercer grado, ordinariamente hasta 5 años y $5,000. No se puede suspender ni aplazar la pena ni imponer libertad vigilada.",
+    "zh": "按第893.13(4)款，成年人涉及未成年人的本罪按第893.03条具体物质分级。第(1)(a)、(1)(b)、(1)(d)、(2)(a)、(2)(b)和(2)(c)5项对应一级重罪，通常最高30年及罚款10,000美元。第(1)(c)、(2)(c)第1至3或6至10项、(3)和(4)款对应二级重罪，通常最高15年及罚款10,000美元。第(4)(c)款涵盖的其他管制物质对应三级重罪，通常最高5年及罚款5,000美元。法院不得暂停或推迟量刑，也不得对定罪者判处缓刑监督。"
+  },
+  "overdose": {
+    "en": "Section 893.21 protects someone who in good faith seeks medical help for another person’s actual or suspected overdose, and a person who experiences or in good faith believes they are experiencing an overdose and needs help, when the evidence for this charge came from seeking that help. Protection covers arrest, charge, prosecution and penalty. It also covers qualifying supervision violations under (3). It gives no basis to suppress evidence in other prosecutions.",
+    "es": "El §893.21 protege a quien de buena fe busca asistencia médica para otra persona por una sobredosis real o sospechada, y a quien sufre o cree de buena fe estar sufriendo una sobredosis y necesita asistencia, si la prueba de esta acusación se obtuvo al solicitar ayuda. La protección abarca arresto, acusación, procesamiento y sanción. El apartado (3) protege además contra sanciones por ciertas infracciones de supervisión. No permite excluir pruebas en otros procesos.",
+    "zh": "第893.21条保护善意为实际或疑似过量用药者寻求医疗帮助的人，以及实际或善意相信自己过量用药且需要医疗帮助的人，前提是本罪的证据因求助而取得。保护涵盖逮捕、指控、起诉及处罚。第(3)款也保护符合条件的监督违规行为免受处罚。此保护不能作为其他刑事诉讼中排除证据的理由。"
+  },
+  "test": {
+    "en": "The testing-product rule in §893.145(4), as amended July 1, 2026, excludes products used solely to detect the listed fentanyl substances or xylazine, unless they can measure quantity, weight or potency.",
+    "es": "El §893.145(4), modificado el 1 de julio de 2026, exceptúa los productos usados únicamente para detectar las sustancias de fentanilo enumeradas o xilacina, salvo si pueden medir cantidad, peso o potencia.",
+    "zh": "第893.145(4)款自2026年7月1日修订后，排除仅用于检测所列芬太尼物质或赛拉嗪的产品，但可测量数量、重量或效价的产品不属于该例外。"
+  },
+  "evidence": {
+    "en": "Section 893.146 directs courts and juries to consider relevant circumstances, including statements about use, residue, legitimate uses and other evidence, in deciding whether an object is drug paraphernalia.",
+    "es": "El §893.146 exige considerar las circunstancias pertinentes, incluidas las declaraciones sobre el uso, los residuos, los usos legítimos y otras pruebas, para decidir si un objeto es parafernalia de drogas.",
+    "zh": "第893.146条要求法院或陪审团综合相关情形，包括有关用途的陈述、残留物、合法用途及其他证据，以判断物品是否属于毒品用具。"
+  },
+  "noncannabis": {
+    "en": "This entry covers non-cannabis applications. Cannabis-specific liability and medical-marijuana compliance require separate review.",
+    "es": "Esta ficha abarca sustancias distintas del cannabis. La responsabilidad específica por cannabis y el cumplimiento de las normas de marihuana medicinal se evalúan por separado.",
+    "zh": "本条目仅涵盖非大麻情形。大麻相关责任和医用大麻合规须另行评估。"
+  },
+  "defense": {
+    "en": "Under §893.101 lack of knowledge of the substance’s illicit nature is an affirmative defense. If raised, actual or constructive possession permits, but does not require, an inference of that knowledge.",
+    "es": "Según el §893.101, desconocer el carácter ilícito de la sustancia es una defensa afirmativa. Si se invoca, la posesión real o constructiva permite, pero no obliga a inferir que se conocía ese carácter.",
+    "zh": "依第893.101条，不知道物质具有非法性质属于积极抗辩。提出该抗辩时，实际或推定占有允许但不强制推断占有人知悉该性质。"
+  },
+  "possessionExceptions": {
+    "en": "Subsection (6)(a) excludes substances lawfully obtained from a practitioner, under a valid professional prescription or order, or otherwise authorized under the chapter. Section (6)(d) separately grades Schedule V possession as a second-degree misdemeanor, ordinarily up to 60 days and $500. Section (6)(b) addresses up to 20 grams of cannabis excluding extracted resin and its preparations. Section (6)(c) separately addresses over 10 grams of certain listed substances or mixtures. The professional and official exclusions in (9) have their own conditions.",
+    "es": "El apartado (6)(a) exceptúa las sustancias obtenidas legalmente de un profesional, con receta u orden profesional válida, o autorizadas por el capítulo. El apartado (6)(d) clasifica por separado la posesión de sustancias de la Lista V como delito menor de segundo grado, ordinariamente hasta 60 días y $500. El (6)(b) trata hasta 20 gramos de cannabis y excluye la resina extraída y sus preparados. El (6)(c) abarca por separado más de 10 gramos de ciertas sustancias o mezclas. Las excepciones profesionales y oficiales del (9) tienen sus propios requisitos.",
+    "zh": "第(6)(a)款排除从执业人员处合法取得、凭有效专业处方或医嘱取得以及本章另行授权的情形。第(6)(d)款另将持有附表V物质定为二级轻罪，通常最高60天及罚款500美元。第(6)(b)款适用于不超过20克的大麻，排除提取的树脂及其制剂。第(6)(c)款另适用于超过10克的特定物质或混合物。第(9)款的专业及公务例外各有适用条件。"
+  },
+  "deliveryExceptions": {
+    "en": "The greater-than-10-gram sale or delivery provision in (1)(b) is separate. Subsection (3) separately covers delivery without consideration of 20 grams or less of cannabis, excluding extracted resin and preparations of it.",
+    "es": "El apartado (1)(b) regula por separado ciertas ventas o entregas de más de 10 gramos. El (3) regula por separado la entrega sin contraprestación de hasta 20 gramos de cannabis, excluida la resina extraída y sus preparados.",
+    "zh": "第(1)(b)款另行规定特定超过10克的销售或交付。第(3)款另行规定无对价交付不超过20克大麻，排除提取树脂及其制剂。"
+  },
+  "purchaseExceptions": {
+    "en": "Subsection (2)(b) separately grades purchases of more than 10 grams of the specified Schedule I(a) or (b) substances, combinations or mixtures as first-degree felonies.",
+    "es": "El apartado (2)(b) clasifica por separado como delito grave de primer grado la compra de más de 10 gramos de las sustancias, combinaciones o mezclas especificadas de la Lista I(a) o (b).",
+    "zh": "第(2)(b)款另将购买超过10克特定附表I(a)或(b)所列物质、其组合或混合物的行为定为一级重罪。"
+  },
+  "domestic": {
+    "en": "For conduct on or after July 1, 2026, §741.2801 requires reclassification if this offense itself qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For these drug offenses the injury-or-death and family or household requirements need case-specific evidence. The shared-residence rule excepts parents of a child in common. The charge alone does not establish these conditions.",
+    "es": "Para hechos desde el 1 de julio de 2026, el §741.2801 exige reclasificar si este delito constituye violencia doméstica según el §741.28 y el acusado ya tenía una condena pertinente al ocurrir los hechos. En estos delitos de drogas, la lesión física o muerte y la relación familiar o doméstica exigen pruebas específicas. La regla de convivencia exceptúa a los progenitores de un hijo en común. La acusación por sí sola no acredita esas condiciones.",
+    "zh": "对2026年7月1日及以后的行为，若本罪本身符合第741.28条家庭暴力定义且行为人当时已有符合条件的家庭暴力定罪，第741.2801条要求提高罪级。此类毒品犯罪须有个案证据证明身体伤害或死亡及家庭或住户关系。共有子女的父母适用共同居住要求的例外。仅凭指控不能认定这些条件。"
+  },
+  "enhanced": {
+    "M1": {
+      "en": "A first-degree misdemeanor then becomes a third-degree felony (ordinary maximum 5 years and $5,000).",
+      "es": "Un delito menor de primer grado pasa entonces a delito grave de tercer grado (máximos ordinarios de 5 años y $5,000).",
+      "zh": "一级轻罪因此升为三级重罪（通常最高5年及5,000美元）。"
+    },
+    "F3": {
+      "en": "A third-degree felony then becomes a second-degree felony (ordinarily 15 years and $10,000 maximum).",
+      "es": "Un delito grave de tercer grado pasa entonces a segundo grado (máximos ordinarios de 15 años y $10,000).",
+      "zh": "三级重罪因此升为二级重罪（通常最高15年及10,000美元）。"
+    },
+    "F2": {
+      "en": "A second-degree felony then becomes a first-degree felony (ordinarily 30 years and $10,000 maximum).",
+      "es": "Un delito grave de segundo grado pasa entonces a primer grado (máximos ordinarios de 30 años y $10,000).",
+      "zh": "二级重罪因此升为一级重罪（通常最高30年及10,000美元）。"
+    },
+    "F1": {
+      "en": "A first-degree felony then becomes a life felony (up to life and ordinarily a $15,000 fine).",
+      "es": "Un delito grave de primer grado pasa entonces a delito punible con cadena perpetua (hasta cadena perpetua y multa ordinaria de $15,000).",
+      "zh": "一级重罪因此升为可判终身监禁的重罪（最高终身监禁及通常最高15,000美元罚款）。"
+    }
+  }
+}

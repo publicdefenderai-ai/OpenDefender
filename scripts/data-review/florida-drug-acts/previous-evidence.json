@@ -1,0 +1,785 @@
+[
+  {
+    "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.13:1_a",
+      "target": "title",
+      "text": "Prohibited acts; penalties",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:1_a",
+        "target": "text",
+        "text": "Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance.",
+        "start": 47,
+        "end": 229,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:1_a",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 288,
+        "end": 497,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:893.13:1_a",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 766,
+        "end": 918,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.13:1_a",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "grading",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "exception",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "sourceKey": "fl:statute:893.101",
+        "role": "justification",
+        "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.13:2_a",
+      "target": "title",
+      "text": "Prohibited acts; penalties",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:2_a",
+        "target": "text",
+        "text": "Except as authorized by this chapter and chapter 499, a person may not purchase, or possess with intent to purchase, a controlled substance.",
+        "start": 10945,
+        "end": 11085,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:2_a",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 11144,
+        "end": 11353,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:893.13:2_a",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 11622,
+        "end": 11774,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.13:2_a",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "grading",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "exception",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "sourceKey": "fl:statute:893.101",
+        "role": "justification",
+        "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.13:4",
+      "target": "title",
+      "text": "Prohibited acts; penalties",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:4",
+        "target": "text",
+        "text": "Except as authorized by this chapter, a person 18 years of age or older may not deliver any controlled substance to a person younger than 18 years of age, use or hire a person younger than 18 years of age as an agent or employee in the sale or delivery of such a substance, or use such person to assist in avoiding detection or apprehension for a violation of this chapter.",
+        "start": 12563,
+        "end": 12936,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:4",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 12997,
+        "end": 13205,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.13:4",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "grading",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "exception",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "sourceKey": "fl:statute:893.101",
+        "role": "justification",
+        "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.13:5",
+      "target": "title",
+      "text": "Prohibited acts; penalties",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:5",
+        "target": "text",
+        "text": "A person may not bring into this state any controlled substance unless the possession of such controlled substance is authorized by this chapter or unless such person is licensed to do so by the appropriate federal agency.",
+        "start": 13789,
+        "end": 14011,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:5",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 14071,
+        "end": 14280,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "felony"
+      },
+      {
+        "sourceKey": "fl:statute:893.13:5",
+        "target": "text",
+        "text": "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 14551,
+        "end": 14703,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.13:5",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "grading",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "exception",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "sourceKey": "fl:statute:893.101",
+        "role": "justification",
+        "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.13:6_a",
+      "target": "title",
+      "text": "Prohibited acts; penalties",
+      "start": 0,
+      "end": 26,
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:6_a",
+        "target": "text",
+        "text": "A person may not be in actual or constructive possession of a controlled substance unless such controlled substance was lawfully obtained from a practitioner or pursuant to a valid prescription or order of a practitioner while acting in the course of his or her professional practice or to be in actual or constructive possession of a controlled substance except as otherwise authorized by this chapter.",
+        "start": 14713,
+        "end": 15116,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.13:6_a",
+        "target": "text",
+        "text": "A person who violates this provision commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 15117,
+        "end": 15256,
+        "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.13:6_a",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "grading",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.13",
+        "role": "exception",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "sourceKey": "fl:statute:893.101",
+        "role": "justification",
+        "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:1",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:1",
+        "target": "text",
+        "text": "It is unlawful for any person to use, or to possess with intent to use, drug paraphernalia:",
+        "start": 203,
+        "end": 294,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:1",
+        "target": "text",
+        "text": "Any person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 648,
+        "end": 787,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:1",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:2",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:2",
+        "target": "text",
+        "text": "It is unlawful for any person to deliver, possess with intent to deliver, or manufacture with intent to deliver drug paraphernalia, knowing, or under circumstances where one reasonably should know, that it will be used:",
+        "start": 842,
+        "end": 1061,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:2",
+        "target": "text",
+        "text": "Any person who violates this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1407,
+        "end": 1554,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:2",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:3_a",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:3_a",
+        "target": "text",
+        "text": "Any person 18 years of age or over who violates subsection (2) by delivering drug paraphernalia to a person under 18 years of age is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1611,
+        "end": 1849,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:3_a",
+        "target": "text",
+        "text": "Any person 18 years of age or over who violates subsection (2) by delivering drug paraphernalia to a person under 18 years of age is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 1611,
+        "end": 1849,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:3_a",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "justification",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:3_b",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:3_b",
+        "target": "text",
+        "text": "It is unlawful for any person to sell or otherwise deliver hypodermic syringes, needles, or other objects which may be used, are intended for use, or are designed for use in parenterally injecting substances into the human body to any person under 18 years of age, except that hypodermic syringes, needles, or other such objects may be lawfully dispensed to a person under 18 years of age by a licensed practitioner, parent, or legal guardian or by a pharmacist pursuant to a valid prescription for same.",
+        "start": 1856,
+        "end": 2360,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:3_b",
+        "target": "text",
+        "text": "Any person who violates the provisions of this paragraph is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 2361,
+        "end": 2517,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:3_b",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "exception",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:4_a",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:4_a",
+        "target": "text",
+        "text": "A controlled substance in violation of this chapter; or",
+        "start": 2783,
+        "end": 2838,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147",
+        "target": "text",
+        "text": "Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2890,
+        "end": 3032,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:4_a",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "justification",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:4_b",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:4_b",
+        "target": "text",
+        "text": "Contraband as defined in s. 932.701(2)(a)1.",
+        "start": 2845,
+        "end": 2888,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:4_b",
+        "target": "text",
+        "text": "Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 2890,
+        "end": 3032,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:4_b",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "justification",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      },
+      {
+        "sourceKey": "fl:statute:932.701",
+        "role": "definition",
+        "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1"
+      },
+      {
+        "sourceKey": "fl:statute:893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "sourceKey": "fl:statute:893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:5",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:5",
+        "target": "text",
+        "text": "It is unlawful for any person to place in any newspaper, magazine, handbill, or other publication any advertisement, knowing, or under circumstances where one reasonably should know, that the purpose of the advertisement, in whole or in part, is to promote the sale of objects designed or intended for use as drug paraphernalia.",
+        "start": 3077,
+        "end": 3405,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:5",
+        "target": "text",
+        "text": "Any person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "start": 3406,
+        "end": 3545,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "misdemeanor"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:5",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  },
+  {
+    "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "identityEvidence": {
+      "sourceKey": "fl:statute:893.147:6",
+      "target": "title",
+      "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "start": 0,
+      "end": 142,
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:6",
+        "target": "text",
+        "text": "It is unlawful for a person to knowingly and willfully sell or offer for sale at retail any drug paraphernalia described in s. 893.145(12)(a)-(c) or (g)-(m), other than a pipe that is primarily made of briar, meerschaum, clay, or corn cob.",
+        "start": 3594,
+        "end": 3833,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "gradeEvidence": [
+      {
+        "sourceKey": "fl:statute:893.147:6",
+        "target": "text",
+        "text": "A person who violates paragraph (a) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, and, upon a second or subsequent violation, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3840,
+        "end": 4117,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "misdemeanor"
+      },
+      {
+        "sourceKey": "fl:statute:893.147:6",
+        "target": "text",
+        "text": "A person who violates paragraph (a) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, and, upon a second or subsequent violation, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "start": 3840,
+        "end": 4117,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+        "category": "felony"
+      }
+    ],
+    "requiredDependencies": [
+      {
+        "sourceKey": "fl:statute:893.147:6",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.147",
+        "role": "grading",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "definition",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      },
+      {
+        "sourceKey": "fl:statute:893.145",
+        "role": "exception",
+        "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+      }
+    ]
+  }
+]
