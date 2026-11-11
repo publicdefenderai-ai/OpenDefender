@@ -202,7 +202,7 @@ export default function DocumentLibrary() {
         currentPage={t('documentLibrary.title', 'Case Documents Library')} 
       />
       
-      <section className="vivid-header-teal py-16 md:py-20 lg:py-24">
+      <section data-skip-content tabIndex={-1} className="vivid-header-teal py-16 md:py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6 text-white">
             {t('documentLibrary.title', 'Case Documents Library')}
@@ -213,7 +213,7 @@ export default function DocumentLibrary() {
         </div>
       </section>
 
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14 lg:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14 lg:py-16">
         <ScrollReveal>
           <Card className="mb-10 md:mb-12">
             <CardContent className="p-5 md:p-6">
@@ -378,7 +378,7 @@ export default function DocumentLibrary() {
             </CardContent>
           </Card>
         </ScrollReveal>
-      </main>
+      </div>
 
       <Footer />
     </div>

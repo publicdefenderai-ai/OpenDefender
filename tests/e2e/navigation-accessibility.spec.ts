@@ -328,7 +328,13 @@ test.describe("intent navigation and accessibility", () => {
     await expectNoHorizontalOverflow(page, 390);
   });
 });
-for (const path of ["/", "/support", "/support/personal-health", "/how-to"]) {
+for (const path of [
+  "/", "/support", "/support/personal-health", "/how-to", "/case-guidance", "/first-24-hours",
+  "/statutes", "/privacy-policy", "/disclaimers", "/immigration-guidance/find-attorney",
+  "/widgets", "/api-docs", "/document-library", "/mission-statement",
+  "/support/court-logistics/intake-form", "/support/court-logistics/court-date-guide",
+  "/support/reputation/eligibility", "/admin/provider-metrics", "/admin/texas-source-review",
+]) {
   test(`one main landmark and keyboard skip destination on ${path}`, async ({ page }) => {
     await page.goto(path);
     await expect(page.locator("h1").first()).toBeVisible();
@@ -340,8 +346,13 @@ for (const path of ["/", "/support", "/support/personal-health", "/how-to"]) {
     await page.keyboard.press("Tab");
     await expect(skip).toBeFocused();
     await page.keyboard.press("Enter");
-    const destination = path === "/" ? main : main.locator("[data-skip-content]");
+    const destination = main.locator("[data-skip-content]");
     await expect(destination).toBeFocused();
     await expect(destination.locator("h1").first()).toBeVisible();
+    await page.keyboard.press("Tab");
+    expect(await destination.evaluate(start => {
+      const next = document.activeElement;
+      return next !== null && Boolean(start.compareDocumentPosition(next) & Node.DOCUMENT_POSITION_FOLLOWING);
+    })).toBe(true);
   });
 }

@@ -77,7 +77,7 @@ export default function CourtDateGuide() {
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
 
-      <main className="flex-1">
+      <div data-skip-content tabIndex={-1} className="flex-1">
         {/* Hero */}
         <div className="bg-gradient-to-br from-teal-500/5 via-background to-background border-b border-border/40">
           <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
@@ -390,7 +390,7 @@ export default function CourtDateGuide() {
             </div>
           </ScrollReveal>
         </div>
-      </main>
+      </div>
       <Footer />
     </div>
   );

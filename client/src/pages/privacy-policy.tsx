@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="editorial-page-intro py-12 md:py-16">
+      <section data-skip-content tabIndex={-1} className="editorial-page-intro py-12 md:py-16">
         <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
           <p className="editorial-kicker mb-3">{t('privacyPolicy.hero.lastUpdated')}</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-5">
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
       
-      <main className="editorial-document max-w-4xl mx-auto px-4 py-12 md:py-16">
+      <div className="editorial-document max-w-4xl mx-auto px-4 py-12 md:py-16">
 
         {/* Core Principles */}
         <ScrollReveal>
@@ -451,7 +451,7 @@ export default function PrivacyPolicy() {
             </CardContent>
           </Card>
         </ScrollReveal>
-      </main>
+      </div>
 
       <Footer />
     </div>

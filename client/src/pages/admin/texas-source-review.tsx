@@ -107,7 +107,7 @@ function AuthGate({
   checking: boolean;
 }) {
   return (
-    <main className="min-h-screen bg-slate-950 px-4 py-16 text-slate-100">
+    <div data-skip-content tabIndex={-1} className="min-h-screen bg-slate-950 px-4 py-16 text-slate-100">
       <div className="mx-auto max-w-md rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl sm:p-8">
         <div className="mb-6 flex items-center gap-3">
           <div className="rounded-xl bg-amber-400/15 p-3 text-amber-300">
@@ -151,7 +151,7 @@ function AuthGate({
           </button>
         </form>
       </div>
-    </main>
+    </div>
   );
 }
 
@@ -487,9 +487,9 @@ export default function TexasSourceReview() {
 
   if (authChecking) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-200">
+      <div data-skip-content tabIndex={-1} className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-200">
         <Loader2 className="h-8 w-8 animate-spin text-amber-300" aria-label="Checking administrative access" />
-      </main>
+      </div>
     );
   }
   if (!adminKey) {
@@ -505,7 +505,7 @@ export default function TexasSourceReview() {
   }
 
   return (
-    <main className="min-h-screen bg-slate-100 pb-16 text-slate-900">
+    <div data-skip-content tabIndex={-1} className="min-h-screen bg-slate-100 pb-16 text-slate-900">
       <header className="border-b border-slate-800 bg-slate-950 text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-6 lg:px-8">
           <div>
@@ -680,6 +680,6 @@ export default function TexasSourceReview() {
           )}
         </section>
       </div>
-    </main>
+    </div>
   );
 }

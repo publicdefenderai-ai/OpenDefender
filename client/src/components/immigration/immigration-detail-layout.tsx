@@ -35,7 +35,7 @@ export function ImmigrationDetailLayout({
       <Header />
       <PageBreadcrumb items={breadcrumbItems} currentPage={title} />
 
-      <header className="border-b border-border/60 bg-muted/20">
+      <header data-skip-content tabIndex={-1} className="border-b border-border/60 bg-muted/20">
         <div className="max-w-5xl mx-auto px-4 py-10 md:py-14">
           <div className="flex items-start gap-4 md:gap-5">
             <div className="mt-1 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-muted text-primary md:h-14 md:w-14">
@@ -62,9 +62,9 @@ export function ImmigrationDetailLayout({
 
       <RapidlyEvolvingNotice />
 
-      <main className="editorial-reading">
+      <div data-immigration-reading className="editorial-reading">
         {children}
-      </main>
+      </div>
 
       <Footer />
     </div>
