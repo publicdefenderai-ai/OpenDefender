@@ -1,0 +1,167 @@
+{
+  "M1": {
+    "en": "A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine.",
+    "es": "Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa.",
+    "zh": "一级轻罪通常最高可判监禁1年及罚款1,000美元。"
+  },
+  "M2": {
+    "en": "A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine.",
+    "es": "Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa.",
+    "zh": "二级轻罪通常最高可判监禁60天及罚款500美元。"
+  },
+  "F3": {
+    "en": "A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine.",
+    "es": "Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa.",
+    "zh": "三级重罪通常最高可判监禁5年及罚款5,000美元。"
+  },
+  "F2": {
+    "en": "A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine.",
+    "es": "Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa.",
+    "zh": "二级重罪通常最高可判监禁15年及罚款10,000美元。"
+  },
+  "F1": {
+    "en": "A first-degree felony ordinarily carries up to 30 years and a $10,000 fine.",
+    "es": "Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa.",
+    "zh": "一级重罪通常最高可判30年监禁及10,000美元罚款。"
+  },
+  "animal1": {
+    "en": "The maximum ordinary jail term is one year.",
+    "es": "La pena ordinaria máxima de cárcel es de un año.",
+    "zh": "通常最高监禁一年。"
+  },
+  "animal2": {
+    "en": "The maximum ordinary prison term is five years.",
+    "es": "La pena ordinaria máxima de prisión es de cinco años.",
+    "zh": "通常最高监禁五年。"
+  },
+  "777.04(1)": {
+    "en": "Normally the target grade controls: capital becomes first-degree felony; life or first-degree becomes second-degree felony; second-degree, third-degree burglary and level 3–10 third-degree felonies become third-degree felonies. Other third-degree felonies generally become first-degree misdemeanors and misdemeanor targets become second-degree misdemeanors. The exceptions and ranking provisions in (4) must be checked against the particular target. Under (5), complete and voluntary renunciation requires abandonment of the attempt or otherwise preventing the crime.",
+    "es": "Normalmente manda el delito objetivo: capital pasa a grave de primer grado; de por vida o de primero a grave de segundo; grave de segundo, allanamiento grave de tercero y graves de tercero de niveles 3–10 a grave de tercero. Los demás graves de tercero generalmente pasan a menores de primero y los delitos menores a menores de segundo. Se deben verificar las excepciones y la clasificación del apartado (4) para el delito concreto. Según (5), la renuncia completa y voluntaria exige abandonar la tentativa o impedir el delito por otros medios.",
+    "zh": "通常按目标犯罪定级：可判死刑的重罪对应一级重罪；终身或一级重罪对应二级；二级重罪、三级入室盗窃和量刑等级3至10的三级重罪对应三级。其余三级重罪一般对应一级轻罪，轻罪对应二级轻罪。须按具体目标罪核对第(4)款的例外和量刑等级。第(5)款的完全自愿放弃要求放弃尝试或以其他方式防止犯罪。"
+  },
+  "777.04(2)": {
+    "en": "Normally the target grade controls: capital becomes first-degree felony; life or first-degree becomes second-degree felony; second-degree, third-degree burglary and level 3–10 third-degree felonies become third-degree felonies. Other third-degree felonies generally become first-degree misdemeanors and misdemeanor targets become second-degree misdemeanors. The exceptions and ranking provisions in (4) must be checked against the particular target. Under (5), complete and voluntary renunciation requires persuading the solicited person to desist or otherwise preventing the crime.",
+    "es": "Normalmente manda el delito objetivo: capital pasa a grave de primer grado; de por vida o de primero a grave de segundo; grave de segundo, allanamiento grave de tercero y graves de tercero de niveles 3–10 a grave de tercero. Los demás graves de tercero generalmente pasan a menores de primero y los delitos menores a menores de segundo. Se deben verificar las excepciones y la clasificación del apartado (4) para el delito concreto. Según (5), la renuncia completa y voluntaria exige persuadir a la persona solicitada de desistir o impedir el delito por otros medios.",
+    "zh": "通常按目标犯罪定级：可判死刑的重罪对应一级重罪；终身或一级重罪对应二级；二级重罪、三级入室盗窃和量刑等级3至10的三级重罪对应三级。其余三级重罪一般对应一级轻罪，轻罪对应二级轻罪。须按具体目标罪核对第(4)款的例外和量刑等级。第(5)款的完全自愿放弃要求说服受唆使者放弃或以其他方式防止犯罪。"
+  },
+  "777.04(3)": {
+    "en": "Normally the target grade controls: capital becomes first-degree felony; life or first-degree becomes second-degree felony; second-degree, third-degree burglary and level 3–10 third-degree felonies become third-degree felonies. Other third-degree felonies generally become first-degree misdemeanors and misdemeanor targets become second-degree misdemeanors. The exceptions and ranking provisions in (4) must be checked against the particular target. Under (5), complete and voluntary renunciation requires persuading the other participants to desist or otherwise preventing the crime.",
+    "es": "Normalmente manda el delito objetivo: capital pasa a grave de primer grado; de por vida o de primero a grave de segundo; grave de segundo, allanamiento grave de tercero y graves de tercero de niveles 3–10 a grave de tercero. Los demás graves de tercero generalmente pasan a menores de primero y los delitos menores a menores de segundo. Se deben verificar las excepciones y la clasificación del apartado (4) para el delito concreto. Según (5), la renuncia completa y voluntaria exige persuadir a los demás participantes de desistir o impedir el delito por otros medios.",
+    "zh": "通常按目标犯罪定级：可判死刑的重罪对应一级重罪；终身或一级重罪对应二级；二级重罪、三级入室盗窃和量刑等级3至10的三级重罪对应三级。其余三级重罪一般对应一级轻罪，轻罪对应二级轻罪。须按具体目标罪核对第(4)款的例外和量刑等级。第(5)款的完全自愿放弃要求说服其他参与者放弃或以其他方式防止犯罪。"
+  },
+  "777.03": {
+    "en": "The family exception in (1)(a) applies to its third-degree-felony branch. For the listed child-victim crimes (1)(b) instead contains a domestic-violence-victim exception requiring a court finding. Under (3) the accessory is generally ranked two levels below the underlying felony.",
+    "es": "La excepción familiar de (1)(a) se limita a su supuesto de delito grave de tercero. Para los delitos enumerados contra menores, (1)(b) contiene una excepción para víctimas de violencia doméstica que requiere determinación judicial. Según (3), el encubrimiento generalmente se clasifica dos niveles por debajo del delito principal.",
+    "zh": "第(1)(a)款的亲属例外限于其三级重罪情形。涉及列明的儿童受害犯罪时，第(1)(b)款适用须由法院认定的家庭暴力受害者例外。第(3)款通常按低于基础重罪两个量刑等级处理。"
+  },
+  "796.07": {
+    "en": "For (2)(f), conviction requires 100 hours of community service and a paid education program if available in the circuit. A second or later conviction requires at least 10 days in custody. A disposition other than dismissal or acquittal carries a separate $5,000 civil penalty. Vehicle impoundment may last up to 60 days. Convictions for prostitution or procuring another to commit it also require screening under §796.08(3).",
+    "es": "En (2)(f), la condena exige 100 horas de servicio comunitario y pagar y asistir a un programa educativo si existe en el circuito. Una segunda condena o posterior exige al menos 10 días de reclusión. Una resolución distinta de absolución o desestimación conlleva una multa civil adicional de $5,000. La inmovilización del vehículo puede durar hasta 60 días. Las condenas por prostitución o por procurar que otra persona la ejerza también exigen pruebas según §796.08(3).",
+    "zh": "第(2)(f)款定罪须完成100小时社区服务；辖区有教育课程时须付费参加。再次定罪至少拘禁10天。除撤诉或无罪外的司法处理另有5,000美元民事罚款。车辆可被扣押至多60天。因卖淫或使他人卖淫定罪还须依第796.08(3)条接受检测。"
+  },
+  "800.03": {
+    "en": "Subsection (3) excludes breastfeeding and mere nudity at a place designated for it.",
+    "es": "El apartado (3) excluye la lactancia y la mera desnudez en un lugar destinado a ella.",
+    "zh": "第(3)款排除哺乳及仅在指定地点裸体。"
+  },
+  "790.23": {
+    "en": "For a felon actually possessing a firearm, §775.087(2) provides a three-year minimum. It becomes ten years if a qualifying prior completed or attempted felony involved actual possession of a firearm or destructive device. These minima do not follow from an ammunition-only allegation.",
+    "es": "Para una persona con condena grave en posesión efectiva de un arma de fuego, §775.087(2) prevé un mínimo de tres años. Son diez años si en un delito grave anterior pertinente consumado o intentado hubo posesión efectiva de un arma de fuego o artefacto destructivo. Estos mínimos no se deducen de una imputación referida solo a munición.",
+    "zh": "有重罪前科者实际持有枪支时，第775.087(2)条规定最低三年；如在以前实施或企图实施的指定重罪中实际持有枪支或破坏性装置，则最低十年。仅涉弹药的指控不能据此确定最低刑。"
+  },
+  "790.221": {
+    "en": "The statute excludes antique firearms and firearms lawfully owned and possessed under federal law.",
+    "es": "Se excluyen las armas antiguas y las armas cuya titularidad y posesión sean lícitas conforme a la ley federal.",
+    "zh": "本条排除古董枪支及依联邦法合法拥有并持有的枪支。"
+  },
+  "806.01": {
+    "en": "An injury during arson can support a separate §806.031 charge, whether or not harm was intended: ordinary bodily harm is a first-degree misdemeanor; great bodily harm, permanent disability or permanent disfigurement is a second-degree felony.",
+    "es": "Una lesión durante el incendio puede fundamentar un cargo separado según §806.031 aunque no haya intención de lesionar: el daño corporal ordinario es delito menor de primero; el grave, la discapacidad permanente o la desfiguración permanente son delito grave de segundo.",
+    "zh": "纵火导致人身伤害时，即使无伤害意图，也可能另依第806.031条指控：一般身体伤害为一级轻罪，重伤、永久残疾或永久毁容为二级重罪。"
+  },
+  "837.02": {
+    "en": "Recantation under §837.07 requires admitting falsity in the same continuous proceeding and either no substantial effect on it or an admission before exposure of the falsehood became manifest.",
+    "es": "La retractación según §837.07 exige admitir la falsedad en el mismo procedimiento continuo y que la falsedad no lo haya afectado sustancialmente o que se admita antes de resultar manifiesto su descubrimiento.",
+    "zh": "第837.07条的撤回抗辩要求在同一连续程序中承认虚假，并满足其一：虚假陈述未实质影响程序，或在明显即将被揭穿之前承认。"
+  },
+  "320.07": {
+    "en": "Both the prior offense and expiration beyond six months matter to this criminal branch.",
+    "es": "Para esta modalidad penal importan tanto el antecedente como que hayan pasado más de seis meses desde el vencimiento.",
+    "zh": "此刑事分支同时要求有前次违规且登记已过期超过六个月。"
+  },
+  "403.413": {
+    "en": "If this dumping violation involved a motor vehicle, the finding of guilt adds three driver-license points even if adjudication is withheld.",
+    "es": "Si en esta infracción se utilizó un vehículo, la determinación de culpabilidad añade tres puntos al permiso de conducir incluso cuando se reserva la adjudicación.",
+    "zh": "如本项倾倒行为涉及机动车，认定有罪即在驾照上记三分，即使暂缓正式定罪。"
+  },
+  "562.12": {
+    "en": "The statutory commercial-sale and repeat fines are mandatory; the ordinary maximum jail or prison terms for the three grades are 60 days, five years and 15 years respectively.",
+    "es": "Las multas por venta comercial y reincidencia son obligatorias; los máximos ordinarios de privación de libertad son respectivamente 60 días, cinco años y 15 años.",
+    "zh": "非法商业销售及再犯的法定罚款为强制处罚；三个等级通常最高分别为60天、五年和十五年监禁。"
+  },
+  "877.03": {
+    "en": "When the charge rests on speech alone, State v. Saunders, 339 So. 2d 641 (Fla. 1976), limits it to fighting words or a knowingly false report of a physical hazard creating a clear and present danger of bodily harm.",
+    "es": "Si el cargo se basa solo en palabras, State v. Saunders, 339 So. 2d 641 (Fla. 1976), lo limita a expresiones que incitan de inmediato a una pelea o a informar, a sabiendas de su falsedad, de un peligro físico creando un peligro claro y presente de daño corporal.",
+    "zh": "若指控仅基于言语，佛州最高法院在State v. Saunders案（1976）将适用范围限于可直接引发冲突的挑衅言语，或明知虚假地报告人身危险、造成人身伤害的明确而现实危险。"
+  },
+  "806.13": {
+    "en": "Damage of $200 or less ordinarily falls in the second-degree misdemeanor branch; above $200 but below $1,000 in first degree. The felony impairment branch requires restoration labor and supplies of at least $1,000. Graffiti adds minimum fines of $250, $500 or $1,000 by conviction count (subject to inability to pay), and at least 40 hours of community service, with 100 hours of graffiti removal if possible.",
+    "es": "Daño de hasta $200 es ordinariamente delito menor de segundo grado; más de $200 y menos de $1,000, de primero. Para la modalidad grave por interrupción la restauración debe costar al menos $1,000 en mano de obra y materiales. El grafiti añade multas mínimas de $250, $500 o $1,000 según los antecedentes, sujetas a incapacidad de pago, y al menos 40 horas de servicio comunitario, con 100 horas de eliminación de grafiti si es posible.",
+    "zh": "损失不超过200美元一般为二级轻罪，超过200但低于1,000美元为一级轻罪。中断服务的重罪分支要求恢复服务的人工及材料至少1,000美元。涂鸦另有随定罪次数递增的最低罚款250、500、1,000美元（无支付能力时可免），以及至少40小时社区服务，可能时需完成100小时清除涂鸦服务。"
+  },
+  "810.09": {
+    "en": "The location, posted warnings, authorized direction to leave and any allegation of being armed affect which subsection applies.",
+    "es": "La ubicación, los avisos, la orden autorizada de retirarse y cualquier alegación de portar armas determinan qué apartado puede aplicar.",
+    "zh": "地点、张贴的告示、经授权的离开指令及是否被指携带武器，都会影响适用的分款。"
+  },
+  "815.06": {
+    "en": "Subsection (7) excludes actions authorized by a warrant or lawful warrant exception, lawful employment within its scope, and authorized government or business security operations.",
+    "es": "El apartado (7) excluye actos amparados por orden judicial o una excepción legal, actos dentro de las funciones laborales lícitas y operaciones de seguridad autorizadas de gobiernos o empresas.",
+    "zh": "第(7)款排除根据搜查令或合法例外实施的行为、合法职务范围内的行为以及经授权的政府或企业安全工作。"
+  },
+  "827.06": {
+    "en": "The prosecution must establish ability to pay and willful failure. A conviction requires restitution equal to all unpaid support at sentencing.",
+    "es": "La fiscalía debe probar capacidad de pago e incumplimiento deliberado. La condena exige restitución por todo el sustento adeudado al dictarse la pena.",
+    "zh": "检方须证明有支付能力且故意不支付。定罪后须按量刑时全部欠付扶养费判令赔偿。"
+  },
+  "828.12(1)": {
+    "en": "The court may prohibit keeping or controlling animals. For a minor, the juvenile court must order a psychological evaluation and treatment or counseling if recommended. Section 828.12(9) directs the state to publish conviction or guilty/no-contest plea information by January 1, 2027: three years for a first misdemeanor conviction, five for a first felony and ten for a subsequent conviction.",
+    "es": "El tribunal puede prohibir tener animales o controlarlos. Para un menor, el tribunal juvenil debe ordenar una evaluación psicológica y tratamiento o asesoramiento si se recomienda. El §828.12(9) ordena al estado publicar información sobre condenas o declaraciones de culpabilidad o no oposición para el 1 de enero de 2027: tres años por la primera condena menor, cinco por la primera grave y diez por una condena posterior.",
+    "zh": "法院可禁止饲养或控制动物。少年法庭须令未成年人接受心理评估，并在专家建议时接受治疗或辅导。 第828.12(9)条要求州政府在2027年1月1日前公布定罪或认罪、不抗辩答辩的信息：首次轻罪定罪公布三年、首次重罪五年、再次定罪十年。"
+  },
+  "828.12(2)": {
+    "en": "A finding of knowing, intentional torture or torment causing injury, mutilation or death requires a minimum $2,500 fine plus psychological counseling or anger-management treatment. A repeat aggravated violation carries at least six months in custody, a minimum $5,000 fine and service of the full imposed term. The court may prohibit keeping animals. Section 828.12(9) directs the state to publish conviction or guilty/no-contest plea information by January 1, 2027: three years for a first misdemeanor conviction, five for a first felony and ten for a subsequent conviction.",
+    "es": "Si se determina tortura o tormento consciente e intencional con lesión, mutilación o muerte, se exige multa mínima de $2,500 y asesoramiento psicológico o tratamiento de manejo de ira. Una infracción agravada posterior exige al menos seis meses de reclusión, multa mínima de $5,000 y cumplimiento íntegro de la pena impuesta. El tribunal puede prohibir tener animales. El §828.12(9) ordena al estado publicar información sobre condenas o declaraciones de culpabilidad o no oposición para el 1 de enero de 2027: tres años por la primera condena menor, cinco por la primera grave y diez por una condena posterior.",
+    "zh": "明知并故意折磨动物致受伤、残损或死亡，须至少罚款2,500美元并接受心理辅导或情绪管理治疗。再次违反加重虐待规定，须至少监禁六个月、罚款至少5,000美元并服满所判刑期。法院可禁止饲养动物。 第828.12(9)条要求州政府在2027年1月1日前公布定罪或认罪、不抗辩答辩的信息：首次轻罪定罪公布三年、首次重罪五年、再次定罪十年。"
+  },
+  "831.01": {
+    "en": "Section 831.01 requires a listed instrument and intent to injure or defraud.",
+    "es": "El §831.01 exige un documento comprendido por el estatuto e intención de perjudicar o defraudar.",
+    "zh": "第831.01条要求涉案文书属于所列类别，且有伤害或欺诈意图。"
+  },
+  "832.05": {
+    "en": "The worthless-check provision excludes postdated checks and contains an exception for a payee or holder with advance knowledge, notice or reason to believe funds were insufficient. The separate deposit-with-intent-to-defraud offense has its own elements.",
+    "es": "La regla sobre cheques sin fondos excluye cheques posfechados y contiene una excepción cuando el beneficiario o tenedor conocía, había sido avisado o tenía razones para creer que faltaban fondos. El depósito con intención de defraudar tiene elementos propios.",
+    "zh": "空头支票条款排除远期支票，并对事先知道、收到通知或有理由相信资金不足的收款人或持有人规定例外。另行规定的欺诈性存款罪有其独立要件。"
+  },
+  "837.05": {
+    "en": "The court must order prosecution and investigation costs, and restitution for damage or injury proximately caused by lawful conduct responding to the report.",
+    "es": "El tribunal debe ordenar el pago de los costos de investigación y enjuiciamiento y la restitución de los perjuicios causados de manera próxima por actos lícitos de respuesta a la denuncia.",
+    "zh": "法院须判令支付起诉和调查费用，并赔偿因对报告作出合法应对而直接造成的财产或人身损害。"
+  },
+  "843.01": {
+    "en": "For the animal branch the police canine or police horse must work at the direction of or in tandem with a listed officer or authorized person. The charge requires offering or doing violence.",
+    "es": "En la modalidad relativa a animales, el perro o caballo policial debe actuar bajo la dirección de un agente o persona autorizada enumerada o junto con ella. El cargo exige ofrecer o ejercer violencia.",
+    "zh": "动物分支要求警犬或警马正受所列警员或获授权人员指挥，或与其协作。指控须涉及威胁使用或实施暴力。"
+  },
+  "843.15": {
+    "en": "Willful failure to appear also forfeits any security pledged for release. The court retains its separate contempt power.",
+    "es": "La incomparecencia deliberada también implica perder la garantía prestada para obtener la libertad. El tribunal conserva su facultad independiente de sancionar por desacato.",
+    "zh": "故意不出庭还会导致获释时提供的担保被没收。法院仍可另行行使藐视法庭的处罚权。"
+  },
+  "domestic": {
+    "en": "For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony.",
+    "es": "Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida.",
+    "zh": "对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
+  }
+}

@@ -318,7 +318,7 @@
     "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
     "section": "320.07",
     "status": "eligible",
-    "reason": "The exact heading and subsection (3)(c) support a narrowly coded repeat expired-registration misdemeanor, with adjacent noncriminal tiers and exceptions stated conditionally.",
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
     "identity": {
       "kind": "official_heading",
       "quote": "Expiration of registration; renewal required; penalties",
@@ -340,9 +340,29 @@
         "section": "320.07",
         "role": "definition",
         "contentHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
       }
     ],
-    "notes": "Parent conduct support, § 320.07(3): “The operation of any motor vehicle without having attached thereto a registration license plate and validation stickers, or the use of any mobile home without having attached thereto a mobile home sticker, for the current registration period shall subject the owner thereof, if he or she is present, or, if the owner is not present, the operator thereof to the following penalty provisions:”. Excluded adjacent grade, § 320.07(3)(a): “Any person whose motor vehicle or mobile home registration has been expired for a period of 6 months or less commits a noncriminal traffic infraction, punishable as a nonmoving violation as provided in chapter 318.” These are whole-section support, not primary (3)(c) conduct or grading quotes. Subsections (3)(d)-(f) supply the lease, servicemember, and leased-owner limitations included in the summaries."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
@@ -471,7 +491,7 @@
     "id": "fl-fs-403-413-6-b-florida-litter-law",
     "section": "403.413",
     "status": "eligible",
-    "reason": "The statutory short title supplies the same literal identity as the official heading, and the exact code is limited to the mid-quantity noncommercial misdemeanor tier.",
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
     "identity": {
       "kind": "official_heading",
       "quote": "Florida Litter Law",
@@ -493,9 +513,29 @@
         "section": "403.413",
         "role": "definition",
         "contentHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
       }
     ],
-    "notes": "Parent conduct support, § 403.413(4): “Unless otherwise authorized by law or permit, it is unlawful for any person to dump litter in any manner or amount in or on any of the following areas:”. That parent prohibition and its listed locations remain whole-section definition support rather than primary (6)(b) conductQuotes. The definition excludes the separate small-amount infraction and felony tiers, avoiding unsupported hazardous-waste definition claims."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-section-562.111",
@@ -512,7 +552,7 @@
     "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
     "section": "562.12",
     "status": "eligible",
-    "reason": "The official heading literally identifies the subsection (1) beverage-licensing conduct, and subsections (1)-(2) provide conditional misdemeanor and felony grades.",
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
     "identity": {
       "kind": "official_heading",
       "quote": "Beverages sold with improper license, or without license or registration, or held with intent to sell prohibited",
@@ -523,9 +563,8 @@
       "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000."
     ],
     "gradingQuotes": [
-      "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
       "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.",
-      "Any person, including a licensee, who commits a second or subsequent violation of subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $15,000 and not more than $20,000."
+      "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
     ],
     "requiredSections": [
       {
@@ -537,9 +576,29 @@
         "section": "562.12",
         "role": "grading",
         "contentHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
       }
     ],
-    "notes": "The exporter-registration offense in subsection (3) is outside this exact charge code."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
@@ -664,7 +723,7 @@
     "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
     "section": "877.03",
     "status": "eligible",
-    "reason": "The whole section defines one misdemeanor under the exact official heading; the manifest's older rows require reselection and are not among the retained or exact-alias records that bar a source-first definition.",
+    "reason": "Individually bound reviewed-family offense, scope and penalties.",
     "identity": {
       "kind": "official_heading",
       "quote": "Breach of the peace; disorderly conduct",
@@ -681,9 +740,29 @@
         "section": "877.03",
         "role": "offense",
         "contentHash": "813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
       }
     ],
-    "notes": "The nonliteral noise-only legacy label remains held; this definition uses only the complete official identity and statutory scope."
+    "notes": "Charged subdivision retains its own scope. Incorporated definitions, repeat and collateral branches are context-specific."
   },
   {
     "id": "fl-section-877.22",

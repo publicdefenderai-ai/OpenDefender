@@ -1,0 +1,2229 @@
+{
+  "records": [
+    {
+      "id": "fl-fs-777-04-1-criminal-attempt",
+      "section": "777.04",
+      "grades": [
+        "F1",
+        "F2",
+        "F3",
+        "M1",
+        "M2"
+      ],
+      "message": "777.04(1)",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense"
+        },
+        {
+          "section": "777.04",
+          "role": "grading"
+        },
+        {
+          "section": "104.091",
+          "role": "exception"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception"
+        },
+        {
+          "section": "828.125",
+          "role": "exception"
+        },
+        {
+          "section": "849.25",
+          "role": "exception"
+        },
+        {
+          "section": "893.135",
+          "role": "exception"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "777.04",
+          "scope": "(4)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(5)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(1)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-777-04-2-criminal-solicitation",
+      "section": "777.04",
+      "grades": [
+        "F1",
+        "F2",
+        "F3",
+        "M1",
+        "M2"
+      ],
+      "message": "777.04(2)",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense"
+        },
+        {
+          "section": "777.04",
+          "role": "grading"
+        },
+        {
+          "section": "104.091",
+          "role": "exception"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception"
+        },
+        {
+          "section": "828.125",
+          "role": "exception"
+        },
+        {
+          "section": "849.25",
+          "role": "exception"
+        },
+        {
+          "section": "893.135",
+          "role": "exception"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "777.04",
+          "scope": "(4)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(5)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-777-04-3-criminal-conspiracy",
+      "section": "777.04",
+      "grades": [
+        "F1",
+        "F2",
+        "F3",
+        "M1",
+        "M2"
+      ],
+      "message": "777.04(3)",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense"
+        },
+        {
+          "section": "777.04",
+          "role": "grading"
+        },
+        {
+          "section": "104.091",
+          "role": "exception"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception"
+        },
+        {
+          "section": "828.125",
+          "role": "exception"
+        },
+        {
+          "section": "849.25",
+          "role": "exception"
+        },
+        {
+          "section": "893.135",
+          "role": "exception"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "777.04",
+          "scope": "(4)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(5)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "777.04",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-777-03-accessory-after-the-fact",
+      "section": "777.03",
+      "grades": [
+        "F1",
+        "F2",
+        "F3",
+        "M1"
+      ],
+      "message": "777.03",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "777.03",
+          "role": "offense"
+        },
+        {
+          "section": "777.03",
+          "role": "grading"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "777.03",
+          "scope": "(1)"
+        },
+        {
+          "section": "777.03",
+          "scope": "(2)"
+        },
+        {
+          "section": "777.03",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+      "section": "796.07",
+      "grades": [
+        "M2",
+        "M1",
+        "F3",
+        "F2"
+      ],
+      "message": "796.07",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "796.07",
+          "role": "offense"
+        },
+        {
+          "section": "796.07",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "796.08",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "796.07",
+          "scope": "(2)"
+        },
+        {
+          "section": "796.07",
+          "scope": "(4)"
+        },
+        {
+          "section": "796.07",
+          "scope": "(5)"
+        },
+        {
+          "section": "796.07",
+          "scope": "(6)"
+        },
+        {
+          "section": "796.07",
+          "scope": "(7)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "796.08",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+      "section": "800.03",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "message": "800.03",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "800.03",
+          "role": "offense"
+        },
+        {
+          "section": "800.03",
+          "role": "exception"
+        },
+        {
+          "section": "800.03",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "800.03",
+          "scope": "(1)"
+        },
+        {
+          "section": "800.03",
+          "scope": "(2)"
+        },
+        {
+          "section": "800.03",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+      "section": "790.23",
+      "grades": [
+        "F2"
+      ],
+      "message": "790.23",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "790.23",
+          "role": "offense"
+        },
+        {
+          "section": "790.23",
+          "role": "exception"
+        },
+        {
+          "section": "790.23",
+          "role": "grading"
+        },
+        {
+          "section": "790.001",
+          "role": "definition"
+        },
+        {
+          "section": "874.04",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "775.087",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "790.23",
+          "scope": "(1)"
+        },
+        {
+          "section": "790.23",
+          "scope": "(2)"
+        },
+        {
+          "section": "790.23",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.087",
+          "scope": "(2)(a)1."
+        },
+        {
+          "section": "775.084",
+          "scope": "(1)(b)1."
+        },
+        {
+          "section": "790.23",
+          "scope": "(4)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+      "section": "790.221",
+      "grades": [
+        "F2"
+      ],
+      "message": "790.221",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "790.221",
+          "role": "offense"
+        },
+        {
+          "section": "790.001",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "790.221",
+          "scope": "(1)"
+        },
+        {
+          "section": "790.221",
+          "scope": "(2)"
+        },
+        {
+          "section": "790.221",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+      "section": "806.01",
+      "grades": [
+        "F1"
+      ],
+      "message": "806.01",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "806.01",
+          "role": "offense"
+        },
+        {
+          "section": "806.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "806.031",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "806.01",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "806.01",
+          "scope": "(1)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(1)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(2)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+      "section": "806.01",
+      "grades": [
+        "F2"
+      ],
+      "message": "806.01",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "806.01",
+          "role": "offense"
+        },
+        {
+          "section": "806.01",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "806.031",
+          "role": "penalty"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "806.01",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "806.01",
+          "scope": "(2)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(1)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(2)"
+        },
+        {
+          "section": "806.031",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+      "section": "837.02",
+      "grades": [
+        "F3",
+        "F2"
+      ],
+      "message": "837.02",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "837.02",
+          "role": "offense"
+        },
+        {
+          "section": "837.02",
+          "role": "grading"
+        },
+        {
+          "section": "837.02",
+          "role": "exception"
+        },
+        {
+          "section": "837.011",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "837.07",
+          "role": "exception"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "837.02",
+          "scope": "(1)"
+        },
+        {
+          "section": "837.02",
+          "scope": "(2)"
+        },
+        {
+          "section": "837.02",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "837.07",
+          "scope": "(1)"
+        },
+        {
+          "section": "837.07",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+      "section": "320.07",
+      "grades": [
+        "M2"
+      ],
+      "message": "320.07",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "320.07",
+          "role": "offense"
+        },
+        {
+          "section": "320.07",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "320.07",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "320.07",
+          "scope": "(3)(c)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-403-413-6-b-florida-litter-law",
+      "section": "403.413",
+      "grades": [
+        "M1"
+      ],
+      "message": "403.413",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "403.413",
+          "role": "offense"
+        },
+        {
+          "section": "403.413",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "403.413",
+          "scope": "(4)"
+        },
+        {
+          "section": "403.413",
+          "scope": "(6)(b)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+      "section": "562.12",
+      "grades": [
+        "M2"
+      ],
+      "message": "562.12",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "562.12",
+          "role": "offense"
+        },
+        {
+          "section": "562.12",
+          "role": "grading"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "562.12",
+          "scope": "(1)"
+        },
+        {
+          "section": "562.12",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+      "section": "877.03",
+      "grades": [
+        "M2"
+      ],
+      "message": "877.03",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "877.03",
+          "role": "offense"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-806-13-criminal-mischief",
+      "section": "806.13",
+      "grades": [
+        "M2",
+        "M1",
+        "F3"
+      ],
+      "message": "806.13",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "806.13",
+          "role": "offense"
+        },
+        {
+          "section": "806.13",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "806.13",
+          "scope": "(1)"
+        },
+        {
+          "section": "806.13",
+          "scope": "(8)"
+        },
+        {
+          "section": "806.13",
+          "scope": "(9)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+      "section": "810.09",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "message": "810.09",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "810.09",
+          "role": "offense"
+        },
+        {
+          "section": "810.09",
+          "role": "grading"
+        },
+        {
+          "section": "810.011",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "810.09",
+          "scope": "(1)"
+        },
+        {
+          "section": "810.09",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+      "section": "815.06",
+      "grades": [
+        "F3",
+        "F2",
+        "F1"
+      ],
+      "message": "815.06",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "815.06",
+          "role": "offense"
+        },
+        {
+          "section": "815.06",
+          "role": "grading"
+        },
+        {
+          "section": "815.06",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "815.06",
+          "scope": "(2)"
+        },
+        {
+          "section": "815.06",
+          "scope": "(3)"
+        },
+        {
+          "section": "815.06",
+          "scope": "(7)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-827-06-nonsupport-of-dependents",
+      "section": "827.06",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "message": "827.06",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "827.06",
+          "role": "offense"
+        },
+        {
+          "section": "827.06",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "827.06",
+          "scope": "(2)"
+        },
+        {
+          "section": "827.06",
+          "scope": "(3)"
+        },
+        {
+          "section": "827.06",
+          "scope": "(4)"
+        },
+        {
+          "section": "827.06",
+          "scope": "(5)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-828-12-animal-cruelty",
+      "section": "828.12",
+      "grades": [
+        "animal1"
+      ],
+      "message": "828.12(1)",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "828.12",
+          "role": "offense"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "828.12",
+          "scope": "(3)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(5)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(8)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(9)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(1)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-828-12-aggravated-animal-cruelty",
+      "section": "828.12",
+      "grades": [
+        "animal2"
+      ],
+      "message": "828.12(2)",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "828.12",
+          "role": "offense"
+        },
+        {
+          "section": "828.12",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "828.12",
+          "scope": "(3)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(5)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(8)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(9)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        },
+        {
+          "section": "828.12",
+          "scope": "(2)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-831-01-forgery",
+      "section": "831.01",
+      "grades": [
+        "F3"
+      ],
+      "message": "831.01",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "831.01",
+          "role": "offense"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+      "section": "832.05",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "message": "832.05",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "832.05",
+          "role": "offense"
+        },
+        {
+          "section": "832.05",
+          "role": "grading"
+        },
+        {
+          "section": "832.05",
+          "role": "exception"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "832.05",
+          "scope": "(2)"
+        },
+        {
+          "section": "832.05",
+          "scope": "(3)"
+        },
+        {
+          "section": "832.05",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+      "section": "837.05",
+      "grades": [
+        "M1",
+        "F3"
+      ],
+      "message": "837.05",
+      "newPrimary": true,
+      "requiredSections": [
+        {
+          "section": "837.05",
+          "role": "offense"
+        },
+        {
+          "section": "837.05",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "837.05",
+          "scope": "(1)"
+        },
+        {
+          "section": "837.05",
+          "scope": "(2)"
+        },
+        {
+          "section": "837.05",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+      "section": "843.01",
+      "grades": [
+        "F3"
+      ],
+      "message": "843.01",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "843.01",
+          "role": "offense"
+        },
+        {
+          "section": "843.01",
+          "role": "grading"
+        },
+        {
+          "section": "943.10",
+          "role": "definition"
+        },
+        {
+          "section": "843.19",
+          "role": "definition"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "843.01",
+          "scope": "(1)"
+        },
+        {
+          "section": "843.01",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+      "section": "843.15",
+      "grades": [
+        "F3",
+        "M1"
+      ],
+      "message": "843.15",
+      "newPrimary": false,
+      "requiredSections": [
+        {
+          "section": "843.15",
+          "role": "offense"
+        },
+        {
+          "section": "843.15",
+          "role": "grading"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "843.15",
+          "scope": "(1)"
+        },
+        {
+          "section": "843.15",
+          "scope": "(2)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    "104.091",
+    "320.07",
+    "379.2431",
+    "403.413",
+    "562.12",
+    "741.28",
+    "741.2801",
+    "775.082",
+    "775.083",
+    "775.084",
+    "775.087",
+    "777.03",
+    "777.04",
+    "790.001",
+    "790.221",
+    "790.23",
+    "796.07",
+    "796.08",
+    "800.03",
+    "806.01",
+    "806.031",
+    "806.13",
+    "810.011",
+    "810.09",
+    "815.06",
+    "827.06",
+    "828.12",
+    "828.125",
+    "831.01",
+    "832.05",
+    "837.011",
+    "837.02",
+    "837.05",
+    "837.07",
+    "843.01",
+    "843.15",
+    "843.19",
+    "849.25",
+    "874.04",
+    "877.03",
+    "893.135",
+    "921.0022",
+    "921.0023",
+    "943.10"
+  ]
+}
