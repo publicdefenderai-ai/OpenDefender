@@ -871,7 +871,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="case-state-workspace" data-testid="guidance-loading">
+        <div data-skip-content tabIndex={-1} className="case-state-workspace" data-testid="guidance-loading">
           <Card className="case-state-surface">
             <CardContent className="pt-6 pb-5">
               <div className="case-loading-content space-y-5">
@@ -919,7 +919,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
               </div>
             </CardContent>
           </Card>
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -929,7 +929,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="case-state-workspace">
+        <div data-skip-content tabIndex={-1} className="case-state-workspace">
           <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
               <div className="space-y-6">
@@ -999,7 +999,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
               </div>
             </CardContent>
           </Card>
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -1009,7 +1009,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="case-state-workspace">
+        <div data-skip-content tabIndex={-1} className="case-state-workspace">
           <Card className="case-state-surface">
             <CardContent className="pt-8 pb-8 px-8">
               <div className="case-expired-content space-y-5">
@@ -1041,7 +1041,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
               </div>
             </CardContent>
           </Card>
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -1051,7 +1051,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className={`case-intake-workspace mx-auto px-4 py-8${presentation === "conversation" ? " conversation-workspace" : ""}`}>
+        <div data-skip-content tabIndex={-1} className={`case-intake-workspace mx-auto px-4 py-8${presentation === "conversation" ? " conversation-workspace" : ""}`}>
           <QAFlow
             presentation={presentation}
             onComplete={handleQAComplete}
@@ -1103,7 +1103,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
               reviewingTimedOutAnswers ? handleTimedOutAnswersChange : undefined
             }
           />
-        </main>
+        </div>
         <Footer />
       </div>
     );
@@ -1113,7 +1113,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="case-results-workspace px-4 py-8">
+        <div data-skip-content tabIndex={-1} className="case-results-workspace px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => handleAttemptClose(onExit)}
@@ -1142,7 +1142,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
               </Link>
             </div>
           </aside>
-        </main>
+        </div>
         
         {/* Public Defender Search Modal */}
         <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
@@ -1344,7 +1344,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
         </div>
       )}
 
-      <main className="case-entry">
+      <div data-skip-content tabIndex={-1} className="case-entry">
         <section id="understand-charges" className="case-entry-hero scroll-mt-24">
           <div>
             <p className="case-kicker">{t('case.hero.title')}</p>
@@ -1374,7 +1374,7 @@ export function CaseGuidanceExperience({ presentation = "form", onExit, onGuidan
             <Link href="/rights-info" data-testid="button-learn-rights">{t('case.privacy.learnRightsButton')}</Link>
           </div>
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>

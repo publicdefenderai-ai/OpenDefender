@@ -457,7 +457,7 @@ export default function FirstTwentyFourHours() {
     <div className="design-first24 min-h-screen bg-background">
       <Header />
 
-      <section className="first24-intro">
+      <section data-skip-content tabIndex={-1} className="first24-intro">
         <div className="first24-intro-inner">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             {t('first24Hours.title')}
@@ -480,7 +480,7 @@ export default function FirstTwentyFourHours() {
         </div>
       </section>
 
-      <main className="first24-reading">
+      <div className="first24-reading">
         <div className="flex gap-12 items-start">
           <PageSidebar
             jurisdiction={jurisdiction}
@@ -1230,7 +1230,7 @@ export default function FirstTwentyFourHours() {
 
           </div>{/* end flex-1 content column */}
         </div>{/* end flex row */}
-      </main>
+      </div>
 
       <Footer />
     </div>

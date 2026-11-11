@@ -271,7 +271,7 @@ export default function ApiDocs() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-8 max-w-6xl">
+      <div data-skip-content tabIndex={-1} className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 rounded-lg bg-primary/10">
@@ -475,7 +475,7 @@ export default function ApiDocs() {
             </div>
           </CardContent>
         </Card>
-      </main>
+      </div>
       
       <Footer />
     </div>

@@ -218,7 +218,7 @@ export default function StatutesPage() {
       <Header />
 
       {/* Editorial opening */}
-      <section className="editorial-page-intro py-10 md:py-14">
+      <section data-skip-content tabIndex={-1} className="editorial-page-intro py-10 md:py-14">
         <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4 sm:px-6">
           <div className="editorial-tool-icon w-12 h-12 mb-5">
             <BookOpen className="h-6 w-6" />
@@ -232,7 +232,7 @@ export default function StatutesPage() {
         </div>
       </section>
 
-      <main className="editorial-workspace flex-1 container mx-auto px-4 py-8 max-w-7xl">
+      <div className="editorial-workspace flex-1 container mx-auto px-4 py-8 max-w-7xl">
         <div className="editorial-surface rounded-lg p-4 mb-6">
           <div className="flex flex-col gap-3 mb-4 sm:flex-row">
             <div className="flex-1">
@@ -481,7 +481,7 @@ export default function StatutesPage() {
             </div>
           </TabsContent>
         </Tabs>
-      </main>
+      </div>
 
       <Footer />
     </div>

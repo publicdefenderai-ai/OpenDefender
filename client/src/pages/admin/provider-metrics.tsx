@@ -170,7 +170,7 @@ export default function AdminProviderMetrics() {
 
   if (!adminKey) {
     return (
-      <main className="min-h-screen bg-slate-50 px-4 py-16">
+      <div data-skip-content tabIndex={-1} className="min-h-screen bg-slate-50 px-4 py-16">
         <form onSubmit={signIn} className="mx-auto max-w-sm rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-5 flex items-center gap-3">
             <ShieldCheck className="h-6 w-6 text-indigo-600" />
@@ -189,7 +189,7 @@ export default function AdminProviderMetrics() {
             Sign in
           </button>
         </form>
-      </main>
+      </div>
     );
   }
 
@@ -197,7 +197,7 @@ export default function AdminProviderMetrics() {
   const dailyRows = report?.daily.filter((item) => item.operation === "api_request" && item.provider !== "GuidanceEnrichment") ?? [];
 
   return (
-    <main className="min-h-screen bg-slate-50 pb-12">
+    <div data-skip-content tabIndex={-1} className="min-h-screen bg-slate-50 pb-12">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-start justify-between gap-4 px-4 py-5 sm:px-6">
           <div>
@@ -294,6 +294,6 @@ export default function AdminProviderMetrics() {
           Metrics retain daily aggregate counters and bounded timings only. Prompts, citations, URLs, session identifiers, and case narratives are not stored in this path.
         </p>
       </div>
-    </main>
+    </div>
   );
 }

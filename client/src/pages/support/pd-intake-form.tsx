@@ -78,7 +78,7 @@ export default function PdIntakeForm() {
     <div className="min-h-screen bg-background flex flex-col">
       <div className="print:hidden"><Header /></div>
 
-      <main className="flex-1">
+      <div data-skip-content tabIndex={-1} className="flex-1">
         {/* Screen-only intro section */}
         <div className="print:hidden bg-gradient-to-br from-amber-500/5 via-background to-background border-b border-border/40">
           <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
@@ -278,7 +278,7 @@ export default function PdIntakeForm() {
             </p>
           </div>
         </div>
-      </main>
+      </div>
       <div className="print:hidden"><Footer /></div>
     </div>
   );

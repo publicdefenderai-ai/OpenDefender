@@ -37,7 +37,7 @@ export default function Home() {
     <div className="design-home min-h-screen bg-background">
       <Header />
 
-      <section className="design-home-hero design-container">
+      <section data-skip-content tabIndex={-1} className="design-home-hero design-container">
         <p className="design-eyebrow">{t("design.eyebrow")}</p>
         <h1><span>{t("design.headline")}</span><em>{t("design.start")}</em></h1>
         <div className="design-open-door" aria-hidden="true" />

@@ -39,7 +39,7 @@ export default function MissionStatement() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="container mx-auto px-4 py-12 max-w-5xl">
+      <div data-skip-content tabIndex={-1} className="container mx-auto px-4 py-12 max-w-5xl">
 
         {/* Hero Section */}
         <ScrollReveal>
@@ -161,7 +161,7 @@ export default function MissionStatement() {
           </motion.div>
         </ScrollReveal>
 
-      </main>
+      </div>
 
       <Footer />
     </div>
