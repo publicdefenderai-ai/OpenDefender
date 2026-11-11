@@ -58,7 +58,7 @@ for (const language of ["en", "es", "zh"] as const) {
       await select.selectOption("0");
       await expect(field).toHaveValue(messages[0][1] + "\n\n<personal note>");
       await expect(boxes.first()).toBeChecked();
-      const art = main.locator(".health-hero img");
+      const art = main.locator(".personal-health-hero img");
       await expect.poll(() => art.evaluate((img: HTMLImageElement) => img.naturalWidth > 0)).toBe(true);
       for (const width of [1280, 320]) {
         await page.setViewportSize({ width, height: 900 });

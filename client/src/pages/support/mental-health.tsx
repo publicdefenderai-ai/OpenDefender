@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import mentalHealthHero from "@assets/stock_images/mental-health.png";
+import { mentalHealthDesignCopy } from "@/locales/mental-health-design";
 import { Heart, Phone, MessageCircle, ClipboardCheck, Copy, Check, Printer, ExternalLink, AlertCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,11 +25,20 @@ function TemplateCard({ label, body }: { label: string; body: string }) {
   const handlePrint = () => {
     const w = window.open("", "_blank");
     if (!w) return;
-    w.document.write(`<!DOCTYPE html><html><head><title>${label}</title><style>body{font-family:Arial,sans-serif;padding:32px;max-width:640px;margin:0 auto;white-space:pre-wrap;font-size:13px;line-height:1.6;}</style></head><body>${body.replace(/\n/g, "<br>")}</body></html>`);
-    w.document.close(); w.print();
+    const printPage = w.document;
+    printPage.title = label;
+    const style = printPage.createElement("style");
+    style.textContent = "body { font: 14px/1.6 Arial, sans-serif; max-width: 640px; margin: 2rem auto; padding: 1rem; } h1 { font-size: 18px; } p { white-space: pre-wrap; overflow-wrap: anywhere; }";
+    printPage.head.append(style);
+    const heading = printPage.createElement("h1");
+    heading.textContent = label;
+    const message = printPage.createElement("p");
+    message.textContent = body;
+    printPage.body.append(heading, message);
+    w.print();
   };
   return (
-    <Card>
+    <Card role="group" aria-label={label}>
       <CardHeader className="pb-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <CardTitle className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</CardTitle>
@@ -168,13 +177,12 @@ function TreatmentConnectionSection() {
   );
 }
 
-function CrisisSection() {
+function CrisisSection({ call, text, languageAccess }: { call: string; text: string; languageAccess: string }) {
   const { t } = useTranslation();
 
   return (
-    <section className="py-10">
+    <section className="mental-health-crisis" id="crisis-support">
       <div className="container mx-auto px-4">
-        <ScrollReveal>
           <Card className="border-rose-200 dark:border-rose-800 bg-rose-50/50 dark:bg-rose-950/20">
             <CardContent className="p-6">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-rose-700 dark:text-rose-400">
@@ -184,12 +192,14 @@ function CrisisSection() {
               <p className="text-sm text-muted-foreground mb-4">
                 {t('support.mentalHealth.crisis.description')}
               </p>
+              <p className="text-sm mb-4">{languageAccess}</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white dark:bg-slate-900 rounded-lg p-4 border">
                   <div className="font-semibold mb-1">{t('support.mentalHealth.crisis.hotline.name')}</div>
-                  <a href="tel:988" className="text-2xl font-bold text-rose-600 dark:text-rose-400 hover:underline">
-                    988
-                  </a>
+                  <div className="mental-health-contact-links">
+                    <a href="tel:988">{call}</a>
+                    <a href="sms:988">{text}</a>
+                  </div>
                   <p className="text-xs text-muted-foreground mt-1">
                     {t('support.mentalHealth.crisis.hotline.availability')}
                   </p>
@@ -221,14 +231,15 @@ function CrisisSection() {
               </div>
             </CardContent>
           </Card>
-        </ScrollReveal>
       </div>
     </section>
   );
 }
 
 export default function MentalHealthSupport() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language.split("-")[0];
+  const copy = mentalHealthDesignCopy[language === "es" || language === "zh" ? language : "en"];
 
   const startHereItems: ActionItem[] = [
     {
@@ -347,7 +358,25 @@ export default function MentalHealthSupport() {
   return (
     <ResourcePageTemplate
       categoryId="mentalHealth"
-      heroImage={mentalHealthHero}
+      mainClassName="mental-health-page"
+      actionHeading={copy.actions}
+      introduction={
+        <>
+          <Link className="mental-health-back" href="/support">{t("support.backToSupport")}</Link>
+          <section className="mental-health-hero">
+            <div>
+              <h1>{copy.title}<br /><em>{copy.accent}</em></h1>
+              <p>{t("support.mentalHealth.overview")}</p>
+            </div>
+            <img src="/images/design/mental-health.svg" width="260" height="220" alt="" aria-hidden="true" />
+          </section>
+          <CrisisSection call={copy.call} text={copy.text} languageAccess={copy.languageAccess} />
+          <nav className="mental-health-paths" aria-label={t("support.pageSections")}>
+            <a data-testid="button-start-here" href="#section-start-here">{copy.actions}</a>
+            <a href="#treatment-connection">{t("support.personalHealth.treatmentConnection.sectionTitle")}</a>
+          </nav>
+        </>
+      }
       icon={Heart}
       iconColor="bg-rose-500/10 text-rose-600 dark:text-rose-400"
       heroGradient="bg-gradient-to-br from-rose-500/5 via-background to-background"
@@ -356,7 +385,7 @@ export default function MentalHealthSupport() {
       externalResources={externalResources}
       faqs={faqs}
       tips={tips}
-      customSections={<><TreatmentConnectionSection /><CrisisSection /></>}
+      customSections={<TreatmentConnectionSection />}
       relatedLinks={[
         { label: t('support.relatedLinks.familyFriends'), href: "/friends-family" },
         { label: t('support.relatedLinks.finances'), href: "/support/finances" },

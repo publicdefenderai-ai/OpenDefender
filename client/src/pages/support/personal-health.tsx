@@ -55,9 +55,9 @@ function TreatmentMessages() {
   const locale = i18n.language.split("-")[0];
   const copyText = personalHealthDesignCopy[locale as keyof typeof personalHealthDesignCopy] ?? personalHealthDesignCopy.en;
   return (
-    <section className="health-section" id="health-messages">
+    <section className="personal-health-section" id="health-messages">
       <h2>{copyText.messages}</h2>
-      <div className="health-editor">
+      <div className="personal-health-editor">
         <label htmlFor="health-template">{copyText.choose}</label>
         <select id="health-template" value={index} onChange={event => { setIndex(Number(event.target.value)); setCopied(false); }}>
           {messages.map((item, value) => <option key={value} value={value}>{item.title}</option>)}
@@ -84,15 +84,15 @@ function CareSections() {
   const questions = t(`${care}.angerQuestions`, { returnObjects: true }) as string[];
   return (
     <>
-      <section className="health-section">
+      <section className="personal-health-section">
         <div><h2>{t(`${med}.title`)}</h2><p>{t(`${med}.description`)}</p></div>
-        <ol className="health-steps">{["step1", "step2", "step3"].map(step =>
+        <ol className="personal-health-steps">{["step1", "step2", "step3"].map(step =>
           <li key={step}><h3>{t(`${med}.${step}.title`)}</h3><p>{t(`${med}.${step}.body`)}</p></li>
         )}</ol>
       </section>
-      <section className="health-section" id="treatment-connection">
+      <section className="personal-health-section" id="treatment-connection">
         <div><h2>{t(`${care}.sectionTitle`)}</h2><p>{t(`${care}.sectionSubtitle`)}</p></div>
-        <div className="health-reading">
+        <div className="personal-health-reading">
           <h3>{t(`${care}.whyTitle`)}</h3><p>{t(`${care}.whyBody`)}</p>
           <fieldset><legend>{t(`${care}.checklistTitle`)}</legend>
             {items.map((item, index) => <label key={index}><input type="checkbox" />{item}</label>)}
@@ -255,7 +255,7 @@ export default function PersonalHealthSupport() {
       actionHeading={copy.plan}
       introduction={<>
         <Link href="/support">{t("support.backToSupport")}</Link>
-        <section className="health-hero">
+        <section className="personal-health-hero">
           <div>
             <h1><small>{t("legalGuidance.qaFlow.additionalDetails.concernsCategories.personalHealth.label")}</small>{copy.title}<br /><em>{copy.accent}</em></h1>
             <p>{t("support.personalHealth.overview")}</p>

@@ -3401,31 +3401,57 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
 
 .family-care-letter { border-radius: 2px; box-shadow: none; }
 
+/* Mental Health support */
+.mental-health-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.mental-health-back, .mental-health-paths a { color: var(--primary); font-weight: 600; font-size: 14px; }
+.mental-health-hero { display: grid; grid-template-columns: minmax(0,1fr) 240px; gap: 44px; align-items: center; margin-block: 24px; }
+.mental-health-hero h1 { font-size: clamp(36px,4.7vw,56px); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; }
+.mental-health-hero em { color: var(--primary); font-style: normal; }
+.mental-health-hero p { margin-top: 20px; max-width: 66ch; color: var(--muted-foreground); line-height: 1.75; }
+.mental-health-hero img { max-width: 100%; height: auto; }
+.mental-health-crisis > div { padding-inline: 0; }
+.mental-health-paths { display: flex; flex-wrap: wrap; gap: 0 20px; padding-block: 8px; }
+.mental-health-paths a { display: inline-flex; align-items: center; min-height: 44px; }
+.mental-health-paths a:hover, .mental-health-back:hover { text-decoration: underline; }
+.mental-health-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; line-height: 1.25; text-transform: none; white-space: normal; letter-spacing: -.025em; }
+.mental-health-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.mental-health-page #treatment-connection { scroll-margin-top: 5rem; background: transparent; }
+.mental-health-page pre { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .mental-health-hero { grid-template-columns: minmax(0,1fr) 76px; gap: 12px; align-items: start; }
+  .mental-health-hero > div { display: contents; }
+  .mental-health-hero img { grid-area: 1 / 2; align-self: center; }
+  .mental-health-hero p { grid-column: 1 / -1; margin-top: 0; }
+}
+
+.mental-health-contact-links { display: flex; flex-wrap: wrap; gap: 0 16px; }
+.mental-health-contact-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--primary); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
 .personal-health-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
-.health-hero, .health-section { display: grid; align-items: start; gap: clamp(24px, 5vw, 68px); }
-.health-hero { grid-template-columns: minmax(0, 1fr) 240px; align-items: center; margin: 32px 0; }
-.health-hero h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -.045em; }
-.health-hero small { display: block; margin-bottom: 12px; font-size: 16px; letter-spacing: normal; }
-.health-hero em { font-style: normal; color: var(--primary); }
-.health-hero p, .health-section p { margin-block: 12px; color: var(--muted-foreground); line-height: 1.7; }
-.health-hero nav { display: flex; flex-wrap: wrap; gap: 0 22px; }
-.health-hero a, .health-reading a, .personal-health-page > a { color: var(--primary); font-weight: 600; }
-.health-hero nav a { display: inline-flex; align-items: center; min-height: 44px; }
-.health-hero a:hover, .health-reading a:hover { text-decoration: underline; }
-.health-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); border-top: 1px solid var(--border); padding-block: 36px; scroll-margin-top: 5rem; }
-.health-section h2, .personal-health-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; line-height: 1.25; text-transform: none; letter-spacing: -.025em; white-space: normal; }
-.health-section h3, .health-section legend, .health-editor label { font-weight: 600; }
-.health-steps { list-style: decimal; padding-inline-start: 1.5rem; }
-.health-steps li::marker { color: var(--primary); font-weight: 600; }
-.health-reading fieldset, .health-reading aside { margin-block: 24px; padding: 18px; background: var(--muted); }
-.health-reading aside { border-inline-start: 3px solid var(--primary); }
-.health-reading label { display: flex; align-items: baseline; gap: 12px; padding-block: 8px; }
-.health-reading input { accent-color: var(--primary); }
-.health-editor { display: grid; gap: 12px; min-width: 0; }
-.health-editor select, .health-editor textarea { width: 100%; min-width: 0; padding: 12px; background: var(--background); border: 1px solid var(--border); border-radius: 4px; color: var(--foreground); }
-.health-editor textarea { line-height: 1.65; }
+.personal-health-hero, .personal-health-section { display: grid; align-items: start; gap: clamp(24px, 5vw, 68px); }
+.personal-health-hero { grid-template-columns: minmax(0, 1fr) 240px; align-items: center; margin: 32px 0; }
+.personal-health-hero h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.08; letter-spacing: -.045em; }
+.personal-health-hero small { display: block; margin-bottom: 12px; font-size: 16px; letter-spacing: normal; }
+.personal-health-hero em { font-style: normal; color: var(--primary); }
+.personal-health-hero p, .personal-health-section p { margin-block: 12px; color: var(--muted-foreground); line-height: 1.7; }
+.personal-health-hero nav { display: flex; flex-wrap: wrap; gap: 0 22px; }
+.personal-health-hero a, .personal-health-reading a, .personal-health-page > a { color: var(--primary); font-weight: 600; }
+.personal-health-hero nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.personal-health-hero a:hover, .personal-health-reading a:hover { text-decoration: underline; }
+.personal-health-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); border-top: 1px solid var(--border); padding-block: 36px; scroll-margin-top: 5rem; }
+.personal-health-section h2, .personal-health-page .editorial-section-heading > span { font-size: 24px; font-weight: 500; line-height: 1.25; text-transform: none; letter-spacing: -.025em; white-space: normal; }
+.personal-health-section h3, .personal-health-section legend, .personal-health-editor label { font-weight: 600; }
+.personal-health-steps { list-style: decimal; padding-inline-start: 1.5rem; }
+.personal-health-steps li::marker { color: var(--primary); font-weight: 600; }
+.personal-health-reading fieldset, .personal-health-reading aside { margin-block: 24px; padding: 18px; background: var(--muted); }
+.personal-health-reading aside { border-inline-start: 3px solid var(--primary); }
+.personal-health-reading label { display: flex; align-items: baseline; gap: 12px; padding-block: 8px; }
+.personal-health-reading input { accent-color: var(--primary); }
+.personal-health-editor { display: grid; gap: 12px; min-width: 0; }
+.personal-health-editor select, .personal-health-editor textarea { width: 100%; min-width: 0; padding: 12px; background: var(--background); border: 1px solid var(--border); border-radius: 4px; color: var(--foreground); }
+.personal-health-editor textarea { line-height: 1.65; }
 .personal-health-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
 @media (max-width: 700px) {
-  .health-hero, .health-section { grid-template-columns: minmax(0, 1fr); }
-  .health-hero img { display: none; }
+  .personal-health-hero, .personal-health-section { grid-template-columns: minmax(0, 1fr); }
+  .personal-health-hero img { display: none; }
 }
