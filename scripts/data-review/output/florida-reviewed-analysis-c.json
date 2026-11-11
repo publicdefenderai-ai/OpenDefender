@@ -731,20 +731,18 @@
     "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
     "section": "893.135",
     "status": "eligible",
-    "reason": "The operative clause expressly names trafficking in cocaine and ties that name to subsection (1)(b)1 conduct and quantity-based grading.",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
     "identity": {
       "kind": "operative_guilt_clause",
       "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
     },
     "conductQuotes": [
-      "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of cocaine, as described in s. 893.03(2)(a)4., or of any mixture containing cocaine, but less than 150 kilograms of cocaine or any such mixture, commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      "(b)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of cocaine, as described in s. 893.03(2)(a)4., or of any mixture containing cocaine, but less than 150 kilograms of cocaine or any such mixture, commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 400 grams or more, but less than 150 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
     ],
     "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
-      "Is 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
-      "Is 400 grams or more, but less than 150 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+      "(b)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of cocaine, as described in s. 893.03(2)(a)4., or of any mixture containing cocaine, but less than 150 kilograms of cocaine or any such mixture, commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 400 grams or more, but less than 150 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
     ],
     "requiredSections": [
       {
@@ -753,12 +751,57 @@
         "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
       },
       {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
         "section": "893.03",
         "role": "definition",
         "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
       }
     ],
-    "notes": "The chapter 893/chapter 499 authorization limitation is stated. Higher-quantity life and capital provisions are outside exact subparagraph (1)(b)1."
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-section-893.147",
@@ -1005,142 +1048,849 @@
   },
   {
     "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(c)1 expressly names this offense and supplies all three quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "4 grams or more of any morphine, opium, hydromorphone, or any salt, derivative, isomer, or salt of an isomer thereof, including heroin,"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
-      "Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $100,000.",
-      "Is 28 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(c)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of any morphine, opium, hydromorphone, or any salt, derivative, isomer, or salt of an isomer thereof, including heroin, as described in s. 893.03(1)(b), (2)(a), (3)(c)3., or (3)(c)4., or 4 grams or more of any mixture containing any such substance, but less than 30 kilograms of such substance or mixture, commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 28 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "The 30-kilogram life/capital branches are outside exact subparagraph (1)(c)1."
+    "gradingQuotes": [
+      "(c)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of any morphine, opium, hydromorphone, or any salt, derivative, isomer, or salt of an isomer thereof, including heroin, as described in s. 893.03(1)(b), (2)(a), (3)(c)3., or (3)(c)4., or 4 grams or more of any mixture containing any such substance, but less than 30 kilograms of such substance or mixture, commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 28 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(c)2 expressly names this offense and supplies all four quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "28 grams or more of hydrocodone, as described in s. 893.03(2)(a)1.k., codeine, as described in s. 893.03(2)(a)1.g., or any salt thereof,"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 28 grams or more, but less than 50 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
-      "Is 50 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
-      "Is 100 grams or more, but less than 300 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.",
-      "Is 300 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "2. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of hydrocodone, as described in s. 893.03(2)(a)1.k., codeine, as described in s. 893.03(2)(a)1.g., or any salt thereof, or 28 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 50 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 50 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 100 grams or more, but less than 300 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.\n\nd. \nIs 300 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "All public quantity tiers are quoted."
+    "gradingQuotes": [
+      "2. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of hydrocodone, as described in s. 893.03(2)(a)1.k., codeine, as described in s. 893.03(2)(a)1.g., or any salt thereof, or 28 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 50 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 50 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 100 grams or more, but less than 300 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.\n\nd. \nIs 300 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(c)3 expressly names this offense and supplies all four quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "7 grams or more of oxycodone, as described in s. 893.03(2)(a)1.q., or any salt thereof,"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 7 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
-      "Is 14 grams or more, but less than 25 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
-      "Is 25 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.",
-      "Is 100 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "3. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 7 grams or more of oxycodone, as described in s. 893.03(2)(a)1.q., or any salt thereof, or 7 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 7 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more, but less than 25 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 25 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.\n\nd. \nIs 100 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "All public quantity tiers are quoted."
+    "gradingQuotes": [
+      "3. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 7 grams or more of oxycodone, as described in s. 893.03(2)(a)1.q., or any salt thereof, or 7 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 7 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more, but less than 25 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 25 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.\n\nd. \nIs 100 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
-    "section": "893.135", "status": "eligible",
-    "reason": "Sub-subparagraph (1)(c)4.a expressly names this offense; (1)(c)4.b supplies all quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of:"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $50,000.",
-      "Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 20 years and shall be ordered to pay a fine of $100,000.",
-      "Is 28 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "4.a. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of:\n(I) \nAlfentanil, as described in s. 893.03(2)(b)1.;\n\n(II) \nCarfentanil, as described in s. 893.03(2)(b)6.;\n\n(III) \nFentanyl, as described in s. 893.03(2)(b)9.;\n\n(IV) \nSufentanil, as described in s. 893.03(2)(b)30.;\n\n(V) \nA fentanyl derivative, as described in s. 893.03(1)(a)63.;\n\n(VI) \nA controlled substance analog, as described in s. 893.0356, of any substance described in sub-sub-subparagraphs (I)-(V); or\n\n(VII) \nA mixture containing any substance described in sub-sub-subparagraphs (I)-(VI),\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "The enhanced minor-sale branch in (1)(c)4.c is expressly excluded from this narrower code."
+    "gradingQuotes": [
+      "4.a. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of:\n(I) \nAlfentanil, as described in s. 893.03(2)(b)1.;\n\n(II) \nCarfentanil, as described in s. 893.03(2)(b)6.;\n\n(III) \nFentanyl, as described in s. 893.03(2)(b)9.;\n\n(IV) \nSufentanil, as described in s. 893.03(2)(b)30.;\n\n(V) \nA fentanyl derivative, as described in s. 893.03(1)(a)63.;\n\n(VI) \nA controlled substance analog, as described in s. 893.0356, of any substance described in sub-sub-subparagraphs (I)-(V); or\n\n(VII) \nA mixture containing any substance described in sub-sub-subparagraphs (I)-(VI),\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "b. \nIf the quantity involved under sub-subparagraph a.:\n(I) \nIs 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $50,000.\n\n(II) \nIs 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 20 years and shall be ordered to pay a fine of $100,000.\n\n(III) \nIs 28 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "893.0356",
+        "role": "definition",
+        "contentHash": "350a72e184f80c7a03907c19b1d518388071fd9420823e0a77bdebafb4cee7d6"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(c)7 expressly names this offense and supplies all three quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of xylazine, as described in s. 893.03(1)(c)37., or any salt thereof, or 28 grams or more of any mixture containing any such substance,"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 28 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
-      "Is 100 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
-      "Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "7. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of xylazine, as described in s. 893.03(1)(c)37., or any salt thereof, or 28 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 100 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "All public quantity tiers are quoted."
+    "gradingQuotes": [
+      "7. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of xylazine, as described in s. 893.03(1)(c)37., or any salt thereof, or 28 grams or more of any mixture containing any such substance, commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 100 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(d)1 expressly names this offense and supplies all three quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of phencyclidine,"],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
-      "Is 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
-      "Is 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(d)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of phencyclidine, as described in s. 893.03(2)(b)23., a substituted phenylcyclohexylamine, as described in s. 893.03(1)(c)195., or a substance described in s. 893.03(1)(c)13., 32., 38., 103., or 146., or of any mixture containing phencyclidine, as described in s. 893.03(2)(b)23., a substituted phenylcyclohexylamine, as described in s. 893.03(1)(c)195., or a substance described in s. 893.03(1)(c)13., 32., 38., 103., or 146., commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "The summary preserves the broader list by referring to the substances specified in the exact subsection."
+    "gradingQuotes": [
+      "(d)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of phencyclidine, as described in s. 893.03(2)(b)23., a substituted phenylcyclohexylamine, as described in s. 893.03(1)(c)195., or a substance described in s. 893.03(1)(c)13., 32., 38., 103., or 146., or of any mixture containing phencyclidine, as described in s. 893.03(2)(b)23., a substituted phenylcyclohexylamine, as described in s. 893.03(1)(c)195., or a substance described in s. 893.03(1)(c)13., 32., 38., 103., or 146., commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
     "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
-    "section": "893.135", "status": "eligible",
-    "reason": "Subsection (1)(e)1 expressly names this offense and supplies all three quantity tiers.",
-    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes": ["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 200 grams or more of methaqualone or of any mixture containing methaqualone, as described in s. 893.03(1)(d), commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "gradingQuotes": [
-      "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
-      "Is 200 grams or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
-      "Is 5 kilograms or more, but less than 25 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
-      "Is 25 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(e)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 200 grams or more of methaqualone or of any mixture containing methaqualone, as described in s. 893.03(1)(d), commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 200 grams or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more, but less than 25 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 25 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
     ],
-    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
-    "notes": "All public quantity tiers are quoted."
+    "gradingQuotes": [
+      "(e)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 200 grams or more of methaqualone or of any mixture containing methaqualone, as described in s. 893.03(1)(d), commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 200 grams or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more, but less than 25 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 25 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
-    "id":"fl-fs-893-135-1-f-1-trafficking-in-amphetamine","section":"893.135","status":"eligible","reason":"Subsection (1)(f)1 expressly names the offense and supplies all quantity tiers.",
-    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of amphetamine, as described in s. 893.03(2)(c)2., or methamphetamine, as described in s. 893.03(2)(c)5.,"],
-    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
-    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+    "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(f)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of amphetamine, as described in s. 893.03(2)(c)2., or methamphetamine, as described in s. 893.03(2)(c)5., or of any mixture containing amphetamine or methamphetamine, or phenylacetone, phenylacetic acid, pseudoephedrine, or ephedrine in conjunction with other chemicals and equipment utilized in the manufacture of amphetamine or methamphetamine, commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "gradingQuotes": [
+      "(f)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of amphetamine, as described in s. 893.03(2)(c)2., or methamphetamine, as described in s. 893.03(2)(c)5., or of any mixture containing amphetamine or methamphetamine, or phenylacetone, phenylacetic acid, pseudoephedrine, or ephedrine in conjunction with other chemicals and equipment utilized in the manufacture of amphetamine or methamphetamine, commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
-    "id":"fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam","section":"893.135","status":"eligible","reason":"Subsection (1)(g)1 expressly names the offense and supplies all quantity tiers.",
-    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of flunitrazepam or any mixture containing flunitrazepam as described in s. 893.03(1)(a) commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 4 grams or more but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 14 grams or more but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 28 grams or more but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 calendar years and pay a fine of $500,000."],
-    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"The 30-kilogram life/capital branches are outside this exact code."
+    "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(g)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of flunitrazepam or any mixture containing flunitrazepam as described in s. 893.03(1)(a) commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 4 grams or more but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 28 grams or more but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 calendar years and pay a fine of $500,000."
+    ],
+    "gradingQuotes": [
+      "(g)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of flunitrazepam or any mixture containing flunitrazepam as described in s. 893.03(1)(a) commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 4 grams or more but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 14 grams or more but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 28 grams or more but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 calendar years and pay a fine of $500,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
-    "id":"fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb","section":"893.135","status":"eligible","reason":"Subsection (1)(h)1 expressly names the offense and supplies all tiers.",
-    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-hydroxybutyric acid (GHB), as described in s. 893.03(1)(d), or any mixture containing gamma-hydroxybutyric acid (GHB), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
-    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+    "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(h)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-hydroxybutyric acid (GHB), as described in s. 893.03(1)(d), or any mixture containing gamma-hydroxybutyric acid (GHB), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "gradingQuotes": [
+      "(h)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-hydroxybutyric acid (GHB), as described in s. 893.03(1)(d), or any mixture containing gamma-hydroxybutyric acid (GHB), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
   {
-    "id":"fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl","section":"893.135","status":"eligible","reason":"Subsection (1)(i)1 expressly names the offense and supplies all tiers.",
-    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
-    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-butyrolactone (GBL), as described in s. 893.03(1)(d), or any mixture containing gamma-butyrolactone (GBL), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
-    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
-    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+    "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "(i)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-butyrolactone (GBL), as described in s. 893.03(1)(d), or any mixture containing gamma-butyrolactone (GBL), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "gradingQuotes": [
+      "(i)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-butyrolactone (GBL), as described in s. 893.03(1)(d), or any mixture containing gamma-butyrolactone (GBL), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000.",
+      "(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.135",
+        "role": "grading",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      },
+      {
+        "section": "893.02",
+        "role": "definition",
+        "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      },
+      {
+        "section": "948.01",
+        "role": "exception",
+        "contentHash": "a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"
+      },
+      {
+        "section": "947.149",
+        "role": "exception",
+        "contentHash": "3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"
+      },
+      {
+        "section": "741.28",
+        "role": "definition",
+        "contentHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"
+      },
+      {
+        "section": "741.2801",
+        "role": "grading",
+        "contentHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"
+      }
+    ],
+    "notes": "Each offense and tier is bound to its own subdivision."
   },
-  {"id":"fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in 1,4-Butanediol,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of 1,4-Butanediol as described in s. 893.03(1)(d), or of any mixture containing 1,4-Butanediol, commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."},
-  {"id":"fl-fs-893-135-1-k-1-trafficking-in-phenethylamines","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 10 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)4., 5., 10., 11., 15., 17., 21.-27., 29., 39., 40.-45., 58., 72.-80., 81.-86., 90.-102., 104.-108., 110.-113., 143.-145., 148.-150., 160.-163., 165., or 187.-189., a substituted cathinone, as described in s. 893.03(1)(c)191., or substituted phenethylamine, as described in s. 893.03(1)(c)192.;\n\nb. \nMixture containing any substance described in sub-subparagraph a.; or\n\nc. \nSalt, isomer, ester, or ether or salt of an isomer, ester, or ether of a substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $250,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"The conduct evidence is one exact contiguous source slice; public text states all three tiers."},
-  {"id":"fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in lysergic acid diethylamide (LSD),”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["1 gram or more of lysergic acid diethylamide (LSD)"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in lysergic acid diethylamide (LSD),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 7 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."},
-  {"id":"fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with four quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in synthetic cannabinoids,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["280 grams or more of a:"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in synthetic cannabinoids,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 30 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years, and the defendant shall be ordered to pay a fine of $750,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all four tiers."},
-  {"id":"fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in n-benzyl phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["14 grams or more of:"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in n-benzyl phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years, and the defendant shall be ordered to pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."}
+  {"id":"fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol","section":"893.135","status":"eligible","reason":"Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in 1,4-Butanediol,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["(j)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of 1,4-Butanediol as described in s. 893.03(1)(d), or of any mixture containing 1,4-Butanediol, commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more, but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"gradingQuotes":["(j)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of 1,4-Butanediol as described in s. 893.03(1)(d), or of any mixture containing 1,4-Butanediol, commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 kilogram or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 kilograms or more, but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000.","(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"},{"section":"893.02","role":"definition","contentHash":"5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"},{"section":"775.082","role":"penalty","contentHash":"ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"},{"section":"775.083","role":"penalty","contentHash":"d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"},{"section":"775.084","role":"penalty","contentHash":"e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"},{"section":"948.01","role":"exception","contentHash":"a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"},{"section":"947.149","role":"exception","contentHash":"3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"},{"section":"741.28","role":"definition","contentHash":"87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"},{"section":"741.2801","role":"grading","contentHash":"bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"}],"notes":"Each offense and tier is bound to its own subdivision."},
+  {"id":"fl-fs-893-135-1-k-1-trafficking-in-phenethylamines","section":"893.135","status":"eligible","reason":"Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["(k)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 10 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)4., 5., 10., 11., 15., 17., 21.-27., 29., 39., 40.-45., 58., 72.-80., 81.-86., 90.-102., 104.-108., 110.-113., 143.-145., 148.-150., 160.-163., 165., or 187.-189., a substituted cathinone, as described in s. 893.03(1)(c)191., or substituted phenethylamine, as described in s. 893.03(1)(c)192.;\n\nb. \nMixture containing any substance described in sub-subparagraph a.; or\n\nc. \nSalt, isomer, ester, or ether or salt of an isomer, ester, or ether of a substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["(k)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 10 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)4., 5., 10., 11., 15., 17., 21.-27., 29., 39., 40.-45., 58., 72.-80., 81.-86., 90.-102., 104.-108., 110.-113., 143.-145., 148.-150., 160.-163., 165., or 187.-189., a substituted cathinone, as described in s. 893.03(1)(c)191., or substituted phenethylamine, as described in s. 893.03(1)(c)192.;\n\nb. \nMixture containing any substance described in sub-subparagraph a.; or\n\nc. \nSalt, isomer, ester, or ether or salt of an isomer, ester, or ether of a substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","2. \nIf the quantity involved under subparagraph 1.:\na. \nIs 10 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.\n\nb. \nIs 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.\n\nc. \nIs 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $250,000.","(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"},{"section":"893.02","role":"definition","contentHash":"5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"},{"section":"775.082","role":"penalty","contentHash":"ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"},{"section":"775.083","role":"penalty","contentHash":"d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"},{"section":"775.084","role":"penalty","contentHash":"e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"},{"section":"948.01","role":"exception","contentHash":"a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"},{"section":"947.149","role":"exception","contentHash":"3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"},{"section":"741.28","role":"definition","contentHash":"87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"},{"section":"741.2801","role":"grading","contentHash":"bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"}],"notes":"Each offense and tier is bound to its own subdivision."},
+  {"id":"fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd","section":"893.135","status":"eligible","reason":"Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in lysergic acid diethylamide (LSD),”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["(l)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 gram or more of lysergic acid diethylamide (LSD) as described in s. 893.03(1)(c), or of any mixture containing lysergic acid diethylamide (LSD), commits a felony of the first degree, which felony shall be known as “trafficking in lysergic acid diethylamide (LSD),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 gram or more, but less than 5 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 grams or more, but less than 7 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 7 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"gradingQuotes":["(l)1. \nAny person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 gram or more of lysergic acid diethylamide (LSD) as described in s. 893.03(1)(c), or of any mixture containing lysergic acid diethylamide (LSD), commits a felony of the first degree, which felony shall be known as “trafficking in lysergic acid diethylamide (LSD),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity involved:\na. \nIs 1 gram or more, but less than 5 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 5 grams or more, but less than 7 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 7 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000.","(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"},{"section":"893.02","role":"definition","contentHash":"5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"},{"section":"775.082","role":"penalty","contentHash":"ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"},{"section":"775.083","role":"penalty","contentHash":"d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"},{"section":"775.084","role":"penalty","contentHash":"e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"},{"section":"948.01","role":"exception","contentHash":"a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"},{"section":"947.149","role":"exception","contentHash":"3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"},{"section":"741.28","role":"definition","contentHash":"87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"},{"section":"741.2801","role":"grading","contentHash":"bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"}],"notes":"Each offense and tier is bound to its own subdivision."},
+  {"id":"fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids","section":"893.135","status":"eligible","reason":"Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in synthetic cannabinoids,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["(m)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 280 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)30., 46.-50., 114.-142., 151.-156., 166.-173., or 176.-186. or a synthetic cannabinoid, as described in s. 893.03(1)(c)190.; or\n\nb. \nMixture containing any substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in synthetic cannabinoids,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["(m)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 280 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)30., 46.-50., 114.-142., 151.-156., 166.-173., or 176.-186. or a synthetic cannabinoid, as described in s. 893.03(1)(c)190.; or\n\nb. \nMixture containing any substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in synthetic cannabinoids,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","2. \nIf the quantity involved under subparagraph 1.:\na. \nIs 280 grams or more, but less than 500 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 500 grams or more, but less than 1,000 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 1,000 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years, and the defendant shall be ordered to pay a fine of $200,000.\n\nd. \nIs 30 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years, and the defendant shall be ordered to pay a fine of $750,000.","(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"},{"section":"893.02","role":"definition","contentHash":"5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"},{"section":"775.082","role":"penalty","contentHash":"ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"},{"section":"775.083","role":"penalty","contentHash":"d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"},{"section":"775.084","role":"penalty","contentHash":"e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"},{"section":"948.01","role":"exception","contentHash":"a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"},{"section":"947.149","role":"exception","contentHash":"3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"},{"section":"741.28","role":"definition","contentHash":"87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"},{"section":"741.2801","role":"grading","contentHash":"bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"}],"notes":"Each offense and tier is bound to its own subdivision."},
+  {"id":"fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines","section":"893.135","status":"eligible","reason":"Existing trafficking identity with individualized weight tiers, minimum terms and mandatory fines.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in n-benzyl phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["(n)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of:\na. \nA substance described in s. 893.03(1)(c)164., 174., or 175., a n-benzyl phenethylamine compound, as described in s. 893.03(1)(c)193.; or\n\nb. \nA mixture containing any substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in n-benzyl phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["(n)1. \nA person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of:\na. \nA substance described in s. 893.03(1)(c)164., 174., or 175., a n-benzyl phenethylamine compound, as described in s. 893.03(1)(c)193.; or\n\nb. \nA mixture containing any substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in n-benzyl phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","2. \nIf the quantity involved under subparagraph 1.:\na. \nIs 14 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.\n\nb. \nIs 100 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.\n\nc. \nIs 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years, and the defendant shall be ordered to pay a fine of $500,000.","(e) \nA felony of the first degree is reclassified to a life felony.\n\nFor purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944, a felony offense that is reclassified under this section is ranked as provided in s. 921.0022 or s. 921.0023 without regard to the penalty enhancement in this section."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"},{"section":"893.02","role":"definition","contentHash":"5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"},{"section":"775.082","role":"penalty","contentHash":"ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"},{"section":"775.083","role":"penalty","contentHash":"d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"},{"section":"775.084","role":"penalty","contentHash":"e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"},{"section":"948.01","role":"exception","contentHash":"a04198e494a1a66498b8c0c7afd8110ee55d9fd971322b5a52dd5e59857ce29e"},{"section":"947.149","role":"exception","contentHash":"3fb4712ab0e65add6fb9fbad97f0d23850ae271f96b557d173dac62522fd2bc2"},{"section":"741.28","role":"definition","contentHash":"87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6"},{"section":"741.2801","role":"grading","contentHash":"bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d"}],"notes":"Each offense and tier is bound to its own subdivision."}
 ]

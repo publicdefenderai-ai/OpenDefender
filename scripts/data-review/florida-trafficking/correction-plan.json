@@ -1,0 +1,1325 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    "741.28",
+    "741.2801",
+    "775.082",
+    "775.083",
+    "775.084",
+    "893.02",
+    "893.03",
+    "893.0356",
+    "893.135",
+    "947.149",
+    "948.01"
+  ],
+  "records": [
+    {
+      "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+      "section": "893.135",
+      "scope": "(1)(b)1.",
+      "tierScope": "(1)(b)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(b)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(b)2."
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+      "section": "893.135",
+      "scope": "(1)(c)1.",
+      "tierScope": "(1)(c)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(c)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(c)5."
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+      "section": "893.135",
+      "scope": "(1)(c)2.",
+      "tierScope": "(1)(c)2.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(c)2."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(c)5."
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 4
+    },
+    {
+      "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+      "section": "893.135",
+      "scope": "(1)(c)3.",
+      "tierScope": "(1)(c)3.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(c)3."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(c)5."
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 4
+    },
+    {
+      "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+      "section": "893.135",
+      "scope": "(1)(c)4.a.",
+      "tierScope": "(1)(c)4.b.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "893.0356",
+          "role": "definition"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(c)4.b."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(c)4.c."
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+      "section": "893.135",
+      "scope": "(1)(c)7.",
+      "tierScope": "(1)(c)7.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(c)7."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "893.03",
+          "scope": "(1)(c)37."
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+      "section": "893.135",
+      "scope": "(1)(d)1.",
+      "tierScope": "(1)(d)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(d)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+      "section": "893.135",
+      "scope": "(1)(e)1.",
+      "tierScope": "(1)(e)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(e)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+      "section": "893.135",
+      "scope": "(1)(f)1.",
+      "tierScope": "(1)(f)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(f)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+      "section": "893.135",
+      "scope": "(1)(g)1.",
+      "tierScope": "(1)(g)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(g)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(1)(g)2."
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+      "section": "893.135",
+      "scope": "(1)(h)1.",
+      "tierScope": "(1)(h)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(h)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+      "section": "893.135",
+      "scope": "(1)(i)1.",
+      "tierScope": "(1)(i)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(i)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+      "section": "893.135",
+      "scope": "(1)(j)1.",
+      "tierScope": "(1)(j)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(j)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+      "section": "893.135",
+      "scope": "(1)(k)1.",
+      "tierScope": "(1)(k)2.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(k)2."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+      "section": "893.135",
+      "scope": "(1)(l)1.",
+      "tierScope": "(1)(l)1.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(l)1."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    },
+    {
+      "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+      "section": "893.135",
+      "scope": "(1)(m)1.",
+      "tierScope": "(1)(m)2.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(m)2."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 4
+    },
+    {
+      "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+      "section": "893.135",
+      "scope": "(1)(n)1.",
+      "tierScope": "(1)(n)2.",
+      "requiredSections": [
+        {
+          "section": "893.135",
+          "role": "grading"
+        },
+        {
+          "section": "893.03",
+          "role": "definition"
+        },
+        {
+          "section": "893.02",
+          "role": "definition"
+        },
+        {
+          "section": "775.082",
+          "role": "penalty"
+        },
+        {
+          "section": "775.083",
+          "role": "penalty"
+        },
+        {
+          "section": "775.084",
+          "role": "penalty"
+        },
+        {
+          "section": "948.01",
+          "role": "exception"
+        },
+        {
+          "section": "947.149",
+          "role": "exception"
+        },
+        {
+          "section": "741.28",
+          "role": "definition"
+        },
+        {
+          "section": "741.2801",
+          "role": "grading"
+        }
+      ],
+      "incorporatedConduct": [
+        {
+          "section": "893.135",
+          "scope": "(1)(n)2."
+        },
+        {
+          "section": "893.135",
+          "scope": "(2)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(3)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(4)"
+        },
+        {
+          "section": "893.135",
+          "scope": "(6)"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)(e)"
+        }
+      ],
+      "tierCount": 3
+    }
+  ]
+}

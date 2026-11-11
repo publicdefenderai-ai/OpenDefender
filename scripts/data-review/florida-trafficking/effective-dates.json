@@ -1,0 +1,25 @@
+[
+  {
+    "chapter": "2026-148",
+    "sourceUrl": "https://laws.flrules.org/files/Ch_2026-148.pdf",
+    "section": 6,
+    "page": 32,
+    "effectiveDate": "2026-10-01",
+    "effectiveDateQuote": "Except as otherwise expressly provided in this act and except for this section, which shall take effect upon this act becoming a law, this act shall take effect October 1, 2026.",
+    "quoteSha256": "b48977af8395abafcae081f9ab2a6906ec30172c10f124646f8e0aaec9cfca19",
+    "retrievedAt": "2026-11-11T01:27:25.558793+00:00",
+    "method": "Section 5 adds xylazine trafficking. Section 6 supplies its operative date."
+  },
+  {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  }
+]

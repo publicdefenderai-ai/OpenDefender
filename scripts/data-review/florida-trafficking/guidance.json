@@ -1,0 +1,41 @@
+{
+  "en": {
+    "ordinary": "This is a first-degree felony. For this branch the ordinary adult prison maximum is 30 years. These quantity tiers set mandatory minimum prison terms and fines.",
+    "intent": "Section 893.135(2) requires intent to perform a listed act involving a listed controlled substance. The intended substance can differ from the listed substance actually involved. Under (6), a qualifying mixture counts at its total weight. Add the weights of separate mixtures containing the same controlled substance.",
+    "sentencing": "Under (3), the court ordinarily cannot suspend, defer or withhold adjudication or sentence. Parole and discretionary early release are restricted until the mandatory minimum is served, subject to the listed pardon, executive clemency and conditional medical release exceptions. Under (4), the state attorney may ask the court to reduce or suspend a sentence for substantial assistance. Relief requires the judge’s finding and is discretionary.",
+    "limits": "The limits here apply to the cited subdivision. A separately charged aggravated branch or qualifying habitual-offender sentencing can carry different penalties.",
+    "opioid": "At 30 kilograms or more, subsection (1)(c)5 provides a separate life-imprisonment rule for the named opioids or mixtures. Review the charged substance and subdivision.",
+    "fentanyl": "Subsection (1)(c)4.c separately provides a minimum of 25 years, up to life, and a $1 million fine when a person aged 18 or older knowingly sells or delivers at least 4 grams to a minor and the specified product or packaging conditions also apply.",
+    "xylazine": "This xylazine charge took effect October 1, 2026. Section 893.03(1)(c)37 excepts an FDA-approved xylazine animal drug product when its use conforms to the approved application or qualifies under the federal authorization specified there. Manufacturing, importing, distributing, prescribing or selling xylazine for human use falls outside that exception.",
+    "domestic": "For conduct on or after July 1, 2026, §§741.28 and 741.2801 can raise this first-degree felony to a life felony if the trafficking offense itself caused physical injury or death to a qualifying family or household member and the accused already had a qualifying domestic-violence conviction. The shared-residence rule has an exception for parents of a child in common. The weight or charge name alone does not establish these facts.",
+    "acts": "Unless authorized under chapter 893 or 499, this charge covers knowingly selling, buying, manufacturing, delivering, bringing into Florida or actually or constructively possessing",
+    "cocaine": "Subsection (1)(b)2 separately prescribes life imprisonment for the specified knowing acts involving 150 kg or more of cocaine.",
+    "flunitrazepam": "At 30 kg or more, subsection (1)(g)2 separately prescribes life imprisonment for the listed flunitrazepam or a mixture containing it."
+  },
+  "es": {
+    "ordinary": "Es un delito grave de primer grado. Para esta modalidad, el máximo ordinario de prisión para adultos es de 30 años. Los tramos de cantidad fijan penas mínimas obligatorias de prisión y multas.",
+    "intent": "El §893.135(2) exige la intención de realizar uno de los actos enumerados con una sustancia controlada incluida en la lista. La sustancia que se pretendía manejar puede ser distinta de la sustancia enumerada que realmente se manejó. Según el apartado (6), se cuenta el peso total de la mezcla pertinente y se suman los pesos de mezclas separadas que contienen la misma sustancia controlada.",
+    "sentencing": "El apartado (3) por regla general impide suspender, aplazar u omitir la adjudicación de culpabilidad o la imposición de pena. La libertad condicional y la liberación anticipada discrecional se restringen hasta cumplir el mínimo, con las excepciones indicadas de indulto, clemencia ejecutiva y liberación médica condicional. Según el apartado (4), la fiscalía puede solicitar una reducción o suspensión de la pena por asistencia sustancial. El juez debe determinar que se prestó dicha asistencia y decide si concede la medida.",
+    "limits": "Estos límites corresponden al apartado citado. Una modalidad agravada imputada por separado o una pena por reincidencia cualificada puede tener sanciones diferentes.",
+    "opioid": "A partir de 30 kilogramos, el apartado (1)(c)5 establece por separado una pena de cadena perpetua para los opioides o mezclas allí enumerados. Revise la sustancia y el apartado de la acusación.",
+    "fentanyl": "El apartado (1)(c)4.c establece por separado un mínimo de 25 años, hasta cadena perpetua, y una multa de $1 millón si una persona de 18 años o más vende o entrega a sabiendas al menos 4 gramos a un menor y se cumplen también las condiciones legales del producto o envase.",
+    "xylazine": "Esta modalidad de xilacina entró en vigor el 1 de octubre de 2026. El §893.03(1)(c)37 exceptúa el medicamento veterinario de xilacina aprobado por la FDA cuando el uso cumple con la autorización aprobada o con la autorización federal especificada. Fabricar, importar, distribuir, recetar o vender xilacina para uso humano queda fuera de esa excepción.",
+    "domestic": "Para hechos desde el 1 de julio de 2026, los §§741.28 y 741.2801 pueden elevar este delito a la categoría punible con cadena perpetua si el propio delito de tráfico causó lesiones físicas o muerte a un familiar o miembro del hogar comprendido en la ley y el acusado ya tenía una condena por violencia doméstica pertinente. La regla de convivencia actual o pasada exceptúa a los progenitores de un hijo en común. El peso o el nombre del delito por sí solos no acreditan esas circunstancias.",
+    "acts": "Salvo autorización de los capítulos 893 o 499, esta acusación comprende vender, comprar, fabricar, entregar, introducir en Florida o poseer, de forma real o constructiva, a sabiendas,",
+    "cocaine": "El apartado (1)(b)2 prescribe por separado cadena perpetua para los actos especificados cometidos a sabiendas con 150 kg o más de cocaína.",
+    "flunitrazepam": "A partir de 30 kg, el apartado (1)(g)2 prescribe por separado cadena perpetua para el flunitrazepam enumerado o una mezcla que lo contenga."
+  },
+  "zh": {
+    "ordinary": "本罪为一级重罪。此款适用普通成年人刑罚时，监禁上限通常为30年。下列重量档次规定强制最低监禁期限和罚款。",
+    "intent": "第893.135(2)款要求行为人有意就一种列明的管制物质实施所列行为。意图涉及的物质可以与实际涉及的另一种列明物质不同。按第(6)款，符合条件的混合物按总重计；含同一种管制物质的不同混合物合并计重。",
+    "sentencing": "依第(3)款，法院通常不得暂停、延迟或暂缓正式判罪或量刑。在服满强制最低刑期前，假释和酌情提前释放受到限制，法定例外包括赦免、行政宽赦及有条件医疗释放。根据第(4)款，检察官可因被告提供重大协助而申请减刑或暂停执行。是否给予救济取决于法官的认定和裁量。",
+    "limits": "上述刑罚适用于所引款项。另行指控的加重情形或符合法定条件的惯犯量刑可能适用其他刑罚。",
+    "opioid": "重量达到30千克时，第(1)(c)5款另对其中列明的阿片类物质或其混合物规定终身监禁。须核对被控物质及具体款项。",
+    "fentanyl": "依第(1)(c)4.c款，年满18岁者明知向未成年人出售或交付至少4克，且产品或包装符合该款特定条件时，另适用最低25年、最高终身监禁，并处罚款100万美元。",
+    "xylazine": "此项赛拉嗪罪名自2026年10月1日起生效。根据第893.03(1)(c)37款，获美国食品药品监督管理局批准的赛拉嗪兽药，若用途符合获批申请或该款指定的联邦授权，可适用例外。为人用而制造、进口、分销、开具处方或出售赛拉嗪不适用此例外。",
+    "domestic": "对2026年7月1日及以后的行为，若该贩运犯罪本身造成符合法律定义的家庭或住户成员身体受伤或死亡，且行为人当时已有符合条件的家庭暴力定罪，第741.28及741.2801条可将该一级重罪升为可判终身监禁的重罪。共有子女的父母适用共同居住要求的例外。仅凭重量或罪名不能确定这些事实。",
+    "acts": "除第893章或第499章授权外，此项指控涵盖明知而出售、购买、制造、交付、带入佛罗里达州，或实际持有或推定持有以下物质：",
+    "cocaine": "第(1)(b)2款另对明知涉及至少150千克可卡因的所列行为规定终身监禁。",
+    "flunitrazepam": "所列氟硝西泮或含该物质的混合物达到30千克时，第(1)(g)2款另行规定终身监禁。"
+  }
+}
