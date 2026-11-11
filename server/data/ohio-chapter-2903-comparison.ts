@@ -97,7 +97,7 @@ function parseEffectiveDate(html: string): string | null {
   return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
 }
 
-function extractOfficialText(
+export function extractOhioPilotComparisonText(
   html: string,
   section: string,
   sourceUrl: string,
@@ -258,7 +258,7 @@ export async function compareOhioChapter2903Sources(
         errors.push(`${document.section}: official source returned HTTP ${response.status}`);
       } else {
         const html = await response.text();
-        const extracted = extractOfficialText(html, document.section, document.sourceUrl);
+        const extracted = extractOhioPilotComparisonText(html, document.section, document.sourceUrl);
         if (!extracted) {
           errors.push(`${document.section}: official page did not contain the expected complete section`);
         } else {
