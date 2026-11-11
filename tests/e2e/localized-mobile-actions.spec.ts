@@ -15,6 +15,7 @@ const LANGUAGES = [
       timeline: "Elija su etapa actual",
       rights: "Vea la referencia rápida de derechos",
       resources: "Buscar ayuda por código postal",
+      sectionStart: "Comience Aquí",
       support: "Comience con el primer paso",
     },
   },
@@ -26,6 +27,7 @@ const LANGUAGES = [
       timeline: "选择您当前的阶段",
       rights: "查看权利速查参考",
       resources: "按邮政编码查找帮助",
+      sectionStart: "从这里开始",
       support: "从第一步开始",
     },
   },
@@ -216,6 +218,8 @@ for (const language of LANGUAGES) {
       );
 
       const labels: Partial<Record<typeof SUPPORT_TEMPLATE_ROUTES[number], string>> = {
+        "/support/transportation": language.labels.sectionStart,
+        "/support/childcare": language.labels.sectionStart,
         "/support/housing": housingDesignCopy[language.code].renters,
         "/support/family-care": familyCareDesignCopy[language.code].plan,
         "/support/personal-health": personalHealthDesignCopy[language.code].plan,
@@ -225,20 +229,25 @@ for (const language of LANGUAGES) {
         await page.goto(route);
         await expect(page.locator("h1").first()).toBeVisible();
         const label = labels[route] ?? language.labels.support;
-        const housingSelector = route === '/support/housing' ? '.housing-paths a[href="#section-start-here"]' : undefined;
+        const selectors: Partial<Record<typeof route, string>> = {
+          "/support/housing": '.housing-paths a[href="#section-start-here"]',
+          "/support/transportation": '.transportation-page nav a[href="#section-start-here"]',
+          "/support/childcare": '.childcare-page nav a[href="#section-start-here"]',
+        };
+        const selector = selectors[route];
         await expectLocalizedMobileCta(
           page,
           {
             language: language.name,
             route,
-            selector: housingSelector,
+            selector,
             testId: "button-start-here",
             label,
             expectedDestination: 'hash "#section-start-here"',
           },
         );
 
-        await (housingSelector ? page.locator(housingSelector) : page.getByTestId("button-start-here")).click();
+        await (selector ? page.locator(selector) : page.getByTestId("button-start-here")).click();
         await expect(page).toHaveURL(
           new RegExp(`${escapeRegExp(route)}#section-start-here$`),
           `${language.name} ${route} CTA "${label}" ` +
