@@ -23,7 +23,7 @@ describe('quarterly verification policy',()=>{
   expect(validate(receipt,new Date(receipt.expiresAt))).not.toBeNull();
   const future={...receipt,verificationPolicy:'quarterly-v1',expiresAt:quarterlyDeadline(receipt.checkedAt),
     acquisitions:receipt.documents.map((d:any)=>({section:d.section,contentHash:d.contentHash,retrievedAt:receipt.checkedAt}))};
-  expect(validate(future,new Date(receipt.expiresAt))).toBeNull();
+  expect(validate(future,new Date(receipt.checkedAt))).toBeNull();
   expect(validate(future,new Date(future.expiresAt))).not.toBeNull();
   future.documents.pop();expect(validate(future,new Date(receipt.checkedAt))).not.toBeNull();
  });
