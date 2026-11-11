@@ -1,3 +1,4 @@
+import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH } from "./ohio-family-batch";
 import { OHIO_PUBLIC_PEACE_BATCH } from "./ohio-public-peace-batch";
 import { OHIO_CUSTODY_BATCH } from "./ohio-custody-batch";
@@ -113,6 +114,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_PROTECTION_BATCH.charges,
   ...OHIO_FAMILY_BATCH.charges,
   ...OHIO_PUBLIC_PEACE_BATCH.charges,
   ...OHIO_CUSTODY_BATCH.charges,
@@ -122,6 +124,7 @@ export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
   // §2909.05 is felony-graded; the old misdemeanor identity must be reselected.
   "oh-vandalism",
   "oh-insurance-fraud",
+  "oh-domestic-violence",
   // Older common-charge IDs have materially different scope/penalty claims.
   // Keep saved IDs intact and require an explicit source-backed selection.
   // The legacy menacing entry retains the superseded 2903.22 source version.
