@@ -177,7 +177,7 @@ function TreatmentConnectionSection() {
   );
 }
 
-function CrisisSection({ call, text }: { call: string; text: string }) {
+function CrisisSection({ call, text, languageAccess }: { call: string; text: string; languageAccess: string }) {
   const { t } = useTranslation();
 
   return (
@@ -192,6 +192,7 @@ function CrisisSection({ call, text }: { call: string; text: string }) {
               <p className="text-sm text-muted-foreground mb-4">
                 {t('support.mentalHealth.crisis.description')}
               </p>
+              <p className="text-sm mb-4">{languageAccess}</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white dark:bg-slate-900 rounded-lg p-4 border">
                   <div className="font-semibold mb-1">{t('support.mentalHealth.crisis.hotline.name')}</div>
@@ -369,7 +370,7 @@ export default function MentalHealthSupport() {
             </div>
             <img src="/images/design/mental-health.svg" width="260" height="220" alt="" aria-hidden="true" />
           </section>
-          <CrisisSection call={copy.call} text={copy.text} />
+          <CrisisSection call={copy.call} text={copy.text} languageAccess={copy.languageAccess} />
           <nav className="mental-health-paths" aria-label={t("support.pageSections")}>
             <a data-testid="button-start-here" href="#section-start-here">{copy.actions}</a>
             <a href="#treatment-connection">{t("support.personalHealth.treatmentConnection.sectionTitle")}</a>

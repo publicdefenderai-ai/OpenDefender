@@ -19,6 +19,9 @@ for (const language of ["en", "es", "zh"] as const) {
       const crisis = main.locator("#crisis-support");
       await expect(crisis).toBeVisible();
       await expect(crisis.locator('a[href="sms:988"]')).toBeVisible();
+      if (language === "zh") {
+        await expect(crisis.getByText(/如需中文口译，请拨打 988/)).toContainText("仅提供英语和西班牙语支持");
+      }
       expect(await crisis.evaluate(el =>
         Boolean(el.compareDocumentPosition(document.getElementById("section-start-here")!) & Node.DOCUMENT_POSITION_FOLLOWING)
       )).toBe(true);
