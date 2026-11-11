@@ -1,5 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
+import { familyCareDesignCopy } from "../../client/src/locales/family-care-design";
 import { housingDesignCopy } from "../../client/src/locales/housing-design";
+import { mentalHealthDesignCopy } from "../../client/src/locales/mental-health-design";
+import { personalHealthDesignCopy } from "../../client/src/locales/personal-health-design";
 
 const PHONE_VIEWPORT = { width: 320, height: 812 } as const;
 
@@ -212,11 +215,16 @@ for (const language of LANGUAGES) {
         language.code,
       );
 
+      const labels: Partial<Record<typeof SUPPORT_TEMPLATE_ROUTES[number], string>> = {
+        "/support/housing": housingDesignCopy[language.code].renters,
+        "/support/family-care": familyCareDesignCopy[language.code].plan,
+        "/support/personal-health": personalHealthDesignCopy[language.code].plan,
+        "/support/mental-health": mentalHealthDesignCopy[language.code].actions,
+      };
       for (const route of SUPPORT_TEMPLATE_ROUTES) {
         await page.goto(route);
         await expect(page.locator("h1").first()).toBeVisible();
-        // Housing now uses the approved renter pathway instead of the generic template CTA.
-        // Verify its localized label and the same destination, rather than skipping the route.
+        const label = labels[route] ?? language.labels.support;
         const housingSelector = route === '/support/housing' ? '.housing-paths a[href="#section-start-here"]' : undefined;
         await expectLocalizedMobileCta(
           page,
@@ -225,7 +233,7 @@ for (const language of LANGUAGES) {
             route,
             selector: housingSelector,
             testId: "button-start-here",
-            label: housingSelector ? housingDesignCopy[language.code].renters : language.labels.support,
+            label,
             expectedDestination: 'hash "#section-start-here"',
           },
         );
@@ -233,12 +241,12 @@ for (const language of LANGUAGES) {
         await (housingSelector ? page.locator(housingSelector) : page.getByTestId("button-start-here")).click();
         await expect(page).toHaveURL(
           new RegExp(`${escapeRegExp(route)}#section-start-here$`),
-          `${language.name} ${route} CTA "${language.labels.support}" ` +
+          `${language.name} ${route} CTA "${label}" ` +
             'did not reach expected hash "#section-start-here"',
         );
         await expect(
           page.locator("#section-start-here"),
-          `${language.name} ${route} CTA "${language.labels.support}" ` +
+          `${language.name} ${route} CTA "${label}" ` +
             'expected hash "#section-start-here" section is not visible',
         ).toBeVisible();
       }
