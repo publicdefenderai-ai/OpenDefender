@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "fl-fs-777-04-1-criminal-attempt",
+    "jurisdiction": "FL",
+    "code": "777.04(1)",
+    "slug": "fl-fs-777-04-1-criminal-attempt",
+    "name": "criminal attempt",
+    "names": {
+      "es": "tentativa criminal",
+      "zh": "犯罪未遂"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 777.04(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 777.04",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Acting toward commission of an offense but failing, or being intercepted or prevented, before completing it.",
+        "degreeContext": "The grade depends on the attempted offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to the expressly listed special-statute exceptions."
+      },
+      "es": {
+        "plainSummary": "Realizar un acto dirigido a cometer un delito sin consumarlo, o ser interceptado o impedido.",
+        "degreeContext": "El grado depende del delito intentado según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a las excepciones legales enumeradas."
+      },
+      "zh": {
+        "plainSummary": "为实施犯罪采取行动但未完成，或在实施中被拦截或阻止。",
+        "degreeContext": "等级依第(4)款取决于目标犯罪，可从一级重罪至二级轻罪，并受列明的特别法例外限制。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-777-04-2-criminal-solicitation",
+    "jurisdiction": "FL",
+    "code": "777.04(2)",
+    "slug": "fl-fs-777-04-2-criminal-solicitation",
+    "name": "criminal solicitation",
+    "names": {
+      "es": "solicitación criminal",
+      "zh": "教唆犯罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 777.04(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 777.04",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Soliciting another to commit an offense by commanding, encouraging, hiring, or requesting specific conduct constituting the offense or an attempt.",
+        "degreeContext": "The grade depends on the solicited offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to listed exceptions."
+      },
+      "es": {
+        "plainSummary": "Solicitar a otra persona que cometa un delito ordenando, alentando, contratando o pidiendo conducta específica que constituya el delito o su tentativa.",
+        "degreeContext": "El grado depende del delito solicitado según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a excepciones enumeradas."
+      },
+      "zh": {
+        "plainSummary": "通过命令、鼓励、雇用或请求他人实施构成犯罪或未遂的具体行为而教唆犯罪。",
+        "degreeContext": "等级依第(4)款取决于所教唆的犯罪，可从一级重罪至二级轻罪，并受列明例外限制。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-777-04-3-criminal-conspiracy",
+    "jurisdiction": "FL",
+    "code": "777.04(3)",
+    "slug": "fl-fs-777-04-3-criminal-conspiracy",
+    "name": "criminal conspiracy",
+    "names": {
+      "es": "conspiración criminal",
+      "zh": "共谋犯罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 777.04(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 777.04",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Agreeing, conspiring, combining, or confederating with another person or persons to commit an offense.",
+        "degreeContext": "The grade depends on the conspired offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to listed exceptions."
+      },
+      "es": {
+        "plainSummary": "Acordar, conspirar, combinarse o confederarse con otra persona para cometer un delito.",
+        "degreeContext": "El grado depende del delito objeto de conspiración según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a excepciones enumeradas."
+      },
+      "zh": {
+        "plainSummary": "与一人或多人达成协议、共谋、联合或结盟以实施犯罪。",
+        "degreeContext": "等级依第(4)款取决于共谋目标犯罪，可从一级重罪至二级轻罪，并受列明例外限制。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-777-03-accessory-after-the-fact",
+    "jurisdiction": "FL",
+    "code": "777.03",
+    "slug": "fl-fs-777-03-accessory-after-the-fact",
+    "name": "Accessory after the fact",
+    "names": {
+      "es": "Encubridor después del hecho",
+      "zh": "事后从犯"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 777.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 921.0022",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"
+      },
+      {
+        "citation": "Fla. Stat. § 921.0023",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0023.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowing that another committed a qualifying felony, maintaining or assisting that person or giving other aid with intent to help the person avoid detection, arrest, trial, or punishment, subject to the statute's specified family and domestic-violence exceptions.",
+        "degreeContext": "The grade depends on the underlying felony: first-degree felony for a capital felony; second-degree felony for a life or first-degree felony; third-degree felony for a second-degree felony or a third-degree felony ranked in levels 3-10; and first-degree misdemeanor for a third-degree felony ranked in levels 1-2."
+      },
+      "es": {
+        "plainSummary": "Sabiendo que otra persona cometió un delito grave aplicable, mantenerla, ayudarla o darle otra asistencia con intención de que evite detección, arresto, juicio o castigo, sujeto a las excepciones familiares y de violencia doméstica especificadas.",
+        "degreeContext": "El grado depende del delito subyacente: delito grave de primer grado si es capital; de segundo si es de por vida o de primer grado; de tercer grado si el subyacente es de segundo grado o de tercer grado en niveles 3-10; y delito menor de primer grado si está en niveles 1-2."
+      },
+      "zh": {
+        "plainSummary": "明知他人实施符合条件的重罪，仍维持、协助该人或提供其他帮助，意图使其逃避侦查、逮捕、审判或处罚，但受法定家庭关系和家庭暴力例外限制。",
+        "degreeContext": "等级取决于基础重罪：基础罪为死刑重罪时属一级重罪；为终身或一级重罪时属二级重罪；为二级重罪或等级3至10的三级重罪时属三级重罪；为等级1至2的三级重罪时属一级轻罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+    "jurisdiction": "FL",
+    "code": "796.07",
+    "slug": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+    "name": "Prohibiting prostitution and related acts",
+    "names": {
+      "es": "Prohibición de la prostitución y actos relacionados",
+      "zh": "禁止卖淫及相关行为"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 796.07",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.07.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Prohibits operating a place for prostitution or lewdness; offering or receiving another for it; knowingly transporting, soliciting, inducing, residing or remaining for that purpose; participating in those acts; an adult offering or engaging in prostitution; or purchasing prostitution services.",
+        "degreeContext": "For conduct other than soliciting another under subsection (2)(f), the first violation is a second-degree misdemeanor, the second a first-degree misdemeanor, and the third or later a third-degree felony. Subsection (2)(f) starts as a first-degree misdemeanor, rises to a third-degree felony on the second violation and a second-degree felony thereafter; subsection (2)(a) conduct involving a qualifying massage establishment is reclassified one degree higher."
+      },
+      "es": {
+        "plainSummary": "Prohíbe operar un lugar para prostitución o lascivia; ofrecer o recibir a otra persona para ello; transportarla, solicitarla, inducirla, residir o permanecer con ese fin; participar en esos actos; que un adulto ofrezca o ejerza prostitución; o comprar servicios de prostitución.",
+        "degreeContext": "Salvo la solicitud del apartado (2)(f), la primera infracción es delito menor de segundo grado, la segunda de primer grado y la tercera o posterior delito grave de tercer grado. El apartado (2)(f) comienza como delito menor de primer grado, sube a delito grave de tercer grado en la segunda y de segundo grado después; el apartado (2)(a) en un establecimiento de masajes aplicable se reclasifica un grado más alto."
+      },
+      "zh": {
+        "plainSummary": "禁止经营用于卖淫或淫秽行为的场所、为此介绍或接收他人、明知而运送、招揽、诱使或为此居留、参与上述行为、成年人提出或从事卖淫，以及购买卖淫服务。",
+        "degreeContext": "除第(2)(f)款招揽他人外，首次为二级轻罪，第二次为一级轻罪，第三次及以后为三级重罪。第(2)(f)款首次为一级轻罪，第二次升为三级重罪，以后为二级重罪；第(2)(a)款涉及符合条件的按摩机构时上调一级。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+    "jurisdiction": "FL",
+    "code": "800.03(1)",
+    "slug": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+    "name": "Unlawful exposure of sexual organs",
+    "names": {
+      "es": "Exposición ilícita de órganos sexuales",
+      "zh": "非法暴露性器官"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.03(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 800.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Exposing sexual organs in public, on another person's private premises, or where visible from those premises, or being naked in public, when done in a vulgar or indecent manner. Breastfeeding and mere nudity at a place set apart for that purpose are excluded.",
+        "degreeContext": "A first violation is a first-degree misdemeanor; a second or subsequent violation is a third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Exponer los órganos sexuales en público, en la propiedad privada de otra persona o donde puedan verse desde ella, o estar desnudo en público, de manera vulgar o indecente. Se excluyen la lactancia y la mera desnudez en un lugar destinado para ese fin.",
+        "degreeContext": "La primera infracción es un delito menor de primer grado; la segunda o posterior es un delito grave de tercer grado."
+      },
+      "zh": {
+        "plainSummary": "以粗俗或不雅方式在公共场所、他人私人场所或可从该场所看到的位置暴露性器官，或在公共场所裸体。母乳喂养以及在专门设置的场所仅仅裸体不在此列。",
+        "degreeContext": "首次违反为一级轻罪；第二次或后续违反为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+    "jurisdiction": "FL",
+    "code": "790.23(1)",
+    "slug": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+    "name": "Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful",
+    "names": {
+      "es": "Posesión de arma de fuego, municiones o arma eléctrica por persona prohibida",
+      "zh": "受禁止人员持有枪支、弹药或电击武器装置"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 790.23(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html"
+      },
+      {
+        "citation": "Fla. Stat. § 790.23",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Owning, possessing, controlling, or having custody of a firearm, ammunition, or electric weapon or device, or carrying a listed concealed weapon, after a qualifying felony conviction or delinquency finding. The section excludes a person whose civil rights and firearm authority were restored or whose qualifying record was expunged as specified.",
+        "degreeContext": "Ordinarily a second-degree felony. It is a first-degree felony with a potential term up to life when the statute's prior or current gang-enhancement qualification applies."
+      },
+      "es": {
+        "plainSummary": "Tener, poseer, controlar o custodiar un arma de fuego, municiones o un arma o dispositivo eléctrico, o portar una de las armas ocultas enumeradas, después de una condena por delito grave o determinación de delincuencia juvenil que reúna los requisitos. La sección excluye a quien recuperó sus derechos civiles y autoridad sobre armas o cuyo antecedente fue eliminado según la ley.",
+        "degreeContext": "Por regla general es un delito grave de segundo grado. Es de primer grado, con posible pena de hasta cadena perpetua, cuando se cumple la condición legal de agravación por pandillas previa o actual."
+      },
+      "zh": {
+        "plainSummary": "在有符合条件的重罪定罪或少年违法认定后，拥有、持有、控制或保管枪支、弹药或电击武器装置，或携带法条列明的隐藏武器。依法恢复公民权和枪支权限者，或符合条件的记录已按规定删除者，不适用本条。",
+        "degreeContext": "通常为二级重罪；符合该法规定的既往或现有帮派加重条件时，为一级重罪，并可能判处最高终身监禁。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+    "jurisdiction": "FL",
+    "code": "790.221",
+    "slug": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+    "name": "Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty",
+    "names": {
+      "es": "Posesión de rifle de cañón corto, escopeta de cañón corto o ametralladora",
+      "zh": "持有短管步枪、短管霰弹枪或机枪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 790.221",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.221.html"
+      },
+      {
+        "citation": "Fla. Stat. § 790.001",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.001.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Owning, possessing, controlling, or having custody of an operable, or readily operable, short-barreled rifle, short-barreled shotgun, or machine gun. Antique firearms and firearms lawfully owned and possessed under federal law are excluded.",
+        "degreeContext": "A second-degree felony when the statutory conduct and weapon definitions apply and neither exception applies."
+      },
+      "es": {
+        "plainSummary": "Tener, poseer, controlar o custodiar un rifle de cañón corto, una escopeta de cañón corto o una ametralladora operable o que pueda hacerse operable fácilmente. Se excluyen las armas antiguas y las armas poseídas legalmente conforme a la ley federal.",
+        "degreeContext": "Es un delito grave de segundo grado cuando se cumplen la conducta y las definiciones legales del arma y no se aplica ninguna excepción."
+      },
+      "zh": {
+        "plainSummary": "拥有、持有、控制或保管可操作或可轻易恢复操作的短管步枪、短管霰弹枪或机枪。古董枪支以及依联邦法律合法拥有和持有的枪支不在此列。",
+        "degreeContext": "当行为和武器符合法定定义且两项例外均不适用时，构成二级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "806.01(1)",
+    "slug": "fl-fs-806-01-1-arson-in-the-first-degree",
+    "name": "Arson in the first degree",
+    "names": {
+      "es": "Incendio provocado de primer grado",
+      "zh": "一级纵火罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 806.01(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 806.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion a dwelling or its contents, a structure or its contents where people are normally present, or another structure the person knew or had reasonable grounds to believe was occupied.",
+        "degreeContext": "First-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft."
+      },
+      "es": {
+        "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, una vivienda o su contenido; una estructura o su contenido donde normalmente hay personas; u otra estructura que la persona sabía o tenía motivos razonables para creer que estaba ocupada.",
+        "degreeContext": "Delito grave de primer grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏住宅或其中物品、通常有人在场的建筑物或其中物品，或者行为人明知或有合理理由相信有人占用的其他建筑物。",
+        "degreeContext": "一级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "806.01(2)",
+    "slug": "fl-fs-806-01-2-arson-in-the-second-degree",
+    "name": "Arson in the second degree",
+    "names": {
+      "es": "Incendio provocado de segundo grado",
+      "zh": "二级纵火罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 806.01(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 806.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion any structure, whether owned by the person or another, under circumstances not covered by first-degree arson.",
+        "degreeContext": "Second-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft."
+      },
+      "es": {
+        "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, cualquier estructura, sea propia o ajena, en circunstancias no comprendidas en el incendio provocado de primer grado.",
+        "degreeContext": "Delito grave de segundo grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏任何建筑物，无论属于本人还是他人，但情形不属于一级纵火罪。",
+        "degreeContext": "二级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+    "jurisdiction": "FL",
+    "code": "837.02(1)-(2)",
+    "slug": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+    "name": "Perjury in official proceedings",
+    "names": {
+      "es": "Perjurio en procedimientos oficiales",
+      "zh": "官方程序中的伪证罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 837.02(1)-(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 837.02",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 837.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Making under oath, in an official proceeding, a false statement the person does not believe to be true regarding a material matter; the capital-felony-prosecution branch does not state a separate materiality requirement.",
+        "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when the official proceeding relates to prosecution of a capital felony. Knowledge of materiality is not an element, and a mistaken belief that the statement was immaterial is not a defense."
+      },
+      "es": {
+        "plainSummary": "Hacer bajo juramento, en un procedimiento oficial, una declaración falsa que la persona no cree verdadera respecto de un asunto material; la modalidad relativa al enjuiciamiento de un delito capital no establece por separado un requisito de materialidad.",
+        "degreeContext": "Por regla general, delito grave de tercer grado. Es delito grave de segundo grado cuando el procedimiento oficial se relaciona con el enjuiciamiento de un delito capital. Conocer la materialidad no es un elemento, y creer por error que la declaración no era material no constituye defensa."
+      },
+      "zh": {
+        "plainSummary": "在官方程序中宣誓后，就重大事项作出本人不相信真实的虚假陈述；涉及起诉死刑重罪的分支并未另行规定重大性要求。",
+        "degreeContext": "通常为三级重罪。官方程序涉及起诉死刑重罪时为二级重罪。明知陈述具有重大性并非构成要件，误以为陈述不重大也不构成抗辩。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+    "jurisdiction": "FL",
+    "code": "320.07(3)(c)",
+    "slug": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+    "name": "Expiration of registration; renewal required; penalties",
+    "names": {
+      "es": "Vencimiento del registro; renovación obligatoria; sanciones",
+      "zh": "登记到期、续期要求及处罚"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 320.07(3)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html"
+      },
+      {
+        "citation": "Fla. Stat. § 320.07",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "The criminal tier applies when a motor vehicle or mobile-home registration has been expired for more than six months and the violation is a second or subsequent offense. The statute generally applies to the present owner, or to the operator when the owner is absent. It excludes a qualifying short-term lessee who proves the lease, protects a qualifying servicemember whose mobile-home registration expired during sufficiently distant active duty, and assigns no owner penalty when a leased vehicle is registered in the lessee's name.",
+        "degreeContext": "A second or subsequent offense involving a registration expired for more than six months is a second-degree misdemeanor. An expiration of six months or less is a noncriminal nonmoving violation, and a first offense after more than six months is subject to the noncriminal penalty in § 318.14; those tiers are not this criminal charge."
+      },
+      "es": {
+        "plainSummary": "El nivel penal se aplica cuando el registro de un vehículo motorizado o casa móvil lleva vencido más de seis meses y se trata de una segunda infracción o posterior. Por regla general se aplica al propietario presente, o al operador si el propietario está ausente. Excluye al arrendatario a corto plazo que demuestre un contrato válido, protege al miembro militar que reúna los requisitos cuando el registro de su casa móvil venció durante servicio activo suficientemente distante y no impone sanción al propietario si el vehículo arrendado está registrado a nombre del arrendatario.",
+        "degreeContext": "Una segunda infracción o posterior con registro vencido por más de seis meses es un delito menor de segundo grado. Un vencimiento de seis meses o menos es una infracción no penal, y la primera infracción después de seis meses recibe la sanción no penal del § 318.14; esos niveles no forman parte de este cargo penal."
+      },
+      "zh": {
+        "plainSummary": "机动车或移动房屋登记过期超过六个月，且属于第二次或后续违法时，适用刑事层级。一般而言，车主在场时由车主承担责任；车主不在场时由驾驶人承担。能证明有效短期租约的承租人、在距移动房屋足够远处服现役期间登记到期的合格军人，以及车辆以承租人名义登记时的出租车主，适用条文规定的排除或保护。",
+        "degreeContext": "登记过期超过六个月的第二次或后续违法属于二级轻罪。过期六个月以内属于非刑事、非行驶类交通违法；超过六个月的首次违法适用第318.14条的非刑事处罚，均不属于本刑事指控。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-403-413-6-b-florida-litter-law",
+    "jurisdiction": "FL",
+    "code": "403.413(6)(b)",
+    "slug": "fl-fs-403-413-6-b-florida-litter-law",
+    "name": "Florida Litter Law",
+    "names": {
+      "es": "Ley de Basura de Florida",
+      "zh": "佛罗里达州垃圾法"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 403.413(6)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html"
+      },
+      {
+        "citation": "Fla. Stat. § 403.413",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Unless authorized by law or permit, this tier prohibits dumping litter on listed public lands or waters, water-control-district property, or private property without the owner's prior consent or where the dumping would create a public nuisance or violate another law. It applies when the amount exceeds 15 pounds or 27 cubic feet but does not exceed 500 pounds or 100 cubic feet and is not dumped for a commercial purpose.",
+        "degreeContext": "The quantity tier in § 403.413(6)(b) is a first-degree misdemeanor and requires litter pickup or comparable community service. Smaller noncommercial amounts are ordinarily a noncriminal infraction, subject to specified intimidation exceptions; larger, commercial-purpose, and hazardous-waste dumping fall under a separate felony tier and are not covered by this definition."
+      },
+      "es": {
+        "plainSummary": "Salvo autorización legal o permiso, este nivel prohíbe arrojar basura en los terrenos o aguas públicas enumerados, en propiedad de un distrito de control de aguas o en propiedad privada sin consentimiento previo del dueño o cuando el vertido cause una molestia pública o viole otra ley. Se aplica cuando la cantidad supera 15 libras o 27 pies cúbicos, pero no supera 500 libras o 100 pies cúbicos, y no se arroja con fin comercial.",
+        "degreeContext": "El nivel cuantitativo del § 403.413(6)(b) es un delito menor de primer grado y exige recoger basura o realizar servicio comunitario comparable. Cantidades menores no comerciales son normalmente una infracción no penal, sujetas a excepciones por intimidación; los vertidos mayores, comerciales o de residuos peligrosos pertenecen a un nivel grave separado y no están incluidos aquí."
+      },
+      "zh": {
+        "plainSummary": "除法律或许可证授权外，本层级禁止在条文列举的公共土地或水域、水利控制区财产倾倒垃圾，也禁止未经所有人事先同意，或者会造成公共妨害或违反其他法律而在私人财产倾倒垃圾。适用数量为超过15磅或27立方英尺，但不超过500磅或100立方英尺，且并非出于商业目的。",
+        "degreeContext": "第403.413(6)(b)条的数量层级属于一级轻罪，并要求清理垃圾或完成相当的社区服务。较少的非商业数量通常属于非刑事违法，但有恐吓方面的例外；更大量、商业目的或危险废物倾倒属于独立重罪层级，不包含在本定义中。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+    "jurisdiction": "FL",
+    "code": "562.12(1)",
+    "slug": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+    "name": "Beverages sold with improper license, or without license or registration, or held with intent to sell prohibited",
+    "names": {
+      "es": "Prohibición de vender bebidas con licencia inadecuada o sin licencia o registro, o de poseerlas con intención de venta",
+      "zh": "禁止持不当许可证、无许可证或未登记销售饮料以及为非法销售而持有饮料"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 562.12(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html"
+      },
+      {
+        "citation": "Fla. Stat. § 562.12",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "This provision prohibits selling alcoholic beverages without a license, selling outside the manner allowed by a license, or keeping or possessing alcoholic beverages with intent to sell or dispose of them unlawfully. It separately covers unlawful alcoholic-beverage sales at a commercial establishment and maintaining a place where such beverages are sold or intended to be sold unlawfully.",
+        "degreeContext": "Unlicensed or license-inconsistent sale, or possession with unlawful-sale intent under subsection (1)(a), is ordinarily a second-degree misdemeanor. An unlawful sale at a commercial establishment, or maintaining a place for unlawful sales, is a third-degree felony with a $5,000-to-$10,000 fine. A second or subsequent subsection (1) violation is a second-degree felony with a $15,000-to-$20,000 fine."
+      },
+      "es": {
+        "plainSummary": "Esta disposición prohíbe vender bebidas alcohólicas sin licencia, vender de una manera no permitida por la licencia o mantener o poseer bebidas alcohólicas con intención de venderlas o disponer de ellas ilícitamente. También abarca por separado la venta ilícita en un establecimiento comercial y mantener un lugar donde se venden o se pretende vender ilícitamente esas bebidas.",
+        "degreeContext": "La venta sin licencia o contraria a la licencia, o la posesión con intención de venta ilícita bajo el inciso (1)(a), es normalmente un delito menor de segundo grado. La venta ilícita en un establecimiento comercial o mantener un lugar para ventas ilícitas es un delito grave de tercer grado con multa de $5,000 a $10,000. Una segunda infracción o posterior del inciso (1) es un delito grave de segundo grado con multa de $15,000 a $20,000."
+      },
+      "zh": {
+        "plainSummary": "本条禁止无许可证销售酒精饮料、以许可证不允许的方式销售，或以非法销售、处分为目的保存或持有酒精饮料。本条还单独涵盖在商业场所非法销售酒精饮料，以及维持一个非法销售或拟非法销售酒精饮料的场所。",
+        "degreeContext": "第(1)(a)款所述无证或违反许可证的销售，以及以非法销售为目的持有，通常属于二级轻罪。在商业场所非法销售或维持非法销售场所属于三级重罪，并处罚金5,000至10,000美元。第二次或后续违反第(1)款属于二级重罪，并处罚金15,000至20,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+    "jurisdiction": "FL",
+    "code": "877.03",
+    "slug": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+    "name": "Breach of the peace; disorderly conduct",
+    "names": {
+      "es": "Perturbación de la paz; conducta desordenada",
+      "zh": "扰乱治安；扰乱秩序行为"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 877.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "The statute covers acts of a nature to corrupt public morals, outrage public decency, disturb the peace and quiet of witnesses, brawling or fighting, or other conduct constituting a breach of the peace or disorderly conduct.",
+        "degreeContext": "A violation of § 877.03 is a second-degree misdemeanor."
+      },
+      "es": {
+        "plainSummary": "La ley abarca actos cuya naturaleza corrompa la moral pública, ultraje el sentido de decencia pública, afecte la paz y tranquilidad de quienes los presencien, peleas o riñas, u otra conducta que constituya perturbación de la paz o conducta desordenada.",
+        "degreeContext": "La infracción del § 877.03 es un delito menor de segundo grado."
+      },
+      "zh": {
+        "plainSummary": "本条涵盖具有败坏公共道德、冒犯公共体面或影响目击者安宁性质的行为，也涵盖斗殴、打架以及其他构成扰乱治安或扰乱秩序的行为。",
+        "degreeContext": "违反第877.03条属于二级轻罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-806-13-criminal-mischief",
+    "jurisdiction": "FL",
+    "code": "806.13(1)",
+    "slug": "fl-fs-806-13-criminal-mischief",
+    "name": "Criminal mischief",
+    "names": {
+      "es": "Daño criminal",
+      "zh": "刑事毁损"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 806.13(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and maliciously injuring or damaging another person's real or personal property, including by graffiti or vandalism.",
+        "degreeContext": "The degree depends on the amount and consequences of the damage: second- or first-degree misdemeanor at the lower damage levels, and third-degree felony at $1,000 or more or for a qualifying interruption or impairment. A prior conviction can reclassify a lower-level offense."
+      },
+      "es": {
+        "plainSummary": "Dañar intencional y maliciosamente bienes muebles o inmuebles de otra persona, incluso mediante grafiti o vandalismo.",
+        "degreeContext": "El grado depende del monto y las consecuencias del daño: delito menor de segundo o primer grado en los niveles inferiores y delito grave de tercer grado cuando alcanza $1,000 o más o causa una interrupción o afectación que reúne los requisitos. Una condena anterior puede reclasificar un delito de nivel inferior."
+      },
+      "zh": {
+        "plainSummary": "故意且恶意损伤或损坏他人的不动产或动产，包括涂鸦或其他破坏行为。",
+        "degreeContext": "等级取决于损失金额和后果：较低损失分别可构成二级或一级轻罪；损失达到1,000美元或造成符合条件的中断或损害时为三级重罪。既往定罪可使较低等级的罪名升格。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+    "jurisdiction": "FL",
+    "code": "810.09(1)-(2)",
+    "slug": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+    "name": "Trespass on property other than structure or conveyance",
+    "names": {
+      "es": "Entrada ilícita en propiedad que no sea una estructura o medio de transporte",
+      "zh": "非法进入非建筑物或交通工具的地产"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 810.09(1)-(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully entering or remaining, without authorization, on property other than a structure or conveyance after the statutory form of notice, or entering specified unenclosed curtilage with intent to commit another offense.",
+        "degreeContext": "Ordinarily a first-degree misdemeanor. It is a third-degree felony when an enumerated condition applies, including being armed or trespassing on certain designated and properly posted sites."
+      },
+      "es": {
+        "plainSummary": "Entrar o permanecer intencionalmente y sin autorización en una propiedad que no sea una estructura o medio de transporte después del aviso exigido por la ley, o entrar en cierto terreno residencial no cercado con intención de cometer otro delito.",
+        "degreeContext": "Por regla general es un delito menor de primer grado. Es delito grave de tercer grado si se cumple una condición enumerada, como estar armado o entrar ilícitamente en ciertos lugares designados y debidamente señalizados."
+      },
+      "zh": {
+        "plainSummary": "在收到法定形式的禁止通知后，未经授权故意进入或停留在建筑物或交通工具以外的地产，或为实施另一罪行而进入特定的未围合住宅附属区域。",
+        "degreeContext": "通常为一级轻罪。符合列明条件时为三级重罪，包括携带武器，或非法进入某些已指定并依法张贴标志的地点。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+    "jurisdiction": "FL",
+    "code": "815.06(2)-(3)",
+    "slug": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+    "name": "Offense against users of computers, computer systems, computer networks, or electronic devices",
+    "names": {
+      "es": "Delitos contra usuarios de computadoras, sistemas, redes y dispositivos electrónicos",
+      "zh": "侵害计算机、计算机系统、网络和电子设备用户罪"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 815.06(2)-(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully and knowingly, without authorization or beyond authorization, accessing a computer or electronic device, disrupting data transmission, damaging specified equipment or systems, introducing a computer contaminant, or conducting surveillance through an inherent device feature.",
+        "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when subsection (3)(b)'s damage, fraud, public-service, government-operation, or transit conditions apply, and a first-degree felony when the violation endangers human life or disrupts a system affecting medical equipment used for direct care."
+      },
+      "es": {
+        "plainSummary": "Acceder intencionalmente y a sabiendas, sin autorización o excediéndola, a una computadora o dispositivo; interrumpir datos; dañar equipos o sistemas; introducir un contaminante informático; o vigilar mediante una función incorporada del dispositivo.",
+        "degreeContext": "Por regla general es delito grave de tercer grado. Es de segundo grado cuando se cumplen las condiciones del inciso (3)(b) sobre daños, fraude, servicios públicos, operaciones gubernamentales o transporte, y de primer grado si pone en peligro la vida humana o interrumpe un sistema que afecta equipo médico de atención directa."
+      },
+      "zh": {
+        "plainSummary": "故意且明知地在未经授权或超越授权的情况下访问计算机或电子设备、中断数据传输、损坏指定设备或系统、植入计算机污染程序，或利用设备内置功能进行监控。",
+        "degreeContext": "通常为三级重罪。符合第(3)(b)款关于损失、欺诈、公共服务、政府运作或交通系统的条件时为二级重罪；危及生命或中断影响直接医疗设备的系统时为一级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-06-nonsupport-of-dependents",
+    "jurisdiction": "FL",
+    "code": "827.06(2)-(3)",
+    "slug": "fl-fs-827-06-nonsupport-of-dependents",
+    "name": "Nonsupport of dependents",
+    "names": {
+      "es": "Incumplimiento de manutención de dependientes",
+      "zh": "不扶养受扶养人"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.06(2)-(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.06.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully failing to provide support the person can provide to a child or spouse whom the person knows he or she is legally obligated to support.",
+        "degreeContext": "First-degree misdemeanor ordinarily. It is a third-degree felony for a fourth or subsequent violation, or when the subsection (2) violation involves support owed for more than one year in an amount of at least $5,000."
+      },
+      "es": {
+        "plainSummary": "No proporcionar intencionalmente la manutención que la persona puede aportar a un hijo o cónyuge a quien sabe que está legalmente obligada a mantener.",
+        "degreeContext": "Por regla general es delito menor de primer grado. Es delito grave de tercer grado en la cuarta infracción o una posterior, o si la infracción del inciso (2) incluye manutención adeudada por más de un año por al menos $5,000."
+      },
+      "zh": {
+        "plainSummary": "明知对某子女或配偶负有法定扶养义务且有能力提供扶养，却故意不提供。",
+        "degreeContext": "通常为一级轻罪。第四次或其后违反，或第(2)款违法涉及拖欠超过一年且金额至少5,000美元时，为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-828-12-animal-cruelty",
+    "jurisdiction": "FL",
+    "code": "828.12(1)",
+    "slug": "fl-fs-828-12-animal-cruelty",
+    "name": "Animal cruelty",
+    "names": {
+      "es": "Crueldad animal",
+      "zh": "虐待动物"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 828.12(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Unnecessarily overloading, overdriving, tormenting, depriving of necessary sustenance or shelter, mutilating, or killing an animal, causing those acts, or carrying an animal cruelly or inhumanely.",
+        "degreeContext": "First-degree misdemeanor, with a fine of not more than $5,000 stated in this subsection, or both the referenced punishment and fine."
+      },
+      "es": {
+        "plainSummary": "Sobrecargar, exigir, atormentar, privar de alimento o refugio necesario, mutilar o matar innecesariamente a un animal; causar esos actos; o transportar al animal de manera cruel o inhumana.",
+        "degreeContext": "Delito menor de primer grado, con multa de hasta $5,000 indicada en este inciso, o tanto la pena referida como la multa."
+      },
+      "zh": {
+        "plainSummary": "不必要地使动物超负荷、过度驱赶、折磨、剥夺必要食物或住所、残害或杀死动物，促使他人实施这些行为，或以残酷、不人道方式运输动物。",
+        "degreeContext": "一级轻罪；本款规定罚款不超过5,000美元，或同时适用所引用的处罚与该罚款。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-828-12-aggravated-animal-cruelty",
+    "jurisdiction": "FL",
+    "code": "828.12(2)",
+    "slug": "fl-fs-828-12-aggravated-animal-cruelty",
+    "name": "Aggravated animal cruelty",
+    "names": {
+      "es": "Crueldad animal agravada",
+      "zh": "严重虐待动物"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 828.12(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally acting toward an animal, or failing to act while owning or having custody or control of it, resulting in cruel death or excessive or repeated unnecessary pain or suffering, or causing the same.",
+        "degreeContext": "Third-degree felony, with a fine of not more than $10,000 stated in subsection (2), or both. Knowing and intentional torture or torment and repeat convictions trigger additional conditions stated in subsections (2)(a)-(b)."
+      },
+      "es": {
+        "plainSummary": "Actuar intencionalmente contra un animal, o no actuar siendo su dueño o teniendo su custodia o control, causando una muerte cruel o dolor o sufrimiento innecesario excesivo o repetido, o hacer que ocurra.",
+        "degreeContext": "Delito grave de tercer grado, con multa de hasta $10,000 indicada en el inciso (2), o ambos. La tortura o tormento consciente e intencional y las condenas repetidas activan condiciones adicionales de los incisos (2)(a)-(b)."
+      },
+      "zh": {
+        "plainSummary": "故意对动物实施行为，或作为动物所有人、照管人或控制人而不采取行动，导致动物惨死或遭受过度、反复且不必要的痛苦，或促使他人造成同样结果。",
+        "degreeContext": "三级重罪；第(2)款规定罚款不超过10,000美元，或两者并处。明知且故意的酷刑或折磨以及重复定罪会触发第(2)(a)-(b)款的附加条件。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-831-01-forgery",
+    "jurisdiction": "FL",
+    "code": "831.01",
+    "slug": "fl-fs-831-01-forgery",
+    "name": "Forgery",
+    "names": {
+      "es": "Falsificación",
+      "zh": "伪造文书"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 831.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Falsely making, altering, forging, or counterfeiting a public record or one of the certificates, legal instruments, financial instruments, receipts, or transportation documents listed in the section, with intent to injure or defraud a person.",
+        "degreeContext": "Third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Hacer, alterar, falsificar o imitar fraudulentamente un registro público o uno de los certificados, instrumentos jurídicos o financieros, recibos o documentos de transporte enumerados en la sección, con intención de perjudicar o defraudar a una persona.",
+        "degreeContext": "Delito grave de tercer grado."
+      },
+      "zh": {
+        "plainSummary": "意图损害或欺诈他人，虚假制作、变造、伪造或仿造公共记录，或本条所列的证书、法律或金融文书、收据或运输凭证。",
+        "degreeContext": "三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+    "jurisdiction": "FL",
+    "code": "832.05(2)-(4)",
+    "slug": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+    "name": "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+    "names": {
+      "es": "Emisión de cheques, giros y órdenes de tarjeta de débito sin fondos; pena; deber del girado; prueba; costos; formulario de denuncia",
+      "zh": "签发空头支票、汇票及借记卡付款指令；处罚；付款人义务；证据；费用；控告表格"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 832.05(2)-(4)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly issuing or using a check, draft, written order, or debit card without sufficient funds or credit, cashing or depositing an item with intent to defraud, or knowingly obtaining value through such an unfunded instrument, subject to the section's stated exceptions.",
+        "degreeContext": "Conduct under subsection (2) is generally a first-degree misdemeanor, but is a third-degree felony when the instrument is at least $150 and value is received. Subsection (3) is a third-degree felony. Subsection (4) is a first-degree misdemeanor below $150 and a third-degree felony at $150 or more."
+      },
+      "es": {
+        "plainSummary": "Emitir o usar a sabiendas un cheque, giro, orden escrita o tarjeta de débito sin fondos o crédito suficientes; cobrar o depositar un instrumento con intención de defraudar; u obtener valor a sabiendas mediante ese instrumento, sujeto a las excepciones de la sección.",
+        "degreeContext": "El inciso (2) es generalmente delito menor de primer grado, pero es delito grave de tercer grado si el instrumento es de al menos $150 y se recibe algo de valor. El inciso (3) es delito grave de tercer grado. El inciso (4) es delito menor de primer grado por menos de $150 y delito grave de tercer grado por $150 o más."
+      },
+      "zh": {
+        "plainSummary": "明知资金或信用不足而签发或使用支票、汇票、书面付款指令或借记卡；意图欺诈而兑现或存入票据；或明知无资金保障而以该票据取得有价物，但受本条所列例外限制。",
+        "degreeContext": "第(2)款通常为一级轻罪；票面至少150美元且收款人取得有价物时为三级重罪。第(3)款为三级重罪。第(4)款金额低于150美元为一级轻罪，达到150美元为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+    "jurisdiction": "FL",
+    "code": "837.05",
+    "slug": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+    "name": "False reports to law enforcement authorities",
+    "names": {
+      "es": "Informes falsos a las autoridades policiales",
+      "zh": "向执法机关作虚假报告"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 837.05",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.05.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly giving false information to a law enforcement officer about the alleged commission of a crime.",
+        "degreeContext": "Ordinarily a first-degree misdemeanor. A qualifying prior violation with corroborated oral or written information, or false information concerning an alleged capital felony, is a third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Dar a sabiendas información falsa a un agente policial sobre la supuesta comisión de un delito.",
+        "degreeContext": "Por regla general es delito menor de primer grado. Una infracción anterior que reúna los requisitos, junto con información oral corroborada o escrita, o información falsa sobre un supuesto delito capital, constituye delito grave de tercer grado."
+      },
+      "zh": {
+        "plainSummary": "明知地向执法人员提供有关被指称犯罪的虚假信息。",
+        "degreeContext": "通常为一级轻罪。符合条件的既往违法加上有佐证的口头或书面信息，或涉及被指称死刑重罪的虚假信息，为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+    "jurisdiction": "FL",
+    "code": "843.01",
+    "slug": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+    "name": "Resisting, obstructing, or opposing by offering or doing violence to legally authorized person, police canine, or police horse",
+    "names": {
+      "es": "Resistencia, obstrucción u oposición mediante amenaza o violencia contra persona legalmente autorizada, can policial o caballo policial",
+      "zh": "以威胁或实施暴力抗拒、妨碍或阻挠依法授权人员、警犬或警马"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 843.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.10",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+      },
+      {
+        "citation": "Fla. Stat. § 843.19",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.19.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly and willfully resisting, obstructing, or opposing a listed officer or legally authorized person performing official duties by offering or doing violence, or doing so by violence toward a police canine or police horse working with such a person.",
+        "degreeContext": "Each form in subsections (1) and (2) is a third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Resistir, obstruir u oponerse consciente e intencionalmente, mediante amenaza o violencia, a un agente enumerado o persona legalmente autorizada que cumple funciones oficiales, o hacerlo con violencia contra un can o caballo policial que trabaja con esa persona.",
+        "degreeContext": "Cada modalidad de los incisos (1) y (2) es delito grave de tercer grado."
+      },
+      "zh": {
+        "plainSummary": "明知且故意地以威胁或实施暴力抗拒、妨碍或阻挠正在履行职务的列明执法人员或依法授权人员，或对与其协同工作的警犬或警马实施该行为。",
+        "degreeContext": "第(1)和第(2)款的每种行为均为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+    "jurisdiction": "FL",
+    "code": "843.15(1)",
+    "slug": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+    "name": "Failure of defendant on bail to appear",
+    "names": {
+      "es": "Incomparecencia de acusado en libertad bajo fianza",
+      "zh": "保释被告未出庭"
+    },
+    "category": "felony",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 843.15(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.15.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "After release under chapter 903, willfully failing to appear before a court or judicial officer as required.",
+        "degreeContext": "Third-degree felony when release was connected to a felony charge, or while awaiting sentence or specified post-conviction review. First-degree misdemeanor when release was connected to a misdemeanor charge."
+      },
+      "es": {
+        "plainSummary": "Después de ser puesto en libertad conforme al capítulo 903, no comparecer intencionalmente ante un tribunal o funcionario judicial cuando se exige.",
+        "degreeContext": "Delito grave de tercer grado si la libertad se relacionaba con un cargo grave, o mientras se esperaba sentencia o cierta revisión posterior a la condena. Delito menor de primer grado si se relacionaba con un cargo menor."
+      },
+      "zh": {
+        "plainSummary": "依第903章获释后，故意不按要求在法院或司法官员面前出庭。",
+        "degreeContext": "因重罪指控获释，或在等待判刑或特定定罪后复审期间未出庭，为三级重罪；因轻罪指控获释而未出庭，为一级轻罪。"
+      }
+    }
+  }
+]

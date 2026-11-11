@@ -85,18 +85,58 @@
     "code": "806.01(1)",
     "slug": "fl-fs-806-01-1-arson-in-the-first-degree",
     "name": "Arson in the first degree",
-    "names": { "es": "Incendio provocado de primer grado", "zh": "一级纵火罪" },
+    "names": {
+      "es": "Incendio provocado de primer grado",
+      "zh": "一级纵火罪"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 806.01(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" },
-      { "citation": "Fla. Stat. § 806.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" }
+      {
+        "citation": "Fla. Stat. § 806.01(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 806.031",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion a dwelling or its contents, a structure or its contents where people are normally present, or another structure the person knew or had reasonable grounds to believe was occupied.", "degreeContext": "First-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft." },
-      "es": { "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, una vivienda o su contenido; una estructura o su contenido donde normalmente hay personas; u otra estructura que la persona sabía o tenía motivos razonables para creer que estaba ocupada.", "degreeContext": "Delito grave de primer grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves." },
-      "zh": { "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏住宅或其中物品、通常有人在场的建筑物或其中物品，或者行为人明知或有合理理由相信有人占用的其他建筑物。", "degreeContext": "一级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。" }
+      "en": {
+        "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion a dwelling or its contents, a structure or its contents where people are normally present, or another structure the person knew or had reasonable grounds to believe was occupied.",
+        "degreeContext": "First-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft. An injury during arson can support a separate §806.031 charge, whether or not harm was intended: ordinary bodily harm is a first-degree misdemeanor; great bodily harm, permanent disability or permanent disfigurement is a second-degree felony. A first-degree felony ordinarily carries up to 30 years and a $10,000 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
+      },
+      "es": {
+        "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, una vivienda o su contenido; una estructura o su contenido donde normalmente hay personas; u otra estructura que la persona sabía o tenía motivos razonables para creer que estaba ocupada.",
+        "degreeContext": "Delito grave de primer grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves. Una lesión durante el incendio puede fundamentar un cargo separado según §806.031 aunque no haya intención de lesionar: el daño corporal ordinario es delito menor de primero; el grave, la discapacidad permanente o la desfiguración permanente son delito grave de segundo. Un delito grave de primer grado conlleva ordinariamente hasta 30 años y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏住宅或其中物品、通常有人在场的建筑物或其中物品，或者行为人明知或有合理理由相信有人占用的其他建筑物。",
+        "degreeContext": "一级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。 纵火导致人身伤害时，即使无伤害意图，也可能另依第806.031条指控：一般身体伤害为一级轻罪，重伤、永久残疾或永久毁容为二级重罪。 一级重罪通常最高可判30年监禁及10,000美元罚款。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
+      }
     }
   },
   {
@@ -105,18 +145,58 @@
     "code": "806.01(2)",
     "slug": "fl-fs-806-01-2-arson-in-the-second-degree",
     "name": "Arson in the second degree",
-    "names": { "es": "Incendio provocado de segundo grado", "zh": "二级纵火罪" },
+    "names": {
+      "es": "Incendio provocado de segundo grado",
+      "zh": "二级纵火罪"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 806.01(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" },
-      { "citation": "Fla. Stat. § 806.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" }
+      {
+        "citation": "Fla. Stat. § 806.01(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 806.031",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.031.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion any structure, whether owned by the person or another, under circumstances not covered by first-degree arson.", "degreeContext": "Second-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft." },
-      "es": { "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, cualquier estructura, sea propia o ajena, en circunstancias no comprendidas en el incendio provocado de primer grado.", "degreeContext": "Delito grave de segundo grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves." },
-      "zh": { "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏任何建筑物，无论属于本人还是他人，但情形不属于一级纵火罪。", "degreeContext": "二级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。" }
+      "en": {
+        "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion any structure, whether owned by the person or another, under circumstances not covered by first-degree arson.",
+        "degreeContext": "Second-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft. An injury during arson can support a separate §806.031 charge, whether or not harm was intended: ordinary bodily harm is a first-degree misdemeanor; great bodily harm, permanent disability or permanent disfigurement is a second-degree felony. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
+      },
+      "es": {
+        "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, cualquier estructura, sea propia o ajena, en circunstancias no comprendidas en el incendio provocado de primer grado.",
+        "degreeContext": "Delito grave de segundo grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves. Una lesión durante el incendio puede fundamentar un cargo separado según §806.031 aunque no haya intención de lesionar: el daño corporal ordinario es delito menor de primero; el grave, la discapacidad permanente o la desfiguración permanente son delito grave de segundo. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏任何建筑物，无论属于本人还是他人，但情形不属于一级纵火罪。",
+        "degreeContext": "二级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。 纵火导致人身伤害时，即使无伤害意图，也可能另依第806.031条指控：一般身体伤害为一级轻罪，重伤、永久残疾或永久毁容为二级重罪。 二级重罪通常最高可判监禁15年及罚款10,000美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
+      }
     }
   },
   {
@@ -442,19 +522,62 @@
     "code": "837.02(1)-(2)",
     "slug": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
     "name": "Perjury in official proceedings",
-    "names": { "es": "Perjurio en procedimientos oficiales", "zh": "官方程序中的伪证罪" },
+    "names": {
+      "es": "Perjurio en procedimientos oficiales",
+      "zh": "官方程序中的伪证罪"
+    },
     "category": "felony",
-    "categories": ["felony"],
-    "verifiedMonth": "2026-09",
+    "categories": [
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
     "citations": [
-      { "citation": "Fla. Stat. § 837.02(1)-(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html" },
-      { "citation": "Fla. Stat. § 837.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html" },
-      { "citation": "Fla. Stat. § 837.011", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html" }
+      {
+        "citation": "Fla. Stat. § 837.02(1)-(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 837.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.084",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 837.07",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html"
+      }
     ],
     "text": {
-      "en": { "plainSummary": "Making under oath, in an official proceeding, a false statement the person does not believe to be true regarding a material matter; the capital-felony-prosecution branch does not state a separate materiality requirement.", "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when the official proceeding relates to prosecution of a capital felony. Knowledge of materiality is not an element, and a mistaken belief that the statement was immaterial is not a defense." },
-      "es": { "plainSummary": "Hacer bajo juramento, en un procedimiento oficial, una declaración falsa que la persona no cree verdadera respecto de un asunto material; la modalidad relativa al enjuiciamiento de un delito capital no establece por separado un requisito de materialidad.", "degreeContext": "Por regla general, delito grave de tercer grado. Es delito grave de segundo grado cuando el procedimiento oficial se relaciona con el enjuiciamiento de un delito capital. Conocer la materialidad no es un elemento, y creer por error que la declaración no era material no constituye defensa." },
-      "zh": { "plainSummary": "在官方程序中宣誓后，就重大事项作出本人不相信真实的虚假陈述；涉及起诉死刑重罪的分支并未另行规定重大性要求。", "degreeContext": "通常为三级重罪。官方程序涉及起诉死刑重罪时为二级重罪。明知陈述具有重大性并非构成要件，误以为陈述不重大也不构成抗辩。" }
+      "en": {
+        "plainSummary": "Making under oath, in an official proceeding, a false statement the person does not believe to be true regarding a material matter; the capital-felony-prosecution branch does not state a separate materiality requirement.",
+        "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when the official proceeding relates to prosecution of a capital felony. Knowledge of materiality is not an element, and a mistaken belief that the statement was immaterial is not a defense. Recantation under §837.07 requires admitting falsity in the same continuous proceeding and either no substantial effect on it or an admission before exposure of the falsehood became manifest. A third-degree felony ordinarily carries up to 5 years in prison and a $5,000 fine. A second-degree felony ordinarily carries up to 15 years in prison and a $10,000 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
+      },
+      "es": {
+        "plainSummary": "Hacer bajo juramento, en un procedimiento oficial, una declaración falsa que la persona no cree verdadera respecto de un asunto material; la modalidad relativa al enjuiciamiento de un delito capital no establece por separado un requisito de materialidad.",
+        "degreeContext": "Por regla general, delito grave de tercer grado. Es delito grave de segundo grado cuando el procedimiento oficial se relaciona con el enjuiciamiento de un delito capital. Conocer la materialidad no es un elemento, y creer por error que la declaración no era material no constituye defensa. La retractación según §837.07 exige admitir la falsedad en el mismo procedimiento continuo y que la falsedad no lo haya afectado sustancialmente o que se admita antes de resultar manifiesto su descubrimiento. Un delito grave de tercer grado conlleva ordinariamente hasta 5 años de prisión y $5,000 de multa. Un delito grave de segundo grado conlleva ordinariamente hasta 15 años de prisión y $10,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
+      },
+      "zh": {
+        "plainSummary": "在官方程序中宣誓后，就重大事项作出本人不相信真实的虚假陈述；涉及起诉死刑重罪的分支并未另行规定重大性要求。",
+        "degreeContext": "通常为三级重罪。官方程序涉及起诉死刑重罪时为二级重罪。明知陈述具有重大性并非构成要件，误以为陈述不重大也不构成抗辩。 第837.07条的撤回抗辩要求在同一连续程序中承认虚假，并满足其一：虚假陈述未实质影响程序，或在明显即将被揭穿之前承认。 三级重罪通常最高可判监禁5年及罚款5,000美元。 二级重罪通常最高可判监禁15年及罚款10,000美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
+      }
     }
   }
 ]

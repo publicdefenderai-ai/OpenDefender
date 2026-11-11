@@ -1,30 +1,30 @@
 {
   "schemaVersion": 1,
-  "reportHash": "2b415cd72817dba8e1e009ee5b179b32faf57f8234cc17cf3680ae9e5ce8ea11",
+  "reportHash": "c5675ee1c9712dd55a884e226a690734e696244eb2721d32a73ff8c372fdaaa7",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
       "status": "eligible",
-      "reason": "Literal operative offense with complete current grading-exception closure.",
-      "draftHash": "f9f36e6917d32fcfc5a427bc005728c3a823d0f2494628a2c1f85284bed6c1c3",
-      "definitionHash": "13a4e1e8cd51e3799259d8537579f3ab2557d7d31565f04d20dff18f60ff5da2",
-      "approvalHash": "1f86f4d197873467805c814dfcbb009a56f8f1bac394e565b4859d50b976ae96"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "4a7ff4c6ce47de11a041bfd5468c4bff238305b13d33604e9f25bf735e5f751b",
+      "definitionHash": "5a0da31639aec161875c5453b2429ca1bb63142ba70369b6fa534eb319341b9d",
+      "approvalHash": "e6e84691983f556e783353a07cc17469f60acd5844b9dafd3356ba060c730edb"
     },
     {
       "id": "fl-fs-777-04-2-criminal-solicitation",
       "status": "eligible",
-      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
-      "draftHash": "1999e98d2366c2854c1c49b776740cb4bc63a7437d9fd137ef0cd3c09170032a",
-      "definitionHash": "682a0988ed78a46fad1c57c590f2378f4f9c4fc0b24b916786352aac153f734a",
-      "approvalHash": "7baf4dd0a47518992c2a7ad466b033b2a18761342c48181d1725039b86232c25"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "be9472917d9d6d2b79131d54dd1030ed82b8e7b1717d5035dbd636ff77e62b58",
+      "definitionHash": "388338071030b1fd59a40464dc47a00e5f8906e553b9c3ab64713a310f26849f",
+      "approvalHash": "a1865b683632522e106bf478be3cde12020030b986b7eb35449b6f4567c44b26"
     },
     {
       "id": "fl-fs-777-04-3-criminal-conspiracy",
       "status": "eligible",
-      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
-      "draftHash": "dfb4e3f406d3a40a9b6972a7a5a46cdb6a5e312736a5e500f0745911c4c4e554",
-      "definitionHash": "03c8f489665fa98974f3ead1b743dc1df4aac2b5022208a3b2d14b86fb51f678",
-      "approvalHash": "526452bab0cb111ca42b91d63a04ce667ce09b0a15c7aa70756a56b9809980fc"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "98e2dc54e839c1728baaba0bb58d04b95d296c03622c5809c53c81d0593c26c9",
+      "definitionHash": "eb28c8b3ff51599985ab2ec03a65a8e73c054c6430e6b2e225265f187c36fcf9",
+      "approvalHash": "7a08f91e910ab80a34e8d1a8fb3ec0d5c5751029c123b829d91dbe5213cc9023"
     },
     {
       "id": "fl-fs-782-07-1-manslaughter",
@@ -77,18 +77,18 @@
     {
       "id": "fl-fs-777-03-accessory-after-the-fact",
       "status": "eligible",
-      "reason": "Clear whole-section offense; current ranking tables close its conditional grades.",
-      "draftHash": "17ddcf1352f4efd68a6399001495902fb167fe931fbb2455cca387cc0298842e",
-      "definitionHash": "8c205dc7c8a504cfad69195e69394488b987ce2e730ef8f0e774b2e06957702d",
-      "approvalHash": "96557502c1bf80d89486d07ff727190f0c122a3f4af9d7d1179fcc402d5c05c8"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "61dcca456be83eca8e88d5183e7ad37e9ad7bb7551a7fbb239b2534da7064f15",
+      "definitionHash": "e276220dd0ef3222fc231a236f2f86673f1fa6d6423a4a4a8b6f99b3a42b9f08",
+      "approvalHash": "f3ab8977d47b214d341ecbd68730242e37d1a57f2f1608cbe49ea26c421647b1"
     },
     {
       "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
       "status": "eligible",
-      "reason": "The official heading supplies a whole-section identity and the section exhaustively states conduct and repeat grades.",
-      "draftHash": "534e83f91e35b34370f70e9c35253ff5d7e1e6f79cdd358a953e8c1c1dbde82e",
-      "definitionHash": "9f8ed527e468fef38fff89f695c0d28994c00de7fbdfe4b5f58be61da48df39e",
-      "approvalHash": "4cc11e4799c281c39e621b51d6aab3fca4600e95714715f2121a279df73bd9f2"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "d290cf7c8edf9c6d3700280ff3e272ddac2a567409d64bc633aeb1e643d0fc99",
+      "definitionHash": "23f98908fab62cc42163300f5d994b8de3c57939e43cb7a53ffc824e6ec2e211",
+      "approvalHash": "96c2972fc1dc4dae12ee800380609cf5497c36d28e7bdcc6843811ed4e204d65"
     },
     {
       "id": "fl-fs-784-011-assault",
@@ -125,26 +125,26 @@
     {
       "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
       "status": "eligible",
-      "reason": "The operative clause supplies a literal offense name; conduct, exceptions, and repeat grading are complete.",
-      "draftHash": "9f1eb329ad6d6b3b597ba0c9294c009d35991c902a00fddd4ebba8ce2e1884f9",
-      "definitionHash": "af3e5dbc57dc425118aff841d7356c57147a1e0483ad5a727b11dd94e2e9dc7f",
-      "approvalHash": "93910585efb9f181e748dfeafc37f94c34b7aae4151b9f08804aa1d05997ed01"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "b68418361c27504ac4268ed7c38c5a2f95867d0412c0fbf388675fc038e196d2",
+      "definitionHash": "397c1aafa5929f7403a080dc47cae8a8726764e32fcb70844ffd552938b124ef",
+      "approvalHash": "7bb4788688f20f37886bb5fc4f14da62bdd52ff055061f993a3e409b2bd845b0"
     },
     {
       "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
       "status": "eligible",
-      "reason": "Current section states prohibited status, conduct, exclusions, and conditional grades.",
-      "draftHash": "ec492a611e41a669a71600d0b45d3c867f9ad7339659d984d951877359c9632c",
-      "definitionHash": "1ab4871a91f451c757656448da962b6e8f411a86a4a6eae043e8aa8a82843d13",
-      "approvalHash": "0d5aba7a7ebc877a5180f74025e8467c0cd88c8334d76c7d6afa7753a4b9c2a3"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "a6b52fffd89f150064c169a692a4e6a39fe9475bcd525762b6f82a341f7b3e0c",
+      "definitionHash": "52b4f7cce11870fb3f5b00b3d3d88aa1c600ce44aeefb1aa3d952a389acaf307",
+      "approvalHash": "bb171a695d137d458d007e636ebec25e13a4a4f84611bfde51db22d704520659"
     },
     {
       "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
       "status": "eligible",
-      "reason": "Clear whole-section possession offense with express state and federal-law exceptions.",
-      "draftHash": "ba5f28b25b1397a634771132fdeee8a9313d6ca15a1341c58097ead9c493f50b",
-      "definitionHash": "393b011efd8c3e5614a37f7a2cc53848289279ccdd0fe53786a9a5bc98ab9c43",
-      "approvalHash": "f7e5c8b08cd5898801fd0b41c1f376be452ac5f2ce1854881e88317a47dbf34b"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "f78886c1d47d9a6c565ec97cc9ad4a9afe648488250871d6daf3b9c18fac7b1d",
+      "definitionHash": "835cfed5ae4a66907fba73261d61309e33cfaa039978d3fed4363690a230bd9f",
+      "approvalHash": "dce4bac71820b6474fc33ae8cd83c1caa9c17963ade75e00fd496da99e60f135"
     },
     {
       "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
@@ -205,18 +205,18 @@
     {
       "id": "fl-fs-806-13-criminal-mischief",
       "status": "eligible",
-      "reason": "Subsection (1) expressly names the offense and conditionally grades it.",
-      "draftHash": "35c50c857018010e74db2d3a962249fb9cbabc66d8ed352333b4f3abd8415ea7",
-      "definitionHash": "37c64e8f72425e33b075be443f3a0579719811eada111983d3d90367db66c5f9",
-      "approvalHash": "641473bd5c2791149a31104d72f5f3380335a4d965ba645266e378fab6dd7b0c"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "6700c28b9d36edcff32a26b5fb610d34f2777de792d8a5421e039bcb9e67ccbd",
+      "definitionHash": "60546cbc391e3a8441b29d7e1fd210a41b367ae496969933029c431abe7876d5",
+      "approvalHash": "3e2e07a45ef8955b0cda5ab65c2102460c1522694f466c7a4f6fb936cc789085"
     },
     {
       "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
       "status": "eligible",
-      "reason": "The heading is a clear offense identity and subsections (1)-(2) supply conduct and conditional grades.",
-      "draftHash": "d8f73fa6a0cb7410ee5d4fb765d9d59b60e6861082a18d0a3e6f1c4517b36aff",
-      "definitionHash": "03f5b5f569f5763671b36f0f3d793e623aaa3f95416a2222573d6fef1cc93bd7",
-      "approvalHash": "d5c0583299aa9db157fb32bc4ef4e452dbebf521002a6d8b740648b691184457"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "5d0d54ad0c38577cd12ae194cb24830810d291fcad914206e822ff9a99511a96",
+      "definitionHash": "918eee0fb82e0c2ea628a5e82a166cba15223295f75d21c5e5fa5fbc33a120c5",
+      "approvalHash": "9db65689b1f78321002489d4fe9ae8f5034750649d097c8e3aeb3c2996aa0b0c"
     },
     {
       "id": "fl-fs-812-015-retail-theft",
@@ -237,10 +237,10 @@
     {
       "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
       "status": "eligible",
-      "reason": "Subsection (2) expressly names and defines the offense; subsection (3) grades it and subsection (7) supplies exceptions.",
-      "draftHash": "a425d8c5417866bd044fe037ce71610977ff98eaf943aa566694bb9ba26c07be",
-      "definitionHash": "5c14889e256cfad52a3232e5b93664d8f46b4c60b1552accac87d5d10281927d",
-      "approvalHash": "64e4804dee0d2816fd81216acf30bcc9aca071e0af0cc38f0290c7d93a33e78f"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "767aadc2ed9def51044bb07522c7bcb1bb6dcd49ea191072455d158b59b476c3",
+      "definitionHash": "784628acd8e430416618bdcf7688f6591053bc79d6a36fb3e070d9e8c5696d6d",
+      "approvalHash": "1df81ac9d23664a52b21e8b639f7de1cb51c56d1d96b6fd3eef989ec3654a333"
     },
     {
       "id": "fl-fs-817-234-insurance-fraud",
@@ -293,66 +293,66 @@
     {
       "id": "fl-fs-827-06-nonsupport-of-dependents",
       "status": "eligible",
-      "reason": "The clear heading and subsections (2)-(3) provide adult conduct and conditional grades.",
-      "draftHash": "fd6ea54cc2de36d2d211cd461bc8fe8630327b2f1221312e6a0bf59582ca3e8a",
-      "definitionHash": "279c01ed96229e61fc0a3ead371e6332495c673952ebe7917a3a2a93a1213ef9",
-      "approvalHash": "f5115b8e92450eb12905aa835bf5d12e038c0ac1cba78b986a8628d052dd1efb"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "328e22e358e6880a7bc0c54fd56af9038fb9a646e5c0237d4734b8539dbf5cfb",
+      "definitionHash": "20b4bd7ee30ded0ffc405500eb6d3aef7854beba452d980689ba48d57224ba94",
+      "approvalHash": "6831c1180d3e648f85617d52a8ce9fb3af05f64f117e983884e8b7912f4f45a0"
     },
     {
       "id": "fl-fs-828-12-animal-cruelty",
       "status": "eligible",
-      "reason": "Subsection (1) expressly names animal cruelty and supplies conduct, grade, and special fine.",
-      "draftHash": "7860f885af173d3b398f022a8110adb35d0dd59e30c076b3054b0bb2a8cb9004",
-      "definitionHash": "7dd33ef2045142a19bfdf63c7c38ba9d456f42581cd6e84030114f28efa805b9",
-      "approvalHash": "e6bb395a390c4666e8abc5e3a8c2896f8b1c297b0055394288373670a97c0858"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "968f8d2ba1861651e76a59afc35af4ac7bdf00ace6b90771c6a64335c896e5f0",
+      "definitionHash": "0cc10737cf40bcfd3aa127325b51606776cad35b7f1b713b8af1464d24bd8231",
+      "approvalHash": "998ca8434c0759d00c041b32acfff92ad31fedf661544a56ae5c5f56ea1fd412"
     },
     {
       "id": "fl-fs-828-12-aggravated-animal-cruelty",
       "status": "eligible",
-      "reason": "Subsection (2) expressly names aggravated animal cruelty and supplies conduct, grade, and conditional additions.",
-      "draftHash": "2ad7db87e1764d04009964708d5759c762be3c005a13bfba5468886ff859e805",
-      "definitionHash": "1981042f3ba6f34f8ee959d4068c29aac4b244545706cee9c07664f061577fc0",
-      "approvalHash": "d3d5353f19b14780736618113c64e4d0456679749e33fb127a366a2206bf7fa9"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "9d1306b93bc68f535dc790b5ff4438e9a19937005abe82306cb14e412a880e9f",
+      "definitionHash": "1b5426b22422e6d08e12bb1b80bb5a9f42594d28175b1b3f70a54e754ad4c5c9",
+      "approvalHash": "7ad0a614bb41135b1c822755a3e8b28df270ab73085fe7dc82dfe7a081d44911"
     },
     {
       "id": "fl-fs-831-01-forgery",
       "status": "eligible",
-      "reason": "The current section's literal heading identifies forgery, and its single operative sentence supplies complete conduct and a third-degree felony grade.",
-      "draftHash": "8cbc9640e46b04ceec67a33544c587b08870cad3239cd678a049e11100d46eb0",
-      "definitionHash": "fb562c9f5cadecd8d6a5a486a7cfeead1efd1b785c60deb0dcd20b4df97b447c",
-      "approvalHash": "919811848dd91950d0ca3949a2e8a9be8a2011f9c913d7665e221a44886fc443"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "f09e472e6e9aae8fbae5f876e1a93c65ddeba165933e1c8f4252b65cca69ca22",
+      "definitionHash": "8dca2629e1cff29e268a733f438c10e4bf69e298343b4836e617b51bc8f21c1a",
+      "approvalHash": "b56e15d87fcf2a14acf17ddcd79e5ff3ab53b0b51d5f24467c5eef01ac1bc304"
     },
     {
       "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
       "status": "eligible",
-      "reason": "The clear whole-section heading is supported by operative conduct, exceptions, and conditional grades in subsections (2)-(4).",
-      "draftHash": "86edca83d00f0e25d945ab617be36d8fb51c9366d19d6feb23d87dd5165bf49a",
-      "definitionHash": "5a382ad8fd89ab35d653fa918065d9f3f35851763186a580e74783a5f45927d5",
-      "approvalHash": "6fc87560d2ba88864171970d7c9c6417caf70de4cafb2c44d3db16e45002a598"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "cc2c8877288b6c0abf0d800993488d5f609f6de202982679cc3fe8d746162d41",
+      "definitionHash": "4b60c39d333196edf93c6b1de3e39b94fcb49ba41a0e4133c345acd477f7ff58",
+      "approvalHash": "b5b4ebb416c50182b8c45ffa5e9781247ded6dc9b0b40da4e2f6c4a5af72f608"
     },
     {
       "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
       "status": "eligible",
-      "reason": "The clear heading and operative clauses supply conduct and conditional grades.",
-      "draftHash": "670ab11e6b8e5699c6156ee498cf03bc2faed6b6e753750b694491675053a9b2",
-      "definitionHash": "857f14436f38eee63737a3a34829a9debca132c68af07f954bd974771e8f275f",
-      "approvalHash": "27efbecf36ef7c17f361adf334b522ea789661cb1d1a3e52ba65a54fb1e58e75"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "3e22a6a4dc3e939e11c5247509e3eae45b151c39c3967a9c3aa5c65ab01de6d4",
+      "definitionHash": "d36a902a8cd93b1fb3c16712bba74f68a77852b3c64eafa70ed2185357d81c3b",
+      "approvalHash": "af7fecd233d1219ca455c0e829fa8260f45211a0b9a43c3528a4b0fa54391452"
     },
     {
       "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
       "status": "eligible",
-      "reason": "The clear heading and both operative clauses are supported by recovered current officer and animal definitions.",
-      "draftHash": "c62ef7cb0d9823d83c1127657872537e72a23d7da237b46c8cd7a7d38260fcf0",
-      "definitionHash": "9051cb042e54fd7519aaec36bc97243bbe3aae0b6794533a1b814ed510ca3073",
-      "approvalHash": "407f59c50905b3d931c17b01a9b30d3f84a9d73fb649d6dabfdb353746cbf011"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "0bec07b8378d6ba2d43aef3e56838a1227d5067e69d750c34a9f2daf16a894dd",
+      "definitionHash": "ad3e77e21c6e2e08eae386c447458d44245b1776bf4c0626b3afb59ac3bad3df",
+      "approvalHash": "0e1fb1a5d84eaded550ff3be2e95cd0364d42f1d4f1bf3dfe9728d9a2f550e0a"
     },
     {
       "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
       "status": "eligible",
-      "reason": "The heading clearly identifies the offense and subsection (1) states conduct and charge-dependent grades.",
-      "draftHash": "1b1c259f40ea50b6b310a5cc7d4f8b1a9385c4f8e42cdbf890f2dd8818f8149f",
-      "definitionHash": "f6b87948c6187e64fab6ddd39a63d41d3c184992df1dd8ab3db5f419435b8594",
-      "approvalHash": "a883670c0cbde9dc93442e15149df3361478632629cdf9053eca9d65f295c462"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "9f2a0122cd47541f416a5c55f5e50f3058aa1c7bb94018aa5cf114e703a45046",
+      "definitionHash": "01e7617b5afa4c25e0aa3b4e7f71115e4bc8ef43696b7e4f034f235820b3dd3f",
+      "approvalHash": "800c33765b34b6a8123782542acc7b8ff211a23d15feea2746b9b2c530acda0f"
     },
     {
       "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
@@ -389,10 +389,10 @@
     {
       "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
       "status": "eligible",
-      "reason": "The exact heading and subsection (3)(c) support a narrowly coded repeat expired-registration misdemeanor, with adjacent noncriminal tiers and exceptions stated conditionally.",
-      "draftHash": "0f227f1c5d17a09d80baf5c8dc0c81b5450b6b0f9ef04899eeeba568a4e3b25c",
-      "definitionHash": "06acfb9ae9f6bd9dba37318eedb74bfc9ea9dc2ac75f0a6081c024fc42fa07be",
-      "approvalHash": "8b384882086c8235b0b1377edc04fef84c97c9ad179587d976a67d36eeca3e1f"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "6b10f6c9bf36a1d96ea9d8572045e9df9bd3773aa2e027b5a3858b4340b8b31f",
+      "definitionHash": "7be7a49d60d0af0c631db638cf99f008617ce43db6323318f7a238e0c59a56a6",
+      "approvalHash": "deeb1e872b3d8763617289c2c42249c638b3ada50303480f0fc869999c05ebac"
     },
     {
       "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
@@ -405,26 +405,26 @@
     {
       "id": "fl-fs-403-413-6-b-florida-litter-law",
       "status": "eligible",
-      "reason": "The statutory short title supplies the same literal identity as the official heading, and the exact code is limited to the mid-quantity noncommercial misdemeanor tier.",
-      "draftHash": "9740fad245baa6a06619afb0b386331756f3b36815f7bc959957d450a409f17d",
-      "definitionHash": "50828dc649a6eb441e10826b92f4567f5b48e195f695abfa2956d2e32cea7271",
-      "approvalHash": "e5774e13c2563683bc31e6a3224f753d28c6b07f279a3315342d39f4950d9ef2"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "f9d14e204a0c447033023072f44ac6f1ee9a08535d97a481d13a417ba2869f96",
+      "definitionHash": "f3a86d8d09bae12fb3fc45dd8989ed9673ad64dac6faaff5df2be7afcbd7fd90",
+      "approvalHash": "1ed0e62a31dfcb0eb3ce9977b292d5aee1f9818b4cc46bd1ed05ede73192177b"
     },
     {
       "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
       "status": "eligible",
-      "reason": "The official heading literally identifies the subsection (1) beverage-licensing conduct, and subsections (1)-(2) provide conditional misdemeanor and felony grades.",
-      "draftHash": "bd298f04ed34a6702d73ee96fb5ecf3b226c6887aaf68d6c2862b0289fc938e1",
-      "definitionHash": "1e6568589f5a0f3a7b182216bea86ee24b327391dfc894fc241740cbe3b186d5",
-      "approvalHash": "20f4ea6e353692966077b706cb7cf968d1be0d7940725728e4162de555429538"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "af95d3c621681334a74a98fe671cd76c1b457280009d5167b43615ed191d2ab0",
+      "definitionHash": "d562b53915ea37b2db80fc1b28c1fd15c4b6f289dd1b7dc5a1ab87b358d590da",
+      "approvalHash": "62d457ee94f35d146a1d657f2a09cc098122773bf14bc9ad158ca74a7939f432"
     },
     {
       "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
       "status": "eligible",
-      "reason": "The whole section defines one misdemeanor under the exact official heading; the manifest's older rows require reselection and are not among the retained or exact-alias records that bar a source-first definition.",
-      "draftHash": "fd1b9b628252be1a49d56beeea4c771b688a607a4d969c59ad29793307e8efce",
-      "definitionHash": "283c628b80b01095b9d1c77b7ee8116e9da4d6aa5c16c75eac657f6d27265b1e",
-      "approvalHash": "dadda48c8806b6b13d73bd870df65074d9812c91385de276968e80c808e98094"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "bbc7b0a24de4804931eebb00d4592684fb7ba63730f51aafc7e65b2fa535862c",
+      "definitionHash": "46b5812676dfb71e8ef9f3a0945de79823524a6dd74561ed4fffb3cbe783ac4d",
+      "approvalHash": "c04228fd8049652edfc53d6bb6291e281589928b0df7158d8c547bc195f03462"
     },
     {
       "id": "fl-fs-316-193-1-driving-under-the-influence",
@@ -573,18 +573,18 @@
     {
       "id": "fl-fs-806-01-1-arson-in-the-first-degree",
       "status": "eligible",
-      "reason": "Subsection (1) expressly states guilt of arson in the first degree and its first-degree-felony grade.",
-      "draftHash": "437c071ee85a44419ee89137ac6a477b4f64d32d20f5bd8669df5160d7a07135",
-      "definitionHash": "f4d39bcd8f0af7d70c78b71f0a7a3f55c20738abf7378a6942e375348b7af39f",
-      "approvalHash": "4e0182753b0f83dffffde2c1f4c588e73d176bf373fedea68faed9cf4e20600d"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "f3eba69f311120073e33e21c00a1b8373d8ae5dd38704612bf3af2f95c08fa48",
+      "definitionHash": "1d7026c202d5e9d6cf668ec8a8a1e532f1ff8658b91712f76924710d03b34fe9",
+      "approvalHash": "21e7a18fb54ad9753734a2c232a9ac6230a5d8d8824a9c18e1124e6cccfd7fc6"
     },
     {
       "id": "fl-fs-806-01-2-arson-in-the-second-degree",
       "status": "eligible",
-      "reason": "Subsection (2) expressly states guilt of arson in the second degree, complete conduct, and its felony grade.",
-      "draftHash": "ad82a5e274dcb1b49bfcd3dfccff5498a494dce498acf89dbbe339439db9d225",
-      "definitionHash": "50f2b739eb1ce3b3037cf11337d121d66470ab9ff084e461fff3b1f885e96f76",
-      "approvalHash": "ee5f0b495817f49323f84d5010f85eb7566cdee445f94aa2edf858cebbe29d07"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "62a6af356a0ebf006ad96c7d89082393b801e68edbbbe57db04d03a589970327",
+      "definitionHash": "5cb5d55f0a794cbde233606026b314204923e397f2f870a608231537f1c65dad",
+      "approvalHash": "fcb895ec1b68f8f82b139b50b39704f16ed470a4cfa8d4a74d28bd10522a741c"
     },
     {
       "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
@@ -629,10 +629,10 @@
     {
       "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
       "status": "eligible",
-      "reason": "The official heading supplies exact identity; subsections (1)-(2) provide the ordinary and capital-felony-prosecution branches with literal felony grades.",
-      "draftHash": "6b6700509a8cde7acf05b442d1e37b4aa1dafe978758d37cedf75276edc5034c",
-      "definitionHash": "ce0cb9314526c671dda720d8116eb20144d11fe7283022cb4520817d3bb8a58f",
-      "approvalHash": "4956f563b184c7c6b8260bc7bd5b2d735c6edf62ae9d4075d0d9d99d7262c7ab"
+      "reason": "Corrected existing record with individually bound conduct and sentencing conditions; freshness and database gates remain separate.",
+      "draftHash": "f974ff8fe1ae382684db4411527fe7fabfbcc98a3a214aae0e60a76011f951d2",
+      "definitionHash": "cff6d86c0d4b17811940fb49e4762b4d18d04a97aad98be80780ffed6cc4e195",
+      "approvalHash": "f880c32fb0e3431acbbbb6f787eac7a24bd797b8b0b95ae30a2ce8fc43e64916"
     },
     {
       "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",

@@ -310,29 +310,41 @@
       "zh": "登记到期、续期要求及处罚"
     },
     "category": "misdemeanor",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 320.07(3)(c)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html"
       },
       {
-        "citation": "Fla. Stat. § 320.07",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html"
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "The criminal tier applies when a motor vehicle or mobile-home registration has been expired for more than six months and the violation is a second or subsequent offense. The statute generally applies to the present owner, or to the operator when the owner is absent. It excludes a qualifying short-term lessee who proves the lease, protects a qualifying servicemember whose mobile-home registration expired during sufficiently distant active duty, and assigns no owner penalty when a leased vehicle is registered in the lessee's name.",
-        "degreeContext": "A second or subsequent offense involving a registration expired for more than six months is a second-degree misdemeanor. An expiration of six months or less is a noncriminal nonmoving violation, and a first offense after more than six months is subject to the noncriminal penalty in § 318.14; those tiers are not this criminal charge."
+        "degreeContext": "A second or subsequent offense involving a registration expired for more than six months is a second-degree misdemeanor. An expiration of six months or less is a noncriminal nonmoving violation, and a first offense after more than six months is subject to the noncriminal penalty in § 318.14; those tiers are not this criminal charge. Both the prior offense and expiration beyond six months matter to this criminal branch. A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
       },
       "es": {
         "plainSummary": "El nivel penal se aplica cuando el registro de un vehículo motorizado o casa móvil lleva vencido más de seis meses y se trata de una segunda infracción o posterior. Por regla general se aplica al propietario presente, o al operador si el propietario está ausente. Excluye al arrendatario a corto plazo que demuestre un contrato válido, protege al miembro militar que reúna los requisitos cuando el registro de su casa móvil venció durante servicio activo suficientemente distante y no impone sanción al propietario si el vehículo arrendado está registrado a nombre del arrendatario.",
-        "degreeContext": "Una segunda infracción o posterior con registro vencido por más de seis meses es un delito menor de segundo grado. Un vencimiento de seis meses o menos es una infracción no penal, y la primera infracción después de seis meses recibe la sanción no penal del § 318.14; esos niveles no forman parte de este cargo penal."
+        "degreeContext": "Una segunda infracción o posterior con registro vencido por más de seis meses es un delito menor de segundo grado. Un vencimiento de seis meses o menos es una infracción no penal, y la primera infracción después de seis meses recibe la sanción no penal del § 318.14; esos niveles no forman parte de este cargo penal. Para esta modalidad penal importan tanto el antecedente como que hayan pasado más de seis meses desde el vencimiento. Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
       },
       "zh": {
         "plainSummary": "机动车或移动房屋登记过期超过六个月，且属于第二次或后续违法时，适用刑事层级。一般而言，车主在场时由车主承担责任；车主不在场时由驾驶人承担。能证明有效短期租约的承租人、在距移动房屋足够远处服现役期间登记到期的合格军人，以及车辆以承租人名义登记时的出租车主，适用条文规定的排除或保护。",
-        "degreeContext": "登记过期超过六个月的第二次或后续违法属于二级轻罪。过期六个月以内属于非刑事、非行驶类交通违法；超过六个月的首次违法适用第318.14条的非刑事处罚，均不属于本刑事指控。"
+        "degreeContext": "登记过期超过六个月的第二次或后续违法属于二级轻罪。过期六个月以内属于非刑事、非行驶类交通违法；超过六个月的首次违法适用第318.14条的非刑事处罚，均不属于本刑事指控。 此刑事分支同时要求有前次违规且登记已过期超过六个月。 二级轻罪通常最高可判监禁60天及罚款500美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
       }
     }
   },
@@ -428,29 +440,41 @@
       "zh": "佛罗里达州垃圾法"
     },
     "category": "misdemeanor",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 403.413(6)(b)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html"
       },
       {
-        "citation": "Fla. Stat. § 403.413",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html"
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "Unless authorized by law or permit, this tier prohibits dumping litter on listed public lands or waters, water-control-district property, or private property without the owner's prior consent or where the dumping would create a public nuisance or violate another law. It applies when the amount exceeds 15 pounds or 27 cubic feet but does not exceed 500 pounds or 100 cubic feet and is not dumped for a commercial purpose.",
-        "degreeContext": "The quantity tier in § 403.413(6)(b) is a first-degree misdemeanor and requires litter pickup or comparable community service. Smaller noncommercial amounts are ordinarily a noncriminal infraction, subject to specified intimidation exceptions; larger, commercial-purpose, and hazardous-waste dumping fall under a separate felony tier and are not covered by this definition."
+        "degreeContext": "The quantity tier in § 403.413(6)(b) is a first-degree misdemeanor and requires litter pickup or comparable community service. Smaller noncommercial amounts are ordinarily a noncriminal infraction, subject to specified intimidation exceptions; larger, commercial-purpose, and hazardous-waste dumping fall under a separate felony tier and are not covered by this definition. If this dumping violation involved a motor vehicle, the finding of guilt adds three driver-license points even if adjudication is withheld. A first-degree misdemeanor ordinarily carries up to 1 year in jail and a $1,000 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
       },
       "es": {
         "plainSummary": "Salvo autorización legal o permiso, este nivel prohíbe arrojar basura en los terrenos o aguas públicas enumerados, en propiedad de un distrito de control de aguas o en propiedad privada sin consentimiento previo del dueño o cuando el vertido cause una molestia pública o viole otra ley. Se aplica cuando la cantidad supera 15 libras o 27 pies cúbicos, pero no supera 500 libras o 100 pies cúbicos, y no se arroja con fin comercial.",
-        "degreeContext": "El nivel cuantitativo del § 403.413(6)(b) es un delito menor de primer grado y exige recoger basura o realizar servicio comunitario comparable. Cantidades menores no comerciales son normalmente una infracción no penal, sujetas a excepciones por intimidación; los vertidos mayores, comerciales o de residuos peligrosos pertenecen a un nivel grave separado y no están incluidos aquí."
+        "degreeContext": "El nivel cuantitativo del § 403.413(6)(b) es un delito menor de primer grado y exige recoger basura o realizar servicio comunitario comparable. Cantidades menores no comerciales son normalmente una infracción no penal, sujetas a excepciones por intimidación; los vertidos mayores, comerciales o de residuos peligrosos pertenecen a un nivel grave separado y no están incluidos aquí. Si en esta infracción se utilizó un vehículo, la determinación de culpabilidad añade tres puntos al permiso de conducir incluso cuando se reserva la adjudicación. Un delito menor de primer grado conlleva ordinariamente hasta 1 año de cárcel y $1,000 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
       },
       "zh": {
         "plainSummary": "除法律或许可证授权外，本层级禁止在条文列举的公共土地或水域、水利控制区财产倾倒垃圾，也禁止未经所有人事先同意，或者会造成公共妨害或违反其他法律而在私人财产倾倒垃圾。适用数量为超过15磅或27立方英尺，但不超过500磅或100立方英尺，且并非出于商业目的。",
-        "degreeContext": "第403.413(6)(b)条的数量层级属于一级轻罪，并要求清理垃圾或完成相当的社区服务。较少的非商业数量通常属于非刑事违法，但有恐吓方面的例外；更大量、商业目的或危险废物倾倒属于独立重罪层级，不包含在本定义中。"
+        "degreeContext": "第403.413(6)(b)条的数量层级属于一级轻罪，并要求清理垃圾或完成相当的社区服务。较少的非商业数量通常属于非刑事违法，但有恐吓方面的例外；更大量、商业目的或危险废物倾倒属于独立重罪层级，不包含在本定义中。 如本项倾倒行为涉及机动车，认定有罪即在驾照上记三分，即使暂缓正式定罪。 一级轻罪通常最高可判监禁1年及罚款1,000美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
       }
     }
   },
@@ -464,34 +488,46 @@
       "es": "Prohibición de vender bebidas con licencia inadecuada o sin licencia o registro, o de poseerlas con intención de venta",
       "zh": "禁止持不当许可证、无许可证或未登记销售饮料以及为非法销售而持有饮料"
     },
-    "category": "felony",
+    "category": "misdemeanor",
     "categories": [
-      "felony",
-      "misdemeanor"
+      "misdemeanor",
+      "felony"
     ],
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 562.12(1)",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html"
       },
       {
-        "citation": "Fla. Stat. § 562.12",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html"
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
       }
     ],
     "text": {
       "en": {
         "plainSummary": "This provision prohibits selling alcoholic beverages without a license, selling outside the manner allowed by a license, or keeping or possessing alcoholic beverages with intent to sell or dispose of them unlawfully. It separately covers unlawful alcoholic-beverage sales at a commercial establishment and maintaining a place where such beverages are sold or intended to be sold unlawfully.",
-        "degreeContext": "Unlicensed or license-inconsistent sale, or possession with unlawful-sale intent under subsection (1)(a), is ordinarily a second-degree misdemeanor. An unlawful sale at a commercial establishment, or maintaining a place for unlawful sales, is a third-degree felony with a $5,000-to-$10,000 fine. A second or subsequent subsection (1) violation is a second-degree felony with a $15,000-to-$20,000 fine."
+        "degreeContext": "Unlicensed or license-inconsistent sale, or possession with unlawful-sale intent under subsection (1)(a), is ordinarily a second-degree misdemeanor. An unlawful sale at a commercial establishment, or maintaining a place for unlawful sales, is a third-degree felony with a $5,000-to-$10,000 fine. A second or subsequent subsection (1) violation is a second-degree felony with a $15,000-to-$20,000 fine. The statutory commercial-sale and repeat fines are mandatory; the ordinary maximum jail or prison terms for the three grades are 60 days, five years and 15 years respectively. A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
       },
       "es": {
         "plainSummary": "Esta disposición prohíbe vender bebidas alcohólicas sin licencia, vender de una manera no permitida por la licencia o mantener o poseer bebidas alcohólicas con intención de venderlas o disponer de ellas ilícitamente. También abarca por separado la venta ilícita en un establecimiento comercial y mantener un lugar donde se venden o se pretende vender ilícitamente esas bebidas.",
-        "degreeContext": "La venta sin licencia o contraria a la licencia, o la posesión con intención de venta ilícita bajo el inciso (1)(a), es normalmente un delito menor de segundo grado. La venta ilícita en un establecimiento comercial o mantener un lugar para ventas ilícitas es un delito grave de tercer grado con multa de $5,000 a $10,000. Una segunda infracción o posterior del inciso (1) es un delito grave de segundo grado con multa de $15,000 a $20,000."
+        "degreeContext": "La venta sin licencia o contraria a la licencia, o la posesión con intención de venta ilícita bajo el inciso (1)(a), es normalmente un delito menor de segundo grado. La venta ilícita en un establecimiento comercial o mantener un lugar para ventas ilícitas es un delito grave de tercer grado con multa de $5,000 a $10,000. Una segunda infracción o posterior del inciso (1) es un delito grave de segundo grado con multa de $15,000 a $20,000. Las multas por venta comercial y reincidencia son obligatorias; los máximos ordinarios de privación de libertad son respectivamente 60 días, cinco años y 15 años. Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
       },
       "zh": {
         "plainSummary": "本条禁止无许可证销售酒精饮料、以许可证不允许的方式销售，或以非法销售、处分为目的保存或持有酒精饮料。本条还单独涵盖在商业场所非法销售酒精饮料，以及维持一个非法销售或拟非法销售酒精饮料的场所。",
-        "degreeContext": "第(1)(a)款所述无证或违反许可证的销售，以及以非法销售为目的持有，通常属于二级轻罪。在商业场所非法销售或维持非法销售场所属于三级重罪，并处罚金5,000至10,000美元。第二次或后续违反第(1)款属于二级重罪，并处罚金15,000至20,000美元。"
+        "degreeContext": "第(1)(a)款所述无证或违反许可证的销售，以及以非法销售为目的持有，通常属于二级轻罪。在商业场所非法销售或维持非法销售场所属于三级重罪，并处罚金5,000至10,000美元。第二次或后续违反第(1)款属于二级重罪，并处罚金15,000至20,000美元。 非法商业销售及再犯的法定罚款为强制处罚；三个等级通常最高分别为60天、五年和十五年监禁。 二级轻罪通常最高可判监禁60天及罚款500美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
       }
     }
   },
@@ -506,25 +542,41 @@
       "zh": "扰乱治安；扰乱秩序行为"
     },
     "category": "misdemeanor",
-    "verifiedMonth": "2026-09",
+    "verifiedMonth": "2026-11",
     "citations": [
       {
         "citation": "Fla. Stat. § 877.03",
         "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
       }
     ],
     "text": {
       "en": {
-        "plainSummary": "The statute covers acts of a nature to corrupt public morals, outrage public decency, disturb the peace and quiet of witnesses, brawling or fighting, or other conduct constituting a breach of the peace or disorderly conduct.",
-        "degreeContext": "A violation of § 877.03 is a second-degree misdemeanor."
+        "plainSummary": "The statute covers acts of a nature to corrupt public morals, outrage public decency, disturb the peace and quiet of witnesses, brawling or fighting, or other conduct constituting a breach of the peace or disorderly conduct. When the charge rests on speech alone, State v. Saunders, 339 So. 2d 641 (Fla. 1976), limits it to fighting words or a knowingly false report of a physical hazard creating a clear and present danger of bodily harm.",
+        "degreeContext": "A violation of § 877.03 is a second-degree misdemeanor. A second-degree misdemeanor ordinarily carries up to 60 days and a $500 fine. For conduct from July 1, 2026, §741.2801 requires a higher grade if the offense qualifies as domestic violence under §741.28 and the accused already had a qualifying domestic-violence conviction at the time. For an offense outside the listed violent crimes, physical injury or death of a qualifying family or household member is required. The degree steps are second-degree misdemeanor to first; first-degree misdemeanor to third-degree felony; third- to second-degree felony; second- to first-degree felony; and first-degree felony to life felony."
       },
       "es": {
-        "plainSummary": "La ley abarca actos cuya naturaleza corrompa la moral pública, ultraje el sentido de decencia pública, afecte la paz y tranquilidad de quienes los presencien, peleas o riñas, u otra conducta que constituya perturbación de la paz o conducta desordenada.",
-        "degreeContext": "La infracción del § 877.03 es un delito menor de segundo grado."
+        "plainSummary": "La ley abarca actos cuya naturaleza corrompa la moral pública, ultraje el sentido de decencia pública, afecte la paz y tranquilidad de quienes los presencien, peleas o riñas, u otra conducta que constituya perturbación de la paz o conducta desordenada. Si el cargo se basa solo en palabras, State v. Saunders, 339 So. 2d 641 (Fla. 1976), lo limita a expresiones que incitan de inmediato a una pelea o a informar, a sabiendas de su falsedad, de un peligro físico creando un peligro claro y presente de daño corporal.",
+        "degreeContext": "La infracción del § 877.03 es un delito menor de segundo grado. Un delito menor de segundo grado conlleva ordinariamente hasta 60 días y $500 de multa. Para hechos desde el 1 de julio de 2026, §741.2801 exige elevar el grado si el delito constituye violencia doméstica según §741.28 y ya había una condena pertinente al ocurrir los hechos. Para un delito ajeno a los delitos violentos enumerados, debe haber lesión física o muerte de un familiar o miembro del hogar comprendido por la ley. El delito menor de segundo pasa a primero y el menor de primero a grave de tercero; el grave de tercero pasa a segundo, el de segundo a primero y el de primero a delito grave de por vida."
       },
       "zh": {
-        "plainSummary": "本条涵盖具有败坏公共道德、冒犯公共体面或影响目击者安宁性质的行为，也涵盖斗殴、打架以及其他构成扰乱治安或扰乱秩序的行为。",
-        "degreeContext": "违反第877.03条属于二级轻罪。"
+        "plainSummary": "本条涵盖具有败坏公共道德、冒犯公共体面或影响目击者安宁性质的行为，也涵盖斗殴、打架以及其他构成扰乱治安或扰乱秩序的行为。 若指控仅基于言语，佛州最高法院在State v. Saunders案（1976）将适用范围限于可直接引发冲突的挑衅言语，或明知虚假地报告人身危险、造成人身伤害的明确而现实危险。",
+        "degreeContext": "违反第877.03条属于二级轻罪。 二级轻罪通常最高可判监禁60天及罚款500美元。 对2026年7月1日或之后的行为，若本罪本身符合第741.28条家庭暴力定义，且行为人当时已有合格家庭暴力前科，第741.2801条要求提高等级。未列入指定暴力犯罪的行为，须导致符合条件的家庭成员或住户身体受伤或死亡。二级轻罪升为一级轻罪，一级轻罪升为三级重罪，三级重罪升为二级，二级升为一级，一级升为终身重罪。"
       }
     }
   },
