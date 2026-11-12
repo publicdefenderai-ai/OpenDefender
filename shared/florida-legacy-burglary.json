@@ -1,0 +1,220 @@
+[
+  {
+    "id": "fl-burglary-in-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "810.02(2)",
+    "slug": "reviewed-fl-burglary-in-the-first-degree",
+    "name": "Burglary in the First Degree",
+    "names": {
+      "es": "Allanamiento con intención delictiva de primer grado",
+      "zh": "一级入室犯罪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Burglary",
+        "Fla. Stat. § 810.02(2)",
+        "FS 810.02(2)"
+      ],
+      "es": [
+        "Burglary",
+        "Fla. Stat. § 810.02(2)",
+        "FS 810.02(2)"
+      ],
+      "zh": [
+        "Burglary",
+        "Fla. Stat. § 810.02(2)",
+        "FS 810.02(2)"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 810.02(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.087",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "For offenses after July 1, 2001, burglary includes entering a dwelling, structure or conveyance intending to commit an offense inside, unless open to the public or entry is permitted. Even after permitted entry, burglary can include remaining secretly or after permission is withdrawn with that intent, or remaining to commit or attempt a forcible felony. First degree covers assault or battery, being or becoming armed with explosives or a dangerous weapon, or entering a dwelling or structure and damaging it using a vehicle to assist the crime (more than a getaway), or causing more than $1,000 damage to it or property inside.",
+        "degreeContext": "First-degree felony punishable by a term up to life; ordinary fine up to $10,000. For qualifying firearm findings under §775.087, actual possession generally requires 10 years, but the ordinary possession minimum for burglary of a conveyance is three years. A machine gun or qualifying semiautomatic firearm and high-capacity magazine can require 15 years for possession. Discharge can require 20 years, or 25 years to life if it causes death or great bodily harm. For conduct on or after July 1, 2026, §741.2801 can raise the degree if the offense qualifies as domestic violence, such as by causing physical injury or death to a qualifying family or household member, and the accused already had a qualifying domestic-violence conviction at the time."
+      },
+      "es": {
+        "plainSummary": "Para hechos posteriores al 1 de julio de 2001, constituye allanamiento con intención delictiva entrar en una vivienda, estructura o medio de transporte para cometer allí un delito, salvo que esté abierto al público o la entrada esté autorizada. Aun con entrada permitida, puede incluir quedarse en secreto o tras retirarse el permiso con esa intención, o quedarse para cometer o intentar cometer un delito grave violento definido por ley. El primer grado comprende agresión o contacto físico ilícito, portar o armarse con explosivos o un arma peligrosa, o entrar en una vivienda o estructura y dañarla usando un vehículo para facilitar el delito (no solo para huir), o causar daños superiores a $1,000 al inmueble o bienes en él.",
+        "degreeContext": "Delito grave de primer grado con pena máxima de prisión perpetua; multa ordinaria de hasta $10,000. Según §775.087, una determinación de posesión efectiva de un arma de fuego comprendida normalmente exige 10 años; para el allanamiento de un medio de transporte, el mínimo ordinario por posesión es de tres años. Una ametralladora o un arma semiautomática con cargador de alta capacidad que cumpla la ley puede exigir 15 años. Disparar puede exigir 20 años, o de 25 años a perpetua si causa muerte o lesiones graves. Para hechos desde el 1 de julio de 2026, el §741.2801 puede elevar el grado si el delito constituye violencia doméstica, por ejemplo al causar lesiones físicas o muerte a un familiar o miembro del hogar comprendido por la ley, y la persona acusada ya tenía una condena válida por violencia doméstica al cometerlo."
+      },
+      "zh": {
+        "plainSummary": "对2001年7月1日之后的行为，意图在内犯罪而进入住宅、建筑物或交通工具可构成入室犯罪，但对公众开放或获准进入的情况除外。即使进入时获准，怀有该犯罪意图而秘密逗留或在许可撤回后逗留，或留下实施或企图实施法定暴力重罪，也可构成本罪。 一级包括攻击或非法身体接触、携带或在内取得爆炸物或危险武器，或进入住宅或建筑物后使用车辆协助犯罪并损坏该处（仅用来逃离不够），或使该处或其内财物损失超过1,000美元。",
+        "degreeContext": "一级重罪，最高可判终身监禁，通常罚款最高10,000美元。依第775.087条，实际持有符合法定条件的枪支一般最低10年，但涉及交通工具入侵时通常最低三年；持有机枪或符合法定条件的半自动枪支与大容量弹匣时可最低15年。开枪可最低20年，开枪致死或重伤时为25年至终身。 对2026年7月1日及以后的行为，若该罪构成法定家庭暴力，例如导致符合法定条件的家庭或同住成员受伤或死亡，且被控者在实施当时已有符合条件的家庭暴力定罪，第741.2801条可提高罪级。"
+      }
+    }
+  },
+  {
+    "id": "fl-burglary-in-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "810.02(3)",
+    "slug": "reviewed-fl-burglary-in-the-second-degree",
+    "name": "Burglary in the Second Degree",
+    "names": {
+      "es": "Allanamiento con intención delictiva de segundo grado",
+      "zh": "二级入室犯罪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Burglary",
+        "Fla. Stat. § 810.02(3)",
+        "FS 810.02(3)"
+      ],
+      "es": [
+        "Burglary",
+        "Fla. Stat. § 810.02(3)",
+        "FS 810.02(3)"
+      ],
+      "zh": [
+        "Burglary",
+        "Fla. Stat. § 810.02(3)",
+        "FS 810.02(3)"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 810.02(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "For offenses after July 1, 2001, burglary includes entering a dwelling, structure or conveyance intending to commit an offense inside, unless open to the public or entry is permitted. Even after permitted entry, burglary can include remaining secretly or after permission is withdrawn with that intent, or remaining to commit or attempt a forcible felony. Without assault or battery or becoming or being armed with an explosive or dangerous weapon, this branch covers occupied or unoccupied dwellings, occupied structures or conveyances, authorized emergency vehicles, and structures or conveyances entered or occupied intending to steal a controlled substance.",
+        "degreeContext": "Second-degree felony, ordinarily up to 15 years and $10,000. If riot conditions facilitated the offense or if it followed the Governor’s emergency declaration in the affected county and emergency conditions facilitated it, subsection (3) raises it to first degree, ordinarily up to 30 years and $10,000. For conduct on or after July 1, 2026, §741.2801 can raise the degree if the offense qualifies as domestic violence, such as by causing physical injury or death to a qualifying family or household member, and the accused already had a qualifying domestic-violence conviction at the time."
+      },
+      "es": {
+        "plainSummary": "Para hechos posteriores al 1 de julio de 2001, constituye allanamiento con intención delictiva entrar en una vivienda, estructura o medio de transporte para cometer allí un delito, salvo que esté abierto al público o la entrada esté autorizada. Aun con entrada permitida, puede incluir quedarse en secreto o tras retirarse el permiso con esa intención, o quedarse para cometer o intentar cometer un delito grave violento definido por ley. Sin agresión ni contacto físico ilícito y sin portar ni armarse con explosivos o un arma peligrosa, esta modalidad abarca viviendas ocupadas o desocupadas, estructuras o medios de transporte ocupados, vehículos de emergencia autorizados y estructuras o medios de transporte en los que se entra o permanece para hurtar una sustancia controlada.",
+        "degreeContext": "Delito grave de segundo grado, normalmente hasta 15 años y $10,000. Si las condiciones de disturbios facilitaron los hechos, o si ocurrieron en el condado afectado tras la declaración de emergencia del gobernador y las condiciones de emergencia los facilitaron, el apartado (3) lo eleva a primer grado, normalmente hasta 30 años y $10,000. Para hechos desde el 1 de julio de 2026, el §741.2801 puede elevar el grado si el delito constituye violencia doméstica, por ejemplo al causar lesiones físicas o muerte a un familiar o miembro del hogar comprendido por la ley, y la persona acusada ya tenía una condena válida por violencia doméstica al cometerlo."
+      },
+      "zh": {
+        "plainSummary": "对2001年7月1日之后的行为，意图在内犯罪而进入住宅、建筑物或交通工具可构成入室犯罪，但对公众开放或获准进入的情况除外。即使进入时获准，怀有该犯罪意图而秘密逗留或在许可撤回后逗留，或留下实施或企图实施法定暴力重罪，也可构成本罪。 在没有攻击或非法身体接触、没有携带或取得爆炸物或危险武器时，本分支包括有人或无人住宅、有人建筑物或交通工具、获授权的紧急车辆，以及意图盗取受管制物质而进入或逗留的建筑物或交通工具。",
+        "degreeContext": "二级重罪，通常最高15年及10,000美元罚款。若骚乱所致状况便利了犯罪，或行为发生在州长宣布紧急状态后、位于受影响县且紧急状况便利了犯罪，则第(3)款将其升为一级重罪，通常最高30年及10,000美元罚款。 对2026年7月1日及以后的行为，若该罪构成法定家庭暴力，例如导致符合法定条件的家庭或同住成员受伤或死亡，且被控者在实施当时已有符合条件的家庭暴力定罪，第741.2801条可提高罪级。"
+      }
+    }
+  },
+  {
+    "id": "fl-trespass-in-structure",
+    "jurisdiction": "FL",
+    "code": "810.08",
+    "slug": "reviewed-fl-trespass-in-structure",
+    "name": "Trespass in Structure or Conveyance",
+    "names": {
+      "es": "Entrada o permanencia ilícita en una estructura o medio de transporte",
+      "zh": "非法进入或逗留于建筑物或交通工具"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Trespass in structure or conveyance",
+        "Fla. Stat. § 810.08",
+        "FS 810.08"
+      ],
+      "es": [
+        "Trespass in structure or conveyance",
+        "Fla. Stat. § 810.08",
+        "FS 810.08"
+      ],
+      "zh": [
+        "Trespass in structure or conveyance",
+        "Fla. Stat. § 810.08",
+        "FS 810.08"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 810.08",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.08.html"
+      },
+      {
+        "citation": "Fla. Stat. § 810.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully entering or remaining in a structure or conveyance without authorization, license or invitation, or refusing to leave after initially permitted entry and a warning by the owner, lessee or an authorized person. A warning to leave can establish the conduct; it does not itself raise the degree.",
+        "degreeContext": "Ordinary second-degree misdemeanor: up to 60 days and $500. With another person present as described in (2)(b): first-degree misdemeanor, up to one year and $1,000. Being armed with or arming oneself inside with a firearm or other dangerous weapon under (2)(c): third-degree felony, ordinarily up to five years and $5,000. For conduct on or after July 1, 2026, §741.2801 can raise the degree if the offense qualifies as domestic violence, such as by causing physical injury or death to a qualifying family or household member, and the accused already had a qualifying domestic-violence conviction at the time."
+      },
+      "es": {
+        "plainSummary": "Entrar o permanecer deliberadamente en una estructura o medio de transporte sin autorización, licencia o invitación, o negarse a salir después de una entrada inicialmente permitida y una advertencia del propietario, arrendatario o persona autorizada. La advertencia puede establecer la conducta; por sí sola no eleva el grado.",
+        "degreeContext": "Normalmente delito menor de segundo grado, hasta 60 días y $500. Con otra persona presente según (2)(b), delito menor de primer grado, hasta un año y $1,000. Si porta un arma de fuego u otra arma peligrosa o se arma con ella dentro según (2)(c), delito grave de tercer grado, normalmente hasta cinco años y $5,000. Para hechos desde el 1 de julio de 2026, el §741.2801 puede elevar el grado si el delito constituye violencia doméstica, por ejemplo al causar lesiones físicas o muerte a un familiar o miembro del hogar comprendido por la ley, y la persona acusada ya tenía una condena válida por violencia doméstica al cometerlo."
+      },
+      "zh": {
+        "plainSummary": "故意未经许可或邀请进入建筑物或交通工具或逗留其中，或本来获准进入但经所有人、承租人或其授权人员要求离开后仍拒绝离开。要求离开可构成认定行为的依据，本身并不提高罪级。",
+        "degreeContext": "通常是二级轻罪，最高60天及500美元。按第(2)(b)款如有他人在场，是一级轻罪，最高一年及1,000美元。按第(2)(c)款，携带枪支或其他危险武器，或在内用这类武器武装自己，是三级重罪，通常最高五年及5,000美元。 对2026年7月1日及以后的行为，若该罪构成法定家庭暴力，例如导致符合法定条件的家庭或同住成员受伤或死亡，且被控者在实施当时已有符合条件的家庭暴力定罪，第741.2801条可提高罪级。"
+      }
+    }
+  }
+]

@@ -531,6 +531,358 @@
           "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
         }
       ]
+    },
+    {
+      "id": "fl-burglary-in-the-first-degree",
+      "officialTitle": "Burglary",
+      "citation": "Fla. Stat. § 810.02(2)",
+      "definitionHash": "358b92ece1ba1969b60c580907f45ebd439b0b83874df4554799e605f238ece3",
+      "spans": [
+        {
+          "section": "810.02",
+          "scope": "(1)",
+          "start": 21,
+          "end": 956,
+          "sourceHash": "4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d",
+          "quoteHash": "516ae4676fdb9841e1b548d76cba2655e6bbd19b72eea1431a053ce473036e66"
+        },
+        {
+          "section": "810.02",
+          "scope": "(2)",
+          "start": 956,
+          "end": 1727,
+          "sourceHash": "4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d",
+          "quoteHash": "5ccc806befba77968f85178eb0dc9ad605ade34068cac8e94b80277958fd1342"
+        },
+        {
+          "section": "810.011",
+          "scope": "(1)",
+          "start": 50,
+          "end": 582,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "845848401381499c524f9a7d4d32bce7edee043cf9842462558bd6715e32cb01"
+        },
+        {
+          "section": "810.011",
+          "scope": "(2)",
+          "start": 582,
+          "end": 1252,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "b2443b007ff2655cf3050f62d6a411529c988a772b076a06ccaad1534e7f796d"
+        },
+        {
+          "section": "810.011",
+          "scope": "(3)",
+          "start": 1252,
+          "end": 1849,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "db7afebbbcf9ef7cee5b6c714bd222f04905730bd814deb6bfef728a48a7d197"
+        },
+        {
+          "section": "810.011",
+          "scope": "(4)",
+          "start": 1849,
+          "end": 2000,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "5a51a9d6bf4968c87145436a41c652c7af24015960cc1e0efae42305901da713"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.087",
+          "scope": "(2)",
+          "start": 1084,
+          "end": 6461,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "8dda0df2bdd9c6069ddb67f577e341967cb69cf6ce917c82cb80c7f0613ee11b"
+        },
+        {
+          "section": "775.087",
+          "scope": "(3)",
+          "start": 6461,
+          "end": 11829,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "2d4e64dd17c428a07ff090c80598f7b22147b5686d982e3a54111e9a029367eb"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-burglary-in-the-second-degree",
+      "officialTitle": "Burglary",
+      "citation": "Fla. Stat. § 810.02(3)",
+      "definitionHash": "ea46b377b83bd338200d441ecadb32762de4850115d08bcc14304cf0463a162e",
+      "spans": [
+        {
+          "section": "810.02",
+          "scope": "(1)",
+          "start": 21,
+          "end": 956,
+          "sourceHash": "4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d",
+          "quoteHash": "516ae4676fdb9841e1b548d76cba2655e6bbd19b72eea1431a053ce473036e66"
+        },
+        {
+          "section": "810.02",
+          "scope": "(3)",
+          "start": 1727,
+          "end": 4534,
+          "sourceHash": "4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d",
+          "quoteHash": "bbe8b72855f7a356396b4bd4df2907a99c4509cc98b7fa200b8a96c3eefe9634"
+        },
+        {
+          "section": "810.011",
+          "scope": "(1)",
+          "start": 50,
+          "end": 582,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "845848401381499c524f9a7d4d32bce7edee043cf9842462558bd6715e32cb01"
+        },
+        {
+          "section": "810.011",
+          "scope": "(2)",
+          "start": 582,
+          "end": 1252,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "b2443b007ff2655cf3050f62d6a411529c988a772b076a06ccaad1534e7f796d"
+        },
+        {
+          "section": "810.011",
+          "scope": "(3)",
+          "start": 1252,
+          "end": 1849,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "db7afebbbcf9ef7cee5b6c714bd222f04905730bd814deb6bfef728a48a7d197"
+        },
+        {
+          "section": "810.011",
+          "scope": "(4)",
+          "start": 1849,
+          "end": 2000,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "5a51a9d6bf4968c87145436a41c652c7af24015960cc1e0efae42305901da713"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-trespass-in-structure",
+      "officialTitle": "Trespass in structure or conveyance",
+      "citation": "Fla. Stat. § 810.08",
+      "definitionHash": "916abd3e94ed3fee4fc21955314f92ee9ff081fc06526e6f90996750c1729efa",
+      "spans": [
+        {
+          "section": "810.08",
+          "scope": "(1)",
+          "start": 48,
+          "end": 415,
+          "sourceHash": "d257c8570e1a0e486b605580b3ae19c3e828437be9660c372d9d8a6f7bf03de4",
+          "quoteHash": "5dab2e7528f767d66f7ab2d27bb5a3b8c6fff12ef917ff90713fc365ea8ac694"
+        },
+        {
+          "section": "810.08",
+          "scope": "(2)(a)",
+          "start": 415,
+          "end": 602,
+          "sourceHash": "d257c8570e1a0e486b605580b3ae19c3e828437be9660c372d9d8a6f7bf03de4",
+          "quoteHash": "8aa13e6169dbc1234a70d517ee7c387175c84c35360e9ac2313b70849c59428f"
+        },
+        {
+          "section": "810.08",
+          "scope": "(2)(b)",
+          "start": 602,
+          "end": 896,
+          "sourceHash": "d257c8570e1a0e486b605580b3ae19c3e828437be9660c372d9d8a6f7bf03de4",
+          "quoteHash": "c742ab83166dda0c65cf8deb8a408162ce9ec165232b69074b99f762e5215105"
+        },
+        {
+          "section": "810.08",
+          "scope": "(2)(c)",
+          "start": 896,
+          "end": 1989,
+          "sourceHash": "d257c8570e1a0e486b605580b3ae19c3e828437be9660c372d9d8a6f7bf03de4",
+          "quoteHash": "196d252c198555c89af7af99f534eb1a6e88251e9d1e977ad459646ce9bcf322"
+        },
+        {
+          "section": "810.08",
+          "scope": "(3)",
+          "start": 1989,
+          "end": 2490,
+          "sourceHash": "d257c8570e1a0e486b605580b3ae19c3e828437be9660c372d9d8a6f7bf03de4",
+          "quoteHash": "aefc8280c0a212d5d37edc936637ddfe15ea087b55853c81952579c50f51e13f"
+        },
+        {
+          "section": "810.011",
+          "scope": "(1)",
+          "start": 50,
+          "end": 582,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "845848401381499c524f9a7d4d32bce7edee043cf9842462558bd6715e32cb01"
+        },
+        {
+          "section": "810.011",
+          "scope": "(2)",
+          "start": 582,
+          "end": 1252,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "b2443b007ff2655cf3050f62d6a411529c988a772b076a06ccaad1534e7f796d"
+        },
+        {
+          "section": "810.011",
+          "scope": "(3)",
+          "start": 1252,
+          "end": 1849,
+          "sourceHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+          "quoteHash": "db7afebbbcf9ef7cee5b6c714bd222f04905730bd814deb6bfef728a48a7d197"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
     }
   ]
 }

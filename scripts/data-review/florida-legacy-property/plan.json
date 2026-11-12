@@ -276,5 +276,190 @@
         "scope": "(2)"
       }
     ]
+  },
+  {
+    "id": "fl-burglary-in-the-first-degree",
+    "primary": "810.02",
+    "subdivision": "(2)",
+    "bindings": [
+      {
+        "section": "810.02",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.02",
+        "scope": "(2)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(2)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(3)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-burglary-in-the-second-degree",
+    "primary": "810.02",
+    "subdivision": "(3)",
+    "bindings": [
+      {
+        "section": "810.02",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.02",
+        "scope": "(3)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(2)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(3)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-trespass-in-structure",
+    "primary": "810.08",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "810.08",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.08",
+        "scope": "(2)(a)"
+      },
+      {
+        "section": "810.08",
+        "scope": "(2)(b)"
+      },
+      {
+        "section": "810.08",
+        "scope": "(2)(c)"
+      },
+      {
+        "section": "810.08",
+        "scope": "(3)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(2)"
+      },
+      {
+        "section": "810.011",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
   }
 ]

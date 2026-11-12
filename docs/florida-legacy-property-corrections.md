@@ -22,3 +22,15 @@ node --import tsx scripts/data-review/florida-legacy-property/verify.ts --check
 ```
 
 The original eligibility manifests and receipts retain their existing bindings. These supporting documents do not confer additional availability or renew a receipt.
+
+## Burglary and trespass follow-up
+
+Three additional existing IDs listed by the public selector on November 11, 2026 now use individualized Florida explanations. These changes add 41 subdivision bindings. The two newly acquired primary sections match the original manifest text. The packet also retains §810.011 for the covered places and conduct, and reuses previously retained penalty authorities. The pre-July 2001 burglary definition is distinct. Explanations describe conduct after July 1, 2001.
+
+| Existing selection | Correction |
+| --- | --- |
+| §810.02(2), first-degree burglary | Replaces a 20-year maximum with the statutory first-degree term up to life. Distinguishes the assault/battery, armed and property-damage paths. Conditional firearm minimums distinguish simple possession during burglary of a conveyance from other burglary. |
+| §810.02(3), second-degree burglary | Replaces a 10-year maximum with an ordinary 15-year maximum. Covers occupied and unoccupied dwellings, the other specified places or purposes, and the qualifying riot or emergency increase. |
+| §810.08, structure or conveyance trespass | A warning followed by refusal can establish conduct. Another person's presence can raise the misdemeanor to first degree. Carrying a firearm or other dangerous weapon or arming oneself inside can make it a third-degree felony. The whole-section choice is available under both severity filters with misdemeanor as the ordinary classification. |
+
+The separate legacy residential, commercial and auto-burglary IDs retain their existing exact-reselection disposition. The reviewed §810.09 choice concerns other property. No §810.02(4) choice or new approval is implied.
