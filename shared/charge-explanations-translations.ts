@@ -1,4 +1,5 @@
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
+import { OHIO_COMMERCIAL_SEX_BATCH } from "./ohio-commercial-sex-batch";
 import { OHIO_PRIORITY_GAPS_BATCH } from "./ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_BATCH } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
@@ -59,6 +60,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
+  ...OHIO_COMMERCIAL_SEX_BATCH.translations,
   ...OHIO_PRIORITY_GAPS_BATCH.translations,
   ...OHIO_PRIVACY_BATCH.translations,
   ...OHIO_PROTECTION_BATCH.translations,
