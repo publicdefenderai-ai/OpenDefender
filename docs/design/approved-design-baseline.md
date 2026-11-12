@@ -600,3 +600,9 @@ Typecheck, the production build, 16 translation checks, six Mental Health browse
 The Personal Health page uses the approved pink medical cross and “Keep your care on track” introduction. It keeps the published medication steps, treatment guidance, support destinations and FAQs. The treatment checklist and three editable message drafts live only on the current page. Switching messages retains edits, and copy and print use the selected draft. Printed text preserves paragraphs.
 
 The Personal Health release browser spec checks English, Spanish and Chinese in both themes, including 320px layouts, medication steps, FAQs, and the copy and print workflows against the pre-refresh content.
+
+### Reentry support
+
+The approved “Coming home. Plan your next steps.” layout pairs the community illustration with the published introduction. Identification starts expanded. Readers can open record clearing, housing, employment and voting independently, or use the section menu to jump directly to the topics. The page retains the practical steps, FAQs, advisory and National Reentry Resource Center links. The Clean Slate Initiative link uses its existing translated label.
+
+The release browser spec compares the page with copy and link destinations captured from main at `b5497c96`. It covers English, Spanish and Chinese in light and dark themes, keyboard access to each topic, and desktop and 320px layouts. Reputation and Records follows Reentry in the support-page refresh.
