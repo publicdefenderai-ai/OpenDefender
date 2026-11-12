@@ -1,4 +1,5 @@
 import { OHIO_PRIVACY_SOURCES, isOhioPrivacySourceFresh } from "../data/ohio-privacy-source";
+import { isReviewedOhioChargeId } from "@shared/ohio-reviewed-identity";
 import { OHIO_PROTECTION_SOURCES, isOhioProtectionSourceFresh } from "../data/ohio-protection-source";
 import { OHIO_FAMILY_SOURCES, isOhioFamilySourceFresh } from "../data/ohio-family-source";
 import { OHIO_PUBLIC_PEACE_SOURCES, isOhioPublicPeaceSourceFresh } from "../data/ohio-public-peace-source";
@@ -238,7 +239,13 @@ export async function getCurrentAuthoritySelectableChargeIds(
       ? metadata.selectableChargeIds.filter((value): value is string => typeof value === "string")
       : [],
   );
-  if (jurisdiction === "OH") for (const hold of sourceChangeHolds) selectable.delete(hold.id);
+  if (jurisdiction === "OH") {
+    for (const id of selectable) {
+      if (!isReviewedOhioChargeId(id)) selectable.delete(id);
+    }
+    for (const hold of sourceChangeHolds) selectable.delete(hold.id);
+    if (!selectable.size) return selectable;
+  }
   // This lower-level boundary also protects direct provenance callers. Keep
   // the receipt lookup here (rather than in the selector layer), since this
   // function is also the provenance authorization boundary. The dynamic

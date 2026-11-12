@@ -10,6 +10,7 @@ test('Ohio privacy publication preserves statutory identity and grading alternat
   expect(body.charges.some((charge: any) => charge.id === 'oh-vandalism')).toBe(false);
   expect(body.charges.some((charge: any) => charge.id === 'oh-insurance-fraud')).toBe(false);
   expect(body.charges.some((charge: any) => charge.id === 'oh-domestic-violence')).toBe(false);
+  expect(body.charges.some((charge: any) => charge.id === 'oh-criminal-trespass')).toBe(false);
   for (const row of rows) {
     const charge = body.charges.find((c: any) => c.id === row.id);
     expect(charge, row.id).toBeDefined();

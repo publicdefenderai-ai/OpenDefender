@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import rows from '../shared/ohio-privacy-publication.json';
 import {OHIO_PRIVACY_DEFINITIONS,OHIO_PRIVACY_IDS} from '../shared/ohio-privacy-batch';
+import {isReviewedOhioChargeId} from '../shared/ohio-reviewed-identity';
 import {getChargeById} from '../shared/criminal-charges';
 import {getChargeExplanation} from '../shared/charge-explanations';
 import {OHIO_PRIVACY_SOURCES,ohioPrivacyPacket,validateOhioPrivacyPacket,validateOhioPrivacyReceipt,OHIO_PRIVACY_RECEIPT_PATH} from '../server/data/ohio-privacy-source';
@@ -23,6 +24,7 @@ describe('Ohio sexual imposition, importuning and voyeurism',()=>{
   expect([...OHIO_REVIEWED_SOURCES,...OHIO_MAJOR_SOURCES,...OHIO_RESIDUAL_SOURCES,...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS].some(r=>OHIO_PRIVACY_IDS.has(r.chargeId))).toBe(false);
   expect(ohioPrivacyPacket.documents['1509.01']).toBeUndefined();
   for(const definition of OHIO_PRIVACY_DEFINITIONS){
+   expect(isReviewedOhioChargeId(definition.id)).toBe(true);
    expect(getChargeById(definition.id)?.categories).toEqual(definition.categories);
    expect(getChargeById(definition.id)?.code).toBe(definition.code);
    for(const language of ['es','zh']){

@@ -596,7 +596,7 @@ function YourChargesSection({
   jurisdiction?: string;
 }) {
   const { t, i18n } = useTranslation();
-  const normalizedJurisdiction = jurisdiction?.toUpperCase();
+  const normalizedJurisdiction = jurisdiction?.toUpperCase() === "OHIO" ? "OH" : jurisdiction?.toUpperCase();
   const isAuthorityBacked = normalizedJurisdiction === "NY" ||
     normalizedJurisdiction === "TX" ||
     normalizedJurisdiction === "FL" ||
@@ -695,14 +695,16 @@ function YourChargesSection({
               <div className="min-w-0">
                 <h4 className="break-words font-semibold text-foreground text-lg">{charge.name}</h4>
               </div>
-              <Badge 
-                variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
-                className="shrink-0"
-              >
-                {(charge.categories ?? [charge.classification])
-                  .map(category => t(`chat.chargeSelector.categories.${category}`, category))
-                  .join(" / ")}
-              </Badge>
+              {!(normalizedJurisdiction === "OH" && charge.needsReselection) && (
+                <Badge
+                  variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
+                  className="shrink-0"
+                >
+                  {(charge.categories ?? [charge.classification])
+                    .map(category => t(`chat.chargeSelector.categories.${category}`, category))
+                    .join(" / ")}
+                </Badge>
+              )}
             </div>
 
             {/* Pending-review warning — shown when explanation.pendingAttorneyReview is true.
@@ -1061,7 +1063,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     try {
       const jurisdiction = guidance.caseData?.jurisdiction?.toUpperCase();
       if (
-        ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "CA"].includes(jurisdiction) &&
+        ["NY", "TX", "FL", "PA", "SC", "IL", "GA", "CA"].includes(jurisdiction) &&
         guidance.chargeClassifications?.length
       ) {
         const authorityPayload = await fetchChargeCatalog({ jurisdiction });
