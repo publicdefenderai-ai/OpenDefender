@@ -1,0 +1,155 @@
+[
+  {
+    "id": "fl-sexual-assault-in-the-first-degree",
+    "primary": "794.011",
+    "subdivision": "(3)",
+    "bindings": [
+      {
+        "section": "794.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.011",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(2)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(4)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(5)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(6)"
+      },
+      {
+        "section": "943.0435",
+        "scope": "(1)(h)"
+      }
+    ]
+  },
+  {
+    "id": "fl-sexual-assault-in-the-third-degree",
+    "primary": "794.011",
+    "subdivision": "(5)",
+    "bindings": [
+      {
+        "section": "794.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.011",
+        "scope": "(5)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(2)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(4)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(5)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(6)"
+      },
+      {
+        "section": "943.0435",
+        "scope": "(1)(h)"
+      },
+      {
+        "section": "794.023",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-statutory-rape",
+    "primary": "794.05",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "794.05",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.05",
+        "scope": "(2)"
+      },
+      {
+        "section": "794.05",
+        "scope": "(3)"
+      },
+      {
+        "section": "794.05",
+        "scope": "(4)"
+      },
+      {
+        "section": "794.05",
+        "scope": "(5)"
+      },
+      {
+        "section": "794.021",
+        "scope": "whole"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "794.0115",
+        "scope": "(2)"
+      },
+      {
+        "section": "943.0435",
+        "scope": "(1)(h)"
+      }
+    ]
+  }
+]
