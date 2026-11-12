@@ -22,6 +22,12 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - §4301.21: effective date `2016-08-31`; SHA-256 `19a1c8ec66f15d0467037b2336548c3f4868e967ec2c6b7f9b5cdcdffaf7b4ec`.
 - §4301.62: effective date `2024-04-30`; SHA-256 `e05b8c011c5d9c45903ae495ba4edc3a5c8a82157c29af6c766db39bbbbd2ce0`.
 
+## OH-002: Sentencing cross-reference in §2925.02(E)
+
+- **Official text.** Section 2925.02(E) cites §2929.14(B)(3)(a) for the mandatory term applicable upon the specified major-drug-offender finding and specification. [Ohio Rev. Code §2925.02](https://codes.ohio.gov/ohio-revised-code/section-2925.02)
+- **Observed discrepancy.** The retained §2929.14 text contains the relevant major-drug-offender sentencing paragraph under (B)(3), followed by (B)(4), without a separately labeled (B)(3)(a). [Ohio Rev. Code §2929.14](https://codes.ohio.gov/ohio-revised-code/section-2929.14)
+- **Platform treatment.** Preserve the literal citation, disclose the numbering discrepancy and the special branch, and withhold a numerical prediction under (E). The ordinary conduct and grades remain independently bound. [Retained evidence](../scripts/data-review/output/ohio-drug-conduct-publication-evidence.json)
+
 ## CA-001: Overlapping 100-pound fireworks penalty bands in HSC §12700(b)
 
 - **Recorded:** September 27, 2026, during the remaining California catalog pass.
