@@ -28,6 +28,8 @@ The evidence is retained in the [dependency research ledger](../scripts/data-rev
 - **Observed discrepancy.** The retained §2929.14 text contains the relevant major-drug-offender sentencing paragraph under (B)(3), followed by (B)(4), without a separately labeled (B)(3)(a). [Ohio Rev. Code §2929.14](https://codes.ohio.gov/ohio-revised-code/section-2929.14)
 - **Platform treatment.** Preserve the literal citation, disclose the numbering discrepancy and the special branch, and withhold a numerical prediction under (E). The ordinary conduct and grades remain independently bound. [Retained evidence](../scripts/data-review/output/ohio-drug-conduct-publication-evidence.json)
 
+The same literal citation appears in §2925.36(E). The §2925.36(C)(2) sample-drug entry preserves the specification requirement and withholds an individual special-term calculation. [Ohio Rev. Code §2925.36](https://codes.ohio.gov/ohio-revised-code/section-2925.36)
+
 ## CA-001: Overlapping 100-pound fireworks penalty bands in HSC §12700(b)
 
 - **Recorded:** September 27, 2026, during the remaining California catalog pass.
