@@ -1,0 +1,298 @@
+{
+  "effectiveDate": {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  "records": [
+    {
+      "id": "fl-sexual-assault-in-the-first-degree",
+      "definitionHash": "040d5b2e63ab85fe3d8b51120c691364d6135725023e4b7ca6a9268339d37452",
+      "bound": [
+        {
+          "section": "794.011",
+          "scope": "(1)",
+          "start": 28,
+          "end": 1867,
+          "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+          "quoteHash": "0150f70387eae492a24035e7657a7a990b779bc9615c88ab53ad0ba323e49a1d"
+        },
+        {
+          "section": "794.011",
+          "scope": "(3)",
+          "start": 2979,
+          "end": 3346,
+          "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+          "quoteHash": "ac1d88c6b47774b9358600d5748b4126ab4be0e25d3080b07d9ac8364175978a"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)",
+          "start": 148,
+          "end": 2015,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "9c5fd0ab05a58cc9fa8288f26d41911405aed167b70b47acdf1dfc5667765b57"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)",
+          "start": 2130,
+          "end": 2355,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "f299896ade46b0125128318839e2c4031b69f56c2f4a20193a2ebda52fc87a79"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(5)",
+          "start": 2355,
+          "end": 2596,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "f184034d5429fe7092695d5e8c8987441961b00ce1ef6ccab4a93f281a692de4"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)",
+          "start": 2596,
+          "end": 3337,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "11e633e385d60ffec3b3703f1aa8e96bcf3b1a072af7c20b0e4c87c29b900a26"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)",
+          "start": 1277,
+          "end": 6577,
+          "sourceHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034",
+          "quoteHash": "e94b17b9b4fd8aadf48e97b61c72b2b30f7ea44fb48621454f254422478493e9"
+        }
+      ]
+    },
+    {
+      "id": "fl-sexual-assault-in-the-third-degree",
+      "definitionHash": "90c60c9ba2307c0fc4f21e2a33292eddc730608b15270d46d382d07bffa8718e",
+      "bound": [
+        {
+          "section": "794.011",
+          "scope": "(1)",
+          "start": 28,
+          "end": 1867,
+          "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+          "quoteHash": "0150f70387eae492a24035e7657a7a990b779bc9615c88ab53ad0ba323e49a1d"
+        },
+        {
+          "section": "794.011",
+          "scope": "(5)",
+          "start": 6864,
+          "end": 8837,
+          "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+          "quoteHash": "c038d77f9dc4d4be5274814991f2a9cbe8def3f2adff686e7f5f6216ce4514cf"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)",
+          "start": 148,
+          "end": 2015,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "9c5fd0ab05a58cc9fa8288f26d41911405aed167b70b47acdf1dfc5667765b57"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(4)",
+          "start": 2130,
+          "end": 2355,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "f299896ade46b0125128318839e2c4031b69f56c2f4a20193a2ebda52fc87a79"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(5)",
+          "start": 2355,
+          "end": 2596,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "f184034d5429fe7092695d5e8c8987441961b00ce1ef6ccab4a93f281a692de4"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(6)",
+          "start": 2596,
+          "end": 3337,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "11e633e385d60ffec3b3703f1aa8e96bcf3b1a072af7c20b0e4c87c29b900a26"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)",
+          "start": 1277,
+          "end": 6577,
+          "sourceHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034",
+          "quoteHash": "e94b17b9b4fd8aadf48e97b61c72b2b30f7ea44fb48621454f254422478493e9"
+        },
+        {
+          "section": "794.023",
+          "scope": "(2)",
+          "start": 400,
+          "end": 1257,
+          "sourceHash": "a1dcb383a75d095d67cb10c83c4fd4186319c5967fc8defc1d78b0245f1c9cac",
+          "quoteHash": "dbe9cb810477e406445ff5d4499d2043ebce3e291b11f7886070e557f1cba68a"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-statutory-rape",
+      "definitionHash": "efb946006ffd4da8fc612140caf46c70c4d6398259e9f917f40107d3e401cd48",
+      "bound": [
+        {
+          "section": "794.05",
+          "scope": "(1)",
+          "start": 57,
+          "end": 268,
+          "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6",
+          "quoteHash": "6a3717e1dd91817d95030693278e812e8a1b0a9918ee6c09d610668d12918623"
+        },
+        {
+          "section": "794.05",
+          "scope": "(2)",
+          "start": 268,
+          "end": 689,
+          "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6",
+          "quoteHash": "96a4a43bdb8e1c8fe44eb04a8cbfc2d5c664edbe0ae3d506e63b36706ce87db1"
+        },
+        {
+          "section": "794.05",
+          "scope": "(3)",
+          "start": 689,
+          "end": 839,
+          "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6",
+          "quoteHash": "72a1b19fcc7e84643617052f57e3d8f217a717de766ecff0f3f7cb9a1da6f7e4"
+        },
+        {
+          "section": "794.05",
+          "scope": "(4)",
+          "start": 839,
+          "end": 940,
+          "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6",
+          "quoteHash": "09442319b2739e9ae1449079a19042c34052b9bd0bf8154eb2c123ddbcf37e8b"
+        },
+        {
+          "section": "794.05",
+          "scope": "(5)",
+          "start": 940,
+          "end": 1507,
+          "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6",
+          "quoteHash": "a5eabe3f5f170af7065e23d9122c5cfd9cb10bef41cb05184800e017eadce6ac"
+        },
+        {
+          "section": "794.021",
+          "scope": "whole",
+          "start": 0,
+          "end": 375,
+          "sourceHash": "1c482a4c61aa09a6cc81021d7354d8ae83abe9c11b1cba9b997e14cbe46efa0c",
+          "quoteHash": "1c482a4c61aa09a6cc81021d7354d8ae83abe9c11b1cba9b997e14cbe46efa0c"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "794.0115",
+          "scope": "(2)",
+          "start": 148,
+          "end": 2015,
+          "sourceHash": "782802de17556d674d7aa27a924623b2d99747822d87855225fd7a618b78c623",
+          "quoteHash": "9c5fd0ab05a58cc9fa8288f26d41911405aed167b70b47acdf1dfc5667765b57"
+        },
+        {
+          "section": "943.0435",
+          "scope": "(1)(h)",
+          "start": 1277,
+          "end": 6577,
+          "sourceHash": "e6000698e64c90ddcb80cb502c7be99e389f0c8bd2774a13337ce16463f1d034",
+          "quoteHash": "e94b17b9b4fd8aadf48e97b61c72b2b30f7ea44fb48621454f254422478493e9"
+        }
+      ]
+    }
+  ]
+}

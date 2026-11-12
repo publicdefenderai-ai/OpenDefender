@@ -1,0 +1,228 @@
+[
+  {
+    "id": "fl-sexual-assault-in-the-first-degree",
+    "jurisdiction": "FL",
+    "legacyLabel": "Sexual Battery",
+    "name": "Sexual Battery (deadly weapon or force likely to cause serious personal injury)",
+    "names": {
+      "es": "Agresión sexual con arma mortal o fuerza que probablemente cause lesiones graves",
+      "zh": "性侵：致命武器或足以造成严重人身伤害的暴力"
+    },
+    "code": "794.011(3)",
+    "slug": "reviewed-fl-sexual-assault-in-the-first-degree",
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 794.011(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      }
+    ],
+    "aliases": {
+      "en": [
+        "Sexual Battery",
+        "Sexual battery",
+        "FS 794.011(3)",
+        "Fla. Stat. § 794.011(3)"
+      ],
+      "es": [
+        "Sexual Battery",
+        "Sexual battery",
+        "FS 794.011(3)",
+        "Fla. Stat. § 794.011(3)"
+      ],
+      "zh": [
+        "Sexual Battery",
+        "Sexual battery",
+        "FS 794.011(3)",
+        "Fla. Stat. § 794.011(3)"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Sexual battery on a person age 12 or older, without consent, while using or threatening to use a deadly weapon or actually using physical force likely to cause serious personal injury. The force branch does not require a resulting injury. Sexual battery involves the penetration or union specified in §794.011(1)(j), excluding acts for a bona fide medical purpose. Consent must be knowing, intelligent and voluntary. Lack of physical resistance does not establish consent.",
+        "degreeContext": "Life felony. For current offenses, imprisonment up to life; ordinary fine up to $15,000. Serious injury and the likelihood of injury are distinct findings for the separate mandatory minimum. For an offense on or after October 1, 2014 committed at age 18 or older, §794.0115 requires 50 years to life if a listed factor is established, including actual serious injury, use or threatened use of a deadly weapon, multiple victims in the episode, qualifying felony court jurisdiction, or a qualifying prior. The weapon factor can also be an element of the charge. Florida lists this offense in §943.0435. A qualifying conviction may require sex-offender registration; age, adjudication and the other statutory conditions matter."
+      },
+      "es": {
+        "plainSummary": "Agresión sexual a una persona de 12 años o más sin su consentimiento, usando o amenazando con usar un arma mortal, o empleando fuerza física que probablemente cause lesiones personales graves. Esta última modalidad no exige que la lesión se produzca. La agresión sexual comprende la penetración o unión que define §794.011(1)(j), salvo actos con un fin médico legítimo. El consentimiento debe ser consciente, informado y voluntario. La falta de resistencia física no establece consentimiento.",
+        "degreeContext": "Delito grave de categoría perpetua. Para hechos actuales, hasta prisión perpetua y multa ordinaria de hasta $15,000. Causar lesiones graves y emplear fuerza que probablemente las cause son determinaciones diferentes para el mínimo obligatorio. Para hechos desde el 1 de octubre de 2014 cometidos a los 18 años o más, §794.0115 exige de 50 años a perpetua si se acredita una condición enumerada, entre ellas lesión grave efectivamente causada, uso o amenaza de uso de un arma mortal, varias víctimas en el mismo episodio, jurisdicción judicial por un delito grave comprendido o un antecedente válido. La condición del arma también puede ser un elemento del delito. Florida incluye esta infracción en §943.0435. Una condena comprendida puede exigir la inscripción en el registro de delincuentes sexuales; importan la edad, la resolución judicial y los demás requisitos legales."
+      },
+      "zh": {
+        "plainSummary": "对年满12岁者实施未经同意的性侵，并使用或威胁使用致命武器，或实际使用足以造成严重人身伤害的暴力。后一种情形无需已造成伤害。 性侵包括第794.011(1)(j)款所定义的侵入或接触，但排除出于正当医疗目的的行为。同意须为知情、明智和自愿。没有身体反抗不等于同意。",
+        "degreeContext": "终身重罪。现行法下最高可判终身监禁；通常罚款最高15,000美元。适用单独的最低刑时，实际造成重伤有别于足以造成重伤。 对2014年10月1日及以后、年满18岁时实施的行为，如符合所列条件之一，包括实际造成严重人身伤害、使用或威胁使用致命武器、同一事件中有多名受害者、当时因符合条件的重罪受法院管辖或有符合条件的前科，第794.0115条要求至少50年、最高终身监禁。武器条件也可以同时是本罪要件。 佛州第943.0435条列有本罪。符合条件的定罪可能要求登记为性犯罪者，具体取决于年龄、裁判结果及其他法定条件。"
+      }
+    }
+  },
+  {
+    "id": "fl-sexual-assault-in-the-third-degree",
+    "jurisdiction": "FL",
+    "legacyLabel": "Sexual Battery (without Force)",
+    "name": "Sexual Battery (without force and violence likely to cause serious personal injury)",
+    "names": {
+      "es": "Agresión sexual sin fuerza y violencia que probablemente causen lesiones graves",
+      "zh": "性侵：未使用足以造成严重人身伤害的暴力"
+    },
+    "code": "794.011(5)",
+    "slug": "reviewed-fl-sexual-assault-in-the-third-degree",
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 794.011(5)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.023",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.023.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "aliases": {
+      "en": [
+        "Sexual Battery (without Force)",
+        "Sexual battery",
+        "FS 794.011(5)",
+        "Fla. Stat. § 794.011(5)"
+      ],
+      "es": [
+        "Sexual Battery (without Force)",
+        "Sexual battery",
+        "FS 794.011(5)",
+        "Fla. Stat. § 794.011(5)"
+      ],
+      "zh": [
+        "Sexual Battery (without Force)",
+        "Sexual battery",
+        "FS 794.011(5)",
+        "Fla. Stat. § 794.011(5)"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Sexual battery without consent on a person age 12 or older, without the level of physical force and violence likely to cause serious personal injury. The rule does not require a complete absence of force. Sexual battery involves the penetration or union specified in §794.011(1)(j), excluding acts for a bona fide medical purpose. Consent must be knowing, intelligent and voluntary. Lack of physical resistance does not establish consent.",
+        "degreeContext": "Adult accused and victim 12–17: first degree, ordinarily up to 30 years. Adult accused and adult victim, or accused under 18 and victim 12 or older: second degree, ordinarily up to 15 years under the adult sentencing statute. A listed prior conviction under (5)(d) makes it first degree. Ordinary fine up to $10,000 in either degree. Juvenile proceedings require separate assessment. If the prosecution charges and proves multiple perpetrators committed sexual battery on the same victim in the same episode, §794.023 raises second degree to first or first to a life felony. For qualifying domestic sexual battery on or after July 1, 2026 with an existing domestic-violence conviction, §741.2801 also provides reclassification. For an offense on or after October 1, 2014 committed at age 18 or older, §794.0115 requires 50 years to life if a listed factor is established, including actual serious injury, use or threatened use of a deadly weapon, multiple victims in the episode, qualifying felony court jurisdiction, or a qualifying prior. The weapon factor can also be an element of the charge. Florida lists this offense in §943.0435. A qualifying conviction may require sex-offender registration; age, adjudication and the other statutory conditions matter."
+      },
+      "es": {
+        "plainSummary": "Agresión sexual sin consentimiento a una persona de 12 años o más, sin el grado de fuerza y violencia física que probablemente cause lesiones personales graves. La norma no exige ausencia total de fuerza. La agresión sexual comprende la penetración o unión que define §794.011(1)(j), salvo actos con un fin médico legítimo. El consentimiento debe ser consciente, informado y voluntario. La falta de resistencia física no establece consentimiento.",
+        "degreeContext": "Persona acusada adulta y víctima de 12 a 17 años: primer grado, normalmente hasta 30 años. Ambas adultas, o persona acusada menor de 18 y víctima de 12 años o más: segundo grado, normalmente hasta 15 años según el régimen de adultos. Un antecedente enumerado en (5)(d) eleva el delito a primer grado. Multa ordinaria de hasta $10,000 en ambos grados. El procedimiento juvenil requiere evaluación aparte. Si se imputa y demuestra que varias personas cometieron agresión sexual contra la misma víctima en el mismo episodio, §794.023 eleva el segundo grado a primero o el primero a delito grave de categoría perpetua. Para hechos de violencia doméstica sexual comprendidos desde el 1 de julio de 2026 con una condena previa por violencia doméstica, §741.2801 también prevé reclasificación. Para hechos desde el 1 de octubre de 2014 cometidos a los 18 años o más, §794.0115 exige de 50 años a perpetua si se acredita una condición enumerada, entre ellas lesión grave efectivamente causada, uso o amenaza de uso de un arma mortal, varias víctimas en el mismo episodio, jurisdicción judicial por un delito grave comprendido o un antecedente válido. La condición del arma también puede ser un elemento del delito. Florida incluye esta infracción en §943.0435. Una condena comprendida puede exigir la inscripción en el registro de delincuentes sexuales; importan la edad, la resolución judicial y los demás requisitos legales."
+      },
+      "zh": {
+        "plainSummary": "对年满12岁者实施未经同意的性侵，未使用足以造成严重人身伤害的暴力。这并不要求完全没有使用身体力量。 性侵包括第794.011(1)(j)款所定义的侵入或接触，但排除出于正当医疗目的的行为。同意须为知情、明智和自愿。没有身体反抗不等于同意。",
+        "degreeContext": "被控者成年且受害者12至17岁：一级重罪，通常最高30年。双方均成年，或被控者未满18岁且受害者年满12岁：二级重罪，按成人量刑法通常最高15年。如有第(5)(d)款所列前科则为一级。两级通常罚款最高均为10,000美元；少年程序须另行评估。若检方指控并证明多人在同一事件中对同一受害者实施性侵，第794.023条将二级升一级、一级升为终身重罪。对2026年7月1日及以后实施的符合法定家庭暴力定义的性侵，如实施时已有家庭暴力定罪，第741.2801条亦规定可提高罪级。 对2014年10月1日及以后、年满18岁时实施的行为，如符合所列条件之一，包括实际造成严重人身伤害、使用或威胁使用致命武器、同一事件中有多名受害者、当时因符合条件的重罪受法院管辖或有符合条件的前科，第794.0115条要求至少50年、最高终身监禁。武器条件也可以同时是本罪要件。 佛州第943.0435条列有本罪。符合条件的定罪可能要求登记为性犯罪者，具体取决于年龄、裁判结果及其他法定条件。"
+      }
+    }
+  },
+  {
+    "id": "fl-statutory-rape",
+    "jurisdiction": "FL",
+    "legacyLabel": "Unlawful Sexual Activity with Certain Minors",
+    "name": "Unlawful Sexual Activity with Certain Minors",
+    "names": {
+      "es": "Actividad sexual ilícita con determinados menores",
+      "zh": "与特定未成年人实施非法性行为"
+    },
+    "code": "794.05",
+    "slug": "reviewed-fl-statutory-rape",
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 794.05",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.05.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.021",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.021.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 794.0115",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+      },
+      {
+        "citation": "Fla. Stat. § 943.0435",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.0435.html"
+      }
+    ],
+    "aliases": {
+      "en": [
+        "Unlawful Sexual Activity with Certain Minors",
+        "Unlawful sexual activity with certain minors",
+        "FS 794.05",
+        "Fla. Stat. § 794.05"
+      ],
+      "es": [
+        "Unlawful Sexual Activity with Certain Minors",
+        "Unlawful sexual activity with certain minors",
+        "FS 794.05",
+        "Fla. Stat. § 794.05"
+      ],
+      "zh": [
+        "Unlawful Sexual Activity with Certain Minors",
+        "Unlawful sexual activity with certain minors",
+        "FS 794.05",
+        "Fla. Stat. § 794.05"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "A person age 24 or older engages in sexual activity defined by §794.05(2) with a person age 16 or 17. Bona fide medical acts and a 16- or 17-year-old whose legal disabilities of minority were removed under chapter 743 are excluded. Consent does not excuse the age-based offense. Under §794.021, ignorance, misrepresentation or a good-faith belief about the minor’s age is not a defense.",
+        "degreeContext": "Second-degree felony, ordinarily up to 15 years and a $10,000 fine. If the offense directly results in childbirth, the statute requires determining paternity, and if the offender is the father, child support under chapter 61. The separate §794.0115 dangerous-offender minimum does not list §794.05 as the current triggering offense. Florida lists this offense in §943.0435. A qualifying conviction may require sex-offender registration; age, adjudication and the other statutory conditions matter."
+      },
+      "es": {
+        "plainSummary": "Una persona de 24 años o más realiza con alguien de 16 o 17 años la actividad sexual definida en §794.05(2). Se excluyen los actos médicos legítimos y el caso de una persona de 16 o 17 años cuya incapacidad legal por minoría de edad fue removida conforme al capítulo 743. El consentimiento no exime del delito basado en edad. Según §794.021, el desconocimiento, la tergiversación o la creencia de buena fe sobre la edad no son defensas.",
+        "degreeContext": "Delito grave de segundo grado, normalmente hasta 15 años y $10,000 de multa. Si el delito causa directamente un nacimiento, la ley exige determinar la paternidad y, si el autor es el padre, pagar manutención según el capítulo 61. El mínimo separado de §794.0115 no incluye §794.05 como delito actual que lo activa. Florida incluye esta infracción en §943.0435. Una condena comprendida puede exigir la inscripción en el registro de delincuentes sexuales; importan la edad, la resolución judicial y los demás requisitos legales."
+      },
+      "zh": {
+        "plainSummary": "年满24岁者与16或17岁者实施第794.05(2)款定义的性行为。正当医疗行为，以及依第743章已解除未成年人法律限制的16或17岁者，均不在此条范围内。同意不能免除这一年龄规定下的责任。依第794.021条，不知年龄、对方谎报年龄或善意误判年龄均不是抗辩理由。",
+        "degreeContext": "二级重罪，通常最高15年及10,000美元罚款。若犯罪直接导致生育，法律要求确定父子关系；如行为人是父亲，须按第61章支付抚养费。第794.0115条的特别最低刑并未将第794.05条列为触发该规定的本案罪名。 佛州第943.0435条列有本罪。符合条件的定罪可能要求登记为性犯罪者，具体取决于年龄、裁判结果及其他法定条件。"
+      }
+    }
+  }
+]

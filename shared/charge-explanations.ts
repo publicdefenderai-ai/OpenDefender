@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_PRIORITY_GAPS_BATCH, OHIO_PRIORITY_GAPS_IDS } from "./ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_BATCH, OHIO_PRIVACY_IDS } from "./ohio-privacy-batch";
@@ -75,6 +76,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_REVIEWED_BATCH.explanations,
   ...FLORIDA_PERSONS_BATCH.explanations,
   ...FLORIDA_LEGACY_PROPERTY.explanations,
+  ...FLORIDA_LEGACY_SEXUAL.explanations,
   ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
   ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   ...OHIO_PATIENT_CARE_BATCH.explanations,
