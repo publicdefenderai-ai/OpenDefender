@@ -601,6 +601,12 @@ The Personal Health page uses the approved pink medical cross and “Keep your c
 
 The Personal Health release browser spec checks English, Spanish and Chinese in both themes, including 320px layouts, medication steps, FAQs, and the copy and print workflows against the pre-refresh content.
 
+### Record Clearance Eligibility Screener
+
+Approved reference: `record-clearance-content.html`, SHA-256 `80f577e328802da7c26454dff23cb7e9a7ccd4295d26bf11410a409a2d596620`. The screener presents the four existing questions with a labeled progress indicator and native radio groups. The published disclaimer appears during intake and on results. The state choices, preselection query parameter, eligibility logic, state data, result wording, exclusions, source list and external resources come from the existing implementation. This is a presentation review.
+
+The release browser test traverses all four result categories in English, Spanish and Chinese in light and dark themes. It exercises keyboard selection, heading focus, back, reset, valid and unknown state links, compares result messages and state source text, and checks phone-width results.
+
 ### Reentry support
 
 The approved “Coming home. Plan your next steps.” layout pairs the community illustration with the published introduction. Identification starts expanded. Readers can open record clearing, housing, employment and voting independently, or use the section menu to jump directly to the topics. The page retains the practical steps, FAQs, advisory and National Reentry Resource Center links. The Clean Slate Initiative link uses its existing translated label.
