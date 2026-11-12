@@ -1,0 +1,536 @@
+{
+  "domesticEnhancementEffectiveDate": {
+    "chapter": "2026-86",
+    "sourceUrl": "https://laws.flrules.org/2026/86",
+    "section": 9,
+    "page": 11,
+    "effectiveDate": "2026-07-01",
+    "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+    "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+    "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+    "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+    "approvalDate": null
+  },
+  "records": [
+    {
+      "id": "fl-grand-theft-in-the-first-degree",
+      "officialTitle": "Theft",
+      "citation": "Fla. Stat. § 812.014(2)(a)",
+      "definitionHash": "c63c76fa6143a72148df19a94b48307db97e14c187daebca2a46369c296810ef",
+      "spans": [
+        {
+          "section": "812.014",
+          "scope": "(1)",
+          "start": 19,
+          "end": 408,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "5cfd05b359daf818267dd63ce507dd8bc57c7e9995873f8d8f89e5aa1ea602dc"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(a)",
+          "start": 408,
+          "end": 1315,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "b152e43935204ec9847ca9d51cfbc7ffa4261f3fee2464fc93e2916a87060259"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)",
+          "start": 2466,
+          "end": 4046,
+          "sourceHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0",
+          "quoteHash": "4932b709b65bb4a5de4cddb186eff8018b2215506a4ff0b32d217c4b807b23df"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-grand-theft-in-the-second-degree",
+      "officialTitle": "Theft",
+      "citation": "Fla. Stat. § 812.014(2)(b)",
+      "definitionHash": "d56717702eca247d119e16ad92b5ddb13aab174284d5702a95ce189ab77f4759",
+      "spans": [
+        {
+          "section": "812.014",
+          "scope": "(1)",
+          "start": 19,
+          "end": 408,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "5cfd05b359daf818267dd63ce507dd8bc57c7e9995873f8d8f89e5aa1ea602dc"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(b)",
+          "start": 1315,
+          "end": 3910,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "b90dddf578b9de2ddb725896bbaf4efeecb56ecf012e695f422dc4537e72c68e"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)",
+          "start": 2466,
+          "end": 4046,
+          "sourceHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0",
+          "quoteHash": "4932b709b65bb4a5de4cddb186eff8018b2215506a4ff0b32d217c4b807b23df"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-grand-theft-in-the-third-degree",
+      "officialTitle": "Theft",
+      "citation": "Fla. Stat. § 812.014(2)(c)",
+      "definitionHash": "b349ecfaa69657a2fd717e44dc4fa22189260d1e0cf090ec49ae1c36b6e7916b",
+      "spans": [
+        {
+          "section": "812.014",
+          "scope": "(1)",
+          "start": 19,
+          "end": 408,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "5cfd05b359daf818267dd63ce507dd8bc57c7e9995873f8d8f89e5aa1ea602dc"
+        },
+        {
+          "section": "812.014",
+          "scope": "(2)(c)",
+          "start": 3910,
+          "end": 7256,
+          "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+          "quoteHash": "6fcb88c037435ae5976c85857a1a3a96e343632a91fbb2a91c41e31ec736bf98"
+        },
+        {
+          "section": "812.012",
+          "scope": "(10)",
+          "start": 2466,
+          "end": 4046,
+          "sourceHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0",
+          "quoteHash": "4932b709b65bb4a5de4cddb186eff8018b2215506a4ff0b32d217c4b807b23df"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-robbery-in-the-first-degree",
+      "officialTitle": "Robbery",
+      "citation": "Fla. Stat. § 812.13(2)(a)",
+      "definitionHash": "b56bc2c317c7d9ba0dfb13fd5a1ea1307e860899374c363ab8b1ce484be3d0d5",
+      "spans": [
+        {
+          "section": "812.13",
+          "scope": "(1)",
+          "start": 20,
+          "end": 367,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "03cec854c7577e75b8228c7abfb6dbccc8edc43244564a045bf069fb4113717e"
+        },
+        {
+          "section": "812.13",
+          "scope": "(2)(a)",
+          "start": 367,
+          "end": 660,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "d55930a0755f443b97d5003bc3dd713fb19bc14c7b5905f2917bb6432b802e83"
+        },
+        {
+          "section": "812.13",
+          "scope": "(3)",
+          "start": 1085,
+          "end": 1665,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "282a11ef33b98e360c2637940c97e271bff15506ce883ba7e481343134ff4a6e"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.087",
+          "scope": "(2)",
+          "start": 1084,
+          "end": 6461,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "8dda0df2bdd9c6069ddb67f577e341967cb69cf6ce917c82cb80c7f0613ee11b"
+        },
+        {
+          "section": "775.087",
+          "scope": "(3)",
+          "start": 6461,
+          "end": 11829,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "2d4e64dd17c428a07ff090c80598f7b22147b5686d982e3a54111e9a029367eb"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-robbery-in-the-second-degree",
+      "officialTitle": "Robbery",
+      "citation": "Fla. Stat. § 812.13(2)(c)",
+      "definitionHash": "c54044e143b890be68ec58029a10c6f14268502029c685914d32d5debc8f82db",
+      "spans": [
+        {
+          "section": "812.13",
+          "scope": "(1)",
+          "start": 20,
+          "end": 367,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "03cec854c7577e75b8228c7abfb6dbccc8edc43244564a045bf069fb4113717e"
+        },
+        {
+          "section": "812.13",
+          "scope": "(2)(c)",
+          "start": 855,
+          "end": 1085,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "a9d9a0df5f4ce989535c7818731f5edf6f7bff02cdc9442d5da81e65642f68dc"
+        },
+        {
+          "section": "812.13",
+          "scope": "(3)",
+          "start": 1085,
+          "end": 1665,
+          "sourceHash": "0d5d581d9d5addc1c5c5838c926ba898bded5423bf5237bbdbc36d36e2d50a13",
+          "quoteHash": "282a11ef33b98e360c2637940c97e271bff15506ce883ba7e481343134ff4a6e"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    },
+    {
+      "id": "fl-carjacking",
+      "officialTitle": "Carjacking",
+      "citation": "Fla. Stat. § 812.133",
+      "definitionHash": "b4b55bfae08204c1ca7daf62f638c623121e46edce00e8eca86b5c0fee002c5c",
+      "spans": [
+        {
+          "section": "812.133",
+          "scope": "(1)",
+          "start": 24,
+          "end": 356,
+          "sourceHash": "e07a48c30636240415041f086686d15e0f8a2efa08cbb0a01e1361e21150d458",
+          "quoteHash": "8442dc7085e6ee2d5780ce91af66a0795ee77434e093b5cb668ece060c802819"
+        },
+        {
+          "section": "812.133",
+          "scope": "(2)(a)",
+          "start": 356,
+          "end": 655,
+          "sourceHash": "e07a48c30636240415041f086686d15e0f8a2efa08cbb0a01e1361e21150d458",
+          "quoteHash": "410bf3bcc6f837808076096f443fa5315f25c7868a65035c372c647951de7aac"
+        },
+        {
+          "section": "812.133",
+          "scope": "(2)(b)",
+          "start": 655,
+          "end": 890,
+          "sourceHash": "e07a48c30636240415041f086686d15e0f8a2efa08cbb0a01e1361e21150d458",
+          "quoteHash": "664d79ef3a414a1fb83a96f68ab452e753f0d29874211809bb831d9047c47333"
+        },
+        {
+          "section": "812.133",
+          "scope": "(3)",
+          "start": 890,
+          "end": 1326,
+          "sourceHash": "e07a48c30636240415041f086686d15e0f8a2efa08cbb0a01e1361e21150d458",
+          "quoteHash": "0c37ac81129dfd943156717f97459b1b99367f35e97d34ff6b983c9137d059be"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.087",
+          "scope": "(2)",
+          "start": 1084,
+          "end": 6461,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "8dda0df2bdd9c6069ddb67f577e341967cb69cf6ce917c82cb80c7f0613ee11b"
+        },
+        {
+          "section": "775.087",
+          "scope": "(3)",
+          "start": 6461,
+          "end": 11829,
+          "sourceHash": "cea37b85d8ef3ce0aebe6313923ba4e591d1eca1be2a0af6f822ae633211e5db",
+          "quoteHash": "2d4e64dd17c428a07ff090c80598f7b22147b5686d982e3a54111e9a029367eb"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        }
+      ]
+    }
+  ]
+}

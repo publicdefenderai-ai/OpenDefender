@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_PROPERTY_DEFINITIONS } from "./florida-legacy-property";
 import { FLORIDA_PERSONS_DEFINITIONS } from "./florida-persons-batch";
 import { FLORIDA_REVIEWED_DEFINITIONS } from "./florida-reviewed-batch";
 
@@ -19474,7 +19475,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
 };
 
-for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS]) {
+for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS, ...FLORIDA_LEGACY_PROPERTY_DEFINITIONS]) {
   const primary = definition.citations[0];
   const existing = CHARGE_CITATIONS[definition.id];
   CHARGE_CITATIONS[definition.id] = {
@@ -19484,7 +19485,9 @@ for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DE
     // Statute approval does not establish a jury-instruction mapping. Preserve
     // an exact existing mapping, otherwise state that none is verified here;
     // this does not assert that the courts publish no applicable instruction.
-    source: "Florida Legislature Online Sunshine reviewed source-first report" +
+    source: (FLORIDA_LEGACY_PROPERTY_DEFINITIONS.includes(definition)
+      ? "Florida Legislature Online Sunshine, legacy property review"
+      : "Florida Legislature Online Sunshine reviewed source-first report") +
       (existing?.instructionRef ? "" :
         "; no FSJI (per-charge instruction mapping not yet verified for this source-first record)"),
     sourceUrl: primary.url,

@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_PRIVACY_BATCH, OHIO_PRIVACY_IDS } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH, OHIO_PROTECTION_IDS } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH, OHIO_FAMILY_IDS } from "./ohio-family-batch";
@@ -72,6 +73,7 @@ export interface ChargeExplanation {
 export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_REVIEWED_BATCH.explanations,
   ...FLORIDA_PERSONS_BATCH.explanations,
+  ...FLORIDA_LEGACY_PROPERTY.explanations,
   ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
   ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   ...OHIO_PATIENT_CARE_BATCH.explanations,
