@@ -1,4 +1,5 @@
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
+import { OHIO_PRIORITY_GAPS_BATCH, OHIO_PRIORITY_GAPS_IDS } from "./ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_BATCH, OHIO_PRIVACY_IDS } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH, OHIO_PROTECTION_IDS } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH, OHIO_FAMILY_IDS } from "./ohio-family-batch";
@@ -83,6 +84,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   ...OHIO_THEFT_FRAUD_BATCH.explanations,
   ...OHIO_BENEFITS_FRAUD_BATCH.explanations,
   ...OHIO_JUSTICE_BATCH.explanations,
+  ...OHIO_PRIORITY_GAPS_BATCH.explanations,
   ...OHIO_PRIVACY_BATCH.explanations,
   ...OHIO_PROTECTION_BATCH.explanations,
   ...OHIO_FAMILY_BATCH.explanations,
@@ -3876,8 +3878,8 @@ export function getChargeExplanation(
               ? { degreeContext: locale.degreeContext }
               : {}),
             // Surface draft flag so callers can show a pending-review notice
-            translationDraft: explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId)) ? false : locale.draft,
-            untranslated: Boolean(explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId))),
+            translationDraft: explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId)) ? false : locale.draft,
+            untranslated: Boolean(explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId))),
           };
            const localizedScopedContent = jurisdiction
              ? getScopedCaseGuidance(explanation.slug, lang)

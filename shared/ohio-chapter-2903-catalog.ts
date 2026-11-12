@@ -1,3 +1,4 @@
+import { OHIO_PRIORITY_GAPS_BATCH } from "./ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_BATCH } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH } from "./ohio-family-batch";
@@ -115,6 +116,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_PRIORITY_GAPS_BATCH.charges,
   ...OHIO_PRIVACY_BATCH.charges,
   ...OHIO_PROTECTION_BATCH.charges,
   ...OHIO_FAMILY_BATCH.charges,

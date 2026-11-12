@@ -1,3 +1,4 @@
+import { OHIO_PRIORITY_GAPS_SOURCES, isOhioPriorityGapsSourceFresh } from "./ohio-priority-gaps-source";
 import { OHIO_PRIVACY_SOURCES, isOhioPrivacySourceFresh } from "./ohio-privacy-source";
 import { OHIO_PROTECTION_SOURCES, isOhioProtectionSourceFresh } from "./ohio-protection-source";
 import { OHIO_FAMILY_SOURCES, isOhioFamilySourceFresh } from "./ohio-family-source";
@@ -62,6 +63,7 @@ export function loadOhioAuthorityManifest(
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_PRIORITY_GAPS_SOURCES.map(record => record.chargeId),
       ...OHIO_PRIVACY_SOURCES.map(record => record.chargeId),
       ...OHIO_PROTECTION_SOURCES.map(record => record.chargeId),
       ...OHIO_FAMILY_SOURCES.map(record => record.chargeId),
@@ -82,7 +84,7 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
-    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES].flatMap(record => [
+    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES].flatMap(record => [
       Date.parse(record.offense.retrievedAt),
       ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
     ]),
@@ -97,6 +99,7 @@ export function loadOhioAuthorityManifest(
   const reviewedFresh = isOhioReviewedSourceFresh(now);
   const majorFresh = isOhioMajorSourceFresh(now);
   const justiceFresh = isOhioJusticeSourceFresh(now);
+  const priorityGapsFresh = isOhioPriorityGapsSourceFresh(now);
   const privacyFresh = isOhioPrivacySourceFresh(now);
   const protectionFresh = isOhioProtectionSourceFresh(now);
   const familyFresh = isOhioFamilySourceFresh(now);
@@ -131,6 +134,7 @@ export function loadOhioAuthorityManifest(
     ...(majorFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_MAJOR_SOURCES) : []),
     ...(residualFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_RESIDUAL_SOURCES) : []),
     ...(justiceFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_JUSTICE_SOURCES) : []),
+    ...(priorityGapsFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_PRIORITY_GAPS_SOURCES) : []),
     ...(privacyFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_PRIVACY_SOURCES) : []),
     ...(protectionFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_PROTECTION_SOURCES) : []),
     ...(familyFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_FAMILY_SOURCES) : []),
@@ -144,6 +148,7 @@ export function loadOhioAuthorityManifest(
       charge.jurisdiction === "OH" &&
       (residualFresh || !OHIO_RESIDUAL_SOURCES.some(record => record.chargeId === charge.id)) &&
       (justiceFresh || !OHIO_JUSTICE_SOURCES.some(record => record.chargeId === charge.id)) &&
+      (priorityGapsFresh || !OHIO_PRIORITY_GAPS_SOURCES.some(record => record.chargeId === charge.id)) &&
       (privacyFresh || !OHIO_PRIVACY_SOURCES.some(record => record.chargeId === charge.id)) &&
       (protectionFresh || !OHIO_PROTECTION_SOURCES.some(record => record.chargeId === charge.id)) &&
       (familyFresh || !OHIO_FAMILY_SOURCES.some(record => record.chargeId === charge.id)) &&

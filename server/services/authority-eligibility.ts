@@ -1,3 +1,4 @@
+import { OHIO_PRIORITY_GAPS_IDS } from "@shared/ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_IDS } from "@shared/ohio-privacy-batch";
 import { isReviewedOhioChargeId } from "@shared/ohio-reviewed-identity";
 import { OHIO_PROTECTION_IDS } from "@shared/ohio-protection-batch";
@@ -8,6 +9,7 @@ import { OHIO_JUSTICE_IDS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_IDS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioPriorityGapsSourceFresh } from "../data/ohio-priority-gaps-source";
 import { isOhioPrivacySourceFresh } from "../data/ohio-privacy-source";
 import { isOhioProtectionSourceFresh } from "../data/ohio-protection-source";
 import { isOhioFamilySourceFresh } from "../data/ohio-family-source";
@@ -53,6 +55,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_PRIORITY_GAPS_IDS.has(charge.id) && !fresh(isOhioPriorityGapsSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_PRIVACY_IDS.has(charge.id) && !fresh(isOhioPrivacySourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_PROTECTION_IDS.has(charge.id) && !fresh(isOhioProtectionSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_FAMILY_IDS.has(charge.id) && !fresh(isOhioFamilySourceFresh)) return false;
