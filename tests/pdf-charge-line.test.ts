@@ -161,6 +161,21 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     mockDoc.splitTextToSize.mockImplementation((t: string) => [t]);
   });
 
+  it('blocks direct export of saved Ohio guidance when the current selector is empty', async () => {
+    const guidance = makeGuidance();
+    const unavailable = {id: 'oh-robbery-in-the-first-degree', name: 'Aggravated Robbery', code: '2911.01', classification: 'felony'};
+    const response = {success: true, charges: [], count: 0, totalAvailable: 0,
+      pagination: {offset: 0, limit: 500, totalMatches: 0, nextOffset: null, snapshot: '0'.repeat(64)}};
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(Response.json(response));
+    try {
+      await expect(generateGuidancePDF({...guidance, caseData: {...guidance.caseData, jurisdiction: 'Ohio'},
+        chargeClassifications: [unavailable]} as any)).rejects.toThrow('currently available Ohio charge');
+      expect(mockDoc.output).not.toHaveBeenCalled();
+    } finally {
+      fetchSpy.mockRestore();
+    }
+  });
+
   // ── A. verifiedCitation populated ─────────────────────────────────────────
 
   it('A: shows the citation parenthetical when verifiedCitation is populated', () => {

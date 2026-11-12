@@ -1,3 +1,4 @@
+import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 // Criminal Charges Database - Comprehensive Coverage for All US Jurisdictions
 // Generated: 2025-09-24T07:04:17.705Z
@@ -95185,7 +95186,7 @@ export function classifyChargesForGuidance(
   return chargeIds
     .map((id) => {
       const charge = getChargeById(id);
-      if (!charge) return null;
+      if (!charge || (charge.jurisdiction === "OH" && !isReviewedOhioChargeId(id))) return null;
 
       const verifiedCitation = getVerifiedCitation(charge);
       return {

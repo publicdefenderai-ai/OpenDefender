@@ -1,10 +1,10 @@
+import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import {
   criminalCharges,
   getChargeById,
   type CriminalCharge,
 } from "./criminal-charges";
 import { isCaliforniaSelectableId } from "./california-authority";
-import { OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION } from "./ohio-chapter-2903-catalog";
 
 export type GuidanceChargeClassification = {
   id?: string;
@@ -25,15 +25,14 @@ export function resolveGuidanceCharge(
 ): CriminalCharge | undefined {
   const isCalifornia = jurisdiction?.toUpperCase() === "CA" || classification.id?.startsWith("ca-");
 
-  if (classification.id) {
-    // The Ohio source-first pilot deliberately does not alias the historical
-    // degree labels to either current statutory offense. Persisted guidance
-    // must require reselection rather than reaching around getChargeById via
-    // the legacy catalog fallback below.
-    if (OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(classification.id)) {
-      return undefined;
-    }
+  // A code alone may match several statutory branches. Saved Ohio cases
+  // require the exact reviewed ID before showing an explanation.
+  if (["OH", "OHIO"].includes(jurisdiction?.toUpperCase() ?? "") || classification.id?.startsWith("oh-")) {
+    return classification.id && isReviewedOhioChargeId(classification.id)
+      ? getChargeById(classification.id) : undefined;
+  }
 
+  if (classification.id) {
     const resolved = getChargeById(classification.id);
     if (isCalifornia) {
       return resolved && isCaliforniaSelectableId(classification.id) ? resolved : undefined;
@@ -42,14 +41,7 @@ export function resolveGuidanceCharge(
   }
 
   const legacyCharge = criminalCharges.find((charge) => charge.code === classification.code);
-  if (!legacyCharge) return undefined;
-
-  // Code-only records are another persisted legacy shape. The raw catalog
-  // row may still be present even though getChargeById intentionally rejects
-  // this Ohio ID, so do not return it as a silent fallback.
-  if (OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(legacyCharge.id)) {
-    return undefined;
-  }
+  if (!legacyCharge || legacyCharge.jurisdiction === "OH") return undefined;
 
   const resolved = getChargeById(legacyCharge.id);
   if (isCalifornia || legacyCharge.id.startsWith("ca-")) {

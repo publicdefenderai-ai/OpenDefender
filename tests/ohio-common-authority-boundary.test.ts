@@ -1,3 +1,5 @@
+import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
+import { classifyChargesForGuidance } from "../shared/criminal-charges";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 const state = vi.hoisted(() => ({ fresh: true, pilotFresh: true, pilotUnavailable: false, missingId: "", rows: [] as any[], metadata: {} as any }));
 vi.mock("../server/services/ohio-pilot-refresh-service", () => ({
@@ -36,7 +38,7 @@ vi.mock('../server/data/ohio-residual-source', async original => ({
   ...await original<typeof import('../server/data/ohio-residual-source')>(),
   isOhioResidualSourceFresh: () => state.fresh,
 }));
-import { getCurrentAuthoritySelectableChargeIds } from "../server/services/authority-source-database";
+import { getAuthorityChargeProvenance, getCurrentAuthoritySelectableChargeIds } from "../server/services/authority-source-database";
 import { buildOhioChapter2903PilotManifestRecords, buildOhioReviewedManifestRecords } from "../server/data/ohio-source-database-seed";
 
 describe("corrected Ohio records require deployed supporting evidence", () => {
@@ -44,6 +46,29 @@ describe("corrected Ohio records require deployed supporting evidence", () => {
   const records = buildOhioReviewedManifestRecords(new Date());
   const record = records.find(r => r.chargeId === "oh-orc-3767-32-littering")!;
   const links = record.provisions.map(p => ({ chargeId: record.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision }));
+  it("withholds the ten historical import IDs even with their offense links", async () => {
+    const historical = [
+      ["oh-rape-in-the-first-degree", "2907.02"], ["oh-sexual-assault-in-the-third-degree", "2907.05"],
+      ["oh-robbery-in-the-first-degree", "2911.01"], ["oh-robbery-in-the-second-degree", "2911.02"],
+      ["oh-disorderly-conduct", "2917.11"], ["oh-domestic-violence", "2919.25"],
+      ["oh-criminal-trespass", "2911.21"], ["oh-menacing", "2903.22"],
+      ["oh-insurance-fraud", "2913.47"], ["oh-vandalism", "2909.05"],
+    ];
+    const records = historical.map(([chargeId, section]) => ({chargeId, provisions: [{
+      sourceKey: "oh:statute:" + section, citation: "Ohio Rev. Code § " + section,
+      supportRole: "offense", subdivision: null,
+    }]}));
+    state.metadata = {selectableChargeIds: records.map(row => row.chargeId), catalogRecords: records};
+    state.rows = records.map(row => ({chargeId: row.chargeId, ...row.provisions[0]}));
+    expect(await getCurrentAuthoritySelectableChargeIds("OH")).toEqual(new Set());
+    for (const [id, code] of historical) {
+      expect(await getAuthorityChargeProvenance("OH", id)).toBeNull();
+      const saved = {id, code, name: "Historical charge", classification: "felony"};
+      expect(resolveGuidanceCharge(saved, "OH")).toBeUndefined();
+      expect(resolveGuidanceCharge({...saved, id: undefined}, "OH")).toBeUndefined();
+      expect(classifyChargesForGuidance(id)).toEqual([]);
+    }
+  });
   it("requires every new-batch dependency even if incomplete ingestion metadata omits it", async () => {
     const newRecord = buildOhioReviewedManifestRecords(new Date(), OHIO_MAJOR_SOURCES)[0];
     const allLinks = newRecord.provisions.map(p => ({chargeId: newRecord.chargeId, sourceKey: p.sourceKey, supportRole: p.supportRole, citation: p.citation, subdivision: p.subdivision}));
