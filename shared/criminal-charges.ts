@@ -1,3 +1,4 @@
+import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
 import { floridaLegacyPropertyText } from "./florida-legacy-property";
 import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
@@ -8185,11 +8186,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '794.011(3)',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Non-consensual sexual act by a person 18 or older in a position of authority or familial relationship against a victim 12–17 years old under Florida Statute § 794.011(3). Life felony.',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
+    ...floridaSexualChargeText('fl-sexual-assault-in-the-first-degree'),
     commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
     evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
+    specificRights: ['Right to challenge the evidence against you'],
     urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
   },
   {
@@ -8211,11 +8211,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '794.011(5)',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Non-consensual sexual act without force or threat of force against a victim 18 or older under Florida Statute § 794.011(5). Second-degree felony.',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
+    ...floridaSexualChargeText('fl-sexual-assault-in-the-third-degree'),
     commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
     evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
+    specificRights: ['Right to challenge the evidence against you'],
     urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
   },
   {
@@ -8224,11 +8223,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '794.05',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Sexual activity by a person 24 or older with a person 16 or 17 years old under Florida Statute § 794.05. Commonly called statutory rape but defined by Florida law as unlawful sexual activity with certain minors.',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
-    commonDefenses: ['Consent', 'Mistaken identity', 'False accusation', 'Insufficient evidence'],
+    ...floridaSexualChargeText('fl-statutory-rape'),
+    commonDefenses: ['Identity or ages disputed', 'Conduct outside the statutory definition', 'Chapter 743 removal of disabilities of nonage'],
     evidenceToGather: ['Medical examination', 'DNA evidence', 'Witness statements', 'Communication records'],
-    specificRights: ['Right to privacy protection', 'Right to victim advocate', 'Right to challenge evidence'],
+    specificRights: ['Right to challenge the evidence against you'],
     urgentActions: ['Contact attorney specializing in sex crimes', 'Preserve all evidence', 'Understand plea options']
   },
   {
@@ -95125,6 +95123,10 @@ chargeCategories['OH'] = Array.from(new Set([
 
 // Helper functions for charge lookup
 function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
+  if (charge.jurisdiction === 'FL') {
+    const displayName = floridaSexualDisplayName(charge.id);
+    return displayName ? {...charge, name: displayName} : charge;
+  }
   if (charge.jurisdiction !== 'NC') return charge;
   const displayName = getNorthCarolinaApprovedDisplayName(charge.id);
   return displayName ? { ...charge, name: displayName } : charge;

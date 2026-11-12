@@ -219,6 +219,7 @@ for (const language of LANGUAGES) {
 
       const labels: Partial<Record<typeof SUPPORT_TEMPLATE_ROUTES[number], string>> = {
         "/support/reputation": language.labels.sectionStart,
+        "/support/court-logistics": language.labels.sectionStart,
         "/support/reentry": language.labels.sectionStart,
         "/support/transportation": language.labels.sectionStart,
         "/support/childcare": language.labels.sectionStart,
@@ -233,6 +234,7 @@ for (const language of LANGUAGES) {
         const label = labels[route] ?? language.labels.support;
         const selectors: Partial<Record<typeof route, string>> = {
           "/support/reputation": '.reputation-page nav a[href="#section-start-here"]',
+          "/support/court-logistics": '.court-logistics-page nav a[href="#section-start-here"]',
           "/support/reentry": '.reentry-page nav a[href="#section-start-here"]',
           "/support/housing": '.housing-paths a[href="#section-start-here"]',
           "/support/transportation": '.transportation-page nav a[href="#section-start-here"]',
