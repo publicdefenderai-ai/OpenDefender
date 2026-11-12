@@ -631,3 +631,9 @@ The remaining approved designs are grouped by user journey. Some have a shared r
 - Immigration guide details: enforcement rights, detention, bond, finding an attorney, family planning and toolkit, workplace raids, DACA/TPS and post-case guidance.
 - Advocate hub and intake, attorney access, workspace, catalogs, playbooks and wizard; developer API reference, widgets and browser extensions.
 - Notice & Disclaimers, Privacy Policy, and remaining error, recovery and empty states. Final closeout includes five real How To screenshots, mobile and theme checks across the completed pages, and a later pass on visual variety.
+
+### Court Logistics support
+
+The approved `court-logistics-content.html` reference has SHA-256 `dc9d4afadc3c78ba01fde011ddc2656feff1aa994dccb16b0d4979b0b48e8301`. The calendar illustration accompanies the existing introduction. Three direct paths open the court-date guide, bail preparation checklist and printable public defender intake. On small screens those links stack in reading order. The court-location action now leads directly to the courthouse finder.
+
+The eight preparation actions, court reminder services, research note, four requirement topics, five resource entries, five FAQs, practical tips and related destinations remain available. Previously English-only preparation and resource descriptions have Spanish and Chinese equivalents. The release browser spec follows all three guide links, checks keyboard access to the research note and requirement panels, verifies their text, and measures phone and desktop layouts across the three languages and both themes.
