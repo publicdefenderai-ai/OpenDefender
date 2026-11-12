@@ -1,5 +1,6 @@
 import { extractOhioDocument } from "./ohio-discovery/section-document";
 export { extractOhioDocument } from "./ohio-discovery/section-document";
+import { OHIO_COMMERCIAL_SEX_SOURCES } from "../../server/data/ohio-commercial-sex-source";
 import { OHIO_PRIORITY_GAPS_SOURCES } from "../../server/data/ohio-priority-gaps-source";
 import { OHIO_PRIVACY_SOURCES } from "../../server/data/ohio-privacy-source";
 import { OHIO_PROTECTION_SOURCES } from "../../server/data/ohio-protection-source";
@@ -110,6 +111,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_COMMERCIAL_SEX_SOURCES.map(record => record.chargeId),
       ...OHIO_PRIORITY_GAPS_SOURCES.map(record => record.chargeId),
       ...OHIO_PRIVACY_SOURCES.map(record => record.chargeId),
       ...OHIO_PROTECTION_SOURCES.map(record => record.chargeId),

@@ -1,0 +1,567 @@
+[
+  {
+    "id": "oh-orc-2907-21-compulsion",
+    "section": "2907.21",
+    "code": "2907.21(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Compelling prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F3",
+      "F2",
+      "F1"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly compelling another person to engage in sexual activity for hire. Under (B) compulsion can be proved by overcoming the person’s will in the ways named in the statute; openly displayed or physical force is unnecessary.",
+    "gradeSummary": "F3 ordinarily. Only for (A)(1), the actual person’s age changes the grade: age 16 or 17 makes F2, and under 16 makes F1. A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). For a current offense with that specification, the required F3 term is three years, the F2 minimum three to eight years, or the F1 minimum five to eleven years. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04",
+      "3719.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-21-facilitation",
+    "section": "2907.21",
+    "code": "2907.21(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Compelling prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly inducing, procuring, encouraging, soliciting, requesting or otherwise facilitating sexual activity for hire by a minor, regardless of knowledge of age, or by a person believed to be a minor, even if the person is an adult.",
+    "gradeSummary": "F3. The age-based F2 and F1 enhancements in (C) apply only to (A)(1). A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). For this F3 branch the required term with that specification is three years. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-21-payment-or-agreement",
+    "section": "2907.21",
+    "code": "2907.21(A)(3)",
+    "scope": "A(3)",
+    "statutoryName": "Compelling prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly paying or agreeing to pay a minor directly or through the minor’s agent so that the minor will engage in sexual activity, regardless of knowledge of age. The alternative in (b) covers a person believed to be a minor, even if the person is an adult.",
+    "gradeSummary": "F3. The age-based F2 and F1 enhancements in (C) apply only to (A)(1). A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). For this F3 branch the required term with that specification is three years. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-21-payment-after-agreement",
+    "section": "2907.21",
+    "code": "2907.21(A)(4)",
+    "scope": "A(4)",
+    "statutoryName": "Compelling prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly paying a minor directly or through the minor’s agent for sexual activity already performed under a prior agreement, regardless of knowledge of age. The alternative in (b) covers a person believed to be a minor, even if the person is an adult.",
+    "gradeSummary": "F3. The age-based F2 and F1 enhancements in (C) apply only to (A)(1). A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). For this F3 branch the required term with that specification is three years. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-21-custodial-permission",
+    "section": "2907.21",
+    "code": "2907.21(A)(5)",
+    "scope": "A(5)",
+    "statutoryName": "Compelling prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly allowing sexual activity for hire by a minor, or a person believed to be a minor, as that person’s parent, guardian, custodian, person with custody or control, or person in loco parentis.",
+    "gradeSummary": "F3. The age-based F2 and F1 enhancements in (C) apply only to (A)(1). A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). For this F3 branch the required term with that specification is three years. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-22-enterprise",
+    "section": "2907.22",
+    "code": "2907.22(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Promoting prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly establishing, maintaining, operating, managing, supervising, controlling or having an interest in a brothel or other enterprise whose purposes include facilitating sexual activity for hire.",
+    "gradeSummary": "F4 ordinarily. F3 if a prostitute in the brothel is a minor regardless of knowledge of age, for a specified prior conviction or guilty plea, or for a concurrent conviction or plea under §2925.03. Division (B)(3) makes F2 for two or more prior violations of this section or two or more substantially similar out-of-state or federal violations. A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). With that specification, the required F4 term is 18 months, the F3 term three years, or the current F2 minimum three to eight years. Division (B)(5) separately requires the prison term under §2929.14(B)(1)(a) upon conviction or plea to a charged qualifying firearm specification. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules. A felony conviction or plea with a §2941.1421 school-proximity specification and an underlying prison term permits an additional one to six months, or one to twelve with a qualifying prior offense and specification. Electronic monitoring can replace the added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04",
+      "2925.03",
+      "2941.141",
+      "2941.144",
+      "2941.145",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-22-supervision",
+    "section": "2907.22",
+    "code": "2907.22(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Promoting prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly supervising, managing or controlling a prostitute’s activities in engaging in sexual activity for hire.",
+    "gradeSummary": "F4 ordinarily. F3 if the prostitute whose activities the accused supervised, managed or controlled is a minor regardless of knowledge of age, for a specified prior conviction or guilty plea, or for a concurrent conviction or plea under §2925.03. Division (B)(3) makes F2 for two or more prior violations of this section or two or more substantially similar out-of-state or federal violations. A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). With that specification, the required F4 term is 18 months, the F3 term three years, or the current F2 minimum three to eight years. Division (B)(5) separately requires the prison term under §2929.14(B)(1)(a) upon conviction or plea to a charged qualifying firearm specification. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules. A felony conviction or plea with a §2941.1421 school-proximity specification and an underlying prison term permits an additional one to six months, or one to twelve with a qualifying prior offense and specification. Electronic monitoring can replace the added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04",
+      "2925.03",
+      "2941.141",
+      "2941.144",
+      "2941.145",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-22-transport",
+    "section": "2907.22",
+    "code": "2907.22(A)(3)",
+    "scope": "A(3)",
+    "statutoryName": "Promoting prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly transporting or causing another person to be transported to facilitate that person’s engaging in sexual activity for hire.",
+    "gradeSummary": "F4 ordinarily. F3 if the person transported is a minor regardless of knowledge of age, for a specified prior conviction or guilty plea, or for a concurrent conviction or plea under §2925.03. Division (B)(3) makes F2 for two or more prior violations of this section or two or more substantially similar out-of-state or federal violations. A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). With that specification, the required F4 term is 18 months, the F3 term three years, or the current F2 minimum three to eight years. Division (B)(5) separately requires the prison term under §2929.14(B)(1)(a) upon conviction or plea to a charged qualifying firearm specification. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules. A felony conviction or plea with a §2941.1421 school-proximity specification and an underlying prison term permits an additional one to six months, or one to twelve with a qualifying prior offense and specification. Electronic monitoring can replace the added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04",
+      "2925.03",
+      "2941.141",
+      "2941.144",
+      "2941.145",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-22-inducement",
+    "section": "2907.22",
+    "code": "2907.22(A)(4)",
+    "scope": "A(4)",
+    "statutoryName": "Promoting prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly inducing or procuring another to engage in sexual activity for hire for the purpose of violating this section or facilitating a violation.",
+    "gradeSummary": "F4 ordinarily. F3 if the person induced or procured is a minor regardless of knowledge of age, for a specified prior conviction or guilty plea, or for a concurrent conviction or plea under §2925.03. Division (B)(3) makes F2 for two or more prior violations of this section or two or more substantially similar out-of-state or federal violations. A conviction or guilty plea on the charged §2941.1422 human-trafficking specification requires a mandatory prison term and restitution under §§2929.14(B)(7) and 2929.18(B)(8). With that specification, the required F4 term is 18 months, the F3 term three years, or the current F2 minimum three to eight years. Division (B)(5) separately requires the prison term under §2929.14(B)(1)(a) upon conviction or plea to a charged qualifying firearm specification. Section 2950.01 lists this offense as sexually oriented. Registration consequences depend on the conviction and applicable adult or juvenile rules. A felony conviction or plea with a §2941.1421 school-proximity specification and an underlying prison term permits an additional one to six months, or one to twelve with a qualifying prior offense and specification. Electronic monitoring can replace the added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1422",
+      "2950.01",
+      "2950.04",
+      "2925.03",
+      "2941.141",
+      "2941.144",
+      "2941.145",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-23-solicitation",
+    "section": "2907.23",
+    "code": "2907.23(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Procuring",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly and for gain enticing or soliciting another to patronize a prostitute or brothel.",
+    "gradeSummary": "M1. The age enhancements in (C) apply only to (A)(2) and (B). For a misdemeanor conviction or plea with a §2941.1421 school-proximity specification and an underlying jail term, the court may add up to 60 days, or up to 120 days with a qualifying prior offense and specification. Electronic monitoring can replace that added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-23-procurement",
+    "section": "2907.23",
+    "code": "2907.23(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Procuring",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly and for gain procuring a prostitute for another to patronize, or at another person’s request taking or directing that person to a place for that purpose.",
+    "gradeSummary": "M1 ordinarily. Where the prostitute involved as specified in (C) is under 16, F4 regardless of knowledge of age. Where that person is 16 or 17, F5. For a misdemeanor conviction or plea with a §2941.1421 school-proximity specification and an underlying jail term, the court may add up to 60 days, or up to 120 days with a qualifying prior offense and specification. Electronic monitoring can replace that added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2907.23",
+          "quote": "Except as otherwise provided in this division, procuring is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2907-23-premises",
+    "section": "2907.23",
+    "code": "2907.23(B)",
+    "scope": "B",
+    "statutoryName": "Procuring",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1",
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly permitting premises to be used for sexual activity for hire when the accused has authority or responsibility over their use. The gain requirement in (A) does not apply to (B).",
+    "gradeSummary": "M1 ordinarily. Where the prostitute involved as specified in (C) is under 16, F4 regardless of knowledge of age. Where that person is 16 or 17, F5. For a misdemeanor conviction or plea with a §2941.1421 school-proximity specification and an underlying jail term, the court may add up to 60 days, or up to 120 days with a qualifying prior offense and specification. Electronic monitoring can replace that added term.",
+    "dependencies": [
+      "2907.01",
+      "2907.26",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2907.23",
+          "quote": "Except as otherwise provided in this division, procuring is a misdemeanor of the first degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2907-231-exchange-of-value",
+    "section": "2907.231",
+    "code": "2907.231(B)",
+    "scope": "B",
+    "statutoryName": "Engaging in prostitution",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Recklessly inducing, enticing or procuring another to engage in sexual activity for hire in exchange for giving anything of value to the other person.",
+    "gradeSummary": "M1 with a discretionary fine up to $1,500, replacing the usual $1,000 M1 fine ceiling. The court must require attendance at the education or treatment program specified in (D).",
+    "dependencies": [
+      "2907.01",
+      "2905.32"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-231-developmental-disability",
+    "section": "2907.231",
+    "code": "2907.231(C)",
+    "scope": "C",
+    "statutoryName": "Engaging in prostitution with a person with a developmental disability",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Recklessly inducing, enticing or procuring another to engage in sexual activity for hire in exchange for giving anything of value to that person when the person has a developmental disability and the accused knows or has reasonable cause to believe that fact.",
+    "gradeSummary": "F3. The court must require attendance at the education or treatment program specified in (D).",
+    "dependencies": [
+      "2907.01",
+      "2905.32"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-241-public-place",
+    "section": "2907.241",
+    "code": "2907.241(A)",
+    "scope": "A",
+    "statutoryName": "Loitering to engage in solicitation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D(1)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Being in or near a statutorily defined public place, with purpose to solicit sexual activity for hire, and engaging in one of the five acts described in (A), such as beckoning to or trying to stop another person. Presence alone is insufficient.",
+    "gradeSummary": "M3. Section 2907.27 separately governs court or arresting-authority testing procedures, including applicable requests and statutory conditions. For a misdemeanor conviction or plea with a §2941.1421 school-proximity specification and an underlying jail term, the court may add up to 60 days, or up to 120 days with a qualifying prior offense and specification. Electronic monitoring can replace that added term.",
+    "dependencies": [
+      "2907.01",
+      "4501.01",
+      "2907.27",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2907-241-after-positive-test",
+    "section": "2907.241",
+    "code": "2907.241(B)",
+    "scope": "B",
+    "statutoryName": "Loitering to engage in solicitation after a positive HIV test",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A",
+      "B"
+    ],
+    "gradingPaths": [
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Being in or near a statutorily defined public place, with purpose to solicit sexual activity for hire, and engaging in one of the five acts described in (A), such as beckoning to or trying to stop another person. Presence alone is insufficient. Division (B) also requires knowledge of a positive test for a virus causing AIDS.",
+    "gradeSummary": "F5 for conduct on or after July 1, 1996. Division (D)(2) specified F4 only for conduct before that date. Section 2907.27 separately governs court or arresting-authority testing procedures, including applicable requests and statutory conditions. A felony conviction or plea with a §2941.1421 school-proximity specification and an underlying prison term permits an additional one to six months, or one to twelve with a qualifying prior offense and specification. Electronic monitoring can replace the added term.",
+    "dependencies": [
+      "2907.01",
+      "4501.01",
+      "2907.27",
+      "2941.1421",
+      "2929.01"
+    ],
+    "extraGrading": []
+  }
+]
