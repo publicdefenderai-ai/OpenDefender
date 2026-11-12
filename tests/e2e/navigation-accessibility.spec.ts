@@ -314,11 +314,11 @@ test.describe("intent navigation and accessibility", () => {
     await expect(next).toBeEnabled();
     await next.click();
 
-    await page.getByRole("button", { name: "Misdemeanor conviction" }).click();
+    await page.getByRole("radio", { name: "Misdemeanor conviction" }).click();
     await page.getByRole("button", { name: "Next" }).click();
-    await page.getByRole("button", { name: "More than 7 years ago" }).click();
+    await page.getByRole("radio", { name: "More than 7 years ago" }).click();
     await page.getByRole("button", { name: "Next" }).click();
-    await page.getByRole("button", { name: "Yes, everything is complete" }).click();
+    await page.getByRole("radio", { name: "Yes, everything is complete" }).click();
     await page.getByRole("button", { name: "See My Result" }).click();
 
     await expect(page.getByText(/may be eligible|may apply|not eligible/i).first()).toBeVisible();

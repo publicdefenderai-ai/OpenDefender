@@ -1,20 +1,16 @@
-import { useState } from "react";
+import { type Ref, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useSearch } from "wouter";
 import {
   ChevronLeft,
   ChevronRight,
-  CheckCircle,
-  Clock,
-  AlertTriangle,
-  XCircle,
   ExternalLink,
   ShieldCheck,
   Scale,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { clearanceDesignCopy } from "@/locales/clearance-design";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -169,7 +165,7 @@ function determineResult(answers: Answers): ResultType {
   return "B";
 }
 
-function ResultCard({ result, state, recordType }: { result: ResultType; state: string; recordType: RecordType | "" }) {
+function ResultCard({ result, state, recordType, headingRef }: { headingRef: Ref<HTMLHeadingElement>; result: ResultType; state: string; recordType: RecordType | "" }) {
   const { t } = useTranslation();
   const rule = getExpungementByState(state);
   const autoInfo = automaticClearanceData[state];
@@ -182,59 +178,18 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
   const visibleExclusions = rule?.exclusions?.slice(0, 5) ?? [];
   const remainingExclusions = (rule?.exclusions?.length ?? 0) - visibleExclusions.length;
 
-  const configs = {
-    A: {
-      icon: CheckCircle,
-      colorClass: "border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30",
-      iconClass: "text-green-600 dark:text-green-400",
-      badgeClass: "border-green-400 text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/40",
-    },
-    B: {
-      icon: CheckCircle,
-      colorClass: "border-green-300 dark:border-green-700 bg-green-50 dark:bg-green-950/30",
-      iconClass: "text-green-600 dark:text-green-400",
-      badgeClass: "border-green-400 text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/40",
-    },
-    C: {
-      icon: Clock,
-      colorClass: "border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30",
-      iconClass: "text-amber-600 dark:text-amber-400",
-      badgeClass: "border-amber-400 text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40",
-    },
-    D: {
-      icon: AlertTriangle,
-      colorClass: "border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950/30",
-      iconClass: "text-slate-600 dark:text-slate-400",
-      badgeClass: "border-slate-400 text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-900/40",
-    },
-  };
-
-  const config = configs[result];
-  const Icon = config.icon;
-
   return (
-    <div className="space-y-6">
-      <Card className={`border-2 ${config.colorClass}`}>
-        <CardHeader>
-          <div className="flex items-center gap-3">
-            <Icon className={`h-6 w-6 shrink-0 ${config.iconClass}`} />
-            <CardTitle className="text-lg">
-              {t(`screener.results.${result}.title`)}
-            </CardTitle>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            {t(`screener.results.${result}.message`)}
-          </p>
-        </CardContent>
-      </Card>
+    <div className="clearance-results space-y-6">
+      <section className="clearance-outcome">
+        <h2 ref={headingRef} tabIndex={-1}>{t(`screener.results.${result}.title`)}</h2>
+        <p>{t(`screener.results.${result}.message`)}</p>
+      </section>
 
       {showAutoClearance && autoInfo && (
-        <Card className="border-teal-300 dark:border-teal-700 bg-teal-50/60 dark:bg-teal-950/20">
+        <Card className="clearance-result-section">
           <CardHeader className="pb-3">
             <CardTitle className="text-base flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
+              <ShieldCheck className="h-4 w-4 text-primary shrink-0" />
               {t("screener.autoClearance.heading", { state: stateName })}
             </CardTitle>
           </CardHeader>
@@ -242,26 +197,26 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
             {autoInfo.legislation && (
               <p>
                 <span className="font-semibold text-foreground">{t("screener.autoClearance.legislationLabel")}</span>{" "}
-                <span className="text-muted-foreground">{autoInfo.legislation}</span>
+                <span lang="en" className="text-muted-foreground">{autoInfo.legislation}</span>
               </p>
             )}
             <p>
               <span className="font-semibold text-foreground">{t("screener.autoClearance.offenseTypesLabel")}</span>{" "}
-              <span className="text-muted-foreground">{autoInfo.offenseTypes.join(", ")}</span>
+              <span lang="en" className="text-muted-foreground">{autoInfo.offenseTypes.join(", ")}</span>
             </p>
             {autoInfo.waitingPeriodNote && (
               <p>
                 <span className="font-semibold text-foreground">{t("screener.autoClearance.waitingPeriodLabel")}</span>{" "}
-                <span className="text-muted-foreground">{autoInfo.waitingPeriodNote}</span>
+                <span lang="en" className="text-muted-foreground">{autoInfo.waitingPeriodNote}</span>
               </p>
             )}
-            {autoInfo.notes && <p className="text-muted-foreground">{autoInfo.notes}</p>}
+            {autoInfo.notes && <p lang="en" className="text-muted-foreground">{autoInfo.notes}</p>}
             {autoInfo.link && (
               <a
                 href={autoInfo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-teal-700 dark:text-teal-400 font-medium hover:underline"
+                className="inline-flex items-center gap-1.5 text-primary font-medium hover:underline"
               >
                 <ExternalLink className="h-3.5 w-3.5" />
                 {t("screener.autoClearance.linkLabel")}
@@ -272,7 +227,7 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
       )}
 
       {rule ? (
-        <Card className="border border-border/60">
+        <Card className="clearance-result-section">
           <CardHeader className="pb-3">
             <CardTitle className="text-base flex items-center gap-2">
               <Scale className="h-4 w-4 shrink-0" />
@@ -280,16 +235,16 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-sm text-muted-foreground leading-relaxed">{rule.overview}</p>
+            <p lang="en" className="text-sm text-muted-foreground leading-relaxed">{rule.overview}</p>
 
             {visibleExclusions.length > 0 && (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                <p className="text-xs font-semibold text-muted-foreground mb-2">
                   {t("screener.stateInfo.exclusionsLabel")}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {visibleExclusions.map((exclusion, i) => (
-                    <Badge key={i} variant="outline" className="text-xs font-normal">
+                    <Badge key={i} lang="en" variant="outline" className="text-xs font-normal">
                       {exclusion}
                     </Badge>
                   ))}
@@ -304,12 +259,12 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
 
             {rule.sources && rule.sources.length > 0 && (
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-1.5">
+                <p className="text-xs font-semibold text-muted-foreground mb-1.5">
                   {t("screener.stateInfo.sourcesLabel")}
                 </p>
                 <div className="flex flex-wrap gap-x-3 gap-y-1">
                   {rule.sources.map((source, i) => (
-                    <span key={i} className="text-xs text-muted-foreground">
+                    <span key={i} lang="en" className="text-xs text-muted-foreground">
                       {source}
                     </span>
                   ))}
@@ -326,7 +281,7 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
         </Alert>
       )}
 
-      <Card className="border border-border/60">
+      <Card className="clearance-result-section">
         <CardHeader className="pb-3">
           <CardTitle className="text-base">{t("screener.resources.title")}</CardTitle>
         </CardHeader>
@@ -379,7 +334,9 @@ function ResultCard({ result, state, recordType }: { result: ResultType; state: 
 }
 
 export default function RecordClearanceScreener() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.resolvedLanguage ?? i18n.language;
+  const labels = lang.startsWith("es") ? clearanceDesignCopy.es : lang.startsWith("zh") ? clearanceDesignCopy.zh : clearanceDesignCopy.en;
   useScrollToTop();
 
   // Deep-linking support (e.g. from site search: /support/reputation/eligibility?state=CA)
@@ -399,6 +356,13 @@ export default function RecordClearanceScreener() {
   const [showResult, setShowResult] = useState(false);
 
   const totalSteps = 4;
+  const question = useRef<HTMLHeadingElement>(null);
+  const view = showResult ? "result" : step;
+  const previousView = useRef(view);
+  useEffect(() => {
+    if (previousView.current !== view) question.current?.focus();
+    previousView.current = view;
+  }, [view]);
 
   const handleStateChange = (state: string) => {
     setAnswers((prev) => ({ ...prev, state }));
@@ -437,216 +401,68 @@ export default function RecordClearanceScreener() {
 
   const result = showResult ? determineResult(answers) : null;
 
+  const choices = step === 2 ? ["arrest", "misdemeanor", "felony", "marijuana"] as const
+    : step === 3 ? ["lt1", "1to3", "3to7", "gt7"] as const
+    : ["complete", "fines", "probation"] as const;
+  const field = step === 2 ? "recordType" : step === 3 ? "timeframe" : "sentence";
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <div data-skip-content tabIndex={-1} className="flex-1">
-        {/* Hero */}
-        <div className="bg-gradient-to-br from-amber-500/5 via-background to-background border-b border-border/40">
-          <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
-            <ScrollReveal>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-amber-500/10">
-                  <ShieldCheck className="h-6 w-6 text-amber-600 dark:text-amber-400" />
-                </div>
-              </div>
-              <h1 className="text-3xl font-bold text-foreground mb-3">
-                {t("screener.title")}
-              </h1>
-              <p className="text-muted-foreground leading-relaxed">
-                {t("screener.subtitle")}
-              </p>
-              <div className="mt-3">
-                <Link href="/support/reputation" className="text-sm text-primary hover:underline">
-                  {t("screener.backToReputation")}
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-
-        {/* Screener Body */}
-        <div className="max-w-2xl mx-auto px-4 py-10">
+      <div data-skip-content tabIndex={-1} className="clearance-page flex-1">
+        <h1>{t("screener.title")}</h1>
+        <p className="clearance-intro">{t("screener.subtitle")}</p>
+        <Link href="/support/reputation" className="clearance-return">{t("screener.backToReputation")}</Link>
+        <section className="clearance-work">
           {!showResult ? (
-            <ScrollReveal>
-              {/* Progress indicator */}
-              <div className="flex flex-wrap items-center gap-2 mb-8">
-                {[1, 2, 3, 4].map((s) => (
-                  <div key={s} className="flex items-center gap-2">
-                    <div
-                      className={`h-8 w-8 shrink-0 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
-                        s === step
-                          ? "bg-amber-500 text-white"
-                          : s < step
-                          ? "bg-amber-200 dark:bg-amber-800 text-amber-800 dark:text-amber-200"
-                          : "bg-muted text-muted-foreground"
-                      }`}
-                    >
-                      {s < step ? <CheckCircle className="h-4 w-4" /> : s}
-                    </div>
-                    {s < 4 && (
-                      <div
-                        className={`h-1 w-8 rounded-full ${
-                          s < step ? "bg-amber-300 dark:bg-amber-700" : "bg-muted"
-                        }`}
-                      />
-                    )}
-                  </div>
+            <>
+              <ol className="clearance-progress">
+                {(["state", "recordType", "timeframe", "sentence"] as const).map((key, index) => (
+                  <li key={key} aria-current={step === index + 1 ? "step" : undefined}>{labels[key]}</li>
                 ))}
-                <span className="ml-2 text-sm text-muted-foreground">
-                  {t("screener.stepIndicator", { current: step, total: totalSteps })}
-                </span>
-              </div>
-
-              {/* Step 1: State */}
-              {step === 1 && (
-                <Card className="border border-border/60 shadow-sm">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{t("screener.step1.question")}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{t("screener.step1.hint")}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <select
-                      data-testid="record-clearance-state"
-                      aria-label={t("screener.step1.question")}
-                      value={answers.state}
-                      onChange={(e) => handleStateChange(e.target.value)}
-                      className="w-full min-h-[44px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                    >
-                      <option value="">{t("screener.step1.placeholder")}</option>
-                      {US_STATES.map((s) => (
-                        <option key={s.code} value={s.code}>
-                          {s.name}
-                        </option>
-                      ))}
-                    </select>
-                  </CardContent>
-                </Card>
+              </ol>
+              <p className="clearance-step">{t("screener.stepIndicator", { current: step, total: totalSteps })}</p>
+              <h2 id="clearance-question" ref={question} tabIndex={-1}>{t(`screener.step${step}.question`)}</h2>
+              {step !== 2 && <p id="clearance-hint" className="clearance-hint">{t(`screener.step${step}.hint`)}</p>}
+              {step === 1 ? (
+                <select data-testid="record-clearance-state" aria-labelledby="clearance-question" aria-describedby="clearance-hint"
+                  value={answers.state} onChange={event => handleStateChange(event.target.value)}>
+                  <option value="">{t("screener.step1.placeholder")}</option>
+                  {US_STATES.map(state => <option key={state.code} value={state.code}>{state.name}</option>)}
+                </select>
+              ) : (
+                <div className="clearance-choices" role="radiogroup" aria-labelledby="clearance-question"
+                  aria-describedby={step === 2 ? undefined : "clearance-hint"}>
+                  {choices.map(value => (
+                    <label key={value}>
+                      <input type="radio" name={field} value={value} checked={answers[field] === value}
+                        onChange={() => setAnswers(prev => ({ ...prev, [field]: value }))} />
+                      {t(`screener.step${step}.options.${value}`)}
+                    </label>
+                  ))}
+                </div>
               )}
-
-              {/* Step 2: Record Type */}
-              {step === 2 && (
-                <Card className="border border-border/60 shadow-sm">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{t("screener.step2.question")}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      {(["arrest", "misdemeanor", "felony", "marijuana"] as RecordType[]).map((type) => (
-                        <button
-                          key={type}
-                          type="button"
-                          onClick={() => setAnswers((prev) => ({ ...prev, recordType: type }))}
-                          className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors ${
-                            answers.recordType === type
-                              ? "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-900 dark:text-amber-100"
-                              : "border-border hover:border-amber-300 hover:bg-muted/50"
-                          }`}
-                        >
-                          {t(`screener.step2.options.${type}`)}
-                        </button>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Step 3: Timeframe */}
-              {step === 3 && (
-                <Card className="border border-border/60 shadow-sm">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{t("screener.step3.question")}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{t("screener.step3.hint")}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      {(["lt1", "1to3", "3to7", "gt7"] as TimeframeType[]).map((tf) => (
-                        <button
-                          key={tf}
-                          type="button"
-                          onClick={() => setAnswers((prev) => ({ ...prev, timeframe: tf }))}
-                          className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors ${
-                            answers.timeframe === tf
-                              ? "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-900 dark:text-amber-100"
-                              : "border-border hover:border-amber-300 hover:bg-muted/50"
-                          }`}
-                        >
-                          {t(`screener.step3.options.${tf}`)}
-                        </button>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Step 4: Sentence completion */}
-              {step === 4 && (
-                <Card className="border border-border/60 shadow-sm">
-                  <CardHeader>
-                    <CardTitle className="text-xl">{t("screener.step4.question")}</CardTitle>
-                    <p className="text-sm text-muted-foreground">{t("screener.step4.hint")}</p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      {(["complete", "fines", "probation"] as SentenceType[]).map((s) => (
-                        <button
-                          key={s}
-                          type="button"
-                          onClick={() => setAnswers((prev) => ({ ...prev, sentence: s }))}
-                          className={`w-full text-left px-4 py-3 rounded-lg border text-sm transition-colors ${
-                            answers.sentence === s
-                              ? "border-amber-400 bg-amber-50 dark:bg-amber-950/30 text-amber-900 dark:text-amber-100"
-                              : "border-border hover:border-amber-300 hover:bg-muted/50"
-                          }`}
-                        >
-                          {t(`screener.step4.options.${s}`)}
-                        </button>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Navigation */}
-              <div className="flex flex-col-reverse gap-3 mt-6 sm:flex-row sm:items-center sm:justify-between">
-                <Button
-                  variant="outline"
-                  onClick={handleBack}
-                  disabled={step === 1}
-                  className="min-h-[44px] gap-2 sm:w-auto"
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                  {t("screener.back")}
+              <div className="clearance-controls">
+                <Button variant="outline" onClick={handleBack} disabled={step === 1}>
+                  <ChevronLeft aria-hidden="true" />{t("screener.back")}
                 </Button>
-                <Button
-                  onClick={handleNext}
-                  disabled={!canProceed()}
-                  className="min-h-[44px] gap-2 bg-amber-600 hover:bg-amber-700 text-white sm:w-auto"
-                >
+                <Button onClick={handleNext} disabled={!canProceed()}>
                   {step === totalSteps ? t("screener.seeResult") : t("screener.next")}
-                  {step < totalSteps && <ChevronRight className="h-4 w-4" />}
+                  {step < totalSteps && <ChevronRight aria-hidden="true" />}
                 </Button>
               </div>
-            </ScrollReveal>
-          ) : (
-            <ScrollReveal>
-              {result && <ResultCard result={result} state={answers.state} recordType={answers.recordType} />}
-              <div className="flex flex-col-reverse gap-3 mt-6 sm:flex-row sm:items-center sm:justify-between">
-                <Button variant="outline" onClick={handleBack} className="min-h-[44px] gap-2 sm:w-auto">
-                  <ChevronLeft className="h-4 w-4" />
-                  {t("screener.back")}
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={handleReset}
-                  className="min-h-[44px] gap-2 sm:w-auto"
-                >
-                  {t("screener.startOver")}
-                </Button>
+              <p className="clearance-note">{t("screener.disclaimer")}</p>
+            </>
+          ) : result && (
+            <>
+              <ResultCard headingRef={question} result={result} state={answers.state} recordType={answers.recordType} />
+              <div className="clearance-controls">
+                <Button variant="outline" onClick={handleBack}>{t("screener.back")}</Button>
+                <Button variant="outline" onClick={handleReset}>{t("screener.startOver")}</Button>
               </div>
-            </ScrollReveal>
+            </>
           )}
-        </div>
+        </section>
       </div>
       <Footer />
     </div>
