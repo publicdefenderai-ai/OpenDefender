@@ -606,3 +606,22 @@ The Personal Health release browser spec checks English, Spanish and Chinese in 
 The approved “Coming home. Plan your next steps.” layout pairs the community illustration with the published introduction. Identification starts expanded. Readers can open record clearing, housing, employment and voting independently, or use the section menu to jump directly to the topics. The page retains the practical steps, FAQs, advisory and National Reentry Resource Center links. The Clean Slate Initiative link uses its existing translated label.
 
 The release browser spec compares the page with copy and link destinations captured from main at `b5497c96`. It covers English, Spanish and Chinese in light and dark themes, keyboard access to each topic, and desktop and 320px layouts. Reputation and Records follows Reentry in the support-page refresh.
+
+### Reputation and Records support
+
+Reference: `reputation-content.html`, SHA-256 `8e923a1db5555c7d997a4ecae0a6c1ac0ac9f0ac96e465819b08cf603ce9aee8`. The approved folder illustration and “Check your record. Protect your future.” opening lead into the original published introduction. The section menu uses native links and translated headings for clearance, background checks, record errors, certificates and conversations. Existing fragment IDs remain available for links from Reentry and elsewhere.
+
+The communication tool shows one selected letter at a time. Each letter can be edited, copied or printed. Edits remain in component memory, keyed by language and template. Print inserts the subject, message and advisory as plain text. Both conversation scripts, the eligibility screener link and the NRRC link remain. The release test exercises the published guidance, keyboard disclosures and message workflows in three languages and both themes.
+
+### Design rollout inventory after Reentry
+
+Merged through PR 156: shared navigation, appearance and footer, homepage, urgent help, First 24 Hours, Case Guidance and results, chat, document summarizer, letter generator, How To, Know Your Rights, Case Timeline, Bail, Plea Agreements, Right to Counsel, Legal Resources, immigration landing and situational guide index, Data Sources, Developers, Friends & Family, Family Toolkit, Collateral Consequences Screener, Resource Directory, Life & Family Support hub, Employment, Finances, Housing, Transportation, Childcare, Family & Dependent Care, Mental Health, Personal Health and Reentry.
+
+The remaining approved designs are grouped by user journey. Some have a shared refreshed header or received accessibility changes before their page-specific redesign.
+
+- Reputation and Records (this batch), record-clearance eligibility and record relief. The old expungement URL redirects to the eligibility screener.
+- Court logistics and preparation: court locator, court records, court-date guide, public defender intake form, bail preparation and mitigation builder.
+- Mission, Documents Library and Glossary. Legal-reference tools include warrants, search and seizure, statutes, printable quick-reference cards and diversion.
+- Immigration guide details: enforcement rights, detention, bond, finding an attorney, family planning and toolkit, workplace raids, DACA/TPS and post-case guidance.
+- Advocate hub and intake, attorney access, workspace, catalogs, playbooks and wizard; developer API reference, widgets and browser extensions.
+- Notice & Disclaimers, Privacy Policy, and remaining error, recovery and empty states. Final closeout includes five real How To screenshots, mobile and theme checks across the completed pages, and a later pass on visual variety.
