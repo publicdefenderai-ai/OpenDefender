@@ -2,9 +2,9 @@ import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import type { EvidenceBackedChargeDefinition } from "../../shared/evidence-backed-charge-batch";
 
-const rows: EvidenceBackedChargeDefinition[] = JSON.parse(readFileSync("shared/florida-legacy-property.json","utf8"));
+const rows: EvidenceBackedChargeDefinition[] = ["property","burglary"].flatMap(family => JSON.parse(readFileSync(`shared/florida-legacy-${family}.json`, "utf8")));
 for (const language of ["en", "es", "zh"] as const) {
-  test(`Florida selector serves the six existing property identities with corrected ${language} content`, async ({ request }) => {
+  test(`Florida selector serves the existing property identities with corrected ${language} content`, async ({ request }) => {
     const response = await request.get("/api/criminal-charges", { params: {jurisdiction:"FL",language,limit:500} });
     expect(response.ok()).toBe(true);
     const { charges } = await response.json();
@@ -16,3 +16,13 @@ for (const language of ["en", "es", "zh"] as const) {
     }
   });
 }
+
+test("Florida whole-section trespass can be found with either severity filter", async ({request}) => {
+  for (const category of ["misdemeanor","felony"]) {
+    const response = await request.get("/api/criminal-charges", {params:{jurisdiction:"FL",category,search:"810.08"}});
+    expect(response.ok()).toBe(true);
+    const {charges} = await response.json();
+    expect(charges.find((charge: {id:string}) => charge.id === "fl-trespass-in-structure"))
+      .toMatchObject({category:"misdemeanor",categories:["misdemeanor","felony"]});
+  }
+});

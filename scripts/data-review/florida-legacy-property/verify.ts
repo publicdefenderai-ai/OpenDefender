@@ -6,14 +6,16 @@ import { floridaHash, validateFloridaDocument, type FloridaBatchDocument } from 
 import plan from "./plan.json";
 import retained from "./sources.json";
 import manifest from "../output/fl-source-manifest.json";
-import definitions from "../../../shared/florida-legacy-property.json";
+import burglary from "../../../shared/florida-legacy-burglary.json";
+import property from "../../../shared/florida-legacy-property.json";
 import effectiveDates from "../florida-persons/effective-dates.json";
 
 export function buildLegacyPropertyBindings(sourceDocs = retained, records = plan) {
   const sources: Record<string, FloridaBatchDocument> = sourceDocs as Record<string, FloridaBatchDocument>;
+  const definitions = [...property, ...burglary];
   const used = new Set<string>();
-  if (records.length !== 6 || definitions.length !== 6 || new Set(records.map(row => row.id)).size !== 6)
-    throw Error("Expected six distinct legacy property identities");
+  if (records.length !== 9 || definitions.length !== 9 || new Set(records.map(row => row.id)).size !== 9)
+    throw Error("Expected nine distinct legacy property identities");
   for (const [section, source] of Object.entries(sources)) {
     if (section !== source.section || !validateFloridaDocument(source) || source.acquisitionKind !== "official_exact_section" ||
         source.edition !== "Florida Statutes 2026" || source.sourceUrl !== source.acquiredFrom)
