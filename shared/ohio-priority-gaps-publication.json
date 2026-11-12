@@ -1,0 +1,611 @@
+[
+  {
+    "id": "oh-orc-2923-15-intoxication",
+    "section": "2923.15",
+    "code": "2923.15(A)",
+    "scope": "A",
+    "statutoryName": "Using weapons while intoxicated",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Carrying or using a firearm or dangerous ordnance while under the influence of alcohol or any drug of abuse. Section 2923.11 defines firearm and dangerous ordnance.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "2923.11",
+      "3719.011"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-discharge",
+    "section": "2923.16",
+    "code": "2923.16(A)",
+    "scope": "A",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "F(2)",
+      "F(3)",
+      "K"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly discharging a firearm while in or on a motor vehicle. Division (F)(1) covers specified authorized duties, and (F)(2) and (3) contain narrow wildlife exceptions with cumulative conditions.",
+    "gradeSummary": "F4.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "1533.103",
+      "1531.01",
+      "519.01",
+      "2909.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-accessible-loaded",
+    "section": "2923.16",
+    "code": "2923.16(B)",
+    "scope": "B",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "F(4)",
+      "F(5)",
+      "F(6)",
+      "F(7)",
+      "G",
+      "H",
+      "K",
+      "L"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly transporting or having a loaded firearm in a motor vehicle where the operator or a passenger can access it without leaving the vehicle. Divisions (F)(1), (4), (5) and (6) provide limited exemptions for specified duties, property, handgun-license status or hunting permits. Section 2923.111 can treat qualifying adults as licensees. Division (G)(1) limits its incorporated defenses to firearms other than handguns; (G)(2) separately addresses lawful purposes on the accused’s own property. Division (H)(1) prohibits requiring a license as a condition of dismissal.",
+    "gradeSummary": "F4.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "2923.12",
+      "1533.103",
+      "1531.01",
+      "519.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-transport-requirements",
+    "section": "2923.16",
+    "code": "2923.16(C)",
+    "scope": "C",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "F(4)",
+      "F(5)",
+      "F(6)",
+      "F(7)",
+      "G",
+      "H",
+      "K",
+      "L"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly transporting or having a firearm in a motor vehicle without meeting the lawful possession, unloaded condition and statutory carriage requirements in division (C). Divisions (F)(1), (4), (5) and (6) provide limited exemptions for specified duties, property, handgun-license status or hunting permits. Section 2923.111 can treat qualifying adults as licensees. Division (G)(1) limits its incorporated defenses to firearms other than handguns; (G)(2) separately addresses lawful purposes on the accused’s own property. Division (H)(1) prohibits requiring a license as a condition of dismissal.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "2923.12",
+      "1533.103",
+      "1531.01",
+      "519.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-under-influence",
+    "section": "2923.16",
+    "code": "2923.16(D)(1)",
+    "scope": "D(1)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "H",
+      "K"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly transporting or having a loaded handgun in a motor vehicle while under the influence of alcohol, a drug of abuse, or both.",
+    "gradeSummary": "F5, rising to F4 when the loaded handgun is concealed on the person.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "3719.011"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-prohibited-concentration",
+    "section": "2923.16",
+    "code": "2923.16(D)(2)",
+    "scope": "D(2)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(2)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "H",
+      "K"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly transporting or having a loaded handgun in a motor vehicle with a prohibited concentration specified in §4511.19(A), including as a passenger.",
+    "gradeSummary": "F5, rising to F4 when the loaded handgun is concealed on the person.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "4511.19"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-officer-disclosure",
+    "section": "2923.16",
+    "code": "2923.16(E)(1)",
+    "scope": "E(1)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(1)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "K",
+      "H(2)"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Applies to a driver or occupant transporting or having a loaded handgun during a qualifying stop under (E). The statute covers licensees and active-duty military personnel with the specified identification and training documentation. Section 2923.111 extends licensee duties to qualifying adults in the specified circumstances. Division (F)(1) provides limited authorized-duty exceptions. Knowingly failing to disclose possession before or when asked by a law enforcement officer. Earlier notification to another officer during the same stop satisfies this duty. The current duty is triggered by a question. Earlier conduct, including before June 13, 2022, must be checked against the then-operative statute. Division (H)(2) identifies prior cases that may qualify for an application to expunge the record of conviction.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "5503.34",
+      "4506.25",
+      "2953.35"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-carrier-disclosure",
+    "section": "2923.16",
+    "code": "2923.16(E)(2)",
+    "scope": "E(2)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(2)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "K",
+      "H(2)"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Applies to a driver or occupant transporting or having a loaded handgun during a qualifying stop under (E). The statute covers licensees and active-duty military personnel with the specified identification and training documentation. Section 2923.111 extends licensee duties to qualifying adults in the specified circumstances. Division (F)(1) provides limited authorized-duty exceptions. Knowingly failing to disclose possession before or when asked by a motor carrier enforcement employee during the covered commercial-vehicle stop. Earlier notification to another unit employee during that stop satisfies this duty. The current duty is triggered by a question. Earlier conduct, including before June 13, 2022, must be checked against the then-operative statute. Division (H)(2) identifies prior cases that may qualify for an application to expunge the record of conviction.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "5503.34",
+      "4506.25",
+      "2953.35"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-remain-or-hands",
+    "section": "2923.16",
+    "code": "2923.16(E)(3)",
+    "scope": "E(3)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(3)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "K"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Applies to a driver or occupant transporting or having a loaded handgun during a qualifying stop under (E). The statute covers licensees and active-duty military personnel with the specified identification and training documentation. Section 2923.111 extends licensee duties to qualifying adults in the specified circumstances. Division (F)(1) provides limited authorized-duty exceptions. Knowingly failing to remain in the stopped motor vehicle or keep hands in plain sight while the officer approaches and until the officer leaves, unless acting as directed by the officer.",
+    "gradeSummary": "M1 ordinarily; a prior conviction or guilty plea under (E)(3) or (5) makes F5. A misdemeanor conviction suspends an issued concealed handgun license for one year under §2923.128(A)(2). Section 2923.111(C)(2) distinguishes persons without an issued license.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "5503.34",
+      "4506.25",
+      "2923.128"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.16",
+          "quote": "A violation of division (E)(3) or (5) of this section is a misdemeanor of the first degree or, if the offender previously has been convicted of or pleaded guilty to a violation of division (E)(3) or (5) of this section, a felony of the fifth degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2923-16-contact-during-stop",
+    "section": "2923.16",
+    "code": "2923.16(E)(4)",
+    "scope": "E(4)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(4)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "K"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Applies to a driver or occupant transporting or having a loaded handgun during a qualifying stop under (E). The statute covers licensees and active-duty military personnel with the specified identification and training documentation. Section 2923.111 extends licensee duties to qualifying adults in the specified circumstances. Division (F)(1) provides limited authorized-duty exceptions. Knowingly touching the loaded handgun with hands or fingers in the vehicle between the officer’s approach and departure, unless acting as directed by the officer.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "5503.34",
+      "4506.25"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-16-lawful-order",
+    "section": "2923.16",
+    "code": "2923.16(E)(5)",
+    "scope": "E(5)",
+    "statutoryName": "Improperly handling firearms in a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(5)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "F(1)",
+      "K"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Applies to a driver or occupant transporting or having a loaded handgun during a qualifying stop under (E). The statute covers licensees and active-duty military personnel with the specified identification and training documentation. Section 2923.111 extends licensee duties to qualifying adults in the specified circumstances. Division (F)(1) provides limited authorized-duty exceptions. Knowingly disregarding or failing to comply with a lawful order of a law enforcement officer during the stop.",
+    "gradeSummary": "M1 ordinarily; a prior conviction or guilty plea under (E)(3) or (5) makes F5. A misdemeanor conviction suspends an issued concealed handgun license for two years under §2923.128(A)(2). Section 2923.111(C)(2) distinguishes persons without an issued license.",
+    "dependencies": [
+      "2923.11",
+      "4511.01",
+      "109.801",
+      "2923.111",
+      "2923.125",
+      "2923.126",
+      "5503.34",
+      "4506.25",
+      "2923.128"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.16",
+          "quote": "A violation of division (E)(3) or (5) of this section is a misdemeanor of the first degree or, if the offender previously has been convicted of or pleaded guilty to a violation of division (E)(3) or (5) of this section, a felony of the fifth degree."
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2925-12-hypodermic-or-syringe",
+    "section": "2925.12",
+    "code": "2925.12(A)",
+    "scope": "A",
+    "statutoryName": "Possessing drug abuse instruments",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly making, obtaining, possessing or using a hypodermic or syringe customarily and primarily intended for a dangerous drug other than marihuana, which the accused previously used for unlawful use, administration or preparation of such a drug. Mere possession is insufficient. Lawful professional conduct and conditional overdose-assistance protection are addressed in (B).",
+    "gradeSummary": "M2 ordinarily; a prior drug abuse offense conviction makes M1. Professional licensing notice and possible driving consequences are separate. Under §2929.33 a court may suspend a license for up to five years when a vehicle furthered the drug offense; suspension is mandatory for a qualifying same-circumstances impaired-driving conviction or guilty plea.",
+    "dependencies": [
+      "2925.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.11",
+      "1.52"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-22-blank-or-general",
+    "section": "2925.22",
+    "code": "2925.22(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Deception to obtain a dangerous drug",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(1)"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Division (A) covers procuring administration, a prescription, or dispensing of a dangerous drug by deception, and possessing an uncompleted preprinted blank used for dangerous-drug prescriptions. This grading branch concerns an uncompleted preprinted dangerous-drug prescription blank or the general dangerous-drug branch.",
+    "gradeSummary": "F5 ordinarily, F4 after a qualifying prior drug abuse conviction or guilty plea. Section 2929.13(C) governs the prison decision. Professional licensing notice and possible driving consequences are separate. Under §2929.33 a court may suspend a license for up to five years when a vehicle furthered the drug offense; suspension is mandatory for a qualifying same-circumstances impaired-driving conviction or guilty plea.",
+    "dependencies": [
+      "2925.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2913.01",
+      "3719.01",
+      "3719.41",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-22-schedule-i-ii",
+    "section": "2925.22",
+    "code": "2925.22(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Deception to obtain a dangerous drug",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2",
+      "F1"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Division (A) covers procuring administration, a prescription, or dispensing of a dangerous drug by deception, and possessing an uncompleted preprinted blank used for dangerous-drug prescriptions. This grading branch concerns a Schedule I or II substance other than marihuana. The alleged offense date, substance and applicable schedule must be verified before applying this branch; this entry does not classify particular substances.",
+    "gradeSummary": "Below bulk amount F4 (§2929.13(C)); from one bulk amount to below five F3; from five to below fifty F2; fifty or more F1. There is a prison presumption for the latter three tiers. The statute uses the amount involved or obtainable under the prescription. Bulk amount depends on the substance and statutory definition. For F1, F2 or F3, §2929.18(B)(1) generally requires at least half the statutory maximum fine unless a timely affidavit and court determination establish indigency and inability to pay. Professional licensing notice and possible driving consequences are separate. Under §2929.33 a court may suspend a license for up to five years when a vehicle furthered the drug offense; suspension is mandatory for a qualifying same-circumstances impaired-driving conviction or guilty plea.",
+    "dependencies": [
+      "2925.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2913.01",
+      "3719.01",
+      "3719.41",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-22-schedule-iii-iv-v-or-marihuana",
+    "section": "2925.22",
+    "code": "2925.22(B)(3)",
+    "scope": "B(3)",
+    "statutoryName": "Deception to obtain a dangerous drug",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Division (A) covers procuring administration, a prescription, or dispensing of a dangerous drug by deception, and possessing an uncompleted preprinted blank used for dangerous-drug prescriptions. This grading branch concerns a Schedule III, IV or V substance, or marihuana. The alleged offense date, substance and applicable schedule must be verified before applying this branch; this entry does not classify particular substances.",
+    "gradeSummary": "Below bulk amount F5; from one bulk amount to below five F4 (§2929.13(C) for both); from five to below fifty F3; fifty or more F2. There is a prison presumption for the last two tiers. The statute uses the amount involved or obtainable under the prescription. Bulk amount depends on the substance and statutory definition. For F1, F2 or F3, §2929.18(B)(1) generally requires at least half the statutory maximum fine unless a timely affidavit and court determination establish indigency and inability to pay. Professional licensing notice and possible driving consequences are separate. Under §2929.33 a court may suspend a license for up to five years when a vehicle furthered the drug offense; suspension is mandatory for a qualifying same-circumstances impaired-driving conviction or guilty plea.",
+    "dependencies": [
+      "2925.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2913.01",
+      "3719.01",
+      "3719.41",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  }
+]
