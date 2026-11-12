@@ -1,3 +1,5 @@
+import { OHIO_DRUG_CONDUCT_SOURCES, isOhioDrugConductSourceFresh } from "../data/ohio-drug-conduct-source";
+import { OHIO_COMMERCIAL_SEX_SOURCES, isOhioCommercialSexSourceFresh } from "../data/ohio-commercial-sex-source";
 import { OHIO_PRIORITY_GAPS_SOURCES, isOhioPriorityGapsSourceFresh } from "../data/ohio-priority-gaps-source";
 import { OHIO_PRIVACY_SOURCES, isOhioPrivacySourceFresh } from "../data/ohio-privacy-source";
 import { isReviewedOhioChargeId } from "@shared/ohio-reviewed-identity";
@@ -269,6 +271,12 @@ export async function getCurrentAuthoritySelectableChargeIds(
   if (jurisdiction === "OH" && !isOhioResidualSourceFresh()) {
     for (const source of OHIO_RESIDUAL_SOURCES) selectable.delete(source.chargeId);
   }
+  if (jurisdiction === "OH" && !isOhioDrugConductSourceFresh()) {
+    for (const source of OHIO_DRUG_CONDUCT_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "OH" && !isOhioCommercialSexSourceFresh()) {
+    for (const source of OHIO_COMMERCIAL_SEX_SOURCES) selectable.delete(source.chargeId);
+  }
   if (jurisdiction === "OH" && !isOhioPriorityGapsSourceFresh()) {
     for (const source of OHIO_PRIORITY_GAPS_SOURCES) selectable.delete(source.chargeId);
   }
@@ -343,8 +351,8 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // Old completed ingestion runs must not serve corrected summaries until
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
-    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES].map(source => ({id: source.chargeId}))]) {
-      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES].find(row => row.chargeId === update.id);
+    for (const update of [...commonUpdates, ...[...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES].map(source => ({id: source.chargeId}))]) {
+      const source = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES].find(row => row.chargeId === update.id);
       if (!source) {
         selectable.delete(update.id);
         continue;

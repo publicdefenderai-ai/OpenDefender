@@ -1,0 +1,1065 @@
+[
+  {
+    "id": "oh-orc-2925-02-force-threat-deception",
+    "section": "2925.02",
+    "code": "2925.02(A)(1)",
+    "scope": "A(1)",
+    "statutoryName": "Corrupting another with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)",
+      "C(2)",
+      "C(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F2",
+      "F1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly administering a controlled substance to another, or inducing or causing its use, by force, threat or deception. Division (B) excludes specified lawful professional conduct.",
+    "gradeSummary": "For Schedule I/II other than marihuana and the five specifically listed compounds: F2, or F1 in the vicinity of a school, with mandatory prison. For Schedule III/IV/V: F2 in both settings; prison is presumed ordinarily and mandatory near a school. For marihuana or a compound listed in (C)(3): F4 ordinarily, F3 near a school, with §2929.13(C) governing prison. Division (E) provides a separate mandatory prison term in lieu of the ordinary term for the specified Schedule I/II sale, offer or possession, court finding of major-drug-offender status, and §2941.1410(A) specification. Division (E) cites §2929.14(B)(3)(a); the retained sentencing section numbers the pertinent paragraph (B)(3). An exact individual term under that special branch requires separate review. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2913.01",
+      "2941.1410",
+      "2929.01",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-02-purpose-to-harm",
+    "section": "2925.02",
+    "code": "2925.02(A)(2)",
+    "scope": "A(2)",
+    "statutoryName": "Corrupting another with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)",
+      "C(2)",
+      "C(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F2",
+      "F1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly administering or furnishing a controlled substance to another, or inducing or causing its use, with the purpose of causing serious physical harm or drug dependency. Actual harm or dependency is not an element of this alternative. Division (B) expressly excludes (A)(2) from its lawful-professional-conduct exception.",
+    "gradeSummary": "For Schedule I/II other than marihuana and the five specifically listed compounds: F2, or F1 in the vicinity of a school, with mandatory prison. For Schedule III/IV/V: F2 in both settings; prison is presumed ordinarily and mandatory near a school. For marihuana or a compound listed in (C)(3): F4 ordinarily, F3 near a school, with §2929.13(C) governing prison. Division (E) provides a separate mandatory prison term in lieu of the ordinary term for the specified Schedule I/II sale, offer or possession, court finding of major-drug-offender status, and §2941.1410(A) specification. Division (E) cites §2929.14(B)(3)(a); the retained sentencing section numbers the pertinent paragraph (B)(3). An exact individual term under that special branch requires separate review. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2913.01",
+      "2941.1410",
+      "2929.01",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-02-resulting-harm",
+    "section": "2925.02",
+    "code": "2925.02(A)(3)",
+    "scope": "A(3)",
+    "statutoryName": "Corrupting another with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)",
+      "C(2)",
+      "C(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F2",
+      "F1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly administering or furnishing a controlled substance to another, or inducing or causing its use, and thereby causing serious physical harm or drug dependency. Division (B) excludes specified lawful professional conduct.",
+    "gradeSummary": "For Schedule I/II other than marihuana and the five specifically listed compounds: F2, or F1 in the vicinity of a school, with mandatory prison. For Schedule III/IV/V: F2 in both settings; prison is presumed ordinarily and mandatory near a school. For marihuana or a compound listed in (C)(3): F4 ordinarily, F3 near a school, with §2929.13(C) governing prison. Division (E) provides a separate mandatory prison term in lieu of the ordinary term for the specified Schedule I/II sale, offer or possession, court finding of major-drug-offender status, and §2941.1410(A) specification. Division (E) cites §2929.14(B)(3)(a); the retained sentencing section numbers the pertinent paragraph (B)(3). An exact individual term under that special branch requires separate review. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2913.01",
+      "2941.1410",
+      "2929.01",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-02-juvenile",
+    "section": "2925.02",
+    "code": "2925.02(A)(4)",
+    "scope": "A(4)",
+    "statutoryName": "Corrupting another with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)",
+      "C(2)",
+      "C(3)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F2",
+      "F1",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly engaging in one of four juvenile-related acts. For (a) through (c) the juvenile must be at least two years younger, with knowledge of age or recklessness: furnishing or administering a controlled substance, inducing its use, or inducing a felony drug abuse offense. Division (d) separately covers using a juvenile for surveillance to prevent detection or arrest for a felony drug abuse offense, irrespective of knowledge of age. The two-year gap belongs only to (a) through (c). Division (B) excludes specified lawful professional conduct.",
+    "gradeSummary": "For Schedule I/II other than marihuana and the five specifically listed compounds: F2, or F1 in the vicinity of a school, with mandatory prison. For Schedule III/IV/V: F2 in both settings; prison is presumed ordinarily and mandatory near a school. For marihuana or a compound listed in (C)(3): F4 ordinarily, F3 near a school, with §2929.13(C) governing prison. Division (E) provides a separate mandatory prison term in lieu of the ordinary term for the specified Schedule I/II sale, offer or possession, court finding of major-drug-offender status, and §2941.1410(A) specification. Division (E) cites §2929.14(B)(3)(a); the retained sentencing section numbers the pertinent paragraph (B)(3). An exact individual term under that special branch requires separate review. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2913.01",
+      "2941.1410",
+      "2929.01",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-02-pregnancy",
+    "section": "2925.02",
+    "code": "2925.02(A)(5)",
+    "scope": "A(5)",
+    "statutoryName": "Corrupting another with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(4)",
+      "C(5)",
+      "C(6)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "F1",
+      "F2",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly furnishing or administering a controlled substance to a pregnant woman or inducing or causing her to use it while knowing of the pregnancy or being reckless in that regard. Division (B) excludes specified lawful professional conduct.",
+    "gradeSummary": "For Schedule I/II other than marihuana and the five listed compounds: F1 with mandatory prison. For Schedule III/IV/V: F2 with mandatory prison. For marihuana or a compound listed in (C)(6): F3 with §2929.13(C) governing prison. The school-vicinity increases for the other conduct branches do not apply under (C)(4) through (6). Division (E) provides a separate mandatory prison term in lieu of the ordinary term for the specified Schedule I/II sale, offer or possession, court finding of major-drug-offender status, and §2941.1410(A) specification. Division (E) cites §2929.14(B)(3)(a); the retained sentencing section numbers the pertinent paragraph (B)(3). An exact individual term under that special branch requires separate review. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2913.01",
+      "2941.1410",
+      "2929.01",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-false-statement",
+    "section": "2925.23",
+    "code": "2925.23(A)",
+    "scope": "A",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "E",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly making a false statement in a prescription, order, report or record required by Chapter 3719 or 4729. Division (E) exempts specified lawful professional conduct.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-label",
+    "section": "2925.23",
+    "code": "2925.23(D)",
+    "scope": "D",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "E",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly making or affixing a false or forged label to a package or receptacle containing dangerous drugs. Division (E) exempts specified lawful professional conduct.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-b-1",
+    "section": "2925.23",
+    "code": "2925.23(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally making, uttering or selling, or knowingly possessing a false or forged prescription.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-b-2",
+    "section": "2925.23",
+    "code": "2925.23(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally making, uttering or selling, or knowingly possessing a false or forged uncompleted preprinted prescription blank.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-b-3",
+    "section": "2925.23",
+    "code": "2925.23(B)(3)",
+    "scope": "B(3)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally making, uttering or selling, or knowingly possessing a false or forged official written order.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-b-4",
+    "section": "2925.23",
+    "code": "2925.23(B)(4)",
+    "scope": "B(4)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(4)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally making, uttering or selling, or knowingly possessing a false or forged terminal-distributor license.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-b-5",
+    "section": "2925.23",
+    "code": "2925.23(B)(5)",
+    "scope": "B(5)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(5)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Intentionally making, uttering or selling, or knowingly possessing a false or forged license for a manufacturer, outsourcing facility, third-party logistics provider, repackager or wholesale distributor of dangerous drugs.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-1",
+    "section": "2925.23",
+    "code": "2925.23(C)(1)",
+    "scope": "C(1)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(1)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a prescription.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-2",
+    "section": "2925.23",
+    "code": "2925.23(C)(2)",
+    "scope": "C(2)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(2)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a uncompleted preprinted prescription blank.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-3",
+    "section": "2925.23",
+    "code": "2925.23(C)(3)",
+    "scope": "C(3)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(3)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F4",
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a official written order.",
+    "gradeSummary": "F4 for a Schedule I/II drug except marihuana; F5 for a dangerous drug under the remaining alternative, Schedule III/IV/V, or marihuana. Section 2929.13(C) applies to the prison decision. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "3719.41",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-4",
+    "section": "2925.23",
+    "code": "2925.23(C)(4)",
+    "scope": "C(4)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(4)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a blank official written order.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-5",
+    "section": "2925.23",
+    "code": "2925.23(C)(5)",
+    "scope": "C(5)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(5)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a terminal-distributor license or blank license.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-23-c-6",
+    "section": "2925.23",
+    "code": "2925.23(C)(6)",
+    "scope": "C(6)",
+    "statutoryName": "Illegal processing of drug documents",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(6)"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acquiring by theft, as defined in §2913.02, a license or blank license for a manufacturer, outsourcing facility, third-party logistics provider, repackager or wholesale distributor of dangerous drugs.",
+    "gradeSummary": "F5 for the specified document itself under the first grading sentence of (F). The schedule-specific alternatives in (F)(1) and (2) are restricted to the other listed divisions. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "1.52",
+      "2925.03",
+      "3719.21",
+      "2913.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-24-drug",
+    "section": "2925.24",
+    "code": "2925.24(A)",
+    "scope": "A",
+    "statutoryName": "Tampering with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly adulterating or altering a dangerous drug, or substituting another substance for it. Division (C) exempts specified lawful professional conduct. The (D) affirmative defense is limited to an allegation of altering a drug prescribed for personal use when it was neither sold nor transferred and the accused had no intent to do so.",
+    "gradeSummary": "F3 ordinarily; physical harm to any person resulting from the violation makes F2. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-24-container",
+    "section": "2925.24",
+    "code": "2925.24(B)",
+    "scope": "B",
+    "statutoryName": "Tampering with drugs",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly adulterating or altering a package or receptacle containing dangerous drugs, or substituting another package or receptacle for it. Division (C) exempts specified lawful professional conduct. The personal-use affirmative defense in (D) addresses an allegation of altering the drug itself.",
+    "gradeSummary": "F3 ordinarily; physical harm to any person resulting from the violation makes F2. For F1, F2 and F3 Chapter 2925 convictions, §2929.18(B)(1) generally requires a fine of at least half the maximum, unless a timely indigency affidavit and court finding of inability to pay satisfy the statutory exception.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-possession",
+    "section": "2925.37",
+    "code": "2925.37(A)",
+    "scope": "A",
+    "statutoryName": "Possession of counterfeit controlled substances",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "G"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly possessing a counterfeit controlled substance as defined by §2925.01.",
+    "gradeSummary": "M1. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-trafficking",
+    "section": "2925.37",
+    "code": "2925.37(B)",
+    "scope": "B",
+    "statutoryName": "Trafficking in counterfeit controlled substances",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "H"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly making, selling, offering to sell, or delivering a substance known to be a counterfeit controlled substance.",
+    "gradeSummary": "F5 ordinarily; F4 in the vicinity of a school or a juvenile. Section 2929.13(C) governs whether prison is imposed. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-marking-device",
+    "section": "2925.37",
+    "code": "2925.37(C)",
+    "scope": "C",
+    "statutoryName": "Trafficking in counterfeit controlled substances",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "H"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Making, possessing, selling, offering to sell or delivering a device with knowledge or reason to know it will be used to reproduce an identifying mark on a counterfeit controlled substance.",
+    "gradeSummary": "F5 ordinarily; F4 in the vicinity of a school or a juvenile. Section 2929.13(C) governs whether prison is imposed. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-juvenile",
+    "section": "2925.37",
+    "code": "2925.37(D)",
+    "scope": "D",
+    "statutoryName": "Aggravated trafficking in counterfeit controlled substances",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling, offering to sell, giving or delivering a counterfeit controlled substance to a juvenile.",
+    "gradeSummary": "F4 under (I). The distinct school- or juvenile-vicinity escalations in (H), (J) and (K) do not supply a higher grade for (D). Section 2929.13(C) governs whether prison is imposed. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-effects-representation",
+    "section": "2925.37",
+    "code": "2925.37(E)",
+    "scope": "E",
+    "statutoryName": "Promoting and encouraging drug abuse",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "J"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Representing a counterfeit substance as controlled by describing its effects as those associated with use of a controlled substance. Direct or indirect representations are covered.",
+    "gradeSummary": "F5 ordinarily; F4 in the vicinity of a school or a juvenile. Section 2929.13(C) governs whether prison is imposed. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2925-37-advertising",
+    "section": "2925.37",
+    "code": "2925.37(F)",
+    "scope": "F",
+    "statutoryName": "Fraudulent drug advertising",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "F"
+    ],
+    "gradingPaths": [
+      "K"
+    ],
+    "contextPaths": [
+      "L",
+      "M"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Directly or indirectly falsely representing or advertising a counterfeit controlled substance as a controlled substance. Section 3715.01 supplies the referenced advertising definition.",
+    "gradeSummary": "F5 ordinarily; F4 in the vicinity of a school or a juvenile. Section 2929.13(C) governs whether prison is imposed. Professional-license notice may apply under §2925.38. Under §2929.33 a vehicle used to further the offense may trigger license suspension; a qualifying same-circumstances impaired-driving conviction or plea requires suspension for up to five years.",
+    "dependencies": [
+      "2925.01",
+      "3719.01",
+      "4729.01",
+      "2925.38",
+      "2929.33",
+      "4511.19",
+      "2925.03",
+      "3719.21",
+      "3715.01"
+    ],
+    "extraGrading": []
+  }
+]

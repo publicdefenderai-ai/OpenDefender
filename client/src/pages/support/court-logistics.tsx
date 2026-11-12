@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import courtLogisticsHero from "@assets/stock_images/court-logistics.jpg";
-import { Calendar, ClipboardCheck, Users, Package, CreditCard, Bell, ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { courtLogisticsDesignCopy } from "@/locales/court-logistics-design";
+import { Calendar } from "lucide-react";
 import {
   ResourcePageTemplate,
   ActionItem,
@@ -8,103 +9,34 @@ import {
   FAQ,
 } from "@/components/support/resource-page-template";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-function RemindersSection() {
+type DesignCopy = typeof courtLogisticsDesignCopy.en;
+
+function RemindersSection({ copy }: { copy: DesignCopy }) {
   const { t } = useTranslation();
-  const ns = 'support.courtLogistics.reminders';
+  const ns = "support.courtLogistics.reminders";
   const selfHelpItems = t(`${ns}.selfHelpItems`, { returnObjects: true }) as string[];
 
   return (
-    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="court-reminders">
-      <div className="max-w-4xl mx-auto px-4">
-        <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
-            <Bell className="h-5 w-5 text-purple-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+    <section className="court-logistics-section" id="court-reminders">
+      <div><h2>{t(`${ns}.sectionTitle`)}</h2><p>{t(`${ns}.sectionSubtitle`)}</p></div>
+      <div>
+        <h3>{t(`${ns}.servicesTitle`)}</h3>
+        {["bailProject", "stateCourts", "pdOffice"].map(key => (
+          <div key={key} className="court-logistics-service">
+            <h4>{key === "bailProject" ? (
+              <a href={t(`${ns}.bailProject.url`)} target="_blank" rel="noopener noreferrer">{t(`${ns}.bailProject.name`)}</a>
+            ) : t(`${ns}.${key}.name`)}</h4>
+            <p>{t(`${ns}.${key}.desc`)}</p>
           </div>
-          <p className="text-muted-foreground mb-2">{t(`${ns}.sectionSubtitle`)}</p>
-          <p className="text-xs text-muted-foreground italic mb-8">{t(`${ns}.researchNote`)}</p>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <h3 className="text-sm font-semibold text-foreground mb-4">{t(`${ns}.servicesTitle`)}</h3>
-          <div className="space-y-3 mb-8">
-            {[
-              {
-                name: t(`${ns}.bailProject.name`),
-                desc: t(`${ns}.bailProject.desc`),
-                url: t(`${ns}.bailProject.url`),
-                external: true,
-              },
-              {
-                name: t(`${ns}.stateCourts.name`),
-                desc: t(`${ns}.stateCourts.desc`),
-                url: null,
-                external: false,
-              },
-              {
-                name: t(`${ns}.pdOffice.name`),
-                desc: t(`${ns}.pdOffice.desc`),
-                url: null,
-                external: false,
-              },
-            ].map(({ name, desc, url, external }) => (
-              <Card key={name}>
-                <CardContent className="pt-4 pb-4">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">{name}</p>
-                      <p className="text-sm text-muted-foreground mt-0.5 leading-relaxed">{desc}</p>
-                    </div>
-                    {external && url && (
-                      <a href={url} target="_blank" rel="noopener noreferrer" className="flex-shrink-0 text-purple-600 hover:text-purple-500 mt-0.5">
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <Card className="mb-6">
-            <CardContent className="pt-5">
-              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.selfHelpTitle`)}</h3>
-              <ul className="space-y-2">
-                {selfHelpItems.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="text-purple-400 mt-0.5 flex-shrink-0">•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <div className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-5 mb-4">
-            <h3 className="text-sm font-semibold text-foreground mb-1">Public Defender Intake Form</h3>
-            <p className="text-sm text-muted-foreground mb-3">Fill this out before your first meeting with your public defender — personal info, employment, housing, and case details. Print and hand it to them at the start to make every minute count.</p>
-            <a href="/support/court-logistics/intake-form" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-sm font-semibold transition-colors">
-              Open Form <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <div className="rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50/50 dark:bg-purple-950/20 p-5">
-            <h3 className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.guideLabel`)}</h3>
-            <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.guideDesc`)}</p>
-            <a href="/support/court-logistics/court-date-guide" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold transition-colors">
-              Open Guide <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </ScrollReveal>
+        ))}
+        <h3>{t(`${ns}.selfHelpTitle`)}</h3>
+        <ul className="list-disc pl-5 space-y-2">{selfHelpItems.map(item => <li key={item}>{item}</li>)}</ul>
+        <details className="court-logistics-research"><summary>{copy.research}</summary><p>{t(`${ns}.researchNote`)}</p></details>
+        <h3><Link href="/support/court-logistics/intake-form">{copy.intake}</Link></h3>
+        <p>{copy.intakeDetail}</p>
+        <h3><Link href="/support/court-logistics/court-date-guide">{t(`${ns}.guideLabel`)}</Link></h3>
+        <p>{t(`${ns}.guideDesc`)}</p>
       </div>
     </section>
   );
@@ -117,8 +49,6 @@ function CourtRequirementsSection() {
   const sections = [
     {
       value: 'court-ordered',
-      icon: ClipboardCheck,
-      iconColor: 'text-purple-500',
       title: t(`${r}.courtOrdered.title`),
       context: t(`${r}.courtOrdered.context`),
       content: (
@@ -154,8 +84,6 @@ function CourtRequirementsSection() {
     },
     {
       value: 'community-service',
-      icon: Users,
-      iconColor: 'text-blue-500',
       title: t(`${r}.communityService.title`),
       context: t(`${r}.communityService.context`),
       content: (
@@ -181,8 +109,6 @@ function CourtRequirementsSection() {
     },
     {
       value: 'property-retrieval',
-      icon: Package,
-      iconColor: 'text-amber-500',
       title: t(`${r}.propertyRetrieval.title`),
       context: t(`${r}.propertyRetrieval.context`),
       content: (
@@ -205,8 +131,6 @@ function CourtRequirementsSection() {
     },
     {
       value: 'id-replacement',
-      icon: CreditCard,
-      iconColor: 'text-emerald-500',
       title: t(`${r}.idReplacement.title`),
       context: t(`${r}.idReplacement.context`),
       content: (
@@ -226,17 +150,14 @@ function CourtRequirementsSection() {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-muted/20">
-      <div className="container mx-auto px-4">
-        <ScrollReveal>
-          <h2 className="text-xl font-bold text-foreground mb-1">{t(`${r}.sectionTitle`)}</h2>
-          <p className="text-sm text-muted-foreground mb-6">{t(`${r}.sectionSubtitle`)}</p>
+    <section id="court-requirements" className="court-logistics-section">
+      <div><h2>{t(`${r}.sectionTitle`)}</h2><p>{t(`${r}.sectionSubtitle`)}</p></div>
+      <div>
           <Accordion type="single" collapsible className="w-full space-y-3">
-            {sections.map(({ value, icon: Icon, iconColor, title, context, content }) => (
-              <AccordionItem key={value} value={value} className="border border-border rounded-lg px-4 bg-background">
+            {sections.map(({ value, title, context, content }) => (
+              <AccordionItem key={value} value={value} className="border-t border-border">
                 <AccordionTrigger className="text-left hover:no-underline py-4">
                   <div className="flex items-center gap-3">
-                    <Icon className={`h-4 w-4 flex-shrink-0 ${iconColor}`} aria-hidden="true" />
                     <span className="font-semibold text-base">{title}</span>
                   </div>
                 </AccordionTrigger>
@@ -247,34 +168,35 @@ function CourtRequirementsSection() {
               </AccordionItem>
             ))}
           </Accordion>
-        </ScrollReveal>
       </div>
     </section>
   );
 }
 
 export default function CourtLogisticsSupport() {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const language = i18n.resolvedLanguage ?? i18n.language;
+  const copy = language.startsWith("es") ? courtLogisticsDesignCopy.es : language.startsWith("zh") ? courtLogisticsDesignCopy.zh : courtLogisticsDesignCopy.en;
   const startHereItems: ActionItem[] = [
     {
       id: "pd-intake-form",
-      title: "Prepare Your Public Defender Intake Form",
-      description: "Before your first meeting with your public defender, fill out this form with your personal information, employment, housing, and case details. Handing it to your PD at the start saves time and helps them build the strongest defense for you. Print it at home or at a library.",
+      title: copy.intakeAction,
+      description: copy.intakeActionNote,
       priority: "high",
-      timeframe: "Before your first PD meeting",
+      timeframe: copy.intakeTime,
       url: "/support/court-logistics/intake-form",
     },
     {
       id: "bail-preparation",
-      title: "Prepare for Your Bail Hearing",
-      description: "If a bail hearing is coming up in the next 24 to 48 hours, gather employment records, proof of housing, and contact information for family in the area. Our Bail Preparation Checklist walks through everything to collect and provides letter templates.",
+      title: copy.bailAction,
+      description: copy.bailActionNote,
       priority: "high",
-      timeframe: "Before the hearing",
+      timeframe: copy.bailTime,
       url: "/support/court-logistics/bail-preparation",
     },
     {
       id: "find-court",
+      url: "/court-locator",
       title: t('support.courtLogistics.actions.findCourt.title'),
       description: t('support.courtLogistics.actions.findCourt.description'),
       priority: "high",
@@ -316,20 +238,20 @@ export default function CourtLogisticsSupport() {
   const externalResources: ExternalResource[] = [
     {
       name: "Partners for Justice",
-      description: "A national nonprofit that embeds trained, non-attorney Advocates inside public defender offices to help clients navigate their cases and connect to social services — housing, employment, health, and more. If your public defender's office partners with PFJ, ask them about wraparound support. Operating in 20+ states. (Source: partnersforjustice.org)",
+      description: copy.pfj,
       url: "https://www.partnersforjustice.org/",
       type: "national",
       free: true,
     },
     {
-      name: "Court Locator (OpenDefender)",
+      name: copy.courtFinder,
       description: t('support.courtLogistics.resources.courtLocator.description'),
       url: "/court-locator",
       type: "online",
       free: true,
     },
     {
-      name: "USCourts.gov - Court Finder",
+      name: copy.usFinder,
       description: t('support.courtLogistics.resources.usCourts.description'),
       url: "https://www.uscourts.gov/about-federal-courts/federal-courts-public/court-website-links",
       type: "national",
@@ -343,7 +265,7 @@ export default function CourtLogisticsSupport() {
       free: true,
     },
     {
-      name: "Self-Help Law Centers",
+      name: copy.selfHelp,
       description: t('support.courtLogistics.resources.selfHelp.description'),
       url: "https://www.lawhelp.org/",
       type: "state",
@@ -385,7 +307,32 @@ export default function CourtLogisticsSupport() {
   return (
     <ResourcePageTemplate
       categoryId="courtLogistics"
-      heroImage={courtLogisticsHero}
+      mainClassName="court-logistics-page"
+      actionHeading={copy.before}
+      customNavItems={[
+        { id: "court-reminders", label: t("support.courtLogistics.reminders.sectionTitle") },
+        { id: "court-requirements", label: t("support.courtLogistics.requirements.sectionTitle") },
+      ]}
+      introduction={<>
+        <Link href="/support">{t("support.backToSupport")}</Link>
+        <section className="court-logistics-hero">
+          <div>
+            <p>{t("legalGuidance.qaFlow.additionalDetails.concernsCategories.courtLogistics.label")}</p>
+            <h1>{copy.title}<br/><em>{copy.accent}</em></h1>
+            <p>{t("support.courtLogistics.overview")}</p>
+          </div>
+          <img src="/images/design/court-logistics.svg" width="240" height="220" alt="" />
+        </section>
+        <nav className="court-logistics-paths" aria-label={copy.guides}>
+          {[
+            ["court-date-guide", copy.date, copy.dateNote],
+            ["bail-preparation", copy.bail, copy.bailNote],
+            ["intake-form", copy.intake, copy.intakeNote],
+          ].map(([path, title, description]) => (
+            <Link key={path} href={`/support/court-logistics/${path}`}><strong>{title}</strong><span>{description}</span></Link>
+          ))}
+        </nav>
+      </>}
       icon={Calendar}
       iconColor="bg-purple-500/10 text-purple-600 dark:text-purple-400"
       heroGradient="bg-gradient-to-br from-purple-500/5 via-background to-background"
@@ -394,7 +341,7 @@ export default function CourtLogisticsSupport() {
       externalResources={externalResources}
       faqs={faqs}
       tips={tips}
-      customSections={<><RemindersSection /><CourtRequirementsSection /></>}
+      customSections={<><RemindersSection copy={copy} /><CourtRequirementsSection /></>}
       relatedLinks={[
         { label: t('support.relatedLinks.process'), href: "/case-timeline" },
         { label: t('support.relatedLinks.rights'), href: "/rights-info" },

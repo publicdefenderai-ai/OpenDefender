@@ -1,3 +1,5 @@
+import { OHIO_DRUG_CONDUCT_BATCH } from "./ohio-drug-conduct-batch";
+import { OHIO_COMMERCIAL_SEX_BATCH } from "./ohio-commercial-sex-batch";
 import { OHIO_PRIORITY_GAPS_BATCH } from "./ohio-priority-gaps-batch";
 import { OHIO_PRIVACY_BATCH } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
@@ -116,6 +118,8 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_DRUG_CONDUCT_BATCH.charges,
+  ...OHIO_COMMERCIAL_SEX_BATCH.charges,
   ...OHIO_PRIORITY_GAPS_BATCH.charges,
   ...OHIO_PRIVACY_BATCH.charges,
   ...OHIO_PROTECTION_BATCH.charges,
