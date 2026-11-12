@@ -1,3 +1,4 @@
+import { floridaRemainingChargeText, floridaRemainingDisplayName } from "./florida-legacy-remaining";
 import { floridaSexualChargeText, floridaSexualDisplayName } from "./florida-legacy-sexual";
 import { floridaLegacyPropertyText } from "./florida-legacy-property";
 import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
@@ -8056,9 +8057,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '782.04(1)',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Premeditated killing with malice aforethought under Florida law',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of others', 'Insanity defense', 'Lack of intent'],
+    ...floridaRemainingChargeText('fl-murder-in-the-first-degree'),
+    commonDefenses: ["The prosecution has not proven the charged premeditation, listed-felony or drug-causation branch"],
     evidenceToGather: ['Crime scene analysis', 'Forensic evidence', 'Witness statements', 'Medical examiner reports'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial', 'Right to expert witnesses'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
@@ -8069,9 +8069,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '782.04(2)',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Intentional killing without premeditation under Florida law',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of others', 'Insanity defense', 'Lack of intent'],
+    ...floridaRemainingChargeText('fl-murder-in-the-second-degree'),
+    commonDefenses: ["Evidence does not establish an imminently dangerous act showing a depraved mind", "Causation or identity disputed"],
     evidenceToGather: ['Crime scene analysis', 'Forensic evidence', 'Witness statements', 'Medical examiner reports'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial', 'Right to expert witnesses'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
@@ -8121,9 +8120,8 @@ export const criminalCharges: CriminalCharge[] = [
     code: '782.071',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Death caused by vehicle while intoxicated or reckless under Florida law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of others', 'Insanity defense', 'Lack of intent'],
+    ...floridaRemainingChargeText('fl-vehicular-homicide'),
+    commonDefenses: ["Disputed reckless operation", "Disputed causation", "Evidence does not support the alleged aggravated branch"],
     evidenceToGather: ['Crime scene analysis', 'Forensic evidence', 'Witness statements', 'Medical examiner reports'],
     specificRights: ['Right to remain silent', 'Right to attorney', 'Right to jury trial', 'Right to expert witnesses'],
     urgentActions: ['Contact criminal defense attorney immediately', 'Do not speak to police without attorney', 'Preserve all evidence']
@@ -8147,11 +8145,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '784.021',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Assault with intent to cause serious harm under Florida law',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
-    commonDefenses: ['Self-defense', 'Defense of property', 'Lack of intent', 'Consent'],
+    ...floridaRemainingChargeText('fl-aggravated-assault'),
+    commonDefenses: ["Disputed threat, apparent ability, or well-founded fear of imminent violence", "Evidence does not establish either statutory aggravating alternative"],
     evidenceToGather: ['Medical records', 'Witness statements', 'Video surveillance', 'Physical evidence'],
-    specificRights: ['Right to self-defense claim', 'Right to medical examination', 'Right to witness testimony'],
+    specificRights: ["Right to challenge the evidence against you"],
     urgentActions: ['Seek medical attention if injured', 'Contact attorney', 'Document any self-defense claims']
   },
   {
@@ -8578,8 +8575,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: '790.01',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Carrying weapon without permit under Florida law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
+    ...floridaRemainingChargeText('fl-unlawful-carrying-of-weapon'),
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -8603,9 +8599,8 @@ export const criminalCharges: CriminalCharge[] = [
     name: 'Discharge of Firearm in City',
     code: '790.15',
     jurisdiction: 'FL',
-    category: 'felony',
-    description: 'Unlawful discharge of firearm under Florida law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
+    category: 'misdemeanor',
+    ...floridaRemainingChargeText('fl-discharge-of-firearm-in-city'),
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -8695,8 +8690,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: '831.01',
     jurisdiction: 'FL',
     category: 'felony',
-    description: 'Creating false documents under Florida law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
+    ...floridaRemainingChargeText('fl-forgery'),
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -8747,8 +8741,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: '856.021',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Remaining in place without purpose under Florida law',
-    maxPenalty: 'Penalties vary by jurisdiction',
+    ...floridaRemainingChargeText('fl-loitering'),
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -8799,8 +8792,7 @@ export const criminalCharges: CriminalCharge[] = [
     code: '316.192',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Driving with willful disregard for safety under Florida law',
-    maxPenalty: 'Up to 1 year jail and/or fines',
+    ...floridaRemainingChargeText('fl-reckless-driving'),
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -8877,11 +8869,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '856.011',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Being intoxicated in a public place and causing a public disturbance or endangering safety under Florida Statute § 856.011',
-    maxPenalty: 'Second degree misdemeanor: up to 60 days jail and/or $500 fine',
-    commonDefenses: ['Not intoxicated', 'Not in a public place', 'Not causing a disturbance', 'Medical condition', 'Seeking medical help'],
+    ...floridaRemainingChargeText('fl-disorderly-intoxication'),
+    commonDefenses: ["Evidence does not establish endangerment or the charged public-disturbance branch"],
     evidenceToGather: ['Witness statements', 'Medical records', 'Video footage', 'Officer body cam footage'],
-    specificRights: ['Right to challenge intoxication determination', 'Right to present medical evidence', 'Right to Marchman Act treatment alternative'],
+    specificRights: ["Right to challenge the evidence against you"],
     urgentActions: ['Contact attorney', 'Seek substance abuse evaluation', 'Document your condition at time of arrest']
   },
   {
@@ -8890,11 +8881,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '893.13(6)(b)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Possession of less than 20 grams of cannabis under Florida Statute § 893.13(6)(b). Many Florida counties now offer civil citations instead of arrest.',
-    maxPenalty: 'First degree misdemeanor: up to 1 year jail and/or $1,000 fine; 2-year driver\'s license suspension',
-    commonDefenses: ['Unlawful search and seizure', 'Constructive possession (not on person)', 'Medical marijuana patient', 'Substance is hemp (under 0.3% THC)', 'Lack of knowledge'],
+    ...floridaRemainingChargeText('fl-possession-of-marijuana-under-20g'),
+    commonDefenses: ["Possession disputed", "Lawful authorization", "Identity or weight of substance disputed"],
     evidenceToGather: ['Evidence of search circumstances', 'Medical marijuana card', 'Lab results', 'Witness statements', 'Body cam footage'],
-    specificRights: ['Right to challenge search', 'Right to demand lab testing', 'Right to pretrial diversion in most counties'],
+    specificRights: ["Right to challenge the evidence against you"],
     urgentActions: ['Contact attorney', 'Do not consent to additional searches', 'Explore civil citation or diversion options']
   },
   {
@@ -8915,11 +8905,10 @@ export const criminalCharges: CriminalCharge[] = [
     code: '843.02',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'Resisting, obstructing, or opposing an officer without violence in the lawful execution of a legal duty under Florida Statute § 843.02',
-    maxPenalty: 'First degree misdemeanor: up to 1 year jail and/or $1,000 fine',
-    commonDefenses: ['Officer was not in lawful execution of duty', 'No intentional resistance', 'Passive non-compliance', 'Unlawful order', 'Mistaken identity'],
+    ...floridaRemainingChargeText('fl-resisting-officer-without-violence'),
+    commonDefenses: ["Lawfulness of the duty or process disputed", "Evidence does not establish resisting, obstructing or opposing"],
     evidenceToGather: ['Body cam footage', 'Witness statements', 'Documentation of the encounter', 'Evidence of lawfulness of officer\'s actions'],
-    specificRights: ['Right to challenge lawfulness of officer\'s actions', 'Right to passive non-compliance defense', 'Right to jury trial'],
+    specificRights: ["Right to challenge the evidence against you"],
     urgentActions: ['Contact attorney', 'Document the encounter in detail', 'Obtain witness contact information']
   },
   {
@@ -57776,12 +57765,11 @@ export const criminalCharges: CriminalCharge[] = [
     code: '562.111',
     jurisdiction: 'FL',
     category: 'misdemeanor',
-    description: 'A person under 21 years of age possessing, consuming, or purchasing alcoholic beverages under FL law',
-    maxPenalty: 'Up to $500 fine, community service, alcohol education program, license suspension',
-    commonDefenses: ['Lack of knowledge alcohol was present', 'Religious ceremony exception', 'Parental consent in private residence', 'Medical emergency / Good Samaritan exception', 'Constructive possession challenge'],
-    evidenceToGather: ['Age verification documents', 'Photos of the location and circumstances', 'Witness statements', 'Proof of parental presence or consent if applicable', 'Records of alcohol education completion'],
-    specificRights: ['Right to attorney', 'Right to have parent or guardian present', 'Right to diversion program in many jurisdictions', 'Right to record expungement after completion'],
-    urgentActions: ['Contact parent or guardian immediately', 'Do not make statements to police without attorney', 'Ask about diversion or first-offender programs', 'Inquire about record sealing upon completion']
+    ...floridaRemainingChargeText('fl-minor-in-possession'),
+    commonDefenses: ["Disputed possession or age", "Qualifying employment or instructional tasting under Florida law"],
+    evidenceToGather: ["Age verification documents", "Witness statements", "Employment or instructional records if relevant"],
+    specificRights: ["Right to challenge the evidence against you"],
+    urgentActions: ["Discuss the specific charge and any prior conviction with counsel"]
   },
   {
     id: 'fl-false-info-to-police',
@@ -95124,7 +95112,7 @@ chargeCategories['OH'] = Array.from(new Set([
 // Helper functions for charge lookup
 function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
   if (charge.jurisdiction === 'FL') {
-    const displayName = floridaSexualDisplayName(charge.id);
+    const displayName = floridaSexualDisplayName(charge.id) ?? floridaRemainingDisplayName(charge.id);
     return displayName ? {...charge, name: displayName} : charge;
   }
   if (charge.jurisdiction !== 'NC') return charge;

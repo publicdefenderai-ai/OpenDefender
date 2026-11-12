@@ -1,0 +1,417 @@
+[
+  {
+    "id": "fl-murder-in-the-first-degree",
+    "primary": "782.04",
+    "subdivision": "(1)",
+    "bindings": [
+      {
+        "section": "782.04",
+        "scope": "(1)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(1)"
+      },
+      {
+        "section": "921.141",
+        "scope": "(1)"
+      },
+      {
+        "section": "921.141",
+        "scope": "(2)"
+      },
+      {
+        "section": "921.141",
+        "scope": "(3)"
+      }
+    ]
+  },
+  {
+    "id": "fl-murder-in-the-second-degree",
+    "primary": "782.04",
+    "subdivision": "(2)",
+    "bindings": [
+      {
+        "section": "782.04",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-vehicular-homicide",
+    "primary": "782.071",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "782.071",
+        "scope": "whole"
+      },
+      {
+        "section": "782.071",
+        "scope": "(1)"
+      },
+      {
+        "section": "782.071",
+        "scope": "(4)"
+      },
+      {
+        "section": "316.062",
+        "scope": "(1)"
+      },
+      {
+        "section": "322.28",
+        "scope": "(4)(a)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-aggravated-assault",
+    "primary": "784.021",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "784.021",
+        "scope": "(1)"
+      },
+      {
+        "section": "784.021",
+        "scope": "(2)"
+      },
+      {
+        "section": "784.021",
+        "scope": "(3)"
+      },
+      {
+        "section": "784.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-unlawful-carrying-of-weapon",
+    "primary": "790.01",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "790.01",
+        "scope": "(1)"
+      },
+      {
+        "section": "790.01",
+        "scope": "(2)"
+      },
+      {
+        "section": "790.01",
+        "scope": "(3)"
+      },
+      {
+        "section": "790.01",
+        "scope": "(4)"
+      },
+      {
+        "section": "790.01",
+        "scope": "(5)"
+      },
+      {
+        "section": "790.06",
+        "scope": "(2)"
+      },
+      {
+        "section": "790.06",
+        "scope": "(3)"
+      },
+      {
+        "section": "790.06",
+        "scope": "(10)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-discharge-of-firearm-in-city",
+    "primary": "790.15",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "790.15",
+        "scope": "(1)"
+      },
+      {
+        "section": "790.15",
+        "scope": "(2)"
+      },
+      {
+        "section": "790.15",
+        "scope": "(3)"
+      },
+      {
+        "section": "790.15",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-forgery",
+    "primary": "831.01",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "831.01",
+        "scope": "whole"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-loitering",
+    "primary": "856.021",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "856.021",
+        "scope": "(1)"
+      },
+      {
+        "section": "856.021",
+        "scope": "(2)"
+      },
+      {
+        "section": "856.021",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-reckless-driving",
+    "primary": "316.192",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "316.192",
+        "scope": "(1)"
+      },
+      {
+        "section": "316.192",
+        "scope": "(2)"
+      },
+      {
+        "section": "316.192",
+        "scope": "(3)"
+      },
+      {
+        "section": "316.192",
+        "scope": "(4)"
+      },
+      {
+        "section": "316.192",
+        "scope": "(5)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-disorderly-intoxication",
+    "primary": "856.011",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "856.011",
+        "scope": "(1)"
+      },
+      {
+        "section": "856.011",
+        "scope": "(2)"
+      },
+      {
+        "section": "856.011",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-possession-of-marijuana-under-20g",
+    "primary": "893.13",
+    "subdivision": "(6)(b)",
+    "bindings": [
+      {
+        "section": "893.13",
+        "scope": "(6)(a)"
+      },
+      {
+        "section": "893.13",
+        "scope": "(6)(b)"
+      },
+      {
+        "section": "322.055",
+        "scope": "(1)"
+      },
+      {
+        "section": "322.055",
+        "scope": "(2)"
+      },
+      {
+        "section": "322.055",
+        "scope": "(3)"
+      },
+      {
+        "section": "322.055",
+        "scope": "(4)"
+      },
+      {
+        "section": "322.055",
+        "scope": "(5)"
+      },
+      {
+        "section": "322.056",
+        "scope": "(1)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-resisting-officer-without-violence",
+    "primary": "843.02",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "843.02",
+        "scope": "whole"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  },
+  {
+    "id": "fl-minor-in-possession",
+    "primary": "562.111",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "562.111",
+        "scope": "(1)"
+      },
+      {
+        "section": "562.111",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(4)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      }
+    ]
+  }
+]
