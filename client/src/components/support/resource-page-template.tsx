@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   PageSectionNav,
+  type PageSectionNavItem,
   ScanFirstPageFrame,
 } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -63,6 +64,7 @@ export interface ResourcePageProps {
   introduction?: ReactNode;
   mainClassName?: string;
   actionHeading?: string;
+  customNavItems?: PageSectionNavItem[];
   sidebar?: ReactNode;
 }
 
@@ -280,6 +282,7 @@ export function ResourcePageTemplate({
   introduction,
   mainClassName,
   actionHeading,
+  customNavItems = [],
   sidebar,
 }: ResourcePageProps) {
   useScrollToTop();
@@ -346,6 +349,7 @@ export function ResourcePageTemplate({
             ariaLabel={t("support.pageSections", "On this page")}
             items={[
               { id: "section-start-here", label: t("support.startHere") },
+              ...customNavItems,
               { id: "section-resources", label: t("support.helpfulResources") },
               ...(faqs?.length ? [{ id: "section-faq", label: t("support.faqs", "FAQs") }] : []),
               ...(tips?.length ? [{ id: "section-tips", label: t("support.tips.title") }] : []),

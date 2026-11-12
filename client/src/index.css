@@ -3455,3 +3455,29 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .personal-health-hero, .personal-health-section { grid-template-columns: minmax(0, 1fr); }
   .personal-health-hero img { display: none; }
 }
+
+.reentry-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.reentry-back, .reentry-topic a { color: var(--primary); font-weight: 600; }
+.reentry-back:hover, .reentry-topic a:hover { text-decoration: underline; }
+.reentry-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 48px; margin: 36px 0; }
+.reentry-hero h1 { font-size: clamp(36px, 4.7vw, 56px); font-weight: 500; letter-spacing: -.045em; line-height: 1.08; }
+.reentry-hero small { display: block; margin-bottom: 14px; font-size: 16px; letter-spacing: normal; }
+.reentry-hero em { color: var(--primary); font-style: normal; }
+.reentry-hero p, .reentry-topic-body { color: var(--muted-foreground); line-height: 1.75; }
+.reentry-hero p { margin-top: 20px; max-width: 66ch; }
+.reentry-topics { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); gap: 24px 40px; padding-block: 36px; border-top: 1px solid var(--border); scroll-margin-top: 5rem; }
+.reentry-topics h2, .reentry-page .editorial-section-heading > span { font-size: 24px; line-height: 1.25; font-weight: 500; letter-spacing: -.025em; text-transform: none; white-space: normal; }
+.reentry-topic { border-top: 1px solid var(--border); }
+.reentry-topic summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; cursor: pointer; font-weight: 600; list-style: none; }
+.reentry-topic summary::-webkit-details-marker { display: none; }
+.reentry-topic summary::after { content: ""; flex: none; width: 12px; height: 12px; background: linear-gradient(var(--primary), var(--primary)) center / 10px 1px no-repeat, linear-gradient(var(--primary), var(--primary)) center / 1px 10px no-repeat; }
+.reentry-topic[open] summary::after { background-size: 10px 1px, 0 0; }
+.reentry-topic-body { padding-bottom: 20px; overflow-wrap: anywhere; }
+.reentry-topic-body p { margin-bottom: 14px; }
+.reentry-topics > [role="alert"] { grid-column: 2; }
+.reentry-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+@media (max-width: 700px) {
+  .reentry-hero, .reentry-topics { grid-template-columns: minmax(0, 1fr); }
+  .reentry-hero img { display: none; }
+  .reentry-topics > [role="alert"] { grid-column: 1; }
+}

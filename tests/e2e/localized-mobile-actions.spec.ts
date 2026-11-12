@@ -218,6 +218,7 @@ for (const language of LANGUAGES) {
       );
 
       const labels: Partial<Record<typeof SUPPORT_TEMPLATE_ROUTES[number], string>> = {
+        "/support/reentry": language.labels.sectionStart,
         "/support/transportation": language.labels.sectionStart,
         "/support/childcare": language.labels.sectionStart,
         "/support/housing": housingDesignCopy[language.code].renters,
@@ -230,6 +231,7 @@ for (const language of LANGUAGES) {
         await expect(page.locator("h1").first()).toBeVisible();
         const label = labels[route] ?? language.labels.support;
         const selectors: Partial<Record<typeof route, string>> = {
+          "/support/reentry": '.reentry-page nav a[href="#section-start-here"]',
           "/support/housing": '.housing-paths a[href="#section-start-here"]',
           "/support/transportation": '.transportation-page nav a[href="#section-start-here"]',
           "/support/childcare": '.childcare-page nav a[href="#section-start-here"]',
