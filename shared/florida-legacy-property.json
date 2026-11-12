@@ -1,0 +1,436 @@
+[
+  {
+    "id": "fl-grand-theft-in-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(a)",
+    "slug": "reviewed-fl-grand-theft-in-the-first-degree",
+    "name": "Grand Theft in the First Degree",
+    "names": {
+      "es": "Hurto mayor de primer grado",
+      "zh": "一级重大盗窃"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.014(2)(a)",
+        "Florida Statutes 812.014(2)(a)",
+        "FS 812.014(2)(a)",
+        "Theft"
+      ],
+      "es": [
+        "Fla. Stat. § 812.014(2)(a)",
+        "Florida Statutes 812.014(2)(a)",
+        "FS 812.014(2)(a)",
+        "Theft"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.014(2)(a)",
+        "Florida Statutes 812.014(2)(a)",
+        "FS 812.014(2)(a)",
+        "Theft"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Theft requires knowingly obtaining, using or trying to obtain or use another person’s property, intending temporarily or permanently to deprive them of a right or benefit or to appropriate the property for an unauthorized use. First-degree grand theft includes property worth at least $100,000, a semitrailer deployed by law enforcement, or qualifying cargo worth at least $50,000.",
+        "degreeContext": "The ordinary maximum is 30 years and a $10,000 fine. The same grade can apply to any grand theft when use of a vehicle as an instrument causes damage to another’s real property (merely using it to escape is insufficient), or the offender causes over $1,000 of damage to another’s real or personal property in committing the offense. Value generally means market value at the time and place of the offense, or replacement cost if market value cannot be satisfactorily determined. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "El hurto exige obtener, usar o intentar obtener o usar a sabiendas bienes ajenos, con intención de privar temporal o permanentemente a la otra persona de un derecho o beneficio, o de apropiarse del bien para un uso no autorizado. El primer grado incluye bienes de al menos $100,000, un semirremolque desplegado por la policía o carga comprendida de al menos $50,000.",
+        "degreeContext": "El máximo ordinario es de 30 años y $10,000 de multa. El mismo grado puede aplicarse a cualquier hurto mayor si usar el vehículo como instrumento causa daños a un inmueble ajeno (no basta usarlo para huir), o si el autor causa daños superiores a $1,000 a bienes muebles o inmuebles ajenos durante el delito. El valor generalmente es el del mercado en el momento y lugar de los hechos o el costo de reposición si no se puede determinar satisfactoriamente el valor de mercado. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "盗窃要求明知而取得、使用或试图取得或使用他人财产，并意图暂时或永久剥夺他人的权利或利益，或将财产用于未经授权的用途。 一级重大盗窃包括价值至少100,000美元的财物、执法部门部署的半挂车或价值至少50,000美元的合格货物。",
+        "degreeContext": "通常最高为30年及10,000美元罚款。如实施重大盗窃时以车辆为工具损坏他人不动产（仅用作逃离不足），或对他人动产或不动产造成超过1,000美元的损失，也可适用该等级。 价值通常按行为发生时当地的市场价值确定；若无法合理确定市场价值，则按重置成本计算。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-grand-theft-in-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(b)",
+    "slug": "reviewed-fl-grand-theft-in-the-second-degree",
+    "name": "Grand Theft in the Second Degree",
+    "names": {
+      "es": "Hurto mayor de segundo grado",
+      "zh": "二级重大盗窃"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.014(2)(b)",
+        "Florida Statutes 812.014(2)(b)",
+        "FS 812.014(2)(b)",
+        "Theft"
+      ],
+      "es": [
+        "Fla. Stat. § 812.014(2)(b)",
+        "Florida Statutes 812.014(2)(b)",
+        "FS 812.014(2)(b)",
+        "Theft"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.014(2)(b)",
+        "Florida Statutes 812.014(2)(b)",
+        "FS 812.014(2)(b)",
+        "Theft"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(2)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Theft requires knowingly obtaining, using or trying to obtain or use another person’s property, intending temporarily or permanently to deprive them of a right or benefit or to appropriate the property for an unauthorized use. The ordinary property-value branch covers $20,000 or more but less than $100,000. Separate branches cover qualifying commercial cargo under $50,000 and qualifying emergency medical or law-enforcement equipment worth at least $300 taken from designated places or vehicles.",
+        "degreeContext": "The ordinary second-degree maximum is 15 years and a $10,000 fine. A qualifying riot or emergency raises this branch to first degree, ordinarily up to 30 years and $10,000. The riot rule requires a riot or aggravated riot that facilitated the theft. The emergency rule requires a theft after the Governor’s declaration in the affected county, facilitated by emergency conditions. Value generally means market value at the time and place of the offense, or replacement cost if market value cannot be satisfactorily determined. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "El hurto exige obtener, usar o intentar obtener o usar a sabiendas bienes ajenos, con intención de privar temporal o permanentemente a la otra persona de un derecho o beneficio, o de apropiarse del bien para un uso no autorizado. La modalidad ordinaria por valor abarca al menos $20,000 y menos de $100,000. Otras modalidades comprenden carga comercial especificada inferior a $50,000 o equipo médico de emergencia o policial comprendido por la ley, valorado en al menos $300 y tomado de lugares o vehículos designados.",
+        "degreeContext": "El máximo ordinario de segundo grado es de 15 años y $10,000. Un disturbio o emergencia que cumpla las condiciones lo eleva a primer grado, ordinariamente hasta 30 años y $10,000. La regla de disturbios exige que las condiciones de un disturbio o disturbio agravado facilitaran el hurto. La regla de emergencia exige que el hurto se produjera en el condado afectado después de la declaración del gobernador y fuera facilitado por las condiciones de emergencia. El valor generalmente es el del mercado en el momento y lugar de los hechos o el costo de reposición si no se puede determinar satisfactoriamente el valor de mercado. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "盗窃要求明知而取得、使用或试图取得或使用他人财产，并意图暂时或永久剥夺他人的权利或利益，或将财产用于未经授权的用途。 通常按价值定级时为至少20,000美元但低于100,000美元。其他分支包括低于50,000美元的指定商业货物，以及从指定设施或车辆盗取且价值至少300美元的特定急救或执法设备。",
+        "degreeContext": "通常二级重罪最高15年及10,000美元；符合法定条件的骚乱或紧急状态使本分支升为一级，通常最高30年及10,000美元。 骚乱规则要求骚乱或加重骚乱所致状况便利了盗窃；紧急状态规则要求盗窃发生在州长宣布紧急状态后、受影响的县内，且紧急状况便利了盗窃。 价值通常按行为发生时当地的市场价值确定；若无法合理确定市场价值，则按重置成本计算。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-grand-theft-in-the-third-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(c)",
+    "slug": "reviewed-fl-grand-theft-in-the-third-degree",
+    "name": "Grand Theft in the Third Degree",
+    "names": {
+      "es": "Hurto mayor de tercer grado",
+      "zh": "三级重大盗窃"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.014(2)(c)",
+        "Florida Statutes 812.014(2)(c)",
+        "FS 812.014(2)(c)",
+        "Theft"
+      ],
+      "es": [
+        "Fla. Stat. § 812.014(2)(c)",
+        "Florida Statutes 812.014(2)(c)",
+        "FS 812.014(2)(c)",
+        "Theft"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.014(2)(c)",
+        "Florida Statutes 812.014(2)(c)",
+        "FS 812.014(2)(c)",
+        "Theft"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.014(2)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html"
+      },
+      {
+        "citation": "Fla. Stat. § 812.012",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Theft requires knowingly obtaining, using or trying to obtain or use another person’s property, intending temporarily or permanently to deprive them of a right or benefit or to appropriate the property for an unauthorized use. The ordinary property-value branch starts at $750 and stops below $20,000. Subparagraphs 1–3 split it at $5,000 and $10,000. Other property-specific branches include a firearm or motor vehicle subject to the statutory exceptions.",
+        "degreeContext": "The ordinary third-degree maximum is five years and $5,000. Subparagraph (2)(c)7 instead requires a $10,000 fine for theft of a commercially farmed animal, a registered beekeeper’s colony, or aquaculture species raised at a certified facility. The special riot or declared-emergency increase applies to the $5,000 to under $20,000 tiers in subparagraphs 2 and 3; those become second-degree felonies, ordinarily up to 15 years and $10,000. The riot rule requires a riot or aggravated riot that facilitated the theft. The emergency rule requires a theft after the Governor’s declaration in the affected county, facilitated by emergency conditions. Value generally means market value at the time and place of the offense, or replacement cost if market value cannot be satisfactorily determined. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "El hurto exige obtener, usar o intentar obtener o usar a sabiendas bienes ajenos, con intención de privar temporal o permanentemente a la otra persona de un derecho o beneficio, o de apropiarse del bien para un uso no autorizado. La modalidad ordinaria por valor empieza en $750 y llega a menos de $20,000. Los numerales 1–3 separan los tramos en $5,000 y $10,000. Otros supuestos incluyen un arma de fuego o vehículo de motor, sujetos a las excepciones legales.",
+        "degreeContext": "El máximo ordinario de tercer grado es de cinco años y $5,000. El numeral (2)(c)7 exige una multa de $10,000 por hurto de un animal de cría comercial, una colonia de un apicultor registrado o una especie de acuicultura criada en una instalación certificada. El aumento por disturbio o emergencia declarada se aplica a los numerales 2 y 3, de $5,000 a menos de $20,000; pasan a segundo grado, ordinariamente hasta 15 años y $10,000. La regla de disturbios exige que las condiciones de un disturbio o disturbio agravado facilitaran el hurto. La regla de emergencia exige que el hurto se produjera en el condado afectado después de la declaración del gobernador y fuera facilitado por las condiciones de emergencia. El valor generalmente es el del mercado en el momento y lugar de los hechos o el costo de reposición si no se puede determinar satisfactoriamente el valor de mercado. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "盗窃要求明知而取得、使用或试图取得或使用他人财产，并意图暂时或永久剥夺他人的权利或利益，或将财产用于未经授权的用途。 通常按价值定级的范围为至少750美元但低于20,000美元；第1至3项以5,000和10,000美元细分。另有针对特定物品的分支，如枪支或机动车，须注意法定例外。",
+        "degreeContext": "通常三级重罪最高五年及5,000美元。 第(2)(c)7项规定，盗窃商业养殖动物、注册养蜂人的蜂群或经认证养殖设施饲养的水产物种，必须罚款10,000美元。 骚乱或宣布紧急状态的特别加重规定适用于第2、3项，即至少5,000但低于20,000美元，升为二级，通常最高15年及10,000美元。 骚乱规则要求骚乱或加重骚乱所致状况便利了盗窃；紧急状态规则要求盗窃发生在州长宣布紧急状态后、受影响的县内，且紧急状况便利了盗窃。 价值通常按行为发生时当地的市场价值确定；若无法合理确定市场价值，则按重置成本计算。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-robbery-in-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.13(2)(a)",
+    "slug": "reviewed-fl-robbery-in-the-first-degree",
+    "name": "Robbery in the First Degree",
+    "names": {
+      "es": "Robo con arma de fuego u otra arma mortal",
+      "zh": "持枪或其他致命武器抢劫"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.13(2)(a)",
+        "Florida Statutes 812.13(2)(a)",
+        "FS 812.13(2)(a)",
+        "Robbery"
+      ],
+      "es": [
+        "Fla. Stat. § 812.13(2)(a)",
+        "Florida Statutes 812.13(2)(a)",
+        "FS 812.13(2)(a)",
+        "Robbery"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.13(2)(a)",
+        "Florida Statutes 812.13(2)(a)",
+        "FS 812.13(2)(a)",
+        "Robbery"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.13(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.087",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Taking property from another person or their custody through force, violence, assault or putting them in fear, intending to deprive them or the owner temporarily or permanently. This branch requires carrying a firearm or another deadly weapon; injury is not required.",
+        "degreeContext": "First-degree felony punishable up to life, ordinarily with a fine up to $10,000. Separate firearm minimums under §775.087 depend on the specific finding. For a qualifying firearm or destructive device, actual possession ordinarily carries a 10-year minimum, discharge 20 years, and discharge causing death or great bodily harm 25 years to life. The special machine-gun or qualifying semiautomatic-firearm-and-magazine provision can require 15 years for possession. Carrying another deadly weapon alone does not establish these firearm minimums. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "Tomar bienes de otra persona o de su custodia mediante fuerza, violencia, agresión o intimidación, con intención de privar temporal o permanentemente a esa persona o al dueño de los bienes. Esta modalidad exige portar un arma de fuego u otra arma mortal; no exige lesiones.",
+        "degreeContext": "Delito grave de primer grado castigable con hasta prisión perpetua; multa ordinaria de hasta $10,000. Los mínimos separados de §775.087 dependen de hechos concretos. Para un arma de fuego o artefacto destructivo comprendido, la posesión efectiva normalmente exige al menos 10 años; un disparo, 20; y un disparo que cause muerte o lesiones corporales graves, de 25 años a prisión perpetua. La disposición especial sobre ametralladoras o armas semiautomáticas con cargador que cumpla la norma puede exigir 15 años por posesión. Portar otra arma mortal por sí solo no establece estos mínimos. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "以强力、暴力、攻击或使人恐惧的方式，从他人身上或其保管中取走财物，意图暂时或永久剥夺该人或所有人对财物的权利。 本分支要求携带枪支或其他致命武器，无须造成伤害。",
+        "degreeContext": "一级重罪，最高可判终身监禁；通常罚款最高10,000美元。 第775.087条的特别最低刑取决于具体认定。对符合法律定义的枪支或破坏性装置，实际持有通常最低10年，开火最低20年，开火致人死亡或重伤为25年至终身。持有特定机枪或符合法定枪支与弹匣条件的半自动枪支，最低可达15年。仅携带其他致命武器不满足这些枪支最低刑条件。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-robbery-in-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "812.13(2)(c)",
+    "slug": "reviewed-fl-robbery-in-the-second-degree",
+    "name": "Robbery in the Second Degree",
+    "names": {
+      "es": "Robo sin armas",
+      "zh": "无武器抢劫"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.13(2)(c)",
+        "Florida Statutes 812.13(2)(c)",
+        "FS 812.13(2)(c)",
+        "Robbery"
+      ],
+      "es": [
+        "Fla. Stat. § 812.13(2)(c)",
+        "Florida Statutes 812.13(2)(c)",
+        "FS 812.13(2)(c)",
+        "Robbery"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.13(2)(c)",
+        "Florida Statutes 812.13(2)(c)",
+        "FS 812.13(2)(c)",
+        "Robbery"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.13(2)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.13.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Taking property from another person or their custody through force, violence, assault or putting them in fear, intending to deprive them or the owner temporarily or permanently. This branch requires that no firearm, deadly weapon or other weapon was carried.",
+        "degreeContext": "Second-degree felony: ordinarily up to 15 years and a $10,000 fine. A carried weapon is addressed by another subdivision. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "Tomar bienes de otra persona o de su custodia mediante fuerza, violencia, agresión o intimidación, con intención de privar temporal o permanentemente a esa persona o al dueño de los bienes. Esta modalidad exige que no se haya portado arma de fuego, arma mortal ni otra arma.",
+        "degreeContext": "Delito grave de segundo grado: ordinariamente hasta 15 años y $10,000 de multa. Si se portó un arma, corresponde examinar otro apartado. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "以强力、暴力、攻击或使人恐惧的方式，从他人身上或其保管中取走财物，意图暂时或永久剥夺该人或所有人对财物的权利。 本分支要求未携带枪支、致命武器或其他武器。",
+        "degreeContext": "二级重罪，通常最高15年及10,000美元罚款。携带武器属于其他分款。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-carjacking",
+    "jurisdiction": "FL",
+    "code": "812.133",
+    "slug": "reviewed-fl-carjacking",
+    "name": "Carjacking",
+    "names": {
+      "es": "Robo de vehículo con violencia o intimidación",
+      "zh": "劫车"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Fla. Stat. § 812.133",
+        "Florida Statutes 812.133",
+        "FS 812.133",
+        "Carjacking"
+      ],
+      "es": [
+        "Fla. Stat. § 812.133",
+        "Florida Statutes 812.133",
+        "FS 812.133",
+        "Carjacking"
+      ],
+      "zh": [
+        "Fla. Stat. § 812.133",
+        "Florida Statutes 812.133",
+        "FS 812.133",
+        "Carjacking"
+      ]
+    },
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 812.133",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.133.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.087",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.087.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Taking a motor vehicle from another person or their custody by force, violence, assault or putting them in fear, intending temporary or permanent deprivation.",
+        "degreeContext": "Both listed branches are first-degree felonies. Carrying a firearm or other deadly weapon under (2)(a) permits a term up to life. Carrying no weapon under (2)(b) ordinarily permits up to 30 years. The conventional fine is up to $10,000. The text does not separately assign a range for carrying only a nondeadly weapon; check the charged subdivision. Separate firearm minimums under §775.087 depend on the specific finding. For a qualifying firearm or destructive device, actual possession ordinarily carries a 10-year minimum, discharge 20 years, and discharge causing death or great bodily harm 25 years to life. The special machine-gun or qualifying semiautomatic-firearm-and-magazine provision can require 15 years for possession. Carrying another deadly weapon alone does not establish these firearm minimums. For conduct on or after July 1, 2026, if this offense causes physical injury or death to a qualifying family or household member and the person charged already had a qualifying domestic-violence conviction when it occurred, §741.2801 raises third degree to second, second to first, and first to a life felony."
+      },
+      "es": {
+        "plainSummary": "Tomar un vehículo de otra persona o de su custodia mediante fuerza, violencia, agresión o intimidación, con intención de privar de él temporal o permanentemente.",
+        "degreeContext": "Ambas modalidades son delitos graves de primer grado. Portar un arma de fuego u otra arma mortal según (2)(a) permite hasta prisión perpetua. Sin armas según (2)(b), normalmente hasta 30 años. La multa ordinaria es de hasta $10,000. El texto no asigna por separado una pena por portar solo un arma no mortal; revise el apartado imputado. Los mínimos separados de §775.087 dependen de hechos concretos. Para un arma de fuego o artefacto destructivo comprendido, la posesión efectiva normalmente exige al menos 10 años; un disparo, 20; y un disparo que cause muerte o lesiones corporales graves, de 25 años a prisión perpetua. La disposición especial sobre ametralladoras o armas semiautomáticas con cargador que cumpla la norma puede exigir 15 años por posesión. Portar otra arma mortal por sí solo no establece estos mínimos. Para hechos desde el 1 de julio de 2026, si el delito causa lesiones físicas o la muerte a un familiar o miembro del hogar comprendido por la ley y la persona acusada ya tenía una condena válida por violencia doméstica cuando ocurrió, el §741.2801 eleva el tercer grado a segundo, el segundo a primero y el primero a delito grave punible con prisión perpetua."
+      },
+      "zh": {
+        "plainSummary": "以强力、暴力、攻击或使人恐惧的方式，从他人身上或其保管中取走机动车，意图暂时或永久剥夺对方权利。",
+        "degreeContext": "两项均为一级重罪。第(2)(a)款中携带枪支或其他致命武器的最高可判终身监禁；第(2)(b)款中不携带任何武器的通常最高30年。通常罚款最高10,000美元。条文没有单独规定仅携带非致命武器的刑期，须核对具体指控分款。 第775.087条的特别最低刑取决于具体认定。对符合法律定义的枪支或破坏性装置，实际持有通常最低10年，开火最低20年，开火致人死亡或重伤为25年至终身。持有特定机枪或符合法定枪支与弹匣条件的半自动枪支，最低可达15年。仅携带其他致命武器不满足这些枪支最低刑条件。 对2026年7月1日及以后的行为，若本罪导致符合法定条件的家庭或同住成员受伤或死亡，且被控者实施时已有符合条件的家庭暴力定罪，则第741.2801条将三级升为二级、二级升为一级、一级升为终身重罪。"
+      }
+    }
+  }
+]

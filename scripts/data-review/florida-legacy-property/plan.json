@@ -1,0 +1,280 @@
+[
+  {
+    "id": "fl-grand-theft-in-the-first-degree",
+    "primary": "812.014",
+    "subdivision": "(2)(a)",
+    "bindings": [
+      {
+        "section": "812.014",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.014",
+        "scope": "(2)(a)"
+      },
+      {
+        "section": "812.012",
+        "scope": "(10)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-grand-theft-in-the-second-degree",
+    "primary": "812.014",
+    "subdivision": "(2)(b)",
+    "bindings": [
+      {
+        "section": "812.014",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.014",
+        "scope": "(2)(b)"
+      },
+      {
+        "section": "812.012",
+        "scope": "(10)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-grand-theft-in-the-third-degree",
+    "primary": "812.014",
+    "subdivision": "(2)(c)",
+    "bindings": [
+      {
+        "section": "812.014",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.014",
+        "scope": "(2)(c)"
+      },
+      {
+        "section": "812.012",
+        "scope": "(10)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-robbery-in-the-first-degree",
+    "primary": "812.13",
+    "subdivision": "(2)(a)",
+    "bindings": [
+      {
+        "section": "812.13",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.13",
+        "scope": "(2)(a)"
+      },
+      {
+        "section": "812.13",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-robbery-in-the-second-degree",
+    "primary": "812.13",
+    "subdivision": "(2)(c)",
+    "bindings": [
+      {
+        "section": "812.13",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.13",
+        "scope": "(2)(c)"
+      },
+      {
+        "section": "812.13",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  },
+  {
+    "id": "fl-carjacking",
+    "primary": "812.133",
+    "subdivision": null,
+    "bindings": [
+      {
+        "section": "812.133",
+        "scope": "(1)"
+      },
+      {
+        "section": "812.133",
+        "scope": "(2)(a)"
+      },
+      {
+        "section": "812.133",
+        "scope": "(2)(b)"
+      },
+      {
+        "section": "812.133",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.082",
+        "scope": "(3)"
+      },
+      {
+        "section": "775.083",
+        "scope": "(1)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(2)"
+      },
+      {
+        "section": "775.087",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(2)"
+      },
+      {
+        "section": "741.28",
+        "scope": "(3)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(1)"
+      },
+      {
+        "section": "741.2801",
+        "scope": "(2)"
+      }
+    ]
+  }
+]

@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_PRIVACY_BATCH } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH } from "./ohio-family-batch";
@@ -47,6 +48,7 @@ export interface ChargeTranslationEntry {
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
   ...FLORIDA_PERSONS_BATCH.translations,
+  ...FLORIDA_LEGACY_PROPERTY.translations,
   ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
   ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   ...OHIO_PATIENT_CARE_BATCH.translations,
