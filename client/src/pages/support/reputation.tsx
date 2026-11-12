@@ -1,7 +1,8 @@
 import { NrrcResources } from "@/components/nrrc-resources";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import reputationHero from "@assets/stock_images/reputation.jpg";
+import { Link } from "wouter";
+import { reputationDesignCopy } from "@/locales/reputation-design";
 import {
   ShieldCheck,
   Copy,
@@ -11,11 +12,8 @@ import {
   Mail,
   ChevronDown,
   BookOpen,
-  RefreshCw,
   ExternalLink,
   ArrowRight,
-  FileSearch,
-  Award,
   Info,
 } from "lucide-react";
 import {
@@ -33,11 +31,13 @@ function TemplateCard({
   label,
   subject,
   body,
+  onBodyChange,
   t,
 }: {
   label: string;
   subject?: string;
   body: string;
+  onBodyChange: (value: string) => void;
   t: (key: string) => string;
 }) {
   const [copied, setCopied] = useState(false);
@@ -66,31 +66,40 @@ function TemplateCard({
       printWindow.document.write(`
         <html>
           <head>
-            <title>${label}</title>
+            <title></title>
             <style>
               body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; max-width: 700px; margin: 0 auto; }
-              h1 { font-size: 18px; color: #333; border-bottom: 2px solid #64748b; padding-bottom: 8px; }
+              h1 { font-size: 18px; color: #333; border-bottom: 1px solid #777; padding-bottom: 8px; }
               .subject { font-weight: bold; margin-bottom: 16px; }
-              .body { white-space: pre-wrap; }
+              .body { white-space: pre-wrap; overflow-wrap: anywhere; }
               .note { font-size: 12px; color: #666; margin-top: 24px; padding-top: 12px; border-top: 1px solid #ddd; font-style: italic; }
               @media print { body { padding: 20px; } }
             </style>
           </head>
           <body>
-            <h1>${label}</h1>
-            ${subject ? `<p class="subject">${subject}</p>` : ""}
-            <div class="body">${body.replace(/\n/g, "<br>")}</div>
-            <p class="note">${t("support.reputation.commsSection.personalizeNote")}</p>
+            <h1></h1>
+            <p class="subject"></p>
+            <div class="body"></div>
+            <p class="note"></p>
           </body>
         </html>
       `);
-      printWindow.document.close();
+      const page = printWindow.document;
+      page.documentElement.lang = document.documentElement.lang;
+      page.title = label;
+      page.querySelector("h1")!.textContent = label;
+      const subjectLine = page.querySelector<HTMLElement>(".subject")!;
+      subjectLine.hidden = !subject;
+      subjectLine.textContent = subject ?? "";
+      page.querySelector(".body")!.textContent = body;
+      page.querySelector(".note")!.textContent = t("support.reputation.commsSection.personalizeNote");
+      page.close();
       printWindow.print();
     }
   };
 
   return (
-    <Card className="border border-border/60 dark:border-border/40 shadow-sm">
+    <Card role="group" aria-label={label} className="border border-border/60 dark:border-border/40 shadow-sm">
       <CardHeader className="pb-3">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
@@ -118,9 +127,9 @@ function TemplateCard({
             {subject}
           </p>
         )}
-        <pre className="whitespace-pre-wrap text-sm text-muted-foreground font-sans leading-relaxed">
-          {body}
-        </pre>
+        <textarea aria-label={label} value={body} onChange={event => onBodyChange(event.target.value)}
+          className="w-full min-h-72 p-3 text-sm leading-relaxed border border-border bg-background" />
+
       </CardContent>
     </Card>
   );
@@ -166,10 +175,7 @@ function CleanSlateSection() {
     <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="clean-slate">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
-            <RefreshCw className="h-5 w-5 text-teal-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
-          </div>
+          <h2 className="mb-2 text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
           <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
         </ScrollReveal>
 
@@ -193,28 +199,26 @@ function CleanSlateSection() {
         </div>
 
         <ScrollReveal>
-          <Card className="mb-6">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-base">{t(`${ns}.statesTitle`)}</CardTitle>
-            </CardHeader>
-            <CardContent>
+          <details className="reputation-disclosure">
+            <summary>{t(`${ns}.statesTitle`)}</summary>
+            <div>
               <ul className="space-y-1.5">
                 {statesList.map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <Check className="h-4 w-4 text-teal-500 flex-shrink-0 mt-0.5" />
+                    <Check className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}
               </ul>
               <p className="text-xs text-muted-foreground mt-3 italic">{t(`${ns}.statesNote`)}</p>
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         </ScrollReveal>
 
         <ScrollReveal>
-          <Card className="mb-6">
-            <CardContent className="pt-5">
-              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.checkTitle`)}</h3>
+          <details className="reputation-disclosure">
+            <summary>{t(`${ns}.checkTitle`)}</summary>
+            <div>
               <ol className="space-y-2">
                 {checkSteps.map((step, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -223,15 +227,15 @@ function CleanSlateSection() {
                   </li>
                 ))}
               </ol>
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="rounded-xl border border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-950/20 p-5 mb-6">
+          <div className="rounded-xl border border-border bg-muted p-5 mb-6">
             <h3 className="text-sm font-semibold text-foreground mb-2">{t(`${ns}.screenerLabel`)}</h3>
             <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.screenerDesc`)}</p>
-            <a href="/support/reputation/eligibility" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-teal-600 hover:bg-teal-500 text-white text-sm font-semibold transition-colors">
+            <a href="/support/reputation/eligibility" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground text-sm font-semibold transition-colors">
               {t(`${ns}.screenerCta`)} <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -245,7 +249,7 @@ function CleanSlateSection() {
               { label: t(`${ns}.lawHelpLabel`), desc: t(`${ns}.lawHelpDesc`), url: "https://www.lawhelp.org/" },
             ].map(({ label, desc, url }) => (
               <a key={label} href={url} target="_blank" rel="noopener noreferrer">
-                <Card className="h-full hover:border-teal-300 dark:hover:border-teal-700 transition-colors cursor-pointer">
+                <Card className="h-full hover:border-primary transition-colors cursor-pointer">
                   <CardContent className="pt-4">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <span className="text-sm font-semibold text-foreground">{label}</span>
@@ -272,27 +276,20 @@ function FcraRightsSection() {
     <section className="py-10 md:py-14 bg-background border-t border-border/30" id="fcra-rights">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
-            <FileSearch className="h-5 w-5 text-blue-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
-          </div>
+          <h2 className="mb-2 text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
           <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-5 mb-6">
+        <div className="mb-6">
           {[
             { title: t(`${ns}.adverseActionTitle`), body: t(`${ns}.adverseActionBody`) },
             { title: t(`${ns}.disputeTitle`), body: t(`${ns}.disputeBody`) },
             { title: t(`${ns}.lookbackTitle`), body: t(`${ns}.lookbackBody`) },
-          ].map(({ title, body }, i) => (
-            <ScrollReveal key={title} delay={i * 0.07}>
-              <Card className="h-full">
-                <CardContent className="pt-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-2">{title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{body}</p>
-                </CardContent>
-              </Card>
-            </ScrollReveal>
+          ].map(({ title, body }) => (
+            <details className="reputation-disclosure" key={title}>
+              <summary>{title}</summary>
+              <p>{body}</p>
+            </details>
           ))}
           <ScrollReveal delay={0.21}>
             <Card className="h-full border-blue-200 dark:border-blue-800 bg-blue-50/40 dark:bg-blue-950/20">
@@ -307,9 +304,9 @@ function FcraRightsSection() {
         </div>
 
         <ScrollReveal>
-          <Card className="mb-6">
-            <CardContent className="pt-5">
-              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.whatToDoTitle`)}</h3>
+          <details className="reputation-disclosure">
+            <summary>{t(`${ns}.whatToDoTitle`)}</summary>
+            <div>
               <ol className="space-y-2">
                 {steps.map((step, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -318,8 +315,8 @@ function FcraRightsSection() {
                   </li>
                 ))}
               </ol>
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         </ScrollReveal>
 
         <ScrollReveal>
@@ -330,7 +327,7 @@ function FcraRightsSection() {
               { label: t(`${ns}.nelp2Label`), desc: t(`${ns}.nelp2Desc`), url: "https://www.nelp.org/publication/fair-chance-hiring-criminal-records/" },
             ].map(({ label, desc, url }) => (
               <a key={label} href={url} target="_blank" rel="noopener noreferrer">
-                <Card className="h-full hover:border-blue-300 dark:hover:border-blue-700 transition-colors cursor-pointer">
+                <Card className="h-full hover:border-primary transition-colors cursor-pointer">
                   <CardContent className="pt-4">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <span className="text-sm font-semibold text-foreground">{label}</span>
@@ -352,20 +349,13 @@ function RapSheetSection() {
   const { t } = useTranslation();
   const ns = "support.reputation.rapSheet";
 
-  const errors = [
-    { key: "error1", icon: "1" },
-    { key: "error2", icon: "2" },
-    { key: "error3", icon: "3" },
-  ] as const;
+  const errors = ["error1", "error2", "error3"] as const;
 
   return (
     <section className="py-10 md:py-14 bg-background border-t border-border/30" id="rap-sheet">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
-            <FileSearch className="h-5 w-5 text-slate-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
-          </div>
+          <h2 className="mb-2 text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
           <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
         </ScrollReveal>
 
@@ -383,7 +373,7 @@ function RapSheetSection() {
                     href="https://www.fbi.gov/services/cjis/identity-history-summary-checks"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
                   >
                     IdentityHistory.fbi.gov <ExternalLink className="h-3 w-3" />
                   </a>
@@ -405,23 +395,12 @@ function RapSheetSection() {
             <h3 className="text-base font-semibold text-foreground mb-1">{t(`${ns}.step2Title`)}</h3>
             <p className="text-sm text-muted-foreground mb-4">{t(`${ns}.step2Intro`)}</p>
             <div className="space-y-3">
-              {errors.map(({ key, icon }) => (
-                <Card key={key} className="border-l-4 border-l-slate-400">
-                  <CardContent className="pt-4">
-                    <div className="flex gap-3">
-                      <span className="w-6 h-6 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
-                        {icon}
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.${key}Title`)}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed mb-2">{t(`${ns}.${key}Body`)}</p>
-                        <p className="text-xs text-muted-foreground leading-relaxed italic border-t border-border/50 pt-2">
-                          <span className="font-semibold not-italic">Fix: </span>{t(`${ns}.${key}Fix`)}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+              {errors.map(key => (
+                <details key={key} className="reputation-disclosure">
+                  <summary>{t(`${ns}.${key}Title`)}</summary>
+                  <p>{t(`${ns}.${key}Body`)}</p>
+                  <p>{t(`${ns}.${key}Fix`)}</p>
+                </details>
               ))}
             </div>
           </div>
@@ -475,10 +454,7 @@ function CertificatesOfReliefSection() {
     <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="certificates-of-relief">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
-            <Award className="h-5 w-5 text-amber-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
-          </div>
+          <h2 className="mb-2 text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
           <p className="text-muted-foreground mb-8">{t(`${ns}.sectionSubtitle`)}</p>
         </ScrollReveal>
 
@@ -502,9 +478,9 @@ function CertificatesOfReliefSection() {
         </div>
 
         <ScrollReveal>
-          <Card className="mb-6">
-            <CardContent className="pt-5">
-              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.statesTitle`)}</h3>
+          <details className="reputation-disclosure">
+            <summary>{t(`${ns}.statesTitle`)}</summary>
+            <div>
               <ul className="space-y-1.5">
                 {statesList.map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -514,14 +490,14 @@ function CertificatesOfReliefSection() {
                 ))}
               </ul>
               <p className="text-xs text-muted-foreground mt-3 italic">{t(`${ns}.statesNote`)}</p>
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         </ScrollReveal>
 
         <ScrollReveal>
-          <Card className="mb-6">
-            <CardContent className="pt-5">
-              <h3 className="text-sm font-semibold text-foreground mb-3">{t(`${ns}.howTitle`)}</h3>
+          <details className="reputation-disclosure">
+            <summary>{t(`${ns}.howTitle`)}</summary>
+            <div>
               <ol className="space-y-2">
                 {howSteps.map((step, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -530,8 +506,8 @@ function CertificatesOfReliefSection() {
                   </li>
                 ))}
               </ol>
-            </CardContent>
-          </Card>
+            </div>
+          </details>
         </ScrollReveal>
 
         <ScrollReveal>
@@ -541,7 +517,7 @@ function CertificatesOfReliefSection() {
               { label: t(`${ns}.cleanSlateLink`), desc: t(`${ns}.cleanSlateLinkDesc`), url: "https://cleanslateinitiative.org/states/" },
             ].map(({ label, desc, url }) => (
               <a key={label} href={url} target="_blank" rel="noopener noreferrer">
-                <Card className="h-full hover:border-amber-300 dark:hover:border-amber-700 transition-colors cursor-pointer">
+                <Card className="h-full hover:border-primary transition-colors cursor-pointer">
                   <CardContent className="pt-4">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <span className="text-sm font-semibold text-foreground">{label}</span>
@@ -560,11 +536,14 @@ function CertificatesOfReliefSection() {
 }
 
 function ReputationCommsSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState<"written" | "conversation">("written");
   const [expandedScript, setExpandedScript] = useState<string | null>(null);
   const callTips = ["tip1", "tip2", "tip3", "tip4"];
   const conversationScripts = ["unexpected", "interview"] as const;
+  const [drafts, setDrafts] = useState<Record<string, string>>({});
+  const [selectedLetter, setSelectedLetter] = useState("closeFriend");
+  const draftId = `${i18n.resolvedLanguage ?? i18n.language}:${selectedLetter}`;
   const writtenTemplates = ["closeFriend", "professional", "mugshot"] as const;
 
   return (
@@ -626,19 +605,21 @@ function ReputationCommsSection() {
         </ScrollReveal>
 
         {activeTab === "written" && (
-          <div className="space-y-4">
-            {writtenTemplates.map((key) => (
-              <ScrollReveal key={key}>
-                <TemplateCard
-                  label={t(`support.reputation.commsSection.emailTemplates.${key}.label`)}
-                  subject={
-                    t(`support.reputation.commsSection.emailTemplates.${key}.subject`) || undefined
-                  }
-                  body={t(`support.reputation.commsSection.emailTemplates.${key}.body`)}
-                  t={t}
-                />
-              </ScrollReveal>
-            ))}
+          <div className="reputation-letter">
+            <label htmlFor="reputation-letter-choice">{t("support.reputation.commsSection.emailTemplates.title")}</label>
+            <select id="reputation-letter-choice" value={selectedLetter} onChange={event => setSelectedLetter(event.target.value)}>
+              {writtenTemplates.map(key => (
+                <option key={key} value={key}>{t(`support.reputation.commsSection.emailTemplates.${key}.label`)}</option>
+              ))}
+            </select>
+            <TemplateCard
+              key={draftId}
+              label={t(`support.reputation.commsSection.emailTemplates.${selectedLetter}.label`)}
+              subject={t(`support.reputation.commsSection.emailTemplates.${selectedLetter}.subject`)}
+              body={drafts[draftId] ?? t(`support.reputation.commsSection.emailTemplates.${selectedLetter}.body`)}
+              onBodyChange={value => setDrafts(current => ({ ...current, [draftId]: value }))}
+              t={t}
+            />
           </div>
         )}
 
@@ -733,70 +714,17 @@ function ReputationCommsSection() {
   );
 }
 
-const SIDEBAR_SECTIONS = [
-  { id: "section-start-here",    label: "Start Here" },
-  { id: "clean-slate",            label: "Record Clearance" },
-  { id: "fcra-rights",            label: "Background Checks" },
-  { id: "rap-sheet",              label: "Record Errors" },
-  { id: "certificates-of-relief", label: "Certificates of Relief" },
-  { id: "reputation-comms",       label: "Conversations" },
-  { id: "section-resources",      label: "Resources" },
-  { id: "section-faq",            label: "Common Questions" },
-  { id: "section-tips",           label: "Tips" },
-] as const;
-
-function ReputationSidebar({ activeId }: { activeId: string | null }) {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 88;
-      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-    }
-  };
-
-  return (
-    <nav aria-label="Page sections" className="space-y-0.5">
-      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-3 px-2">
-        On this page
-      </p>
-      {SIDEBAR_SECTIONS.map(({ id, label }) => {
-        const isActive = activeId === id;
-        return (
-          <button
-            key={id}
-            onClick={() => scrollTo(id)}
-            className={`w-full flex items-center gap-2 text-left rounded-lg px-2 py-1.5 transition-all duration-150 text-xs ${
-              isActive
-                ? "bg-slate-100 dark:bg-slate-800 text-foreground font-semibold"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-            }`}
-          >
-            {isActive && <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />}
-            <span className="leading-snug">{label}</span>
-          </button>
-        );
-      })}
-    </nav>
-  );
-}
-
 export default function ReputationSupport() {
-  const { t } = useTranslation();
-  const [activeId, setActiveId] = useState<string | null>("section-start-here");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const ids = SIDEBAR_SECTIONS.map((s) => s.id);
-      let current: string | null = null;
-      for (const id of ids) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 120) current = id;
-      }
-      setActiveId(current);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const { t, i18n } = useTranslation();
+  const language = i18n.resolvedLanguage ?? i18n.language;
+  const copy = language.startsWith("es") ? reputationDesignCopy.es : language.startsWith("zh") ? reputationDesignCopy.zh : reputationDesignCopy.en;
+  const sections = [
+    { id: "clean-slate", label: t("support.reputation.cleanSlate.sectionTitle") },
+    { id: "fcra-rights", label: t("support.reputation.fcraRights.sectionTitle") },
+    { id: "rap-sheet", label: t("support.reputation.rapSheet.sectionTitle") },
+    { id: "certificates-of-relief", label: t("support.reputation.certificatesOfRelief.sectionTitle") },
+    { id: "reputation-comms", label: t("support.reputation.commsSection.sectionTitle") },
+  ];
 
   const startHereItems: ActionItem[] = [
     {
@@ -914,7 +842,20 @@ export default function ReputationSupport() {
   return (
     <ResourcePageTemplate
       categoryId="reputation"
-      heroImage={reputationHero}
+      mainClassName="reputation-page"
+      actionHeading={copy.start}
+      customNavItems={sections}
+      introduction={<>
+        <Link className="reputation-back" href="/support">{t("support.backToSupport")}</Link>
+        <section className="reputation-hero">
+          <div>
+            <p>{t("support.relatedLinks.reputation")}</p>
+            <h1>{copy.title}<br /><em>{copy.accent}</em></h1>
+            <p>{t("support.reputation.overview")}</p>
+          </div>
+          <img src="/images/design/reputation.svg" alt="" width="240" height="220" />
+        </section>
+      </>}
       icon={ShieldCheck}
       iconColor="bg-slate-500/10 text-slate-600 dark:text-slate-400"
       heroGradient="bg-gradient-to-br from-slate-500/5 via-background to-background"
@@ -929,30 +870,13 @@ export default function ReputationSupport() {
         { label: t("support.relatedLinks.finances"), href: "/support/finances" },
       ]}
       customSections={<>
-        {/* Mobile section nav — hidden on desktop (sidebar handles that) */}
-        <div className="lg:hidden sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm -mx-4 px-4">
-          <div className="flex gap-2 overflow-x-auto py-2.5 no-scrollbar">
-            {SIDEBAR_SECTIONS.map(({ id, label }) => (
-              <button
-                key={id}
-                onClick={() => {
-                  const el = document.getElementById(id);
-                  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 56, behavior: "smooth" });
-                }}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
-                  activeId === id
-                    ? "border-slate-400 bg-slate-100 dark:bg-slate-800 text-foreground font-semibold"
-                    : "border-border hover:bg-muted hover:border-foreground/20 text-muted-foreground"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-      <NrrcResources ids={["consequences"]} />
-        <CleanSlateSection /><FcraRightsSection /><RapSheetSection /><CertificatesOfReliefSection /><ReputationCommsSection /></>}
-      sidebar={<ReputationSidebar activeId={activeId} />}
+        <NrrcResources ids={["consequences"]} />
+        <CleanSlateSection />
+        <FcraRightsSection />
+        <RapSheetSection />
+        <CertificatesOfReliefSection />
+        <ReputationCommsSection />
+      </>}
     />
   );
 }

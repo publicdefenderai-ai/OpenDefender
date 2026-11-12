@@ -3481,3 +3481,33 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .reentry-hero img { display: none; }
   .reentry-topics > [role="alert"] { grid-column: 1; }
 }
+
+.reputation-page { max-width: 1120px; margin: auto; padding: 32px clamp(20px, 4vw, 40px) 56px; }
+.reputation-back { color: var(--primary); font-weight: 600; }
+.reputation-back:hover { text-decoration: underline; }
+.reputation-hero { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; align-items: center; margin: 36px 0; }
+.reputation-hero h1 { margin: 14px 0 20px; font-size: clamp(36px, 4.7vw, 56px); font-weight: 500; letter-spacing: -.045em; line-height: 1.08; }
+.reputation-hero em { color: var(--primary); font-style: normal; }
+.reputation-hero p:last-child, .reputation-disclosure > :not(summary) { max-width: 68ch; color: var(--muted-foreground); line-height: 1.75; }
+.reputation-page section[id] { scroll-margin-top: 5rem; }
+.reputation-page .editorial-card-interactive { border: 0; border-top: 1px solid var(--border); border-radius: 0; box-shadow: none; background: transparent; }
+.reputation-page .editorial-section-heading > span, .reputation-page section[id] h2 { font-size: 24px; font-weight: 500; letter-spacing: -.025em; text-transform: none; white-space: normal; }
+.reputation-disclosure { border-top: 1px solid var(--border); padding: 0 0 4px; }
+.reputation-disclosure summary { cursor: pointer; color: var(--primary); font-weight: 600; padding: 14px 0; }
+.reputation-disclosure[open] { padding-bottom: 16px; }
+.reputation-page pre { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .reputation-hero { grid-template-columns: minmax(0, 1fr); }
+  .reputation-hero img { display: none; }
+}
+.reputation-letter { padding: clamp(14px, 3vw, 28px); background: var(--muted); }
+.reputation-letter label { display: block; margin-bottom: 6px; font-weight: 600; }
+.reputation-letter select { width: 100%; min-height: 44px; margin-bottom: 18px; padding: 8px; background: var(--background); border: 1px solid var(--border); }
+.reputation-page #clean-slate, .reputation-page #certificates-of-relief { background: transparent; }
+.reputation-page section[id] > .max-w-4xl { max-width: none; }
+.reputation-page section[id] a > .bg-card { background: transparent; border-width: 1px 0 0; border-radius: 0; }
+@media (min-width: 900px) {
+  .reputation-page :is(#clean-slate, #fcra-rights, #rap-sheet, #certificates-of-relief) > div { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.65fr); column-gap: 42px; }
+  .reputation-page :is(#clean-slate, #fcra-rights, #rap-sheet, #certificates-of-relief) > div > :first-child { grid-column: 1; grid-row: 1 / span 10; }
+  .reputation-page :is(#clean-slate, #fcra-rights, #rap-sheet, #certificates-of-relief) > div > :not(:first-child) { grid-column: 2; }
+}

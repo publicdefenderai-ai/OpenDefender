@@ -91,6 +91,7 @@ const testProcess = spawn(
   "tests/e2e/mental-health-design.spec.ts",
   "tests/e2e/personal-health-design.spec.ts",
   "tests/e2e/reentry-design.spec.ts",
+  "tests/e2e/reputation-design.spec.ts",
     "tests/e2e/family-toolkit-design.spec.ts",
     "tests/e2e/collateral-design.spec.ts",
     "tests/e2e/directory-design.spec.ts",
