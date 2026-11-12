@@ -142,6 +142,7 @@ const releaseCheckOhioSourceFirstChargeIds = [
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-theft-fraud-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-benefits-fraud-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-justice-publication.json"), "utf8")).map(row => row.id),
+  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-privacy-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-protection-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-family-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-public-peace-publication.json"), "utf8")).map(row => row.id),

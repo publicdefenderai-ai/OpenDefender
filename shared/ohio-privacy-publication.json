@@ -1,0 +1,472 @@
+[
+  {
+    "id": "oh-orc-2907-06-offensive-contact",
+    "section": "2907.06",
+    "code": "2907.06(A)",
+    "scope": "A",
+    "statutoryName": "Sexual imposition",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "M3",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Having sexual contact with another, causing another to have sexual contact with the accused, or causing two or more others to have sexual contact when the accused knows the contact is offensive to a participant or is reckless in that regard. Division (B) prohibits conviction on the victim’s testimony alone without other supporting evidence.",
+    "gradeSummary": "M3 ordinarily. A prior conviction or guilty plea under this section, 2907.02 through 2907.05 or former 2907.12 makes M1. Three or more qualifying prior violations, in any combination, retain M1 but permit up to one year in jail. A prior under former 2907.12 must be identified from the historical conviction. The published composite effective March 21, 2025 contains a single conduct provision. For conduct through March 20, 2025, check the earlier version and the specific conduct alleged. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2907.02",
+      "2907.03",
+      "2907.04",
+      "2907.05",
+      "1.52",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.06 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.06/8-9-2024"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-under-thirteen",
+    "section": "2907.07",
+    "code": "2907.07(A)",
+    "scope": "A",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(2)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Soliciting a person under 13 to engage in sexual activity with the accused. Knowledge of the person’s age is unnecessary.",
+    "gradeSummary": "On a first offense F3, with a presumption for prison. If the accused also arranged to meet the other person for sexual activity, one of the F3 terms in 2929.14(A)(3)(b) is mandatory. A previous conviction for a sexually oriented or child-victim oriented offense makes F2 with mandatory prison. For conduct on or after March 22, 2019 the mandatory minimum term is two to eight years with an indefinite maximum; for earlier conduct, check the then-applicable definite-term statute. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-age-thirteen-to-fifteen",
+    "section": "2907.07",
+    "code": "2907.07(B)(1)",
+    "scope": "B(1)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(3)",
+      "G(4)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older soliciting sexual conduct with a nonspouse aged 13 through 15 when the accused is at least four years older. Knowledge of age is unnecessary.",
+    "gradeSummary": "On a first offense F5, with a presumption for prison. A mandatory F5 term requires both arranging a meeting for sexual activity and an age gap of at least ten years. A previous conviction for a sexually oriented or child-victim oriented offense makes F4 with a mandatory prison term of at least twelve months. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-trafficked-teen",
+    "section": "2907.07",
+    "code": "2907.07(B)(2)",
+    "scope": "B(2)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(3)",
+      "G(4)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older, at least four years older than the other person, soliciting sexual conduct with a 16- or 17-year-old victim of a violation of 2905.32, knowing or recklessly disregarding the person’s age. The version effective August 9, 2024 removed the nonspouse condition from this branch; it remains in (B)(1).",
+    "gradeSummary": "On a first offense F5, with a presumption for prison. A mandatory F5 term requires both arranging a meeting for sexual activity and an age gap of at least ten years. A previous conviction for a sexually oriented or child-victim oriented offense makes F4 with a mandatory prison term of at least twelve months. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2905.32",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-substantially-impaired-under-sixteen",
+    "section": "2907.07",
+    "code": "2907.07(C)",
+    "scope": "C",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(2)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Soliciting a person under 16 to engage in sexual activity with the accused when that person is substantially impaired because of a mental or physical condition.",
+    "gradeSummary": "On a first offense F3, with a presumption for prison. If the accused also arranged to meet the other person for sexual activity, one of the F3 terms in 2929.14(A)(3)(b) is mandatory. A previous conviction for a sexually oriented or child-victim oriented offense makes F2 with mandatory prison. For conduct on or after March 22, 2019 the mandatory minimum term is two to eight years with an indefinite maximum; for earlier conduct, check the then-applicable definite-term statute. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-device-under-thirteen",
+    "section": "2907.07",
+    "code": "2907.07(D)(1)",
+    "scope": "D(1)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(2)"
+    ],
+    "contextPaths": [
+      "F"
+    ],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older using a telecommunications device to solicit sexual activity with a person under 13, knowing the person is under 13 or being reckless about that fact. Division (F) requires the transmission to originate in Ohio or be received in Ohio.",
+    "gradeSummary": "On a first offense F3, with a presumption for prison. If the accused also arranged to meet the other person for sexual activity, one of the F3 terms in 2929.14(A)(3)(b) is mandatory. A previous conviction for a sexually oriented or child-victim oriented offense makes F2 with mandatory prison. For conduct on or after March 22, 2019 the mandatory minimum term is two to eight years with an indefinite maximum; for earlier conduct, check the then-applicable definite-term statute. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2913.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-device-officer-as-under-thirteen",
+    "section": "2907.07",
+    "code": "2907.07(D)(2)",
+    "scope": "D(2)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D(2)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(2)"
+    ],
+    "contextPaths": [
+      "F"
+    ],
+    "degrees": [
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older using a telecommunications device to solicit sexual activity with a law enforcement officer posing as a child under 13, believing the other person is under 13 or being reckless about that fact. Division (F) requires the transmission to originate in Ohio or be received in Ohio.",
+    "gradeSummary": "On a first offense F3, with a presumption for prison. If the accused also arranged to meet the other person for sexual activity, one of the F3 terms in 2929.14(A)(3)(b) is mandatory. A previous conviction for a sexually oriented or child-victim oriented offense makes F2 with mandatory prison. For conduct on or after March 22, 2019 the mandatory minimum term is two to eight years with an indefinite maximum; for earlier conduct, check the then-applicable definite-term statute. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2913.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-device-thirteen-to-fifteen",
+    "section": "2907.07",
+    "code": "2907.07(E)(1)",
+    "scope": "E(1)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(1)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(3)",
+      "G(4)"
+    ],
+    "contextPaths": [
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older using a telecommunications device to solicit sexual activity with a person aged 13 through 15. The accused must be at least four years older and know or be reckless about the age range. Division (F) requires the transmission to originate in Ohio or be received in Ohio.",
+    "gradeSummary": "On a first offense F5, with a presumption for prison. A mandatory F5 term requires both arranging a meeting for sexual activity and an age gap of at least ten years. A previous conviction for a sexually oriented or child-victim oriented offense makes F4 with a mandatory prison term of at least twelve months. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2913.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-07-device-officer-as-thirteen-to-fifteen",
+    "section": "2907.07",
+    "code": "2907.07(E)(2)",
+    "scope": "E(2)",
+    "statutoryName": "Importuning",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E(2)"
+    ],
+    "gradingPaths": [
+      "G(1)",
+      "G(3)",
+      "G(4)"
+    ],
+    "contextPaths": [
+      "F"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "An accused age 18 or older using a telecommunications device to solicit sexual activity with a law enforcement officer posing as a 13- through 15-year-old. The accused must be at least four years older than the assumed age and believe the other person is within that range or be reckless about that fact. Division (F) requires the transmission to originate in Ohio or be received in Ohio.",
+    "gradeSummary": "On a first offense F5, with a presumption for prison. A mandatory F5 term requires both arranging a meeting for sexual activity and an age gap of at least ten years. For (E)(2) the age gap uses the age the officer claimed. A previous conviction for a sexually oriented or child-victim oriented offense makes F4 with a mandatory prison term of at least twelve months. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2907.01",
+      "2913.01",
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.07 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.07/4-4-2023"
+    }
+  },
+  {
+    "id": "oh-orc-2907-08-spying-or-eavesdropping",
+    "section": "2907.08",
+    "code": "2907.08(A)",
+    "scope": "A",
+    "statutoryName": "Voyeurism",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(2)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Trespassing or otherwise surreptitiously invading another person’s privacy to spy or eavesdrop on that person for the purpose of the accused’s own sexual arousal or gratification.",
+    "gradeSummary": "M3. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.08 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.08/4-7-2009"
+    }
+  },
+  {
+    "id": "oh-orc-2907-08-recording-private-areas",
+    "section": "2907.08",
+    "code": "2907.08(B)",
+    "scope": "B",
+    "statutoryName": "Voyeurism",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(3)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly trespassing or otherwise secretly or surreptitiously recording, filming, photographing, broadcasting or streaming another person in a place where a person has a reasonable expectation of privacy, for the purpose of viewing that person’s private areas.",
+    "gradeSummary": "M2. The April 4, 2023 amendment changed the conduct elements. Earlier (B) referred to recording another in a state of nudity for sexual arousal or gratification. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.08 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.08/4-7-2009"
+    }
+  },
+  {
+    "id": "oh-orc-2907-08-recording-minor-private-areas",
+    "section": "2907.08",
+    "code": "2907.08(C)",
+    "scope": "C",
+    "statutoryName": "Voyeurism",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(5)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly trespassing or otherwise secretly or surreptitiously recording, filming, photographing, broadcasting or streaming a minor in a place where a person has a reasonable expectation of privacy, for the purpose of viewing the minor’s private areas.",
+    "gradeSummary": "F5. The April 4, 2023 amendment changed the conduct elements. Earlier (C) referred to recording, spying or eavesdropping on a minor in a state of nudity for sexual arousal or gratification. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.08 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.08/4-7-2009"
+    }
+  },
+  {
+    "id": "oh-orc-2907-08-recording-through-clothing",
+    "section": "2907.08",
+    "code": "2907.08(D)",
+    "scope": "D",
+    "statutoryName": "Voyeurism",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "E(1)",
+      "E(4)"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Secretly or surreptitiously recording another person above, under or through that person’s clothing for the purpose of viewing the body or undergarments.",
+    "gradeSummary": "M1. The April 4, 2023 amendment added recording above clothing; the previous wording said under or through clothing. Registration can be a separate consequence. Chapter 2950 distinguishes adult convictions and juvenile classifications; the charge alone does not establish an individual registration obligation or duration.",
+    "dependencies": [
+      "2950.01",
+      "2950.04"
+    ],
+    "extraGrading": [],
+    "historicalCitation": {
+      "citation": "Ohio Rev. Code Ann. § 2907.08 (previous version)",
+      "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.08/4-7-2009"
+    }
+  }
+]

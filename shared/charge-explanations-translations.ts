@@ -1,3 +1,4 @@
+import { OHIO_PRIVACY_BATCH } from "./ohio-privacy-batch";
 import { OHIO_PROTECTION_BATCH } from "./ohio-protection-batch";
 import { OHIO_FAMILY_BATCH } from "./ohio-family-batch";
 import { OHIO_PUBLIC_PEACE_BATCH } from "./ohio-public-peace-batch";
@@ -55,6 +56,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
+  ...OHIO_PRIVACY_BATCH.translations,
   ...OHIO_PROTECTION_BATCH.translations,
   ...OHIO_FAMILY_BATCH.translations,
   ...OHIO_PUBLIC_PEACE_BATCH.translations,
