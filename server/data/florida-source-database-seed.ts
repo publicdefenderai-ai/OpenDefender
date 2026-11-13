@@ -1,5 +1,6 @@
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "./florida-robbery-source";
+import { FLORIDA_COURT_OFFICIALS_SOURCES, isFloridaCourtOfficialsSourceFresh } from "./florida-court-officials-source";
 import { FLORIDA_JUSTICE_SOURCES, isFloridaJusticeSourceFresh } from "./florida-justice-source";
 import { FLORIDA_CREDIT_CARD_SOURCES, isFloridaCreditCardSourceFresh } from "./florida-credit-card-source";
 import { FLORIDA_RESTRAINT_SOURCES, isFloridaRestraintSourceFresh } from "./florida-restraint-source";
@@ -22,7 +23,7 @@ import {
   type FloridaReviewedSourceRecord,
 } from "./florida-reviewed-source-records";
 
-const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES];
+const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES, ...FLORIDA_COURT_OFFICIALS_SOURCES, ...FLORIDA_JUSTICE_SOURCES, ...FLORIDA_CREDIT_CARD_SOURCES, ...FLORIDA_RESTRAINT_SOURCES, ...FLORIDA_CRASH_FLIGHT_SOURCES];
 
 export const FLORIDA_SOURCE_POLICY = "official_florida_online_sunshine_statutes";
 export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.cfm";
@@ -663,6 +664,7 @@ export function buildFloridaSourceDatabaseSeed(
     isFloridaReviewedSourceFresh(now))
     .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now))
     .filter(record => !FLORIDA_ROBBERY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRobberySourceFresh(now))
+    .filter(record => !FLORIDA_COURT_OFFICIALS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCourtOfficialsSourceFresh(now))
     .filter(record => !FLORIDA_JUSTICE_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaJusticeSourceFresh(now))
     .filter(record => !FLORIDA_CREDIT_CARD_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaCreditCardSourceFresh(now))
     .filter(record => !FLORIDA_RESTRAINT_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRestraintSourceFresh(now))
