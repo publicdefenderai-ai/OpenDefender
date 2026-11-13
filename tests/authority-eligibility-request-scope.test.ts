@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 const state = vi.hoisted(() => {
   const deadline = Date.parse('2026-11-10T00:00:00Z');
-  const checks = Object.fromEntries(['ca','pilot','reviewed','major','theftFraud','benefitsFraud','justice','custody','publicPeace','family','protection','privacy','priorityGaps','commercialSex','drugConduct','drugRemainder','residual','flOld','flNew'].map(key => [key, vi.fn(() => Date.now() < deadline)]));
-  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','fl-n1','fl-n2','oh-criminal-trespass'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
+  const checks = Object.fromEntries(['ca','pilot','reviewed','major','theftFraud','benefitsFraud','justice','custody','publicPeace','family','protection','privacy','priorityGaps','commercialSex','drugConduct','drugRemainder','residual','flOld','flNew','flRobbery'].map(key => [key, vi.fn(() => Date.now() < deadline)]));
+  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','fl-n1','fl-n2','fl-r1','fl-r2','oh-criminal-trespass'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
 });
 // Synthetic IDs stand in for the reviewed batches mocked below.
 vi.mock('../shared/ohio-reviewed-identity', () => ({isReviewedOhioChargeId: (id: string) => /^oh-(?:r|t|b|j|c|pp|fa|pr|pv|pg|cs|dc|dr)[12]$/.test(id)}));
@@ -21,6 +21,7 @@ vi.mock('../shared/criminal-charges', () => ({getSelectableCharges: () => [
   {id:'oh-dc1',jurisdiction:'OH'}, {id:'oh-dc2',jurisdiction:'OH'},
   {id:'oh-dr1',jurisdiction:'OH'}, {id:'oh-dr2',jurisdiction:'OH'},
   {id:'fl-n1',jurisdiction:'FL'}, {id:'fl-n2',jurisdiction:'FL'},
+  {id:'fl-r1',jurisdiction:'FL'}, {id:'fl-r2',jurisdiction:'FL'},
 ]}));
 vi.mock('../shared/california-authority', () => ({CALIFORNIA_CANONICAL_RECORDS:[{canonicalId:'ca-one',selectable:true}],getCaliforniaCanonicalRecord:()=>({currentness:{status:'current'}})}));
 vi.mock('../shared/california-freshness', () => ({isCaliforniaEvidenceFresh:state.checks.ca}));
@@ -55,6 +56,8 @@ vi.mock('../server/data/ohio-major-source', () => ({isOhioMajorSourceFresh:state
 vi.mock('../server/data/ohio-reviewed-source', () => ({OHIO_REVIEWED_SOURCES:[],isOhioReviewedSourceFresh:state.checks.reviewed}));
 vi.mock('../server/data/ohio-chapter-2903-source', () => ({OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS:[]}));
 vi.mock('../server/data/ohio-chapter-2903-refresh', () => ({isOhioChapter2903PilotFresh:state.checks.pilot}));
+vi.mock('../shared/florida-robbery-batch', () => ({FLORIDA_ROBBERY_IDS:new Set(['fl-r1','fl-r2'])}));
+vi.mock('../server/data/florida-robbery-source', () => ({isFloridaRobberySourceFresh:state.checks.flRobbery}));
 vi.mock('../shared/florida-persons-batch', () => ({FLORIDA_PERSONS_IDS:new Set(['fl-n1','fl-n2'])}));
 vi.mock('../server/data/florida-persons-source', () => ({isFloridaPersonsSourceFresh:state.checks.flNew}));
 vi.mock('../server/data/florida-reviewed-source-records', () => ({FLORIDA_REVIEWED_SOURCE_RECORDS:[],isFloridaReviewedSourceFresh:state.checks.flOld}));
@@ -64,7 +67,7 @@ import {getCurrentAuthoritySelectableChargeIds} from '../server/services/authori
 beforeEach(() => {vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(state.deadline-1);});
 afterEach(() => {vi.useRealTimers();vi.unstubAllEnvs();});
 for (const fixture of [true,false]) describe(`request-scoped eligibility fixture=${fixture}`, () => {
-  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','fl-n1','fl-n2','oh-criminal-trespass']));});
+  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','fl-n1','fl-n2','fl-r1','fl-r2','oh-criminal-trespass']));});
   it('does not evaluate unrelated state evidence or databases for California',async()=>{
     expect([...await getCurrentAuthoritySelectableChargeIds(['CA'])]).toEqual(['ca-one']);
     expect(state.db).not.toHaveBeenCalled();
@@ -72,11 +75,18 @@ for (const fixture of [true,false]) describe(`request-scoped eligibility fixture
     expect(state.checks.ca).toHaveBeenCalledTimes(1);
   });
   it('checks each relevant family once, then rechecks expiry on the next request',async()=>{
-    expect((await getCurrentAuthoritySelectableChargeIds(['OH','FL'])).size).toBe(28);
+    expect((await getCurrentAuthoritySelectableChargeIds(['OH','FL'])).size).toBe(30);
     expect(state.checks.drugRemainder).toHaveBeenCalledTimes(1);expect(state.checks.drugConduct).toHaveBeenCalledTimes(1);expect(state.checks.commercialSex).toHaveBeenCalledTimes(1);expect(state.checks.priorityGaps).toHaveBeenCalledTimes(1);expect(state.checks.privacy).toHaveBeenCalledTimes(1);expect(state.checks.protection).toHaveBeenCalledTimes(1);expect(state.checks.family).toHaveBeenCalledTimes(1);expect(state.checks.publicPeace).toHaveBeenCalledTimes(1);expect(state.checks.custody).toHaveBeenCalledTimes(1);expect(state.checks.justice).toHaveBeenCalledTimes(1);expect(state.checks.benefitsFraud).toHaveBeenCalledTimes(1);expect(state.checks.theftFraud).toHaveBeenCalledTimes(1);expect(state.checks.residual).toHaveBeenCalledTimes(1);expect(state.checks.flNew).toHaveBeenCalledTimes(1);
     vi.setSystemTime(state.deadline);
     expect((await getCurrentAuthoritySelectableChargeIds(['OH','FL'])).size).toBe(0);
     expect(state.checks.drugRemainder).toHaveBeenCalledTimes(2);expect(state.checks.drugConduct).toHaveBeenCalledTimes(2);expect(state.checks.commercialSex).toHaveBeenCalledTimes(2);expect(state.checks.priorityGaps).toHaveBeenCalledTimes(2);expect(state.checks.privacy).toHaveBeenCalledTimes(2);expect(state.checks.protection).toHaveBeenCalledTimes(2);expect(state.checks.family).toHaveBeenCalledTimes(2);expect(state.checks.publicPeace).toHaveBeenCalledTimes(2);expect(state.checks.custody).toHaveBeenCalledTimes(2);expect(state.checks.justice).toHaveBeenCalledTimes(2);expect(state.checks.benefitsFraud).toHaveBeenCalledTimes(2);expect(state.checks.theftFraud).toHaveBeenCalledTimes(2);expect(state.checks.residual).toHaveBeenCalledTimes(2);expect(state.checks.flNew).toHaveBeenCalledTimes(2);
+  });
+  it('withholds robbery choices when their evidence expires and rechecks on the next Florida request', async () => {
+    state.checks.flRobbery.mockReturnValueOnce(false);
+    expect([...await getCurrentAuthoritySelectableChargeIds(['FL'])]).toEqual(['fl-n1', 'fl-n2']);
+    expect(state.checks.flRobbery).toHaveBeenCalledTimes(1);
+    expect([...await getCurrentAuthoritySelectableChargeIds(['FL'])]).toEqual(['fl-n1', 'fl-n2', 'fl-r1', 'fl-r2']);
+    expect(state.checks.flRobbery).toHaveBeenCalledTimes(2);
   });
   it('withholds theft/fraud alone when its own receipt is stale', async()=>{
     state.checks.theftFraud.mockReturnValueOnce(false);
@@ -162,7 +172,7 @@ for (const fixture of [true,false]) describe(`request-scoped eligibility fixture
     expect([...await getCurrentAuthoritySelectableChargeIds(['OH'])]).toEqual(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2']);
     expect(state.checks.drugRemainder).toHaveBeenCalledTimes(2);
   });
-  it('keeps all-jurisdiction callers supported',async()=>{expect((await getCurrentAuthoritySelectableChargeIds()).size).toBe(29);});
+  it('keeps all-jurisdiction callers supported',async()=>{expect((await getCurrentAuthoritySelectableChargeIds()).size).toBe(31);});
 });
 it('does not cache database eligibility between requests',async()=>{
   vi.stubEnv('RELEASE_CHECK','false');
