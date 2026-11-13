@@ -5071,13 +5071,23 @@ export default {
     }
   },
   "courtLocator": {
+    "design": {
+      "zip": "Código postal",
+      "before": "Antes de ir",
+      "notice": "Un tribunal cercano podría no ser el que lleva su caso. Confirme la dirección, la sala, la fecha y la hora en su aviso judicial o directamente con el tribunal.",
+      "federal": "Buscar un tribunal federal",
+      "prepare": "Prepárese para su cita en el tribunal",
+      "unavailable": "No se pudo realizar la búsqueda. Inténtelo de nuevo o use el buscador de tribunales federales.",
+      "nearby": "Tribunales cercanos",
+      "website": "Sitio web del tribunal"
+    },
     "hero": {
-      "title": "Encuentre su Tribunal Local",
-      "subtitle": "Ubique tribunales cercanos utilizando fuentes de datos gubernamentales gratuitas y OpenStreetMap. Obtenga información de contacto, horarios de operación y servicios disponibles en su área."
+      "title": "Encuentre un tribunal.",
+      "subtitle": "Busque tribunales cercanos y sus ubicaciones por código postal."
     },
     "search": {
       "inputPlaceholder": "Ingrese código postal",
-      "searchButton": "Buscar",
+      "searchButton": "Buscar tribunales",
       "searching": "Buscando...",
       "error": "Por favor ingrese un código postal válido de 5 dígitos",
       "errorGeneral": "No se puede buscar oficinas. Por favor intente nuevamente o contacte a su tribunal local para información."
@@ -5153,7 +5163,7 @@ export default {
       },
       "dataSourcesCard": {
         "title": "Fuentes de Datos",
-        "description": "Ubicaciones de tribunales de OpenStreetMap y CourtListener (Proyecto de Ley Libre). Siempre llame con anticipación para confirmar horarios y procedimientos ya que los datos pueden variar."
+        "description": "Los resultados locales provienen de OpenStreetMap. La cobertura y los datos de contacto varían. Llame para confirmar el horario y los procedimientos."
       }
     }
   },
