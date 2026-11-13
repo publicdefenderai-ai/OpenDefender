@@ -1,0 +1,1704 @@
+[
+  {
+    "id": "fl-fs-316-191-2-a-traffic",
+    "section": "316.191",
+    "scope": "(2)(a)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(a)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-a-traffic",
+      "name": "Driving in a road race, street takeover or stunt event",
+      "names": {
+        "es": "Conducir en una carrera, toma de vía o exhibición peligrosa",
+        "zh": "参与道路竞速、占道或特技驾驶"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(a)",
+      "slug": "fl-fs-316-191-2-a-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(a)",
+          "F.S. 316.191(2)(a)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(a)",
+          "F.S. 316.191(2)(a)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(a)",
+          "F.S. 316.191(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Driving a motor vehicle on a highway, roadway or parking lot in a street takeover, stunt driving, race, speed or acceleration contest, endurance test, speed exhibition, or to set a speed record.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Conducir en una carretera, vía o estacionamiento en una toma de vía, maniobras peligrosas, carrera, concurso de velocidad o aceleración, prueba de resistencia o exhibición de velocidad, o para establecer un récord de velocidad.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "在公路、道路或停车场驾驶机动车参与占道、特技驾驶、比赛、竞速或加速赛、耐力测试、速度展示或创造速度纪录。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-2-b-traffic",
+    "section": "316.191",
+    "scope": "(2)(b)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(b)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-b-traffic",
+      "name": "Participating in, coordinating or facilitating a road-racing event",
+      "names": {
+        "es": "Participar, coordinar o facilitar un evento de carreras",
+        "zh": "参与、组织或协助道路竞速活动"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(b)",
+      "slug": "fl-fs-316-191-2-b-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(b)",
+          "F.S. 316.191(2)(b)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(b)",
+          "F.S. 316.191(2)(b)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(b)",
+          "F.S. 316.191(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Participating in, coordinating online or otherwise, facilitating, or collecting money at any location for a race, takeover, stunt event or other competition or exhibition covered by §316.191(2).",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Participar, coordinar en redes u otros medios, facilitar o recaudar dinero en cualquier lugar para una carrera, toma de vía, maniobra peligrosa u otra competición o exhibición comprendida en §316.191(2).",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "参与、在网上或以其他方式组织、协助第316.191(2)款所列竞赛、占道、特技或展示，或在任何地点为此收款。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-2-c-traffic",
+    "section": "316.191",
+    "scope": "(2)(c)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(c)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-c-traffic",
+      "name": "Knowingly riding as a passenger in a road-racing event",
+      "names": {
+        "es": "Viajar a sabiendas como pasajero en una carrera",
+        "zh": "明知而乘车参与道路竞速活动"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(c)",
+      "slug": "fl-fs-316-191-2-c-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(c)",
+          "F.S. 316.191(2)(c)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(c)",
+          "F.S. 316.191(2)(c)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(c)",
+          "F.S. 316.191(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly riding as a passenger in a prohibited race, drag race, street takeover, stunt event, competition, test or exhibition.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Viajar a sabiendas como pasajero en una carrera, toma de vía, maniobra peligrosa, competición, prueba o exhibición prohibida.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "明知而作为乘客参加受禁的道路比赛、直线竞速、占道、特技驾驶、测试或展示。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-2-d-traffic",
+    "section": "316.191",
+    "scope": "(2)(d)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(d)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-d-traffic",
+      "name": "Purposefully impeding traffic for a road-racing event",
+      "names": {
+        "es": "Obstaculizar deliberadamente el tránsito para una carrera",
+        "zh": "为道路竞速故意阻碍交通"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(d)",
+      "slug": "fl-fs-316-191-2-d-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(d)",
+          "F.S. 316.191(2)(d)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(d)",
+          "F.S. 316.191(2)(d)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(d)",
+          "F.S. 316.191(2)(d)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Purposefully slowing, stopping or impeding traffic, including pedestrians, for a prohibited race, takeover, stunt event, competition, test or exhibition.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Hacer que el tránsito, incluidos los peatones, disminuya la marcha, se detenga o se vea obstaculizado deliberadamente para una carrera, toma de vía, maniobra, competición, prueba o exhibición prohibida.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "为受禁的比赛、占道、特技、测试或展示而故意使包括行人在内的交通减慢、停止或受到阻碍。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-2-e-traffic",
+    "section": "316.191",
+    "scope": "(2)(e)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(e)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-e-traffic",
+      "name": "Driving to film or record a road-racing event",
+      "names": {
+        "es": "Conducir para filmar o grabar una carrera",
+        "zh": "为拍摄道路竞速活动而驾车"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(e)",
+      "slug": "fl-fs-316-191-2-e-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(e)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(e)",
+          "F.S. 316.191(2)(e)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(e)",
+          "F.S. 316.191(2)(e)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(e)",
+          "F.S. 316.191(2)(e)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a motor vehicle to film or record participants in a prohibited event. Bona fide news media members are exempt under this paragraph.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Conducir un vehículo para filmar o grabar a participantes de un evento prohibido. Este apartado exime a integrantes auténticos de medios informativos.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "为拍摄或记录受禁活动的参与者而驾驶机动车。真正的新闻媒体成员适用本款例外。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-2-f-traffic",
+    "section": "316.191",
+    "scope": "(2)(f)",
+    "gradingScope": "(3)(a)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "316.003",
+      "322.271",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)(f)",
+        "(3)(a)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "316.003": [
+        "(46)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-2-f-traffic",
+      "name": "Driving to supply fuel for a road-racing event",
+      "names": {
+        "es": "Conducir para abastecer de combustible una carrera",
+        "zh": "为道路竞速车辆供应燃料而驾车"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "316.191(2)(f)",
+      "slug": "fl-fs-316-191-2-f-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(2)(f)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(f)",
+          "F.S. 316.191(2)(f)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(f)",
+          "F.S. 316.191(2)(f)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(2)(f)",
+          "F.S. 316.191(2)(f)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Operating a motor vehicle carrying any amount of fuel for the purpose of fueling another vehicle involved in a prohibited event.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail, with a required $500–$2,000 fine and one-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Conducir un vehículo con cualquier cantidad de combustible para abastecer a un vehículo que participa en un evento prohibido.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel, multa obligatoria de $500 a $2,000 y revocación de licencia por un año. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "驾驶载有任何数量燃料的机动车，目的是向参与受禁活动的车辆供油。",
+          "degreeContext": "一级轻罪：通常最高一年监禁，必须罚款500至2,000美元并吊销驾照一年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-3-b-traffic",
+    "section": "316.191",
+    "scope": "(3)(b)",
+    "gradingScope": "(3)(b)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "322.271",
+      "316.003",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)",
+        "(3)(b)",
+        "(3)(c)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "316.003": [
+        "(1)",
+        "(46)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-3-b-traffic",
+      "name": "Road racing: second violation within one year",
+      "names": {
+        "es": "Carreras: segunda infracción en un año",
+        "zh": "道路竞速：一年内第二次违法"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.191(3)(b)",
+      "slug": "fl-fs-316-191-3-b-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(3)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(b)",
+          "F.S. 316.191(3)(b)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(b)",
+          "F.S. 316.191(3)(b)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(b)",
+          "F.S. 316.191(3)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A second violation of any of §316.191(2)’s prohibited conduct within one year after the date of a prior violation that resulted in conviction. A determination of guilt counts even if adjudication was withheld.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison, a required $2,500–$4,000 fine, and two-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Segunda infracción de cualquier conducta prohibida por §316.191(2) dentro del año siguiente a la fecha de una infracción anterior que terminó en condena. Cuenta una determinación de culpabilidad incluso si se reservó la adjudicación.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión, multa obligatoria de $2,500 a $4,000 y revocación por dos años. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "在导致定罪的先前违法行为发生之日起一年内，再次违反第316.191(2)款所禁行为。即使暂缓正式定罪，有罪认定也计入。",
+          "degreeContext": "三级重罪：通常最高五年监禁，必须罚款2,500至4,000美元并吊销驾照两年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-3-c-traffic",
+    "section": "316.191",
+    "scope": "(3)(c)",
+    "gradingScope": "(3)(c)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "322.271",
+      "316.003",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)",
+        "(3)(c)",
+        "(3)(b)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "316.003": [
+        "(1)",
+        "(46)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-3-c-traffic",
+      "name": "Road racing: knowingly interfering with an emergency vehicle",
+      "names": {
+        "es": "Carreras: interferencia consciente con vehículo de emergencia",
+        "zh": "道路竞速：明知而妨碍应急车辆"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.191(3)(c)",
+      "slug": "fl-fs-316-191-3-c-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(3)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(c)",
+          "F.S. 316.191(3)(c)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(c)",
+          "F.S. 316.191(3)(c)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(c)",
+          "F.S. 316.191(3)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "During a subsection (2) violation, knowingly obstructing an authorized emergency vehicle on call and responding to an emergency other than a violation of this racing statute. Paragraph (c) directs punishment under paragraph (b).",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison, a required $2,500–$4,000 fine, and two-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Durante una infracción del apartado (2), obstaculizar a sabiendas a un vehículo de emergencia autorizado que atiende una emergencia distinta de una infracción de esta ley de carreras. El apartado (c) remite a la pena del (b).",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión, multa obligatoria de $2,500 a $4,000 y revocación por dos años. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "在违反第(2)款期间，明知而阻碍获授权应急车辆执行应急任务；该紧急情况须不是本竞速法所指违法事件。第(c)款引用第(b)款的处罚。",
+          "degreeContext": "三级重罪：通常最高五年监禁，必须罚款2,500至4,000美元并吊销驾照两年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-3-d-traffic",
+    "section": "316.191",
+    "scope": "(3)(d)",
+    "gradingScope": "(3)(d)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "322.271",
+      "316.003",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)",
+        "(3)(d)",
+        "(3)(b)",
+        "(3)(c)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "316.003": [
+        "(1)",
+        "(46)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-3-d-traffic",
+      "name": "Road racing: repeat emergency-vehicle interference",
+      "names": {
+        "es": "Carreras: interferencia reiterada con vehículo de emergencia",
+        "zh": "道路竞速：再次妨碍应急车辆"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.191(3)(d)",
+      "slug": "fl-fs-316-191-3-d-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(3)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(d)",
+          "F.S. 316.191(3)(d)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(d)",
+          "F.S. 316.191(3)(d)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(d)",
+          "F.S. 316.191(3)(d)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A second or subsequent violation of the specific emergency-vehicle interference provision in §316.191(3)(c). This branch does not state the one-year limit of the general repeat offense.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years and a fine up to $10,000; four-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Segunda o posterior infracción de la disposición específica de interferencia con un vehículo de emergencia de §316.191(3)(c). Esta modalidad no fija el plazo de un año de la reiteración general.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años y multa de hasta $10,000; revocación por cuatro años. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "第二次或更多次违反第316.191(3)(c)款关于妨碍应急车辆的特定规定。本款未规定一般重复违法的一年期限。",
+          "degreeContext": "二级重罪：通常最高15年监禁，罚金最高10,000美元；吊销驾照四年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-3-e-traffic",
+    "section": "316.191",
+    "scope": "(3)(e)",
+    "gradingScope": "(3)(e)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "322.271",
+      "316.003",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)",
+        "(3)(e)",
+        "(3)(b)",
+        "(3)(c)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "316.003": [
+        "(1)",
+        "(46)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-3-e-traffic",
+      "name": "Road racing: third or subsequent violation within five years",
+      "names": {
+        "es": "Carreras: tercera o posterior infracción en cinco años",
+        "zh": "道路竞速：五年内第三次或更多次违法"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.191(3)(e)",
+      "slug": "fl-fs-316-191-3-e-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(3)(e)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(e)",
+          "F.S. 316.191(3)(e)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(e)",
+          "F.S. 316.191(3)(e)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(e)",
+          "F.S. 316.191(3)(e)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A third or subsequent violation of subsection (2) within five years after the date of a prior subsection (2) violation that resulted in conviction.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years, a required $3,500–$7,500 fine and four-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Tercera o posterior infracción del apartado (2) dentro de los cinco años desde la fecha de una infracción anterior del mismo apartado que terminó en condena.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años, multa obligatoria de $3,500 a $7,500 y revocación por cuatro años. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "在先前导致定罪的第(2)款违法发生之日起五年内，第三次或更多次违反该款。",
+          "degreeContext": "二级重罪：通常最高15年监禁，必须罚款3,500至7,500美元并吊销驾照四年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-316-191-3-f-traffic",
+    "section": "316.191",
+    "scope": "(3)(f)",
+    "gradingScope": "(3)(f)",
+    "officialTitle": "Racing on highways, street takeovers, and stunt driving",
+    "dependencies": [
+      "316.191",
+      "322.271",
+      "316.003",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "316.191": [
+        "(1)",
+        "(2)",
+        "(3)(f)",
+        "(3)(b)",
+        "(3)(c)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "322.271": [
+        "(1)"
+      ],
+      "316.003": [
+        "(1)",
+        "(46)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-316-191-3-f-traffic",
+      "name": "Coordinated street takeover: specified driving or traffic conduct",
+      "names": {
+        "es": "Toma de vía coordinada: conducción u obstrucción especificadas",
+        "zh": "有组织占道：特定驾驶或交通阻碍行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "316.191(3)(f)",
+      "slug": "fl-fs-316-191-3-f-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 316.191(3)(f)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.191",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.191.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.271",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.271.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.003",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.003.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(f)",
+          "F.S. 316.191(3)(f)"
+        ],
+        "es": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(f)",
+          "F.S. 316.191(3)(f)"
+        ],
+        "zh": [
+          "Racing on highways, street takeovers, and stunt driving",
+          "FS 316.191(3)(f)",
+          "F.S. 316.191(3)(f)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Ten or more vehicles operate in an organized manner to take over a street. This felony requires driving in the event, purposefully impeding traffic, driving to film (subject to the news exception), or driving to supply fuel. Passenger or coordination status alone is outside this branch.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison, a required $2,500–$4,000 fine, and two-year license revocation. Licensed tracks, drag strips and areas designated by the authorities for these events are excluded. Arrest may lead to vehicle impoundment; forfeiture has separate conditions. A license hearing may be requested."
+        },
+        "es": {
+          "plainSummary": "Diez o más vehículos actúan organizadamente para tomar una vía. Se exige conducir en el evento, obstaculizar el tránsito deliberadamente, conducir para filmar (con la excepción de prensa) o conducir para abastecer combustible. Ser pasajero o coordinar por sí solo no basta para esta modalidad.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión, multa obligatoria de $2,500 a $4,000 y revocación por dos años. Se excluyen pistas autorizadas y áreas destinadas por las autoridades a estos actos. El arresto puede dar lugar a retención del vehículo; el decomiso tiene requisitos distintos. Se puede solicitar una audiencia sobre la licencia."
+        },
+        "zh": {
+          "plainSummary": "十辆或更多车辆有组织地占道。须有在活动中驾驶、故意阻碍交通、驾车拍摄（新闻例外适用）或驾车供油行为。仅作乘客或组织者不足以适用本款。",
+          "degreeContext": "三级重罪：通常最高五年监禁，必须罚款2,500至4,000美元并吊销驾照两年。 获许可的赛道、直线竞速赛道和主管机关指定场所除外。被捕可导致车辆被扣留；没收须符合另列条件。可以申请驾照听证。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-03-1-b-1-traffic",
+    "section": "322.03",
+    "scope": "(1)(b)1.",
+    "gradingScope": "(1)(b)1.",
+    "officialTitle": "Drivers must be licensed; penalties",
+    "dependencies": [
+      "322.03",
+      "322.04",
+      "316.212",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.03": [
+        "(1)(a)",
+        "(1)(b)",
+        "(1)(b)1.",
+        "(7)"
+      ],
+      "322.04": [
+        "(1)"
+      ],
+      "316.212": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-03-1-b-1-traffic",
+      "name": "Driving without a valid license (first conviction)",
+      "names": {
+        "es": "Conducción sin licencia válida (primera condena)",
+        "zh": "无有效驾照驾驶 (第一次定罪)"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.03(1)(b)1.",
+      "slug": "fl-fs-322-03-1-b-1-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.03(1)(b)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)1.",
+          "F.S. 322.03(1)(b)1."
+        ],
+        "es": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)1.",
+          "F.S. 322.03(1)(b)1."
+        ],
+        "zh": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)1.",
+          "F.S. 322.03(1)(b)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Driving on a Florida highway without a valid license unless otherwise authorized. Licensing exemptions apply, and §316.212 golf-cart violations are excluded from this penalty ladder.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. A license valid when arrested can be presented by the court appearance to preclude conviction under §322.03(7)."
+        },
+        "es": {
+          "plainSummary": "Conducir en una carretera de Florida sin licencia válida, salvo autorización legal. Se aplican las exenciones; las infracciones relativas a carritos de golf de §316.212 están excluidas de esta escala.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Presentar antes o en la comparecencia una licencia válida al momento del arresto impide la condena conforme al apartado (7)."
+        },
+        "zh": {
+          "plainSummary": "未经其他法定授权而在佛州公路上无有效驾照驾驶。法定免领驾照情形适用；第316.212条高尔夫球车违规不适用该处罚阶梯。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 在出庭时或之前出示被捕当时有效的驾照，可依第(7)款免予定罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-03-1-b-2-traffic",
+    "section": "322.03",
+    "scope": "(1)(b)2.",
+    "gradingScope": "(1)(b)2.",
+    "officialTitle": "Drivers must be licensed; penalties",
+    "dependencies": [
+      "322.03",
+      "322.04",
+      "316.212",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.03": [
+        "(1)(a)",
+        "(1)(b)",
+        "(1)(b)2.",
+        "(7)"
+      ],
+      "322.04": [
+        "(1)"
+      ],
+      "316.212": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-03-1-b-2-traffic",
+      "name": "Driving without a valid license (second conviction)",
+      "names": {
+        "es": "Conducción sin licencia válida (segunda condena)",
+        "zh": "无有效驾照驾驶 (第二次定罪)"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.03(1)(b)2.",
+      "slug": "fl-fs-322-03-1-b-2-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.03(1)(b)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)2.",
+          "F.S. 322.03(1)(b)2."
+        ],
+        "es": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)2.",
+          "F.S. 322.03(1)(b)2."
+        ],
+        "zh": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)2.",
+          "F.S. 322.03(1)(b)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Driving on a Florida highway without a valid license unless otherwise authorized. Licensing exemptions apply, and §316.212 golf-cart violations are excluded from this penalty ladder.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. A license valid when arrested can be presented by the court appearance to preclude conviction under §322.03(7)."
+        },
+        "es": {
+          "plainSummary": "Conducir en una carretera de Florida sin licencia válida, salvo autorización legal. Se aplican las exenciones; las infracciones relativas a carritos de golf de §316.212 están excluidas de esta escala.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Presentar antes o en la comparecencia una licencia válida al momento del arresto impide la condena conforme al apartado (7)."
+        },
+        "zh": {
+          "plainSummary": "未经其他法定授权而在佛州公路上无有效驾照驾驶。法定免领驾照情形适用；第316.212条高尔夫球车违规不适用该处罚阶梯。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 在出庭时或之前出示被捕当时有效的驾照，可依第(7)款免予定罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-03-1-b-3-traffic",
+    "section": "322.03",
+    "scope": "(1)(b)3.",
+    "gradingScope": "(1)(b)3.",
+    "officialTitle": "Drivers must be licensed; penalties",
+    "dependencies": [
+      "322.03",
+      "322.04",
+      "316.212",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.03": [
+        "(1)(a)",
+        "(1)(b)",
+        "(1)(b)3.",
+        "(7)"
+      ],
+      "322.04": [
+        "(1)"
+      ],
+      "316.212": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-03-1-b-3-traffic",
+      "name": "Driving without a valid license (third or subsequent conviction)",
+      "names": {
+        "es": "Conducción sin licencia válida (tercera condena o posterior)",
+        "zh": "无有效驾照驾驶 (第三次或更多次定罪)"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.03(1)(b)3.",
+      "slug": "fl-fs-322-03-1-b-3-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.03(1)(b)3.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 316.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)3.",
+          "F.S. 322.03(1)(b)3."
+        ],
+        "es": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)3.",
+          "F.S. 322.03(1)(b)3."
+        ],
+        "zh": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(1)(b)3.",
+          "F.S. 322.03(1)(b)3."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Driving on a Florida highway without a valid license unless otherwise authorized. Licensing exemptions apply, and §316.212 golf-cart violations are excluded from this penalty ladder.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. At least ten days in jail are mandatory. A license valid when arrested can be presented by the court appearance to preclude conviction under §322.03(7)."
+        },
+        "es": {
+          "plainSummary": "Conducir en una carretera de Florida sin licencia válida, salvo autorización legal. Se aplican las exenciones; las infracciones relativas a carritos de golf de §316.212 están excluidas de esta escala.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Se exigen al menos diez días de cárcel. Presentar antes o en la comparecencia una licencia válida al momento del arresto impide la condena conforme al apartado (7)."
+        },
+        "zh": {
+          "plainSummary": "未经其他法定授权而在佛州公路上无有效驾照驾驶。法定免领驾照情形适用；第316.212条高尔夫球车违规不适用该处罚阶梯。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 最低必须监禁十天。 在出庭时或之前出示被捕当时有效的驾照，可依第(7)款免予定罪。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-03-2-a-traffic",
+    "section": "322.03",
+    "scope": "(2)(a)",
+    "gradingScope": "(2)(a)",
+    "officialTitle": "Drivers must be licensed; penalties",
+    "dependencies": [
+      "322.03",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.03": [
+        "(2)(a)",
+        "(7)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-03-2-a-traffic",
+      "name": "False affidavit about other licenses by a commercial driver",
+      "names": {
+        "es": "Declaración jurada falsa sobre otras licencias del conductor comercial",
+        "zh": "商用车驾驶人就其他驾照作虚假宣誓"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.03(2)(a)",
+      "slug": "fl-fs-322-03-2-a-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.03(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(2)(a)",
+          "F.S. 322.03(2)(a)"
+        ],
+        "es": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(2)(a)",
+          "F.S. 322.03(2)(a)"
+        ],
+        "zh": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(2)(a)",
+          "F.S. 322.03(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "When applying for a license, a commercial driver must surrender all other jurisdictions’ licenses in their possession or swear they possess none. A false affidavit is the misdemeanor; failure to surrender alone is a noncriminal moving violation.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Al solicitar la licencia, un conductor comercial debe entregar todas las licencias de otras jurisdicciones que tenga o declarar bajo juramento que no tiene ninguna. La declaración falsa es delito menor; no entregar las licencias por sí solo es infracción no penal.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "商用车驾驶人申领驾照时须交出所持其他辖区驾照，或宣誓声明没有。作虚假宣誓构成轻罪；仅未交出驾照属非刑事交通违规。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-322-03-4-b-traffic",
+    "section": "322.03",
+    "scope": "(4)(b)",
+    "gradingScope": "(4)(b)",
+    "officialTitle": "Drivers must be licensed; penalties",
+    "dependencies": [
+      "322.03",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.03": [
+        "(4)(b)",
+        "(4)(c)",
+        "(7)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-03-4-b-traffic",
+      "name": "Florida resident operating a commercial vehicle without a valid Florida CDL",
+      "names": {
+        "es": "Residente de Florida que conduce vehículo comercial sin licencia comercial válida de Florida",
+        "zh": "佛州居民无有效佛州商用驾照驾驶商用车"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.03(4)(b)",
+      "slug": "fl-fs-322-03-4-b-traffic",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.03(4)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(4)(b)",
+          "F.S. 322.03(4)(b)"
+        ],
+        "es": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(4)(b)",
+          "F.S. 322.03(4)(b)"
+        ],
+        "zh": [
+          "Drivers must be licensed; penalties",
+          "FS 322.03(4)(b)",
+          "F.S. 322.03(4)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A Florida resident who is required to hold a commercial license operates a commercial motor vehicle in Florida without a valid Florida-issued commercial license. A commercial license expired for 30 days or less falls under a separate nonmoving violation.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. A license valid when arrested can be presented by the court appearance to preclude conviction under §322.03(7)."
+        },
+        "es": {
+          "plainSummary": "Un residente obligado a tener licencia comercial conduce un vehículo comercial en Florida sin licencia comercial válida emitida por Florida. Una licencia caducada por 30 días o menos corresponde a una infracción distinta, no de circulación.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Presentar antes o en la comparecencia una licencia válida al momento del arresto impide la condena conforme al apartado (7)."
+        },
+        "zh": {
+          "plainSummary": "依法须持商用驾照的佛州居民未持有效佛州签发商用驾照而在州内驾驶商用车。商用驾照过期不超过30天适用另列非行车违规。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 在出庭时或之前出示被捕当时有效的驾照，可依第(7)款免予定罪。"
+        }
+      }
+    }
+  }
+]
