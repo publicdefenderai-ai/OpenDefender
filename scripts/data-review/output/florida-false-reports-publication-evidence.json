@@ -1,0 +1,2100 @@
+{
+  "schemaVersion": 1,
+  "scope": "florida_false_reports_publication",
+  "acquisitionMetadata": {
+    "775.082": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.083": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "775.084": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "790.163": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.163.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "790.164": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.164.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "790.166": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.166.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "817.49": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.011": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.012": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.012.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.02": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.021": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.055": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.06": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.06.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "837.07": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    },
+    "914.04": {
+      "edition": "Florida Statutes 2026",
+      "acquiredFrom": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.04.html",
+      "acquisitionKind": "official_exact_section",
+      "currentnessProvenance": "Edition label read from official Online Sunshine response: Florida Statutes 2026"
+    }
+  },
+  "supportingSpans": [
+    {
+      "id": "fl-fs-817-49-1-false-report",
+      "sections": [
+        {
+          "section": "817.49",
+          "scope": "(1)",
+          "start": 59,
+          "end": 540,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "93337dd82291ea20669142d0fb802ee5c0c5d4c72fcc937c894146e7b6001e84"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(a)",
+          "start": 540,
+          "end": 881,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "f2d9f38a430fdbe33b1cb968a56a1af301ef49c0232bafd583a434142ace886a"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(b)",
+          "start": 881,
+          "end": 1602,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "9d51c63c61922dab63772da1c6e048803acf853222c77b0abc67d1ae34c8bd31"
+        },
+        {
+          "section": "817.49",
+          "scope": "(3)",
+          "start": 1602,
+          "end": 1788,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "34661ec6a0fb18162e114802c5c9ea2a26a5a94b7af1cd4e3d7e575325c12646"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-49-2-b-1-false-report",
+      "sections": [
+        {
+          "section": "817.49",
+          "scope": "(2)(b)1.",
+          "start": 1089,
+          "end": 1376,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "93be528ab044778238875de6a4bfa27aeb114fae46895b9be8f32669a1ff0513"
+        },
+        {
+          "section": "817.49",
+          "scope": "(1)",
+          "start": 59,
+          "end": 540,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "93337dd82291ea20669142d0fb802ee5c0c5d4c72fcc937c894146e7b6001e84"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(a)",
+          "start": 540,
+          "end": 881,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "f2d9f38a430fdbe33b1cb968a56a1af301ef49c0232bafd583a434142ace886a"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(b)",
+          "start": 881,
+          "end": 1602,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "9d51c63c61922dab63772da1c6e048803acf853222c77b0abc67d1ae34c8bd31"
+        },
+        {
+          "section": "817.49",
+          "scope": "(3)",
+          "start": 1602,
+          "end": 1788,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "34661ec6a0fb18162e114802c5c9ea2a26a5a94b7af1cd4e3d7e575325c12646"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-817-49-2-b-2-false-report",
+      "sections": [
+        {
+          "section": "817.49",
+          "scope": "(2)(b)2.",
+          "start": 1376,
+          "end": 1602,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "782fd696052c4f78b270aacd4ee32e0cfee87e175462e8864be9eb028d76eb7b"
+        },
+        {
+          "section": "817.49",
+          "scope": "(1)",
+          "start": 59,
+          "end": 540,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "93337dd82291ea20669142d0fb802ee5c0c5d4c72fcc937c894146e7b6001e84"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(a)",
+          "start": 540,
+          "end": 881,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "f2d9f38a430fdbe33b1cb968a56a1af301ef49c0232bafd583a434142ace886a"
+        },
+        {
+          "section": "817.49",
+          "scope": "(2)(b)",
+          "start": 881,
+          "end": 1602,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "9d51c63c61922dab63772da1c6e048803acf853222c77b0abc67d1ae34c8bd31"
+        },
+        {
+          "section": "817.49",
+          "scope": "(3)",
+          "start": 1602,
+          "end": 1788,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+          "quoteHash": "34661ec6a0fb18162e114802c5c9ea2a26a5a94b7af1cd4e3d7e575325c12646"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-055-1-false-report",
+      "sections": [
+        {
+          "section": "837.055",
+          "scope": "(1)",
+          "start": 71,
+          "end": 408,
+          "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+          "quoteHash": "4c062150e35b7c8aa9f146bbb04d5d34c610b729ac9268997f7b7687a699d179"
+        },
+        {
+          "section": "837.055",
+          "scope": "(2)",
+          "start": 408,
+          "end": 951,
+          "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+          "quoteHash": "5c21f2f40f0ffb3921a7cf3aa1a1b40b7858b834a9077dea8bdad0bfb4056632"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-055-2-false-report",
+      "sections": [
+        {
+          "section": "837.055",
+          "scope": "(2)",
+          "start": 408,
+          "end": 951,
+          "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+          "quoteHash": "5c21f2f40f0ffb3921a7cf3aa1a1b40b7858b834a9077dea8bdad0bfb4056632"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-012-1-false-report",
+      "sections": [
+        {
+          "section": "837.012",
+          "scope": "(1)",
+          "start": 56,
+          "end": 322,
+          "sourceHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1",
+          "quoteHash": "1d5af80edf678c834f645579003bd5799872340fef01f38df3faef3cece0f353"
+        },
+        {
+          "section": "837.012",
+          "scope": "(2)",
+          "start": 322,
+          "end": 700,
+          "sourceHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1",
+          "quoteHash": "4e8bef3c9da564975674f7ae4fcca234b6dddccea2784db7c3116d420151777c"
+        },
+        {
+          "section": "837.011",
+          "scope": "(1)",
+          "start": 90,
+          "end": 545,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "d87e729e78ffcafd822f61c2f16a690e52faf257718873a410e2ccce473aedd1"
+        },
+        {
+          "section": "837.011",
+          "scope": "(2)",
+          "start": 545,
+          "end": 792,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "0b70e5b010f56293e054e196c154de6c487fc527830a24a9b29e9456709ec22e"
+        },
+        {
+          "section": "837.011",
+          "scope": "(3)",
+          "start": 792,
+          "end": 1126,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "7467b5c982c2e6313b6c869112d8d27efcda70f65ada1f12db8441e9eee6cdb2"
+        },
+        {
+          "section": "837.07",
+          "scope": "(1)",
+          "start": 248,
+          "end": 324,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "e9cbcdae0907d8d75f6c2d23e945776bfa93981d96d9e1c06a2701eebfb9e9b0"
+        },
+        {
+          "section": "837.07",
+          "scope": "(2)",
+          "start": 324,
+          "end": 466,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "54847aa5886b3ce6746cb6e2814bed718ae1d1f669d47482301162284c4a1306"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-021-1-false-report",
+      "sections": [
+        {
+          "section": "837.021",
+          "scope": "(1)",
+          "start": 49,
+          "end": 330,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "46c4c22fae55e1684ec02bcca35344f47568e6e58dfe3aa6d2f97aac41ba3dcd"
+        },
+        {
+          "section": "837.021",
+          "scope": "(3)",
+          "start": 625,
+          "end": 1188,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "dfd7443c5564476e8d02c0ef04cf02c9d0f2683448613770c37abb658334a6c7"
+        },
+        {
+          "section": "837.021",
+          "scope": "(4)",
+          "start": 1188,
+          "end": 1786,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "eb8aae53600bcb125e7752c9e0011155633d6f17346cae30ce865794e6debcf6"
+        },
+        {
+          "section": "837.011",
+          "scope": "(1)",
+          "start": 90,
+          "end": 545,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "d87e729e78ffcafd822f61c2f16a690e52faf257718873a410e2ccce473aedd1"
+        },
+        {
+          "section": "837.011",
+          "scope": "(2)",
+          "start": 545,
+          "end": 792,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "0b70e5b010f56293e054e196c154de6c487fc527830a24a9b29e9456709ec22e"
+        },
+        {
+          "section": "837.011",
+          "scope": "(3)",
+          "start": 792,
+          "end": 1126,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "7467b5c982c2e6313b6c869112d8d27efcda70f65ada1f12db8441e9eee6cdb2"
+        },
+        {
+          "section": "837.07",
+          "scope": "(1)",
+          "start": 248,
+          "end": 324,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "e9cbcdae0907d8d75f6c2d23e945776bfa93981d96d9e1c06a2701eebfb9e9b0"
+        },
+        {
+          "section": "837.07",
+          "scope": "(2)",
+          "start": 324,
+          "end": 466,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "54847aa5886b3ce6746cb6e2814bed718ae1d1f669d47482301162284c4a1306"
+        },
+        {
+          "section": "837.02",
+          "scope": "(1)",
+          "start": 44,
+          "end": 340,
+          "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+          "quoteHash": "c92ca9025465332b768466b38bb40fa80c9fb8b143b33a83a15d645a2ab8d6fb"
+        },
+        {
+          "section": "837.02",
+          "scope": "(2)",
+          "start": 340,
+          "end": 618,
+          "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+          "quoteHash": "3a3baea1188c4cb27b2e0ddf3b5f882f14ddd0347387456364597d1bf9ea8c29"
+        },
+        {
+          "section": "914.04",
+          "scope": "",
+          "start": 0,
+          "end": 1385,
+          "sourceHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327",
+          "quoteHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-021-2-false-report",
+      "sections": [
+        {
+          "section": "837.021",
+          "scope": "(2)",
+          "start": 330,
+          "end": 625,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "1a0864f9fcd576b64e90245c504c5b368c327693d3e7b7bd37b10a96b76cd04c"
+        },
+        {
+          "section": "837.021",
+          "scope": "(3)",
+          "start": 625,
+          "end": 1188,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "dfd7443c5564476e8d02c0ef04cf02c9d0f2683448613770c37abb658334a6c7"
+        },
+        {
+          "section": "837.021",
+          "scope": "(4)",
+          "start": 1188,
+          "end": 1786,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+          "quoteHash": "eb8aae53600bcb125e7752c9e0011155633d6f17346cae30ce865794e6debcf6"
+        },
+        {
+          "section": "837.011",
+          "scope": "(1)",
+          "start": 90,
+          "end": 545,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "d87e729e78ffcafd822f61c2f16a690e52faf257718873a410e2ccce473aedd1"
+        },
+        {
+          "section": "837.011",
+          "scope": "(2)",
+          "start": 545,
+          "end": 792,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "0b70e5b010f56293e054e196c154de6c487fc527830a24a9b29e9456709ec22e"
+        },
+        {
+          "section": "837.011",
+          "scope": "(3)",
+          "start": 792,
+          "end": 1126,
+          "sourceHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+          "quoteHash": "7467b5c982c2e6313b6c869112d8d27efcda70f65ada1f12db8441e9eee6cdb2"
+        },
+        {
+          "section": "837.07",
+          "scope": "(1)",
+          "start": 248,
+          "end": 324,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "e9cbcdae0907d8d75f6c2d23e945776bfa93981d96d9e1c06a2701eebfb9e9b0"
+        },
+        {
+          "section": "837.07",
+          "scope": "(2)",
+          "start": 324,
+          "end": 466,
+          "sourceHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+          "quoteHash": "54847aa5886b3ce6746cb6e2814bed718ae1d1f669d47482301162284c4a1306"
+        },
+        {
+          "section": "837.02",
+          "scope": "(1)",
+          "start": 44,
+          "end": 340,
+          "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+          "quoteHash": "c92ca9025465332b768466b38bb40fa80c9fb8b143b33a83a15d645a2ab8d6fb"
+        },
+        {
+          "section": "837.02",
+          "scope": "(2)",
+          "start": 340,
+          "end": 618,
+          "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+          "quoteHash": "3a3baea1188c4cb27b2e0ddf3b5f882f14ddd0347387456364597d1bf9ea8c29"
+        },
+        {
+          "section": "914.04",
+          "scope": "",
+          "start": 0,
+          "end": 1385,
+          "sourceHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327",
+          "quoteHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-837-06-false-report",
+      "sections": [
+        {
+          "section": "837.06",
+          "scope": "",
+          "start": 0,
+          "end": 379,
+          "sourceHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a",
+          "quoteHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-790-163-1-false-report",
+      "sections": [
+        {
+          "section": "790.163",
+          "scope": "(1)",
+          "start": 164,
+          "end": 655,
+          "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+          "quoteHash": "cc9f90af9a46aec7b3e5c443fc854891575e5e48648c8c30a4166c8efcac535c"
+        },
+        {
+          "section": "790.163",
+          "scope": "(2)",
+          "start": 655,
+          "end": 1134,
+          "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+          "quoteHash": "b54dfc045f9209cf7afd3d3fde73097bf51f0809f5325e76ae28ec4aa7453f73"
+        },
+        {
+          "section": "790.163",
+          "scope": "(3)",
+          "start": 1134,
+          "end": 1335,
+          "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+          "quoteHash": "04f94b2f20efe765e2a176e60761d7de595b67ab98bf1d78c550ec1c5407a77c"
+        },
+        {
+          "section": "790.163",
+          "scope": "(4)",
+          "start": 1335,
+          "end": 1822,
+          "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+          "quoteHash": "a1c40db1a2ea1b8888525f133c4e5daa3eab30963609828b0dac267f1b813428"
+        },
+        {
+          "section": "790.166",
+          "scope": "(1)(a)",
+          "start": 241,
+          "end": 810,
+          "sourceHash": "03c81d55d1c366fbfc26899ff41d05c3ca6eb0184a007b2bbad41426e5406418",
+          "quoteHash": "c2706a026372369c77417a5e3dd1ff0603e7aa689d634426e5952d0c68bd22a7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    },
+    {
+      "id": "fl-fs-790-164-1-false-report",
+      "sections": [
+        {
+          "section": "790.164",
+          "scope": "(1)",
+          "start": 222,
+          "end": 820,
+          "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+          "quoteHash": "d66f6d8b79abbe0901f13f25dff6078ee5d7449babd0d3474199d60745998e59"
+        },
+        {
+          "section": "790.164",
+          "scope": "(2)",
+          "start": 820,
+          "end": 1299,
+          "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+          "quoteHash": "b54dfc045f9209cf7afd3d3fde73097bf51f0809f5325e76ae28ec4aa7453f73"
+        },
+        {
+          "section": "790.164",
+          "scope": "(3)",
+          "start": 1299,
+          "end": 1500,
+          "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+          "quoteHash": "04f94b2f20efe765e2a176e60761d7de595b67ab98bf1d78c550ec1c5407a77c"
+        },
+        {
+          "section": "790.164",
+          "scope": "(4)(d)",
+          "start": 2384,
+          "end": 2912,
+          "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+          "quoteHash": "b20f5c7e35b5a420687efa1078220f432bd4f532509a0b42d6b4732071f85792"
+        },
+        {
+          "section": "790.166",
+          "scope": "(1)(a)",
+          "start": 241,
+          "end": 810,
+          "sourceHash": "03c81d55d1c366fbfc26899ff41d05c3ca6eb0184a007b2bbad41426e5406418",
+          "quoteHash": "c2706a026372369c77417a5e3dd1ff0603e7aa689d634426e5952d0c68bd22a7"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        },
+        {
+          "section": "775.084",
+          "scope": "(4)",
+          "start": 15909,
+          "end": 20043,
+          "sourceHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+          "quoteHash": "3c1f81eb55d5346fc18b85f16abf6decd530cc892b7a426bb50b655fde95031f"
+        }
+      ]
+    }
+  ],
+  "report": {
+    "schemaVersion": 1,
+    "kind": "florida_source_first_review",
+    "drafts": [
+      {
+        "id": "fl-fs-817-49-1-false-report",
+        "name": "False report of a crime that did not occur",
+        "code": "817.49(1)",
+        "citation": "Fla. Stat. § 817.49(1)",
+        "primarySourceKey": "fl:statute:817.49:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:817.49:1",
+          "target": "title",
+          "text": "False reports of commission of crimes; penalty",
+          "start": 0,
+          "end": 46,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:1",
+            "target": "text",
+            "text": "(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 59,
+            "end": 538,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:1",
+            "target": "text",
+            "text": "(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 59,
+            "end": 538,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:817.49:1",
+            "role": "offense",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:817.49",
+            "role": "grading",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "grading": "(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "interpretation": "Scope 817.49(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-817-49-2-b-1-false-report",
+        "name": "False crime report resulting in serious harm from the response",
+        "code": "817.49(2)(b)1.",
+        "citation": "Fla. Stat. § 817.49(2)(b)1.",
+        "primarySourceKey": "fl:statute:817.49:2_b_1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:817.49:2_b_1",
+          "target": "title",
+          "text": "False reports of commission of crimes; penalty",
+          "start": 0,
+          "end": 46,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_1",
+            "target": "text",
+            "text": "1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1089,
+            "end": 1374,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_1",
+            "target": "text",
+            "text": "1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1089,
+            "end": 1374,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_1",
+            "role": "offense",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:817.49",
+            "role": "grading",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 817.49(2)(b)1.. Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-817-49-2-b-2-false-report",
+        "name": "False crime report resulting in death from the response",
+        "code": "817.49(2)(b)2.",
+        "citation": "Fla. Stat. § 817.49(2)(b)2.",
+        "primarySourceKey": "fl:statute:817.49:2_b_2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:817.49:2_b_2",
+          "target": "title",
+          "text": "False reports of commission of crimes; penalty",
+          "start": 0,
+          "end": 46,
+          "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_2",
+            "target": "text",
+            "text": "2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1376,
+            "end": 1600,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_2",
+            "target": "text",
+            "text": "2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 1376,
+            "end": 1600,
+            "sourceHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:817.49:2_b_2",
+            "role": "offense",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:817.49",
+            "role": "grading",
+            "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 817.49(2)(b)2.. Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-055-1-false-report",
+        "name": "False information during a missing-person or felony investigation",
+        "code": "837.055(1)",
+        "citation": "Fla. Stat. § 837.055(1)",
+        "primarySourceKey": "fl:statute:837.055:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.055:1",
+          "target": "title",
+          "text": "False information to law enforcement during investigation",
+          "start": 0,
+          "end": 57,
+          "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.055:1",
+            "target": "text",
+            "text": "(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 71,
+            "end": 406,
+            "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.055:1",
+            "target": "text",
+            "text": "(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 71,
+            "end": 406,
+            "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.055:1",
+            "role": "offense",
+            "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          },
+          {
+            "sourceKey": "fl:statute:837.055",
+            "role": "grading",
+            "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "grading": "(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "interpretation": "Scope 837.055(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-055-2-false-report",
+        "name": "False information in a missing-child investigation with serious harm or death",
+        "code": "837.055(2)",
+        "citation": "Fla. Stat. § 837.055(2)",
+        "primarySourceKey": "fl:statute:837.055:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.055:2",
+          "target": "title",
+          "text": "False information to law enforcement during investigation",
+          "start": 0,
+          "end": 57,
+          "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.055:2",
+            "target": "text",
+            "text": "(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+            "start": 408,
+            "end": 951,
+            "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.055:2",
+            "target": "text",
+            "text": "(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+            "start": 408,
+            "end": 951,
+            "sourceHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.055:2",
+            "role": "offense",
+            "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          },
+          {
+            "sourceKey": "fl:statute:837.055",
+            "role": "grading",
+            "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+        "grading": "(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+        "interpretation": "Scope 837.055(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-012-1-false-report",
+        "name": "Perjury outside an official proceeding",
+        "code": "837.012(1)",
+        "citation": "Fla. Stat. § 837.012(1)",
+        "primarySourceKey": "fl:statute:837.012:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.012:1",
+          "target": "title",
+          "text": "Perjury when not in an official proceeding",
+          "start": 0,
+          "end": 42,
+          "sourceHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.012:1",
+            "target": "text",
+            "text": "(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 56,
+            "end": 320,
+            "sourceHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.012:1",
+            "target": "text",
+            "text": "(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 56,
+            "end": 320,
+            "sourceHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.012:1",
+            "role": "offense",
+            "contentHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1"
+          },
+          {
+            "sourceKey": "fl:statute:837.012",
+            "role": "grading",
+            "contentHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1"
+          },
+          {
+            "sourceKey": "fl:statute:837.011",
+            "role": "definition",
+            "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583"
+          },
+          {
+            "sourceKey": "fl:statute:837.07",
+            "role": "definition",
+            "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "grading": "(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "interpretation": "Scope 837.012(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-021-1-false-report",
+        "name": "Perjury by contradictory statements",
+        "code": "837.021(1)",
+        "citation": "Fla. Stat. § 837.021(1)",
+        "primarySourceKey": "fl:statute:837.021:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.021:1",
+          "target": "title",
+          "text": "Perjury by contradictory statements",
+          "start": 0,
+          "end": 35,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.021:1",
+            "target": "text",
+            "text": "(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 49,
+            "end": 328,
+            "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.021:1",
+            "target": "text",
+            "text": "(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 49,
+            "end": 328,
+            "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.021:1",
+            "role": "offense",
+            "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          },
+          {
+            "sourceKey": "fl:statute:837.021",
+            "role": "grading",
+            "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          },
+          {
+            "sourceKey": "fl:statute:837.011",
+            "role": "definition",
+            "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583"
+          },
+          {
+            "sourceKey": "fl:statute:837.07",
+            "role": "definition",
+            "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d"
+          },
+          {
+            "sourceKey": "fl:statute:837.02",
+            "role": "definition",
+            "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+          },
+          {
+            "sourceKey": "fl:statute:914.04",
+            "role": "definition",
+            "contentHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 837.021(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-021-2-false-report",
+        "name": "Perjury by contradictory statements in a capital-felony prosecution",
+        "code": "837.021(2)",
+        "citation": "Fla. Stat. § 837.021(2)",
+        "primarySourceKey": "fl:statute:837.021:2",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.021:2",
+          "target": "title",
+          "text": "Perjury by contradictory statements",
+          "start": 0,
+          "end": 35,
+          "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.021:2",
+            "target": "text",
+            "text": "(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 330,
+            "end": 623,
+            "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.021:2",
+            "target": "text",
+            "text": "(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 330,
+            "end": 623,
+            "sourceHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.021:2",
+            "role": "offense",
+            "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          },
+          {
+            "sourceKey": "fl:statute:837.021",
+            "role": "grading",
+            "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760"
+          },
+          {
+            "sourceKey": "fl:statute:837.011",
+            "role": "definition",
+            "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583"
+          },
+          {
+            "sourceKey": "fl:statute:837.07",
+            "role": "definition",
+            "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d"
+          },
+          {
+            "sourceKey": "fl:statute:837.02",
+            "role": "definition",
+            "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5"
+          },
+          {
+            "sourceKey": "fl:statute:914.04",
+            "role": "definition",
+            "contentHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 837.021(2). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-837-06-false-report",
+        "name": "False official statements",
+        "code": "837.06",
+        "citation": "Fla. Stat. § 837.06",
+        "primarySourceKey": "fl:statute:837.06",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:837.06",
+          "target": "title",
+          "text": "False official statements",
+          "start": 0,
+          "end": 25,
+          "sourceHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:837.06",
+            "target": "text",
+            "text": "Whoever knowingly makes a false statement in writing with the intent to mislead a public servant in the performance of his or her official duty shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 38,
+            "end": 288,
+            "sourceHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:837.06",
+            "target": "text",
+            "text": "Whoever knowingly makes a false statement in writing with the intent to mislead a public servant in the performance of his or her official duty shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+            "start": 38,
+            "end": 288,
+            "sourceHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a",
+            "category": "misdemeanor"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:837.06",
+            "role": "offense",
+            "contentHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          }
+        ],
+        "conduct": "Whoever knowingly makes a false statement in writing with the intent to mislead a public servant in the performance of his or her official duty shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "grading": "Whoever knowingly makes a false statement in writing with the intent to mislead a public servant in the performance of his or her official duty shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "interpretation": "Scope 837.06. Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-790-163-1-false-report",
+        "name": "False report concerning a planted explosive or violent firearm use",
+        "code": "790.163(1)",
+        "citation": "Fla. Stat. § 790.163(1)",
+        "primarySourceKey": "fl:statute:790.163:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:790.163:1",
+          "target": "title",
+          "text": "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+          "start": 0,
+          "end": 150,
+          "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:790.163:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 164,
+            "end": 653,
+            "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:790.163:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 164,
+            "end": 653,
+            "sourceHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:790.163:1",
+            "role": "offense",
+            "contentHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d"
+          },
+          {
+            "sourceKey": "fl:statute:790.163",
+            "role": "grading",
+            "contentHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d"
+          },
+          {
+            "sourceKey": "fl:statute:790.166",
+            "role": "definition",
+            "contentHash": "03c81d55d1c366fbfc26899ff41d05c3ca6eb0184a007b2bbad41426e5406418"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 790.163(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      },
+      {
+        "id": "fl-fs-790-164-1-false-report",
+        "name": "False report concerning explosives, violence to government property or violent firearm use",
+        "code": "790.164(1)",
+        "citation": "Fla. Stat. § 790.164(1)",
+        "primarySourceKey": "fl:statute:790.164:1",
+        "identityEvidence": {
+          "sourceKey": "fl:statute:790.164:1",
+          "target": "title",
+          "text": "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+          "start": 0,
+          "end": 208,
+          "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e"
+        },
+        "conductEvidence": [
+          {
+            "sourceKey": "fl:statute:790.164:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 222,
+            "end": 818,
+            "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e"
+          }
+        ],
+        "gradeEvidence": [
+          {
+            "sourceKey": "fl:statute:790.164:1",
+            "target": "text",
+            "text": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+            "start": 222,
+            "end": 818,
+            "sourceHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+            "category": "felony"
+          }
+        ],
+        "requiredDependencies": [
+          {
+            "sourceKey": "fl:statute:790.164:1",
+            "role": "offense",
+            "contentHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e"
+          },
+          {
+            "sourceKey": "fl:statute:790.164",
+            "role": "grading",
+            "contentHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e"
+          },
+          {
+            "sourceKey": "fl:statute:790.166",
+            "role": "definition",
+            "contentHash": "03c81d55d1c366fbfc26899ff41d05c3ca6eb0184a007b2bbad41426e5406418"
+          },
+          {
+            "sourceKey": "fl:statute:775.082",
+            "role": "penalty",
+            "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+          },
+          {
+            "sourceKey": "fl:statute:775.083",
+            "role": "penalty",
+            "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+          },
+          {
+            "sourceKey": "fl:statute:775.084",
+            "role": "penalty",
+            "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+          }
+        ],
+        "conduct": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "grading": "(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "interpretation": "Scope 790.164(1). Branch name qualifies the statutory heading. Underlying conduct and conditions remain incorporated through the bound complete dependency texts.",
+        "legalReview": null
+      }
+    ],
+    "sourceEvidence": {
+      "fl:statute:817.49:1": {
+        "sourceKey": "fl:statute:817.49:1",
+        "section": "817.49",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 817.49(1)",
+        "title": "False reports of commission of crimes; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html",
+        "text": "817.49 \nFalse reports of commission of crimes; penalty.\n—\n\n(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2)(a) \nAs used in this section, the term “public safety agency” means a law enforcement agency, professional or volunteer fire department, emergency medical service, ambulance service, or other public entity that dispatches or provides first responder services to respond to crimes, to assist victims of crimes, or to apprehend offenders.\n\n(b) \nIf the willful making of a false report of a crime as set forth in this section results in a response by a federal, state, district, municipal, or other public safety agency and the response results in:\n1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA court shall order any person convicted of violating this section to pay restitution, which shall include full payment for any cost incurred by a responding public safety agency.\n\n(4) \nThe Legislature finds that the false reporting of crimes is a threat to public safety and a threat to the safety of law enforcement officers and other first responders. As such, the Legislature encourages each state attorney to adopt a pro-prosecution policy for the false reporting of crimes as prohibited in this section.\n\nHistory.\n—\ns. 1, ch. 59-294; s. 875, ch. 71-136; s. 1, ch. 2021-64; s. 5, ch. 2025-176.",
+        "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+        "retrievedAt": "2026-11-13T20:07:56.900Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 59,
+            "end": 540
+          }
+        ]
+      },
+      "fl:statute:817.49": {
+        "sourceKey": "fl:statute:817.49",
+        "section": "817.49",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 817.49",
+        "title": "False reports of commission of crimes; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html",
+        "text": "817.49 \nFalse reports of commission of crimes; penalty.\n—\n\n(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2)(a) \nAs used in this section, the term “public safety agency” means a law enforcement agency, professional or volunteer fire department, emergency medical service, ambulance service, or other public entity that dispatches or provides first responder services to respond to crimes, to assist victims of crimes, or to apprehend offenders.\n\n(b) \nIf the willful making of a false report of a crime as set forth in this section results in a response by a federal, state, district, municipal, or other public safety agency and the response results in:\n1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA court shall order any person convicted of violating this section to pay restitution, which shall include full payment for any cost incurred by a responding public safety agency.\n\n(4) \nThe Legislature finds that the false reporting of crimes is a threat to public safety and a threat to the safety of law enforcement officers and other first responders. As such, the Legislature encourages each state attorney to adopt a pro-prosecution policy for the false reporting of crimes as prohibited in this section.\n\nHistory.\n—\ns. 1, ch. 59-294; s. 875, ch. 71-136; s. 1, ch. 2021-64; s. 5, ch. 2025-176.",
+        "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+        "retrievedAt": "2026-11-13T20:07:56.900Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.082": {
+        "sourceKey": "fl:statute:775.082",
+        "section": "775.082",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.082",
+        "title": "Penalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+        "text": "775.082 \nPenalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison.\n—\n\n(1)(a) \nExcept as provided in paragraph (b), a person who has been convicted of a capital felony shall be punished by death if the proceeding held to determine sentence according to the procedure set forth in s. 921.141 results in a determination that such person shall be punished by death, otherwise such person shall be punished by life imprisonment and shall be ineligible for parole.\n\n(b)1. \nA person who actually killed, intended to kill, or attempted to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age shall be punished by a term of imprisonment for life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. If the court finds that life imprisonment is not an appropriate sentence, such person shall be punished by a term of imprisonment of at least 40 years. A person sentenced pursuant to this subparagraph is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(a).\n\n2. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\n3. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(a) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(2) \nIn the event the death penalty in a capital felony is held to be unconstitutional by the Florida Supreme Court or the United States Supreme Court, the court having jurisdiction over a person previously sentenced to death for a capital felony shall cause such person to be brought before the court, and the court shall sentence such person to life imprisonment as provided in subsection (1). No sentence of death shall be reduced as a result of a determination that a method of execution is held to be unconstitutional under the State Constitution or the Constitution of the United States.\n\n(3) \nA person who has been convicted of any other designated felony may be punished as follows:\n(a)1. \nFor a life felony committed before October 1, 1983, by a term of imprisonment for life or for a term of at least 30 years.\n\n2. \nFor a life felony committed on or after October 1, 1983, by a term of imprisonment for life or by a term of imprisonment not exceeding 40 years.\n\n3. \nExcept as provided in subparagraph 4., for a life felony committed on or after July 1, 1995, by a term of imprisonment for life or by imprisonment for a term of years not exceeding life imprisonment.\n\n4.a. \nExcept as provided in sub-subparagraph b., for a life felony committed on or after September 1, 2005, which is a violation of s. 800.04(5)(b), by:\n(I) \nA term of imprisonment for life; or\n\n(II) \nA split sentence that is a term of at least 25 years’ imprisonment and not exceeding life imprisonment, followed by probation or community control for the remainder of the person’s natural life, as provided in s. 948.012(4).\n\nb. \nFor a life felony committed on or after July 1, 2008, which is a person’s second or subsequent violation of s. 800.04(5)(b), by a term of imprisonment for life.\n\n5. \nNotwithstanding subparagraphs 1.-4., a person who is convicted under s. 782.04 of an offense that was reclassified as a life felony which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n6. \nFor a life felony committed on or after October 1, 2014, which is a violation of s. 787.06(3)(g), by a term of imprisonment for life.\n\n(b)1. \nFor a felony of the first degree, by a term of imprisonment not exceeding 30 years or, when specifically provided by statute, by imprisonment for a term of years not exceeding life imprisonment.\n\n2. \nNotwithstanding subparagraph 1., a person convicted under s. 782.04 of a first degree felony punishable by a term of years not exceeding life imprisonment, or an offense that was reclassified as a first degree felony punishable by a term of years not exceeding life, which was committed before the person attained 18 years of age may be punished by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(c) \nNotwithstanding paragraphs (a) and (b), a person convicted of an offense that is not included in s. 782.04 but that is an offense that is a life felony or is punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, or an offense that was reclassified as a life felony or an offense punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 20 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(d).\n\n(d) \nFor a felony of the second degree, by a term of imprisonment not exceeding 15 years.\n\n(e) \nFor a felony of the third degree, by a term of imprisonment not exceeding 5 years.\n\n(4) \nA person who has been convicted of a designated misdemeanor may be sentenced as follows:\n(a) \nFor a misdemeanor of the first degree, by a definite term of imprisonment not exceeding 1 year;\n\n(b) \nFor a misdemeanor of the second degree, by a definite term of imprisonment not exceeding 60 days.\n\n(5) \nAny person who has been convicted of a noncriminal violation may not be sentenced to a term of imprisonment nor to any other punishment more severe than a fine, forfeiture, or other civil penalty, except as provided in chapter 316 or by ordinance of any city or county.\n\n(6) \nNothing in this section shall be construed to alter the operation of any statute of this state authorizing a trial court, in its discretion, to impose a sentence of imprisonment for an indeterminate period within minimum and maximum limits as provided by law, except as provided in subsection (1).\n\n(7) \nThis section does not deprive the court of any authority conferred by law to decree a forfeiture of property, suspend or cancel a license, remove a person from office, or impose any other civil penalty. Such a judgment or order may be included in the sentence.\n\n(8)(a) \nThe sentencing guidelines that were effective October 1, 1983, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1983, and before January 1, 1994, and to all felonies, except capital felonies and life felonies, committed before October 1, 1983, when the defendant affirmatively selects to be sentenced pursuant to such provisions.\n\n(b) \nThe 1994 sentencing guidelines, that were effective January 1, 1994, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after January 1, 1994, and before October 1, 1995.\n\n(c) \nThe 1995 sentencing guidelines that were effective October 1, 1995, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1995, and before October 1, 1998.\n\n(d) \nThe Criminal Punishment Code applies to all felonies, except capital felonies, committed on or after October 1, 1998. Any revision to the Criminal Punishment Code applies to sentencing for all felonies, except capital felonies, committed on or after the effective date of the revision.\n\n(e) \nFelonies, except capital felonies, with continuing dates of enterprise shall be sentenced under the sentencing guidelines or the Criminal Punishment Code in effect on the beginning date of the criminal activity.\n\n(9)(a)1. \n“Prison releasee reoffender” means any defendant who commits, or attempts to commit:\na. \nTreason;\n\nb. \nMurder;\n\nc. \nManslaughter;\n\nd. \nSexual battery;\n\ne. \nCarjacking;\n\nf. \nHome-invasion robbery;\n\ng. \nRobbery;\n\nh. \nArson;\n\ni. \nKidnapping;\n\nj. \nAggravated assault with a deadly weapon;\n\nk. \nAggravated battery;\n\nl. \nAggravated stalking;\n\nm. \nAircraft piracy;\n\nn. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\no. \nAny felony that involves the use or threat of physical force or violence against an individual;\n\np. \nArmed burglary;\n\nq. \nBurglary of a dwelling or burglary of an occupied structure;\n\nr. \nAny felony violation of s. 790.07, s. 800.04, s. 827.03, s. 827.071, or s. 847.0135(5); or\n\ns. \nBattery on a law enforcement officer which results in bodily injury;\n\nwithin 3 years after being released from a state correctional facility operated by the Department of Corrections or a private vendor, a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence, or a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n2. \n“Prison releasee reoffender” also means any defendant who commits or attempts to commit any offense listed in sub-subparagraphs 1.a.-s. while the defendant was serving a prison sentence or on escape status from a state correctional facility operated by the Department of Corrections or a private vendor or while the defendant was on escape status from a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n3. \nIf the state attorney determines that a defendant is a prison releasee reoffender as defined in subparagraph 1., the state attorney may seek to have the court sentence the defendant as a prison releasee reoffender. Upon proof from the state attorney that establishes by a preponderance of the evidence that a defendant is a prison releasee reoffender as defined in this section, such defendant is not eligible for sentencing under the sentencing guidelines and must be sentenced as follows:\na. \nFor a felony punishable by life, by a term of imprisonment for life;\n\nb. \nFor a felony of the first degree, by a term of imprisonment of 30 years;\n\nc. \nFor a felony of the second degree, by a term of imprisonment of 15 years; and\n\nd. \nFor a felony of the third degree, by a term of imprisonment of 5 years.\n\n(b) \nA person sentenced under paragraph (a) shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release. Any person sentenced under paragraph (a) must serve 100 percent of the court-imposed sentence.\n\n(c) \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law, pursuant to s. 775.084 or any other provision of law.\n\n(d)1. \nIt is the intent of the Legislature that offenders previously released from prison or a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence who meet the criteria in paragraph (a) be punished to the fullest extent of the law and as provided in this subsection, unless the state attorney determines that extenuating circumstances exist which preclude the just prosecution of the offender, including whether the victim recommends that the offender not be sentenced as provided in this subsection.\n\n2. \nFor every case in which the offender meets the criteria in paragraph (a) and does not receive the mandatory minimum prison sentence, the state attorney must explain the sentencing deviation in writing and place such explanation in the case file maintained by the state attorney.\n\n(10) \nIf a defendant is sentenced for an offense committed on or after July 1, 2009, which is a third degree felony but not a forcible felony as defined in s. 776.08, and excluding any third degree felony violation under chapter 810, and if the total sentence points pursuant to s. 921.0024 are 22 points or fewer, the court must sentence the offender to a nonstate prison sanction. However, if the court makes written findings that a nonstate prison sanction could present a danger to the public, the court may sentence the offender to a state correctional facility pursuant to this section.\n\n(11) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 3, ch. 71-136; ss. 1, 2, ch. 72-118; s. 2, ch. 72-724; s. 5, ch. 74-383; s. 1, ch. 77-174; s. 1, ch. 83-87; s. 1, ch. 94-228; s. 16, ch. 95-184; s. 4, ch. 95-294; s. 2, ch. 97-239; s. 2, ch. 98-3; s. 10, ch. 98-204; s. 2, ch. 99-188; s. 3, ch. 2000-246; s. 1, ch. 2001-239; s. 2, ch. 2002-70; ss. 1, 2, ch. 2002-211; s. 4, ch. 2005-28; s. 13, ch. 2008-172; s. 1, ch. 2008-182; s. 1, ch. 2009-63; s. 2, ch. 2011-200; s. 8, ch. 2014-160; s. 1, ch. 2014-220; s. 1, ch. 2016-13; s. 19, ch. 2016-24; s. 3, ch. 2017-1; s. 21, ch. 2017-37; s. 11, ch. 2017-107; s. 30, ch. 2019-167; s. 1, ch. 2026-149.",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+        "retrievedAt": "2026-11-13T20:08:02.851Z",
+        "effectiveDateStart": "October 1, 1995",
+        "subdivisionRanges": []
+      },
+      "fl:statute:775.083": {
+        "sourceKey": "fl:statute:775.083",
+        "section": "775.083",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.083",
+        "title": "Fines",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+        "text": "775.083 \nFines.\n—\n\n(1) \nA person who has been convicted of an offense other than a capital felony may be sentenced to pay a fine in addition to any punishment described in s. 775.082; when specifically authorized by statute, he or she may be sentenced to pay a fine in lieu of any punishment described in s. 775.082. A person who has been convicted of a noncriminal violation may be sentenced to pay a fine. Fines for designated crimes and for noncriminal violations shall not exceed:\n(a) \n$15,000, when the conviction is of a life felony.\n\n(b) \n$10,000, when the conviction is of a felony of the first or second degree.\n\n(c) \n$5,000, when the conviction is of a felony of the third degree.\n\n(d) \n$1,000, when the conviction is of a misdemeanor of the first degree.\n\n(e) \n$500, when the conviction is of a misdemeanor of the second degree or a noncriminal violation.\n\n(f) \nAny higher amount equal to double the pecuniary gain derived from the offense by the offender or double the pecuniary loss suffered by the victim.\n\n(g) \nAny higher amount specifically authorized by statute.\n\nFines imposed in this subsection shall be deposited by the clerk of the court in the fine and forfeiture fund established pursuant to s. 142.01. If a defendant is unable to pay a fine, the court may defer payment of the fine to a date certain. As used in this subsection, the term “convicted” or “conviction” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2) \nIn addition to the fines set forth in subsection (1), court costs shall be assessed and collected in each instance a defendant pleads nolo contendere to, or is convicted of, or adjudicated delinquent for, a felony, a misdemeanor, or a criminal traffic offense under state law, or a violation of any municipal or county ordinance if the violation constitutes a misdemeanor under state law. The court costs imposed by this section shall be $50 for a felony and $20 for any other offense and shall be deposited by the clerk of the court into an appropriate county account for disbursement for the purposes provided in this subsection. A county shall account for the funds separately from other county funds as crime prevention funds. The county, in consultation with the sheriff, must expend such funds for crime prevention programs in the county.\n\n(3) \nThe clerk of the court of each county is the entity responsible for collecting payment of fines, fees, service charges, and court costs. Unless otherwise designated by the court, a person who has been ordered to pay court obligations under this section shall immediately contact the clerk to pay fines, fees, service charges, and court costs in full or to apply for enrollment in a payment plan pursuant to s. 28.246(4).\n\n(4) \nThe purpose of this section is to provide uniform penalty authorization for criminal offenses and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 4, ch. 71-136; s. 6, ch. 74-383; s. 1, ch. 77-97; s. 1, ch. 77-174; s. 1, ch. 96-408; s. 1810, ch. 97-102; s. 117, ch. 2003-402; s. 5, ch. 2009-6; s. 29, ch. 2010-162; s. 8, ch. 2017-126; s. 13, ch. 2021-116; s. 19, ch. 2021-131.",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+        "retrievedAt": "2026-11-13T20:08:03.820Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:817.49:2_b_1": {
+        "sourceKey": "fl:statute:817.49:2_b_1",
+        "section": "817.49",
+        "subdivision": "(2)(b)1.",
+        "citation": "Fla. Stat. § 817.49(2)(b)1.",
+        "title": "False reports of commission of crimes; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html",
+        "text": "817.49 \nFalse reports of commission of crimes; penalty.\n—\n\n(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2)(a) \nAs used in this section, the term “public safety agency” means a law enforcement agency, professional or volunteer fire department, emergency medical service, ambulance service, or other public entity that dispatches or provides first responder services to respond to crimes, to assist victims of crimes, or to apprehend offenders.\n\n(b) \nIf the willful making of a false report of a crime as set forth in this section results in a response by a federal, state, district, municipal, or other public safety agency and the response results in:\n1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA court shall order any person convicted of violating this section to pay restitution, which shall include full payment for any cost incurred by a responding public safety agency.\n\n(4) \nThe Legislature finds that the false reporting of crimes is a threat to public safety and a threat to the safety of law enforcement officers and other first responders. As such, the Legislature encourages each state attorney to adopt a pro-prosecution policy for the false reporting of crimes as prohibited in this section.\n\nHistory.\n—\ns. 1, ch. 59-294; s. 875, ch. 71-136; s. 1, ch. 2021-64; s. 5, ch. 2025-176.",
+        "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+        "retrievedAt": "2026-11-13T20:07:56.900Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)(b)1.",
+            "start": 1089,
+            "end": 1376
+          }
+        ]
+      },
+      "fl:statute:775.084": {
+        "sourceKey": "fl:statute:775.084",
+        "section": "775.084",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 775.084",
+        "title": "Violent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+        "text": "775.084 \nViolent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms.\n—\n\n(1) \nAs used in this act:\n(a) \n“Habitual felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(a), if it finds that:\n1. \nThe defendant has previously been convicted of any combination of two or more felonies in this state or other qualified offenses.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for a felony or other qualified offense; or\n\nb. \nWithin 5 years of the date of the conviction of the defendant’s last prior felony or other qualified offense, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for a felony or other qualified offense, whichever is later.\n\n3. \nThe felony for which the defendant is to be sentenced, and one of the two prior felony convictions, is not a violation of s. 893.13 relating to the purchase or the possession of a controlled substance.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(b) \n“Habitual violent felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(b), if it finds that:\n1. \nThe defendant has previously been convicted of a felony or an attempt or conspiracy to commit a felony and one or more of such convictions was for:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery; or\n\no. \nAggravated stalking.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years of the date of the conviction of the last prior enumerated felony, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(c) \n“Three-time violent felony offender” means a defendant for whom the court must impose a mandatory minimum term of imprisonment, as provided in paragraph (4)(c), if it finds that:\n1. \nThe defendant has previously been convicted as an adult two or more times of a felony, or an attempt to commit a felony, and two or more of such convictions were for committing, or attempting to commit, any of the following offenses or combination thereof:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery;\n\no. \nAggravated stalking;\n\np. \nHome invasion/robbery;\n\nq. \nCarjacking; or\n\nr. \nAn offense which is in violation of a law of any other jurisdiction if the elements of the offense are substantially similar to the elements of any felony offense enumerated in sub-subparagraphs a.-q., or an attempt to commit any such felony offense.\n\n2. \nThe felony for which the defendant is to be sentenced is one of the felonies enumerated in sub-subparagraphs 1.a.-q. and was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r.; or\n\nb. \nWithin 5 years after the date of the conviction of the last prior offense enumerated in sub-subparagraphs 1.a.-r., or within 5 years after the defendant’s release from a prison sentence, probation, community control, or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r., whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(d) \n“Violent career criminal” means a defendant for whom the court must impose imprisonment pursuant to paragraph (4)(d), if it finds that:\n1. \nThe defendant has previously been convicted as an adult three or more times for an offense in this state or other qualified offense that is:\na. \nAny forcible felony, as described in s. 776.08;\n\nb. \nAggravated stalking, as described in s. 784.048(3) and (4);\n\nc. \nAggravated child abuse, as described in s. 827.03(2)(a);\n\nd. \nAggravated abuse of an elderly person or disabled adult, as described in s. 825.102(2);\n\ne. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, as described in s. 800.04 or s. 847.0135(5);\n\nf. \nEscape, as described in s. 944.40; or\n\ng. \nA felony violation of chapter 790 involving the use or possession of a firearm.\n\n2. \nThe defendant has been incarcerated in a state prison or a federal prison.\n\n3. \nThe primary felony offense for which the defendant is to be sentenced is a felony enumerated in subparagraph 1. and was committed on or after October 1, 1995, and:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years after the conviction of the last prior enumerated felony, or within 5 years after the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(e) \n“Qualified offense” means any offense, substantially similar in elements and penalties to an offense in this state, which is in violation of a law of any other jurisdiction, whether that of another state, the District of Columbia, the United States or any possession or territory thereof, or any foreign jurisdiction, that was punishable under the law of such jurisdiction at the time of its commission by the defendant by death or imprisonment exceeding 1 year.\n\n(2) \nFor the purposes of this section, the placing of a person on probation or community control without an adjudication of guilt shall be treated as a prior conviction.\n\n(3)(a) \nIn a separate proceeding, the court shall determine if the defendant is a habitual felony offender or a habitual violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a habitual felony offender or a habitual violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a habitual felony offender or a habitual violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a habitual felony offender sanction or a habitual violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a habitual felony offender or a habitual violent felony offender, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a habitual felony offender or a habitual violent felony offender, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a habitual felony offender or a habitual violent felony offender as provided in this subparagraph.\n\n(b) \nIn a separate proceeding, the court shall determine if the defendant is a three-time violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a three-time violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a three-time violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after the effective date of this act, if the state attorney pursues a three-time violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a three-time violent felony offender, subject to imprisonment pursuant to this section as provided in paragraph (4)(c).\n\n(c) \nIn a separate proceeding, the court shall determine whether the defendant is a violent career criminal with respect to a primary offense committed on or after October 1, 1995. The procedure shall be as follows:\n1. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n2. \nAll evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n3. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable only as provided in paragraph (d).\n\n4. \nFor the purpose of identification, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n5. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a violent career criminal sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a violent career criminal, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a violent career criminal, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a violent career criminal as provided in this subparagraph.\n\n(d)1. \nA person sentenced under paragraph (4)(d) as a violent career criminal has the right of direct appeal, and either the state or the defendant may petition the trial court to vacate an illegal sentence at any time. However, the determination of the trial court to impose or not to impose a violent career criminal sentence is presumed appropriate and no petition or motion for collateral or other postconviction relief may be considered based on an allegation either by the state or the defendant that such sentence is inappropriate, inadequate, or excessive.\n\n2. \nIt is the intent of the Legislature that, with respect to both direct appeal and collateral review of violent career criminal sentences, all claims of error or illegality be raised at the first opportunity and that no claim should be filed more than 2 years after the judgment and sentence became final, unless it is established that the basis for the claim could not have been ascertained at the time by the exercise of due diligence. Technical violations and mistakes at trials and sentencing proceedings involving violent career criminals that do not affect due process or fundamental fairness are not appealable by either the state or the defendant.\n\n3. \nIt is the intent of the Legislature that no funds, resources, or employees of the state or its political subdivisions be used, directly or indirectly, in appellate or collateral proceedings based on violent career criminal sentencing, except when such use is constitutionally or statutorily mandated.\n\n(4)(a) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10.\n\n(b) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual violent felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life, and such offender shall not be eligible for release for 15 years.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30, and such offender shall not be eligible for release for 10 years.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10, and such offender shall not be eligible for release for 5 years.\n\n(c)1. \nThe court, in conformity with the procedure established in paragraph (3)(b), must sentence the three-time violent felony offender to a mandatory minimum term of imprisonment, as follows:\na. \nIn the case of a felony punishable by life, to a term of imprisonment for life;\n\nb. \nIn the case of a felony of the first degree, to a term of imprisonment of 30 years;\n\nc. \nIn the case of a felony of the second degree, to a term of imprisonment of 15 years; or\n\nd. \nIn the case of a felony of the third degree, to a term of imprisonment of 5 years.\n\n2. \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law.\n\n(d) \nThe court, in conformity with the procedure established in paragraph (3)(c), shall sentence the violent career criminal as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 40, with a mandatory minimum term of 30 years’ imprisonment.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 15, with a mandatory minimum term of 10 years’ imprisonment.\n\n(e) \nIf the court finds, pursuant to paragraph (3)(a) or paragraph (3)(c), that it is not necessary for the protection of the public to sentence a defendant who meets the criteria for sentencing as a habitual felony offender, a habitual violent felony offender, or a violent career criminal, with respect to an offense committed on or after October 1, 1995, sentence shall be imposed without regard to this section.\n\n(f) \nAt any time when it appears to the court that the defendant is eligible for sentencing under this section, the court shall make that determination as provided in paragraph (3)(a), paragraph (3)(b), or paragraph (3)(c).\n\n(g) \nA sentence imposed under this section shall not be increased after such imposition.\n\n(h) \nA sentence imposed under this section is not subject to s. 921.002.\n\n(i) \nThe provisions of this section do not apply to capital felonies, and a sentence authorized under this section does not preclude the imposition of the death penalty for a capital felony.\n\n(j) \nThe provisions of s. 947.1405 shall apply to persons sentenced as habitual felony offenders and persons sentenced as habitual violent felony offenders.\n\n(k)1. \nA defendant sentenced under this section as a habitual felony offender, a habitual violent felony offender, or a violent career criminal is eligible for gain-time granted by the Department of Corrections as provided in s. 944.275(4)(b).\n\n2. \nFor an offense committed on or after October 1, 1995, a defendant sentenced under this section as a violent career criminal is not eligible for any form of discretionary early release, other than pardon or executive clemency, or conditional medical release granted pursuant to s. 947.149.\n\n3. \nFor an offense committed on or after July 1, 1999, a defendant sentenced under this section as a three-time violent felony offender shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release.\n\n(5) \nIn order to be counted as a prior felony for purposes of sentencing under this section, the felony must have resulted in a conviction sentenced separately prior to the current offense and sentenced separately from any other felony conviction that is to be counted as a prior felony.\n\n(6) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section, and to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 5, ch. 71-136; s. 7, ch. 74-383; s. 1, ch. 75-116; s. 2, ch. 75-298; s. 1, ch. 77-174; s. 6, ch. 88-131; s. 1, ch. 89-280; s. 2, ch. 93-406; s. 2, ch. 95-182; s. 8, ch. 95-195; s. 14, ch. 96-322; s. 44, ch. 96-388; s. 12, ch. 97-78; s. 12, ch. 97-194; s. 11, ch. 98-204; s. 3, ch. 99-188; s. 3, ch. 99-201; s. 3, ch. 2000-246; ss. 1, 2, ch. 2002-210; s. 2, ch. 2003-23; s. 14, ch. 2008-172; s. 10, ch. 2012-155; s. 39, ch. 2016-105; s. 8, ch. 2019-98.",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+        "retrievedAt": "2026-11-13T20:08:04.852Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:817.49:2_b_2": {
+        "sourceKey": "fl:statute:817.49:2_b_2",
+        "section": "817.49",
+        "subdivision": "(2)(b)2.",
+        "citation": "Fla. Stat. § 817.49(2)(b)2.",
+        "title": "False reports of commission of crimes; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html",
+        "text": "817.49 \nFalse reports of commission of crimes; penalty.\n—\n\n(1) \nExcept as provided in subsection (2), whoever willfully imparts, conveys, or causes to be imparted or conveyed to a law enforcement officer or employee of a public safety agency false information or reports concerning the alleged commission of any crime under the laws of this state, knowing such information or report to be false, when no such crime has actually been committed, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2)(a) \nAs used in this section, the term “public safety agency” means a law enforcement agency, professional or volunteer fire department, emergency medical service, ambulance service, or other public entity that dispatches or provides first responder services to respond to crimes, to assist victims of crimes, or to apprehend offenders.\n\n(b) \nIf the willful making of a false report of a crime as set forth in this section results in a response by a federal, state, district, municipal, or other public safety agency and the response results in:\n1. \nGreat bodily harm, permanent disfigurement, or permanent disability to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n2. \nDeath to any person as a proximate result of lawful conduct arising out of a response, the person making such report commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nA court shall order any person convicted of violating this section to pay restitution, which shall include full payment for any cost incurred by a responding public safety agency.\n\n(4) \nThe Legislature finds that the false reporting of crimes is a threat to public safety and a threat to the safety of law enforcement officers and other first responders. As such, the Legislature encourages each state attorney to adopt a pro-prosecution policy for the false reporting of crimes as prohibited in this section.\n\nHistory.\n—\ns. 1, ch. 59-294; s. 875, ch. 71-136; s. 1, ch. 2021-64; s. 5, ch. 2025-176.",
+        "contentHash": "5b5767be92806bb67197156d5dab93121368c9be1f128dd2b5b5933274e5a3e8",
+        "retrievedAt": "2026-11-13T20:07:56.900Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)(b)2.",
+            "start": 1376,
+            "end": 1602
+          }
+        ]
+      },
+      "fl:statute:837.055:1": {
+        "sourceKey": "fl:statute:837.055:1",
+        "section": "837.055",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 837.055(1)",
+        "title": "False information to law enforcement during investigation",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html",
+        "text": "837.055 \nFalse information to law enforcement during investigation.\n—\n\n(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+        "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+        "retrievedAt": "2026-11-13T20:07:53.980Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 71,
+            "end": 408
+          }
+        ]
+      },
+      "fl:statute:837.055": {
+        "sourceKey": "fl:statute:837.055",
+        "section": "837.055",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.055",
+        "title": "False information to law enforcement during investigation",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html",
+        "text": "837.055 \nFalse information to law enforcement during investigation.\n—\n\n(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+        "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+        "retrievedAt": "2026-11-13T20:07:53.980Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.055:2": {
+        "sourceKey": "fl:statute:837.055:2",
+        "section": "837.055",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 837.055(2)",
+        "title": "False information to law enforcement during investigation",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html",
+        "text": "837.055 \nFalse information to law enforcement during investigation.\n—\n\n(1) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation or a felony criminal investigation with the intent to mislead the officer or impede the investigation commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nWhoever knowingly and willfully gives false information to a law enforcement officer who is conducting a missing person investigation involving a child 16 years of age or younger with the intent to mislead the officer or impede the investigation, and the child who is the subject of the investigation suffers great bodily harm, permanent disability, permanent disfigurement, or death, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 1, ch. 2006-142; s. 1, ch. 2012-53.",
+        "contentHash": "d3c01fc1dbda996b5cc2ef3fa9ce664e5d59d5ad63eaf09410fc3b4719d8b044",
+        "retrievedAt": "2026-11-13T20:07:53.980Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 408,
+            "end": 951
+          }
+        ]
+      },
+      "fl:statute:837.012:1": {
+        "sourceKey": "fl:statute:837.012:1",
+        "section": "837.012",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 837.012(1)",
+        "title": "Perjury when not in an official proceeding",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.012.html",
+        "text": "837.012 \nPerjury when not in an official proceeding.\n—\n\n(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nKnowledge of the materiality of the statement is not an element of this crime, and the defendant’s mistaken belief that his or her statement was not material is not a defense.\n\nHistory.\n—\ns. 2, ch. 1637, 1868; RS 2560; GS 3472; RGS 5341; CGL 7474; s. 997, ch. 71-136; s. 54, ch. 74-383; s. 32, ch. 75-298; s. 205, ch. 91-224; s. 1310, ch. 97-102.\n\nNote.\n—\nFormer s. 837.01.",
+        "contentHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1",
+        "retrievedAt": "2026-11-13T20:07:51.139Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 56,
+            "end": 322
+          }
+        ]
+      },
+      "fl:statute:837.012": {
+        "sourceKey": "fl:statute:837.012",
+        "section": "837.012",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.012",
+        "title": "Perjury when not in an official proceeding",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.012.html",
+        "text": "837.012 \nPerjury when not in an official proceeding.\n—\n\n(1) \nWhoever makes a false statement, which he or she does not believe to be true, under oath, not in an official proceeding, in regard to any material matter shall be guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nKnowledge of the materiality of the statement is not an element of this crime, and the defendant’s mistaken belief that his or her statement was not material is not a defense.\n\nHistory.\n—\ns. 2, ch. 1637, 1868; RS 2560; GS 3472; RGS 5341; CGL 7474; s. 997, ch. 71-136; s. 54, ch. 74-383; s. 32, ch. 75-298; s. 205, ch. 91-224; s. 1310, ch. 97-102.\n\nNote.\n—\nFormer s. 837.01.",
+        "contentHash": "f3e8d4df488b49c509c67050ab5a991436b3e1c620b668049b44b4e61c7e32f1",
+        "retrievedAt": "2026-11-13T20:07:51.139Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.011": {
+        "sourceKey": "fl:statute:837.011",
+        "section": "837.011",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.011",
+        "title": "Definitions",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html",
+        "text": "837.011 \nDefinitions.\n—\n\nIn this chapter, unless a different meaning plainly is required:\n(1) \n“Official proceeding” means a proceeding heard, or which may be or is required to be heard, before any legislative, judicial, administrative, or other governmental agency or official authorized to take evidence under oath, including any referee, general or special magistrate, administrative law judge, hearing officer, hearing examiner, commissioner, notary, or other person taking testimony or a deposition in connection with any such proceeding.\n\n(2) \n“Oath” includes affirmation or any other form of attestation required or authorized by law by which a person acknowledges that he or she is bound in conscience or law to testify truthfully in an official proceeding or other official matter.\n\n(3) \n“Material matter” means any subject, regardless of its admissibility under the rules of evidence, which could affect the course or outcome of the proceeding. Whether a matter is material in a given factual situation is a question of law.\n\nHistory.\n—\ns. 53, ch. 74-383; s. 316, ch. 96-410; s. 1823, ch. 97-102; s. 98, ch. 2004-11.",
+        "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+        "retrievedAt": "2026-11-13T20:07:50.180Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.07": {
+        "sourceKey": "fl:statute:837.07",
+        "section": "837.07",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.07",
+        "title": "Recantation as a defense",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html",
+        "text": "837.07 \nRecantation as a defense.\n—\n\nRecantation shall be a defense to any prosecution for perjury or false statement only if the person making the false statement admits such statement to be false in the same continuous proceeding or matter, and:\n(1) \nThe false statement has not substantially affected the proceeding; or\n\n(2) \nSuch admission is made before it has become manifest that such false statement has been or will be exposed.\n\nHistory.\n—\ns. 1, ch. 90-126.",
+        "contentHash": "e67b8ec7cd578207751c2d23ae198efca74fd85fe558579daae6577114bf082d",
+        "retrievedAt": "2026-11-13T20:07:55.915Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.021:1": {
+        "sourceKey": "fl:statute:837.021:1",
+        "section": "837.021",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 837.021(1)",
+        "title": "Perjury by contradictory statements",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html",
+        "text": "837.021 \nPerjury by contradictory statements.\n—\n\n(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIn any prosecution for perjury under this section:\n(a) \nThe prosecution may proceed in a single count by setting forth the willful making of contradictory statements under oath and alleging in the alternative that one or more of them are false.\n\n(b) \nThe question of whether a statement was material is a question of law to be determined by the court.\n\n(c) \nIt is not necessary to prove which, if any, of the contradictory statements is not true.\n\n(d) \nIt is a defense that the accused believed each statement to be true at the time the statement was made.\n\n(4) \nA person may not be prosecuted under this section for making contradictory statements in separate proceedings if the contradictory statement made in the most recent proceeding was made under a grant of immunity under s. 914.04; but such person may be prosecuted under s. 837.02 for any false statement made in that most recent proceeding, and the contradictory statements may be received against him or her upon any criminal investigation or proceeding for such perjury.\n\nHistory.\n—\ns. 1, ch. 72-314; s. 56, ch. 74-383; s. 34, ch. 75-298; s. 2, ch. 85-41; s. 4, ch. 97-90; s. 1312, ch. 97-102.",
+        "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+        "retrievedAt": "2026-11-13T20:07:53.028Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 49,
+            "end": 330
+          }
+        ]
+      },
+      "fl:statute:837.021": {
+        "sourceKey": "fl:statute:837.021",
+        "section": "837.021",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.021",
+        "title": "Perjury by contradictory statements",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html",
+        "text": "837.021 \nPerjury by contradictory statements.\n—\n\n(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIn any prosecution for perjury under this section:\n(a) \nThe prosecution may proceed in a single count by setting forth the willful making of contradictory statements under oath and alleging in the alternative that one or more of them are false.\n\n(b) \nThe question of whether a statement was material is a question of law to be determined by the court.\n\n(c) \nIt is not necessary to prove which, if any, of the contradictory statements is not true.\n\n(d) \nIt is a defense that the accused believed each statement to be true at the time the statement was made.\n\n(4) \nA person may not be prosecuted under this section for making contradictory statements in separate proceedings if the contradictory statement made in the most recent proceeding was made under a grant of immunity under s. 914.04; but such person may be prosecuted under s. 837.02 for any false statement made in that most recent proceeding, and the contradictory statements may be received against him or her upon any criminal investigation or proceeding for such perjury.\n\nHistory.\n—\ns. 1, ch. 72-314; s. 56, ch. 74-383; s. 34, ch. 75-298; s. 2, ch. 85-41; s. 4, ch. 97-90; s. 1312, ch. 97-102.",
+        "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+        "retrievedAt": "2026-11-13T20:07:53.028Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.02": {
+        "sourceKey": "fl:statute:837.02",
+        "section": "837.02",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.02",
+        "title": "Perjury in official proceedings",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html",
+        "text": "837.02 \nPerjury in official proceedings.\n—\n\n(1) \nExcept as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nKnowledge of the materiality of the statement is not an element of the crime of perjury under subsection (1) or subsection (2), and the defendant’s mistaken belief that the statement was not material is not a defense.\n\nHistory.\n—\ns. 1, sub-ch. 6, ch. 1637, 1868; RS 2561; GS 3473; RGS 5343; CGL 7477; s. 998, ch. 71-136; s. 55, ch. 74-383; s. 33, ch. 75-298; s. 3, ch. 97-90; s. 1311, ch. 97-102.",
+        "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+        "retrievedAt": "2026-11-13T20:07:52.091Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:914.04": {
+        "sourceKey": "fl:statute:914.04",
+        "section": "914.04",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 914.04",
+        "title": "Witnesses; person not excused from testifying or producing evidence in certain prosecutions on ground testimony might incriminate him or her; use of testimony given or evidence produced",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.04.html",
+        "text": "914.04 \nWitnesses; person not excused from testifying or producing evidence in certain prosecutions on ground testimony might incriminate him or her; use of testimony given or evidence produced.\n—\n\nNo person who has been duly served with a subpoena or subpoena duces tecum shall be excused from attending and testifying or producing any book, paper, or other document before any court having felony trial jurisdiction, grand jury, or state attorney upon investigation, proceeding, or trial for a violation of any of the criminal statutes of this state upon the ground or for the reason that the testimony or evidence, documentary or otherwise, required of the person may tend to convict him or her of a crime or to subject him or her to a penalty or forfeiture, but no testimony so given or evidence so produced shall be received against the person upon any criminal investigation or proceeding. Such testimony or evidence, however, may be received against the person upon any criminal investigation or proceeding for perjury committed while giving such testimony or producing such evidence or for any perjury subsequently committed.\n\nHistory.\n—\ns. 1, ch. 5400, 1905; s. 1, ch. 7850, 1919; RGS 6017; CGL 8311; s. 1, ch. 69-316; s. 97, ch. 70-339; s. 1, ch. 71-99; s. 36, ch. 73-334; s. 1, ch. 82-393; s. 175, ch. 83-216; s. 1, ch. 85-41; s. 1522, ch. 97-102.\n\nNote.\n—\nFormer s. 932.29.",
+        "contentHash": "e74b718e8178e575c0d569e063d707f7490d48725dc01fb56750e243db714327",
+        "retrievedAt": "2026-11-13T20:08:01.734Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:837.021:2": {
+        "sourceKey": "fl:statute:837.021:2",
+        "section": "837.021",
+        "subdivision": "(2)",
+        "citation": "Fla. Stat. § 837.021(2)",
+        "title": "Perjury by contradictory statements",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html",
+        "text": "837.021 \nPerjury by contradictory statements.\n—\n\n(1) \nExcept as provided in subsection (2), whoever, in one or more official proceedings, willfully makes two or more material statements under oath which contradict each other, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nWhoever, in one or more official proceedings that relate to the prosecution of a capital felony, willfully makes two or more material statements under oath which contradict each other, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nIn any prosecution for perjury under this section:\n(a) \nThe prosecution may proceed in a single count by setting forth the willful making of contradictory statements under oath and alleging in the alternative that one or more of them are false.\n\n(b) \nThe question of whether a statement was material is a question of law to be determined by the court.\n\n(c) \nIt is not necessary to prove which, if any, of the contradictory statements is not true.\n\n(d) \nIt is a defense that the accused believed each statement to be true at the time the statement was made.\n\n(4) \nA person may not be prosecuted under this section for making contradictory statements in separate proceedings if the contradictory statement made in the most recent proceeding was made under a grant of immunity under s. 914.04; but such person may be prosecuted under s. 837.02 for any false statement made in that most recent proceeding, and the contradictory statements may be received against him or her upon any criminal investigation or proceeding for such perjury.\n\nHistory.\n—\ns. 1, ch. 72-314; s. 56, ch. 74-383; s. 34, ch. 75-298; s. 2, ch. 85-41; s. 4, ch. 97-90; s. 1312, ch. 97-102.",
+        "contentHash": "4b871cc688f72a3bfaa9ae42cb0429d5a5a6fddb14a542dd37f2fc7416e32760",
+        "retrievedAt": "2026-11-13T20:07:53.028Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(2)",
+            "start": 330,
+            "end": 625
+          }
+        ]
+      },
+      "fl:statute:837.06": {
+        "sourceKey": "fl:statute:837.06",
+        "section": "837.06",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 837.06",
+        "title": "False official statements",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.06.html",
+        "text": "837.06 \nFalse official statements.\n—\n\nWhoever knowingly makes a false statement in writing with the intent to mislead a public servant in the performance of his or her official duty shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.\n\nHistory.\n—\ns. 58, ch. 74-383; s. 34, ch. 75-298; s. 207, ch. 91-224; s. 1313, ch. 97-102.",
+        "contentHash": "3b5cee267ea8850a20b639cec9fbd88f4146de096fd01b6e196f31f3061c0a0a",
+        "retrievedAt": "2026-11-13T20:07:54.942Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:790.163:1": {
+        "sourceKey": "fl:statute:790.163:1",
+        "section": "790.163",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 790.163(1)",
+        "title": "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.163.html",
+        "text": "790.163 \nFalse report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty.\n—\n\n(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nNotwithstanding any other law, adjudication of guilt or imposition of sentence for a violation of this section may not be suspended, deferred, or withheld. However, the state attorney may move the sentencing court to reduce or suspend the sentence of any person who is convicted of a violation of this section and who provides substantial assistance in the identification, arrest, or conviction of any of his or her accomplices, accessories, coconspirators, or principals.\n\n(3) \nProof that a person accused of violating this section knowingly made a false report is prima facie evidence of the accused person’s intent to deceive, mislead, or otherwise misinform any person.\n\n(4) \nIn addition to any other penalty provided by law with respect to any person who is convicted of a violation of this section that resulted in the mobilization or action of any law enforcement officer or any state or local agency, a person convicted of a violation of this section may be required by the court to pay restitution for all of the costs and damages arising from the criminal conduct.\n\nHistory.\n—\ns. 3, ch. 59-29; s. 749, ch. 71-136; s. 1, ch. 2002-28; s. 1, ch. 2016-156.",
+        "contentHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+        "retrievedAt": "2026-11-13T20:07:58.828Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 164,
+            "end": 655
+          }
+        ]
+      },
+      "fl:statute:790.163": {
+        "sourceKey": "fl:statute:790.163",
+        "section": "790.163",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 790.163",
+        "title": "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.163.html",
+        "text": "790.163 \nFalse report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty.\n—\n\n(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nNotwithstanding any other law, adjudication of guilt or imposition of sentence for a violation of this section may not be suspended, deferred, or withheld. However, the state attorney may move the sentencing court to reduce or suspend the sentence of any person who is convicted of a violation of this section and who provides substantial assistance in the identification, arrest, or conviction of any of his or her accomplices, accessories, coconspirators, or principals.\n\n(3) \nProof that a person accused of violating this section knowingly made a false report is prima facie evidence of the accused person’s intent to deceive, mislead, or otherwise misinform any person.\n\n(4) \nIn addition to any other penalty provided by law with respect to any person who is convicted of a violation of this section that resulted in the mobilization or action of any law enforcement officer or any state or local agency, a person convicted of a violation of this section may be required by the court to pay restitution for all of the costs and damages arising from the criminal conduct.\n\nHistory.\n—\ns. 3, ch. 59-29; s. 749, ch. 71-136; s. 1, ch. 2002-28; s. 1, ch. 2016-156.",
+        "contentHash": "2f5efbc97192eb38b99ef81d5dfa72ca80f1fa9b01f9ac74045b34bee99b0f5d",
+        "retrievedAt": "2026-11-13T20:07:58.828Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:790.166": {
+        "sourceKey": "fl:statute:790.166",
+        "section": "790.166",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 790.166",
+        "title": "Manufacture, possession, sale, delivery, display, use, or attempted or threatened use of a weapon of mass destruction or hoax weapon of mass destruction prohibited; definitions; penalties",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.166.html",
+        "text": "790.166 \nManufacture, possession, sale, delivery, display, use, or attempted or threatened use of a weapon of mass destruction or hoax weapon of mass destruction prohibited; definitions; penalties.\n—\n\n(1) \nAs used in this section, the term:\n(a) \n“Weapon of mass destruction” means:\n1. \nAny device or object that is designed or intended to cause death or serious bodily injury to any human or animal, or severe emotional or mental harm to any human, through the release, dissemination, or impact of toxic or poisonous chemicals, or their precursors;\n\n2. \nAny device or object involving a biological agent;\n\n3. \nAny device or object that is designed or intended to release radiation or radioactivity at a level dangerous to human or animal life; or\n\n4. \nAny biological agent, toxin, vector, or delivery system.\n\n(b) \n“Hoax weapon of mass destruction” means any device or object that by its design, construction, content, or characteristics appears to be or to contain, or is represented to be, constitute, or contain, a weapon of mass destruction as defined in this section, but which is, in fact, an inoperative facsimile, imitation, counterfeit, or representation of a weapon of mass destruction which does not meet the definition of a weapon of mass destruction or which does not actually contain or constitute a weapon, biological agent, toxin, vector, or delivery system prohibited by this section.\n\n(c) \n“Biological agent” means any microorganism, virus, infectious substance, or biological product that may be engineered through biotechnology, or any naturally occurring or bioengineered component of any such microorganism, virus, infectious substance, or biological product, capable of causing:\n1. \nDeath, disease, or other biological malfunction in a human, an animal, a plant, or other living organism;\n\n2. \nDeterioration of food, water, equipment, supplies, or material of any kind; or\n\n3. \nDeleterious alteration of the environment.\n\n(d) \n“Toxin” means the toxic material of plants, animals, microorganisms, viruses, fungi, or infectious substances, or a recombinant molecule, whatever its origin or method of reproduction, including:\n1. \nAny poisonous substance or biological product that may be engineered through biotechnology produced by a living organism; or\n\n2. \nAny poisonous isomer or biological product, homolog, or derivative of such substance.\n\n(e) \n“Delivery system” means:\n1. \nAny apparatus, equipment, device, or means of delivery specifically designed to deliver or disseminate a biological agent, toxin, or vector; or\n\n2. \nAny vector.\n\n(f) \n“Vector” means a living organism or molecule, including a recombinant molecule or biological product that may be engineered through biotechnology, capable of carrying a biological agent or toxin to a host.\n\n(2) \nA person who, without lawful authority, manufactures, possesses, sells, delivers, sends, mails, displays, uses, threatens to use, attempts to use, or conspires to use, or who makes readily accessible to others a weapon of mass destruction commits a felony of the first degree, punishable by imprisonment for a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084, and if death results, commits a capital felony, punishable as provided in s. 775.082.\n\n(3) \nAny person who, without lawful authority, manufactures, possesses, sells, delivers, mails, sends, displays, uses, threatens to use, attempts to use, or conspires to use, or who makes readily accessible to others, a hoax weapon of mass destruction commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(4) \nAny person who, while committing or attempting to commit any felony, possesses, displays, or threatens to use any hoax weapon of mass destruction commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nNotwithstanding any other law, adjudication of guilt or imposition of sentence may not be suspended, deferred, or withheld for a violation of this section. However, the state attorney may move the sentencing court to reduce or suspend the sentence of any person who is convicted of a violation of this section and who provides substantial assistance in the identification, arrest, or conviction of any of his or her accomplices, accessories, coconspirators, or principals.\n\n(6) \nProof that a device or object described in subparagraph (1)(a)1. caused death or serious bodily injury to a human or animal through the release, dissemination, or impact of toxic or poisonous chemicals, or their precursors, is prima facie evidence that the device or object was designed or intended to cause such death or serious bodily injury. Proof that a device or object described in subparagraph (1)(a)3. released radiation or radioactivity at a level dangerous to human or animal life is prima facie evidence that the device or object was designed or intended for such release.\n\n(7) \nThis section does not apply to any member or employee of the Armed Forces of the United States, a federal or state governmental agency, or a private entity who is otherwise engaged in lawful activity within the scope of his or her employment, if such person is otherwise duly authorized or licensed to manufacture, possess, sell, deliver, display, or otherwise engage in activity relative to this section and if such person is in compliance with applicable federal and state law.\n\n(8) \nFor purposes of this section, the term “weapon of mass destruction” does not include:\n(a) \nA device or instrument that emits or discharges smoke or an offensive, noxious, or irritant liquid, powder, gas, or chemical for the purpose of immobilizing, incapacitating, or thwarting an attack by a person or animal and that is lawfully possessed or used by a person for the purpose of self-protection or, as provided in subsection (7), is lawfully possessed or used by any member or employee of the Armed Forces of the United States, a federal or state governmental agency, or a private entity. A member or employee of a federal or state governmental agency includes, but is not limited to, a law enforcement officer, as defined in s. 784.07; a federal law enforcement officer, as defined in s. 901.1505; and an emergency service employee, as defined in s. 496.404.\n\n(b) \nThe liquid, powder, gas, chemical, or smoke that is emitted or discharged from a device or instrument as specified in paragraph (a).\n\n(9) \nIn addition to any other penalty provided by law with respect to any person who is convicted of a violation of this section that resulted in the mobilization or action of any law enforcement officer or any state or local agency, a person convicted of a violation of this section may be required by the court to pay restitution for all of the costs and damages arising from the criminal conduct.\n\nHistory.\n—\ns. 2, ch. 2000-218; s. 4, ch. 2002-28; s. 18, ch. 2019-141.",
+        "contentHash": "03c81d55d1c366fbfc26899ff41d05c3ca6eb0184a007b2bbad41426e5406418",
+        "retrievedAt": "2026-11-13T20:08:30.507Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      },
+      "fl:statute:790.164:1": {
+        "sourceKey": "fl:statute:790.164:1",
+        "section": "790.164",
+        "subdivision": "(1)",
+        "citation": "Fla. Stat. § 790.164(1)",
+        "title": "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.164.html",
+        "text": "790.164 \nFalse reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward.\n—\n\n(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nNotwithstanding any other law, adjudication of guilt or imposition of sentence for a violation of this section may not be suspended, deferred, or withheld. However, the state attorney may move the sentencing court to reduce or suspend the sentence of any person who is convicted of a violation of this section and who provides substantial assistance in the identification, arrest, or conviction of any of his or her accomplices, accessories, coconspirators, or principals.\n\n(3) \nProof that a person accused of violating this section knowingly made a false report is prima facie evidence of the accused person’s intent to deceive, mislead, or otherwise misinform any person.\n\n(4)(a) \nThere shall be a $5,000 reward for the giving of information to any law enforcement agency in the state, which information leads to the arrest and conviction of any person violating the provisions of this section. Any person claiming such reward shall apply to the law enforcement agency developing the case and be paid by the Department of Law Enforcement from the deficiency fund.\n\n(b) \nThere shall be only one reward given for each case, regardless of how many persons are arrested and convicted in connection with the case and regardless of how many persons submit claims for the reward.\n\n(c) \nThe Department of Law Enforcement shall establish procedures to be used by all reward applicants, and the circuit judge in whose jurisdiction the action occurs shall review all such applications and make final determination as to those applicants entitled to receive an award.\n\n(d) \nIn addition to any other penalty provided by law with respect to any person who is convicted of a violation of this section that resulted in the mobilization or action of any law enforcement officer or any state or local agency, a person convicted of a violation of this section may be required by the court to pay restitution for all of the costs and damages arising from the criminal conduct.\n\nHistory.\n—\nss. 2, 2A, ch. 71-306; s. 1, ch. 76-146; s. 236, ch. 77-104; s. 25, ch. 79-8; s. 2, ch. 2002-28; s. 2, ch. 2016-156.",
+        "contentHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+        "retrievedAt": "2026-11-13T20:07:59.800Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": [
+          {
+            "subdivision": "(1)",
+            "start": 222,
+            "end": 820
+          }
+        ]
+      },
+      "fl:statute:790.164": {
+        "sourceKey": "fl:statute:790.164",
+        "section": "790.164",
+        "subdivision": null,
+        "citation": "Fla. Stat. § 790.164",
+        "title": "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+        "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.164.html",
+        "text": "790.164 \nFalse reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward.\n—\n\n(1) \nIt is unlawful for any person to make a false report, with intent to deceive, mislead, or otherwise misinform any person, concerning the placing or planting of any bomb, dynamite, other deadly explosive, or weapon of mass destruction as defined in s. 790.166, concerning any act of arson or other violence to property owned by the state or any political subdivision, or concerning the use of firearms in a violent manner against a person or persons. A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \nNotwithstanding any other law, adjudication of guilt or imposition of sentence for a violation of this section may not be suspended, deferred, or withheld. However, the state attorney may move the sentencing court to reduce or suspend the sentence of any person who is convicted of a violation of this section and who provides substantial assistance in the identification, arrest, or conviction of any of his or her accomplices, accessories, coconspirators, or principals.\n\n(3) \nProof that a person accused of violating this section knowingly made a false report is prima facie evidence of the accused person’s intent to deceive, mislead, or otherwise misinform any person.\n\n(4)(a) \nThere shall be a $5,000 reward for the giving of information to any law enforcement agency in the state, which information leads to the arrest and conviction of any person violating the provisions of this section. Any person claiming such reward shall apply to the law enforcement agency developing the case and be paid by the Department of Law Enforcement from the deficiency fund.\n\n(b) \nThere shall be only one reward given for each case, regardless of how many persons are arrested and convicted in connection with the case and regardless of how many persons submit claims for the reward.\n\n(c) \nThe Department of Law Enforcement shall establish procedures to be used by all reward applicants, and the circuit judge in whose jurisdiction the action occurs shall review all such applications and make final determination as to those applicants entitled to receive an award.\n\n(d) \nIn addition to any other penalty provided by law with respect to any person who is convicted of a violation of this section that resulted in the mobilization or action of any law enforcement officer or any state or local agency, a person convicted of a violation of this section may be required by the court to pay restitution for all of the costs and damages arising from the criminal conduct.\n\nHistory.\n—\nss. 2, 2A, ch. 71-306; s. 1, ch. 76-146; s. 236, ch. 77-104; s. 25, ch. 79-8; s. 2, ch. 2002-28; s. 2, ch. 2016-156.",
+        "contentHash": "77370ed792438bdbb5bb479b72de1629564c13cf226111a8e0b655a18e4a3f5e",
+        "retrievedAt": "2026-11-13T20:07:59.800Z",
+        "effectiveDateStart": null,
+        "subdivisionRanges": []
+      }
+    }
+  },
+  "eligibility": {
+    "schemaVersion": 1,
+    "reportHash": "c17c1690eff23a6f5022a61c3dae56d664daaa087d29b1388e4fa28d4ff431a6",
+    "decisions": [
+      {
+        "id": "fl-fs-817-49-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "5664e338391e6213935247fe4f28092a84138df9abf5352f681cf40fb6d34197",
+        "definitionHash": "afe9b24558cb9f0b7e883db536bc1dc9f078a0da69fb47c61458680c0a56fc2e",
+        "approvalHash": "40789ce3b7535e41453e3b849ca78d98f18d1a4f78fd69df62cf429eeaecaf4a"
+      },
+      {
+        "id": "fl-fs-817-49-2-b-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "cb5904b61b9700f404349bd2aa54a94d24ee926300e2122a013452fbafd7ec78",
+        "definitionHash": "37e64801130193e55d03b51d93f0382ea73f3f61cd6464b536aec9452803834f",
+        "approvalHash": "151a96ed9b82d468cdf7f9326ac118064f7d0e9f73137c890d7e560f624859f3"
+      },
+      {
+        "id": "fl-fs-817-49-2-b-2-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "9cb588b727a6b90d992c78644fb129bfafc887c7d1b7872e302a57bd543d3880",
+        "definitionHash": "0f48270601ad6384cce08ee1b47195c38c13ef302a058d86f811805db5b6970d",
+        "approvalHash": "626e69782079a87dad45430df3f46e990e3a2345edb51092b0c3b2ba8f9c9d94"
+      },
+      {
+        "id": "fl-fs-837-055-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "fe492580bb6087d9a63161a0d289652f67fe30b78d11a809fb368c3c37be16af",
+        "definitionHash": "fca52e1d35e72bc79c5687ed95d1ed039f87a43c228ab839c98b27388c4e1c9f",
+        "approvalHash": "c751bade3ac106a3d1b6411d9e5c61b43c6a76454ef82794f4013889c6a90ddb"
+      },
+      {
+        "id": "fl-fs-837-055-2-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "0dc66a9210c3fdf102bbd455d6d4beaa41a50fcf2dbdddfaa7ef4936c2b2e4c4",
+        "definitionHash": "f3d03ba30fde47e94e294c009ba4f06681199bdd02402d52ddfc03aac4efffe2",
+        "approvalHash": "35a6bf53b22bb6417a3392a4e89c19867ced3e7cd368b662f36229504d277ae5"
+      },
+      {
+        "id": "fl-fs-837-012-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "b7a2eaa1032ce8f24bc0d9e4eff4cca222b16f6cc7bad31de3946d2d62bd251d",
+        "definitionHash": "49d03a70faef34c53a87f272e781ec6e84fa2fc8e4644a64e45330307707856e",
+        "approvalHash": "14eb2e2ee5d80733bacea06fe0388865bb675dd8f1a608d1429837007524a4ff"
+      },
+      {
+        "id": "fl-fs-837-021-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "4b0fddb271fcb8b446e34267651b57813d8d475a5ac5aa06ec8bc1f96de62dd1",
+        "definitionHash": "8561176ba1117753853fa8fbbfa76dfa6996e7afa80620810d30e10751076747",
+        "approvalHash": "fb64e031af545f82ed507d6eb8030fca7524febf119c6654f308eaa8b9db96f5"
+      },
+      {
+        "id": "fl-fs-837-021-2-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "2c49f0759696e1176a7ec80bf78c2b5cc107713745c7e05df97e408f2fbb1cd5",
+        "definitionHash": "83f58b6bfaf2b82338ac7d00d9281363e8fc700a97c8ca3ab397dd65b043a4a0",
+        "approvalHash": "02042e6bdafbfc2bed2be202310cbc6d1205cbb9570e40b4c2d75d2f6c0a0988"
+      },
+      {
+        "id": "fl-fs-837-06-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "bf8e65258dd962d128440b1e9b046631c473644b836601d449df106dc6da9b21",
+        "definitionHash": "79ab92201e5e2fca7fdcbb55683683f378d8371d109e9f42dd3cb40c57422423",
+        "approvalHash": "f15b9171f303143179cec78a490fa80063561a0aade3051f79adbdadd849a43a"
+      },
+      {
+        "id": "fl-fs-790-163-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "db2e5f3b4bd029c6a6fa1385d15a1651ab7ad748304e0696240500b6be4902bf",
+        "definitionHash": "d22b070b56c56c3ef87a223c595d81755bcd33d57ed7f497e350d5cd804af1bc",
+        "approvalHash": "fb4a59ed09f2d6f194fdcee174f23fe2be4870e30eed839d17ab7c8617165bda"
+      },
+      {
+        "id": "fl-fs-790-164-1-false-report",
+        "status": "eligible",
+        "reason": "Individually source-bound publication proposal; approval requires reviewed merge and production import remains separate.",
+        "draftHash": "7ada2e23e323dc28d289bf177b127abcc0432df5c67c55ee81570f907b9d9153",
+        "definitionHash": "ff5affdeac30fe53f8429e9dd268907c9bb8add662224fbd5c8f00dd6acec0fd",
+        "approvalHash": "958e559cc77e51a1b766d052952fe02ed33799158bb9f5a1f830f3209c707e6b"
+      }
+    ]
+  }
+}

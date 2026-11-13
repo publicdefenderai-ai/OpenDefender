@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "fl-fs-817-49-1-false-report",
+    "section": "817.49",
+    "scope": "(1)",
+    "officialTitle": "False reports of commission of crimes; penalty",
+    "dependencies": [
+      "817.49",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "817.49": [
+        "(1)",
+        "(2)(a)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-49-1-false-report",
+      "name": "False report of a crime that did not occur",
+      "names": {
+        "es": "Denuncia falsa de un delito inexistente",
+        "zh": "谎报未发生的犯罪"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.49(1)",
+      "slug": "fl-fs-817-49-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.49(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.49",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(1)",
+          "F.S. 817.49(1)"
+        ],
+        "es": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(1)",
+          "F.S. 817.49(1)"
+        ],
+        "zh": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(1)",
+          "F.S. 817.49(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully reporting, or causing someone to report, to a law enforcement officer or public safety agency employee a Florida crime the person knows was never committed.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. The court must order restitution including full responding-agency costs."
+        },
+        "es": {
+          "plainSummary": "Comunicar deliberadamente, o hacer que se comunique, a un agente de policía o empleado de un organismo de seguridad pública un delito de Florida que se sabe que nunca se cometió.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. El tribunal debe ordenar restitución, incluido el costo íntegro de la respuesta del organismo."
+        },
+        "zh": {
+          "plainSummary": "故意向执法人员或公共安全机构雇员谎报、或促使他人谎报明知从未发生的佛州犯罪。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 法院必须判令赔偿，包括应急机构的全部响应费用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-49-2-b-1-false-report",
+    "section": "817.49",
+    "scope": "(2)(b)1.",
+    "officialTitle": "False reports of commission of crimes; penalty",
+    "dependencies": [
+      "817.49",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.49": [
+        "(2)(b)1.",
+        "(1)",
+        "(2)(a)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-49-2-b-1-false-report",
+      "name": "False crime report resulting in serious harm from the response",
+      "names": {
+        "es": "Denuncia falsa con daño grave causado por la respuesta",
+        "zh": "谎报犯罪导致应急响应造成严重伤害"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.49(2)(b)1.",
+      "slug": "fl-fs-817-49-2-b-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.49(2)(b)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.49",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)1.",
+          "F.S. 817.49(2)(b)1."
+        ],
+        "es": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)1.",
+          "F.S. 817.49(2)(b)1."
+        ],
+        "zh": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)1.",
+          "F.S. 817.49(2)(b)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully reporting, or causing someone to report, to a law enforcement officer or public safety agency employee a Florida crime the person knows was never committed. A public safety agency responds and lawful conduct arising from that response proximately causes great bodily harm, permanent disfigurement or permanent disability to a person.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. The court must order restitution including full responding-agency costs."
+        },
+        "es": {
+          "plainSummary": "Comunicar deliberadamente, o hacer que se comunique, a un agente de policía o empleado de un organismo de seguridad pública un delito de Florida que se sabe que nunca se cometió. Responde un organismo de seguridad pública y una actuación lícita derivada de esa respuesta es causa próxima de daño corporal grave, desfiguración permanente o discapacidad permanente.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El tribunal debe ordenar restitución, incluido el costo íntegro de la respuesta del organismo."
+        },
+        "zh": {
+          "plainSummary": "故意向执法人员或公共安全机构雇员谎报、或促使他人谎报明知从未发生的佛州犯罪。 公共安全机构作出响应，由此产生的合法行为是造成人员严重伤害、永久毁容或永久残障的法律近因。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 法院必须判令赔偿，包括应急机构的全部响应费用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-49-2-b-2-false-report",
+    "section": "817.49",
+    "scope": "(2)(b)2.",
+    "officialTitle": "False reports of commission of crimes; penalty",
+    "dependencies": [
+      "817.49",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.49": [
+        "(2)(b)2.",
+        "(1)",
+        "(2)(a)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-49-2-b-2-false-report",
+      "name": "False crime report resulting in death from the response",
+      "names": {
+        "es": "Denuncia falsa con muerte causada por la respuesta",
+        "zh": "谎报犯罪导致应急响应造成人员死亡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.49(2)(b)2.",
+      "slug": "fl-fs-817-49-2-b-2-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.49(2)(b)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.49",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.49.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)2.",
+          "F.S. 817.49(2)(b)2."
+        ],
+        "es": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)2.",
+          "F.S. 817.49(2)(b)2."
+        ],
+        "zh": [
+          "False reports of commission of crimes; penalty",
+          "FS 817.49(2)(b)2.",
+          "F.S. 817.49(2)(b)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully reporting, or causing someone to report, to a law enforcement officer or public safety agency employee a Florida crime the person knows was never committed. A public safety agency responds and lawful conduct arising from that response proximately causes someone’s death.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The court must order restitution including full responding-agency costs."
+        },
+        "es": {
+          "plainSummary": "Comunicar deliberadamente, o hacer que se comunique, a un agente de policía o empleado de un organismo de seguridad pública un delito de Florida que se sabe que nunca se cometió. Responde un organismo de seguridad pública y una actuación lícita derivada de esa respuesta es causa próxima de la muerte de una persona.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El tribunal debe ordenar restitución, incluido el costo íntegro de la respuesta del organismo."
+        },
+        "zh": {
+          "plainSummary": "故意向执法人员或公共安全机构雇员谎报、或促使他人谎报明知从未发生的佛州犯罪。 公共安全机构作出响应，由此产生的合法行为是造成人员死亡的法律近因。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 法院必须判令赔偿，包括应急机构的全部响应费用。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-055-1-false-report",
+    "section": "837.055",
+    "scope": "(1)",
+    "officialTitle": "False information to law enforcement during investigation",
+    "dependencies": [
+      "837.055",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "837.055": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-055-1-false-report",
+      "name": "False information during a missing-person or felony investigation",
+      "names": {
+        "es": "Información falsa en investigación de desaparición o delito grave",
+        "zh": "失踪人员或重罪调查中提供虚假信息"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "837.055(1)",
+      "slug": "fl-fs-837-055-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.055(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.055",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(1)",
+          "F.S. 837.055(1)"
+        ],
+        "es": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(1)",
+          "F.S. 837.055(1)"
+        ],
+        "zh": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(1)",
+          "F.S. 837.055(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and willfully giving false information to a law enforcement officer conducting a missing-person or felony investigation with intent to mislead the officer or impede the investigation.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Dar a sabiendas y deliberadamente información falsa a un agente que investiga una desaparición o delito grave con intención de engañarlo u obstaculizar la investigación.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "在执法人员调查失踪人员或重罪时，明知且故意提供虚假信息，意图误导该人员或妨碍调查。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-055-2-false-report",
+    "section": "837.055",
+    "scope": "(2)",
+    "officialTitle": "False information to law enforcement during investigation",
+    "dependencies": [
+      "837.055",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "837.055": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-055-2-false-report",
+      "name": "False information in a missing-child investigation with serious harm or death",
+      "names": {
+        "es": "Información falsa en investigación de menor desaparecido con daños graves o muerte",
+        "zh": "失踪儿童严重受伤或死亡的调查中提供虚假信息"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "837.055(2)",
+      "slug": "fl-fs-837-055-2-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.055(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.055",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.055.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(2)",
+          "F.S. 837.055(2)"
+        ],
+        "es": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(2)",
+          "F.S. 837.055(2)"
+        ],
+        "zh": [
+          "False information to law enforcement during investigation",
+          "FS 837.055(2)",
+          "F.S. 837.055(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and willfully giving false information with intent to mislead the investigating officer or impede the search for a child age 16 or younger, where the missing child suffers great bodily harm, permanent disability, permanent disfigurement or death.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Dar información falsa a sabiendas y deliberadamente con intención de engañar al agente u obstaculizar la investigación de la desaparición de un menor de 16 años o menos, cuando el menor sufre daño corporal grave, discapacidad permanente, desfiguración permanente o muerte.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在调查不超过16岁的失踪儿童时，明知且故意提供虚假信息，意图误导执法人员或妨碍调查，且该儿童遭受严重伤害、永久残障、永久毁容或死亡。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-012-1-false-report",
+    "section": "837.012",
+    "scope": "(1)",
+    "officialTitle": "Perjury when not in an official proceeding",
+    "dependencies": [
+      "837.012",
+      "837.011",
+      "837.07",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "837.012": [
+        "(1)",
+        "(2)"
+      ],
+      "837.011": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "837.07": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-012-1-false-report",
+      "name": "Perjury outside an official proceeding",
+      "names": {
+        "es": "Perjurio fuera de un procedimiento oficial",
+        "zh": "正式程序以外的伪证"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "837.012(1)",
+      "slug": "fl-fs-837-012-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.012(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Perjury when not in an official proceeding",
+          "FS 837.012(1)",
+          "F.S. 837.012(1)"
+        ],
+        "es": [
+          "Perjury when not in an official proceeding",
+          "FS 837.012(1)",
+          "F.S. 837.012(1)"
+        ],
+        "zh": [
+          "Perjury when not in an official proceeding",
+          "FS 837.012(1)",
+          "F.S. 837.012(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making a material false statement under oath outside an official proceeding without believing it true. Knowledge of materiality is not required; a mistake about materiality is no defense.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine. Recantation is a defense only if the person admits the falsehood in the same continuous proceeding or matter, and it has not substantially affected the proceeding or the admission occurs before exposure becomes manifest."
+        },
+        "es": {
+          "plainSummary": "Declarar bajo juramento algo materialmente falso fuera de un procedimiento oficial sin creer que sea cierto. No se requiere saber que el asunto es material; el error sobre su importancia no constituye defensa.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000. Retractarse solo constituye defensa si se admite la falsedad en el mismo procedimiento o asunto continuo y no lo ha afectado sustancialmente, o si se admite allí antes de que sea evidente que ha sido o será descubierta."
+        },
+        "zh": {
+          "plainSummary": "在正式程序以外就重要事项宣誓作出自己不信为真的虚假陈述。不要求明知事项重要；误以为事项不重要并非抗辩。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。 撤回陈述须在同一连续程序或事项中承认虚假，且该陈述尚未实质影响程序，或在虚假已经或将会暴露变得显而易见之前承认，才可作为抗辩。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-021-1-false-report",
+    "section": "837.021",
+    "scope": "(1)",
+    "officialTitle": "Perjury by contradictory statements",
+    "dependencies": [
+      "837.021",
+      "837.011",
+      "837.07",
+      "837.02",
+      "914.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "837.021": [
+        "(1)",
+        "(3)",
+        "(4)"
+      ],
+      "837.011": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "837.07": [
+        "(1)",
+        "(2)"
+      ],
+      "837.02": [
+        "(1)",
+        "(2)"
+      ],
+      "914.04": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-021-1-false-report",
+      "name": "Perjury by contradictory statements",
+      "names": {
+        "es": "Perjurio por declaraciones contradictorias",
+        "zh": "以矛盾陈述作伪证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "837.021(1)",
+      "slug": "fl-fs-837-021-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.021(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Perjury by contradictory statements",
+          "FS 837.021(1)",
+          "F.S. 837.021(1)"
+        ],
+        "es": [
+          "Perjury by contradictory statements",
+          "FS 837.021(1)",
+          "F.S. 837.021(1)"
+        ],
+        "zh": [
+          "Perjury by contradictory statements",
+          "FS 837.021(1)",
+          "F.S. 837.021(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully making two or more contradictory material statements under oath in one or more official proceedings. The state need not prove which statement is false. Believing each was true when given is a defense. Separate proceedings have a specific bar if the latest statement was made under immunity; false testimony there may separately be prosecuted under §837.02.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Recantation is a defense only if the person admits the falsehood in the same continuous proceeding or matter, and it has not substantially affected the proceeding or the admission occurs before exposure becomes manifest."
+        },
+        "es": {
+          "plainSummary": "Hacer deliberadamente dos o más declaraciones materiales contradictorias bajo juramento en uno o más procedimientos oficiales. No se exige probar cuál es falsa. Creer que cada una era cierta al declarar constituye defensa. En procedimientos separados se aplica una limitación si la declaración más reciente se prestó con inmunidad; el perjurio en esta última puede perseguirse por §837.02.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Retractarse solo constituye defensa si se admite la falsedad en el mismo procedimiento o asunto continuo y no lo ha afectado sustancialmente, o si se admite allí antes de que sea evidente que ha sido o será descubierta."
+        },
+        "zh": {
+          "plainSummary": "在一个或多个正式程序中故意就重要事项作出两份或更多互相矛盾的宣誓陈述。控方无需证明哪份虚假。作出每份陈述时都相信其真实可作为抗辩。在不同程序中若最后的陈述享有豁免，本条起诉受限；最后程序中的虚假证词仍可另据第837.02条起诉。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 撤回陈述须在同一连续程序或事项中承认虚假，且该陈述尚未实质影响程序，或在虚假已经或将会暴露变得显而易见之前承认，才可作为抗辩。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-021-2-false-report",
+    "section": "837.021",
+    "scope": "(2)",
+    "officialTitle": "Perjury by contradictory statements",
+    "dependencies": [
+      "837.021",
+      "837.011",
+      "837.07",
+      "837.02",
+      "914.04",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "837.021": [
+        "(2)",
+        "(3)",
+        "(4)"
+      ],
+      "837.011": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "837.07": [
+        "(1)",
+        "(2)"
+      ],
+      "837.02": [
+        "(1)",
+        "(2)"
+      ],
+      "914.04": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-021-2-false-report",
+      "name": "Perjury by contradictory statements in a capital-felony prosecution",
+      "names": {
+        "es": "Perjurio por declaraciones contradictorias en un proceso por delito capital",
+        "zh": "死刑重罪起诉中以矛盾陈述作伪证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "837.021(2)",
+      "slug": "fl-fs-837-021-2-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.021(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.07",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.07.html"
+        },
+        {
+          "citation": "Fla. Stat. § 837.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Perjury by contradictory statements",
+          "FS 837.021(2)",
+          "F.S. 837.021(2)"
+        ],
+        "es": [
+          "Perjury by contradictory statements",
+          "FS 837.021(2)",
+          "F.S. 837.021(2)"
+        ],
+        "zh": [
+          "Perjury by contradictory statements",
+          "FS 837.021(2)",
+          "F.S. 837.021(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Willfully making two or more contradictory material statements under oath in one or more official proceedings. The state need not prove which statement is false. Believing each was true when given is a defense. Separate proceedings have a specific bar if the latest statement was made under immunity; false testimony there may separately be prosecuted under §837.02. The proceeding must relate to the prosecution of a capital felony.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Recantation is a defense only if the person admits the falsehood in the same continuous proceeding or matter, and it has not substantially affected the proceeding or the admission occurs before exposure becomes manifest."
+        },
+        "es": {
+          "plainSummary": "Hacer deliberadamente dos o más declaraciones materiales contradictorias bajo juramento en uno o más procedimientos oficiales. No se exige probar cuál es falsa. Creer que cada una era cierta al declarar constituye defensa. En procedimientos separados se aplica una limitación si la declaración más reciente se prestó con inmunidad; el perjurio en esta última puede perseguirse por §837.02. El procedimiento debe guardar relación con el procesamiento por un delito capital.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. Retractarse solo constituye defensa si se admite la falsedad en el mismo procedimiento o asunto continuo y no lo ha afectado sustancialmente, o si se admite allí antes de que sea evidente que ha sido o será descubierta."
+        },
+        "zh": {
+          "plainSummary": "在一个或多个正式程序中故意就重要事项作出两份或更多互相矛盾的宣誓陈述。控方无需证明哪份虚假。作出每份陈述时都相信其真实可作为抗辩。在不同程序中若最后的陈述享有豁免，本条起诉受限；最后程序中的虚假证词仍可另据第837.02条起诉。 该程序须涉及对死刑重罪的起诉。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 撤回陈述须在同一连续程序或事项中承认虚假，且该陈述尚未实质影响程序，或在虚假已经或将会暴露变得显而易见之前承认，才可作为抗辩。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-837-06-false-report",
+    "section": "837.06",
+    "scope": "",
+    "officialTitle": "False official statements",
+    "dependencies": [
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "837.06": [
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-837-06-false-report",
+      "name": "False official statements",
+      "names": {
+        "es": "Declaraciones oficiales falsas",
+        "zh": "虚假公务陈述"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "837.06",
+      "slug": "fl-fs-837-06-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 837.06",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.06.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False official statements",
+          "FS 837.06",
+          "F.S. 837.06"
+        ],
+        "es": [
+          "False official statements",
+          "FS 837.06",
+          "F.S. 837.06"
+        ],
+        "zh": [
+          "False official statements",
+          "FS 837.06",
+          "F.S. 837.06"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly making a false statement in writing with intent to mislead a public servant performing official duties. The statute specifies writing and does not require an oath.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Hacer a sabiendas una declaración falsa por escrito con intención de engañar a un servidor público en el ejercicio de sus funciones. Se exige que sea escrita; no se exige juramento.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "明知而作出虚假书面陈述，意图误导正在履行公务的公职人员。法条要求书面形式，不要求宣誓。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-790-163-1-false-report",
+    "section": "790.163",
+    "scope": "(1)",
+    "officialTitle": "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+    "dependencies": [
+      "790.163",
+      "790.166",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "790.163": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)"
+      ],
+      "790.166": [
+        "(1)(a)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-790-163-1-false-report",
+      "name": "False report concerning a planted explosive or violent firearm use",
+      "names": {
+        "es": "Informe falso sobre un explosivo colocado o el uso violento de armas de fuego",
+        "zh": "谎报安放爆炸物或暴力使用枪支"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "790.163(1)",
+      "slug": "fl-fs-790-163-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 790.163(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.163.html"
+        },
+        {
+          "citation": "Fla. Stat. § 790.163",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.163.html"
+        },
+        {
+          "citation": "Fla. Stat. § 790.166",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.166.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+          "FS 790.163(1)",
+          "F.S. 790.163(1)"
+        ],
+        "es": [
+          "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+          "FS 790.163(1)",
+          "F.S. 790.163(1)"
+        ],
+        "zh": [
+          "False report concerning planting a bomb, an explosive, or a weapon of mass destruction, or concerning the use of firearms in a violent manner; penalty",
+          "FS 790.163(1)",
+          "F.S. 790.163(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making a false report intending to deceive, mislead or misinform someone about the placement of a bomb, explosive or legally defined weapon of mass destruction, or about violent use of firearms against a person or people.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The court cannot suspend, defer or withhold adjudication or sentence. The prosecutor may move to reduce or suspend the sentence for substantial assistance regarding accomplices or other participants. If law enforcement or a state or local agency mobilizes or acts, the court may order restitution for resulting costs and damages."
+        },
+        "es": {
+          "plainSummary": "Hacer un informe falso con intención de engañar, inducir a error o desinformar a alguien sobre la colocación de una bomba, explosivo o arma de destrucción masiva definida por ley, o sobre el uso violento de armas de fuego contra una o más personas.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El tribunal no puede suspender, aplazar ni reservar la adjudicación o pena. El fiscal puede solicitar reducir o suspender la pena por cooperación sustancial respecto de cómplices u otros partícipes. Si la policía u otro organismo estatal o local se moviliza o actúa, el tribunal puede ordenar restitución de los gastos y daños."
+        },
+        "zh": {
+          "plainSummary": "意图欺骗、误导他人而谎报安放炸弹、爆炸物或法律界定的大规模杀伤性武器，或谎报对人暴力使用枪支。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 法院不得暂停、延后或暂缓定罪或量刑。为查明、逮捕或定罪同案者而提供重大协助时，检方可申请减刑或缓刑。若执法人员或州或地方机构动员或采取行动，法院可判令赔偿相关费用和损失。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-790-164-1-false-report",
+    "section": "790.164",
+    "scope": "(1)",
+    "officialTitle": "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+    "dependencies": [
+      "790.164",
+      "790.166",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "790.164": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)(d)"
+      ],
+      "790.166": [
+        "(1)(a)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-790-164-1-false-report",
+      "name": "False report concerning explosives, violence to government property or violent firearm use",
+      "names": {
+        "es": "Informe falso sobre explosivos, violencia contra bienes públicos o uso violento de armas de fuego",
+        "zh": "谎报爆炸物、暴力破坏公产或暴力使用枪支"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "790.164(1)",
+      "slug": "fl-fs-790-164-1-false-report",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 790.164(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.164.html"
+        },
+        {
+          "citation": "Fla. Stat. § 790.164",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.164.html"
+        },
+        {
+          "citation": "Fla. Stat. § 790.166",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.166.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+          "FS 790.164(1)",
+          "F.S. 790.164(1)"
+        ],
+        "es": [
+          "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+          "FS 790.164(1)",
+          "F.S. 790.164(1)"
+        ],
+        "zh": [
+          "False reports concerning planting a bomb, explosive, or weapon of mass destruction in, or committing arson against, state-owned property, or concerning the use of firearms in a violent manner; penalty; reward",
+          "FS 790.164(1)",
+          "F.S. 790.164(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Making a false report intending to deceive, mislead or misinform someone about planting a bomb, explosive or legally defined weapon of mass destruction; arson or other violence to state or political-subdivision property; or violent use of firearms against a person or people.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. The court cannot suspend, defer or withhold adjudication or sentence. The prosecutor may move to reduce or suspend the sentence for substantial assistance regarding accomplices or other participants. If law enforcement or a state or local agency mobilizes or acts, the court may order restitution for resulting costs and damages."
+        },
+        "es": {
+          "plainSummary": "Hacer un informe falso con intención de engañar, inducir a error o desinformar sobre la colocación de una bomba, explosivo o arma de destrucción masiva, un incendio provocado u otra violencia contra bienes del estado o sus subdivisiones políticas, o el uso violento de armas de fuego contra personas.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. El tribunal no puede suspender, aplazar ni reservar la adjudicación o pena. El fiscal puede solicitar reducir o suspender la pena por cooperación sustancial respecto de cómplices u otros partícipes. Si la policía u otro organismo estatal o local se moviliza o actúa, el tribunal puede ordenar restitución de los gastos y daños."
+        },
+        "zh": {
+          "plainSummary": "意图欺骗、误导他人而谎报安放炸弹、爆炸物或法律界定的大规模杀伤性武器，或谎报对州或其政治分区财产纵火或实施其他暴力，或对人暴力使用枪支。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 法院不得暂停、延后或暂缓定罪或量刑。为查明、逮捕或定罪同案者而提供重大协助时，检方可申请减刑或缓刑。若执法人员或州或地方机构动员或采取行动，法院可判令赔偿相关费用和损失。"
+        }
+      }
+    }
+  }
+]
