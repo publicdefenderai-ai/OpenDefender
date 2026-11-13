@@ -8,7 +8,7 @@ export interface CourtLocation {
   phone?: string;
   hours?: string;
   website?: string;
-  type: "federal" | "state" | "municipal" | "traffic" | "bankruptcy";
+  type: "federal" | "state" | "municipal" | "traffic" | "bankruptcy" | "court";
   services: string[];
   distance: number;
   lat: number;
@@ -71,159 +71,88 @@ export async function getZipCodeCoordinates(zipCode: string): Promise<{ lat: num
 
 // Search for courthouses using OpenStreetMap Nominatim
 export async function searchNearbyCourthouses(lat: number, lng: number, radiusMiles = 25): Promise<CourtLocation[]> {
-  try {
-    // Convert miles to degrees (rough approximation: 1 degree ≈ 69 miles)
-    const radiusDegrees = radiusMiles / 69;
-    const bbox = {
-      south: lat - radiusDegrees,
-      west: lng - radiusDegrees,
-      north: lat + radiusDegrees,
-      east: lng + radiusDegrees
-    };
-    
-    // Search for courthouses in the area
-    const response = await fetch(
-      `https://nominatim.openstreetmap.org/search?` +
-      `amenity=courthouse&` +
-      `viewbox=${bbox.west},${bbox.south},${bbox.east},${bbox.north}&` +
-      `bounded=1&` +
-      `format=json&` +
-      `addressdetails=1&` +
-      `limit=20`,
-      {
-        headers: {
-          'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)'
-        }
+  // Convert miles to degrees (rough approximation: 1 degree ≈ 69 miles)
+  const radiusDegrees = radiusMiles / 69;
+  const bbox = {
+    south: lat - radiusDegrees,
+    west: lng - radiusDegrees,
+    north: lat + radiusDegrees,
+    east: lng + radiusDegrees
+  };
+
+  // Search for courthouses in the area
+  const response = await fetch(
+    `https://nominatim.openstreetmap.org/search?` +
+    `amenity=courthouse&` +
+    `viewbox=${bbox.west},${bbox.south},${bbox.east},${bbox.north}&` +
+    `bounded=1&` +
+    `format=json&` +
+    `addressdetails=1&extratags=1&countrycodes=us&` +
+    `limit=20`,
+    {
+      headers: {
+        'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)'
       }
-    );
-    
-    if (!response.ok) {
-      throw new Error('Failed to search for courthouses');
     }
-    
-    const data = await response.json();
-    
-    // Convert to our court location format
-    const courts: CourtLocation[] = data.map((place: any, index: number) => {
-      const address = place.address || {};
-      const fullAddress = [
-        address.house_number,
-        address.road,
-        address.city || address.town || address.village,
-        address.state,
-        address.postcode
-      ].filter(Boolean).join(', ');
-      
-      // Calculate distance (rough approximation)
-      const distance = calculateDistance(lat, lng, parseFloat(place.lat), parseFloat(place.lon));
-      
-      // Determine court type from the name
-      const name = place.display_name || 'Courthouse';
-      let type: CourtLocation['type'] = 'state';
-      let services: string[] = ['General Court Services'];
-      
-      if (name.toLowerCase().includes('federal') || name.toLowerCase().includes('district court')) {
-        type = 'federal';
-        services = ['Federal Criminal Cases', 'Federal Civil Cases'];
-      } else if (name.toLowerCase().includes('bankruptcy')) {
-        type = 'bankruptcy';
-        services = ['Bankruptcy Cases', 'Chapter 7', 'Chapter 11', 'Chapter 13'];
-      } else if (name.toLowerCase().includes('traffic') || name.toLowerCase().includes('municipal')) {
-        type = 'municipal';
-        services = ['Traffic Citations', 'Municipal Violations', 'Local Ordinances'];
-      } else if (name.toLowerCase().includes('superior') || name.toLowerCase().includes('county')) {
-        type = 'state';
-        services = ['Criminal Cases', 'Civil Cases', 'Family Court', 'Probate'];
-      }
-      
-      return {
-        id: place.place_id.toString(),
-        name: extractCourtName(name),
-        address: fullAddress,
-        county: address.county?.replace(' County', ''), // Clean county name
-        phone: undefined, // Would need additional API calls to get phone numbers
-        hours: 'Call for hours', // Default message
-        website: undefined,
-        type,
-        services,
-        distance: Math.round(distance * 10) / 10, // Round to 1 decimal
-        lat: parseFloat(place.lat),
-        lng: parseFloat(place.lon)
-      };
-    });
-    
-    // Sort by distance and return
-    return courts.sort((a, b) => a.distance - b.distance);
-    
-  } catch (error) {
-    console.error('Error searching for courthouses:', error);
-    return [];
+  );
+
+  if (!response.ok) {
+    throw new Error('Failed to search for courthouses');
   }
+
+  const data = await response.json();
+
+  const courts: CourtLocation[] = [];
+  for (const place of data) {
+    if (place.type !== "courthouse" || !place.place_id) continue;
+    const latitude = parseFloat(place.lat);
+    const longitude = parseFloat(place.lon);
+    const distance = calculateDistance(lat, lng, latitude, longitude);
+    if (!Number.isFinite(distance) || distance > radiusMiles) continue;
+
+    const address = place.address ?? {};
+    const tags = place.extratags ?? {};
+    const name = place.name || extractCourtName(place.display_name || "");
+    const website = tags.website || tags["contact:website"];
+    courts.push({
+      id: String(place.place_id),
+      name,
+      address: [[address.house_number, address.road].filter(Boolean).join(" "),
+        address.city || address.town || address.village, address.state, address.postcode].filter(Boolean).join(", "),
+      county: address.county?.replace(/ County$/, ""),
+      type: classifyCourtName(name),
+      services: [],
+      distance: Math.round(distance * 10) / 10,
+      lat: latitude,
+      lng: longitude,
+      phone: tags.phone || tags["contact:phone"],
+      hours: tags.opening_hours,
+      website: typeof website === "string" && /^https?:\/\//i.test(website) ? website : undefined,
+    });
+  }
+  return courts.sort((a, b) => a.distance - b.distance);
 }
 
-// Enhanced courthouse search with federal court data from CourtListener
-export async function searchCourthousesWithFederalData(zipCode: string): Promise<CourtLocation[]> {
-  try {
-    // First get ZIP code coordinates and county
-    const coords = await getZipCodeCoordinates(zipCode);
-    if (!coords) {
-      throw new Error('Could not geocode ZIP code');
-    }
-    
-    // Search for nearby courthouses using OSM
-    const osmCourts = await searchNearbyCourthouses(coords.lat, coords.lng);
-    
-    // Try to get federal court data from CourtListener API (free but requires no key for basic access)
-    let allCourts = [...osmCourts];
-    try {
-      const courtListenerResponse = await fetch(
-        'https://www.courtlistener.com/api/rest/v4/courts/?format=json&ordering=position',
-        {
-          headers: {
-            'User-Agent': 'OpenDefender/1.0 (legal-guidance-app)',
-            'Accept': 'application/json'
-          }
-        }
-      );
-      
-      if (courtListenerResponse.ok) {
-        const federalData = await courtListenerResponse.json();
-        
-        // Filter for courts near our location (this would need more sophisticated geo-filtering)
-        const nearbyFederalCourts = federalData.results?.slice(0, 3).map((court: any, index: number) => ({
-          id: `cl-${court.id}`,
-          name: court.full_name || court.short_name,
-          address: `${court.position || 'Location details available on court website'}`,
-          county: undefined, // Federal courts don't have county restrictions
-          phone: 'Call court clerk for information',
-          hours: '8:30 AM - 5:00 PM (typical)',
-          website: court.url,
-          type: 'federal' as const,
-          services: ['Federal Criminal Cases', 'Federal Civil Cases', 'Appeals'],
-          distance: 5 + index, // Placeholder distance
-          lat: coords.lat + (index * 0.01), // Placeholder coordinates
-          lng: coords.lng + (index * 0.01)
-        })) || [];
-        
-        allCourts = [...osmCourts, ...nearbyFederalCourts];
-      }
-    } catch (federalError) {
-      console.warn('Could not fetch federal court data:', federalError);
-    }
-    
-    // Sort courts by county priority, then by distance within each group
-    return sortCourtsByCountyAndDistance(allCourts, coords.county);
-    
-  } catch (error) {
-    console.error('Error in comprehensive courthouse search:', error);
-    throw error;
-  }
+function classifyCourtName(name: string): CourtLocation["type"] {
+  if (/bankruptcy/i.test(name)) return "bankruptcy";
+  if (/federal|united states|\bu\.?s\.?\s+(district|court|courthouse)/i.test(name)) return "federal";
+  if (/municipal/i.test(name)) return "municipal";
+  if (/traffic/i.test(name)) return "traffic";
+  if (/superior|county|state court/i.test(name)) return "state";
+  return "court";
+}
+
+export async function searchCourthouses(zipCode: string): Promise<CourtLocation[]> {
+  const coords = await getZipCodeCoordinates(zipCode);
+  if (!coords) throw new Error("Could not locate ZIP code");
+  const courts = await searchNearbyCourthouses(coords.lat, coords.lng);
+  return sortCourtsByCountyAndDistance(courts, coords.county);
 }
 
 // Sort courts by county priority and separate state/federal
 export function sortCourtsByCountyAndDistance(courts: CourtLocation[], userCounty?: string): CourtLocation[] {
   // Separate state and federal courts
-  const stateCourts = courts.filter(court => court.type === 'state' || court.type === 'municipal' || court.type === 'traffic');
+  const stateCourts = courts.filter(court => court.type === 'state' || court.type === 'municipal' || court.type === 'traffic' || court.type === 'court');
   const federalCourts = courts.filter(court => court.type === 'federal' || court.type === 'bankruptcy');
   
   // Sort state courts: same county first, then by distance

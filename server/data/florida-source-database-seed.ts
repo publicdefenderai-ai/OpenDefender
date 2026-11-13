@@ -1,4 +1,5 @@
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "./florida-persons-source";
+import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "./florida-robbery-source";
 import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
 import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
@@ -17,7 +18,7 @@ import {
   type FloridaReviewedSourceRecord,
 } from "./florida-reviewed-source-records";
 
-const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES];
+const allReviewedSources = [...FLORIDA_REVIEWED_SOURCE_RECORDS, ...FLORIDA_PERSONS_SOURCES, ...FLORIDA_ROBBERY_SOURCES];
 
 export const FLORIDA_SOURCE_POLICY = "official_florida_online_sunshine_statutes";
 export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.cfm";
@@ -655,7 +656,8 @@ export function buildFloridaSourceDatabaseSeed(
   const records = manifest.catalogRecords.filter(record =>
     !FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
     isFloridaReviewedSourceFresh(now))
-    .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now));
+    .filter(record => !FLORIDA_PERSONS_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaPersonsSourceFresh(now))
+    .filter(record => !FLORIDA_ROBBERY_SOURCES.some(source => source.chargeId === record.chargeId) || isFloridaRobberySourceFresh(now));
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const snapshotIdentities = new Set<string>();
