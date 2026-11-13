@@ -41,6 +41,10 @@ for (const language of ['en','es','zh'] as const) for (const theme of ['light','
    for(const key of ['title','what','clock','action','linkLabel'] as const) await expect(result).toContainText(expected[key]);
   }
   await expect(main).toContainText(old.disclaimer);await expect(main).toContainText(old.generalInfo);await expect(main).toContainText(old.privacyStrip);
+  const supervision = main.locator('[data-risk="supervision"]');
+  const hearing = { en: 'revocation hearing', es: 'audiencia de revocación', zh: '撤销缓刑或假释听证会' };
+  await expect(supervision).toContainText(hearing[language]);
+  await expect(supervision).not.toContainText('322.055');
   const select=main.locator('select');
   for (const option of await select.locator('option').evaluateAll(es=>es.map(e=>(e as HTMLOptionElement).value).filter(Boolean))) {
    await select.selectOption(option);

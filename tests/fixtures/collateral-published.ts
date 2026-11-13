@@ -77,8 +77,8 @@ export default {
     "risks": {
       "supervision": {
         "title": "Probation or Parole Violation Risk",
-        "what": "Some convictions or other qualifying adjudications can require sex-offender registration. The exact offense, disposition, jurisdiction and any required court order matter. A charge alone does not establish a duty.",
-        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
+        "what": "A new arrest while you are on probation or parole can lead to a report alleging a violation of your supervision conditions. The arrest alone does not establish a violation.",
+        "clock": "You may be held pending a separate revocation hearing. That hearing can take place while the new criminal case is still pending.",
         "action": "Your lawyer can explain reporting conditions, hearing procedures and possible outcomes.",
         "linkLabel": "Get case guidance"
       },
@@ -134,7 +134,7 @@ export default {
       "driverLicenseCheck": {
         "title": "Driver's License — Check Your State",
         "what": "In some states, a conviction for a qualifying drug offense can affect a license even when no vehicle was involved. A pending drug charge alone does not trigger a conviction-based suspension.",
-        "clock": "If your state does require suspension, it typically takes effect at sentencing or shortly after conviction. Acting before a conviction is entered gives you the most options.",
+        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
         "action": "Ask your attorney specifically whether your state suspends driver's licenses for this type of drug conviction and whether any hardship or restricted license is available. Do not assume your license is safe — and do not assume it is at risk — without confirming your state's rule.",
         "linkLabel": "Transportation and license help"
       },
@@ -942,8 +942,8 @@ export default {
     "risks": {
       "supervision": {
         "title": "Riesgo de Violación de Supervisión",
-        "what": "Algunas condenas u otras resoluciones aplicables pueden exigir inscripción en el registro de delitos sexuales. Importan el delito, la resolución, la jurisdicción y cualquier orden judicial requerida. Un cargo por sí solo no crea esa obligación.",
-        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
+        "what": "Si está en libertad vigilada o en libertad condicional y le arrestan de nuevo, se puede presentar un informe que alegue un incumplimiento de las condiciones de supervisión. El arresto por sí solo no demuestra un incumplimiento.",
+        "clock": "Es posible que permanezca bajo custodia hasta una audiencia de revocación separada. La audiencia puede celebrarse mientras la nueva causa penal sigue pendiente.",
         "action": "Su abogado puede explicarle las condiciones de notificación, la audiencia y los posibles resultados.",
         "linkLabel": "Obtener orientación del caso"
       },
@@ -999,7 +999,7 @@ export default {
       "driverLicenseCheck": {
         "title": "Licencia de Conducir — Verifique Su Estado",
         "what": "En algunos estados, una condena por ciertos delitos de drogas puede afectar la licencia aunque no haya intervenido un vehículo. Un cargo pendiente por sí solo no activa una suspensión basada en una condena.",
-        "clock": "Si su estado exige la suspensión, generalmente entra en vigencia en la sentencia o poco después de la condena. Actuar antes de que se dicte una condena le da más opciones.",
+        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
         "action": "Pregúntele específicamente a su abogado si su estado suspende las licencias de conducir por este tipo de condena por drogas y si hay disponible una licencia restringida o de emergencia. No asuma que su licencia está segura — ni que está en riesgo — sin confirmar la ley de su estado.",
         "linkLabel": "Ayuda con transporte y licencia"
       },
@@ -1807,8 +1807,8 @@ export default {
     "risks": {
       "supervision": {
         "title": "缓刑或假释违规风险",
-        "what": "某些定罪或其他符合法律条件的裁决可能产生性犯罪登记义务。具体罪名、裁决、司法管辖区及所需的法院命令均有影响。单凭指控不会产生该义务。",
-        "clock": "佛州第322.055条适用于成年人某些毒品定罪，并有例外。得州第521.372条区分特定定罪和某些法院下令的吊扣。适用州和案件结果很重要。",
+        "what": "在缓刑或假释期间再次被捕，可能会有人提交报告，指称您违反了监督条件。仅凭被捕这一事实不能认定您违规。",
+        "clock": "您可能会被羁押，等待单独举行的撤销缓刑或假释听证会。即使新的刑事案件尚未审结，也可能举行这场听证会。",
         "action": "律师可以解释报告条件、听证程序和可能的结果。",
         "linkLabel": "获取案件指导"
       },
@@ -1864,7 +1864,7 @@ export default {
       "driverLicenseCheck": {
         "title": "驾驶执照——请核实您所在的州",
         "what": "有些州的特定毒品犯罪定罪即使与车辆无关也可能影响驾照。仅有待决指控不会触发以定罪为条件的吊扣。",
-        "clock": "如果您所在的州确实要求吊销，通常在宣判时或定罪后不久生效。在判决作出前采取行动可以为您争取更多选择。",
+        "clock": "佛州第322.055条适用于成年人某些毒品定罪，并有例外。得州第521.372条区分特定定罪和某些法院下令的吊扣。适用州和案件结果很重要。",
         "action": "请明确向您的律师询问：您所在的州是否会因此类毒品定罪吊销驾驶执照，以及是否有限制性驾照或困难豁免驾照可供申请。在未确认所在州规定之前，请勿假设您的驾照安全，也请勿假设其处于风险之中。",
         "linkLabel": "交通与驾照帮助"
       },

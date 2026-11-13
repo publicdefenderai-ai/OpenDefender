@@ -6823,8 +6823,8 @@ export default {
     "risks": {
       "supervision": {
         "title": "Probation or Parole Violation Risk",
-        "what": "Some convictions or other qualifying adjudications can require sex-offender registration. The exact offense, disposition, jurisdiction and any required court order matter. A charge alone does not establish a duty.",
-        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
+        "what": "A new arrest while you are on probation or parole can lead to a report alleging a violation of your supervision conditions. The arrest alone does not establish a violation.",
+        "clock": "You may be held pending a separate revocation hearing. That hearing can take place while the new criminal case is still pending.",
         "action": "Your lawyer can explain reporting conditions, hearing procedures and possible outcomes.",
         "linkLabel": "Get case guidance"
       },
@@ -6880,7 +6880,7 @@ export default {
       "driverLicenseCheck": {
         "title": "Driver's License — Check Your State",
         "what": "In some states, a conviction for a qualifying drug offense can affect a license even when no vehicle was involved. A pending drug charge alone does not trigger a conviction-based suspension.",
-        "clock": "If your state does require suspension, it typically takes effect at sentencing or shortly after conviction. Acting before a conviction is entered gives you the most options.",
+        "clock": "Florida § 322.055 covers certain drug convictions for adults, with statutory exceptions. Texas § 521.372 distinguishes qualifying convictions and certain court-ordered suspensions. The state and disposition matter.",
         "action": "Ask your attorney specifically whether your state suspends driver's licenses for this type of drug conviction and whether any hardship or restricted license is available. Do not assume your license is safe — and do not assume it is at risk — without confirming your state's rule.",
         "linkLabel": "Transportation and license help"
       },

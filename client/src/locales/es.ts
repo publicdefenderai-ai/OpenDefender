@@ -6829,8 +6829,8 @@ export default {
     "risks": {
       "supervision": {
         "title": "Riesgo de Violación de Supervisión",
-        "what": "Algunas condenas u otras resoluciones aplicables pueden exigir inscripción en el registro de delitos sexuales. Importan el delito, la resolución, la jurisdicción y cualquier orden judicial requerida. Un cargo por sí solo no crea esa obligación.",
-        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
+        "what": "Si está en libertad vigilada o en libertad condicional y le arrestan de nuevo, se puede presentar un informe que alegue un incumplimiento de las condiciones de supervisión. El arresto por sí solo no demuestra un incumplimiento.",
+        "clock": "Es posible que permanezca bajo custodia hasta una audiencia de revocación separada. La audiencia puede celebrarse mientras la nueva causa penal sigue pendiente.",
         "action": "Su abogado puede explicarle las condiciones de notificación, la audiencia y los posibles resultados.",
         "linkLabel": "Obtener orientación del caso"
       },
@@ -6886,7 +6886,7 @@ export default {
       "driverLicenseCheck": {
         "title": "Licencia de Conducir — Verifique Su Estado",
         "what": "En algunos estados, una condena por ciertos delitos de drogas puede afectar la licencia aunque no haya intervenido un vehículo. Un cargo pendiente por sí solo no activa una suspensión basada en una condena.",
-        "clock": "Si su estado exige la suspensión, generalmente entra en vigencia en la sentencia o poco después de la condena. Actuar antes de que se dicte una condena le da más opciones.",
+        "clock": "En Florida, § 322.055 cubre ciertas condenas por drogas de adultos, con excepciones. En Texas, § 521.372 distingue las condenas aplicables y ciertas suspensiones ordenadas por el tribunal. Importan el estado y la resolución.",
         "action": "Pregúntele específicamente a su abogado si su estado suspende las licencias de conducir por este tipo de condena por drogas y si hay disponible una licencia restringida o de emergencia. No asuma que su licencia está segura — ni que está en riesgo — sin confirmar la ley de su estado.",
         "linkLabel": "Ayuda con transporte y licencia"
       },
