@@ -1,7 +1,8 @@
-import { useState } from "react";
+import "./intake-checklist.css";
+import { useId, useState } from "react";
 import {
-  FileText, Copy, Check, Printer, AlertTriangle, ChevronDown, ChevronUp,
-  ArrowLeft, Download, Shield, Info,
+  FileText, Copy, Check, Printer, AlertTriangle, Plus, Minus,
+  ArrowLeft, Download, Info,
 } from "lucide-react";
 import { Document, Paragraph, TextRun, AlignmentType, Packer } from "docx";
 import { Link } from "wouter";
@@ -305,24 +306,20 @@ function triggerDownload(blob: Blob, filename: string) {
 
 /* -- UI components -------------------------------------------------------- */
 
-function TriToggle({ value, onChange }: { value: TriValue; onChange: (v: TriValue) => void }) {
+function TriToggle({ label, value, onChange }: { label: string; value: TriValue; onChange: (v: TriValue) => void }) {
   const opts: { val: TriValue; label: string }[] = [
     { val: 'yes', label: 'Yes' },
     { val: 'unknown', label: 'Unknown' },
     { val: 'no', label: 'No' },
   ];
   return (
-    <div className="flex rounded-lg border border-border overflow-hidden text-xs">
+    <div role="group" aria-label={label} className="intake-options">
       {opts.map(({ val, label }) => (
         <button
+          aria-pressed={value === val}
           key={val}
           type="button"
           onClick={() => onChange(value === val ? '' : val)}
-          className={`flex-1 px-2 py-2 font-semibold transition-colors border-r last:border-r-0 border-border leading-none
-            ${value === val
-              ? 'bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]'
-              : 'bg-background text-muted-foreground hover:bg-muted/50'
-            }`}
         >
           {label}
         </button>
@@ -347,8 +344,8 @@ function TriRow({
     <div className="space-y-1.5">
       <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <span className="min-w-0 text-sm text-foreground leading-snug flex-1">{label}</span>
-        <div className="w-full sm:w-44 flex-shrink-0">
-          <TriToggle value={value} onChange={onChange} />
+        <div className="w-full sm:w-60 flex-shrink-0">
+          <TriToggle label={label} value={value} onChange={onChange} />
         </div>
       </div>
       {showFlag && (
@@ -378,35 +375,26 @@ function Domain({ title, filled, children, defaultOpen = false }: {
   title: string; filled: number; children: React.ReactNode; defaultOpen?: boolean;
 }) {
   const [open, setOpen] = useState(defaultOpen);
+  const panelId = useId();
   return (
-    <div className="editorial-card overflow-hidden">
-      <button
-        type="button"
-        onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center justify-between px-5 py-4 bg-muted/30 hover:bg-muted/50 transition-colors text-left"
-      >
-        <div className="flex items-center gap-3">
-          <span className="font-semibold text-sm text-foreground">{title}</span>
-          {filled > 0 && (
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]">
-              {filled} {filled === 1 ? "field" : "fields"} filled
-            </span>
-          )}
-        </div>
-        {open
-          ? <ChevronUp className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-          : <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0" />}
-      </button>
-      {open && <div className="px-5 py-5 space-y-4 bg-background">{children}</div>}
-    </div>
+    <section className="intake-domain">
+      <h2><button type="button" aria-expanded={open} aria-controls={panelId}
+        onClick={() => setOpen(!open)} className="intake-toggle">
+        <span>{title} {filled > 0 && <small>{filled} filled</small>}</span>
+        {open ? <Minus size={16} aria-hidden="true" /> : <Plus size={16} aria-hidden="true" />}
+      </button></h2>
+      <div hidden={!open} id={panelId} className="intake-fields">{children}</div>
+    </section>
   );
 }
 
-function TextInput({ value, onChange, placeholder }: {
+function TextInput({ id, value, onChange, placeholder }: {
+  id: string;
   value: string; onChange: (v: string) => void; placeholder?: string;
 }) {
   return (
     <input
+      id={id}
       type="text"
       value={value}
       onChange={e => onChange(e.target.value)}
@@ -416,10 +404,10 @@ function TextInput({ value, onChange, placeholder }: {
   );
 }
 
-function FieldLabel({ children, hint }: { children: React.ReactNode; hint?: string }) {
+function FieldLabel({ htmlFor, children, hint }: { htmlFor: string; children: React.ReactNode; hint?: string }) {
   return (
     <div className="mb-1">
-      <span className="text-sm font-medium text-foreground">{children}</span>
+      <label htmlFor={htmlFor} className="text-sm font-medium text-foreground">{children}</label>
       {hint && <span className="text-xs text-muted-foreground ml-2">{hint}</span>}
     </div>
   );
@@ -429,14 +417,8 @@ function DocCheckbox({ checked, onChange, label }: {
   checked: boolean; onChange: (v: boolean) => void; label: string;
 }) {
   return (
-    <label className="flex items-center gap-3 cursor-pointer group py-1">
-      <div
-        onClick={() => onChange(!checked)}
-        className={`w-4 h-4 rounded border flex-shrink-0 flex items-center justify-center transition-colors
-          ${checked ? 'bg-[var(--editorial-signal)] border-[var(--editorial-signal)]' : 'border-border group-hover:border-[var(--editorial-signal)]'}`}
-      >
-        {checked && <Check className="h-3 w-3 text-white" />}
-      </div>
+    <label className="flex items-center gap-3 cursor-pointer group min-h-11">
+      <input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)} className="size-4 accent-primary" />
       <span className="text-sm text-foreground">{label}</span>
     </label>
   );
@@ -455,15 +437,20 @@ function InfoNote({ children }: { children: React.ReactNode }) {
 
 function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] }) {
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
   const [docxLoading, setDocxLoading] = useState(false);
   const empty = !output;
 
   const handleCopy = async () => {
+    setCopyError(false);
     try { await navigator.clipboard.writeText(output); }
     catch {
       const el = document.createElement("textarea");
       el.value = output; document.body.appendChild(el); el.select();
-      document.execCommand("copy"); document.body.removeChild(el);
+      try {
+        if (!document.execCommand("copy")) throw new Error();
+      } catch { setCopied(false); setCopyError(true); return; }
+      finally { el.remove(); }
     }
     setCopied(true); setTimeout(() => setCopied(false), 2000);
   };
@@ -490,69 +477,45 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
   };
 
   const handlePrint = () => {
-    const flagsHtml = flags.map(f =>
-      `<div style="background:${f.severity === 'critical' ? '#fef2f2' : '#fffbeb'};border:1px solid ${f.severity === 'critical' ? '#fca5a5' : '#fcd34d'};border-radius:4px;padding:8px 12px;margin-bottom:6px;font-size:12px;">
-        <strong style="color:${f.severity === 'critical' ? '#991b1b' : '#92400e'};">\u26A0 ${f.label.toUpperCase()}</strong>
-        <span style="color:${f.severity === 'critical' ? '#7f1d1d' : '#78350f'};"> ${f.text}</span>
-       </div>`
-    ).join('');
-
     const win = window.open("", "_blank");
     if (!win) return;
-    win.document.write(`<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Client Intake Record \u2014 Draft</title>
-  <style>
-    body{font-family:Arial,sans-serif;padding:32px;max-width:680px;margin:0 auto;color:#111;}
-    .header{font-size:16px;font-weight:700;margin-bottom:2px;}
-    .subheader{font-size:11px;color:#cc0000;font-style:italic;margin-bottom:4px;}
-    .date{font-size:12px;color:#555;margin-bottom:20px;}
-    .flags-title{font-size:13px;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em;}
-    pre{white-space:pre-wrap;font-family:monospace;font-size:12px;line-height:1.7;}
-    .disclaimer{font-size:10px;color:#cc0000;font-style:italic;margin-top:20px;padding-top:10px;border-top:1px solid #ddd;}
-    @media print{body{padding:16px;}}
-  </style>
-</head>
-<body>
-  <div class="header">CLIENT INTAKE RECORD \u2014 DRAFT</div>
-  <div class="subheader">FOR ATTORNEY USE OR USE UNDER DIRECT ATTORNEY SUPERVISION</div>
-  <div class="date">Prepared: ${new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</div>
-  ${flags.length > 0 ? `<div style="margin-bottom:20px;"><div class="flags-title">Flags Requiring Immediate Attention</div>${flagsHtml}</div>` : ''}
-  <pre>${output.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
-  <div class="disclaimer">If you are the attorney of record, this document may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Do not retain, print, or share without first consulting the supervising attorney on this case. This record contains only screening flags. No client statements are recorded.</div>
-</body>
-</html>`);
-    win.document.close(); win.print();
+    const doc = win.document;
+    doc.documentElement.lang = "en";
+    doc.title = "Client Intake Record · Draft";
+    const style = doc.createElement("style");
+    style.textContent = "@page { margin: 18mm } body { max-width: 72ch; margin: auto; color: #181518 } pre { font: 11pt/1.5 Arial, sans-serif; white-space: pre-wrap; overflow-wrap: anywhere }";
+    doc.head.append(style);
+    const record = doc.createElement("pre");
+    record.textContent = output;
+    doc.body.append(record);
+    win.print();
   };
 
   return (
-    <div className="editorial-card overflow-hidden">
+    <section id="intake-record" tabIndex={-1} className="intake-output">
       <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-muted/30 border-b border-border">
         <div className="flex min-w-0 items-center gap-2">
           <FileText className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm font-semibold text-foreground">Intake record output</span>
+          <h2 className="text-xl font-semibold">Intake record · Draft</h2>
         </div>
       </div>
 
-      {!empty && (
-        <div className="flex flex-wrap gap-2 px-4 py-2.5 border-b border-border bg-muted/10">
-          <button type="button" onClick={handleCopy} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+      {copyError && <p role="status">Copy was unavailable. Select and copy the record below.</p>}
+      <div className="flex flex-wrap gap-2 px-4 py-2.5 border-b border-border bg-muted/10">
+          <button type="button" disabled={empty} onClick={handleCopy} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             {copied ? <Check className="h-3.5 w-3.5 text-green-600" /> : <Copy className="h-3.5 w-3.5" />}
             {copied ? "Copied" : "Copy"}
           </button>
-          <button type="button" onClick={handleDownloadTxt} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+          <button type="button" disabled={empty} onClick={handleDownloadTxt} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             <Download className="h-3.5 w-3.5" /> .txt
           </button>
-          <button type="button" onClick={handleDownloadDocx} disabled={docxLoading} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-50">
+          <button type="button" onClick={handleDownloadDocx} disabled={empty || docxLoading} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-50">
             <Download className="h-3.5 w-3.5" /> {docxLoading ? "Building..." : ".docx"}
           </button>
-          <button type="button" onClick={handlePrint} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+          <button type="button" disabled={empty} onClick={handlePrint} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             <Printer className="h-3.5 w-3.5" /> Print / PDF
           </button>
         </div>
-      )}
 
       {flags.length > 0 && (
         <div className="px-4 py-3 border-b border-border space-y-2">
@@ -597,7 +560,7 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
           </pre>
         </>
       )}
-    </div>
+    </section>
   );
 }
 
@@ -628,74 +591,57 @@ export default function IntakeChecklist() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4">
-          <Link href="/for-advocates" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-xs font-semibold mb-5 transition-colors">
-            <ArrowLeft className="h-3.5 w-3.5" /> Advocate Hub
-          </Link>
-          <p className="editorial-kicker mb-2">Advocate tool</p>
-          <h1 className="text-3xl md:text-4xl text-foreground mb-3 leading-tight">
-            First Contact Intake Checklist
-          </h1>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
-            A structured screening tool for the first meeting with a new client. Covers every legal-risk domain that must be identified before any plea discussion begins. Flags fire automatically for answers that require immediate legal attention.
+      <div className="intake-workspace" lang="en">
+        <header>
+          <Link href="/for-advocates">Advocate Hub</Link>
+          <h1>First Contact <span>Intake Checklist</span></h1>
+          <p>A structured screening tool for the first meeting with a new client. Organize key information and identify answers that need prompt attorney attention.</p>
+        </header>
+        <aside className="intake-notice">
+          <p><span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
           </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">Nothing is saved or sent anywhere</span>
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">For defense counsel or use under attorney supervision</span>
-          </div>
+          <p>Answers stay on this page until you leave or reload it. You can copy, download or print your draft.</p>
+        </aside>
+        <div className="intake-bar">
+          <span role="status">7 sections · {Object.values(s).filter(value => typeof value === 'string' ? value.trim() : value).length} fields filled</span>
+          <a href="#intake-record">View intake record</a>
         </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-4 pt-6">
-        <div className="flex items-start gap-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
-          <Shield className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-          <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
-            <span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-
-          <div className="space-y-3">
-
+        <div>
             <Domain
               title="Case & Identification"
               filled={countText('clientId', 'charges', 'courtDate', 'caseNumber', 'jurisdiction', 'pdContact') + countTri('pdAssigned')}
               defaultOpen
             >
               <div>
-                <FieldLabel hint="optional">Client name or identifier</FieldLabel>
-                <TextInput value={s.clientId} onChange={set('clientId')} placeholder="e.g. J. Smith or leave blank" />
+                <FieldLabel htmlFor="intake-clientId" hint="optional">Client name or identifier</FieldLabel>
+                  <TextInput id="intake-clientId" value={s.clientId} onChange={set('clientId')} placeholder="e.g. J. Smith or leave blank" />
               </div>
               <div>
-                <FieldLabel>Charge(s)</FieldLabel>
-                <TextInput value={s.charges} onChange={set('charges')} placeholder="e.g. Burglary in the second degree" />
+                <FieldLabel htmlFor="intake-charges">Charge(s)</FieldLabel>
+                  <TextInput id="intake-charges" value={s.charges} onChange={set('charges')} placeholder="e.g. Burglary in the second degree" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <FieldLabel>Court date</FieldLabel>
-                  <TextInput value={s.courtDate} onChange={set('courtDate')} placeholder="e.g. July 14, 2026" />
+                  <FieldLabel htmlFor="intake-courtDate">Court date</FieldLabel>
+                  <TextInput id="intake-courtDate" value={s.courtDate} onChange={set('courtDate')} placeholder="e.g. July 14, 2026" />
                 </div>
                 <div>
-                  <FieldLabel>Case number</FieldLabel>
-                  <TextInput value={s.caseNumber} onChange={set('caseNumber')} placeholder="e.g. 26-CR-00421" />
+                  <FieldLabel htmlFor="intake-caseNumber">Case number</FieldLabel>
+                  <TextInput id="intake-caseNumber" value={s.caseNumber} onChange={set('caseNumber')} placeholder="e.g. 26-CR-00421" />
                 </div>
               </div>
               <div>
-                <FieldLabel>Jurisdiction</FieldLabel>
-                <TextInput value={s.jurisdiction} onChange={set('jurisdiction')} placeholder="e.g. Cook County, IL" />
+                <FieldLabel htmlFor="intake-jurisdiction">Jurisdiction</FieldLabel>
+                  <TextInput id="intake-jurisdiction" value={s.jurisdiction} onChange={set('jurisdiction')} placeholder="e.g. Cook County, IL" />
               </div>
               <div>
-                <FieldLabel>Public defender assigned?</FieldLabel>
-                <TriToggle value={s.pdAssigned} onChange={set('pdAssigned')} />
+                <span className="text-sm font-medium">Public defender assigned?</span>
+                <TriToggle label="Public defender assigned?" value={s.pdAssigned} onChange={set('pdAssigned')} />
               </div>
               {s.pdAssigned === 'yes' && (
                 <div>
-                  <FieldLabel hint="optional">PD name / contact</FieldLabel>
-                  <TextInput value={s.pdContact} onChange={set('pdContact')} placeholder="e.g. P.D. Martinez, (312) 555-0100" />
+                  <FieldLabel htmlFor="intake-pdContact" hint="optional">PD name / contact</FieldLabel>
+                  <TextInput id="intake-pdContact" value={s.pdContact} onChange={set('pdContact')} placeholder="e.g. P.D. Martinez, (312) 555-0100" />
                 </div>
               )}
             </Domain>
@@ -789,8 +735,8 @@ export default function IntakeChecklist() {
                   flagText="Detention or conviction directly impacts dependents. Document for bail argument and collateral consequence screen." />
                 {(s.primaryCaregiver === 'yes' || s.numberOfDependents) && (
                   <div>
-                    <FieldLabel hint="optional">Number of dependents</FieldLabel>
-                    <TextInput value={s.numberOfDependents} onChange={set('numberOfDependents')} placeholder="e.g. 2 children, ages 4 and 7" />
+                    <FieldLabel htmlFor="intake-numberOfDependents" hint="optional">Number of dependents</FieldLabel>
+                  <TextInput id="intake-numberOfDependents" value={s.numberOfDependents} onChange={set('numberOfDependents')} placeholder="e.g. 2 children, ages 4 and 7" />
                   </div>
                 )}
                 <TriRow label="Pregnant or recently gave birth?" value={s.pregnantPostpartum} onChange={set('pregnantPostpartum')}
@@ -819,10 +765,10 @@ export default function IntakeChecklist() {
 
           </div>
 
-          <div className="lg:sticky lg:top-6 space-y-4">
+          <div className="space-y-4">
             <OutputPanel output={output} flags={flags} />
 
-            <div className="editorial-card px-4 py-4">
+            <nav aria-label="Related tools" className="border-t border-border py-4">
               <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">Next steps</p>
               <div className="space-y-1">
                 {[
@@ -843,10 +789,8 @@ export default function IntakeChecklist() {
                   </Link>
                 ))}
               </div>
-            </div>
+            </nav>
           </div>
-
-        </div>
       </div>
 
       <Footer />
