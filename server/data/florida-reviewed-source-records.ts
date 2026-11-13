@@ -132,6 +132,7 @@ export interface FloridaReviewedSourceRecord {
   offense: FloridaReviewedDocument;
   identityEvidence: FloridaReviewedEvidenceSpan;
   conductEvidence: FloridaReviewedEvidenceSpan[];
+  incorporatedConductEvidence?: FloridaReviewedEvidenceSpan[];
   gradeEvidence: FloridaReviewedDraft["gradeEvidence"];
   dependencies: Array<FloridaReviewedDocument & {
     dependencyRole: FloridaReviewedDependencyRole;

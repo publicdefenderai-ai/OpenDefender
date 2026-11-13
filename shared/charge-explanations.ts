@@ -1,6 +1,8 @@
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
+import { OHIO_CRASH_IDENTITY_BATCH, OHIO_CRASH_IDENTITY_IDS } from "./ohio-crash-identity-batch";
+import { OHIO_DRIVING_LICENSE_BATCH, OHIO_DRIVING_LICENSE_IDS } from "./ohio-driving-license-batch";
 import { OHIO_GAMBLING_BATCH, OHIO_GAMBLING_IDS } from "./ohio-gambling-batch";
 import { OHIO_WEAPONS_LOCATION_BATCH, OHIO_WEAPONS_LOCATION_IDS } from "./ohio-weapons-location-batch";
 import { OHIO_DRUG_REMAINDER_BATCH, OHIO_DRUG_REMAINDER_IDS } from "./ohio-drug-remainder-batch";
@@ -18,6 +20,8 @@ import { OHIO_THEFT_FRAUD_BATCH, OHIO_THEFT_FRAUD_IDS } from "./ohio-theft-fraud
 import { OHIO_RESIDUAL_BATCH, OHIO_RESIDUAL_IDS } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH, FLORIDA_PERSONS_IDS } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
+import { FLORIDA_JUSTICE_BATCH } from "./florida-justice-batch";
+import { FLORIDA_CREDIT_CARD_BATCH } from "./florida-credit-card-batch";
 import { FLORIDA_RESTRAINT_BATCH } from "./florida-restraint-batch";
 import { FLORIDA_CRASH_FLIGHT_BATCH } from "./florida-crash-flight-batch";
 import { OHIO_MAJOR_BATCH, OHIO_MAJOR_IDS } from "./ohio-major-batch";
@@ -83,7 +87,7 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_REVIEWED_BATCH.explanations,
-  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
+  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_JUSTICE_BATCH.explanations, ...FLORIDA_CREDIT_CARD_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
   ...FLORIDA_LEGACY_PROPERTY.explanations,
   ...FLORIDA_LEGACY_SEXUAL.explanations,
   ...FLORIDA_LEGACY_REMAINING.explanations,
@@ -96,6 +100,8 @@ export const chargeExplanations: ChargeExplanation[] = [
   ...OHIO_THEFT_FRAUD_BATCH.explanations,
   ...OHIO_BENEFITS_FRAUD_BATCH.explanations,
   ...OHIO_JUSTICE_BATCH.explanations,
+  ...OHIO_CRASH_IDENTITY_BATCH.explanations,
+  ...OHIO_DRIVING_LICENSE_BATCH.explanations,
   ...OHIO_GAMBLING_BATCH.explanations,
   ...OHIO_WEAPONS_LOCATION_BATCH.explanations,
   ...OHIO_DRUG_REMAINDER_BATCH.explanations,
@@ -3895,8 +3901,8 @@ export function getChargeExplanation(
               ? { degreeContext: locale.degreeContext }
               : {}),
             // Surface draft flag so callers can show a pending-review notice
-            translationDraft: explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId) || OHIO_COMMERCIAL_SEX_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_CONDUCT_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_REMAINDER_IDS.has(explanation.canonicalChargeId) || OHIO_WEAPONS_LOCATION_IDS.has(explanation.canonicalChargeId) || OHIO_GAMBLING_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId)) ? false : locale.draft,
-            untranslated: Boolean(explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId) || OHIO_COMMERCIAL_SEX_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_CONDUCT_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_REMAINDER_IDS.has(explanation.canonicalChargeId) || OHIO_WEAPONS_LOCATION_IDS.has(explanation.canonicalChargeId) || OHIO_GAMBLING_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId))),
+            translationDraft: explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId) || OHIO_COMMERCIAL_SEX_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_CONDUCT_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_REMAINDER_IDS.has(explanation.canonicalChargeId) || OHIO_WEAPONS_LOCATION_IDS.has(explanation.canonicalChargeId) || OHIO_GAMBLING_IDS.has(explanation.canonicalChargeId) || OHIO_DRIVING_LICENSE_IDS.has(explanation.canonicalChargeId) || OHIO_CRASH_IDENTITY_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId)) ? false : locale.draft,
+            untranslated: Boolean(explanation.canonicalChargeId && (OHIO_UNTRANSLATED_CORRECTION_IDS.has(explanation.canonicalChargeId) || OHIO_MAJOR_IDS.has(explanation.canonicalChargeId) || OHIO_RESIDUAL_IDS.has(explanation.canonicalChargeId) || (OHIO_THEFT_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_BENEFITS_FRAUD_IDS.has(explanation.canonicalChargeId) || (OHIO_JUSTICE_IDS.has(explanation.canonicalChargeId) || OHIO_CUSTODY_IDS.has(explanation.canonicalChargeId) || OHIO_PUBLIC_PEACE_IDS.has(explanation.canonicalChargeId) || OHIO_FAMILY_IDS.has(explanation.canonicalChargeId) || OHIO_PROTECTION_IDS.has(explanation.canonicalChargeId) || OHIO_PRIVACY_IDS.has(explanation.canonicalChargeId) || OHIO_PRIORITY_GAPS_IDS.has(explanation.canonicalChargeId) || OHIO_COMMERCIAL_SEX_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_CONDUCT_IDS.has(explanation.canonicalChargeId) || OHIO_DRUG_REMAINDER_IDS.has(explanation.canonicalChargeId) || OHIO_WEAPONS_LOCATION_IDS.has(explanation.canonicalChargeId) || OHIO_GAMBLING_IDS.has(explanation.canonicalChargeId) || OHIO_DRIVING_LICENSE_IDS.has(explanation.canonicalChargeId) || OHIO_CRASH_IDENTITY_IDS.has(explanation.canonicalChargeId)))) || FLORIDA_PERSONS_IDS.has(explanation.canonicalChargeId))),
           };
            const localizedScopedContent = jurisdiction
              ? getScopedCaseGuidance(explanation.slug, lang)

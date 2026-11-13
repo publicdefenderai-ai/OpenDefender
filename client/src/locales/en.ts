@@ -8284,6 +8284,7 @@ export default {
     "disclaimer": "This screener provides general information only. It is not legal advice. Results depend on your specific record and state law. Contact a legal aid organization for a full review."
   },
   "pdIntakeForm": {
+    "sectionIndex": "In this form · 7 sections",
     "badge": "Print-Ready Form",
     "title": "Public Defender Intake Form",
     "formTitle": "Public Defender Intake Form",

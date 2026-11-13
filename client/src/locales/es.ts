@@ -8290,6 +8290,7 @@ export default {
     "disclaimer": "Este evaluador proporciona solo información general. No es asesoramiento legal. Los resultados dependen de su registro específico y la ley estatal. Contacte a una organización de ayuda legal para una revisión completa."
   },
   "pdIntakeForm": {
+    "sectionIndex": "Contenido del formulario · 7 secciones",
     "badge": "Formulario Imprimible",
     "title": "Formulario de Ingreso del Defensor Público",
     "formTitle": "Formulario de Ingreso del Defensor Público",

@@ -8290,6 +8290,7 @@ export default {
     "disclaimer": "此评估工具仅提供一般信息，不是法律建议。结果取决于您的具体记录和州法律。请联系法律援助机构进行全面审查。"
   },
   "pdIntakeForm": {
+    "sectionIndex": "表格内容 · 共七节",
     "badge": "可打印表格",
     "title": "公设辩护人入档表格",
     "formTitle": "公设辩护人入档表格",

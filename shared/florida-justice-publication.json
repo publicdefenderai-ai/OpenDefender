@@ -1,0 +1,1548 @@
+[
+  {
+    "id": "fl-fs-914-22-2-a-justice",
+    "section": "914.22",
+    "scope": "(2)(a)",
+    "gradingScopes": [
+      "(2)(a)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(a)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-a-justice",
+      "name": "Tampering with a witness, victim or informant (misdemeanor matter)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (asunto de delito menor)",
+        "zh": "干扰证人、受害人或线人 (轻罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(a)",
+      "slug": "fl-fs-914-22-2-a-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(a)",
+          "FS 914.22(2)(a)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(a)",
+          "FS 914.22(2)(a)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(a)",
+          "FS 914.22(2)(a)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: misdemeanor matter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: asunto de delito menor.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：轻罪事项.",
+          "degreeContext": "三级重罪，通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-2-b-justice",
+    "section": "914.22",
+    "scope": "(2)(b)",
+    "gradingScopes": [
+      "(2)(b)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(b)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-b-justice",
+      "name": "Tampering with a witness, victim or informant (third-degree felony matter)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (asunto de delito grave de tercer grado)",
+        "zh": "干扰证人、受害人或线人 (三级重罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(b)",
+      "slug": "fl-fs-914-22-2-b-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(b)",
+          "FS 914.22(2)(b)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(b)",
+          "FS 914.22(2)(b)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(b)",
+          "FS 914.22(2)(b)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: third-degree felony matter.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: asunto de delito grave de tercer grado.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：三级重罪事项.",
+          "degreeContext": "二级重罪，通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-2-c-justice",
+    "section": "914.22",
+    "scope": "(2)(c)",
+    "gradingScopes": [
+      "(2)(c)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(c)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-c-justice",
+      "name": "Tampering with a witness, victim or informant (second-degree felony matter)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (asunto de delito grave de segundo grado)",
+        "zh": "干扰证人、受害人或线人 (二级重罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(c)",
+      "slug": "fl-fs-914-22-2-c-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(c)",
+          "FS 914.22(2)(c)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(c)",
+          "FS 914.22(2)(c)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(c)",
+          "FS 914.22(2)(c)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: second-degree felony matter.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: asunto de delito grave de segundo grado.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：二级重罪事项.",
+          "degreeContext": "一级重罪，通常最高30年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-2-d-justice",
+    "section": "914.22",
+    "scope": "(2)(d)",
+    "gradingScopes": [
+      "(2)(d)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(d)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-d-justice",
+      "name": "Tampering with a witness, victim or informant (first-degree felony matter, including one punishable by life)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (asunto de delito grave de primer grado, incluso si permite cadena perpetua)",
+        "zh": "干扰证人、受害人或线人 (一级重罪事项，包括可判终身监禁的一级重罪)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(d)",
+      "slug": "fl-fs-914-22-2-d-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(d)",
+          "FS 914.22(2)(d)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(d)",
+          "FS 914.22(2)(d)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(d)",
+          "FS 914.22(2)(d)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: first-degree felony matter, including one punishable by life.",
+          "degreeContext": "First-degree felony punishable by imprisonment up to life and ordinarily a fine up to $10,000."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: asunto de delito grave de primer grado, incluso si permite cadena perpetua.",
+          "degreeContext": "Delito grave de primer grado castigado con hasta cadena perpetua y, normalmente, multa de hasta $10,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：一级重罪事项，包括可判终身监禁的一级重罪.",
+          "degreeContext": "一级重罪，最高可判终身监禁，通常罚金最高10,000美元。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-2-e-justice",
+    "section": "914.22",
+    "scope": "(2)(e)",
+    "gradingScopes": [
+      "(2)(e)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(e)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-e-justice",
+      "name": "Tampering with a witness, victim or informant (life or capital felony investigation or prosecution)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (investigación o procesamiento por delito de categoría perpetua o capital)",
+        "zh": "干扰证人、受害人或线人 (终身级重罪或死刑重罪的调查或起诉)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(e)",
+      "slug": "fl-fs-914-22-2-e-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(e)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(e)",
+          "FS 914.22(2)(e)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(e)",
+          "FS 914.22(2)(e)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(e)",
+          "FS 914.22(2)(e)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: life or capital felony investigation or prosecution.",
+          "degreeContext": "Life felony: imprisonment up to life and ordinarily a fine up to $15,000."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: investigación o procesamiento por delito de categoría perpetua o capital.",
+          "degreeContext": "Delito grave de la categoría life felony: hasta cadena perpetua y, normalmente, multa de hasta $15,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：终身级重罪或死刑重罪的调查或起诉.",
+          "degreeContext": "终身级重罪，最高可判终身监禁，通常罚金最高15,000美元。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-2-f-justice",
+    "section": "914.22",
+    "scope": "(2)(f)",
+    "gradingScopes": [
+      "(2)(f)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(2)(f)",
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-2-f-justice",
+      "name": "Tampering with a witness, victim or informant (indeterminable offense level or noncriminal matter)",
+      "names": {
+        "es": "Manipulación de testigo, víctima o informante (nivel del delito indeterminable o asunto no penal)",
+        "zh": "干扰证人、受害人或线人 (罪级无法确定或非刑事事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(2)(f)",
+      "slug": "fl-fs-914-22-2-f-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(2)(f)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(f)",
+          "FS 914.22(2)(f)",
+          "914.22(1)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(f)",
+          "FS 914.22(2)(f)",
+          "914.22(1)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(2)(f)",
+          "FS 914.22(2)(f)",
+          "914.22(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly using intimidation or physical force, threatening or attempting to threaten, attempting the prohibited coercion, misleading someone, or offering a financial benefit to induce someone to withhold evidence or testimony, impair evidence, evade a summons, be absent when summoned, obstruct reporting an offense or release violation, or testify falsely. An official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: indeterminable offense level or noncriminal matter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Usar a sabiendas intimidación o fuerza física, amenazar o intentar amenazar o coaccionar, engañar u ofrecer una ventaja económica para inducir a alguien a retener pruebas o testimonios, alterar pruebas, eludir una citación, no comparecer, obstaculizar la comunicación de un delito o incumplimiento de condiciones de libertad, o declarar falsamente. No es necesario que ya exista o sea inminente un procedimiento oficial. Este grado se refiere al procedimiento o investigación afectados: nivel del delito indeterminable o asunto no penal.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而使用恐吓或暴力、威胁或企图威胁或胁迫、误导他人或提供经济利益，意图诱使他人隐瞒证据或证言、损害证据、逃避传唤、被传唤后缺席、妨碍举报犯罪或违反释放条件，或作假证。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：罪级无法确定或非刑事事项.",
+          "degreeContext": "三级重罪，通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-a-justice",
+    "section": "914.22",
+    "scope": "(4)(a)",
+    "gradingScopes": [
+      "(4)(a)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(a)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-a-justice",
+      "name": "Harassing a witness, victim or informant (misdemeanor matter)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (asunto de delito menor)",
+        "zh": "骚扰证人、受害人或线人 (轻罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "914.22(4)(a)",
+      "slug": "fl-fs-914-22-4-a-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(a)",
+          "FS 914.22(4)(a)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(a)",
+          "FS 914.22(4)(a)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(a)",
+          "FS 914.22(4)(a)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: misdemeanor matter.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: asunto de delito menor.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：轻罪事项.",
+          "degreeContext": "一级轻罪，通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-b-justice",
+    "section": "914.22",
+    "scope": "(4)(b)",
+    "gradingScopes": [
+      "(4)(b)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(b)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-b-justice",
+      "name": "Harassing a witness, victim or informant (third-degree felony matter)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (asunto de delito grave de tercer grado)",
+        "zh": "骚扰证人、受害人或线人 (三级重罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(4)(b)",
+      "slug": "fl-fs-914-22-4-b-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(b)",
+          "FS 914.22(4)(b)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(b)",
+          "FS 914.22(4)(b)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(b)",
+          "FS 914.22(4)(b)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: third-degree felony matter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: asunto de delito grave de tercer grado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：三级重罪事项.",
+          "degreeContext": "三级重罪，通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-c-justice",
+    "section": "914.22",
+    "scope": "(4)(c)",
+    "gradingScopes": [
+      "(4)(c)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(c)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-c-justice",
+      "name": "Harassing a witness, victim or informant (second-degree felony matter)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (asunto de delito grave de segundo grado)",
+        "zh": "骚扰证人、受害人或线人 (二级重罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(4)(c)",
+      "slug": "fl-fs-914-22-4-c-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(c)",
+          "FS 914.22(4)(c)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(c)",
+          "FS 914.22(4)(c)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(c)",
+          "FS 914.22(4)(c)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: second-degree felony matter.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: asunto de delito grave de segundo grado.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：二级重罪事项.",
+          "degreeContext": "二级重罪，通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-d-justice",
+    "section": "914.22",
+    "scope": "(4)(d)",
+    "gradingScopes": [
+      "(4)(d)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(d)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-d-justice",
+      "name": "Harassing a witness, victim or informant (ordinary first-degree felony matter)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (asunto ordinario de delito grave de primer grado)",
+        "zh": "骚扰证人、受害人或线人 (普通一级重罪事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(4)(d)",
+      "slug": "fl-fs-914-22-4-d-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(d)",
+          "FS 914.22(4)(d)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(d)",
+          "FS 914.22(4)(d)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(d)",
+          "FS 914.22(4)(d)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: ordinary first-degree felony matter.",
+          "degreeContext": "First-degree felony: ordinarily up to 30 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: asunto ordinario de delito grave de primer grado.",
+          "degreeContext": "Delito grave de primer grado: normalmente hasta 30 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：普通一级重罪事项.",
+          "degreeContext": "一级重罪，通常最高30年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-e-justice",
+    "section": "914.22",
+    "scope": "(4)(e)",
+    "gradingScopes": [
+      "(4)(e)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(e)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-e-justice",
+      "name": "Harassing a witness, victim or informant (first-degree felony punishable by life, or prosecution of a life or capital felony)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (delito grave de primer grado punible con perpetua, o procesamiento por delito de categoría perpetua o capital)",
+        "zh": "骚扰证人、受害人或线人 (可判终身监禁的一级重罪，或因终身级或死刑重罪而起诉)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(4)(e)",
+      "slug": "fl-fs-914-22-4-e-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(e)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(e)",
+          "FS 914.22(4)(e)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(e)",
+          "FS 914.22(4)(e)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(e)",
+          "FS 914.22(4)(e)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: first-degree felony punishable by life, or prosecution of a life or capital felony.",
+          "degreeContext": "First-degree felony punishable by imprisonment up to life and ordinarily a fine up to $10,000."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: delito grave de primer grado punible con perpetua, o procesamiento por delito de categoría perpetua o capital.",
+          "degreeContext": "Delito grave de primer grado castigado con hasta cadena perpetua y, normalmente, multa de hasta $10,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：可判终身监禁的一级重罪，或因终身级或死刑重罪而起诉.",
+          "degreeContext": "一级重罪，最高可判终身监禁，通常罚金最高10,000美元。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-914-22-4-f-justice",
+    "section": "914.22",
+    "scope": "(4)(f)",
+    "gradingScopes": [
+      "(4)(f)"
+    ],
+    "officialTitle": "Tampering with or harassing a witness, victim, or informant; penalties",
+    "dependencies": [
+      "914.22",
+      "914.21",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "914.22": [
+        "(4)(f)",
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "914.21": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-914-22-4-f-justice",
+      "name": "Harassing a witness, victim or informant (indeterminable offense level or noncriminal matter)",
+      "names": {
+        "es": "Acoso a testigo, víctima o informante (nivel del delito indeterminable o asunto no penal)",
+        "zh": "骚扰证人、受害人或线人 (罪级无法确定或非刑事事项)"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "914.22(4)(f)",
+      "slug": "fl-fs-914-22-4-f-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 914.22(4)(f)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 914.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0914/Sections/0914.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(f)",
+          "FS 914.22(4)(f)",
+          "914.22(3)"
+        ],
+        "es": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(f)",
+          "FS 914.22(4)(f)",
+          "914.22(3)"
+        ],
+        "zh": [
+          "Tampering with or harassing a witness, victim, or informant; penalties",
+          "Fla. Stat. 914.22(4)(f)",
+          "FS 914.22(4)(f)",
+          "914.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Intentionally harassing someone and thereby hindering, delaying, preventing or discouraging participation or testimony in an official proceeding, cooperation with an official investigation, reporting an offense or release violation, making or seeking an arrest, or initiating or assisting prosecution or parole or probation revocation. Attempts are covered. The official proceeding need not already be pending or imminent. This grade concerns the affected proceeding or investigation: indeterminable offense level or noncriminal matter.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acosar intencionalmente y con ello obstaculizar, retrasar, impedir o disuadir la comparecencia o el testimonio en un procedimiento oficial, la cooperación con una investigación, la denuncia de un delito o incumplimiento de condiciones de libertad, la realización o solicitud de un arresto, o la promoción o asistencia en un proceso penal o de revocación de libertad condicional. Se incluye la tentativa. El procedimiento no tiene que estar pendiente ni ser inminente. Este grado se refiere al procedimiento o investigación afectados: nivel del delito indeterminable o asunto no penal.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "故意骚扰他人，从而阻碍、延误、阻止或劝阻其出席正式程序或作证、协助正式调查、举报犯罪或违反释放条件、逮捕或请求逮捕，或启动或协助起诉、撤销假释或缓刑程序。未遂也在范围内。正式程序无需已在进行或即将开始。 该罪级取决于所涉程序或调查：罪级无法确定或非刑事事项.",
+          "degreeContext": "三级重罪，通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-918-13-1-a-justice",
+    "section": "918.13",
+    "scope": "(1)(a)",
+    "gradingScopes": [
+      "(2)(a)",
+      "(2)(b)"
+    ],
+    "officialTitle": "Tampering with or fabricating physical evidence",
+    "dependencies": [
+      "918.13",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "918.13": [
+        "(1)(a)",
+        "(1)",
+        "(2)(a)",
+        "(2)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-918-13-1-a-justice",
+      "name": "Tampering with physical evidence",
+      "names": {
+        "es": "Manipulación de pruebas materiales",
+        "zh": "干扰实物证据"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "918.13(1)(a)",
+      "slug": "fl-fs-918-13-1-a-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 918.13(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0918/Sections/0918.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 918.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0918/Sections/0918.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(a)",
+          "FS 918.13(1)(a)"
+        ],
+        "es": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(a)",
+          "FS 918.13(1)(a)"
+        ],
+        "zh": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(a)",
+          "FS 918.13(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowing a Florida criminal trial, proceeding or investigation by a duly constituted prosecuting authority, law enforcement agency, grand jury or legislative committee is pending or about to begin.  Altering, destroying, concealing or removing a record, document or other item with the purpose of impairing its truthfulness or availability in that proceeding or investigation.",
+          "degreeContext": "Ordinarily a third-degree felony (up to five years and $5,000). When the proceeding or investigation concerns a capital felony, the offense is a second-degree felony (up to 15 years and $10,000)."
+        },
+        "es": {
+          "plainSummary": "Con conocimiento de que está pendiente o por comenzar un juicio, procedimiento o investigación penal de Florida por una fiscalía, policía, gran jurado o comisión legislativa debidamente constituida.  Alterar, destruir, ocultar o retirar un registro, documento u otro objeto con el propósito de perjudicar su veracidad o disponibilidad en ese proceso o investigación.",
+          "degreeContext": "Normalmente delito grave de tercer grado (hasta cinco años y $5,000). Cuando el proceso o investigación se refiere a un delito capital, es de segundo grado (hasta 15 años y $10,000)."
+        },
+        "zh": {
+          "plainSummary": "明知佛州依法设立的检察机关、执法机构、大陪审团或立法委员会的刑事审判、程序或调查正在进行或即将启动。 为损害记录、文件或其他物品在该程序或调查中的真实性或可用性而篡改、销毁、隐藏或移走该物品。",
+          "degreeContext": "通常为三级重罪（最高五年及5,000美元）。若程序或调查涉及死刑重罪，则为二级重罪（最高15年及10,000美元）。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-918-13-1-b-justice",
+    "section": "918.13",
+    "scope": "(1)(b)",
+    "gradingScopes": [
+      "(2)(a)",
+      "(2)(b)"
+    ],
+    "officialTitle": "Tampering with or fabricating physical evidence",
+    "dependencies": [
+      "918.13",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "918.13": [
+        "(1)(b)",
+        "(1)",
+        "(2)(a)",
+        "(2)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-918-13-1-b-justice",
+      "name": "Fabricating physical evidence",
+      "names": {
+        "es": "Fabricación de pruebas materiales",
+        "zh": "伪造实物证据"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "918.13(1)(b)",
+      "slug": "fl-fs-918-13-1-b-justice",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 918.13(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0918/Sections/0918.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 918.13",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0918/Sections/0918.13.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(b)",
+          "FS 918.13(1)(b)"
+        ],
+        "es": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(b)",
+          "FS 918.13(1)(b)"
+        ],
+        "zh": [
+          "Tampering with or fabricating physical evidence",
+          "Fla. Stat. 918.13(1)(b)",
+          "FS 918.13(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowing a Florida criminal trial, proceeding or investigation by a duly constituted prosecuting authority, law enforcement agency, grand jury or legislative committee is pending or about to begin.  Making, presenting or using a record, document or other item knowing it to be false.",
+          "degreeContext": "Ordinarily a third-degree felony (up to five years and $5,000). When the proceeding or investigation concerns a capital felony, the offense is a second-degree felony (up to 15 years and $10,000)."
+        },
+        "es": {
+          "plainSummary": "Con conocimiento de que está pendiente o por comenzar un juicio, procedimiento o investigación penal de Florida por una fiscalía, policía, gran jurado o comisión legislativa debidamente constituida.  Crear, presentar o usar un registro, documento u otro objeto sabiendo que es falso.",
+          "degreeContext": "Normalmente delito grave de tercer grado (hasta cinco años y $5,000). Cuando el proceso o investigación se refiere a un delito capital, es de segundo grado (hasta 15 años y $10,000)."
+        },
+        "zh": {
+          "plainSummary": "明知佛州依法设立的检察机关、执法机构、大陪审团或立法委员会的刑事审判、程序或调查正在进行或即将启动。 明知记录、文件或其他物品虚假而制作、提交或使用它。",
+          "degreeContext": "通常为三级重罪（最高五年及5,000美元）。若程序或调查涉及死刑重罪，则为二级重罪（最高15年及10,000美元）。"
+        }
+      }
+    }
+  }
+]

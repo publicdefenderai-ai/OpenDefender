@@ -1,6 +1,8 @@
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
+import { OHIO_CRASH_IDENTITY_BATCH } from "./ohio-crash-identity-batch";
+import { OHIO_DRIVING_LICENSE_BATCH } from "./ohio-driving-license-batch";
 import { OHIO_GAMBLING_BATCH } from "./ohio-gambling-batch";
 import { OHIO_WEAPONS_LOCATION_BATCH } from "./ohio-weapons-location-batch";
 import { OHIO_DRUG_REMAINDER_BATCH } from "./ohio-drug-remainder-batch";
@@ -18,6 +20,8 @@ import { OHIO_THEFT_FRAUD_BATCH } from "./ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_BATCH } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
+import { FLORIDA_JUSTICE_BATCH } from "./florida-justice-batch";
+import { FLORIDA_CREDIT_CARD_BATCH } from "./florida-credit-card-batch";
 import { FLORIDA_RESTRAINT_BATCH } from "./florida-restraint-batch";
 import { FLORIDA_CRASH_FLIGHT_BATCH } from "./florida-crash-flight-batch";
 import { OHIO_MAJOR_BATCH } from "./ohio-major-batch";
@@ -58,7 +62,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...FLORIDA_REVIEWED_BATCH.translations,
-  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
+  ...FLORIDA_PERSONS_BATCH.translations, ...FLORIDA_ROBBERY_BATCH.translations, ...FLORIDA_JUSTICE_BATCH.translations, ...FLORIDA_CREDIT_CARD_BATCH.translations, ...FLORIDA_RESTRAINT_BATCH.translations, ...FLORIDA_CRASH_FLIGHT_BATCH.translations,
   ...FLORIDA_LEGACY_PROPERTY.translations,
   ...FLORIDA_LEGACY_SEXUAL.translations,
   ...FLORIDA_LEGACY_REMAINING.translations,
@@ -71,6 +75,8 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
+  ...OHIO_CRASH_IDENTITY_BATCH.translations,
+  ...OHIO_DRIVING_LICENSE_BATCH.translations,
   ...OHIO_GAMBLING_BATCH.translations,
   ...OHIO_WEAPONS_LOCATION_BATCH.translations,
   ...OHIO_DRUG_REMAINDER_BATCH.translations,

@@ -142,6 +142,8 @@ const releaseCheckOhioSourceFirstChargeIds = [
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-theft-fraud-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-benefits-fraud-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-justice-publication.json"), "utf8")).map(row => row.id),
+  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-crash-identity-publication.json"), "utf8")).map(row => row.id),
+  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-driving-license-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-gambling-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-weapons-location-publication.json"), "utf8")).map(row => row.id),
   ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-drug-remainder-publication.json"), "utf8")).map(row => row.id),
@@ -185,6 +187,8 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
     // Independently reviewed Florida persons batch; its own receipt gate still applies.
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-persons-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-robbery-publication.json"), "utf8")).map(row => row.id),
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-justice-publication.json"), "utf8")).map(row => row.id),
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-credit-card-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-restraint-publication.json"), "utf8")).map(row => row.id),
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-crash-flight-publication.json"), "utf8")).map(row => row.id),
     ...releaseCheckOhioSourceFirstChargeIds,
