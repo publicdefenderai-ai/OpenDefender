@@ -1,0 +1,1007 @@
+[
+  {
+    "id": "oh-orc-959-01-owner-or-keeper",
+    "section": "959.01",
+    "scope": "whole",
+    "code": "959.01",
+    "statutoryName": "Abandoning animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "An owner or keeper abandoning a dog, cat or another domestic animal.",
+    "gradeSummary": "M2 on a first offense; M1 on each subsequent offense.",
+    "dependencies": [
+      "959.99"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(3)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-02-injury-to-owned-animal",
+    "section": "959.02",
+    "scope": "whole",
+    "code": "959.02",
+    "statutoryName": "Injuring animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Killing or injuring another person’s covered domestic animal without the owner’s consent, with the malicious or willful conduct described in the statute. A licensed veterinarian acting in an official capacity is excepted. Section 959.04 provides a limited exclusion for qualifying trespassing-animal circumstances with specified payment or court deposit within 15 days.",
+    "gradeSummary": "M2 ordinarily; M1 when the value of the animal killed or the injury done is at least $300.",
+    "dependencies": [
+      "959.99",
+      "959.04"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "B"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-03-poisoning",
+    "section": "959.03",
+    "scope": "whole",
+    "code": "959.03",
+    "statutoryName": "Poisoning animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The statute prohibits malicious or willful nonconsensual administration of poison to the listed domestic animals belonging to another, subject to the licensed-veterinarian exception. It separately prohibits willfully placing poisoned food without the owner’s consent where such animals may readily find it. Section 959.04 provides a limited exclusion for qualifying trespassing-animal circumstances with specified payment or court deposit within 15 days.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "959.99",
+      "959.04"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "C"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-05-competition",
+    "section": "959.05",
+    "scope": "whole",
+    "code": "959.05",
+    "statutoryName": "Drugging animal prior to competition",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Giving an animal a drug not specifically permitted by the applicable rules within 48 hours before it competes at the specified fair or agricultural exhibition. Racing meetings conducted under the Chapter 3769 permit are excluded. Whether a particular medication is permitted requires the applicable event rules.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "959.99"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "G"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-knowing-cruelty",
+    "section": "959.131",
+    "scope": "B",
+    "code": "959.131(B)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly committing a prohibited act of cruelty against a companion animal as described in (B). The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M1 on a first offense; F5 on each subsequent offense. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(1)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "959.99",
+          "quote": "misdemeanor of the first degree on a first offense"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-959-131-serious-physical-harm",
+    "section": "959.131",
+    "scope": "C",
+    "code": "959.131(C)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly causing serious physical harm to a companion animal. Division (A)(12) defines serious harm by unjustifiable substantial risk of death, permanent incapacity or the specified acute or prolonged pain. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "F5. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(2)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-reckless-deprivation",
+    "section": "959.131",
+    "scope": "E",
+    "code": "959.131(E)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "A person confining or caring for a companion animal recklessly deprives it of necessary sustenance or confines it without enough wholesome food and water. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M1 on a first offense; F5 on each subsequent offense. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(1)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "959.99",
+          "quote": "misdemeanor of the first degree on a first offense"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-959-131-d-cruelty",
+    "section": "959.131",
+    "scope": "D(1)",
+    "code": "959.131(D)(1)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A person who confines a companion animal or acts as its custodian or caretaker negligently commits the prohibited cruelty described in this subdivision. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M2 on a first offense; M1 on each subsequent offense. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(3)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-d-sustenance",
+    "section": "959.131",
+    "scope": "D(2)",
+    "code": "959.131(D)(2)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A person who confines a companion animal or acts as its custodian or caretaker negligently deprives the animal of necessary sustenance or confines it without enough wholesome food and water where sickness or other suffering can reasonably be expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M2 on a first offense; M1 on each subsequent offense. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(3)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-d-shelter",
+    "section": "959.131",
+    "scope": "D(3)",
+    "code": "959.131(D)(3)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D(3)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M2",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A person who confines a companion animal or acts as its custodian or caretaker negligently confines the animal without adequate access to shelter from the listed weather and sunlight conditions where sickness or other suffering can reasonably be expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M2 on a first offense; M1 on each subsequent offense. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(3)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-f-cruelty",
+    "section": "959.131",
+    "scope": "F(1)",
+    "code": "959.131(F)(1)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "F(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker knowingly commits the prohibited cruelty described in this subdivision. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "F5. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(4)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-f-sustenance",
+    "section": "959.131",
+    "scope": "F(2)",
+    "code": "959.131(F)(2)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "F(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker knowingly deprives the animal of necessary sustenance or confines it without enough wholesome food and water where death or unnecessary or unjustifiable pain or suffering is reasonably expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "F5. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(4)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-f-shelter",
+    "section": "959.131",
+    "scope": "F(3)",
+    "code": "959.131(F)(3)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "F(3)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker knowingly confines the animal without adequate access to shelter from the listed weather and sunlight conditions where death or unnecessary or unjustifiable pain or suffering is reasonably expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "F5. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(4)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-g-cruelty",
+    "section": "959.131",
+    "scope": "G(1)",
+    "code": "959.131(G)(1)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "G(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker negligently commits the prohibited cruelty described in this subdivision. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M1. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(5)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-g-sustenance",
+    "section": "959.131",
+    "scope": "G(2)",
+    "code": "959.131(G)(2)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "G(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker negligently deprives the animal of necessary sustenance or confines it without enough wholesome food and water where sickness or other suffering can reasonably be expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M1. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(5)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-131-g-shelter",
+    "section": "959.131",
+    "scope": "G(3)",
+    "code": "959.131(G)(3)",
+    "statutoryName": "Prohibitions concerning companion animals",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "G(3)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "A dog kennel owner, manager or employee who confines a companion animal or acts as its custodian or caretaker negligently confines the animal without adequate access to shelter from the listed weather and sunlight conditions where sickness or other suffering can reasonably be expected. The companion-animal definition includes dogs and cats regardless of where kept and animals kept inside a human residential dwelling; it excludes livestock and wild animals. Division (H) supplies limited exceptions.",
+    "gradeSummary": "M1. The court may order forfeiture and limits on owning or caring for companion animals, for a specified or indefinite time. It may order reimbursement of qualifying unpaid impoundment care costs. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132",
+      "1717.01",
+      "956.01",
+      "1531.01",
+      "4741.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "E(5)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(6)"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-participation",
+    "section": "959.16",
+    "scope": "A(1)",
+    "code": "959.16(A)(1)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly promoting, engaging in or being employed at dogfighting.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-admission-proceeds",
+    "section": "959.16",
+    "scope": "A(2)",
+    "code": "959.16(A)(2)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly receiving value for another person’s admission to dogfighting or a place kept for it.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-dog-for-fighting",
+    "section": "959.16",
+    "scope": "A(3)",
+    "code": "959.16(A)(3)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly selling, purchasing, possessing or training a dog for dogfighting.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-seizing-animal",
+    "section": "959.16",
+    "scope": "A(4)",
+    "code": "959.16(A)(4)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly using, training or possessing a dog for seizing, detaining or maltreating a domestic animal.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-paid-admission-presence",
+    "section": "959.16",
+    "scope": "A(5)",
+    "code": "959.16(A)(5)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly paying for admission to, or being present at, a dogfight.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-16-public-spectacle",
+    "section": "959.16",
+    "scope": "A(6)",
+    "code": "959.16(A)(6)",
+    "statutoryName": "Dogfighting offenses",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(6)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "C"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly witnessing a dogfight presented as a public spectacle.",
+    "gradeSummary": "F4 on a first offense; F3 on each subsequent offense. Division (C) permits seizure and impoundment of qualifying dogs and requires confiscation of qualifying equipment.",
+    "dependencies": [
+      "959.99",
+      "959.161",
+      "2935.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "H"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-21-conduct-or-possession",
+    "section": "959.21",
+    "scope": "B",
+    "code": "959.21(B)",
+    "statutoryName": "Sexual conduct with an animal",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly engaging in the sexual conduct defined in (A), or knowingly possessing, selling or purchasing an animal with intent that it be subjected to that conduct.",
+    "gradeSummary": "M2. The court may order forfeiture and disposition of the animal. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "D"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  },
+  {
+    "id": "oh-orc-959-21-organizing-or-assisting",
+    "section": "959.21",
+    "scope": "C",
+    "code": "959.21(C)",
+    "statutoryName": "Sexual conduct with an animal",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly organizing, promoting, aiding or abetting an act involving sexual conduct with an animal as defined in (A).",
+    "gradeSummary": "M2. The court may order forfeiture and disposition of the animal. If a contributing mental or emotional disorder is suspected, the court may require evaluation or counseling at the offender’s expense.",
+    "dependencies": [
+      "959.99",
+      "959.132"
+    ],
+    "extraGrading": [
+      {
+        "section": "959.99",
+        "path": "D"
+      },
+      {
+        "section": "959.99",
+        "path": "E(7)"
+      }
+    ]
+  }
+]

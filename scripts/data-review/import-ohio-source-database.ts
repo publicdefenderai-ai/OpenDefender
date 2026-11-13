@@ -1,5 +1,6 @@
 import { extractOhioDocument } from "./ohio-discovery/section-document";
 export { extractOhioDocument } from "./ohio-discovery/section-document";
+import { OHIO_ANIMAL_PROTECTION_SOURCES } from "../../server/data/ohio-animal-protection-source";
 import { OHIO_TOOLS_TRANSACTIONS_SOURCES } from "../../server/data/ohio-tools-transactions-source";
 import { OHIO_DANGEROUS_DRIVING_SOURCES } from "../../server/data/ohio-dangerous-driving-source";
 import { OHIO_CRASH_IDENTITY_SOURCES } from "../../server/data/ohio-crash-identity-source";
@@ -119,6 +120,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_ANIMAL_PROTECTION_SOURCES.map(record => record.chargeId),
       ...OHIO_TOOLS_TRANSACTIONS_SOURCES.map(record => record.chargeId),
       ...OHIO_DANGEROUS_DRIVING_SOURCES.map(record => record.chargeId),
       ...OHIO_CRASH_IDENTITY_SOURCES.map(record => record.chargeId),
