@@ -29,8 +29,10 @@ import { isOhioTheftFraudSourceFresh } from "../data/ohio-theft-fraud-source";
 import { isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_IDS } from "@shared/florida-persons-batch";
 import { FLORIDA_ROBBERY_IDS } from "@shared/florida-robbery-batch";
+import { FLORIDA_CRASH_FLIGHT_IDS } from "@shared/florida-crash-flight-batch";
 import { isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
+import { isFloridaCrashFlightSourceFresh } from "../data/florida-crash-flight-source";
 import { OHIO_MAJOR_IDS } from "@shared/ohio-major-batch";
 import { isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { isCaliforniaEvidenceFresh } from "@shared/california-freshness";
@@ -62,6 +64,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "OH" && !isReviewedOhioChargeId(charge.id)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_PERSONS_IDS.has(charge.id) && !fresh(isFloridaPersonsSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_ROBBERY_IDS.has(charge.id) && !fresh(isFloridaRobberySourceFresh)) return false;
+    if (charge.jurisdiction === "FL" && FLORIDA_CRASH_FLIGHT_IDS.has(charge.id) && !fresh(isFloridaCrashFlightSourceFresh)) return false;
     if (charge.jurisdiction === "FL" && FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === charge.id) && !fresh(isFloridaReviewedSourceFresh)) return false;
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
