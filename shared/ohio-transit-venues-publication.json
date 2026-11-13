@@ -1,0 +1,387 @@
+[
+  {
+    "id": "oh-orc-2917-40-unassigned-admission",
+    "section": "2917.40",
+    "scope": "B(1)",
+    "code": "2917.40(B)(1)",
+    "statutoryName": "Safety at live entertainment performances",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "A",
+      "D",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Selling, offering for sale, or offering for a donation a ticket that is both unnumbered and unassigned to a specific seat for a covered restricted-area live performance with more than 8,000 tickets offered to the public, or a covered concert with more than 3,000 tickets offered to the public. The (D)(1) nonconcert entrance exemption and (D)(2) or (3) concert exemptions granted by the responsible official may apply. Covered events exclude the multi-activity admissions described in (G)(1), symphony orchestra performances, ballet, horse races, dances and fairs.",
+    "gradeSummary": "M1. If the violation results in physical harm to a person, the court must consider that fact in favor of imprisonment; the statute does not make jail automatic.",
+    "dependencies": [
+      "1.59",
+      "3345.04",
+      "3345.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-40-advertising",
+    "section": "2917.40",
+    "scope": "B(2)",
+    "code": "2917.40(B)(2)",
+    "statutoryName": "Safety at live entertainment performances",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "A",
+      "B(1)",
+      "D",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Advertising a covered restricted-area live performance with more than 8,000 tickets offered to the public, or a covered concert with more than 3,000 tickets offered to the public without the words “Reserved Seats Only.” The (D)(1) nonconcert entrance exemption and (D)(2) or (3) concert exemptions granted by the responsible official may apply. Covered events exclude the multi-activity admissions described in (G)(1), symphony orchestra performances, ballet, horse races, dances and fairs.",
+    "gradeSummary": "M1. If the violation results in physical harm to a person, the court must consider that fact in favor of imprisonment; the statute does not make jail automatic.",
+    "dependencies": [
+      "1.59",
+      "3345.04",
+      "3345.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-40-entrance-staffing",
+    "section": "2917.40",
+    "scope": "C",
+    "code": "2917.40(C)",
+    "statutoryName": "Safety at live entertainment performances",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "A",
+      "D(1)",
+      "E",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "An owner or operator of a restricted entertainment area fails to open, maintain and properly staff the designated number of entrances at least 90 minutes before a live performance for which more than 3,000 tickets are sold, offered for sale or offered for a donation. A nonconcert event qualifies for the (D)(1) exception when its eight required entrances or separate turnstiles are open, maintained and properly staffed at least one hour before the scheduled start. Covered events exclude the multi-activity admissions described in (G)(1), symphony orchestra performances, ballet, horse races, dances and fairs.",
+    "gradeSummary": "M1. If the violation results in physical harm to a person, the court must consider that fact in favor of imprisonment; the statute does not make jail automatic.",
+    "dependencies": [
+      "1.59",
+      "3345.04",
+      "3345.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-40-contract",
+    "section": "2917.40",
+    "scope": "F",
+    "code": "2917.40(F)",
+    "statutoryName": "Safety at live entertainment performances",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "F"
+    ],
+    "gradingPaths": [
+      "I"
+    ],
+    "contextPaths": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Entering a live-entertainment-performance contract that does not permit or require compliance with this section. Covered events exclude the multi-activity admissions described in (G)(1), symphony orchestra performances, ballet, horse races, dances and fairs.",
+    "gradeSummary": "M1. If the violation results in physical harm to a person, the court must consider that fact in favor of imprisonment; the statute does not make jail automatic.",
+    "dependencies": [
+      "1.59",
+      "3345.04",
+      "3345.21"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-fare-evasion",
+    "section": "2917.41",
+    "scope": "A",
+    "code": "2917.41(A)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Evading payment of the known fare. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-altered-fare-media",
+    "section": "2917.41",
+    "scope": "B",
+    "code": "2917.41(B)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Altering a transit transfer, pass, ticket or token with the purpose of evading payment or defrauding the system. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-sound-equipment",
+    "section": "2917.41",
+    "scope": "C(1)",
+    "code": "2917.41(C)(1)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(1)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Playing sound equipment in a facility or vehicle without proper use of a private earphone. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "Minor misdemeanor on a first offense. M4 after a prior conviction or guilty plea under any division of this section or a substantially similar municipal ordinance.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-posted-restrictions",
+    "section": "2917.41",
+    "scope": "C(2)",
+    "code": "2917.41(C)(2)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(2)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Smoking, eating or drinking in a clearly marked prohibited area of a facility or vehicle. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "Minor misdemeanor on a first offense. M4 after a prior conviction or guilty plea under any division of this section or a substantially similar municipal ordinance.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-spitting",
+    "section": "2917.41",
+    "scope": "C(3)",
+    "code": "2917.41(C)(3)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C(3)"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(2)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Spitting on a person, facility or vehicle while in a facility or on a vehicle of the system. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "Minor misdemeanor on a first offense. M4 after a prior conviction or guilty plea under any division of this section or a substantially similar municipal ordinance.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-defacing",
+    "section": "2917.41",
+    "scope": "D",
+    "code": "2917.41(D)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(3)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Writing on, defacing, drawing on or otherwise marking a facility or vehicle. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "M3.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2917-41-transit-police",
+    "section": "2917.41",
+    "scope": "E",
+    "code": "2917.41(E)",
+    "statutoryName": "Misconduct involving a public transportation system",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [
+      "F",
+      "F(1)"
+    ],
+    "contextPaths": [
+      "H"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Failing to comply with a lawful order of a transit police officer, or resisting, obstructing or abusing a transit police officer performing official duties. The statute covers the county transit systems, regional transit authorities and regional transit commissions specified in division (H).",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "306.01",
+      "306.13",
+      "306.30",
+      "306.71",
+      "306.80",
+      "306.90"
+    ],
+    "extraGrading": []
+  }
+]

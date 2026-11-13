@@ -1,3 +1,4 @@
+import { OHIO_TRANSIT_VENUES_SOURCES, isOhioTransitVenuesSourceFresh } from "./ohio-transit-venues-source";
 import { OHIO_LIQUOR_ID_SOURCES, isOhioLiquorIdSourceFresh } from "./ohio-liquor-id-source";
 import { OHIO_CIVIL_RIGHTS_SOURCES, isOhioCivilRightsSourceFresh } from "./ohio-civil-rights-source";
 import { OHIO_ANIMAL_PROTECTION_SOURCES, isOhioAnimalProtectionSourceFresh } from "./ohio-animal-protection-source";
@@ -75,6 +76,7 @@ export function loadOhioAuthorityManifest(
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_TRANSIT_VENUES_SOURCES.map(record => record.chargeId),
       ...OHIO_LIQUOR_ID_SOURCES.map(record => record.chargeId),
       ...OHIO_CIVIL_RIGHTS_SOURCES.map(record => record.chargeId),
       ...OHIO_ANIMAL_PROTECTION_SOURCES.map(record => record.chargeId),
@@ -108,7 +110,7 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
-    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES, ...OHIO_GAMBLING_SOURCES, ...OHIO_DRIVING_LICENSE_SOURCES, ...OHIO_CRASH_IDENTITY_SOURCES, ...OHIO_DANGEROUS_DRIVING_SOURCES, ...OHIO_TOOLS_TRANSACTIONS_SOURCES, ...OHIO_ANIMAL_PROTECTION_SOURCES, ...OHIO_CIVIL_RIGHTS_SOURCES, ...OHIO_LIQUOR_ID_SOURCES].flatMap(record => [
+    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES, ...OHIO_GAMBLING_SOURCES, ...OHIO_DRIVING_LICENSE_SOURCES, ...OHIO_CRASH_IDENTITY_SOURCES, ...OHIO_DANGEROUS_DRIVING_SOURCES, ...OHIO_TOOLS_TRANSACTIONS_SOURCES, ...OHIO_ANIMAL_PROTECTION_SOURCES, ...OHIO_CIVIL_RIGHTS_SOURCES, ...OHIO_LIQUOR_ID_SOURCES, ...OHIO_TRANSIT_VENUES_SOURCES].flatMap(record => [
       Date.parse(record.offense.retrievedAt),
       ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
     ]),
@@ -123,6 +125,7 @@ export function loadOhioAuthorityManifest(
   const reviewedFresh = isOhioReviewedSourceFresh(now);
   const majorFresh = isOhioMajorSourceFresh(now);
   const justiceFresh = isOhioJusticeSourceFresh(now);
+  const transitVenuesFresh = isOhioTransitVenuesSourceFresh(now);
   const liquorIdFresh = isOhioLiquorIdSourceFresh(now);
   const civilRightsFresh = isOhioCivilRightsSourceFresh(now);
   const animalProtectionFresh = isOhioAnimalProtectionSourceFresh(now);
@@ -170,6 +173,7 @@ export function loadOhioAuthorityManifest(
     ...(majorFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_MAJOR_SOURCES) : []),
     ...(residualFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_RESIDUAL_SOURCES) : []),
     ...(justiceFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_JUSTICE_SOURCES) : []),
+    ...(transitVenuesFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_TRANSIT_VENUES_SOURCES) : []),
     ...(liquorIdFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_LIQUOR_ID_SOURCES) : []),
     ...(civilRightsFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_CIVIL_RIGHTS_SOURCES) : []),
     ...(animalProtectionFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_ANIMAL_PROTECTION_SOURCES) : []),
@@ -196,6 +200,7 @@ export function loadOhioAuthorityManifest(
       charge.jurisdiction === "OH" &&
       (residualFresh || !OHIO_RESIDUAL_SOURCES.some(record => record.chargeId === charge.id)) &&
       (justiceFresh || !OHIO_JUSTICE_SOURCES.some(record => record.chargeId === charge.id)) &&
+      (transitVenuesFresh || !OHIO_TRANSIT_VENUES_SOURCES.some(record => record.chargeId === charge.id)) &&
       (liquorIdFresh || !OHIO_LIQUOR_ID_SOURCES.some(record => record.chargeId === charge.id)) &&
       (civilRightsFresh || !OHIO_CIVIL_RIGHTS_SOURCES.some(record => record.chargeId === charge.id)) &&
       (animalProtectionFresh || !OHIO_ANIMAL_PROTECTION_SOURCES.some(record => record.chargeId === charge.id)) &&
