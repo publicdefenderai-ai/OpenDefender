@@ -1,3 +1,4 @@
+import { OHIO_ANIMAL_PROTECTION_IDS } from "@shared/ohio-animal-protection-batch";
 import { OHIO_TOOLS_TRANSACTIONS_IDS } from "@shared/ohio-tools-transactions-batch";
 import { OHIO_DANGEROUS_DRIVING_IDS } from "@shared/ohio-dangerous-driving-batch";
 import { OHIO_CRASH_IDENTITY_IDS } from "@shared/ohio-crash-identity-batch";
@@ -18,6 +19,7 @@ import { OHIO_JUSTICE_IDS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_IDS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioAnimalProtectionSourceFresh } from "../data/ohio-animal-protection-source";
 import { isOhioToolsTransactionsSourceFresh } from "../data/ohio-tools-transactions-source";
 import { isOhioDangerousDrivingSourceFresh } from "../data/ohio-dangerous-driving-source";
 import { isOhioCrashIdentitySourceFresh } from "../data/ohio-crash-identity-source";
@@ -97,6 +99,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_ANIMAL_PROTECTION_IDS.has(charge.id) && !fresh(isOhioAnimalProtectionSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_TOOLS_TRANSACTIONS_IDS.has(charge.id) && !fresh(isOhioToolsTransactionsSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_DANGEROUS_DRIVING_IDS.has(charge.id) && !fresh(isOhioDangerousDrivingSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_CRASH_IDENTITY_IDS.has(charge.id) && !fresh(isOhioCrashIdentitySourceFresh)) return false;
