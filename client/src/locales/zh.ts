@@ -3887,6 +3887,15 @@ export default {
     }
   },
   "courtRecords": {
+    "design": {
+      "viewDocket": "查看案卷",
+      "searching": "正在搜索法院记录…",
+      "fullAccess": "结果来自 RECAP 档案库和判例数据库。",
+      "limitedAccess": "目前无法完整访问 RECAP，搜索结果可能有限。",
+      "about": "关于 RECAP",
+      "locator": "查找法院",
+      "sources": "数据来源"
+    },
     "hero": {
       "title": "法庭记录搜索",
       "subtitle": "从 RECAP Archive 和判例法数据库中搜索免费的法庭记录"
@@ -8642,6 +8651,19 @@ export default {
     }
   },
   "courtDateGuide": {
+    "design": {
+      "heading": "记住",
+      "accent": "您的开庭日期。",
+      "navigation": "指南章节",
+      "confirm": "确认开庭信息",
+      "reminders": "设置提醒",
+      "transport": "安排交通",
+      "day": "查看出庭清单",
+      "missed": "已经错过开庭日期？",
+      "week": "提前一周",
+      "days": "提前两天",
+      "morning": "开庭当天早上"
+    },
     "badge": "实用指南",
     "title": "法庭日期指南：如何追踪并不错过您的法庭日期",
     "subtitle": "错过法庭日期通常会导致签发逮捕令。本指南介绍如何确认您的日期、设置提醒、寻找交通工具，以及如果您已经错过日期该怎么做。",

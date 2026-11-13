@@ -60,14 +60,14 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(495);
+    expect(ohioCount).toBe(515);
     expect(manifest.catalogRecords.map(record => record.chargeId).sort()).toEqual(
       criminalCharges.filter(charge => charge.jurisdiction === "OH").map(charge => charge.id).sort(),
     );
-    expect(seed.sources).toHaveLength(520);
-    expect(seed.snapshots).toHaveLength(520);
-    expect(seed.links).toHaveLength(3644);
-    expect(seed.selectableChargeIds).toHaveLength(386);
+    expect(seed.sources).toHaveLength(531);
+    expect(seed.snapshots).toHaveLength(531);
+    expect(seed.links).toHaveLength(3860);
+    expect(seed.selectableChargeIds).toHaveLength(406);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
@@ -183,7 +183,7 @@ describe("Ohio authority manifest", () => {
     // Derive a post-expiry instant across legacy and quarterly batches.
     const afterAnyCurrentReceipt = new Date(Math.max(...[
       'ohio-chapter-2903-refresh-receipt.json', 'ohio-reviewed-refresh-receipt.json',
-      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json', 'ohio-theft-fraud-refresh-receipt.json', 'ohio-benefits-fraud-refresh-receipt.json', 'ohio-justice-refresh-receipt.json', 'ohio-custody-refresh-receipt.json', 'ohio-public-peace-refresh-receipt.json', 'ohio-family-refresh-receipt.json', 'ohio-protection-refresh-receipt.json', 'ohio-privacy-refresh-receipt.json', 'ohio-priority-gaps-refresh-receipt.json', 'ohio-commercial-sex-refresh-receipt.json', 'ohio-drug-conduct-refresh-receipt.json', 'ohio-drug-remainder-refresh-receipt.json', 'ohio-weapons-location-refresh-receipt.json',
+      'ohio-major-refresh-receipt.json', 'ohio-residual-refresh-receipt.json', 'ohio-theft-fraud-refresh-receipt.json', 'ohio-benefits-fraud-refresh-receipt.json', 'ohio-justice-refresh-receipt.json', 'ohio-custody-refresh-receipt.json', 'ohio-public-peace-refresh-receipt.json', 'ohio-family-refresh-receipt.json', 'ohio-protection-refresh-receipt.json', 'ohio-privacy-refresh-receipt.json', 'ohio-priority-gaps-refresh-receipt.json', 'ohio-commercial-sex-refresh-receipt.json', 'ohio-drug-conduct-refresh-receipt.json', 'ohio-drug-remainder-refresh-receipt.json', 'ohio-weapons-location-refresh-receipt.json', 'ohio-gambling-refresh-receipt.json',
     ].map(name => Date.parse(JSON.parse(readFileSync(`scripts/data-review/output/${name}`, 'utf8')).expiresAt))) + 1);
     expect(loadOhioAuthorityManifest(undefined, afterAnyCurrentReceipt).catalogRecords)
       .toHaveLength(115);

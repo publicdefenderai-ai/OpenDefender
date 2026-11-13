@@ -1,0 +1,34 @@
+.court-date-page { width: min(100%, 68rem); margin: auto; padding: clamp(2rem, 5vw, 4rem) 5%; }
+.court-date-page header { max-width: 47rem; }
+.court-date-page h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); line-height: 1.06; letter-spacing: -.04em; margin: 1.5rem 0; }
+.court-date-page h1 span { display: block; color: var(--primary); }
+.court-date-page p, .court-date-page li { line-height: 1.75; }
+.court-date-page a { color: var(--primary); font-weight: 600; }
+.court-date-page a:hover { text-decoration: underline; text-underline-offset: .2em; }
+.court-date-jumps, .court-date-links { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding: 1rem 0; border-block-start: 1px solid var(--border); }
+.court-date-jumps { margin-top: 2rem; border-block-end: 1px solid var(--border); }
+.court-date-jumps a, .court-date-links a, .court-date-urgent { display: inline-flex; align-items: center; min-height: 44px; }
+.court-date-urgent { margin: .5rem 0 1rem; }
+.court-date-section { display: grid; grid-template-columns: minmax(10rem, 1fr) minmax(0, 3fr); gap: 2.5rem; padding: 2rem 0; border-top: 1px solid var(--border); scroll-margin-top: 6rem; }
+.court-date-section h2 { font-size: 1.5rem; line-height: 1.25; font-weight: 550; }
+.court-date-section ul, .court-date-section ol { padding-inline-start: 1.45rem; }
+.court-date-section ul { list-style: disc; }
+.court-date-section ol { list-style: decimal; }
+.court-date-section li { margin-block: .6rem; }
+.court-date-paper, .court-date-strip { background: var(--muted); padding: 1.25rem; margin-block: 1.25rem; }
+.court-date-paper h3, .court-date-strip { font-weight: 600; }
+.court-date-paper ul, .court-date-strip { display: grid; gap: .5rem 1.25rem; }
+.court-date-paper ul { grid-template-columns: repeat(2,minmax(0,1fr)); list-style: none; padding: 0; }
+.court-date-paper li { border-bottom: 1px solid var(--border); }
+.court-date-strip { grid-template-columns: repeat(3,minmax(0,1fr)); color: var(--primary); }
+.court-date-warning { border-inline-start: 3px solid var(--primary); padding-inline-start: 1rem; margin-block: 1rem; font-weight: 550; }
+.court-date-section details, .court-date-section label { border-bottom: 1px solid var(--border); padding-block: .75rem; }
+.court-date-section summary { cursor: pointer; min-height: 44px; align-content: center; font-weight: 600; }
+.court-date-section label { display: flex; align-items: baseline; gap: .75rem; cursor: pointer; min-height: 44px; }
+.court-date-section input { width: 1.15rem; height: 1.15rem; flex: none; accent-color: var(--primary); }
+@media (max-width: 700px) {
+  .court-date-section { grid-template-columns: minmax(0,1fr); gap: 1rem; }
+  .court-date-jumps { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .court-date-paper ul { grid-template-columns: minmax(0,1fr); }
+  .court-date-strip { gap: .75rem; padding: 1rem; }
+}
