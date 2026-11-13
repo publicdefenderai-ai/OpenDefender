@@ -8636,6 +8636,19 @@ export default {
     }
   },
   "courtDateGuide": {
+    "design": {
+      "heading": "Keep track of",
+      "accent": "your court date.",
+      "navigation": "Guide sections",
+      "confirm": "Confirm the details",
+      "reminders": "Set reminders",
+      "transport": "Arrange transportation",
+      "day": "Review your checklist",
+      "missed": "Already missed a court date?",
+      "week": "One week before",
+      "days": "Two days before",
+      "morning": "That morning"
+    },
     "badge": "Practical Guide",
     "title": "Court Date Guide: How to Track and Not Miss Your Court Date",
     "subtitle": "Missing a court date typically results in a bench warrant. This guide covers how to confirm your date, set reminders, find transportation, and what to do if you have already missed a date.",
