@@ -1,0 +1,2192 @@
+[
+  {
+    "id": "fl-fs-838-015-1-corruption",
+    "section": "838.015",
+    "scope": "(1)",
+    "officialTitle": "Bribery",
+    "dependencies": [
+      "838.015",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.015": [
+        "(1)",
+        "(3)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-015-1-corruption",
+      "name": "Bribery of or by a public servant",
+      "names": {
+        "es": "Soborno de un servidor público o por este",
+        "zh": "向公职人员行贿或公职人员受贿"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.015(1)",
+      "slug": "fl-fs-838-015-1-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.015(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.015",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.015.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bribery",
+          "FS 838.015(1)",
+          "F.S. 838.015(1)"
+        ],
+        "es": [
+          "Bribery",
+          "FS 838.015(1)",
+          "F.S. 838.015(1)"
+        ],
+        "zh": [
+          "Bribery",
+          "FS 838.015(1)",
+          "F.S. 838.015(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and intentionally giving, offering or promising an unauthorized benefit to a public servant, or a public servant requesting, soliciting, accepting or agreeing to accept one for oneself or another, to influence an act or omission believed or represented to involve official discretion or duty. Actual authority or assumption of office need not be proved.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Dar, ofrecer o prometer deliberadamente un beneficio no autorizado a un servidor público, o que este lo pida, acepte o acuerde aceptarlo para sí u otra persona, para influir en un acto u omisión que se cree o se presenta como relacionado con una facultad o deber oficial. No se exige demostrar autoridad efectiva ni toma de posesión.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知且故意向公职人员给予、提议给予或承诺未经授权的利益，或公职人员为自己或他人索取、收受或同意收受该利益，意图影响被认为或被声称涉及公务裁量或职责的作为或不作为。无须证明实际权限或已经就职。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-838-016-1-corruption",
+    "section": "838.016",
+    "scope": "(1)",
+    "officialTitle": "Unlawful compensation or reward for official behavior",
+    "dependencies": [
+      "838.016",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.016": [
+        "(1)",
+        "(4)",
+        "(3)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-016-1-corruption",
+      "name": "Unlawful compensation or reward for official behavior",
+      "names": {
+        "es": "Compensación o recompensa ilícita por actuación oficial",
+        "zh": "就公务行为给予或收受非法报酬"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.016(1)",
+      "slug": "fl-fs-838-016-1-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.016(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.016.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.016",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.016.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(1)",
+          "F.S. 838.016(1)"
+        ],
+        "es": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(1)",
+          "F.S. 838.016(1)"
+        ],
+        "zh": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(1)",
+          "F.S. 838.016(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and intentionally giving, offering or promising, or as a public servant seeking or accepting, an unauthorized benefit for past, present or future performance, nonperformance or violation of a perceived or represented official duty or discretionary act. The statute preserves rewards for apprehending a criminal.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Dar, ofrecer o prometer deliberadamente, o como servidor público solicitar o aceptar, un beneficio no autorizado por el cumplimiento, incumplimiento o infracción pasada, presente o futura de un acto que se cree o se presenta como oficial. La norma permite recompensas por capturar a un delincuente.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知且故意就被认为或被声称属于公务的过去、现在或未来履行、不履行或违反职责，给予、提议或承诺非法利益，或作为公职人员索取或收受该利益。法条保留因抓获犯罪者而接受奖励的例外。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(4)"
+  },
+  {
+    "id": "fl-fs-838-016-2-corruption",
+    "section": "838.016",
+    "scope": "(2)",
+    "officialTitle": "Unlawful compensation or reward for official behavior",
+    "dependencies": [
+      "838.016",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.016": [
+        "(2)",
+        "(4)",
+        "(3)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-016-2-corruption",
+      "name": "Unlawful compensation or reward for influence with another public servant",
+      "names": {
+        "es": "Compensación o recompensa ilícita por influir sobre otro servidor público",
+        "zh": "为向另一公职人员施加影响给予或收受非法报酬"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.016(2)",
+      "slug": "fl-fs-838-016-2-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.016(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.016.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.016",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.016.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(2)",
+          "F.S. 838.016(2)"
+        ],
+        "es": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(2)",
+          "F.S. 838.016(2)"
+        ],
+        "zh": [
+          "Unlawful compensation or reward for official behavior",
+          "FS 838.016(2)",
+          "F.S. 838.016(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly and intentionally giving, offering or promising, or as a public servant seeking or accepting, an unauthorized benefit for past, present or future influence with another public servant regarding a perceived or represented official act or omission. The sought influence need not succeed.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Dar, ofrecer o prometer deliberadamente, o como servidor público solicitar o aceptar, un beneficio no autorizado por influir, antes, ahora o en el futuro, sobre otro servidor público respecto de un acto u omisión que se considera o presenta como oficial. No se exige que la influencia tenga éxito.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知且故意就过去、现在或未来向另一公职人员施加影响而给予、提议或承诺非法利益，或作为公职人员索取或收受；事项须被认为或被声称涉及公务上的作为或不作为。无须实际达到目的。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(4)"
+  },
+  {
+    "id": "fl-fs-838-021-3-a-corruption",
+    "section": "838.021",
+    "scope": "(3)(a)",
+    "officialTitle": "Corruption by threat against public servant",
+    "dependencies": [
+      "838.021",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.021": [
+        "(3)(a)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(5)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-021-3-a-corruption",
+      "name": "Corruption by harming a public servant or protected person",
+      "names": {
+        "es": "Corrupción al causar daño a un servidor público u otra persona protegida",
+        "zh": "通过伤害公职人员或受保护者实施腐败"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.021(3)(a)",
+      "slug": "fl-fs-838-021-3-a-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.021(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(a)",
+          "F.S. 838.021(3)(a)"
+        ],
+        "es": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(a)",
+          "F.S. 838.021(3)(a)"
+        ],
+        "zh": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(a)",
+          "F.S. 838.021(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Unlawfully harming a public servant, immediate family member or another person in whose welfare the servant is interested, intending to influence official action or to induce influence with another public servant. Harm includes financial or other loss, disadvantage or injury.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Causar daño ilícito a un servidor público, familiar inmediato u otra persona por cuyo bienestar se interesa el funcionario, para influir en una actuación oficial o inducirlo a influir sobre otro funcionario. El daño incluye pérdida económica u otra desventaja o lesión.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "非法伤害 公职人员、其直系亲属或其关心的人，意图影响公务行为或促使其向另一公职人员施加影响。损害包括经济等损失、不利后果或伤害。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)(a)"
+  },
+  {
+    "id": "fl-fs-838-021-3-b-corruption",
+    "section": "838.021",
+    "scope": "(3)(b)",
+    "officialTitle": "Corruption by threat against public servant",
+    "dependencies": [
+      "838.021",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.021": [
+        "(3)(b)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(5)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-021-3-b-corruption",
+      "name": "Corruption by threatening harm to a public servant or protected person",
+      "names": {
+        "es": "Corrupción por amenazas contra un servidor público u otra persona protegida",
+        "zh": "通过威胁伤害公职人员或受保护者实施腐败"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.021(3)(b)",
+      "slug": "fl-fs-838-021-3-b-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.021(3)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.021",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.021.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(b)",
+          "F.S. 838.021(3)(b)"
+        ],
+        "es": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(b)",
+          "F.S. 838.021(3)(b)"
+        ],
+        "zh": [
+          "Corruption by threat against public servant",
+          "FS 838.021(3)(b)",
+          "F.S. 838.021(3)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Threatening unlawful harm to a public servant, immediate family member or another person in whose welfare the servant is interested, intending to influence official action or to induce influence with another public servant. Harm includes financial or other loss, disadvantage or injury.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Amenazar con daño ilícito a un servidor público, familiar inmediato u otra persona por cuyo bienestar se interesa el funcionario, para influir en una actuación oficial o inducirlo a influir sobre otro funcionario. El daño incluye pérdida económica u otra desventaja o lesión.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "威胁非法伤害 公职人员、其直系亲属或其关心的人，意图影响公务行为或促使其向另一公职人员施加影响。损害包括经济等损失、不利后果或伤害。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)(b)"
+  },
+  {
+    "id": "fl-fs-838-022-1-a-corruption",
+    "section": "838.022",
+    "scope": "(1)(a)",
+    "officialTitle": "Official misconduct",
+    "dependencies": [
+      "838.022",
+      "838.23",
+      "838.014",
+      "1.01",
+      "119.011",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.022": [
+        "(1)(a)",
+        "(3)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "119.011": [
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-022-1-a-corruption",
+      "name": "Official misconduct by falsifying a public record",
+      "names": {
+        "es": "Conducta oficial indebida por falsificar un registro público",
+        "zh": "伪造公共记录的公务不当行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.022(1)(a)",
+      "slug": "fl-fs-838-022-1-a-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.022(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 119.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Official misconduct",
+          "FS 838.022(1)(a)",
+          "F.S. 838.022(1)(a)"
+        ],
+        "es": [
+          "Official misconduct",
+          "FS 838.022(1)(a)",
+          "F.S. 838.022(1)(a)"
+        ],
+        "zh": [
+          "Official misconduct",
+          "FS 838.022(1)(a)",
+          "F.S. 838.022(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or public contractor knowingly and intentionally obtains a benefit for someone or causes unlawful harm to another by the following conduct. A candidate qualifies only if otherwise a public servant. Falsifying a public record or causing another person to falsify it.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor o contratista público obtiene deliberadamente un beneficio para alguien o causa daño ilícito a otra persona mediante la conducta siguiente. Un candidato debe además reunir otra condición de servidor público. Falsificar un registro público o hacer que otra persona lo falsifique.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或公共承包商明知且故意以下列行为为任何人取得利益或对他人造成非法损害。候选人须另具公职人员资格才适用。 伪造公共记录或使他人伪造。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-838-022-1-b-corruption",
+    "section": "838.022",
+    "scope": "(1)(b)",
+    "officialTitle": "Official misconduct",
+    "dependencies": [
+      "838.022",
+      "838.23",
+      "838.014",
+      "1.01",
+      "119.011",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.022": [
+        "(1)(b)",
+        "(3)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "119.011": [
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-022-1-b-corruption",
+      "name": "Official misconduct by concealing or altering a public record",
+      "names": {
+        "es": "Conducta oficial indebida por ocultar o alterar un registro público",
+        "zh": "隐匿或篡改公共记录的公务不当行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.022(1)(b)",
+      "slug": "fl-fs-838-022-1-b-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.022(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 119.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Official misconduct",
+          "FS 838.022(1)(b)",
+          "F.S. 838.022(1)(b)"
+        ],
+        "es": [
+          "Official misconduct",
+          "FS 838.022(1)(b)",
+          "F.S. 838.022(1)(b)"
+        ],
+        "zh": [
+          "Official misconduct",
+          "FS 838.022(1)(b)",
+          "F.S. 838.022(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or public contractor knowingly and intentionally obtains a benefit for someone or causes unlawful harm to another by the following conduct. A candidate qualifies only if otherwise a public servant. Concealing, covering up, destroying, mutilating or altering a public record, or causing another to do so, except as authorized by law or contract.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor o contratista público obtiene deliberadamente un beneficio para alguien o causa daño ilícito a otra persona mediante la conducta siguiente. Un candidato debe además reunir otra condición de servidor público. Ocultar, encubrir, destruir, mutilar o alterar un registro público o hacer que otro lo haga, salvo autorización legal o contractual.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或公共承包商明知且故意以下列行为为任何人取得利益或对他人造成非法损害。候选人须另具公职人员资格才适用。 隐匿、掩盖、销毁、毁损或篡改公共记录，或使他人实施上述行为；法律或合同授权的除外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-838-022-1-c-corruption",
+    "section": "838.022",
+    "scope": "(1)(c)",
+    "officialTitle": "Official misconduct",
+    "dependencies": [
+      "838.022",
+      "838.23",
+      "838.014",
+      "1.01",
+      "119.011",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.022": [
+        "(1)(c)",
+        "(3)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "119.011": [
+        "(12)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-022-1-c-corruption",
+      "name": "Official misconduct by obstructing communication about a felony",
+      "names": {
+        "es": "Conducta oficial indebida por obstruir la comunicación sobre un delito grave",
+        "zh": "阻碍传达重罪信息的公务不当行为"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.022(1)(c)",
+      "slug": "fl-fs-838-022-1-c-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.022(1)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.022",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.022.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 119.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Official misconduct",
+          "FS 838.022(1)(c)",
+          "F.S. 838.022(1)(c)"
+        ],
+        "es": [
+          "Official misconduct",
+          "FS 838.022(1)(c)",
+          "F.S. 838.022(1)(c)"
+        ],
+        "zh": [
+          "Official misconduct",
+          "FS 838.022(1)(c)",
+          "F.S. 838.022(1)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or public contractor knowingly and intentionally obtains a benefit for someone or causes unlawful harm to another by the following conduct. A candidate qualifies only if otherwise a public servant. Obstructing, delaying or preventing communication about a felony directly involving or affecting the government entity the person serves.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor o contratista público obtiene deliberadamente un beneficio para alguien o causa daño ilícito a otra persona mediante la conducta siguiente. Un candidato debe además reunir otra condición de servidor público. Obstruir, demorar o impedir la comunicación de información sobre un delito grave que involucra o afecta directamente a la entidad pública a la que sirve.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或公共承包商明知且故意以下列行为为任何人取得利益或对他人造成非法损害。候选人须另具公职人员资格才适用。 阻碍、拖延或阻止传达直接涉及或影响其服务的政府实体的重罪信息。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-838-12-1-corruption",
+    "section": "838.12",
+    "scope": "(1)",
+    "officialTitle": "Bribery in athletic contests",
+    "dependencies": [
+      "838.12",
+      "838.23",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.12": [
+        "(1)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-12-1-corruption",
+      "name": "Bribery in athletic contests: offering a bribe",
+      "names": {
+        "es": "Soborno en competencias deportivas: ofrecimiento",
+        "zh": "体育赛事行贿"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.12(1)",
+      "slug": "fl-fs-838-12-1-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.12(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.12",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bribery in athletic contests",
+          "FS 838.12(1)",
+          "F.S. 838.12(1)"
+        ],
+        "es": [
+          "Bribery in athletic contests",
+          "FS 838.12(1)",
+          "F.S. 838.12(1)"
+        ],
+        "zh": [
+          "Bribery in athletic contests",
+          "FS 838.12(1)",
+          "F.S. 838.12(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Giving, promising, offering or conspiring to offer a benefit or agreement to a participant, official or other person connected to a professional or amateur contest, intending to cause a loss, limit a victory margin or fix the contest.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Dar, prometer u ofrecer, o conspirar para hacerlo, un beneficio o acuerdo a un participante, oficial u otra persona vinculada a una competencia profesional o de aficionados, para provocar una derrota, limitar el margen de victoria o amañar el resultado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "向职业或业余比赛的选手、裁判或其他有关人员给予、承诺、提议或共谋给予利益或协议，意图使一方落败、限制胜差或操纵比赛。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(1)"
+  },
+  {
+    "id": "fl-fs-838-12-2-corruption",
+    "section": "838.12",
+    "scope": "(2)",
+    "officialTitle": "Bribery in athletic contests",
+    "dependencies": [
+      "838.12",
+      "838.23",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.12": [
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-12-2-corruption",
+      "name": "Bribery in athletic contests: receiving a bribe",
+      "names": {
+        "es": "Soborno en competencias deportivas: recepción",
+        "zh": "体育赛事受贿"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.12(2)",
+      "slug": "fl-fs-838-12-2-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.12(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.12",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bribery in athletic contests",
+          "FS 838.12(2)",
+          "F.S. 838.12(2)"
+        ],
+        "es": [
+          "Bribery in athletic contests",
+          "FS 838.12(2)",
+          "F.S. 838.12(2)"
+        ],
+        "zh": [
+          "Bribery in athletic contests",
+          "FS 838.12(2)",
+          "F.S. 838.12(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A participant, prospective participant, official or other person connected to a professional or amateur contest solicits, accepts, agrees or conspires to receive a benefit or agreement intending to lose, cause a loss, limit a victory margin or fix the contest.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un participante actual o futuro, oficial u otra persona vinculada a una competencia profesional o de aficionados solicita, acepta, acuerda o conspira para recibir un beneficio o acuerdo para perder, causar una derrota, limitar el margen de victoria o amañar el resultado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "职业或业余比赛的选手、拟参赛者、裁判或其他有关人员索取、收受、同意或共谋收受利益或协议，意图落败、使一方落败、限制胜差或操纵比赛。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(2)"
+  },
+  {
+    "id": "fl-fs-838-15-1-corruption",
+    "section": "838.15",
+    "scope": "(1)",
+    "officialTitle": "Commercial bribe receiving",
+    "dependencies": [
+      "838.15",
+      "838.23",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.15": [
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-15-1-corruption",
+      "name": "Commercial bribe receiving",
+      "names": {
+        "es": "Recepción de soborno comercial",
+        "zh": "商业受贿"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.15(1)",
+      "slug": "fl-fs-838-15-1-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.15(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.15",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Commercial bribe receiving",
+          "FS 838.15(1)",
+          "F.S. 838.15(1)"
+        ],
+        "es": [
+          "Commercial bribe receiving",
+          "FS 838.15(1)",
+          "F.S. 838.15(1)"
+        ],
+        "zh": [
+          "Commercial bribe receiving",
+          "FS 838.15(1)",
+          "F.S. 838.15(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Soliciting, accepting or agreeing to accept a benefit with intent to violate a legal duty as an agent, employee, fiduciary, professional adviser, organization manager or other listed role, including an arbitrator or purportedly disinterested adjudicator or referee.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Solicitar, aceptar o acordar aceptar un beneficio para incumplir un deber legal como agente, empleado, fiduciario, asesor profesional, directivo u otra función enumerada, incluido árbitro o juzgador que se presenta como imparcial.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "以违反自己作为代理人、雇员、受信人、专业顾问、组织管理者或其他所列角色的法律义务为目的索取、接受或同意接受利益，包括仲裁人或声称公正的裁判。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(2)"
+  },
+  {
+    "id": "fl-fs-838-16-1-corruption",
+    "section": "838.16",
+    "scope": "(1)",
+    "officialTitle": "Commercial bribery",
+    "dependencies": [
+      "838.16",
+      "838.23",
+      "838.15",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.16": [
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.15": [
+        "(1)"
+      ],
+      "838.014": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-16-1-corruption",
+      "name": "Commercial bribery",
+      "names": {
+        "es": "Soborno comercial",
+        "zh": "商业行贿"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.16(1)",
+      "slug": "fl-fs-838-16-1-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.16(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.16.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.16",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.16.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.15",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.15.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Commercial bribery",
+          "FS 838.16(1)",
+          "F.S. 838.16(1)"
+        ],
+        "es": [
+          "Commercial bribery",
+          "FS 838.16(1)",
+          "F.S. 838.16(1)"
+        ],
+        "zh": [
+          "Commercial bribery",
+          "FS 838.16(1)",
+          "F.S. 838.16(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Giving, offering or agreeing to give someone a benefit knowing the person owes a duty listed in §838.15(1) and intending to induce that person to violate it.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Dar, ofrecer o acordar dar un beneficio a otra persona sabiendo que tiene un deber de los enumerados en §838.15(1) y con intención de inducirla a incumplirlo.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知他人负有第838.15(1)条列明的义务，意图促使其违反该义务，而给予、提议或同意给予利益。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(2)"
+  },
+  {
+    "id": "fl-fs-838-21-corruption",
+    "section": "838.21",
+    "scope": "",
+    "officialTitle": "Disclosure or use of confidential criminal justice information",
+    "dependencies": [
+      "838.23",
+      "119.011",
+      "838.014",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.21": [
+        ""
+      ],
+      "838.23": [
+        ""
+      ],
+      "119.011": [
+        "(3)"
+      ],
+      "838.014": [
+        "(7)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-21-corruption",
+      "name": "Disclosure or use of confidential criminal justice information",
+      "names": {
+        "es": "Divulgación o uso de información penal confidencial",
+        "zh": "披露或使用保密刑事司法信息"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.21",
+      "slug": "fl-fs-838-21-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.21",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.21.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 119.011",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/Sections/0119.011.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Disclosure or use of confidential criminal justice information",
+          "FS 838.21",
+          "F.S. 838.21"
+        ],
+        "es": [
+          "Disclosure or use of confidential criminal justice information",
+          "FS 838.21",
+          "F.S. 838.21"
+        ],
+        "zh": [
+          "Disclosure or use of confidential criminal justice information",
+          "FS 838.21",
+          "F.S. 838.21"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant intends to obstruct, impede or prevent an investigation or prosecution and discloses active investigative or intelligence information, or discloses or uses nonpublic information obtained through office about securing or issuing a relevant warrant, subpoena or other court process or order.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Con intención de obstruir, dificultar o impedir una investigación o proceso penal, un servidor público divulga información de investigación o inteligencia activa, o divulga o usa información no pública conocida por su cargo sobre la obtención o emisión de una orden judicial, citación u otra actuación u orden pertinente.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员意图阻挠、妨碍或阻止刑事调查或起诉而披露正在进行的调查或刑事情报信息，或披露、使用因公职取得的有关申请或签发相关令状、传票或其他法院文书或命令的非公开信息。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": ""
+  },
+  {
+    "id": "fl-fs-838-22-1-a-corruption",
+    "section": "838.22",
+    "scope": "(1)(a)",
+    "officialTitle": "Bid tampering",
+    "dependencies": [
+      "838.22",
+      "838.23",
+      "838.014",
+      "1.01",
+      "287.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.22": [
+        "(1)(a)",
+        "(5)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "287.012": [
+        "(16)",
+        "(17)",
+        "(23)",
+        "(24)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-22-1-a-corruption",
+      "name": "Bid tampering by disclosure of nonpublic information",
+      "names": {
+        "es": "Manipulación de licitaciones por divulgación de información no pública",
+        "zh": "披露非公开信息操纵投标"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.22(1)(a)",
+      "slug": "fl-fs-838-22-1-a-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.22(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 287.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0287/Sections/0287.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bid tampering",
+          "FS 838.22(1)(a)",
+          "F.S. 838.22(1)(a)"
+        ],
+        "es": [
+          "Bid tampering",
+          "FS 838.22(1)(a)",
+          "F.S. 838.22(1)(a)"
+        ],
+        "zh": [
+          "Bid tampering",
+          "FS 838.22(1)(a)",
+          "F.S. 838.22(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or public contractor engaged to assist a government procurement knowingly and intentionally influences or attempts to influence a competitive solicitation by disclosing material nonpublic information about a vendor response, evaluations or other aspects of the solicitation, except as authorized by law.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor público o contratista contratado para asistir en compras públicas influye o intenta influir deliberadamente en una licitación competitiva divulgando información material no pública sobre una oferta, evaluación u otro aspecto, salvo autorización legal.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或受聘协助政府采购的公共承包商明知且故意披露关于投标、评估或其他招标事项的重大非公开信息，借此影响或试图影响竞争性采购；法律授权的除外。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(5)"
+  },
+  {
+    "id": "fl-fs-838-22-1-b-corruption",
+    "section": "838.22",
+    "scope": "(1)(b)",
+    "officialTitle": "Bid tampering",
+    "dependencies": [
+      "838.22",
+      "838.23",
+      "838.014",
+      "1.01",
+      "287.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.22": [
+        "(1)(b)",
+        "(5)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "287.012": [
+        "(16)",
+        "(17)",
+        "(23)",
+        "(24)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-22-1-b-corruption",
+      "name": "Bid tampering by altering responses or evaluations",
+      "names": {
+        "es": "Manipulación de licitaciones por alterar ofertas o evaluaciones",
+        "zh": "篡改投标或评估操纵招标"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.22(1)(b)",
+      "slug": "fl-fs-838-22-1-b-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.22(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 287.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0287/Sections/0287.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bid tampering",
+          "FS 838.22(1)(b)",
+          "F.S. 838.22(1)(b)"
+        ],
+        "es": [
+          "Bid tampering",
+          "FS 838.22(1)(b)",
+          "F.S. 838.22(1)(b)"
+        ],
+        "zh": [
+          "Bid tampering",
+          "FS 838.22(1)(b)",
+          "F.S. 838.22(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or public contractor engaged to assist a government procurement knowingly and intentionally influences or attempts to influence a competitive solicitation by altering a submitted response, its supporting material or an evaluation to give a bidder a competitive advantage.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor público o contratista contratado para asistir en compras públicas influye o intenta influir deliberadamente en una licitación competitiva alterando una oferta, su documentación o la evaluación para dar ventaja competitiva a un oferente.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或受聘协助政府采购的公共承包商明知且故意影响或试图影响竞争性招标，为使投标人取得竞争优势而篡改已提交的投标、证明材料或评估。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(5)"
+  },
+  {
+    "id": "fl-fs-838-22-2-corruption",
+    "section": "838.22",
+    "scope": "(2)",
+    "officialTitle": "Bid tampering",
+    "dependencies": [
+      "838.22",
+      "838.23",
+      "838.014",
+      "1.01",
+      "287.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.22": [
+        "(2)",
+        "(5)",
+        "(1)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "287.012": [
+        "(16)",
+        "(17)",
+        "(23)",
+        "(24)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-22-2-corruption",
+      "name": "Bid tampering through a sole-source contract",
+      "names": {
+        "es": "Manipulación de licitaciones mediante contrato de proveedor único",
+        "zh": "以单一来源合同操纵采购"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.22(2)",
+      "slug": "fl-fs-838-22-2-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.22(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 287.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0287/Sections/0287.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bid tampering",
+          "FS 838.22(2)",
+          "F.S. 838.22(2)"
+        ],
+        "es": [
+          "Bid tampering",
+          "FS 838.22(2)",
+          "F.S. 838.22(2)"
+        ],
+        "zh": [
+          "Bid tampering",
+          "FS 838.22(2)",
+          "F.S. 838.22(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A public servant or contractor engaged to assist government procurement knowingly and intentionally obtains a benefit for someone or causes unlawful harm by using a sole-source contract to circumvent a competitive solicitation required by law or rule.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Un servidor público o contratista contratado para asistir en compras públicas obtiene deliberadamente un beneficio para alguien o causa daño ilícito utilizando un contrato de proveedor único para eludir la licitación exigida por ley o reglamento.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "公职人员或受聘协助政府采购的公共承包商明知且故意以单一来源合同规避法律或规章要求的竞争性招标，从而为任何人谋利或造成非法损害。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(5)"
+  },
+  {
+    "id": "fl-fs-838-22-3-corruption",
+    "section": "838.22",
+    "scope": "(3)",
+    "officialTitle": "Bid tampering",
+    "dependencies": [
+      "838.22",
+      "838.23",
+      "838.014",
+      "1.01",
+      "287.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.22": [
+        "(3)",
+        "(5)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "287.012": [
+        "(16)",
+        "(17)",
+        "(23)",
+        "(24)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-22-3-corruption",
+      "name": "Bid tampering by agreement with a public servant or contractor",
+      "names": {
+        "es": "Manipulación de licitaciones mediante acuerdo con servidor o contratista público",
+        "zh": "与公职人员或承包商合谋操纵投标"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.22(3)",
+      "slug": "fl-fs-838-22-3-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.22(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 287.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0287/Sections/0287.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bid tampering",
+          "FS 838.22(3)",
+          "F.S. 838.22(3)"
+        ],
+        "es": [
+          "Bid tampering",
+          "FS 838.22(3)",
+          "F.S. 838.22(3)"
+        ],
+        "zh": [
+          "Bid tampering",
+          "FS 838.22(3)",
+          "F.S. 838.22(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly agreeing or conspiring, directly or indirectly, with a public servant or public contractor assisting government procurement to violate the disclosure, alteration or sole-source prohibitions of §838.22(1) or (2).",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Acordar o conspirar a sabiendas, directa o indirectamente, con un servidor público o contratista que asiste en compras públicas para infringir las prohibiciones de divulgación, alteración o proveedor único de §838.22(1) o (2).",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知而直接或间接与公职人员或协助政府采购的公共承包商协议或共谋，违反第838.22(1)或(2)条有关披露、篡改或单一来源采购的禁令。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(5)"
+  },
+  {
+    "id": "fl-fs-838-22-4-corruption",
+    "section": "838.22",
+    "scope": "(4)",
+    "officialTitle": "Bid tampering",
+    "dependencies": [
+      "838.22",
+      "838.23",
+      "838.014",
+      "1.01",
+      "287.012",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "838.22": [
+        "(4)",
+        "(5)",
+        "(1)",
+        "(2)"
+      ],
+      "838.23": [
+        ""
+      ],
+      "838.014": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ],
+      "1.01": [
+        "(3)"
+      ],
+      "287.012": [
+        "(16)",
+        "(17)",
+        "(23)",
+        "(24)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-838-22-4-corruption",
+      "name": "Bid tampering by entering an unlawfully secured contract",
+      "names": {
+        "es": "Manipulación de licitaciones al celebrar un contrato obtenido ilícitamente",
+        "zh": "签订以非法操纵采购取得的合同"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "838.22(4)",
+      "slug": "fl-fs-838-22-4-corruption",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 838.22(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.22",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.22.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.23",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.23.html"
+        },
+        {
+          "citation": "Fla. Stat. § 838.014",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0838/Sections/0838.014.html"
+        },
+        {
+          "citation": "Fla. Stat. § 1.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0000-0099/0001/Sections/0001.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 287.012",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0287/Sections/0287.012.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Bid tampering",
+          "FS 838.22(4)",
+          "F.S. 838.22(4)"
+        ],
+        "es": [
+          "Bid tampering",
+          "FS 838.22(4)",
+          "F.S. 838.22(4)"
+        ],
+        "zh": [
+          "Bid tampering",
+          "FS 838.22(4)",
+          "F.S. 838.22(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly entering a commodities or services contract secured by a public servant or public contractor assisting procurement in violation of §838.22(1) or (2). This branch concerns the person entering the contract.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine. Conviction also requires 250 hours of community service. After a hearing, restitution is mandatory if the judge finds actual financial loss directly or indirectly caused by the offense or related to the criminal episode."
+        },
+        "es": {
+          "plainSummary": "Celebrar a sabiendas un contrato de bienes o servicios obtenido por un servidor público o contratista que asiste en compras públicas infringiendo §838.22(1) o (2). Este apartado se refiere a quien celebra el contrato.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000. La condena exige además 250 horas de servicio comunitario. Tras una audiencia, la restitución es obligatoria si el juez determina una pérdida económica real causada directa o indirectamente por el delito o relacionada con el episodio delictivo."
+        },
+        "zh": {
+          "plainSummary": "明知而签订由公职人员或协助采购的公共承包商违反第838.22(1)或(2)条所取得的商品或服务合同。本款针对订立合同者。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。 定罪还须完成250小时社区服务。经听证，若法官认定实际经济损失由犯罪直接或间接造成，或与该犯罪事件有关，须判令赔偿。"
+        }
+      }
+    },
+    "gradeScope": "(5)"
+  }
+]
