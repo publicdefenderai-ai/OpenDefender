@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_DRUG_REMAINDER_BATCH } from "./ohio-drug-remainder-batch";
@@ -55,6 +56,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...FLORIDA_PERSONS_BATCH.translations,
   ...FLORIDA_LEGACY_PROPERTY.translations,
   ...FLORIDA_LEGACY_SEXUAL.translations,
+  ...FLORIDA_LEGACY_REMAINING.translations,
   ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
   ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   ...OHIO_PATIENT_CARE_BATCH.translations,

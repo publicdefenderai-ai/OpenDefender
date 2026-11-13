@@ -1,0 +1,895 @@
+[
+  {
+    "id": "fl-murder-in-the-first-degree",
+    "legacyLabel": "Murder in the First Degree",
+    "legacyCategory": "felony",
+    "name": "Murder in the First Degree",
+    "names": {
+      "es": "Asesinato en primer grado",
+      "zh": "一级谋杀"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "782.04(1)",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.04(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 921.141",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.141.html"
+      }
+    ],
+    "slug": "reviewed-fl-murder-in-the-first-degree",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Murder in the First Degree",
+        "Murder",
+        "FS 782.04(1)",
+        "Fla. Stat. § 782.04(1)"
+      ],
+      "es": [
+        "Murder in the First Degree",
+        "Murder",
+        "FS 782.04(1)",
+        "Fla. Stat. § 782.04(1)"
+      ],
+      "zh": [
+        "Murder in the First Degree",
+        "Murder",
+        "FS 782.04(1)",
+        "Fla. Stat. § 782.04(1)"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "An unlawful killing with a premeditated design to kill, a killing during commission or attempted commission of a listed felony, or a death caused or substantially caused by unlawful distribution of a listed substance by a person 18 or older. The charging branch determines which facts the state must prove.",
+        "degreeContext": "Capital felony. For an adult, ordinarily life without parole, or death only if sought and imposed under the separate §921.141 sentencing procedure. The charging decision alone does not determine a death sentence. For offenses committed under age 18, §775.082(1)(b) provides a separate hearing and sentencing and review rules."
+      },
+      "es": {
+        "plainSummary": "Muerte ilícita con propósito premeditado de matar, durante la comisión o tentativa de uno de los delitos graves enumerados, o causada de manera directa o sustancial por la distribución ilegal de una sustancia enumerada por alguien de 18 años o más. Los hechos que deben probarse dependen de la modalidad imputada.",
+        "degreeContext": "Delito capital. Para un adulto, normalmente prisión perpetua sin libertad condicional, o pena de muerte solo si se solicita e impone mediante el procedimiento de §921.141. La imputación por sí sola no determina la pena de muerte. Para hechos cometidos antes de los 18 años, §775.082(1)(b) prevé una audiencia y reglas de sentencia y revisión distintas."
+      },
+      "zh": {
+        "plainSummary": "非法致人死亡且预谋杀人，或在实施或企图实施所列重罪时致人死亡，或年满18岁者非法分销指定物质并导致或实质上促成死亡。检方须证明的事实取决于所控分支。",
+        "degreeContext": "死刑重罪。成人通常为终身监禁且不得假释；仅在检方请求并经第921.141条的独立量刑程序判处时才可适用死刑。起诉本身并不决定死刑。未满18岁时实施的行为适用第775.082(1)(b)款的特别听证、量刑和复核规定。"
+      }
+    }
+  },
+  {
+    "id": "fl-murder-in-the-second-degree",
+    "legacyLabel": "Murder in the Second Degree",
+    "legacyCategory": "felony",
+    "name": "Murder in the Second Degree",
+    "names": {
+      "es": "Asesinato en segundo grado",
+      "zh": "二级谋杀"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "782.04(2)",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.04(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-murder-in-the-second-degree",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Murder in the Second Degree",
+        "Murder",
+        "FS 782.04(2)",
+        "Fla. Stat. § 782.04(2)"
+      ],
+      "es": [
+        "Murder in the Second Degree",
+        "Murder",
+        "FS 782.04(2)",
+        "Fla. Stat. § 782.04(2)"
+      ],
+      "zh": [
+        "Murder in the Second Degree",
+        "Murder",
+        "FS 782.04(2)",
+        "Fla. Stat. § 782.04(2)"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "An unlawful killing by an act imminently dangerous to another that shows a depraved disregard for human life. Subsection (2) does not require a premeditated design to kill a particular person.",
+        "degreeContext": "First-degree felony punishable by a term of years up to life; ordinary fine up to $10,000. Separate youth sentencing rules apply to qualifying offenses committed under age 18."
+      },
+      "es": {
+        "plainSummary": "Muerte ilícita mediante un acto de peligro inminente para otra persona que revela un desprecio depravado por la vida humana. El apartado (2) no exige un plan premeditado para matar a una persona determinada.",
+        "degreeContext": "Delito grave de primer grado con pena de prisión de hasta perpetua y multa ordinaria de hasta $10,000. Para hechos comprendidos cometidos antes de los 18 años se aplican reglas juveniles distintas."
+      },
+      "zh": {
+        "plainSummary": "通过对他人造成紧迫危险且表现出极端漠视生命的行为，非法致人死亡。第(2)款不要求事先计划杀死特定的人。",
+        "degreeContext": "一级重罪，最高可判终身监禁；通常罚款最高10,000美元。符合条件的未满18岁时实施的行为另适用少年量刑规定。"
+      }
+    }
+  },
+  {
+    "id": "fl-vehicular-homicide",
+    "legacyLabel": "Vehicular Homicide",
+    "legacyCategory": "felony",
+    "name": "Vehicular Homicide",
+    "names": {
+      "es": "Homicidio vehicular",
+      "zh": "车辆杀人"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "782.071",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 782.071",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.071.html"
+      },
+      {
+        "citation": "Fla. Stat. § 316.062",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-vehicular-homicide",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Vehicular Homicide",
+        "Vehicular homicide",
+        "FS 782.071",
+        "Fla. Stat. § 782.071"
+      ],
+      "es": [
+        "Vehicular Homicide",
+        "Vehicular homicide",
+        "FS 782.071",
+        "Fla. Stat. § 782.071"
+      ],
+      "zh": [
+        "Vehicular Homicide",
+        "Vehicular homicide",
+        "FS 782.071",
+        "Fla. Stat. § 782.071"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Reckless operation of a motor vehicle in a manner likely to cause death or great bodily harm, causing death of a human being or death of an unborn child through injury to the mother. Intoxication is not an element.",
+        "degreeContext": "Ordinarily second-degree felony, up to 15 years and $10,000. First degree, ordinarily up to 30 years and $10,000, if the person knew or should have known the crash occurred and failed to provide information and aid, or had a prior conviction listed in (1)(c). The prior-conviction branch applies from October 1, 2025. License revocation is at least three years; the court may also order 120 hours of hospital or trauma-center service."
+      },
+      "es": {
+        "plainSummary": "Conducir un vehículo de manera temeraria que probablemente cause la muerte o lesiones graves, causando la muerte de una persona o de un no nacido por lesiones a la madre. La intoxicación no es un elemento.",
+        "degreeContext": "Normalmente delito grave de segundo grado, hasta 15 años y $10,000. Primer grado, normalmente hasta 30 años y $10,000, si sabía o debía saber que ocurrió el choque y omitió dar información y auxilio, o si tenía una condena previa enumerada en (1)(c). La modalidad por antecedente rige desde el 1 de octubre de 2025. Revocación de licencia por al menos tres años; el tribunal puede ordenar además 120 horas de servicio en un hospital o centro de traumatología."
+      },
+      "zh": {
+        "plainSummary": "鲁莽驾驶机动车，其方式很可能导致死亡或严重人身伤害，并造成他人死亡，或因母亲受伤而导致胎儿死亡。无需证明醉驾。",
+        "degreeContext": "通常为二级重罪，最高15年及10,000美元。如知道或理应知道发生碰撞而未提供信息和救助，或有第(1)(c)款列举的前科，则为一级重罪，通常最高30年及10,000美元。前科分支自2025年10月1日起适用。驾照至少吊销三年；法院还可命令在医院或创伤中心服务120小时。"
+      }
+    }
+  },
+  {
+    "id": "fl-aggravated-assault",
+    "legacyLabel": "Aggravated Assault",
+    "legacyCategory": "felony",
+    "name": "Aggravated Assault",
+    "names": {
+      "es": "Agresión agravada",
+      "zh": "加重威胁攻击"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "784.021",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.021",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.021.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.28",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+      },
+      {
+        "citation": "Fla. Stat. § 741.2801",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-aggravated-assault",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Aggravated Assault",
+        "Aggravated assault",
+        "FS 784.021",
+        "Fla. Stat. § 784.021"
+      ],
+      "es": [
+        "Aggravated Assault",
+        "Aggravated assault",
+        "FS 784.021",
+        "Fla. Stat. § 784.021"
+      ],
+      "zh": [
+        "Aggravated Assault",
+        "Aggravated assault",
+        "FS 784.021",
+        "Fla. Stat. § 784.021"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "An intentional, unlawful threat of violence by word or act, apparent ability to carry it out and an act causing well-founded fear of imminent violence, plus either a deadly weapon without intent to kill or intent to commit a felony. Actual injury is not required.",
+        "degreeContext": "Third-degree felony, ordinarily up to five years and $5,000. Furthering a qualifying riot raises the sentencing-chart ranking one level. For qualifying domestic assault on or after July 1, 2026 with a prior domestic-violence conviction already in place, §741.2801 raises it to second degree, ordinarily up to 15 years and $10,000."
+      },
+      "es": {
+        "plainSummary": "Amenaza intencional e ilegal de violencia de palabra o por acción, capacidad aparente para ejecutarla y un acto que causa temor fundado de violencia inminente, más uso de arma mortal sin intención de matar o intención de cometer un delito grave. No se exige lesión efectiva.",
+        "degreeContext": "Delito grave de tercer grado, normalmente hasta cinco años y $5,000. Actuar para promover disturbios comprendidos eleva un nivel la puntuación de sentencia. Una agresión doméstica comprendida cometida desde el 1 de julio de 2026 con condena previa por violencia doméstica pasa a segundo grado según §741.2801, normalmente hasta 15 años y $10,000."
+      },
+      "zh": {
+        "plainSummary": "通过言语或行为故意、非法威胁暴力，表面上有能力实施，且行为使他人有合理根据害怕暴力迫在眉睫；另须使用致命武器但无杀人意图，或有实施重罪的意图。无需实际造成伤害。",
+        "degreeContext": "三级重罪，通常最高五年及5,000美元。为促成法定骚乱而实施时，量刑表位阶提高一级。2026年7月1日及以后实施且已有家庭暴力定罪的符合法定条件的家庭暴力攻击，可依第741.2801条升为二级，通常最高15年及10,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-unlawful-carrying-of-weapon",
+    "legacyLabel": "Unlawful Carrying of Weapon",
+    "legacyCategory": "misdemeanor",
+    "name": "Carrying of Concealed Weapons or Concealed Firearms",
+    "names": {
+      "es": "Porte de armas ocultas o armas de fuego ocultas",
+      "zh": "隐蔽携带武器或枪支"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "790.01",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 790.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 790.06",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.06.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-unlawful-carrying-of-weapon",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Unlawful Carrying of Weapon",
+        "Carrying of concealed weapons or concealed firearms",
+        "FS 790.01",
+        "Fla. Stat. § 790.01"
+      ],
+      "es": [
+        "Unlawful Carrying of Weapon",
+        "Carrying of concealed weapons or concealed firearms",
+        "FS 790.01",
+        "Fla. Stat. § 790.01"
+      ],
+      "zh": [
+        "Unlawful Carrying of Weapon",
+        "Carrying of concealed weapons or concealed firearms",
+        "FS 790.01",
+        "Fla. Stat. § 790.01"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "The state must prove concealed carrying on or about the person and that the person both lacked a license and did not meet the statutory eligibility criteria. Having no license alone is insufficient. Subsection (5) specifies exceptions.",
+        "degreeContext": "A qualifying concealed weapon or electric weapon/device under (2) is a first-degree misdemeanor, up to one year and $1,000. A concealed firearm under (3) is a third-degree felony, ordinarily up to five years and $5,000."
+      },
+      "es": {
+        "plainSummary": "El estado debe demostrar el porte oculto en la persona o a su alcance y que carecía tanto de licencia como de los requisitos legales de elegibilidad. La falta de licencia por sí sola no basta. El apartado (5) prevé excepciones.",
+        "degreeContext": "Un arma oculta o arma o dispositivo eléctrico comprendido en (2) es delito menor de primer grado, hasta un año y $1,000. Un arma de fuego oculta según (3) es delito grave de tercer grado, normalmente hasta cinco años y $5,000."
+      },
+      "zh": {
+        "plainSummary": "州方须证明当事人隐蔽随身携带，且既无许可证、又不符合法定持证资格。仅无许可证不足。第(5)款规定了例外。",
+        "degreeContext": "第(2)款所列隐蔽武器或电击武器、装置属一级轻罪，最高一年及1,000美元。第(3)款所列隐蔽枪支属三级重罪，通常最高五年及5,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-discharge-of-firearm-in-city",
+    "legacyLabel": "Discharge of Firearm in City",
+    "legacyCategory": "felony",
+    "name": "Discharging a Firearm in Public or on Residential Property",
+    "names": {
+      "es": "Disparar un arma de fuego en público o en propiedad residencial",
+      "zh": "在公共场所或住宅用地开枪"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "790.15",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 790.15",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.15.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-discharge-of-firearm-in-city",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Discharge of Firearm in City",
+        "Discharging firearm in public or on residential property",
+        "FS 790.15",
+        "Fla. Stat. § 790.15"
+      ],
+      "es": [
+        "Discharge of Firearm in City",
+        "Discharging firearm in public or on residential property",
+        "FS 790.15",
+        "Fla. Stat. § 790.15"
+      ],
+      "zh": [
+        "Discharge of Firearm in City",
+        "Discharging firearm in public or on residential property",
+        "FS 790.15",
+        "Fla. Stat. § 790.15"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Subsection (1) covers knowing discharge at the public locations specified or reckless or negligent outdoor discharge at residential property. Subsection (4) separately covers recreational discharge in qualifying residential areas. The section specifies exceptions, including lawful defense and official duties. City limits are not an element.",
+        "degreeContext": "Under (1) or (4), first-degree misdemeanor, up to one year and $1,000. Under (2), an occupant knowingly and willfully firing from a vehicle within 1,000 feet of a person: second-degree felony, up to 15 years and $10,000. A driver or owner knowingly directing another to fire from the vehicle under (3): third-degree felony, up to five years and $5,000."
+      },
+      "es": {
+        "plainSummary": "El apartado (1) comprende disparos conscientes en los lugares públicos especificados o disparos temerarios o negligentes al aire libre en propiedad residencial. El (4) comprende disparos recreativos en zonas residenciales que cumplen los requisitos. Existen excepciones, incluidas defensa lícita y funciones oficiales. No exige estar dentro de una ciudad.",
+        "degreeContext": "Según (1) o (4), delito menor de primer grado, hasta un año y $1,000. Según (2), disparar a sabiendas y deliberadamente desde un vehículo como ocupante a menos de o hasta 1,000 pies de una persona: delito grave de segundo grado, hasta 15 años y $10,000. El conductor o propietario que ordena a sabiendas a otra persona disparar desde el vehículo según (3): tercer grado, hasta cinco años y $5,000."
+      },
+      "zh": {
+        "plainSummary": "第(1)款涵盖明知而在指定公共地点开枪，或在住宅用地室外鲁莽或疏忽开枪。第(4)款另涵盖在符合条件的住宅区进行娱乐性射击。法律列有正当防卫和执行公务等例外。不限于市界内。",
+        "degreeContext": "第(1)或(4)款：一级轻罪，最高一年及1,000美元。第(2)款：车内人员明知并故意从车内开枪，且与他人距离不超过1,000英尺，属二级重罪，最高15年及10,000美元。第(3)款：驾驶人或车主明知而指示他人从车内开枪，属三级重罪，最高五年及5,000美元。"
+      }
+    }
+  },
+  {
+    "id": "fl-forgery",
+    "legacyLabel": "Forgery",
+    "legacyCategory": "felony",
+    "name": "Forgery",
+    "names": {
+      "es": "Falsificación documental",
+      "zh": "伪造文书"
+    },
+    "category": "felony",
+    "categories": [
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "831.01",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 831.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-forgery",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Forgery",
+        "Forgery",
+        "FS 831.01",
+        "Fla. Stat. § 831.01"
+      ],
+      "es": [
+        "Forgery",
+        "Forgery",
+        "FS 831.01",
+        "Fla. Stat. § 831.01"
+      ],
+      "zh": [
+        "Forgery",
+        "Forgery",
+        "FS 831.01",
+        "Fla. Stat. § 831.01"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Falsely making, altering, forging or counterfeiting one of the legal or financial documents listed in §831.01, with intent to injure or defraud someone. The list includes deeds, wills, insurance policies, promissory notes and specified public records.",
+        "degreeContext": "Third-degree felony, ordinarily up to five years and a $5,000 fine."
+      },
+      "es": {
+        "plainSummary": "Crear falsamente, alterar o falsificar un documento legal o financiero enumerado en §831.01 con intención de perjudicar o defraudar. Incluye escrituras, testamentos, pólizas, pagarés y ciertos registros públicos.",
+        "degreeContext": "Delito grave de tercer grado, normalmente hasta cinco años y multa de $5,000."
+      },
+      "zh": {
+        "plainSummary": "虚假制作、变造或伪造第831.01条列举的法律或财务文书，且有意损害或欺诈他人。包括契据、遗嘱、保险单、本票及指定公共记录。",
+        "degreeContext": "三级重罪，通常最高五年及5,000美元罚款。"
+      }
+    }
+  },
+  {
+    "id": "fl-loitering",
+    "legacyLabel": "Loitering",
+    "legacyCategory": "misdemeanor",
+    "name": "Loitering or Prowling",
+    "names": {
+      "es": "Merodeo o acecho",
+      "zh": "游荡或徘徊"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "jurisdiction": "FL",
+    "code": "856.021",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 856.021",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.021.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-loitering",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Loitering",
+        "Loitering or prowling; penalty",
+        "FS 856.021",
+        "Fla. Stat. § 856.021"
+      ],
+      "es": [
+        "Loitering",
+        "Loitering or prowling; penalty",
+        "FS 856.021",
+        "Fla. Stat. § 856.021"
+      ],
+      "zh": [
+        "Loitering",
+        "Loitering or prowling; penalty",
+        "FS 856.021",
+        "Fla. Stat. § 856.021"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Unusual place, time or conduct that reasonably warrants immediate concern or alarm for nearby people or property. Mere presence without a stated purpose does not suffice. Unless impracticable, police must offer an opportunity before arrest to explain and dispel that alarm. A true explanation that would have dispelled it, or failure to follow the required procedure, bars conviction.",
+        "degreeContext": "Second-degree misdemeanor, up to 60 days in jail and a $500 fine."
+      },
+      "es": {
+        "plainSummary": "Lugar, hora o conducta inusuales que justifican razonablemente alarma o preocupación inmediata por personas o bienes cercanos. Estar presente sin explicar un propósito no basta. Salvo que sea impracticable, antes del arresto se debe permitir explicar la conducta y disipar la alarma. Una explicación veraz que la habría disipado o incumplir el procedimiento obligatorio impide la condena.",
+        "degreeContext": "Delito menor de segundo grado, hasta 60 días de cárcel y multa de $500."
+      },
+      "zh": {
+        "plainSummary": "地点、时间或举止异常，且足以合理引发对附近人身或财产安全的警觉或即时担忧。仅在场而未说明目的并不足够。除非不可行，警方应在逮捕前给予解释以消除警觉的机会。若属实的解释本可消除警觉，或警方未遵守必要程序，不得定罪。",
+        "degreeContext": "二级轻罪，最高60天监禁及500美元罚款。"
+      }
+    }
+  },
+  {
+    "id": "fl-reckless-driving",
+    "legacyLabel": "Reckless Driving",
+    "legacyCategory": "misdemeanor",
+    "name": "Reckless Driving",
+    "names": {
+      "es": "Conducción temeraria",
+      "zh": "鲁莽驾驶"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "jurisdiction": "FL",
+    "code": "316.192",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 316.192",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.192.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-reckless-driving",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Reckless Driving",
+        "Reckless driving",
+        "FS 316.192",
+        "Fla. Stat. § 316.192"
+      ],
+      "es": [
+        "Reckless Driving",
+        "Reckless driving",
+        "FS 316.192",
+        "Fla. Stat. § 316.192"
+      ],
+      "zh": [
+        "Reckless Driving",
+        "Reckless driving",
+        "FS 316.192",
+        "Fla. Stat. § 316.192"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Driving a vehicle with willful or wanton disregard for the safety of persons or property. Fleeing an officer in a motor vehicle is reckless driving under the statute.",
+        "degreeContext": "Ordinary first conviction: up to 90 days, $25–$500, or both. Repeat: up to six months, $50–$1,000, or both. Causing damage to another’s person or property: first-degree misdemeanor, up to one year and $1,000. Causing serious bodily injury: third-degree felony, ordinarily up to five years and $5,000. Add $5 to any fine; a DUI education and evaluation program is required if the court finds reasonable cause to believe substances contributed."
+      },
+      "es": {
+        "plainSummary": "Conducir con desprecio deliberado o temerario por la seguridad de personas o bienes. Huir de un agente en un vehículo de motor constituye conducción temeraria según la ley.",
+        "degreeContext": "Primera condena ordinaria: hasta 90 días, $25–$500 o ambos. Reincidencia: hasta seis meses, $50–$1,000 o ambos. Causar daño personal o material a otro: delito menor de primer grado, hasta un año y $1,000. Lesión corporal grave: delito grave de tercer grado, normalmente hasta cinco años y $5,000. Se suman $5 a toda multa. Si el tribunal tiene causa razonable para creer que contribuyeron sustancias, exige un programa educativo y evaluación."
+      },
+      "zh": {
+        "plainSummary": "驾驶车辆时故意或肆意漠视人身或财产安全。驾车逃离执法人员依法构成鲁莽驾驶。",
+        "degreeContext": "通常初犯最高90天、25至500美元或两者并处；再犯最高六个月、50至1,000美元或并处。造成他人人身或财产损害属一级轻罪，最高一年及1,000美元；造成严重人身伤害属三级重罪，通常最高五年及5,000美元。所有罚款加收5美元。法院有合理理由认为酒精等物质为致因时，须接受相关教育及评估。"
+      }
+    }
+  },
+  {
+    "id": "fl-disorderly-intoxication",
+    "legacyLabel": "Disorderly Intoxication",
+    "legacyCategory": "misdemeanor",
+    "name": "Disorderly Intoxication",
+    "names": {
+      "es": "Intoxicación con peligro o perturbación del orden",
+      "zh": "醉酒危及安全或扰乱秩序"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "jurisdiction": "FL",
+    "code": "856.011",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 856.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.011.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-disorderly-intoxication",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Disorderly Intoxication",
+        "Disorderly intoxication",
+        "FS 856.011",
+        "Fla. Stat. § 856.011"
+      ],
+      "es": [
+        "Disorderly Intoxication",
+        "Disorderly intoxication",
+        "FS 856.011",
+        "Fla. Stat. § 856.011"
+      ],
+      "zh": [
+        "Disorderly Intoxication",
+        "Disorderly intoxication",
+        "FS 856.011",
+        "Fla. Stat. § 856.011"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Being intoxicated and endangering another person or property, or being intoxicated or drinking alcohol in a public place or public conveyance and causing a public disturbance. Intoxication alone is insufficient.",
+        "degreeContext": "Second-degree misdemeanor, up to 60 days and $500. Three convictions or forfeitures of collateral under (1) during the previous 12 months can allow a court to commit the person to a treatment resource for up to 60 days."
+      },
+      "es": {
+        "plainSummary": "Estar intoxicado y poner en peligro a otra persona o bienes, o estar intoxicado o beber alcohol en un lugar o transporte público y causar una perturbación pública. La intoxicación por sí sola no basta.",
+        "degreeContext": "Delito menor de segundo grado, hasta 60 días y $500. Tres condenas o pérdidas de garantía conforme al apartado (1) en los 12 meses anteriores pueden permitir al tribunal ordenar tratamiento por hasta 60 días."
+      },
+      "zh": {
+        "plainSummary": "醉酒并危及他人或财产，或在公共场所、公共交通工具上醉酒或饮酒并扰乱公共秩序。仅醉酒并不足够。",
+        "degreeContext": "二级轻罪，最高60天及500美元。此前12个月内三次因第(1)款被定罪或被没收保证金时，法院可令接受最长60天的治疗。"
+      }
+    }
+  },
+  {
+    "id": "fl-possession-of-marijuana-under-20g",
+    "legacyLabel": "Possession of Cannabis (Under 20 Grams)",
+    "legacyCategory": "misdemeanor",
+    "name": "Possession of Cannabis (20 Grams or Less)",
+    "names": {
+      "es": "Posesión de cannabis (20 gramos o menos)",
+      "zh": "持有大麻（20克或以下）"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "jurisdiction": "FL",
+    "code": "893.13(6)(b)",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 893.13(6)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.055",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.055.html"
+      },
+      {
+        "citation": "Fla. Stat. § 322.056",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.056.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-possession-of-marijuana-under-20g",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Possession of Cannabis (Under 20 Grams)",
+        "Prohibited acts; penalties",
+        "FS 893.13(6)(b)",
+        "Fla. Stat. § 893.13(6)(b)"
+      ],
+      "es": [
+        "Possession of Cannabis (Under 20 Grams)",
+        "Prohibited acts; penalties",
+        "FS 893.13(6)(b)",
+        "Fla. Stat. § 893.13(6)(b)"
+      ],
+      "zh": [
+        "Possession of Cannabis (Under 20 Grams)",
+        "Prohibited acts; penalties",
+        "FS 893.13(6)(b)",
+        "Fla. Stat. § 893.13(6)(b)"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Unauthorized possession of 20 grams or less of cannabis. Exactly 20 grams is included. Extracted resin and compounds, mixtures or preparations of that resin do not qualify for this misdemeanor branch.",
+        "degreeContext": "First-degree misdemeanor, up to one year and $1,000. For adults §322.055 provides six months of license suspension or delay, or until evaluation and any required treatment are completed, with a possible restricted-license exception. Section 322.056 separately provides six months for qualifying findings against people under 18, subject to its terms."
+      },
+      "es": {
+        "plainSummary": "Posesión no autorizada de 20 gramos o menos de cannabis. Incluye exactamente 20 gramos. La resina extraída y sus compuestos, mezclas o preparados no corresponden a esta modalidad de delito menor.",
+        "degreeContext": "Delito menor de primer grado, hasta un año y $1,000. Para adultos, §322.055 prevé suspensión o retraso de licencia por seis meses o hasta la evaluación y el tratamiento exigido, con posible excepción para licencia restringida. §322.056 dispone separadamente seis meses para menores de 18 en los casos comprendidos y bajo sus propios requisitos."
+      },
+      "zh": {
+        "plainSummary": "未经授权持有20克或以下大麻，正好20克也包括在内。提取的树脂及其化合物、混合物或制剂不适用这项轻罪分支。",
+        "degreeContext": "一级轻罪，最高一年及1,000美元。对成人，第322.055条规定暂停或延迟发放驾照六个月，或至完成评估和所需治疗，符合条件时可获限制驾驶许可。对未满18岁的符合条件的裁判，第322.056条另规定六个月，并适用其自身条件。"
+      }
+    }
+  },
+  {
+    "id": "fl-resisting-officer-without-violence",
+    "legacyLabel": "Resisting Officer Without Violence",
+    "legacyCategory": "misdemeanor",
+    "name": "Resisting Officer Without Violence",
+    "names": {
+      "es": "Resistencia a un agente sin violencia",
+      "zh": "非暴力阻碍执法"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "jurisdiction": "FL",
+    "code": "843.02",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 843.02",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.02.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-resisting-officer-without-violence",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Resisting Officer Without Violence",
+        "Resisting officer without violence to his or her person",
+        "FS 843.02",
+        "Fla. Stat. § 843.02"
+      ],
+      "es": [
+        "Resisting Officer Without Violence",
+        "Resisting officer without violence to his or her person",
+        "FS 843.02",
+        "Fla. Stat. § 843.02"
+      ],
+      "zh": [
+        "Resisting Officer Without Violence",
+        "Resisting officer without violence to his or her person",
+        "FS 843.02",
+        "Fla. Stat. § 843.02"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Resisting, obstructing or opposing a covered officer or other legally authorized person executing legal process or lawfully carrying out a legal duty, without offering or doing violence.",
+        "degreeContext": "First-degree misdemeanor, up to one year and a $1,000 fine."
+      },
+      "es": {
+        "plainSummary": "Resistir, obstruir u oponerse a un agente comprendido u otra persona autorizada al ejecutar un proceso legal o cumplir lícitamente un deber, sin ofrecer ni ejercer violencia.",
+        "degreeContext": "Delito menor de primer grado, hasta un año y multa de $1,000."
+      },
+      "zh": {
+        "plainSummary": "在受法律涵盖的执法人员或其他获授权者执行法律程序或依法履职时予以抵抗、妨碍或阻挠，但未作出暴力威胁或实施暴力。",
+        "degreeContext": "一级轻罪，最高一年及1,000美元罚款。"
+      }
+    }
+  },
+  {
+    "id": "fl-minor-in-possession",
+    "legacyLabel": "Minor in Possession of Alcohol",
+    "legacyCategory": "misdemeanor",
+    "name": "Possession of Alcoholic Beverages by a Person Under 21",
+    "names": {
+      "es": "Posesión de bebidas alcohólicas por una persona menor de 21 años",
+      "zh": "未满21岁者持有酒精饮料"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor"
+    ],
+    "jurisdiction": "FL",
+    "code": "562.111",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 562.111",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.111.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.082",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+      },
+      {
+        "citation": "Fla. Stat. § 775.083",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+      }
+    ],
+    "slug": "reviewed-fl-minor-in-possession",
+    "verifiedMonth": "2026-11",
+    "aliases": {
+      "en": [
+        "Minor in Possession of Alcohol",
+        "Possession of alcoholic beverages by persons under age 21 prohibited",
+        "FS 562.111",
+        "Fla. Stat. § 562.111"
+      ],
+      "es": [
+        "Minor in Possession of Alcohol",
+        "Possession of alcoholic beverages by persons under age 21 prohibited",
+        "FS 562.111",
+        "Fla. Stat. § 562.111"
+      ],
+      "zh": [
+        "Minor in Possession of Alcohol",
+        "Possession of alcoholic beverages by persons under age 21 prohibited",
+        "FS 562.111",
+        "Fla. Stat. § 562.111"
+      ]
+    },
+    "text": {
+      "en": {
+        "plainSummary": "Possession of alcoholic beverages by someone under 21. Exceptions include qualifying employment and narrowly defined supervised instructional tasting for eligible students age 18 or older. The charge concerns possession.",
+        "degreeContext": "Ordinary first conviction: second-degree misdemeanor, up to 60 days and $500. A further conviction after a prior conviction under (1): first-degree misdemeanor, up to one year and $1,000."
+      },
+      "es": {
+        "plainSummary": "Posesión de bebidas alcohólicas por una persona menor de 21 años. Hay excepciones por empleo comprendido y por degustación educativa supervisada bajo requisitos específicos para estudiantes de 18 años o más. La acusación se refiere a posesión.",
+        "degreeContext": "Primera condena ordinaria: delito menor de segundo grado, hasta 60 días y $500. Nueva condena después de una condena previa conforme al (1): delito menor de primer grado, hasta un año y $1,000."
+      },
+      "zh": {
+        "plainSummary": "未满21岁者持有酒精饮料。符合条件的工作，以及年满18岁学生按严格课程要求在监督下品尝，属于例外。本罪针对持有行为。",
+        "degreeContext": "通常初次定罪：二级轻罪，最高60天及500美元。曾因第(1)款定罪后再次定罪：一级轻罪，最高一年及1,000美元。"
+      }
+    }
+  }
+]

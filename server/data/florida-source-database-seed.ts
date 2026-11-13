@@ -573,10 +573,17 @@ export function validateFloridaManifestRecord(
 ): string | null {
   const charge = criminalCharges.find((candidate) => candidate.id === record.chargeId);
   if (!charge || charge.jurisdiction !== "FL") return "Unknown Florida catalog charge";
+  // The historical whole-section 790.15 record used its vehicle-related felony
+  // tier as primary. Honor just that source-bound legacy record on replay.
+  const historicalDischargeTier = record.chargeId === "fl-discharge-of-firearm-in-city" &&
+    record.catalogCode === "790.15" && record.catalogCategory === "felony" &&
+    charge.category === "misdemeanor" && charge.categories?.includes("felony") &&
+    record.disposition === "exact_alias_rename" && record.provisions.length === 1 &&
+    record.provisions[0].contentHash === "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5";
   if (
     record.catalogLabel !== charge.name ||
     record.catalogCode !== charge.code ||
-    record.catalogCategory !== charge.category
+    (record.catalogCategory !== charge.category && !historicalDischargeTier)
   ) {
     return "Manifest catalog identity does not match the current Florida catalog";
   }

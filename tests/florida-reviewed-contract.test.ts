@@ -173,9 +173,9 @@ describe("Florida reviewed source-first contract", () => {
   it("preserves generic explanations for known legacy IDs without borrowing a source-first branch", () => {
     for (const locale of ["en", "es", "zh"]) {
       const explanation = getChargeExplanation(
-        "Aggravated assault", "FL", locale, "fl-aggravated-assault",
+        "Battery", "FL", locale, "fl-battery",
       );
-      expect(explanation?.slug).toBe("aggravated-assault");
+      expect(explanation?.slug).toBe("battery");
       expect(explanation?.canonicalChargeId).toBeUndefined();
     }
     expect(getChargeExplanation("Aggravated assault", "FL", "en", "fl-unknown")).toBeNull();
