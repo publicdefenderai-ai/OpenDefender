@@ -1,0 +1,460 @@
+[
+  {
+    "id": "oh-orc-4511-194-under-influence",
+    "section": "4511.194",
+    "scope": "B(1)",
+    "code": "4511.194(B)(1)",
+    "statutoryName": "Having physical control of a vehicle while under the influence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Being in the driver’s position of the front seat of a vehicle (or the driver’s position of a streetcar or trackless trolley) with possession of its ignition key or device, while under the influence of alcohol, a drug of abuse or both. Physical control does not require driving.",
+    "gradeSummary": "M1. The court may also impose a class seven license suspension of up to one year.",
+    "dependencies": [
+      "4511.19",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-194-alcohol-concentration",
+    "section": "4511.194",
+    "scope": "B(2)",
+    "code": "4511.194(B)(2)",
+    "statutoryName": "Having physical control of a vehicle while under the influence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Being in the driver’s position of the front seat of a vehicle (or the driver’s position of a streetcar or trackless trolley) with possession of its ignition key or device, while at or above an applicable alcohol concentration in whole blood, serum/plasma, breath or urine under §4511.19(A)(1)(b) through (e). Physical control does not require driving.",
+    "gradeSummary": "M1. The court may also impose a class seven license suspension of up to one year.",
+    "dependencies": [
+      "4511.19",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-194-controlled-substance",
+    "section": "4511.194",
+    "scope": "B(3)",
+    "code": "4511.194(B)(3)",
+    "statutoryName": "Having physical control of a vehicle while under the influence",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B(3)"
+    ],
+    "gradingPaths": [
+      "D"
+    ],
+    "contextPaths": [
+      "A",
+      "C",
+      "E"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Being in the driver’s position of the front seat of a vehicle (or the driver’s position of a streetcar or trackless trolley) with possession of its ignition key or device, while at or above the applicable listed controlled-substance or metabolite concentration under §4511.19(A)(1)(j). Physical control does not require driving. Division (E) excludes a substance obtained by authorized prescription and taken in accordance with the prescriber’s directions. This exception applies only to (B)(3).",
+    "gradeSummary": "M1. The court may also impose a class seven license suspension of up to one year.",
+    "dependencies": [
+      "4511.19",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-20-willful-or-wanton",
+    "section": "4511.20",
+    "scope": "A",
+    "code": "4511.20(A)",
+    "statutoryName": "Operation in willful or wanton disregard of the safety of persons or property",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "MM",
+      "M4",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a vehicle, streetcar or trackless trolley on a street or highway in willful or wanton disregard of safety of persons or property.",
+    "gradeSummary": "Minor misdemeanor ordinarily. One qualifying predicate traffic offense within one year increases it to M4; two or more qualifying prior convictions within one year make it M3. Section 4510.15 separately permits suspension for a conviction for operating a motor vehicle in violation of a law relating to reckless operation. If imposed, this class five suspension lasts six months to three years.",
+    "dependencies": [
+      "4511.01",
+      "4510.15",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-201-willful-or-wanton",
+    "section": "4511.201",
+    "scope": "A",
+    "code": "4511.201(A)",
+    "statutoryName": "Operation off street or highway in willful or wanton disregard of the safety of persons or property",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "MM",
+      "M4",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a vehicle, streetcar or trackless trolley on public or private property other than streets or highways in willful or wanton disregard of safety of persons or property. The section excludes competitive operation on property when its owner knowingly permits it.",
+    "gradeSummary": "Minor misdemeanor ordinarily. One qualifying predicate traffic offense within one year increases it to M4; two or more qualifying prior convictions within one year make it M3. Section 4510.15 separately permits suspension for a conviction for operating a motor vehicle in violation of a law relating to reckless operation. If imposed, this class five suspension lasts six months to three years.",
+    "dependencies": [
+      "4511.01",
+      "4510.15",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-202-reasonable-control",
+    "section": "4511.202",
+    "scope": "A",
+    "code": "4511.202(A)",
+    "statutoryName": "Operating a motor vehicle or agricultural tractor without being in control of it",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle, trolley, streetcar or agricultural tractor, including a tractor drawing farm machinery, on a street, highway or property open to public vehicular traffic without reasonable control of the vehicle or machinery.",
+    "gradeSummary": "Minor misdemeanor.",
+    "dependencies": [
+      "4511.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-203-unlicensed",
+    "section": "4511.203",
+    "scope": "A(1)",
+    "code": "4511.203(A)(1)",
+    "statutoryName": "Wrongful entrustment of a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)",
+      "C(1)"
+    ],
+    "contextPaths": [
+      "B(1)",
+      "C(3)",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "UM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Permitting another person to drive a motor vehicle the offender owns or controls, knowing or having reasonable cause to believe the driver lacks a valid license, permit or nonresident driving privilege. Division (B) provides branch-specific prima-facie evidence. The section exempts the rental and leasing dealers defined in §4549.65.",
+    "gradeSummary": "Unclassified misdemeanor ordinarily, with no jail or community residential sanction, up to $1,000 fine and up to 500 hours of community service. Failure to complete service may result in indirect contempt. Two or more prior (A)(1) through (3) or substantially equivalent municipal convictions or pleas within three years make it M1. The court may impose a class seven license suspension up to one year. If the vehicle is registered to the offender it may order 30 days of immobilization and plate impoundment, 60 days with one qualifying prior, or forfeiture with two or more qualifying priors. These vehicle consequences use their own prior-offense test. Forfeiture can also bar registration or transfer for five years unless terminated early by the court.",
+    "dependencies": [
+      "4549.65",
+      "4510.02",
+      "4503.233",
+      "4503.234",
+      "2929.26",
+      "2929.27",
+      "2705.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-203-suspended",
+    "section": "4511.203",
+    "scope": "A(2)",
+    "code": "4511.203(A)(2)",
+    "statutoryName": "Wrongful entrustment of a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)",
+      "C(1)"
+    ],
+    "contextPaths": [
+      "B(2)",
+      "C(3)",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "UM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Permitting another person to drive a motor vehicle the offender owns or controls, knowing or having reasonable cause to believe the driver’s license, permit or nonresident operating privilege is suspended or canceled. Division (B) provides branch-specific prima-facie evidence. The section exempts the rental and leasing dealers defined in §4549.65.",
+    "gradeSummary": "Unclassified misdemeanor ordinarily, with no jail or community residential sanction, up to $1,000 fine and up to 500 hours of community service. Failure to complete service may result in indirect contempt. Two or more prior (A)(1) through (3) or substantially equivalent municipal convictions or pleas within three years make it M1. The court may impose a class seven license suspension up to one year. If the vehicle is registered to the offender it may order 30 days of immobilization and plate impoundment, 60 days with one qualifying prior, or forfeiture with two or more qualifying priors. These vehicle consequences use their own prior-offense test. Forfeiture can also bar registration or transfer for five years unless terminated early by the court.",
+    "dependencies": [
+      "4549.65",
+      "4510.02",
+      "4503.233",
+      "4503.234",
+      "2929.26",
+      "2929.27",
+      "2705.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-203-financial-responsibility",
+    "section": "4511.203",
+    "scope": "A(3)",
+    "code": "4511.203(A)(3)",
+    "statutoryName": "Wrongful entrustment of a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)",
+      "C(1)"
+    ],
+    "contextPaths": [
+      "B(1)",
+      "C(3)",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "UM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Permitting another person to drive a motor vehicle the offender owns or controls, knowing or having reasonable cause to believe driving would violate a Chapter 4509 financial-responsibility prohibition. Division (B) provides branch-specific prima-facie evidence. The section exempts the rental and leasing dealers defined in §4549.65.",
+    "gradeSummary": "Unclassified misdemeanor ordinarily, with no jail or community residential sanction, up to $1,000 fine and up to 500 hours of community service. Failure to complete service may result in indirect contempt. Two or more prior (A)(1) through (3) or substantially equivalent municipal convictions or pleas within three years make it M1. The court may impose a class seven license suspension up to one year. If the vehicle is registered to the offender it may order 30 days of immobilization and plate impoundment, 60 days with one qualifying prior, or forfeiture with two or more qualifying priors. These vehicle consequences use their own prior-offense test. Forfeiture can also bar registration or transfer for five years unless terminated early by the court.",
+    "dependencies": [
+      "4549.65",
+      "4510.02",
+      "4503.233",
+      "4503.234",
+      "2929.26",
+      "2929.27",
+      "2705.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-203-impaired-driving",
+    "section": "4511.203",
+    "scope": "A(4)",
+    "code": "4511.203(A)(4)",
+    "statutoryName": "Wrongful entrustment of a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B(3)",
+      "C(3)",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Permitting another person to drive a motor vehicle the offender owns or controls, knowing or having reasonable cause to believe driving would violate §4511.19 or a substantially equivalent municipal ordinance. Division (B) provides branch-specific prima-facie evidence. The section exempts the rental and leasing dealers defined in §4549.65.",
+    "gradeSummary": "M1 without a prior-offense prerequisite. The court may impose a class seven license suspension up to one year. If the vehicle is registered to the offender it may order 30 days of immobilization and plate impoundment, 60 days with one qualifying prior, or forfeiture with two or more qualifying priors. These vehicle consequences use their own prior-offense test. Forfeiture can also bar registration or transfer for five years unless terminated early by the court.",
+    "dependencies": [
+      "4549.65",
+      "4510.02",
+      "4503.233",
+      "4503.234",
+      "4511.19"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-203-waiver-order",
+    "section": "4511.203",
+    "scope": "A(5)",
+    "code": "4511.203(A)(5)",
+    "statutoryName": "Wrongful entrustment of a motor vehicle",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B(1)",
+      "C(3)",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Permitting another person to drive a motor vehicle the offender owns or controls, knowing or having reasonable cause to believe the vehicle is under a §4503.235 immobilization waiver order that forbids this driver from operating it. Division (B) provides branch-specific prima-facie evidence. The section exempts the rental and leasing dealers defined in §4549.65.",
+    "gradeSummary": "M1 without a prior-offense prerequisite. The court may impose a class seven license suspension up to one year. If the vehicle is registered to the offender it may order 30 days of immobilization and plate impoundment, 60 days with one qualifying prior, or forfeiture with two or more qualifying priors. These vehicle consequences use their own prior-offense test. Forfeiture can also bar registration or transfer for five years unless terminated early by the court.",
+    "dependencies": [
+      "4549.65",
+      "4510.02",
+      "4503.233",
+      "4503.234",
+      "4503.235"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-251-participation",
+    "section": "4511.251",
+    "scope": "B",
+    "code": "4511.251(B)",
+    "statutoryName": "Street racing, stunt driving, or street takeover",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "E"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly participating in street racing, stunt driving or a street takeover. The conduct in (B) must occur on a public road, street or highway, or private property open to the general public. Division (E) excludes competitive vehicle operation knowingly permitted by the political subdivision with jurisdiction or the property owner.",
+    "gradeSummary": "M1. A license suspension of 30 days to three years is mandatory and the first 30 days cannot be suspended.",
+    "dependencies": [
+      "4511.21",
+      "4510.036"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4511-251-assistance",
+    "section": "4511.251",
+    "scope": "D",
+    "code": "4511.251(D)",
+    "statutoryName": "Street racing, stunt driving, or street takeover",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "A",
+      "E",
+      "B"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Rendering assistance to street racing, stunt driving or a street takeover; (D) provides that those assisting are charged equally with participants. The conduct in (B) must occur on a public road, street or highway, or private property open to the general public. Division (E) excludes competitive vehicle operation knowingly permitted by the political subdivision with jurisdiction or the property owner.",
+    "gradeSummary": "M1. A license suspension of 30 days to three years is mandatory and the first 30 days cannot be suspended.",
+    "dependencies": [
+      "4511.21",
+      "4510.036"
+    ],
+    "extraGrading": []
+  }
+]
