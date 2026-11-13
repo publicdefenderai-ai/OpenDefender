@@ -1,5 +1,6 @@
 import { extractOhioDocument } from "./ohio-discovery/section-document";
 export { extractOhioDocument } from "./ohio-discovery/section-document";
+import { OHIO_CRASH_IDENTITY_SOURCES } from "../../server/data/ohio-crash-identity-source";
 import { OHIO_DRIVING_LICENSE_SOURCES } from "../../server/data/ohio-driving-license-source";
 import { OHIO_GAMBLING_SOURCES } from "../../server/data/ohio-gambling-source";
 import { OHIO_WEAPONS_LOCATION_SOURCES } from "../../server/data/ohio-weapons-location-source";
@@ -116,6 +117,7 @@ export function getOhioLegacyManifestCharges() {
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_CRASH_IDENTITY_SOURCES.map(record => record.chargeId),
       ...OHIO_DRIVING_LICENSE_SOURCES.map(record => record.chargeId),
       ...OHIO_GAMBLING_SOURCES.map(record => record.chargeId),
       ...OHIO_WEAPONS_LOCATION_SOURCES.map(record => record.chargeId),
