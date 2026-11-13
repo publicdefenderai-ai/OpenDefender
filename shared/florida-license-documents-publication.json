@@ -1,0 +1,1647 @@
+[
+  {
+    "id": "fl-fs-322-212-1-a-license-document",
+    "section": "322.212",
+    "scope": "(1)(a)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(1)(a)",
+        "(1)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-1-a-license-document",
+      "name": "Unauthorized possession or display of a blank, forged or unlawfully issued license or ID",
+      "names": {
+        "es": "Posesión o exhibición no autorizada de licencia o identificación en blanco, falsificada o emitida ilícitamente",
+        "zh": "未经授权持有或展示空白、伪造或非法签发的驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(1)(a)",
+      "slug": "fl-fs-322-212-1-a-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(1)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(a)",
+          "F.S. 322.212(1)(a)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(a)",
+          "F.S. 322.212(1)(a)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(a)",
+          "F.S. 322.212(1)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing or displaying a blank, forged, stolen, fictitious, counterfeit or unlawfully issued driver license or identification card, or something resembling such a document, without department authorization.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Subsection (1) permits possession or display of another person’s license or ID for a lawful purpose."
+        },
+        "es": {
+          "plainSummary": "Poseer o mostrar a sabiendas y sin autorización del departamento una licencia o identificación en blanco, falsificada, robada, ficticia, imitada o expedida ilícitamente, o un objeto que se le parezca.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El apartado (1) permite poseer o mostrar el documento de otra persona con un fin lícito."
+        },
+        "zh": {
+          "plainSummary": "未经主管部门授权，明知而持有或出示空白、伪造、盗取、虚构、仿冒、非法签发的驾照或身份证，或外观与其相似的物件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 第(1)款允许为合法目的持有或出示他人的驾照或身份证。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-1-b-license-document",
+    "section": "322.212",
+    "scope": "(1)(b)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(1)(b)",
+        "(1)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-1-b-license-document",
+      "name": "Possession of an instrument resembling a recognized driver license",
+      "names": {
+        "es": "Posesión de un instrumento semejante a una licencia reconocida",
+        "zh": "持有与受认可驾照相似的物件"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(1)(b)",
+      "slug": "fl-fs-322-212-1-b-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(1)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(b)",
+          "F.S. 322.212(1)(b)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(b)",
+          "F.S. 322.212(1)(b)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(b)",
+          "F.S. 322.212(1)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing an instrument resembling a driver license issued by Florida or an authorized agent, or by another jurisdiction whose licenses Florida recognizes for driving.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Subsection (1) permits possession or display of another person’s license or ID for a lawful purpose."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas un instrumento semejante a una licencia expedida por Florida o sus agentes autorizados, o por otra jurisdicción cuyas licencias reconoce Florida para conducir.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El apartado (1) permite poseer o mostrar el documento de otra persona con un fin lícito."
+        },
+        "zh": {
+          "plainSummary": "明知而持有与佛州或其授权代理人签发的驾照相似的物件，或与佛州承认驾驶效力的外州或其他辖区驾照相似的物件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 第(1)款允许为合法目的持有或出示他人的驾照或身份证。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-1-c-license-document",
+    "section": "322.212",
+    "scope": "(1)(c)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(1)(c)",
+        "(1)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-1-c-license-document",
+      "name": "Possession of an instrument resembling a recognized identification card",
+      "names": {
+        "es": "Posesión de un instrumento semejante a una identificación reconocida",
+        "zh": "持有与受认可身份证相似的物件"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(1)(c)",
+      "slug": "fl-fs-322-212-1-c-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(1)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(c)",
+          "F.S. 322.212(1)(c)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(c)",
+          "F.S. 322.212(1)(c)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(c)",
+          "F.S. 322.212(1)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing an instrument resembling an identification card issued by Florida or its authorized agents or by a jurisdiction whose IDs Florida recognizes as indicating a person’s true name and age.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Subsection (1) permits possession or display of another person’s license or ID for a lawful purpose."
+        },
+        "es": {
+          "plainSummary": "Poseer a sabiendas un instrumento semejante a una identificación expedida por Florida o sus agentes autorizados, o por otra jurisdicción cuyos documentos Florida reconoce como prueba del nombre real y la edad.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El apartado (1) permite poseer o mostrar el documento de otra persona con un fin lícito."
+        },
+        "zh": {
+          "plainSummary": "明知而持有与佛州或其授权代理人签发的身份证相似的物件，或与佛州认可为证明真实姓名和年龄的其他辖区身份证相似的物件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 第(1)款允许为合法目的持有或出示他人的驾照或身份证。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-1-d-license-document",
+    "section": "322.212",
+    "scope": "(1)(d)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(1)(d)",
+        "(1)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-1-d-license-document",
+      "name": "Unauthorized sale, manufacture or delivery of a false license or identification card",
+      "names": {
+        "es": "Venta, fabricación o entrega no autorizada de licencia o identificación falsa",
+        "zh": "未经授权销售、制造或交付虚假驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(1)(d)",
+      "slug": "fl-fs-322-212-1-d-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(1)(d)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(d)",
+          "F.S. 322.212(1)(d)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(d)",
+          "F.S. 322.212(1)(d)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(1)(d)",
+          "F.S. 322.212(1)(d)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly selling, manufacturing or delivering, or offering to do so, a blank, forged, stolen, fictitious, counterfeit or unlawfully issued license or ID, or a resembling instrument, without department authorization.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Subsection (1) permits possession or display of another person’s license or ID for a lawful purpose."
+        },
+        "es": {
+          "plainSummary": "Vender, fabricar o entregar a sabiendas, u ofrecer hacerlo, una licencia o identificación en blanco, falsificada, robada, ficticia, imitada o expedida ilícitamente, o un instrumento semejante, sin autorización del departamento.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. El apartado (1) permite poseer o mostrar el documento de otra persona con un fin lícito."
+        },
+        "zh": {
+          "plainSummary": "未经主管部门授权，明知而销售、制造、交付或提议如此处理空白、伪造、盗取、虚构、仿冒或非法签发的驾照、身份证或与其相似的物件。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 第(1)款允许为合法目的持有或出示他人的驾照或身份证。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-2-license-document",
+    "section": "322.212",
+    "scope": "(2)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(2)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-2-license-document",
+      "name": "Unauthorized exchange, sale or gift of a license or identification card",
+      "names": {
+        "es": "Intercambio, venta o regalo no autorizado de licencia o identificación",
+        "zh": "未经授权交换、销售或赠与驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(2)",
+      "slug": "fl-fs-322-212-2-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(2)",
+          "F.S. 322.212(2)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(2)",
+          "F.S. 322.212(2)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(2)",
+          "F.S. 322.212(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Bartering, trading, selling or giving away a license or identification card, or conspiring to do so, without department authority to issue it under the chapter or department rules.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Permutar, intercambiar, vender o regalar una licencia o identificación, o conspirar para ello, sin autorización del departamento para emitirla conforme al capítulo o sus reglas.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "未经主管部门依本章或部门规则授权签发，而以物易物、交换、出售、赠与驾照或身份证，或共谋实施这些行为。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-3-license-document",
+    "section": "322.212",
+    "scope": "(3)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(3)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-3-license-document",
+      "name": "Department employee permitting unlawful issuance of a license or ID",
+      "names": {
+        "es": "Empleado que permite la expedición ilícita de licencia o identificación",
+        "zh": "部门雇员允许非法签发驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(3)",
+      "slug": "fl-fs-322-212-3-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(3)",
+          "F.S. 322.212(3)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(3)",
+          "F.S. 322.212(3)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(3)",
+          "F.S. 322.212(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A department employee allows issuance of a license or identification card knowing the applicant has not lawfully fulfilled the requirements for issuance.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Un empleado del departamento permite la expedición de una licencia o identificación sabiendo que el solicitante no ha cumplido legalmente los requisitos.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "主管部门雇员明知申请人未依法满足签发条件，仍允许签发驾照或身份证。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-4-license-document",
+    "section": "322.212",
+    "scope": "(4)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(4)",
+        "(6)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-4-license-document",
+      "name": "Agreeing to supply or assisting in supplying a license or ID unlawfully",
+      "names": {
+        "es": "Acuerdo o ayuda para suministrar ilícitamente una licencia o identificación",
+        "zh": "同意非法提供或协助提供驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(4)",
+      "slug": "fl-fs-322-212-4-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(4)",
+          "F.S. 322.212(4)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(4)",
+          "F.S. 322.212(4)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(4)",
+          "F.S. 322.212(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Agreeing to supply or aiding in supplying a person with a driver license or identification card by means inconsistent with Chapter 322.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Acordar suministrar o ayudar a suministrar una licencia o identificación por medios contrarios al capítulo 322.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "同意或协助通过不符合第322章规定的方式向他人提供驾照或身份证。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-5-a-license-document",
+    "section": "322.212",
+    "scope": "(5)(a)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(5)(a)",
+        "(6)",
+        "(7)"
+      ],
+      "775.082": [
+        "(3)",
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-5-a-license-document",
+      "name": "False or fraudulent license or ID application",
+      "names": {
+        "es": "Solicitud falsa o fraudulenta de licencia o identificación",
+        "zh": "虚假或欺诈性驾照或身份证申请"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "322.212(5)(a)",
+      "slug": "fl-fs-322-212-5-a-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(5)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(a)",
+          "F.S. 322.212(5)(a)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(a)",
+          "F.S. 322.212(5)(a)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(a)",
+          "F.S. 322.212(5)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Using a false or fictitious name, knowingly making a false statement or concealing a material fact, or otherwise committing fraud in a driver license or identification application.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. Giving a false age under this paragraph is instead a second-degree misdemeanor, ordinarily up to 60 days and $500. False information on a commercial license or commercial learner permit application, or conviction for fraud in the associated testing, also disqualifies the person from commercial driving for one year."
+        },
+        "es": {
+          "plainSummary": "Usar un nombre falso o ficticio, declarar algo falso a sabiendas, ocultar a sabiendas un hecho material o cometer otro fraude al solicitar una licencia o identificación.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Dar una edad falsa conforme a este apartado es delito menor de segundo grado, normalmente hasta 60 días y $500. Dar información falsa al solicitar una licencia comercial o permiso comercial de aprendizaje, o recibir condena por fraude en el examen correspondiente, conlleva además un año de inhabilitación para conducir vehículos comerciales."
+        },
+        "zh": {
+          "plainSummary": "申请驾照或身份证时使用假名或虚构姓名，明知而虚假陈述或隐瞒重要事实，或实施其他欺诈。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。 本项下虚报年龄属于二级轻罪，通常最高60天监禁及500美元罚金。 申请商业驾照或商业驾驶学习许可时提供虚假信息，或因相关考试欺诈被定罪，另须取消商业驾驶资格一年。"
+        }
+      },
+      "categories": [
+        "felony",
+        "misdemeanor"
+      ]
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-212-5-b-license-document",
+    "section": "322.212",
+    "scope": "(5)(b)",
+    "officialTitle": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+    "dependencies": [
+      "322.212",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.212": [
+        "(5)(b)",
+        "(6)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-212-5-b-license-document",
+      "name": "Possession of a license or ID with an altered birth date",
+      "names": {
+        "es": "Posesión de licencia o identificación con fecha de nacimiento alterada",
+        "zh": "持有出生日期被改动的驾照或身份证"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.212(5)(b)",
+      "slug": "fl-fs-322-212-5-b-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.212(5)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(b)",
+          "F.S. 322.212(5)(b)"
+        ],
+        "es": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(b)",
+          "F.S. 322.212(5)(b)"
+        ],
+        "zh": [
+          "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+          "FS 322.212(5)(b)",
+          "F.S. 322.212(5)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Possessing a driver license or identification card with an altered date of birth. The penalty clause also specifies an instrument resembling one with an altered birth date.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Poseer una licencia o identificación cuya fecha de nacimiento se ha alterado. La disposición sobre la pena incluye un instrumento semejante con la fecha alterada.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "持有出生日期遭改动的驾照或身份证。处罚条款还列有出生日期遭改动且与该证件相似的物件。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "(6)"
+  },
+  {
+    "id": "fl-fs-322-32-1-license-document",
+    "section": "322.32",
+    "scope": "(1)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "322.34",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(1)",
+        ""
+      ],
+      "322.34": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-1-license-document",
+      "name": "Possession or display of a license known to be canceled, suspended or otherwise invalid",
+      "names": {
+        "es": "Posesión o exhibición de licencia que se sabe cancelada, suspendida o inválida",
+        "zh": "明知驾照失效而持有或出示"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(1)",
+      "slug": "fl-fs-322-32-1-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.34",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.34.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(1)",
+          "F.S. 322.32(1)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(1)",
+          "F.S. 322.32(1)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(1)",
+          "F.S. 322.32(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Displaying, causing or permitting display, or possessing a canceled, revoked, suspended or disqualified license with knowledge of its status. A qualifying prior citation, admission or notice can establish knowledge; the court may consider other evidence. Driving is not required.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Mostrar, permitir o provocar la exhibición, o poseer una licencia cancelada, revocada, suspendida o descalificada con conocimiento de su estado. Una citación previa pertinente, admisión o aviso puede demostrar conocimiento; el tribunal puede considerar otras pruebas. No es necesario conducir.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "明知驾照已被取消、吊销、暂停或取消资格，仍出示、促成或允许展示，或持有该证。符合条件的先前传票、本人承认或通知可证明知情；法院可考虑其他证据。无需实际驾驶。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-32-2-license-document",
+    "section": "322.32",
+    "scope": "(2)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(2)",
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-2-license-document",
+      "name": "Lending a driver license or knowingly allowing its use",
+      "names": {
+        "es": "Préstamo de licencia o autorización consciente de su uso por otro",
+        "zh": "出借驾照或明知而允许他人使用"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(2)",
+      "slug": "fl-fs-322-32-2-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(2)",
+          "F.S. 322.32(2)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(2)",
+          "F.S. 322.32(2)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(2)",
+          "F.S. 322.32(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Lending one’s license to another or knowingly permitting another to use it.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Prestar la propia licencia a otra persona o permitir a sabiendas que otra persona la use.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "将自己的驾照借给他人，或明知而允许他人使用。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-32-3-license-document",
+    "section": "322.32",
+    "scope": "(3)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(3)",
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-3-license-document",
+      "name": "Displaying or representing another person’s driver license as one’s own",
+      "names": {
+        "es": "Exhibición de una licencia ajena como propia",
+        "zh": "将他人驾照出示或冒充为自己的驾照"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(3)",
+      "slug": "fl-fs-322-32-3-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(3)",
+          "F.S. 322.32(3)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(3)",
+          "F.S. 322.32(3)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(3)",
+          "F.S. 322.32(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Displaying or representing as one’s own a driver license not issued to oneself.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Exhibir o presentar como propia una licencia que no fue expedida a esa persona.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "把并非签发给本人的驾照出示或声称为本人驾照。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-32-4-license-document",
+    "section": "322.32",
+    "scope": "(4)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(4)",
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-4-license-document",
+      "name": "Failure or refusal to surrender a license on lawful demand",
+      "names": {
+        "es": "Incumplimiento o negativa a entregar una licencia ante requerimiento legal",
+        "zh": "经合法要求仍未交出或拒绝交出驾照"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(4)",
+      "slug": "fl-fs-322-32-4-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(4)",
+          "F.S. 322.32(4)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(4)",
+          "F.S. 322.32(4)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(4)",
+          "F.S. 322.32(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Failing or refusing upon lawful demand by the department or a law enforcement officer to surrender a suspended, revoked, disqualified or canceled license in one’s possession.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "No entregar o negarse a entregar, ante requerimiento legal del departamento o de un agente, una licencia suspendida, revocada, descalificada o cancelada que se tiene en posesión.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "主管部门或执法人员依法要求交出时，未交出或拒绝交出本人持有的已暂停、吊销、取消资格或取消的驾照。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-32-5-license-document",
+    "section": "322.32",
+    "scope": "(5)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(5)",
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-5-license-document",
+      "name": "Permitting unlawful use of one’s driver license",
+      "names": {
+        "es": "Permitir el uso ilícito de la propia licencia",
+        "zh": "允许他人非法使用本人驾照"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(5)",
+      "slug": "fl-fs-322-32-5-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(5)",
+          "F.S. 322.32(5)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(5)",
+          "F.S. 322.32(5)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(5)",
+          "F.S. 322.32(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Permitting unlawful use of a driver license issued to oneself.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Permitir el uso ilícito de una licencia expedida a uno mismo.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "允许非法使用签发给本人的驾照。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-32-6-license-document",
+    "section": "322.32",
+    "scope": "(6)",
+    "officialTitle": "Unlawful use of license",
+    "dependencies": [
+      "322.32",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.32": [
+        "(6)",
+        ""
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-32-6-license-document",
+      "name": "Applying for or obtaining photographic licenses in different names",
+      "names": {
+        "es": "Solicitud u obtención de licencias con fotografía a nombres distintos",
+        "zh": "以不同姓名申请或取得带照片驾照"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.32(6)",
+      "slug": "fl-fs-322-32-6-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.32(6)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.32",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.32.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Unlawful use of license",
+          "FS 322.32(6)",
+          "F.S. 322.32(6)"
+        ],
+        "es": [
+          "Unlawful use of license",
+          "FS 322.32(6)",
+          "F.S. 322.32(6)"
+        ],
+        "zh": [
+          "Unlawful use of license",
+          "FS 322.32(6)",
+          "F.S. 322.32(6)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Applying for, obtaining or causing issuance to oneself of two or more photographic driver licenses in different names. Issuance is prima facie evidence of a violation unless it complied with the chapter.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Solicitar, obtener o hacer expedir para uno mismo dos o más licencias con fotografía a nombres distintos. La expedición es prueba inicial de infracción salvo que cumpla el capítulo.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "以不同姓名为自己申请、取得或促成签发两张或以上带照片的驾照。除非签发符合本章规定，签发本身构成初步证据。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "@header"
+  },
+  {
+    "id": "fl-fs-322-36-1-license-document",
+    "section": "322.36",
+    "scope": "(1)",
+    "officialTitle": "Permitting unauthorized operator to drive",
+    "dependencies": [
+      "322.36",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.36": [
+        "(1)",
+        "(3)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-36-1-license-document",
+      "name": "Permitting an unauthorized operator to drive",
+      "names": {
+        "es": "Permitir conducir a quien no está autorizado",
+        "zh": "允许无合法驾驶资格者驾驶"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.36(1)",
+      "slug": "fl-fs-322-36-1-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.36(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(1)",
+          "F.S. 322.36(1)"
+        ],
+        "es": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(1)",
+          "F.S. 322.36(1)"
+        ],
+        "zh": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(1)",
+          "F.S. 322.36(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Authorizing or knowingly permitting someone to operate a motor vehicle owned or controlled by the person on a highway or public street without authorization under Chapter 322.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. Knowingly lending a vehicle to a driver with a suspended license triggers a mandatory one-year suspension of the lender’s license if that vehicle is involved in a crash causing bodily injury or death."
+        },
+        "es": {
+          "plainSummary": "Autorizar o permitir a sabiendas que alguien sin autorización conforme al capítulo 322 conduzca un vehículo propio o bajo control de la persona en una carretera o vía pública.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Prestar a sabiendas el vehículo a alguien con licencia suspendida exige suspender por un año la licencia del prestamista si el vehículo interviene en un choque con lesiones o muerte."
+        },
+        "zh": {
+          "plainSummary": "授权或明知而允许不具第322章驾驶资格的人在公路或公共街道驾驶自己拥有或控制的机动车。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 明知对方驾照已暂停仍将车辆借给对方，若该车发生事故造成人员受伤或死亡，出借人的驾照须暂停一年。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-322-36-2-license-document",
+    "section": "322.36",
+    "scope": "(2)",
+    "officialTitle": "Permitting unauthorized operator to drive",
+    "dependencies": [
+      "322.36",
+      "322.12",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.36": [
+        "(2)",
+        "(3)"
+      ],
+      "322.12": [
+        "(4)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-36-2-license-document",
+      "name": "Unauthorized assistance with a commercial driver license examination",
+      "names": {
+        "es": "Asistencia no autorizada en examen para licencia comercial",
+        "zh": "未经授权协助商业驾照考试"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.36(2)",
+      "slug": "fl-fs-322-36-2-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.36(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.36",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.36.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.12",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(2)",
+          "F.S. 322.36(2)"
+        ],
+        "es": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(2)",
+          "F.S. 322.36(2)"
+        ],
+        "zh": [
+          "Permitting unauthorized operator to drive",
+          "FS 322.36(2)",
+          "F.S. 322.36(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly or willfully providing unauthorized assistance to an applicant for the commercial driver license examination required by §322.12(4).",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine."
+        },
+        "es": {
+          "plainSummary": "Prestar a sabiendas o deliberadamente ayuda no autorizada al aspirante en el examen de licencia comercial exigido por §322.12(4).",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500."
+        },
+        "zh": {
+          "plainSummary": "明知或故意在第322.12(4)条要求的商业驾照考试中给申请人提供未经授权的协助。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。"
+        }
+      }
+    },
+    "gradeScope": "(3)"
+  },
+  {
+    "id": "fl-fs-322-12-4-e-license-document",
+    "section": "322.12",
+    "scope": "(4)(e)",
+    "officialTitle": "Examination of applicants",
+    "dependencies": [
+      "322.12",
+      "322.212",
+      "775.082",
+      "775.083"
+    ],
+    "subdivisions": {
+      "322.12": [
+        "(4)"
+      ],
+      "322.212": [
+        "(7)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-322-12-4-e-license-document",
+      "name": "Receiving unauthorized assistance on the commercial driver license knowledge examination",
+      "names": {
+        "es": "Recibir asistencia no autorizada en el examen teórico para licencia comercial",
+        "zh": "商业驾照知识考试中接受未经授权的协助"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "322.12(4)(e)",
+      "slug": "fl-fs-322-12-4-e-license-document",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 322.12(4)(e)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.12",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.12.html"
+        },
+        {
+          "citation": "Fla. Stat. § 322.212",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.212.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Examination of applicants",
+          "FS 322.12(4)(e)",
+          "F.S. 322.12(4)(e)"
+        ],
+        "es": [
+          "Examination of applicants",
+          "FS 322.12(4)(e)",
+          "F.S. 322.12(4)(e)"
+        ],
+        "zh": [
+          "Examination of applicants",
+          "FS 322.12(4)(e)",
+          "F.S. 322.12(4)(e)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A commercial license applicant receives unauthorized assistance on the exam portion testing ability to read and understand highway signs or knowledge of traffic laws for the requested class, including impaired-driving laws.",
+          "degreeContext": "Second-degree misdemeanor: ordinarily up to 60 days in jail and a $500 fine. Effective July 1, 2026. A conviction for fraud in commercial license or permit testing separately triggers one year of commercial disqualification under §322.212(7)."
+        },
+        "es": {
+          "plainSummary": "Un aspirante a licencia comercial recibe ayuda no autorizada en la parte del examen sobre comprensión de señales viales o conocimiento de las leyes de tránsito de la clase solicitada, incluidas las de conducción bajo los efectos de sustancias.",
+          "degreeContext": "Delito menor de segundo grado: normalmente hasta 60 días de cárcel y multa de $500. Vigente desde el 1 de julio de 2026. Una condena por fraude en el examen comercial impone por separado un año de inhabilitación conforme a §322.212(7)."
+        },
+        "zh": {
+          "plainSummary": "商业驾照申请人在测试道路标志理解能力或所申请类别交通法规知识（包括酒驾法规）的考试部分接受未经授权的帮助。",
+          "degreeContext": "二级轻罪：通常最高60天监禁及500美元罚金。 2026年7月1日生效。若因商业驾照或学习许可考试欺诈被定罪，第322.212(7)条另规定取消商业驾驶资格一年。"
+        }
+      }
+    },
+    "gradeScope": "(4)(e)"
+  }
+]

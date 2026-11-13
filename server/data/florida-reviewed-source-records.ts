@@ -460,7 +460,13 @@ export function findSubdivisionRange(
   subdivision: string | null,
 ): FloridaReviewedSubdivisionRange[] {
   if (!subdivision) return [];
-  const markers = [...text.matchAll(
+  // Online Sunshine prefixes some subsection labels with a numbered editorial
+  // note. Match the marker only when its matching note is present. Equal lengths
+  // preserve all offsets into the publisher's unmodified text.
+  const markerText = text.replace(/^(\d+)(?=\(\d+\)(?:\([a-z]+\))?[\t\u2000-\u206f ]*$)/gm,
+    (digits: string) => text.includes("\n" + digits + "Note.\n")
+      ? "\n".repeat(digits.length) : digits);
+  const markers = [...markerText.matchAll(
     /^(\(\d+\)(?:\([a-z]+\))?(?:\d+\.)?(?:[a-z]+\.)?|\([a-z]+\)(?:\d+\.)?(?:[a-z]+\.)?|\d+\.(?:[a-z]+\.)?|[a-z]+\.)[\t\u2000-\u206f ]*$/gm,
   )].map(match => ({
     label: match[1].toLowerCase(),
