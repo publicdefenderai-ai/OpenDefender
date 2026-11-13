@@ -1,0 +1,668 @@
+[
+  {
+    "id": "oh-orc-2923-19-unauthorized-access",
+    "section": "2923.19",
+    "scope": "A(1)",
+    "code": "2923.19(A)(1)",
+    "statutoryName": "Failure to secure dangerous ordnance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Negligently failing to take proper precautions against theft or acquisition or use by an unauthorized or incompetent person while acquiring, possessing, carrying or using dangerous ordnance. Section 2923.11 defines dangerous ordnance.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-19-safety",
+    "section": "2923.19",
+    "scope": "A(2)",
+    "code": "2923.19(A)(2)",
+    "statutoryName": "Failure to secure dangerous ordnance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Negligently failing to take proper precautions to ensure safety of persons and property while acquiring, possessing, carrying or using dangerous ordnance. Section 2923.11 defines dangerous ordnance.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-prohibited-recipient",
+    "section": "2923.20",
+    "scope": "A(1)",
+    "code": "2923.20(A)(1)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Recklessly selling, lending, giving or furnishing a firearm to someone prohibited under §2923.13 or §2923.15, or dangerous ordnance to someone prohibited under either section or §2923.17.",
+    "gradeSummary": "F4.",
+    "dependencies": [
+      "2923.11",
+      "2923.13",
+      "2923.15",
+      "2923.17"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-purpose-of-disposal",
+    "section": "2923.20",
+    "scope": "A(2)",
+    "code": "2923.20(A)(2)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "degrees": [
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Possessing a firearm or dangerous ordnance with purpose to dispose of it in violation of division (A).",
+    "gradeSummary": "F4.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-prohibited-transfer",
+    "section": "2923.20",
+    "scope": "A(3)",
+    "code": "2923.20(A)(3)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "B"
+    ],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly soliciting or encouraging a licensed dealer or private seller to transfer a firearm or ammunition in a manner prohibited by state or federal law. The underlying prohibition must be established in the specific case. The exclusion in (B) covers officers acting within their duties and people acting at their direction.",
+    "gradeSummary": "F3.",
+    "dependencies": [
+      "2923.11",
+      "2305.401",
+      "5502.63"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-false-information",
+    "section": "2923.20",
+    "scope": "A(4)",
+    "code": "2923.20(A)(4)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "B"
+    ],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "With intent to deceive, knowingly providing materially false information to a licensed dealer or private seller concerning a firearm or ammunition transfer. Division (D)(3) defines material falsity. The exclusion in (B) covers officers acting within their duties and people acting at their direction.",
+    "gradeSummary": "F3.",
+    "dependencies": [
+      "2923.11",
+      "2305.401",
+      "5502.63"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-inducement",
+    "section": "2923.20",
+    "scope": "A(5)",
+    "code": "2923.20(A)(5)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D",
+      "B"
+    ],
+    "degrees": [
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly procuring or inducing another person to violate (A)(3) or (A)(4). The exclusion in (B) covers officers acting within their duties and people acting at their direction.",
+    "gradeSummary": "F3.",
+    "dependencies": [
+      "2923.11",
+      "2305.401",
+      "5502.63"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-transfer-record",
+    "section": "2923.20",
+    "scope": "A(6)",
+    "code": "2923.20(A)(6)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(6)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "degrees": [
+      "M2"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Negligently failing to require proof of the recipient’s authority to acquire dangerous ordnance, or negligently failing to maintain the specified complete transfer record and promptly forward a copy to the designated authority.",
+    "gradeSummary": "M2.",
+    "dependencies": [
+      "2923.11",
+      "2923.17"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-20-unreported-loss",
+    "section": "2923.20",
+    "scope": "A(7)",
+    "code": "2923.20(A)(7)",
+    "statutoryName": "Unlawful transactions in weapons",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(7)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "D"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Knowingly failing promptly to report to law enforcement the loss or theft of a firearm or dangerous ordnance in one’s possession or control.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-sale-under-eighteen",
+    "section": "2923.21",
+    "scope": "A(1)",
+    "code": "2923.21(A)(1)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling a firearm to someone under 18. Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-handgun-sale-under-twenty-one",
+    "section": "2923.21",
+    "scope": "A(2)",
+    "code": "2923.21(A)(2)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling a handgun to someone under 21, subject to (B). Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-furnishing",
+    "section": "2923.21",
+    "scope": "A(3)",
+    "code": "2923.21(A)(3)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Furnishing any firearm to someone under 18 or, subject to (B), a handgun to someone under 21. The lawful hunting, sporting or educational purposes exception is specific to (A)(3). Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-intermediary-firearm",
+    "section": "2923.21",
+    "scope": "A(4)",
+    "code": "2923.21(A)(4)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(4)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling or furnishing a firearm to someone 18 or older knowing or having reason to know of their intended unlawful transfer to someone under 18 under (A)(1) or (A)(3). Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-intermediary-handgun",
+    "section": "2923.21",
+    "scope": "A(5)",
+    "code": "2923.21(A)(5)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(5)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Selling or furnishing a handgun to someone 21 or older knowing or having reason to know of their intended unlawful transfer to someone under 21 under (A)(2) or (A)(3). Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-purchase-firearm",
+    "section": "2923.21",
+    "scope": "A(6)",
+    "code": "2923.21(A)(6)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(6)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Purchasing or attempting to purchase a firearm with intent to sell or furnish it in violation of the specified under-18 restrictions. Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-21-purchase-handgun",
+    "section": "2923.21",
+    "scope": "A(7)",
+    "code": "2923.21(A)(7)",
+    "statutoryName": "Improperly furnishing firearms to a minor",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(7)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Purchasing or attempting to purchase a handgun with intent to sell or furnish it in violation of the specified under-21 restrictions. Division (B) has limited handgun exceptions for qualifying trained officers and active-duty military personnel. Where a charge depends on an intended illegal sale or furnishing, that underlying violation must also be established.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "2923.11",
+      "2923.125"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-24-criminal-purpose",
+    "section": "2923.24",
+    "scope": "A",
+    "code": "2923.24(A)",
+    "statutoryName": "Possessing criminal tools",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Possessing or controlling a substance, device, instrument or article with purpose to use it criminally. Division (B) identifies circumstances constituting prima-facie evidence of criminal purpose; the charge still requires that purpose.",
+    "gradeSummary": "Ordinarily M1. If circumstances indicate intent to use the item in the commission of a felony, F5.",
+    "dependencies": [
+      "2923.11"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "2923.24",
+          "quote": "possessing criminal tools is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-2923-42-active-participation",
+    "section": "2923.42",
+    "scope": "A",
+    "code": "2923.42(A)",
+    "statutoryName": "Participating in a criminal gang",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [
+      "C",
+      "D"
+    ],
+    "degrees": [
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Actively participating in a criminal gang with knowledge of its current or prior pattern of criminal gang activity and purposely promoting, furthering, assisting or engaging in the criminal conduct defined in §2923.41(C). Membership alone does not establish those elements.",
+    "gradeSummary": "F2. Division (D) permits prosecution under other applicable provisions as well. Section 2923.44 separately addresses forfeiture. Division (C) governs distribution of a fine imposed.",
+    "dependencies": [
+      "2923.41",
+      "2923.44"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-241-creation-with-intent",
+    "section": "2923.241",
+    "scope": "B",
+    "code": "2923.241(B)",
+    "statutoryName": "Designing a vehicle with a hidden compartment used to transport a controlled substance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "A",
+      "G",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly creating a vehicle with a statutorily defined hidden compartment with intent to facilitate unlawful concealment or transportation of a controlled substance. Divisions (G) through (I) include duty-related law enforcement, ordinary-course dealer/manufacturer and conditional secure-storage exclusions.",
+    "gradeSummary": "F4, or F3 following a prior conviction or plea under (B).",
+    "dependencies": [
+      "3719.01",
+      "4501.01",
+      "4511.01",
+      "4517.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-241-knowing-use",
+    "section": "2923.241",
+    "scope": "C",
+    "code": "2923.241(C)",
+    "statutoryName": "Operating a vehicle with a hidden compartment used to transport a controlled substance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "A",
+      "G",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly operating, possessing or using a vehicle with such a compartment, knowing that it is used or intended to facilitate unlawful concealment or transportation of a controlled substance. Divisions (G) through (I) include duty-related law enforcement, ordinary-course dealer/manufacturer and conditional secure-storage exclusions.",
+    "gradeSummary": "F4 ordinarily; F3 after a conviction or plea under (C) or (D). If the compartment actually contains a controlled substance at the time of the offense, F2.",
+    "dependencies": [
+      "3719.01",
+      "4501.01",
+      "4511.01",
+      "4517.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-2923-241-prior-aggravated-trafficking",
+    "section": "2923.241",
+    "scope": "D",
+    "code": "2923.241(D)",
+    "statutoryName": "Operating a vehicle with a hidden compartment used to transport a controlled substance",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "F"
+    ],
+    "contextPaths": [
+      "A",
+      "G",
+      "H",
+      "I"
+    ],
+    "degrees": [
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Operating, possessing or using a vehicle with such a compartment after a conviction or guilty plea for F1 or F2 aggravated drug trafficking under §2925.03. This subdivision specifies the prior offense; it does not repeat (C)’s separate knowledge condition. Divisions (G) through (I) include duty-related law enforcement, ordinary-course dealer/manufacturer and conditional secure-storage exclusions.",
+    "gradeSummary": "F4 ordinarily; F3 after a conviction or plea under (C) or (D). If the compartment actually contains a controlled substance at the time of the offense, F2.",
+    "dependencies": [
+      "3719.01",
+      "4501.01",
+      "4511.01",
+      "4517.01",
+      "2925.03"
+    ],
+    "extraGrading": []
+  }
+]

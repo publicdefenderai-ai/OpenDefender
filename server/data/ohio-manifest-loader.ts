@@ -1,3 +1,4 @@
+import { OHIO_TOOLS_TRANSACTIONS_SOURCES, isOhioToolsTransactionsSourceFresh } from "./ohio-tools-transactions-source";
 import { OHIO_DANGEROUS_DRIVING_SOURCES, isOhioDangerousDrivingSourceFresh } from "./ohio-dangerous-driving-source";
 import { OHIO_CRASH_IDENTITY_SOURCES, isOhioCrashIdentitySourceFresh } from "./ohio-crash-identity-source";
 import { OHIO_DRIVING_LICENSE_SOURCES, isOhioDrivingLicenseSourceFresh } from "./ohio-driving-license-source";
@@ -71,6 +72,7 @@ export function loadOhioAuthorityManifest(
       ...OHIO_THEFT_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_BENEFITS_FRAUD_SOURCES.map(record => record.chargeId),
       ...OHIO_JUSTICE_SOURCES.map(record => record.chargeId),
+      ...OHIO_TOOLS_TRANSACTIONS_SOURCES.map(record => record.chargeId),
       ...OHIO_DANGEROUS_DRIVING_SOURCES.map(record => record.chargeId),
       ...OHIO_CRASH_IDENTITY_SOURCES.map(record => record.chargeId),
       ...OHIO_DRIVING_LICENSE_SOURCES.map(record => record.chargeId),
@@ -100,7 +102,7 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
-    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES, ...OHIO_GAMBLING_SOURCES, ...OHIO_DRIVING_LICENSE_SOURCES, ...OHIO_CRASH_IDENTITY_SOURCES, ...OHIO_DANGEROUS_DRIVING_SOURCES].flatMap(record => [
+    ...[...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES, ...OHIO_GAMBLING_SOURCES, ...OHIO_DRIVING_LICENSE_SOURCES, ...OHIO_CRASH_IDENTITY_SOURCES, ...OHIO_DANGEROUS_DRIVING_SOURCES, ...OHIO_TOOLS_TRANSACTIONS_SOURCES].flatMap(record => [
       Date.parse(record.offense.retrievedAt),
       ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
     ]),
@@ -115,6 +117,7 @@ export function loadOhioAuthorityManifest(
   const reviewedFresh = isOhioReviewedSourceFresh(now);
   const majorFresh = isOhioMajorSourceFresh(now);
   const justiceFresh = isOhioJusticeSourceFresh(now);
+  const toolsTransactionsFresh = isOhioToolsTransactionsSourceFresh(now);
   const dangerousDrivingFresh = isOhioDangerousDrivingSourceFresh(now);
   const crashIdentityFresh = isOhioCrashIdentitySourceFresh(now);
   const drivingLicenseFresh = isOhioDrivingLicenseSourceFresh(now);
@@ -158,6 +161,7 @@ export function loadOhioAuthorityManifest(
     ...(majorFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_MAJOR_SOURCES) : []),
     ...(residualFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_RESIDUAL_SOURCES) : []),
     ...(justiceFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_JUSTICE_SOURCES) : []),
+    ...(toolsTransactionsFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_TOOLS_TRANSACTIONS_SOURCES) : []),
     ...(dangerousDrivingFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_DANGEROUS_DRIVING_SOURCES) : []),
     ...(crashIdentityFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_CRASH_IDENTITY_SOURCES) : []),
     ...(drivingLicenseFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt, OHIO_DRIVING_LICENSE_SOURCES) : []),
@@ -180,6 +184,7 @@ export function loadOhioAuthorityManifest(
       charge.jurisdiction === "OH" &&
       (residualFresh || !OHIO_RESIDUAL_SOURCES.some(record => record.chargeId === charge.id)) &&
       (justiceFresh || !OHIO_JUSTICE_SOURCES.some(record => record.chargeId === charge.id)) &&
+      (toolsTransactionsFresh || !OHIO_TOOLS_TRANSACTIONS_SOURCES.some(record => record.chargeId === charge.id)) &&
       (dangerousDrivingFresh || !OHIO_DANGEROUS_DRIVING_SOURCES.some(record => record.chargeId === charge.id)) &&
       (crashIdentityFresh || !OHIO_CRASH_IDENTITY_SOURCES.some(record => record.chargeId === charge.id)) &&
       (drivingLicenseFresh || !OHIO_DRIVING_LICENSE_SOURCES.some(record => record.chargeId === charge.id)) &&

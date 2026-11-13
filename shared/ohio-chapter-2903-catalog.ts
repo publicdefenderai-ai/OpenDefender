@@ -1,3 +1,4 @@
+import { OHIO_TOOLS_TRANSACTIONS_BATCH } from "./ohio-tools-transactions-batch";
 import { OHIO_DANGEROUS_DRIVING_BATCH } from "./ohio-dangerous-driving-batch";
 import { OHIO_CRASH_IDENTITY_BATCH } from "./ohio-crash-identity-batch";
 import { OHIO_DRIVING_LICENSE_BATCH } from "./ohio-driving-license-batch";
@@ -124,6 +125,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_TOOLS_TRANSACTIONS_BATCH.charges,
   ...OHIO_DANGEROUS_DRIVING_BATCH.charges,
   ...OHIO_CRASH_IDENTITY_BATCH.charges,
   ...OHIO_DRIVING_LICENSE_BATCH.charges,
