@@ -218,6 +218,9 @@ for (const viewport of VIEWPORTS) {
       page,
     }) => {
       const diagnostics = watchBrowserDiagnostics(page);
+      await page.route("**/api/captcha/config", route =>
+        route.fulfill({ json: { required: false, siteKey: null } }),
+      );
       let polishRequests = 0;
       page.on("request", (request) => {
         if (request.url().endsWith("/api/mitigation/polish")) {

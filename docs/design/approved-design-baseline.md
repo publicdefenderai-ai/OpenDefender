@@ -661,3 +661,7 @@ The approved pd-intake-content.html groups the seven existing sections into four
 ### Bail Preparation
 
 The approved bail-preparation-content.html layout leads with the documentation checklist and letter templates. The page retains the seven section anchors, published guidance, support destinations and attorney note. Its 16 checklist items and three editable letter drafts stay in memory. Copy and print use the selected letter's current text. The checklist printout includes the current marks and disclaimer.
+
+### Mitigation Builder
+
+The approved mitigation-builder-content.html design places the seven social-history sections before the structured summary, with a completed-field count and a direct summary link. All 22 existing fields retain their original options and output mapping. The English intake is marked for assistive technology. The opening distinguishes local summary preparation from the optional AI submission and keeps the attorney-supervision notice visible. Existing draft labels, edit and verification controls, rate limits and export handlers are retained.
