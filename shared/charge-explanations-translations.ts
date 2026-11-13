@@ -1,6 +1,7 @@
 import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
+import { OHIO_LIQUOR_ID_BATCH } from "./ohio-liquor-id-batch";
 import { OHIO_CIVIL_RIGHTS_BATCH } from "./ohio-civil-rights-batch";
 import { OHIO_ANIMAL_PROTECTION_BATCH } from "./ohio-animal-protection-batch";
 import { OHIO_TOOLS_TRANSACTIONS_BATCH } from "./ohio-tools-transactions-batch";
@@ -84,6 +85,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_THEFT_FRAUD_BATCH.translations,
   ...OHIO_BENEFITS_FRAUD_BATCH.translations,
   ...OHIO_JUSTICE_BATCH.translations,
+  ...OHIO_LIQUOR_ID_BATCH.translations,
   ...OHIO_CIVIL_RIGHTS_BATCH.translations,
   ...OHIO_ANIMAL_PROTECTION_BATCH.translations,
   ...OHIO_TOOLS_TRANSACTIONS_BATCH.translations,

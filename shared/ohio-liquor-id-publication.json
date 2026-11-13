@@ -1,0 +1,613 @@
+[
+  {
+    "id": "oh-orc-4301-631-order-or-attempt",
+    "section": "4301.631",
+    "scope": "C",
+    "code": "4301.631(C)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. An underage person orders, pays for, shares the cost of, or attempts to purchase a low-alcohol beverage. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "The statutory offense is M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "2152.02",
+      "2152.19"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": true
+  },
+  {
+    "id": "oh-orc-4301-631-false-information-for-another",
+    "section": "4301.631",
+    "scope": "D",
+    "code": "4301.631(D)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. A person knowingly gives false identifying information about someone under 18 for the purpose or with intent to obtain a low-alcohol beverage for that person by purchase or gift. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-631-false-information-for-self",
+    "section": "4301.631",
+    "scope": "E",
+    "code": "4301.631(E)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "E"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. An underage person knowingly presents false identifying information to obtain a low-alcohol beverage in Ohio. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "The statutory offense is M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "2152.02",
+      "2152.19"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": true
+  },
+  {
+    "id": "oh-orc-4301-631-sale-or-furnishing",
+    "section": "4301.631",
+    "scope": "F",
+    "code": "4301.631(F)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "F"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. A person sells, furnishes or buys a low-alcohol beverage for someone under 18. The section excepts provision by a physician in regular practice, established religious purposes, or accompaniment by a parent, spouse aged at least 18, or legal guardian. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-631-allowing-possession",
+    "section": "4301.631",
+    "scope": "G",
+    "code": "4301.631(G)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "G"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. An owner or occupant knowingly allows someone under 18 to remain on the premises while possessing or consuming a low-alcohol beverage. The exception requires the qualifying parent, spouse aged at least 18, or guardian both to give the beverage and be present. The owner is liable for a lessee’s conduct only if the owner authorizes or acquiesces in it. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-631-possessing-or-consuming",
+    "section": "4301.631",
+    "scope": "H",
+    "code": "4301.631(H)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "H"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. An underage person knowingly possesses or consumes a low-alcohol beverage in a public or private place, subject to the exceptions for accompaniment by a parent, spouse aged at least 18 or legal guardian, or provision by a physician in regular practice or for established religious purposes. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "The statutory offense is M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "2152.02",
+      "2152.19"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": true
+  },
+  {
+    "id": "oh-orc-4301-631-permitting-underage-violation",
+    "section": "4301.631",
+    "scope": "I",
+    "code": "4301.631(I)",
+    "statutoryName": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "I"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "The underage person in this section is someone under 18. A parent, spouse aged at least 18, or legal guardian knowingly permits the underage person to violate this section. Here, low-alcohol beverage means a qualifying malt or fermented agricultural product with no alcohol or less than 0.5% alcohol by volume. The definition excludes soft drinks such as root beer, birch beer and ginger beer.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-634-false-information-to-obtain-alcohol",
+    "section": "4301.634",
+    "scope": "whole",
+    "code": "4301.634",
+    "statutoryName": "Furnishing false information to obtain beer or intoxicating liquor by person under twenty-one",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Except as otherwise provided in Chapter 4301, a person under 21 knowingly gives false identifying information to purchase or otherwise obtain beer or intoxicating liquor where sold under a liquor-control permit or by the division.",
+    "gradeSummary": "M1. On the first violation presenting qualifying false or altered identification to a permit holder or its employee or agent, the fine is $250–$1,000. On a second violation with a second such presentation, the fine is $500–$1,000 and a class-seven suspension of up to one year is discretionary. On a third or later violation with a third or later such presentation, the fine is $500–$1,000 and the court may impose a class-six suspension of three months to two years, potentially until age 21, or specified community service in lieu of suspension. These branches permit up to six months of adult custody. For a child in juvenile court, adult sentencing ranges do not determine the disposition.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "4510.02",
+      "2152.02",
+      "2152.19"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "F"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-636-age-card-transfer",
+    "section": "4301.636",
+    "scope": "A(1)",
+    "code": "4301.636(A)(1)",
+    "statutoryName": "Manufacture, transfer, sell, or distribute false identification card or driver's license",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Manufacturing, transferring or distributing an age-identification card with the specified marks or designation representing it as official Ohio identification, except a card issued under § 4507.50.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "4507.50"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "G"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-636-age-card-compensation",
+    "section": "4301.636",
+    "scope": "A(2)",
+    "code": "4301.636(A)(2)",
+    "statutoryName": "Manufacture, transfer, sell, or distribute false identification card or driver's license",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Manufacturing, selling or distributing an age-identification card displaying the specified marks or designation representing it as official Ohio identification for compensation, except a card issued under § 4507.50.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "4507.50"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "G"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-636-driver-card-transfer",
+    "section": "4301.636",
+    "scope": "B(1)",
+    "code": "4301.636(B)(1)",
+    "statutoryName": "Manufacture, transfer, sell, or distribute false identification card or driver's license",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B(1)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Someone other than the registrar or deputy registrar manufactures, transfers or distributes a card displaying the listed official markings or designation representing it as an Ohio driver’s license.",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "G"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-636-driver-card-compensation",
+    "section": "4301.636",
+    "scope": "B(2)",
+    "code": "4301.636(B)(2)",
+    "statutoryName": "Manufacture, transfer, sell, or distribute false identification card or driver's license",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B(2)"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "F5"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Someone other than the registrar or deputy registrar manufactures, sells or distributes for compensation a card displaying the markings or official-license designation listed in (B)(2).",
+    "gradeSummary": "F5.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "G"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-64-vehicle-consumption",
+    "section": "4301.64",
+    "scope": "whole",
+    "code": "4301.64",
+    "statutoryName": "Prohibition against consumption of beer or intoxicating liquor in motor vehicle",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Consuming beer or intoxicating liquor in a motor vehicle. Section 4301.62(D) excepts qualifying passengers paying for a prearranged chauffeured limousine, or their guests, outside its front compartment on a street, highway or other property open to public vehicle travel or parking.",
+    "gradeSummary": "M4. For an offender under 18 when the offense occurred, the court may suspend a qualifying permit or license for six months to one year or substitute community service. An unlicensed offender aged at least 15½ faces a six-month issuance delay as specified; one below 15½ cannot receive a temporary instruction permit until age 16. Juvenile dispositions depend on juvenile law.",
+    "dependencies": [
+      "4301.99",
+      "4301.01",
+      "4301.62",
+      "4503.24",
+      "4511.01",
+      "2152.02",
+      "2152.19"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-65-sale",
+    "section": "4301.65",
+    "scope": "B",
+    "code": "4301.65(B)",
+    "statutoryName": "Sale, purchase, or use of alcohol vaporizing device prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "M3",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Selling or offering to sell an alcohol vaporizing device as defined in division (A).",
+    "gradeSummary": "M3 ordinarily; M1 for a second or subsequent violation within five consecutive years after the first violation.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "J"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-65-purchase-or-use",
+    "section": "4301.65",
+    "scope": "C",
+    "code": "4301.65(C)",
+    "statutoryName": "Sale, purchase, or use of alcohol vaporizing device prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [
+      "A"
+    ],
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Purchasing or using an alcohol vaporizing device as defined in division (A).",
+    "gradeSummary": "Minor misdemeanor.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "A"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-66-obstruction",
+    "section": "4301.66",
+    "scope": "whole",
+    "code": "4301.66",
+    "statutoryName": "Obstructing inspection or search of premises prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Hindering a liquor-control agent or employee, public-safety enforcement agent, or law officer inspecting or searching premises where beer or intoxicating liquor is possessed, kept, sold or given away. A bona fide private residence is excluded.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "C"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-67-unlawful-possession",
+    "section": "4301.67",
+    "scope": "whole",
+    "code": "4301.67",
+    "statutoryName": "Illegal possession of spirituous or intoxicating liquor or beer prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Possessing more than one liter of spirituous liquor not purchased from the division or otherwise lawfully acquired under Chapters 4301 and 4303, or possessing other unlawfully acquired intoxicating liquor or beer. The one-liter threshold applies only to the spirituous-liquor branch.",
+    "gradeSummary": "M4.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "B"
+      }
+    ],
+    "under18Only": false
+  },
+  {
+    "id": "oh-orc-4301-68-original-container",
+    "section": "4301.68",
+    "scope": "whole",
+    "code": "4301.68",
+    "statutoryName": "Sale of liquor in diluted, refilled, or partly refilled containers prohibited",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "whole"
+    ],
+    "gradingPaths": [],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Selling, offering for sale or possessing intoxicating liquor in an original container that has been diluted, refilled or partly refilled.",
+    "gradeSummary": "M1.",
+    "dependencies": [
+      "4301.99",
+      "4301.01"
+    ],
+    "extraGrading": [
+      {
+        "section": "4301.99",
+        "path": "C"
+      }
+    ],
+    "under18Only": false
+  }
+]
