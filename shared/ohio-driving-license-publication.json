@@ -1,0 +1,409 @@
+[
+  {
+    "id": "oh-orc-4510-12-motor-vehicle-never-licensed",
+    "section": "4510.12",
+    "scope": "A(1)",
+    "code": "4510.12(A)(1) / (C)(1)",
+    "statutoryName": "Operating a motor vehicle or motorcycle without a valid license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "degrees": [
+      "UM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle on an Ohio public road or highway, or public or private property used by the public for vehicular travel or parking, without a valid driver’s or commercial driver’s license. Sections 4507.03 through 4507.05 supply exceptions. Division (B) permits rebuttal of the specified record evidence. This branch requires a finding that the driver never held the applicable license.",
+    "gradeSummary": "Ordinarily an unclassified misdemeanor: no jail or community residential sanction, fine up to $1,000 and up to 500 hours of community service. Failure to complete court-ordered service can be prosecuted as indirect criminal contempt. Any previous conviction or plea under this section or a substantially equivalent municipal ordinance raises it to M1. No suspension for a first violation or if more than three years have elapsed since the last qualifying violation.",
+    "dependencies": [
+      "4507.03",
+      "4507.04",
+      "4507.05",
+      "4507.14",
+      "4510.02",
+      "2929.21",
+      "2929.26",
+      "2929.27",
+      "2705.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-12-motor-vehicle-expired",
+    "section": "4510.12",
+    "scope": "A(1)",
+    "code": "4510.12(A)(1) / (C)(2)",
+    "statutoryName": "Operating a motor vehicle or motorcycle without a valid license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "MM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle on an Ohio public road or highway, or public or private property used by the public for vehicular travel or parking, without a valid driver’s or commercial driver’s license. Sections 4507.03 through 4507.05 supply exceptions. Division (B) permits rebuttal of the specified record evidence. This branch concerns an expired license or permit specified in (C)(2).",
+    "gradeSummary": "Minor misdemeanor ordinarily. Two or more prior convictions or pleas under this section or a substantially equivalent municipal ordinance within three years make it M1. Where there is at least one qualifying prior within three years and the license expired more than six months earlier, the court may impose a class seven suspension up to one year. No suspension for a first violation or if more than three years have elapsed since the last qualifying violation.",
+    "dependencies": [
+      "4507.03",
+      "4507.04",
+      "4507.05",
+      "4507.14",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-12-motorcycle-never-licensed",
+    "section": "4510.12",
+    "scope": "A(2)",
+    "code": "4510.12(A)(2) / (C)(1)",
+    "statutoryName": "Operating a motor vehicle or motorcycle without a valid license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)"
+    ],
+    "contextPaths": [
+      "B",
+      "D"
+    ],
+    "degrees": [
+      "UM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motorcycle on an Ohio public road or highway, or public or private property used by the public for vehicular travel or parking, without a valid motorcycle endorsement or restricted motorcycle license. Sections 4507.03 through 4507.05 supply exceptions. Division (B) permits rebuttal of the specified record evidence. This branch requires a finding that the driver never held the applicable license.",
+    "gradeSummary": "Ordinarily an unclassified misdemeanor: no jail or community residential sanction, fine up to $1,000 and up to 500 hours of community service. Failure to complete court-ordered service can be prosecuted as indirect criminal contempt. Any previous conviction or plea under this section or a substantially equivalent municipal ordinance raises it to M1. No suspension for a first violation or if more than three years have elapsed since the last qualifying violation.",
+    "dependencies": [
+      "4507.03",
+      "4507.04",
+      "4507.05",
+      "4507.14",
+      "4510.02",
+      "2929.21",
+      "2929.26",
+      "2929.27",
+      "2705.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-12-motorcycle-expired",
+    "section": "4510.12",
+    "scope": "A(2)",
+    "code": "4510.12(A)(2) / (C)(2)",
+    "statutoryName": "Operating a motor vehicle or motorcycle without a valid license",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B",
+      "D",
+      "E"
+    ],
+    "degrees": [
+      "MM",
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motorcycle on an Ohio public road or highway, or public or private property used by the public for vehicular travel or parking, without a valid motorcycle endorsement or restricted motorcycle license. Sections 4507.03 through 4507.05 supply exceptions. Division (B) permits rebuttal of the specified record evidence. This branch concerns an expired license or permit specified in (C)(2).",
+    "gradeSummary": "Minor misdemeanor ordinarily. Two or more prior convictions or pleas under this section or a substantially equivalent municipal ordinance within three years make it M1. Where there is at least one qualifying prior within three years and the license expired more than six months earlier, the court may impose a class seven suspension up to one year. No suspension for a first violation or if more than three years have elapsed since the last qualifying violation.",
+    "dependencies": [
+      "4507.03",
+      "4507.04",
+      "4507.05",
+      "4507.14",
+      "4510.02"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-14-ordinary",
+    "section": "4510.14",
+    "scope": "B(1)",
+    "code": "4510.14(A) / (B)(1)",
+    "statutoryName": "Driving under OVI suspension",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(1)"
+    ],
+    "contextPaths": [
+      "C",
+      "E",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle on Ohio public roads or highways during a suspension under the OVI provisions specified in (A), including a municipal OVI conviction suspension under §4510.07. This is the (B)(1) branch where the repeat conditions do not apply.",
+    "gradeSummary": "M1. Three consecutive days in jail, up to six months total; if within 60 days of sentencing the court makes a written finding that unavailable jail space prevents service from beginning within that period, 30 consecutive days to six months of monitored house arrest can substitute. Required fine $250 to $1,000. If registered in the offender’s name, vehicle immobilization and plate impoundment are required for 30 days. A class seven license suspension of up to one year is required; (E) supplies commercial license rules. Proof of financial responsibility is required. For this M1, absent that proof, the court may award up to $5,000 restitution for qualifying collision losses.",
+    "dependencies": [
+      "4511.19",
+      "4511.191",
+      "4511.196",
+      "4510.07",
+      "4510.02",
+      "4503.233",
+      "2929.01",
+      "4506.16",
+      "3123.58",
+      "4509.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-14-one-prior",
+    "section": "4510.14",
+    "scope": "B(2)",
+    "code": "4510.14(A) / (B)(2)",
+    "statutoryName": "Driving under OVI suspension",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "E",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle on Ohio public roads or highways during a suspension under the OVI provisions specified in (A), including a municipal OVI conviction suspension under §4510.07. This choice uses the prior-offense condition in (B)(2).",
+    "gradeSummary": "M1, with one prior conviction or guilty plea for this or an equivalent offense within six years. Ten consecutive days in jail, up to one year total; if within 60 days of sentencing the court makes a written finding that unavailable jail space prevents service from beginning within that period, 90 consecutive days to one year of monitored house arrest can substitute. Required fine $500 to $2,500. If registered in the offender’s name, vehicle immobilization and plate impoundment are required for 60 days. A class seven license suspension of up to one year is required; (E) supplies commercial license rules. Proof of financial responsibility is required. For this M1, absent that proof, the court may award up to $5,000 restitution for qualifying collision losses.",
+    "dependencies": [
+      "4511.19",
+      "4511.191",
+      "4511.196",
+      "4510.07",
+      "4510.02",
+      "4503.233",
+      "2929.01",
+      "4506.16",
+      "3123.58",
+      "4509.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-14-two-priors",
+    "section": "4510.14",
+    "scope": "B(3)",
+    "code": "4510.14(A) / (B)(3)",
+    "statutoryName": "Driving under OVI suspension",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "C",
+      "E",
+      "F",
+      "G"
+    ],
+    "degrees": [
+      "MN"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a motor vehicle on Ohio public roads or highways during a suspension under the OVI provisions specified in (A), including a municipal OVI conviction suspension under §4510.07. This choice uses the prior-offense condition in (B)(3).",
+    "gradeSummary": "Misdemeanor with no stated degree, with two or more prior violations or equivalent offenses under (B)(3) within six years. Thirty consecutive days of mandatory jail, up to one year total; monitored house arrest cannot substitute for the mandatory jail. Required fine $500 to $2,500. Where registered in the offender’s name the vehicle is subject to required criminal forfeiture; a statutory title-transfer rule may permit a fine measured by its value. A class seven license suspension of up to one year is required; (E) supplies commercial license rules. Proof of financial responsibility is required. The collision-restitution provision in (F) is expressly limited to an M1.",
+    "dependencies": [
+      "4511.19",
+      "4511.191",
+      "4511.196",
+      "4510.07",
+      "4510.02",
+      "4503.234",
+      "2929.01",
+      "4506.16",
+      "3123.58",
+      "4509.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-16-financial-responsibility",
+    "section": "4510.16",
+    "scope": "A",
+    "code": "4510.16(A)",
+    "statutoryName": "Driving under financial responsibility law suspension or cancellation",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "D",
+      "D(1)",
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "D(3)"
+    ],
+    "degrees": [
+      "UM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "During a Chapter 4509 suspension or cancellation, operating a vehicle anywhere in Ohio or knowingly permitting another to operate a vehicle the person owns in Ohio, except as Chapter 4509 specifically authorizes. The specified record is rebuttable evidence of suspension.",
+    "gradeSummary": "Ordinarily an unclassified misdemeanor: no jail or community residential sanction, fine up to $1,000 and up to 500 hours of community service. Failure to complete court-ordered service can be prosecuted as indirect criminal contempt. Two qualifying convictions or pleas within three years under (D)(2), including its §4510.11/§4510.111 and municipal-equivalent rules, raise it to M4. Proof of financial responsibility is required in either branch. Absent proof the court may award up to $5,000 restitution for qualifying collision losses.",
+    "dependencies": [
+      "2929.21",
+      "2929.26",
+      "2929.27",
+      "2705.02",
+      "4509.01",
+      "4509.37",
+      "4509.40",
+      "4510.11",
+      "4510.111"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-16-nonpayment-of-judgment",
+    "section": "4510.16",
+    "scope": "B",
+    "code": "4510.16(B)",
+    "statutoryName": "Driving under a nonpayment of judgment suspension",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "D",
+      "D(1)",
+      "D(2)"
+    ],
+    "contextPaths": [
+      "C",
+      "D(3)"
+    ],
+    "degrees": [
+      "UM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a vehicle on a highway or public or private property used by the public for travel or parking during a §4509.37 or §4509.40 nonpayment-of-judgment suspension. The specified record is rebuttable evidence of suspension.",
+    "gradeSummary": "Ordinarily an unclassified misdemeanor: no jail or community residential sanction, fine up to $1,000 and up to 500 hours of community service. Failure to complete court-ordered service can be prosecuted as indirect criminal contempt. Two qualifying convictions or pleas within three years under (D)(2), including its §4510.11/§4510.111 and municipal-equivalent rules, raise it to M4. Proof of financial responsibility is required in either branch. Absent proof the court may award up to $5,000 restitution for qualifying collision losses.",
+    "dependencies": [
+      "2929.21",
+      "2929.26",
+      "2929.27",
+      "2705.02",
+      "4509.01",
+      "4509.37",
+      "4509.40",
+      "4510.11",
+      "4510.111"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4510-111-specified-suspensions",
+    "section": "4510.111",
+    "scope": "A",
+    "code": "4510.111(A)",
+    "statutoryName": "Driving under suspension",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "C",
+      "C(1)",
+      "C(2)"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "UM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating a vehicle on a highway or public or private property used by the public for vehicular travel or parking while a driver’s or commercial driver’s license is suspended under one of the statutes listed in (A). Record evidence of the suspension can be rebutted. Check the suspension order and its statutory basis.",
+    "gradeSummary": "Ordinarily an unclassified misdemeanor: no jail or community residential sanction, fine up to $1,000 and up to 500 hours of community service. Failure to complete court-ordered service can be prosecuted as indirect criminal contempt. At least two qualifying convictions or guilty pleas within three years under (C)(2), including its §4510.11/§4510.16 and municipal-equivalent rules, make it M4. Only this repeat branch requires proof of financial responsibility and permits up to $5,000 restitution for qualifying collision losses absent proof.",
+    "dependencies": [
+      "2929.21",
+      "2929.26",
+      "2929.27",
+      "2705.02",
+      "4509.01",
+      "4510.11",
+      "4510.16",
+      "2151.354",
+      "2935.27",
+      "3123.58",
+      "4301.99",
+      "4510.032",
+      "4510.22",
+      "4510.33"
+    ],
+    "extraGrading": []
+  }
+]
