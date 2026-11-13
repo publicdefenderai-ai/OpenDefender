@@ -182,6 +182,7 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
       .filter(row => row.status === "eligible").map(row => row.id),
     // Independently reviewed Florida persons batch; its own receipt gate still applies.
     ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-persons-publication.json"), "utf8")).map(row => row.id),
+    ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/florida-robbery-publication.json"), "utf8")).map(row => row.id),
     ...releaseCheckOhioSourceFirstChargeIds,
     ...releaseCheckCaliforniaSelectableChargeIds,
   ])];

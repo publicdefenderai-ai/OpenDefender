@@ -7,6 +7,7 @@ vi.mock('node:fs',async original=>{
 });
 // Isolate the historical reviewed family; independent-family interaction has its own matrix test.
 vi.mock('../server/data/florida-persons-source',async original=>({...await original<typeof import('../server/data/florida-persons-source')>(),isFloridaPersonsSourceFresh:()=>false}));
+vi.mock('../server/data/florida-robbery-source',async original=>({...await original<typeof import('../server/data/florida-robbery-source')>(),isFloridaRobberySourceFresh:()=>false}));
 import {syntheticFloridaReceipt as receipt} from "./helpers/florida-receipt-fixture";
 import { describe, expect, it, vi } from "vitest";
 import { loadFloridaAuthorityManifest } from "../server/data/florida-manifest-loader";
