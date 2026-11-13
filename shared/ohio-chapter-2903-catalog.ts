@@ -1,3 +1,4 @@
+import { OHIO_WEAPONS_LOCATION_BATCH } from "./ohio-weapons-location-batch";
 import { OHIO_DRUG_REMAINDER_BATCH } from "./ohio-drug-remainder-batch";
 import { OHIO_DRUG_CONDUCT_BATCH } from "./ohio-drug-conduct-batch";
 import { OHIO_COMMERCIAL_SEX_BATCH } from "./ohio-commercial-sex-batch";
@@ -119,6 +120,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_THEFT_FRAUD_BATCH.charges,
   ...OHIO_BENEFITS_FRAUD_BATCH.charges,
   ...OHIO_JUSTICE_BATCH.charges,
+  ...OHIO_WEAPONS_LOCATION_BATCH.charges,
   ...OHIO_DRUG_REMAINDER_BATCH.charges,
   ...OHIO_DRUG_CONDUCT_BATCH.charges,
   ...OHIO_COMMERCIAL_SEX_BATCH.charges,
