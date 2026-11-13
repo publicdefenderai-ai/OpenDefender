@@ -1,3 +1,4 @@
+import { OHIO_WEAPONS_LOCATION_DEFINITIONS } from "@shared/ohio-weapons-location-batch";
 import { OHIO_DRUG_REMAINDER_DEFINITIONS } from "@shared/ohio-drug-remainder-batch";
 import { OHIO_DRUG_CONDUCT_DEFINITIONS } from "@shared/ohio-drug-conduct-batch";
 import { OHIO_COMMERCIAL_SEX_DEFINITIONS } from "@shared/ohio-commercial-sex-batch";
@@ -11,6 +12,7 @@ import { OHIO_JUSTICE_DEFINITIONS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_DEFINITIONS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_DEFINITIONS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_DEFINITIONS } from "@shared/ohio-residual-batch";
+import { OHIO_WEAPONS_LOCATION_SOURCES, isOhioWeaponsLocationSourceFresh } from "./ohio-weapons-location-source";
 import { OHIO_DRUG_REMAINDER_SOURCES, isOhioDrugRemainderSourceFresh } from "./ohio-drug-remainder-source";
 import { OHIO_DRUG_CONDUCT_SOURCES, isOhioDrugConductSourceFresh } from "./ohio-drug-conduct-source";
 import { OHIO_COMMERCIAL_SEX_SOURCES, isOhioCommercialSexSourceFresh } from "./ohio-commercial-sex-source";
@@ -475,7 +477,7 @@ function reviewedProvision(
     metadata: {
       chargeId: charge.id, catalogLabel: charge.name, catalogCode: charge.code,
       catalogClassification: charge.category,
-      sourceFirstBatch: OHIO_DRUG_REMAINDER_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_drug_remainder_22" : OHIO_DRUG_CONDUCT_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_drug_conduct_26" : OHIO_COMMERCIAL_SEX_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_commercial_sex_16" : OHIO_PRIORITY_GAPS_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_priority_gaps_15" : OHIO_PRIVACY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_privacy_13" : OHIO_PROTECTION_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_protection_14" : OHIO_FAMILY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_family_17" : OHIO_PUBLIC_PEACE_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_public_peace_14" : OHIO_CUSTODY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_custody_30" : OHIO_JUSTICE_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_justice_17" : OHIO_BENEFITS_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_benefits_fraud_6" : OHIO_THEFT_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_theft_fraud_21" : OHIO_RESIDUAL_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_residual_14" : OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
+      sourceFirstBatch: OHIO_WEAPONS_LOCATION_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_weapons_location_12" : OHIO_DRUG_REMAINDER_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_drug_remainder_22" : OHIO_DRUG_CONDUCT_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_drug_conduct_26" : OHIO_COMMERCIAL_SEX_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_commercial_sex_16" : OHIO_PRIORITY_GAPS_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_priority_gaps_15" : OHIO_PRIVACY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_privacy_13" : OHIO_PROTECTION_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_protection_14" : OHIO_FAMILY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_family_17" : OHIO_PUBLIC_PEACE_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_public_peace_14" : OHIO_CUSTODY_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_custody_30" : OHIO_JUSTICE_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_justice_17" : OHIO_BENEFITS_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_benefits_fraud_6" : OHIO_THEFT_FRAUD_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_theft_fraud_21" : OHIO_RESIDUAL_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_residual_14" : OHIO_MAJOR_SOURCES.some(row => row.chargeId === source.chargeId) ? "ohio_major_20" : "ohio_reviewed_125",
       reviewedDraftSection: source.section,
       reviewedInterpretation: source.interpretation,
       reviewedLegalDecision: source.reviewedLegalDecision,
@@ -508,7 +510,7 @@ function reviewedSupportRole(
 export function buildOhioReviewedManifestRecords(importedAt: Date, sources: readonly OhioReviewedSource[] = OHIO_REVIEWED_SOURCES): AuthorityCatalogRecord[] {
   return sources.map(source => {
     const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
-    if (!charge || charge.jurisdiction !== "OH" || charge.code !== (OHIO_DRUG_REMAINDER_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_DRUG_CONDUCT_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_COMMERCIAL_SEX_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PRIORITY_GAPS_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PRIVACY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PROTECTION_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_FAMILY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PUBLIC_PEACE_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_CUSTODY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_JUSTICE_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_BENEFITS_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_THEFT_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_RESIDUAL_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? source.section) ||
+    if (!charge || charge.jurisdiction !== "OH" || charge.code !== (OHIO_WEAPONS_LOCATION_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_DRUG_REMAINDER_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_DRUG_CONDUCT_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_COMMERCIAL_SEX_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PRIORITY_GAPS_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PRIVACY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PROTECTION_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_FAMILY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_PUBLIC_PEACE_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_CUSTODY_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_JUSTICE_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_BENEFITS_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_THEFT_FRAUD_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? OHIO_RESIDUAL_DEFINITIONS.find(row => row.id === source.chargeId)?.code ?? source.section) ||
         charge.name !== source.canonicalTitle) {
       throw new Error(`Ohio reviewed source-first catalog identity is missing: ${source.chargeId}`);
     }
@@ -791,7 +793,7 @@ export function validateOhioManifestRecord(
   if (sourceFirstPilot) {
     return validateOhioChapter2903PilotManifestRecord(record, sourceFirstPilot);
   }
-  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES].find(
+  const reviewedSource = [...OHIO_REVIEWED_SOURCES, ...OHIO_MAJOR_SOURCES, ...OHIO_RESIDUAL_SOURCES, ...OHIO_THEFT_FRAUD_SOURCES, ...OHIO_BENEFITS_FRAUD_SOURCES, ...OHIO_JUSTICE_SOURCES, ...OHIO_CUSTODY_SOURCES, ...OHIO_PUBLIC_PEACE_SOURCES, ...OHIO_FAMILY_SOURCES, ...OHIO_PROTECTION_SOURCES, ...OHIO_PRIVACY_SOURCES, ...OHIO_PRIORITY_GAPS_SOURCES, ...OHIO_COMMERCIAL_SEX_SOURCES, ...OHIO_DRUG_CONDUCT_SOURCES, ...OHIO_DRUG_REMAINDER_SOURCES, ...OHIO_WEAPONS_LOCATION_SOURCES].find(
     candidate => candidate.chargeId === record.chargeId,
   );
   if (reviewedSource) return validateOhioReviewedManifestRecord(record, reviewedSource);
@@ -872,6 +874,7 @@ export function buildOhioSourceDatabaseSeed(
   // live receipt boundary that the loader uses.
   const records = manifest.catalogRecords.filter(record =>
     (!OHIO_RESIDUAL_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioResidualSourceFresh(now)) &&
+    (!OHIO_WEAPONS_LOCATION_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioWeaponsLocationSourceFresh(now)) &&
     (!OHIO_DRUG_REMAINDER_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDrugRemainderSourceFresh(now)) &&
     (!OHIO_DRUG_CONDUCT_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioDrugConductSourceFresh(now)) &&
     (!OHIO_COMMERCIAL_SEX_SOURCES.some(source => source.chargeId === record.chargeId) || isOhioCommercialSexSourceFresh(now)) &&
