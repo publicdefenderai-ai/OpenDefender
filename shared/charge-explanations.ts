@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_REMAINING } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY } from "./florida-legacy-property";
 import { OHIO_DRUG_CONDUCT_BATCH, OHIO_DRUG_CONDUCT_IDS } from "./ohio-drug-conduct-batch";
@@ -79,6 +80,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_PERSONS_BATCH.explanations,
   ...FLORIDA_LEGACY_PROPERTY.explanations,
   ...FLORIDA_LEGACY_SEXUAL.explanations,
+  ...FLORIDA_LEGACY_REMAINING.explanations,
   ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
   ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   ...OHIO_PATIENT_CARE_BATCH.explanations,

@@ -1,3 +1,4 @@
+import { FLORIDA_LEGACY_REMAINING_DEFINITIONS } from "./florida-legacy-remaining";
 import { FLORIDA_LEGACY_SEXUAL_DEFINITIONS } from "./florida-legacy-sexual";
 import { FLORIDA_LEGACY_PROPERTY_DEFINITIONS } from "./florida-legacy-property";
 import { FLORIDA_PERSONS_DEFINITIONS } from "./florida-persons-batch";
@@ -19476,7 +19477,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
 };
 
-for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS, ...FLORIDA_LEGACY_PROPERTY_DEFINITIONS, ...FLORIDA_LEGACY_SEXUAL_DEFINITIONS]) {
+for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DEFINITIONS, ...FLORIDA_LEGACY_PROPERTY_DEFINITIONS, ...FLORIDA_LEGACY_SEXUAL_DEFINITIONS, ...FLORIDA_LEGACY_REMAINING_DEFINITIONS]) {
   const primary = definition.citations[0];
   const existing = CHARGE_CITATIONS[definition.id];
   CHARGE_CITATIONS[definition.id] = {
@@ -19486,7 +19487,7 @@ for (const definition of [...FLORIDA_REVIEWED_DEFINITIONS, ...FLORIDA_PERSONS_DE
     // Statute approval does not establish a jury-instruction mapping. Preserve
     // an exact existing mapping, otherwise state that none is verified here;
     // this does not assert that the courts publish no applicable instruction.
-    source: ((FLORIDA_LEGACY_PROPERTY_DEFINITIONS.includes(definition) || FLORIDA_LEGACY_SEXUAL_DEFINITIONS.includes(definition))
+    source: ((FLORIDA_LEGACY_PROPERTY_DEFINITIONS.includes(definition) || FLORIDA_LEGACY_SEXUAL_DEFINITIONS.includes(definition) || FLORIDA_LEGACY_REMAINING_DEFINITIONS.includes(definition))
       ? "Florida Legislature Online Sunshine, legacy charge review"
       : "Florida Legislature Online Sunshine reviewed source-first report") +
       (existing?.instructionRef ? "" :

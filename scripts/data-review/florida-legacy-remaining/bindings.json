@@ -1,0 +1,769 @@
+{
+  "effectiveDates": [
+    {
+      "chapter": "2026-86",
+      "sourceUrl": "https://laws.flrules.org/2026/86",
+      "section": 9,
+      "page": 11,
+      "effectiveDate": "2026-07-01",
+      "effectiveDateQuote": "This act shall take effect July 1, 2026.",
+      "quoteSha256": "04698f4328d1fce4f9f0322b257b336bf3bf0f4edb5c2d30105a62e7b06ba22a",
+      "retrievedAt": "2026-11-06T05:21:03.323886+00:00",
+      "method": "official PDF effective-date clause inspected through browser extraction; hash covers quoted clause only",
+      "approvalDate": null
+    },
+    {
+      "chapter": "2025-121",
+      "sourceUrl": "https://laws.flrules.org/2025/121",
+      "section": 9,
+      "page": 17,
+      "effectiveDate": "2025-10-01",
+      "effectiveDateQuote": "This act shall take effect October 1, 2025.",
+      "quoteSha256": "4d9d320f0fd3b5172cbd7e6a53937a42b2e9c9c63f104430ed8047f0d515a913",
+      "retrievedAt": "2026-11-08T23:34:47.917451+00:00",
+      "method": "official PDF effective-date clause inspected through web extraction; hash covers quoted clause only",
+      "approvalDate": null
+    }
+  ],
+  "records": [
+    {
+      "id": "fl-murder-in-the-first-degree",
+      "legacyHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+      "definitionHash": "d8a3c18b1e73c98675fa228f9d94a73fbdc17e4e0919cd7703c1f9aa2e8a1e40",
+      "bound": [
+        {
+          "section": "782.04",
+          "scope": "(1)",
+          "start": 19,
+          "end": 2635,
+          "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+          "quoteHash": "a2b74792d7d829ba5963f64d3a2b03bbd03383af9c42e54e5dab39bc017ab31e"
+        },
+        {
+          "section": "775.082",
+          "scope": "(1)",
+          "start": 148,
+          "end": 2326,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "2e423af90be070c6a59d172f33ee09a869d9c3217fe56cc56f4e564eef68407d"
+        },
+        {
+          "section": "921.141",
+          "scope": "(1)",
+          "start": 116,
+          "end": 1947,
+          "sourceHash": "f4e031f670cc34136d2aa3b40efc3379b9ed94939023461f4ce98d87b868a5cb",
+          "quoteHash": "b35d43f272eff4e3e70c281c0c20c38bafdc04a4e1e1584f058788bdd8bf91ab"
+        },
+        {
+          "section": "921.141",
+          "scope": "(2)",
+          "start": 1947,
+          "end": 3707,
+          "sourceHash": "f4e031f670cc34136d2aa3b40efc3379b9ed94939023461f4ce98d87b868a5cb",
+          "quoteHash": "ec1d5b66188fc7a646466d406710510149c40a1a0d39ddb8283cd026c04dfcee"
+        },
+        {
+          "section": "921.141",
+          "scope": "(3)",
+          "start": 3707,
+          "end": 4863,
+          "sourceHash": "f4e031f670cc34136d2aa3b40efc3379b9ed94939023461f4ce98d87b868a5cb",
+          "quoteHash": "f5755620d28dcd30a594e2d5d38424d0d3d8e144396b1800814934b41cbcdc7d"
+        }
+      ]
+    },
+    {
+      "id": "fl-murder-in-the-second-degree",
+      "legacyHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+      "definitionHash": "1aae4d50484a844e144c075ca5b81837177a38ad3a53d7ab1fc56a82ef4d4f67",
+      "bound": [
+        {
+          "section": "782.04",
+          "scope": "(2)",
+          "start": 2635,
+          "end": 3086,
+          "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+          "quoteHash": "feee507e96358b908db4f58330b58eae8b084c22b63d41070348e323d164d345"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-vehicular-homicide",
+      "legacyHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698",
+      "definitionHash": "07eb41c8a7bf9fb87085474c99e0b7fb79de73530265e6efec1d4a4055af7c57",
+      "bound": [
+        {
+          "section": "782.071",
+          "scope": "whole",
+          "start": 0,
+          "end": 1875,
+          "sourceHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698",
+          "quoteHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698"
+        },
+        {
+          "section": "782.071",
+          "scope": "(1)",
+          "start": 288,
+          "end": 1027,
+          "sourceHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698",
+          "quoteHash": "29103e2fc81e224751cf1c8f259a6c5fe3dda04ba6dc9f74c9dd5f65ea9231d6"
+        },
+        {
+          "section": "782.071",
+          "scope": "(4)",
+          "start": 1276,
+          "end": 1875,
+          "sourceHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698",
+          "quoteHash": "9bd0dfdc9c8b254f6df5ec5d6b97b350b693454cde5d25684829afb0308ecefc"
+        },
+        {
+          "section": "316.062",
+          "scope": "(1)",
+          "start": 53,
+          "end": 1064,
+          "sourceHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa",
+          "quoteHash": "0ae94231b5e764bf48abb5e89824132c228189e60c71bb3e72886deb3897ba97"
+        },
+        {
+          "section": "322.28",
+          "scope": "(4)(a)",
+          "start": 5953,
+          "end": 6578,
+          "sourceHash": "f8fb7a86a02d4a9f7c258078f9167763a7257c3a1312a484fa0ec904d1e99c04",
+          "quoteHash": "6a8b78f17325b065703f8ecfedaf773d3ffef14b25458cadb6c38ae2db609e64"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-aggravated-assault",
+      "legacyHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718",
+      "definitionHash": "b2e071c26c6b7b0a4924720492ec0b57284de4e198557bc167015422a75ed558",
+      "bound": [
+        {
+          "section": "784.021",
+          "scope": "(1)",
+          "start": 32,
+          "end": 171,
+          "sourceHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718",
+          "quoteHash": "389781903db970abeda238f760f836f578942851611edc9ad79d1b59975841b5"
+        },
+        {
+          "section": "784.021",
+          "scope": "(2)",
+          "start": 171,
+          "end": 320,
+          "sourceHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718",
+          "quoteHash": "2f460efdb0bc09b5bafb98ab353eee4a332fb6d1c2179b841f90bdaf68e85930"
+        },
+        {
+          "section": "784.021",
+          "scope": "(3)",
+          "start": 320,
+          "end": 803,
+          "sourceHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718",
+          "quoteHash": "04dc8ffe1577350666267d0c315dd8624ea44e243dd60016a559f56c74e79cf4"
+        },
+        {
+          "section": "784.011",
+          "scope": "(1)",
+          "start": 21,
+          "end": 280,
+          "sourceHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6",
+          "quoteHash": "f7cc67a17e05d65c9cc484bdbdc2baaf7716cca6350aaed11d1e8a529c07f7f1"
+        },
+        {
+          "section": "741.28",
+          "scope": "(2)",
+          "start": 141,
+          "end": 465,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "9d3fab260b15b0014cfcc5ea7ca43c8af61e69b7f2da3c7cb9db05086ac99cce"
+        },
+        {
+          "section": "741.28",
+          "scope": "(3)",
+          "start": 465,
+          "end": 968,
+          "sourceHash": "87e7db2f9f273213b291f45ebad6ccfebba3b779a25aedc50024bcd1dfd5f5a6",
+          "quoteHash": "566987cd16dad74af62c0ebd8f6fcd8f396813636c9bb532076eb1d87f03cbc7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(1)",
+          "start": 52,
+          "end": 263,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "c90146c671cf5a7bd7856cda2f1e7eb71d580a9ab105361de603f0e3752315c7"
+        },
+        {
+          "section": "741.2801",
+          "scope": "(2)",
+          "start": 263,
+          "end": 1314,
+          "sourceHash": "bbfc1ef4d95f6a8c8fe64a2976b81d4768b4d7f92c5b4566c5dfc9cdbe3c7f4d",
+          "quoteHash": "74576bfa7d3e2f7e65a563a644c61f178239be3e078d38593c67daebe6e4d1cc"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-unlawful-carrying-of-weapon",
+      "legacyHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+      "definitionHash": "55782e596c1d20f1db1a69a79d723ff472aa679ddb1ba7b4df64e7d3370dfb7b",
+      "bound": [
+        {
+          "section": "790.01",
+          "scope": "(1)",
+          "start": 64,
+          "end": 410,
+          "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+          "quoteHash": "3d6f37da82b5f0f067d98ed8ead98c2e890f95b228a7ddcfc431b43f369f403f"
+        },
+        {
+          "section": "790.01",
+          "scope": "(2)",
+          "start": 410,
+          "end": 744,
+          "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+          "quoteHash": "fd697a2f5c3e250fcf4ff6356445e0b238a48f5dd79f3a61d1e02bc0bbf63b55"
+        },
+        {
+          "section": "790.01",
+          "scope": "(3)",
+          "start": 744,
+          "end": 1055,
+          "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+          "quoteHash": "50205f31ed20e5d93bc72a79cadc152e58047e52c7c21b5f79d19ddc2a3df40c"
+        },
+        {
+          "section": "790.01",
+          "scope": "(4)",
+          "start": 1055,
+          "end": 1402,
+          "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+          "quoteHash": "f2e6f7ee59a3ebe46460abe41b9e6dd5ed18ef55babc7d4d727db45e7815d427"
+        },
+        {
+          "section": "790.01",
+          "scope": "(5)",
+          "start": 1402,
+          "end": 2394,
+          "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4",
+          "quoteHash": "3c6856e18f2c8350244d1bd3368bd7c82e7e0771507b9c1e8ecf538862211482"
+        },
+        {
+          "section": "790.06",
+          "scope": "(2)",
+          "start": 1014,
+          "end": 7099,
+          "sourceHash": "f12d9959aed8403cef992429e03866170943296d6c409edf4363417da8c4a81e",
+          "quoteHash": "dc1d21ac4aada8c3179e5e2b26ab974c421d7263de212a2649673e83edc54944"
+        },
+        {
+          "section": "790.06",
+          "scope": "(3)",
+          "start": 7099,
+          "end": 10008,
+          "sourceHash": "f12d9959aed8403cef992429e03866170943296d6c409edf4363417da8c4a81e",
+          "quoteHash": "4ff9540ecaa59f066fc8e0b68436215da7f4b06496f52de53d0f2c98c77fb6db"
+        },
+        {
+          "section": "790.06",
+          "scope": "(10)",
+          "start": 18042,
+          "end": 20647,
+          "sourceHash": "f12d9959aed8403cef992429e03866170943296d6c409edf4363417da8c4a81e",
+          "quoteHash": "b9db83a2a593648c47b988385bdeac227158df8838e13ffc12798a6a34aa63bb"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-discharge-of-firearm-in-city",
+      "legacyHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5",
+      "definitionHash": "23653d06fda6c5ce55c9779abaaddf843e00e920cea8a2e9b46411ac2a79bfc1",
+      "bound": [
+        {
+          "section": "790.15",
+          "scope": "(1)",
+          "start": 69,
+          "end": 999,
+          "sourceHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5",
+          "quoteHash": "6b49193756bdfc8e119b37947d5e05b5b41c040378f84f69435848db666f9488"
+        },
+        {
+          "section": "790.15",
+          "scope": "(2)",
+          "start": 999,
+          "end": 1237,
+          "sourceHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5",
+          "quoteHash": "f464b50c8c5522eba0d654ae3232e200c7665e1b9787db5df5c8bb81059c3582"
+        },
+        {
+          "section": "790.15",
+          "scope": "(3)",
+          "start": 1237,
+          "end": 1529,
+          "sourceHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5",
+          "quoteHash": "76067ddf71144a871a09eae4c414894d37619e7b7ff4285c796983635e5bc90d"
+        },
+        {
+          "section": "790.15",
+          "scope": "(4)",
+          "start": 1529,
+          "end": 2444,
+          "sourceHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5",
+          "quoteHash": "a627cdb28dd41f1ae8fe17868aee45a13037ca9dbb4d663af5066b4d57964e23"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-forgery",
+      "legacyHash": "2983b98d3ba1ac0396e3b97717ac8c5b2fcf572fb3f6a453117065d070c95dd5",
+      "definitionHash": "c412de8aeb3cbaa6b10bff9a0f6b4a326df9e633559ff016b8ff96a66c3302b8",
+      "bound": [
+        {
+          "section": "831.01",
+          "scope": "whole",
+          "start": 0,
+          "end": 1120,
+          "sourceHash": "2983b98d3ba1ac0396e3b97717ac8c5b2fcf572fb3f6a453117065d070c95dd5",
+          "quoteHash": "2983b98d3ba1ac0396e3b97717ac8c5b2fcf572fb3f6a453117065d070c95dd5"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-loitering",
+      "legacyHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001",
+      "definitionHash": "252e79895107e35932fe9e7572c744e815c37e8becf99dfea9b1a37efc67969c",
+      "bound": [
+        {
+          "section": "856.021",
+          "scope": "(1)",
+          "start": 44,
+          "end": 319,
+          "sourceHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001",
+          "quoteHash": "b89104150b61fc6dbf7fb80b70c33677d039e95ffc48033952103314df5b4866"
+        },
+        {
+          "section": "856.021",
+          "scope": "(2)",
+          "start": 319,
+          "end": 1310,
+          "sourceHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001",
+          "quoteHash": "e4435bae1d04f937a20b5231ff1f04dfee39864e4fd85cb955cf1da5bd9fe9a5"
+        },
+        {
+          "section": "856.021",
+          "scope": "(3)",
+          "start": 1310,
+          "end": 1524,
+          "sourceHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001",
+          "quoteHash": "49bd79f07251e8799aa5ddba0b0612487bdd8b5f40fb701dd57d503a07b260f5"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-reckless-driving",
+      "legacyHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+      "definitionHash": "020d11f171a278ac35856155fe61663412b180871d8e51c1f5267c9176655ded",
+      "bound": [
+        {
+          "section": "316.192",
+          "scope": "(1)",
+          "start": 30,
+          "end": 260,
+          "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+          "quoteHash": "1fd2d928523bb7397f253cfe3ca807595694349f4774ade805c9a5d1c0f67baa"
+        },
+        {
+          "section": "316.192",
+          "scope": "(2)",
+          "start": 260,
+          "end": 721,
+          "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+          "quoteHash": "6317c096c49db32df2addc2a4cb131b663fa3c1fc61348ad984fc95546040124"
+        },
+        {
+          "section": "316.192",
+          "scope": "(3)",
+          "start": 721,
+          "end": 1410,
+          "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+          "quoteHash": "5a8f7911fae6d26a290d56d8244946f04525c27f72f13ff2b0303a69b8a07eb3"
+        },
+        {
+          "section": "316.192",
+          "scope": "(4)",
+          "start": 1410,
+          "end": 1647,
+          "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+          "quoteHash": "7ae5e1094df10fc0472938272ce6ace48d4a660d929aabf9e4a6b1d64c46a966"
+        },
+        {
+          "section": "316.192",
+          "scope": "(5)",
+          "start": 1647,
+          "end": 4299,
+          "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f",
+          "quoteHash": "7ae0d3fcc9eab7268d12f852325043346c4ad3246cdc36bf0d6567e71b48f55d"
+        },
+        {
+          "section": "775.082",
+          "scope": "(3)",
+          "start": 2921,
+          "end": 8263,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "b0a462a386f3eb7bb9ea4d4a5f818931896aec10f71be1893fb97c239489c856"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-disorderly-intoxication",
+      "legacyHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5",
+      "definitionHash": "a2ded02fb7bbb51117f1ad8d0179549a0b9ee0f076201a8bd6c440694a5c812e",
+      "bound": [
+        {
+          "section": "856.011",
+          "scope": "(1)",
+          "start": 37,
+          "end": 308,
+          "sourceHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5",
+          "quoteHash": "dede10e30056fb8737bd4761b457e4fc6c893c06601c79f53bdb1461aa3944c9"
+        },
+        {
+          "section": "856.011",
+          "scope": "(2)",
+          "start": 308,
+          "end": 473,
+          "sourceHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5",
+          "quoteHash": "e73015fecdb7b77a694a7b9208b36f02b8f0894af193bb3006f6b6eb84e69572"
+        },
+        {
+          "section": "856.011",
+          "scope": "(3)",
+          "start": 473,
+          "end": 1287,
+          "sourceHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5",
+          "quoteHash": "c592b6cf75005ee8ba46b59ead2c82d93ed557130659d02c24e8ee10f3a60e2e"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-possession-of-marijuana-under-20g",
+      "legacyHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+      "definitionHash": "e76263b9c636c3135564b1bc5945d0df45df7a332621fbbb9e43df5984ce90f2",
+      "bound": [
+        {
+          "section": "893.13",
+          "scope": "(6)(a)",
+          "start": 14705,
+          "end": 15258,
+          "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+          "quoteHash": "db175139748c0180b4e8177843067819aae1f94c82d48cc8e2a44f3595685bd1"
+        },
+        {
+          "section": "893.13",
+          "scope": "(6)(b)",
+          "start": 15258,
+          "end": 15675,
+          "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+          "quoteHash": "068befa78908fe57f2eefd5a23a7206d75a74ef816440d5efb6a5772fab85ce0"
+        },
+        {
+          "section": "322.055",
+          "scope": "(1)",
+          "start": 158,
+          "end": 987,
+          "sourceHash": "c3f257cdf81136ee5a8b5d80cffb7c0e4815811dc069b2135234a80c9908ced8",
+          "quoteHash": "e407aae852654b9bbabc00f4da8f07cb1a61f4666d67dc131f68ff2b28c681b8"
+        },
+        {
+          "section": "322.055",
+          "scope": "(2)",
+          "start": 987,
+          "end": 1910,
+          "sourceHash": "c3f257cdf81136ee5a8b5d80cffb7c0e4815811dc069b2135234a80c9908ced8",
+          "quoteHash": "938e186d68ca26088396e64d656d9d3fee57fbf9e12828d9646c2afb07c7b20f"
+        },
+        {
+          "section": "322.055",
+          "scope": "(3)",
+          "start": 1910,
+          "end": 2816,
+          "sourceHash": "c3f257cdf81136ee5a8b5d80cffb7c0e4815811dc069b2135234a80c9908ced8",
+          "quoteHash": "a7a8cc494b96d4917d0eaac8d0d4dc63ead7ac20e86a8edd2ab448c79048087d"
+        },
+        {
+          "section": "322.055",
+          "scope": "(4)",
+          "start": 2816,
+          "end": 3834,
+          "sourceHash": "c3f257cdf81136ee5a8b5d80cffb7c0e4815811dc069b2135234a80c9908ced8",
+          "quoteHash": "7fe7af4f290b7d9a48b98f13146874046fce540115681a0c652893b4aefc140f"
+        },
+        {
+          "section": "322.055",
+          "scope": "(5)",
+          "start": 3834,
+          "end": 4168,
+          "sourceHash": "c3f257cdf81136ee5a8b5d80cffb7c0e4815811dc069b2135234a80c9908ced8",
+          "quoteHash": "175df3c79362405fac006e9d56e0e2385e480bb1be464d21e1eb793e28c50e9f"
+        },
+        {
+          "section": "322.056",
+          "scope": "(1)",
+          "start": 164,
+          "end": 1352,
+          "sourceHash": "276cba198af8c94aa47308b14690b86fcba12370ec14fd89be790464d38057b1",
+          "quoteHash": "af4b8294f990d09dcc41b0b1e44252635c6ff7b82f29f6d1f82be158239e2635"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-resisting-officer-without-violence",
+      "legacyHash": "eaf7742e70e1e1ec3d3a4e5a10ea1f52595b0b8905255ecfbe621c9851bfe8b6",
+      "definitionHash": "41cb9512f8b15da8a8787962bd1c78d8cbe40b35d3582dbf94d11092251910ba",
+      "bound": [
+        {
+          "section": "843.02",
+          "scope": "whole",
+          "start": 0,
+          "end": 1112,
+          "sourceHash": "eaf7742e70e1e1ec3d3a4e5a10ea1f52595b0b8905255ecfbe621c9851bfe8b6",
+          "quoteHash": "eaf7742e70e1e1ec3d3a4e5a10ea1f52595b0b8905255ecfbe621c9851bfe8b6"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    },
+    {
+      "id": "fl-minor-in-possession",
+      "legacyHash": "af564468b310202fd814de9dfe8dc55d4851e642d070f54e197acc4a3b2a1a93",
+      "definitionHash": "c2954123e03eddaaee400fd9fdad4fb25d08b717f707983627dd6d1f5900cafb",
+      "bound": [
+        {
+          "section": "562.111",
+          "scope": "(1)",
+          "start": 82,
+          "end": 1167,
+          "sourceHash": "b9ec030d7760a85a292dd31158c56277a6cff580b84ab82f5a55001c2b29b051",
+          "quoteHash": "09b13f37e3b15bb5cc0d3edd7dc28581083a3e89f9bb91eaf69e46dc12797a4f"
+        },
+        {
+          "section": "562.111",
+          "scope": "(2)",
+          "start": 1167,
+          "end": 2996,
+          "sourceHash": "b9ec030d7760a85a292dd31158c56277a6cff580b84ab82f5a55001c2b29b051",
+          "quoteHash": "6439f2aa36b3696737122f1ab999dd218f54f5cf431c5cb854bb4ff78c9511cb"
+        },
+        {
+          "section": "775.082",
+          "scope": "(4)",
+          "start": 8263,
+          "end": 8563,
+          "sourceHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+          "quoteHash": "3956cabf57d4eb869956af51be5e343d747fd22ebe40e58ab01e2c574d168cb1"
+        },
+        {
+          "section": "775.083",
+          "scope": "(1)",
+          "start": 19,
+          "end": 1554,
+          "sourceHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+          "quoteHash": "08d7c177223a49f071779422ad67dafef5cc0859f4b286d65440a8c17ee74be0"
+        }
+      ]
+    }
+  ]
+}
