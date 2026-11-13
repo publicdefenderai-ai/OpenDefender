@@ -25,6 +25,7 @@ import { OHIO_RESIDUAL_BATCH, OHIO_RESIDUAL_IDS } from "./ohio-residual-batch";
 import { FLORIDA_PERSONS_BATCH, FLORIDA_PERSONS_IDS } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
 import { FLORIDA_FALSE_REPORTS_BATCH } from "./florida-false-reports-batch";
+import { FLORIDA_FORGED_INSTRUMENTS_BATCH } from "./florida-forged-instruments-batch";
 import { FLORIDA_ROAD_RACING_BATCH } from "./florida-road-racing-batch";
 import { FLORIDA_COURT_OFFICIALS_BATCH } from "./florida-court-officials-batch";
 import { FLORIDA_JUSTICE_BATCH } from "./florida-justice-batch";
@@ -94,7 +95,7 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   ...FLORIDA_REVIEWED_BATCH.explanations,
-  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_FALSE_REPORTS_BATCH.explanations, ...FLORIDA_ROAD_RACING_BATCH.explanations, ...FLORIDA_COURT_OFFICIALS_BATCH.explanations, ...FLORIDA_JUSTICE_BATCH.explanations, ...FLORIDA_CREDIT_CARD_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
+  ...FLORIDA_PERSONS_BATCH.explanations, ...FLORIDA_ROBBERY_BATCH.explanations, ...FLORIDA_FALSE_REPORTS_BATCH.explanations, ...FLORIDA_FORGED_INSTRUMENTS_BATCH.explanations, ...FLORIDA_ROAD_RACING_BATCH.explanations, ...FLORIDA_COURT_OFFICIALS_BATCH.explanations, ...FLORIDA_JUSTICE_BATCH.explanations, ...FLORIDA_CREDIT_CARD_BATCH.explanations, ...FLORIDA_RESTRAINT_BATCH.explanations, ...FLORIDA_CRASH_FLIGHT_BATCH.explanations,
   ...FLORIDA_LEGACY_PROPERTY.explanations,
   ...FLORIDA_LEGACY_SEXUAL.explanations,
   ...FLORIDA_LEGACY_REMAINING.explanations,
