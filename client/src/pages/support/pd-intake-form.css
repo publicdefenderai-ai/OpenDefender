@@ -1,0 +1,33 @@
+.pd-intake-page { width: min(100%, 66rem); margin-inline: auto; padding: clamp(2rem, 5vw, 4rem) 5%; }
+.pd-intake-page header { max-width: 48rem; }
+.pd-intake-page h1 { font-size: clamp(2.5rem, 5vw, 3.6rem); font-weight: 500; line-height: 1.1; letter-spacing: -.035em; margin: 1rem 0; }
+.pd-intake-page p { line-height: 1.65; }
+.pd-intake-privacy { margin: 1rem 0; padding-inline-start: 1rem; border-inline-start: 3px solid var(--primary); }
+.pd-intake-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem 1.5rem; margin: 1.5rem 0; }
+.pd-intake-page a { color: var(--primary); font-weight: 550; }
+.pd-intake-page a:hover { text-decoration: underline; }
+.pd-intake-index { border-block: 1px solid var(--border); padding-block: .5rem; }
+.pd-intake-index summary { cursor: pointer; min-height: 44px; align-content: center; }
+.pd-intake-index nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 1rem; }
+.pd-intake-index a { padding-block: .6rem; }
+.pd-intake-sheet { max-width: 51rem; margin: 2rem auto; padding: clamp(1rem, 4vw, 2.6rem); border: 1px solid var(--border); background: var(--card); }
+.pd-intake-folio { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .6rem; margin-bottom: 1rem; color: var(--muted-foreground); font-size: .85rem; }
+.pd-intake-folio span:last-child { white-space: nowrap; }
+.pd-intake-sheet section { scroll-margin-top: 6rem; }
+.pd-intake-sheet h2 { font-size: 1.35rem; font-weight: 550; border-bottom: 2px solid var(--primary); margin: 1.3rem 0 .75rem; padding-bottom: .4rem; }
+.pd-intake-field { margin: .85rem 0; break-inside: avoid; }
+.pd-intake-line { height: 1.8rem; border-bottom: 1px solid var(--muted-foreground); }
+.pd-intake-options { display: flex; gap: .4rem 1.2rem; flex-wrap: wrap; padding-top: .35rem; }
+.pd-intake-options li { display: flex; gap: .5rem; align-items: baseline; }
+.pd-intake-options li::before { content: ""; width: .85em; height: .85em; border: 1px solid currentColor; flex: none; }
+.pd-intake-end { margin-top: 1rem; border-top: 1px solid var(--border); padding-top: .75rem; }
+@media (max-width: 700px) { .pd-intake-index nav { grid-template-columns: 1fr; } }
+@media print {
+  .pd-intake-index { display: none; }
+  .pd-intake-page { width: 100%; padding: 0; color: black; }
+  .pd-intake-sheet { color-scheme: light; --primary: #333; --border: #888; --muted-foreground: #444; color: black; background: white; max-width: none; margin: 0; padding: 0; border: none; font: 11pt/1.32 Arial, sans-serif; }
+  .pd-intake-sheet + .pd-intake-sheet { break-before: page; }
+  .pd-intake-sheet h2 { font-size: 15pt; break-after: avoid; }
+  .pd-intake-sheet p { line-height: 1.35; }
+  .pd-intake-field { margin: 8pt 0; }
+}

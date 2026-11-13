@@ -649,3 +649,7 @@ Nearby results use mapped courthouse coordinates. The previous federal supplemen
 The approved `court-records-content.html` reference has SHA-256 `3bad111103fe0802bc88dc60df7ff5d685270321a2497c0d4bb3b6480247c2a5`. The page keeps the published RECAP notice, search term, case name, docket number and semantic-search switch. All three fields have associated labels and submit through the existing court-records endpoint. Dockets and opinions appear in separate lists with filing metadata, source links and provider availability notices.
 
 “View docket” describes the actual docket destination. An empty successful search has its own message. A partial outage keeps the available results and names the affected source. The release browser test checks keyword and semantic requests, record destinations, keyboard submission, successful, partial, failed and empty responses, reset and translated layouts with controlled API responses.
+
+### Public Defender Intake Form
+
+The approved pd-intake-content.html groups the seven existing sections into four sheets. The on-screen index links to each section and the print action opens the browser print dialog. All answers are handwritten. The page has no answer fields, storage or submission. The release browser checks verify the published field labels, answer options, advisories, keyboard navigation, print trigger and four-page output on Letter and A4 paper in English, Spanish and Chinese.

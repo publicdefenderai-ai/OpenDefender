@@ -1,67 +1,36 @@
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "wouter";
-import { Printer, FileText, Info } from "lucide-react";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { Printer } from "lucide-react";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import "./pd-intake-form.css";
 
-// A blank line component used throughout the form
-function BlankLine({ wide = false }: { wide?: boolean }) {
+const sections = ["personal", "support", "housing", "financial", "legalHistory", "immigration", "additional"] as const;
+
+function Sheet({ number, title, children }: { number: number; title: string; children: ReactNode }) {
   return (
-    <div
-      className={`border-b border-gray-400 dark:border-gray-600 print:border-gray-700 mt-1 mb-4 ${wide ? "w-full" : "w-full"}`}
-      style={{ minHeight: "1.5rem" }}
-    />
+    <article className="pd-intake-sheet">
+      <div className="pd-intake-folio"><span>{title}</span><span>{number} / 4</span></div>
+      {children}
+    </article>
   );
 }
 
-function BlankLines({ count = 3 }: { count?: number }) {
-  return (
-    <div className="space-y-4">
-      {Array.from({ length: count }).map((_, i) => (
-        <BlankLine key={i} />
-      ))}
-    </div>
-  );
+function FieldRow({ label }: { label: string }) {
+  return <div className="pd-intake-field">{label}<div className="pd-intake-line" /></div>;
 }
 
-function SectionHeader({ number, title }: { number: string; title: string }) {
-  return (
-    <div className="mt-8 mb-4 pb-2 border-b-2 border-amber-400 print:border-gray-700">
-      <h2 className="text-base font-bold text-foreground print:text-black">
-        {number}. {title}
-      </h2>
-    </div>
-  );
-}
-
-function FieldRow({ label, halfWidth = false }: { label: string; halfWidth?: boolean }) {
-  return (
-    <div className={`mb-4 ${halfWidth ? "inline-block w-full md:w-1/2 pr-4 print:w-1/2" : "block"}`}>
-      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1 print:text-black print:text-xs">
-        {label}
-      </p>
-      <BlankLine />
-    </div>
-  );
+function BlankLines({ count }: { count: number }) {
+  return <div>{Array.from({ length: count }, (_, i) => <div className="pd-intake-line" key={i} />)}</div>;
 }
 
 function CheckboxRow({ label, options }: { label: string; options: string[] }) {
   return (
-    <div className="mb-4">
-      <p className="text-sm text-foreground mb-2 print:text-black">{label}</p>
-      <div className="flex flex-wrap gap-4">
-        {options.map((opt) => (
-          <span key={opt} className="flex items-center gap-2 text-sm text-muted-foreground print:text-black">
-            <span className="inline-block w-4 h-4 border border-gray-400 print:border-gray-700 rounded-sm shrink-0" />
-            {opt}
-          </span>
-        ))}
-      </div>
+    <div className="pd-intake-field">
+      <p>{label}</p>
+      <ul className="pd-intake-options">{options.map(option => <li key={option}>{option}</li>)}</ul>
     </div>
   );
 }
@@ -69,74 +38,29 @@ function CheckboxRow({ label, options }: { label: string; options: string[] }) {
 export default function PdIntakeForm() {
   const { t } = useTranslation();
   useScrollToTop();
-
-  const handlePrint = () => {
-    window.print();
-  };
-
+  const formTitle = t("pdIntakeForm.formTitle");
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <div className="print:hidden"><Header /></div>
-
-      <div data-skip-content tabIndex={-1} className="flex-1">
-        {/* Screen-only intro section */}
-        <div className="print:hidden bg-gradient-to-br from-amber-500/5 via-background to-background border-b border-border/40">
-          <div className="max-w-3xl mx-auto px-4 py-10 md:py-14">
-            <ScrollReveal>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-amber-500/10">
-                  <FileText className="h-6 w-6 text-amber-600 dark:text-amber-400" />
-                </div>
-                <Badge
-                  variant="outline"
-                  className="border-amber-400 text-amber-700 dark:text-amber-400 bg-amber-100 dark:bg-amber-900/40"
-                >
-                  {t("pdIntakeForm.badge")}
-                </Badge>
-              </div>
-              <h1 className="text-3xl font-bold text-foreground mb-3">
-                {t("pdIntakeForm.title")}
-              </h1>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                {t("pdIntakeForm.intro")}
-              </p>
-
-              <Alert className="border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/30 mb-6">
-                <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-                <AlertDescription className="text-sm text-amber-800 dark:text-amber-300">
-                  {t("pdIntakeForm.privacyNote")}
-                </AlertDescription>
-              </Alert>
-
-              <Button
-                onClick={handlePrint}
-                className="gap-2 bg-amber-600 hover:bg-amber-700 text-white"
-              >
-                <Printer className="h-4 w-4" />
-                {t("pdIntakeForm.printButton")}
-              </Button>
-
-              <div className="mt-4">
-                <Link href="/support/court-logistics" className="text-sm text-primary hover:underline">
-                  {t("pdIntakeForm.backToCourtLogistics")}
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
+    <ScanFirstPageFrame mainClassName="pd-intake-page">
+      <header>
+        <p>{t("pdIntakeForm.badge")}</p>
+        <h1>{t("pdIntakeForm.title")}</h1>
+        <p>{t("pdIntakeForm.intro")}</p>
+        <p className="pd-intake-privacy">{t("pdIntakeForm.privacyNote")}</p>
+        <div className="pd-intake-actions">
+          <Button type="button" onClick={() => window.print()}><Printer aria-hidden="true" />{t("pdIntakeForm.printButton")}</Button>
+          <Link href="/support/court-logistics">{t("pdIntakeForm.backToCourtLogistics")}</Link>
         </div>
-
-        {/* Form */}
-        <div className="max-w-3xl mx-auto px-4 py-10 print:px-0 print:py-0 print:max-w-none">
-          {/* Print-only header */}
-          <div className="hidden print:block mb-6">
-            <h1 className="text-2xl font-bold text-black border-b-2 border-gray-700 pb-3 mb-2">
-              {t("pdIntakeForm.formTitle")}
-            </h1>
-            <p className="text-xs text-gray-600 italic">{t("pdIntakeForm.printIntro")}</p>
-          </div>
-
-          {/* Section 1: Personal Information */}
-          <SectionHeader number="1" title={t("pdIntakeForm.sections.personal.title")} />
+      </header>
+      <details className="pd-intake-index">
+        <summary>{t("pdIntakeForm.sectionIndex")}</summary>
+        <nav aria-label={t("pdIntakeForm.sectionIndex")}>
+          {sections.map((key, i) => <a key={key} href={"#intake-" + key}>{i + 1}. {t("pdIntakeForm.sections." + key + ".title")}</a>)}
+        </nav>
+      </details>
+      <Sheet number={1} title={formTitle}>
+        <p>{t("pdIntakeForm.printIntro")}</p>
+        <section id="intake-personal">
+          <h2>1. {t("pdIntakeForm.sections.personal.title")}</h2>
           <FieldRow label={t("pdIntakeForm.sections.personal.fullName")} />
           <FieldRow label={t("pdIntakeForm.sections.personal.preferredName")} />
           <div className="md:flex md:gap-4 print:flex print:gap-4">
@@ -150,9 +74,11 @@ export default function PdIntakeForm() {
           <FieldRow label={t("pdIntakeForm.sections.personal.address")} />
           <FieldRow label={t("pdIntakeForm.sections.personal.email")} />
           <FieldRow label={t("pdIntakeForm.sections.personal.language")} />
-
-          {/* Section 2: Support System */}
-          <SectionHeader number="2" title={t("pdIntakeForm.sections.support.title")} />
+        </section>
+      </Sheet>
+      <Sheet number={2} title={formTitle}>
+        <section id="intake-support">
+          <h2>2. {t("pdIntakeForm.sections.support.title")}</h2>
           <FieldRow label={t("pdIntakeForm.sections.support.emergencyContact")} />
           <FieldRow label={t("pdIntakeForm.sections.support.emergencyPhone")} />
           <CheckboxRow
@@ -174,9 +100,9 @@ export default function PdIntakeForm() {
             label={t("pdIntakeForm.sections.support.veteran")}
             options={[t("pdIntakeForm.options.yes"), t("pdIntakeForm.options.no")]}
           />
-
-          {/* Section 3: Housing */}
-          <SectionHeader number="3" title={t("pdIntakeForm.sections.housing.title")} />
+        </section>
+        <section id="intake-housing">
+          <h2>3. {t("pdIntakeForm.sections.housing.title")}</h2>
           <CheckboxRow
             label={t("pdIntakeForm.sections.housing.situation")}
             options={[
@@ -195,9 +121,11 @@ export default function PdIntakeForm() {
               t("pdIntakeForm.options.noHousing"),
             ]}
           />
-
-          {/* Section 4: Financial Information */}
-          <SectionHeader number="4" title={t("pdIntakeForm.sections.financial.title")} />
+        </section>
+      </Sheet>
+      <Sheet number={3} title={formTitle}>
+        <section id="intake-financial">
+          <h2>4. {t("pdIntakeForm.sections.financial.title")}</h2>
           <FieldRow label={t("pdIntakeForm.sections.financial.monthlyIncome")} />
           <CheckboxRow
             label={t("pdIntakeForm.sections.financial.outstandingDebts")}
@@ -211,9 +139,9 @@ export default function PdIntakeForm() {
             ]}
           />
           <FieldRow label={t("pdIntakeForm.sections.financial.insuranceType")} />
-
-          {/* Section 5: Prior Legal History */}
-          <SectionHeader number="5" title={t("pdIntakeForm.sections.legalHistory.title")} />
+        </section>
+        <section id="intake-legalHistory">
+          <h2>5. {t("pdIntakeForm.sections.legalHistory.title")}</h2>
           <p className="text-xs text-muted-foreground mb-4 italic print:text-gray-600">
             {t("pdIntakeForm.sections.legalHistory.note")}
           </p>
@@ -237,9 +165,11 @@ export default function PdIntakeForm() {
             label={t("pdIntakeForm.sections.legalHistory.expunged")}
             options={[t("pdIntakeForm.options.yes"), t("pdIntakeForm.options.no")]}
           />
-
-          {/* Section 6: Immigration */}
-          <SectionHeader number="6" title={t("pdIntakeForm.sections.immigration.title")} />
+        </section>
+      </Sheet>
+      <Sheet number={4} title={formTitle}>
+        <section id="intake-immigration">
+          <h2>6. {t("pdIntakeForm.sections.immigration.title")}</h2>
           <p className="text-xs text-muted-foreground mb-4 italic print:text-gray-600">
             {t("pdIntakeForm.sections.immigration.note")}
           </p>
@@ -259,9 +189,9 @@ export default function PdIntakeForm() {
               t("pdIntakeForm.options.preferNotSay"),
             ]}
           />
-
-          {/* Section 7: Additional Information */}
-          <SectionHeader number="7" title={t("pdIntakeForm.sections.additional.title")} />
+        </section>
+        <section id="intake-additional">
+          <h2>7. {t("pdIntakeForm.sections.additional.title")}</h2>
           <p className="text-sm text-muted-foreground mb-2 print:text-black">
             {t("pdIntakeForm.sections.additional.anythingElse")}
           </p>
@@ -270,16 +200,9 @@ export default function PdIntakeForm() {
             {t("pdIntakeForm.sections.additional.medications")}
           </p>
           <BlankLines count={3} />
-
-          {/* Footer note */}
-          <div className="mt-10 pt-4 border-t border-gray-300 dark:border-gray-700 print:border-gray-500">
-            <p className="text-xs text-muted-foreground italic print:text-gray-600 print:text-xs">
-              {t("pdIntakeForm.formFooter")}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="print:hidden"><Footer /></div>
-    </div>
+        </section>
+        <p className="pd-intake-end">{t("pdIntakeForm.formFooter")}</p>
+      </Sheet>
+    </ScanFirstPageFrame>
   );
 }
