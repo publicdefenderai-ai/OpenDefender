@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "kind": "initial_acquired_evidence_window",
+  "verificationPolicy": "quarterly-v1",
+  "checkedAt": "2026-11-13T06:39:29.850Z",
+  "expiresAt": "2027-02-08T23:31:33.103Z",
+  "packetHash": "31326d83f6328ff638555e62ee66ef02c944d8b41931cb23b03d47c9257a0626"
+}

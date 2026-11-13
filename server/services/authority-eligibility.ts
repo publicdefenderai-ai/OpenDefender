@@ -1,3 +1,4 @@
+import { OHIO_DANGEROUS_DRIVING_IDS } from "@shared/ohio-dangerous-driving-batch";
 import { OHIO_CRASH_IDENTITY_IDS } from "@shared/ohio-crash-identity-batch";
 import { OHIO_DRIVING_LICENSE_IDS } from "@shared/ohio-driving-license-batch";
 import { OHIO_GAMBLING_IDS } from "@shared/ohio-gambling-batch";
@@ -16,6 +17,7 @@ import { OHIO_JUSTICE_IDS } from "@shared/ohio-justice-batch";
 import { OHIO_BENEFITS_FRAUD_IDS } from "@shared/ohio-benefits-fraud-batch";
 import { OHIO_THEFT_FRAUD_IDS } from "@shared/ohio-theft-fraud-batch";
 import { OHIO_RESIDUAL_IDS } from "@shared/ohio-residual-batch";
+import { isOhioDangerousDrivingSourceFresh } from "../data/ohio-dangerous-driving-source";
 import { isOhioCrashIdentitySourceFresh } from "../data/ohio-crash-identity-source";
 import { isOhioDrivingLicenseSourceFresh } from "../data/ohio-driving-license-source";
 import { isOhioGamblingSourceFresh } from "../data/ohio-gambling-source";
@@ -87,6 +89,7 @@ function createAuthorityChargeGate() {
     if (charge.jurisdiction === "CA" && (!fresh(isCaliforniaEvidenceFresh) || getCaliforniaCanonicalRecord(charge.id)?.currentness.status !== "current")) return false;
     if (charge.jurisdiction === "OH" && OHIO_RESIDUAL_IDS.has(charge.id) && !fresh(isOhioResidualSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_THEFT_FRAUD_IDS.has(charge.id) && !fresh(isOhioTheftFraudSourceFresh)) return false;
+    if (charge.jurisdiction === "OH" && OHIO_DANGEROUS_DRIVING_IDS.has(charge.id) && !fresh(isOhioDangerousDrivingSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_CRASH_IDENTITY_IDS.has(charge.id) && !fresh(isOhioCrashIdentitySourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_DRIVING_LICENSE_IDS.has(charge.id) && !fresh(isOhioDrivingLicenseSourceFresh)) return false;
     if (charge.jurisdiction === "OH" && OHIO_GAMBLING_IDS.has(charge.id) && !fresh(isOhioGamblingSourceFresh)) return false;
