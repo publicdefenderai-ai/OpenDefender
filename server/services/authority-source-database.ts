@@ -15,6 +15,7 @@ import { OHIO_THEFT_FRAUD_SOURCES, isOhioTheftFraudSourceFresh } from "../data/o
 import { OHIO_RESIDUAL_SOURCES, isOhioResidualSourceFresh } from "../data/ohio-residual-source";
 import { FLORIDA_PERSONS_SOURCES, isFloridaPersonsSourceFresh } from "../data/florida-persons-source";
 import { FLORIDA_ROBBERY_SOURCES, isFloridaRobberySourceFresh } from "../data/florida-robbery-source";
+import { FLORIDA_RESTRAINT_SOURCES, isFloridaRestraintSourceFresh } from "../data/florida-restraint-source";
 import { FLORIDA_CRASH_FLIGHT_SOURCES, isFloridaCrashFlightSourceFresh } from "../data/florida-crash-flight-source";
 import { OHIO_MAJOR_SOURCES, isOhioMajorSourceFresh } from "../data/ohio-major-source";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
@@ -325,6 +326,9 @@ export async function getCurrentAuthoritySelectableChargeIds(
   }
   if (jurisdiction === "FL" && !isFloridaRobberySourceFresh()) {
     for (const source of FLORIDA_ROBBERY_SOURCES) selectable.delete(source.chargeId);
+  }
+  if (jurisdiction === "FL" && !isFloridaRestraintSourceFresh()) {
+    for (const source of FLORIDA_RESTRAINT_SOURCES) selectable.delete(source.chargeId);
   }
   if (jurisdiction === "FL" && !isFloridaCrashFlightSourceFresh()) {
     for (const source of FLORIDA_CRASH_FLIGHT_SOURCES) selectable.delete(source.chargeId);

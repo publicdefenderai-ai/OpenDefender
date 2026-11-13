@@ -1,0 +1,1137 @@
+[
+  {
+    "id": "fl-fs-787-01-2-restraint",
+    "section": "787.01",
+    "scope": "(2)",
+    "gradingScope": "(2)",
+    "officialTitle": "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.01",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.01": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-01-2-restraint",
+      "name": "Kidnapping",
+      "names": {
+        "es": "Secuestro",
+        "zh": "绑架"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.01(2)",
+      "slug": "fl-fs-787-01-2-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.01(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.01",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.01.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(2)",
+          "F.S. 787.01(2)"
+        ],
+        "es": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(2)",
+          "F.S. 787.01(2)"
+        ],
+        "zh": [
+          "Kidnapping; kidnapping of child under age 13, aggravating circumstances",
+          "FS 787.01(2)",
+          "F.S. 787.01(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, secretly or by threat confining, abducting or imprisoning someone against their will and without lawful authority, intending ransom, reward, use as a shield or hostage, commission or facilitation of a felony, bodily harm or terror to someone, or interference with a governmental or political function. For the felony-facilitation theory, restraint merely incidental to the other crime is insufficient. Confining a child under 13 without a parent’s or legal guardian’s consent counts as against the child’s will. A separately aggravated child offense requires an additional listed offense.",
+          "degreeContext": "First-degree felony punishable by imprisonment up to life and ordinarily a fine up to $10,000. For conduct on or after July 1, 2026 against a qualifying family or household member, a qualifying domestic-violence conviction already in place requires reclassification to a life felony."
+        },
+        "es": {
+          "plainSummary": "Confinar, raptar o encarcelar a alguien mediante fuerza, secreto o amenaza, contra su voluntad y sin autoridad legal, para obtener rescate o recompensa, usarlo como escudo o rehén, cometer o facilitar un delito grave, causar daño corporal o terror a alguien, o interferir en una función gubernamental o política. Para la modalidad de facilitar otro delito grave no basta una restricción meramente incidental. El confinamiento de un menor de 13 años sin consentimiento de su padre, madre o tutor legal se considera contrario a la voluntad del menor. La modalidad agravada contra menores exige además otro delito enumerado.",
+          "degreeContext": "Delito grave de primer grado castigado con hasta cadena perpetua y, normalmente, multa de hasta $10,000. Para hechos desde el 1 de julio de 2026 contra un familiar o conviviente comprendido, una condena previa válida por violencia doméstica exige reclasificación a delito grave castigado como life felony."
+        },
+        "zh": {
+          "plainSummary": "以强力、秘密或威胁方式，在无合法权限且违背他人意愿的情况下限制、劫持或拘禁他人，目的是索取赎金或报酬、将人作为盾牌或人质、实施或便利重罪、伤害或恐吓他人，或干扰政府或政治职能。若指控旨在便利其他重罪，仅附带于该罪的限制不足以构成绑架。 未经父母或法定监护人同意限制未满13岁儿童自由，视为违背儿童意愿。另列的加重儿童犯罪还须伴随法定列举的其他犯罪。",
+          "degreeContext": "一级重罪，最高可判终身监禁，通常罚金最高10,000美元。 自2026年7月1日起，若侵害符合法定关系的家庭成员或同住者，且行为人当时已有符合条件的家庭暴力定罪，本罪须升为可判终身的重罪（life felony）."
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-02-2-restraint",
+    "section": "787.02",
+    "scope": "(2)",
+    "gradingScope": "(2)",
+    "officialTitle": "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+    "dependencies": [
+      "787.02",
+      "741.28",
+      "741.2801",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.02": [
+        "(1)",
+        "(2)",
+        "(3)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "741.2801": [
+        "(1)",
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-02-2-restraint",
+      "name": "False imprisonment",
+      "names": {
+        "es": "Privación ilegal de libertad",
+        "zh": "非法拘禁"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.02(2)",
+      "slug": "fl-fs-787-02-2-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.02(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.02",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.02.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.2801",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.2801.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(2)",
+          "F.S. 787.02(2)"
+        ],
+        "es": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(2)",
+          "F.S. 787.02(2)"
+        ],
+        "zh": [
+          "False imprisonment; false imprisonment of child under age 13, aggravating circumstances",
+          "FS 787.02(2)",
+          "F.S. 787.02(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Forcibly, by threat or secretly confining, abducting, imprisoning or restraining someone without lawful authority and against their will. Confining a child under 13 without a parent’s or legal guardian’s consent counts as against the child’s will. A separately aggravated child offense requires an additional listed offense.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine. For conduct on or after July 1, 2026 against a qualifying family or household member, a qualifying domestic-violence conviction already in place requires reclassification to a second-degree felony, ordinarily up to 15 years and $10,000."
+        },
+        "es": {
+          "plainSummary": "Confinar, raptar, encarcelar o restringir a alguien mediante fuerza, amenaza o en secreto, sin autoridad legal y contra su voluntad. El confinamiento de un menor de 13 años sin consentimiento de su padre, madre o tutor legal se considera contrario a la voluntad del menor. La modalidad agravada contra menores exige además otro delito enumerado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000. Para hechos desde el 1 de julio de 2026 contra un familiar o conviviente comprendido, una condena previa válida por violencia doméstica exige reclasificación a delito grave de segundo grado, normalmente hasta 15 años y $10,000."
+        },
+        "zh": {
+          "plainSummary": "以强力、威胁或秘密方式，在无合法权限且违背他人意愿的情况下限制、劫持或拘禁他人。 未经父母或法定监护人同意限制未满13岁儿童自由，视为违背儿童意愿。另列的加重儿童犯罪还须伴随法定列举的其他犯罪。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。 自2026年7月1日起，若侵害符合法定关系的家庭成员或同住者，且行为人当时已有符合条件的家庭暴力定罪，本罪须升为二级重罪，通常最高15年监禁和10,000美元罚金."
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-025-2-a-restraint",
+    "section": "787.025",
+    "scope": "(2)(a)",
+    "gradingScope": "(2)(a)",
+    "officialTitle": "Luring or enticing a child",
+    "dependencies": [
+      "787.025",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.025": [
+        "(1)",
+        "(2)(a)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-025-2-a-restraint",
+      "name": "Luring or enticing a child",
+      "names": {
+        "es": "Atracción o inducción de un menor",
+        "zh": "引诱儿童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.025(2)(a)",
+      "slug": "fl-fs-787-025-2-a-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.025(2)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.025",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(a)",
+          "F.S. 787.025(2)(a)"
+        ],
+        "es": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(a)",
+          "F.S. 787.025(2)(a)"
+        ],
+        "zh": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(a)",
+          "F.S. 787.025(2)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A person age 18 or older intentionally lures or entices, or tries to lure or entice, a child under 14 into or out of a structure, dwelling or conveyance for a purpose other than a lawful one. Statutory defenses include reasonably believing the action necessary to prevent serious injury, a lawful purpose, or reasonable actions without intent to harm the child’s health, safety or welfare.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Una persona de 18 años o más atrae o induce intencionalmente, o intenta atraer o inducir, a un menor de 14 años a entrar o salir de una estructura, vivienda o medio de transporte con un propósito que no es lícito. Las defensas incluyen creer razonablemente que era necesario evitar lesiones graves, un fin lícito, o actos razonables sin intención de perjudicar la salud, seguridad o bienestar del menor.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "年满18岁者出于不合法目的，故意引诱或企图引诱未满14岁的儿童进入或离开建筑物、住宅或交通工具。 法定抗辩包括合理相信行为为防止严重伤害所必需、目的合法，或行为合理且无意损害儿童健康、安全或福祉。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-025-2-b-restraint",
+    "section": "787.025",
+    "scope": "(2)(b)",
+    "gradingScope": "(2)(b)",
+    "officialTitle": "Luring or enticing a child",
+    "dependencies": [
+      "787.025",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.025": [
+        "(1)",
+        "(2)(b)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-025-2-b-restraint",
+      "name": "Luring or enticing a child after a prior luring conviction",
+      "names": {
+        "es": "Atracción de un menor tras condena previa por esa conducta",
+        "zh": "有引诱儿童前科后再次引诱儿童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.025(2)(b)",
+      "slug": "fl-fs-787-025-2-b-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.025(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.025",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(b)",
+          "F.S. 787.025(2)(b)"
+        ],
+        "es": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(b)",
+          "F.S. 787.025(2)(b)"
+        ],
+        "zh": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(b)",
+          "F.S. 787.025(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A person age 18 or older intentionally lures or entices, or tries to lure or entice, a child under 14 into or out of a structure, dwelling or conveyance for a purpose other than a lawful one. Requires a prior conviction under paragraph (2)(a). Statutory defenses include reasonably believing the action necessary to prevent serious injury, a lawful purpose, or reasonable actions without intent to harm the child’s health, safety or welfare.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Una persona de 18 años o más atrae o induce intencionalmente, o intenta atraer o inducir, a un menor de 14 años a entrar o salir de una estructura, vivienda o medio de transporte con un propósito que no es lícito. Se exige una condena previa por el apartado (2)(a). Las defensas incluyen creer razonablemente que era necesario evitar lesiones graves, un fin lícito, o actos razonables sin intención de perjudicar la salud, seguridad o bienestar del menor.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "年满18岁者出于不合法目的，故意引诱或企图引诱未满14岁的儿童进入或离开建筑物、住宅或交通工具。 须曾因第(2)(a)款定罪。 法定抗辩包括合理相信行为为防止严重伤害所必需、目的合法，或行为合理且无意损害儿童健康、安全或福祉。",
+          "degreeContext": "二级重罪，通常最高15年监禁和10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-025-2-c-restraint",
+    "section": "787.025",
+    "scope": "(2)(c)",
+    "gradingScope": "(2)(c)",
+    "officialTitle": "Luring or enticing a child",
+    "dependencies": [
+      "787.025",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.025": [
+        "(1)",
+        "(2)(c)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-025-2-c-restraint",
+      "name": "Luring or enticing a child after a listed sex-offense conviction",
+      "names": {
+        "es": "Atracción de un menor tras condena previa por delito sexual enumerado",
+        "zh": "有列明性犯罪前科后引诱儿童"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.025(2)(c)",
+      "slug": "fl-fs-787-025-2-c-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.025(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.025",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.025.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(c)",
+          "F.S. 787.025(2)(c)"
+        ],
+        "es": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(c)",
+          "F.S. 787.025(2)(c)"
+        ],
+        "zh": [
+          "Luring or enticing a child",
+          "FS 787.025(2)(c)",
+          "F.S. 787.025(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A person age 18 or older intentionally lures or entices, or tries to lure or entice, a child under 14 into or out of a structure, dwelling or conveyance for a purpose other than a lawful one. Requires a prior conviction under chapter 794, §800.04, §847.0135(5), or a similar law of another jurisdiction. Statutory defenses include reasonably believing the action necessary to prevent serious injury, a lawful purpose, or reasonable actions without intent to harm the child’s health, safety or welfare.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Una persona de 18 años o más atrae o induce intencionalmente, o intenta atraer o inducir, a un menor de 14 años a entrar o salir de una estructura, vivienda o medio de transporte con un propósito que no es lícito. Se exige condena previa bajo el capítulo 794, §800.04, §847.0135(5) o una ley similar de otra jurisdicción. Las defensas incluyen creer razonablemente que era necesario evitar lesiones graves, un fin lícito, o actos razonables sin intención de perjudicar la salud, seguridad o bienestar del menor.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "年满18岁者出于不合法目的，故意引诱或企图引诱未满14岁的儿童进入或离开建筑物、住宅或交通工具。 须曾根据第794章、第800.04条、第847.0135(5)条或其他辖区类似法律定罪。 法定抗辩包括合理相信行为为防止严重伤害所必需、目的合法，或行为合理且无意损害儿童健康、安全或福祉。",
+          "degreeContext": "二级重罪，通常最高15年监禁和10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-03-1-restraint",
+    "section": "787.03",
+    "scope": "(1)",
+    "gradingScope": "(1)",
+    "officialTitle": "Interference with custody",
+    "dependencies": [
+      "787.03",
+      "741.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.03": [
+        "(1)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-03-1-restraint",
+      "name": "Interference with custody: taking or enticing from lawful custody",
+      "names": {
+        "es": "Interferencia con la custodia: sustracción de la custodia legal",
+        "zh": "干扰监护：将人带离或诱离合法监护"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.03(1)",
+      "slug": "fl-fs-787-03-1-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.03(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Interference with custody",
+          "FS 787.03(1)",
+          "F.S. 787.03(1)"
+        ],
+        "es": [
+          "Interference with custody",
+          "FS 787.03(1)",
+          "F.S. 787.03(1)"
+        ],
+        "zh": [
+          "Interference with custody",
+          "FS 787.03(1)",
+          "F.S. 787.03(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without lawful authority, knowingly or recklessly taking or enticing a minor or legally incompetent person from a lawful custodian, or aiding, abetting, hiring or procuring someone else to do so. Section 787.03(4) provides defenses for reasonable protective action, qualifying domestic violence, or the protected person acting on their own initiative under specified conditions. The separate shelter exception for lawful custodians requires reporting within 10 days, timely custody proceedings when taking a minor, and updated contact information.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Sin autoridad legal, llevarse o inducir a alejarse de su custodio legal a un menor o una persona legalmente incapacitada, a sabiendas o temerariamente, o ayudar, instigar, contratar o conseguir que otro lo haga. El apartado (4) prevé defensas por motivos razonables de protección, violencia doméstica o iniciativa propia de la persona protegida en las condiciones especificadas. La excepción de refugio para custodios legales exige informar en diez días, iniciar oportunamente el trámite de custodia al llevarse a un menor y actualizar los datos de contacto.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在无合法权限下，明知或罔顾风险，将未成年人或法律上无行为能力者带离或诱离合法监护人，或帮助、教唆、雇用或促使他人这样做。 第(4)款规定的抗辩包括合理的保护行为、特定家庭暴力情形，或受保护人在法定条件下自行发起行动。合法监护人的另行避难例外要求十天内报告，带走未成年人时及时提起监护程序，并更新联系方式。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-03-2-restraint",
+    "section": "787.03",
+    "scope": "(2)",
+    "gradingScope": "(2)",
+    "officialTitle": "Interference with custody",
+    "dependencies": [
+      "787.03",
+      "741.28",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.03": [
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)"
+      ],
+      "741.28": [
+        "(2)",
+        "(3)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-03-2-restraint",
+      "name": "Interference with custody: malicious deprivation without a custody order",
+      "names": {
+        "es": "Interferencia con la custodia: privación maliciosa sin orden de custodia",
+        "zh": "干扰监护：无监护令时恶意剥夺监护权"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.03(2)",
+      "slug": "fl-fs-787-03-2-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.03(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 741.28",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Interference with custody",
+          "FS 787.03(2)",
+          "F.S. 787.03(2)"
+        ],
+        "es": [
+          "Interference with custody",
+          "FS 787.03(2)",
+          "F.S. 787.03(2)"
+        ],
+        "zh": [
+          "Interference with custody",
+          "FS 787.03(2)",
+          "F.S. 787.03(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without a custody or visitation order, a parent, stepparent, legal guardian or relative who has custody takes, detains, conceals or entices away a minor or legally incompetent person, in or outside Florida, maliciously intending to deprive someone else of custody rights. Section 787.03(4) provides defenses for reasonable protective action, qualifying domestic violence, or the protected person acting on their own initiative under specified conditions. The separate shelter exception for lawful custodians requires reporting within 10 days, timely custody proceedings when taking a minor, and updated contact information.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Sin orden de custodia o visitas, un progenitor, padrastro, madrastra, tutor legal o familiar que tiene la custodia se lleva, retiene, oculta o induce a alejarse a un menor o persona legalmente incapacitada, dentro o fuera de Florida, con intención maliciosa de privar a otra persona de su derecho de custodia. El apartado (4) prevé defensas por motivos razonables de protección, violencia doméstica o iniciativa propia de la persona protegida en las condiciones especificadas. La excepción de refugio para custodios legales exige informar en diez días, iniciar oportunamente el trámite de custodia al llevarse a un menor y actualizar los datos de contacto.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在没有监护或探视权裁定时，拥有监护权的父母、继父母、法定监护人或亲属在佛州境内或境外带走、扣留、藏匿或诱走未成年人或法律上无行为能力者，蓄意剥夺他人的监护权。 第(4)款规定的抗辩包括合理的保护行为、特定家庭暴力情形，或受保护人在法定条件下自行发起行动。合法监护人的另行避难例外要求十天内报告，带走未成年人时及时提起监护程序，并更新联系方式。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-04-1-restraint",
+    "section": "787.04",
+    "scope": "(1)",
+    "gradingScope": "(6)",
+    "officialTitle": "Removing minors from state or concealing minors contrary to state agency order or court order",
+    "dependencies": [
+      "787.04",
+      "827.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.04": [
+        "(1)",
+        "(5)",
+        "(6)"
+      ],
+      "827.03": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-04-1-restraint",
+      "name": "Removing or concealing a minor contrary to a known court order",
+      "names": {
+        "es": "Traslado u ocultación de un menor contra una orden judicial conocida",
+        "zh": "违反已知法院命令带走或藏匿未成年人"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.04(1)",
+      "slug": "fl-fs-787-04-1-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.04(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(1)",
+          "F.S. 787.04(1)"
+        ],
+        "es": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(1)",
+          "F.S. 787.04(1)"
+        ],
+        "zh": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(1)",
+          "F.S. 787.04(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "With personal knowledge of a court order, leading, taking, enticing or removing a minor beyond Florida, or concealing the minor’s location, in violation of that order. For taking a minor across state lines, subsection (5) recognizes a defense based on a reasonable belief this was necessary to protect the minor from child abuse.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Con conocimiento personal de una orden judicial y en infracción de ella, conducir, llevar, inducir o trasladar a un menor fuera de Florida, u ocultar su paradero. Para llevar al menor fuera del estado, el apartado (5) reconoce una defensa si se creía razonablemente que era necesario para protegerlo del abuso infantil.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "本人知悉法院命令，却违反命令将未成年人带离或诱离佛州，或隐瞒其下落。 对将未成年人带出州境的行为，第(5)款允许以合理相信此举是保护该儿童免受虐待所必需作为抗辩。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-04-2-restraint",
+    "section": "787.04",
+    "scope": "(2)",
+    "gradingScope": "(6)",
+    "officialTitle": "Removing minors from state or concealing minors contrary to state agency order or court order",
+    "dependencies": [
+      "787.04",
+      "827.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.04": [
+        "(2)",
+        "(5)",
+        "(6)"
+      ],
+      "827.03": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-04-2-restraint",
+      "name": "Removing or concealing a minor during a pending custody proceeding",
+      "names": {
+        "es": "Traslado u ocultación de un menor durante un proceso de custodia",
+        "zh": "监护程序期间带走或藏匿未成年人"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.04(2)",
+      "slug": "fl-fs-787-04-2-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.04(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(2)",
+          "F.S. 787.04(2)"
+        ],
+        "es": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(2)",
+          "F.S. 787.04(2)"
+        ],
+        "zh": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(2)",
+          "F.S. 787.04(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "With criminal intent, after legally required notice of a pending custody proceeding and without the court’s permission, taking a minor beyond Florida or concealing the minor’s location. For taking a minor across state lines, subsection (5) recognizes a defense based on a reasonable belief this was necessary to protect the minor from child abuse.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Con intención delictiva, tras recibir el aviso legal del proceso de custodia pendiente y sin permiso del tribunal, llevar al menor fuera de Florida u ocultar su paradero. Para llevar al menor fuera del estado, el apartado (5) reconoce una defensa si se creía razonablemente que era necesario para protegerlo del abuso infantil.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "收到依法要求的监护程序通知后，出于犯罪意图，未经受理法院许可将未成年人带离佛州或隐瞒其下落。 对将未成年人带出州境的行为，第(5)款允许以合理相信此举是保护该儿童免受虐待所必需作为抗辩。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-04-3-restraint",
+    "section": "787.04",
+    "scope": "(3)",
+    "gradingScope": "(6)",
+    "officialTitle": "Removing minors from state or concealing minors contrary to state agency order or court order",
+    "dependencies": [
+      "787.04",
+      "827.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.04": [
+        "(3)",
+        "(5)",
+        "(6)"
+      ],
+      "827.03": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-04-3-restraint",
+      "name": "Removing or concealing a minor during a dependency or abuse proceeding",
+      "names": {
+        "es": "Traslado u ocultación de un menor durante actuación de protección infantil",
+        "zh": "儿童保护程序或虐待调查期间带走或藏匿未成年人"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.04(3)",
+      "slug": "fl-fs-787-04-3-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.04(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(3)",
+          "F.S. 787.04(3)"
+        ],
+        "es": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(3)",
+          "F.S. 787.04(3)"
+        ],
+        "zh": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(3)",
+          "F.S. 787.04(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "After actual or constructive notice of a dependency proceeding or an investigation or proceeding concerning the minor’s alleged abuse or neglect, knowingly and willfully taking the minor beyond Florida or concealing their location without the responsible agency’s or court’s permission. For taking a minor across state lines, subsection (5) recognizes a defense based on a reasonable belief this was necessary to protect the minor from child abuse.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Tras notificación efectiva o legalmente presumida de un proceso de dependencia o de una investigación o actuación por presunto abuso o negligencia contra el menor, llevarlo fuera de Florida u ocultar su paradero a sabiendas y voluntariamente, sin autorización del organismo o tribunal competente. Para llevar al menor fuera del estado, el apartado (5) reconoce una defensa si se creía razonablemente que era necesario para protegerlo del abuso infantil.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "对儿童保护程序或该未成年人遭虐待或忽视的调查或程序已有实际或推定通知，仍明知且故意在未经主管机关或法院许可下将其带离佛州或隐瞒其下落。 对将未成年人带出州境的行为，第(5)款允许以合理相信此举是保护该儿童免受虐待所必需作为抗辩。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-787-04-4-restraint",
+    "section": "787.04",
+    "scope": "(4)",
+    "gradingScope": "(6)",
+    "officialTitle": "Removing minors from state or concealing minors contrary to state agency order or court order",
+    "dependencies": [
+      "787.04",
+      "827.03",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "787.04": [
+        "(4)",
+        "(5)",
+        "(6)"
+      ],
+      "827.03": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-787-04-4-restraint",
+      "name": "Failure to produce or deliver a minor after court-authorized removal",
+      "names": {
+        "es": "Incumplimiento de presentar o entregar al menor tras un traslado autorizado",
+        "zh": "经法院准许带离后未按要求带回或交付未成年人"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "787.04(4)",
+      "slug": "fl-fs-787-04-4-restraint",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 787.04(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 787.04",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0787/Sections/0787.04.html"
+        },
+        {
+          "citation": "Fla. Stat. § 827.03",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(4)",
+          "F.S. 787.04(4)"
+        ],
+        "es": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(4)",
+          "F.S. 787.04(4)"
+        ],
+        "zh": [
+          "Removing minors from state or concealing minors contrary to state agency order or court order",
+          "FS 787.04(4)",
+          "F.S. 787.04(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "After taking a minor out of Florida under a court order or permission in a pending Florida custody proceeding, failing to produce the minor in court or deliver the minor to the court-designated person. For taking a minor across state lines, subsection (5) recognizes a defense based on a reasonable belief this was necessary to protect the minor from child abuse.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Después de llevar a un menor fuera de Florida por orden o permiso judicial en un proceso de custodia pendiente en Florida, no presentarlo ante el tribunal o no entregarlo a la persona designada. Para llevar al menor fuera del estado, el apartado (5) reconoce una defensa si se creía razonablemente que era necesario para protegerlo del abuso infantil.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "在佛州监护程序期间依受理法院命令或许可将未成年人带离佛州，之后未将其带到法院或交给法院指定的人。 对将未成年人带出州境的行为，第(5)款允许以合理相信此举是保护该儿童免受虐待所必需作为抗辩。",
+          "degreeContext": "三级重罪，通常最高五年监禁和5,000美元罚金。"
+        }
+      }
+    }
+  }
+]
