@@ -1,3 +1,4 @@
+import { lawyerQuestions, counselCopyKey } from "../../locales/guidance-reader";
 import { ChargeTranslationSupplement } from "./charge-translation-supplement";
 import { fetchChargeCatalog } from "@/lib/charge-catalog";
 import { translationUnavailableNotice } from "@shared/translation-unavailable-notice";
@@ -54,7 +55,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Progress } from "@/components/ui/progress";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Checkbox } from "@/components/ui/checkbox";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
@@ -73,7 +73,7 @@ import {
   type GuidanceChargeClassification,
 } from "@shared/guidance-charge-resolution";
 import { getChargeExplanation } from "@shared/charge-explanations";
-import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { getDocumentsForPhase, knownCasePhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
 import { GuidancePrintPlan } from "@/components/legal/guidance-print-plan";
 import { renderGuidanceRichText } from "@/components/legal/guidance-rich-text";
@@ -414,6 +414,7 @@ function CollateralConsequencesCard({
 }: {
   items: Array<{ category: string; consequence: string; timing: string; actionNote: string }>;
 }) {
+  const { t } = useTranslation();
   return (
     <Collapsible defaultOpen>
       <CollapsibleTrigger asChild>
@@ -422,7 +423,7 @@ function CollateralConsequencesCard({
             <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
               <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
                 <AlertTriangle className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
-                Beyond the Sentence: What Else May Be at Risk
+                {t('design.readerConsequences')}
                 <Badge variant="secondary" className="shrink-0 text-xs">{items.length}</Badge>
               </div>
               <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
@@ -434,7 +435,7 @@ function CollateralConsequencesCard({
         <Card className="mt-2 border-amber-200 dark:border-amber-800">
           <CardContent className="pt-5 space-y-1">
             <p className="text-xs text-muted-foreground pb-3">
-              These are consequences that go beyond the sentence itself. They often take effect automatically, sometimes upon a guilty plea, before sentencing. Raise each one with your attorney before any plea decision.
+              {t('design.readerEffectsNote')}
             </p>
             <div className="space-y-3">
               {items.map((item, i) => {
@@ -447,8 +448,8 @@ function CollateralConsequencesCard({
                       <span className="min-w-0 break-words text-xs font-semibold text-foreground">{meta.label}</span>
                       <Badge variant="outline" className="ml-auto shrink-0 text-xs">{item.timing}</Badge>
                     </div>
-                    <p className="text-sm text-foreground mb-1">{item.consequence}</p>
-                    <p className="text-xs text-muted-foreground italic">{item.actionNote}</p>
+                    <p className="text-sm text-foreground mb-1">{renderGuidanceRichText(item.consequence)}</p>
+                    <p className="text-xs text-muted-foreground italic">{renderGuidanceRichText(item.actionNote)}</p>
                   </div>
                 );
               })}
@@ -589,9 +590,11 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
 }
 
 function YourChargesSection({
+  printOnly = false,
   chargeClassifications,
   jurisdiction,
 }: {
+  printOnly?: boolean;
   chargeClassifications?: GuidanceChargeClassification[];
   jurisdiction?: string;
 }) {
@@ -664,14 +667,6 @@ function YourChargesSection({
     };
   });
 
-  // Generate fallback description based on classification
-  const getFallbackDescription = (charge: { name: string; classification: string; code: string }) => {
-    const isFelony = charge.classification === 'felony';
-    return isFelony 
-      ? `This is a felony charge, which is a more serious criminal offense. Felonies can carry significant penalties including potential prison time. Your attorney can explain the specific elements the prosecution must prove.`
-      : `This is a misdemeanor charge, which is generally less serious than a felony. Misdemeanors can still result in jail time, fines, and a criminal record. Your attorney can explain what the prosecution needs to prove.`;
-  };
-
   return (
     <Card className="guidance-section">
       <CardHeader className="pb-3">
@@ -688,7 +683,7 @@ function YourChargesSection({
           <div 
             key={index} 
             className="space-y-4"
-            data-testid={`charge-explanation-${index}`}
+            data-testid={printOnly ? undefined : `charge-explanation-${index}`}
           >
             {/* Charge Header */}
             <div className="flex items-start justify-between gap-3">
@@ -697,7 +692,7 @@ function YourChargesSection({
               </div>
               {!(normalizedJurisdiction === "OH" && charge.needsReselection) && (
                 <Badge
-                  variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
+                  variant="outline"
                   className="shrink-0"
                 >
                   {(charge.categories ?? [charge.classification])
@@ -747,7 +742,7 @@ function YourChargesSection({
             {charge.explanation?.jurisdictionDetailMissing && (
               <div
                 className="flex items-start gap-2 p-2.5 rounded-md bg-slate-50 border border-slate-200 dark:bg-slate-900/40 dark:border-slate-700"
-                data-testid={`charge-jurisdiction-coverage-${index}`}
+                data-testid={printOnly ? undefined : `charge-jurisdiction-coverage-${index}`}
               >
                 <AlertTriangle className="h-4 w-4 text-slate-600 dark:text-slate-300 shrink-0 mt-0.5" />
                 <p className="min-w-0 text-xs text-slate-700 dark:text-slate-300 leading-snug">
@@ -763,7 +758,7 @@ function YourChargesSection({
                <Alert
                  variant="default"
                  className="border-amber-300 bg-amber-50 text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200"
-                 data-testid={`charge-reselection-warning-${index}`}
+                 data-testid={printOnly ? undefined : `charge-reselection-warning-${index}`}
                >
                  <AlertTriangle className="h-4 w-4" />
                   <AlertDescription className="min-w-0">
@@ -792,7 +787,7 @@ function YourChargesSection({
                      : i18n.language === 'zh'
                        ? `在确认确切的${normalizedJurisdiction ?? '该州'}罪名和现行法律之前，我们无法显示此罪名的具体信息。`
                        : `We cannot show charge-specific information until the exact charge and current ${normalizedJurisdiction ?? 'state'} authority are confirmed.`)
-                   : getFallbackDescription(charge)
+                   : t('design.readerChargeUnknown')
                )}
             </p>
 
@@ -803,12 +798,12 @@ function YourChargesSection({
                 the user's state. Falls back to the generic explanation otherwise. */}
             {charge.explanation?.jurisdictionDetail ? (
               <div className="p-3 rounded-lg bg-muted/50 border-l-2 border-primary">
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                {charge.explanation.jurisdictionDetail.keyRule.trim() !== charge.explanation.plainSummary?.trim() && <p className="text-sm text-muted-foreground leading-relaxed">
                   <span className="font-medium text-foreground">
                     {jurisdiction ? `In ${jurisdiction}: ` : 'For this jurisdiction: '}
                   </span>
                   {charge.explanation.jurisdictionDetail.keyRule}
-                </p>
+                </p>}
                 <p className="text-xs text-muted-foreground mt-2">
                   Source: {charge.explanation.jurisdictionDetail.citation}
                   {charge.explanation.jurisdictionDetail.penaltyClass && ` (${charge.explanation.jurisdictionDetail.penaltyClass})`}
@@ -852,7 +847,7 @@ function YourChargesSection({
 
             {/* Read the Law — only shown when the canonical citation gate verifies it. */}
             {jurisdiction && charge.verifiedCitation && (
-              <ChargeReadTheLaw
+              printOnly ? <p>{charge.verifiedCitation}</p> : <ChargeReadTheLaw
                 jurisdiction={jurisdiction}
                 citation={charge.verifiedCitation}
               />
@@ -895,7 +890,8 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   
-  const phase = mapCaseStageToPhase(caseStage || 'just_arrested');
+  const phase = knownCasePhase(caseStage);
+  if (!phase) return null;
   const documents = getDocumentsForPhase(phase, 'criminal');
   
   if (documents.length === 0) return null;
@@ -911,10 +907,10 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-foreground">
           <FileText className="h-5 w-5 text-muted-foreground" />
-          {t('documents.guidance.documentsSection.title', 'Documents You Should Have')}
+          {t('design.readerDocuments')}
         </CardTitle>
         <p className="text-sm text-muted-foreground mt-1">
-          {t('documents.guidance.documentsSection.description', 'Based on your case stage, you should have received these important documents. Click any document to learn more.')}
+          {t('design.readerDocumentsNote')}
         </p>
       </CardHeader>
       <CardContent className="pt-0">
@@ -986,7 +982,6 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
   const [, setLocation] = useLocation();
   const { attemptNavigation } = useNavigationGuard();
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showExportWarning, setShowExportWarning] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [showFlagDialog, setShowFlagDialog] = useState(false);
@@ -1024,34 +1019,12 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     setCompletedActions(newCompleted);
   };
 
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-    }
-    setExpandedSections(newExpanded);
-  };
-
   const practicalStarterActions = guidance.practicalStarterSteps.map(step =>
     t(`legalGuidance.dashboard.practicalPlan.${step}`),
   );
   const generatedPracticalActions = guidance.immediateActions.filter(action => action.treatment === 'practical');
   const legalInformationActions = guidance.immediateActions.filter(action => action.treatment !== 'practical');
   const practicalActions = [...practicalStarterActions, ...generatedPracticalActions.map(action => action.action)];
-
-  const getPracticalActionsProgress = () => {
-    if (practicalActions.length === 0) return 0;
-    return Math.round((completedActions.size / practicalActions.length) * 100);
-  };
-
-  const getUrgentDeadlines = () => {
-    return guidance.deadlines.filter(deadline => 
-      deadline.priority === 'critical' && 
-      (deadline.daysFromNow === undefined || deadline.daysFromNow <= 7)
-    );
-  };
 
   const handleExportClick = () => {
     setShowExportWarning(true);
@@ -1092,11 +1065,14 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     section?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
   };
 
+  const counselQuestions = lawyerQuestions(i18n.language, guidance.chargeClassifications.length > 0, guidance.caseData.custodyStatus, guidance.caseData.selectedConcerns);
   return (
     <>
-      <GuidancePrintPlan guidance={guidance} language={i18n.language} />
+      <GuidancePrintPlan guidance={guidance} language={i18n.language} chargeDetails={
+        <YourChargesSection printOnly chargeClassifications={guidance.chargeClassifications} jurisdiction={guidance.caseData.jurisdiction} />
+      } />
       <div
-        className="guidance-results w-full min-w-0 mx-auto space-y-6 print:hidden"
+        className="guidance-results guidance-reader w-full min-w-0 mx-auto space-y-6 print:hidden"
         data-testid="guidance-dashboard"
       >
       {/* Case Summary Header */}
@@ -1137,7 +1113,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             <div className="guidance-result-actions">
               {onNewSession && (
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   onClick={onNewSession}
                   className="flex-1 md:flex-none"
                   data-testid="button-new-session"
@@ -1145,7 +1121,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                   {t('legalGuidance.dashboard.newSession', 'Start New Session')}
                 </Button>
               )}
-              <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
+              <Button variant="ghost" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
               </Button>
               <Button
@@ -1164,87 +1140,8 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </div>
           </div>
           
-          <div className="guidance-summary-facts">
-            <div className="text-center">
-              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.charges')}</div>
-              <div className="font-medium">
-                <div className="flex flex-col gap-1">
-                  {guidance.chargeClassifications && guidance.chargeClassifications.length > 0 ? (
-                    guidance.chargeClassifications.map((charge, idx) => (
-                      <div key={idx} className="flex items-center justify-center gap-2">
-                        <span>{formatChargeName(charge.name)}</span>
-                        <Badge 
-                          variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
-                          className="text-xs"
-                          data-testid={`badge-charge-classification-${idx}`}
-                        >
-                          {(charge.categories ?? [charge.classification])
-                            .map(category => t(`chat.chargeSelector.categories.${category}`, category))
-                            .join(" / ")}
-                        </Badge>
-                      </div>
-                    ))
-                  ) : (
-                    guidance.caseData.charges
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.jurisdiction')}</div>
-              <div className="font-medium">{guidance.caseData.jurisdiction.toUpperCase()}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.currentStage')}</div>
-              <Badge variant="outline" className="capitalize">
-                {guidance.caseData.caseStage}
-              </Badge>
-            </div>
-            <div className="text-center">
-              <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.actionsCompleted')}</div>
-              <div className="flex items-center gap-2">
-                <Progress value={getPracticalActionsProgress()} className="flex-1" />
-                <span className="text-sm font-medium">{getPracticalActionsProgress()}%</span>
-              </div>
-            </div>
-          </div>
         </CardHeader>
       </Card>
-
-      <Card className="guidance-start-note" data-testid="guidance-next-step">
-        <CardContent className="p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="min-w-0">
-            <p className="text-xs font-semibold text-primary mb-1">
-              {t('legalGuidance.dashboard.nextStep.label', 'Start here')}
-            </p>
-            <h2 className="font-semibold text-foreground">
-              {t('legalGuidance.dashboard.nextStep.title', 'Review your practical next steps')}
-            </h2>
-            <p className="text-sm text-muted-foreground mt-1">
-              {t('legalGuidance.dashboard.nextStep.description', 'Start with the practical plan, then use the timeline and deadlines to prepare for what comes next.')}
-            </p>
-          </div>
-          <Button
-            onClick={() => jumpToSection('practical-action-plan')}
-            className="w-full sm:w-auto shrink-0"
-            data-testid="button-guidance-next-step"
-          >
-            {t('legalGuidance.dashboard.nextStep.button', 'View practical plan')}
-            <ArrowRight className="h-4 w-4 ml-2" />
-          </Button>
-        </CardContent>
-      </Card>
-
-      <nav className="guidance-section-nav" aria-label={t('design.guidanceSections')}>
-        {guidance.overview && <button onClick={() => jumpToSection('guidance-overview')}>{t('design.guidanceOverview')}</button>}
-        <button onClick={() => jumpToSection('practical-action-plan')}>{t('legalGuidance.dashboard.practicalPlan.title')}</button>
-        <button onClick={() => jumpToSection('guidance-timeline')}>{t('legalGuidance.dashboard.caseTimeline.title')}</button>
-        {guidance.rights.length > 0 && <button onClick={() => jumpToSection('guidance-rights')}>{t('design.guidanceRights')}</button>}
-        {guidance.resources.length > 0 && <button onClick={() => jumpToSection('guidance-resources')}>{t('design.guidanceResources')}</button>}
-      </nav>
-
-      {/* (Attorney notice folded into Urgent Takeaways below) */}
-
       {/* Safety flag notice — shown when server stripped dangerous content */}
       {guidance.dangerFlags && guidance.dangerFlags.length > 0 && (
         <Alert className="border-orange-300 bg-orange-50 dark:bg-orange-900/20" data-testid="banner-safety-flag">
@@ -1255,6 +1152,39 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </Alert>
       )}
 
+      {/* Overview Section */}
+      {guidance.overview && (
+        <Card id="guidance-overview" tabIndex={-1} className="guidance-section" data-guidance-section="overview">
+          <CardHeader className="pb-3">
+            <div className="flex items-start justify-between gap-4">
+              <CardTitle className="flex items-center gap-2 text-foreground">
+                <FileText className="h-5 w-5 text-muted-foreground" />
+                {t('design.guidanceOverview')}
+              </CardTitle>
+              {guidance.validation && (
+                guidance.validation.confidenceScore < 0.7 ||
+                guidance.validation.issues.some(i => i.severity === 'error' || i.severity === 'warning')
+              ) && (
+                <p className="text-xs text-amber-700 dark:text-amber-400 italic text-right" data-testid="banner-low-confidence">
+                  Some deadlines and procedures could not be fully verified for this jurisdiction. Confirm with your attorney.
+                </p>
+              )}
+            </div>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
+              {renderGuidanceRichText(guidance.overview, guardedNavigate)}
+            </p>
+          </CardContent>
+        </Card>
+      )}
+
+      <section className="guidance-appearance" data-testid="next-court-appearance">
+        <Calendar aria-hidden="true" />
+        <div><h2>{t('design.readerAppearance')}</h2><p>{t('design.readerDateNote')}</p>
+          <button onClick={() => guardedNavigate('/court-locator')}>{t('legalGuidance.dashboard.practicalPlan.findCourt')}</button>
+        </div>
+      </section>
       {/* Urgent Takeaways — AI critical alerts only (time-sensitive, case-specific) */}
       {guidance.criticalAlerts.length > 0 && (
         <Alert
@@ -1283,212 +1213,6 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </Alert>
       )}
 
-      {/* Overview Section */}
-      {guidance.overview && (
-        <Card id="guidance-overview" tabIndex={-1} className="guidance-section" data-guidance-section="overview">
-          <CardHeader className="pb-3">
-            <div className="flex items-start justify-between gap-4">
-              <CardTitle className="flex items-center gap-2 text-foreground">
-                <FileText className="h-5 w-5 text-muted-foreground" />
-                Overview
-              </CardTitle>
-              {guidance.validation && (
-                guidance.validation.confidenceScore < 0.7 ||
-                guidance.validation.issues.some(i => i.severity === 'error' || i.severity === 'warning')
-              ) && (
-                <p className="text-xs text-amber-700 dark:text-amber-400 italic text-right" data-testid="banner-low-confidence">
-                  Some deadlines and procedures could not be fully verified for this jurisdiction. Confirm with your attorney.
-                </p>
-              )}
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
-              {renderGuidanceRichText(guidance.overview, guardedNavigate)}
-            </p>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Your Charges Section */}
-      <div data-guidance-section="charges">
-        <YourChargesSection
-          chargeClassifications={guidance.chargeClassifications}
-          jurisdiction={guidance.caseData?.jurisdiction}
-        />
-      </div>
-
-      {/* Local Ordinance Attribution — shown when LOCUS found a relevant municipal ordinance */}
-      {guidance.localOrdinance && (
-        <div className="flex items-start gap-2 text-xs text-muted-foreground px-1 -mt-2">
-          <MapPin className="h-3 w-3 flex-shrink-0 mt-0.5" />
-          <span>
-            Local ordinance referenced: {guidance.localOrdinance.section} ({guidance.localOrdinance.jurisdictionDisplay})
-            {' · '}
-            <a
-              href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
-            >
-              LOCUS-v1
-            </a>
-            , CC-BY-NC-4.0
-          </span>
-        </div>
-      )}
-
-      {/* Simple Reassurance Message with Hidden Technical Details */}
-      {guidance.validation && (
-        <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
-          <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-          <div className="flex-1">
-            <p className="text-sm text-slate-700 dark:text-slate-300" data-testid="text-validation-reassurance">
-              {t('guidance.validation.reassurance', 
-                `This guidance is based on ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
-              )}
-            </p>
-            {guidance.validation.sourceEnrichment?.status === 'unavailable' && (
-              <p
-                className="mt-2 text-xs text-muted-foreground"
-                data-testid="text-source-enrichment-status"
-                role="status"
-                aria-live="polite"
-              >
-                {t(
-                  'guidance.validation.sourceUnavailable',
-                  'Some optional verification details are unavailable right now; the main roadmap is unaffected.'
-                )}
-              </p>
-            )}
-            
-            {/* Collapsible technical details for advanced users */}
-            <Collapsible className="mt-3">
-              <div className="flex items-center gap-3 flex-wrap">
-                <CollapsibleTrigger asChild>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-0 h-auto text-xs text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-transparent group"
-                    data-testid="btn-show-verification-details"
-                  >
-                    <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
-                    {t('guidance.validation.showDetails', 'How this guidance was sourced')}
-                  </Button>
-                </CollapsibleTrigger>
-                <a
-                  href="/tech-docs#ai-validation"
-                  className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 underline underline-offset-2"
-                >
-                  {t('guidance.validation.methodologyLink', 'Full methodology')}
-                </a>
-              </div>
-              <CollapsibleContent className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-600">
-                <div className="space-y-3 text-xs text-slate-600 dark:text-slate-400">
-                  {/* What we checked */}
-                  <div className="space-y-1.5">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
-                      <span>{t('guidance.validation.checkedStatutes', 'Cross-referenced with state criminal statutes')}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
-                      <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced with published sentencing guidelines')}</span>
-                    </div>
-                    {guidance.localOrdinance && (
-                      <div className="flex items-center gap-2">
-                        <MapPin className="h-3.5 w-3.5 text-blue-500" />
-                        <span>
-                          Municipal ordinance context: {guidance.localOrdinance.section}, {guidance.localOrdinance.jurisdictionDisplay} (
-                          <a
-                            href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:text-slate-700 dark:hover:text-slate-200"
-                          >
-                            LOCUS-v1
-                          </a>
-                          , CC-BY-NC-4.0)
-                        </span>
-                      </div>
-                    )}
-                    {guidance.validation.precedents && guidance.validation.precedents.length > 0 ? (
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-3.5 w-3.5 text-green-500" />
-                        <span>{t('guidance.validation.foundCases', `Found ${guidance.validation.precedents.length} similar court case${guidance.validation.precedents.length !== 1 ? 's' : ''}`)}</span>
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-2">
-                        <HelpCircle className="h-3.5 w-3.5 text-slate-400" />
-                        <span>{t('guidance.validation.noCasesFound', 'We searched for similar court cases but none matched closely enough to include')}</span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  {/* Technical metrics - hidden by default, only for advanced users */}
-                  <div className="pt-2 border-t border-slate-200 dark:border-slate-600">
-                    <p className="text-slate-500 dark:text-slate-500 mb-2">
-                      {t('guidance.validation.technicalDetails', 'Technical details:')}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="font-normal text-xs" data-testid="badge-confidence-score">
-                        {Math.round(guidance.validation.confidenceScore * 100)}% confidence
-                      </Badge>
-                      <Badge variant="outline" className="font-normal text-xs">
-                        {guidance.validation.checksPassed}/{guidance.validation.checksPerformed} checks passed
-                      </Badge>
-                      {guidance.validation.tiers?.tier1 && (
-                        <Badge variant="outline" className="font-normal text-xs">
-                          Statutes: {Math.round(guidance.validation.tiers.tier1.score * 100)}%
-                        </Badge>
-                      )}
-                      {guidance.validation.tiers?.tier2 && (
-                        <Badge variant="outline" className="font-normal text-xs">
-                          Case law: {Math.round(guidance.validation.tiers.tier2.score * 100)}%
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Issues - only show if there are any */}
-                  {(guidance.validation.issues?.length ?? 0) > 0 && (
-                    <div className="pt-2 border-t border-slate-200 dark:border-slate-600 space-y-1.5">
-                      {guidance.validation.issues.map((issue, index) => (
-                        <div 
-                          key={index} 
-                          className="flex items-start gap-2"
-                          data-testid={`validation-issue-${index}`}
-                        >
-                          {issue.severity === 'info' ? (
-                            <HelpCircle className="h-3.5 w-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
-                          ) : (
-                            <AlertTriangle className="h-3.5 w-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
-                          )}
-                          <span>{issue.message}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
-          </div>
-        </div>
-      )}
-
-      {/* Precedent Cases Section */}
-      {guidance.validation?.precedents && guidance.validation.precedents.length > 0 && (
-        <PrecedentCasesSection 
-          precedents={guidance.validation.precedents}
-          sessionId={guidance.sessionId}
-          jurisdiction={guidance.caseData.jurisdiction}
-          caseStage={guidance.caseData.caseStage}
-        />
-      )}
-
-      {/* Documents You Should Have Section */}
-      <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
-
       {/* Practical support is intentionally separate from case-specific legal information. */}
       <Card id="practical-action-plan" tabIndex={-1} className="guidance-section guidance-practical-plan" data-testid="practical-action-plan">
         <CardHeader>
@@ -1497,10 +1221,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
               <CheckCircle className="h-5 w-5 text-primary" />
               {t('legalGuidance.dashboard.practicalPlan.title')}
             </div>
-            <div className="flex items-center gap-2">
-              <Progress value={getPracticalActionsProgress()} className="w-24" />
-              <span className="text-sm font-medium text-muted-foreground">{getPracticalActionsProgress()}%</span>
-            </div>
+
           </CardTitle>
           <p className="text-sm text-muted-foreground">
             {t('legalGuidance.dashboard.practicalPlan.subtitle')}
@@ -1568,6 +1289,13 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </CardContent>
       </Card>
 
+      <nav className="guidance-section-nav" aria-label={t('design.guidanceSections')}>
+        {guidance.overview && <button onClick={() => jumpToSection('guidance-overview')}>{t('design.guidanceOverview')}</button>}
+        <button onClick={() => jumpToSection('practical-action-plan')}>{t('legalGuidance.dashboard.practicalPlan.title')}</button>
+        <button onClick={() => jumpToSection('guidance-timeline')}>{t('legalGuidance.dashboard.caseTimeline.title')}</button>
+        {guidance.rights.length > 0 && <button onClick={() => jumpToSection('guidance-rights')}>{t('design.guidanceRights')}</button>}
+        {guidance.resources.length > 0 && <button onClick={() => jumpToSection('guidance-resources')}>{t('design.guidanceResources')}</button>}
+      </nav>
       {/* These records contain general case information, not a personalized task list. */}
       {legalInformationActions.length > 0 && (
        <Card className="guidance-section" data-guidance-section="immediateActions" data-testid="legal-information-actions">
@@ -1610,19 +1338,6 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             <Calendar className="h-5 w-5 text-muted-foreground" />
             {t('legalGuidance.dashboard.caseTimeline.title')}
           </CardTitle>
-          {/* Progress indicator */}
-          {guidance.timeline.length > 0 && (
-            <div className="mt-3">
-              <div className="flex items-center justify-between text-sm text-muted-foreground mb-2">
-                <span>{t('legalGuidance.dashboard.caseTimeline.progress', 'Case Progress')}</span>
-                <span>{Math.round((guidance.timeline.filter(s => s.completed).length / guidance.timeline.length) * 100)}%</span>
-              </div>
-              <Progress 
-                value={(guidance.timeline.filter(s => s.completed).length / guidance.timeline.length) * 100} 
-                className="h-2"
-              />
-            </div>
-          )}
         </CardHeader>
         <CardContent>
           {/* Inline estimate notice — shown when the user's state is not individually mapped */}
@@ -1654,7 +1369,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             
             <div className="space-y-0">
               {guidance.timeline.map((stage, index) => {
-                const isCurrentStage = !stage.completed && (index === 0 || guidance.timeline[index - 1]?.completed);
+                const isCurrentStage = Boolean(knownCasePhase(guidance.caseData.caseStage)) && !stage.completed && (index === 0 || guidance.timeline[index - 1]?.completed);
                 const isCompleted = stage.completed;
                 
                 return (
@@ -1700,8 +1415,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
               })}
             </div>
           </div>
-          {/* Local Court Variation Disclaimer — timeframes vary by county */}
-          <LocalCourtDisclaimer jurisdiction={guidance.caseData?.jurisdiction ?? ''} />
+          {!guidance.deadlines.length && <LocalCourtDisclaimer jurisdiction={guidance.caseData.jurisdiction} />}
         </CardContent>
       </Card>
 
@@ -1736,6 +1450,65 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </Card>
       )}
 
+      {guidance.avoidActions.length > 0 && (
+        <section className="guidance-reader-section" data-guidance-section="avoidActions">
+          <h2>{t('legalGuidance.dashboard.actionsToAvoid.title')}</h2>
+          <ul>{guidance.avoidActions.map((item, index) => (
+            <li key={index}>{renderGuidanceRichText(item, guardedNavigate)}</li>
+          ))}</ul>
+        </section>
+      )}
+      {guidance.evidenceToGather.length > 0 && (
+        <section className="guidance-reader-section" data-guidance-section="evidenceToGather">
+          <h2>{t('legalGuidance.dashboard.evidenceToGather.title', 'Evidence topics to review with a lawyer')}</h2>
+          <ul>{guidance.evidenceToGather.map((item, index) => (
+            <li key={index}>{renderGuidanceRichText(item, guardedNavigate)}</li>
+          ))}</ul>
+        </section>
+      )}
+      <section className="guidance-reader-section" data-guidance-section="courtPreparation">
+          <h2>{t('design.readerPrepare')}</h2>
+          <ul>{(guidance.courtPreparation.length ? guidance.courtPreparation : [t('design.readerPrepareFallback')]).map((item, index) => (
+            <li key={index}>{renderGuidanceRichText(item, guardedNavigate)}</li>
+          ))}</ul>
+      </section>
+      {/* Documents You Should Have Section */}
+      <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
+
+      {/* Your Charges Section */}
+      <div data-guidance-section="charges">
+        <YourChargesSection
+          chargeClassifications={guidance.chargeClassifications}
+          jurisdiction={guidance.caseData?.jurisdiction}
+        />
+      </div>
+
+      {/* Local Ordinance Attribution — shown when LOCUS found a relevant municipal ordinance */}
+      {guidance.localOrdinance && (
+        <div className="flex items-start gap-2 text-xs text-muted-foreground px-1 -mt-2">
+          <MapPin className="h-3 w-3 flex-shrink-0 mt-0.5" />
+          <span>
+            Local ordinance referenced: {guidance.localOrdinance.section} ({guidance.localOrdinance.jurisdictionDisplay})
+            {' · '}
+            <a
+              href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              LOCUS-v1
+            </a>
+            , CC-BY-NC-4.0
+          </span>
+        </div>
+      )}
+
+      <section className="guidance-reader-section" data-testid="counsel-path">
+        <h2>{t('chat.casePanel.attorney')}</h2>
+        <p>{t(`design.${counselCopyKey(guidance.caseData.hasAttorney)}`)}</p>
+        {counselQuestions.length > 0 && <><h3 className="mt-4 font-semibold">{t('design.readerLawyerQuestions')}</h3><ul>{counselQuestions.map(question => <li key={question}>{question}</li>)}</ul></>}
+        {guidance.caseData.hasAttorney !== true && <button onClick={onShowPublicDefender ?? (() => guardedNavigate('/legal-aid'))}>{t('home.publicDefenderSearch.title')}</button>}
+      </section>
       {/* Your Rights */}
       {guidance.rights.length > 0 && (
         <Card id="guidance-rights" tabIndex={-1} className="guidance-section" data-guidance-section="rights">
@@ -1758,231 +1531,57 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </Card>
       )}
 
-      {/* Next Steps */}
-      {guidance.nextSteps.length > 0 && (
-        <Card className="guidance-section" data-guidance-section="nextSteps">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-foreground">
-              <ArrowRight className="h-5 w-5 text-muted-foreground" />
-              {t('legalGuidance.dashboard.nextSteps.title')}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {guidance.nextSteps.map((step, index) => (
-                <div key={index} className="flex items-start gap-3 p-3 rounded-lg border border-border bg-muted/20">
-                  <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
-                    {index + 1}
-                  </div>
-                  <span className="flex-1 text-sm text-foreground">{renderGuidanceRichText(step, guardedNavigate)}</span>
-                </div>
+      {/* Context footer — universal rights and reminders, compact two-column */}
+      <div className="border-t border-border/50 pt-6 mt-2">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+          <div>
+            <p className="text-xs font-semibold text-muted-foreground mb-2">Fundamental Rights</p>
+            <ul className="space-y-1.5">
+              {[
+                "You have the right to remain silent. You do not have to answer questions from police or prosecutors.",
+                "You have the right to an attorney at no cost if you cannot afford one. Request one at your first appearance.",
+                "You cannot be compelled to testify against yourself in court.",
+              ].map((right, i) => (
+                <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                  <span className="flex-shrink-0 font-semibold text-foreground/60">{i + 1}.</span>
+                  <span>{right}</span>
+                </li>
               ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Court Fees & Fines Callout */}
-      <Card className="border-amber-200 dark:border-amber-800 bg-amber-50/40 dark:bg-amber-950/20">
-        <CardContent className="p-4 flex items-start gap-3">
-          <DollarSign className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-          <div className="flex-1">
-            <p className="text-sm font-semibold text-foreground mb-0.5">
-              Court Fines & Fees
-            </p>
-            <p className="text-sm text-muted-foreground mb-2">
-              Most criminal cases result in fines, court costs, probation fees, and surcharges set at sentencing. Know what to expect, whether you qualify for a waiver, and where to get financial help.
-            </p>
-            <button
-              onClick={() => guardedNavigate('/support/finances')}
-              className="text-sm font-medium text-amber-700 dark:text-amber-400 hover:underline inline-flex items-center gap-1"
-            >
-              Court Fees & Financial Help <ArrowRight className="h-3.5 w-3.5" />
-            </button>
+            </ul>
           </div>
-        </CardContent>
-      </Card>
+          <div>
+            <p className="text-xs font-semibold text-muted-foreground mb-2">Key Reminders</p>
+            <ul className="space-y-1.5">
+              {[
+                "Conversations about your case outside of attorney-client privilege are not protected. Friends and family can be required to testify about what you told them.",
+                "You can decline a search clearly and calmly. Saying no does not prevent a search but preserves your rights.",
+                "Do not miss any court date. A missed appearance typically results in a bench warrant.",
+              ].map((reminder, i) => (
+                <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+                  <span className="flex-shrink-0 text-muted-foreground/50">•</span>
+                  <span>{reminder}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      {/* Expandable Sections */}
-      <div className="grid min-w-0 md:grid-cols-2 gap-6">
-        {/* Local Resources */}
-        <Collapsible defaultOpen className="min-w-0">
-          <CollapsibleTrigger asChild>
-            <Card className="min-w-0 cursor-pointer hover:bg-muted/50 border-border">
-              <CardHeader className="min-w-0">
-                <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
-                  <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
-                    <Users className="h-5 w-5 shrink-0 text-muted-foreground" />
-                    {t('legalGuidance.dashboard.localResources.title')}
-                  </div>
-                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
-                </CardTitle>
-              </CardHeader>
-            </Card>
-          </CollapsibleTrigger>
-          <CollapsibleContent>
-            <Card className="mt-2">
-              <CardContent className="pt-6">
-                <div className="space-y-3">
-                  {/* Public Defender Office - Only show if user doesn't have attorney */}
-                  {!guidance.caseData.hasAttorney && onShowPublicDefender && (
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4"
-                      onClick={onShowPublicDefender}
-                    >
-                      <div className="flex min-w-0 w-full items-start gap-3">
-                        <MapPin className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                        <div className="min-w-0 flex-1 text-left">
-                          <div className="font-semibold text-base mb-1">Public Defender Office</div>
-                          <p className="text-sm text-muted-foreground">
-                            Search for public defender offices near you
-                          </p>
-                        </div>
-                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                      </div>
-                    </Button>
-                  )}
-
-                  {/* Legal Aid Organizations */}
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
-                    onClick={() => guardedNavigate('/resources')}
-                  >
-                    <div className="flex min-w-0 w-full items-start gap-3">
-                      <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div className="min-w-0 flex-1 text-left">
-                        <div className="font-semibold text-base mb-1">Legal Aid</div>
-                        <p className="text-sm text-muted-foreground">
-                          Find legal aid organizations and free legal services
-                        </p>
-                      </div>
-                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    </div>
-                  </Button>
-
-                  {/* Court Self-Help Center */}
-                  <Button
-                    variant="outline"
-                    className="w-full justify-start h-auto py-4 px-4"
-                    onClick={() => guardedNavigate('/court-locator')}
-                  >
-                    <div className="flex min-w-0 w-full items-start gap-3">
-                      <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                      <div className="min-w-0 flex-1 text-left">
-                        <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
-                        <p className="text-sm text-muted-foreground">
-                          Find local courthouses and court information
-                        </p>
-                      </div>
-                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                    </div>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </CollapsibleContent>
-        </Collapsible>
-
-        {/* Evidence — Discuss With Attorney */}
-        {guidance.evidenceToGather.length > 0 && (
-          <Collapsible defaultOpen data-guidance-section="evidenceToGather" className="min-w-0">
-            <CollapsibleTrigger asChild>
-              <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader className="min-w-0">
-                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
-                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
-                      <FileText className="h-5 w-5 shrink-0 text-amber-600" />
-                      {t('legalGuidance.dashboard.evidenceToGather.title')}
-                    </div>
-                    <ChevronDown className="h-4 w-4 shrink-0" />
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <Card className="mt-2">
-                <CardContent className="pt-6 space-y-4">
-                  <div className="flex items-start gap-2 p-3 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg">
-                    <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-                    <p className="text-sm text-amber-800 dark:text-amber-300">
-                      {t('legalGuidance.dashboard.evidenceToGather.warning')}
-                    </p>
-                  </div>
-                  <ul className="space-y-2">
-                    {guidance.evidenceToGather.map((evidence, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-amber-600 mt-1">•</span>
-                        <span className="min-w-0 text-sm">{evidence}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </CollapsibleContent>
-          </Collapsible>
-        )}
-
-        {/* Warnings & Court Preparation — merged into one collapsible */}
-        {(guidance.warnings.length > 0 || guidance.courtPreparation.length > 0) && (
-          <Collapsible defaultOpen className="min-w-0">
-            <CollapsibleTrigger asChild>
-              <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader className="min-w-0">
-                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
-                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
-                      <AlertTriangle className="h-5 w-5 shrink-0 text-red-600" />
-                      {t('legalGuidance.dashboard.warningsAndPrep.title', 'Warnings & Court Preparation')}
-                    </div>
-                    <ChevronDown className="h-4 w-4 shrink-0" />
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <Card className="mt-2">
-                <CardContent className="pt-6 space-y-4">
-                  {guidance.warnings.length > 0 && (
-                    <div data-guidance-section="warnings">
-                      {guidance.courtPreparation.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground mb-2">{t('legalGuidance.dashboard.warningsAndPrep.thingsToReview')}</p>
-                      )}
-                      <ul className="space-y-2">
-                        {guidance.warnings.map((warning, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-red-600 mt-1">•</span>
-                            <span className="min-w-0 text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  {guidance.courtPreparation.length > 0 && (
-                    <div data-guidance-section="courtPreparation">
-                      {guidance.warnings.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground mb-2 pt-2 border-t border-border">{t('legalGuidance.dashboard.warningsAndPrep.courtInformation')}</p>
-                      )}
-                      <ul className="space-y-2">
-                        {guidance.courtPreparation.map((preparation, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <span className="text-orange-600 mt-1">•</span>
-                            <span className="min-w-0 text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            </CollapsibleContent>
-          </Collapsible>
-        )}
-
+      {guidance.warnings.length > 0 && (
+        <section className="guidance-reader-section" data-guidance-section="warnings">
+          <h2>{t('legalGuidance.dashboard.warningsAndPrep.thingsToReview')}</h2>
+          <ul>{guidance.warnings.map((item, index) => (
+            <li key={index}>{renderGuidanceRichText(item, guardedNavigate)}</li>
+          ))}</ul>
+        </section>
+      )}
         {/* Collateral Consequences */}
         {guidance.collateralConsequences && guidance.collateralConsequences.length > 0 && (
           <div data-guidance-section="collateralConsequences">
-            <CollateralConsequencesCard items={guidance.collateralConsequences} />
+            <CollateralConsequencesCard items={[...guidance.collateralConsequences].sort((a, b) =>
+              Number(guidance.caseData.selectedConcerns?.includes(b.category) ?? false) -
+              Number(guidance.caseData.selectedConcerns?.includes(a.category) ?? false)
+            )} />
           </div>
         )}
 
@@ -1994,42 +1593,6 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
               title={t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}
             />
           </div>
-        )}
-
-        {/* Actions to Avoid */}
-        {guidance.avoidActions.length > 0 && (
-          <Collapsible defaultOpen data-guidance-section="avoidActions" className="min-w-0">
-            <CollapsibleTrigger asChild>
-              <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader className="min-w-0">
-                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
-                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
-                      <X className="h-5 w-5 shrink-0 text-red-500" />
-                      {t('legalGuidance.dashboard.actionsToAvoid.title')}
-                    </div>
-                    <ChevronDown className="h-4 w-4 shrink-0" />
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <Card className="mt-2">
-                <CardContent className="pt-6">
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {t('legalGuidance.dashboard.actionsToAvoid.description')}
-                  </p>
-                  <ul className="space-y-2">
-                    {guidance.avoidActions.map((action, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-red-500 mt-1">•</span>
-                        <span className="min-w-0 text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </CollapsibleContent>
-          </Collapsible>
         )}
 
         {/* Areas of Uncertainty */}
@@ -2066,7 +1629,31 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </CollapsibleContent>
           </Collapsible>
         )}
-      </div>
+      {/* Next Steps */}
+      {guidance.nextSteps.length > 0 && (
+        <Card className="guidance-section" data-guidance-section="nextSteps">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <ArrowRight className="h-5 w-5 text-muted-foreground" />
+              {t('legalGuidance.dashboard.nextSteps.title')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {guidance.nextSteps.map((step, index) => (
+                <div key={index} className="flex items-start gap-3 p-3 rounded-lg border border-border bg-muted/20">
+                  <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
+                    {index + 1}
+                  </div>
+                  <span className="flex-1 text-sm text-foreground">{renderGuidanceRichText(step, guardedNavigate)}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+
+      <button className="text-sm font-semibold text-primary underline" onClick={() => guardedNavigate('/support/finances')}>{t('design.readerFees')}</button>
 
       {/* Generated legal contacts: the same resource records shown in chat and PDF. */}
       {guidance.resources.length > 0 && (
@@ -2080,9 +1667,9 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
           <CardContent className="space-y-3">
             {guidance.resources.map((resource, index) => (
               <div key={`${resource.type}-${index}`} className="rounded-lg border border-border p-3">
-                <p className="font-medium text-foreground">{resource.type}</p>
-                <p className="text-sm text-muted-foreground mt-1">{resource.description}</p>
-                <p className="text-sm mt-2">{resource.contact}</p>
+                <p className="font-medium text-foreground">{renderGuidanceRichText(resource.description, guardedNavigate)}</p>
+
+                {resource.contact !== resource.website && <p className="text-sm mt-2">{resource.contact}</p>}
                 {resource.hours && <p className="text-xs text-muted-foreground mt-1">{resource.hours}</p>}
                 {resource.website && (
                   <a href={resource.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline mt-1 inline-block">
@@ -2168,6 +1755,234 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </Card>
       )}
 
+        {/* Local Resources */}
+        <Collapsible defaultOpen className="min-w-0">
+          <CollapsibleTrigger asChild>
+            <Card className="min-w-0 cursor-pointer hover:bg-muted/50 border-border">
+              <CardHeader className="min-w-0">
+                <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
+                  <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                    <Users className="h-5 w-5 shrink-0 text-muted-foreground" />
+                    {t('legalGuidance.dashboard.localResources.title')}
+                  </div>
+                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
+                </CardTitle>
+              </CardHeader>
+            </Card>
+          </CollapsibleTrigger>
+          <CollapsibleContent>
+            <Card className="mt-2">
+              <CardContent className="pt-6">
+                <div className="space-y-3">
+                  {/* Public Defender Office - Only show if user doesn't have attorney */}
+                  {guidance.caseData.hasAttorney === false && onShowPublicDefender && (
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start h-auto py-4 px-4"
+                      onClick={onShowPublicDefender}
+                    >
+                      <div className="flex min-w-0 w-full items-start gap-3">
+                        <MapPin className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <div className="min-w-0 flex-1 text-left">
+                          <div className="font-semibold text-base mb-1">Public Defender Office</div>
+                          <p className="text-sm text-muted-foreground">
+                            Search for public defender offices near you
+                          </p>
+                        </div>
+                        <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                      </div>
+                    </Button>
+                  )}
+
+                  {/* Legal Aid Organizations */}
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 px-4"
+                    onClick={() => guardedNavigate('/resources')}
+                  >
+                    <div className="flex min-w-0 w-full items-start gap-3">
+                      <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0 flex-1 text-left">
+                        <div className="font-semibold text-base mb-1">Legal Aid</div>
+                        <p className="text-sm text-muted-foreground">
+                          Find legal aid organizations and free legal services
+                        </p>
+                      </div>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    </div>
+                  </Button>
+
+                  {/* Court Self-Help Center */}
+                  <Button
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 px-4"
+                    onClick={() => guardedNavigate('/court-locator')}
+                  >
+                    <div className="flex min-w-0 w-full items-start gap-3">
+                      <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
+                      <div className="min-w-0 flex-1 text-left">
+                        <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
+                        <p className="text-sm text-muted-foreground">
+                          Find local courthouses and court information
+                        </p>
+                      </div>
+                      <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                    </div>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </CollapsibleContent>
+        </Collapsible>
+
+      {/* Simple Reassurance Message with Hidden Technical Details */}
+      {guidance.validation && (
+        <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+          <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+          <div className="flex-1">
+            <p className="text-sm text-slate-700 dark:text-slate-300" data-testid="text-validation-reassurance">
+              {t('guidance.validation.reassurance',
+                `This guidance is based on ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
+              )}
+            </p>
+            {guidance.validation.sourceEnrichment?.status === 'unavailable' && (
+              <p
+                className="mt-2 text-xs text-muted-foreground"
+                data-testid="text-source-enrichment-status"
+                role="status"
+                aria-live="polite"
+              >
+                {t(
+                  'guidance.validation.sourceUnavailable',
+                  'Some optional verification details are unavailable right now; the main roadmap is unaffected.'
+                )}
+              </p>
+            )}
+
+            {/* Collapsible technical details for advanced users */}
+            <Collapsible className="mt-3">
+              <div className="flex items-center gap-3 flex-wrap">
+                <CollapsibleTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="p-0 h-auto text-xs text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-transparent group"
+                    data-testid="btn-show-verification-details"
+                  >
+                    <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
+                    {t('guidance.validation.showDetails', 'How this guidance was sourced')}
+                  </Button>
+                </CollapsibleTrigger>
+                <a
+                  href="/tech-docs#ai-validation"
+                  className="text-xs text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 underline underline-offset-2"
+                >
+                  {t('guidance.validation.methodologyLink', 'Full methodology')}
+                </a>
+              </div>
+              <CollapsibleContent className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-600">
+                <div className="space-y-3 text-xs text-slate-600 dark:text-slate-400">
+                  {/* What we checked */}
+                  <div className="space-y-1.5">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                      <span>{t('guidance.validation.checkedStatutes', 'Cross-referenced with state criminal statutes')}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                      <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced with published sentencing guidelines')}</span>
+                    </div>
+                    {guidance.localOrdinance && (
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-3.5 w-3.5 text-blue-500" />
+                        <span>
+                          Municipal ordinance context: {guidance.localOrdinance.section}, {guidance.localOrdinance.jurisdictionDisplay} (
+                          <a
+                            href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-slate-700 dark:hover:text-slate-200"
+                          >
+                            LOCUS-v1
+                          </a>
+                          , CC-BY-NC-4.0)
+                        </span>
+                      </div>
+                    )}
+                    {guidance.validation.precedents && guidance.validation.precedents.length > 0 ? (
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-3.5 w-3.5 text-green-500" />
+                        <span>{t('guidance.validation.foundCases', `Found ${guidance.validation.precedents.length} similar court case${guidance.validation.precedents.length !== 1 ? 's' : ''}`)}</span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2">
+                        <HelpCircle className="h-3.5 w-3.5 text-slate-400" />
+                        <span>{t('guidance.validation.noCasesFound', 'We searched for similar court cases but none matched closely enough to include')}</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Technical metrics - hidden by default, only for advanced users */}
+                  <div className="pt-2 border-t border-slate-200 dark:border-slate-600">
+                    <p className="text-slate-500 dark:text-slate-500 mb-2">
+                      {t('guidance.validation.technicalDetails', 'Technical details:')}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="font-normal text-xs" data-testid="badge-confidence-score">
+                        {Math.round(guidance.validation.confidenceScore * 100)}% confidence
+                      </Badge>
+                      <Badge variant="outline" className="font-normal text-xs">
+                        {guidance.validation.checksPassed}/{guidance.validation.checksPerformed} checks passed
+                      </Badge>
+                      {guidance.validation.tiers?.tier1 && (
+                        <Badge variant="outline" className="font-normal text-xs">
+                          Statutes: {Math.round(guidance.validation.tiers.tier1.score * 100)}%
+                        </Badge>
+                      )}
+                      {guidance.validation.tiers?.tier2 && (
+                        <Badge variant="outline" className="font-normal text-xs">
+                          Case law: {Math.round(guidance.validation.tiers.tier2.score * 100)}%
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Issues - only show if there are any */}
+                  {(guidance.validation.issues?.length ?? 0) > 0 && (
+                    <div className="pt-2 border-t border-slate-200 dark:border-slate-600 space-y-1.5">
+                      {guidance.validation.issues.map((issue, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start gap-2"
+                          data-testid={`validation-issue-${index}`}
+                        >
+                          {issue.severity === 'info' ? (
+                            <HelpCircle className="h-3.5 w-3.5 text-blue-500 flex-shrink-0 mt-0.5" />
+                          ) : (
+                            <AlertTriangle className="h-3.5 w-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
+                          )}
+                          <span>{issue.message}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          </div>
+        </div>
+      )}
+
+      {/* Precedent Cases Section */}
+      {guidance.validation?.precedents && guidance.validation.precedents.length > 0 && (
+        <PrecedentCasesSection
+          precedents={guidance.validation.precedents}
+          sessionId={guidance.sessionId}
+          jurisdiction={guidance.caseData.jurisdiction}
+          caseStage={guidance.caseData.caseStage}
+        />
+      )}
+
       {/* Privacy Notice */}
       <Card className="guidance-privacy-notice" role="note" aria-labelledby="guidance-privacy-title" data-testid="guidance-privacy-notice">
         <CardContent className="pt-6">
@@ -2210,42 +2025,6 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
           </div>
         </CardContent>
       </Card>
-
-      {/* Context footer — universal rights and reminders, compact two-column */}
-      <div className="border-t border-border/50 pt-6 mt-2">
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-3">
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground mb-2">Fundamental Rights</p>
-            <ul className="space-y-1.5">
-              {[
-                "You have the right to remain silent. You do not have to answer questions from police or prosecutors.",
-                "You have the right to an attorney at no cost if you cannot afford one. Request one at your first appearance.",
-                "You cannot be compelled to testify against yourself in court.",
-              ].map((right, i) => (
-                <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
-                  <span className="flex-shrink-0 font-semibold text-foreground/60">{i + 1}.</span>
-                  <span>{right}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground mb-2">Key Reminders</p>
-            <ul className="space-y-1.5">
-              {[
-                "Conversations about your case outside of attorney-client privilege are not protected. Friends and family can be required to testify about what you told them.",
-                "You can decline a search clearly and calmly. Saying no does not prevent a search but preserves your rights.",
-                "Do not miss any court date. A missed appearance typically results in a bench warrant.",
-              ].map((reminder, i) => (
-                <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
-                  <span className="flex-shrink-0 text-muted-foreground/50">•</span>
-                  <span>{reminder}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
 
       {/* Flag Response Dialog */}
       <Dialog open={showFlagDialog} onOpenChange={(open) => { setShowFlagDialog(open); if (!open) { setFlagReason(''); } }}>

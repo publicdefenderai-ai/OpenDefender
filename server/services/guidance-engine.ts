@@ -1,3 +1,4 @@
+import { isUnknownStage } from "../../shared/guidance-answers";
 // Enhanced Legal Guidance Generation Engine
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
@@ -9,7 +10,7 @@ interface CaseData {
   charges: string | string[];
   caseStage: string;
   custodyStatus: string;
-  hasAttorney: boolean;
+  hasAttorney?: boolean | null;
   supervisionStatus?: string;
   citizenshipStatus?: string;
   hasMinorChildren?: boolean | null;
@@ -579,14 +580,14 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     criticalAlerts: buildCriticalAlertsForCharges(caseData, jurisdictionData, specificCharges),
     immediateActions: buildImmediateActionsForCharges(caseData, stageData, specificCharges, fallbackChargeData),
     nextSteps: buildNextSteps(caseData, stageData),
-    deadlines: buildDeadlines(caseData, jurisdictionData, stageData),
+    deadlines: isUnknownStage(caseStage) ? [] : buildDeadlines(caseData, jurisdictionData, stageData),
     rights: buildRightsForCharges(specificCharges, caseStage),
     resources: buildResources(jurisdiction, hasAttorney),
     warnings: buildWarningsForCharges(caseData, specificCharges, fallbackChargeData),
     evidenceToGather: buildEvidenceForCharges(specificCharges, fallbackChargeData),
     courtPreparation: (stageData as any)?.courtPreparation || [],
     avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
-    timeline: buildCaseTimeline(caseStage, jurisdictionData, jurisdiction),
+    timeline: isUnknownStage(caseStage) ? [] : buildCaseTimeline(caseStage, jurisdictionData, jurisdiction),
     mockQA: buildMockQA(caseData, specificCharges),
     collateralConsequences: buildCollateralConsequences(caseData, chargeTypeList),
     uncertainties: buildUncertainties(caseData, jurisdictionData, chargeTypeList),
@@ -623,8 +624,8 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
       },
       {
         question: "Do you have an attorney or do you need one appointed?",
-        suggestedResponse: hasAttorney ? "Yes, Your Honor, I have an attorney." : "I would like to request a public defender, Your Honor.",
-        explanation: hasAttorney ? "Confirm you have representation." : "If you cannot afford a lawyer, the court will appoint a public defender to represent you.",
+        suggestedResponse: hasAttorney == null ? "State whether you have counsel, if known." : hasAttorney ? "Yes, Your Honor, I have an attorney." : "I would like to request a public defender, Your Honor.",
+        explanation: hasAttorney == null ? "If you need a lawyer, you can ask how appointment works." : hasAttorney ? "Confirm you have representation." : "If you cannot afford a lawyer, the court will appoint a public defender to represent you.",
         category: 'procedural'
       },
       {
@@ -697,7 +698,7 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
   };
   
   // Get questions for current stage
-  const stageQA = stageQuestions[caseStage] || stageQuestions['arraignment'];
+  const stageQA = stageQuestions[caseStage] || [];
   mockQA.push(...stageQA);
   
   // Add charge-specific questions if available
@@ -785,7 +786,7 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
     );
   }
   
-  if (!caseData.hasAttorney) {
+  if (caseData.hasAttorney === false) {
     alerts.push('Requesting a public defender promptly matters — representation before arraignment can affect bail and initial proceedings.');
   }
   
@@ -851,7 +852,7 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   }
   
   // Add attorney action if needed with URGENT priority
-  if (!caseData.hasAttorney && caseData.caseStage === 'arrest') {
+  if (caseData.hasAttorney === false && caseData.caseStage === 'arrest') {
     actions.unshift({ 
       action: 'Ask for a public defender right away if you can\'t afford a lawyer', 
       urgency: 'urgent',
@@ -1119,10 +1120,10 @@ function buildBasicRights(caseStage: string): string[] {
   return basicRights;
 }
 
-function buildResources(jurisdiction: string, hasAttorney: boolean): GuidanceResource[] {
+function buildResources(jurisdiction: string, hasAttorney: boolean | null | undefined): GuidanceResource[] {
   const resources: GuidanceResource[] = [];
   
-  if (!hasAttorney) {
+  if (hasAttorney === false) {
     resources.push({
       type: 'Public Defender Office',
       description: 'Free legal representation if you qualify financially. Income thresholds shown are approximate — eligibility is determined by the court at your first appearance, not by these figures alone.',
@@ -1177,7 +1178,9 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   
   // Part 2: Important actions (2-3 key things)
   let actions = '';
-  if (!hasAttorney) {
+  if (hasAttorney == null) {
+    actions = 'If you have a lawyer, they can help review your court papers. If you need representation, you can ask the court about appointed counsel.';
+  } else if (hasAttorney === false) {
     actions = 'Securing legal representation is the immediate priority — the public defender\'s office provides representation at no cost for those who qualify. Making statements to police before speaking with an attorney is something legal professionals consistently advise against.';
   } else if (caseStage === 'arrest') {
     actions = 'Attorneys consistently advise against making statements without counsel present. Attending the arraignment hearing on time is the other immediate priority.';
@@ -1340,7 +1343,7 @@ function buildCollateralConsequences(caseData: CaseData, chargeType: string | st
   const items: CollateralConsequenceItem[] = [];
 
   // Supervision / probation / parole
-  if (caseData.supervisionStatus && caseData.supervisionStatus !== 'none' && caseData.supervisionStatus !== '') {
+  if (['probation', 'parole', 'both'].includes(caseData.supervisionStatus ?? '')) {
     const isParole = caseData.supervisionStatus === 'parole';
     items.push({
       category: 'supervision_revocation',
@@ -1420,8 +1423,12 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
     });
   }
 
+  if (isUnknownStage(caseData.caseStage)) {
+    items.push({ area: 'Case Stage', note: 'The stage was not specified. Check your court notice for the hearing type and date.' });
+  }
+
   // Supervision status not provided — couldn't assess revocation risk
-  if (!caseData.supervisionStatus) {
+  if (!caseData.supervisionStatus || caseData.supervisionStatus === 'unsure') {
     items.push({
       area: 'Probation / Parole Status',
       note: 'You did not indicate whether you are currently on probation or parole. If you are, a new charge may trigger a revocation proceeding — a serious additional risk that your attorney must know about immediately.',

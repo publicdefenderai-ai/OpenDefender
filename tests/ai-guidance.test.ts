@@ -578,3 +578,17 @@ describe('reviewed classification alternatives in the actual AI request', () => 
     }
   });
 });
+
+describe('questionnaire facts sent to the mocked provider', () => {
+  it.each([[true, 'Yes'], [false, 'No'], [null, 'Not specified'], [undefined, 'Not specified']] as const)(
+    'preserves representation answer %s', async (answer, expected) => {
+      mockMessagesCreate.mockResolvedValue(makeMockApiResponse(VALID_CLAUDE_JSON));
+      await generateClaudeGuidance({ ...BASE_CASE, caseStage: 'unsure', hasAttorney: answer,
+        priorConvictions: false, hasHousingAssistance: null }, 'tri-' + String(answer));
+      const prompt = mockMessagesCreate.mock.calls.at(-1)![0].messages[0].content as string;
+      expect(prompt.split('\n')).toContain('- Has Attorney: ' + expected);
+      expect(prompt).toContain('CASE STAGE UNKNOWN');
+      expect(prompt).toContain('Prior convictions: No');
+      expect(prompt).not.toContain('In public or subsidized housing:');
+    });
+});

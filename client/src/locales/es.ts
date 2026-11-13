@@ -1,3 +1,4 @@
+import { readerCopy } from "./guidance-reader";
 // Shared reviewed wording: compact summaries for cards/lists, full text for detailed sections.
 const reviewedRightsCopy = {
   "phoneDetail": "El acceso al teléfono, los horarios y el número de llamadas varían según el estado y el centro. El acceso a un abogado está protegido, pero no siempre se realiza por teléfono. Pregunte al personal cómo contactar a su abogado y organizar una llamada legal confidencial.",
@@ -38,6 +39,7 @@ export default {
     guidanceUrgencyGeneral: "Prioridad",
 
     guidanceRoadmapTitle: "Hoja de ruta del caso: {{jurisdiction}}",
+    ...readerCopy.es,
     guidanceChargeTitle: "Orientación: {{name}} en {{jurisdiction}}",
 
     guidanceSections: "Secciones de la guía",

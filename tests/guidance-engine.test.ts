@@ -1361,3 +1361,16 @@ describe('getVerifiedCitation guard — chargeClassifications code field', () =>
     ).toHaveLength(0);
   });
 });
+
+describe('unanswered case guidance facts', () => {
+  it('does not infer representation, probation or a completed stage from release', () => {
+    const g = generateEnhancedGuidance({ ...baseCase, hasAttorney: null, caseStage: 'unsure', supervisionStatus: 'unsure' });
+    expect(g.overview).toContain('If you have a lawyer');
+    expect(g.criticalAlerts.join(' ')).not.toContain('Requesting a public defender');
+    expect(g.collateralConsequences?.some(x => x.category === 'supervision_revocation')).toBe(false);
+    expect(g.uncertainties?.some(x => x.area === 'Probation / Parole Status')).toBe(true);
+    expect(g.timeline).toEqual([]);
+    expect(g.deadlines).toEqual([]);
+    expect(g.mockQA?.some(x => x.question.includes('plead'))).toBe(false);
+  });
+});

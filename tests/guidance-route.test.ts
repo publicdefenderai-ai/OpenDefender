@@ -994,3 +994,11 @@ describe('GET /api/admin/source-coverage: authenticated readiness gate', () => {
     }
   });
 });
+
+describe('questionnaire answers in the returned plan', () => {
+  it.each([true, false, null, undefined])('preserves attorney answer %s and unknown stage', async answer => {
+    const res = await request(testApp).post('/api/legal-guidance/rules')
+      .send({ ...VALID_BODY, hasAttorney: answer, caseStage: '', custodyStatus: 'released' }).expect(200);
+    expect(res.body.guidance.caseData).toMatchObject({ hasAttorney: answer ?? null, caseStage: 'unsure' });
+  });
+});

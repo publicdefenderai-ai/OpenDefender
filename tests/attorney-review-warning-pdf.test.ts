@@ -67,7 +67,7 @@ vi.mock('@shared/charge-explanations', () => ({
 
 vi.mock('@shared/legal-documents', () => ({
   getDocumentsForPhase: vi.fn().mockReturnValue([]),
-  mapCaseStageToPhase: vi.fn().mockReturnValue('arrest'),
+  knownCasePhase: vi.fn().mockReturnValue('arrest'),
 }));
 
 // URL stub: must support both `new URL(path)` (used by loadCJKFont font fetching)

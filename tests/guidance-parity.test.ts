@@ -53,7 +53,7 @@ vi.mock('jspdf-autotable', () => ({
 vi.mock('@shared/charge-explanations', () => ({ getChargeExplanation: mockGetChargeExplanation }));
 vi.mock('@shared/legal-documents', () => ({
   getDocumentsForPhase: vi.fn(() => []),
-  mapCaseStageToPhase: vi.fn(() => 'arrest'),
+  knownCasePhase: vi.fn(() => 'arrest'),
 }));
 
 vi.stubGlobal('URL', { createObjectURL: vi.fn(() => 'blob:test'), revokeObjectURL: vi.fn() });
@@ -111,7 +111,7 @@ describe('normalized guidance surface parity', () => {
     }
     expect(normalized.caseData).toEqual({
       jurisdiction: '', charges: '', caseStage: '', custodyStatus: '',
-      hasAttorney: false, selectedConcerns: undefined,
+      hasAttorney: null, selectedConcerns: undefined,
     });
   });
 
@@ -148,10 +148,9 @@ describe('normalized guidance surface parity', () => {
     ].forEach(value => expect(summary).toContain(value));
 
     const orderedValues = [
-      'PARITY_ALERT', 'PARITY_OVERVIEW', 'parity-charge', 'PARITY_ACTION',
-      'PARITY_STAGE', 'PARITY_DEADLINE', 'PARITY_RIGHT', 'PARITY_NEXT',
-      'PARITY_EVIDENCE', 'PARITY_WARNING', 'PARITYCOURTPREP',
-      'PARITY_COLLATERAL', 'PARITY_QUESTION', 'PARITY_AVOID',
+      'PARITY_OVERVIEW', 'PARITY_ALERT', 'PARITY_ACTION', 'PARITY_STAGE', 'PARITY_DEADLINE',
+      'PARITY_AVOID', 'PARITY_EVIDENCE', 'PARITYCOURTPREP', 'parity-charge', 'PARITY_RIGHT',
+      'PARITY_WARNING', 'PARITY_COLLATERAL', 'PARITY_QUESTION', 'PARITY_NEXT',
       'PARITY_UNCERTAINTY', 'PARITY_RESOURCE',
     ];
     let previous = -1;
@@ -373,6 +372,14 @@ describe('normalized guidance surface parity', () => {
     expect(pdf).toContain('Right to counsel');
     expect(pdf).not.toContain('**');
     expect(pdf).not.toContain('[case records](/support/evidence)');
+  });
+
+  it('retains similar warnings with different triggering events', () => {
+    const warnings = [
+      'Confirm the hearing date with your lawyer after arrest.',
+      'Confirm the hearing date with your lawyer after release.',
+    ];
+    expect(normalizeGuidance({ warnings }).warnings).toEqual(warnings);
   });
 
   it('deduplicates repeated warnings while preserving distinct local subjects', () => {
