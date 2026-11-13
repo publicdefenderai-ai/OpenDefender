@@ -1,0 +1,1795 @@
+[
+  {
+    "id": "fl-fs-817-60-1-credit-card",
+    "section": "817.60",
+    "scope": "(1)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(1)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "817.67": [
+        "(1)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-1-credit-card",
+      "name": "Credit card theft: taking or receiving a taken card",
+      "names": {
+        "es": "Robo de tarjeta: sustracción o recepción de una tarjeta sustraída",
+        "zh": "信用卡盗窃：拿走或收受被盗卡"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.60(1)",
+      "slug": "fl-fs-817-60-1-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(1)",
+          "F.S. 817.60(1)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(1)",
+          "F.S. 817.60(1)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(1)",
+          "F.S. 817.60(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Taking a credit card from another person without the cardholder’s consent, or knowingly receiving a card so taken intending to use it, sell it or transfer it to someone other than the issuer or cardholder.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Tomar una tarjeta de otra persona sin consentimiento del titular, o recibirla sabiendo que fue sustraída así y con intención de usarla, venderla o transferirla a alguien que no sea el emisor ni el titular.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "未经持卡人同意从他人处取走信用卡，或明知卡以此方式被取走仍收受，并意图使用、出售或转交给发卡方或持卡人以外的人。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-2-credit-card",
+    "section": "817.60",
+    "scope": "(2)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(2)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "817.67": [
+        "(1)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-2-credit-card",
+      "name": "Credit card theft: lost, misplaced or mistakenly delivered card",
+      "names": {
+        "es": "Robo de tarjeta perdida, extraviada o entregada por error",
+        "zh": "信用卡盗窃：保留遗失、错放或误送的卡"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.60(2)",
+      "slug": "fl-fs-817-60-2-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(2)",
+          "F.S. 817.60(2)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(2)",
+          "F.S. 817.60(2)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(2)",
+          "F.S. 817.60(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Receiving a card known to be lost, misplaced or mistakenly delivered as to the cardholder’s identity or address, then keeping it intending to use it, sell it or transfer it to someone other than the issuer or cardholder.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Recibir una tarjeta que se sabe perdida, extraviada o entregada por error de identidad o domicilio del titular y conservarla para usarla, venderla o transferirla a una persona distinta del titular o emisor.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "明知信用卡遗失、错放或因持卡人身份或地址错误而误送，收受后仍保留，意图使用、出售或转给发卡方或持卡人以外的人。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-3-credit-card",
+    "section": "817.60",
+    "scope": "(3)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(3)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "817.67": [
+        "(1)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-3-credit-card",
+      "name": "Purchase or sale of another’s credit card",
+      "names": {
+        "es": "Compra o venta de tarjeta de crédito ajena",
+        "zh": "买卖他人的信用卡"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.60(3)",
+      "slug": "fl-fs-817-60-3-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(3)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(3)",
+          "F.S. 817.60(3)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(3)",
+          "F.S. 817.60(3)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(3)",
+          "F.S. 817.60(3)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A person other than the issuer sells a credit card, or a person buys one from someone other than the issuer.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Una persona distinta del emisor vende la tarjeta, o alguien la compra a quien no es el emisor.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "非发卡方出售信用卡，或从非发卡方处购买信用卡。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-4-credit-card",
+    "section": "817.60",
+    "scope": "(4)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(4)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "817.67": [
+        "(1)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-4-credit-card",
+      "name": "Obtaining control of a credit card as security for debt",
+      "names": {
+        "es": "Obtención del control de una tarjeta como garantía de deuda",
+        "zh": "取得信用卡作为债务担保"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.60(4)",
+      "slug": "fl-fs-817-60-4-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(4)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(4)",
+          "F.S. 817.60(4)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(4)",
+          "F.S. 817.60(4)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(4)",
+          "F.S. 817.60(4)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Taking control of a credit card as security for a debt with intent to defraud the issuer, a provider of value, or another person.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Tomar control de una tarjeta como garantía de una deuda con intención de defraudar al emisor, a un proveedor de valor o a otra persona.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "意图欺诈发卡方、提供财物或服务的一方或其他人，而控制信用卡作为债务担保。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-5-credit-card",
+    "section": "817.60",
+    "scope": "(5)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(5)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-5-credit-card",
+      "name": "Dealing in credit cards of another",
+      "names": {
+        "es": "Tráfico de tarjetas de crédito ajenas",
+        "zh": "经手他人的信用卡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.60(5)",
+      "slug": "fl-fs-817-60-5-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(5)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(5)",
+          "F.S. 817.60(5)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(5)",
+          "F.S. 817.60(5)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(5)",
+          "F.S. 817.60(5)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Someone other than the issuer receives at least two cards issued to different cardholders within any 12 months and has reason to know the cards were taken or retained through card theft or a violation of this statutory part.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Una persona distinta del emisor recibe, en cualquier período de doce meses, al menos dos tarjetas emitidas a diferentes titulares y tiene motivos para saber que se obtuvieron o retuvieron por robo u otra infracción de esta parte de la ley.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "非发卡方在任何十二个月内收受至少两张发给不同持卡人的卡，并有理由知道这些卡通过信用卡盗窃或违反本部分法律而被取得或保留。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-6-a-credit-card",
+    "section": "817.60",
+    "scope": "(6)(a)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(6)(a)",
+        "(6)(b)",
+        "(6)(c)",
+        "(6)(d)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-6-a-credit-card",
+      "name": "Credit card forgery",
+      "names": {
+        "es": "Falsificación de tarjeta de crédito",
+        "zh": "伪造信用卡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.60(6)(a)",
+      "slug": "fl-fs-817-60-6-a-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(6)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(6)(a)",
+          "F.S. 817.60(6)(a)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(6)(a)",
+          "F.S. 817.60(6)(a)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(6)(a)",
+          "F.S. 817.60(6)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "With intent to defraud, falsely making, embossing, altering or passing such a credit card, or possessing or controlling a counterfeit card or an invoice, voucher, sales draft or other representation of one.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Con intención de defraudar, fabricar, grabar, alterar falsamente o presentar una tarjeta así, o poseer o controlar una tarjeta falsificada o factura, comprobante, recibo de venta u otra representación de ella.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "意图欺诈而伪造、压印、篡改或行使此类信用卡，或持有、控制假卡或代表该卡的发票、凭证、交易单据等。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-7-credit-card",
+    "section": "817.60",
+    "scope": "(7)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(7)"
+      ],
+      "775.082": [
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "817.67": [
+        "(1)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-7-credit-card",
+      "name": "Signing another’s credit card",
+      "names": {
+        "es": "Firma de una tarjeta de crédito ajena",
+        "zh": "签署他人的信用卡"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.60(7)",
+      "slug": "fl-fs-817-60-7-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(7)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(7)",
+          "F.S. 817.60(7)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(7)",
+          "F.S. 817.60(7)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(7)",
+          "F.S. 817.60(7)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Someone other than the cardholder or their authorized signer signs the credit card with intent to defraud.",
+          "degreeContext": "First-degree misdemeanor: ordinarily up to one year in jail and a $1,000 fine."
+        },
+        "es": {
+          "plainSummary": "Alguien que no es el titular ni está autorizado por él firma la tarjeta con intención de defraudar.",
+          "degreeContext": "Delito menor de primer grado: normalmente hasta un año de cárcel y multa de $1,000."
+        },
+        "zh": {
+          "plainSummary": "并非持卡人或其授权签字者，意图欺诈而在卡上签名。",
+          "degreeContext": "一级轻罪：通常最高一年监禁及1,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-60-8-credit-card",
+    "section": "817.60",
+    "scope": "(8)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Theft; obtaining credit card through fraudulent means",
+    "dependencies": [
+      "817.60",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.60": [
+        "(8)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-60-8-credit-card",
+      "name": "Unlawful possession of a stolen credit or debit card",
+      "names": {
+        "es": "Posesión ilícita de tarjeta de crédito o débito robada",
+        "zh": "非法持有被盗信用卡或借记卡"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.60(8)",
+      "slug": "fl-fs-817-60-8-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.60(8)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.60",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.60.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(8)",
+          "F.S. 817.60(8)"
+        ],
+        "es": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(8)",
+          "F.S. 817.60(8)"
+        ],
+        "zh": [
+          "Theft; obtaining credit card through fraudulent means",
+          "FS 817.60(8)",
+          "F.S. 817.60(8)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing, receiving or retaining a card taken without the cardholder’s consent, intending to impede the cardholder’s recovery of it. The ordinary-business retail exception covers unknown theft or retention for investigation of known theft or possible unlawful use.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Poseer, recibir o retener a sabiendas una tarjeta sustraída sin consentimiento del titular con intención de impedir que la recupere. En el curso ordinario del comercio se exceptúan el desconocimiento del robo y la retención para investigar el robo conocido o un posible uso ilícito.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知卡未经持卡人同意被取走，仍持有、收受或保管，意图阻止持卡人取回。零售商或雇员在正常业务中不知卡系被盗，或为调查已知盗窃或可能的非法使用而持卡，适用例外。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-62-1-credit-card",
+    "section": "817.62",
+    "scope": "(1)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(1)",
+      "(2)"
+    ],
+    "officialTitle": "Fraud by person authorized to provide goods or services",
+    "dependencies": [
+      "817.62",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.62": [
+        "(1)"
+      ],
+      "775.082": [
+        "(3)",
+        "(4)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(1)",
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-62-1-credit-card",
+      "name": "Merchant fraud involving an unlawfully held, forged, expired or revoked credit card",
+      "names": {
+        "es": "Fraude de proveedor con tarjeta obtenida ilícitamente, falsificada, caducada o revocada",
+        "zh": "商户欺诈：使用非法取得、伪造、过期或撤销的信用卡"
+      },
+      "jurisdiction": "FL",
+      "category": "misdemeanor",
+      "code": "817.62(1)",
+      "slug": "fl-fs-817-62-1-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.62(1)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.62",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(1)",
+          "F.S. 817.62(1)"
+        ],
+        "es": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(1)",
+          "F.S. 817.62(1)"
+        ],
+        "zh": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(1)",
+          "F.S. 817.62(1)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A provider authorized by an acquirer, or its agent or employee, supplies value intending to defraud the issuer, acquirer or cardholder on presentation of a card obtained or retained unlawfully or one known to be forged, expired or revoked.",
+          "degreeContext": "Across any six-month period, a total of $300 or less is a first-degree misdemeanor (up to one year and $1,000); more than $300 is a third-degree felony (up to five years and $5,000)."
+        },
+        "es": {
+          "plainSummary": "Un proveedor autorizado por la entidad adquirente, su agente o empleado entrega algo de valor con intención de defraudar al emisor, adquirente o titular al presentarse una tarjeta obtenida o retenida ilícitamente, o que sabe falsificada, caducada o revocada.",
+          "degreeContext": "En cualquier período de seis meses, un total de $300 o menos es delito menor de primer grado (hasta un año y $1,000); más de $300 es delito grave de tercer grado (hasta cinco años y $5,000)."
+        },
+        "zh": {
+          "plainSummary": "收单机构授权的商户或其代理人、雇员意图欺诈发卡方、收单方或持卡人，在他人出示非法取得或保留的卡，或明知伪造、过期或撤销的卡时提供财物或服务。",
+          "degreeContext": "在任何六个月内，总额不超过300美元属一级轻罪（最高一年及1,000美元）；超过300美元属三级重罪（最高五年及5,000美元）。"
+        }
+      },
+      "categories": [
+        "misdemeanor",
+        "felony"
+      ]
+    }
+  },
+  {
+    "id": "fl-fs-817-62-2-credit-card",
+    "section": "817.62",
+    "scope": "(2)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Fraud by person authorized to provide goods or services",
+    "dependencies": [
+      "817.62",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.62": [
+        "(2)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-62-2-credit-card",
+      "name": "Merchant misrepresentation to issuer or acquirer",
+      "names": {
+        "es": "Declaración falsa del proveedor al emisor o adquirente",
+        "zh": "商户向发卡方或收单方虚报"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.62(2)",
+      "slug": "fl-fs-817-62-2-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.62(2)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.62",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(2)",
+          "F.S. 817.62(2)"
+        ],
+        "es": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(2)",
+          "F.S. 817.62(2)"
+        ],
+        "zh": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(2)",
+          "F.S. 817.62(2)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An authorized provider or its agent or employee, intending to defraud the issuer, acquirer or cardholder, fails to provide value that it claimed in writing to the issuer or acquirer it had provided.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "El proveedor autorizado, su agente o empleado, con intención de defraudar al emisor, adquirente o titular, no entrega lo que declaró por escrito al emisor o adquirente haber suministrado.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "授权商户或其代理人、雇员意图欺诈发卡方、收单方或持卡人，书面向发卡方或收单方称已提供财物或服务，实际未提供。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-62-3-a-credit-card",
+    "section": "817.62",
+    "scope": "(3)(a)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Fraud by person authorized to provide goods or services",
+    "dependencies": [
+      "817.62",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.62": [
+        "(3)(a)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-62-3-a-credit-card",
+      "name": "Illegally factoring credit card transactions: presenting a sale made by another",
+      "names": {
+        "es": "Tramitación ilícita: presentar una venta ajena para cobro",
+        "zh": "非法提交信用卡交易：提交他人销售记录"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.62(3)(a)",
+      "slug": "fl-fs-817-62-3-a-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.62(3)(a)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.62",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(a)",
+          "F.S. 817.62(3)(a)"
+        ],
+        "es": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(a)",
+          "F.S. 817.62(3)(a)"
+        ],
+        "zh": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(a)",
+          "F.S. 817.62(3)(a)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "An authorized provider or its agent or employee presents a card-transaction record for payment to the issuer or acquirer for a sale the provider or its agent or employee did not make, intending to defraud the issuer, acquirer or cardholder.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Un proveedor autorizado, su agente o empleado presenta al emisor o adquirente para cobro el registro de una venta que no hizo el proveedor ni su agente o empleado, con intención de defraudar al emisor, adquirente o titular.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "授权商户或其代理人、雇员意图欺诈发卡方、收单方或持卡人，向发卡方或收单方提交并非由该商户或其人员完成的销售记录以收款。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-62-3-b-credit-card",
+    "section": "817.62",
+    "scope": "(3)(b)",
+    "gradingSection": "817.67",
+    "gradingScopes": [
+      "(2)"
+    ],
+    "officialTitle": "Fraud by person authorized to provide goods or services",
+    "dependencies": [
+      "817.62",
+      "775.082",
+      "775.083",
+      "775.084",
+      "817.67",
+      "817.58"
+    ],
+    "subdivisions": {
+      "817.62": [
+        "(3)(b)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ],
+      "817.67": [
+        "(2)"
+      ],
+      "817.58": [
+        "(1)",
+        "(2)",
+        "(3)",
+        "(4)",
+        "(5)",
+        "(6)",
+        "(7)",
+        "(8)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-62-3-b-credit-card",
+      "name": "Illegally factoring credit card transactions: causing another to submit a sale",
+      "names": {
+        "es": "Tramitación ilícita: hacer que otro presente una venta para cobro",
+        "zh": "非法提交信用卡交易：促使他人提交销售记录"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.62(3)(b)",
+      "slug": "fl-fs-817-62-3-b-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.62(3)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.62",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.62.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.67",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.58",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.58.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(b)",
+          "F.S. 817.62(3)(b)"
+        ],
+        "es": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(b)",
+          "F.S. 817.62(3)(b)"
+        ],
+        "zh": [
+          "Fraud by person authorized to provide goods or services",
+          "FS 817.62(3)(b)",
+          "F.S. 817.62(3)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without the acquirer’s authorization, employing, soliciting or otherwise causing an authorized provider or its agent or employee to submit to the acquirer a record of a sale that provider or its personnel did not make.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Sin autorización del adquirente, contratar, solicitar o hacer que un proveedor autorizado, su agente o empleado remita al adquirente el registro de una venta que no hizo ese proveedor ni su personal.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "未经收单机构授权，雇用、招揽或以其他方式促使授权商户或其人员向收单方提交并非该商户或其人员完成的销售记录。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-625-2-a-1-credit-card",
+    "section": "817.625",
+    "scope": "(2)(a)1.",
+    "gradingSection": "817.625",
+    "gradingScopes": [
+      "(2)(a)"
+    ],
+    "officialTitle": "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+    "dependencies": [
+      "817.625",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.625": [
+        "(1)",
+        "(2)(a)1.",
+        "(2)(a)",
+        "(2)(d)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-625-2-a-1-credit-card",
+      "name": "Fraudulent use of a payment-card scanner or skimming device",
+      "names": {
+        "es": "Uso fraudulento de lector o dispositivo de captura de tarjetas",
+        "zh": "欺诈性使用支付卡读取或盗读设备"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.625(2)(a)1.",
+      "slug": "fl-fs-817-625-2-a-1-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.625(2)(a)1.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.625",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)1.",
+          "F.S. 817.625(2)(a)1."
+        ],
+        "es": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)1.",
+          "F.S. 817.625(2)(a)1."
+        ],
+        "zh": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)1.",
+          "F.S. 817.625(2)(a)1."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without permission of the authorized card user, using a scanner or skimming device to access or store encoded payment-card data with intent to defraud that user, the issuer or a merchant. Florida’s forfeiture provisions also apply.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Sin permiso del usuario autorizado, utilizar un lector o dispositivo de captura para acceder o conservar datos codificados de la tarjeta con intención de defraudar al usuario, emisor o comerciante. También se aplican las disposiciones de Florida sobre decomiso.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "未经获授权用卡人许可，用读取或盗读设备获取或存储支付卡编码信息，意图欺诈用卡人、发卡方或商户。 佛州没收规定也适用。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-625-2-a-2-credit-card",
+    "section": "817.625",
+    "scope": "(2)(a)2.",
+    "gradingSection": "817.625",
+    "gradingScopes": [
+      "(2)(a)"
+    ],
+    "officialTitle": "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+    "dependencies": [
+      "817.625",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.625": [
+        "(1)",
+        "(2)(a)2.",
+        "(2)(a)",
+        "(2)(d)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-625-2-a-2-credit-card",
+      "name": "Fraudulent use of a payment-card reencoder",
+      "names": {
+        "es": "Uso fraudulento de un recodificador de tarjetas",
+        "zh": "欺诈性使用支付卡重编码设备"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.625(2)(a)2.",
+      "slug": "fl-fs-817-625-2-a-2-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.625(2)(a)2.",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.625",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)2.",
+          "F.S. 817.625(2)(a)2."
+        ],
+        "es": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)2.",
+          "F.S. 817.625(2)(a)2."
+        ],
+        "zh": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(a)2.",
+          "F.S. 817.625(2)(a)2."
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Without permission of the authorized user of the source card, using a reencoder to copy encoded information to a different payment card with intent to defraud that user, the issuer or a merchant. Florida’s forfeiture provisions also apply.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Sin permiso del usuario autorizado de la tarjeta de origen, usar un recodificador para copiar la información codificada a otra tarjeta con intención de defraudar al usuario, emisor o comerciante. También se aplican las disposiciones de Florida sobre decomiso.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "未经原卡获授权用卡人许可，使用重编码设备将编码信息复制到另一张支付卡上，意图欺诈用卡人、发卡方或商户。 佛州没收规定也适用。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-625-2-b-credit-card",
+    "section": "817.625",
+    "scope": "(2)(b)",
+    "gradingSection": "817.625",
+    "gradingScopes": [
+      "(2)(b)"
+    ],
+    "officialTitle": "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+    "dependencies": [
+      "817.625",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.625": [
+        "(1)",
+        "(2)(b)",
+        "(2)(d)",
+        "(2)(a)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-625-2-b-credit-card",
+      "name": "Repeat fraudulent use of a payment-card scanner, skimmer or reencoder",
+      "names": {
+        "es": "Uso fraudulento reiterado de lector, capturador o recodificador",
+        "zh": "再次欺诈性使用支付卡读取、盗读或重编码设备"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.625(2)(b)",
+      "slug": "fl-fs-817-625-2-b-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.625(2)(b)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.625",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(b)",
+          "F.S. 817.625(2)(b)"
+        ],
+        "es": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(b)",
+          "F.S. 817.625(2)(b)"
+        ],
+        "zh": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(b)",
+          "F.S. 817.625(2)(b)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "A second or subsequent violation of either device-use offense in (2)(a)1. or 2. Both require unauthorized use of encoded card information with intent to defraud. The repeat provision does not refer to mere possession under (2)(c). Florida’s forfeiture provisions also apply.",
+          "degreeContext": "Second-degree felony: ordinarily up to 15 years in prison and a $10,000 fine."
+        },
+        "es": {
+          "plainSummary": "Segunda o posterior infracción de cualquiera de los dos usos del apartado (2)(a)1. o 2. Ambos requieren uso de los datos codificados sin autorización y con intención de defraudar. La regla de reiteración no incluye la mera posesión del apartado (2)(c). También se aplican las disposiciones de Florida sobre decomiso.",
+          "degreeContext": "Delito grave de segundo grado: normalmente hasta 15 años de prisión y multa de $10,000."
+        },
+        "zh": {
+          "plainSummary": "第二次或更多次违反第(2)(a)1或2项设备使用规定；两项均要求未经许可使用编码卡信息且有欺诈意图。重复违法规定不针对第(2)(c)款的单纯持有。 佛州没收规定也适用。",
+          "degreeContext": "二级重罪：通常最高15年监禁及10,000美元罚金。"
+        }
+      }
+    }
+  },
+  {
+    "id": "fl-fs-817-625-2-c-credit-card",
+    "section": "817.625",
+    "scope": "(2)(c)",
+    "gradingSection": "817.625",
+    "gradingScopes": [
+      "(2)(c)"
+    ],
+    "officialTitle": "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+    "dependencies": [
+      "817.625",
+      "775.082",
+      "775.083",
+      "775.084"
+    ],
+    "subdivisions": {
+      "817.625": [
+        "(1)",
+        "(2)(c)",
+        "(2)(d)"
+      ],
+      "775.082": [
+        "(3)"
+      ],
+      "775.083": [
+        "(1)"
+      ],
+      "775.084": [
+        "(4)"
+      ]
+    },
+    "definition": {
+      "id": "fl-fs-817-625-2-c-credit-card",
+      "name": "Knowing possession, sale or delivery of a skimming device",
+      "names": {
+        "es": "Posesión, venta o entrega consciente de un dispositivo de captura",
+        "zh": "明知而持有、出售或交付盗读设备"
+      },
+      "jurisdiction": "FL",
+      "category": "felony",
+      "code": "817.625(2)(c)",
+      "slug": "fl-fs-817-625-2-c-credit-card",
+      "verifiedMonth": "2026-11",
+      "citations": [
+        {
+          "citation": "Fla. Stat. § 817.625(2)(c)",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 817.625",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.625.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.082",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.083",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html"
+        },
+        {
+          "citation": "Fla. Stat. § 775.084",
+          "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html"
+        }
+      ],
+      "aliases": {
+        "en": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(c)",
+          "F.S. 817.625(2)(c)"
+        ],
+        "es": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(c)",
+          "F.S. 817.625(2)(c)"
+        ],
+        "zh": [
+          "Use of scanning device, skimming device, or reencoder to defraud; possession of skimming device; penalties",
+          "FS 817.625(2)(c)",
+          "F.S. 817.625(2)(c)"
+        ]
+      },
+      "text": {
+        "en": {
+          "plainSummary": "Knowingly possessing, selling or delivering a statutorily defined skimming device. The law expressly exempts specified public employees, officers and agents and merchant-employed financial or retail security investigators acting within official duties. Florida’s forfeiture provisions also apply.",
+          "degreeContext": "Third-degree felony: ordinarily up to five years in prison and a $5,000 fine."
+        },
+        "es": {
+          "plainSummary": "Poseer, vender o entregar a sabiendas un dispositivo de captura definido por ley. Se exceptúa a determinados empleados, funcionarios y agentes públicos e investigadores de seguridad financiera o comercial empleados por comerciantes cuando actúan dentro de sus funciones oficiales. También se aplican las disposiciones de Florida sobre decomiso.",
+          "degreeContext": "Delito grave de tercer grado: normalmente hasta cinco años de prisión y multa de $5,000."
+        },
+        "zh": {
+          "plainSummary": "明知而持有、出售或交付法律所定义的盗读设备。在法定职务范围内行动的特定公职人员、代理人员及由商户雇用的金融或零售安全调查人员适用豁免。 佛州没收规定也适用。",
+          "degreeContext": "三级重罪：通常最高五年监禁及5,000美元罚金。"
+        }
+      }
+    }
+  }
+]

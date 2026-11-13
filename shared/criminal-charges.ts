@@ -4,6 +4,7 @@ import { floridaLegacyPropertyText } from "./florida-legacy-property";
 import { isReviewedOhioChargeId } from "./ohio-reviewed-identity";
 import { FLORIDA_PERSONS_BATCH } from "./florida-persons-batch";
 import { FLORIDA_ROBBERY_BATCH } from "./florida-robbery-batch";
+import { FLORIDA_CREDIT_CARD_BATCH } from "./florida-credit-card-batch";
 import { FLORIDA_RESTRAINT_BATCH } from "./florida-restraint-batch";
 import { FLORIDA_CRASH_FLIGHT_BATCH } from "./florida-crash-flight-batch";
 // Criminal Charges Database - Comprehensive Coverage for All US Jurisdictions
@@ -94662,7 +94663,7 @@ criminalCharges.push(...phase5JuvenileCharges);
 // older degree-labelled Ohio homicide rows.
 criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
 // Additive source-first Florida identities never replace or alias legacy rows.
-criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges, ...FLORIDA_PERSONS_BATCH.charges, ...FLORIDA_ROBBERY_BATCH.charges, ...FLORIDA_RESTRAINT_BATCH.charges, ...FLORIDA_CRASH_FLIGHT_BATCH.charges);
+criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges, ...FLORIDA_PERSONS_BATCH.charges, ...FLORIDA_ROBBERY_BATCH.charges, ...FLORIDA_CREDIT_CARD_BATCH.charges, ...FLORIDA_RESTRAINT_BATCH.charges, ...FLORIDA_CRASH_FLIGHT_BATCH.charges);
 // Source-first California additions preserve the separate legacy inventory.
 criminalCharges.push(...getCaliforniaAdditionCharges());
 
