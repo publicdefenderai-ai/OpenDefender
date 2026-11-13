@@ -402,7 +402,7 @@ async function stubRecoveringStatuteCardProvider(page: Page) {
 }
 
 async function expectEditorialOpening(page: Page) {
-  const opening = page.locator("section.editorial-page-intro");
+  const opening = page.locator(new URL(page.url()).pathname === "/court-records" ? ".records-opening" : "section.editorial-page-intro");
   await expect(opening).toHaveCount(1);
   await expect(opening.locator("h1")).toBeVisible();
   await expect(opening.locator("p")).toBeVisible();
@@ -426,7 +426,7 @@ async function expectPrimaryToolSurface(page: Page, route: string) {
     case "/court-records":
       await expect(page.getByTestId("input-search-term")).toBeVisible();
       await expect(
-        page.locator("div.editorial-workspace > .editorial-card").first(),
+        page.getByRole("form"),
       ).toBeVisible();
       return;
     case "/statutes":
@@ -450,11 +450,36 @@ for (const viewport of VIEWPORTS) {
       await stubInitialServiceRequests(page);
     });
 
+    test("court records fields fit the available width", async ({ page }, info) => {
+      await page.goto("/court-records");
+      await expectEditorialOpening(page);
+      await expectPrimaryToolSurface(page, "/court-records");
+      await expectNoHorizontalOverflow(page);
+      const fields = page.locator(".records-fields input");
+      await expect(fields).toHaveCount(3);
+      const positions = await fields.evaluateAll(nodes => nodes.map(node => {
+        const { x, y } = node.getBoundingClientRect();
+        return { x: Math.round(x), y: Math.round(y) };
+      }));
+      if (viewport.name === "desktop") {
+        expect(new Set(positions.map(field => field.y)).size).toBe(1);
+        expect(positions[2].x).toBeGreaterThan(positions[1].x);
+        expect(positions[1].x).toBeGreaterThan(positions[0].x);
+      } else {
+        expect(new Set(positions.map(field => field.x)).size).toBe(1);
+        expect(positions[2].y).toBeGreaterThan(positions[1].y);
+        expect(positions[1].y).toBeGreaterThan(positions[0].y);
+      }
+      await info.attach("Court Records layout", {
+        body: await page.screenshot(),
+        contentType: "image/png",
+      });
+    });
+
     test("render their editorial openings and initial tool surfaces without overflow", async ({ page }) => {
       const routes = [
         "/legal-glossary",
         "/document-summarizer",
-        "/court-records",
         "/statutes",
       ] as const;
 

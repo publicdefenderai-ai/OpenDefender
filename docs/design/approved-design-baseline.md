@@ -637,3 +637,9 @@ The remaining approved designs are grouped by user journey. Some have a shared r
 The approved `court-logistics-content.html` reference has SHA-256 `dc9d4afadc3c78ba01fde011ddc2656feff1aa994dccb16b0d4979b0b48e8301`. The calendar illustration accompanies the existing introduction. Three direct paths open the court-date guide, bail preparation checklist and printable public defender intake. On small screens those links stack in reading order. The court-location action now leads directly to the courthouse finder.
 
 The eight preparation actions, court reminder services, research note, four requirement topics, five resource entries, five FAQs, practical tips and related destinations remain available. Previously English-only preparation and resource descriptions have Spanish and Chinese equivalents. The release browser spec follows all three guide links, checks keyboard access to the research note and requirement panels, verifies their text, and measures phone and desktop layouts across the three languages and both themes.
+
+### Court Records search
+
+The approved `court-records-content.html` reference has SHA-256 `3bad111103fe0802bc88dc60df7ff5d685270321a2497c0d4bb3b6480247c2a5`. The page keeps the published RECAP notice, search term, case name, docket number and semantic-search switch. All three fields have associated labels and submit through the existing court-records endpoint. Dockets and opinions appear in separate lists with filing metadata, source links and provider availability notices.
+
+“View docket” describes the actual docket destination. An empty successful search has its own message. A partial outage keeps the available results and names the affected source. The release browser test checks keyword and semantic requests, record destinations, keyboard submission, successful, partial, failed and empty responses, reset and translated layouts with controlled API responses.

@@ -3570,3 +3570,31 @@ button[data-state=open] > .guide-toggle::before { content: '−'; }
   .court-logistics-paths { gap: 0; }
   .court-logistics-hero img { display: none; }
 }
+
+.records-page { width: 100%; max-width: 1160px; margin: auto; padding: 48px clamp(20px,5vw,60px) 64px; }
+.records-opening h1 { font-size: clamp(36px,4.8vw,58px); letter-spacing: -.04em; font-weight: 500; line-height: 1.1; }
+.records-opening p, .records-free { max-width: 80ch; line-height: 1.8; color: var(--muted-foreground); }
+.records-opening p { margin: 18px 0 28px; }
+.records-free { padding: 6px 0 6px 20px; border-left: 3px solid var(--primary); margin-bottom: 28px; }
+.records-page a { color: var(--primary); font-weight: 600; }
+.records-page a:hover, .records-free a { text-decoration: underline; }
+.records-form { background: var(--muted); padding: clamp(18px,3vw,30px); }
+.records-mode, .records-metadata, .records-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; }
+.records-form label, .records-match h4 { font-weight: 600; }
+.records-form p, .records-metadata { font-size: 14px; color: var(--muted-foreground); margin: 8px 0 14px; }
+.records-fields { display: grid; grid-template-columns: minmax(0,1.3fr) repeat(2,minmax(0,1fr)); gap: 18px; margin: 20px 0 10px; }
+.records-fields label { display: block; margin-bottom: 6px; }
+.records-fields input, .records-form button[type="submit"] { min-height: 46px; }
+.records-page [role="status"]:not(:empty), .records-results { margin: 22px 0; }
+.records-results h2 { font-weight: 500; font-size: 28px; }
+.records-results h3 { font-weight: 600; font-size: 19px; margin: 24px 0 8px; }
+.records-match { display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: baseline; gap: 12px; border-top: 1px solid var(--border); padding: 18px 0; overflow-wrap: anywhere; }
+.records-match a, .records-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.records-warning { margin: 20px 0; padding: 14px; border-left: 3px solid var(--destructive); background: var(--muted); }
+.records-links { margin-top: 32px; padding-top: 12px; border-top: 1px solid var(--border); gap: 6px 24px; }
+@media (max-width: 700px) {
+  .records-fields, .records-match { grid-template-columns: minmax(0,1fr); }
+}
+.records-fields + button { margin-top: 12px; }
+.records-mode { flex-wrap: nowrap; }
+.records-mode label { min-width: 0; }
