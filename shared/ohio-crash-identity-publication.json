@@ -1,0 +1,632 @@
+[
+  {
+    "id": "oh-orc-4549-021-stop-and-identify",
+    "section": "4549.021",
+    "scope": "A(1)",
+    "code": "4549.021(A)(1)",
+    "statutoryName": "Failure to stop after a nonpublic road accident",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(2)",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "A",
+      "B(4)"
+    ],
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly involved in a collision causing injury or damage to persons or property on public or private property other than a public road or highway, the operator must stop. On request the operator must provide the identification required by (A)(1) and show the license if available.",
+    "gradeSummary": "M1 ordinarily. Serious physical harm makes it F5, or F4 if the offender knew that harm resulted. Death makes it F3, or F2 if the offender knew death resulted. In all cases a six-month to three-year class five suspension is mandatory. The first six months cannot be suspended. Proof of financial responsibility is required. Absent proof, the court may order restitution up to $5,000 for qualifying economic loss directly and proximately resulting from vehicle operation.",
+    "dependencies": [
+      "4510.02",
+      "4509.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "4549.021",
+          "quote": "failure to stop after a nonpublic road accident is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4549-021-police-report",
+    "section": "4549.021",
+    "scope": "A(2)",
+    "code": "4549.021(A)(2)",
+    "statutoryName": "Failure to stop after a nonpublic road accident",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(2)",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "A",
+      "B(4)"
+    ],
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "If the operator involved in such an off-road injury or damage collision does not provide the (A)(1) information, the operator must give it within 24 hours to the local city or village police or, outside their boundaries, the county sheriff.",
+    "gradeSummary": "M1 ordinarily. Serious physical harm makes it F5, or F4 if the offender knew that harm resulted. Death makes it F3, or F2 if the offender knew death resulted. In all cases a six-month to three-year class five suspension is mandatory. The first six months cannot be suspended. Proof of financial responsibility is required. Absent proof, the court may order restitution up to $5,000 for qualifying economic loss directly and proximately resulting from vehicle operation.",
+    "dependencies": [
+      "4510.02",
+      "4509.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "4549.021",
+          "quote": "failure to stop after a nonpublic road accident is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4549-021-unattended-vehicle",
+    "section": "4549.021",
+    "scope": "A(3)",
+    "code": "4549.021(A)(3)",
+    "statutoryName": "Failure to stop after a nonpublic road accident",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "B(1)",
+      "B(2)",
+      "B(3)"
+    ],
+    "contextPaths": [
+      "A",
+      "B(4)"
+    ],
+    "degrees": [
+      "M1",
+      "F5",
+      "F4",
+      "F3",
+      "F2"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "When colliding with an unoccupied or unattended vehicle under (A), the operator must securely attach the required written identification in a conspicuous place on or in that vehicle.",
+    "gradeSummary": "M1 ordinarily. Serious physical harm makes it F5, or F4 if the offender knew that harm resulted. Death makes it F3, or F2 if the offender knew death resulted. In all cases a six-month to three-year class five suspension is mandatory. The first six months cannot be suspended. Proof of financial responsibility is required. Absent proof, the court may order restitution up to $5,000 for qualifying economic loss directly and proximately resulting from vehicle operation.",
+    "dependencies": [
+      "4510.02",
+      "4509.01"
+    ],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "4549.021",
+          "quote": "failure to stop after a nonpublic road accident is a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4549-03-realty-or-fixtures",
+    "section": "4549.03",
+    "scope": "A",
+    "code": "4549.03(A)",
+    "statutoryName": "Failure to stop after an accident involving the property of others",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "M1"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "After an accident damaging real property or attached personal property legally on or next to a public road or highway, the driver must stop immediately, reasonably seek and notify the owner or person in charge and supply the required information. If a reasonable search fails, the driver must report the specified information, location and known damage within 24 hours to the local police or appropriate sheriff.",
+    "gradeSummary": "M1. Proof of financial responsibility is required. Absent proof, the court may order restitution up to $5,000 for qualifying economic loss directly and proximately resulting from vehicle operation.",
+    "dependencies": [
+      "4509.01"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-08-fictitious",
+    "section": "4549.08",
+    "scope": "A(1)",
+    "code": "4549.08(A)(1)",
+    "statutoryName": "Operating a motor vehicle bearing an invalid license plate or identification mark",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(1)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "M4",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating or driving a motor vehicle on Ohio public roads or highways displaying a fictitious plate, distinctive number or identification mark. A person charged under §4503.12 for failure to comply with its registration transfer requirements cannot also be charged under this section.",
+    "gradeSummary": "M4 for a first offense and M3 for each subsequent offense.",
+    "dependencies": [
+      "4503.12"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-08-counterfeit",
+    "section": "4549.08",
+    "scope": "A(2)",
+    "code": "4549.08(A)(2)",
+    "statutoryName": "Operating a motor vehicle bearing an invalid license plate or identification mark",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(2)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B"
+    ],
+    "degrees": [
+      "M4",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating or driving a motor vehicle on Ohio public roads or highways displaying a counterfeit or unlawfully made copy of a distinctive number or identification mark. A person charged under §4503.12 for failure to comply with its registration transfer requirements cannot also be charged under this section.",
+    "gradeSummary": "M4 for a first offense and M3 for each subsequent offense.",
+    "dependencies": [
+      "4503.12"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-08-another-vehicle",
+    "section": "4549.08",
+    "scope": "A(3)",
+    "code": "4549.08(A)(3)",
+    "statutoryName": "Operating a motor vehicle bearing an invalid license plate or identification mark",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A(3)"
+    ],
+    "gradingPaths": [
+      "C"
+    ],
+    "contextPaths": [
+      "B",
+      "A(3)"
+    ],
+    "degrees": [
+      "M4",
+      "M3"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Operating or driving a motor vehicle on Ohio public roads or highways displaying a plate, number or mark belonging to another vehicle. The same owner’s transfer allowance under §4503.12(A)(4) lasts up to 30 days. A person charged under §4503.12 for failure to comply with its registration transfer requirements cannot also be charged under this section.",
+    "gradeSummary": "M4 for a first offense and M3 for each subsequent offense.",
+    "dependencies": [
+      "4503.12"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-11-former-owner",
+    "section": "4549.11",
+    "scope": "A",
+    "code": "4549.11(A)",
+    "statutoryName": "Operation of a motor vehicle bearing license plates or an identification mark issued to another",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "MM",
+      "M4"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "Driving or operating on Ohio highways a vehicle acquired from a former owner who registered it, while it displays the distinctive number or mark assigned upon original registration.",
+    "gradeSummary": "Minor misdemeanor for a first offense; M4 for each subsequent offense.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-12-resident-foreign-mark",
+    "section": "4549.12",
+    "scope": "A",
+    "code": "4549.12(A)",
+    "statutoryName": "Illegal operation by a resident of this state of a motor vehicle bearing the distinctive number or identification mark issued by a foreign jurisdiction",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "B"
+    ],
+    "contextPaths": [],
+    "degrees": [
+      "MM"
+    ],
+    "categories": [
+      "misdemeanor"
+    ],
+    "conductSummary": "An Ohio resident who owns the vehicle operates it on Ohio highways with a mark or number issued by another state without complying with Ohio vehicle registration and identification law. Residency, ownership and noncompliance matter.",
+    "gradeSummary": "Minor misdemeanor.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-20-replacement",
+    "section": "4549.20",
+    "scope": "B",
+    "code": "4549.20(B)",
+    "statutoryName": "Improper replacement of a motor vehicle air bag",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E(1)"
+    ],
+    "contextPaths": [
+      "A",
+      "E(3)"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly installing or reinstalling the counterfeit, nonfunctional or substitute air bag described in (B), with knowledge of nonconformity to the federal safety standard for that vehicle’s make, model and year. The statute incorporates federal definitions and standards. Product-specific compliance requires separate evidence.",
+    "gradeSummary": "M1 for a first offense. F5 for a subsequent offense or serious physical harm to an individual. Division (E)(3) specifies the acts counted separately.",
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "4549.20",
+          "quote": "improper replacement of a motor vehicle air bag, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4549-20-false-diagnostic",
+    "section": "4549.20",
+    "scope": "D",
+    "code": "4549.20(D)",
+    "statutoryName": "Improper replacement of a motor vehicle air bag",
+    "namingBasis": "guilt_clause",
+    "conductPaths": [
+      "D"
+    ],
+    "gradingPaths": [
+      "E(1)"
+    ],
+    "contextPaths": [
+      "A",
+      "E(3)"
+    ],
+    "degrees": [
+      "M1",
+      "F5"
+    ],
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "conductSummary": "Knowingly selling, installing or reinstalling a device in a motor vehicle that falsely indicates the vehicle has a functional air bag. The statute incorporates federal definitions and standards. Product-specific compliance requires separate evidence.",
+    "gradeSummary": "M1 for a first offense. F5 for a subsequent offense or serious physical harm to an individual. Division (E)(3) specifies the acts counted separately.",
+    "dependencies": [],
+    "extraGrading": [],
+    "primaryClassification": {
+      "category": "misdemeanor",
+      "basis": "statutory_ordinary_grade",
+      "ordinaryDegrees": [
+        "M1"
+      ],
+      "evidence": [
+        {
+          "section": "4549.20",
+          "quote": "improper replacement of a motor vehicle air bag, a misdemeanor of the first degree"
+        }
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4549-20-counterfeit",
+    "section": "4549.20",
+    "scope": "C(1)",
+    "code": "4549.20(C)(1)",
+    "statutoryName": "Improper replacement of motor vehicle air bag",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C(1)"
+    ],
+    "gradingPaths": [
+      "E(2)"
+    ],
+    "contextPaths": [
+      "A",
+      "E(3)"
+    ],
+    "degrees": [
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly manufacturing, importing, selling or offering for sale a counterfeit air bag. The statutory definitions apply; product-specific compliance is not determined here.",
+    "gradeSummary": "F5 ordinarily. F4 if total sales price is $5,000 to under $100,000 or quantity is more than 100 but below 1,000. F3 if total sales price reaches $100,000 or quantity reaches 1,000. Quantity alone at exactly 100 does not trigger F4. Division (E)(3) specifies separately countable acts.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-20-nonfunctional",
+    "section": "4549.20",
+    "scope": "C(2)",
+    "code": "4549.20(C)(2)",
+    "statutoryName": "Improper replacement of motor vehicle air bag",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C(2)"
+    ],
+    "gradingPaths": [
+      "E(2)"
+    ],
+    "contextPaths": [
+      "A",
+      "E(3)"
+    ],
+    "degrees": [
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly manufacturing, importing, selling or offering for sale a nonfunctional air bag. The statutory definitions apply; product-specific compliance is not determined here.",
+    "gradeSummary": "F5 ordinarily. F4 if total sales price is $5,000 to under $100,000 or quantity is more than 100 but below 1,000. F3 if total sales price reaches $100,000 or quantity reaches 1,000. Quantity alone at exactly 100 does not trigger F4. Division (E)(3) specifies separately countable acts.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-20-nonconforming-substitute",
+    "section": "4549.20",
+    "scope": "C(3)",
+    "code": "4549.20(C)(3)",
+    "statutoryName": "Improper replacement of motor vehicle air bag",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C(3)"
+    ],
+    "gradingPaths": [
+      "E(2)"
+    ],
+    "contextPaths": [
+      "A",
+      "E(3)"
+    ],
+    "degrees": [
+      "F5",
+      "F4",
+      "F3"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Knowingly manufacturing, importing, selling or offering for sale a substitute intended to fulfill an air bag’s function and not conforming to federal standard 208 for the intended vehicle. The statutory definitions apply; product-specific compliance is not determined here.",
+    "gradeSummary": "F5 ordinarily. F4 if total sales price is $5,000 to under $100,000 or quantity is more than 100 but below 1,000. F3 if total sales price reaches $100,000 or quantity reaches 1,000. Quantity alone at exactly 100 does not trigger F4. Division (E)(3) specifies separately countable acts.",
+    "dependencies": [],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-62-vehicle-identification",
+    "section": "4549.62",
+    "scope": "A",
+    "code": "4549.62(A)",
+    "statutoryName": "Offenses with purpose to conceal or destroy identity",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "A"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "D(2)",
+      "D(3)",
+      "D(4)"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acting with purpose to conceal or destroy a vehicle or part’s identity by removing, defacing, covering, altering or destroying its vehicle identification number or derivative. Division (D)(3) supplies a limited good-faith junk/scrap exclusion.",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The separate failure-to-apply offense in (F) is outside this choice.",
+    "dependencies": [
+      "4549.61",
+      "4737.05"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-62-owner-mark",
+    "section": "4549.62",
+    "scope": "B",
+    "code": "4549.62(B)",
+    "statutoryName": "Offenses with purpose to conceal or destroy identity",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "B"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "D(2)",
+      "D(3)",
+      "D(4)"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Acting with that purpose against a lawfully placed nonmanufacturer owner’s anti-theft identifying number. Division (D)(3) supplies a limited good-faith junk/scrap exclusion.",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The separate failure-to-apply offense in (F) is outside this choice.",
+    "dependencies": [
+      "4549.61",
+      "4737.05"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-62-counterfeit-number",
+    "section": "4549.62",
+    "scope": "C",
+    "code": "4549.62(C)",
+    "statutoryName": "Offenses with purpose to conceal or destroy identity",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "C"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "D(2)",
+      "D(3)",
+      "D(4)"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Placing a counterfeit vehicle identification number or derivative on a vehicle or part with purpose to conceal or destroy its identity. Division (D)(3)’s scrap exclusion does not extend to (C).",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The separate failure-to-apply offense in (F) is outside this choice.",
+    "dependencies": [
+      "4549.61",
+      "4737.05"
+    ],
+    "extraGrading": []
+  },
+  {
+    "id": "oh-orc-4549-62-knowing-dealing-possession",
+    "section": "4549.62",
+    "scope": "D(1)",
+    "code": "4549.62(D)(1)",
+    "statutoryName": "Offenses with purpose to conceal or destroy identity",
+    "namingBasis": "official_heading",
+    "conductPaths": [
+      "D(1)"
+    ],
+    "gradingPaths": [
+      "E"
+    ],
+    "contextPaths": [
+      "D(2)",
+      "D(3)",
+      "D(4)"
+    ],
+    "degrees": [
+      "F5",
+      "F4"
+    ],
+    "categories": [
+      "felony"
+    ],
+    "conductSummary": "Dealing in, concealing or possessing a vehicle or part with knowledge that its identification number or derivative was impaired in the specified way and visual examination at the manufacturer’s marking site cannot determine identity. Division (D)(3) supplies a limited good-faith junk/scrap exclusion. Division (D)(4) provides a conditional owner/insurer possession exception; (D)(2) addresses seizure, forfeiture and part-recovery provisions.",
+    "gradeSummary": "F5 on a first offense and F4 on each subsequent offense. The separate failure-to-apply offense in (F) is outside this choice.",
+    "dependencies": [
+      "4549.61",
+      "4737.05"
+    ],
+    "extraGrading": []
+  }
+]
