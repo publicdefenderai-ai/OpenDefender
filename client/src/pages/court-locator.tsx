@@ -1,448 +1,108 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { 
-  MapPin, 
-  Search, 
-  Phone, 
-  Clock, 
-  Navigation,
-  Building2,
-  Scale,
-  AlertCircle,
-  ExternalLink
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ClickToCall } from "@/components/ui/click-to-call";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import { useState, type FormEvent } from "react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
-
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { RotatingCardCarousel } from "@/components/ui/rotating-card-carousel";
+import { ClickToCall } from "@/components/ui/click-to-call";
+import { Button } from "@/components/ui/button";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { searchCourthousesWithFederalData, CourtLocation } from "@/lib/court-services";
+import { searchCourthouses, type CourtLocation } from "@/lib/court-services";
+
+const federalFinder = "https://www.uscourts.gov/federal-court-finder/find";
+
+function CourtRow({ court }: { court: CourtLocation }) {
+  const { t } = useTranslation();
+  const directions = new URL("https://maps.google.com/maps");
+  directions.searchParams.set("daddr", `${court.lat},${court.lng}`);
+  return (
+    <li className="locator-result">
+      <div>
+        <h4>{court.name}</h4>
+        <p>{t(`courtLocator.courtTypes.${court.type}`)} · {t("courtLocator.courtCard.milesAway", { distance: court.distance })}</p>
+        {court.county && <p>{t("courtLocator.courtCard.county", { county: court.county })}</p>}
+      </div>
+      <div>
+        {court.address && <p>{court.address}</p>}
+        {court.hours && <p>{t("courtLocator.courtCard.hours")}: {court.hours}</p>}
+        {court.services.length > 0 && <p>{t("courtLocator.courtCard.services")}: {court.services.join(", ")}</p>}
+        <div className="locator-links">
+          <a href={directions.href} target="_blank" rel="noopener noreferrer" data-testid={`button-directions-${court.id}`}>{t("courtLocator.courtCard.directions")}</a>
+          {court.website && <a href={court.website} target="_blank" rel="noopener noreferrer" data-testid={`button-website-${court.id}`}>{t("courtLocator.design.website")}</a>}
+          {court.phone && <ClickToCall phoneNumber={court.phone} size="sm" variant="link" data-testid={`button-call-${court.id}`} />}
+        </div>
+      </div>
+    </li>
+  );
+}
 
 export default function CourtLocator() {
   useScrollToTop();
   const { t } = useTranslation();
-  const [zipCode, setZipCode] = useState("");
-  const [isSearching, setIsSearching] = useState(false);
+  const [zip, setZip] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [courts, setCourts] = useState<CourtLocation[]>([]);
-  const [searchPerformed, setSearchPerformed] = useState(false);
-  const [error, setError] = useState("");
 
-  const handleSearch = async () => {
-    if (!zipCode.trim() || zipCode.length !== 5) {
-      setError(t('courtLocator.search.error'));
-      return;
-    }
-
-    setIsSearching(true);
-    setError("");
-    
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (zip.length !== 5 || status === "loading") return;
+    setStatus("loading");
     try {
-      // Use real courthouse data from free APIs
-      const courtData = await searchCourthousesWithFederalData(zipCode);
-      
-      if (courtData.length === 0) {
-        // No results found - show helpful message instead of fake data
-        setCourts([]);
-        setError(t('courtLocator.search.noResults', 'No courthouses found for this ZIP code. Try searching on Google Maps for "courthouse near [your ZIP]" or visit uscourts.gov for federal court locations.'));
-      } else {
-        setCourts(courtData);
-      }
-
-      setSearchPerformed(true);
-    } catch (err) {
-      console.error('Court search error:', err);
-      // Show error instead of fake data
+      setCourts(await searchCourthouses(zip));
+      setStatus("success");
+    } catch {
       setCourts([]);
-      setError(t('courtLocator.search.searchError', 'Unable to search for courthouses. Please try again later, or search on Google Maps for "courthouse near [your ZIP]".'));
-      setSearchPerformed(true);
-    } finally {
-      setIsSearching(false);
+      setStatus("error");
     }
-  };
+  }
 
-  const getCourtTypeColor = (type: CourtLocation["type"]) => {
-    switch (type) {
-      case "federal": return "bg-blue-600";
-      case "state": return "bg-green-600";
-      case "municipal": return "bg-purple-600";
-      case "traffic": return "bg-orange-600";
-      case "bankruptcy": return "bg-indigo-600";
-      default: return "bg-gray-600";
-    }
-  };
-
-  const getCourtTypeName = (type: CourtLocation["type"]) => {
-    switch (type) {
-      case "federal": return t('courtLocator.courtTypes.federal');
-      case "state": return t('courtLocator.courtTypes.state');
-      case "municipal": return t('courtLocator.courtTypes.municipal');
-      case "traffic": return t('courtLocator.courtTypes.traffic');
-      case "bankruptcy": return t('courtLocator.courtTypes.bankruptcy');
-      default: return t('courtLocator.courtTypes.court');
-    }
-  };
-
-  const stateCourts = courts.filter(court => 
-    court.type === 'state' || court.type === 'municipal' || court.type === 'traffic'
-  );
-  const federalCourts = courts.filter(court => 
-    court.type === 'federal' || court.type === 'bankruptcy'
-  );
+  const groups = [
+    { label: "courtLocator.design.nearby", rows: courts.filter(c => c.type !== "federal" && c.type !== "bankruptcy") },
+    { label: "courtLocator.sections.federalTitle", rows: courts.filter(c => c.type === "federal" || c.type === "bankruptcy") },
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-
-      {/* Hero Section */}
-      <section className="vivid-header-teal py-10 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
-                {t('courtLocator.hero.title')}
-              </h1>
-              <p className="text-base md:text-xl text-white/80 max-w-3xl mx-auto">
-                {t('courtLocator.hero.subtitle')}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Search Section */}
-          <ScrollReveal delay={0.2}>
-            <div className="max-w-md mx-auto mb-8">
-              <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
-                <div className="flex-1">
-                  <Input
-                    type="text"
-                    placeholder={t('courtLocator.search.inputPlaceholder')}
-                    value={zipCode}
-                    onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
-                    onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                    className="min-h-[44px] bg-white border-2 border-blue-300 text-black placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-                    data-testid="input-zip-code"
-                  />
-                </div>
-                <Button
-                  onClick={handleSearch}
-                  disabled={isSearching || zipCode.length !== 5}
-                  className="min-h-[44px] bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 shadow-lg"
-                  data-testid="button-search-courts"
-                >
-                  {isSearching ? (
-                    <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-blue-600 border-t-transparent mr-2"></div>
-                      {t('courtLocator.search.searching')}
-                    </>
-                  ) : (
-                    <>
-                      <Search className="mr-2 h-4 w-4" />
-                      {t('courtLocator.search.searchButton')}
-                    </>
-                  )}
-                </Button>
-              </div>
-              
-              {error && (
-                <Alert className="mt-4 border-yellow-200 bg-yellow-50">
-                  <AlertCircle className="h-4 w-4 text-yellow-600" />
-                  <AlertDescription className="text-yellow-800">
-                    {error}
-                  </AlertDescription>
-                </Alert>
-              )}
-            </div>
-          </ScrollReveal>
+    <ScanFirstPageFrame mainClassName="locator-page">
+      <h1>{t("courtLocator.hero.title")}</h1>
+      <p className="locator-intro">{t("courtLocator.hero.subtitle")}</p>
+      <form onSubmit={submit} className="locator-search">
+        <label htmlFor="locator-postal">{t("courtLocator.design.zip")}</label>
+        <div>
+          <input id="locator-postal" autoComplete="postal-code" inputMode="numeric" maxLength={5}
+            value={zip} disabled={status === "loading"} placeholder={t("courtLocator.search.inputPlaceholder")}
+            data-testid="input-zip-code" onChange={event => {
+              setZip(event.target.value.replace(/\D/g, "").slice(0, 5));
+              setStatus("idle");
+            }} />
+          <Button type="submit" disabled={zip.length !== 5 || status === "loading"} data-testid="button-search-courts">
+            {t(status === "loading" ? "courtLocator.search.searching" : "courtLocator.search.searchButton")}
+          </Button>
         </div>
-      </section>
-
-      {/* Results Section */}
-      {searchPerformed && (
-        <section className="py-16 bg-background">
-          <div className="max-w-7xl mx-auto px-4">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-4">
-                  {t('courtLocator.results.title')}
-                </h2>
-                <p className="text-muted-foreground">
-                  {t('courtLocator.results.foundCourts', { count: courts.length, plural: courts.length !== 1 ? 's' : '' })}
-                </p>
-              </div>
-            </ScrollReveal>
-
-            {/* Court Results */}
-            <div className="space-y-12">
-              {/* State Courts Section */}
-              {stateCourts.length > 0 && (
-                <div>
-                  <ScrollReveal>
-                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
-                      <Scale className="h-6 w-6 mr-3 text-green-600" />
-                      {t('courtLocator.sections.stateTitle', { count: stateCourts.length })}
-                    </h3>
-                    <p className="text-muted-foreground mb-8">
-                      {t('courtLocator.sections.stateDesc')}
-                    </p>
-                  </ScrollReveal>
-                  
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {stateCourts.map((court, index) => (
-                      <CourtCard 
-                        key={court.id} 
-                        court={court} 
-                        index={index} 
-                        getCourtTypeColor={getCourtTypeColor} 
-                        getCourtTypeName={getCourtTypeName}
-                        t={t}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Federal Courts Section */}
-              {federalCourts.length > 0 && (
-                <div>
-                  <ScrollReveal>
-                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center">
-                      <Building2 className="h-6 w-6 mr-3 text-blue-600" />
-                      {t('courtLocator.sections.federalTitle', { count: federalCourts.length })}
-                    </h3>
-                    <p className="text-muted-foreground mb-8">
-                      {t('courtLocator.sections.federalDesc')}
-                    </p>
-                  </ScrollReveal>
-                  
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {federalCourts.map((court, index) => (
-                      <CourtCard 
-                        key={court.id} 
-                        court={court} 
-                        index={index} 
-                        getCourtTypeColor={getCourtTypeColor} 
-                        getCourtTypeName={getCourtTypeName}
-                        t={t}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {courts.length === 0 && (
-              <ScrollReveal>
-                <div className="text-center py-12">
-                  <Building2 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {t('courtLocator.results.noCourts')}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {t('courtLocator.results.tryDifferent')}
-                  </p>
-                </div>
-              </ScrollReveal>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Information Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                {t('courtLocator.courtInformation.title')}
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <RotatingCardCarousel
-              items={[
-                {
-                  id: "court-types",
-                  icon: <Scale className="h-6 w-6" />,
-                  title: t('courtLocator.courtInformation.courtTypesCard.title'),
-                  description: t('courtLocator.courtInformation.courtTypesCard.description'),
-                },
-                {
-                  id: "court-hours",
-                  icon: <Clock className="h-6 w-6" />,
-                  title: t('courtLocator.courtInformation.courtHoursCard.title'),
-                  description: t('courtLocator.courtInformation.courtHoursCard.description'),
-                },
-                {
-                  id: "data-sources",
-                  icon: <Phone className="h-6 w-6" />,
-                  title: t('courtLocator.courtInformation.dataSourcesCard.title'),
-                  description: t('courtLocator.courtInformation.dataSourcesCard.description'),
-                },
-              ]}
-              autoRotateInterval={5000}
-            />
-          </ScrollReveal>
+      </form>
+      <p className="locator-notice">{t("courtLocator.design.notice")}</p>
+      <p role="status">{status === "loading" && t("courtLocator.search.searching")}
+        {status === "success" && (courts.length ? t("courtLocator.results.foundCourts", { count: courts.length, plural: courts.length === 1 ? "" : "s" })
+          : t("courtLocator.results.noCourts") + ". " + t("courtLocator.results.tryDifferent"))}</p>
+      {status === "error" && <p role="alert">{t("courtLocator.design.unavailable")}</p>}
+      {status === "success" && courts.length > 0 && <section className="locator-section">
+        <h2>{t("courtLocator.results.title")}</h2>
+        {groups.filter(group => group.rows.length).map(group => <div key={group.label}>
+          <h3>{t(group.label, { count: group.rows.length })}</h3>
+          <ul>{group.rows.map(court => <CourtRow key={court.id} court={court} />)}</ul>
+        </div>)}
+      </section>}
+      <section className="locator-section">
+        <h2>{t("courtLocator.design.before")}</h2>
+        {["courtTypesCard", "courtHoursCard", "dataSourcesCard"].map(key => <details key={key}>
+          <summary>{t(`courtLocator.courtInformation.${key}.title`)}</summary>
+          <p>{t(`courtLocator.courtInformation.${key}.description`)}</p>
+        </details>)}
+        <div className="locator-links">
+          <a href={federalFinder}>{t("courtLocator.design.federal")}</a>
+          <Link href="/support/court-logistics/court-date-guide">{t("courtLocator.design.prepare")}</Link>
+          <Link href="/rights-info" data-testid="button-know-your-rights">{t("footer.knowYourRights")}</Link>
+          <Link href="/case-guidance" data-testid="button-get-guidance">{t("footer.getCaseGuidance")}</Link>
         </div>
+        <a className="locator-credit" href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>
       </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <ScrollReveal>
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              {t('rights.disclaimer.needHelp')}
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              {t('courtLocator.info.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/rights-info">
-                <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl"
-                  data-testid="button-know-your-rights"
-                >
-                  {t('footer.knowYourRights')}
-                </Button>
-              </Link>
-              <Link href="/case-guidance">
-                <Button 
-                  variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-xl"
-                  data-testid="button-get-guidance"
-                >
-                  {t('footer.getCaseGuidance')}
-                </Button>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
-
-// Court Card Component
-function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
-  court: CourtLocation;
-  index: number;
-  getCourtTypeColor: (type: CourtLocation["type"]) => string;
-  getCourtTypeName: (type: CourtLocation["type"]) => string;
-  t: any;
-}) {
-  return (
-    <ScrollReveal key={court.id} delay={index * 0.1}>
-      <Card className="h-full hover:shadow-lg transition-all duration-300">
-        <CardHeader>
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div className="min-w-0 flex-1">
-              <CardTitle className="text-lg mb-2">{court.name}</CardTitle>
-              <div className="flex flex-wrap gap-2 mb-2">
-                <Badge className={`${getCourtTypeColor(court.type)} text-white`}>
-                  {getCourtTypeName(court.type)}
-                </Badge>
-                {court.county && (
-                  <Badge variant="outline" className="text-xs">
-                    {t('courtLocator.courtCard.county', { county: court.county })}
-                  </Badge>
-                )}
-              </div>
-            </div>
-            <div className="shrink-0 text-left sm:text-right">
-              <div className="text-sm text-muted-foreground mb-1">{t('courtLocator.courtCard.distance')}</div>
-              <div className="font-semibold text-blue-600">
-                {court.distance} {t('courtLocator.courtCard.miles')}
-              </div>
-            </div>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {/* Address */}
-            <div className="flex items-start gap-3">
-              <MapPin className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-              <div>
-                <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.address')}</div>
-                <div className="text-sm font-medium">{court.address}</div>
-              </div>
-            </div>
-
-            {/* Phone - Click to Call */}
-            {court.phone && (
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-                <div className="flex-1">
-                  <div className="text-sm text-muted-foreground mb-1">{t('courtLocator.courtCard.phone')}</div>
-                  <ClickToCall
-                    phoneNumber={court.phone}
-                    size="sm"
-                    data-testid={`button-call-${court.id}`}
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* Hours */}
-            {court.hours && (
-              <div className="flex items-start gap-3">
-                <Clock className="h-4 w-4 text-muted-foreground mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-sm text-muted-foreground">{t('courtLocator.courtCard.hours')}</div>
-                  <div className="text-sm font-medium">{court.hours}</div>
-                </div>
-              </div>
-            )}
-
-            {/* Services */}
-            <div>
-              <div className="text-sm text-muted-foreground mb-2">{t('courtLocator.courtCard.services')}</div>
-              <div className="flex flex-wrap gap-1">
-                {court.services.map((service) => (
-                  <Badge key={service} variant="outline" className="text-xs">
-                    {service}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            {/* Actions */}
-            <div className="flex gap-2 pt-2">
-              <Button
-                variant="outline"
-                size="sm"
-                className="min-h-[44px] flex-1"
-                onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(court.address)}`, '_blank')}
-                data-testid={`button-directions-${court.id}`}
-              >
-                <Navigation className="h-3 w-3 mr-1" />
-                {t('courtLocator.courtCard.directions')}
-              </Button>
-              {court.website && (
-                  <Button
-                  variant="outline"
-                  size="sm"
-                    className="min-h-[44px] min-w-[44px]"
-                    aria-label={t('courtLocator.courtCard.website')}
-                    onClick={() => window.open(court.website, '_blank')}
-                  data-testid={`button-website-${court.id}`}
-                >
-                  <ExternalLink className="h-3 w-3" />
-                </Button>
-              )}
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-    </ScrollReveal>
+    </ScanFirstPageFrame>
   );
 }
