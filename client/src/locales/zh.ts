@@ -5070,13 +5070,23 @@ export default {
     }
   },
   "courtLocator": {
+    "design": {
+      "zip": "邮政编码",
+      "before": "出发前",
+      "notice": "附近的法院可能不是审理您案件的法院。请查看出庭通知或联系法院，确认地址、法庭、日期和时间。",
+      "federal": "查找联邦法院",
+      "prepare": "准备出庭",
+      "unavailable": "暂时无法搜索法院。请重试或使用联邦法院查找工具。",
+      "nearby": "附近的法院地点",
+      "website": "法院网站"
+    },
     "hero": {
-      "title": "查找您当地的法院",
-      "subtitle": "使用免费的政府数据源和OpenStreetMap查找附近的法院。获取联系信息、办公时间和您所在地区可用的服务。"
+      "title": "查找法院。",
+      "subtitle": "输入邮政编码，查找附近的法院及地点信息。"
     },
     "search": {
       "inputPlaceholder": "输入邮编",
-      "searchButton": "搜索",
+      "searchButton": "查找法院",
       "searching": "搜索中...",
       "error": "请输入有效的5位数邮编",
       "errorGeneral": "无法搜索法院。请重试或联系您当地法院获取信息。"
@@ -5152,7 +5162,7 @@ export default {
       },
       "dataSourcesCard": {
         "title": "数据来源",
-        "description": "法院位置来自OpenStreetMap和CourtListener（Free Law Project）。请务必提前致电确认时间和流程，因为数据可能有所不同。"
+        "description": "附近法院的位置来自 OpenStreetMap。覆盖范围和联系方式因地点而异。请提前致电确认办公时间和办事流程。"
       }
     }
   },
