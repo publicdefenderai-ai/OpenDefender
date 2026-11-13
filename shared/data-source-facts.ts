@@ -1,3 +1,5 @@
+import { catalogCounts } from "./catalog-counts";
+
 /**
  * Public aggregate facts used by the data-sources transparency page.
  *
@@ -6,11 +8,7 @@
  */
 export const DATA_SOURCE_FACTS = {
   federalStatutes: 10,
-  charges: 8426,
-  chargeTiers: { felony: 4665, misdemeanor: 3694, infraction: 67 },
-  chargeJurisdictions: 57,
-  chargeExplanations: 750,
-  chargeExplanationsWithSources: 734,
+  ...catalogCounts,
   chargeExplanationOverlays: 2818,
   procedureJurisdictions: 57,
   procedureHighConfidence: 52,
