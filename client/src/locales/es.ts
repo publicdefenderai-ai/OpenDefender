@@ -3888,6 +3888,15 @@ export default {
     }
   },
   "courtRecords": {
+    "design": {
+      "viewDocket": "Ver expediente",
+      "searching": "Buscando registros judiciales…",
+      "fullAccess": "Resultados del archivo RECAP y de la base de datos de jurisprudencia.",
+      "limitedAccess": "El acceso completo a RECAP no está disponible. Los resultados pueden ser limitados.",
+      "about": "Acerca de RECAP",
+      "locator": "Buscar un tribunal",
+      "sources": "Fuentes de datos"
+    },
     "hero": {
       "title": "Búsqueda de Registros Judiciales",
       "subtitle": "Busque registros judiciales gratuitos del Archivo RECAP y la base de datos de jurisprudencia"
