@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 const state = vi.hoisted(() => {
   const deadline = Date.parse('2026-11-10T00:00:00Z');
   const checks = Object.fromEntries(['ca','pilot','reviewed','major','theftFraud','benefitsFraud','justice','custody','publicPeace','family','protection','privacy','priorityGaps','commercialSex','drugConduct','drugRemainder','weaponsLocation','gambling','flCredit','drivingLicense','residual','flOld','flNew','flRobbery','flCrashFlight','flRestraint'].map(key => [key, vi.fn(() => Date.now() < deadline)]));
-  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','oh-wl1','oh-wl2','oh-dl1','oh-dl2','oh-gb1','oh-gb2','fl-n1','fl-n2','fl-r1','fl-r2','fl-c1','fl-c2','fl-p1','fl-p2','fl-s1','fl-s2','oh-criminal-trespass'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
+  return { checks, db: vi.fn(async (_state: string) => new Set(['oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','oh-wl1','oh-wl2','oh-gb1','oh-gb2','oh-dl1','oh-dl2','fl-n1','fl-n2','fl-r1','fl-r2','fl-c1','fl-c2','fl-p1','fl-p2','fl-s1','fl-s2','oh-criminal-trespass'])), caDb: vi.fn(async () => new Set(['ca-one'])), deadline };
 });
 // Synthetic IDs stand in for the reviewed batches mocked below.
 vi.mock('../shared/ohio-reviewed-identity', () => ({isReviewedOhioChargeId: (id: string) => /^oh-(?:r|t|b|j|c|pp|fa|pr|pv|pg|cs|dc|dr|wl|gb|dl)[12]$/.test(id)}));
@@ -21,8 +21,8 @@ vi.mock('../shared/criminal-charges', () => ({getSelectableCharges: () => [
   {id:'oh-dc1',jurisdiction:'OH'}, {id:'oh-dc2',jurisdiction:'OH'},
   {id:'oh-dr1',jurisdiction:'OH'}, {id:'oh-dr2',jurisdiction:'OH'},
   {id:'oh-wl1',jurisdiction:'OH'}, {id:'oh-wl2',jurisdiction:'OH'},
-  {id:'oh-dl1',jurisdiction:'OH'}, {id:'oh-dl2',jurisdiction:'OH'},
   {id:'oh-gb1',jurisdiction:'OH'}, {id:'oh-gb2',jurisdiction:'OH'},
+  {id:'oh-dl1',jurisdiction:'OH'}, {id:'oh-dl2',jurisdiction:'OH'},
   {id:'fl-n1',jurisdiction:'FL'}, {id:'fl-n2',jurisdiction:'FL'},
   {id:'fl-r1',jurisdiction:'FL'}, {id:'fl-r2',jurisdiction:'FL'},
   {id:'fl-p1',jurisdiction:'FL'}, {id:'fl-p2',jurisdiction:'FL'},
@@ -85,7 +85,7 @@ import {getCurrentAuthoritySelectableChargeIds} from '../server/services/authori
 beforeEach(() => {vi.clearAllMocks(); vi.useFakeTimers(); vi.setSystemTime(state.deadline-1);});
 afterEach(() => {vi.useRealTimers();vi.unstubAllEnvs();});
 for (const fixture of [true,false]) describe(`request-scoped eligibility fixture=${fixture}`, () => {
-  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','oh-wl1','oh-wl2','oh-dl1','oh-dl2','oh-gb1','oh-gb2','fl-n1','fl-n2','fl-r1','fl-r2','fl-c1','fl-c2','fl-p1','fl-p2','fl-s1','fl-s2','oh-criminal-trespass']));});
+  beforeEach(() => {vi.stubEnv('RELEASE_CHECK',String(fixture));vi.stubEnv('RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS',JSON.stringify(['ca-one','oh-r1','oh-r2','oh-t1','oh-t2','oh-b1','oh-b2','oh-j1','oh-j2','oh-c1','oh-c2','oh-pp1','oh-pp2','oh-fa1','oh-fa2','oh-pr1','oh-pr2','oh-pv1','oh-pv2','oh-pg1','oh-pg2','oh-cs1','oh-cs2','oh-dc1','oh-dc2','oh-dr1','oh-dr2','oh-wl1','oh-wl2','oh-gb1','oh-gb2','oh-dl1','oh-dl2','fl-n1','fl-n2','fl-r1','fl-r2','fl-c1','fl-c2','fl-p1','fl-p2','fl-s1','fl-s2','oh-criminal-trespass']));});
   it('does not evaluate unrelated state evidence or databases for California',async()=>{
     expect([...await getCurrentAuthoritySelectableChargeIds(['CA'])]).toEqual(['ca-one']);
     expect(state.db).not.toHaveBeenCalled();
